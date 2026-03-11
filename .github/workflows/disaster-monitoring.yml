@@ -1,0 +1,49 @@
+name: Disaster Awareness Monitoring
+
+on:
+  schedule:
+    - cron: '0 */8 * * *'
+  workflow_dispatch:
+
+jobs:
+  monitor-and-store:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/anomalyco/opencode:latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+      - name: Install dependencies
+        run: pip install fire
+
+      - name: Run full monitoring cycle
+        env:
+          EXA_ENABLED: 1
+        run: python -m disaster_monitor.cli full-cycle
+
+      - name: Check for changes
+        id: git-status
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "changes=true" >> $GITHUB_OUTPUT
+            git add -A
+            git commit -m "Auto-update: Incidents from $(date -u +%Y-%m-%dT%H:%M:%SZ) monitoring cycle"
+            git push
+          else
+            echo "changes=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Summary
+        run: |
+          echo "## Disaster Monitoring Complete" >> $GITHUB_STEP_SUMMARY
+          echo "- Timestamp: $(date -u +%Y-%m-%dT%H:%M:%SZ)" >> $GITHUB_STEP_SUMMARY
+          echo "- Changes detected: ${{ steps.git-status.outputs.changes }}" >> $GITHUB_STEP_SUMMARY
