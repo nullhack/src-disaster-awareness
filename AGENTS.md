@@ -1105,8 +1105,8 @@ Update on [disaster event/name/type] in [country]
 
 ### Documentation Files
 - AGENTS.md - This file (monitoring system)
-- DATA-ENGINEERING.md - Data storage and processing guide
-- SYSTEM-COMPLETE.md - System completion summary
+- docs/DATA-ENGINEERING.md - Data storage and processing guide
+- docs/SYSTEM-COMPLETE.md - System completion summary
 - incidents/README.md - Data access and query guide
 
 ---
@@ -1135,7 +1135,7 @@ Update on [disaster event/name/type] in [country]
 
 1. **Understand the System:**
    - Review this AGENTS.md file (complete system overview)
-   - Read DATA-ENGINEERING.md for data storage details
+   - Read docs/DATA-ENGINEERING.md for data storage details
    - Read each skill file for detailed rules
 
 2. **Monitor Incidents (Subsystem 1):**
