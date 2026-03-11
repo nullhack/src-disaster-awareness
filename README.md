@@ -1,6 +1,6 @@
 # Disaster Awareness Agent
 
-An intelligent LLM-powered agent prototype designed to autonomously monitor and analyze global disasters in real-time, providing critical situational awareness and humanitarian response coordination.
+An intelligent LLM-powered agent prototype designed to autonomously monitor and analyze global disasters, providing critical situational awareness and humanitarian response coordination.
 
 ## Purpose
 
@@ -14,7 +14,7 @@ An intelligent LLM-powered agent prototype designed to autonomously monitor and 
 
 ## Key Features
 
-- **Real-time Web Intelligence**: Autonomous scraping and analysis of global news sources, social media, and disaster reporting channels
+- **Web Intelligence**: Autonomous scraping and analysis of global news sources, social media, and disaster reporting channels
 - **LLM-Powered Analysis**: Advanced natural language understanding to identify severity, affected populations, and urgent needs
 - **Structured Reporting**: Generate standardized crisis reports with key metrics and response recommendations
 - **Multi-Source Aggregation**: Correlate information from diverse sources to reduce misinformation and enhance accuracy
