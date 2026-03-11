@@ -1,50 +1,68 @@
 # Disaster Awareness Agent System
 
-Comprehensive documentation of the disaster and health emergency monitoring agent system for the Disaster Awareness Agent project.
+Comprehensive documentation of the complete disaster awareness system consisting of monitoring and data engineering subsystems for the Disaster Awareness Agent project.
 
 ## System Overview
 
-The Disaster Awareness Agent system consists of **3 specialized subagents** and **3 supporting skills** working together to monitor, classify, and report on natural disasters and health emergencies with epidemic/pandemic potential.
+The Disaster Awareness Agent system is composed of **TWO INTEGRATED SUBSYSTEMS**:
 
-### Architecture Diagram
+1. **Monitoring Subsystem:** 3 subagents + 3 supporting skills for detecting, classifying, and reporting disasters
+2. **Data Engineering Subsystem:** 1 subagent + 2 supporting skills for processing, validating, and storing incident data
+
+Together they create a complete pipeline from data source → monitoring → analysis → storage → querying.
+
+### Complete Architecture Diagram
 
 ```
-Data Sources
-├── GDACS (Natural Disasters)
-├── ProMED (Disease Outbreaks)
-├── News Outlets (Tier 1-3)
-└── Social Media Platforms
+DATA SOURCES (5 platforms)
+├── GDACS (Natural Disasters, real-time)
+├── ProMED-mail (Disease Outbreaks, daily)
+├── Reuters/AP/BBC (Tier 1 news)
+├── Regional News (Tier 2-3)
+└── WHO (Official verification)
 
         ↓
 
-Monitoring Agents
-├─ disaster-incident-reporter
-│  └── Monitors: GDACS + ProMED
-├─ media-incident-reporter
-│  └── Monitors: News + Social Media
-└─ [Both feed classified data]
+MONITORING SUBSYSTEM
+├─ disaster-incident-reporter (GDACS + ProMED)
+├─ media-incident-reporter (News + Social Media)
+└─ incident-summarizer (Report compilation)
 
         ↓
 
-Supporting Skills (Classification & Formatting)
-├─ incident-classifier
-│  └── Rules for priority classification
-├─ disaster-monitor
-│  └── Incident formatting standards
-└─ media-monitor
-    └── Media monitoring guidelines
+CLASSIFICATION & FORMATTING (Skills)
+├─ incident-classifier (Priority classification)
+├─ disaster-monitor (Formatting standards)
+└─ media-monitor (Media monitoring guidelines)
 
         ↓
 
-Output Agent
-└─ incident-summarizer
-   └── Compiles into WhatsApp + Timeline reports
-
-        ↓
-
-Distribution
+OUTPUT
 ├─ WhatsApp "Incident updates" Group
 └─ Disaster Event Timeline Document
+
+        ↓
+
+DATA ENGINEERING SUBSYSTEM
+└─ data-engineer (Validate, transform, store)
+
+        ↓
+
+SUPPORTING SKILLS (Schema & Storage)
+├─ data-schema (JSON schema with validation)
+└─ data-storage (Folder organization)
+
+        ↓
+
+JSONL INCIDENT DATABASE
+├─ incidents/by-date/[YYYY-MM-DD]/           (PRIMARY)
+├─ incidents/by-country-group/[A|B|C]/[MM]/  (SECONDARY)
+├─ incidents/by-incident-type/[type]/        (TERTIARY)
+├─ incidents/by-country/[country]/            (COUNTRY-SPECIFIC)
+├─ incidents/media-coverage/[YYYY-MM]/       (MEDIA)
+├─ incidents/escalations/[YYYY-MM-DD]/       (ESCALATIONS)
+├─ incidents/archive/[YYYY]/                 (HISTORICAL)
+└─ incidents/indices/                        (FAST LOOKUPS)
 ```
 
 ---
@@ -296,6 +314,372 @@ Structured incidents from:
 - Priority-based organization
 - Complete documentation
 - Escalation identification
+
+---
+
+## 3. Data Engineering Subagent
+
+#### Subagent: data-engineer
+**File:** `.opencode/agents/data-engineer.md`
+
+**Purpose:** Process incident data from monitoring agents, validate against schema, organize into folder structure, and store in JSONL format.
+
+**Responsibilities:**
+1. Receive incident data from monitoring agents
+2. Validate against complete data schema
+3. Transform and normalize data
+4. Generate unique incident IDs
+5. Create necessary directory structure
+6. Write data to JSONL files in appropriate locations
+7. Update indices for fast lookups
+8. Generate metadata and statistics
+9. Detect and flag escalations
+10. Handle errors and ensure data quality
+
+**Supporting Skills:**
+- `@skill data-schema` - JSON schema definitions and validation rules
+- `@skill data-storage` - Folder organization and file naming conventions
+
+**Workflow (6 Phases):**
+1. **Reception & Validation** (5 mins)
+   - Receive incident JSON
+   - Load data-schema skill
+   - Validate all required fields
+   - Check data integrity constraints
+   - Generate quality score (0-1)
+
+2. **Data Transformation** (3 mins)
+   - Normalize dates to ISO 8601 UTC
+   - Standardize country names
+   - Fix enum values
+   - Generate incident ID if missing
+   - Populate metadata fields
+
+3. **Directory Organization** (2 mins)
+   - Load data-storage skill
+   - Determine target directories
+   - Create directories as needed
+   - Plan file writes
+
+4. **JSONL File Writing** (3 mins)
+   - Append to `by-date/[YYYY-MM-DD]/incidents.jsonl`
+   - Append to `by-country-group/[group]/[YYYY-MM]/incidents.jsonl`
+   - Append to `by-incident-type/[type]/[status]/incidents.jsonl`
+   - Append to `by-country/[country]/incidents.jsonl`
+   - Store media coverage records separately
+
+5. **Index Updates** (2 mins)
+   - Update incident-index.jsonl
+   - Update country-index.jsonl
+   - Update date-index.jsonl
+   - Enable fast lookups
+
+6. **Metadata Updates** (2 mins)
+   - Update daily metadata (counts, statistics)
+   - Update monthly metadata
+   - Update type-specific metadata
+   - Generate summary statistics
+
+**Input Format:**
+Structured incident JSON from monitoring agents with:
+- incident_id, incident_name, created_date
+- country, country_group, incident_type
+- incident_level, priority, status
+- location, impact, sources
+- disaster_details or disease_details
+- media_coverage, escalation_tracking
+
+**Output:**
+- JSONL files in organized directory structure
+- Updated indices for fast querying
+- Metadata files with statistics
+- Escalation notifications (if detected)
+- Processing status report
+
+**Data Quality:**
+- Quality scoring (0-1 scale)
+- ≥ 0.95: Store immediately
+- 0.85-0.95: Store with warnings
+- < 0.85: Flag for manual review
+- Average quality target: ≥ 0.90
+
+**Performance:**
+- Validation: < 5 seconds per incident
+- Transformation: < 2 seconds
+- Storage: < 5 seconds
+- Total: < 15 seconds per incident (end-to-end)
+
+**Escalation Detection:**
+- Level changes detected automatically
+- Humanitarian crisis flagged
+- Multi-regional spread identified
+- Creates escalation records
+- Returns escalation alerts
+
+**Tools Used:**
+- `skill` - Load data-schema and data-storage
+- `write` - Create metadata and index files
+- `bash` - Create directories, append to files
+- `read` - Check for duplicates
+- `grep` - Search for existing incident IDs
+
+**Temperature:** 0.1 (Focused, deterministic)
+
+**Key Operating Principles:**
+- Accuracy over speed
+- Data quality critical
+- Validation always
+- No invalid data stored
+- Complete audit trail
+- Error handling and recovery
+
+---
+
+## Supporting Skills for Data Engineering
+
+#### Skill: data-schema
+**File:** `.opencode/skills/data-schema/SKILL.md`
+
+**Purpose:** Defines complete JSON schema for incident data storage and validation.
+
+**Key Content:**
+- Full incident record schema (60+ fields)
+- Simplified incident schema (for quick entry)
+- Media coverage record schema
+- Schema validation rules and constraints
+- Data type specifications
+- Integrity constraint rules
+- Example records (earthquake, disease outbreak)
+- Backwards compatibility guidelines
+
+**Used By:**
+- data-engineer (when validating incidents)
+- Developers (when creating new incident data)
+
+---
+
+#### Skill: data-storage
+**File:** `.opencode/skills/data-storage/SKILL.md`
+
+**Purpose:** Defines folder organization, directory structure, and file management conventions.
+
+**Key Content:**
+- Complete directory hierarchy
+- Primary organization: by-date (YYYY-MM-DD)
+- Secondary organization: by-country-group ([A|B|C]/[YYYY-MM])
+- Tertiary organization: by-incident-type
+- Country-specific storage
+- Media coverage segregation
+- Escalation tracking
+- Archive strategy
+- Index maintenance
+- File naming conventions
+- Rotation and compression strategy
+- Access patterns and performance optimization
+
+**Used By:**
+- data-engineer (when organizing data)
+- Query tools (when accessing data)
+
+---
+
+## Data Engineering Workflows
+
+### Workflow 5: Storing Incident Data
+
+```
+Monitoring agents produce incident JSON
+        ↓
+@data-engineer receives incident
+        ↓
+Step 1: Validate against @skill data-schema
+        ├─ Check required fields
+        ├─ Validate data types
+        ├─ Check constraints
+        └─ Generate quality score
+        ↓
+Step 2: Transform and normalize
+        ├─ Convert dates to ISO 8601
+        ├─ Standardize country names
+        ├─ Fix enum values
+        └─ Generate incident ID
+        ↓
+Step 3: Load @skill data-storage
+        ├─ Determine target directories
+        ├─ Create directories
+        └─ Plan file structure
+        ↓
+Step 4: Write to JSONL files
+        ├─ by-date/2025-03-11/incidents.jsonl
+        ├─ by-country-group/group-a/2025-03/incidents.jsonl
+        ├─ by-incident-type/earthquake/active/incidents.jsonl
+        └─ by-country/indonesia/active-incidents.jsonl
+        ↓
+Step 5: Update indices
+        ├─ incident-index.jsonl
+        ├─ country-index.jsonl
+        └─ date-index.jsonl
+        ↓
+Step 6: Update metadata
+        ├─ by-date/2025-03-11/metadata.json
+        ├─ by-country-group/group-a/2025-03/metadata.json
+        └─ Aggregate statistics
+        ↓
+Success Report
+        ├─ Incident stored: YES
+        ├─ Location: incidents/by-date/2025-03-11/
+        ├─ Quality score: 0.95
+        └─ Escalation detected: NO
+```
+
+### Workflow 6: Batch Processing Multiple Incidents
+
+```
+Daily monitoring produces 5-10 incidents
+        ↓
+@data-engineer receives batch
+        ↓
+Step 1: Validate all incidents
+        ├─ Check each independently
+        ├─ Collect validation results
+        └─ Separate by quality tier
+        ↓
+Step 2: Organize by quality
+        ├─ Ready to store (quality ≥ 0.95) → 8 incidents
+        ├─ Store with warnings (0.85-0.95) → 1 incident
+        └─ Needs review (< 0.85) → 1 incident
+        ↓
+Step 3: Batch directory creation
+        ├─ Create all needed directories once
+        └─ More efficient than individual creation
+        ↓
+Step 4: Batch write operations
+        ├─ Write all validated incidents to same date files
+        ├─ Single metadata.json update per date
+        └─ Bulk index updates
+        ↓
+Step 5: Report status
+        {
+          "total_received": 10,
+          "validated": 9,
+          "stored": 9,
+          "warnings": 1,
+          "needs_review": 1,
+          "storage_location": "incidents/by-date/2025-03-11/",
+          "files_updated": ["incidents.jsonl", "metadata.json", "indices"]
+        }
+```
+
+### Workflow 7: Escalation Detection During Storage
+
+```
+Updated incident arrives: Flood in Aceh, Indonesia
+        ↓
+Previous record exists (Level 2)
+        ↓
+@data-engineer detects level change
+        ├─ Previous: Level 2 (5K affected)
+        ├─ Current: Level 3 (25K affected, 5 deaths)
+        └─ Escalation detected: YES
+        ↓
+Creates escalation record
+        {
+          "incident_id": "20250311-ID-FL",
+          "previous_level": 2,
+          "new_level": 3,
+          "reason": "Death toll increased; affected population tripled",
+          "escalation_date": "2025-03-11T14:30:00Z"
+        }
+        ↓
+Step 1: Store incident update to by-date files
+Step 2: Write escalation record to escalations/2025-03-11/escalations.jsonl
+Step 3: Update escalation metadata/summary
+Step 4: Flag for SRC alert
+Step 5: Return escalation notification
+        ↓
+Result:
+        ├─ Escalation alert generated
+        ├─ Sent to SRC monitoring
+        └─ Flagged for immediate action
+```
+
+---
+
+## Data Organization & Access Patterns
+
+### Storage Structure
+
+```
+incidents/
+├── by-date/[YYYY-MM-DD]/              (PRIMARY - Most used)
+│   ├── incidents.jsonl
+│   ├── media-coverage.jsonl
+│   └── metadata.json
+├── by-country-group/[A|B|C]/[YYYY-MM]/(SECONDARY - Regional analysis)
+│   ├── incidents.jsonl
+│   └── metadata.json
+├── by-incident-type/[type]/[status]/ (TERTIARY - Type-based)
+│   ├── incidents.jsonl
+│   └── metadata.json
+├── by-country/[country]/              (COUNTRY-SPECIFIC)
+│   ├── active-incidents.jsonl
+│   ├── resolved-incidents.jsonl
+│   └── metadata.json
+├── media-coverage/[YYYY-MM]/          (MEDIA RECORDS)
+│   ├── coverage.jsonl
+│   ├── singapore-mentions.jsonl
+│   ├── src-mentions.jsonl
+│   ├── donation-concerns.jsonl
+│   └── misinformation.jsonl
+├── escalations/[YYYY-MM-DD]/          (ESCALATION TRACKING)
+│   ├── escalations.jsonl
+│   └── summary.json
+├── archive/[YYYY]/                    (HISTORICAL)
+│   ├── resolved-incidents.jsonl
+│   └── media-coverage.jsonl
+└── indices/                           (FAST LOOKUPS)
+    ├── incident-index.jsonl
+    ├── country-index.jsonl
+    ├── date-index.jsonl
+    └── query-log.jsonl
+```
+
+### Data File Format
+
+**Format:** JSONL (JSON Lines)
+- One JSON object per line
+- UTF-8 encoding
+- No newlines within objects
+- Streaming and processing friendly
+
+**Example:**
+```
+{"incident_id": "20250311-ID-EQ", "incident_name": "Earthquake in Sumatra, Indonesia", ...}
+{"incident_id": "20250311-PH-FL", "incident_name": "Floods in Luzon, Philippines", ...}
+{"incident_id": "20250311-TH-DI", "incident_name": "Chikungunya Outbreak in Thailand", ...}
+```
+
+### Quick Access Examples
+
+**Find today's incidents:**
+```bash
+cat incidents/by-date/$(date +%Y-%m-%d)/incidents.jsonl
+```
+
+**Find high-priority incidents:**
+```bash
+jq 'select(.priority=="HIGH")' incidents/by-date/2025-03-11/incidents.jsonl
+```
+
+**Count incidents by severity:**
+```bash
+jq '.classification.incident_level' incidents/by-date/2025-03-11/incidents.jsonl | sort | uniq -c
+```
+
+**Get Singapore mentions:**
+```bash
+wc -l incidents/media-coverage/2025-03/singapore-mentions.jsonl
+```
 
 ---
 
@@ -690,26 +1074,40 @@ Update on [disaster event/name/type] in [country]
 
 ## References
 
-### Agents
+### Monitoring Agents
 - `@disaster-incident-reporter` - GDACS/ProMED monitoring
 - `@media-incident-reporter` - News/social media monitoring
 - `@incident-summarizer` - Report compilation
 
-### Skills
+### Data Engineering Agent
+- `@data-engineer` - Incident data processing and storage
+
+### Monitoring Skills
 - `@skill incident-classifier` - Classification rules
 - `@skill disaster-monitor` - Formatting standards
 - `@skill media-monitor` - Media monitoring guidelines
 
-### Data Sources
-- GDACS: https://www.gdacs.org/
-- ProMED: https://www.promedmail.org/
-- ReliefWeb: https://reliefweb.int/
-- HealthMap: https://www.healthmap.org/
-- WHO: https://www.who.int/emergencies/
+### Data Engineering Skills
+- `@skill data-schema` - JSON schema and validation
+- `@skill data-storage` - Folder organization and file structure
+
+### Data Sources (Top 5)
+- GDACS: https://www.gdacs.org/ (Natural disasters)
+- ProMED: https://www.promedmail.org/ (Disease outbreaks)
+- Reuters/AP/BBC: Tier 1 news agencies
+- Regional News: Tier 2-3 local/regional outlets
+- WHO: https://www.who.int/emergencies/ (Official verification)
 
 ### Distribution Channels
-- WhatsApp: https://chat.whatsapp.com/Iod50oeNYyM2eK6noZzVpr
-- Disaster Event Timeline: [Document link]
+- WhatsApp Group: https://chat.whatsapp.com/Iod50oeNYyM2eK6noZzVpr
+- Disaster Event Timeline: Shared spreadsheet/document
+- JSONL Database: incidents/ directory
+
+### Documentation Files
+- AGENTS.md - This file (monitoring system)
+- DATA-ENGINEERING.md - Data storage and processing guide
+- SYSTEM-COMPLETE.md - System completion summary
+- incidents/README.md - Data access and query guide
 
 ---
 
@@ -717,9 +1115,17 @@ Update on [disaster event/name/type] in [country]
 
 **Created:** 2025-03-11  
 **Last Updated:** 2025-03-11  
-**Version:** 1.0  
+**Version:** 2.0  
 **Status:** Active  
 **Maintained By:** Disaster Awareness Agent Team
+
+**Changes in Version 2.0:**
+- Added complete Data Engineering Subsystem
+- Integrated data-engineer subagent
+- Added data-schema and data-storage skills
+- Documented JSONL storage format
+- Added data workflows and storage structure
+- Updated architecture to show complete system pipeline
 
 ---
 
@@ -728,26 +1134,34 @@ Update on [disaster event/name/type] in [country]
 ### For New Users
 
 1. **Understand the System:**
-   - Review this AGENTS.md file
-   - Read each skill (incident-classifier, disaster-monitor, media-monitor)
+   - Review this AGENTS.md file (complete system overview)
+   - Read DATA-ENGINEERING.md for data storage details
+   - Read each skill file for detailed rules
 
-2. **Use the Agents:**
-   - Request disaster monitoring: `@disaster-incident-reporter`
-   - Request media monitoring: `@media-incident-reporter`
-   - Request report compilation: `@incident-summarizer`
+2. **Monitor Incidents (Subsystem 1):**
+   - Request disaster monitoring: `@disaster-incident-reporter Check GDACS and ProMED`
+   - Request media monitoring: `@media-incident-reporter Scan news for Singapore/SRC mentions`
+   - Request report compilation: `@incident-summarizer Compile daily reports`
 
-3. **Check Reports:**
+3. **Store Incidents (Subsystem 2):**
+   - Request storage: `@data-engineer Store this incident [JSON]`
+   - Incidents automatically organized in incidents/ directory
+   - Stored in JSONL format with indices
+
+4. **Check Reports:**
    - WhatsApp "Incident updates" group for daily summaries
    - Disaster Event Timeline for detailed documentation
+   - Query incidents: `cat incidents/by-date/$(date +%Y-%m-%d)/incidents.jsonl`
 
-4. **Report Issues:**
+5. **Report Issues:**
    - Escalate via WhatsApp immediate flag (🚨)
    - Contact system administrators for system issues
 
 ### For Operators
 
 1. **Daily Operations:**
-   - Ensure agents running on schedule
+   - Ensure monitoring agents running on schedule
+   - Ensure data-engineer ready for storage
    - Monitor WhatsApp for escalations
    - Verify incident classifications
    - Update timeline as needed
@@ -756,10 +1170,19 @@ Update on [disaster event/name/type] in [country]
    - Cross-check reported incidents against sources
    - Verify classification accuracy
    - Ensure format compliance
+   - Monitor data quality scores (target ≥ 0.90)
    - Track false positive/negative rates
 
-3. **Escalation Management:**
+3. **Data Management:**
+   - Monitor incidents/ directory size
+   - Verify metadata.json files updated
+   - Check indices for accuracy
+   - Archive old incidents (> 3 months)
+   - Backup incidents/ directory daily
+
+4. **Escalation Management:**
    - Respond to Level 4 incidents immediately
    - Coordinate with SRC if response needed
    - Update emergency timeline
+   - Check for detected escalations in data-engineer output
    - Brief leadership on major incidents
