@@ -17,6 +17,11 @@ Comprehensive guide for organizing disaster and health incident data in a scalab
 ```
 incidents/
 ├── README.md (overview and access guide)
+├── staging/                          # STAGING - Reporters write raw data here
+│   ├── incidents.jsonl              # Raw incidents from reporters
+│   ├── media.jsonl                   # Raw media coverage
+│   └── metadata.json                 # Staging metadata (counts, timestamps)
+│
 ├── by-date/
 │   ├── 2025-03-11/
 │   │   ├── incidents.jsonl
@@ -88,6 +93,121 @@ incidents/
     ├── date-index.jsonl
     └── query-log.jsonl
 ```
+
+## Staging Area (Workflow Separation)
+
+The staging area separates data collection from data processing, allowing reporters and data engineers to work independently.
+
+### Workflow Overview
+
+```
+┌─────────────────────────────────────────────────────────┐
+│  STAGE 1: Reporters (disaster-incident-reporter,     │
+│            media-incident-reporter)                    │
+│  ↓                                                     │
+│  Write raw data to staging/                           │
+└─────────────────────────────────────────────────────────┘
+                          ↓
+┌─────────────────────────────────────────────────────────┐
+│  STAGE 2: Data Engineer                                │
+│  - Read from staging/                                  │
+│  - Validate, deduplicate, transform                   │
+│  - Write to by-date/, by-country-group/, etc.         │
+│  - Update indices and metadata                         │
+│  - Clear staging files after processing              │
+└─────────────────────────────────────────────────────────┘
+```
+
+### Directory: `incidents/staging/`
+
+**Purpose:** Raw incident data from reporters before validation and processing
+
+### Files in Staging
+
+#### 1. `incidents.jsonl`
+**Purpose:** Raw incidents from reporters
+
+**Content:** Unvalidated incident records
+```
+{"incident_name": "Flood in Aceh", "country": "Indonesia", ...}
+{"incident_name": "Earthquake in Luzon", "country": "Philippines", ...}
+```
+
+**Notes:**
+- May not conform to full data-schema
+- May contain duplicates
+- May have missing optional fields
+- Reporters write here directly
+
+#### 2. `media.jsonl`
+**Purpose:** Raw media coverage from reporters
+
+**Content:** Media articles without full normalization
+```
+{"source": "Reuters", "title": "...", "url": "...", ...}
+```
+
+**Notes:**
+- May not have coverage_id assigned
+- May need linking to existing incidents
+
+#### 3. `metadata.json`
+**Purpose:** Track what's in staging
+
+**Content:**
+```json
+{
+  "staging_date": "2025-03-11",
+  "pending_incidents": 5,
+  "pending_media": 12,
+  "received_from": ["disaster-incident-reporter", "media-incident-reporter"],
+  "received_at": "2025-03-11T08:00:00Z",
+  "processed": false
+}
+```
+
+### Write Operations: Reporters
+
+**Step 1:** Append raw incident
+```bash
+echo '[raw incident JSON]' >> incidents/staging/incidents.jsonl
+```
+
+**Step 2:** Append raw media
+```bash
+echo '[raw media JSON]' >> incidents/staging/media.jsonl
+```
+
+### Process & Clear: Data Engineer
+
+**Step 1:** Read staging
+```bash
+cat incidents/staging/incidents.jsonl
+cat incidents/staging/media.jsonl
+```
+
+**Step 2:** Validate, deduplicate, transform
+
+**Step 3:** Write to final locations
+- Write to by-date/[YYYY-MM-DD]/
+- Write to by-country-group/
+- Write to by-incident-type/
+- Write to by-country/
+
+**Step 4:** Clear staging after successful processing
+```bash
+# Remove or truncate staging files after successful processing
+rm incidents/staging/incidents.jsonl
+rm incidents/staging/media.jsonl
+# Update metadata.json to mark as processed
+```
+
+### Why Use Staging?
+
+1. **Separation of Concerns:** Reporters don't need to know final storage structure
+2. **Validation Gate:** Data engineer can catch issues before they reach main database
+3. **Deduplication:** Can check against existing records before writing
+4. **Error Recovery:** If processing fails, data remains in staging for retry
 
 ## Primary Structure: By Date (Most Important)
 

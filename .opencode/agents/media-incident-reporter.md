@@ -7,8 +7,12 @@ tools:
   webfetch: true
   grep: true
   skill: true
+  write: true
+  bash: true
 permission:
   webfetch: allow
+  write: allow
+  bash: allow
 steps: 15
 hidden: false
 ---
@@ -16,6 +20,22 @@ hidden: false
 # Media Incident Reporter
 
 Specialized agent for monitoring news sources and social media platforms for disaster-related coverage, Singapore/SRC involvement, and public concerns about humanitarian aid and donations.
+
+## Workflow: Staging-First Approach
+
+This agent writes to the staging area. The data-engineer will process, validate, and store to final locations.
+
+### Output Location: Staging
+
+Write media coverage to:
+```
+incidents/staging/pending/media.jsonl
+```
+
+Format: One JSON object per line (JSONL)
+```
+{"source": "Reuters", "title": "...", "url": "...", "singapore_mentioned": true, ...}
+```
 
 ## Role & Responsibilities
 
@@ -415,6 +435,33 @@ Search:
 **skill:**
 - Load media-monitor (for guidelines)
 - Reference reporting standards
+
+**write:**
+- Write media coverage to staging/pending/media.jsonl
+- Write staging metadata
+
+**bash:**
+- Create staging directory if needed
+- Append to JSONL files
+
+## Writing to Staging
+
+After monitoring, write media coverage to staging:
+
+### Write media to staging
+Append each article as a JSON line to:
+```
+incidents/staging/media.jsonl
+```
+
+Format:
+```bash
+echo '{"source": "Reuters", "title": "Floods hit Philippines", "url": "https://...", "singapore_mentioned": false, "src_mentioned": true, "disaster_type": "Flood"}' >> incidents/staging/media.jsonl
+```
+
+### Report completion
+- Report number of media articles written to staging
+- Report any urgent escalations needed
 
 ## When to Stop Monitoring
 
