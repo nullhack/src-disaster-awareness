@@ -26,7 +26,7 @@ logger = logging.getLogger(__name__)
 STAGING_DIR = Path("incidents/staging")
 STAGING_INCIDENTS = STAGING_DIR / "incidents.jsonl"
 STAGING_MEDIA = STAGING_DIR / "media.jsonl"
-DEFAULT_MODEL = "claude-sonnet-4-20250514"
+DEFAULT_MODEL = "opencode/minimax-m2.5-free"
 
 
 class DisasterMonitor:

@@ -379,7 +379,7 @@ echo '{"incident_name": "Flood in Aceh", "country": "Indonesia", "country_group"
 
 - After comprehensive scan of all 5 data sources (GDACS, ProMED, ReliefWeb, HealthMap, WHO)
 - When all new incidents processed and classified
-- When all incidents written to staging/pending/incidents.jsonl
+- When all incidents written to staging/incidents.jsonl
 - When quality checks completed on all reports
 
 ## When to Escalate to Next Step
