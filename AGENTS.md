@@ -17,16 +17,26 @@ Together they create a complete pipeline from data source → monitoring → ana
 DATA SOURCES (5 platforms)
 ├── GDACS (Natural Disasters, real-time)
 ├── ProMED-mail (Disease Outbreaks, daily)
-├── Reuters/AP/BBC (Tier 1 news)
-├── Regional News (Tier 2-3)
-└── WHO (Official verification)
+├── ReliefWeb (Humanitarian news)
+├── HealthMap (Disease surveillance)
+└── WHO (Official health emergencies)
 
         ↓
 
 MONITORING SUBSYSTEM
-├─ disaster-incident-reporter (GDACS + ProMED)
-├─ media-incident-reporter (News + Social Media)
+├─ disaster-incident-reporter → writes to staging/
+├─ media-incident-reporter → writes to staging/
 └─ incident-summarizer (Report compilation)
+
+        ↓
+
+STAGING AREA
+└─ incidents/staging/ (pending raw data)
+
+        ↓
+
+DATA ENGINEERING SUBSYSTEM
+└─ data-engineer (reads staging, validates, deduplicates, stores)
 
         ↓
 
@@ -55,6 +65,9 @@ SUPPORTING SKILLS (Schema & Storage)
         ↓
 
 JSONL INCIDENT DATABASE
+├─ incidents/staging/                       (REPORTING - Raw data from reporters)
+│   ├─ incidents.jsonl
+│   └─ media.jsonl
 ├─ incidents/by-date/[YYYY-MM-DD]/           (PRIMARY)
 ├─ incidents/by-country-group/[A|B|C]/[MM]/  (SECONDARY)
 ├─ incidents/by-incident-type/[type]/        (TERTIARY)
@@ -87,7 +100,7 @@ JSONL INCIDENT DATABASE
 - Data structure for storing classifications
 
 **Used By:**
-- disaster-incident-reporter (when classifying GDACS/ProMED incidents)
+- disaster-incident-reporter (when classifying incidents from all 5 sources)
 - media-incident-reporter (when determining reporting threshold)
 
 ---
@@ -137,22 +150,28 @@ JSONL INCIDENT DATABASE
 #### Subagent: disaster-incident-reporter
 **File:** `.opencode/agents/disaster-incident-reporter.md`
 
-**Purpose:** Monitor GDACS and ProMED for disaster and disease incidents, classify them, and generate formatted reports.
+**Purpose:** Monitor all 5 data sources for disaster and disease incidents, classify them, and generate formatted reports.
 
 **Responsibilities:**
 1. Monitor GDACS for real-time natural disaster alerts
 2. Monitor ProMED-mail for emerging disease outbreaks
-3. Classify incidents using incident-classifier skill rules
-4. Format reports using disaster-monitor skill standards
-5. Determine reporting priority
-6. Output formatted incidents for incident-summarizer
+3. Monitor ReliefWeb for humanitarian news
+4. Monitor HealthMap for disease surveillance
+5. Monitor WHO for official health emergencies
+6. Classify incidents using incident-classifier skill rules
+7. Format reports using disaster-monitor skill standards
+8. Determine reporting priority
+9. Output formatted incidents for incident-summarizer
 
 **Data Sources:**
 - **GDACS** (https://www.gdacs.org/) - Real-time natural disasters
 - **ProMED-mail** (https://www.promedmail.org/) - Disease outbreak intelligence
+- **ReliefWeb** (https://reliefweb.int/) - Humanitarian news
+- **HealthMap** (https://www.healthmap.org/) - Disease surveillance
+- **WHO** (https://www.who.int/emergencies/) - Official health emergencies
 
 **Workflow:**
-1. Retrieve latest data from GDACS and ProMED (5-10 mins)
+1. Retrieve latest data from all 5 sources (5-10 mins)
 2. Apply incident-classifier rules (5-10 mins)
 3. Format using disaster-monitor standards (5-10 mins)
 4. Quality checks (2-5 mins)
@@ -169,7 +188,7 @@ Structured incident data with:
 - Reporting action (INCLUDE/MONITOR/EXCLUDE)
 
 **Tools Used:**
-- `webfetch` - Retrieve GDACS/ProMED data
+- `webfetch` - Retrieve data from all 5 sources
 - `grep` - Search incident databases
 - `skill` - Load incident-classifier and disaster-monitor
 
@@ -848,6 +867,27 @@ Timeline Updated
 - **Access:** Website posts, archive search
 - **Key Data:** Disease, location, cases, spread pattern
 
+### With ReliefWeb
+- **URL:** https://reliefweb.int/
+- **Data Type:** Humanitarian news and disaster reports
+- **Update Frequency:** Continuous
+- **Access:** Website, RSS feeds
+- **Key Data:** Humanitarian impact, relief operations, disaster details
+
+### With HealthMap
+- **URL:** https://www.healthmap.org/
+- **Data Type:** Disease outbreak tracking
+- **Update Frequency:** Real-time
+- **Access:** Website, API
+- **Key Data:** Outbreak locations, case counts, alert levels
+
+### With WHO
+- **URL:** https://www.who.int/emergencies/
+- **Data Type:** Official health emergencies
+- **Update Frequency:** As needed
+- **Access:** Website, press releases
+- **Key Data:** Emergency declarations, official counts, response recommendations
+
 ### With News Sources
 - **Tier 1:** Reuters, AP, BBC, AFP, Al Jazeera
 - **Tier 2:** Channel NewsAsia, Straits Times, The Star, Antara, Bangkok Post
@@ -1094,9 +1134,9 @@ Update on [disaster event/name/type] in [country]
 ### Data Sources (Top 5)
 - GDACS: https://www.gdacs.org/ (Natural disasters)
 - ProMED: https://www.promedmail.org/ (Disease outbreaks)
-- Reuters/AP/BBC: Tier 1 news agencies
-- Regional News: Tier 2-3 local/regional outlets
-- WHO: https://www.who.int/emergencies/ (Official verification)
+- ReliefWeb: https://reliefweb.int/ (Humanitarian news)
+- HealthMap: https://www.healthmap.org/ (Disease surveillance)
+- WHO: https://www.who.int/emergencies/ (Official health emergencies)
 
 ### Distribution Channels
 - WhatsApp Group: https://chat.whatsapp.com/Iod50oeNYyM2eK6noZzVpr
@@ -1139,7 +1179,7 @@ Update on [disaster event/name/type] in [country]
    - Read each skill file for detailed rules
 
 2. **Monitor Incidents (Subsystem 1):**
-   - Request disaster monitoring: `@disaster-incident-reporter Check GDACS and ProMED`
+   - Request disaster monitoring: `@disaster-incident-reporter Check all 5 data sources (GDACS, ProMED, ReliefWeb, HealthMap, WHO)`
    - Request media monitoring: `@media-incident-reporter Scan news for Singapore/SRC mentions`
    - Request report compilation: `@incident-summarizer Compile daily reports`
 

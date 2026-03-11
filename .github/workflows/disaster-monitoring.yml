@@ -22,9 +22,13 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
 
-      - name: Run monitoring and storage
-        run: |
-          opencode run "Execute the complete disaster monitoring and storage cycle in ONE flow. First, use @disaster-incident-reporter to check these 5 data sources: GDACS (https://www.gdacs.org/), ProMED (https://www.promedmail.org/), ReliefWeb (https://reliefweb.int/), HealthMap (https://www.healthmap.org/), WHO (https://www.who.int/emergencies/). Second, use @skill incident-classifier to classify all incidents by country group (A/B/C), severity level (1-4), and priority (HIGH/MEDIUM/LOW). Third, use @skill disaster-monitor and @skill media-monitor to format all reports. Fourth, use @incident-summarizer to compile all incidents. Fifth, use @data-engineer to validate, transform, and store all incidents in JSONL format in incidents/by-date/ directory, update indices and metadata. IMPORTANT: Store ALL data in this single flow. Report: number of incidents found, number stored, storage locations, any escalations."
+      - name: Install dependencies
+        run: pip install fire
+
+      - name: Run full monitoring cycle
+        env:
+          EXA_ENABLED: 1
+        run: python -m disaster_monitor.cli full-cycle
 
       - name: Check for changes
         id: git-status
