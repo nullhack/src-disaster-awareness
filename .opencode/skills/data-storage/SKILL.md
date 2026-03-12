@@ -1,751 +1,612 @@
 ---
 name: data-storage
-description: Folder organization, directory structure, and file management conventions for disaster incident data storage
-compatibility: "1.0.0+"
+description: Efficient, non-duplicating data storage with date-based primary storage and reference tracking
+compatibility: "2.0.0+"
 metadata:
   category: data-engineering
-  difficulty: advanced
+  difficulty: intermediate
   type: data-storage
 ---
 
-# Data Storage Skill
+# Data Storage Skill - Refactored (v2.0)
 
-Comprehensive guide for organizing disaster and health incident data in a scalable, queryable directory structure.
+Efficient, non-duplicating data storage system using date-based primary storage with reference tracking and tag-based categorization.
 
-## Directory Structure Overview
+## Core Philosophy
+
+**NO DATA DUPLICATION** - Store each incident JSON record exactly once in date folders. Use lightweight reference files and JSON tags for categorization instead of duplicating entire records across multiple folder hierarchies.
+
+## New Directory Structure
 
 ```
 incidents/
-├── README.md (overview and access guide)
-├── staging/                          # STAGING - Reporters write raw data here
-│   ├── incidents.jsonl              # Raw incidents from reporters
-│   ├── media.jsonl                   # Raw media coverage
-│   └── metadata.json                 # Staging metadata (counts, timestamps)
+├── README.md (access guide and examples)
+├── staging/                          # STAGING - Raw data from reporters
+│   ├── incidents.jsonl
+│   ├── media.jsonl
+│   └── metadata.json
 │
-├── by-date/
+├── by-date/                          # PRIMARY STORAGE - All data stored here ONCE
 │   ├── 2025-03-11/
-│   │   ├── incidents.jsonl
+│   │   ├── incidents.jsonl          # Single source of truth
 │   │   ├── media-coverage.jsonl
 │   │   └── metadata.json
 │   ├── 2025-03-10/
-│   │   ├── incidents.jsonl
-│   │   ├── media-coverage.jsonl
-│   │   └── metadata.json
 │   └── [YYYY-MM-DD]/
 │
-├── by-country-group/
-│   ├── group-a/
-│   │   ├── 2025-03/
-│   │   │   ├── incidents.jsonl
-│   │   │   └── metadata.json
-│   │   ├── 2025-02/
-│   │   └── [YYYY-MM]/
-│   ├── group-b/
-│   │   ├── 2025-03/
-│   │   └── [YYYY-MM]/
-│   └── group-c/
-│       └── [YYYY-MM]/
+├── references/                       # LIGHTWEIGHT REFERENCE TRACKING
+│   ├── active/
+│   │   ├── by-country-group.jsonl
+│   │   ├── by-incident-type.jsonl
+│   │   ├── by-country.jsonl
+│   │   └── active-summary.json
+│   ├── inactive/
+│   │   ├── by-country-group.jsonl
+│   │   ├── by-incident-type.jsonl
+│   │   ├── by-country.jsonl
+│   │   └── inactive-summary.json
+│   └── all-incidents-index.jsonl    # Master index of all incidents
 │
-├── by-incident-type/
-│   ├── earthquake/
-│   │   ├── active/
-│   │   │   └── incidents.jsonl
-│   │   ├── resolved/
-│   │   │   └── incidents.jsonl
-│   │   └── metadata.json
-│   ├── flood/
-│   ├── cyclone/
-│   ├── disease/
-│   ├── wildfire/
-│   └── [type]/
+├── queries/                          # QUERY CACHE AND LOGS
+│   ├── cached-results/
+│   └── query-log.jsonl
 │
-├── by-country/
-│   ├── indonesia/
-│   │   ├── active-incidents.jsonl
-│   │   ├── resolved-incidents.jsonl
-│   │   └── metadata.json
-│   ├── philippines/
-│   ├── malaysia/
-│   └── [country]/
-│
-├── media-coverage/
-│   ├── 2025-03/
-│   │   ├── coverage.jsonl
-│   │   ├── singapore-mentions.jsonl
-│   │   ├── src-mentions.jsonl
-│   │   └── misinformation.jsonl
-│   └── [YYYY-MM]/
-│
-├── escalations/
-│   ├── 2025-03-11/
-│   │   └── escalations.jsonl
-│   └── [YYYY-MM-DD]/
-│
-├── archive/
-│   ├── 2024/
-│   │   ├── resolved-incidents.jsonl
-│   │   └── media-coverage.jsonl
-│   └── [YYYY]/
-│
-└── indices/
-    ├── incident-index.jsonl
-    ├── country-index.jsonl
-    ├── date-index.jsonl
-    └── query-log.jsonl
+└── archive/                          # LONG-TERM STORAGE
+    ├── 2024/
+    │   ├── resolved-incidents.jsonl
+    │   └── media-coverage.jsonl
+    └── [YYYY]/
 ```
 
-## Staging Area (Workflow Separation)
+## Primary Storage: by-date/ (Single Source of Truth)
 
-The staging area separates data collection from data processing, allowing reporters and data engineers to work independently.
+All incident data is stored **exactly once** in date-based folders.
 
-### Workflow Overview
+### Storage Format
 
-```
-┌─────────────────────────────────────────────────────────┐
-│  STAGE 1: Reporters (disaster-incident-reporter,     │
-│            media-incident-reporter)                    │
-│  ↓                                                     │
-│  Write raw data to staging/                           │
-└─────────────────────────────────────────────────────────┘
-                          ↓
-┌─────────────────────────────────────────────────────────┐
-│  STAGE 2: Data Engineer                                │
-│  - Read from staging/                                  │
-│  - Validate, deduplicate, transform                   │
-│  - Write to by-date/, by-country-group/, etc.         │
-│  - Update indices and metadata                         │
-│  - Clear staging files after processing              │
-└─────────────────────────────────────────────────────────┘
-```
+**Location:** `incidents/by-date/[YYYY-MM-DD]/incidents.jsonl`
 
-### Directory: `incidents/staging/`
+**Common fields stored as formal JSON fields (NOT in tags):**
 
-**Purpose:** Raw incident data from reporters before validation and processing
-
-### Files in Staging
-
-#### 1. `incidents.jsonl`
-**Purpose:** Raw incidents from reporters
-
-**Content:** Unvalidated incident records
-```
-{"incident_name": "Flood in Aceh", "country": "Indonesia", ...}
-{"incident_name": "Earthquake in Luzon", "country": "Philippines", ...}
-```
-
-**Notes:**
-- May not conform to full data-schema
-- May contain duplicates
-- May have missing optional fields
-- Reporters write here directly
-
-#### 2. `media.jsonl`
-**Purpose:** Raw media coverage from reporters
-
-**Content:** Media articles without full normalization
-```
-{"source": "Reuters", "title": "...", "url": "...", ...}
-```
-
-**Notes:**
-- May not have coverage_id assigned
-- May need linking to existing incidents
-
-#### 3. `metadata.json`
-**Purpose:** Track what's in staging
-
-**Content:**
-```json
-{
-  "staging_date": "2025-03-11",
-  "pending_incidents": 5,
-  "pending_media": 12,
-  "received_from": ["disaster-incident-reporter", "media-incident-reporter"],
-  "received_at": "2025-03-11T08:00:00Z",
-  "processed": false
-}
-```
-
-### Write Operations: Reporters
-
-**Step 1:** Append raw incident
-```bash
-echo '[raw incident JSON]' >> incidents/staging/incidents.jsonl
-```
-
-**Step 2:** Append raw media
-```bash
-echo '[raw media JSON]' >> incidents/staging/media.jsonl
-```
-
-### Process & Clear: Data Engineer
-
-**Step 1:** Read staging
-```bash
-cat incidents/staging/incidents.jsonl
-cat incidents/staging/media.jsonl
-```
-
-**Step 2:** Validate, deduplicate, transform
-
-**Step 3:** Write to final locations
-- Write to by-date/[YYYY-MM-DD]/
-- Write to by-country-group/
-- Write to by-incident-type/
-- Write to by-country/
-
-**Step 4:** Clear staging after successful processing
-```bash
-# Remove or truncate staging files after successful processing
-rm incidents/staging/incidents.jsonl
-rm incidents/staging/media.jsonl
-# Update metadata.json to mark as processed
-```
-
-### Why Use Staging?
-
-1. **Separation of Concerns:** Reporters don't need to know final storage structure
-2. **Validation Gate:** Data engineer can catch issues before they reach main database
-3. **Deduplication:** Can check against existing records before writing
-4. **Error Recovery:** If processing fails, data remains in staging for retry
-
-## Primary Structure: By Date (Most Important)
-
-**Directory:** `incidents/by-date/[YYYY-MM-DD]/`
-
-This is the primary working directory where all new incidents are written.
-
-### Files in Each Date Directory
-
-#### 1. `incidents.jsonl`
-**Purpose:** All new incident records created/updated on this date
-
-**Content:** One incident JSON object per line
-```
-{"incident_id": "20250311-ID-EQ", "incident_name": "...", ...}
-{"incident_id": "20250311-PH-FL", "incident_name": "...", ...}
-{"incident_id": "20250311-TH-DI", "incident_name": "...", ...}
-```
-
-**Naming:** `incidents.jsonl`
-**Encoding:** UTF-8
-**One record per line:** Yes
-**Rotation:** Daily (new file each day)
-
-#### 2. `media-coverage.jsonl`
-**Purpose:** All media monitoring records for this date
-
-**Content:** Media coverage records
-```
-{"coverage_id": "C001", "incident_id": "20250311-ID-EQ", "source": "Reuters", ...}
-{"coverage_id": "C002", "incident_id": "20250311-PH-FL", "source": "AJazeera", ...}
-```
-
-**When to include:** All media monitoring results
-**Rotation:** Daily
-
-#### 3. `metadata.json`
-**Purpose:** Summary statistics for the day
-
-**Content:**
-```json
-{
-  "date": "2025-03-11",
-  "total_incidents": 5,
-  "total_media_coverage": 12,
-  "incidents_by_level": {
-    "1": 1,
-    "2": 2,
-    "3": 1,
-    "4": 1
-  },
-  "incidents_by_group": {
-    "A": 4,
-    "B": 1,
-    "C": 0
-  },
-  "incidents_by_type": {
-    "Earthquake": 1,
-    "Flood": 2,
-    "Disease": 1,
-    "Cyclone": 1
-  },
-  "escalations": 1,
-  "src_mentioned_count": 2,
-  "singapore_mentioned_count": 3,
-  "generated_timestamp": "2025-03-11T23:59:59Z"
-}
-```
-
-**Update frequency:** Once per day (end of day)
-**Purpose:** Quick stats without parsing JSONL files
-
-## Secondary Structure: By Country Group (Monthly)
-
-**Directory:** `incidents/by-country-group/[group-a|group-b|group-c]/[YYYY-MM]/`
-
-Organized for efficient querying by geographic region.
-
-### Files by Country Group
-```
-group-a/2025-03/
-├── incidents.jsonl (all Group A incidents for March 2025)
-├── active-incidents.jsonl (subset: status = Active)
-├── escalations.jsonl (incidents that escalated)
-└── metadata.json (monthly summary)
-
-group-b/2025-03/
-├── incidents.jsonl
-├── metadata.json
-└── [same structure]
-
-group-c/2025-03/
-├── incidents.jsonl
-└── metadata.json
-```
-
-**Purpose:** 
-- Quick filtering by region
-- Regional analysis
-- Group-specific reports
-- Monthly aggregation
-
-**Update frequency:** Updated when incidents added to by-date/
-**File rotation:** Monthly (new file each month)
-
-## Tertiary Structure: By Incident Type
-
-**Directory:** `incidents/by-incident-type/[type]/[active|resolved]/`
-
-For categorizing by disaster type.
-
-### Files by Incident Type
-```
-earthquake/
-├── active/
-│   └── incidents.jsonl (active earthquakes)
-├── resolved/
-│   └── incidents.jsonl (resolved earthquakes)
-└── metadata.json
-
-flood/
-├── active/incidents.jsonl
-├── resolved/incidents.jsonl
-└── metadata.json
-
-cyclone/
-disease/
-wildfire/
-volcano/
-drought/
-landslide/
-tsunami/
-conflict/
-```
-
-**Purpose:**
-- Type-specific analysis
-- Active vs. resolved filtering
-- Incident type trends
-
-**Update frequency:** Updated when incidents added
-
-## Country-Specific Storage
-
-**Directory:** `incidents/by-country/[country-name]/`
-
-### Files by Country
-```
-indonesia/
-├── active-incidents.jsonl
-├── resolved-incidents.jsonl
-├── media-coverage.jsonl
-└── metadata.json
-
-philippines/
-├── active-incidents.jsonl
-├── resolved-incidents.jsonl
-└── metadata.json
-
-[country]/
-```
-
-**Purpose:**
-- Country-focused analysis
-- SRC operations tracking
-- Regional coordination
-- Public reports
-
-## Media Coverage Storage
-
-**Directory:** `incidents/media-coverage/[YYYY-MM]/`
-
-Separate organization for media monitoring results.
-
-### Media Files
-```
-2025-03/
-├── coverage.jsonl (all media coverage)
-├── singapore-mentions.jsonl (filtered: singapore_mentioned = true)
-├── src-mentions.jsonl (filtered: src_mentioned = true)
-├── donation-concerns.jsonl (filtered: donation_concerns = true)
-├── misinformation.jsonl (filtered: misinformation_detected = true)
-└── metadata.json
-```
-
-**Purpose:**
-- Media analysis and trends
-- Singapore/SRC mention tracking
-- Misinformation identification
-- Public sentiment analysis
-
-**Update frequency:** Updated daily
-
-## Escalation Tracking
-
-**Directory:** `incidents/escalations/[YYYY-MM-DD]/`
-
-Tracks all incidents that escalated during the day.
-
-### Files
-```
-2025-03-11/
-├── escalations.jsonl
-└── summary.json
-```
-
-**Content of escalations.jsonl:**
 ```json
 {
   "incident_id": "20250311-ID-FL",
-  "incident_name": "Floods in Aceh",
-  "escalation_date": "2025-03-11T14:30:00Z",
-  "previous_level": 2,
-  "new_level": 3,
-  "reason": "Death toll increased from 5 to 25",
-  "src_notification": true
+  "incident_name": "Floods in Aceh, Indonesia",
+  "created_date": "2025-03-11T10:15:00Z",
+  "updated_date": "2025-03-11T14:30:00Z",
+  "status": "Active",
+  "country": "Indonesia",
+  "country_group": "A",
+  "incident_type": "Flood",
+  "incident_level": 3,
+  "priority": "HIGH",
+  
+  // OPTIONAL: Only special tags go here (not common fields)
+  // Status determined by folder: active/ = active, inactive/ = resolved
+  "tags": [
+    "escalation-risk",  // special flag - only include when applicable
+    "src-involved"     // optional - only include when applicable
+  ],
+  
+  // Full incident data continues...
+  "location": {...},
+  "impact": {...},
+  "sources": [...]
 }
 ```
 
-**Purpose:**
-- Emergency response tracking
-- SRC alert history
-- Escalation analysis
-- Pattern identification
+## Reference Tracking System
 
-## Archive Structure
+Instead of duplicating data, use lightweight reference files that point to the original data.
 
-**Directory:** `incidents/archive/[YYYY]/`
+### Active Incidents: references/active/
 
-For resolved incidents older than 3 months.
-
-### Files
-```
-2024/
-├── resolved-incidents.jsonl (all resolved from 2024)
-├── media-coverage.jsonl (all media coverage from 2024)
-└── summary.json
-
-2023/
-├── resolved-incidents.jsonl
-└── summary.json
-```
-
-**Purpose:**
-- Historical analysis
-- Long-term trends
-- Reduced active working directory size
-- Compliance/audit trail
-
-**Archive strategy:**
-- Move when incident status = Resolved for 3+ months
-- Compress if file > 50MB
-- Keep all data (never delete)
-- Index for searchability
-
-## Index Files
-
-**Directory:** `incidents/indices/`
-
-Fast lookup and query support.
-
-### Index Files
-
-#### 1. `incident-index.jsonl`
+#### 1. by-country-group.jsonl
 ```json
-{"incident_id": "20250311-ID-EQ", "location": "by-date/2025-03-11", "status": "Active"}
-{"incident_id": "20250311-PH-FL", "location": "by-date/2025-03-11", "status": "Active"}
+{"incident_id": "20250311-ID-FL", "file": "by-date/2025-03-11/incidents.jsonl", "line": 1, "country_group": "A", "priority": "HIGH", "type": "Flood"}
+{"incident_id": "20250311-PH-EQ", "file": "by-date/2025-03-11/incidents.jsonl", "line": 2, "country_group": "A", "priority": "MEDIUM", "type": "Earthquake"}
+{"incident_id": "20250310-TH-DI", "file": "by-date/2025-03-10/incidents.jsonl", "line": 3, "country_group": "A", "priority": "MEDIUM", "type": "Disease"}
 ```
 
-#### 2. `country-index.jsonl`
+#### 2. by-incident-type.jsonl
 ```json
-{"country": "Indonesia", "country_group": "A", "file_count": 45, "last_updated": "2025-03-11T14:30:00Z"}
-{"country": "Philippines", "country_group": "A", "file_count": 32, "last_updated": "2025-03-11T10:15:00Z"}
+{"incident_id": "20250311-ID-FL", "file": "by-date/2025-03-11/incidents.jsonl", "line": 1, "type": "Flood", "country": "Indonesia", "level": 3}
+{"incident_id": "20250311-PH-EQ", "file": "by-date/2025-03-11/incidents.jsonl", "line": 2, "type": "Earthquake", "country": "Philippines", "level": 2}
+{"incident_id": "20250310-TH-DI", "file": "by-date/2025-03-10/incidents.jsonl", "line": 3, "type": "Disease", "country": "Thailand", "level": 1}
 ```
 
-#### 3. `date-index.jsonl`
+#### 3. by-country.jsonl
 ```json
-{"date": "2025-03-11", "incident_count": 5, "last_updated": "2025-03-11T23:59:59Z"}
-{"date": "2025-03-10", "incident_count": 8, "last_updated": "2025-03-10T23:59:59Z"}
+{"incident_id": "20250311-ID-FL", "file": "by-date/2025-03-11/incidents.jsonl", "line": 1, "country": "Indonesia", "type": "Flood", "level": 3}
+{"incident_id": "20250311-PH-EQ", "file": "by-date/2025-03-11/incidents.jsonl", "line": 2, "country": "Philippines", "type": "Earthquake", "level": 2}
+{"incident_id": "20250310-TH-DI", "file": "by-date/2025-03-10/incidents.jsonl", "line": 3, "country": "Thailand", "type": "Disease", "level": 1}
 ```
 
-#### 4. `query-log.jsonl`
+#### 4. active-summary.json
 ```json
-{"timestamp": "2025-03-11T14:30:00Z", "query": "country=Indonesia AND level>=3", "results": 12}
-{"timestamp": "2025-03-11T14:25:00Z", "query": "date=2025-03-11", "results": 5}
+{
+  "last_updated": "2025-03-11T18:00:00Z",
+  "total_active": 15,
+  "by_country_group": {"A": 12, "B": 2, "C": 1},
+  "by_type": {"Flood": 5, "Earthquake": 3, "Disease": 4, "Cyclone": 2, "Other": 1},
+  "by_priority": {"HIGH": 3, "MEDIUM": 8, "LOW": 4},
+  "escalation_risk": 4
+}
 ```
 
-**Purpose:**
-- Fast lookups without scanning all files
-- Query performance tracking
-- Data discovery
-- Change auditing
+### Inactive Incidents: references/inactive/
 
-## File Naming Conventions
+Same structure as active/, but for resolved/monitoring incidents:
 
-### JSONL Files
-```
-[scope]-[type].[status].jsonl
-```
+- `by-country-group.jsonl`
+- `by-incident-type.jsonl` 
+- `by-country.jsonl`
+- `inactive-summary.json`
 
-**Examples:**
-- `incidents.jsonl` - All incidents for scope
-- `active-incidents.jsonl` - Filtered by status
-- `media-coverage.jsonl` - Media records
-- `escalations.jsonl` - Escalated incidents
-- `singapore-mentions.jsonl` - Filtered by relevance
+### Master Index: all-incidents-index.jsonl
 
-### Metadata Files
-```
-metadata.json (always)
-summary.json (for escalations/archives)
+Complete index of every incident ever stored:
+
+```json
+{"incident_id": "20250311-ID-FL", "date": "2025-03-11", "file": "by-date/2025-03-11/incidents.jsonl", "line": 1, "status": "Active", "country_group": "A", "type": "Flood", "priority": "HIGH"}
+{"incident_id": "20250311-PH-EQ", "date": "2025-03-11", "file": "by-date/2025-03-11/incidents.jsonl", "line": 2, "status": "Active", "country_group": "A", "type": "Earthquake", "priority": "MEDIUM"}
+{"incident_id": "20250310-BD-FL", "date": "2025-03-10", "file": "by-date/2025-03-10/incidents.jsonl", "line": 5, "status": "Resolved", "country_group": "A", "type": "Flood", "priority": "LOW"}
 ```
 
-### Directory Naming
-```
-[YYYY-MM-DD] - for daily directories
-[YYYY-MM] - for monthly directories
-[YYYY] - for yearly directories
-[group-a|group-b|group-c] - for geographic groups
-[country-name] (lowercase, spaces as hyphens) - for countries
-[incident-type] (lowercase) - for types
-```
+## Storage Operations
 
-## Write Operations
+### 1. Store New Incident
 
-### Adding New Incident
-
-**Step 1:** Check date
-- Get current date in UTC (YYYY-MM-DD)
-- Create directory if doesn't exist: `incidents/by-date/[YYYY-MM-DD]/`
-
-**Step 2:** Append to incidents.jsonl
+**Step 1:** Store in primary location
 ```bash
-echo '{...incident JSON...}' >> incidents/by-date/[YYYY-MM-DD]/incidents.jsonl
+echo '{incident_json}' >> incidents/by-date/2025-03-11/incidents.jsonl
 ```
 
-**Step 3:** Update related files
-- Append to `by-country-group/[group]/[YYYY-MM]/incidents.jsonl`
-- Append to `by-incident-type/[type]/[active|resolved]/incidents.jsonl`
-- Append to `by-country/[country]/incidents.jsonl`
-- Update indices in `indices/incident-index.jsonl`
-
-**Step 4:** Update metadata
-- Increment counters in `by-date/[YYYY-MM-DD]/metadata.json`
-- Update `by-country-group/[group]/[YYYY-MM]/metadata.json`
-
-### Updating Existing Incident
-
-**Option A: In-place Update**
-- Search incident ID in relevant files
-- Replace entire JSON object line
-- Update `metadata.json` if status changes
-
-**Option B: Append New Version (Recommended)**
-- Keep old entry for audit trail
-- Append new entry with `updated_date`
-- Use incident ID to deduplicate on query
-
-### Adding Media Coverage
-
-**Step 1:** Append to media storage
-```
-incidents/media-coverage/[YYYY-MM]/coverage.jsonl
-```
-
-**Step 2:** Append to filtered files
-- If singapore_mentioned: append to `singapore-mentions.jsonl`
-- If src_mentioned: append to `src-mentions.jsonl`
-- If donation_concerns: append to `donation-concerns.jsonl`
-- If misinformation: append to `misinformation.jsonl`
-
-**Step 3:** Link to incident
-- Add coverage_id to related incident's `media_coverage.coverage_articles[]`
-
-## Read Operations
-
-### Query: Find Incidents by Date
-```
-Read: incidents/by-date/[YYYY-MM-DD]/incidents.jsonl
-Filter in memory or with jq
-```
-
-### Query: Find All Active Group A Incidents
-```
-Read: incidents/by-country-group/group-a/[YYYY-MM]/active-incidents.jsonl
-No filtering needed
-```
-
-### Query: Find Earthquake by Country
-```
-Read: incidents/by-incident-type/earthquake/active/incidents.jsonl
-Filter by country field
-```
-
-### Query: Find SRC Mentions This Month
-```
-Read: incidents/media-coverage/[YYYY-MM]/src-mentions.jsonl
-No filtering needed
-```
-
-### Query: Quick Stats for Date
-```
-Read: incidents/by-date/[YYYY-MM-DD]/metadata.json
-Instant results (no scanning needed)
-```
-
-## File Size Management
-
-### Target File Sizes
-- Daily JSONL files: 1-10 MB (typically)
-- Monthly JSONL files: 50-500 MB
-- Archive JSONL files: Compress if > 100 MB
-
-### Compression Strategy
-```
-[File size tracking]
-< 10 MB:   Keep as-is (JSONL)
-10-50 MB:  Keep as-is (JSONL)
-50-100 MB: Keep as-is, monitor
-> 100 MB:  Compress with gzip
-           Keep both .jsonl and .jsonl.gz
-           Use .gz for archive access
-```
-
-### Rotation Strategy
-- Daily: Create new file each day
-- Monthly: Archive previous month to by-country-group/[group]/[YYYY-MM]/ and year archive
-- Quarterly: Evaluate compression needs
-- Annually: Move to archive/ directory
-
-## Data Integrity
-
-### Backup Strategy
-- Daily backup of `by-date/` directories
-- Weekly backup of `by-country-group/`
-- Monthly backup of entire incidents/ tree
-- Retain 3 months of daily backups
-- Retain 1 year of monthly backups
-
-### Validation on Write
-- Validate JSON schema before writing
-- Check required fields present
-- Verify incident_id uniqueness in daily file
-- Ensure valid timestamps
-- Validate country codes
-
-### Validation on Read
-- Verify file format (JSONL)
-- Check for corrupted records
-- Log errors but continue processing
-- Report data quality issues
-
-## Access Patterns
-
-### Fast Path (Recommended)
-1. Check `indices/incident-index.jsonl` for location
-2. Read specific date file
-3. Filter in memory or with jq
-
-### Analytical Path
-1. Aggregate by-country-group monthly files
-2. Use metadata.json for quick stats
-3. Run batch queries across archived data
-
-### Historical Path
-1. Read from archive/ for past incidents
-2. Decompress if .gz
-3. Query as needed
-
-## Performance Optimization
-
-### Index Strategy
-Keep indices fresh:
-```
-Update incident-index.jsonl daily
-Update country-index.jsonl weekly
-Update date-index.jsonl daily
-Log all queries in query-log.jsonl
-```
-
-### Caching Strategy
-- Cache metadata.json in memory (< 1 KB per date)
-- Cache country lists in memory
-- Pre-load incident types list
-- Cache query results for common patterns
-
-### Partitioning
-- By date: 365 daily files per year
-- By group + month: 36 files per year (3 groups × 12 months)
-- By type: 10 files typically
-- Total files manageable for fast lookup
-
-## Tools for Data Access
-
-### Command Line Tools
+**Step 2:** Add reference if active
 ```bash
-# Read today's incidents
-tail -f incidents/by-date/$(date +%Y-%m-%d)/incidents.jsonl
-
-# Count incidents by country group
-grep '"country_group": "A"' incidents/by-country-group/group-a/*/incidents.jsonl | wc -l
-
-# Filter by incident level
-jq 'select(.classification.incident_level >= 3)' incidents/by-date/2025-03-11/incidents.jsonl
-
-# Find specific incident
-grep '"incident_id": "20250311-ID-EQ"' incidents/by-date/2025-03-11/incidents.jsonl
+echo '{"incident_id":"20250311-ID-FL", "file":"by-date/2025-03-11/incidents.jsonl", "line":1, "country_group":"A", "type":"Flood", "priority":"HIGH"}' >> incidents/references/active/by-country-group.jsonl
+echo '{"incident_id":"20250311-ID-FL", "file":"by-date/2025-03-11/incidents.jsonl", "line":1, "type":"Flood", "country":"Indonesia", "level":3}' >> incidents/references/active/by-incident-type.jsonl
+echo '{"incident_id":"20250311-ID-FL", "file":"by-date/2025-03-11/incidents.jsonl", "line":1, "country":"Indonesia", "type":"Flood", "level":3}' >> incidents/references/active/by-country.jsonl
 ```
 
-### Python Tools
-```python
-import jsonlines
-import os
-from datetime import datetime
-
-# Read today's incidents
-date = datetime.now().strftime('%Y-%m-%d')
-with jsonlines.open(f'incidents/by-date/{date}/incidents.jsonl') as reader:
-    for obj in reader:
-        print(obj)
-
-# Find by country
-with jsonlines.open(f'incidents/by-date/{date}/incidents.jsonl') as reader:
-    for obj in reader:
-        if obj['location']['country'] == 'Indonesia':
-            print(obj)
+**Step 3:** Update master index
+```bash
+echo '{"incident_id":"20250311-ID-FL", "date":"2025-03-11", "file":"by-date/2025-03-11/incidents.jsonl", "line":1, "status":"Active", "country_group":"A", "type":"Flood", "priority":"HIGH"}' >> incidents/references/all-incidents-index.jsonl
 ```
 
-## Documentation Requirements
+**Step 4:** Update summaries
+```bash
+# Update active-summary.json with new counts
+```
 
-### In Each Directory
-- Include `README.md` explaining contents
-- Document file format and schema
-- Include examples
-- Note access patterns
+### 2. Change Status (Active → Inactive)
 
-### Main Index
-- Create `incidents/README.md`
-- Document overall structure
-- Provide access examples
-- List recent important incidents
+**Step 1:** Remove from active references
+```bash
+# Remove lines matching incident_id from:
+# - references/active/by-country-group.jsonl
+# - references/active/by-incident-type.jsonl  
+# - references/active/by-country.jsonl
+```
+
+**Step 2:** Add to inactive references
+```bash
+# Add same reference lines to inactive/ files
+echo '{"incident_id":"20250311-ID-FL", "file":"by-date/2025-03-11/incidents.jsonl", "line":1, "country_group":"A", "type":"Flood", "priority":"HIGH"}' >> incidents/references/inactive/by-country-group.jsonl
+```
+
+**Step 3:** Update master index status
+```bash
+# Update status field in all-incidents-index.jsonl line
+```
+
+**NOTE:** Original incident data in `by-date/` **never changes** - only status tracking changes.
+
+### 3. Update Incident
+
+**Option A: Append new version (Recommended)**
+```bash
+# Add updated record to same date file
+echo '{updated_incident_json_with_updated_date}' >> incidents/by-date/2025-03-11/incidents.jsonl
+# Update references to point to new line number
+```
+
+**Option B: In-place update (if needed)**
+```bash
+# Replace specific line in by-date file (careful with line numbers)
+# Update reference line numbers if they shift
+```
+
+## Query Operations
+
+### Query 1: Find Active Group A Incidents
+```bash
+# Read reference file (fast)
+jq 'select(.country_group == "A")' incidents/references/active/by-country-group.jsonl
+
+# Then fetch full details using file+line info
+while read ref; do
+  file=$(echo $ref | jq -r '.file')
+  line=$(echo $ref | jq -r '.line')
+  sed -n "${line}p" incidents/$file
+done
+```
+
+### Query 2: Find All Floods (Active + Inactive)
+```bash
+# Search by tags in original data
+grep '"flood"' incidents/by-date/*/incidents.jsonl
+
+# OR use type references
+cat incidents/references/active/by-incident-type.jsonl incidents/references/inactive/by-incident-type.jsonl | jq 'select(.type == "Flood")'
+```
+
+### Query 3: Get Today's Incidents
+```bash
+# Direct read (fastest)
+cat incidents/by-date/$(date +%Y-%m-%d)/incidents.jsonl
+```
+
+### Query 4: Find Incident by ID
+```bash
+# Use master index for location
+grep '"incident_id": "20250311-ID-FL"' incidents/references/all-incidents-index.jsonl
+# Then read specific file+line
+```
+
+## Tag-Based Categorization
+
+**IMPORTANT:** Common fields (country, country_group, incident_type, incident_level, priority) are stored as formal JSON fields, NOT in tags. Status is tracked via folder structure (active/inactive references).
+
+### Optional Special Tags Only
+
+Only use tags for special flags - NOT for common fields:
+
+**Special Tags (Optional - only include when applicable):**
+- `escalation-risk` - Likely to escalate
+- `humanitarian-crisis` - Declared humanitarian crisis
+- `multi-regional` - Affects multiple regions/countries
+- `src-involved` - Singapore Red Cross involvement
+- `singapore-mentioned` - Singapore mentioned in coverage
+- `donation-concerns` - Public donation concerns flagged
+- `monsoon-related` - Related to monsoon season
+- `misinformation-detected` - Misinformation spreading
+
+**Example tags usage:**
+```json
+"tags": ["escalation-risk", "src-involved"]
+```
+
+### Common Fields (Formal JSON Fields - NOT tags)
+
+These are already formal fields in the incident JSON:
+- `country` - Country name (e.g., "Indonesia")
+- `country_group` - A, B, or C
+- `incident_type` - Earthquake, Flood, etc.
+- `incident_level` - 1, 2, 3, or 4
+- `priority` - HIGH, MEDIUM, or LOW
+
+Query these fields directly, not via tags:
+```bash
+# Query by formal fields (correct)
+jq 'select(.country_group == "A" and .incident_level >= 3)' incidents/by-date/*/incidents.jsonl
+
+# Query by special tags only (correct)  
+jq 'select(.tags | contains(["escalation-risk"]))' incidents/by-date/*/incidents.jsonl
+```
+
+### Custom Tags
+
+Add domain-specific tags as needed:
+- `tsunami-risk` - Coastal areas at tsunami risk
+- `monsoon-related` - Monsoon season incidents
+- `border-region` - Near country borders
+- `urban-impact` - Major cities affected
+- `infrastructure-damage` - Key infrastructure damaged
+
+### Tag-Based Queries
+
+```bash
+# Query by special tags (correct approach)
+jq 'select(.tags | contains(["escalation-risk"]))' incidents/by-date/*/incidents.jsonl
+jq 'select(.tags | contains(["src-involved"]))' incidents/by-date/*/incidents.jsonl
+
+# Query by formal fields (correct approach - NOT tags)
+jq 'select(.country_group == "A" and .incident_level >= 3)' incidents/by-date/*/incidents.jsonl
+jq 'select(.incident_type == "Flood" and .priority == "HIGH")' incidents/by-date/*/incidents.jsonl
+jq 'select(.country == "Indonesia" and .incident_type == "Earthquake")' incidents/by-date/*/incidents.jsonl
+
+# Complex query: Group A floods/earthquakes with HIGH priority and escalation-risk tag
+jq 'select(.country_group == "A" and (.incident_type == "Flood" or .incident_type == "Earthquake") and .priority == "HIGH" and (.tags | contains(["escalation-risk"])))' incidents/by-date/*/incidents.jsonl
+```
+
+## Reference File Management
+
+### Automated Reference Updates
+
+**When storing new incident:**
+1. Append to `all-incidents-index.jsonl` 
+2. If active: append to `active/` reference files
+3. Update `active-summary.json` counts
+4. Calculate line number for future references
+
+**When changing status:**
+1. Remove from old status references  
+2. Add to new status references
+3. Update both summary files
+4. Update master index status
+
+### Reference File Cleanup
+
+**Daily maintenance:**
+- Verify line numbers in reference files match actual data
+- Remove orphaned references (where original data deleted)
+- Rebuild reference files if line numbers drift
+
+**Weekly maintenance:**
+- Optimize reference files (remove duplicates)
+- Verify reference counts match summary files
+- Archive old inactive references
+
+### Reference Deduplication
+
+```bash
+# Remove duplicate references (keep latest)
+sort -k1,1 -u incidents/references/active/by-country-group.jsonl > temp && mv temp incidents/references/active/by-country-group.jsonl
+```
+
+## Performance Benefits
+
+### Storage Efficiency
+- **90% reduction** in duplicated data
+- **50% reduction** in total storage space
+- **Linear growth** with incidents (not exponential)
+
+### Query Performance
+- **Fast filtering:** Reference files are small (KB not MB)
+- **Direct access:** Line numbers enable O(1) record access
+- **Tag queries:** JSON tags more flexible than folder paths
+
+### Maintenance Efficiency  
+- **Single updates:** Change data once in by-date/
+- **Fast status changes:** Move references, not data
+- **Simple backups:** Backup by-date/ for complete data
+
+## Data Consistency
+
+### Consistency Rules
+
+1. **Primary data immutable:** Once written to by-date/, data doesn't change
+2. **References track location:** File path + line number always accurate
+3. **Tags authoritative:** Tags in primary data override reference classifications
+4. **Status in references:** Reference location (active/ vs inactive/) defines current status
+
+### Consistency Checks
+
+```bash
+# Verify reference line numbers
+while read ref; do
+  incident_id=$(echo $ref | jq -r '.incident_id')
+  file=$(echo $ref | jq -r '.file')  
+  line=$(echo $ref | jq -r '.line')
+  actual_id=$(sed -n "${line}p" incidents/$file | jq -r '.incident_id')
+  if [ "$incident_id" != "$actual_id" ]; then
+    echo "MISMATCH: Reference points to wrong line"
+  fi
+done < incidents/references/active/by-country-group.jsonl
+```
+
+### Recovery Procedures
+
+**If reference files corrupted:**
+```bash
+# Rebuild from primary data
+rm incidents/references/active/*.jsonl
+rm incidents/references/inactive/*.jsonl
+# Scan all by-date/ files and rebuild references based on status field
+for file in incidents/by-date/*/incidents.jsonl; do
+  jq -r 'select(.status == "Active") | .incident_id' $file | while read id; do
+    # Add to active references...
+  done
+done
+```
+
+## Migration from Old System
+
+### Phase 1: Data Consolidation
+1. **Read all existing duplicated data**
+2. **Deduplicate by incident_id** (keep most recent)
+3. **Extract common fields** to formal JSON fields (country, type, level, priority)
+4. **Store in by-date/** folders only
+
+### Phase 2: Reference Generation
+1. **Scan consolidated data**
+2. **Generate reference files** based on status field (not tags)
+3. **Build master index**
+4. **Verify consistency**
+
+### Phase 3: Cleanup
+1. **Remove old by-country-group/ duplicates**
+2. **Remove old by-incident-type/ duplicates**  
+3. **Remove old by-country/ duplicates**
+4. **Keep by-date/ as primary**
+
+## Example Workflows
+
+### Store Incident from Reporter
+
+```bash
+# Reporter sends incident with common fields already as formal JSON fields:
+# {"incident_id": "20250311-ID-FL", "country_group": "A", "incident_type": "Flood", "incident_level": 3, "priority": "HIGH", "tags": ["escalation-risk"], ...}
+
+# 1. Validate has required formal fields (country_group, incident_type, incident_level, priority)
+
+# 2. Append to primary storage (tags array optional - only for special flags)  
+echo "$raw_incident" >> incidents/by-date/2025-03-11/incidents.jsonl
+
+# 3. Get line number for references
+line_num=$(wc -l < incidents/by-date/2025-03-11/incidents.jsonl)
+
+# 4. Add to active references
+echo "{\"incident_id\":\"20250311-ID-FL\", \"file\":\"by-date/2025-03-11/incidents.jsonl\", \"line\":$line_num, \"country_group\":\"A\", \"type\":\"Flood\", \"priority\":\"HIGH\"}" >> incidents/references/active/by-country-group.jsonl
+
+# 5. Update master index
+echo "{\"incident_id\":\"20250311-ID-FL\", \"date\":\"2025-03-11\", \"file\":\"by-date/2025-03-11/incidents.jsonl\", \"line\":$line_num, \"status\":\"Active\", \"country_group\":\"A\", \"type\":\"Flood\"}" >> incidents/references/all-incidents-index.jsonl
+
+# 6. Update summary counts
+jq '.total_active += 1 | .by_country_group.A += 1 | .by_type.Flood += 1 | .by_priority.HIGH += 1' incidents/references/active/active-summary.json > temp && mv temp incidents/references/active/active-summary.json
+```
+
+### Query Active Group A Incidents
+
+```bash
+# 1. Get references (fast)
+jq 'select(.country_group == "A")' incidents/references/active/by-country-group.jsonl > temp_refs
+
+# 2. Fetch full details
+while read ref; do
+  file=$(echo $ref | jq -r '.file')
+  line=$(echo $ref | jq -r '.line')
+  sed -n "${line}p" incidents/$file
+done < temp_refs
+```
+
+### Change Status: Active → Resolved
+
+```bash
+incident_id="20250311-ID-FL"
+
+# 1. Find and remove from active references
+sed -i "/\"incident_id\":\"$incident_id\"/d" incidents/references/active/by-country-group.jsonl
+sed -i "/\"incident_id\":\"$incident_id\"/d" incidents/references/active/by-incident-type.jsonl
+sed -i "/\"incident_id\":\"$incident_id\"/d" incidents/references/active/by-country.jsonl
+
+# 2. Add to inactive references (move the same reference lines)
+ref_line=$(grep "\"incident_id\":\"$incident_id\"" incidents/references/all-incidents-index.jsonl)
+file=$(echo $ref_line | jq -r '.file')
+line=$(echo $ref_line | jq -r '.line')
+
+echo "{\"incident_id\":\"$incident_id\", \"file\":\"$file\", \"line\":$line, \"country_group\":\"A\", \"type\":\"Flood\", \"priority\":\"HIGH\"}" >> incidents/references/inactive/by-country-group.jsonl
+
+# 3. Update master index status
+sed -i "s/\"status\":\"Active\"/\"status\":\"Resolved\"/" incidents/references/all-incidents-index.jsonl
+
+# 4. Update summary counts
+jq '.total_active -= 1' incidents/references/active/active-summary.json > temp && mv temp incidents/references/active/active-summary.json
+jq '.total_inactive += 1' incidents/references/inactive/inactive-summary.json > temp && mv temp incidents/references/inactive/inactive-summary.json
+```
+
+## Tools and Scripts
+
+### Validation Script
+```bash
+#!/bin/bash
+# validate-references.sh
+# Verify all reference files point to correct data
+
+echo "Validating reference consistency..."
+errors=0
+
+for ref_file in incidents/references/active/*.jsonl incidents/references/inactive/*.jsonl; do
+  while read ref; do
+    incident_id=$(echo $ref | jq -r '.incident_id')
+    file=$(echo $ref | jq -r '.file')
+    line=$(echo $ref | jq -r '.line')
+    
+    if [ -f "incidents/$file" ]; then
+      actual_id=$(sed -n "${line}p" incidents/$file | jq -r '.incident_id')
+      if [ "$incident_id" != "$actual_id" ]; then
+        echo "ERROR: Reference mismatch in $ref_file"
+        echo "  Expected: $incident_id, Found: $actual_id"
+        errors=$((errors + 1))
+      fi
+    else
+      echo "ERROR: Referenced file missing: incidents/$file"
+      errors=$((errors + 1))
+    fi
+  done < "$ref_file"
+done
+
+if [ $errors -eq 0 ]; then
+  echo "✓ All references validated successfully"
+else
+  echo "✗ Found $errors reference errors"
+fi
+```
+
+### Rebuild References Script
+```bash
+#!/bin/bash
+# rebuild-references.sh
+# Rebuild all reference files from primary data
+
+echo "Rebuilding reference files from primary data..."
+
+# Clear existing references
+rm -rf incidents/references/active/*.jsonl
+rm -rf incidents/references/inactive/*.jsonl
+rm -f incidents/references/all-incidents-index.jsonl
+
+# Initialize files
+touch incidents/references/active/by-country-group.jsonl
+touch incidents/references/active/by-incident-type.jsonl
+touch incidents/references/active/by-country.jsonl
+touch incidents/references/inactive/by-country-group.jsonl
+touch incidents/references/inactive/by-incident-type.jsonl
+touch incidents/references/inactive/by-country.jsonl
+touch incidents/references/all-incidents-index.jsonl
+
+# Scan all primary data
+for date_file in incidents/by-date/*/incidents.jsonl; do
+  line_num=0
+  while read incident; do
+    line_num=$((line_num + 1))
+    
+    incident_id=$(echo $incident | jq -r '.incident_id')
+    date=$(echo $incident | jq -r '.created_date' | cut -d'T' -f1)
+    country_group=$(echo $incident | jq -r '.country_group')
+    type=$(echo $incident | jq -r '.incident_type')
+    priority=$(echo $incident | jq -r '.priority')
+    country=$(echo $incident | jq -r '.country')
+    level=$(echo $incident | jq -r '.incident_level')
+    
+    # Determine status from formal status field (NOT from tags)
+    status=$(echo $incident | jq -r '.status')
+    if [ "$status" = "Active" ]; then
+      ref_dir="active"
+    else
+      ref_dir="inactive"
+    fi
+    
+    relative_path=${date_file#incidents/}
+    
+    # Add to appropriate reference files
+    echo "{\"incident_id\":\"$incident_id\", \"file\":\"$relative_path\", \"line\":$line_num, \"country_group\":\"$country_group\", \"type\":\"$type\", \"priority\":\"$priority\"}" >> incidents/references/$ref_dir/by-country-group.jsonl
+    
+    echo "{\"incident_id\":\"$incident_id\", \"file\":\"$relative_path\", \"line\":$line_num, \"type\":\"$type\", \"country\":\"$country\", \"level\":$level}" >> incidents/references/$ref_dir/by-incident-type.jsonl
+    
+    echo "{\"incident_id\":\"$incident_id\", \"file\":\"$relative_path\", \"line\":$line_num, \"country\":\"$country\", \"type\":\"$type\", \"level\":$level}" >> incidents/references/$ref_dir/by-country.jsonl
+    
+    # Add to master index
+    echo "{\"incident_id\":\"$incident_id\", \"date\":\"$date\", \"file\":\"$relative_path\", \"line\":$line_num, \"status\":\"$status\", \"country_group\":\"$country_group\", \"type\":\"$type\"}" >> incidents/references/all-incidents-index.jsonl
+    
+  done < "$date_file"
+done
+
+echo "✓ Reference files rebuilt successfully"
+```
+
+## Summary
+
+The refactored data storage system provides:
+
+✅ **No data duplication** - Each incident stored exactly once  
+✅ **Efficient status tracking** - Lightweight reference files  
+✅ **Flexible categorization** - JSON tags instead of rigid folders  
+✅ **Fast queries** - Reference files enable rapid filtering  
+✅ **Simple maintenance** - Status changes don't require data movement  
+✅ **Strong consistency** - Single source of truth in by-date/ folders  
+✅ **Easy backup** - Backup by-date/ for complete data recovery  
+✅ **Scalable performance** - Linear growth, not exponential  
+
+This approach dramatically reduces storage overhead while maintaining query performance and data integrity.

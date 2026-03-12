@@ -1,10 +1,10 @@
 ---
 name: data-schema
-description: JSON schema definitions and data structures for storing disaster and health incident information in JSONL format
-compatibility: "1.0.0+"
+description: JSON schema definitions and data structures for storing disaster and health incident information in JSONL format with tag-based categorization
+compatibility: "2.0.0+"
 metadata:
   category: data-engineering
-  difficulty: advanced
+  difficulty: intermediate
   type: data-schema
 ---
 
@@ -34,13 +34,27 @@ Every incident record follows this comprehensive schema:
   
   "classification": {
     "country": "string - country name",
-    "country_group": "enum - A | B | C",
+    "country_group": "enum - A | B | C", 
     "region": "string - geographic region (South Asia, Southeast Asia, etc.)",
     "incident_type": "enum - Earthquake | Flood | Cyclone | Volcano | Wildfire | Drought | Landslide | Tsunami | Disease | Conflict | Other",
     "incident_level": "integer - 1-4 severity level",
     "priority": "enum - HIGH | MEDIUM | LOW",
     "should_report": "boolean - whether to include in distribution"
   },
+  
+  "tags": [
+    "string - optional special tags only (not common fields)",
+    "// OPTIONAL SPECIAL TAGS (use these when applicable):",
+    "// - escalation-risk: likely to escalate",
+    "// - humanitarian-crisis: declared humanitarian crisis",
+    "// - multi-regional: affects multiple regions/countries", 
+    "// - src-involved: Singapore Red Cross involved",
+    "// - singapore-mentioned: Singapore mentioned in coverage",
+    "// - donation-concerns: public donation concerns flagged",
+    "// - monsoon-related: related to monsoon season",
+    "// - misinformation-detected: misinformation spreading",
+    "// Example: [\"escalation-risk\", \"src-involved\"]"
+  ],
   
   "location": {
     "country": "string - country name",
@@ -152,7 +166,6 @@ Every incident record follows this comprehensive schema:
     "completeness_score": "number - 0-1 how complete record is",
     "last_verified": "string - when data was last verified",
     "related_incidents": ["string - IDs of related incidents"],
-    "tags": ["string - searchable tags"],
     "notes": "string - additional notes or observations"
   }
 }
@@ -213,8 +226,7 @@ For storing media monitoring data:
   "metadata": {
     "country": "string",
     "disaster_type": "string",
-    "recorded_by": "string - agent or person",
-    "tags": ["string"]
+    "recorded_by": "string - agent or person"
   }
 }
 ```
@@ -392,6 +404,7 @@ Future schema changes will be tracked with version numbers in metadata. Current 
     "first_reported": "2025-03-11T09:45:00Z",
     "latest_update": "2025-03-11T14:30:00Z"
   },
+  "tags": ["escalation-risk"],
   "media_coverage": {
     "singapore_mentioned": false,
     "src_mentioned": false,
@@ -420,7 +433,6 @@ Future schema changes will be tracked with version numbers in metadata. Current 
   "metadata": {
     "data_quality": "High",
     "completeness_score": 0.92,
-    "tags": ["earthquake", "Indonesia", "Sumatra", "Group-A"],
     "notes": "Monitor for aftershocks and updated impact assessments"
   }
 }
@@ -462,6 +474,7 @@ Future schema changes will be tracked with version numbers in metadata. Current 
     "spread_pattern": "Localized",
     "potential_pandemic": false
   },
+  "tags": ["escalation-risk"],
   "classification_metadata": {
     "rationale": "Early outbreak in Group A country, limited spread but Group A monitoring priority"
   }

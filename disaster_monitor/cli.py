@@ -10,7 +10,7 @@ import logging
 import subprocess
 import sys
 from pathlib import Path
-from typing import Any
+from typing import Any, Optional
 
 import fire
 
@@ -36,9 +36,11 @@ class DisasterMonitor:
         self,
         model: str = DEFAULT_MODEL,
         verbose: bool = False,
+        timeout: int = 1800,
     ):
         self.model = model
         self.verbose = verbose
+        self.timeout = timeout
         if verbose:
             logging.getLogger().setLevel(logging.DEBUG)
 
@@ -46,16 +48,28 @@ class DisasterMonitor:
         """Ensure staging directory exists."""
         STAGING_DIR.mkdir(parents=True, exist_ok=True)
 
-    def _run_opencode(self, prompt: str) -> str:
-        """Execute opencode with given prompt using subprocess."""
-        logger.debug(f"Running opencode with model: {self.model}")
+    def _run_opencode(self, prompt: str, timeout: Optional[int] = None) -> str:
+        """Execute opencode with given prompt using subprocess.
+
+        Args:
+            prompt: The prompt to send to opencode
+            timeout: Maximum execution time in seconds (uses instance default if None)
+        """
+        if timeout is None:
+            timeout = self.timeout
+        logger.debug(f"Running opencode with model: {self.model}, timeout: {timeout}s")
 
         cmd = ["opencode", "run", "--model", self.model, prompt]
-        result = subprocess.run(
-            cmd,
-            capture_output=True,
-            text=True,
-        )
+        try:
+            result = subprocess.run(
+                cmd,
+                capture_output=True,
+                text=True,
+                timeout=timeout,
+            )
+        except subprocess.TimeoutExpired:
+            logger.error(f"opencode timed out after {timeout} seconds")
+            raise RuntimeError(f"opencode execution timed out after {timeout} seconds")
 
         if result.returncode != 0:
             logger.error(f"opencode failed: {result.stderr}")
@@ -104,6 +118,10 @@ After finding incidents, use @skill incident-classifier to classify them by coun
             self._run_opencode(prompt)
         except Exception as e:
             logger.error(f"Failed to fetch disasters: {e}")
+            if "timed out" in str(e):
+                logger.warning(
+                    f"Consider increasing timeout (current: {self.timeout}s) for disaster monitoring"
+                )
             return {"success": False, "error": str(e)}
 
         staging = self._check_staging()
@@ -129,6 +147,10 @@ Focus on Singapore/SRC mentions, donation concerns, and misinformation. Write al
             self._run_opencode(prompt)
         except Exception as e:
             logger.error(f"Failed to fetch media: {e}")
+            if "timed out" in str(e):
+                logger.warning(
+                    f"Consider increasing timeout (current: {self.timeout}s) for media monitoring"
+                )
             return {"success": False, "error": str(e)}
 
         staging = self._check_staging()
@@ -165,6 +187,10 @@ Report: number of incidents stored, duplicates skipped, any errors."""
             self._run_opencode(prompt)
         except Exception as e:
             logger.error(f"Failed to store data: {e}")
+            if "timed out" in str(e):
+                logger.warning(
+                    f"Consider increasing timeout (current: {self.timeout}s) for data storage"
+                )
             return {"success": False, "error": str(e)}
 
         staging_after = self._check_staging()
