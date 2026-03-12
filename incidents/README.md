@@ -1,33 +1,33 @@
-# Disaster Incident Data Store
+# Disaster Incident Data Store - Efficient Storage v2.0
 
-This directory contains all stored disaster and health incident data collected from monitoring sources (GDACS, ProMED, News, Social Media).
+This directory contains all stored disaster and health incident data using an efficient, zero-duplication storage system with reference tracking.
 
-## Quick Navigation
+## 🚀 New Efficient Storage System
 
-### Primary Access: By Date
-- **Location:** `by-date/[YYYY-MM-DD]/`
-- **Use Case:** Find incidents from a specific date
-- **Files:** 
-  - `incidents.jsonl` - All incidents for the day
+**Core Philosophy:** Store each incident exactly **once** in date folders. Use lightweight reference files and tags for categorization instead of duplicating data.
+
+### Primary Storage (Single Source of Truth)
+- **Location:** `by-date/[YYYY-MM-DD]/incidents.jsonl`
+- **Use Case:** All incident data stored here ONCE
+- **Files:**
+  - `incidents.jsonl` - Single source of truth for all incidents
   - `media-coverage.jsonl` - Media coverage records
   - `metadata.json` - Summary statistics
 
-### Secondary Access: By Region
-- **Location:** `by-country-group/[group-a|b|c]/[YYYY-MM]/`
-- **Use Case:** Query incidents by geographic region (monthly)
-- **Groups:**
-  - `group-a/` - Asia Pacific 1 (primary focus)
-  - `group-b/` - Asia Pacific 2 + MENA
-  - `group-c/` - Rest of world
+### Reference Tracking (Lightweight Pointers)
+- **Location:** `references/`
+- **Use Case:** Fast categorization and status tracking without data duplication
+- **Structure:**
+  - `active/` - Pointers to currently active incidents
+  - `inactive/` - Pointers to resolved/monitoring incidents
+  - `all-incidents-index.jsonl` - Master index of all incidents
 
-### Tertiary Access: By Type
-- **Location:** `by-incident-type/[type]/[active|resolved]/`
-- **Use Case:** Find incidents by disaster type
-- **Types:** earthquake, flood, cyclone, disease, wildfire, volcano, drought, landslide, tsunami, conflict
-
-### Country-Specific
-- **Location:** `by-country/[country]/`
-- **Use Case:** Find all incidents in a specific country
+### Tag-Based Categorization
+**Location:** Within each incident's `tags` array in primary storage
+**Use Case:** Flexible categorization replacing rigid folder hierarchies
+**Tags:**
+  - **Required:** status (active/resolved), type (flood/earthquake), country-group (group-a/b/c), severity (level-1/2/3/4), priority
+  - **Optional:** escalation-risk, src-involved, singapore-mentioned, etc.
 - **Files:** `active-incidents.jsonl`, `resolved-incidents.jsonl`
 
 ### Media Coverage
