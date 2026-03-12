@@ -17,9 +17,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install git
-        run: dnf install -y git
-
       - name: Configure Git
         run: |
           git config --local user.email "disasterbot@user.noreply.github.com"
