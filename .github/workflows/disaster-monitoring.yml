@@ -17,6 +17,14 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Install git
+        run: |
+          curl -fsSL https://github.com/git/git/releases/download/v2.43.0/git-2.43.0.tar.gz -o /tmp/git.tar.gz
+          tar -xzf /tmp/git.tar.gz -C /tmp
+          cd /tmp/git-2.43.0
+          make -j$(nproc) prefix=/usr NO_TCLTK=1 all
+          make prefix=/usr NO_TCLTK=1 install
+
       - name: Configure Git
         run: |
           git config --local user.email "disasterbot@user.noreply.github.com"
