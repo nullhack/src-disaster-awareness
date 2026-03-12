@@ -8,29 +8,26 @@ metadata:
   type: data-storage
 ---
 
-# Data Storage Skill - Refactored (v2.0)
+# Data Storage Skill
 
-Efficient, non-duplicating data storage system using date-based primary storage with reference tracking and tag-based categorization.
+Efficient, non-duplicating data storage using date-based primary storage with reference tracking.
 
 ## Core Philosophy
 
 **NO DATA DUPLICATION** - Store each incident JSON record exactly once in date folders. Use lightweight reference files and JSON tags for categorization instead of duplicating entire records across multiple folder hierarchies.
 
-## New Directory Structure
+## Directory Structure
 
 ```
 incidents/
-├── README.md (access guide and examples)
-├── staging/                          # STAGING - Raw data from reporters
+├── staging/                          # Raw data from reporters
 │   ├── incidents.jsonl
-│   ├── media.jsonl
-│   └── metadata.json
+│   └── media.jsonl
 │
 ├── by-date/                          # PRIMARY STORAGE - All data stored here ONCE
 │   ├── 2025-03-11/
 │   │   ├── incidents.jsonl          # Single source of truth
-│   │   ├── media-coverage.jsonl
-│   │   └── metadata.json
+│   │   └── media-coverage.jsonl
 │   ├── 2025-03-10/
 │   └── [YYYY-MM-DD]/
 │
@@ -38,18 +35,12 @@ incidents/
 │   ├── active/
 │   │   ├── by-country-group.jsonl
 │   │   ├── by-incident-type.jsonl
-│   │   ├── by-country.jsonl
-│   │   └── active-summary.json
+│   │   └── by-country.jsonl
 │   ├── inactive/
 │   │   ├── by-country-group.jsonl
 │   │   ├── by-incident-type.jsonl
-│   │   ├── by-country.jsonl
-│   │   └── inactive-summary.json
+│   │   └── by-country.jsonl
 │   └── all-incidents-index.jsonl    # Master index of all incidents
-│
-├── queries/                          # QUERY CACHE AND LOGS
-│   ├── cached-results/
-│   └── query-log.jsonl
 │
 └── archive/                          # LONG-TERM STORAGE
     ├── 2024/
@@ -122,16 +113,11 @@ Instead of duplicating data, use lightweight reference files that point to the o
 {"incident_id": "20250310-TH-DI", "file": "by-date/2025-03-10/incidents.jsonl", "line": 3, "country": "Thailand", "type": "Disease", "level": 1}
 ```
 
-#### 4. active-summary.json
+#### 3. by-country.jsonl
 ```json
-{
-  "last_updated": "2025-03-11T18:00:00Z",
-  "total_active": 15,
-  "by_country_group": {"A": 12, "B": 2, "C": 1},
-  "by_type": {"Flood": 5, "Earthquake": 3, "Disease": 4, "Cyclone": 2, "Other": 1},
-  "by_priority": {"HIGH": 3, "MEDIUM": 8, "LOW": 4},
-  "escalation_risk": 4
-}
+{"incident_id": "20250311-ID-FL", "file": "by-date/2025-03-11/incidents.jsonl", "line": 1, "country": "Indonesia", "type": "Flood", "level": 3}
+{"incident_id": "20250311-PH-EQ", "file": "by-date/2025-03-11/incidents.jsonl", "line": 2, "country": "Philippines", "type": "Earthquake", "level": 2}
+{"incident_id": "20250310-TH-DI", "file": "by-date/2025-03-10/incidents.jsonl", "line": 3, "country": "Thailand", "type": "Disease", "level": 1}
 ```
 
 ### Inactive Incidents: references/inactive/
@@ -141,7 +127,6 @@ Same structure as active/, but for resolved/monitoring incidents:
 - `by-country-group.jsonl`
 - `by-incident-type.jsonl` 
 - `by-country.jsonl`
-- `inactive-summary.json`
 
 ### Master Index: all-incidents-index.jsonl
 
@@ -172,11 +157,6 @@ echo '{"incident_id":"20250311-ID-FL", "file":"by-date/2025-03-11/incidents.json
 **Step 3:** Update master index
 ```bash
 echo '{"incident_id":"20250311-ID-FL", "date":"2025-03-11", "file":"by-date/2025-03-11/incidents.jsonl", "line":1, "status":"Active", "country_group":"A", "type":"Flood", "priority":"HIGH"}' >> incidents/references/all-incidents-index.jsonl
-```
-
-**Step 4:** Update summaries
-```bash
-# Update active-summary.json with new counts
 ```
 
 ### 2. Change Status (Active → Inactive)
@@ -327,14 +307,10 @@ jq 'select(.country_group == "A" and (.incident_type == "Flood" or .incident_typ
 **When storing new incident:**
 1. Append to `all-incidents-index.jsonl` 
 2. If active: append to `active/` reference files
-3. Update `active-summary.json` counts
-4. Calculate line number for future references
-
 **When changing status:**
 1. Remove from old status references  
 2. Add to new status references
-3. Update both summary files
-4. Update master index status
+3. Update master index status
 
 ### Reference File Cleanup
 
@@ -345,7 +321,6 @@ jq 'select(.country_group == "A" and (.incident_type == "Flood" or .incident_typ
 
 **Weekly maintenance:**
 - Optimize reference files (remove duplicates)
-- Verify reference counts match summary files
 - Archive old inactive references
 
 ### Reference Deduplication
@@ -411,26 +386,6 @@ for file in incidents/by-date/*/incidents.jsonl; do
 done
 ```
 
-## Migration from Old System
-
-### Phase 1: Data Consolidation
-1. **Read all existing duplicated data**
-2. **Deduplicate by incident_id** (keep most recent)
-3. **Extract common fields** to formal JSON fields (country, type, level, priority)
-4. **Store in by-date/** folders only
-
-### Phase 2: Reference Generation
-1. **Scan consolidated data**
-2. **Generate reference files** based on status field (not tags)
-3. **Build master index**
-4. **Verify consistency**
-
-### Phase 3: Cleanup
-1. **Remove old by-country-group/ duplicates**
-2. **Remove old by-incident-type/ duplicates**  
-3. **Remove old by-country/ duplicates**
-4. **Keep by-date/ as primary**
-
 ## Example Workflows
 
 ### Store Incident from Reporter
@@ -451,10 +406,7 @@ line_num=$(wc -l < incidents/by-date/2025-03-11/incidents.jsonl)
 echo "{\"incident_id\":\"20250311-ID-FL\", \"file\":\"by-date/2025-03-11/incidents.jsonl\", \"line\":$line_num, \"country_group\":\"A\", \"type\":\"Flood\", \"priority\":\"HIGH\"}" >> incidents/references/active/by-country-group.jsonl
 
 # 5. Update master index
-echo "{\"incident_id\":\"20250311-ID-FL\", \"date\":\"2025-03-11\", \"file\":\"by-date/2025-03-11/incidents.jsonl\", \"line\":$line_num, \"status\":\"Active\", \"country_group\":\"A\", \"type\":\"Flood\"}" >> incidents/references/all-incidents-index.jsonl
-
-# 6. Update summary counts
-jq '.total_active += 1 | .by_country_group.A += 1 | .by_type.Flood += 1 | .by_priority.HIGH += 1' incidents/references/active/active-summary.json > temp && mv temp incidents/references/active/active-summary.json
+echo '{"incident_id":"20250311-ID-FL", "date":"2025-03-11", "file":"by-date/2025-03-11/incidents.jsonl", "line":$line_num, "status":"Active", "country_group":"A", "type":"Flood"}' >> incidents/references/all-incidents-index.jsonl
 ```
 
 ### Query Active Group A Incidents
@@ -490,10 +442,6 @@ echo "{\"incident_id\":\"$incident_id\", \"file\":\"$file\", \"line\":$line, \"c
 
 # 3. Update master index status
 sed -i "s/\"status\":\"Active\"/\"status\":\"Resolved\"/" incidents/references/all-incidents-index.jsonl
-
-# 4. Update summary counts
-jq '.total_active -= 1' incidents/references/active/active-summary.json > temp && mv temp incidents/references/active/active-summary.json
-jq '.total_inactive += 1' incidents/references/inactive/inactive-summary.json > temp && mv temp incidents/references/inactive/inactive-summary.json
 ```
 
 ## Tools and Scripts
