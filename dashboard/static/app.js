@@ -264,14 +264,21 @@ function setupEventListeners() {
  */
 async function loadData() {
     showLoading(true);
+    console.log('Loading data...');
 
-    const incidentsData = await fetchData('data/incidents.json');
-    const diseaseData = await fetchData('data/disease-incidents.json');
-    
-    state.incidents = incidentsData || [];
-    state.diseaseIncidents = diseaseData || [];
-    
-    console.log(`Loaded ${state.incidents.length} incidents, ${state.diseaseIncidents.length} diseases from local`);
+    try {
+        const incidentsData = await fetchData('incidents.json');
+        console.log('Incidents:', incidentsData ? incidentsData.length : 0);
+        
+        const diseaseData = await fetchData('disease-incidents.json');
+        
+        state.incidents = incidentsData || [];
+        state.diseaseIncidents = diseaseData || [];
+        
+        console.log(`Loaded ${state.incidents.length} incidents`);
+    } catch (e) {
+        console.error('Error loading data:', e);
+    }
 
     updateAllUI();
     showLoading(false);
@@ -502,11 +509,16 @@ function normalizeIncident(record) {
  */
 async function fetchData(filename) {
     try {
-        const response = await fetch(CONFIG.dataPath + filename);
+        const url = CONFIG.dataPath + filename;
+        console.log('Fetching:', url);
+        const response = await fetch(url);
+        console.log('Response:', response.status, response.ok);
         if (!response.ok) return [];
-        return await response.json();
+        const data = await response.json();
+        console.log('Got:', data.length, 'records');
+        return data;
     } catch (error) {
-        console.warn(`Could not load ${filename}:`, error);
+        console.error(`Error loading ${filename}:`, error);
         return [];
     }
 }
