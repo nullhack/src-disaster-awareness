@@ -1,0 +1,131 @@
+[
+  {
+    "incident_id": "20250327-ID-FL",
+    "incident_name": "Floods in Jakarta, Indonesia",
+    "country": "Indonesia",
+    "country_group": "A",
+    "incident_type": "Flood",
+    "incident_level": 3,
+    "priority": "HIGH",
+    "status": "Active",
+    "created_date": "2025-03-25T08:00:00Z",
+    "updated_date": "2025-03-27T14:30:00Z",
+    "location": {
+      "country": "Indonesia",
+      "province": "Jakarta",
+      "districts": ["Jakarta Pusat", "Jakarta Selatan", "Jakarta Barat"],
+      "coordinates": {"lat": -6.2088, "lon": 106.8456}
+    },
+    "impact": {
+      "deaths": 5,
+      "missing": 12,
+      "affected": 45000,
+      "displaced": 23000
+    },
+    "sources": [
+      {"name": "BNPB Indonesia", "url": "https://bnpb.go.id"},
+      {"name": "Reuters", "url": "https://reuters.com"}
+    ]
+  },
+  {
+    "incident_id": "20250327-PH-TY",
+    "incident_name": "Typhoon in Luzon, Philippines",
+    "country": "Philippines",
+    "country_group": "A",
+    "incident_type": "Cyclone",
+    "incident_level": 4,
+    "priority": "HIGH",
+    "status": "Active",
+    "created_date": "2025-03-20T06:00:00Z",
+    "updated_date": "2025-03-27T10:00:00Z",
+    "location": {
+      "country": "Philippines",
+      "province": "Luzon",
+      "districts": ["Cagayan Valley", "Ilocos Region", "Central Luzon"],
+      "coordinates": {"lat": 15.5, "lon": 120.5}
+    },
+    "impact": {
+      "deaths": 45,
+      "missing": 23,
+      "affected": 380000,
+      "displaced": 156000
+    },
+    "sources": [
+      {"name": "NDRRMC", "url": "https://ndrmc.gov.ph"},
+      {"name": "GDACS", "url": "https://gdacs.org"}
+    ]
+  },
+  {
+    "incident_id": "20250326-MM-EQ",
+    "incident_name": "Earthquake in Mandalay, Myanmar",
+    "country": "Myanmar",
+    "country_group": "A",
+    "incident_type": "Earthquake",
+    "incident_level": 2,
+    "priority": "MEDIUM",
+    "status": "Active",
+    "created_date": "2025-03-26T12:00:00Z",
+    "updated_date": "2025-03-26T18:00:00Z",
+    "location": {
+      "country": "Myanmar",
+      "province": "Mandalay",
+      "coordinates": {"lat": 21.9583, "lon": 96.0925}
+    },
+    "impact": {
+      "deaths": 3,
+      "affected": 5200
+    },
+    "sources": [
+      {"name": "EMSC", "url": "https://emsc-csem.org"}
+    ]
+  },
+  {
+    "incident_id": "20250325-IN-FL",
+    "incident_name": "Floods in Bihar, India",
+    "country": "India",
+    "country_group": "A",
+    "incident_type": "Flood",
+    "incident_level": 3,
+    "priority": "HIGH",
+    "status": "Active",
+    "created_date": "2025-03-20T07:00:00Z",
+    "updated_date": "2025-03-25T16:00:00Z",
+    "location": {
+      "country": "India",
+      "province": "Bihar",
+      "coordinates": {"lat": 25.7854, "lon": 87.4794}
+    },
+    "impact": {
+      "deaths": 18,
+      "affected": 125000,
+      "displaced": 45000
+    },
+    "sources": [
+      {"name": "NDMA India", "url": "https://ndma.gov.in"}
+    ]
+  },
+  {
+    "incident_id": "20250324-TH-FR",
+    "incident_name": "Forest Fires in Chiang Mai, Thailand",
+    "country": "Thailand",
+    "country_group": "A",
+    "incident_type": "Fire",
+    "incident_level": 2,
+    "priority": "MEDIUM",
+    "status": "Active",
+    "created_date": "2025-03-15T09:00:00Z",
+    "updated_date": "2025-03-24T12:00:00Z",
+    "location": {
+      "country": "Thailand",
+      "province": "Chiang Mai",
+      "coordinates": {"lat": 18.7883, "lon": 98.9853}
+    },
+    "impact": {
+      "affected": 15000,
+      "displaced": 2000
+    },
+    "sources": [
+      {"name": "Thai PBS", "url": "https://thaipbs.or.th"}
+    ]
+  }
+]
