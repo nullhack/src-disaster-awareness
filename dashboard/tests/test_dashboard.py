@@ -18,9 +18,9 @@ def dashboard_url(dash_server):
     return f"http://localhost:8000"
 
 
-@pytest.fixture
+@pytest.fixture(scope="session")
 def dash_server():
-    """Start a simple HTTP server for the dashboard."""
+    """Start a simple HTTP server for the dashboard (session scope)."""
     import http.server
     import socketserver
     import threading
@@ -28,11 +28,24 @@ def dash_server():
 
     os.chdir(STATIC_DIR)
 
-    class Handler(http.server.SimpleHTTPRequestHandler):
+    # Create a custom handler that can serve from parent directory for data
+    class DashHandler(http.server.SimpleHTTPRequestHandler):
+        def __init__(self, *args, **kwargs):
+            super().__init__(*args, directory=str(STATIC_DIR), **kwargs)
+
+        def translate_path(self, path):
+            # Serve data from parent directory
+            if path.startswith("/data/"):
+                data_path = path[5:]  # Remove /data prefix
+                return str(DATA_DIR / data_path.lstrip("/"))
+            return super().translate_path(path)
+
         def log_message(self, format, *args):
             pass  # Suppress logging
 
-    with socketserver.TCPServer(("", 8000), Handler) as httpd:
+    # Allow port reuse
+    socketserver.TCPServer.allow_reuse_address = True
+    with socketserver.TCPServer(("", 8000), DashHandler) as httpd:
         thread = threading.Thread(target=httpd.serve_forever, daemon=True)
         thread.start()
         time.sleep(0.5)  # Wait for server to start

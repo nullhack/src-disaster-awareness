@@ -4,7 +4,7 @@
 
 // Configuration
 const CONFIG = {
-    dataPath: '../incidents/',
+    dataPath: '/data/',
     refreshInterval: 300000, // 5 minutes
     mapCenter: [15, 90], // Asia-Pacific focus
     mapZoom: 3,
