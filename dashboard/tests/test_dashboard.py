@@ -207,17 +207,15 @@ class TestDashboardUI:
 
     @pytest.mark.ui
     def test_map_legend_visible(self, page, dashboard_url):
-        """Test map legend is displayed."""
+        """Test that map legend is visible."""
         page.goto(dashboard_url)
 
         legend = page.locator(".map-legend")
         assert legend.is_visible()
 
-        # Check legend items
-        assert legend.locator("text=Critical").is_visible()
-        assert legend.locator("text=Major").is_visible()
-        assert legend.locator("text=Significant").is_visible()
-        assert legend.locator("text=Minor").is_visible()
+        # Check type legend items (now shows disaster types instead of just severity)
+        assert legend.locator("text=Flood").is_visible()
+        assert legend.locator("text=Earthquake").is_visible()
 
 
 class TestDashboardInteraction:

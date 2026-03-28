@@ -8,6 +8,23 @@ const CONFIG = {
     refreshInterval: 300000, // 5 minutes
     mapCenter: [15, 90], // Asia-Pacific focus
     mapZoom: 3,
+    // Marker sizes by severity (in pixels)
+    markerSizes: {
+        4: 40,  // Critical - largest
+        3: 32,  // Major
+        2: 26,  // Significant
+        1: 20,  // Minor - smallest
+    },
+    // Marker colors by disaster TYPE (not severity)
+    markerColors: {
+        Flood: '#3b82f6',      // Blue
+        Earthquake: '#92400e',  // Brown/amber
+        Cyclone: '#06b6d4',    // Cyan
+        Fire: '#dc2626',       // Red
+        Drought: '#d97706',    // Amber
+        Landslide: '#78350f', // Dark brown
+        Disease: '#8b5cf6',   // Purple (kept for disease)
+    },
 };
 
 // State
@@ -181,6 +198,7 @@ function setupEventListeners() {
         typeFilter.addEventListener('change', (e) => {
             state.filters.type = e.target.value;
             updateMapMarkers();
+            updateTable();
         });
     }
 
@@ -188,6 +206,7 @@ function setupEventListeners() {
         severityFilter.addEventListener('change', (e) => {
             state.filters.severity = e.target.value;
             updateMapMarkers();
+            updateTable();
         });
     }
 
@@ -195,6 +214,17 @@ function setupEventListeners() {
         countryGroupFilter.addEventListener('change', (e) => {
             state.filters.countryGroup = e.target.value;
             updateMapMarkers();
+            updateTable();
+        });
+    }
+
+    // Country filter
+    const countryFilter = document.getElementById('countryFilter');
+    if (countryFilter) {
+        countryFilter.addEventListener('change', (e) => {
+            state.filters.country = e.target.value;
+            updateMapMarkers();
+            updateTable();
         });
     }
 
@@ -244,11 +274,15 @@ async function loadData() {
         const diseaseData = await fetchData('disease-incidents.json');
         state.diseaseIncidents = diseaseData || [];
 
-        // Update UI
+        // Populate country filter dropdown
+        populateCountryFilter();
+
+        // Update UI with filtered data
         updateStats();
         updateMapMarkers();
         updateRecentIncidents();
         updateCharts();
+        updateTable();
 
         // Update timestamp
         updateLastUpdated();
@@ -364,33 +398,67 @@ function getFilteredIncidents() {
             if (incident.country_group !== state.filters.countryGroup) return false;
         }
 
+        // Country filter
+        if (state.filters.country && state.filters.country !== 'all') {
+            if (incident.country !== state.filters.country) return false;
+        }
+
         return true;
     });
 }
 
 /**
+ * Populate country filter dropdown with available countries
+ */
+function populateCountryFilter() {
+    const countryFilter = document.getElementById('countryFilter');
+    if (!countryFilter) return;
+
+    // Get all unique countries from data
+    const allIncidents = [...state.incidents, ...state.diseaseIncidents];
+    const countries = [...new Set(allIncidents.map(i => i.country).filter(Boolean))].sort();
+
+    // Keep the "All Countries" option
+    const firstOption = countryFilter.options[0];
+    countryFilter.innerHTML = '';
+    countryFilter.add(new Option('All Countries', 'all'));
+
+    countries.forEach(country => {
+        countryFilter.add(new Option(country, country));
+    });
+}
+
+/**
  * Create map marker
+ * - Color based on DISASTER TYPE (blue=flood, red=fire, brown=earthquake, etc.)
+ * - Size based on SEVERITY (larger = more severe)
  */
 function createMarker(incident) {
     if (!incident.location?.coordinates?.lat || !incident.location?.coordinates?.lon) {
         return null;
     }
 
-    const isDisease = incident.incident_type === 'Disease' || incident.incident_type === 'Disease Outbreak';
-    const color = isDisease ? '#8b5cf6' : SEVERITY_COLORS[incident.incident_level] || '#3b82f6';
+    // Get color by TYPE (flood=blue, fire=red, earthquake=brown, etc.)
+    const incidentType = incident.incident_type || 'Unknown';
+    const color = CONFIG.markerColors[incidentType] || CONFIG.markerColors['Disease'] || '#6b7280';
+
+    // Get size by SEVERITY (Level 4 = largest, Level 1 = smallest)
+    const severity = incident.incident_level || 1;
+    const size = CONFIG.markerSizes[severity] || 20;
 
     const icon = L.divIcon({
         className: 'incident-marker',
         html: `<div style="
-            width: 20px;
-            height: 20px;
+            width: ${size}px;
+            height: ${size}px;
             background: ${color};
             border-radius: 50%;
-            border: 2px solid white;
-            box-shadow: 0 0 10px ${color};
-        "></div>`,
-        iconSize: [20, 20],
-        iconAnchor: [10, 10],
+            border: 3px solid white;
+            box-shadow: 0 0 15px ${color}, 0 4px 8px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+        " title="${incident.incident_name} (Level ${severity})"></div>`,
+        iconSize: [size, size],
+        iconAnchor: [size/2, size/2],
     });
 
     const marker = L.marker([incident.location.coordinates.lat, incident.location.coordinates.lon], { icon });
@@ -400,11 +468,6 @@ function createMarker(incident) {
     marker.bindPopup(popupContent, {
         className: 'incident-popup',
         maxWidth: 300,
-    });
-
-    // Click to open modal
-    marker.on('click', () => {
-        // Popup shown by default
     });
 
     return marker;
@@ -501,6 +564,59 @@ function updateRecentIncidents() {
             </div>
         </div>
     `).join('');
+}
+
+/**
+ * Update data table with filtered incidents
+ */
+function updateTable() {
+    const tbody = document.getElementById('incidentsTableBody');
+    const countEl = document.getElementById('tableCount');
+    if (!tbody) return;
+
+    const filtered = getFilteredIncidents()
+        .sort((a, b) => new Date(b.updated_date || b.created_date) - new Date(a.updated_date || a.created_date));
+
+    // Update count
+    if (countEl) {
+        countEl.textContent = `${filtered.length} incident${filtered.length !== 1 ? 's' : ''}`;
+    }
+
+    if (filtered.length === 0) {
+        tbody.innerHTML = `
+            <tr>
+                <td colspan="9" class="empty-cell">
+                    No incidents match the current filters
+                </td>
+            </tr>
+        `;
+        return;
+    }
+
+    tbody.innerHTML = filtered.slice(0, 50).map(incident => {
+        const levelColors = { 4: '#ef4444', 3: '#f97316', 2: '#eab308', 1: '#22c55e' };
+        const levelColor = levelColors[incident.incident_level] || '#6b7280';
+        
+        // Get source links
+        const sources = incident.sources || [];
+        const sourceLinks = sources.slice(0, 2).map(s => 
+            `<a href="${s.url}" target="_blank" class="source-link">${s.name}</a>`
+        ).join(', ') || 'N/A';
+
+        return `
+            <tr onclick="openModal('${incident.incident_id}')" class="table-row">
+                <td>${formatDate(incident.updated_date || incident.created_date)}</td>
+                <td>${incident.country || 'N/A'}</td>
+                <td><span class="type-badge type-${incident.incident_type?.toLowerCase()}">${incident.incident_type || 'Unknown'}</span></td>
+                <td class="incident-name-cell" title="${incident.incident_name}">${incident.incident_name || 'Unnamed'}</td>
+                <td><span class="level-badge" style="background: ${levelColor}">L${incident.incident_level || 1}</span></td>
+                <td>${(incident.impact?.deaths || 0).toLocaleString()}</td>
+                <td>${formatNumber(incident.impact?.affected || 0)}</td>
+                <td><span class="status-badge ${(incident.status || 'Active').toLowerCase()}">${incident.status || 'Active'}</span></td>
+                <td class="sources-cell">${sourceLinks}</td>
+            </tr>
+        `;
+    }).join('');
 }
 
 /**
@@ -829,45 +945,84 @@ Latest: ${incidents[0]?.incident_name || 'N/A'}.`;
 }
 
 /**
- * Generate fallback summary without LLM
+ * Generate fallback summary without LLM - more detailed and specific
  */
 function generateFallbackSummary(incidents) {
     if (incidents.length === 0) return 'No incidents match the current filters.';
     
+    // Basic stats
     const totalDeaths = incidents.reduce((sum, i) => sum + (i.impact?.deaths || 0), 0);
     const totalAffected = incidents.reduce((sum, i) => sum + (i.impact?.affected || 0), 0);
+    const totalDisplaced = incidents.reduce((sum, i) => sum + (i.impact?.displaced || 0), 0);
     
-    // Find most affected type
+    // Detailed breakdown by type
     const typeCounts = {};
+    const typeDeaths = {};
     incidents.forEach(i => {
-        typeCounts[i.incident_type] = (typeCounts[i.incident_type] || 0) + 1;
+        const type = i.incident_type || 'Unknown';
+        typeCounts[type] = (typeCounts[type] || 0) + 1;
+        typeDeaths[type] = (typeDeaths[type] || 0) + (i.impact?.deaths || 0);
     });
-    const topType = Object.entries(typeCounts).sort((a, b) => b[1] - a[1])[0];
     
-    // Find most affected country
+    // Breakdown by country
     const countryCounts = {};
     incidents.forEach(i => {
         countryCounts[i.country] = (countryCounts[i.country] || 0) + 1;
     });
-    const topCountry = Object.entries(countryCounts).sort((a, b) => b[1] - a[1])[0];
     
-    // Check for critical incidents
-    const critical = incidents.filter(i => i.incident_level === 4).length;
+    // Severity breakdown
+    const severityCounts = { 4: 0, 3: 0, 2: 0, 1: 0 };
+    incidents.forEach(i => {
+        const level = i.incident_level || 1;
+        if (severityCounts[level] !== undefined) severityCounts[level]++;
+    });
     
-    let summary = `This filter shows ${incidents.length} incident${incidents.length !== 1 ? 's' : ''} `;
-    summary += `resulting in ${totalDeaths.toLocaleString()} death${totalDeaths !== 1 ? 's' : ''} `;
-    summary += `and affecting ${formatNumber(totalAffected)} people. `;
+    // Get top affected country
+    const sortedCountries = Object.entries(countryCounts).sort((a, b) => b[1] - a[1]);
+    const topCountry = sortedCountries[0];
+    const top3Countries = sortedCountries.slice(0, 3);
     
-    if (topType) {
-        summary += `${topType[0]} is the most common incident type (${topType[1]} incidents). `;
+    // Build detailed summary
+    let summary = `📊 **Filtered Results: ${incidents.length} incident${incidents.length !== 1 ? 's' : ''}**\n\n`;
+    
+    // Impact summary
+    summary += `💔 **Impact:** ${totalDeaths.toLocaleString()} death${totalDeaths !== 1 ? 's' : ''}, `;
+    summary += `${formatNumber(totalAffected)} affected, ${formatNumber(totalDisplaced)} displaced\n\n`;
+    
+    // Type breakdown
+    summary += `📋 **By Type:**\n`;
+    Object.entries(typeCounts).sort((a, b) => b[1] - a[1]).forEach(([type, count]) => {
+        const deaths = typeDeaths[type];
+        summary += `  • ${type}: ${count} incident${count !== 1 ? 's' : ''} (${deaths} deaths)\n`;
+    });
+    
+    // Severity breakdown
+    summary += `\n⚠️ **By Severity:**\n`;
+    if (severityCounts[4] > 0) summary += `  • Critical (L4): ${severityCounts[4]} - URGENT\n`;
+    if (severityCounts[3] > 0) summary += `  • Major (L3): ${severityCounts[3]}\n`;
+    if (severityCounts[2] > 0) summary += `  • Significant (L2): ${severityCounts[2]}\n`;
+    if (severityCounts[1] > 0) summary += `  • Minor (L1): ${severityCounts[1]}\n`;
+    
+    // Countries
+    summary += `\n🌍 **Top Countries:** ${top3Countries.map(([c, n]) => `${c} (${n})`).join(', ')}\n`;
+    
+    // Most severe incident
+    const mostSevere = incidents.find(i => i.incident_level === 4);
+    if (mostSevere) {
+        summary += `\n🚨 **Most Severe:** ${mostSevere.incident_name} in ${mostSevere.country} `;
+        summary += `(${mostSevere.impact?.deaths || 0} deaths)\n`;
     }
     
-    if (topCountry) {
-        summary += `${topCountry[0]} has the most incidents (${topCountry[1]}). `;
+    // Recommendations based on data
+    summary += `\n💡 **Analysis:** `;
+    if (severityCounts[4] > 0) {
+        summary += `${severityCounts[4]} critical incident${severityCounts[4] !== 1 ? 's' : ''} require${severityCounts[4] === 1 ? 's' : ''} immediate attention. `;
     }
-    
-    if (critical > 0) {
-        summary += `⚠️ ${critical} critical (Level 4) incident${critical !== 1 ? 's' : ''} require${critical === 1 ? 's' : ''} immediate attention.`;
+    if (typeCounts['Flood'] && typeCounts['Flood'] > 2) {
+        summary += `Multiple flood events indicate seasonal pattern. `;
+    }
+    if (typeCounts['Disease'] && typeCounts['Disease'] > 0) {
+        summary += `Disease outbreaks require health monitoring. `;
     }
     
     return summary;
@@ -892,4 +1047,6 @@ window.Dashboard = {
     closeModal,
     showSummary,
     generateAISummary,
+    updateTable,
+    populateCountryFilter,
 };

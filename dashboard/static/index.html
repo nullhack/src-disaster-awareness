@@ -127,6 +127,9 @@
                             <option value="B">Group B (MENA + Pacific)</option>
                             <option value="C">Group C (Other)</option>
                         </select>
+                        <select id="countryFilter" class="filter-select">
+                            <option value="all">All Countries</option>
+                        </select>
                         <button id="summarizeBtn" class="btn btn-secondary">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
@@ -187,20 +190,41 @@
                 <div class="map-container" id="map"></div>
                 <div class="map-legend">
                     <div class="legend-item">
+                        <span class="legend-dot flood"></span>
+                        <span>Flood</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot earthquake"></span>
+                        <span>Earthquake</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot cyclone"></span>
+                        <span>Cyclone</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot fire"></span>
+                        <span>Wildfire</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot disease"></span>
+                        <span>Disease</span>
+                    </div>
+                    <span style="border-left: 1px solid var(--color-border); margin: 0 8px;"></span>
+                    <div class="legend-item" title="Marker size = severity">
                         <span class="legend-dot critical"></span>
-                        <span>Critical (Level 4)</span>
+                        <span>L4</span>
                     </div>
                     <div class="legend-item">
                         <span class="legend-dot major"></span>
-                        <span>Major (Level 3)</span>
+                        <span>L3</span>
                     </div>
                     <div class="legend-item">
                         <span class="legend-dot significant"></span>
-                        <span>Significant (Level 2)</span>
+                        <span>L2</span>
                     </div>
                     <div class="legend-item">
                         <span class="legend-dot minor"></span>
-                        <span>Minor (Level 1)</span>
+                        <span>L1</span>
                     </div>
                 </div>
             </section>
@@ -234,6 +258,43 @@
                     </div>
                 </div>
             </aside>
+
+            <!-- Data Table Section -->
+            <section class="table-section">
+                <div class="section-header">
+                    <h2>Incident Details</h2>
+                    <div class="table-controls">
+                        <span id="tableCount" class="table-count">0 incidents</span>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table id="incidentsTable" class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Country</th>
+                                <th>Type</th>
+                                <th>Incident</th>
+                                <th>Level</th>
+                                <th>Deaths</th>
+                                <th>Affected</th>
+                                <th>Status</th>
+                                <th>Sources</th>
+                            </tr>
+                        </thead>
+                        <tbody id="incidentsTableBody">
+                            <tr>
+                                <td colspan="9" class="loading-cell">
+                                    <div class="loading-placeholder">
+                                        <div class="spinner"></div>
+                                        <span>Loading data...</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
         </main>
 
         <!-- Incident Detail Modal -->
