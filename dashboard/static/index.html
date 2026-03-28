@@ -127,6 +127,61 @@
                             <option value="B">Group B (MENA + Pacific)</option>
                             <option value="C">Group C (Other)</option>
                         </select>
+                        <button id="summarizeBtn" class="btn btn-secondary">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                            AI Summary
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Summary Panel -->
+                <div id="summaryPanel" class="summary-panel hidden">
+                    <div class="summary-header">
+                        <h3 id="summaryTitle">Filtered Summary</h3>
+                        <button id="closeSummary" class="summary-close">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="summaryContent" class="summary-content">
+                        <div class="summary-stats">
+                            <div class="summary-stat">
+                                <span class="summary-stat-value" id="summaryTotal">0</span>
+                                <span class="summary-stat-label">Total Incidents</span>
+                            </div>
+                            <div class="summary-stat">
+                                <span class="summary-stat-value" id="summaryDeaths">0</span>
+                                <span class="summary-stat-label">Total Deaths</span>
+                            </div>
+                            <div class="summary-stat">
+                                <span class="summary-stat-value" id="summaryAffected">0</span>
+                                <span class="summary-stat-label">Affected</span>
+                            </div>
+                            <div class="summary-stat">
+                                <span class="summary-stat-value" id="summaryCountries">0</span>
+                                <span class="summary-stat-label">Countries</span>
+                            </div>
+                        </div>
+                        <div class="summary-breakdown">
+                            <h4>By Severity</h4>
+                            <div class="breakdown-bars" id="severityBreakdown"></div>
+                        </div>
+                        <div class="summary-breakdown">
+                            <h4>By Country</h4>
+                            <div class="breakdown-list" id="countryBreakdown"></div>
+                        </div>
+                        <div id="aiSummary" class="ai-summary hidden">
+                            <h4>AI Analysis</h4>
+                            <div class="ai-summary-content" id="aiSummaryContent">
+                                <div class="ai-loading">
+                                    <div class="spinner-small"></div>
+                                    <span>Generating summary...</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="map-container" id="map"></div>

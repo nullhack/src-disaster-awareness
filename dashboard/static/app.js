@@ -4,7 +4,7 @@
 
 // Configuration
 const CONFIG = {
-    dataPath: '/data/',
+    dataPath: 'data/',
     refreshInterval: 300000, // 5 minutes
     mapCenter: [15, 90], // Asia-Pacific focus
     mapZoom: 3,
@@ -195,6 +195,23 @@ function setupEventListeners() {
         countryGroupFilter.addEventListener('change', (e) => {
             state.filters.countryGroup = e.target.value;
             updateMapMarkers();
+        });
+    }
+
+    // Summary button
+    const summarizeBtn = document.getElementById('summarizeBtn');
+    const closeSummaryBtn = document.getElementById('closeSummary');
+    const summaryPanel = document.getElementById('summaryPanel');
+
+    if (summarizeBtn) {
+        summarizeBtn.addEventListener('click', () => {
+            showSummary();
+        });
+    }
+
+    if (closeSummaryBtn && summaryPanel) {
+        closeSummaryBtn.addEventListener('click', () => {
+            summaryPanel.classList.add('hidden');
         });
     }
 
@@ -626,6 +643,245 @@ function startAutoRefresh() {
     setInterval(loadData, CONFIG.refreshInterval);
 }
 
+/**
+ * Get filtered incidents based on current filters
+ */
+function getFilteredIncidents() {
+    const allIncidents = [...state.incidents, ...state.diseaseIncidents];
+    
+    return allIncidents.filter(incident => {
+        // Type filter
+        if (state.filters.type !== 'all') {
+            if (state.filters.type === 'Disease') {
+                if (incident.incident_type !== 'Disease') return false;
+            } else {
+                if (incident.incident_type !== state.filters.type) return false;
+            }
+        }
+        
+        // Severity filter
+        if (state.filters.severity !== 'all') {
+            if (incident.incident_level !== parseInt(state.filters.severity)) return false;
+        }
+        
+        // Country group filter
+        if (state.filters.countryGroup !== 'all') {
+            if (incident.country_group !== state.filters.countryGroup) return false;
+        }
+        
+        return true;
+    });
+}
+
+/**
+ * Show summary panel with filtered data
+ */
+function showSummary() {
+    const filtered = getFilteredIncidents();
+    const summaryPanel = document.getElementById('summaryPanel');
+    const summaryTitle = document.getElementById('summaryTitle');
+    const summaryTotal = document.getElementById('summaryTotal');
+    const summaryDeaths = document.getElementById('summaryDeaths');
+    const summaryAffected = document.getElementById('summaryAffected');
+    const summaryCountries = document.getElementById('summaryCountries');
+    const severityBreakdown = document.getElementById('severityBreakdown');
+    const countryBreakdown = document.getElementById('countryBreakdown');
+    
+    if (!summaryPanel) return;
+    
+    // Show panel
+    summaryPanel.classList.remove('hidden');
+    
+    // Build filter description
+    let filterDesc = [];
+    if (state.filters.type !== 'all') filterDesc.push(state.filters.type);
+    if (state.filters.severity !== 'all') filterDesc.push(`Level ${state.filters.severity}`);
+    if (state.filters.countryGroup !== 'all') filterDesc.push(`Group ${state.filters.countryGroup}`);
+    
+    summaryTitle.textContent = filterDesc.length > 0 
+        ? `Summary: ${filterDesc.join(' + ')}`
+        : 'All Incidents Summary';
+    
+    // Calculate totals
+    const totalDeaths = filtered.reduce((sum, i) => sum + (i.impact?.deaths || 0), 0);
+    const totalAffected = filtered.reduce((sum, i) => sum + (i.impact?.affected || 0), 0);
+    const countries = [...new Set(filtered.map(i => i.country))];
+    
+    summaryTotal.textContent = filtered.length;
+    summaryDeaths.textContent = totalDeaths.toLocaleString();
+    summaryAffected.textContent = formatNumber(totalAffected);
+    summaryCountries.textContent = countries.length;
+    
+    // Severity breakdown
+    const severityCounts = { 4: 0, 3: 0, 2: 0, 1: 0 };
+    filtered.forEach(i => {
+        const level = i.incident_level || 1;
+        if (severityCounts[level] !== undefined) {
+            severityCounts[level]++;
+        }
+    });
+    
+    const maxCount = Math.max(...Object.values(severityCounts), 1);
+    const severityLabels = { 4: 'Critical', 3: 'Major', 2: 'Significant', 1: 'Minor' };
+    const severityColors = { 4: 'critical', 3: 'major', 2: 'significant', 1: 'minor' };
+    
+    severityBreakdown.innerHTML = Object.entries(severityCounts).map(([level, count]) => `
+        <div class="breakdown-bar">
+            <span class="breakdown-label">${severityLabels[level]}</span>
+            <div class="breakdown-bar-container">
+                <div class="breakdown-bar-fill ${severityColors[level]}" style="width: ${(count / maxCount) * 100}%"></div>
+            </div>
+            <span class="breakdown-count">${count}</span>
+        </div>
+    `).join('');
+    
+    // Country breakdown
+    const countryCounts = {};
+    filtered.forEach(i => {
+        countryCounts[i.country] = (countryCounts[i.country] || 0) + 1;
+    });
+    
+    const sortedCountries = Object.entries(countryCounts)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 10);
+    
+    countryBreakdown.innerHTML = sortedCountries.map(([country, count]) => 
+        `<span class="breakdown-item">${country} (${count})</span>`
+    ).join('');
+    
+    // Generate AI summary
+    generateAISummary(filtered);
+}
+
+/**
+ * Generate AI summary using Ollama or fallback
+ */
+async function generateAISummary(incidents) {
+    const aiSummary = document.getElementById('aiSummary');
+    const aiContent = document.getElementById('aiSummaryContent');
+    
+    if (!aiSummary || !aiContent) return;
+    
+    aiSummary.classList.remove('hidden');
+    aiContent.innerHTML = `
+        <div class="ai-loading">
+            <div class="spinner-small"></div>
+            <span>Generating summary...</span>
+        </div>
+    `;
+    
+    // Build summary text
+    const summaryText = buildSummaryText(incidents);
+    
+    // Try Ollama first, then fallback
+    try {
+        const response = await fetch('http://localhost:11434/api/generate', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                model: 'llama3.2',
+                prompt: `You are a disaster analysis assistant. Provide a brief 2-3 sentence summary of the following disaster incidents, highlighting key patterns, risks, and recommendations:\n\n${summaryText}`,
+                stream: false,
+                format: 'json'
+            }),
+            signal: AbortSignal.timeout(10000)
+        });
+        
+        if (response.ok) {
+            const data = await response.json();
+            if (data.response) {
+                aiContent.textContent = data.response;
+                return;
+            }
+        }
+    } catch (e) {
+        console.log('Ollama not available, using fallback summary');
+    }
+    
+    // Fallback: Generate summary without LLM
+    aiContent.textContent = generateFallbackSummary(incidents);
+}
+
+/**
+ * Build text summary for LLM
+ */
+function buildSummaryText(incidents) {
+    if (incidents.length === 0) return 'No incidents to summarize.';
+    
+    const totalDeaths = incidents.reduce((sum, i) => sum + (i.impact?.deaths || 0), 0);
+    const totalAffected = incidents.reduce((sum, i) => sum + (i.impact?.affected || 0), 0);
+    
+    const typeCounts = {};
+    const countryCounts = {};
+    const levelCounts = {};
+    
+    incidents.forEach(i => {
+        typeCounts[i.incident_type] = (typeCounts[i.incident_type] || 0) + 1;
+        countryCounts[i.country] = (countryCounts[i.country] || 0) + 1;
+        levelCounts[i.incident_level] = (levelCounts[i.incident_level] || 0) + 1;
+    });
+    
+    return `Total: ${incidents.length} incidents, ${totalDeaths} deaths, ${totalAffected.toLocaleString()} affected.
+Types: ${JSON.stringify(typeCounts)}.
+Countries: ${Object.keys(countryCounts).join(', ')}.
+Severity: ${JSON.stringify(levelCounts)}.
+Latest: ${incidents[0]?.incident_name || 'N/A'}.`;
+}
+
+/**
+ * Generate fallback summary without LLM
+ */
+function generateFallbackSummary(incidents) {
+    if (incidents.length === 0) return 'No incidents match the current filters.';
+    
+    const totalDeaths = incidents.reduce((sum, i) => sum + (i.impact?.deaths || 0), 0);
+    const totalAffected = incidents.reduce((sum, i) => sum + (i.impact?.affected || 0), 0);
+    
+    // Find most affected type
+    const typeCounts = {};
+    incidents.forEach(i => {
+        typeCounts[i.incident_type] = (typeCounts[i.incident_type] || 0) + 1;
+    });
+    const topType = Object.entries(typeCounts).sort((a, b) => b[1] - a[1])[0];
+    
+    // Find most affected country
+    const countryCounts = {};
+    incidents.forEach(i => {
+        countryCounts[i.country] = (countryCounts[i.country] || 0) + 1;
+    });
+    const topCountry = Object.entries(countryCounts).sort((a, b) => b[1] - a[1])[0];
+    
+    // Check for critical incidents
+    const critical = incidents.filter(i => i.incident_level === 4).length;
+    
+    let summary = `This filter shows ${incidents.length} incident${incidents.length !== 1 ? 's' : ''} `;
+    summary += `resulting in ${totalDeaths.toLocaleString()} death${totalDeaths !== 1 ? 's' : ''} `;
+    summary += `and affecting ${formatNumber(totalAffected)} people. `;
+    
+    if (topType) {
+        summary += `${topType[0]} is the most common incident type (${topType[1]} incidents). `;
+    }
+    
+    if (topCountry) {
+        summary += `${topCountry[0]} has the most incidents (${topCountry[1]}). `;
+    }
+    
+    if (critical > 0) {
+        summary += `⚠️ ${critical} critical (Level 4) incident${critical !== 1 ? 's' : ''} require${critical === 1 ? 's' : ''} immediate attention.`;
+    }
+    
+    return summary;
+}
+
+/**
+ * Format large numbers
+ */
+function formatNumber(num) {
+    if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
+    if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
+    return num.toString();
+}
+
 // Export for testing
 window.Dashboard = {
     state,
@@ -634,4 +890,6 @@ window.Dashboard = {
     getFilteredIncidents,
     openModal,
     closeModal,
+    showSummary,
+    generateAISummary,
 };

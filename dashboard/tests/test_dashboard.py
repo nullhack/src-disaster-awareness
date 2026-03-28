@@ -25,20 +25,40 @@ def dash_server():
     import socketserver
     import threading
     import time
+    from pathlib import Path
 
-    os.chdir(STATIC_DIR)
+    # Serve from dashboard root, not just static
+    DASHBOARD_ROOT = Path(__file__).parent.parent
 
-    # Create a custom handler that can serve from parent directory for data
     class DashHandler(http.server.SimpleHTTPRequestHandler):
         def __init__(self, *args, **kwargs):
-            super().__init__(*args, directory=str(STATIC_DIR), **kwargs)
+            # Don't call super().__init__ here, let SimpleHTTPRequestHandler do its thing
+            super().__init__(*args, directory=str(DASHBOARD_ROOT), **kwargs)
 
         def translate_path(self, path):
-            # Serve data from parent directory
+            """Custom path translation to serve files from correct directories."""
+            import urllib.parse
+
+            # Decode URL
+            path = urllib.parse.unquote(path)
+
+            # Handle /data/ prefix - serve from data directory
             if path.startswith("/data/"):
-                data_path = path[5:]  # Remove /data prefix
-                return str(DATA_DIR / data_path.lstrip("/"))
-            return super().translate_path(path)
+                data_file = path[5:]  # Remove /data prefix
+                return str(DATA_DIR / data_file.lstrip("/"))
+
+            # Default - serve from static directory
+            if path == "/":
+                return str(STATIC_DIR / "index.html")
+
+            # Remove leading slash and serve from static
+            static_file = path.lstrip("/")
+            static_path = STATIC_DIR / static_file
+
+            if static_path.exists():
+                return str(static_path)
+
+            return str(DASHBOARD_ROOT / static_file)
 
         def log_message(self, format, *args):
             pass  # Suppress logging
@@ -311,6 +331,72 @@ class TestDashboardData:
         expected = sum(1 for i in all_incidents if i.get("incident_level") == 4)
 
         assert critical_count == expected
+
+    @pytest.mark.ui
+    def test_summary_button_visible(self, page, dashboard_url):
+        """Test that summary button is visible."""
+        page.goto(dashboard_url)
+        page.wait_for_timeout(1000)
+
+        summarize_btn = page.locator("#summarizeBtn")
+        assert summarize_btn.is_visible()
+
+    @pytest.mark.ui
+    def test_summary_panel_opens(self, page, dashboard_url):
+        """Test that summary panel opens when button is clicked."""
+        page.goto(dashboard_url)
+        page.wait_for_timeout(1000)
+
+        # Click summarize button
+        page.locator("#summarizeBtn").click()
+        page.wait_for_timeout(500)
+
+        # Check panel is visible
+        summary_panel = page.locator("#summaryPanel")
+        assert not summary_panel.is_hidden()
+
+        # Check summary stats are displayed
+        assert page.locator("#summaryTotal").is_visible()
+        assert page.locator("#summaryDeaths").is_visible()
+
+    @pytest.mark.ui
+    def test_summary_panel_closes(self, page, dashboard_url):
+        """Test that summary panel can be closed."""
+        page.goto(dashboard_url)
+        page.wait_for_timeout(1000)
+
+        # Open summary
+        page.locator("#summarizeBtn").click()
+        page.wait_for_timeout(500)
+
+        # Close summary
+        page.locator("#closeSummary").click()
+        page.wait_for_timeout(500)
+
+        # Check panel is hidden
+        summary_panel = page.locator("#summaryPanel")
+        assert (
+            summary_panel.is_hidden()
+            or summary_panel.get_attribute("class") == "summary-panel hidden"
+        )
+
+    @pytest.mark.ui
+    def test_filtered_summary_updates(self, page, dashboard_url):
+        """Test that summary updates with filters."""
+        page.goto(dashboard_url)
+        page.wait_for_timeout(1500)
+
+        # Apply earthquake filter
+        page.locator("#typeFilter").select_option("Earthquake")
+        page.wait_for_timeout(500)
+
+        # Open summary
+        page.locator("#summarizeBtn").click()
+        page.wait_for_timeout(1000)
+
+        # Check title reflects filter
+        title = page.locator("#summaryTitle").text_content()
+        assert "Earthquake" in title
 
 
 class TestDashboardResponsive:
