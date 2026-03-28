@@ -336,7 +336,7 @@ Structured incidents from:
 
 ---
 
-## 3. Data Engineering Subagent
+## 3. Data Engineering Subagents
 
 #### Subagent: data-engineer
 **File:** `.opencode/agents/data-engineer.md`
@@ -454,7 +454,162 @@ Structured incident JSON from monitoring agents with:
 
 ---
 
+---
+
+#### Subagent: storage-manager
+**File:** `.opencode/agents/storage-manager.md`
+
+**Purpose:** Oversee storage operations, ensure data integrity, prevent duplicates, maintain reference accuracy, and validate storage standards.
+
+**Responsibilities:**
+1. Validate incidents before storage approval
+2. Detect duplicates (exact ID, composite, source URL)
+3. Calculate and enforce quality thresholds
+4. Verify reference file integrity
+5. Manage active/inactive status transitions
+6. Run storage audits (daily/weekly/monthly)
+7. Flag incidents for deep research
+8. Coordinate with data-engineer and researcher
+
+**Supporting Skills:**
+- `@skill storage-manager-skill` - Storage oversight rules
+- `@skill data-storage` - Storage conventions
+- `@skill data-schema` - Validation rules
+
+**Workflow:**
+1. Receive incident for validation (3 mins)
+2. Check duplicates across index (5 mins)
+3. Validate against schema and quality score (3 mins)
+4. Decide: APPROVE/CONDITIONAL/DENY/DEEP_RESEARCH (2 mins)
+5. Post-storage validation (3 mins)
+6. Audit and reporting (2 mins)
+
+**Output:**
+- Storage approval/denial with reasons
+- Quality score assessment
+- Research flags if needed
+- Reference integrity verification
+
+**Tools Used:**
+- `skill` - Load storage-manager-skill, data-storage
+- `read` - Check existing incidents and references
+- `grep` - Search for duplicates
+- `write` - Update audit logs
+
+**Temperature:** 0.1 (Strict, deterministic)
+
+**Key Operating Principles:**
+- Zero tolerance for duplicates
+- Quality threshold: ≥ 0.85 required for storage
+- 100% reference accuracy required
+- Daily audits mandatory
+- Flag for research when quality < 0.85
+
+---
+
+#### Subagent: researcher
+**File:** `.opencode/agents/researcher.md`
+
+**Purpose:** Conduct deep research on flagged incidents to validate sources, gather accurate information, verify numbers, and enhance incident data quality.
+
+**Responsibilities:**
+1. Research incidents flagged by storage-manager
+2. Identify and consult authoritative sources
+3. Gather accurate dates (onset, updates, forecast)
+4. Verify impact numbers (deaths, affected, displaced)
+5. Enhance incident descriptions
+6. Cross-reference across multiple sources
+7. Return validated, enhanced incident data
+8. Document confidence levels
+
+**Research Triggers:**
+- Low quality score (< 0.85)
+- High severity with limited sources
+- Humanitarian crisis declaration
+- New incident type for database
+- Escalation potential
+- Singapore/SRC angle important
+
+**Supporting Skills:**
+- `@skill researcher-skill` - Research methodology
+- `@skill data-schema` - Required fields
+- `@skill incident-classifier` - Classification standards
+
+**Workflow:**
+1. Parse research request from storage-manager (3 mins)
+2. Identify authoritative sources (5 mins)
+3. Gather and verify data (10 mins)
+4. Establish timeline and dates (5 mins)
+5. Verify impact numbers (5 mins)
+6. Enhance and complete missing fields (5 mins)
+7. Calculate enhanced quality score (2 mins)
+
+**Output:**
+- Enhanced incident JSON with validated data
+- Multiple source citations
+- Confidence levels for each data point
+- Research metadata (original score, enhanced score)
+- Ready for re-validation
+
+**Tools Used:**
+- `webfetch` - Retrieve authoritative sources
+- `websearch` - Find additional sources
+- `skill` - Load researcher-skill
+- `read` - Check existing data
+
+**Temperature:** 0.3 (Analytical, thorough)
+
+**Key Operating Principles:**
+- Authority sources first (government > UN > news)
+- Cross-verify all critical numbers
+- Document confidence levels honestly
+- Quality target: ≥ 0.90 after research
+- Transparent about limitations
+
+---
+
 ## Supporting Skills for Data Engineering
+
+#### Skill: storage-manager-skill
+**File:** `.opencode/skills/storage-manager-skill/SKILL.md`
+
+**Purpose:** Rules and methodology for overseeing storage operations and ensuring data integrity.
+
+**Key Content:**
+- Validation rules and quality thresholds
+- Duplicate detection procedures
+- Reference integrity standards
+- Research flagging criteria
+- Active/inactive status management
+- Storage audit procedures
+- Error handling protocols
+
+**Used By:**
+- storage-manager (when validating incidents)
+- data-engineer (for standards compliance)
+
+---
+
+#### Skill: researcher-skill
+**File:** `.opencode/skills/researcher-skill/SKILL.md`
+
+**Purpose:** Methodology and guidelines for conducting deep research on flagged incidents.
+
+**Key Content:**
+- Research triggers and priorities
+- Source identification by country/type
+- Data extraction standards
+- Cross-reference verification rules
+- Quality score calculation
+- Date research guidelines
+- Impact number verification
+- Enhancement procedures
+
+**Used By:**
+- researcher (when investigating incidents)
+- storage-manager (when deciding to flag for research)
+
+---
 
 #### Skill: data-schema
 **File:** `.opencode/skills/data-schema/SKILL.md`
@@ -1119,8 +1274,10 @@ Update on [disaster event/name/type] in [country]
 - `@media-incident-reporter` - News/social media monitoring
 - `@incident-summarizer` - Report compilation
 
-### Data Engineering Agent
+### Data Engineering Agents
 - `@data-engineer` - Incident data processing and storage
+- `@storage-manager` - Storage oversight and validation
+- `@researcher` - Deep research on flagged incidents
 
 ### Monitoring Skills
 - `@skill incident-classifier` - Classification rules
@@ -1130,6 +1287,8 @@ Update on [disaster event/name/type] in [country]
 ### Data Engineering Skills
 - `@skill data-schema` - JSON schema and validation
 - `@skill data-storage` - Folder organization and file structure
+- `@skill storage-manager-skill` - Storage oversight rules
+- `@skill researcher-skill` - Research methodology
 
 ### Data Sources (Top 5)
 - GDACS: https://www.gdacs.org/ (Natural disasters)
