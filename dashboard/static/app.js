@@ -268,16 +268,16 @@ async function loadData() {
 
     try {
         const incidentsData = await fetchData('incidents.json');
-        console.log('Incidents:', incidentsData ? incidentsData.length : 0);
         
         const diseaseData = await fetchData('disease-incidents.json');
         
         state.incidents = incidentsData || [];
         state.diseaseIncidents = diseaseData || [];
         
-        console.log(`Loaded ${state.incidents.length} incidents`);
+        alert(`Loaded ${state.incidents.length} incidents and ${state.diseaseIncidents.length} diseases`);
     } catch (e) {
         console.error('Error loading data:', e);
+        alert('Error loading data: ' + e.message);
     }
 
     updateAllUI();
