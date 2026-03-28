@@ -260,29 +260,33 @@ function setupEventListeners() {
 }
 
 /**
- * Load data from GitHub raw JSONL files
+ * Load data from GitHub API + raw JSONL files
  */
 async function loadData() {
     showLoading(true);
 
     try {
-        // Fetch from GitHub raw content
-        const GITHUB_RAW = 'https://raw.githubusercontent.com/nullhack/src-disaster-awareness/main';
-        const BY_DATE_PATH = '/incidents/by-date';
+        // Use GitHub API to get list of date directories
+        const API_URL = 'https://api.github.com/repos/nullhack/src-disaster-awareness/contents/incidents/by-date';
         
-        // Get list of date folders
-        const datesResponse = await fetch(`${GITHUB_RAW}${BY_DATE_PATH}`);
+        const datesResponse = await fetch(API_URL);
         if (!datesResponse.ok) throw new Error('Could not fetch date list');
         
-        const datesHtml = await datesResponse.text();
-        const dateMatches = datesHtml.match(/\/incidents\/by-date\/(\d{4}-\d{2}-\d{2})\//g) || [];
-        const uniqueDates = [...new Set(dateMatches.map(m => m.match(/(\d{4}-\d{2}-\d{2})/)[1]))];
+        const dateDirs = await datesResponse.json();
+        const uniqueDates = dateDirs
+            .filter(d => d.type === 'dir' && d.name.match(/^\d{4}-\d{2}-\d{2}$/))
+            .map(d => d.name)
+            .sort()
+            .slice(-30); // Last 30 days
+        
+        const GITHUB_RAW = 'https://raw.githubusercontent.com/nullhack/src-disaster-awareness/main';
+        const BY_DATE_PATH = '/incidents/by-date';
         
         const allIncidents = [];
         const allDiseases = [];
         
         // Fetch each date's incidents.jsonl
-        for (const date of uniqueDates.slice(-30)) { // Last 30 days
+        for (const date of uniqueDates) {
             try {
                 const response = await fetch(`${GITHUB_RAW}${BY_DATE_PATH}/${date}/incidents.jsonl`);
                 if (!response.ok) continue;
