@@ -1,0 +1,101 @@
+[
+  {
+    "incident_id": "20250327-SG-DEN",
+    "incident_name": "Dengue Fever Outbreak in Singapore",
+    "country": "Singapore",
+    "country_group": "A",
+    "incident_type": "Disease",
+    "disease_type": "Dengue Fever",
+    "incident_level": 2,
+    "priority": "MEDIUM",
+    "status": "Active",
+    "created_date": "2025-03-01T08:00:00Z",
+    "updated_date": "2025-03-27T09:00:00Z",
+    "location": {
+      "country": "Singapore",
+      "coordinates": {"lat": 1.3521, "lon": 103.8198}
+    },
+    "impact": {
+      "affected": 8500,
+      "deaths": 3
+    },
+    "sources": [
+      {"name": "MOH Singapore", "url": "https://moh.gov.sg"}
+    ]
+  },
+  {
+    "incident_id": "20250325-MY-DEN",
+    "incident_name": "Dengue Outbreak in Malaysia",
+    "country": "Malaysia",
+    "country_group": "A",
+    "incident_type": "Disease",
+    "disease_type": "Dengue Fever",
+    "incident_level": 3,
+    "priority": "HIGH",
+    "status": "Active",
+    "created_date": "2025-02-15T08:00:00Z",
+    "updated_date": "2025-03-25T10:00:00Z",
+    "location": {
+      "country": "Malaysia",
+      "province": "Selangor",
+      "coordinates": {"lat": 3.0738, "lon": 101.5183}
+    },
+    "impact": {
+      "affected": 62000,
+      "deaths": 42
+    },
+    "sources": [
+      {"name": "KKM Malaysia", "url": "https://moh.gov.my"}
+    ]
+  },
+  {
+    "incident_id": "20250322-VN-MPOX",
+    "incident_name": "Mpox Cases in Vietnam",
+    "country": "Vietnam",
+    "country_group": "A",
+    "incident_type": "Disease",
+    "disease_type": "Mpox",
+    "incident_level": 2,
+    "priority": "MEDIUM",
+    "status": "Active",
+    "created_date": "2025-03-10T08:00:00Z",
+    "updated_date": "2025-03-22T14:00:00Z",
+    "location": {
+      "country": "Vietnam",
+      "province": "Ho Chi Minh City",
+      "coordinates": {"lat": 10.8231, "lon": 106.6297}
+    },
+    "impact": {
+      "affected": 156,
+      "deaths": 0
+    },
+    "sources": [
+      {"name": "Vietnam MOH", "url": "https://moh.gov.vn"}
+    ]
+  },
+  {
+    "incident_id": "20250320-PH-MES",
+    "incident_name": "Measles Outbreak in Philippines",
+    "country": "Philippines",
+    "country_group": "A",
+    "incident_type": "Disease",
+    "disease_type": "Measles",
+    "incident_level": 3,
+    "priority": "HIGH",
+    "status": "Active",
+    "created_date": "2025-02-01T08:00:00Z",
+    "updated_date": "2025-03-20T08:00:00Z",
+    "location": {
+      "country": "Philippines",
+      "province": "Metro Manila",
+      "coordinates": {"lat": 14.5995, "lon": 120.9842}
+    },
+    "impact": {
+      "affected": 4500,
+      "deaths": 25
+    },
+    "sources": [
+      {"name": "DOH Philippines", "url": "https://doh.gov.ph"}
+    ]
+  }
+]
