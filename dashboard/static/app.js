@@ -260,19 +260,61 @@ function setupEventListeners() {
 }
 
 /**
- * Load data from JSON files
+ * Load data from GitHub raw JSONL files
  */
 async function loadData() {
     showLoading(true);
 
     try {
-        // Load incidents data
-        const incidentsData = await fetchData('incidents.json');
-        state.incidents = incidentsData || [];
-
-        // Load disease data
-        const diseaseData = await fetchData('disease-incidents.json');
-        state.diseaseIncidents = diseaseData || [];
+        // Fetch from GitHub raw content
+        const GITHUB_RAW = 'https://raw.githubusercontent.com/nullhack/src-disaster-awareness/main';
+        const BY_DATE_PATH = '/incidents/by-date';
+        
+        // Get list of date folders
+        const datesResponse = await fetch(`${GITHUB_RAW}${BY_DATE_PATH}`);
+        if (!datesResponse.ok) throw new Error('Could not fetch date list');
+        
+        const datesHtml = await datesResponse.text();
+        const dateMatches = datesHtml.match(/\/incidents\/by-date\/(\d{4}-\d{2}-\d{2})\//g) || [];
+        const uniqueDates = [...new Set(dateMatches.map(m => m.match(/(\d{4}-\d{2}-\d{2})/)[1]))];
+        
+        const allIncidents = [];
+        const allDiseases = [];
+        
+        // Fetch each date's incidents.jsonl
+        for (const date of uniqueDates.slice(-30)) { // Last 30 days
+            try {
+                const response = await fetch(`${GITHUB_RAW}${BY_DATE_PATH}/${date}/incidents.jsonl`);
+                if (!response.ok) continue;
+                
+                const text = await response.text();
+                const lines = text.split('\n').filter(l => l.trim());
+                
+                for (const line of lines) {
+                    try {
+                        const record = JSON.parse(line);
+                        const normalized = normalizeIncident(record);
+                        
+                        if (normalized.incident_type === 'Disease') {
+                            allDiseases.push(normalized);
+                        } else {
+                            allIncidents.push(normalized);
+                        }
+                    } catch (e) {
+                        // Skip malformed lines
+                    }
+                }
+            } catch (e) {
+                // Continue on individual file errors
+            }
+        }
+        
+        // Sort by date
+        allIncidents.sort((a, b) => new Date(b.updated_date || b.created_date) - new Date(a.updated_date || a.created_date));
+        allDiseases.sort((a, b) => new Date(b.updated_date || b.created_date) - new Date(a.updated_date || a.created_date));
+        
+        state.incidents = allIncidents;
+        state.diseaseIncidents = allDiseases;
 
         // Populate country filter dropdown
         populateCountryFilter();
@@ -288,11 +330,112 @@ async function loadData() {
         updateLastUpdated();
 
     } catch (error) {
-        console.error('Error loading data:', error);
-        showError('Failed to load incident data');
+        console.error('Error loading data from GitHub:', error);
+        
+        // Fallback to local files
+        console.log('Falling back to local files...');
+        try {
+            const incidentsData = await fetchData('data/incidents.json');
+            const diseaseData = await fetchData('data/disease-incidents.json');
+            state.incidents = incidentsData || [];
+            state.diseaseIncidents = diseaseData || [];
+            
+            populateCountryFilter();
+            updateStats();
+            updateMapMarkers();
+            updateRecentIncidents();
+            updateCharts();
+            updateTable();
+            updateLastUpdated();
+        } catch (e) {
+            showError('Failed to load incident data');
+        }
     } finally {
         showLoading(false);
     }
+}
+
+/**
+ * Normalize incident from JSONL to dashboard format
+ */
+function normalizeIncident(record) {
+    const typeMapping = {
+        'Cyclone': 'Cyclone', 'Tropical Cyclone': 'Cyclone', 'Typhoon': 'Cyclone', 'Hurricane': 'Cyclone',
+        'Earthquake': 'Earthquake', 'Flood': 'Flood', 'Flash Flood': 'Flood', 'River Flood': 'Flood',
+        'Wildfire': 'Fire', 'Forest Fire': 'Fire', 'Fire': 'Fire', 'Volcano': 'Fire',
+        'Drought': 'Drought', 'Landslide': 'Landslide', 'Mudslide': 'Landslide',
+        'Disease': 'Disease', 'Outbreak': 'Disease', 'Epidemic': 'Disease',
+        'Conflict': 'Conflict', 'Food Insecurity': 'Food Insecurity', 'Severe Weather': 'Severe Weather',
+    };
+    
+    const it = record.incident_type || '';
+    let dtype = typeMapping[it] || it;
+    if (!dtype && it.toLowerCase().includes('cyclone')) dtype = 'Cyclone';
+    if (!dtype && it.toLowerCase().includes('fire')) dtype = 'Fire';
+    if (!dtype && it.toLowerCase().includes('flood')) dtype = 'Flood';
+    if (!dtype && it.toLowerCase().includes('disease')) dtype = 'Disease';
+    
+    const loc = record.location || {};
+    const coords = loc.coordinates || {};
+    const provinces = loc.provinces || [];
+    const imp = record.impact || {};
+    const dd = record.disaster_details || {};
+    const cm = record.classification_metadata || {};
+    const meta = record.metadata || {};
+    
+    const sources = (record.sources || []).map(s => ({
+        name: s.name || '',
+        url: s.url || '',
+        type: s.type || '',
+        reliability: s.reliability_tier || ''
+    }));
+    
+    return {
+        incident_id: record.incident_id || '',
+        incident_name: record.incident_name || '',
+        country: record.country || '',
+        country_group: record.country_group || 'C',
+        incident_type: dtype,
+        incident_level: record.incident_level || 1,
+        priority: record.priority || 'LOW',
+        status: record.status || 'Active',
+        created_date: record.created_date || '',
+        updated_date: record.updated_date || '',
+        location: {
+            country: record.country || '',
+            province: provinces[0]?.name || '',
+            affected_provinces: provinces.filter(p => p.affected).length || 1,
+            affected_area_description: loc.affected_area_description || '',
+            coordinates: {
+                lat: coords.latitude || coords.lat || 0,
+                lon: coords.longitude || coords.lon || 0
+            }
+        },
+        impact: {
+            deaths: imp.deaths || 0,
+            missing: imp.missing || 0,
+            injured: imp.injuries || 0,
+            affected: imp.affected_population || 0,
+            displaced: imp.displaced_persons || 0,
+            impact_description: imp.impact_description || ''
+        },
+        disaster_details: {
+            disaster_type: dd.disaster_type || '',
+            magnitude: dd.magnitude_or_scale || '',
+            depth: dd.depth_or_altitude || '',
+            forecasted: dd.forecasted || false
+        },
+        sources: sources,
+        classification: {
+            classified_by: cm.classified_by || '',
+            confidence: cm.classification_confidence || 0,
+            rationale: cm.rationale || ''
+        },
+        metadata: {
+            data_quality: meta.data_quality || '',
+            completeness: meta.completeness_score || 0
+        }
+    };
 }
 
 /**
