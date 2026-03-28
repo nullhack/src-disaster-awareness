@@ -1,131 +1,1588 @@
 [
   {
-    "incident_id": "20250327-ID-FL",
-    "incident_name": "Floods in Jakarta, Indonesia",
-    "country": "Indonesia",
-    "country_group": "A",
-    "incident_type": "Flood",
-    "incident_level": 3,
-    "priority": "HIGH",
+    "incident_id": "20260312-PO-TC",
+    "incident_name": "Tropical Cyclone NURI-26",
+    "country": "Pacific Ocean",
+    "country_group": "B",
+    "incident_type": "Cyclone",
+    "original_type": "Tropical Cyclone",
+    "incident_level": 2,
+    "priority": "MEDIUM",
     "status": "Active",
-    "created_date": "2025-03-25T08:00:00Z",
-    "updated_date": "2025-03-27T14:30:00Z",
+    "tags": [],
+    "created_date": "2026-03-12T00:00:00Z",
+    "updated_date": "2026-03-12T00:00:00Z",
+    "first_reported": "2026-03-12T00:00:00Z",
+    "latest_update": "2026-03-12T00:00:00Z",
     "location": {
-      "country": "Indonesia",
-      "province": "Jakarta",
-      "districts": ["Jakarta Pusat", "Jakarta Selatan", "Jakarta Barat"],
-      "coordinates": {"lat": -6.2088, "lon": 106.8456}
+      "country": "Pacific Ocean",
+      "province": "Pacific Ocean",
+      "affected_provinces": 1,
+      "affected_area_description": "Pacific Ocean",
+      "coordinates": {
+        "lat": 0,
+        "lon": -160.0
+      }
     },
     "impact": {
-      "deaths": 5,
-      "missing": 12,
-      "affected": 45000,
-      "displaced": 23000
+      "deaths": 0,
+      "missing": 0,
+      "injured": 0,
+      "affected": 0,
+      "displaced": 0,
+      "affected_provinces": 1,
+      "impact_description": "Tropical Cyclone NURI-26 active in Pacific Ocean on March 12, 2026. Current winds 56 km/h. Monitoring for development."
+    },
+    "disaster_details": {
+      "disaster_type": "Tropical Cyclone",
+      "magnitude": 56,
+      "depth": 0,
+      "forecasted": false
     },
     "sources": [
-      {"name": "BNPB Indonesia", "url": "https://bnpb.go.id"},
-      {"name": "Reuters", "url": "https://reuters.com"}
-    ]
+      {
+        "name": "GDACS",
+        "url": "https://www.gdacs.org/report.aspx?eventid=1001263&episodeid=5&eventtype=TC",
+        "type": "disaster-database",
+        "reliability": "Tier1"
+      }
+    ],
+    "classification": {
+      "classified_by": "data-engineer",
+      "classified_date": "2026-03-12T00:00:00Z",
+      "confidence": 0.95,
+      "rationale": "Active tropical cyclone - monitoring",
+      "special_flags": []
+    },
+    "metadata": {
+      "data_quality": "High",
+      "completeness": 0.9
+    }
   },
   {
-    "incident_id": "20250327-PH-TY",
-    "incident_name": "Typhoon in Luzon, Philippines",
-    "country": "Philippines",
-    "country_group": "A",
+    "incident_id": "20260312-PO-TC",
+    "incident_name": "Tropical Cyclone NURI-26",
+    "country": "Pacific Ocean",
+    "country_group": "B",
     "incident_type": "Cyclone",
+    "original_type": "Tropical Cyclone",
+    "incident_level": 2,
+    "priority": "MEDIUM",
+    "status": "Active",
+    "tags": [],
+    "created_date": "2026-03-12T00:00:00Z",
+    "updated_date": "2026-03-12T00:00:00Z",
+    "first_reported": "2026-03-12T00:00:00Z",
+    "latest_update": "2026-03-12T00:00:00Z",
+    "location": {
+      "country": "Pacific Ocean",
+      "province": "Pacific Ocean",
+      "affected_provinces": 1,
+      "affected_area_description": "Pacific Ocean",
+      "coordinates": {
+        "lat": 0,
+        "lon": -160.0
+      }
+    },
+    "impact": {
+      "deaths": 0,
+      "missing": 0,
+      "injured": 0,
+      "affected": 0,
+      "displaced": 0,
+      "affected_provinces": 1,
+      "impact_description": "Tropical Cyclone NURI-26 active in Pacific Ocean on March 12, 2026. Current winds 56 km/h. Monitoring for development."
+    },
+    "disaster_details": {
+      "disaster_type": "Tropical Cyclone",
+      "magnitude": 56,
+      "depth": 0,
+      "forecasted": false
+    },
+    "sources": [
+      {
+        "name": "GDACS",
+        "url": "https://www.gdacs.org/report.aspx?eventid=1001263&episodeid=5&eventtype=TC",
+        "type": "disaster-database",
+        "reliability": "Tier1"
+      }
+    ],
+    "classification": {
+      "classified_by": "data-engineer",
+      "classified_date": "2026-03-12T00:00:00Z",
+      "confidence": 0.95,
+      "rationale": "Active tropical cyclone - monitoring",
+      "special_flags": []
+    },
+    "metadata": {
+      "data_quality": "High",
+      "completeness": 0.9
+    }
+  },
+  {
+    "incident_id": "20260311-AU-FL",
+    "incident_name": "Australia floods",
+    "country": "Australia",
+    "country_group": "B",
+    "incident_type": "Flood",
+    "original_type": "Flood",
+    "incident_level": 3,
+    "priority": "MEDIUM",
+    "status": "Active",
+    "tags": [],
+    "created_date": "2026-03-11T00:00:00Z",
+    "updated_date": "2026-03-11T00:00:00Z",
+    "first_reported": "2026-03-11T00:00:00Z",
+    "latest_update": "2026-03-11T00:00:00Z",
+    "location": {
+      "country": "Australia",
+      "province": "Bundaberg",
+      "affected_provinces": 2,
+      "affected_area_description": "Heavy rainfall affecting Bundaberg and Katherine cities",
+      "coordinates": {
+        "lat": -24.866,
+        "lon": 152.348
+      }
+    },
+    "impact": {
+      "deaths": 0,
+      "missing": 0,
+      "injured": 0,
+      "affected": 10000,
+      "displaced": 0,
+      "affected_provinces": 2,
+      "impact_description": "197 sheltered, 2,500 without power, 10,000 isolated. Major flood warnings ongoing."
+    },
+    "disaster_details": {
+      "disaster_type": "Flood",
+      "magnitude": 0,
+      "depth": 0,
+      "forecasted": false
+    },
+    "sources": [
+      {
+        "name": "GDACS",
+        "url": "https://www.gdacs.org/report.aspx?eventtype=FL&eventid=1103742",
+        "type": "disaster-database",
+        "reliability": "Tier1"
+      }
+    ],
+    "classification": {
+      "classified_by": "data-engineer",
+      "classified_date": "2026-03-11T00:00:00Z",
+      "confidence": 0.95,
+      "rationale": "Processed from staging with GDACS source",
+      "special_flags": []
+    },
+    "metadata": {
+      "data_quality": "High",
+      "completeness": 0.92
+    }
+  },
+  {
+    "incident_id": "20260311-CD-LS",
+    "incident_name": "DRC landslide",
+    "country": "Democratic Republic of the Congo",
+    "country_group": "C",
+    "incident_type": "Landslide",
+    "original_type": "Landslide",
     "incident_level": 4,
     "priority": "HIGH",
     "status": "Active",
-    "created_date": "2025-03-20T06:00:00Z",
-    "updated_date": "2025-03-27T10:00:00Z",
+    "tags": [
+      "humanitarian-crisis"
+    ],
+    "created_date": "2026-03-11T00:00:00Z",
+    "updated_date": "2026-03-11T00:00:00Z",
+    "first_reported": "2026-03-11T00:00:00Z",
+    "latest_update": "2026-03-11T00:00:00Z",
     "location": {
-      "country": "Philippines",
-      "province": "Luzon",
-      "districts": ["Cagayan Valley", "Ilocos Region", "Central Luzon"],
-      "coordinates": {"lat": 15.5, "lon": 120.5}
+      "country": "Democratic Republic of the Congo",
+      "province": "North Kivu",
+      "affected_provinces": 1,
+      "affected_area_description": "Rubaya mine area, North Kivu province",
+      "coordinates": {
+        "lat": -0.5,
+        "lon": 29.0
+      }
     },
     "impact": {
-      "deaths": 45,
-      "missing": 23,
-      "affected": 380000,
-      "displaced": 156000
+      "deaths": 300,
+      "missing": 0,
+      "injured": 0,
+      "affected": 300,
+      "displaced": 0,
+      "affected_provinces": 1,
+      "impact_description": "Massive landslide at Rubaya mine area. At least 300 unconfirmed fatalities. Second major landslide in same area (200+ deaths on March 3)."
+    },
+    "disaster_details": {
+      "disaster_type": "Landslide",
+      "magnitude": 0,
+      "depth": 0,
+      "forecasted": false
     },
     "sources": [
-      {"name": "NDRRMC", "url": "https://ndrmc.gov.ph"},
-      {"name": "GDACS", "url": "https://gdacs.org"}
-    ]
+      {
+        "name": "GDACS",
+        "url": "http://erccportal.jrc.ec.europa.eu/",
+        "type": "disaster-database",
+        "reliability": "Tier1"
+      }
+    ],
+    "classification": {
+      "classified_by": "data-engineer",
+      "classified_date": "2026-03-11T00:00:00Z",
+      "confidence": 0.95,
+      "rationale": "Level 4 with significant fatalities",
+      "special_flags": [
+        "humanitarian-crisis"
+      ]
+    },
+    "metadata": {
+      "data_quality": "High",
+      "completeness": 0.9
+    }
   },
   {
-    "incident_id": "20250326-MM-EQ",
-    "incident_name": "Earthquake in Mandalay, Myanmar",
-    "country": "Myanmar",
-    "country_group": "A",
-    "incident_type": "Earthquake",
-    "incident_level": 2,
-    "priority": "MEDIUM",
-    "status": "Active",
-    "created_date": "2025-03-26T12:00:00Z",
-    "updated_date": "2025-03-26T18:00:00Z",
-    "location": {
-      "country": "Myanmar",
-      "province": "Mandalay",
-      "coordinates": {"lat": 21.9583, "lon": 96.0925}
-    },
-    "impact": {
-      "deaths": 3,
-      "affected": 5200
-    },
-    "sources": [
-      {"name": "EMSC", "url": "https://emsc-csem.org"}
-    ]
-  },
-  {
-    "incident_id": "20250325-IN-FL",
-    "incident_name": "Floods in Bihar, India",
-    "country": "India",
-    "country_group": "A",
-    "incident_type": "Flood",
-    "incident_level": 3,
+    "incident_id": "20260311-LB-DC",
+    "incident_name": "Lebanon displacement crisis",
+    "country": "Lebanon",
+    "country_group": "B",
+    "incident_type": "Conflict",
+    "original_type": "Conflict",
+    "incident_level": 4,
     "priority": "HIGH",
     "status": "Active",
-    "created_date": "2025-03-20T07:00:00Z",
-    "updated_date": "2025-03-25T16:00:00Z",
+    "tags": [
+      "humanitarian-crisis"
+    ],
+    "created_date": "2026-03-11T00:00:00Z",
+    "updated_date": "2026-03-11T00:00:00Z",
+    "first_reported": "2026-03-11T00:00:00Z",
+    "latest_update": "2026-03-11T00:00:00Z",
     "location": {
-      "country": "India",
-      "province": "Bihar",
-      "coordinates": {"lat": 25.7854, "lon": 87.4794}
+      "country": "Lebanon",
+      "province": "Various",
+      "affected_provinces": 1,
+      "affected_area_description": "Across Lebanon",
+      "coordinates": {
+        "lat": 33.854,
+        "lon": 35.862
+      }
     },
     "impact": {
-      "deaths": 18,
-      "affected": 125000,
-      "displaced": 45000
+      "deaths": 0,
+      "missing": 0,
+      "injured": 38,
+      "affected": 700000,
+      "displaced": 700000,
+      "affected_provinces": 1,
+      "impact_description": "About 700,000 people displaced in a week across Lebanon due to conflict escalation. 60,000 newly displaced in 24 hours including 18,000 children. 7 children killed, 38 injured."
+    },
+    "disaster_details": {
+      "disaster_type": "Conflict/Displacement",
+      "magnitude": 0,
+      "depth": 0,
+      "forecasted": false
     },
     "sources": [
-      {"name": "NDMA India", "url": "https://ndma.gov.in"}
-    ]
+      {
+        "name": "ReliefWeb",
+        "url": "https://reliefweb.int/report/lebanon/unhcr-almost-700000-displaced-week-across-lebanon-crisis-deepens-enar",
+        "type": "humanitarian-org",
+        "reliability": "Tier1"
+      }
+    ],
+    "classification": {
+      "classified_by": "data-engineer",
+      "classified_date": "2026-03-11T00:00:00Z",
+      "confidence": 0.95,
+      "rationale": "Level 4 humanitarian crisis with mass displacement",
+      "special_flags": [
+        "humanitarian-crisis"
+      ]
+    },
+    "metadata": {
+      "data_quality": "High",
+      "completeness": 0.92
+    }
   },
   {
-    "incident_id": "20250324-TH-FR",
-    "incident_name": "Forest Fires in Chiang Mai, Thailand",
-    "country": "Thailand",
+    "incident_id": "20260311-ME-DC",
+    "incident_name": "Middle East conflict displacement",
+    "country": "Lebanon/Israel/Palestine/Iran",
+    "country_group": "B",
+    "incident_type": "Conflict",
+    "original_type": "Conflict",
+    "incident_level": 4,
+    "priority": "HIGH",
+    "status": "Active",
+    "tags": [
+      "humanitarian-crisis",
+      "multi-regional"
+    ],
+    "created_date": "2026-03-11T00:00:00Z",
+    "updated_date": "2026-03-11T00:00:00Z",
+    "first_reported": "2026-03-11T00:00:00Z",
+    "latest_update": "2026-03-11T00:00:00Z",
+    "location": {
+      "country": "Lebanon/Israel/Palestine/Iran",
+      "province": "Multiple",
+      "affected_provinces": 1,
+      "affected_area_description": "South-West Asia and Middle East",
+      "coordinates": {
+        "lat": 30.0,
+        "lon": 45.0
+      }
+    },
+    "impact": {
+      "deaths": 0,
+      "missing": 0,
+      "injured": 0,
+      "affected": 330000,
+      "displaced": 330000,
+      "affected_provinces": 4,
+      "impact_description": "More than 330,000 displaced by conflict across South-West Asia and Middle East. Significant population movement due to intensifying hostilities."
+    },
+    "disaster_details": {
+      "disaster_type": "Conflict/Displacement",
+      "magnitude": 0,
+      "depth": 0,
+      "forecasted": false
+    },
+    "sources": [
+      {
+        "name": "ReliefWeb",
+        "url": "https://reliefweb.int/report/iran-islamic-republic/unhcr-middle-east-situation-emergency-flash-update-1-5-march-2026",
+        "type": "humanitarian-org",
+        "reliability": "Tier1"
+      }
+    ],
+    "classification": {
+      "classified_by": "data-engineer",
+      "classified_date": "2026-03-11T00:00:00Z",
+      "confidence": 0.95,
+      "rationale": "Multi-regional humanitarian crisis",
+      "special_flags": [
+        "humanitarian-crisis",
+        "multi-regional"
+      ]
+    },
+    "metadata": {
+      "data_quality": "High",
+      "completeness": 0.9
+    }
+  },
+  {
+    "incident_id": "20260311-KE-DF",
+    "incident_name": "Kenya drought and floods",
+    "country": "Kenya",
+    "country_group": "B",
+    "incident_type": "Drought",
+    "original_type": "Drought",
+    "incident_level": 3,
+    "priority": "MEDIUM",
+    "status": "Active",
+    "tags": [],
+    "created_date": "2026-03-11T00:00:00Z",
+    "updated_date": "2026-03-11T00:00:00Z",
+    "first_reported": "2026-03-11T00:00:00Z",
+    "latest_update": "2026-03-11T00:00:00Z",
+    "location": {
+      "country": "Kenya",
+      "province": "ASAL Counties",
+      "affected_provinces": 1,
+      "affected_area_description": "ASAL (Arid and Semi-Arid Land) counties",
+      "coordinates": {
+        "lat": 0.024,
+        "lon": 37.906
+      }
+    },
+    "impact": {
+      "deaths": 0,
+      "missing": 0,
+      "injured": 0,
+      "affected": 3300000,
+      "displaced": 0,
+      "affected_provinces": 1,
+      "impact_description": "3.3 million Kenyans face acute hunger in ASAL counties. Worst drought in 40 years. Ongoing floods also affecting the country."
+    },
+    "disaster_details": {
+      "disaster_type": "Drought/Flood",
+      "magnitude": 0,
+      "depth": 0,
+      "forecasted": false
+    },
+    "sources": [
+      {
+        "name": "ReliefWeb",
+        "url": "https://reliefweb.int/report/kenya/urgent-33-million-kenyans-face-acute-hunger-multi-year-drought-devastates-asal-counties-urgent-multisectoral-action-needed-save-lives",
+        "type": "humanitarian-org",
+        "reliability": "Tier1"
+      }
+    ],
+    "classification": {
+      "classified_by": "data-engineer",
+      "classified_date": "2026-03-11T00:00:00Z",
+      "confidence": 0.95,
+      "rationale": "Major food insecurity crisis in Group B country",
+      "special_flags": []
+    },
+    "metadata": {
+      "data_quality": "High",
+      "completeness": 0.92
+    }
+  },
+  {
+    "incident_id": "20260311-NG-FI",
+    "incident_name": "Nigeria malnutrition crisis",
+    "country": "Nigeria",
+    "country_group": "C",
+    "incident_type": "Food Insecurity",
+    "original_type": "Food Insecurity",
+    "incident_level": 3,
+    "priority": "MEDIUM",
+    "status": "Active",
+    "tags": [],
+    "created_date": "2026-03-11T00:00:00Z",
+    "updated_date": "2026-03-11T00:00:00Z",
+    "first_reported": "2026-03-11T00:00:00Z",
+    "latest_update": "2026-03-11T00:00:00Z",
+    "location": {
+      "country": "Nigeria",
+      "province": "Northern Regions",
+      "affected_provinces": 1,
+      "affected_area_description": "Northern regions of Nigeria",
+      "coordinates": {
+        "lat": 9.082,
+        "lon": 8.675
+      }
+    },
+    "impact": {
+      "deaths": 0,
+      "missing": 0,
+      "injured": 0,
+      "affected": 6400000,
+      "displaced": 0,
+      "affected_provinces": 1,
+      "impact_description": "6.4 million children under-fives suffer from acute malnutrition across northern regions. 15 years into conflict driving food insecurity."
+    },
+    "disaster_details": {
+      "disaster_type": "Food Insecurity",
+      "magnitude": 0,
+      "depth": 0,
+      "forecasted": false
+    },
+    "sources": [
+      {
+        "name": "ReliefWeb",
+        "url": "https://reliefweb.int/report/nigeria/nigeria-millions-children-face-malnutrition-amid-ongoing-conflict-countrys-northeast",
+        "type": "humanitarian-org",
+        "reliability": "Tier1"
+      }
+    ],
+    "classification": {
+      "classified_by": "data-engineer",
+      "classified_date": "2026-03-11T00:00:00Z",
+      "confidence": 0.95,
+      "rationale": "Major food insecurity with significant child impact",
+      "special_flags": []
+    },
+    "metadata": {
+      "data_quality": "High",
+      "completeness": 0.9
+    }
+  },
+  {
+    "incident_id": "20260311-CM-FI",
+    "incident_name": "Cameroon food insecurity",
+    "country": "Cameroon",
+    "country_group": "C",
+    "incident_type": "Food Insecurity",
+    "original_type": "Food Insecurity",
+    "incident_level": 3,
+    "priority": "MEDIUM",
+    "status": "Active",
+    "tags": [],
+    "created_date": "2026-03-11T00:00:00Z",
+    "updated_date": "2026-03-11T00:00:00Z",
+    "first_reported": "2026-03-11T00:00:00Z",
+    "latest_update": "2026-03-11T00:00:00Z",
+    "location": {
+      "country": "Cameroon",
+      "province": "Far North",
+      "affected_provinces": 3,
+      "affected_area_description": "Far North, North and East regions",
+      "coordinates": {
+        "lat": 7.369,
+        "lon": 12.355
+      }
+    },
+    "impact": {
+      "deaths": 0,
+      "missing": 0,
+      "injured": 0,
+      "affected": 3300000,
+      "displaced": 0,
+      "affected_provinces": 3,
+      "impact_description": "More than 3.3 million people struggling to find food in Cameroon. Silent food insecurity crisis in Far North, North and East regions."
+    },
+    "disaster_details": {
+      "disaster_type": "Food Insecurity",
+      "magnitude": 0,
+      "depth": 0,
+      "forecasted": false
+    },
+    "sources": [
+      {
+        "name": "ReliefWeb",
+        "url": "https://reliefweb.int/report/cameroon/cameroons-silent-food-insecurity-crisis-deepens-millions-struggle-find-food",
+        "type": "humanitarian-org",
+        "reliability": "Tier1"
+      }
+    ],
+    "classification": {
+      "classified_by": "data-engineer",
+      "classified_date": "2026-03-11T00:00:00Z",
+      "confidence": 0.95,
+      "rationale": "Significant food insecurity across multiple regions",
+      "special_flags": []
+    },
+    "metadata": {
+      "data_quality": "High",
+      "completeness": 0.9
+    }
+  },
+  {
+    "incident_id": "20260311-GA-SW",
+    "incident_name": "Gabon severe weather",
+    "country": "Gabon",
+    "country_group": "C",
+    "incident_type": "Severe Weather",
+    "original_type": "Severe Weather",
+    "incident_level": 3,
+    "priority": "MEDIUM",
+    "status": "Active",
+    "tags": [],
+    "created_date": "2026-03-11T00:00:00Z",
+    "updated_date": "2026-03-11T00:00:00Z",
+    "first_reported": "2026-03-11T00:00:00Z",
+    "latest_update": "2026-03-11T00:00:00Z",
+    "location": {
+      "country": "Gabon",
+      "province": "Haut-Ogooue",
+      "affected_provinces": 1,
+      "affected_area_description": "Eastern Gabon - Franceville, Moanda and Sucaf areas",
+      "coordinates": {
+        "lat": -1.0,
+        "lon": 14.0
+      }
+    },
+    "impact": {
+      "deaths": 0,
+      "missing": 0,
+      "injured": 1400,
+      "affected": 1683,
+      "displaced": 0,
+      "affected_provinces": 1,
+      "impact_description": "Heavy rainfall and strong winds in eastern Gabon (Haut-Ogooue province). More than 1,400 injured, 283 affected across Franceville, Moanda and Sucaf areas."
+    },
+    "disaster_details": {
+      "disaster_type": "Severe Weather",
+      "magnitude": 0,
+      "depth": 0,
+      "forecasted": false
+    },
+    "sources": [
+      {
+        "name": "GDACS",
+        "url": "http://erccportal.jrc.ec.europa.eu/",
+        "type": "disaster-database",
+        "reliability": "Tier1"
+      }
+    ],
+    "classification": {
+      "classified_by": "data-engineer",
+      "classified_date": "2026-03-11T00:00:00Z",
+      "confidence": 0.95,
+      "rationale": "Significant severe weather with injuries",
+      "special_flags": []
+    },
+    "metadata": {
+      "data_quality": "High",
+      "completeness": 0.9
+    }
+  },
+  {
+    "incident_id": "20260311-US-SF",
+    "incident_name": "Hawaii severe weather",
+    "country": "United States",
+    "country_group": "C",
+    "incident_type": "Severe Weather",
+    "original_type": "Severe Weather",
+    "incident_level": 2,
+    "priority": "LOW",
+    "status": "Active",
+    "tags": [],
+    "created_date": "2026-03-11T00:00:00Z",
+    "updated_date": "2026-03-11T00:00:00Z",
+    "first_reported": "2026-03-11T00:00:00Z",
+    "latest_update": "2026-03-11T00:00:00Z",
+    "location": {
+      "country": "United States",
+      "province": "Hawaii",
+      "affected_provinces": 1,
+      "affected_area_description": "Hawaii Islands - Kauai and Oahu",
+      "coordinates": {
+        "lat": 19.898,
+        "lon": -155.666
+      }
+    },
+    "impact": {
+      "deaths": 0,
+      "missing": 0,
+      "injured": 0,
+      "affected": 1000,
+      "displaced": 0,
+      "affected_provinces": 1,
+      "impact_description": "Severe weather with heavy rainfall and thunderstorms affecting Hawaii Islands. Evacuation orders issued for camping sites on Kauai and Oahu. Emergency proclamation declared."
+    },
+    "disaster_details": {
+      "disaster_type": "Severe Weather/Flood",
+      "magnitude": 0,
+      "depth": 0,
+      "forecasted": false
+    },
+    "sources": [
+      {
+        "name": "GDACS",
+        "url": "http://erccportal.jrc.ec.europa.eu/",
+        "type": "disaster-database",
+        "reliability": "Tier1"
+      }
+    ],
+    "classification": {
+      "classified_by": "data-engineer",
+      "classified_date": "2026-03-11T00:00:00Z",
+      "confidence": 0.95,
+      "rationale": "Group C incident with LOW priority",
+      "special_flags": []
+    },
+    "metadata": {
+      "data_quality": "High",
+      "completeness": 0.88
+    }
+  },
+  {
+    "incident_id": "20260311-PH-VO",
+    "incident_name": "Philippines Kanlaon Volcano",
+    "country": "Philippines",
     "country_group": "A",
     "incident_type": "Fire",
+    "original_type": "Volcano",
     "incident_level": 2,
     "priority": "MEDIUM",
     "status": "Active",
-    "created_date": "2025-03-15T09:00:00Z",
-    "updated_date": "2025-03-24T12:00:00Z",
+    "tags": [],
+    "created_date": "2026-03-11T00:00:00Z",
+    "updated_date": "2026-03-11T00:00:00Z",
+    "first_reported": "2026-03-11T00:00:00Z",
+    "latest_update": "2026-03-11T00:00:00Z",
     "location": {
-      "country": "Thailand",
-      "province": "Chiang Mai",
-      "coordinates": {"lat": 18.7883, "lon": 98.9853}
+      "country": "Philippines",
+      "province": "Negros Island",
+      "affected_provinces": 1,
+      "affected_area_description": "Kanlaon Volcano on Negros Island",
+      "coordinates": {
+        "lat": 10.412,
+        "lon": 123.133
+      }
     },
     "impact": {
-      "affected": 15000,
-      "displaced": 2000
+      "deaths": 0,
+      "missing": 0,
+      "injured": 0,
+      "affected": 0,
+      "displaced": 0,
+      "affected_provinces": 1,
+      "impact_description": "Kanlaon Volcano in Philippines showing ongoing activity. Monitoring continues."
+    },
+    "disaster_details": {
+      "disaster_type": "Volcano",
+      "magnitude": 0,
+      "depth": 0,
+      "forecasted": false
     },
     "sources": [
-      {"name": "Thai PBS", "url": "https://thaipbs.or.th"}
-    ]
+      {
+        "name": "GDACS",
+        "url": "https://www.gdacs.org/",
+        "type": "disaster-database",
+        "reliability": "Tier1"
+      }
+    ],
+    "classification": {
+      "classified_by": "data-engineer",
+      "classified_date": "2026-03-11T00:00:00Z",
+      "confidence": 0.9,
+      "rationale": "Group A volcano activity - monitoring",
+      "special_flags": []
+    },
+    "metadata": {
+      "data_quality": "Medium",
+      "completeness": 0.85
+    }
+  },
+  {
+    "incident_id": "20260311-IN-DR",
+    "incident_name": "Northeast India drought",
+    "country": "India",
+    "country_group": "A",
+    "incident_type": "Drought",
+    "original_type": "Drought",
+    "incident_level": 2,
+    "priority": "MEDIUM",
+    "status": "Active",
+    "tags": [],
+    "created_date": "2026-03-11T00:00:00Z",
+    "updated_date": "2026-03-11T00:00:00Z",
+    "first_reported": "2026-03-11T00:00:00Z",
+    "latest_update": "2026-03-11T00:00:00Z",
+    "location": {
+      "country": "India",
+      "province": "Northeast India",
+      "affected_provinces": 1,
+      "affected_area_description": "Northeast India region",
+      "coordinates": {
+        "lat": 26.0,
+        "lon": 92.0
+      }
+    },
+    "impact": {
+      "deaths": 0,
+      "missing": 0,
+      "injured": 0,
+      "affected": 0,
+      "displaced": 0,
+      "affected_provinces": 1,
+      "impact_description": "Drought conditions in Northeast India. 7 weeks duration."
+    },
+    "disaster_details": {
+      "disaster_type": "Drought",
+      "magnitude": 0,
+      "depth": 0,
+      "forecasted": false
+    },
+    "sources": [
+      {
+        "name": "GDACS",
+        "url": "https://www.gdacs.org/",
+        "type": "disaster-database",
+        "reliability": "Tier1"
+      }
+    ],
+    "classification": {
+      "classified_by": "data-engineer",
+      "classified_date": "2026-03-11T00:00:00Z",
+      "confidence": 0.9,
+      "rationale": "Group A drought conditions",
+      "special_flags": []
+    },
+    "metadata": {
+      "data_quality": "Medium",
+      "completeness": 0.85
+    }
+  },
+  {
+    "incident_id": "20260311-JP-EQ",
+    "incident_name": "Japan earthquake M5.9",
+    "country": "Japan",
+    "country_group": "A",
+    "incident_type": "Earthquake",
+    "original_type": "Earthquake",
+    "incident_level": 1,
+    "priority": "MEDIUM",
+    "status": "Active",
+    "tags": [],
+    "created_date": "2026-03-11T00:00:00Z",
+    "updated_date": "2026-03-11T00:00:00Z",
+    "first_reported": "2026-03-09T00:00:00Z",
+    "latest_update": "2026-03-11T00:00:00Z",
+    "location": {
+      "country": "Japan",
+      "province": "Japan",
+      "affected_provinces": 1,
+      "affected_area_description": "Japan",
+      "coordinates": {
+        "lat": 36.204,
+        "lon": 138.253
+      }
+    },
+    "impact": {
+      "deaths": 0,
+      "missing": 0,
+      "injured": 0,
+      "affected": 0,
+      "displaced": 0,
+      "affected_provinces": 1,
+      "impact_description": "M5.9 earthquake in Japan on March 9, 2026. Depth 140.6km. 2.7 million in MMI IV. Low humanitarian impact expected based on GDACS assessment."
+    },
+    "disaster_details": {
+      "disaster_type": "Earthquake",
+      "magnitude": 5.9,
+      "depth": 140.6,
+      "forecasted": false
+    },
+    "sources": [
+      {
+        "name": "GDACS",
+        "url": "https://www.gdacs.org/report.aspx?eventid=1528231&episodeid=1692051&eventtype=EQ",
+        "type": "disaster-database",
+        "reliability": "Tier1"
+      }
+    ],
+    "classification": {
+      "classified_by": "data-engineer",
+      "classified_date": "2026-03-11T00:00:00Z",
+      "confidence": 0.95,
+      "rationale": "M5.9 earthquake in Group A - low impact expected",
+      "special_flags": []
+    },
+    "metadata": {
+      "data_quality": "High",
+      "completeness": 0.9
+    }
+  },
+  {
+    "incident_id": "20260311-SB-EQ",
+    "incident_name": "Solomon Islands earthquake M6.3",
+    "country": "Solomon Islands",
+    "country_group": "B",
+    "incident_type": "Earthquake",
+    "original_type": "Earthquake",
+    "incident_level": 2,
+    "priority": "MEDIUM",
+    "status": "Active",
+    "tags": [],
+    "created_date": "2026-03-11T00:00:00Z",
+    "updated_date": "2026-03-11T00:00:00Z",
+    "first_reported": "2026-03-06T00:00:00Z",
+    "latest_update": "2026-03-11T00:00:00Z",
+    "location": {
+      "country": "Solomon Islands",
+      "province": "Solomon Islands",
+      "affected_provinces": 1,
+      "affected_area_description": "Solomon Islands region",
+      "coordinates": {
+        "lat": -9.645,
+        "lon": 160.156
+      }
+    },
+    "impact": {
+      "deaths": 0,
+      "missing": 0,
+      "injured": 0,
+      "affected": 0,
+      "displaced": 0,
+      "affected_provinces": 1,
+      "impact_description": "M6.3 earthquake in Solomon Islands on March 6, 2026. Regional significance. Monitoring for tsunami potential."
+    },
+    "disaster_details": {
+      "disaster_type": "Earthquake",
+      "magnitude": 6.3,
+      "depth": 0,
+      "forecasted": false
+    },
+    "sources": [
+      {
+        "name": "GDACS",
+        "url": "https://www.gdacs.org/report.aspx?eventid=1527699&episodeid=1691440&eventtype=EQ",
+        "type": "disaster-database",
+        "reliability": "Tier1"
+      }
+    ],
+    "classification": {
+      "classified_by": "data-engineer",
+      "classified_date": "2026-03-11T00:00:00Z",
+      "confidence": 0.95,
+      "rationale": "M6.3 earthquake in Group B - tsunami monitoring",
+      "special_flags": []
+    },
+    "metadata": {
+      "data_quality": "High",
+      "completeness": 0.9
+    }
+  },
+  {
+    "incident_id": "20260311-IT-EQ",
+    "incident_name": "Italy earthquake M6.0",
+    "country": "Italy",
+    "country_group": "C",
+    "incident_type": "Earthquake",
+    "original_type": "Earthquake",
+    "incident_level": 2,
+    "priority": "LOW",
+    "status": "Monitoring",
+    "tags": [],
+    "created_date": "2026-03-11T00:00:00Z",
+    "updated_date": "2026-03-11T00:00:00Z",
+    "first_reported": "2026-03-09T00:00:00Z",
+    "latest_update": "2026-03-11T00:00:00Z",
+    "location": {
+      "country": "Italy",
+      "province": "Italy",
+      "affected_provinces": 1,
+      "affected_area_description": "Italy",
+      "coordinates": {
+        "lat": 41.872,
+        "lon": 12.567
+      }
+    },
+    "impact": {
+      "deaths": 0,
+      "missing": 0,
+      "injured": 0,
+      "affected": 0,
+      "displaced": 0,
+      "affected_provinces": 1,
+      "impact_description": "M6.0 earthquake in Italy on March 9, 2026. Significant magnitude but in European region."
+    },
+    "disaster_details": {
+      "disaster_type": "Earthquake",
+      "magnitude": 6.0,
+      "depth": 0,
+      "forecasted": false
+    },
+    "sources": [
+      {
+        "name": "GDACS",
+        "url": "https://www.gdacs.org/report.aspx?eventid=1528284&episodeid=1692142&eventtype=EQ",
+        "type": "disaster-database",
+        "reliability": "Tier1"
+      }
+    ],
+    "classification": {
+      "classified_by": "data-engineer",
+      "classified_date": "2026-03-11T00:00:00Z",
+      "confidence": 0.95,
+      "rationale": "Group C earthquake - monitoring status",
+      "special_flags": []
+    },
+    "metadata": {
+      "data_quality": "High",
+      "completeness": 0.88
+    }
+  },
+  {
+    "incident_id": "20260311-ID-EQ",
+    "incident_name": "Indonesia earthquake M6.2",
+    "country": "Indonesia",
+    "country_group": "A",
+    "incident_type": "Earthquake",
+    "original_type": "Earthquake",
+    "incident_level": 2,
+    "priority": "MEDIUM",
+    "status": "Active",
+    "tags": [],
+    "created_date": "2026-03-11T00:00:00Z",
+    "updated_date": "2026-03-11T00:00:00Z",
+    "first_reported": "2026-03-03T00:00:00Z",
+    "latest_update": "2026-03-11T00:00:00Z",
+    "location": {
+      "country": "Indonesia",
+      "province": "Indonesia",
+      "affected_provinces": 1,
+      "affected_area_description": "Indonesia region",
+      "coordinates": {
+        "lat": -0.789,
+        "lon": 113.921
+      }
+    },
+    "impact": {
+      "deaths": 0,
+      "missing": 0,
+      "injured": 0,
+      "affected": 0,
+      "displaced": 0,
+      "affected_provinces": 1,
+      "impact_description": "M6.2 earthquake in Indonesia on March 3, 2026. Regionally significant. Monitoring for impact."
+    },
+    "disaster_details": {
+      "disaster_type": "Earthquake",
+      "magnitude": 6.2,
+      "depth": 0,
+      "forecasted": false
+    },
+    "sources": [
+      {
+        "name": "GDACS",
+        "url": "https://www.gdacs.org/report.aspx?eventid=1527111&episodeid=1690780&eventtype=EQ",
+        "type": "disaster-database",
+        "reliability": "Tier1"
+      }
+    ],
+    "classification": {
+      "classified_by": "data-engineer",
+      "classified_date": "2026-03-11T00:00:00Z",
+      "confidence": 0.95,
+      "rationale": "M6.2 earthquake in Group A country",
+      "special_flags": []
+    },
+    "metadata": {
+      "data_quality": "High",
+      "completeness": 0.9
+    }
+  },
+  {
+    "incident_id": "20260311-PS-HC",
+    "incident_name": "Gaza humanitarian crisis",
+    "country": "Palestine (Gaza)",
+    "country_group": "B",
+    "incident_type": "Conflict",
+    "original_type": "Conflict",
+    "incident_level": 4,
+    "priority": "HIGH",
+    "status": "Active",
+    "tags": [
+      "humanitarian-crisis"
+    ],
+    "created_date": "2026-03-11T00:00:00Z",
+    "updated_date": "2026-03-11T00:00:00Z",
+    "first_reported": "2026-03-11T00:00:00Z",
+    "latest_update": "2026-03-11T00:00:00Z",
+    "location": {
+      "country": "Palestine (Gaza)",
+      "province": "Gaza",
+      "affected_provinces": 1,
+      "affected_area_description": "Gaza Strip",
+      "coordinates": {
+        "lat": 31.354,
+        "lon": 34.308
+      }
+    },
+    "impact": {
+      "deaths": 0,
+      "missing": 0,
+      "injured": 0,
+      "affected": 0,
+      "displaced": 0,
+      "affected_provinces": 1,
+      "impact_description": "Catastrophic conditions in Gaza. Massive aid influx urgently needed. Ongoing catastrophe with lives lost due to violence and aid restrictions."
+    },
+    "disaster_details": {
+      "disaster_type": "Conflict/Humanitarian Crisis",
+      "magnitude": 0,
+      "depth": 0,
+      "forecasted": false
+    },
+    "sources": [
+      {
+        "name": "ReliefWeb",
+        "url": "https://reliefweb.int/report/occupied-palestinian-territory/huge-influx-aid-urgently-needed-amid-catastrophic-conditions-gaza",
+        "type": "humanitarian-org",
+        "reliability": "Tier1"
+      }
+    ],
+    "classification": {
+      "classified_by": "data-engineer",
+      "classified_date": "2026-03-11T00:00:00Z",
+      "confidence": 0.95,
+      "rationale": "Level 4 humanitarian crisis - catastrophic",
+      "special_flags": [
+        "humanitarian-crisis"
+      ]
+    },
+    "metadata": {
+      "data_quality": "High",
+      "completeness": 0.92
+    }
+  },
+  {
+    "incident_id": "20260311-IL-HE",
+    "incident_name": "WHO Israel-Palestine conflict health crisis",
+    "country": "Israel/Palestine",
+    "country_group": "B",
+    "incident_type": "Conflict",
+    "original_type": "Conflict",
+    "incident_level": 4,
+    "priority": "HIGH",
+    "status": "Active",
+    "tags": [
+      "humanitarian-crisis"
+    ],
+    "created_date": "2026-03-11T00:00:00Z",
+    "updated_date": "2026-03-11T00:00:00Z",
+    "first_reported": "2026-03-11T00:00:00Z",
+    "latest_update": "2026-03-11T00:00:00Z",
+    "location": {
+      "country": "Israel/Palestine",
+      "province": "Israel/Palestine",
+      "affected_provinces": 1,
+      "affected_area_description": "Israel and Palestine region",
+      "coordinates": {
+        "lat": 31.5,
+        "lon": 35.0
+      }
+    },
+    "impact": {
+      "deaths": 0,
+      "missing": 0,
+      "injured": 0,
+      "affected": 0,
+      "displaced": 0,
+      "affected_provinces": 1,
+      "impact_description": "WHO reports conflict deepening health crisis across Middle East. Ongoing emergency with significant health impacts."
+    },
+    "disaster_details": {
+      "disaster_type": "Conflict/Health Emergency",
+      "magnitude": 0,
+      "depth": 0,
+      "forecasted": false
+    },
+    "sources": [
+      {
+        "name": "WHO",
+        "url": "https://www.who.int/news/item/11-03-2026-conflict-deepens-health-crisis-across-middle-east--who-says",
+        "type": "government",
+        "reliability": "Tier1"
+      }
+    ],
+    "classification": {
+      "classified_by": "data-engineer",
+      "classified_date": "2026-03-11T00:00:00Z",
+      "confidence": 0.95,
+      "rationale": "WHO declared health emergency",
+      "special_flags": [
+        "humanitarian-crisis"
+      ]
+    },
+    "metadata": {
+      "data_quality": "High",
+      "completeness": 0.92
+    }
+  },
+  {
+    "incident_id": "20260311-SD-HC",
+    "incident_name": "Sudan humanitarian crisis",
+    "country": "Sudan",
+    "country_group": "C",
+    "incident_type": "Conflict",
+    "original_type": "Conflict",
+    "incident_level": 4,
+    "priority": "HIGH",
+    "status": "Active",
+    "tags": [
+      "humanitarian-crisis"
+    ],
+    "created_date": "2026-03-11T00:00:00Z",
+    "updated_date": "2026-03-11T00:00:00Z",
+    "first_reported": "2026-03-11T00:00:00Z",
+    "latest_update": "2026-03-11T00:00:00Z",
+    "location": {
+      "country": "Sudan",
+      "province": "Sudan",
+      "affected_provinces": 1,
+      "affected_area_description": "Sudan",
+      "coordinates": {
+        "lat": 12.863,
+        "lon": 30.217
+      }
+    },
+    "impact": {
+      "deaths": 0,
+      "missing": 0,
+      "injured": 0,
+      "affected": 33700000,
+      "displaced": 0,
+      "affected_provinces": 1,
+      "impact_description": "33.7 million people affected in Sudan. Over 2.5 years of conflict. Humanitarian catastrophe of staggering dimensions."
+    },
+    "disaster_details": {
+      "disaster_type": "Conflict/Humanitarian Crisis",
+      "magnitude": 0,
+      "depth": 0,
+      "forecasted": false
+    },
+    "sources": [
+      {
+        "name": "WHO",
+        "url": "https://www.who.int/publications/m/item/public-health-situation-analysis---sudan-conflict-and-complex-emergency",
+        "type": "government",
+        "reliability": "Tier1"
+      }
+    ],
+    "classification": {
+      "classified_by": "data-engineer",
+      "classified_date": "2026-03-11T00:00:00Z",
+      "confidence": 0.95,
+      "rationale": "Massive humanitarian crisis - 33.7M affected",
+      "special_flags": [
+        "humanitarian-crisis"
+      ]
+    },
+    "metadata": {
+      "data_quality": "High",
+      "completeness": 0.92
+    }
+  },
+  {
+    "incident_id": "20260310-ID-FL",
+    "incident_name": "Indonesia floods",
+    "country": "Indonesia",
+    "country_group": "A",
+    "incident_type": "Flood",
+    "original_type": "Flood",
+    "incident_level": 2,
+    "priority": "MEDIUM",
+    "status": "Active",
+    "tags": [],
+    "created_date": "2026-03-10T00:00:00Z",
+    "updated_date": "2026-03-10T00:00:00Z",
+    "first_reported": "2026-03-10T00:00:00Z",
+    "latest_update": "2026-03-10T00:00:00Z",
+    "location": {
+      "country": "Indonesia",
+      "province": "Various",
+      "affected_provinces": 1,
+      "affected_area_description": "Multiple areas in Indonesia",
+      "coordinates": {
+        "lat": -0.789,
+        "lon": 113.921
+      }
+    },
+    "impact": {
+      "deaths": 0,
+      "missing": 0,
+      "injured": 0,
+      "affected": 5000,
+      "displaced": 0,
+      "affected_provinces": 1,
+      "impact_description": "Floods in Indonesia affecting multiple areas. Ongoing situation with updates expected."
+    },
+    "disaster_details": {
+      "disaster_type": "Flood",
+      "magnitude": 0,
+      "depth": 0,
+      "forecasted": false
+    },
+    "sources": [
+      {
+        "name": "GDACS",
+        "url": "https://www.gdacs.org/",
+        "type": "disaster-database",
+        "reliability": "Tier1"
+      }
+    ],
+    "classification": {
+      "classified_by": "data-engineer",
+      "classified_date": "2026-03-10T00:00:00Z",
+      "confidence": 0.9,
+      "rationale": "Group A flood with medium priority",
+      "special_flags": []
+    },
+    "metadata": {
+      "data_quality": "Medium",
+      "completeness": 0.85
+    }
+  },
+  {
+    "incident_id": "20260310-MM-WF",
+    "incident_name": "Myanmar forest fires",
+    "country": "Myanmar",
+    "country_group": "A",
+    "incident_type": "Fire",
+    "original_type": "Wildfire",
+    "incident_level": 2,
+    "priority": "MEDIUM",
+    "status": "Active",
+    "tags": [],
+    "created_date": "2026-03-10T00:00:00Z",
+    "updated_date": "2026-03-10T00:00:00Z",
+    "first_reported": "2026-03-10T00:00:00Z",
+    "latest_update": "2026-03-10T00:00:00Z",
+    "location": {
+      "country": "Myanmar",
+      "province": "Various",
+      "affected_provinces": 1,
+      "affected_area_description": "Myanmar forest areas",
+      "coordinates": {
+        "lat": 21.916,
+        "lon": 95.956
+      }
+    },
+    "impact": {
+      "deaths": 0,
+      "missing": 0,
+      "injured": 0,
+      "affected": 0,
+      "displaced": 0,
+      "affected_provinces": 1,
+      "impact_description": "Forest fires in Myanmar burning approximately 16,222 hectares."
+    },
+    "disaster_details": {
+      "disaster_type": "Wildfire",
+      "magnitude": 16222,
+      "depth": 0,
+      "forecasted": false
+    },
+    "sources": [
+      {
+        "name": "GDACS",
+        "url": "https://www.gdacs.org/",
+        "type": "disaster-database",
+        "reliability": "Tier1"
+      }
+    ],
+    "classification": {
+      "classified_by": "data-engineer",
+      "classified_date": "2026-00:00:03-10T00Z",
+      "confidence": 0.9,
+      "rationale": "Group A wildfire - significant area burned",
+      "special_flags": []
+    },
+    "metadata": {
+      "data_quality": "Medium",
+      "completeness": 0.85
+    }
+  },
+  {
+    "incident_id": "20260310-ID-FL",
+    "incident_name": "Indonesia floods",
+    "country": "Indonesia",
+    "country_group": "A",
+    "incident_type": "Flood",
+    "original_type": "Flood",
+    "incident_level": 2,
+    "priority": "MEDIUM",
+    "status": "Active",
+    "tags": [],
+    "created_date": "2026-03-10T00:00:00Z",
+    "updated_date": "2026-03-10T00:00:00Z",
+    "first_reported": "2026-03-10T00:00:00Z",
+    "latest_update": "2026-03-10T00:00:00Z",
+    "location": {
+      "country": "Indonesia",
+      "province": "Various",
+      "affected_provinces": 1,
+      "affected_area_description": "Multiple areas in Indonesia",
+      "coordinates": {
+        "lat": -0.789,
+        "lon": 113.921
+      }
+    },
+    "impact": {
+      "deaths": 0,
+      "missing": 0,
+      "injured": 0,
+      "affected": 5000,
+      "displaced": 0,
+      "affected_provinces": 1,
+      "impact_description": "Floods in Indonesia affecting multiple areas. Ongoing situation with updates expected."
+    },
+    "disaster_details": {
+      "disaster_type": "Flood",
+      "magnitude": 0,
+      "depth": 0,
+      "forecasted": false
+    },
+    "sources": [
+      {
+        "name": "GDACS",
+        "url": "https://www.gdacs.org/",
+        "type": "disaster-database",
+        "reliability": "Tier1"
+      }
+    ],
+    "classification": {
+      "classified_by": "data-engineer",
+      "classified_date": "2026-03-10T00:00:00Z",
+      "confidence": 0.9,
+      "rationale": "Group A flood with medium priority",
+      "special_flags": []
+    },
+    "metadata": {
+      "data_quality": "Medium",
+      "completeness": 0.85
+    }
+  },
+  {
+    "incident_id": "20260310-MM-WF",
+    "incident_name": "Myanmar forest fires",
+    "country": "Myanmar",
+    "country_group": "A",
+    "incident_type": "Fire",
+    "original_type": "Wildfire",
+    "incident_level": 2,
+    "priority": "MEDIUM",
+    "status": "Active",
+    "tags": [],
+    "created_date": "2026-03-10T00:00:00Z",
+    "updated_date": "2026-03-10T00:00:00Z",
+    "first_reported": "2026-03-10T00:00:00Z",
+    "latest_update": "2026-03-10T00:00:00Z",
+    "location": {
+      "country": "Myanmar",
+      "province": "Various",
+      "affected_provinces": 1,
+      "affected_area_description": "Myanmar forest areas",
+      "coordinates": {
+        "lat": 21.916,
+        "lon": 95.956
+      }
+    },
+    "impact": {
+      "deaths": 0,
+      "missing": 0,
+      "injured": 0,
+      "affected": 0,
+      "displaced": 0,
+      "affected_provinces": 1,
+      "impact_description": "Forest fires in Myanmar burning approximately 16,222 hectares."
+    },
+    "disaster_details": {
+      "disaster_type": "Wildfire",
+      "magnitude": 16222,
+      "depth": 0,
+      "forecasted": false
+    },
+    "sources": [
+      {
+        "name": "GDACS",
+        "url": "https://www.gdacs.org/",
+        "type": "disaster-database",
+        "reliability": "Tier1"
+      }
+    ],
+    "classification": {
+      "classified_by": "data-engineer",
+      "classified_date": "2026-03-10T00:00:00Z",
+      "confidence": 0.9,
+      "rationale": "Group A wildfire - significant area burned",
+      "special_flags": []
+    },
+    "metadata": {
+      "data_quality": "Medium",
+      "completeness": 0.85
+    }
+  },
+  {
+    "incident_id": "20260301-FJ-FL",
+    "incident_name": "Fiji floods",
+    "country": "Fiji",
+    "country_group": "B",
+    "incident_type": "Flood",
+    "original_type": "Flood",
+    "incident_level": 2,
+    "priority": "LOW",
+    "status": "Monitoring",
+    "tags": [],
+    "created_date": "2026-03-01T00:00:00Z",
+    "updated_date": "2026-03-01T00:00:00Z",
+    "first_reported": "2026-03-01T00:00:00Z",
+    "latest_update": "2026-03-01T00:00:00Z",
+    "location": {
+      "country": "Fiji",
+      "province": "Various",
+      "affected_provinces": 1,
+      "affected_area_description": "Fiji islands",
+      "coordinates": {
+        "lat": -17.713,
+        "lon": 178.065
+      }
+    },
+    "impact": {
+      "deaths": 0,
+      "missing": 0,
+      "injured": 0,
+      "affected": 0,
+      "displaced": 0,
+      "affected_provinces": 1,
+      "impact_description": "Floods in Fiji. Ongoing situation."
+    },
+    "disaster_details": {
+      "disaster_type": "Flood",
+      "magnitude": 0,
+      "depth": 0,
+      "forecasted": false
+    },
+    "sources": [
+      {
+        "name": "GDACS",
+        "url": "https://www.gdacs.org/",
+        "type": "disaster-database",
+        "reliability": "Tier1"
+      }
+    ],
+    "classification": {
+      "classified_by": "data-engineer",
+      "classified_date": "2026-03-01T00:00:00Z",
+      "confidence": 0.85,
+      "rationale": "Group B flood - monitoring status",
+      "special_flags": []
+    },
+    "metadata": {
+      "data_quality": "Medium",
+      "completeness": 0.85
+    }
+  },
+  {
+    "incident_id": "20260301-FJ-FL",
+    "incident_name": "Fiji floods",
+    "country": "Fiji",
+    "country_group": "B",
+    "incident_type": "Flood",
+    "original_type": "Flood",
+    "incident_level": 2,
+    "priority": "LOW",
+    "status": "Monitoring",
+    "tags": [],
+    "created_date": "2026-03-01T00:00:00Z",
+    "updated_date": "2026-03-01T00:00:00Z",
+    "first_reported": "2026-03-01T00:00:00Z",
+    "latest_update": "2026-03-01T00:00:00Z",
+    "location": {
+      "country": "Fiji",
+      "province": "Various",
+      "affected_provinces": 1,
+      "affected_area_description": "Fiji islands",
+      "coordinates": {
+        "lat": -17.713,
+        "lon": 178.065
+      }
+    },
+    "impact": {
+      "deaths": 0,
+      "missing": 0,
+      "injured": 0,
+      "affected": 0,
+      "displaced": 0,
+      "affected_provinces": 1,
+      "impact_description": "Floods in Fiji. Ongoing situation."
+    },
+    "disaster_details": {
+      "disaster_type": "Flood",
+      "magnitude": 0,
+      "depth": 0,
+      "forecasted": false
+    },
+    "sources": [
+      {
+        "name": "GDACS",
+        "url": "https://www.gdacs.org/",
+        "type": "disaster-database",
+        "reliability": "Tier1"
+      }
+    ],
+    "classification": {
+      "classified_by": "data-engineer",
+      "classified_date": "2026-03-01T00:00:00Z",
+      "confidence": 0.85,
+      "rationale": "Group B flood - monitoring status",
+      "special_flags": []
+    },
+    "metadata": {
+      "data_quality": "Medium",
+      "completeness": 0.85
+    }
   }
 ]

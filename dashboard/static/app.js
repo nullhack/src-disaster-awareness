@@ -600,16 +600,21 @@ function updateTable() {
         // Get source links
         const sources = incident.sources || [];
         const sourceLinks = sources.slice(0, 2).map(s => 
-            `<a href="${s.url}" target="_blank" class="source-link">${s.name}</a>`
+            `<a href="${s.url}" target="_blank" class="source-link" title="${s.name}">${s.name}</a>`
         ).join(', ') || 'N/A';
         
         // Build summary text
         const summary = buildIncidentSummary(incident);
         
         // Location text
+        const province = incident.location?.province || '-';
         const location = incident.location?.province 
             ? `${incident.location.province}, ${incident.country}` 
             : incident.country || 'Unknown';
+        
+        // Magnitude
+        const magnitude = incident.disaster_details?.magnitude || incident.disaster_details?.depth || '-';
+        const forecasted = incident.disaster_details?.forecasted ? '🔮 Yes' : '-';
 
         return `
             <tr class="table-row" data-id="${incident.incident_id}">
@@ -621,17 +626,22 @@ function updateTable() {
                     </button>
                 </td>
                 <td>${formatDate(incident.updated_date || incident.created_date)}</td>
-                <td>${incident.country || 'N/A'}</td>
-                <td><span class="type-badge type-${incident.incident_type?.toLowerCase()}">${incident.incident_type || 'Unknown'}</span></td>
-                <td class="incident-name-cell" title="${incident.incident_name}">${incident.incident_name || 'Unnamed'}</td>
+                <td>${incident.country || '-'}</td>
+                <td><span class="type-badge type-${incident.incident_type?.toLowerCase()}">${incident.incident_type || '-'}</span></td>
+                <td class="incident-name-cell" title="${incident.incident_name}">${incident.incident_name || '-'}</td>
+                <td>${province}</td>
                 <td><span class="level-badge" style="background: ${levelColor}">L${incident.incident_level || 1}</span></td>
                 <td>${(incident.impact?.deaths || 0).toLocaleString()}</td>
                 <td>${formatNumber(incident.impact?.affected || 0)}</td>
-                <td><span class="status-badge ${(incident.status || 'Active').toLowerCase()}">${incident.status || 'Active'}</span></td>
+                <td>${formatNumber(incident.impact?.displaced || 0)}</td>
+                <td>${formatNumber(incident.impact?.missing || 0)}</td>
+                <td>${magnitude}</td>
+                <td>${forecasted}</td>
+                <td><span class="status-badge ${(incident.status || 'Active').toLowerCase()}">${incident.status || '-'}</span></td>
                 <td class="sources-cell">${sourceLinks}</td>
             </tr>
             <tr class="summary-row hidden" id="summary-${incident.incident_id}">
-                <td colspan="10">
+                <td colspan="15">
                     <div class="incident-summary">
                         <div class="summary-grid">
                             <div class="summary-item">
@@ -639,26 +649,62 @@ function updateTable() {
                                 <span class="summary-value">${location}</span>
                             </div>
                             <div class="summary-item">
-                                <span class="summary-label">Last Updated</span>
-                                <span class="summary-value">${formatDate(incident.updated_date || incident.created_date)}</span>
-                            </div>
-                            <div class="summary-item">
-                                <span class="summary-label">Displaced</span>
-                                <span class="summary-value">${formatNumber(incident.impact?.displaced || 0)}</span>
-                            </div>
-                            <div class="summary-item">
-                                <span class="summary-label">Missing</span>
-                                <span class="summary-value">${formatNumber(incident.impact?.missing || 0)}</span>
+                                <span class="summary-label">Affected Provinces</span>
+                                <span class="summary-value">${incident.location?.affected_provinces || 1}</span>
                             </div>
                             <div class="summary-item">
                                 <span class="summary-label">Injured</span>
                                 <span class="summary-value">${formatNumber(incident.impact?.injured || 0)}</span>
                             </div>
                             <div class="summary-item">
+                                <span class="summary-label">Magnitude/Scale</span>
+                                <span class="summary-value">${magnitude}</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Forecasted</span>
+                                <span class="summary-value">${forecasted}</span>
+                            </div>
+                            <div class="summary-item">
                                 <span class="summary-label">Country Group</span>
-                                <span class="summary-value">Group ${incident.country_group || 'N/A'}</span>
+                                <span class="summary-value">Group ${incident.country_group || '-'}</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">First Reported</span>
+                                <span class="summary-value">${formatDate(incident.first_reported)}</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Classification</span>
+                                <span class="summary-value">${incident.classification?.classified_by || '-'}</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Confidence</span>
+                                <span class="summary-value">${Math.round((incident.classification?.confidence || 0) * 100)}%</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Data Quality</span>
+                                <span class="summary-value">${incident.metadata?.data_quality || '-'}</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Completeness</span>
+                                <span class="summary-value">${Math.round((incident.metadata?.completeness || 0) * 100)}%</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Tags</span>
+                                <span class="summary-value">${(incident.tags || []).join(', ') || '-'}</span>
                             </div>
                         </div>
+                        ${incident.impact?.impact_description ? `
+                        <div class="summary-description full-width">
+                            <span class="summary-label">Impact Description</span>
+                            <p>${incident.impact.impact_description}</p>
+                        </div>
+                        ` : ''}
+                        ${incident.location?.affected_area_description ? `
+                        <div class="summary-description full-width">
+                            <span class="summary-label">Affected Area</span>
+                            <p>${incident.location.affected_area_description}</p>
+                        </div>
+                        ` : ''}
                         <div class="summary-description">
                             <span class="summary-label">Summary</span>
                             <p>${summary}</p>

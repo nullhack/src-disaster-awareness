@@ -1,101 +1,670 @@
 [
   {
-    "incident_id": "20250327-SG-DEN",
-    "incident_name": "Dengue Fever Outbreak in Singapore",
-    "country": "Singapore",
+    "incident_id": "20260311-BD-DO",
+    "incident_name": "Dengue outbreak Bangladesh",
+    "country": "Bangladesh",
     "country_group": "A",
     "incident_type": "Disease",
-    "disease_type": "Dengue Fever",
+    "original_type": "Disease",
     "incident_level": 2,
     "priority": "MEDIUM",
     "status": "Active",
-    "created_date": "2025-03-01T08:00:00Z",
-    "updated_date": "2025-03-27T09:00:00Z",
+    "tags": [],
+    "created_date": "2026-03-11T00:00:00Z",
+    "updated_date": "2026-03-11T00:00:00Z",
+    "first_reported": "",
+    "latest_update": "",
     "location": {
-      "country": "Singapore",
-      "coordinates": {"lat": 1.3521, "lon": 103.8198}
+      "country": "Bangladesh",
+      "province": "Various",
+      "affected_provinces": 1,
+      "affected_area_description": "Bangladesh",
+      "coordinates": {
+        "lat": 23.685,
+        "lon": 90.356
+      }
     },
     "impact": {
-      "affected": 8500,
-      "deaths": 3
+      "deaths": 0,
+      "missing": 0,
+      "injured": 0,
+      "affected": 0,
+      "displaced": 0,
+      "affected_provinces": 1,
+      "impact_description": "Dengue outbreak in Bangladesh - ongoing update."
+    },
+    "disaster_details": {
+      "disaster_type": "",
+      "magnitude": "",
+      "depth": "",
+      "forecasted": false
     },
     "sources": [
-      {"name": "MOH Singapore", "url": "https://moh.gov.sg"}
-    ]
+      {
+        "name": "ProMED",
+        "url": "https://www.promedmail.org/",
+        "type": "disease-database",
+        "reliability": "Tier1"
+      }
+    ],
+    "classification": {
+      "classified_by": "data-engineer",
+      "classified_date": "2026-03-11T00:00:00Z",
+      "confidence": 0.9,
+      "rationale": "Group A disease outbreak - monitoring",
+      "special_flags": []
+    },
+    "metadata": {
+      "data_quality": "Medium",
+      "completeness": 0.85
+    }
   },
   {
-    "incident_id": "20250325-MY-DEN",
-    "incident_name": "Dengue Outbreak in Malaysia",
-    "country": "Malaysia",
-    "country_group": "A",
+    "incident_id": "20260311-CD-CH",
+    "incident_name": "Cholera outbreak DRC",
+    "country": "Democratic Republic of the Congo",
+    "country_group": "C",
     "incident_type": "Disease",
-    "disease_type": "Dengue Fever",
-    "incident_level": 3,
-    "priority": "HIGH",
+    "original_type": "Disease",
+    "incident_level": 2,
+    "priority": "LOW",
     "status": "Active",
-    "created_date": "2025-02-15T08:00:00Z",
-    "updated_date": "2025-03-25T10:00:00Z",
+    "tags": [],
+    "created_date": "2026-03-11T00:00:00Z",
+    "updated_date": "2026-03-11T00:00:00Z",
+    "first_reported": "",
+    "latest_update": "",
     "location": {
-      "country": "Malaysia",
-      "province": "Selangor",
-      "coordinates": {"lat": 3.0738, "lon": 101.5183}
+      "country": "Democratic Republic of the Congo",
+      "province": "South Kivu",
+      "affected_provinces": 1,
+      "affected_area_description": "South Kivu province",
+      "coordinates": {
+        "lat": -2.5,
+        "lon": 28.0
+      }
     },
     "impact": {
-      "affected": 62000,
-      "deaths": 42
+      "deaths": 0,
+      "missing": 0,
+      "injured": 0,
+      "affected": 0,
+      "displaced": 0,
+      "affected_provinces": 1,
+      "impact_description": "Cholera outbreak in South Kivu, DRC - fatal cases reported."
+    },
+    "disaster_details": {
+      "disaster_type": "",
+      "magnitude": "",
+      "depth": "",
+      "forecasted": false
     },
     "sources": [
-      {"name": "KKM Malaysia", "url": "https://moh.gov.my"}
-    ]
+      {
+        "name": "ProMED",
+        "url": "https://www.promedmail.org/",
+        "type": "disease-database",
+        "reliability": "Tier1"
+      }
+    ],
+    "classification": {
+      "classified_by": "data-engineer",
+      "classified_date": "2026-03-11T00:00:00Z",
+      "confidence": 0.9,
+      "rationale": "Group C disease outbreak - LOW priority",
+      "special_flags": []
+    },
+    "metadata": {
+      "data_quality": "Medium",
+      "completeness": 0.85
+    }
   },
   {
-    "incident_id": "20250322-VN-MPOX",
-    "incident_name": "Mpox Cases in Vietnam",
-    "country": "Vietnam",
+    "incident_id": "20260311-GL-ME",
+    "incident_name": "Measles multiple countries",
+    "country": "Global (Canada, New Zealand, Nepal, USA)",
+    "country_group": "C",
+    "incident_type": "Disease",
+    "original_type": "Disease",
+    "incident_level": 2,
+    "priority": "LOW",
+    "status": "Monitoring",
+    "tags": [],
+    "created_date": "2026-03-11T00:00:00Z",
+    "updated_date": "2026-03-11T00:00:00Z",
+    "first_reported": "",
+    "latest_update": "",
+    "location": {
+      "country": "Global (Canada, New Zealand, Nepal, USA)",
+      "province": "Multiple",
+      "affected_provinces": 1,
+      "affected_area_description": "Multiple countries",
+      "coordinates": {
+        "lat": 0,
+        "lon": 0
+      }
+    },
+    "impact": {
+      "deaths": 0,
+      "missing": 0,
+      "injured": 0,
+      "affected": 0,
+      "displaced": 0,
+      "affected_provinces": 1,
+      "impact_description": "Measles outbreaks reported in multiple countries: Canada, New Zealand, Nepal, USA."
+    },
+    "disaster_details": {
+      "disaster_type": "",
+      "magnitude": "",
+      "depth": "",
+      "forecasted": false
+    },
+    "sources": [
+      {
+        "name": "ProMED",
+        "url": "https://www.promedmail.org/",
+        "type": "disease-database",
+        "reliability": "Tier1"
+      }
+    ],
+    "classification": {
+      "classified_by": "data-engineer",
+      "classified_date": "2026-03-11T00:00:00Z",
+      "confidence": 0.85,
+      "rationale": "Multi-country measles - monitoring",
+      "special_flags": []
+    },
+    "metadata": {
+      "data_quality": "Medium",
+      "completeness": 0.85
+    }
+  },
+  {
+    "incident_id": "20260311-ID-AI",
+    "incident_name": "Avian influenza multi-country",
+    "country": "Indonesia",
     "country_group": "A",
     "incident_type": "Disease",
-    "disease_type": "Mpox",
+    "original_type": "Disease",
     "incident_level": 2,
     "priority": "MEDIUM",
     "status": "Active",
-    "created_date": "2025-03-10T08:00:00Z",
-    "updated_date": "2025-03-22T14:00:00Z",
+    "tags": [],
+    "created_date": "2026-03-11T00:00:00Z",
+    "updated_date": "2026-03-11T00:00:00Z",
+    "first_reported": "",
+    "latest_update": "",
     "location": {
-      "country": "Vietnam",
-      "province": "Ho Chi Minh City",
-      "coordinates": {"lat": 10.8231, "lon": 106.6297}
+      "country": "Indonesia",
+      "province": "Multiple",
+      "affected_provinces": 1,
+      "affected_area_description": "Multiple countries",
+      "coordinates": {
+        "lat": -0.789,
+        "lon": 113.921
+      }
     },
     "impact": {
-      "affected": 156,
-      "deaths": 0
+      "deaths": 0,
+      "missing": 0,
+      "injured": 0,
+      "affected": 0,
+      "displaced": 0,
+      "affected_provinces": 5,
+      "impact_description": "Avian influenza (H5N1) outbreaks in poultry reported in multiple countries including Indonesia, India, USA, South Korea."
+    },
+    "disaster_details": {
+      "disaster_type": "",
+      "magnitude": "",
+      "depth": "",
+      "forecasted": false
     },
     "sources": [
-      {"name": "Vietnam MOH", "url": "https://moh.gov.vn"}
-    ]
+      {
+        "name": "ProMED",
+        "url": "https://www.promedmail.org/",
+        "type": "disease-database",
+        "reliability": "Tier1"
+      }
+    ],
+    "classification": {
+      "classified_by": "data-engineer",
+      "classified_date": "2026-03-11T00:00:00Z",
+      "confidence": 0.9,
+      "rationale": "Group A multi-country avian influenza",
+      "special_flags": []
+    },
+    "metadata": {
+      "data_quality": "Medium",
+      "completeness": 0.85
+    }
   },
   {
-    "incident_id": "20250320-PH-MES",
-    "incident_name": "Measles Outbreak in Philippines",
-    "country": "Philippines",
-    "country_group": "A",
+    "incident_id": "20260311-GL-MX",
+    "incident_name": "Mpox multi-country outbreak",
+    "country": "Global",
+    "country_group": "C",
     "incident_type": "Disease",
-    "disease_type": "Measles",
+    "original_type": "Disease",
     "incident_level": 3,
-    "priority": "HIGH",
+    "priority": "MEDIUM",
     "status": "Active",
-    "created_date": "2025-02-01T08:00:00Z",
-    "updated_date": "2025-03-20T08:00:00Z",
+    "tags": [],
+    "created_date": "2026-03-11T00:00:00Z",
+    "updated_date": "2026-03-11T00:00:00Z",
+    "first_reported": "",
+    "latest_update": "",
     "location": {
-      "country": "Philippines",
-      "province": "Metro Manila",
-      "coordinates": {"lat": 14.5995, "lon": 120.9842}
+      "country": "Global",
+      "province": "Multiple",
+      "affected_provinces": 1,
+      "affected_area_description": "Multiple countries",
+      "coordinates": {
+        "lat": 0,
+        "lon": 0
+      }
     },
     "impact": {
-      "affected": 4500,
-      "deaths": 25
+      "deaths": 0,
+      "missing": 0,
+      "injured": 0,
+      "affected": 0,
+      "displaced": 0,
+      "affected_provinces": 1,
+      "impact_description": "Ongoing multi-country mpox outbreak. WHO situation report #63. Continued international surveillance and response."
+    },
+    "disaster_details": {
+      "disaster_type": "",
+      "magnitude": "",
+      "depth": "",
+      "forecasted": false
     },
     "sources": [
-      {"name": "DOH Philippines", "url": "https://doh.gov.ph"}
-    ]
+      {
+        "name": "WHO",
+        "url": "https://www.who.int/publications/m/item/multi-country-outbreak-of-mpox--external-situation-report--63---24-february-2026",
+        "type": "government",
+        "reliability": "Tier1"
+      }
+    ],
+    "classification": {
+      "classified_by": "data-engineer",
+      "classified_date": "2026-03-11T00:00:00Z",
+      "confidence": 0.95,
+      "rationale": "WHO monitored multi-country outbreak",
+      "special_flags": []
+    },
+    "metadata": {
+      "data_quality": "High",
+      "completeness": 0.9
+    }
+  },
+  {
+    "incident_id": "20260311-LK-LP",
+    "incident_name": "Leptospirosis Sri Lanka",
+    "country": "Sri Lanka",
+    "country_group": "A",
+    "incident_type": "Disease",
+    "original_type": "Disease",
+    "incident_level": 2,
+    "priority": "MEDIUM",
+    "status": "Active",
+    "tags": [],
+    "created_date": "2026-03-11T00:00:00Z",
+    "updated_date": "2026-03-11T00:00:00Z",
+    "first_reported": "",
+    "latest_update": "",
+    "location": {
+      "country": "Sri Lanka",
+      "province": "Sri Lanka",
+      "affected_provinces": 1,
+      "affected_area_description": "Sri Lanka",
+      "coordinates": {
+        "lat": 7.873,
+        "lon": 80.771
+      }
+    },
+    "impact": {
+      "deaths": 0,
+      "missing": 0,
+      "injured": 0,
+      "affected": 0,
+      "displaced": 0,
+      "affected_provinces": 1,
+      "impact_description": "Leptospirosis outbreak reported in Sri Lanka. Disease transmitted through water contaminated with animal urine."
+    },
+    "disaster_details": {
+      "disaster_type": "",
+      "magnitude": "",
+      "depth": "",
+      "forecasted": false
+    },
+    "sources": [
+      {
+        "name": "ProMED",
+        "url": "https://www.promedmail.org/",
+        "type": "disease-database",
+        "reliability": "Tier1"
+      }
+    ],
+    "classification": {
+      "classified_by": "data-engineer",
+      "classified_date": "2026-03-11T00:00:00Z",
+      "confidence": 0.9,
+      "rationale": "Group A disease outbreak",
+      "special_flags": []
+    },
+    "metadata": {
+      "data_quality": "Medium",
+      "completeness": 0.85
+    }
+  },
+  {
+    "incident_id": "20260311-NP-ME",
+    "incident_name": "Measles outbreak Nepal",
+    "country": "Nepal",
+    "country_group": "A",
+    "incident_type": "Disease",
+    "original_type": "Disease",
+    "incident_level": 2,
+    "priority": "MEDIUM",
+    "status": "Active",
+    "tags": [],
+    "created_date": "2026-03-11T00:00:00Z",
+    "updated_date": "2026-03-11T00:00:00Z",
+    "first_reported": "",
+    "latest_update": "",
+    "location": {
+      "country": "Nepal",
+      "province": "Gandaki",
+      "affected_provinces": 1,
+      "affected_area_description": "Gandaki region, Nepal",
+      "coordinates": {
+        "lat": 28.395,
+        "lon": 84.124
+      }
+    },
+    "impact": {
+      "deaths": 0,
+      "missing": 0,
+      "injured": 0,
+      "affected": 0,
+      "displaced": 0,
+      "affected_provinces": 1,
+      "impact_description": "Measles outbreak in Gandaki region, Nepal. Cases reported. Ongoing investigation."
+    },
+    "disaster_details": {
+      "disaster_type": "",
+      "magnitude": "",
+      "depth": "",
+      "forecasted": false
+    },
+    "sources": [
+      {
+        "name": "ProMED",
+        "url": "https://www.promedmail.org/",
+        "type": "disease-database",
+        "reliability": "Tier1"
+      }
+    ],
+    "classification": {
+      "classified_by": "data-engineer",
+      "classified_date": "2026-03-11T00:00:00Z",
+      "confidence": 0.9,
+      "rationale": "Group A measles outbreak",
+      "special_flags": []
+    },
+    "metadata": {
+      "data_quality": "Medium",
+      "completeness": 0.85
+    }
+  },
+  {
+    "incident_id": "20260311-IN-AI",
+    "incident_name": "Avian Influenza India Bihar",
+    "country": "India",
+    "country_group": "A",
+    "incident_type": "Disease",
+    "original_type": "Disease",
+    "incident_level": 2,
+    "priority": "MEDIUM",
+    "status": "Active",
+    "tags": [],
+    "created_date": "2026-03-11T00:00:00Z",
+    "updated_date": "2026-03-11T00:00:00Z",
+    "first_reported": "",
+    "latest_update": "",
+    "location": {
+      "country": "India",
+      "province": "Bihar",
+      "affected_provinces": 1,
+      "affected_area_description": "Bihar, India",
+      "coordinates": {
+        "lat": 25.096,
+        "lon": 85.313
+      }
+    },
+    "impact": {
+      "deaths": 0,
+      "missing": 0,
+      "injured": 0,
+      "affected": 0,
+      "displaced": 0,
+      "affected_provinces": 1,
+      "impact_description": "Avian Influenza H5N1 outbreak in Bihar, India. Affecting crows and poultry. Spreading."
+    },
+    "disaster_details": {
+      "disaster_type": "",
+      "magnitude": "",
+      "depth": "",
+      "forecasted": false
+    },
+    "sources": [
+      {
+        "name": "ProMED",
+        "url": "https://www.promedmail.org/",
+        "type": "disease-database",
+        "reliability": "Tier1"
+      }
+    ],
+    "classification": {
+      "classified_by": "data-engineer",
+      "classified_date": "2026-03-11T00:00:00Z",
+      "confidence": 0.9,
+      "rationale": "Group A avian influenza - spreading",
+      "special_flags": []
+    },
+    "metadata": {
+      "data_quality": "Medium",
+      "completeness": 0.85
+    }
+  },
+  {
+    "incident_id": "20260311-ID-AV",
+    "incident_name": "Avian Influenza Indonesia",
+    "country": "Indonesia",
+    "country_group": "A",
+    "incident_type": "Disease",
+    "original_type": "Disease",
+    "incident_level": 2,
+    "priority": "MEDIUM",
+    "status": "Active",
+    "tags": [],
+    "created_date": "2026-03-11T00:00:00Z",
+    "updated_date": "2026-03-11T00:00:00Z",
+    "first_reported": "",
+    "latest_update": "",
+    "location": {
+      "country": "Indonesia",
+      "province": "Indonesia",
+      "affected_provinces": 1,
+      "affected_area_description": "Indonesia",
+      "coordinates": {
+        "lat": -0.789,
+        "lon": 113.921
+      }
+    },
+    "impact": {
+      "deaths": 0,
+      "missing": 0,
+      "injured": 0,
+      "affected": 0,
+      "displaced": 0,
+      "affected_provinces": 1,
+      "impact_description": "Avian Influenza H5N1 in birds, Indonesia. WOAH reported. Ongoing monitoring."
+    },
+    "disaster_details": {
+      "disaster_type": "",
+      "magnitude": "",
+      "depth": "",
+      "forecasted": false
+    },
+    "sources": [
+      {
+        "name": "ProMED",
+        "url": "https://www.promedmail.org/",
+        "type": "disease-database",
+        "reliability": "Tier1"
+      }
+    ],
+    "classification": {
+      "classified_by": "data-engineer",
+      "classified_date": "2026-03-11T00:00:00Z",
+      "confidence": 0.9,
+      "rationale": "Group A avian influenza - monitoring",
+      "special_flags": []
+    },
+    "metadata": {
+      "data_quality": "Medium",
+      "completeness": 0.85
+    }
+  },
+  {
+    "incident_id": "20260310-CD-EB",
+    "incident_name": "Ebola suspected DRC",
+    "country": "Democratic Republic of the Congo",
+    "country_group": "C",
+    "incident_type": "Disease",
+    "original_type": "Disease",
+    "incident_level": 3,
+    "priority": "MEDIUM",
+    "status": "Active",
+    "tags": [
+      "escalation-risk"
+    ],
+    "created_date": "2026-03-10T00:00:00Z",
+    "updated_date": "2026-03-10T00:00:00Z",
+    "first_reported": "",
+    "latest_update": "",
+    "location": {
+      "country": "Democratic Republic of the Congo",
+      "province": "North Kivu",
+      "affected_provinces": 2,
+      "affected_area_description": "North Kivu and Kasai provinces",
+      "coordinates": {
+        "lat": -0.5,
+        "lon": 29.0
+      }
+    },
+    "impact": {
+      "deaths": 0,
+      "missing": 0,
+      "injured": 0,
+      "affected": 0,
+      "displaced": 0,
+      "affected_provinces": 2,
+      "impact_description": "Suspected Ebola cases reported in North Kivu and Kasai, DRC. Investigation ongoing."
+    },
+    "disaster_details": {
+      "disaster_type": "",
+      "magnitude": "",
+      "depth": "",
+      "forecasted": false
+    },
+    "sources": [
+      {
+        "name": "ProMED",
+        "url": "https://www.promedmail.org/",
+        "type": "disease-database",
+        "reliability": "Tier1"
+      }
+    ],
+    "classification": {
+      "classified_by": "data-engineer",
+      "classified_date": "2026-03-10T00:00:00Z",
+      "confidence": 0.9,
+      "rationale": "Suspected Ebola - high risk disease",
+      "special_flags": [
+        "escalation-risk"
+      ]
+    },
+    "metadata": {
+      "data_quality": "Medium",
+      "completeness": 0.85
+    }
+  },
+  {
+    "incident_id": "20260310-CD-EB",
+    "incident_name": "Ebola suspected DRC",
+    "country": "Democratic Republic of the Congo",
+    "country_group": "C",
+    "incident_type": "Disease",
+    "original_type": "Disease",
+    "incident_level": 3,
+    "priority": "MEDIUM",
+    "status": "Active",
+    "tags": [
+      "escalation-risk"
+    ],
+    "created_date": "2026-03-10T00:00:00Z",
+    "updated_date": "2026-03-10T00:00:00Z",
+    "first_reported": "",
+    "latest_update": "",
+    "location": {
+      "country": "Democratic Republic of the Congo",
+      "province": "North Kivu",
+      "affected_provinces": 2,
+      "affected_area_description": "North Kivu and Kasai provinces",
+      "coordinates": {
+        "lat": -0.5,
+        "lon": 29.0
+      }
+    },
+    "impact": {
+      "deaths": 0,
+      "missing": 0,
+      "injured": 0,
+      "affected": 0,
+      "displaced": 0,
+      "affected_provinces": 2,
+      "impact_description": "Suspected Ebola cases reported in North Kivu and Kasai, DRC. Investigation ongoing."
+    },
+    "disaster_details": {
+      "disaster_type": "",
+      "magnitude": "",
+      "depth": "",
+      "forecasted": false
+    },
+    "sources": [
+      {
+        "name": "ProMED",
+        "url": "https://www.promedmail.org/",
+        "type": "disease-database",
+        "reliability": "Tier1"
+      }
+    ],
+    "classification": {
+      "classified_by": "data-engineer",
+      "classified_date": "2026-03-10T00:00:00Z",
+      "confidence": 0.9,
+      "rationale": "Suspected Ebola - high risk disease",
+      "special_flags": [
+        "escalation-risk"
+      ]
+    },
+    "metadata": {
+      "data_quality": "Medium",
+      "completeness": 0.85
+    }
   }
 ]
