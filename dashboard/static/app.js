@@ -4,7 +4,7 @@
 
 // Configuration
 const CONFIG = {
-    dataPath: 'data/',
+    dataPath: './data/',
     refreshInterval: 300000, // 5 minutes
     mapCenter: [15, 90], // Asia-Pacific focus
     mapZoom: 3,
@@ -264,20 +264,18 @@ function setupEventListeners() {
  */
 async function loadData() {
     showLoading(true);
-    console.log('Loading data...');
-
+    
     try {
-        const incidentsData = await fetchData('incidents.json');
-        
-        const diseaseData = await fetchData('disease-incidents.json');
+        const incidentsData = await fetchData('data/incidents.json');
+        const diseaseData = await fetchData('data/disease-incidents.json');
         
         state.incidents = incidentsData || [];
         state.diseaseIncidents = diseaseData || [];
         
-        alert(`Loaded ${state.incidents.length} incidents and ${state.diseaseIncidents.length} diseases`);
+        alert('Loaded: ' + state.incidents.length + ' incidents, ' + state.diseaseIncidents.length + ' diseases');
     } catch (e) {
-        console.error('Error loading data:', e);
-        alert('Error loading data: ' + e.message);
+        console.error('Error:', e);
+        alert('Error: ' + e.message);
     }
 
     updateAllUI();
@@ -509,16 +507,14 @@ function normalizeIncident(record) {
  */
 async function fetchData(filename) {
     try {
-        const url = CONFIG.dataPath + filename;
-        console.log('Fetching:', url);
-        const response = await fetch(url);
-        console.log('Response:', response.status, response.ok);
-        if (!response.ok) return [];
-        const data = await response.json();
-        console.log('Got:', data.length, 'records');
-        return data;
+        const response = await fetch(filename);
+        if (!response.ok) {
+            console.log('Failed to fetch:', filename, response.status);
+            return [];
+        }
+        return await response.json();
     } catch (error) {
-        console.error(`Error loading ${filename}:`, error);
+        console.error('Error loading', filename, error);
         return [];
     }
 }
