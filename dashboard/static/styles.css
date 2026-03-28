@@ -670,6 +670,17 @@ body::before {
     gap: var(--spacing-xs);
 }
 
+.detail-item.full-width {
+    grid-column: 1 / -1;
+}
+
+.detail-description {
+    font-size: 0.9rem;
+    color: var(--color-text);
+    line-height: 1.6;
+    margin: 4px 0 0 0;
+}
+
 .detail-label {
     font-size: 0.75rem;
     color: var(--color-text-muted);
@@ -1081,11 +1092,13 @@ body::before {
     cursor: pointer;
 }
 
-.incident-name-cell {
-    max-width: 200px;
+.incident-name-cell,
+.description-cell {
+    max-width: 250px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-size: 0.8rem;
 }
 
 .sources-cell {

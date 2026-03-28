@@ -275,15 +275,12 @@
                                 <th>Date</th>
                                 <th>Country</th>
                                 <th>Type</th>
-                                <th>Incident</th>
-                                <th>Province</th>
+                                <th>Description</th>
                                 <th>Lvl</th>
                                 <th>Deaths</th>
                                 <th>Affected</th>
                                 <th>Displaced</th>
-                                <th>Missing</th>
                                 <th>Magnitude</th>
-                                <th>Forecast</th>
                                 <th>Status</th>
                                 <th>Sources</th>
                             </tr>
@@ -319,6 +316,10 @@
                 </div>
                 <div class="modal-body">
                     <div class="detail-grid">
+                        <div class="detail-item full-width">
+                            <span class="detail-label">Description</span>
+                            <p class="detail-description" id="modalDescription">-</p>
+                        </div>
                         <div class="detail-item">
                             <span class="detail-label">Country</span>
                             <span class="detail-value" id="modalCountry">-</span>
@@ -346,6 +347,14 @@
                         <div class="detail-item">
                             <span class="detail-label">Displaced</span>
                             <span class="detail-value" id="modalDisplaced">-</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Missing</span>
+                            <span class="detail-value" id="modalMissing">-</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Injured</span>
+                            <span class="detail-value" id="modalInjured">-</span>
                         </div>
                         <div class="detail-item">
                             <span class="detail-label">Last Updated</span>

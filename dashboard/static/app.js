@@ -479,9 +479,12 @@ function createMarker(incident) {
 function createPopupContent(incident) {
     const severity = getSeverityLabel(incident.incident_level);
     const color = SEVERITY_COLORS[incident.incident_level] || '#3b82f6';
+    
+    // Get description
+    const description = incident.impact?.impact_description || incident.location?.affected_area_description || '';
 
     return `
-        <div style="min-width: 200px;">
+        <div style="min-width: 250px; max-width: 300px;">
             <div style="
                 display: inline-block;
                 padding: 2px 8px;
@@ -498,10 +501,11 @@ function createPopupContent(incident) {
             <h4 style="font-size: 14px; font-weight: 600; margin: 0 0 4px 0;">
                 ${incident.incident_name}
             </h4>
-            <p style="font-size: 12px; color: #94a3b8; margin: 0;">
+            <p style="font-size: 12px; color: #94a3b8; margin: 0 0 8px 0;">
                 ${incident.country} • ${incident.incident_type}
             </p>
-            ${incident.impact?.deaths ? `<p style="font-size: 12px; margin: 8px 0 0 0;"><strong>Deaths:</strong> ${incident.impact.deaths.toLocaleString()}</p>` : ''}
+            ${description ? `<p style="font-size: 11px; color: #cbd5e1; margin: 0 0 8px 0; line-height: 1.4; max-height: 60px; overflow: hidden; text-overflow: ellipsis;">${description}</p>` : ''}
+            ${incident.impact?.deaths ? `<p style="font-size: 12px; margin: 4px 0 0 0;"><strong>Deaths:</strong> ${incident.impact.deaths.toLocaleString()}</p>` : ''}
             ${incident.impact?.affected ? `<p style="font-size: 12px; margin: 4px 0 0 0;"><strong>Affected:</strong> ${incident.impact.affected.toLocaleString()}</p>` : ''}
             <button 
                 onclick="openModal('${incident.incident_id}')"
@@ -614,7 +618,9 @@ function updateTable() {
         
         // Magnitude
         const magnitude = incident.disaster_details?.magnitude || incident.disaster_details?.depth || '-';
-        const forecasted = incident.disaster_details?.forecasted ? '🔮 Yes' : '-';
+        
+        // Get description - prefer impact description, fallback to incident name
+        const description = incident.impact?.impact_description || incident.location?.affected_area_description || incident.incident_name || '-';
 
         return `
             <tr class="table-row" data-id="${incident.incident_id}">
@@ -628,20 +634,17 @@ function updateTable() {
                 <td>${formatDate(incident.updated_date || incident.created_date)}</td>
                 <td>${incident.country || '-'}</td>
                 <td><span class="type-badge type-${incident.incident_type?.toLowerCase()}">${incident.incident_type || '-'}</span></td>
-                <td class="incident-name-cell" title="${incident.incident_name}">${incident.incident_name || '-'}</td>
-                <td>${province}</td>
+                <td class="description-cell" title="${description}">${description}</td>
                 <td><span class="level-badge" style="background: ${levelColor}">L${incident.incident_level || 1}</span></td>
                 <td>${(incident.impact?.deaths || 0).toLocaleString()}</td>
                 <td>${formatNumber(incident.impact?.affected || 0)}</td>
                 <td>${formatNumber(incident.impact?.displaced || 0)}</td>
-                <td>${formatNumber(incident.impact?.missing || 0)}</td>
                 <td>${magnitude}</td>
-                <td>${forecasted}</td>
                 <td><span class="status-badge ${(incident.status || 'Active').toLowerCase()}">${incident.status || '-'}</span></td>
                 <td class="sources-cell">${sourceLinks}</td>
             </tr>
             <tr class="summary-row hidden" id="summary-${incident.incident_id}">
-                <td colspan="15">
+                <td colspan="12">
                     <div class="incident-summary">
                         <div class="summary-grid">
                             <div class="summary-item">
@@ -841,14 +844,18 @@ window.openModal = function(incidentId) {
     // Set title
     document.getElementById('modalTitle').textContent = incident.incident_name;
 
-    // Set details
+    // Set details - including description prominently
+    const description = incident.impact?.impact_description || incident.location?.affected_area_description || 'No description available';
+    document.getElementById('modalDescription').textContent = description;
     document.getElementById('modalCountry').textContent = incident.country;
     document.getElementById('modalType').textContent = incident.incident_type;
     document.getElementById('modalLevel').textContent = `Level ${incident.incident_level}`;
     document.getElementById('modalStatus').textContent = incident.status || 'Active';
-    document.getElementById('modalDeaths').textContent = incident.impact?.deaths?.toLocaleString() || 'N/A';
-    document.getElementById('modalAffected').textContent = incident.impact?.affected?.toLocaleString() || 'N/A';
-    document.getElementById('modalDisplaced').textContent = incident.impact?.displaced?.toLocaleString() || 'N/A';
+    document.getElementById('modalDeaths').textContent = incident.impact?.deaths?.toLocaleString() || '0';
+    document.getElementById('modalAffected').textContent = incident.impact?.affected?.toLocaleString() || '0';
+    document.getElementById('modalDisplaced').textContent = incident.impact?.displaced?.toLocaleString() || '0';
+    document.getElementById('modalMissing').textContent = incident.impact?.missing?.toLocaleString() || '0';
+    document.getElementById('modalInjured').textContent = incident.impact?.injured?.toLocaleString() || '0';
     document.getElementById('modalUpdated').textContent = formatDate(incident.updated_date || incident.created_date);
 
     // Set sources
