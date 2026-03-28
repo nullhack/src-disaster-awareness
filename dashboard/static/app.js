@@ -260,102 +260,121 @@ function setupEventListeners() {
 }
 
 /**
- * Load data from GitHub API + raw JSONL files
+ * Load data - local files first, then GitHub as backup
  */
 async function loadData() {
     showLoading(true);
+    
+    let loadedFromGitHub = false;
 
+    // First try local files (fast, always works)
     try {
-        // Use GitHub API to get list of date directories
-        const API_URL = 'https://api.github.com/repos/nullhack/src-disaster-awareness/contents/incidents/by-date';
+        const incidentsData = await fetchData('data/incidents.json');
+        const diseaseData = await fetchData('data/disease-incidents.json');
         
-        const datesResponse = await fetch(API_URL);
-        if (!datesResponse.ok) throw new Error('Could not fetch date list');
-        
-        const dateDirs = await datesResponse.json();
-        const uniqueDates = dateDirs
-            .filter(d => d.type === 'dir' && d.name.match(/^\d{4}-\d{2}-\d{2}$/))
-            .map(d => d.name)
-            .sort()
-            .slice(-30); // Last 30 days
-        
-        const GITHUB_RAW = 'https://raw.githubusercontent.com/nullhack/src-disaster-awareness/main';
-        const BY_DATE_PATH = '/incidents/by-date';
-        
-        const allIncidents = [];
-        const allDiseases = [];
-        
-        // Fetch each date's incidents.jsonl
-        for (const date of uniqueDates) {
-            try {
-                const response = await fetch(`${GITHUB_RAW}${BY_DATE_PATH}/${date}/incidents.jsonl`);
-                if (!response.ok) continue;
-                
-                const text = await response.text();
-                const lines = text.split('\n').filter(l => l.trim());
-                
-                for (const line of lines) {
-                    try {
-                        const record = JSON.parse(line);
-                        const normalized = normalizeIncident(record);
-                        
-                        if (normalized.incident_type === 'Disease') {
-                            allDiseases.push(normalized);
-                        } else {
-                            allIncidents.push(normalized);
-                        }
-                    } catch (e) {
-                        // Skip malformed lines
-                    }
-                }
-            } catch (e) {
-                // Continue on individual file errors
-            }
+        if (incidentsData && incidentsData.length > 0) {
+            state.incidents = incidentsData;
+            state.diseaseIncidents = diseaseData || [];
+            console.log(`Loaded ${incidentsData.length} incidents from local files`);
+        } else {
+            // Local empty - try GitHub
+            throw new Error('Local files empty');
         }
-        
-        // Sort by date
+    } catch (e) {
+        // Try GitHub as backup
+        console.log('Trying GitHub...');
+        try {
+            await loadFromGitHub();
+            loadedFromGitHub = true;
+        } catch (ghError) {
+            console.error('GitHub also failed:', ghError);
+            showError('Failed to load incident data');
+            showLoading(false);
+            return;
+        }
+    }
+
+    // Always try to update from GitHub in background for fresh data
+    if (!loadedFromGitHub) {
+        setTimeout(async () => {
+            try {
+                await loadFromGitHub();
+                console.log('Updated from GitHub in background');
+            } catch (e) {
+                // Silent fail - we already have local data
+            }
+        }, 2000);
+    }
+
+    // Update UI
+    populateCountryFilter();
+    updateStats();
+    updateMapMarkers();
+    updateRecentIncidents();
+    updateCharts();
+    updateTable();
+    updateLastUpdated();
+    showLoading(false);
+}
+
+/**
+ * Load from GitHub API
+ */
+async function loadFromGitHub() {
+    const API_URL = 'https://api.github.com/repos/nullhack/src-disaster-awareness/contents/incidents/by-date';
+    
+    const datesResponse = await fetch(API_URL);
+    if (!datesResponse.ok) throw new Error('GitHub API failed');
+    
+    const dateDirs = await datesResponse.json();
+    const uniqueDates = dateDirs
+        .filter(d => d.type === 'dir' && d.name.match(/^\d{4}-\d{2}-\d{2}$/))
+        .map(d => d.name)
+        .sort()
+        .slice(-30);
+    
+    const GITHUB_RAW = 'https://raw.githubusercontent.com/nullhack/src-disaster-awareness/main';
+    
+    const allIncidents = [];
+    const allDiseases = [];
+    
+    for (const date of uniqueDates) {
+        try {
+            const response = await fetch(`${GITHUB_RAW}/incidents/by-date/${date}/incidents.jsonl`);
+            if (!response.ok) continue;
+            
+            const text = await response.text();
+            const lines = text.split('\n').filter(l => l.trim());
+            
+            for (const line of lines) {
+                try {
+                    const record = JSON.parse(line);
+                    const normalized = normalizeIncident(record);
+                    
+                    if (normalized.incident_type === 'Disease') {
+                        allDiseases.push(normalized);
+                    } else {
+                        allIncidents.push(normalized);
+                    }
+                } catch (e) {}
+            }
+        } catch (e) {}
+    }
+    
+    if (allIncidents.length > 0) {
         allIncidents.sort((a, b) => new Date(b.updated_date || b.created_date) - new Date(a.updated_date || a.created_date));
         allDiseases.sort((a, b) => new Date(b.updated_date || b.created_date) - new Date(a.updated_date || a.created_date));
         
         state.incidents = allIncidents;
         state.diseaseIncidents = allDiseases;
-
-        // Populate country filter dropdown
+        
+        // Update UI with fresh data
         populateCountryFilter();
-
-        // Update UI with filtered data
         updateStats();
         updateMapMarkers();
         updateRecentIncidents();
         updateCharts();
         updateTable();
-
-        // Update timestamp
-        updateLastUpdated();
-
-    } catch (error) {
-        console.error('Error loading data from GitHub:', error);
-        
-        // Fallback to local files
-        console.log('Falling back to local files...');
-        try {
-            const incidentsData = await fetchData('data/incidents.json');
-            const diseaseData = await fetchData('data/disease-incidents.json');
-            state.incidents = incidentsData || [];
-            state.diseaseIncidents = diseaseData || [];
-            
-            populateCountryFilter();
-            updateStats();
-            updateMapMarkers();
-            updateRecentIncidents();
-            updateCharts();
-            updateTable();
-            updateLastUpdated();
-        } catch (e) {
-            showError('Failed to load incident data');
-        }
-    } finally {
-        showLoading(false);
     }
 }
 
