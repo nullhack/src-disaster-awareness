@@ -1181,3 +1181,146 @@ body::before {
 .legend-dot.major { background: #f97316; width: 14px; height: 14px; }
 .legend-dot.significant { background: #eab308; width: 12px; height: 12px; }
 .legend-dot.minor { background: #22c55e; width: 10px; height: 10px; }
+
+/* Table Row Expansion */
+.expand-cell {
+    width: 40px;
+    text-align: center;
+}
+
+.expand-btn {
+    background: none;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    color: var(--color-text-muted);
+    transition: transform 0.2s, color 0.2s;
+    border-radius: 4px;
+}
+
+.expand-btn:hover {
+    color: var(--color-text);
+    background: var(--color-border);
+}
+
+.expand-btn svg {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.2s;
+}
+
+.expand-btn.expanded svg {
+    transform: rotate(90deg);
+}
+
+.table-row {
+    transition: background 0.2s;
+}
+
+.table-row:hover {
+    background: rgba(59, 130, 246, 0.1);
+}
+
+/* Summary Row */
+.summary-row {
+    background: var(--color-bg) !important;
+}
+
+.summary-row.hidden {
+    display: none;
+}
+
+.summary-row td {
+    padding: 0 !important;
+    border: none;
+}
+
+.incident-summary {
+    padding: 16px;
+    animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.summary-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.summary-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    letter-spacing: 0.5px;
+}
+
+.summary-value {
+    font-size: 0.875rem;
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+.summary-description {
+    margin-bottom: 12px;
+}
+
+.summary-description p {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    margin: 4px 0 0 0;
+}
+
+.summary-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+}
+
+.btn-sm svg {
+    width: 14px;
+    height: 14px;
+}
+
+.btn-primary {
+    background: var(--color-primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #2563eb;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .summary-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

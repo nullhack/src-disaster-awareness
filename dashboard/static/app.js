@@ -593,7 +593,7 @@ function updateTable() {
         return;
     }
 
-    tbody.innerHTML = filtered.slice(0, 50).map(incident => {
+    tbody.innerHTML = filtered.slice(0, 50).map((incident, index) => {
         const levelColors = { 4: '#ef4444', 3: '#f97316', 2: '#eab308', 1: '#22c55e' };
         const levelColor = levelColors[incident.incident_level] || '#6b7280';
         
@@ -602,9 +602,24 @@ function updateTable() {
         const sourceLinks = sources.slice(0, 2).map(s => 
             `<a href="${s.url}" target="_blank" class="source-link">${s.name}</a>`
         ).join(', ') || 'N/A';
+        
+        // Build summary text
+        const summary = buildIncidentSummary(incident);
+        
+        // Location text
+        const location = incident.location?.province 
+            ? `${incident.location.province}, ${incident.country}` 
+            : incident.country || 'Unknown';
 
         return `
-            <tr onclick="openModal('${incident.incident_id}')" class="table-row">
+            <tr class="table-row" data-id="${incident.incident_id}">
+                <td class="expand-cell">
+                    <button class="expand-btn" onclick="toggleRow(this, '${incident.incident_id}')" title="Expand details">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 18l6-6-6-6"/>
+                        </svg>
+                    </button>
+                </td>
                 <td>${formatDate(incident.updated_date || incident.created_date)}</td>
                 <td>${incident.country || 'N/A'}</td>
                 <td><span class="type-badge type-${incident.incident_type?.toLowerCase()}">${incident.incident_type || 'Unknown'}</span></td>
@@ -615,8 +630,115 @@ function updateTable() {
                 <td><span class="status-badge ${(incident.status || 'Active').toLowerCase()}">${incident.status || 'Active'}</span></td>
                 <td class="sources-cell">${sourceLinks}</td>
             </tr>
+            <tr class="summary-row hidden" id="summary-${incident.incident_id}">
+                <td colspan="10">
+                    <div class="incident-summary">
+                        <div class="summary-grid">
+                            <div class="summary-item">
+                                <span class="summary-label">Location</span>
+                                <span class="summary-value">${location}</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Last Updated</span>
+                                <span class="summary-value">${formatDate(incident.updated_date || incident.created_date)}</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Displaced</span>
+                                <span class="summary-value">${formatNumber(incident.impact?.displaced || 0)}</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Missing</span>
+                                <span class="summary-value">${formatNumber(incident.impact?.missing || 0)}</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Injured</span>
+                                <span class="summary-value">${formatNumber(incident.impact?.injured || 0)}</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Country Group</span>
+                                <span class="summary-value">Group ${incident.country_group || 'N/A'}</span>
+                            </div>
+                        </div>
+                        <div class="summary-description">
+                            <span class="summary-label">Summary</span>
+                            <p>${summary}</p>
+                        </div>
+                        <div class="summary-actions">
+                            <button class="btn btn-primary btn-sm" onclick="openModal('${incident.incident_id}')">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                    <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                </svg>
+                                View Full Details
+                            </button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
         `;
     }).join('');
+}
+
+/**
+ * Toggle table row expansion
+ */
+function toggleRow(btn, incidentId) {
+    const summaryRow = document.getElementById(`summary-${incidentId}`);
+    if (!summaryRow) return;
+    
+    const isHidden = summaryRow.classList.contains('hidden');
+    
+    if (isHidden) {
+        // Close all other expanded rows first
+        document.querySelectorAll('.summary-row:not(.hidden)').forEach(row => {
+            row.classList.add('hidden');
+        });
+        document.querySelectorAll('.expand-btn').forEach(b => {
+            b.classList.remove('expanded');
+        });
+        
+        // Expand this row
+        summaryRow.classList.remove('hidden');
+        btn.classList.add('expanded');
+    } else {
+        // Collapse this row
+        summaryRow.classList.add('hidden');
+        btn.classList.remove('expanded');
+    }
+}
+
+/**
+ * Build incident summary text
+ */
+function buildIncidentSummary(incident) {
+    const parts = [];
+    
+    if (incident.location?.province) {
+        parts.push(`Affected area: ${incident.location.province}, ${incident.country}`);
+    }
+    
+    if (incident.impact?.deaths) {
+        parts.push(`${incident.impact.deaths} death${incident.impact.deaths > 1 ? 's' : ''}`);
+    }
+    
+    if (incident.impact?.affected) {
+        parts.push(`${formatNumber(incident.impact.affected)} affected`);
+    }
+    
+    if (incident.impact?.displaced) {
+        parts.push(`${formatNumber(incident.impact.displaced)} displaced`);
+    }
+    
+    if (incident.status) {
+        parts.push(`Status: ${incident.status}`);
+    }
+    
+    // Add source info
+    if (incident.sources?.length > 0) {
+        parts.push(`Source: ${incident.sources[0].name}`);
+    }
+    
+    return parts.join(' • ') || 'No details available';
 }
 
 /**
@@ -1049,4 +1171,6 @@ window.Dashboard = {
     generateAISummary,
     updateTable,
     populateCountryFilter,
+    toggleRow,
+    buildIncidentSummary,
 };

@@ -424,3 +424,81 @@ class TestCombinedFilters:
         # Title should reflect filter
         title = page.locator("#summaryTitle").text_content()
         assert "Cyclone" in title
+
+
+class TestDataTableExpansion:
+    """Tests for table row expansion and inline summary."""
+
+    @pytest.mark.ui
+    def test_table_expand_button_visible(self, page, dashboard_url):
+        """Test that expand buttons are visible in table."""
+        page.goto(dashboard_url)
+        page.wait_for_timeout(1500)
+
+        # Check for expand buttons
+        expand_btns = page.locator(".expand-btn")
+        assert expand_btns.count() > 0
+
+    @pytest.mark.ui
+    def test_table_expand_row_shows_summary(self, page, dashboard_url):
+        """Test that clicking expand shows inline summary."""
+        page.goto(dashboard_url)
+        page.wait_for_timeout(1500)
+
+        # Click first expand button
+        first_expand = page.locator(".expand-btn").first
+        first_expand.click()
+        page.wait_for_timeout(500)
+
+        # Check that summary row is visible
+        summary_rows = page.locator(".summary-row:not(.hidden)")
+        assert summary_rows.count() == 1
+
+    @pytest.mark.ui
+    def test_table_expand_shows_details(self, page, dashboard_url):
+        """Test that expanded summary shows location, impact, etc."""
+        page.goto(dashboard_url)
+        page.wait_for_timeout(1500)
+
+        # Click expand
+        page.locator(".expand-btn").first.click()
+        page.wait_for_timeout(500)
+
+        # Check for summary grid in first visible summary row
+        visible_summary = page.locator(".summary-row:not(.hidden) .summary-grid")
+        assert visible_summary.count() > 0
+
+    @pytest.mark.ui
+    def test_table_expand_view_details_button(self, page, dashboard_url):
+        """Test that View Full Details button exists in expanded row."""
+        page.goto(dashboard_url)
+        page.wait_for_timeout(1500)
+
+        # Click expand
+        page.locator(".expand-btn").first.click()
+        page.wait_for_timeout(500)
+
+        # Check for View Full Details button in the first visible summary
+        view_btn = page.locator(".summary-row:not(.hidden) .btn-primary")
+        assert view_btn.count() > 0
+
+    @pytest.mark.ui
+    def test_table_expand_collapse(self, page, dashboard_url):
+        """Test that clicking expand again collapses the row."""
+        page.goto(dashboard_url)
+        page.wait_for_timeout(1500)
+
+        # Click expand
+        first_expand = page.locator(".expand-btn").first
+        first_expand.click()
+        page.wait_for_timeout(500)
+
+        # Verify expanded
+        assert page.locator(".summary-row:not(.hidden)").count() == 1
+
+        # Click again to collapse
+        first_expand.click()
+        page.wait_for_timeout(500)
+
+        # Verify collapsed
+        assert page.locator(".summary-row:not(.hidden)").count() == 0
