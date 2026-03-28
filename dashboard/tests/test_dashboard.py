@@ -41,14 +41,22 @@ def dash_server():
 
             # Decode URL
             path = urllib.parse.unquote(path)
+            print(f"REQUEST: {path}")
 
             # Handle /data/ prefix - serve from data directory
-            if path.startswith("/data/"):
-                data_file = path[5:]  # Remove /data prefix
+            if path.startswith("/data/") or path == "/data" or path.startswith("data/"):
+                # Serve from DATA_DIR - handle all variations
+                if path == "/data" or path == "data":
+                    return str(DATA_DIR)
+                if path.startswith("/data/"):
+                    data_file = path[5:]  # Remove /data prefix
+                else:
+                    data_file = path[5:]  # Remove data/ prefix
+                print(f"  -> DATA: {DATA_DIR / data_file.lstrip('/')}")
                 return str(DATA_DIR / data_file.lstrip("/"))
 
             # Default - serve from static directory
-            if path == "/":
+            if path == "/" or path == "":
                 return str(STATIC_DIR / "index.html")
 
             # Remove leading slash and serve from static
@@ -58,6 +66,7 @@ def dash_server():
             if static_path.exists():
                 return str(static_path)
 
+            # Fall back to root
             return str(DASHBOARD_ROOT / static_file)
 
         def log_message(self, format, *args):
@@ -302,13 +311,22 @@ class TestDashboardData:
         """Test that incident data loads and displays correctly."""
         page.goto(dashboard_url)
 
+        # Capture console logs
+        console_logs = []
+        page.on("console", lambda msg: console_logs.append(msg.text))
+
         # Wait for data to load
-        page.wait_for_timeout(1500)
+        page.wait_for_timeout(2000)
+
+        # Print console logs for debugging
+        print("Console logs:", console_logs)
 
         # Check total count (should be len of both files)
         total_el = page.locator("#totalIncidents")
         total_text = total_el.text_content()
         expected_total = len(sample_incidents) + len(sample_diseases)
+
+        print(f"Total text: '{total_text}', Expected: {expected_total}")
 
         assert int(total_text) == expected_total
 

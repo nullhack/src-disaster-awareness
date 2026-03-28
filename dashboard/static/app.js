@@ -2,9 +2,9 @@
  * Disaster Awareness Dashboard - Main Application
  */
 
-// Configuration
+// Configuration - use path that works when served from static/ (../data/)
 const CONFIG = {
-    dataPath: './data/',
+    dataPath: '',  // Will be combined with filename in fetchData
     refreshInterval: 300000, // 5 minutes
     mapCenter: [15, 90], // Asia-Pacific focus
     mapZoom: 3,
@@ -265,17 +265,30 @@ function setupEventListeners() {
 async function loadData() {
     showLoading(true);
     
+    console.log('Loading data from data/incidents.json and data/disease-incidents.json');
+    
     try {
-        const incidentsData = await fetchData('data/incidents.json');
-        const diseaseData = await fetchData('data/disease-incidents.json');
+        // Fetch both files in parallel
+        const [incidentsRes, diseasesRes] = await Promise.all([
+            fetch('data/incidents.json'),
+            fetch('data/disease-incidents.json')
+        ]);
+        
+        const incidentsData = incidentsRes.ok ? await incidentsRes.json() : [];
+        const diseaseData = diseasesRes.ok ? await diseasesRes.json() : [];
+        
+        console.log('Incidents:', incidentsData.length);
+        console.log('Diseases:', diseaseData.length);
         
         state.incidents = incidentsData || [];
         state.diseaseIncidents = diseaseData || [];
         
-        alert('Loaded: ' + state.incidents.length + ' incidents, ' + state.diseaseIncidents.length + ' diseases');
+        if (state.incidents.length === 0) {
+            console.error('No incidents loaded!');
+            document.getElementById('totalIncidents').textContent = 'ERROR';
+        }
     } catch (e) {
-        console.error('Error:', e);
-        alert('Error: ' + e.message);
+        console.error('Error loading data:', e);
     }
 
     updateAllUI();
