@@ -1,0 +1,3276 @@
+{
+  "filters": {
+    "untracked": 93,
+    "total": 93,
+    "passed": 93,
+    "marker_counts": {
+      "slow": 2,
+      "integration": 3
+    }
+  },
+  "results": [
+    {
+      "test": "Given: A simple test<br>When: Test executes<br>Then: Should always pass",
+      "nodeid": "tests/disaster_surveillance_reporter_test.py::test_basics",
+      "status": "passed",
+      "duration": 0.00018998699670191854,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/disaster_surveillance_reporter_test.py",
+      "line": 3,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:12.523546Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00018998699670191854,
+          "timestamp": "2026-04-10T05:48:12.523573Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A simple test\nWhen: Test executes\nThen: Should always pass"
+    },
+    {
+      "test": "Given: A GDACSAdapter instance<br>When: fetch() is called with real HTTP to GDACS API<br>Then: Should return list of RawIncidentData (may be empty if no active incidents)",
+      "nodeid": "tests/integration/adapters_test.py::test_gdacs_adapter_fetch_should_return_incidents",
+      "status": "passed",
+      "duration": 4.2200739860054455,
+      "trace": null,
+      "error": null,
+      "markers": [
+        "slow",
+        "integration"
+      ],
+      "file": "tests/integration/adapters_test.py",
+      "line": 11,
+      "stdout": "",
+      "stderr": "INFO - HTTP Request: GET https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson \"HTTP/1.1 200 OK\"\n",
+      "timestamp": "2026-04-10T05:48:16.744915Z",
+      "screenshot": "screenshots",
+      "logs": "HTTP Request: GET https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson \"HTTP/1.1 200 OK\"",
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 4.2200739860054455,
+          "timestamp": "2026-04-10T05:48:16.744932Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A GDACSAdapter instance\nWhen: fetch() is called with real HTTP to GDACS API\nThen: Should return list of RawIncidentData (may be empty if no active incidents)"
+    },
+    {
+      "test": "Given: A GDACSAdapter instance<br>When: fetch() is called<br>Then: All returned incidents should have source_name 'GDACS'",
+      "nodeid": "tests/integration/adapters_test.py::test_gdacs_adapter_fetch_should_have_source_name",
+      "status": "passed",
+      "duration": 3.7625555299964617,
+      "trace": null,
+      "error": null,
+      "markers": [
+        "slow",
+        "integration"
+      ],
+      "file": "tests/integration/adapters_test.py",
+      "line": 24,
+      "stdout": "",
+      "stderr": "INFO - HTTP Request: GET https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson \"HTTP/1.1 200 OK\"\n",
+      "timestamp": "2026-04-10T05:48:20.510498Z",
+      "screenshot": "screenshots",
+      "logs": "HTTP Request: GET https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson \"HTTP/1.1 200 OK\"",
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 3.7625555299964617,
+          "timestamp": "2026-04-10T05:48:20.510514Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A GDACSAdapter instance\nWhen: fetch() is called\nThen: All returned incidents should have source_name 'GDACS'"
+    },
+    {
+      "test": "Given: A JSONLBackend with base_path<br>When: write() is called<br>Then: Should create subfolder in YYYY-MM-DD format (UTC)",
+      "nodeid": "tests/integration/adapters_test.py::test_jsonl_backend_should_create_date_subfolder",
+      "status": "passed",
+      "duration": 0.001215536001836881,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/integration/adapters_test.py",
+      "line": 38,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:20.513249Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.001215536001836881,
+          "timestamp": "2026-04-10T05:48:20.513266Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A JSONLBackend with base_path\nWhen: write() is called\nThen: Should create subfolder in YYYY-MM-DD format (UTC)"
+    },
+    {
+      "test": "Given: A JSONLBackend initialized without date<br>When: write() is called<br>Then: Should use current UTC date for subfolder",
+      "nodeid": "tests/integration/adapters_test.py::test_jsonl_backend_should_use_utc_date",
+      "status": "passed",
+      "duration": 0.0009065000049304217,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/integration/adapters_test.py",
+      "line": 57,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:20.515508Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.0009065000049304217,
+          "timestamp": "2026-04-10T05:48:20.515524Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A JSONLBackend initialized without date\nWhen: write() is called\nThen: Should use current UTC date for subfolder"
+    },
+    {
+      "test": "Given: A JSONLBackend that wrote to a date folder<br>When: read() is called<br>Then: Should return the written incidents",
+      "nodeid": "tests/integration/adapters_test.py::test_jsonl_backend_should_read_from_date_folder",
+      "status": "passed",
+      "duration": 0.0009891489971778356,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/integration/adapters_test.py",
+      "line": 76,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:20.517831Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.0009891489971778356,
+          "timestamp": "2026-04-10T05:48:20.517848Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A JSONLBackend that wrote to a date folder\nWhen: read() is called\nThen: Should return the written incidents"
+    },
+    {
+      "test": "Given: A JSONLBackend with existing data<br>When: append() is called<br>Then: Should add to the same date folder",
+      "nodeid": "tests/integration/adapters_test.py::test_jsonl_backend_should_append_to_date_folder",
+      "status": "passed",
+      "duration": 0.0012846649988205172,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/integration/adapters_test.py",
+      "line": 98,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:20.520499Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.0012846649988205172,
+          "timestamp": "2026-04-10T05:48:20.520519Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A JSONLBackend with existing data\nWhen: append() is called\nThen: Should add to the same date folder"
+    },
+    {
+      "test": "End-to-end test: fetch from sources \u2192 transform \u2192 classify \u2192 send email.",
+      "nodeid": "tests/integration/email_integration_test.py::test_full_pipeline_with_email",
+      "status": "passed",
+      "duration": 11.580127537999942,
+      "trace": null,
+      "error": null,
+      "markers": [
+        "integration"
+      ],
+      "file": "tests/integration/email_integration_test.py",
+      "line": 16,
+      "stdout": "\n[1] Fetching from real sources...\n   GDACS: 13 incidents\n   ProMED: 5 incidents\n\n[2] Transforming to schema...\n   Transformed: 3 incidents\n\n[3] Classifying...\n   Classified: 3 incidents\n\n[4] Sending email...\n   From: contato.eric.lopes@gmail.com\n   To: contato.eric.lopes@gmail.com\n\n[5] Verifying...\n   SUCCESS! Sent report with 3 incidents\n",
+      "stderr": "INFO - HTTP Request: GET https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson \"HTTP/1.1 200 OK\"\n",
+      "timestamp": "2026-04-10T05:48:32.102381Z",
+      "screenshot": "screenshots",
+      "logs": "HTTP Request: GET https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson \"HTTP/1.1 200 OK\"",
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 11.580127537999942,
+          "timestamp": "2026-04-10T05:48:32.102410Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "End-to-end test: fetch from sources \u2192 transform \u2192 classify \u2192 send email."
+    },
+    {
+      "test": "Integration test: Write real data to Google Sheets.",
+      "nodeid": "tests/integration/google_sheets_integration_test.py::test_integration_google_sheets_real_write",
+      "status": "passed",
+      "duration": 0.00035504599509295076,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/integration/google_sheets_integration_test.py",
+      "line": 7,
+      "stdout": "SKIP: GOOGLE_SHEETS_URL not set in environment\nTo run this test:\n1. Copy .env.example to .env\n2. Set GOOGLE_SHEETS_URL with edit-enabled link\n3. Set up Google credentials (OAuth2 or service account)\n",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:32.106865Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00035504599509295076,
+          "timestamp": "2026-04-10T05:48:32.106887Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Integration test: Write real data to Google Sheets."
+    },
+    {
+      "test": "Given: A HealthMapAdapter instance<br>When: source_name property is accessed<br>Then: Should return \"HealthMap\"",
+      "nodeid": "tests/unit/adapters/healthmap_adapter_test.py::test_given_healthmap_adapter_when_source_name_then_should_return_healthmap",
+      "status": "passed",
+      "duration": 0.0001987569994525984,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/adapters/healthmap_adapter_test.py",
+      "line": 6,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:32.108658Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.0001987569994525984,
+          "timestamp": "2026-04-10T05:48:32.108674Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A HealthMapAdapter instance\nWhen: source_name property is accessed\nThen: Should return \"HealthMap\""
+    },
+    {
+      "test": "Given: A HealthMapAdapter in mock mode<br>When: fetch() is called<br>Then: Should return list of RawIncidentData with disease surveillance data",
+      "nodeid": "tests/unit/adapters/healthmap_adapter_test.py::test_given_healthmap_adapter_when_fetch_with_mock_then_should_return_incidents",
+      "status": "passed",
+      "duration": 0.00025821099552558735,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/adapters/healthmap_adapter_test.py",
+      "line": 16,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:32.110163Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00025821099552558735,
+          "timestamp": "2026-04-10T05:48:32.110176Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A HealthMapAdapter in mock mode\nWhen: fetch() is called\nThen: Should return list of RawIncidentData with disease surveillance data"
+    },
+    {
+      "test": "Given: A HealthMapAdapter in mock mode<br>When: fetch() is called<br>Then: Should return incidents with raw_fields containing disease data",
+      "nodeid": "tests/unit/adapters/healthmap_adapter_test.py::test_given_healthmap_adapter_when_fetch_with_mock_then_should_have_disease_data",
+      "status": "passed",
+      "duration": 0.00028101699717808515,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/adapters/healthmap_adapter_test.py",
+      "line": 35,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:32.111783Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00028101699717808515,
+          "timestamp": "2026-04-10T05:48:32.111796Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A HealthMapAdapter in mock mode\nWhen: fetch() is called\nThen: Should return incidents with raw_fields containing disease data"
+    },
+    {
+      "test": "Given: A HealthMapAdapter with mock_mode=False<br>When: fetch() is called (real fetch not implemented)<br>Then: Should return empty list (stub implementation)",
+      "nodeid": "tests/unit/adapters/healthmap_adapter_test.py::test_given_healthmap_adapter_when_fetch_real_then_should_return_empty",
+      "status": "passed",
+      "duration": 0.0001879620031104423,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/adapters/healthmap_adapter_test.py",
+      "line": 48,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:32.113310Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.0001879620031104423,
+          "timestamp": "2026-04-10T05:48:32.113327Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A HealthMapAdapter with mock_mode=False\nWhen: fetch() is called (real fetch not implemented)\nThen: Should return empty list (stub implementation)"
+    },
+    {
+      "test": "Given: A ProMEDAdapter instance<br>When: source_name property is accessed<br>Then: Should return 'ProMED'",
+      "nodeid": "tests/unit/adapters/promed_adapter_test.py::test_given_promed_adapter_when_source_name_then_should_return_promed",
+      "status": "passed",
+      "duration": 0.00018964699847856537,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/adapters/promed_adapter_test.py",
+      "line": 5,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:32.114891Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00018964699847856537,
+          "timestamp": "2026-04-10T05:48:32.114907Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A ProMEDAdapter instance\nWhen: source_name property is accessed\nThen: Should return 'ProMED'"
+    },
+    {
+      "test": "Given: A ProMEDAdapter in mock mode<br>When: fetch() is called<br>Then: Should return list of RawIncidentData",
+      "nodeid": "tests/unit/adapters/promed_adapter_test.py::test_given_promed_adapter_when_fetch_with_mock_then_should_return_incidents",
+      "status": "passed",
+      "duration": 0.0005007800064049661,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/adapters/promed_adapter_test.py",
+      "line": 15,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:32.116684Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.0005007800064049661,
+          "timestamp": "2026-04-10T05:48:32.116697Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A ProMEDAdapter in mock mode\nWhen: fetch() is called\nThen: Should return list of RawIncidentData"
+    },
+    {
+      "test": "Given: A ProMEDAdapter in mock mode<br>When: fetch() is called<br>Then: Incidents should have disease types",
+      "nodeid": "tests/unit/adapters/promed_adapter_test.py::test_given_promed_adapter_when_fetch_then_should_have_disease_types",
+      "status": "passed",
+      "duration": 0.0003736789949471131,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/adapters/promed_adapter_test.py",
+      "line": 28,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:32.118414Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.0003736789949471131,
+          "timestamp": "2026-04-10T05:48:32.118432Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A ProMEDAdapter in mock mode\nWhen: fetch() is called\nThen: Incidents should have disease types"
+    },
+    {
+      "test": "Given: A ProMEDAdapter in mock mode<br>When: fetch() is called<br>Then: Incidents should have countries",
+      "nodeid": "tests/unit/adapters/promed_adapter_test.py::test_given_promed_adapter_when_fetch_then_should_have_countries",
+      "status": "passed",
+      "duration": 0.00025390900555066764,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/adapters/promed_adapter_test.py",
+      "line": 42,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:32.120016Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00025390900555066764,
+          "timestamp": "2026-04-10T05:48:32.120029Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A ProMEDAdapter in mock mode\nWhen: fetch() is called\nThen: Incidents should have countries"
+    },
+    {
+      "test": "Given: A ProMEDAdapter in mock mode<br>When: fetch() is called<br>Then: RawIncidentData should have raw_fields with cases/deaths",
+      "nodeid": "tests/unit/adapters/promed_adapter_test.py::test_given_promed_adapter_when_fetch_then_should_have_raw_fields",
+      "status": "passed",
+      "duration": 0.0003236880002077669,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/adapters/promed_adapter_test.py",
+      "line": 56,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:32.121595Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.0003236880002077669,
+          "timestamp": "2026-04-10T05:48:32.121608Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A ProMEDAdapter in mock mode\nWhen: fetch() is called\nThen: RawIncidentData should have raw_fields with cases/deaths"
+    },
+    {
+      "test": "Given: A ProMEDAdapter in real mode<br>When: fetch() is called<br>Then: Should return empty list (real fetch not implemented)",
+      "nodeid": "tests/unit/adapters/promed_adapter_test.py::test_given_promed_adapter_when_fetch_real_then_should_return_empty",
+      "status": "passed",
+      "duration": 0.00018412800272926688,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/adapters/promed_adapter_test.py",
+      "line": 70,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:32.123033Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00018412800272926688,
+          "timestamp": "2026-04-10T05:48:32.123049Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A ProMEDAdapter in real mode\nWhen: fetch() is called\nThen: Should return empty list (real fetch not implemented)"
+    },
+    {
+      "test": "Given: A ReliefWebAdapter instance<br>When: source_name property is accessed<br>Then: Should return \"ReliefWeb\"",
+      "nodeid": "tests/unit/adapters/reliefweb_adapter_test.py::test_given_reliefweb_adapter_when_source_name_then_should_return_reliefweb",
+      "status": "passed",
+      "duration": 0.00020277600560802966,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/adapters/reliefweb_adapter_test.py",
+      "line": 7,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:32.124681Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00020277600560802966,
+          "timestamp": "2026-04-10T05:48:32.124697Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A ReliefWebAdapter instance\nWhen: source_name property is accessed\nThen: Should return \"ReliefWeb\""
+    },
+    {
+      "test": "Given: A ReliefWebAdapter in mock mode<br>When: fetch() is called<br>Then: Should return list of RawIncidentData with humanitarian incidents",
+      "nodeid": "tests/unit/adapters/reliefweb_adapter_test.py::test_given_reliefweb_adapter_when_fetch_with_mock_then_should_return_incidents",
+      "status": "passed",
+      "duration": 0.00025084599474212155,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/adapters/reliefweb_adapter_test.py",
+      "line": 17,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:32.126156Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00025084599474212155,
+          "timestamp": "2026-04-10T05:48:32.126168Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A ReliefWebAdapter in mock mode\nWhen: fetch() is called\nThen: Should return list of RawIncidentData with humanitarian incidents"
+    },
+    {
+      "test": "Given: A ReliefWebAdapter in mock mode<br>When: fetch() is called<br>Then: Should return incidents with recent dates (within last 7 days)",
+      "nodeid": "tests/unit/adapters/reliefweb_adapter_test.py::test_given_reliefweb_adapter_when_fetch_with_mock_then_should_have_correct_dates",
+      "status": "passed",
+      "duration": 0.00027266499819234014,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/adapters/reliefweb_adapter_test.py",
+      "line": 45,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:32.127735Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00027266499819234014,
+          "timestamp": "2026-04-10T05:48:32.127749Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A ReliefWebAdapter in mock mode\nWhen: fetch() is called\nThen: Should return incidents with recent dates (within last 7 days)"
+    },
+    {
+      "test": "Given: A ReliefWebAdapter with mock_mode=False<br>When: fetch() is called (real fetch not implemented)<br>Then: Should return empty list (stub implementation)",
+      "nodeid": "tests/unit/adapters/reliefweb_adapter_test.py::test_given_reliefweb_adapter_when_fetch_real_then_should_return_empty",
+      "status": "passed",
+      "duration": 4.07311715400283,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/adapters/reliefweb_adapter_test.py",
+      "line": 63,
+      "stdout": "",
+      "stderr": "INFO - HTTP Request: GET https://api.reliefweb.int/v2/reports?appname=disaster-surveillance-reporter&limit=10&preset=latest \"HTTP/1.1 403 Forbidden\"\n",
+      "timestamp": "2026-04-10T05:48:36.202415Z",
+      "screenshot": "screenshots",
+      "logs": "HTTP Request: GET https://api.reliefweb.int/v2/reports?appname=disaster-surveillance-reporter&limit=10&preset=latest \"HTTP/1.1 403 Forbidden\"",
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 4.07311715400283,
+          "timestamp": "2026-04-10T05:48:36.202450Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A ReliefWebAdapter with mock_mode=False\nWhen: fetch() is called (real fetch not implemented)\nThen: Should return empty list (stub implementation)"
+    },
+    {
+      "test": "Given: A GDACSAdapter instance<br>When: source_name property is accessed<br>Then: Should return 'GDACS'",
+      "nodeid": "tests/unit/adapters/source_adapter_test.py::test_gdacs_adapter_should_return_source_name",
+      "status": "passed",
+      "duration": 0.0003726720024133101,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/adapters/source_adapter_test.py",
+      "line": 7,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:36.206013Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.0003726720024133101,
+          "timestamp": "2026-04-10T05:48:36.206046Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A GDACSAdapter instance\nWhen: source_name property is accessed\nThen: Should return 'GDACS'"
+    },
+    {
+      "test": "Given: A GDACSAdapter instance<br>When: fetch() is called<br>Then: Should return a list of RawIncidentData",
+      "nodeid": "tests/unit/adapters/source_adapter_test.py::test_gdacs_adapter_fetch_should_return_list",
+      "status": "passed",
+      "duration": 3.8865885569975944,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/adapters/source_adapter_test.py",
+      "line": 17,
+      "stdout": "",
+      "stderr": "INFO - HTTP Request: GET https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson \"HTTP/1.1 200 OK\"\n",
+      "timestamp": "2026-04-10T05:48:40.095781Z",
+      "screenshot": "screenshots",
+      "logs": "HTTP Request: GET https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson \"HTTP/1.1 200 OK\"",
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 3.8865885569975944,
+          "timestamp": "2026-04-10T05:48:40.095826Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A GDACSAdapter instance\nWhen: fetch() is called\nThen: Should return a list of RawIncidentData"
+    },
+    {
+      "test": "Given: A GDACSAdapter with HTTP error<br>When: fetch() is called<br>Then: Should return empty list",
+      "nodeid": "tests/unit/adapters/source_adapter_test.py::test_gdacs_adapter_fetch_should_return_empty_on_error",
+      "status": "passed",
+      "duration": 0.01427392700134078,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/adapters/source_adapter_test.py",
+      "line": 28,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:40.112984Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.01427392700134078,
+          "timestamp": "2026-04-10T05:48:40.113008Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A GDACSAdapter with HTTP error\nWhen: fetch() is called\nThen: Should return empty list"
+    },
+    {
+      "test": "Given: A GDACSAdapter with timeout<br>When: fetch() is called<br>Then: Should return empty list",
+      "nodeid": "tests/unit/adapters/source_adapter_test.py::test_gdacs_adapter_fetch_should_return_empty_on_timeout",
+      "status": "passed",
+      "duration": 0.0013480720008374192,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/adapters/source_adapter_test.py",
+      "line": 62,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:40.116056Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.0013480720008374192,
+          "timestamp": "2026-04-10T05:48:40.116074Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A GDACSAdapter with timeout\nWhen: fetch() is called\nThen: Should return empty list"
+    },
+    {
+      "test": "Given: A WHOAdapter instance<br>When: source_name property is accessed<br>Then: Should return \"WHO\"",
+      "nodeid": "tests/unit/adapters/who_adapter_test.py::test_given_who_adapter_when_source_name_then_should_return_who",
+      "status": "passed",
+      "duration": 0.00020228500216035172,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/adapters/who_adapter_test.py",
+      "line": 6,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:40.117745Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00020228500216035172,
+          "timestamp": "2026-04-10T05:48:40.117761Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A WHOAdapter instance\nWhen: source_name property is accessed\nThen: Should return \"WHO\""
+    },
+    {
+      "test": "Given: A WHOAdapter in mock mode<br>When: fetch() is called<br>Then: Should return list of RawIncidentData with health emergencies",
+      "nodeid": "tests/unit/adapters/who_adapter_test.py::test_given_who_adapter_when_fetch_with_mock_then_should_return_incidents",
+      "status": "passed",
+      "duration": 0.0003417819971218705,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/adapters/who_adapter_test.py",
+      "line": 16,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:40.120586Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.0003417819971218705,
+          "timestamp": "2026-04-10T05:48:40.120599Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A WHOAdapter in mock mode\nWhen: fetch() is called\nThen: Should return list of RawIncidentData with health emergencies"
+    },
+    {
+      "test": "Given: A WHOAdapter in mock mode<br>When: fetch() is called<br>Then: Should return incidents with raw_fields containing health data",
+      "nodeid": "tests/unit/adapters/who_adapter_test.py::test_given_who_adapter_when_fetch_with_mock_then_should_have_health_data",
+      "status": "passed",
+      "duration": 0.00027301199588691816,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/adapters/who_adapter_test.py",
+      "line": 33,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:40.122358Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00027301199588691816,
+          "timestamp": "2026-04-10T05:48:40.122372Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A WHOAdapter in mock mode\nWhen: fetch() is called\nThen: Should return incidents with raw_fields containing health data"
+    },
+    {
+      "test": "Given: A WHOAdapter with mock_mode=False<br>When: fetch() is called (real fetch not implemented)<br>Then: Should return empty list (stub implementation)",
+      "nodeid": "tests/unit/adapters/who_adapter_test.py::test_given_who_adapter_when_fetch_real_then_should_return_empty",
+      "status": "passed",
+      "duration": 0.00021327799913706258,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/adapters/who_adapter_test.py",
+      "line": 46,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:40.123821Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00021327799913706258,
+          "timestamp": "2026-04-10T05:48:40.123838Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A WHOAdapter with mock_mode=False\nWhen: fetch() is called (real fetch not implemented)\nThen: Should return empty list (stub implementation)"
+    },
+    {
+      "test": "Given: A RulesLoader instance<br>When: get_country_group('Indonesia') is called<br>Then: Should return 'A'",
+      "nodeid": "tests/unit/classification/classification_rules_test.py::test_get_country_group_indonesia_should_be_a",
+      "status": "passed",
+      "duration": 0.0002526059979572892,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/classification/classification_rules_test.py",
+      "line": 13,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:40.125497Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.0002526059979572892,
+          "timestamp": "2026-04-10T05:48:40.125513Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A RulesLoader instance\nWhen: get_country_group('Indonesia') is called\nThen: Should return 'A'"
+    },
+    {
+      "test": "Given: A RulesLoader instance<br>When: get_country_group('Australia') is called<br>Then: Should return 'B'",
+      "nodeid": "tests/unit/classification/classification_rules_test.py::test_get_country_group_australia_should_be_b",
+      "status": "passed",
+      "duration": 0.0002052429990726523,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/classification/classification_rules_test.py",
+      "line": 23,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:40.127050Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.0002052429990726523,
+          "timestamp": "2026-04-10T05:48:40.127068Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A RulesLoader instance\nWhen: get_country_group('Australia') is called\nThen: Should return 'B'"
+    },
+    {
+      "test": "Given: A RulesLoader instance<br>When: get_country_group('Germany') is called<br>Then: Should return 'C' (unknown country defaults to C)",
+      "nodeid": "tests/unit/classification/classification_rules_test.py::test_get_country_group_germany_should_be_c",
+      "status": "passed",
+      "duration": 0.00022404600167647004,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/classification/classification_rules_test.py",
+      "line": 33,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:40.128604Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00022404600167647004,
+          "timestamp": "2026-04-10T05:48:40.128621Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A RulesLoader instance\nWhen: get_country_group('Germany') is called\nThen: Should return 'C' (unknown country defaults to C)"
+    },
+    {
+      "test": "Given: A RulesLoader instance<br>When: get_country_group('Japan') is called<br>Then: Should return 'A'",
+      "nodeid": "tests/unit/classification/classification_rules_test.py::test_get_country_group_japan_should_be_a",
+      "status": "passed",
+      "duration": 0.0002245069990749471,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/classification/classification_rules_test.py",
+      "line": 43,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:40.130417Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.0002245069990749471,
+          "timestamp": "2026-04-10T05:48:40.130435Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A RulesLoader instance\nWhen: get_country_group('Japan') is called\nThen: Should return 'A'"
+    },
+    {
+      "test": "Given: A RulesLoader instance<br>When: get_priority(4, 'A') is called<br>Then: Should return 'HIGH'",
+      "nodeid": "tests/unit/classification/classification_rules_test.py::test_get_priority_level_4_group_a_should_be_high",
+      "status": "passed",
+      "duration": 0.00017886400019051507,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/classification/classification_rules_test.py",
+      "line": 53,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:40.131852Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00017886400019051507,
+          "timestamp": "2026-04-10T05:48:40.131868Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A RulesLoader instance\nWhen: get_priority(4, 'A') is called\nThen: Should return 'HIGH'"
+    },
+    {
+      "test": "Given: A RulesLoader instance<br>When: get_priority(3, 'A') is called<br>Then: Should return 'HIGH'",
+      "nodeid": "tests/unit/classification/classification_rules_test.py::test_get_priority_level_3_group_a_should_be_high",
+      "status": "passed",
+      "duration": 0.0002009939998970367,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/classification/classification_rules_test.py",
+      "line": 63,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:40.133356Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.0002009939998970367,
+          "timestamp": "2026-04-10T05:48:40.133372Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A RulesLoader instance\nWhen: get_priority(3, 'A') is called\nThen: Should return 'HIGH'"
+    },
+    {
+      "test": "Given: A RulesLoader instance<br>When: get_priority(3, 'B') is called<br>Then: Should return 'MEDIUM'",
+      "nodeid": "tests/unit/classification/classification_rules_test.py::test_get_priority_level_3_group_b_should_be_medium",
+      "status": "passed",
+      "duration": 0.00017596899851923808,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/classification/classification_rules_test.py",
+      "line": 73,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:40.134807Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00017596899851923808,
+          "timestamp": "2026-04-10T05:48:40.134824Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A RulesLoader instance\nWhen: get_priority(3, 'B') is called\nThen: Should return 'MEDIUM'"
+    },
+    {
+      "test": "Given: A RulesLoader instance<br>When: get_priority(2, 'C') is called<br>Then: Should return 'LOW'",
+      "nodeid": "tests/unit/classification/classification_rules_test.py::test_get_priority_level_2_group_c_should_be_low",
+      "status": "passed",
+      "duration": 0.0001721540029393509,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/classification/classification_rules_test.py",
+      "line": 83,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:40.136296Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.0001721540029393509,
+          "timestamp": "2026-04-10T05:48:40.136316Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A RulesLoader instance\nWhen: get_priority(2, 'C') is called\nThen: Should return 'LOW'"
+    },
+    {
+      "test": "Given: A RulesLoader instance<br>When: should_report(4, any_group) is called<br>Then: Should return True for all groups",
+      "nodeid": "tests/unit/classification/classification_rules_test.py::test_should_report_level_4_all_groups_should_be_true",
+      "status": "passed",
+      "duration": 0.0001965929986909032,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/classification/classification_rules_test.py",
+      "line": 93,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:40.138031Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.0001965929986909032,
+          "timestamp": "2026-04-10T05:48:40.138050Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A RulesLoader instance\nWhen: should_report(4, any_group) is called\nThen: Should return True for all groups"
+    },
+    {
+      "test": "Given: A RulesLoader instance<br>When: should_report(1, 'C') is called<br>Then: Should return False (Group C Level 1 not reported)",
+      "nodeid": "tests/unit/classification/classification_rules_test.py::test_should_report_level_1_group_c_should_be_false",
+      "status": "passed",
+      "duration": 0.00020693600527010858,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/classification/classification_rules_test.py",
+      "line": 104,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:40.139683Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00020693600527010858,
+          "timestamp": "2026-04-10T05:48:40.139706Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A RulesLoader instance\nWhen: should_report(1, 'C') is called\nThen: Should return False (Group C Level 1 not reported)"
+    },
+    {
+      "test": "Given: A RulesLoader instance<br>When: should_report(1, 'A') is called<br>Then: Should return True (Group A Level 1 reported for awareness)",
+      "nodeid": "tests/unit/classification/classification_rules_test.py::test_should_report_level_1_group_a_should_be_true",
+      "status": "passed",
+      "duration": 0.00018198999896412715,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/classification/classification_rules_test.py",
+      "line": 114,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:40.141348Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00018198999896412715,
+          "timestamp": "2026-04-10T05:48:40.141367Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A RulesLoader instance\nWhen: should_report(1, 'A') is called\nThen: Should return True (Group A Level 1 reported for awareness)"
+    },
+    {
+      "test": "Given: A RulesLoader instance<br>When: should_report(2, 'C') is called<br>Then: Should return False (Group C Level 2 not reported)",
+      "nodeid": "tests/unit/classification/classification_rules_test.py::test_should_report_level_2_group_c_should_be_false",
+      "status": "passed",
+      "duration": 0.00018817999807652086,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/classification/classification_rules_test.py",
+      "line": 124,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:40.142999Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00018817999807652086,
+          "timestamp": "2026-04-10T05:48:40.143021Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A RulesLoader instance\nWhen: should_report(2, 'C') is called\nThen: Should return False (Group C Level 2 not reported)"
+    },
+    {
+      "test": "Given: A CLI instance with storage path<br>When: status() is called<br>Then: Should show zero incidents",
+      "nodeid": "tests/unit/cli_test.py::test_cli_status_should_show_zero_incidents",
+      "status": "passed",
+      "duration": 0.00039659500180277973,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/cli_test.py",
+      "line": 6,
+      "stdout": "=== Disaster Surveillance Reporter Status ===\nStorage path: /tmp/pytest-of-user/pytest-46/test_cli_status_should_show_ze0\nTotal incidents: 0\n\nBy Status:\n\nBy Priority:\n",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:40.146428Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00039659500180277973,
+          "timestamp": "2026-04-10T05:48:40.146444Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A CLI instance with storage path\nWhen: status() is called\nThen: Should show zero incidents"
+    },
+    {
+      "test": "Given: A CLI with storage containing incidents<br>When: status() is called<br>Then: Should show incident counts",
+      "nodeid": "tests/unit/cli_test.py::test_cli_status_should_show_incidents",
+      "status": "passed",
+      "duration": 0.0006692370006931014,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/cli_test.py",
+      "line": 16,
+      "stdout": "=== Disaster Surveillance Reporter Status ===\nStorage path: /tmp/pytest-of-user/pytest-46/test_cli_status_should_show_in0\nTotal incidents: 0\n\nBy Status:\n\nBy Priority:\n",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:40.148912Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.0006692370006931014,
+          "timestamp": "2026-04-10T05:48:40.148926Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A CLI with storage containing incidents\nWhen: status() is called\nThen: Should show incident counts"
+    },
+    {
+      "test": "Given: A CLI instance<br>When: fetch() is called<br>Then: Should fetch incidents from source",
+      "nodeid": "tests/unit/cli_test.py::test_cli_fetch_should_call_adapter",
+      "status": "passed",
+      "duration": 4.28339832900383,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/cli_test.py",
+      "line": 48,
+      "stdout": "  - M4.5 Earthquake Reykjanes Ridge (Unknown)\n  - M4.6 Earthquake Izu Islands, Japan region (Japan region)\n  - M4.6 Earthquake 37 km NE of R\u0101mhormoz, Iran (Iran)\n  - M4.5 Earthquake 185 km SW of Merizo Village, Guam (Guam)\n  - M4.7 Earthquake 138 km WSW of Baluntaicun, China (China)\n  - M5.2 Earthquake South Shetland Islands (Unknown)\n  - M4.9 Earthquake Fiji region (Unknown)\n  - M4.5 Earthquake 84 km NE of Wabag, Papua New Guinea (Papua New Guinea)\n  - M5.1 Earthquake Izu Islands, Japan region (Japan region)\n  - M4.9 Earthquake Volcano Islands, Japan region (Japan region)\n  - M4.9 Earthquake 193 km SSW of Merizo Village, Guam (Guam)\n  - M4.7 Earthquake 27 km SW of Surup, Philippines (Philippines)\n  - M5.1 Earthquake 93 km ENE of Nabire, Indonesia (Indonesia)\n",
+      "stderr": "INFO - HTTP Request: GET https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson \"HTTP/1.1 200 OK\"\nINFO - Fetched 13 incidents from gdacs\n",
+      "timestamp": "2026-04-10T05:48:44.433923Z",
+      "screenshot": "screenshots",
+      "logs": "HTTP Request: GET https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson \"HTTP/1.1 200 OK\"\nFetched 13 incidents from gdacs",
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 4.28339832900383,
+          "timestamp": "2026-04-10T05:48:44.433975Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A CLI instance\nWhen: fetch() is called\nThen: Should fetch incidents from source"
+    },
+    {
+      "test": "Given: A CLI instance<br>When: full_cycle() is called<br>Then: Should run complete pipeline",
+      "nodeid": "tests/unit/cli_test.py::test_cli_full_cycle_should_run_pipeline",
+      "status": "passed",
+      "duration": 4.363515543001995,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/cli_test.py",
+      "line": 58,
+      "stdout": "=== Running Full Pipeline ===\n1. Fetching from gdacs...\n   Found 13 raw incidents\n2. Transforming to schema...\n   Transformed 13 incidents\n3. Classifying...\n   Classified 13 incidents\n4. Storing...\n   Stored in incidents\n\n=== Pipeline Complete ===\n",
+      "stderr": "INFO - HTTP Request: GET https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson \"HTTP/1.1 200 OK\"\n",
+      "timestamp": "2026-04-10T05:48:48.801601Z",
+      "screenshot": "screenshots",
+      "logs": "HTTP Request: GET https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson \"HTTP/1.1 200 OK\"",
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 4.363515543001995,
+          "timestamp": "2026-04-10T05:48:48.801633Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A CLI instance\nWhen: full_cycle() is called\nThen: Should run complete pipeline"
+    },
+    {
+      "test": "Given: A CLI instance<br>When: store() is called<br>Then: Should show storage status",
+      "nodeid": "tests/unit/cli_test.py::test_cli_store_should_show_storage_status",
+      "status": "passed",
+      "duration": 0.0006295040002441965,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/cli_test.py",
+      "line": 68,
+      "stdout": "Storage path: /tmp/pytest-of-user/pytest-46/test_cli_store_should_show_sto0\nStored 0 incidents\n",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.806338Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.0006295040002441965,
+          "timestamp": "2026-04-10T05:48:48.806364Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A CLI instance\nWhen: store() is called\nThen: Should show storage status"
+    },
+    {
+      "test": "Given: A CLI with stored incidents<br>When: classify() is called<br>Then: Should classify incidents",
+      "nodeid": "tests/unit/cli_test.py::test_cli_classify_with_incidents",
+      "status": "passed",
+      "duration": 0.0010821850009961054,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/cli_test.py",
+      "line": 78,
+      "stdout": "",
+      "stderr": "INFO - Classified 0 incidents\n",
+      "timestamp": "2026-04-10T05:48:48.810077Z",
+      "screenshot": "screenshots",
+      "logs": "Classified 0 incidents",
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.0010821850009961054,
+          "timestamp": "2026-04-10T05:48:48.810097Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A CLI with stored incidents\nWhen: classify() is called\nThen: Should classify incidents"
+    },
+    {
+      "test": "Given: An OpenCodeClient instance<br>When: model property is accessed<br>Then: Should return the current model",
+      "nodeid": "tests/unit/opencode/opencode_client_test.py::test_given_opencode_client_when_model_then_should_return_current",
+      "status": "passed",
+      "duration": 0.00020793499425053596,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/opencode/opencode_client_test.py",
+      "line": 7,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.812008Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00020793499425053596,
+          "timestamp": "2026-04-10T05:48:48.812031Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: An OpenCodeClient instance\nWhen: model property is accessed\nThen: Should return the current model"
+    },
+    {
+      "test": "Given: An OpenCodeClient instance<br>When: AVAILABLE_MODELS is accessed<br>Then: Should contain both nemotron-3-super-free and minimax-m2.5-free models",
+      "nodeid": "tests/unit/opencode/opencode_client_test.py::test_given_opencode_client_when_available_models_then_should_contain_both",
+      "status": "passed",
+      "duration": 0.00019543700182111934,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/opencode/opencode_client_test.py",
+      "line": 17,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.813667Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00019543700182111934,
+          "timestamp": "2026-04-10T05:48:48.813684Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: An OpenCodeClient instance\nWhen: AVAILABLE_MODELS is accessed\nThen: Should contain both nemotron-3-super-free and minimax-m2.5-free models"
+    },
+    {
+      "test": "Given: An OpenCodeClient with current model<br>When: _switch_to_fallback_model() is called<br>Then: Should switch to next model in list",
+      "nodeid": "tests/unit/opencode/opencode_client_test.py::test_given_opencode_client_when_switch_model_then_should_use_next",
+      "status": "passed",
+      "duration": 0.00018864400044549257,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/opencode/opencode_client_test.py",
+      "line": 29,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.815120Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00018864400044549257,
+          "timestamp": "2026-04-10T05:48:48.815135Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: An OpenCodeClient with current model\nWhen: _switch_to_fallback_model() is called\nThen: Should switch to next model in list"
+    },
+    {
+      "test": "Given: An OpenCodeClient that has used all models<br>When: _switch_to_fallback_model() is called again<br>Then: Should cycle back to first model (nemotron)",
+      "nodeid": "tests/unit/opencode/opencode_client_test.py::test_given_opencode_client_when_all_models_used_then_should_cycle",
+      "status": "passed",
+      "duration": 0.00022857899602968246,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/opencode/opencode_client_test.py",
+      "line": 43,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.816598Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00022857899602968246,
+          "timestamp": "2026-04-10T05:48:48.816614Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: An OpenCodeClient that has used all models\nWhen: _switch_to_fallback_model() is called again\nThen: Should cycle back to first model (nemotron)"
+    },
+    {
+      "test": "Given: An OpenCodeClient in mock mode<br>When: transform() is called with raw incident<br>Then: Should return dict with required schema fields",
+      "nodeid": "tests/unit/opencode/opencode_client_test.py::test_transform_should_return_schema_fields",
+      "status": "passed",
+      "duration": 0.00031070200202520937,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/opencode/opencode_client_test.py",
+      "line": 55,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.818580Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00031070200202520937,
+          "timestamp": "2026-04-10T05:48:48.818603Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: An OpenCodeClient in mock mode\nWhen: transform() is called with raw incident\nThen: Should return dict with required schema fields"
+    },
+    {
+      "test": "Given: An OpenCodeClient in mock mode with raw_fields<br>When: transform() is called<br>Then: Should include summary, estimated_affected, estimated_deaths",
+      "nodeid": "tests/unit/opencode/opencode_client_test.py::test_transform_should_include_new_fields",
+      "status": "passed",
+      "duration": 0.0002082249993691221,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/opencode/opencode_client_test.py",
+      "line": 81,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.820251Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.0002082249993691221,
+          "timestamp": "2026-04-10T05:48:48.820302Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: An OpenCodeClient in mock mode with raw_fields\nWhen: transform() is called\nThen: Should include summary, estimated_affected, estimated_deaths"
+    },
+    {
+      "test": "Given: An OpenCodeClient in mock mode<br>When: transform() is called<br>Then: Should include sources list in output",
+      "nodeid": "tests/unit/opencode/opencode_client_test.py::test_transform_should_include_sources_list",
+      "status": "passed",
+      "duration": 0.00021415200171759352,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/opencode/opencode_client_test.py",
+      "line": 106,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.821810Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00021415200171759352,
+          "timestamp": "2026-04-10T05:48:48.821826Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: An OpenCodeClient in mock mode\nWhen: transform() is called\nThen: Should include sources list in output"
+    },
+    {
+      "test": "Given: An OpenCodeClient in mock mode<br>When: transform() is called<br>Then: Sources list should never be empty",
+      "nodeid": "tests/unit/opencode/opencode_client_test.py::test_transform_should_have_non_empty_sources",
+      "status": "passed",
+      "duration": 0.00020064500131411478,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/opencode/opencode_client_test.py",
+      "line": 126,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.823256Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00020064500131411478,
+          "timestamp": "2026-04-10T05:48:48.823305Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: An OpenCodeClient in mock mode\nWhen: transform() is called\nThen: Sources list should never be empty"
+    },
+    {
+      "test": "Given: An OpenCodeClient in mock mode<br>When: transform() is called with source_name and source_url<br>Then: Sources should contain name, type, url, accessed_date",
+      "nodeid": "tests/unit/opencode/opencode_client_test.py::test_transform_should_include_source_details",
+      "status": "passed",
+      "duration": 0.0002081950005958788,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/opencode/opencode_client_test.py",
+      "line": 143,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.824749Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.0002081950005958788,
+          "timestamp": "2026-04-10T05:48:48.824766Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: An OpenCodeClient in mock mode\nWhen: transform() is called with source_name and source_url\nThen: Sources should contain name, type, url, accessed_date"
+    },
+    {
+      "test": "Given: An OpenCodeClient in mock mode with no source data<br>When: transform() is called<br>Then: Summary should never be null - code should generate fallback",
+      "nodeid": "tests/unit/opencode/opencode_client_test.py::test_transform_should_not_have_null_summary",
+      "status": "passed",
+      "duration": 0.0002116960022249259,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/opencode/opencode_client_test.py",
+      "line": 168,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.826340Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.0002116960022249259,
+          "timestamp": "2026-04-10T05:48:48.826359Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: An OpenCodeClient in mock mode with no source data\nWhen: transform() is called\nThen: Summary should never be null - code should generate fallback"
+    },
+    {
+      "test": "Given: An OpenCodeClient with raw incident containing incident_name, disaster_type, country<br>When: transform() is called (no source data available)<br>Then: Code should generate fallback summary from those fields",
+      "nodeid": "tests/unit/opencode/opencode_client_test.py::test_transform_should_generate_fallback_summary_from_fields",
+      "status": "passed",
+      "duration": 0.00020666600175900385,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/opencode/opencode_client_test.py",
+      "line": 187,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.827810Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00020666600175900385,
+          "timestamp": "2026-04-10T05:48:48.827826Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: An OpenCodeClient with raw incident containing incident_name, disaster_type, country\nWhen: transform() is called (no source data available)\nThen: Code should generate fallback summary from those fields"
+    },
+    {
+      "test": "Given: An OpenCodeClient with empty raw_fields<br>When: transform() is called<br>Then: Summary should be generated from basic incident info",
+      "nodeid": "tests/unit/opencode/opencode_client_test.py::test_transform_should_have_non_null_summary_when_raw_fields_empty",
+      "status": "passed",
+      "duration": 0.00020559000404318795,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/opencode/opencode_client_test.py",
+      "line": 206,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.829367Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00020559000404318795,
+          "timestamp": "2026-04-10T05:48:48.829386Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: An OpenCodeClient with empty raw_fields\nWhen: transform() is called\nThen: Summary should be generated from basic incident info"
+    },
+    {
+      "test": "Given: An OpenCodeClient in mock mode without raw_fields<br>When: transform() is called<br>Then: estimated_affected and estimated_deaths should be None (optional fields)",
+      "nodeid": "tests/unit/opencode/opencode_client_test.py::test_transform_should_have_optional_fields_as_null_when_missing",
+      "status": "passed",
+      "duration": 0.00020188400230836123,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/opencode/opencode_client_test.py",
+      "line": 224,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.830844Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00020188400230836123,
+          "timestamp": "2026-04-10T05:48:48.830861Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: An OpenCodeClient in mock mode without raw_fields\nWhen: transform() is called\nThen: estimated_affected and estimated_deaths should be None (optional fields)"
+    },
+    {
+      "test": "Given: An OpenCodeClient in mock mode<br>When: transform() is called with country 'Indonesia'<br>Then: Should include country in result",
+      "nodeid": "tests/unit/opencode/opencode_client_test.py::test_transform_should_include_country",
+      "status": "passed",
+      "duration": 0.0001925390024553053,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/opencode/opencode_client_test.py",
+      "line": 242,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.832258Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.0001925390024553053,
+          "timestamp": "2026-04-10T05:48:48.832306Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: An OpenCodeClient in mock mode\nWhen: transform() is called with country 'Indonesia'\nThen: Should include country in result"
+    },
+    {
+      "test": "Given: An OpenCodeClient in mock mode with incident<br>When: classify() is called<br>Then: Should add classification dict with required fields",
+      "nodeid": "tests/unit/opencode/opencode_client_test.py::test_classify_should_add_classification_fields",
+      "status": "passed",
+      "duration": 0.00019620399689301848,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/opencode/opencode_client_test.py",
+      "line": 255,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.834139Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00019620399689301848,
+          "timestamp": "2026-04-10T05:48:48.834159Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: An OpenCodeClient in mock mode with incident\nWhen: classify() is called\nThen: Should add classification dict with required fields"
+    },
+    {
+      "test": "Given: An OpenCodeClient in mock mode with incident<br>When: classify() is called<br>Then: Should add classification_metadata",
+      "nodeid": "tests/unit/opencode/opencode_client_test.py::test_classify_should_add_classification_metadata",
+      "status": "passed",
+      "duration": 0.00019120000069960952,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/opencode/opencode_client_test.py",
+      "line": 277,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.835647Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00019120000069960952,
+          "timestamp": "2026-04-10T05:48:48.835663Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: An OpenCodeClient in mock mode with incident\nWhen: classify() is called\nThen: Should add classification_metadata"
+    },
+    {
+      "test": "Given: An OpenCodeClient in real mode<br>When: transform() is called<br>Then: Should call subprocess.run with opencode command",
+      "nodeid": "tests/unit/opencode/opencode_client_test.py::test_real_transform_should_call_opencode_cli",
+      "status": "passed",
+      "duration": 0.0007386450015474111,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/opencode/opencode_client_test.py",
+      "line": 292,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.837604Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.0007386450015474111,
+          "timestamp": "2026-04-10T05:48:48.837619Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: An OpenCodeClient in real mode\nWhen: transform() is called\nThen: Should call subprocess.run with opencode command"
+    },
+    {
+      "test": "Given: An OpenCodeClient in real mode<br>When: classify() is called<br>Then: Should call subprocess.run with opencode command",
+      "nodeid": "tests/unit/opencode/opencode_client_test.py::test_real_classify_should_call_opencode_cli",
+      "status": "passed",
+      "duration": 0.0006709980007144623,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/opencode/opencode_client_test.py",
+      "line": 315,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.839529Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.0006709980007144623,
+          "timestamp": "2026-04-10T05:48:48.839545Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: An OpenCodeClient in real mode\nWhen: classify() is called\nThen: Should call subprocess.run with opencode command"
+    },
+    {
+      "test": "Given: An OpenCodeClient in real mode<br>When: First model fails with rate limit (returncode 429)<br>Then: Should retry with next model automatically",
+      "nodeid": "tests/unit/opencode/opencode_client_test.py::test_real_transform_should_fallback_on_rate_limit",
+      "status": "passed",
+      "duration": 0.006441083998652175,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/opencode/opencode_client_test.py",
+      "line": 338,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.847246Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.006441083998652175,
+          "timestamp": "2026-04-10T05:48:48.847302Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: An OpenCodeClient in real mode\nWhen: First model fails with rate limit (returncode 429)\nThen: Should retry with next model automatically"
+    },
+    {
+      "test": "Given: An OpenCodeClient in real mode<br>When: All models fail<br>Then: Should try all models in AVAILABLE_MODELS before giving up",
+      "nodeid": "tests/unit/opencode/opencode_client_test.py::test_real_transform_should_exhaust_all_models_on_failure",
+      "status": "passed",
+      "duration": 0.0006625690002692863,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/opencode/opencode_client_test.py",
+      "line": 360,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.849424Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.0006625690002692863,
+          "timestamp": "2026-04-10T05:48:48.849440Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: An OpenCodeClient in real mode\nWhen: All models fail\nThen: Should try all models in AVAILABLE_MODELS before giving up"
+    },
+    {
+      "test": "Given: A Pipeline with configured sources<br>When: fetch_all() is called<br>Then: Should return all incidents from all sources",
+      "nodeid": "tests/unit/pipeline/pipeline_test.py::test_pipeline_fetch_all_should_return_incidents",
+      "status": "passed",
+      "duration": 0.00020948900055373088,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/pipeline/pipeline_test.py",
+      "line": 39,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.851000Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00020948900055373088,
+          "timestamp": "2026-04-10T05:48:48.851015Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A Pipeline with configured sources\nWhen: fetch_all() is called\nThen: Should return all incidents from all sources"
+    },
+    {
+      "test": "Given: A Pipeline with raw incidents<br>When: transform_all() is called<br>Then: Should return list of dicts with schema fields",
+      "nodeid": "tests/unit/pipeline/pipeline_test.py::test_pipeline_transform_all_should_return_schema_dicts",
+      "status": "passed",
+      "duration": 0.000259631997323595,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/pipeline/pipeline_test.py",
+      "line": 75,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.852461Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.000259631997323595,
+          "timestamp": "2026-04-10T05:48:48.852477Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A Pipeline with raw incidents\nWhen: transform_all() is called\nThen: Should return list of dicts with schema fields"
+    },
+    {
+      "test": "Given: A Pipeline with transformed incidents<br>When: classify_all() is called<br>Then: Each incident should have classification field",
+      "nodeid": "tests/unit/pipeline/pipeline_test.py::test_pipeline_classify_all_should_add_classification",
+      "status": "passed",
+      "duration": 0.00018375099898548797,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/pipeline/pipeline_test.py",
+      "line": 104,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.853832Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00018375099898548797,
+          "timestamp": "2026-04-10T05:48:48.853846Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A Pipeline with transformed incidents\nWhen: classify_all() is called\nThen: Each incident should have classification field"
+    },
+    {
+      "test": "Given: A Pipeline with storage backend<br>When: store_all() is called with incidents<br>Then: Storage should contain the incidents",
+      "nodeid": "tests/unit/pipeline/pipeline_test.py::test_pipeline_store_all_should_write_to_storage",
+      "status": "passed",
+      "duration": 0.00017949299945030361,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/pipeline/pipeline_test.py",
+      "line": 132,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.855165Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00017949299945030361,
+          "timestamp": "2026-04-10T05:48:48.855180Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A Pipeline with storage backend\nWhen: store_all() is called with incidents\nThen: Storage should contain the incidents"
+    },
+    {
+      "test": "Given: A Pipeline with all components configured<br>When: run_full_cycle() is called<br>Then: Should return classified incidents stored in backend",
+      "nodeid": "tests/unit/pipeline/pipeline_test.py::test_pipeline_run_full_cycle_should_return_classified_incidents",
+      "status": "passed",
+      "duration": 0.00025388100038981065,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/pipeline/pipeline_test.py",
+      "line": 151,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.856554Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00025388100038981065,
+          "timestamp": "2026-04-10T05:48:48.856569Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A Pipeline with all components configured\nWhen: run_full_cycle() is called\nThen: Should return classified incidents stored in backend"
+    },
+    {
+      "test": "Given: Environment variables GMAIL_EMAIL, GMAIL_PASSWORD, GMAIL_RECIPIENT are set<br>When: EmailReporter is initialized<br>Then: Should load the configuration from environment",
+      "nodeid": "tests/unit/storage/email_reporter_test.py::test_given_email_reporter_when_init_with_env_vars_should_load",
+      "status": "passed",
+      "duration": 0.0007795209967298433,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/storage/email_reporter_test.py",
+      "line": 11,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.858595Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.0007795209967298433,
+          "timestamp": "2026-04-10T05:48:48.858609Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: Environment variables GMAIL_EMAIL, GMAIL_PASSWORD, GMAIL_RECIPIENT are set\nWhen: EmailReporter is initialized\nThen: Should load the configuration from environment"
+    },
+    {
+      "test": "Given: Required environment variables are not set<br>When: EmailReporter is initialized<br>Then: Should raise ValueError",
+      "nodeid": "tests/unit/storage/email_reporter_test.py::test_given_email_reporter_when_init_should_raise_without_env",
+      "status": "passed",
+      "duration": 0.0003607949984143488,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/storage/email_reporter_test.py",
+      "line": 30,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.860059Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.0003607949984143488,
+          "timestamp": "2026-04-10T05:48:48.860073Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: Required environment variables are not set\nWhen: EmailReporter is initialized\nThen: Should raise ValueError"
+    },
+    {
+      "test": "Given: An EmailReporter with mock SMTP<br>When: write is called with incidents<br>Then: Should send email with HTML table",
+      "nodeid": "tests/unit/storage/email_reporter_test.py::test_given_email_reporter_when_write_should_send_email",
+      "status": "passed",
+      "duration": 0.0029481399978976697,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/storage/email_reporter_test.py",
+      "line": 56,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.864356Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.0029481399978976697,
+          "timestamp": "2026-04-10T05:48:48.864369Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: An EmailReporter with mock SMTP\nWhen: write is called with incidents\nThen: Should send email with HTML table"
+    },
+    {
+      "test": "Given: An EmailReporter<br>When: write is called with incidents<br>Then: Email body should contain HTML table with incident data",
+      "nodeid": "tests/unit/storage/email_reporter_test.py::test_given_email_reporter_when_write_should_include_table",
+      "status": "passed",
+      "duration": 0.0034564979941933416,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/storage/email_reporter_test.py",
+      "line": 99,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.868795Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.0034564979941933416,
+          "timestamp": "2026-04-10T05:48:48.868806Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: An EmailReporter\nWhen: write is called with incidents\nThen: Email body should contain HTML table with incident data"
+    },
+    {
+      "test": "Given: An EmailReporter<br>When: write is called<br>Then: Email subject should include today's date",
+      "nodeid": "tests/unit/storage/email_reporter_test.py::test_given_email_reporter_when_write_should_have_subject_with_date",
+      "status": "passed",
+      "duration": 0.002225292999355588,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/storage/email_reporter_test.py",
+      "line": 146,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.871932Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.002225292999355588,
+          "timestamp": "2026-04-10T05:48:48.871942Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: An EmailReporter\nWhen: write is called\nThen: Email subject should include today's date"
+    },
+    {
+      "test": "Given: Environment variable GOOGLE_SHEETS_URL is set<br>When: GoogleSheetsBackend is initialized<br>Then: Should load the spreadsheet URL from environment",
+      "nodeid": "tests/unit/storage/google_sheets_test.py::test_given_google_sheets_backend_when_init_with_env_url_should_load",
+      "status": "passed",
+      "duration": 0.0006423199956770986,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/storage/google_sheets_test.py",
+      "line": 13,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.873534Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.0006423199956770986,
+          "timestamp": "2026-04-10T05:48:48.873544Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: Environment variable GOOGLE_SHEETS_URL is set\nWhen: GoogleSheetsBackend is initialized\nThen: Should load the spreadsheet URL from environment"
+    },
+    {
+      "test": "Given: A GoogleSheetsBackend instance<br>When: Initialized<br>Then: Should use today's date as default sheet name",
+      "nodeid": "tests/unit/storage/google_sheets_test.py::test_given_google_sheets_backend_when_init_should_have_today_date",
+      "status": "passed",
+      "duration": 0.0006681419981759973,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/storage/google_sheets_test.py",
+      "line": 30,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.875013Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.0006681419981759973,
+          "timestamp": "2026-04-10T05:48:48.875022Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A GoogleSheetsBackend instance\nWhen: Initialized\nThen: Should use today's date as default sheet name"
+    },
+    {
+      "test": "Given: A GoogleSheetsBackend with mock service<br>When: get_or_create_worksheet is called with new date<br>Then: Should create a new worksheet with that date name",
+      "nodeid": "tests/unit/storage/google_sheets_test.py::test_given_google_sheets_backend_when_get_or_create_sheet_should_create",
+      "status": "passed",
+      "duration": 0.012931331002619117,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/storage/google_sheets_test.py",
+      "line": 46,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.888804Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.012931331002619117,
+          "timestamp": "2026-04-10T05:48:48.888822Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A GoogleSheetsBackend with mock service\nWhen: get_or_create_worksheet is called with new date\nThen: Should create a new worksheet with that date name"
+    },
+    {
+      "test": "Given: A GoogleSheetsBackend with mock service<br>When: get_or_create_worksheet is called with existing date<br>Then: Should return existing worksheet without creating new",
+      "nodeid": "tests/unit/storage/google_sheets_test.py::test_given_google_sheets_backend_when_get_or_create_sheet_should_return_existing",
+      "status": "passed",
+      "duration": 0.0017279649982810952,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/storage/google_sheets_test.py",
+      "line": 70,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.891735Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.0017279649982810952,
+          "timestamp": "2026-04-10T05:48:48.891749Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A GoogleSheetsBackend with mock service\nWhen: get_or_create_worksheet is called with existing date\nThen: Should return existing worksheet without creating new"
+    },
+    {
+      "test": "Given: A GoogleSheetsBackend with mock worksheet<br>When: write is called and first row is empty<br>Then: Should write header row first",
+      "nodeid": "tests/unit/storage/google_sheets_test.py::test_given_google_sheets_backend_when_write_with_empty_header_should_write",
+      "status": "passed",
+      "duration": 0.0019530150020727888,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/storage/google_sheets_test.py",
+      "line": 94,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.894760Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.0019530150020727888,
+          "timestamp": "2026-04-10T05:48:48.894775Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A GoogleSheetsBackend with mock worksheet\nWhen: write is called and first row is empty\nThen: Should write header row first"
+    },
+    {
+      "test": "Given: An incident with sources list<br>When: write is called<br>Then: Sources should be converted to JSON string for cell",
+      "nodeid": "tests/unit/storage/google_sheets_test.py::test_given_google_sheets_backend_when_write_should_convert_sources_to_json",
+      "status": "passed",
+      "duration": 0.002411977999145165,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/storage/google_sheets_test.py",
+      "line": 141,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.898446Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.002411977999145165,
+          "timestamp": "2026-04-10T05:48:48.898467Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: An incident with sources list\nWhen: write is called\nThen: Sources should be converted to JSON string for cell"
+    },
+    {
+      "test": "Given: A worksheet with existing data<br>When: write is called<br>Then: Should find the next empty row (not overwrite existing)",
+      "nodeid": "tests/unit/storage/google_sheets_test.py::test_given_google_sheets_backend_when_write_should_find_next_empty_row",
+      "status": "passed",
+      "duration": 0.002877144994272385,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/storage/google_sheets_test.py",
+      "line": 195,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.902661Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.002877144994272385,
+          "timestamp": "2026-04-10T05:48:48.902695Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A worksheet with existing data\nWhen: write is called\nThen: Should find the next empty row (not overwrite existing)"
+    },
+    {
+      "test": "Given: No GOOGLE_SHEETS_URL environment variable<br>When: GoogleSheetsBackend is initialized<br>Then: Should raise ValueError",
+      "nodeid": "tests/unit/storage/google_sheets_test.py::test_given_google_sheets_backend_when_no_env_should_raise_error",
+      "status": "passed",
+      "duration": 0.00032712599931983277,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/storage/google_sheets_test.py",
+      "line": 245,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.904248Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00032712599931983277,
+          "timestamp": "2026-04-10T05:48:48.904262Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: No GOOGLE_SHEETS_URL environment variable\nWhen: GoogleSheetsBackend is initialized\nThen: Should raise ValueError"
+    },
+    {
+      "test": "Given: A JSONLBackend instance with base_path and date<br>When: write() is called with incidents<br>Then: Should create the file in date subfolder",
+      "nodeid": "tests/unit/storage/jsonl_backend_test.py::test_jsonl_backend_write_should_create_file",
+      "status": "passed",
+      "duration": 0.00047295600234065205,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/storage/jsonl_backend_test.py",
+      "line": 25,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.906119Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00047295600234065205,
+          "timestamp": "2026-04-10T05:48:48.906132Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A JSONLBackend instance with base_path and date\nWhen: write() is called with incidents\nThen: Should create the file in date subfolder"
+    },
+    {
+      "test": "Given: A JSONLBackend instance<br>When: write() is called with multiple incidents<br>Then: Should write in JSONL format (one JSON per line)",
+      "nodeid": "tests/unit/storage/jsonl_backend_test.py::test_jsonl_backend_write_should_write_jsonl_format",
+      "status": "passed",
+      "duration": 0.00045270499686012045,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/storage/jsonl_backend_test.py",
+      "line": 38,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.908008Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00045270499686012045,
+          "timestamp": "2026-04-10T05:48:48.908020Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A JSONLBackend instance\nWhen: write() is called with multiple incidents\nThen: Should write in JSONL format (one JSON per line)"
+    },
+    {
+      "test": "Given: A JSONLBackend instance with nonexistent date folder<br>When: read() is called<br>Then: Should return empty list",
+      "nodeid": "tests/unit/storage/jsonl_backend_test.py::test_jsonl_backend_read_should_return_empty_for_nonexistent",
+      "status": "passed",
+      "duration": 0.00020893900364171714,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/storage/jsonl_backend_test.py",
+      "line": 59,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.909604Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.00020893900364171714,
+          "timestamp": "2026-04-10T05:48:48.909616Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A JSONLBackend instance with nonexistent date folder\nWhen: read() is called\nThen: Should return empty list"
+    },
+    {
+      "test": "Given: A JSONLBackend with previously written data<br>When: read() is called<br>Then: Should return the written incidents",
+      "nodeid": "tests/unit/storage/jsonl_backend_test.py::test_jsonl_backend_read_should_return_written_data",
+      "status": "passed",
+      "duration": 0.0005383879979490303,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/storage/jsonl_backend_test.py",
+      "line": 71,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.911484Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.0005383879979490303,
+          "timestamp": "2026-04-10T05:48:48.911497Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A JSONLBackend with previously written data\nWhen: read() is called\nThen: Should return the written incidents"
+    },
+    {
+      "test": "Given: A JSONLBackend with existing data<br>When: append() is called with new incidents<br>Then: Should add new incidents to file",
+      "nodeid": "tests/unit/storage/jsonl_backend_test.py::test_jsonl_backend_append_should_add_to_existing",
+      "status": "passed",
+      "duration": 0.0008201390010071918,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/storage/jsonl_backend_test.py",
+      "line": 90,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.913675Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.0008201390010071918,
+          "timestamp": "2026-04-10T05:48:48.913689Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A JSONLBackend with existing data\nWhen: append() is called with new incidents\nThen: Should add new incidents to file"
+    },
+    {
+      "test": "Given: A JSONLBackend with date<br>When: append() is called on new file<br>Then: Should create file and write data",
+      "nodeid": "tests/unit/storage/jsonl_backend_test.py::test_jsonl_backend_append_should_create_if_not_exists",
+      "status": "passed",
+      "duration": 0.0005233159972704016,
+      "trace": null,
+      "error": null,
+      "markers": [],
+      "file": "tests/unit/storage/jsonl_backend_test.py",
+      "line": 106,
+      "stdout": "",
+      "stderr": "",
+      "timestamp": "2026-04-10T05:48:48.915634Z",
+      "screenshot": "screenshots",
+      "logs": [],
+      "worker": "main",
+      "links": [],
+      "attempts": [
+        {
+          "status": "passed",
+          "trace": null,
+          "error": null,
+          "duration": 0.0005233159972704016,
+          "timestamp": "2026-04-10T05:48:48.915648Z"
+        }
+      ],
+      "attempt_count": 1,
+      "flaky": false,
+      "attempt_statuses": [
+        "passed"
+      ],
+      "first_failure_index": null,
+      "first_failure": null,
+      "docstring": "Given: A JSONLBackend with date\nWhen: append() is called on new file\nThen: Should create file and write data"
+    }
+  ]
+}
