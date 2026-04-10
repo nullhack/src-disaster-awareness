@@ -1,29 +1,109 @@
-# Project Analysis for Architect
+# Project Analysis for Architect - Major Architecture Changes
 
 ## Executive Summary
 
-**Disaster Surveillance Reporter** is a backend-focused Python application that:
-1. Fetches disaster incident data from multiple web sources (as modular adapters)
-2. Transforms source data into a defined schema format using OpenCode AI
-3. Classifies incidents using rule files via OpenCode CLI with minimax-m2.5-free model
-4. Stores processed incidents using pluggable storage backends
-5. Excludes dashboard - purely backend processing pipeline
+**Disaster Surveillance Reporter** is being transformed from a simple pipeline to a sophisticated **multi-stage surveillance system** with intelligent deduplication:
 
-This is a refactored/rearchitected version of the parent project `src-disaster-awareness`, focusing on modular, testable architecture with proper adapter patterns and mockable AI integration.
+### Current Architecture (To Be Replaced)
+1. Sources → AI Transform → Classify → Store (single stage)
+
+### New Architecture (Multi-Stage Pipeline)
+1. **Stage 1**: Multiple sources → Normalized JSONL with content similarity deduplication
+2. **Stage 2**: JSONL → DSPy-AI enhancement → Enhanced JSONL  
+3. **Stage 3**: Enhanced JSONL → Multiple storage backends
+
+### Key Improvements
+- **Local JSONL as Intermediate Storage**: Deterministic data capture before enhancement
+- **Content Similarity Deduplication**: Prevent duplicate incident storage using fuzzy matching
+- **Multi-Source Processing**: Handle multiple sources simultaneously with CLI flags
+- **Enhanced Pipeline Flow**: Full cycle with optional AI enhancement and additional source discovery
+- **Mock-First Testing**: Segregated test categories with optional real API tests
 
 ---
 
-## New Requirements (2026-04-09)
+## Major Architecture Changes (2026-04-10)
 
-### Summary Enhancement Requirements
+### 1. Local JSONL Output (Priority 1)
+- **Local JSONL as Primary Output**: Use local JSONL files as the deterministic output of the digest stage
+- **Normalized Schema**: Convert source data to standard schema immediately (not raw capture)
+- **Date-Based Storage**: Continue using `incidents/by-date/YYYY-MM-DD/incidents.jsonl` structure
+- **Upsert Capability**: Implement content similarity matching to prevent duplicates
 
-The following requirements were added to ensure every incident has a meaningful summary and source attribution:
+### 2. Multi-Source Processing
+- **Simultaneous Source Processing**: Handle multiple sources iteratively instead of one by one
+- **CLI Multi-Selection**: `--sources gdacs,promed,reliefweb,news --storage jsonl,sqlite,email`
+- **Source Priority/Merging**: Handle cases where multiple sources report the same incident
 
-1. **Sources List**: Each JSONL incident report MUST contain a list of sources
-2. **No Null Summaries**: AI must always provide a summary - null summaries are not allowed
-3. **Code-Based Fallback**: If no summary data is retrieved from sources, programmatically generate a summary in human language based on available incident JSONL fields
-4. **Short Summary**: Keep summary concise - one short paragraph
-5. **Source Reference**: Users can check sources if they want more details
+### 3. Content Similarity Deduplication  
+- **Duplicate Detection Strategy**: Title/description similarity with fuzzy matching
+- **Configurable Threshold**: `--duplicate-threshold 0.8` for similarity scoring
+- **Upsert Logic**: Update existing incidents with new information instead of creating duplicates
+
+### 4. Enhanced Multi-Stage Pipeline
+```
+Sources → Normalized JSONL (w/ deduplication) → DSPy-AI Enhancement → Storage Backends
+   │                    │                              │                      │
+   ├─ GDACS            ├─ Content similarity         ├─ Fill missing data   ├─ JSONL
+   ├─ ProMED           ├─ Fuzzy matching            ├─ Standardize formats ├─ SQLite  
+   ├─ ReliefWeb        ├─ Upsert capability         ├─ Additional sources  ├─ Email
+   ├─ News             └─ Deterministic data        └─ Skip processed     └─ Sheets
+   └─ Additional sources
+```
+
+### 5. Test Strategy Overhaul
+- **Test Categories**: `unit`, `integration`, `e2e`, `slow`, `mock`, `real_api`
+- **Mock-First Development**: Everything uses mocks except optional end-to-end tests
+- **Optional E2E Tests**: Real API calls available via `task test-e2e` (not automated)
+
+---
+
+## New Pipeline Architecture
+
+### Stage 1: Multi-Source Fetching with Deduplication
+```python
+class ContentSimilarityMatcher:
+    """Detect duplicate incidents using fuzzy matching."""
+    def __init__(self, threshold: float = 0.8): ...
+    def is_duplicate(self, incident1: dict, incident2: dict) -> bool: ...
+    def find_duplicates(self, incidents: list[dict]) -> list[tuple]: ...
+
+class JSONLStorage:
+    """Local JSONL storage with upsert capability.""" 
+    def upsert(self, incidents: list[dict]) -> int: ...
+    def read_existing(self) -> list[dict]: ...
+```
+
+**CLI Interface:**
+```bash
+# Multi-source processing
+python -m disaster_surveillance_reporter.cli fetch \
+  --sources gdacs,promed,reliefweb \
+  --output incidents/by-date/2026-04-10/incidents.jsonl \
+  --duplicate-threshold 0.8
+```
+
+### Stage 2: DSPy-AI Enhancement 
+```python
+class DSPyEnhancer:
+    """Fill missing information using DSPy-AI with predefined formats."""
+    def enhance_batch(self, incidents: list[dict]) -> list[dict]: ...
+    def fill_missing_fields(self, incident: dict) -> dict: ...
+    def search_additional_sources(self, incident: dict) -> list[dict]: ...
+```
+
+**Enhanced Fields:**
+- Standardized severity levels
+- Geographic coordinates (if missing)
+- Affected population estimates
+- Cross-reference with additional sources
+
+### Stage 3: Multi-Backend Storage
+```python
+# Simultaneous storage to multiple backends
+python -m disaster_surveillance_reporter.cli store \
+  --input incidents/enhanced/2026-04-10.jsonl \
+  --storage jsonl,sqlite,email,sheets
+```
 
 ---
 

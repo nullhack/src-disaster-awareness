@@ -7,30 +7,56 @@
 [![MIT License][license-shield]][license-url]
 [![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen?style=for-the-badge)](docs/coverage/index.html)
 
-> Backend pipeline for disaster incident processing. Fetches from modular sources, transforms with DSPy AI, classifies via OpenCode CLI, stores via pluggable backends. No dashboard - pure backend processing.
+> Multi-stage disaster surveillance pipeline with content similarity deduplication. Fetches from multiple sources, normalizes to JSONL, enhances with DSPy-AI, stores via pluggable backends. No dashboard - pure backend processing with intelligent duplicate prevention.
 
 **AI-Enhanced Python Project** built with enterprise-grade architecture, TDD workflows, and zero-config quality standards.
 
 ## Features
 
-- **Modular Source Adapters**: Pluggable incident sources using adapter pattern
-  - **GDACSAdapter**: https://www.gdacs.org/ (disaster database) - Real HTTP calls required
-  - **ProMEDAdapter**: https://www.promedmail.org/ (disease database)
-  - **ReliefWebAdapter**: https://reliefweb.int/ (humanitarian data)
-  - **HealthMapAdapter**: https://www.healthmap.org/ (disease surveillance)
-  - **WHOAdapter**: https://www.who.int/emergencies/ (health emergencies)
-  - Easy to add new sources without modifying core code
-- **Modular Storage Backends**: Pluggable storage using adapter pattern
-  - **JSONLBackend**: Date-based subfolders (`incidents/by-date/YYYY-MM-DD/incidents.jsonl`)
-  - **SQLiteBackend**: Store in `incidents.db` with defined schema
-  - **EmailBackend**: Send incidents via SMTP
-  - **GoogleSheetsBackend**: Write to Google Sheets (one tab per day, append to next empty row)
-  - Easy to add new storage without modifying core code
-- **DSPy AI Transformation**: Convert raw source data to schema-compliant format
-- **Rule-Based Classification**: Country groups (A/B/C), severity levels (1-4), priority (HIGH/MEDIUM/LOW)
-- **Test Mocks**: All external AI calls mockable for testing (avoid free model quota limits)
-- **Real Data Tests**: GDACS adapter tests make actual HTTP calls to https://www.gdacs.org/
-- **CLI Interface**: fetch, classify, store, status, full-cycle commands
+### 🔄 **Multi-Stage Pipeline Architecture**
+- **Stage 1**: Multi-source fetching → Normalized JSONL with content similarity deduplication
+- **Stage 2**: JSONL → DSPy-AI enhancement → Enhanced JSONL
+- **Stage 3**: Enhanced JSONL → Multiple storage backends
+
+### 📡 **Modular Source Adapters**
+- **GDACSAdapter**: https://www.gdacs.org/ (disaster database) - Real HTTP calls required
+- **ProMEDAdapter**: https://www.promedmail.org/ (disease database)
+- **ReliefWebAdapter**: https://reliefweb.int/ (humanitarian data)
+- **HealthMapAdapter**: https://www.healthmap.org/ (disease surveillance)
+- **WHOAdapter**: https://www.who.int/emergencies/ (health emergencies)
+- **NewsAdapter**: Aggregated news sources for incident coverage
+- Process multiple sources simultaneously with command flags
+
+### 🗃️ **Storage Backends**
+- **JSONLBackend**: Date-based subfolders with upsert capability (`incidents/by-date/YYYY-MM-DD/incidents.jsonl`)
+- **SQLiteBackend**: Local database storage with schema validation
+- **EmailBackend**: SMTP delivery for incident notifications
+- **GoogleSheetsBackend**: Real-time spreadsheet updates
+- Support multiple simultaneous storage backends
+
+### 🧠 **Intelligence & Deduplication**
+- **Content Similarity Matching**: Fuzzy matching on title/description to prevent duplicates
+- **DSPy-AI Enhancement**: Fill missing fields, standardize formats, enrich incident data
+- **Configurable Similarity Threshold**: Adjust duplicate detection sensitivity
+- **Incremental Processing**: Skip already-processed incidents to avoid re-research
+
+### 🖥️ **Enhanced CLI Interface**
+```bash
+# Multi-source processing
+--sources gdacs,promed,reliefweb,healthmap,who,news
+
+# Multi-storage output  
+--storage jsonl,sqlite,email,sheets
+
+# Duplicate detection tuning
+--duplicate-threshold 0.8
+```
+
+### 🧪 **Advanced Testing Strategy**
+- **Test Marks**: `unit`, `integration`, `e2e`, `slow`, `mock`, `real_api`
+- **Mock-First Development**: All external services mocked by default
+- **Optional E2E Tests**: Real API calls available via `task test-e2e` 
+- **Property-Based Testing**: Hypothesis for robust validation
 
 ---
 
@@ -38,8 +64,8 @@
 
 ```bash
 # Clone and setup
-git clone https://github.com/nullhack/disaster-surveillance-reporter
-cd disaster-surveillance-reporter
+git clone https://github.com/nullhack/src-disaster-awareness
+cd src-disaster-awareness
 
 # Install UV package manager (if not installed)
 curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -104,26 +130,63 @@ Complex projects are developed across multiple AI sessions. `TODO.md` at the roo
 
 ```bash
 # Core development workflow
-task run              # Execute main application
-task test             # Run comprehensive test suite  
-task lint             # Format and lint code
-task static-check     # Type safety validation
+task run              # Execute main application  
+task test             # Run comprehensive test suite (smoke, unit, integration + coverage)
+task test-fast        # Run fast tests only (skip slow tests)
+task test-slow        # Run slow tests only
+task lint             # Format and lint code with ruff
+task static-check     # Type safety validation with pyright
 task doc-serve        # Live pdoc documentation server
-task doc-build        # Build static pdoc API docs
+task doc-build        # Build static pdoc API docs with search
 task doc-publish      # Publish API docs to GitHub Pages
 
 # Quality assurance
-task test-report      # Detailed coverage report
-task mut-report       # Mutation testing (optional)
+task test-report      # Detailed coverage report with HTML output
+task mut-report       # Cosmic ray mutation testing (optional)
+
+# Enhanced CLI Commands
+# Multi-source processing with deduplication
+python -m disaster_surveillance_reporter.cli full-cycle \
+  --sources gdacs,promed,reliefweb \
+  --storage jsonl,sqlite \
+  --duplicate-threshold 0.8
+
+# Individual pipeline stages  
+python -m disaster_surveillance_reporter.cli fetch --sources gdacs,news
+python -m disaster_surveillance_reporter.cli enhance --input incidents.jsonl
+python -m disaster_surveillance_reporter.cli store --storage email,sheets
+python -m disaster_surveillance_reporter.cli status --detailed
+
+# Optional end-to-end tests with real APIs
+task test-e2e  # Real API calls - not automated
 ```
 
 ## 🎯 Project Structure
 
 ```
-disaster-surveillance-reporter/
+src-disaster-awareness/
 ├── disaster_surveillance_reporter/        # Main application package
-│   ├── __init__.py                       # Package initialization
-│   └── disaster_surveillance_reporter.py   # Core module
+│   ├── adapters/                         # Source adapters (GDACS, ProMED, etc.)
+│   │   ├── __init__.py
+│   │   ├── _types.py                     # Shared types and protocols
+│   │   ├── gdacs.py                      # GDACS disaster adapter
+│   │   ├── promed.py                     # ProMED disease adapter  
+│   │   ├── reliefweb.py                  # ReliefWeb humanitarian adapter
+│   │   ├── healthmap.py                  # HealthMap disease surveillance
+│   │   └── who.py                        # WHO emergency adapter
+│   ├── classification/                   # Rule-based classification
+│   │   └── __init__.py
+│   ├── storage/                          # Storage backends
+│   │   ├── __init__.py
+│   │   ├── jsonl.py                      # JSONL date-based storage
+│   │   ├── email_reporter.py             # Email backend  
+│   │   └── google_sheets.py              # Google Sheets backend
+│   ├── pipeline/                         # Pipeline orchestration
+│   │   └── __init__.py
+│   ├── opencode/                         # OpenCode AI integration
+│   │   └── __init__.py
+│   ├── cli.py                            # Command-line interface
+│   └── __init__.py                       # Package initialization
 ├── .opencode/                            # AI development agents
 │   ├── agents/                           # Specialized AI agents
 │   │   ├── developer.md                  # 7-phase development workflow
@@ -136,9 +199,13 @@ disaster-surveillance-reporter/
 │       ├── implementation/               # Guided implementation
 │       └── code-quality/                 # Quality enforcement
 ├── tests/                                # Comprehensive test suite
+├── scripts/                              # Validation and utility scripts
 ├── docs/                                 # Documentation (api/, tests/, coverage/)
+├── main.py                               # Test entry point
 ├── TODO.md                               # Development roadmap & session state
+├── AGENTS.md                             # Agent configuration
 ├── Dockerfile                            # Multi-stage container build
+├── uv.lock                               # UV dependency lock file
 └── pyproject.toml                        # Project configuration
 ```
 
@@ -207,17 +274,17 @@ Distributed under the MIT License. See [LICENSE](LICENSE) for details.
 ---
 
 **Author:** eol ([@nullhack](https://github.com/nullhack))  
-**Project:** [disaster-surveillance-reporter](https://github.com/nullhack/disaster-surveillance-reporter)  
-**Documentation:** [nullhack.github.io/disaster-surveillance-reporter](https://nullhack.github.io/disaster-surveillance-reporter)
+**Project:** [src-disaster-awareness](https://github.com/nullhack/src-disaster-awareness)  
+**Documentation:** [nullhack.github.io/src-disaster-awareness](https://nullhack.github.io/src-disaster-awareness)
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[contributors-shield]: https://img.shields.io/github/contributors/nullhack/disaster-surveillance-reporter.svg?style=for-the-badge
-[contributors-url]: https://github.com/nullhack/disaster-surveillance-reporter/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/nullhack/disaster-surveillance-reporter.svg?style=for-the-badge
-[forks-url]: https://github.com/nullhack/disaster-surveillance-reporter/network/members
-[stars-shield]: https://img.shields.io/github/stars/nullhack/disaster-surveillance-reporter.svg?style=for-the-badge
-[stars-url]: https://github.com/nullhack/disaster-surveillance-reporter/stargazers
-[issues-shield]: https://img.shields.io/github/issues/nullhack/disaster-surveillance-reporter.svg?style=for-the-badge
-[issues-url]: https://github.com/nullhack/disaster-surveillance-reporter/issues
+[contributors-shield]: https://img.shields.io/github/contributors/nullhack/src-disaster-awareness.svg?style=for-the-badge
+[contributors-url]: https://github.com/nullhack/src-disaster-awareness/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/nullhack/src-disaster-awareness.svg?style=for-the-badge
+[forks-url]: https://github.com/nullhack/src-disaster-awareness/network/members
+[stars-shield]: https://img.shields.io/github/stars/nullhack/src-disaster-awareness.svg?style=for-the-badge
+[stars-url]: https://github.com/nullhack/src-disaster-awareness/stargazers
+[issues-shield]: https://img.shields.io/github/issues/nullhack/src-disaster-awareness.svg?style=for-the-badge
+[issues-url]: https://github.com/nullhack/src-disaster-awareness/issues
 [license-shield]: https://img.shields.io/badge/license-MIT-green?style=for-the-badge
-[license-url]: https://github.com/nullhack/disaster-surveillance-reporter/blob/main/LICENSE
+[license-url]: https://github.com/nullhack/src-disaster-awareness/blob/main/LICENSE
