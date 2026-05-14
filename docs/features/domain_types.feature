@@ -23,11 +23,11 @@ Feature: Domain Types
 
   Rule: ai_enriched is False means all AI fields are None
 
-    Example: unenriched bundle has no AI-generated values
+    Example: unenriched bundle has no AI generated values
       Given an IncidentBundle where ai_enriched is False
       Then summary is None and rationale is None and estimated_affected is None and estimated_deaths is None
 
-  Rule: incident_id follows YYYYMMDD-CC-TTT format with UNX for unknown country and OTH for unknown type
+  Rule: incident_id uses date country type format with UNX for unknown country and OTH for unknown type
 
     Example: known country and disaster type produce standard incident_id
       Given an IncidentBundle whose earliest record date is 2026-05-14 with country Philippines and disaster_type Earthquake
