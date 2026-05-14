@@ -8,14 +8,41 @@
 
 ## Summary
 
+### Review Decision: **FAIL**
+
+> **Reviewer:** R (Reviewer agent) — adversarial review of simulation completeness
+> **Date:** 2026-05-14
+> **Stance:** Actively searched for missed scenarios and invalid pain points; did not confirm completeness.
+
+**Five independent failure conditions:**
+
+1. **21 unresolved pain points** (17 original + 4 newly discovered) — including 3 Contradictory, 8 Missing, 9 Ambiguous, 1 Edge-case
+2. **Major scenario coverage gaps:** SQLiteStore has zero scenarios; NewsSearcher has no error scenarios; Storage query filters untested; individual overrides O1/O2/O3/O5 untested
+3. **2 quality attributes unstressed:** Performance targets (QA-5: < 5s without AI, QA-6: < 5min with AI) have no simulation scenarios
+4. **Bilateral data model mismatch:** `Incident.source_urls` (Required) cannot be populated for GDACS-only bundles (GDACS `raw_fields` lack URL field) — hard cross-context inconsistency
+5. **4 rules rejected** for insufficient specificity or contradiction with unresolved pain points (rules 9, 10, 19, 30)
+
+**Pain points requiring fix-spec resolution — Tier 1 (architectural blockers):**
+- CLS-4 + XCS-2: AI-dependent overrides vs "no AI calls" in Classification — must clarify phase boundary
+- XCS-1: Pipeline order conflict (classify before or after search-more?) — must choose one
+- STO-4 (NEW): Incident.source_urls Required vs GDACS no URL — must resolve data model mismatch
+
+### Metrics
+
 | Metric | Count |
 |--------|-------|
 | Bounded contexts simulated | 5 |
 | Total scenarios walked | 42 |
 | I/O evidence files | 84 |
-| Discovered rules | 34 |
-| Pain points | 17 |
+| Discovered rules | 34 (30 accepted, 4 rejected) |
+| Pain points (original) | 17 (all validated, 0 removed) |
+| Pain points (newly added) | 4 |
+| **Total pain points** | **21** |
 | E2E test candidates | 12 |
+| Scenario coverage gaps | 7 |
+| Quality attributes unstressed | 2 |
+| Bilateral integration mismatches | 1 |
+| Rules rejected | 4 |
 
 ---
 
@@ -178,6 +205,7 @@ None found. Fetching context is well-specified with clear error handling rules.
 |----|---------------|-------------|
 | ENR-1 | **Missing** | Rate limit retry parameters undefined. Spec says "auto-retry with backoff" on HTTP 429 but does not specify: max retry count, backoff strategy (linear vs exponential), initial delay, or what happens when all retries are exhausted. Does the provider raise? Return empty? Propagate as ai_enriched=False? |
 | ENR-2 | **Missing** | Post-extraction classification gap. When the Extractor fills in country/country_code for a bundle that previously had it as None, does classification run again? The bundle already has a (default) country_group=Group C. Should it be re-classified with the now-known country? The spec describes a linear pipeline (classify → enrich → store) but extraction may change fields that affect classification. |
+| ENR-3 | **Missing** | DuckAIProvider unrecoverable exception mid-batch. Spec says "Auth/network failure → raise exception (unrecoverable)" but no scenario or pain point addresses what happens to bundles already processed in a batch. If 5 of 10 bundles are processed and the provider raises, are those 5 lost? Stored with partial enrichment? The ai_enriched=False rule covers graceful timeout/failure, not exceptions that propagate out of the batch loop. |
 
 ### E2E Test Candidates
 
@@ -214,6 +242,8 @@ None found. Fetching context is well-specified with clear error handling rules.
 | STO-1 | **Ambiguous** | Inverted date range precondition violation behavior undefined. Spec says "Preconditions: date_from <= date_to" but does not specify what happens when violated. ValueError? Empty list? Silent correction? |
 | STO-2 | **Ambiguous** | Date partitioning key unclear. JSONL path uses YYYY-MM-DD but the spec does not state which date determines the partition: incident_id date (YYYYMMDD), fetched_at, classified_at, or report_date? If classified_at differs from incident_id date, which directory does the bundle go into? |
 | STO-3 | **Missing** | incident_name derivation algorithm undefined. Incident record has incident_name described as "Best title from available records" but no selection algorithm is given. Longest title? First title? Title from most reliable source? Title with the most information? |
+| STO-4 | **Contradictory** | Incident.source_urls is Required but GDACS raw_fields contain no URL field. GDACS has title, description, alertlevel, eventtype, iso3, latitude, longitude, istemporary, affectedcountries — no url. WHO, GDELT, and DDG-NEWS all have url fields. A GDACS-only bundle would produce an Incident with empty source_urls, violating the Required constraint. This is a bilateral data model mismatch between the Fetching context (GDACS data shape) and the Storage context (Incident entity). |
+| STO-5 | **Ambiguous** | Storage write failure handling is vague. Spec says "Storage failure → log error, pipeline handles gracefully" but "gracefully" is not defined. Does the pipeline skip the failed bundle and continue? Abort the entire pipeline? Retry once? The handling strategy affects data integrity guarantees across pipeline runs. |
 
 ### E2E Test Candidates
 
@@ -227,6 +257,7 @@ None found. Fetching context is well-specified with clear error handling rules.
 |----|---------------|-------------|
 | XCS-1 | **Contradictory** | Pipeline order conflict. product_definition.md says "fetch → correlate → classify → search-more → AI enrich → store" (classify before search-more). But behavioral_spec.md Fetching context says DDG News search happens for "bundles needing context" after correlation but the pipeline flow implies it runs before classification. If search-more adds records to a bundle, does classification need to re-run? The pipeline ordering between supplementary search and classification is unclear. |
 | XCS-2 | **Missing** | O1/O3/O5 override evaluation timing. The Classification context says "no AI calls" but O1 (Humanitarian Crisis) uses "AI for WHO/GDELT," O3 (Likely Development) uses "AI-assisted text understanding," and O5 (Forecast/Early Warning) uses "AI for others." The Enrichment context's Classifier agent detects O1, O3, O5 — but these are listed as classification overrides. If they are evaluated during enrichment, then the overrides list is incomplete after classification and gets updated during enrichment. This means the overrides field is populated in two phases, which the spec does not explicitly state. |
+| XCS-4 | **Missing** | Supplementary search query generation algorithm undefined. The Correlation → Fetching integration point says "Payload: Search query derived from bundle records" but no algorithm is specified. What fields from the raw records are used to construct the query? Title concatenation? Title + country? A template like "{disaster_type} in {country}"? This directly affects the quality of supplementary search results and the accuracy of correlation for bundles with sparse data. |
 
 ---
 
@@ -234,17 +265,60 @@ None found. Fetching context is well-specified with clear error handling rules.
 
 | Classification | Count | IDs |
 |---------------|-------|-----|
-| Ambiguous | 7 | COR-1, COR-2, CLS-1, CLS-2, CLS-6, STO-1, STO-2 |
-| Contradictory | 2 | CLS-4, XCS-1 |
-| Missing | 7 | COR-3, CLS-3, CLS-5, ENR-1, ENR-2, STO-3, XCS-2 |
+| Ambiguous | 8 | COR-1, COR-2, CLS-1, CLS-2, CLS-6, STO-1, STO-2, STO-5 |
+| Contradictory | 3 | CLS-4, XCS-1, STO-4 |
+| Missing | 9 | COR-3, CLS-3, CLS-5, ENR-1, ENR-2, ENR-3, STO-3, XCS-2, XCS-4 |
 | Edge-case | 1 | COR-4 |
 
-**Total pain points: 17**
+**Total pain points: 21** (17 original + 4 added by review)
 
 ### Priority Pain Points (require stakeholder decision before test writing)
 
-1. **CLS-1 (GDACS severity bump)** — Directly affects Level derivation for Group A. Must be defined before classification tests can be written.
-2. **CLS-4 (AI-dependent overrides in deterministic classification)** — Blurs the Classification/Enrichment boundary. Must clarify which overrides are evaluated during classification vs enrichment.
-3. **XCS-1 (Pipeline order)** — Affects integration test structure. Must clarify if supplementary search runs before or after classification.
-4. **CLS-5 (incident_id generation)** — Affects dedup and storage. Must define how IDs are generated when country/type are unknown.
-5. **CLS-6 (Multi-source level selection)** — Directly affects classification outcome. Must clarify if first-source or highest-level wins.
+**Tier 1 — Architectural blockers (must resolve before any test writing):**
+
+1. **CLS-4 + XCS-2 (AI-dependent overrides in deterministic classification)** — O1/O2/O3/O5 require AI but Classification says "no AI calls." Must decide: are these evaluated only during Enrichment? If so, remove from Classification overrides table and document as Enrichment-phase overrides. Blurs the Classification/Enrichment boundary.
+2. **XCS-1 (Pipeline order)** — product_definition says "classify → search-more" but behavioral_spec has correlator triggering search before classification. Must choose one ordering and update all documents consistently. Affects integration test structure.
+3. **STO-4 (source_urls Required vs GDACS no URL)** — Bilateral data model mismatch. Must either: make source_urls Optional, provide a GDACS URL derivation rule, or accept empty list for GDACS-only bundles.
+
+**Tier 2 — Classification logic gaps (must resolve before Classification tests):**
+
+4. **CLS-1 (GDACS severity bump)** — Must define which levels get bumped and by how much for Group A.
+5. **CLS-6 (Multi-source level selection)** — Must clarify: first-source-only or highest-level-wins?
+6. **CLS-3 (Multiple override interaction)** — Must define precedence rules for concurrent overrides.
+7. **CLS-5 (incident_id generation)** — Must define how IDs are generated when country/type are unknown at correlation time.
+
+**Tier 3 — Correlation logic gaps (must resolve before Correlation tests):**
+
+8. **COR-1 (Date proximity threshold)** — Must define the date window (1 day? 3 days? 7 days?).
+9. **COR-3 (Title similarity algorithm)** — Must specify matching method and threshold.
+10. **COR-2 (Country extraction from unstructured sources)** — Must define how country is extracted from WHO/GDELT text.
+
+**Tier 4 — Enrichment/Storage gaps:**
+
+11. **ENR-2 (Post-extraction re-classification)** — Must decide if extraction triggers re-classification.
+12. **ENR-1 (Rate limit retry parameters)** — Must specify max retries, backoff strategy, exhaustion behavior.
+13. **ENR-3 (Unrecoverable AI exception mid-batch)** — Must define partial batch handling.
+14. **STO-2 (Date partitioning key)** — Must specify which date determines the partition directory.
+15. **STO-3 (incident_name derivation)** — Must specify title selection algorithm.
+16. **STO-5 (Storage write failure handling)** — Must define "handles gracefully" concretely.
+17. **XCS-4 (Search query generation)** — Must specify how DDG News queries are derived from bundles.
+
+### Reviewer Notes
+
+**Scenario coverage gaps found (not pain points, but simulation completeness issues):**
+- SQLiteStore: zero scenarios (complete entity coverage failure)
+- NewsSearcher: no error or edge case scenarios
+- Storage query filters: only date range tested; country_group, disaster_type, priority, should_report, source_name filters untested
+- Individual overrides O1, O2, O3, O5: no dedicated scenarios
+- StorageBackend.exists(): not directly tested
+- DuckAIProvider auth/network failure: not tested
+
+**Quality attributes not stressed by any scenario:**
+- QA-5: Performance < 5 seconds for 50 incidents (excluding AI) — no timing scenarios
+- QA-6: Performance < 5 minutes full batch with AI — no timing scenarios
+
+**Rules rejected (4 of 34):**
+- Rule 9: Not specific enough (correlation combination logic undefined)
+- Rule 10: Incomplete (GDACS severity bump undefined, linked to CLS-1)
+- Rule 19: Ambiguous (source reliability "tried first" meaning unclear, linked to CLS-6)
+- Rule 30: Contradicted by unresolved STO-2 (partition key date undefined)
