@@ -29,7 +29,7 @@ Feature: Domain Types
 
   Rule: incident_id uses date country type format with UNX for unknown country and OTH for unknown type
 
-    Example: incident_id format varies by country and type
+    Scenario Outline: incident_id format varies by country and type
       Given an IncidentBundle whose earliest record date is 2026-05-14 with country <country> and disaster_type <disaster_type>
       When the incident_id is generated
       Then the incident_id is "<expected_id>"
