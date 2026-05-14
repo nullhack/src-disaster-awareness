@@ -126,3 +126,67 @@ Step 1 uses three independent HTTP requests (no parallelism framework — sequen
 | 6 | Performance | Full batch with AI in < 5 minutes | ~6 AI calls × 15s rate limit ≈ 90s for 50 incidents | Measured by E2E test with mocked AI latency |
 | 7 | Maintainability | Adding a new source adapter requires zero changes to core pipeline | New adapter implements `SourceAdapter` protocol, registered in config | No existing files modified when adding adapter |
 | 8 | Observability | Every pipeline run produces a structured log of step outcomes | Step-level timing, source fetch counts, classification distribution, storage count | `structlog` JSON output to stderr at `INFO` level |
+
+## Technology Stack
+
+| Layer | Choice | Rationale |
+|-------|--------|-----------|
+| Language | Python 3.14+ | Type hints (PEP 695), dataclasses, pattern matching; team expertise |
+| Architecture | Sequential pipeline (monolith) | 7 ordered steps with data dependencies; single-process CLI; no concurrency needed. See ADR 1. |
+| HTTP Client | httpx >= 0.28 | Modern sync HTTP client; connection pooling; timeout control; used by all adapters |
+| AI Framework | DSPy | Typed signatures for structured LLM output; prompt optimization; composable modules. See ADR 3. |
+| News Search | ddgs >= 9.14.2 | DuckDuckGo News via `DDGS.news()`; supplementary context for sparse bundles |
+| Primary Storage | JSONL (date-partitioned) | Human-readable; append-only; grep-able; zero-config; atomic writes. See ADR 2. |
+| Alt. Storage | SQLite (stdlib `sqlite3`) | Same `StorageBackend` protocol; efficient queries for large datasets |
+| Logging | structlog | Structured JSON output; step-level timing; filterable by log level |
+| CLI | argparse (stdlib) | Single entry point `dsr-pipeline`; environment variable config; no framework needed |
+| Correlation | difflib.SequenceMatcher (stdlib) | Title similarity ratio; deterministic; no external dependency. See ADR 4. |
+| Data Shapes | dataclasses (stdlib) | RawRecord, IncidentBundle, Incident; no validation framework overhead |
+
+### Key Design Principles
+
+1. **Minimal runtime dependencies** — 4 packages (httpx, dspy, ddgs, structlog) plus stdlib
+2. **No web framework** — CLI tool, not a server
+3. **No async** — single-process, single-threaded, synchronous execution
+4. **No ORM** — direct JSONL/SQLite via adapter pattern
+5. **No template engine** — no HTML output
+6. **Stdlib-first** — difflib for similarity, sqlite3 for alt storage, argparse for CLI, json for serialization
+
+## Dependencies
+
+### Runtime
+
+| Package | Version | Purpose | ADR |
+|---------|---------|---------|-----|
+| httpx | >= 0.28 | HTTP client for GDACS GeoJSON, WHO OData, GDELT DOC APIs. Connection pooling, timeout control, retry support. | — |
+| dspy | * | Structured LLM programming. Typed signatures for Extractor and Classifier agents. Provider-agnostic LM configuration. | ADR 3 |
+| ddgs | >= 9.14.2 | DuckDuckGo News search via `DDGS.news()`. Supplementary context when primary sources lack country/type data. | — |
+| structlog | * | Structured JSON logging. Step-level timing, source counts, classification distribution to stderr. | — |
+
+### Development
+
+| Package | Version | Purpose |
+|---------|---------|---------|
+| flowr | >= 1.0.0 | Flow state machine management for project workflow |
+| pytest-beehave | >= 0.2.0 | BDD test framework (Given/When/Then) |
+| pytest | * | Test runner |
+| ruff | * | Linting and formatting |
+| pyright | * | Static type checking |
+
+### Standard Library (no install)
+
+| Module | Purpose |
+|--------|---------|
+| `dataclasses` | RawRecord, IncidentBundle, Incident data shapes |
+| `json` | JSONL serialization/deserialization |
+| `sqlite3` | SQLite storage backend |
+| `difflib` | SequenceMatcher for title similarity (correlation) |
+| `re` | Keyword scanning for WHO/GDELT level derivation |
+| `pathlib` | File path handling for JSONL storage |
+| `datetime` | Timestamps, date parsing, date partitioning |
+| `os` | Atomic file writes (temp file + rename) |
+| `typing` | Protocol definitions (SourceAdapter, NewsSearcher, AIProvider, StorageBackend) |
+| `argparse` | CLI entry point |
+| `logging` | Fallback logging (structlog primary) |
+| `tempfile` | Atomic write temporary files |
+| `collections` | Data grouping utilities |
