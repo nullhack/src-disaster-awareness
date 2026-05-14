@@ -129,7 +129,7 @@
 ## Country Group
 
 **Genus:** A geographic categorization assigned to every country
-**Differentia:** as one of three tiers — Group A (25 Asia Pacific primary countries, highest monitoring priority), Group B (41 Asia Pacific secondary + Middle East + North Africa countries), or Group C (rest of world, lowest monitoring priority) — that determines monitoring priority and reporting thresholds via the priority matrix.
+**Differentia:** as one of three tiers — Group A (24 Asia Pacific primary countries, highest monitoring priority), Group B (41 Asia Pacific secondary + Middle East + North Africa countries), or Group C (rest of world, lowest monitoring priority) — that determines monitoring priority and reporting thresholds via the priority matrix.
 
 **Source:** 2026-05-14
 
@@ -137,7 +137,7 @@
 
 ## Country Group A
 
-**Genus:** A set of 25 countries
+**Genus:** A set of 24 countries
 **Differentia:** in the Asia Pacific region (Afghanistan, Bangladesh, Bhutan, Brunei, Cambodia, China, India, Indonesia, Japan, Laos, Malaysia, Maldives, Myanmar, Nepal, North Korea, Pakistan, Philippines, Singapore, South Korea, Sri Lanka, Taiwan, Thailand, Timor Leste, Vietnam) receiving the highest monitoring priority, where all levels (1–4) are reported.
 
 **Source:** 2026-05-14
@@ -435,6 +435,6 @@
 ## Source Reliability Order
 
 **Genus:** A priority ordering of data sources
-**Differentia:** GDACS > WHO > GDELT > DDG-NEWS, used by the ClassifyEngine to try the most reliable available source first when deriving classification fields from raw records in a bundle.
+**Differentia:** GDACS > WHO > GDELT > DDG-NEWS, used by the ClassifyEngine to select the level from the highest-reliability source that derived one (most-reliable-source-wins), not a fallback chain.
 
 **Source:** 2026-05-14

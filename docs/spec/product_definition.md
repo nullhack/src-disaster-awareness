@@ -68,7 +68,7 @@ The legacy codebase was unmaintainable. This clean rewrite automates disaster in
 
 ### Phase 4 — Pipeline
 
-17. `pipeline.py` — fetch → correlate → classify → search-more → AI enrich → store
+17. `pipeline.py` — fetch → correlate → classify → search-more → AI enrich → override re-eval → store
 18. End-to-end test
 
 ## Deployment
@@ -121,7 +121,7 @@ Step 1 uses three independent HTTP requests (no parallelism framework — sequen
 | 1 | Reproducibility | Same fixtures → same classified incidents, every time | Byte-identical JSON output from identical input fixtures across repeated runs | Deterministic: no randomness, no timestamps in output, no floating-point drift |
 | 2 | Reliability | Any single source API down → other sources unaffected, no data loss | Empty list from failed adapter, pipeline continues with available sources | Each adapter returns `[]` on failure; never raises |
 | 3 | Reliability | AI timeout/failure → incident stored without enrichment | `ai_enriched=False`, all AI fields None, bundle persisted to storage | Bundle present in storage with `ai_enriched=False` after run |
-| 4 | Testability | Every classification rule has a passing test with named fixture | 100% rule coverage: all 66 countries (25+41), all 12 priority matrix cells, all 6 overrides, all 4 source level derivations | `task test-coverage` shows 100% for classify.py, correlate.py |
+| 4 | Testability | Every classification rule has a passing test with named fixture | 100% rule coverage: all 65 countries (24+41), all 12 priority matrix cells, all 6 overrides, all 4 source level derivations | `task test-coverage` shows 100% for classify.py, correlate.py |
 | 5 | Performance | 50 incidents classified and stored in < 5 seconds (excluding AI) | Pure Python path (Steps 2–3, 6–7) completes in < 5s for 50 bundles | Measured by `pytest` performance marker; ~65ms estimated |
 | 6 | Performance | Full batch with AI in < 5 minutes | ~6 AI calls × 15s rate limit ≈ 90s for 50 incidents | Measured by E2E test with mocked AI latency |
 | 7 | Maintainability | Adding a new source adapter requires zero changes to core pipeline | New adapter implements `SourceAdapter` protocol, registered in config | No existing files modified when adding adapter |
