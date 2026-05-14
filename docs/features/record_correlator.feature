@@ -12,13 +12,28 @@ Feature: Record Correlator
     IncidentBundle. No record appears in more than one bundle (no duplicates)
     and no record is left unassigned (no orphans).
 
+  Example: All Records Assigned Without Duplicates
+    Given five RawRecords about two distinct incidents from three sources
+    When the records are correlated
+    Then each record is assigned to exactly one IncidentBundle
+
   Rule: Unmatched Records Create Singleton Bundles
     A RawRecord that does not correlate with any other record still becomes an
     IncidentBundle containing exactly that one record.
 
+  Example: Unmatched Record Creates Singleton Bundle
+    Given a WHO record that does not correlate with any other record
+    When the record is correlated
+    Then the output contains one IncidentBundle with exactly that record
+
   Rule: Empty Input Produces Empty Output
     When given an empty list of RawRecords, the correlator returns an empty list
     of IncidentBundles. Zero records in, zero bundles out.
+
+  Example: Empty Input Produces Empty Bundles
+    Given an empty list of RawRecords
+    When the records are correlated
+    Then the output is an empty list of IncidentBundles
 
   Rule: Correlation Uses Three Matching Criteria
     Two records are correlation candidates based on three criteria:
@@ -28,7 +43,25 @@ Feature: Record Correlator
        record has no country data. If both records lack country data, skip
        the country criterion for that pair.
     3. Title similarity: normalized Levenshtein ratio ≥ 0.6. If either record
-       has no title, skip this criterion for that pair.
+        has no title, skip this criterion for that pair.
+
+  Example: Date Within One Day Passes Proximity
+    Given one record dated 2026-05-14
+    And another record dated 2026-05-15
+    When evaluating date proximity
+    Then the date criterion passes
+
+  Example: Shared Country Passes Overlap
+    Given one record with country "Philippines"
+    And another record also with country "Philippines"
+    When evaluating country overlap
+    Then the country criterion passes
+
+  Example: Similar Titles Meet Levenshtein Threshold
+    Given one record with title "Earthquake strikes Philippines"
+    And another record with title "Earthquake struck Philippines"
+    When evaluating title similarity
+    Then the title criterion passes
 
   Rule: Correlation Requires Date and Country or Title
     A pair correlates if the date criterion passes AND at least one of the
@@ -38,9 +71,32 @@ Feature: Record Correlator
     unavailable on both records, the records do not correlate and each forms
     its own singleton bundle.
 
+  Scenario Outline: Date Plus Country Or Title Determines Grouping
+    Given one record dated 2026-05-14 from "Philippines" with title "Earthquake in Philippines"
+    And another record dated <other_date> from <other_country> with title <other_title>
+    When the records are correlated
+    Then the records <grouping>
+
+    Examples:
+      | other_date  | other_country | other_title                  | grouping                   |
+      | 2026-05-14  | Philippines   | "Quake hits Philippines"      | are grouped into one bundle |
+      | 2026-05-14  | Japan         | "Earthquake in Philippines"   | are grouped into one bundle |
+      | 2026-05-14  | Japan         | "Typhoon warning Japan"       | remain in separate bundles  |
+      | 2026-05-16  | Philippines   | "Earthquake in Philippines"   | remain in separate bundles  |
+
+  Example: Sole Criterion Correlates Records Alone
+    Given two records dated one day apart with no country data and no title text
+    When the records are correlated
+    Then the records are grouped into one IncidentBundle
+
   Rule: Blank Records Get Default Classification
     Records with no date, no country, and no title form singleton bundles with
     default classification: Level 1, Group C, Priority LOW, should_report=False.
+
+  Example: Blank Records Receive Default Classification
+    Given a RawRecord with no date no country and no title
+    When the record is correlated
+    Then the bundle is classified with the blank record defaults
 
   Rule: Incident ID Generated From Earliest Record Data
     Each IncidentBundle receives an incident_id in the format YYYYMMDD-CC-TTT:
@@ -49,6 +105,11 @@ Feature: Record Correlator
     ("UNX" if unknown), and TTT is the disaster type code ("OTH" if unknown).
     The incident_id is stable identity — once generated, it must not change even
     if later pipeline steps fill in missing fields.
+
+  Example: Incident ID Generated From Earliest Date
+    Given a bundle with earliest record date "2026-05-13" country code "PH" and disaster type "EQ"
+    When the incident ID is generated
+    Then the incident ID is "20260513-PH-EQ"
 
   # Constraints:
   # - Reproducibility: same set of raw records always produces the same grouping and
