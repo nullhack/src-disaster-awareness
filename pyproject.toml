@@ -12,6 +12,7 @@ maintainers = [
     { name = "eol", email = "nullhack@users.noreply.github.com" }
 ]
 dependencies = [
+    "agents-smith>=1.0.0",
     "dotenv>=0.9.9",
     "fire>=0.7.1",
     "google-api-python-client>=2.194.0",
@@ -175,3 +176,9 @@ mut-report = """
   rm mut.sqlite
 """
 static-check = "pyright"
+
+[dependency-groups]
+dev = [
+    "agents-smith>=1.0.0",
+    "flowr>=1.0.0",
+]
