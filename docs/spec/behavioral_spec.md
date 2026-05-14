@@ -133,17 +133,23 @@ The Fetching context wraps external disaster data sources behind uniform protoco
 
 ### Integration Points
 
+> **Context Map — Fetching as upstream:**
+> - **→ Correlation** (Customer-Supplier): Fetching provides `list[RawRecord]` in a uniform format designed for Correlation's grouping needs. The RawRecord contract (source_name, fetched_at, raw_fields) is the published language between these contexts.
+> - **→ Enrichment** (Anti-Corruption Layer): Fetching's NewsSearcher provides supplementary DDG News results. The pipeline orchestrator acts as the ACL, mediating between Fetching's search capability and downstream contexts. Enrichment is isolated from DDG News query mechanics.
+
 #### Fetching -> Correlation
 - Purpose: Pass all raw records from primary sources to the correlator
 - Trigger: Pipeline orchestrator collects all adapter results
 - Payload: `list[RawRecord]` (combined from GDACS, WHO, GDELT)
 - Response: `list[IncidentBundle]` (grouped by incident)
+- Context: Customer-Supplier — Fetching produces records in a format designed for Correlation's grouping logic
 
 #### Fetching -> Correlation (supplementary)
 - Purpose: Append supplementary DDG News results to bundles needing context
 - Trigger: Pipeline step after initial classification identifies bundles with missing fields
 - Payload: Search query derived from bundle records (see XCS-4 resolution below)
 - Response: Records appended to existing bundles
+- Context: Anti-Corruption Layer — pipeline orchestrator mediates between NewsSearcher and downstream; Enrichment sees only additional records
 
 ### External Contracts
 
@@ -232,23 +238,31 @@ Examples:
 
 ### Integration Points
 
+> **Context Map — Correlation:**
+> - **Fetching → Correlation** (Customer-Supplier, downstream): Receives `list[RawRecord]` from Fetching, groups into bundles by incident identity.
+> - **Correlation → Classification** (Customer-Supplier, upstream): Produces `list[IncidentBundle]` shaped for Classification's deterministic rules. Classification's needs influence the bundle structure.
+> - **Correlation → Fetching** (supplementary search): Triggers DDG News search via pipeline orchestrator ACL for bundles needing context after initial classification.
+
 #### Fetching -> Correlation
 - Purpose: Raw records grouped into incident bundles
 - Trigger: Pipeline orchestrator passes combined raw records to correlator
 - Payload: `list[RawRecord]`
 - Response: `list[IncidentBundle]`
+- Context: Customer-Supplier — Correlation consumes RawRecords and produces bundles with fields shaped for downstream Classification
 
 #### Correlation -> Classification
 - Purpose: Bundles flow to deterministic initial classification
 - Trigger: Pipeline orchestrator passes bundles to ClassifyEngine
 - Payload: `list[IncidentBundle]`
 - Response: `list[IncidentBundle]` (with preliminary classification fields populated)
+- Context: Customer-Supplier — bundle structure (incident_id, country, disaster_type, records) designed for Classification's rule engine
 
 #### Correlation -> Fetching (supplementary search)
 - Purpose: Bundles needing context trigger DDG News search
 - Trigger: Pipeline step after initial classification, when bundles have `country is None` or `disaster_type is None`
 - Payload: Search query (see query generation algorithm below)
 - Response: Additional `RawRecord`s appended to bundle
+- Context: Anti-Corruption Layer — pipeline orchestrator generates query from bundle fields, calls NewsSearcher, appends results; downstream contexts see only additional records
 
 ### External Contracts
 
@@ -373,29 +387,38 @@ Overrides are **independent and cumulative** (resolves CLS-3): each override tha
 
 ### Integration Points
 
+> **Context Map — Classification:**
+> - **Correlation → Classification** (Customer-Supplier, downstream): Receives `list[IncidentBundle]` from Correlation for deterministic initial classification.
+> - **Classification ↔ Enrichment** (Partnership): Bidirectional cooperation — Classification sends classified bundles → Enrichment extracts missing fields → Classification re-classifies with extracted data → Enrichment generates summaries and detects overrides (O1, O3, O5) → Classification re-evaluates overrides. Both contexts share the IncidentBundle aggregate and must evolve in lockstep.
+> - **Classification → Storage** (Conformist, upstream): Storage accepts classified bundles without influencing the format.
+
 #### Correlation -> Initial Classification
 - Purpose: Bundles with raw records flow to deterministic classification
 - Trigger: Pipeline orchestrator passes bundles to ClassifyEngine
 - Payload: `list[IncidentBundle]` (classification fields may be None)
 - Response: `list[IncidentBundle]` (preliminary classification fields populated, O2/O4/O6 in overrides)
+- Context: Customer-Supplier — Correlation produces bundles shaped for Classification's rule engine
 
 #### Initial Classification -> Supplementary Search
 - Purpose: Classified bundles with missing fields trigger supplementary search
 - Trigger: `country is None` or `disaster_type is None` after initial classification
 - Payload: Search query (see Supplementary Search Query Generation below)
 - Response: Additional `RawRecord`s from DDG News appended to bundles
+- Context: Anti-Corruption Layer — pipeline orchestrator mediates; Classification signals missing fields without coupling to NewsSearcher
 
 #### AI Enrichment -> Override Re-evaluation
 - Purpose: Enriched bundles receive override re-evaluation with AI data
 - Trigger: Pipeline orchestrator passes enriched bundles back to ClassifyEngine
 - Payload: `list[IncidentBundle]` (enriched with AI fields, O1/O3/O5 detected by Classifier agent)
 - Response: `list[IncidentBundle]` (final overrides list, possibly updated level/priority)
+- Context: Partnership — Enrichment returns AI-detected override flags; Classification re-evaluates deterministically with enriched data
 
 #### Override Re-evaluation -> Storage
 - Purpose: Fully classified and enriched bundles flow to storage
 - Trigger: Pipeline orchestrator passes bundles to StorageBackend
 - Payload: `list[IncidentBundle]`
 - Response: `{stored_count: int}`
+- Context: Conformist — Storage accepts whatever bundle format arrives without feedback
 
 ### External Contracts
 
@@ -512,35 +535,44 @@ Both Extractor and Classifier agents use DSPy typed signatures for structured LL
 
 ### Integration Points
 
+> **Context Map — Enrichment:**
+> - **Classification ↔ Enrichment** (Partnership): Bidirectional cooperation — Enrichment receives classified bundles, extracts missing fields, generates summaries, detects overrides (O1, O3, O5); Classification re-classifies with extracted data and re-evaluates overrides. Both contexts share the IncidentBundle aggregate.
+> - **Fetching → Enrichment** (Anti-Corruption Layer): Supplementary DDG News results are appended to bundles by the pipeline orchestrator. Enrichment processes all records uniformly without knowing their origin (primary fetch vs supplementary search).
+
 #### Initial Classification -> Enrichment (Extractor batch)
 - Purpose: Bundles with missing fields receive AI extraction
 - Trigger: Pipeline identifies bundles where `country is None` or `disaster_type is None`
 - Payload: `list[IncidentBundle]` (~10 per batch)
 - Response: Extracted fields populated in bundles
+- Context: Partnership — Enrichment extracts country/type/casualties; Classification re-classifies with new data
 
 #### Enrichment -> Classification (re-classification after extraction)
 - Purpose: Re-run deterministic classification with newly extracted fields
 - Trigger: Extractor fills in `country` or `disaster_type` that were previously None
 - Payload: `list[IncidentBundle]` (extracted fields populated)
 - Response: Updated `country_group`, `incident_level`, `priority` (incident_id unchanged)
+- Context: Partnership — feedback loop: Enrichment fills fields → Classification re-classifies → Enrichment receives re-classified bundles for summary generation
 
 #### Initial Classification -> Enrichment (Classifier batch)
 - Purpose: Reportable bundles receive AI summaries and override detection
 - Trigger: Pipeline identifies bundles where `should_report=True`
 - Payload: `list[IncidentBundle]` (~10 per batch)
 - Response: `summary`, `rationale`, override flags populated in bundles
+- Context: Partnership — Enrichment generates summaries and detects O1/O3/O5 for reportable bundles
 
 #### Enrichment -> Override Re-evaluation
 - Purpose: AI-detected overrides (O1, O3, O5) applied to classification
 - Trigger: Classifier agent returns override flags
 - Payload: `list[IncidentBundle]` (with AI override flags)
 - Response: Updated `overrides` list and possibly updated `level`, `priority`
+- Context: Partnership — Enrichment provides override flags; Classification applies deterministic re-evaluation
 
 #### Enrichment -> Storage
 - Purpose: Enriched (or classified-only) bundles are stored
 - Trigger: Pipeline passes bundles to StorageBackend
 - Payload: `list[IncidentBundle]`
 - Response: `{stored_count: int}`
+- Context: Conformist — Storage accepts bundles; Enrichment has no influence over Storage format
 
 ### External Contracts
 
@@ -682,17 +714,23 @@ Storage path: `incidents/by-date/YYYY-MM-DD/incidents.jsonl` where `YYYY-MM-DD` 
 
 ### Integration Points
 
+> **Context Map — Storage as downstream (Conformist):**
+> - **Classification → Storage**: Storage accepts `list[IncidentBundle]` from the pipeline and persists them without influencing the bundle format. Storage conforms to the upstream data model.
+> - **Storage → CLI query**: Storage exposes query results as `list[Incident]` (flattened view) to external consumers via the `StorageBackend` protocol.
+
 #### Override Re-evaluation -> Storage
 - Purpose: Persist fully classified and enriched bundles
 - Trigger: Pipeline orchestrator calls `store.store(bundles)`
 - Payload: `list[IncidentBundle]`
 - Response: `{stored_count: int}` — count of new bundles (skips existing IDs)
+- Context: Conformist — Storage accepts whatever bundle format arrives; no feedback to upstream
 
 #### Storage -> CLI query
 - Purpose: Allow users to query stored incidents
 - Trigger: User or researcher queries by date range and filters
 - Payload: `{date_from: date, date_to: date, **filters}`
 - Response: `list[Incident]` — flattened query results
+- Context: Published Language — StorageBackend.query() exposes a standard query interface returning `Incident` value objects
 
 ### External Contracts
 

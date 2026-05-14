@@ -68,3 +68,63 @@ The Disaster Surveillance Reporter (DSR) is a backend pipeline that fetches disa
 | Aggregate | Root Entity | Invariants | Why Grouped | Bounded Context |
 |-----------|-------------|------------|-------------|-----------------|
 | Incident Bundle | `IncidentBundle` | Every bundle must have a valid `incident_id` (YYYYMMDD-CC-TTT). Classification fields (`country_group`, `incident_level`, `priority`, `should_report`) must be consistent with the priority matrix and overrides. All contained `RawRecord`s must relate to the same real-world incident. | Classification, enrichment, and storage all operate on the same incident identity; splitting them would allow inconsistent state. Raw records are immutable once grouped. | Correlation / Classification / Enrichment / Storage |
+
+---
+
+## Context Map
+
+### Relationship Patterns
+
+| # | Upstream | Downstream | Vernon Pattern | Payload | Rationale |
+|---|----------|-----------|----------------|---------|-----------|
+| 1 | Fetching | Correlation | Customer-Supplier | `list[RawRecord]` | Fetching produces raw records in a uniform format (source_name, fetched_at, raw_fields) designed as the shared contract. Correlation depends on this format for grouping logic. Fetching considers Correlation's needs by preserving complete raw_fields and normalising source_name. |
+| 2 | Correlation | Classification | Customer-Supplier | `list[IncidentBundle]` | Correlation shapes IncidentBundle fields (country, disaster_type, records, incident_id) to serve Classification's deterministic rules. Classification's requirements (date from records, country extraction, title availability) influence the bundle structure. |
+| 3 | Classification | Enrichment | Partnership | `list[IncidentBundle]` (bidirectional) | Tight bidirectional cooperation with feedback loops: Classification sends classified bundles → Enrichment extracts missing fields → Classification re-classifies with extracted data → Enrichment generates summaries and detects overrides → Classification re-evaluates overrides. Both contexts share the IncidentBundle aggregate and must evolve in lockstep. |
+| 4 | Fetching (DDG News) | Enrichment | Anti-Corruption Layer | Search query → `list[RawRecord]` | Supplementary search uses Fetching's NewsSearcher protocol to find additional articles for bundles needing context. The pipeline orchestrator acts as the ACL: it generates the search query, calls NewsSearcher, and appends results to bundles. Enrichment sees only additional records — no coupling to DDG News mechanics or query generation logic. |
+| 5 | Classification | Storage | Conformist | `list[IncidentBundle]` | Storage accepts whatever bundle format arrives from the pipeline and persists it without influencing the IncidentBundle structure. Storage conforms to the upstream data model — it has no feedback channel to request format changes. |
+
+### Shared Kernel
+
+`types.py` contains the shared data structures used across all five bounded contexts:
+
+| Type | Used By | Role |
+|------|---------|------|
+| `RawRecord` | Fetching, Correlation, Enrichment | Universal raw data unit — the pipeline's lingua franca for source data |
+| `IncidentBundle` | Correlation, Classification, Enrichment, Storage | Aggregate root flowing through the entire pipeline; carries classification and enrichment state |
+| `Incident` | Storage | Flattened query result derived from IncidentBundle for reporting |
+
+Changes to these shared types affect multiple contexts and require cross-context coordination.
+
+### Published Languages (Protocols)
+
+Each context exposes its capability through a Python Protocol that decouples consumers from implementation details:
+
+| Context | Protocol | Purpose | Consumers |
+|---------|----------|---------|-----------|
+| Fetching | `SourceAdapter` | Contract for primary API adapters (GDACS, WHO, GDELT) | Pipeline orchestrator |
+| Fetching | `NewsSearcher` | Contract for supplementary news search (DDG News) | Pipeline orchestrator (supplementary search step) |
+| Enrichment | `AIProvider` | Contract for pluggable AI backends (Ollama, Gemini, OpenAI) | Extractor agent, Classifier agent |
+| Storage | `StorageBackend` | Contract for storage backends (JSONL, SQLite) | Pipeline orchestrator, CLI |
+
+### Context Map Diagram
+
+```mermaid
+graph LR
+    F["Fetching<br/>SourceAdapter · NewsSearcher"]
+    C["Correlation<br/>Correlator"]
+    CL["Classification<br/>ClassifyEngine"]
+    E["Enrichment<br/>Extractor · Classifier"]
+    S["Storage<br/>StorageBackend"]
+
+    F -->|"Customer-Supplier<br/>list[RawRecord]"| C
+    C -->|"Customer-Supplier<br/>list[IncidentBundle]"| CL
+    CL <-->|"Partnership<br/>bidirectional"| E
+    F -.->|"ACL<br/>supplementary search"| E
+    CL -->|"Conformist<br/>list[IncidentBundle]"| S
+```
+
+### Anti-Corruption Layers
+
+| ACL | Mediator | Upstream Model | Downstream Isolation | Translation |
+|-----|----------|---------------|---------------------|-------------|
+| Supplementary Search | Pipeline orchestrator (step 4) | `NewsSearcher.search()` returns `list[RawRecord]` with `source_name="DDG-NEWS"`, containing DDG News-specific fields (title, url, body, date, source, image) | Enrichment (Extractor agent) reads raw records from bundles to extract country, type, casualties. It does not know whether records came from primary fetch or supplementary search. | Pipeline orchestrator: (1) determines which bundles need context from Classification output, (2) generates search queries from bundle fields using the query generation algorithm, (3) calls `NewsSearcher.search()`, (4) appends resulting `RawRecord`s to bundle.records. Enrichment processes all records uniformly regardless of origin. |
