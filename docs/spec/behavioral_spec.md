@@ -667,7 +667,7 @@ Examples:
 #### source_urls Derivation (resolves STO-4)
 
 The `source_urls` field is built by collecting `url` fields from each record's `raw_fields`:
-- WHO records: `raw_fields["url"]` (usually present)
+- WHO records: `raw_fields["ItemDefaultUrl"]` (relative path; prepend `https://www.who.int` for full URL)
 - GDELT records: `raw_fields["url"]` (usually present)
 - DDG-NEWS records: `raw_fields["url"]` (usually present)
 - GDACS records: `raw_fields["url"]["report"]` if `url` dict is present (may be None if missing)

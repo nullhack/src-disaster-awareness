@@ -12,7 +12,7 @@
 ## Disaster Surveillance Reporter
 
 **Genus:** A backend data pipeline
-**Differentia:** that fetches disaster incident data from three free, zero-auth public APIs (GDACS, WHO DON, GDELT), correlates records about the same incident across sources, classifies deterministically with pure Python rules, enriches with AI (DuckDuckGo AI + DSPy), and stores complete bundles locally in JSONL or SQLite.
+**Differentia:** that fetches disaster incident data from three free, zero-auth public APIs (GDACS, WHO DON, GDELT), correlates records about the same incident across sources, classifies deterministically with pure Python rules, enriches with pluggable AIProvider (Ollama/Gemini/OpenAI + DSPy), and stores complete bundles locally in JSONL or SQLite.
 
 **Source:** 2026-05-14
 
@@ -75,18 +75,18 @@
 ## AIProvider
 
 **Genus:** A Python Protocol for abstract AI chat interfaces
-**Differentia:** defining `chat(prompt, *, model) -> str` that raises on unrecoverable failure (auth, network) but auto-retries on rate limits (HTTP 429). Implemented by `DuckAIProvider` which calls DuckDuckGo's `duckchat/v1` API directly via httpx.
+**Differentia:** defining `chat(prompt, *, model) -> str` that raises on unrecoverable failure (auth, network) but auto-retries on rate limits (HTTP 429). Implemented by pluggable backends: OllamaProvider (local, free), GeminiProvider (Google, free tier), or OpenAIProvider (paid). The pipeline also supports running with AI disabled entirely.
 
 **Source:** 2026-05-14
 
 ---
 
-## DuckAIProvider
+## DuckAIProvider (Deprecated)
 
-**Genus:** A concrete implementation of the AIProvider protocol
-**Differentia:** calling DuckDuckGo's free `duckchat/v1` API via direct HTTP (no wrapper library), using a two-step protocol: GET `/status` to obtain a VQD token, then POST `/chat` with the token and model selection to receive an SSE stream response. Rate limited to ~1 request per 15 seconds.
+**Genus:** ~~A concrete implementation of the AIProvider protocol~~
+**Differentia:** calling DuckDuckGo's free `duckchat/v1` API via direct HTTP. **Deprecated** — replaced by pluggable AIProvider backends (OllamaProvider, GeminiProvider, OpenAIProvider). The VQD token and SSE protocol are no longer used.
 
-**Source:** 2026-05-14
+**Source:** 2026-05-14 (deprecated)
 
 ---
 
@@ -282,7 +282,7 @@
 ## GDELT
 
 **Genus:** A free, zero-auth external data source
-**Differentia:** the Global Database of Events, Language, and Tone providing global news articles via a DOC API, with ~20% deterministic field availability. Country and disaster type must be extracted. Tone scores provide severity indication.
+**Differentia:** the Global Database of Events, Language, and Tone providing global news articles via a DOC API, with ~20% deterministic field availability. Country and disaster type must be extracted. ArtList mode has no tone field — level derivation uses title keyword scan instead of tone scores.
 
 **Source:** 2026-05-14
 
@@ -345,27 +345,27 @@
 ## DSPy
 
 **Genus:** A Python framework for structured LLM programming
-**Differentia:** used alongside direct DuckDuckGo AI calls to provide typed output signatures for incident extraction and classification, prompt optimization over time, and composable AI modules.
+**Differentia:** used alongside pluggable AIProvider backends to provide typed output signatures for incident extraction and classification, prompt optimization over time, and composable AI modules.
 
 **Source:** 2026-05-14
 
 ---
 
-## VQD Token
+## VQD Token (Deprecated)
 
-**Genus:** An authentication token for DuckDuckGo AI
-**Differentia:** obtained via GET request to `duckduckgo.com/duckchat/v1/status` with the `x-vqd-accept: 1` header, returned as the `x-vqd-4` response header, and cached by `DuckAIProvider` for reuse in subsequent chat requests.
+**Genus:** ~~An authentication token for DuckDuckGo AI~~
+**Differentia:** formerly used by DuckAIProvider to authenticate with `duckchat/v1`. **Deprecated** — the pipeline now uses pluggable AIProvider backends (Ollama/Gemini/OpenAI) which do not use VQD tokens.
 
-**Source:** 2026-05-14
+**Source:** 2026-05-14 (deprecated)
 
 ---
 
-## SSE (Server-Sent Events)
+## SSE (Server-Sent Events) (Deprecated)
 
-**Genus:** A streaming HTTP response format
-**Differentia:** used by DuckDuckGo's `duckchat/v1/chat` endpoint to deliver AI responses as a sequence of `data: {...}` lines terminated by `data: [DONE]`, parsed by `DuckAIProvider._parse_sse()` into a concatenated string.
+**Genus:** ~~A streaming HTTP response format~~
+**Differentia:** formerly used by DuckDuckGo's `duckchat/v1/chat` endpoint. **Deprecated** — the pipeline now uses pluggable AIProvider backends (Ollama/Gemini/OpenAI) which use standard request-response patterns, not SSE streaming.
 
-**Source:** 2026-05-14
+**Source:** 2026-05-14 (deprecated)
 
 ---
 
@@ -390,7 +390,7 @@
 ## Pipeline
 
 **Genus:** The orchestrator module (`pipeline.py`)
-**Differentia:** executing the six-step sequential flow: (1) fetch all 3 primary sources, (2) correlate records into bundles, (3) supplementary DDG News search for bundles needing context, (4) classify deterministically, (5) AI enrich in batches, (6) store complete bundles.
+**Differentia:** executing the seven-step sequential flow: (1) fetch all 3 primary sources, (2) correlate records into bundles, (3) classify deterministically (initial), (4) supplementary DDG News search for bundles needing context, (5) AI enrich in batches, (6) override re-evaluation, (7) store complete bundles.
 
 **Source:** 2026-05-14
 
@@ -414,10 +414,10 @@
 
 ---
 
-## Tone Score
+## Tone Score (Deprecated for ArtList mode)
 
 **Genus:** A GDELT-specific sentiment metric
-**Differentia:** a numeric value in `raw_fields` used to derive incident levels: tone < -5 → Level 4, tone < -3 → Level 3, tone >= 0 → Level 1, else → Level 2.
+**Differentia:** a numeric value available via the GDELT ToneChart API (not ArtList mode). The ArtList mode used by the DSR pipeline does not include tone data. Level derivation for GDELT uses title keyword scan instead: "major"/"catastrophic"/"deadly"/"massive" → 3, "devastating"/"hundreds dead"/"thousands displaced"/"PHEIC" → 4.
 
 **Source:** 2026-05-14
 

@@ -9,7 +9,7 @@
 
 - A deterministic classification engine that assigns incident levels (1–4), priorities (HIGH/MED/LOW), and country groups (A/B/C) using fixed Python rules — no AI for classification, ever.
 - A multi-source correlation pipeline that groups information about the same real-world incident from different APIs (GDACS, WHO DON, GDELT) into unified bundles, supplementing with DuckDuckGo News search when context is sparse.
-- An AI-augmented extraction and enrichment system for unstructured text (WHO, GDELT, DDG News), using free DuckDuckGo AI via direct HTTP and DSPy for structured output, operating on batched `IncidentBundle`s.
+- An AI-augmented extraction and enrichment system for unstructured text (WHO, GDELT, DDG News), using a pluggable AIProvider (Ollama, Gemini, or OpenAI) via DSPy for structured output, operating on batched `IncidentBundle`s.
 
 ## What Disaster Surveillance Reporter IS NOT
 
@@ -61,7 +61,7 @@ The legacy codebase was unmaintainable. This clean rewrite automates disaster in
 
 ### Phase 3 — AI (from day 1)
 
-13. `ai/provider.py` — `AIProvider` protocol + `DuckAIProvider` (direct HTTP to duckchat/v1)
+13. `ai/provider.py` — `AIProvider` protocol + pluggable backends (OllamaProvider, GeminiProvider, OpenAIProvider)
 14. `ai/extractor.py` — batched extraction agent with DSPy signatures
 15. `ai/classifier.py` — batched classification agent with DSPy signatures
 16. Integration tests (fixtures + mocked AI responses)
