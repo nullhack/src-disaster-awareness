@@ -3,6 +3,18 @@ revision = 3
 requires-python = ">=3.14"
 
 [[package]]
+name = "agents-smith"
+version = "1.0.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "requests" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/5e/59/eb40b30f1bfe96e4890a5cff457e10270073744d870cae2726d5ab4d7068/agents_smith-1.0.0.tar.gz", hash = "sha256:f53f27d767fae974f27663a2f6702546dcfaf1da92282cb2428f5041abd4bc0a", size = 10836, upload-time = "2026-05-02T16:56:12.636Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/7b/f8/e5ba7318a95a29b732c7822e7b4a8eecbb25b8b6a0b1484d48afaa437d12/agents_smith-1.0.0-py3-none-any.whl", hash = "sha256:c2e051f20d368c420efa865b73890407726189047ab9155bf7bd89a59ef5d8d1", size = 10109, upload-time = "2026-05-02T16:56:11.433Z" },
+]
+
+[[package]]
 name = "aiohappyeyeballs"
 version = "2.6.1"
 source = { registry = "https://pypi.org/simple" }
@@ -254,6 +266,7 @@ dependencies = [
 
 [package.dev-dependencies]
 dev = [
+    { name = "agents-smith" },
     { name = "flowr" },
     { name = "pytest-beehave" },
 ]
@@ -269,6 +282,7 @@ requires-dist = [
 
 [package.metadata.requires-dev]
 dev = [
+    { name = "agents-smith", specifier = ">=1.0.0" },
     { name = "flowr", specifier = ">=1.0.0" },
     { name = "pytest-beehave", specifier = ">=0.2.0" },
 ]

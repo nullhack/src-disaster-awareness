@@ -69,6 +69,7 @@ test-fast = "pytest -q"
 
 [dependency-groups]
 dev = [
+    "agents-smith>=1.0.0",
     "flowr>=1.0.0",
     "pytest-beehave>=0.2.0",
 ]
