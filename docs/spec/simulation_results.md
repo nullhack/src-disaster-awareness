@@ -1,6 +1,6 @@
 # Simulation Results
 
-> **Status:** DRAFT (2026-05-14) — iteration 2B FAIL after fixture validation review
+> **Status:** APPROVED (2026-05-14) — iteration 2C PASS, all fixture issues resolved
 > Flow: spec-validation-flow / simulate-spec
 > Owner: SA (System Architect)
 
@@ -156,8 +156,12 @@ The behavioral_spec.md was correctly updated with all 7 fixture corrections (GDA
 | Enrichment → Override Re-evaluation | ✅ | AI fields and override flags flow correctly |
 | Override Re-evaluation → Storage | ✅ | Complete bundles persisted |
 | source_urls derivation (GDACS) | ✅ | GDACS uses `url.report` from `raw_fields["url"]` dict (spec line 673) |
-| source_urls derivation (WHO) | ❌ | behavioral_spec line 670 says `raw_fields["url"]` but WHO field is `ItemDefaultUrl` (line 92, 646) |
+| source_urls derivation (WHO) | ✅ | Fixed: `raw_fields["ItemDefaultUrl"]` with prepend (spec line 670) |
 | O2 evaluation phase | ⚠️ Advisory | Method column conflicts with invariant (XCS-5) |
+
+### Iteration 2C: Final Verdict
+
+> **Decision:** **PASS** — all 18 fixture-validation issues resolved across 4 files. Zero unresolved blockers. 3 advisory-only minor findings (ENR-5, STO-6, XCS-5) remain but are non-blocking implementation details.
 
 ### Metrics
 
