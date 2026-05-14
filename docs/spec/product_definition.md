@@ -71,13 +71,58 @@ The legacy codebase was unmaintainable. This clean rewrite automates disaster in
 17. `pipeline.py` — fetch → correlate → classify → search-more → AI enrich → store
 18. End-to-end test
 
+## Deployment
+
+### Runtime Model
+
+DSR is a **CLI tool** executed as a scheduled batch process. There is no daemon, no web server, and no persistent process.
+
+**Execution:** `dsr-pipeline` CLI command (entry point defined in `pyproject.toml`). Each invocation runs the full 7-step pipeline once and exits.
+
+**Scheduling:** `cron` (Linux) or Task Scheduler (Windows). Recommended interval: every 6 hours. The pipeline is idempotent — duplicate runs produce no duplicate storage entries (dedup by `incident_id`).
+
+**Data location:** Local filesystem under `./incidents/`. JSONL files at `incidents/by-date/YYYY-MM-DD/incidents.jsonl`. SQLite file at `incidents/dsr.db` (if selected). All paths relative to the working directory at invocation time.
+
+**Configuration (environment variables):**
+
+| Variable | Purpose | Default |
+|----------|---------|---------|
+| `DSR_AI_PROVIDER` | AI backend: `ollama`, `gemini`, `openai`, or `none` | `none` |
+| `DSR_AI_MODEL` | Model name for selected provider | Provider-specific |
+| `DSR_AI_API_KEY` | API key for Gemini/OpenAI (not needed for Ollama/none) | — |
+| `DSR_AI_BASE_URL` | Override base URL for AI provider (e.g., custom Ollama host) | Provider-specific |
+| `DSR_STORAGE_BACKEND` | Storage: `jsonl` or `sqlite` | `jsonl` |
+| `DSR_STORAGE_PATH` | Base directory for storage | `./incidents` |
+| `DSR_LOG_LEVEL` | Logging verbosity: `DEBUG`, `INFO`, `WARNING`, `ERROR` | `INFO` |
+
+**Exit codes:** 0 = success (all steps completed, including partial AI failures), 1 = fatal error (storage completely unavailable, configuration invalid).
+
+**Single-process, single-threaded.** No multiprocessing, no async, no distributed execution. The pipeline processes bundles sequentially within each step.
+
+### Pipeline Execution Flow
+
+```
+dsr-pipeline
+  ├─ Step 1: Fetch (GDACS, WHO, GDELT in parallel via httpx)
+  ├─ Step 2: Correlate (group into IncidentBundles)
+  ├─ Step 3: Initial Classify (deterministic, no I/O)
+  ├─ Step 4: Supplementary Search (DDG News for bundles missing fields)
+  ├─ Step 5: AI Enrich (Extractor → re-classify → Classifier, batched)
+  ├─ Step 6: Override Re-evaluation (deterministic, no I/O)
+  └─ Step 7: Store (JSONL or SQLite, atomic writes)
+```
+
+Step 1 uses three independent HTTP requests (no parallelism framework — sequential or `httpx` connection pooling). Step 5 is the only step with variable latency (AI calls). All other steps are deterministic and fast.
+
 ## Quality Attributes
 
-| Priority | Attribute | Scenario | Target |
-|----------|-----------|----------|--------|
-| 1 | Reproducibility | Same fixtures → same classified incidents, every time | Deterministic output, no randomness |
-| 2 | Reliability | Any source API down → other sources unaffected, no data loss | Empty list from failed adapter, pipeline continues |
-| 3 | Reliability | AI timeout/failure → incident stored without enrichment | `ai_enriched=False`, all AI fields None, bundle persisted |
-| 4 | Testability | Every classification rule has a passing test with named fixture | 100% rule coverage: all country groups, all priority matrix cells, all overrides |
-| 5 | Performance | 50 incidents classified and stored in < 5 seconds (excluding AI) | Pure Python path fast |
-| 6 | Performance | Full batch with AI in < 5 minutes | ~6 AI calls × 15s rate limit ≈ 1.5 min for 50 incidents |
+| Priority | Attribute | Scenario | Target | Measurement |
+|----------|-----------|----------|--------|-------------|
+| 1 | Reproducibility | Same fixtures → same classified incidents, every time | Byte-identical JSON output from identical input fixtures across repeated runs | Deterministic: no randomness, no timestamps in output, no floating-point drift |
+| 2 | Reliability | Any single source API down → other sources unaffected, no data loss | Empty list from failed adapter, pipeline continues with available sources | Each adapter returns `[]` on failure; never raises |
+| 3 | Reliability | AI timeout/failure → incident stored without enrichment | `ai_enriched=False`, all AI fields None, bundle persisted to storage | Bundle present in storage with `ai_enriched=False` after run |
+| 4 | Testability | Every classification rule has a passing test with named fixture | 100% rule coverage: all 66 countries (25+41), all 12 priority matrix cells, all 6 overrides, all 4 source level derivations | `task test-coverage` shows 100% for classify.py, correlate.py |
+| 5 | Performance | 50 incidents classified and stored in < 5 seconds (excluding AI) | Pure Python path (Steps 2–3, 6–7) completes in < 5s for 50 bundles | Measured by `pytest` performance marker; ~65ms estimated |
+| 6 | Performance | Full batch with AI in < 5 minutes | ~6 AI calls × 15s rate limit ≈ 90s for 50 incidents | Measured by E2E test with mocked AI latency |
+| 7 | Maintainability | Adding a new source adapter requires zero changes to core pipeline | New adapter implements `SourceAdapter` protocol, registered in config | No existing files modified when adding adapter |
+| 8 | Observability | Every pipeline run produces a structured log of step outcomes | Step-level timing, source fetch counts, classification distribution, storage count | `structlog` JSON output to stderr at `INFO` level |
