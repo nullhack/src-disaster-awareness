@@ -1,0 +1,3 @@
+def test_gdacs_adapter_assigns_source_name_gdacs():
+    ...
+

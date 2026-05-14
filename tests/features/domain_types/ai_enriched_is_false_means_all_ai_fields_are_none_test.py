@@ -1,0 +1,3 @@
+def test_unenriched_bundle_has_no_ai_generated_values():
+    ...
+

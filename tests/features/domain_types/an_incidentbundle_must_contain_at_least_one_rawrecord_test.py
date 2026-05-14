@@ -1,0 +1,3 @@
+def test_singleton_bundle_created_from_a_single_uncorrelated_record():
+    ...
+

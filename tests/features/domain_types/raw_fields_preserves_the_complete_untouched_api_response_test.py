@@ -1,0 +1,3 @@
+def test_gdacs_adapter_response_stored_without_modification():
+    ...
+

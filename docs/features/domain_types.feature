@@ -29,20 +29,16 @@ Feature: Domain Types
 
   Rule: incident_id uses date country type format with UNX for unknown country and OTH for unknown type
 
-    Example: known country and disaster type produce standard incident_id
-      Given an IncidentBundle whose earliest record date is 2026-05-14 with country Philippines and disaster_type Earthquake
+    Example: incident_id format varies by country and type
+      Given an IncidentBundle whose earliest record date is 2026-05-14 with country <country> and disaster_type <disaster_type>
       When the incident_id is generated
-      Then the incident_id is "20260514-PH-EQ"
+      Then the incident_id is "<expected_id>"
 
-    Example: unknown country uses UNX code in CC position
-      Given an IncidentBundle whose earliest record date is 2026-05-14 with unknown country and disaster_type Flood
-      When the incident_id is generated
-      Then the incident_id is "20260514-UNX-FL"
-
-    Example: unknown disaster type uses OTH code in TTT position
-      Given an IncidentBundle whose earliest record date is 2026-05-14 with country Indonesia and unknown disaster_type
-      When the incident_id is generated
-      Then the incident_id is "20260514-ID-OTH"
+      Examples:
+        | country     | disaster_type | expected_id     |
+        | Philippines | Earthquake    | 20260514-PH-EQ  |
+        | unknown     | Flood         | 20260514-UNX-FL |
+        | Indonesia   | unknown       | 20260514-ID-OTH |
 
   Rule: incident_id is stable identity that never changes after generation
 
