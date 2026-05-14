@@ -1,0 +1,66 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "bbox": [
+        143.0462,
+        39.9532,
+        143.0462,
+        39.9532
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          143.0462,
+          39.9532
+        ]
+      },
+      "properties": {
+        "eventtype": "EQ",
+        "eventid": 1536386,
+        "episodeid": 1701063,
+        "eventname": "",
+        "glide": "EQ-2026-000057-JPN",
+        "name": "Earthquake in Japan",
+        "description": "Earthquake in Japan",
+        "htmldescription": "Orange M 7.4 Earthquake in Japan at: 20 Apr 2026 07:53:00.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/EQ.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/EQ.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1536386&episodeid=1701063",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1536386&episodeid=1701063&eventtype=EQ",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1536386"
+        },
+        "alertlevel": "Orange",
+        "alertscore": 2,
+        "episodealertlevel": "Orange",
+        "episodealertscore": 1.005,
+        "istemporary": "false",
+        "iscurrent": "false",
+        "country": "Japan",
+        "fromdate": "2026-04-20T07:53:00",
+        "todate": "2026-04-20T07:53:00",
+        "datemodified": "2026-04-21T09:01:16",
+        "iso3": "JPN",
+        "source": "NEIC",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "JP",
+            "iso3": "JPN",
+            "countryname": "Japan"
+          }
+        ],
+        "severitydata": {
+          "severity": 7.4,
+          "severitytext": "Magnitude 7.4M, Depth:35km",
+          "severityunit": "M"
+        }
+      }
+    }
+  ],
+  "bbox": null
+}

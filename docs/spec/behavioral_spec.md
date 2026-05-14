@@ -57,50 +57,79 @@ The Fetching context wraps external disaster data sources behind uniform protoco
 | fetched_at | datetime | Yes | UTC timestamp of when the record was fetched |
 | raw_fields | dict | Yes | Complete, untouched source-specific API response. No normalization. |
 
-#### GDACS raw_fields (expected, subject to change)
+#### GDACS raw_fields (verified 2026-05-14)
 
 | Field | Type | Notes |
 |-------|------|-------|
-| title | str | Event title |
-| description | str | Event description |
-| alertlevel | str | "Green", "Orange", or "Red" |
 | eventtype | str | Disaster type code (EQ, TC, FL, VO, TS, DR, WF) |
+| alertlevel | str | "Green", "Orange", or "Red" |
+| name | str | Event name, e.g. "Earthquake in Japan" |
+| description | str | Event description |
+| htmldescription | str | HTML description with severity prefix |
+| country | str | Primary affected country name |
 | iso3 | str | ISO 3166-1 alpha-3 country code |
-| latitude | float | Event latitude |
-| longitude | float | Event longitude |
-| istemporary | bool | Whether this is a forecast/early warning |
+| fromdate | str | Event start date (ISO 8601) |
+| todate | str | Event end date (ISO 8601) |
+| eventid | int | GDACS event ID |
+| episodeid | int | GDACS episode ID |
+| istemporary | str | "true" or "false" as STRING, not bool. Whether this is a forecast/early warning |
+| iscurrent | str | "true" or "false" as STRING |
+| url | dict | Dict with keys: geometry (str), report (str), details (str). `url.report` is the event page URL |
 | affectedcountries | list[dict] | List of {iso2, iso3, countryname} |
+| severitydata | dict | {severity: float, severitytext: str, severityunit: str} |
+| alertscore | float | Alert score |
+| glide | str | GLIDE identifier, e.g. "EQ-2026-000057-JPN" |
+| source | str | Data source, e.g. "NEIC" |
+| geometry | GeoJSON | Point coordinates [lon, lat] |
 
-> **Note:** GDACS raw_fields do NOT contain a URL field. This is by design — GDACS provides structured alert data, not article links.
+> **Note:** GDACS `url` field is a dict. Use `url.report` for the event page URL (resolves STO-4 for GDACS bundles). `istemporary` is a string ("true"/"false"), parse to bool in adapter.
 
-#### WHO raw_fields (expected, subject to change)
+#### WHO raw_fields (verified 2026-05-14)
+
+| Field | Type | Notes |
+|-------|------|-------|
+| Title | str | Article title, e.g. "Avian influenza – situation in Egypt" |
+| ItemDefaultUrl | str | Relative URL path, e.g. "/2006_03_20-en". Prepend "https://www.who.int" for full URL |
+| PublicationDateAndTime | str | ISO 8601 publication datetime |
+| PublicationDate | str | ISO 8601 publication date |
+| Overview | str | Full HTML body content (may be long) |
+| Summary | str | Summary text (often empty) |
+| DonId | str | DON article ID (often empty string) |
+| Id | str | UUID identifier |
+| FormattedDate | str | Human-readable date |
+| UrlName | str | URL slug |
+| Assessment | str | WHO assessment (often empty) |
+| Advice | str | WHO advice (often empty) |
+| Epidemiology | str \| null | Epidemiological data |
+| regionscountries | str \| null | GUID reference to country entity (or null). NOT a usable country field |
+
+> **Critical:** WHO DON has NO structured country or disaster type field. `regionscountries` is a GUID reference (often null). Country and disaster type MUST be extracted from Title/Overview text via AI or regex. This confirms WHO is ~30% deterministic. `ItemDefaultUrl` is a relative path — prepend `https://www.who.int`.
+
+#### GDELT raw_fields (verified 2026-05-14, ArtList mode)
 
 | Field | Type | Notes |
 |-------|------|-------|
 | title | str | Article title |
 | url | str | Article URL |
-| date | str | Publication date |
-| content_html | str | Full HTML content |
+| seendate | str | Date GDELT saw this article. Format: "YYYYMMDDTHHMMSSz" (NOT ISO 8601) |
+| domain | str | Source domain, e.g. "reuters.com" |
+| language | str | Article language, e.g. "English", "Chinese" |
+| sourcecountry | str | Country where the news SOURCE is located (NOT the incident country) |
+| socialimage | str | Image URL (often empty) |
+| url_mobile | str | Mobile URL (often empty) |
 
-#### GDELT raw_fields (expected, subject to change)
+> **Critical:** GDELT ArtList mode has NO `tone` field. Tone data requires a separate ToneChart API call. The `sourcecountry` field is where the news source is based, NOT where the incident occurred. Incident country must be extracted from title text. The level derivation rule "tone < -5 → 4" is NOT usable with ArtList mode — see Classification section for revised GDELT level derivation.
+
+#### DDG-NEWS raw_fields (verified 2026-05-14)
 
 | Field | Type | Notes |
 |-------|------|-------|
 | title | str | Article title |
 | url | str | Article URL |
-| seendate | str | When GDELT saw this article |
-| tone | float | Sentiment/negativity score |
-| themes | list[str] | GDELT theme tags |
-
-#### DDG-NEWS raw_fields
-
-| Field | Type | Notes |
-|-------|------|-------|
-| date | str | Article date |
-| title | str | Article title |
-| body | str | Article body |
-| url | str | Article URL |
-| source | str | Publisher name |
+| body | str | Article body snippet |
+| date | str | Publication date (ISO 8601) |
+| source | str | Publisher name, e.g. "ABC7 KABC" |
+| image | str | Image URL |
 
 ### Integration Points
 
@@ -309,7 +338,7 @@ Uses **most-reliable-source-wins** (resolves CLS-6/Rule 19): when multiple sourc
 |--------|------|
 | GDACS | Green → 1, Orange → 3, Red → 4. **Severity bump for Group A** (resolves CLS-1/Rule 10): when the bundle's primary country is in Group A, bump Orange from Level 3 to Level 4, and Green from Level 1 to Level 2. Red (Level 4) is not bumped (already max). Group B and Group C receive no bump. |
 | WHO | Keyword scan: "pandemic"/"PHEIC" → 4, "epidemic"/"widespread" → 3, "cluster"/"cases reported" → 2, "isolated case" → 1, default → 2 |
-| GDELT | tone < -5 → 4, < -3 → 3, >= 0 → 1, else → 2 |
+| GDELT | ArtList mode has no tone field. Default Level 2 unless title keyword scan suggests higher: "major"/"catastrophic"/"deadly"/"massive" → 3, "devastating"/"hundreds dead"/"thousands displaced"/"PHEIC" → 4. Otherwise Level 1 if title seems minor. Default: Level 2. |
 
 **Default when no source provides level data:** Level 2.
 
@@ -330,7 +359,7 @@ Overrides are **independent and cumulative** (resolves CLS-3): each override tha
 | O2 | Multi-Regional | Force priority HIGH, force should_report=True | Initial (deterministic) | GDACS: structured `affectedcountries` count > 1; AI for others (post-enrichment) |
 | O3 | Likely Development | Bump level +1 (max 4), force should_report=True | **Post-enrichment** | AI-assisted text understanding |
 | O4 | Environmental | Force priority HIGH if country is Group A | Initial (deterministic) | Disaster type in {WF, DR, FL} AND country in Group A |
-| O5 | Forecast/Early Warning | Bump level +1 (max 4), force should_report=True | **Post-enrichment** | GDACS: `istemporary=True`; AI for others |
+| O5 | Forecast/Early Warning | Bump level +1 (max 4), force should_report=True | **Post-enrichment** | GDACS: `istemporary="true"` (string, not bool); AI for others |
 | O6 | Singapore/SRC | **Force priority HIGH, force should_report=True** regardless of level or country group (resolves ENR-4) | Initial (deterministic) | Keyword: "Singapore", "SRC", "Red Cross" in any record's text |
 
 **Override application order:**
@@ -415,7 +444,7 @@ Overrides are **independent and cumulative** (resolves CLS-3): each override tha
 
 ### Context
 
-The Enrichment context adds AI-extracted and AI-generated fields to classified `IncidentBundle`s. It operates in two batched phases: (1) the Extractor batch processes bundles where country or disaster_type is still None after initial classification, extracting structured data from unstructured text using all raw records in the bundle plus any supplementary DDG News results; (2) the Classifier batch processes `should_report=True` bundles, generating summaries and detecting overrides O1 (Humanitarian Crisis), O3 (Likely Development), and O5 (Forecast/Early Warning). After extraction, re-run the deterministic classifier with the newly populated fields (ENR-2). The AI provider is DuckDuckGo AI via direct HTTP (no wrapper library), with DSPy providing structured output signatures. Enrichment is failure-safe: if AI fails, the bundle is stored with `ai_enriched=False` and all AI fields as None.
+The Enrichment context adds AI-extracted and AI-generated fields to classified `IncidentBundle`s. It operates in two batched phases: (1) the Extractor batch processes bundles where country or disaster_type is still None after initial classification, extracting structured data from unstructured text using all raw records in the bundle plus any supplementary DDG News results; (2) the Classifier batch processes `should_report=True` bundles, generating summaries and detecting overrides O1 (Humanitarian Crisis), O3 (Likely Development), and O5 (Forecast/Early Warning). After extraction, re-run the deterministic classifier with the newly populated fields (ENR-2). AI enrichment is optional — the pipeline supports pluggable AI backends (Ollama, Gemini, OpenAI, or disabled) via DSPy typed signatures. Enrichment is failure-safe: if AI fails or is unavailable, the bundle is stored with `ai_enriched=False` and all AI fields as None.
 
 ### Supplementary Search Query Generation (resolves XCS-4)
 
@@ -440,8 +469,22 @@ Examples:
 #### AIProvider (Protocol)
 - Purpose: Abstract AI chat interface. `chat(prompt, *, model) -> str`. Raises on unrecoverable failure; auto-retries on HTTP 429.
 
-#### DuckAIProvider
-- Purpose: Concrete implementation calling DuckDuckGo's `duckchat/v1` API directly via httpx. Two-step protocol: GET `/status` for VQD token, POST `/chat` for SSE stream response. Rate limited to ~1 request/15 seconds.
+#### AIProvider Implementation
+
+The pipeline supports pluggable AI backends. The default implementation is **optional** — the pipeline runs fully without AI, using deterministic classification only.
+
+**Supported implementations (pick one):**
+
+1. **OllamaProvider** (recommended, free): Calls local Ollama server. No API key needed. Models: llama3, mistral, etc. Requires Ollama running locally.
+2. **GeminiProvider** (free tier): Calls Google Gemini API. Requires free API key from Google AI Studio. Models: gemini-2.0-flash.
+3. **OpenAIProvider**: Calls OpenAI API. Requires paid API key. Models: gpt-4o-mini.
+4. **None (AI disabled)**: Pipeline skips enrichment steps 5-6 entirely. All bundles classified deterministically. AI fields remain None.
+
+All implementations use the same `AIProvider` protocol: `chat(prompt, *, model) -> str`.
+
+#### DSPy Integration
+
+Both Extractor and Classifier agents use DSPy typed signatures for structured LLM programming. DSPy handles prompt engineering, output parsing, and retry logic. The underlying LM is configured via `dspy.configure(lm=dspy.LM("provider/model"))`.
 
 #### Extractor Agent
 - Purpose: Batched AI extraction. Takes bundles with missing country/disaster_type, returns extracted fields. Uses DSPy typed signatures. Lives in `ai/extractor.py`.
@@ -501,20 +544,18 @@ Examples:
 
 ### External Contracts
 
-#### DuckAIProvider: chat()
+#### AIProvider: chat()
 
 - **Actor**: Extractor agent or Classifier agent
 - **Trigger**: Agent needs AI response for a batch
-- **Input**: `{prompt: str, model: str = "gpt-4o-mini"}`
+- **Input**: `{prompt: str, model: str}` — model depends on provider
 - **Output**: `str` — AI-generated text response
 - **Errors**:
-  - HTTP 429 (rate limit) → **auto-retry with exponential backoff**: initial delay 15s, multiplier 2×, max 3 retries. Total max wait: 15+30+60 = 105 seconds per call. After all retries exhausted, raise exception.
-  - Auth/network failure → raise exception (unrecoverable)
-  - VQD token expired → re-fetch from `/status` endpoint, then retry once
-- **Side Effects**: HTTP requests to `duckduckgo.com/duckchat/v1/*`
-- **Preconditions**: VQD token obtained (lazy-initialized on first call)
-
-Available models: gpt-4o-mini, claude-3-haiku, llama-3.3-70b, o3-mini, mistral-small
+  - AI provider unavailable (Ollama not running, API key invalid, network failure) → bundles stored without enrichment (`ai_enriched=False`, `enrichment_failed=True`). Pipeline continues.
+  - HTTP 429 (rate limit) → auto-retry with exponential backoff: initial delay 15s, multiplier 2×, max 3 retries. After exhaustion, mark bundles as failed and continue.
+  - Mid-batch failure → keep successfully enriched bundles, mark remaining as `enrichment_failed=True` (resolves ENR-3).
+- **Side Effects**: AI API calls (local or remote)
+- **Preconditions**: None — if AI is unavailable, pipeline proceeds without enrichment
 
 #### Extractor Agent: extract()
 
@@ -538,7 +579,7 @@ Available models: gpt-4o-mini, claude-3-haiku, llama-3.3-70b, o3-mini, mistral-s
 
 #### Mid-Batch Failure Handling (resolves ENR-3)
 
-If `DuckAIProvider` fails mid-batch (unrecoverable exception during a batch of ~10 bundles):
+If `AIProvider` fails mid-batch (unrecoverable exception during a batch of ~10 bundles):
 1. All bundles already successfully processed in the current batch are kept with their AI fields populated.
 2. All remaining unprocessed bundles in the batch are marked `enrichment_failed=True` and `ai_enriched=False`.
 3. ALL bundles (enriched and unenriched) proceed to storage.
@@ -602,7 +643,7 @@ The Storage context persists complete `IncidentBundle`s (all raw records + class
 | should_report | bool | Yes | Reporting decision |
 | overrides | list[str] | Yes | Applied overrides (may be empty) |
 | report_date | date | Yes | Report date |
-| source_urls | list[str] | **Optional** | All source URLs. Default: empty list. Collected from raw_fields where available: WHO has url, GDELT has url, DDG-NEWS has url, GDACS may have none. |
+| source_urls | list[str] | **Optional** | All source URLs. Default: empty list. Collected from raw_fields where available: WHO has `ItemDefaultUrl` (prepend base), GDELT has url, DDG-NEWS has url, GDACS has `url.report`. |
 | summary | str \| None | No | AI summary (if enriched) |
 | rationale | str \| None | No | AI rationale (if enriched) |
 | estimated_affected | int \| None | No | AI-extracted estimate |
@@ -629,9 +670,9 @@ The `source_urls` field is built by collecting `url` fields from each record's `
 - WHO records: `raw_fields["url"]` (usually present)
 - GDELT records: `raw_fields["url"]` (usually present)
 - DDG-NEWS records: `raw_fields["url"]` (usually present)
-- GDACS records: no URL field in raw_fields — no URL contributed
+- GDACS records: `raw_fields["url"]["report"]` if `url` dict is present (may be None if missing)
 
-Result: a GDACS-only bundle will have `source_urls = []` (empty list, not an error). A mixed GDACS+WHO bundle will have URLs from the WHO records only. This is expected and correct.
+Result: a GDACS-only bundle will have `source_urls` populated from `url.report` if available. A mixed GDACS+WHO bundle will have URLs from both GDACS and WHO records.
 
 #### Date Partitioning (resolves STO-2/Rule 30)
 
@@ -702,7 +743,7 @@ SQLiteStore uses database transactions with COMMIT/ROLLBACK for the same atomici
 - JSONL is append-only — records are never modified in place
 - Both backends MUST implement the same `StorageBackend` protocol
 - File encoding: UTF-8, one JSON object per line
-- `source_urls` MAY be empty (GDACS-only bundles have no URLs) — this is not an error
+- `source_urls` MAY be empty (some bundles may have no URLs) — this is not an error
 - Inverted date range (`date_from > date_to`) returns empty list, not an error
 - Storage writes MUST be atomic (temp file + rename for JSONL, transactions for SQLite)
 - Storage write failure on one bundle MUST NOT prevent storage of other bundles
