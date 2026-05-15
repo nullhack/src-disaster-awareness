@@ -1,0 +1,3 @@
+def test_ai_classifier_detects_forecast_warning():
+    ...
+
