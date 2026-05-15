@@ -1,0 +1,3 @@
+def test_query_returns_incident_without_raw_records():
+    ...
+

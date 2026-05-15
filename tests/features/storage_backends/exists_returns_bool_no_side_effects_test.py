@@ -1,0 +1,6 @@
+def test_exists_returns_true_for_stored_incident():
+    ...
+
+def test_exists_returns_false_for_unknown_incident():
+    ...
+

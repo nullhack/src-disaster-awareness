@@ -1,0 +1,3 @@
+def test_single_bundle_failure_isolates_others():
+    ...
+

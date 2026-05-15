@@ -1,0 +1,3 @@
+def test_query_filters_by_disaster_type():
+    ...
+

@@ -1,0 +1,3 @@
+def test_sqlitestore_implements_storage_backend_protocol():
+    ...
+

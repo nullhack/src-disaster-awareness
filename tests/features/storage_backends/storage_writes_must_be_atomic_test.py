@@ -1,0 +1,3 @@
+def test_failed_write_leaves_original_data_intact():
+    ...
+

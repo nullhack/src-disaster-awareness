@@ -1,0 +1,3 @@
+def test_complete_bundle_preserved_after_storage():
+    ...
+
