@@ -9,14 +9,14 @@ def test_source_name_is_always_who():
         "Title": "Ebola outbreak in DRC",
         "Overview": "...",
         "ItemDefaultUrl": "/emergencies/disease-outbreak-news/item/2025-DON123",
-        "PublicationDate": "2025-05-10T00:00:00Z",
+        "PublicationDate": "2026-05-10T00:00:00Z",
     }
     article2 = {
         "Id": 2,
         "Title": "Cholera in Haiti",
         "Overview": "...",
         "ItemDefaultUrl": "/emergencies/disease-outbreak-news/item/2025-DON789",
-        "PublicationDate": "2025-05-11T00:00:00Z",
+        "PublicationDate": "2026-05-11T00:00:00Z",
     }
     odata_response = {
         "@odata.context": (

@@ -9,7 +9,7 @@ def test_malformed_records_are_silently_skipped():
         "Title": "Ebola outbreak in DRC",
         "Overview": "An outbreak of Ebola virus disease...",
         "ItemDefaultUrl": "/emergencies/disease-outbreak-news/item/2025-DON123",
-        "PublicationDate": "2025-05-10T00:00:00Z",
+        "PublicationDate": "2026-05-10T00:00:00Z",
     }
     odata_response = {
         "@odata.context": (

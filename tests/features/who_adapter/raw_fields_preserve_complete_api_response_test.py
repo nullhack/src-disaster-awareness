@@ -9,7 +9,7 @@ def test_complete_api_response_is_preserved():
         "Title": "Dengue fever in Brazil",
         "Overview": "Brazil has reported an increase in dengue cases...",
         "ItemDefaultUrl": "/emergencies/disease-outbreak-news/item/2025-DON456",
-        "PublicationDate": "2025-05-12T00:00:00Z",
+        "PublicationDate": "2026-05-12T00:00:00Z",
         "Disease": "Dengue",
         "Country": "Brazil",
         "Region": "Americas",
@@ -38,7 +38,7 @@ def test_complete_api_response_is_preserved():
     assert raw["ItemDefaultUrl"] == (
         "/emergencies/disease-outbreak-news/item/2025-DON456"
     )
-    assert raw["PublicationDate"] == "2025-05-12T00:00:00Z"
+    assert raw["PublicationDate"] == "2026-05-12T00:00:00Z"
     assert raw["Disease"] == "Dengue"
     assert raw["Country"] == "Brazil"
     assert raw["Region"] == "Americas"
