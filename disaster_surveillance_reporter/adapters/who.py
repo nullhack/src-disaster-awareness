@@ -4,7 +4,7 @@ import httpx
 
 from disaster_surveillance_reporter.types import RawRecord
 
-WHO_API = "https://wesalute.azurewebsites.net/api/hubs/diseaseoutbreaknews"
+WHO_API = "https://www.who.int/api/hubs/diseaseoutbreaknews"
 
 
 class WHOAdapter:
