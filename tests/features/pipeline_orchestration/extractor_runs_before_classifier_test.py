@@ -2,19 +2,13 @@
 
 from unittest.mock import MagicMock
 
-import pytest
-
 from disaster_surveillance_reporter.pipeline import Pipeline
+from disaster_surveillance_reporter.types import IncidentBundle, RawRecord
 
 
 def test_pipeline_extraction_precedes_classification():
-    """Given incident bundles needing both extraction and classification
-    When the AI enrichment step runs
-    Then the Extractor agent processes before the Classifier agent."""
+    """Extractor agent processes before Classifier agent in AI enrich step."""
     import datetime as dt
-
-    from disaster_surveillance_reporter.adapters._types import RawIncidentData
-    from disaster_surveillance_reporter.types import IncidentBundle, RawRecord
 
     record = RawRecord(
         source_name="GDACS",
@@ -30,17 +24,7 @@ def test_pipeline_extraction_precedes_classification():
 
     mock_adapter = MagicMock()
     mock_adapter.source_name = "GDACS"
-    mock_adapter.fetch.return_value = [
-        RawIncidentData(
-            source_name="GDACS",
-            incident_name="Test Incident",
-            country="",
-            disaster_type="",
-            report_date="2026-05-15",
-            source_url="http://example.com",
-            raw_fields={},
-        )
-    ]
+    mock_adapter.fetch.return_value = [record]
 
     mock_correlator = MagicMock()
     mock_correlator.correlate.return_value = [bundle]
@@ -51,15 +35,25 @@ def test_pipeline_extraction_precedes_classification():
 
     mock_news = MagicMock()
 
-    # Track call order
     call_log = []
 
-    def ai_chat(prompt, *, model):
-        call_log.append(prompt[:50])
-        return '{"summary": "test"}'
+    def extract_side_effect(bundles):
+        call_log.append("extractor")
+        return bundles
 
-    mock_ai = MagicMock()
-    mock_ai.chat.side_effect = ai_chat
+    def classify_side_effect(bundles):
+        call_log.append("classifier")
+        return bundles
+
+    mock_extractor = MagicMock()
+    mock_extractor.extract.side_effect = extract_side_effect
+    mock_classifier = MagicMock()
+
+    def classify_side_effect(bundles):
+        call_log.append("classifier")
+        return bundles
+
+    mock_classifier.enrich.side_effect = classify_side_effect
 
     mock_storage = MagicMock()
     mock_storage.store.return_value = 1
@@ -69,16 +63,14 @@ def test_pipeline_extraction_precedes_classification():
         correlator=mock_correlator,
         classify_engine=mock_classify,
         news_searcher=mock_news,
-        ai_provider=mock_ai,
+        extractor=mock_extractor,
+        classifier=mock_classifier,
         storage_backend=mock_storage,
     )
     pipeline.run()
 
-    # AI was called at least twice (extract then classify)
-    assert len(call_log) >= 2, f"Expected at least 2 AI calls, got {len(call_log)}"
-    assert "Extract" in call_log[0], (
-        f"First AI call should be extractor, got: {call_log[0]!r}"
-    )
-    assert "Classif" in call_log[1], (
-        f"Second AI call should be classifier, got: {call_log[1]!r}"
+    assert "extractor" in call_log
+    assert "classifier" in call_log
+    assert call_log.index("extractor") < call_log.index("classifier"), (
+        "Extractor must run before Classifier"
     )

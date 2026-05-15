@@ -6,7 +6,7 @@ ai_extractor + ai_classifier TDD (red→green) — SE: "Implemented ExtractorAge
 
 ## Root Cause
 
-`review-gate` for ai_extractor and ai_classifier checked only Object Calisthenics nesting (OC-1), feature-to-test traceability, and functional lint — it never verified architectural spec compliance (domain_spec.md:508–510) against production code. The review-gate skill's Tier 1 "Domain Spec Alignment" check was exclusively entity/invariant matching, not protocol/dependency verification.
+`review-gate` for ai_extractor and ai_classifier checked only Object Calisthenics nesting (OC-1), feature-to-test traceability, and functional lint — it never verified architectural spec compliance against production code. DSPy is referenced **18 times across 7 specification documents** (domain_spec.md:470,508,510,513,516; product_definition.md:12,65,66,137,148,162; glossary.md:15,330,339,345; ai_extractor.feature:4; ai_classifier.feature:6; ai_provider.feature:8), yet zero `import dspy` statements exist in production code. The review-gate skill's Tier 1 "Domain Spec Alignment" check was exclusively entity/invariant matching, not protocol/dependency verification. The reviewer checked *what entities exist* but never verified *how agents talk to AI*.
 
 ## Missed Gate
 
