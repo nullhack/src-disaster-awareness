@@ -1,0 +1,3 @@
+def test_auth_failure_raises_without_retry():
+    ...
+
