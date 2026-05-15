@@ -21,6 +21,7 @@ Feature: AI Provider
         | ollama   |
         | gemini   |
         | openai   |
+        | opencode |
         | none     |
 
     Example: Invalid provider raises error
@@ -31,6 +32,12 @@ Feature: AI Provider
     Example: Missing API key raises error
       Given DSR_AI_PROVIDER is set to "openai"
       And DSR_AI_API_KEY is not set
+      When the AIProvider is initialized
+      Then the initialization raises a configuration error
+
+    Example: Missing opencode password raises error
+      Given DSR_AI_PROVIDER is set to "opencode"
+      And OPENCODE_SERVER_PASSWORD is not set
       When the AIProvider is initialized
       Then the initialization raises a configuration error
 
