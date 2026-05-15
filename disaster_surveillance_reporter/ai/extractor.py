@@ -66,8 +66,9 @@ class ExtractorAgent:
         bundles: list[IncidentBundle],
     ) -> None:
         for bundle in bundles:
-            if not bundle.ai_enriched:
-                bundle.enrichment_failed = True
+            bundle.enrichment_failed = (
+                bundle.enrichment_failed or not bundle.ai_enriched
+            )
 
     def _do_extract_batch(self, batch: list[IncidentBundle]) -> None:
         """Make the AI call for a batch and apply results to each bundle.
