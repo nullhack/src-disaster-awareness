@@ -63,9 +63,13 @@ testpaths = ["tests"]
 python_files = ["*_test.py"]
 python_functions = ["test_*"]
 
+[project.scripts]
+dsr-pipeline = "disaster_surveillance_reporter.cli:main"
+
 [tool.taskipy.tasks]
 test = "pytest"
 test-fast = "pytest -q"
+run = "python -m disaster_surveillance_reporter.cli pipeline"
 
 [dependency-groups]
 dev = [

@@ -467,7 +467,7 @@ Overrides are **independent and cumulative** (resolves CLS-3): each override tha
 
 ### Context
 
-The Enrichment context adds AI-extracted and AI-generated fields to classified `IncidentBundle`s. It operates in two batched phases: (1) the Extractor batch processes bundles where country or disaster_type is still None after initial classification, extracting structured data from unstructured text using all raw records in the bundle plus any supplementary DDG News results; (2) the Classifier batch processes `should_report=True` bundles, generating summaries and detecting overrides O1 (Humanitarian Crisis), O3 (Likely Development), and O5 (Forecast/Early Warning). After extraction, re-run the deterministic classifier with the newly populated fields (ENR-2). AI enrichment is optional — the pipeline supports pluggable AI backends (Ollama, Gemini, OpenAI, or disabled) via DSPy typed signatures. Enrichment is failure-safe: if AI fails or is unavailable, the bundle is stored with `ai_enriched=False` and all AI fields as None.
+The Enrichment context adds AI-extracted and AI-generated fields to classified `IncidentBundle`s. It operates in two batched phases: (1) the Extractor batch processes bundles where country or disaster_type is still None after initial classification, extracting structured data from unstructured text using all raw records in the bundle plus any supplementary DDG News results; (2) the Classifier batch processes `should_report=True` bundles, generating summaries and detecting overrides O1 (Humanitarian Crisis), O3 (Likely Development), and O5 (Forecast/Early Warning). After extraction, re-run the deterministic classifier with the newly populated fields (ENR-2). AI enrichment is optional — the pipeline supports pluggable AI backends (Ollama, Gemini, OpenAI, opencode, or disabled) via DSPy typed signatures. Enrichment is failure-safe: if AI fails or is unavailable, the bundle is stored with `ai_enriched=False` and all AI fields as None.
 
 ### Supplementary Search Query Generation (resolves XCS-4)
 
@@ -498,9 +498,10 @@ The pipeline supports pluggable AI backends. The default implementation is **opt
 
 **Supported implementations (pick one):**
 
-1. **OllamaProvider** (recommended, free): Calls local Ollama server. No API key needed. Models: llama3, mistral, etc. Requires Ollama running locally.
+1. **OllamaProvider** (recommended, free): Calls local Ollama server. No API key needed. Models: llama3.2, mistral, etc. Requires Ollama running locally.
 2. **GeminiProvider** (free tier): Calls Google Gemini API. Requires free API key from Google AI Studio. Models: gemini-2.0-flash.
-3. **OpenAIProvider**: Calls OpenAI API. Requires paid API key. Models: gpt-4o-mini.
+3. **OpenAIProvider** (paid): Calls OpenAI API. Requires paid API key. Models: gpt-4o-mini.
+4. **OpencodeProvider** (local, free): Calls opencode serve's HTTP REST API (`POST /session`, `POST /session/{id}/message`). Uses `opencode:<password>` basic auth. Configured via `OPENCODE_BASE_URL`, `OPENCODE_SERVER_PASSWORD`, `OPENCODE_SESSION_TIMEOUT`. Accepts but ignores the `model` parameter (model is configured server-side).
 4. **None (AI disabled)**: Pipeline skips enrichment steps 5-6 entirely. All bundles classified deterministically. AI fields remain None.
 
 All implementations use the same `AIProvider` protocol: `chat(prompt, *, model) -> str`.

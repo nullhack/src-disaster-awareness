@@ -75,7 +75,7 @@
 ## AIProvider
 
 **Genus:** A Python Protocol for abstract AI chat interfaces
-**Differentia:** defining `chat(prompt, *, model) -> str` that raises on unrecoverable failure (auth, network) but auto-retries on rate limits (HTTP 429). Implemented by pluggable backends: OllamaProvider (local, free), GeminiProvider (Google, free tier), or OpenAIProvider (paid). The pipeline also supports running with AI disabled entirely.
+**Differentia:** defining `chat(prompt, *, model) -> str` that raises on unrecoverable failure (auth, network) but auto-retries on rate limits (HTTP 429). Implemented by pluggable backends: OllamaProvider (local, free), GeminiProvider (Google, free tier), OpenAIProvider (paid), or OpencodeProvider (local, free — uses opencode serve HTTP API). The pipeline also supports running with AI disabled entirely.
 
 **Source:** 2026-05-14
 
@@ -87,6 +87,15 @@
 **Differentia:** calling DuckDuckGo's free `duckchat/v1` API via direct HTTP. **Deprecated** — replaced by pluggable AIProvider backends (OllamaProvider, GeminiProvider, OpenAIProvider). The VQD token and SSE protocol are no longer used.
 
 **Source:** 2026-05-14 (deprecated)
+
+---
+
+## OpencodeProvider
+
+**Genus:** A concrete implementation of the AIProvider protocol
+**Differentia:** using opencode serve's embedded HTTP REST API (`POST /session` to create a persistent session, `POST /session/{id}/message` to send prompts and collect text responses). Configured via `OPENCODE_BASE_URL` (default `http://127.0.0.1:4096`), `OPENCODE_SERVER_PASSWORD` (required for `opencode:<password>` basic auth), and `OPENCODE_SESSION_TIMEOUT` (default 120s). Accepts but ignores the `model` parameter (openCode's model is configured server-side). Auto-recreates session on 401/404 from message endpoint. Supports rate-limit retry via same exponential backoff as other providers.
+
+**Source:** 2026-05-15
 
 ---
 

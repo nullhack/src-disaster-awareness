@@ -20,7 +20,7 @@ The forces at play are: (1) AI must be optional and failure-safe, (2) different 
 
 ## Decision
 
-Use DSPy for structured LLM programming with a pluggable `AIProvider` protocol. DSPy handles typed output signatures, prompt engineering, and retry logic. The underlying LM is configured via `dspy.configure(lm=dspy.LM("provider/model"))`. Four implementations are supported: OllamaProvider (local, free, recommended), GeminiProvider (free tier), OpenAIProvider (paid), and None (AI disabled — pipeline runs deterministically only).
+Use DSPy for structured LLM programming with a pluggable `AIProvider` protocol. DSPy handles typed output signatures, prompt engineering, and retry logic. The underlying LM is configured via `dspy.configure(lm=dspy.LM("provider/model"))`. Five implementations are supported: OllamaProvider (local, free, recommended), GeminiProvider (free tier), OpenAIProvider (paid), OpencodeProvider (local, free — uses opencode serve HTTP API), and None (AI disabled — pipeline runs deterministically only).
 
 ## Reason
 

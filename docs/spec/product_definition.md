@@ -87,10 +87,13 @@ DSR is a **CLI tool** executed as a scheduled batch process. There is no daemon,
 
 | Variable | Purpose | Default |
 |----------|---------|---------|
-| `DSR_AI_PROVIDER` | AI backend: `ollama`, `gemini`, `openai`, or `none` | `none` |
+| `DSR_AI_PROVIDER` | AI backend: `ollama`, `gemini`, `openai`, `opencode`, or `none` | `none` |
 | `DSR_AI_MODEL` | Model name for selected provider | Provider-specific |
-| `DSR_AI_API_KEY` | API key for Gemini/OpenAI (not needed for Ollama/none) | — |
+| `DSR_AI_API_KEY` | API key for Gemini/OpenAI (not needed for Ollama/opencode/none) | — |
 | `DSR_AI_BASE_URL` | Override base URL for AI provider (e.g., custom Ollama host) | Provider-specific |
+| `OPENCODE_BASE_URL` | Base URL for opencode serve (opencode provider only) | `http://127.0.0.1:4096` |
+| `OPENCODE_SERVER_PASSWORD` | Password for opencode serve basic auth (required if provider=opencode) | — |
+| `OPENCODE_SESSION_TIMEOUT` | HTTP request timeout in seconds for opencode | 120 |
 | `DSR_STORAGE_BACKEND` | Storage: `jsonl` or `sqlite` | `jsonl` |
 | `DSR_STORAGE_PATH` | Base directory for storage | `./incidents` |
 | `DSR_LOG_LEVEL` | Logging verbosity: `DEBUG`, `INFO`, `WARNING`, `ERROR` | `INFO` |
