@@ -29,6 +29,25 @@ def _country_to_alpha2(name: str | None) -> str:
         return "UNX"
 
 
+def _extract_source_date(record: RawRecord) -> datetime | None:
+    """Extract the source-provided date from a RawRecord's raw_fields.
+
+    Source date fields: GDACS fromdate, WHO PublicationDate,
+    GDELT seendate, DDG-NEWS date.  Returns ``None`` if no
+    source date is available or the date cannot be parsed.
+    """
+    raise NotImplementedError
+
+
+def generate_source_fingerprint(record: RawRecord) -> str:
+    """Generate ``{SOURCE_NAME}:{native_id}`` for a single source record.
+
+    native_id is source-specific: GDACS uses eventid, WHO uses Id or DonId,
+    GDELT uses url, DDG-NEWS uses url.
+    """
+    raise NotImplementedError
+
+
 def generate_incident_id(
     records: list[RawRecord],
     country: str | None,
@@ -36,13 +55,21 @@ def generate_incident_id(
 ) -> str:
     """Generate a stable incident identifier in YYYYMMDD-CC-TTT format.
 
-    - Date: earliest ``fetched_at`` from *records*, falling back to UTC today.
+    - Date: earliest source-provided date from *records*, falling back to
+      ``fetched_at`` if no source date is available, then to UTC today.
     - CC: ISO 3166-1 alpha-2 country code.  Unknown → ``"UNX"``.
     - TTT: disaster type code.  Unknown → ``"OTH"``.
     """
     if records:
-        earliest = min(r.fetched_at.date() for r in records)
-        date_part = earliest.strftime("%Y%m%d")
+        source_dates = []
+        for r in records:
+            sd = _extract_source_date(r)
+            if sd is not None:
+                source_dates.append(sd.date())
+        if source_dates:
+            date_part = min(source_dates).strftime("%Y%m%d")
+        else:
+            date_part = min(r.fetched_at.date() for r in records).strftime("%Y%m%d")
     else:
         date_part = datetime.now(tz=timezone.utc).strftime("%Y%m%d")
 
@@ -83,6 +110,8 @@ class IncidentBundle:
     enrichment_failed: bool = False
     classified_at: datetime | None = None
     classification_date: date | None = None
+    last_updated: datetime | None = None
+    source_fingerprints: list[str] = field(default_factory=list)
 
     _AI_FIELDS: ClassVar[tuple[str, ...]] = (
         "summary",
