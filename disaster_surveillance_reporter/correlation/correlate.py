@@ -1,5 +1,4 @@
-"""Record correlator — groups RawRecords from different sources that describe
-the same real-world incident into IncidentBundles.
+"""Record correlator — groups RawRecords into IncidentBundles.
 
 Matching criteria (all must pass for a pair to correlate):
   1. Date proximity: within ±1 calendar day.  No parseable date → passes vacuously.
@@ -17,7 +16,13 @@ stable YYYYMMDD-CC-TTT identifiers.
 
 from __future__ import annotations
 
-from disaster_surveillance_reporter.types import IncidentBundle, RawRecord
+import difflib
+
+from disaster_surveillance_reporter.types import (
+    IncidentBundle,
+    RawRecord,
+    generate_incident_id,
+)
 
 
 class Correlator:
@@ -33,4 +38,95 @@ class Correlator:
             One IncidentBundle per real-world incident.  Every input record
             is assigned to exactly one bundle.
         """
-        raise NotImplementedError
+        if not records:
+            return []
+
+        n = len(records)
+        parent = list(range(n))
+
+        def find(x: int) -> int:
+            while parent[x] != x:
+                parent[x] = parent[parent[x]]
+                x = parent[x]
+            return x
+
+        def union(x: int, y: int) -> None:
+            rx, ry = find(x), find(y)
+            if rx != ry:
+                parent[rx] = ry
+
+        # Pre-extract per-record data for efficient pair comparison.
+        dates = [r.fetched_at for r in records]
+        countries = [r.raw_fields.get("country") for r in records]
+        titles = [
+            " ".join(r.raw_fields.get("title", "").lower().split()) for r in records
+        ]
+
+        for i in range(n):
+            for j in range(i + 1, n):
+                # Criterion 1: date proximity — ±1 calendar day.
+                date_diff = abs((dates[i] - dates[j]).days)
+                if date_diff > 1:
+                    continue
+
+                # Criterion 2: country overlap.
+                ci = countries[i]
+                cj = countries[j]
+                country_ok = (ci == cj) or (ci is None) or (cj is None)
+
+                # Criterion 3: title similarity via SequenceMatcher ratio.
+                ti = titles[i]
+                tj = titles[j]
+                title_ok = difflib.SequenceMatcher(None, ti, tj).ratio() >= 0.6
+
+                # Combination logic: date AND (country OR title).
+                if country_ok or title_ok:
+                    union(i, j)
+
+        # Group records by their connected-component root.
+        groups: dict[int, list[RawRecord]] = {}
+        for i in range(n):
+            root = find(i)
+            groups.setdefault(root, []).append(records[i])
+
+        bundles: list[IncidentBundle] = []
+        for group_records in groups.values():
+            # Extract bundle-level country and disaster_type (first non-None).
+            bundle_country: str | None = None
+            bundle_disaster_type: str | None = None
+            for r in group_records:
+                if bundle_country is None:
+                    bundle_country = r.raw_fields.get("country")
+                if bundle_disaster_type is None:
+                    bundle_disaster_type = r.raw_fields.get("disaster_type")
+                if bundle_country is not None and bundle_disaster_type is not None:
+                    break
+
+            incident_id = generate_incident_id(
+                group_records, bundle_country, bundle_disaster_type
+            )
+
+            # All-unavailable records: no country AND no title → defaults.
+            has_country = any(
+                r.raw_fields.get("country") is not None for r in group_records
+            )
+            has_title = any(r.raw_fields.get("title", "") != "" for r in group_records)
+
+            if not has_country and not has_title:
+                bundle = IncidentBundle(
+                    incident_id=incident_id,
+                    records=list(group_records),
+                    country_group="C",
+                    incident_level=1,
+                    priority="LOW",
+                    should_report=False,
+                )
+            else:
+                bundle = IncidentBundle(
+                    incident_id=incident_id,
+                    records=list(group_records),
+                )
+
+            bundles.append(bundle)
+
+        return bundles
