@@ -67,7 +67,6 @@ def test_similar_titles_meet_levenshtein_threshold():
             source_name="WHO",
             fetched_at=dt,
             raw_fields={
-                "country": "Japan",
                 "title": "Earthquake struck Philippines",
             },
         ),

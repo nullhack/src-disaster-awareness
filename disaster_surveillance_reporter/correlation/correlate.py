@@ -18,11 +18,35 @@ from __future__ import annotations
 
 import difflib
 
+import pycountry
+
 from disaster_surveillance_reporter.types import (
     IncidentBundle,
     RawRecord,
     generate_incident_id,
 )
+
+
+def _normalize_country(record: RawRecord) -> str | None:
+    """Extract ISO 3166-1 alpha-2 code from a record's country field.
+
+    Uses iso3 (GDACS) or country name (WHO/GDELT/DDG-NEWS) via pycountry.
+    Returns None if no country info or lookup fails.
+    """
+    raw = record.raw_fields
+    iso3 = raw.get("iso3")
+    if iso3:
+        try:
+            return pycountry.countries.get(alpha_3=iso3).alpha_2
+        except (LookupError, AttributeError):
+            pass
+    name = raw.get("country")
+    if name:
+        try:
+            return pycountry.countries.lookup(name).alpha_2
+        except LookupError:
+            pass
+    return None
 
 
 class Correlator:
@@ -57,7 +81,7 @@ class Correlator:
 
         # Pre-extract per-record data for efficient pair comparison.
         dates = [r.fetched_at for r in records]
-        countries = [r.raw_fields.get("country") for r in records]
+        countries = [_normalize_country(r) for r in records]
         titles = [
             " ".join(r.raw_fields.get("title", "").lower().split()) for r in records
         ]
@@ -69,19 +93,24 @@ class Correlator:
                 if date_diff > 1:
                     continue
 
-                # Criterion 2: country overlap.
+                # Criterion 2: country match required when both have one.
                 ci = countries[i]
                 cj = countries[j]
-                country_ok = (ci == cj) or (ci is None) or (cj is None)
+                if ci and cj:
+                    if ci != cj:
+                        continue
+                else:
+                    # Criterion 3: title similarity via SequenceMatcher ratio.
+                    ti = titles[i]
+                    tj = titles[j]
+                    country_ok = (ci == cj) or (ci is None) or (cj is None)
+                    title_ok = (
+                        difflib.SequenceMatcher(None, ti, tj).ratio() >= 0.6
+                    )
+                    if not (country_ok or title_ok):
+                        continue
 
-                # Criterion 3: title similarity via SequenceMatcher ratio.
-                ti = titles[i]
-                tj = titles[j]
-                title_ok = difflib.SequenceMatcher(None, ti, tj).ratio() >= 0.6
-
-                # Combination logic: date AND (country OR title).
-                if country_ok or title_ok:
-                    union(i, j)
+                union(i, j)
 
         # Group records by their connected-component root.
         groups: dict[int, list[RawRecord]] = {}
@@ -96,7 +125,7 @@ class Correlator:
             bundle_disaster_type: str | None = None
             for r in group_records:
                 if bundle_country is None:
-                    bundle_country = r.raw_fields.get("country")
+                    bundle_country = _normalize_country(r)
                 if bundle_disaster_type is None:
                     bundle_disaster_type = r.raw_fields.get("disaster_type")
                 if bundle_country is not None and bundle_disaster_type is not None:
@@ -108,7 +137,7 @@ class Correlator:
 
             # All-unavailable records: no country AND no title → defaults.
             has_country = any(
-                r.raw_fields.get("country") is not None for r in group_records
+                _normalize_country(r) is not None for r in group_records
             )
             has_title = any(r.raw_fields.get("title", "") != "" for r in group_records)
 

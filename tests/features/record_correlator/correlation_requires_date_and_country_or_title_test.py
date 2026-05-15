@@ -43,7 +43,7 @@ def _make_pair(other_date_str, other_country, other_title):
     other_date="2026-05-14",
     other_country="Japan",
     other_title="Earthquake in Philippines",
-    grouping="are grouped into one bundle",
+    grouping="remain in separate bundles",
 )
 @example(
     other_date="2026-05-14",

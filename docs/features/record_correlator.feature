@@ -80,7 +80,7 @@ Feature: Record Correlator
     Examples:
       | other_date  | other_country | other_title                  | grouping                   |
       | 2026-05-14  | Philippines   | "Quake hits Philippines"      | are grouped into one bundle |
-      | 2026-05-14  | Japan         | "Earthquake in Philippines"   | are grouped into one bundle |
+      | 2026-05-14  | Japan         | "Earthquake in Philippines"   | remain in separate bundles  |
       | 2026-05-14  | Japan         | "Typhoon warning Japan"       | remain in separate bundles  |
       | 2026-05-16  | Philippines   | "Earthquake in Philippines"   | remain in separate bundles  |
 
