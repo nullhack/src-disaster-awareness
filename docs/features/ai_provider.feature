@@ -84,6 +84,28 @@ Feature: AI Provider
         | DNS failure         |
         | connection timeout  |
 
+  Rule: OpencodeProvider manages sessions via REST
+    OpencodeProvider uses opencode serve's HTTP REST API with two endpoints:
+    POST /session creates a persistent session with opencode:<password> basic
+    auth returning a session ID; POST /session/{id}/message sends prompts and
+    collects text responses. The model parameter is accepted but ignored (model
+    is configured server-side). The session is auto-recreated on 401 or 404
+    from the message endpoint. OPENCODE_SERVER_PASSWORD is required at init
+    time.
+
+  Example: OpencodeProvider creates session and sends message
+    Given DSR_AI_PROVIDER is set to "opencode"
+    And OPENCODE_SERVER_PASSWORD is set to "test-pw"
+    When the AIProvider chat method is called with a prompt
+    Then a session is created via POST /session
+    And the prompt is sent via POST /session/{id}/message
+
+  Example: OpencodeProvider auto recreates session on 401
+    Given an existing opencode session
+    When an HTTP 401 is received from POST /session/{id}/message
+    Then a new session is created via POST /session
+    And the message is retried with the new session
+
   # Constraints:
   # - Reliability: AI failure (timeout, auth, network) must not block storage — bundles
   #   are stored with ai_enriched=False and all AI fields as None

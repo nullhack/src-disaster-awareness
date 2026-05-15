@@ -19,3 +19,7 @@ def test_invalid_provider_raises_error():
 def test_missing_api_key_raises_error():
     ...
 
+@pytest.mark.skip(reason="not implemented")
+def test_missing_opencode_password_raises_error():
+    ...
+

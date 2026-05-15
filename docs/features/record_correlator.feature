@@ -63,6 +63,45 @@ Feature: Record Correlator
     When evaluating title similarity
     Then the title criterion passes
 
+  Rule: Country Codes Are Normalized Via Pycountry
+    Country names from source-specific fields are normalized to ISO 3166-1
+    alpha-2 codes via pycountry before correlation matching. GDACS provides
+    iso3/affectedcountries directly; WHO and GDELT require AI extraction from
+    title/text first. Unknown or non-standard country names that pycountry
+    cannot resolve are treated as having no country data. Normalization is
+    applied in the adapter layer before correlation.
+
+  Example: Country Name Normalized To ISO Code
+    Given a record with country name "Philippines"
+    When the country is normalized via pycountry
+    Then the country code is "PH"
+
+  Example: Unknown Country Name Treated As No Country
+    Given a record with country name "NonExistentia"
+    When the country is normalized via pycountry
+    Then the country code is None
+
+  Rule: Country Match Required When Both Present
+    When both records in a pair have country data (after pycountry normalization
+    to ISO codes), they MUST share at least one country code to correlate.
+    Title similarity does NOT override a country mismatch — cross-country
+    correlation is prohibited. If record A has only JP and record B has only
+    BD, the pair does NOT correlate regardless of title similarity. This
+    constraint applies only when BOTH records have country data; if one
+    record has no country, the country criterion is skipped.
+
+  Example: Shared Country Enables Correlation
+    Given one record with country code "PH"
+    And another record with country code "PH"
+    When evaluating country overlap
+    Then the country criterion passes
+
+  Example: Different Countries Block Correlation
+    Given one record with country code "JP"
+    And another record with country code "BD"
+    When evaluating country overlap
+    Then the country criterion fails regardless of title similarity
+
   Rule: Correlation Requires Date and Country or Title
     A pair correlates if the date criterion passes AND at least one of the
     country or title criteria passes. At least two criteria must be available
