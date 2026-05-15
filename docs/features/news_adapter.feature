@@ -7,14 +7,11 @@ Feature: News Adapter
   from bundle fields: "{title} {country} {disaster_type} latest news" with fallbacks
   for unknown fields.
 
-  # Business rules:
-  # - NewsSearcher never raises on failure — network failure, empty results, and API
-  #   errors all return empty list
-  # - Supplementary search query uses worst-case template when nothing is known:
-  #   "disaster incident disaster emergency latest news" is a valid query per spec
-  # - Adapter never raises on HTTP errors — returns empty list on failure
-  # - Adapter never raises on network failure — returns empty list on failure
-  # - source_name is exactly "DDG-NEWS" for all records from this adapter
+  Rule: Failure returns empty list
+
+  Rule: Worst case query uses default template
+
+  Rule: Records have source name DDG-NEWS
 
   # Constraints:
   # - Reliability: DDG News search failure must not block pipeline — bundles proceed
