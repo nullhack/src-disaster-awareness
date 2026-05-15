@@ -3,8 +3,8 @@
 from datetime import datetime, timezone
 from unittest.mock import Mock
 
-import pytest
-from hypothesis import given, example, settings, strategies as st
+from hypothesis import example, given, settings
+from hypothesis import strategies as st
 
 from disaster_surveillance_reporter.ai.extractor import ExtractorAgent
 from disaster_surveillance_reporter.types import IncidentBundle, RawRecord

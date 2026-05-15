@@ -4,15 +4,14 @@ import json
 from datetime import datetime, timezone
 from unittest.mock import Mock
 
-import pytest
-
 from disaster_surveillance_reporter.ai.extractor import ExtractorAgent
 from disaster_surveillance_reporter.types import IncidentBundle, RawRecord
 
 
 def test_ai_extractor_keeps_incident_id_unchanged() -> None:
     """The incident_id '20260514-UNX-OTH' must remain unchanged after extraction,
-    even when the Extractor resolves country to 'Philippines' and type to 'Earthquake'."""
+    even when the Extractor resolves country to 'Philippines' and type to 'Earthquake'.
+    """
     record = RawRecord(
         source_name="GDACS",
         fetched_at=datetime(2026, 5, 14, 12, 0, 0, tzinfo=timezone.utc),
