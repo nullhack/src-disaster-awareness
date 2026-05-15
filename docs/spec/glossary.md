@@ -81,10 +81,10 @@
 
 ---
 
-## DuckAIProvider (Deprecated)
+## DuckAIProvider (Retired)
 
 **Genus:** ~~A concrete implementation of the AIProvider protocol~~
-**Differentia:** calling DuckDuckGo's free `duckchat/v1` API via direct HTTP. **Deprecated** — replaced by pluggable AIProvider backends (OllamaProvider, GeminiProvider, OpenAIProvider). The VQD token and SSE protocol are no longer used.
+**Differentia:** formerly calling DuckDuckGo's free `duckchat/v1` API via direct HTTP with VQD token + SSE streaming. **Retired** — the VQD token protocol was replaced by a JavaScript proof-of-work challenge, making it unusable. Replaced by pluggable AIProvider backends: OllamaProvider, GeminiProvider, OpenAIProvider, and OpencodeProvider. The VQD token and SSE protocol are no longer relevant.
 
 **Source:** 2026-05-14 (deprecated)
 
@@ -155,7 +155,7 @@
 
 ## Country Group B
 
-**Genus:** A set of 41 countries
+**Genus:** A set of 46+ countries
 **Differentia:** spanning Asia Pacific 2, the Middle East, and North Africa receiving secondary monitoring priority, where levels 2–4 are reported but level 1 incidents are excluded.
 
 **Source:** 2026-05-14
@@ -282,7 +282,7 @@
 ## WHO DON
 
 **Genus:** A free, zero-auth external data source
-**Differentia:** the World Health Organization Disease Outbreak News providing disease outbreak reports via an OData REST API, with ~30% deterministic field availability. Country, disaster type, and incident level must be extracted from unstructured HTML content.
+**Differentia:** the World Health Organization Disease Outbreak News providing disease outbreak reports via a REST API at `https://www.who.int/api/hubs/diseaseoutbreaknews`, with ~30% deterministic field availability. **No structured country or disaster type fields** — these must be extracted from Title/Overview text via AI or regex. `regionscountries` is a GUID reference (often null), not a usable country field. `ItemDefaultUrl` is a relative path, requiring `https://www.who.int` prefix for full URL.
 
 **Source:** 2026-05-14
 
@@ -300,7 +300,7 @@
 ## DDG News
 
 **Genus:** A supplementary data source
-**Differentia:** DuckDuckGo News accessed via the `ddgs` Python package's `news()` function, used after initial fetch to search for additional articles about specific incidents that need more context (missing country, low-structure source). Returns {date, title, body, url, source} per result.
+**Differentia:** DuckDuckGo News accessed via the `ddgs` Python package's `news()` function, used after initial fetch to search for additional articles about specific incidents that need more context (missing country, low-structure source). Returns `{date, title, body, url, source}` per result. Returns `[]` on failure, never raises.
 
 **Source:** 2026-05-14
 
@@ -327,7 +327,7 @@
 ## Correlation
 
 **Genus:** A pipeline step that groups records
-**Differentia:** matching `RawRecord`s from different sources that describe the same real-world incident into a single `IncidentBundle`, using date proximity, country overlap, and title similarity as matching criteria. Single-source records become bundles with one record.
+**Differentia:** matching `RawRecord`s from different sources that describe the same real-world incident into a single `IncidentBundle`, using date proximity (±1 day), ISO 3166-1 alpha-2 normalized country matching (via pycountry), and title similarity (SequenceMatcher ratio ≥ 0.6 after lowercase/strip/collapse normalization). When both records have country data, a country match is required — title similarity cannot override a country mismatch. Single-source records become bundles with one record.
 
 **Source:** 2026-05-14
 
@@ -447,3 +447,39 @@
 **Differentia:** GDACS > WHO > GDELT > DDG-NEWS, used by the ClassifyEngine to select the level from the highest-reliability source that derived one (most-reliable-source-wins), not a fallback chain.
 
 **Source:** 2026-05-14
+
+---
+
+## pycountry
+
+**Genus:** A Python library (package `pycountry`)
+**Differentia:** providing ISO 3166-1 alpha-2 country code lookups (name → code and code → name). Used by correlation for country normalization and by classification for country group assignment. Replaces the original manual `_COUNTRY_CODE` dictionary.
+
+**Source:** 2026-05-15
+
+---
+
+## ISO 3166-1 alpha-2 Country Normalization
+
+**Genus:** A correlation preprocessing step
+**Differentia:** converting country names from source-specific formats to standardized two-letter ISO country codes via `pycountry`, enabling deterministic country matching across sources. Applied in the adapter layer before correlation.
+
+**Source:** 2026-05-15
+
+---
+
+## Title Normalization
+
+**Genus:** A correlation preprocessing step
+**Differentia:** normalizing record titles before SequenceMatcher comparison: lowercase, strip leading/trailing whitespace, collapse multiple spaces to single space. Applied by the adapter layer to ensure consistent similarity scoring across sources.
+
+**Source:** 2026-05-15
+
+---
+
+## ddgs
+
+**Genus:** A Python package (`ddgs >= 9.14.2`)
+**Differentia:** providing DuckDuckGo News search via `DDGS.news()`. Used for supplementary news search after initial classification for bundles needing context. Returns `[]` on failure, never raises. Supports `region`, `timelimit`, and `max_results` parameters.
+
+**Source:** 2026-05-15

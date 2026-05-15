@@ -9,7 +9,7 @@
 
 - A deterministic classification engine that assigns incident levels (1–4), priorities (HIGH/MED/LOW), and country groups (A/B/C) using fixed Python rules — no AI for classification, ever.
 - A multi-source correlation pipeline that groups information about the same real-world incident from different APIs (GDACS, WHO DON, GDELT) into unified bundles, supplementing with DuckDuckGo News search when context is sparse.
-- An AI-augmented extraction and enrichment system for unstructured text (WHO, GDELT, DDG News), using a pluggable AIProvider (Ollama, Gemini, or OpenAI) via DSPy for structured output, operating on batched `IncidentBundle`s.
+- An AI-augmented extraction and enrichment system for unstructured text (WHO, GDELT, DDG News), using a pluggable AIProvider (Ollama, Gemini, OpenAI, or OpencodeProvider) via DSPy for structured output, operating on batched `IncidentBundle`s.
 
 ## What Disaster Surveillance Reporter IS NOT
 
@@ -43,33 +43,33 @@ The legacy codebase was unmaintainable. This clean rewrite automates disaster in
 
 ### Phase 1 — Foundation (pure Python, no I/O)
 
-1. `types.py` — `RawRecord`, `IncidentBundle`, `Incident` dataclasses
-2. `classify.py` — `ClassifyEngine` with all deterministic rules (country groups, priority matrix, level derivation, overrides O1–O6)
-3. `correlate.py` — Record correlator (date proximity + country overlap + title similarity)
-4. `storage/jsonl.py` — JSONLStore (date-partitioned, append-only, dedup by incident_id)
-5. `storage/sqlite.py` — SQLiteStore (same `StorageBackend` protocol)
-6. Tests for all of the above
+1. [DONE] `domain_types.py` — `RawRecord`, `IncidentBundle`, `Incident` dataclasses
+2. [DONE] `classify.py` — `ClassifyEngine` with all deterministic rules (24 Group A + 46+ Group B countries, priority matrix, level derivation, overrides O1–O6)
+3. [DONE] `correlate.py` — Record correlator (date proximity + ISO-normalized country match + title similarity via SequenceMatcher)
+4. [DONE] `storage/jsonl.py` — JSONLStore (date-partitioned, atomic temp-file+rename, dedup by incident_id)
+5. [DONE] `storage/sqlite.py` — SQLiteStore (same `StorageBackend` protocol)
+6. [DONE] Tests for all of the above (fixture-based, deterministic)
 
 ### Phase 2 — Adapters (fixture-driven)
 
-7. `scripts/capture_fixtures.py` — call each API once, save raw JSON
-8. Run capture fixtures against real APIs
-9. `adapters/gdacs.py` + tests (GeoJSON REST → `list[RawRecord]`)
-10. `adapters/who.py` + tests (OData REST → `list[RawRecord]`)
-11. `adapters/gdelt.py` + tests (DOC API → `list[RawRecord]`)
-12. `adapters/news.py` + tests (DDG News search → `list[RawRecord]`)
+7. [DONE] `scripts/capture_fixtures.py` — call each API once, save raw JSON
+8. [DONE] Run capture fixtures against real APIs
+9. [DONE] `adapters/gdacs.py` + tests (GeoJSON REST → `list[RawRecord]`)
+10. [DONE] `adapters/who.py` + tests (WHO DON REST → `list[RawRecord]`)
+11. [DONE] `adapters/gdelt.py` + tests (GDELT DOC ArtList API → `list[RawRecord]`)
+12. [DONE] `adapters/news.py` + tests (DDG News supplementary search via ddgs → `list[RawRecord]`)
 
 ### Phase 3 — AI (from day 1)
 
-13. `ai/provider.py` — `AIProvider` protocol + pluggable backends (OllamaProvider, GeminiProvider, OpenAIProvider)
-14. `ai/extractor.py` — batched extraction agent with DSPy signatures
-15. `ai/classifier.py` — batched classification agent with DSPy signatures
-16. Integration tests (fixtures + mocked AI responses)
+13. [DONE] `ai/provider.py` — `AIProvider` protocol + pluggable backends (OllamaProvider, GeminiProvider, OpenAIProvider, OpencodeProvider)
+14. [DONE] `ai/extractor.py` — batched extraction agent with DSPy typed Signature subclasses
+15. [DONE] `ai/classifier.py` — batched classification agent with DSPy typed Signature subclasses
+16. [DONE] Integration tests (fixtures + mocked AI responses)
 
 ### Phase 4 — Pipeline
 
-17. `pipeline.py` — fetch → correlate → classify → search-more → AI enrich → override re-eval → store
-18. End-to-end test
+17. [DONE] `pipeline.py` — 7-step orchestration: Fetch → Correlate → Initial Classify → Supplementary Search → AI Enrich → Override Re-evaluation → Store
+18. [DONE] End-to-end test
 
 ## Deployment
 
@@ -124,7 +124,7 @@ Step 1 uses three independent HTTP requests (no parallelism framework — sequen
 | 1 | Reproducibility | Same fixtures → same classified incidents, every time | Byte-identical JSON output from identical input fixtures across repeated runs | Deterministic: no randomness, no timestamps in output, no floating-point drift |
 | 2 | Reliability | Any single source API down → other sources unaffected, no data loss | Empty list from failed adapter, pipeline continues with available sources | Each adapter returns `[]` on failure; never raises |
 | 3 | Reliability | AI timeout/failure → incident stored without enrichment | `ai_enriched=False`, all AI fields None, bundle persisted to storage | Bundle present in storage with `ai_enriched=False` after run |
-| 4 | Testability | Every classification rule has a passing test with named fixture | 100% rule coverage: all 65 countries (24+41), all 12 priority matrix cells, all 6 overrides, all 4 source level derivations | `task test-coverage` shows 100% for classify.py, correlate.py |
+| 4 | Testability | Every classification rule has a passing test with named fixture | 100% rule coverage: all 70+ countries (24+46+), all 12 priority matrix cells, all 6 overrides, all 4 source level derivations | `task test-coverage` shows 100% for classify.py, correlate.py |
 | 5 | Performance | 50 incidents classified and stored in < 5 seconds (excluding AI) | Pure Python path (Steps 2–3, 6–7) completes in < 5s for 50 bundles | Measured by `pytest` performance marker; ~65ms estimated |
 | 6 | Performance | Full batch with AI in < 5 minutes | ~6 AI calls × 15s rate limit ≈ 90s for 50 incidents | Measured by E2E test with mocked AI latency |
 | 7 | Maintainability | Adding a new source adapter requires zero changes to core pipeline | New adapter implements `SourceAdapter` protocol, registered in config | No existing files modified when adding adapter |
@@ -161,9 +161,10 @@ Step 1 uses three independent HTTP requests (no parallelism framework — sequen
 
 | Package | Version | Purpose | ADR |
 |---------|---------|---------|-----|
-| httpx | >= 0.28 | HTTP client for GDACS GeoJSON, WHO OData, GDELT DOC APIs. Connection pooling, timeout control, retry support. | — |
+| httpx | >= 0.28 | HTTP client for GDACS GeoJSON, WHO DON REST, GDELT DOC APIs. Connection pooling, timeout control, retry support. | — |
 | dspy | * | Structured LLM programming. Typed signatures for Extractor and Classifier agents. Provider-agnostic LM configuration. | ADR 3 |
 | ddgs | >= 9.14.2 | DuckDuckGo News search via `DDGS.news()`. Supplementary context when primary sources lack country/type data. | — |
+| pycountry | >= 24 | ISO 3166-1 alpha-2 country code lookups. Used by correlation for country normalization (name → code) and classification for country group assignment. | — |
 | structlog | * | Structured JSON logging. Step-level timing, source counts, classification distribution to stderr. | — |
 
 ### Development

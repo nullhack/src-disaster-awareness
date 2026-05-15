@@ -282,9 +282,11 @@ Two records are candidates for correlation if ALL of the following pass:
 
 1. **Date proximity**: The dates of the two records are within **±1 calendar day** of each other. If a record has no parseable date, it passes this criterion vacuously (date is not used as a disqualifier).
 
-2. **Country overlap**: The records share at least one country, OR at least one record has no country data (skip the country criterion for that pair, relying on date + title only). Country is extracted from source-specific fields: GDACS uses `iso3`/`affectedcountries`, WHO and GDELT use title/text parsing (deferred to AI extraction if not deterministically available).
+2. **Country overlap (ISO-normalized)**: Country is extracted from source-specific fields and normalized to ISO 3166-1 alpha-2 codes via `pycountry`. GDACS provides `iso3`/`affectedcountries` directly; WHO and GDELT require AI extraction from title/text. Matching rules:
+   - If **both** records have country data, they must share at least one ISO-normalized country code to correlate. Title similarity does NOT override a country mismatch — cross-country correlation is prohibited.
+   - If at least one record has **no** country data, skip the country criterion (rely on date + title only for that pair).
 
-3. **Title similarity**: Normalized Levenshtein ratio ≥ **0.6**. Normalization: lowercase both titles, strip leading/trailing whitespace, collapse multiple spaces to single space. If either record has no title, this criterion is skipped (rely on date + country only).
+3. **Title similarity**: Normalized SequenceMatcher ratio ≥ **0.6**. Normalization: lowercase both titles, strip leading/trailing whitespace, collapse multiple spaces to single space — applied by the adapter before correlation. If either record has no title, this criterion is skipped (rely on date + country only).
 
 **Correlation combination logic (resolves Rule 9):**
 - A pair correlates if date AND (country passes OR title passes). At least two criteria must be available — if only one is available, the pair correlates on that one criterion.
@@ -329,7 +331,7 @@ This split resolves CLS-4/XCS-2: O1 (Humanitarian Crisis), O3 (Likely Developmen
 #### Country Groups
 
 - **Group A** (24 countries, highest priority): Afghanistan, Bangladesh, Bhutan, Brunei, Cambodia, China, India, Indonesia, Japan, Laos, Malaysia, Maldives, Myanmar, Nepal, North Korea, Pakistan, Philippines, Singapore, South Korea, Sri Lanka, Taiwan, Thailand, Timor Leste, Vietnam
-- **Group B** (41 countries, secondary priority): Asia Pacific 2 (Australia, Fiji, etc.) + Middle East (Bahrain, Cyprus, Iran, Iraq, Jordan, Kuwait, Lebanon, Oman, Palestine, Israel, Qatar, Saudi Arabia, Syria, Turkey, UAE, Yemen) + North Africa (Algeria, Egypt, Morocco, Tunisia)
+- **Group B** (46+ countries, secondary priority): Asia Pacific 2 (Australia, Fiji, New Zealand, etc.) + Middle East (Bahrain, Cyprus, Iran, Iraq, Jordan, Kuwait, Lebanon, Oman, Palestine, Israel, Qatar, Saudi Arabia, Syria, Turkey, UAE, Yemen) + North Africa (Algeria, Egypt, Morocco, Tunisia) + additional countries as needed
 - **Group C** (rest of world, lowest priority)
 
 #### Priority Matrix
@@ -502,7 +504,7 @@ The pipeline supports pluggable AI backends. The default implementation is **opt
 2. **GeminiProvider** (free tier): Calls Google Gemini API. Requires free API key from Google AI Studio. Models: gemini-2.0-flash.
 3. **OpenAIProvider** (paid): Calls OpenAI API. Requires paid API key. Models: gpt-4o-mini.
 4. **OpencodeProvider** (local, free): Calls opencode serve's HTTP REST API (`POST /session`, `POST /session/{id}/message`). Uses `opencode:<password>` basic auth. Configured via `OPENCODE_BASE_URL`, `OPENCODE_SERVER_PASSWORD`, `OPENCODE_SESSION_TIMEOUT`. Accepts but ignores the `model` parameter (model is configured server-side).
-4. **None (AI disabled)**: Pipeline skips enrichment steps 5-6 entirely. All bundles classified deterministically. AI fields remain None.
+5. **None (AI disabled)**: Pipeline skips enrichment steps entirely. All bundles classified deterministically. AI fields remain None.
 
 All implementations use the same `AIProvider` protocol: `chat(prompt, *, model) -> str`.
 
