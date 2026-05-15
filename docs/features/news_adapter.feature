@@ -32,7 +32,7 @@ Feature: News Adapter
       When the supplementary search query is generated
       Then the query is "Earthquake detected disaster emergency latest news"
 
-  Rule: Records have source name DDG-NEWS
+  Rule: Records have source name DDG NEWS
 
     Example: DDG News records source name verified
       Given a successful DDG News search returning multiple articles

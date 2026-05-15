@@ -1,0 +1,3 @@
+def test_ddg_news_records_source_name_verified():
+    ...
+
