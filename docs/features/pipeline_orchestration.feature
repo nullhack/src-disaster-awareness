@@ -12,15 +12,41 @@ Feature: Pipeline Orchestration
     ai_enriched=False and all AI-extracted fields set to None. The pipeline
     continues with the next bundle or step.
 
+    Example: Pipeline AI failure stores unenriched
+      Given incident bundles pending AI enrichment
+      When the AI enrichment step fails completely
+      Then the bundle stores without AI enrichment
+
+    Example: Pipeline mid-batch failure preserves results
+      Given a batch of three incident bundles needing AI enrichment
+      When AI enrichment fails after the first bundle processes
+      Then successfully enriched bundles are preserved despite batch failure
+
   Rule: Extractor runs before Classifier
     Within the AI Enrich step, the Extractor agent processes bundles with missing
     fields before the Classifier agent generates summaries for reportable bundles.
     Post-extraction re-classification runs between the two agents.
 
+    Example: Pipeline extraction precedes classification
+      Given incident bundles needing both extraction and classification
+      When the AI enrichment step runs
+      Then the Extractor agent processes before the Classifier agent
+
   Rule: Supplementary search triggers on missing fields
     After initial classification, bundles where country is None or disaster_type
     is None trigger a supplementary DDG News search. Pipeline step 4 evaluates
     the trigger condition using bundle fields.
+
+    Scenario Outline: Pipeline missing field triggers search
+      Given a bundle missing "<field>" after initial classification
+      When the supplementary search trigger is evaluated
+      Then supplementary search is triggered
+
+      Examples:
+        | field                 |
+        | country               |
+        | disaster_type         |
+        | country and type      |
 
   Rule: Pipeline executes seven sequential steps
     The pipeline orchestrates seven sequential steps: (1) Fetch all 3 primary
@@ -28,10 +54,27 @@ Feature: Pipeline Orchestration
     (4) Supplementary DDG News search for bundles needing context, (5) AI enrich
     in batches, (6) Override re-evaluation, (7) Store complete bundles.
 
+    Example: Pipeline completes all seven steps
+      Given raw records from all three primary sources
+      When the pipeline orchestrator runs
+      Then seven pipeline steps execute in specified order
+
   Rule: Search queries use templated fields
     Supplementary search queries use the template "{title} {country} {disaster_type}
     latest news". Unknown country is omitted from the query. Unknown disaster type
     is substituted with "disaster emergency".
+
+    Scenario Outline: Pipeline search query matches template
+      Given a bundle with title "<title>", country "<country>", and type "<disaster_type>"
+      When the supplementary search query is generated
+      Then the search query is "<expected_query>"
+
+      Examples:
+        | title                       | country       | disaster_type | expected_query                                                |
+        | "Magnitude 7.2 earthquake"  | "Philippines" | "Earthquake"  | "Magnitude 7.2 earthquake Philippines Earthquake latest news" |
+        | "Disease outbreak report"   | ""            | "Flood"       | "Disease outbreak report Flood latest news"                   |
+        | "Flood warning issued"      | ""            | ""            | "Flood warning issued disaster emergency latest news"         |
+        | "disaster incident"         | "Japan"       | "Earthquake"  | "disaster incident Japan Earthquake latest news"              |
 
   # Constraints:
   # - Reproducibility: pipeline is idempotent — duplicate runs produce no duplicate
