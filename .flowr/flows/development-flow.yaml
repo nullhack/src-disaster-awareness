@@ -14,7 +14,7 @@ states:
         - structure-feature
       in:
         - features/<feature_id>.feature
-        - behavioral_spec.md
+        - domain_spec.md
         - simulation_results.md
         - glossary.md
         - product_definition.md
@@ -58,7 +58,7 @@ states:
         - test-implementations
         - source-implementations
         - features/<feature_id>.feature
-        - behavioral_spec.md
+        - domain_spec.md
         - "adr/*.md"  # optional
       out: []
     next:

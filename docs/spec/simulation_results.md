@@ -8,7 +8,7 @@
 
 ## Resolution Status
 
-All 21 pain points from iteration 1 have been verified as resolved in the rewritten behavioral_spec.md (708 lines).
+All 21 pain points from iteration 1 have been verified as resolved in the rewritten domain_spec.md (708 lines).
 
 | ID | Original Classification | Resolution | Iteration 2 Verification |
 |----|------------------------|------------|--------------------------|
@@ -60,7 +60,7 @@ All 21 pain points from iteration 1 have been verified as resolved in the rewrit
 4. Bilateral data model mismatch: Incident.source_urls Required vs GDACS no URL
 5. 4 rules rejected for insufficient specificity
 
-**Post-fix status:** All 21 pain points resolved. 4 previously rejected rules accepted. behavioral_spec.md fully rewritten.
+**Post-fix status:** All 21 pain points resolved. 4 previously rejected rules accepted. domain_spec.md fully rewritten.
 
 ### Iteration 2: Re-simulation
 
@@ -81,30 +81,30 @@ All 21 pain points from iteration 1 have been verified as resolved in the rewrit
 > **Reviewer:** R (Reviewer agent)
 > **Date:** 2026-05-14
 > **Decision:** **PASS** — zero unresolved blockers, all entities covered, all QAs stressed
-> **Note:** This PASS was issued BEFORE fixture validation corrections were applied to behavioral_spec.md.
+> **Note:** This PASS was issued BEFORE fixture validation corrections were applied to domain_spec.md.
 
 ### Iteration 2B: Fixture Validation Review (Adversarial)
 
 > **Reviewer:** R (Reviewer agent)
 > **Date:** 2026-05-14
-> **Decision:** **FAIL** — fixture corrections introduced stale cross-document references and one internal contradiction in behavioral_spec.md
+> **Decision:** **FAIL** — fixture corrections introduced stale cross-document references and one internal contradiction in domain_spec.md
 
 **Rationale for FAIL:**
 
-The behavioral_spec.md was correctly updated with all 7 fixture corrections (GDACS url dict, istemporary string, WHO no structured fields, WHO ItemDefaultUrl relative, GDELT no tone, pluggable AIProvider, GDELT title-keyword level derivation). However:
+The domain_spec.md was correctly updated with all 7 fixture corrections (GDACS url dict, istemporary string, WHO no structured fields, WHO ItemDefaultUrl relative, GDELT no tone, pluggable AIProvider, GDELT title-keyword level derivation). However:
 
-1. **One internal contradiction in behavioral_spec.md**: Line 670 says WHO uses `raw_fields["url"]` but the WHO data shape (line 92) and the Incident source_urls field (line 646) both say the field is `ItemDefaultUrl` (a relative path requiring base URL prepend). This is a direct fixture-validation oversight.
+1. **One internal contradiction in domain_spec.md**: Line 670 says WHO uses `raw_fields["url"]` but the WHO data shape (line 92) and the Incident source_urls field (line 646) both say the field is `ItemDefaultUrl` (a relative path requiring base URL prepend). This is a direct fixture-validation oversight.
 2. **simulation_results.md stale entries FIXED** — 11 stale references (DuckAIProvider, VQD, tone-based GDELT level, incorrect "GDACS no-URL" claims) updated to reflect fixture-corrected spec (AIProvider pluggable backend, GDELT title keyword scan, GDACS `url.report`).
 3. **glossary.md stale entries FIXED** — 6 stale entries (DuckAIProvider, VQD Token, SSE, Tone Score, "six-step" pipeline, GDELT tone description) updated.
 4. **product_definition.md stale entries FIXED** — 2 stale entries (DuckDuckGo AI, DuckAIProvider) updated.
 
-**All 21 previously resolved pain points still hold** in the corrected behavioral_spec.md. No resolutions were broken by the fixture corrections.
+**All 21 previously resolved pain points still hold** in the corrected domain_spec.md. No resolutions were broken by the fixture corrections.
 
 **Issues requiring fix (ordered by severity):**
 
 | # | File | Lines | Severity | Description |
 |---|------|-------|----------|-------------|
-| 1 | behavioral_spec.md | 670 | **CRITICAL** → Fixed | WHO source_urls derivation said `raw_fields["url"]` but actual field is `ItemDefaultUrl` (per fixture line 92 and spec line 646). Fixed to `raw_fields["ItemDefaultUrl"]` with prepend of `https://www.who.int`. |
+| 1 | domain_spec.md | 670 | **CRITICAL** → Fixed | WHO source_urls derivation said `raw_fields["url"]` but actual field is `ItemDefaultUrl` (per fixture line 92 and spec line 646). Fixed to `raw_fields["ItemDefaultUrl"]` with prepend of `https://www.who.int`. |
 | 2 | simulation_results.md | 313 | **CRITICAL** → Fixed | Rule 12: "GDELT tone maps to levels" contradicts fixture-corrected spec. Fixed to title keyword scan. |
 | 3 | simulation_results.md | 284 | **CRITICAL** → Fixed | Scenario 04 "GDELT extreme negative tone = Level 4" — fixed to "GDELT title keyword PHEIC triggers Level 4". |
 | 4 | simulation_results.md | 368 | **HIGH** → Fixed | Scenario 04 "VQD token expired triggers re-fetch" — fixed to "AIProvider rate limit triggers auto-retry". |

@@ -14,7 +14,7 @@ states:
         - assess-architecture
       in:
         - product_definition.md
-        - behavioral_spec.md
+        - domain_spec.md
         - simulation_results.md
       out:
         - product_definition.md:
@@ -48,11 +48,11 @@ states:
       skills:
         - map-contexts
       in:
-        - behavioral_spec.md
+        - domain_spec.md
         - product_definition.md
         - glossary.md
       out:
-        - behavioral_spec.md:
+        - domain_spec.md:
             - context_map
             - integration_points
     next:
@@ -68,7 +68,7 @@ states:
         - design-technical-solution
         - draft-adr
       in:
-        - behavioral_spec.md
+        - domain_spec.md
         - glossary.md
         - product_definition.md
       out:
@@ -89,7 +89,7 @@ states:
       in:
         - "adr/<adr_id>.md"  # optional
         - product_definition.md
-        - behavioral_spec.md
+        - domain_spec.md
         - simulation_results.md
         - glossary.md
       out: []

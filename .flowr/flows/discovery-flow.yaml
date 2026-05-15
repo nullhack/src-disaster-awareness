@@ -13,7 +13,7 @@ states:
         - conduct-interview
       in:
         - "interview-notes/*.md"  # optional
-        - "behavioral_spec.md"  # optional — for re-interview context
+        - "domain_spec.md"  # optional — for re-interview context
         - "product_definition.md"  # optional — for re-interview context
       out:
         - "interview-notes/<session_id>.md"
@@ -31,7 +31,7 @@ states:
         - define-ubiquitous-language
       in:
         - interview-notes/*.md
-        - "behavioral_spec.md"  # optional — cumulative edit across iterations
+        - "domain_spec.md"  # optional — cumulative edit across iterations
         - "glossary.md"  # optional — cumulative edit across iterations
         - "product_definition.md"  # optional — cumulative edit across iterations
       out:
@@ -43,7 +43,7 @@ states:
             - out_of_scope
             - delivery_order
             - quality_attributes
-        - behavioral_spec.md:
+        - domain_spec.md:
             - context_map
             - context
             - entities
