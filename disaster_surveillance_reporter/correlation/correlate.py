@@ -93,21 +93,25 @@ class Correlator:
                 if date_diff > 1:
                     continue
 
-                # Criterion 2: country match required when both have one.
+                # Criterion 2+3: country and title matching.
                 ci = countries[i]
                 cj = countries[j]
-                if ci and cj:
+                ti = titles[i]
+                tj = titles[j]
+
+                # Both have country: must match.
+                if ci is not None and cj is not None:
                     if ci != cj:
                         continue
+                # Both unknown country: shared missing country = match.
+                elif ci is None and cj is None:
+                    pass
+                # One has country, other unknown: require title similarity.
                 else:
-                    # Criterion 3: title similarity via SequenceMatcher ratio.
-                    ti = titles[i]
-                    tj = titles[j]
-                    country_ok = (ci == cj) or (ci is None) or (cj is None)
-                    title_ok = (
-                        difflib.SequenceMatcher(None, ti, tj).ratio() >= 0.6
-                    )
-                    if not (country_ok or title_ok):
+                    if ti and tj:
+                        if difflib.SequenceMatcher(None, ti, tj).ratio() < 0.6:
+                            continue
+                    else:
                         continue
 
                 union(i, j)

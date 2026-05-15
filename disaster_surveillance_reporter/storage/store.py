@@ -70,7 +70,7 @@ class JSONLStore:
 
     def __init__(self, base_path: Path) -> None:
         """Create a JSONL store at *base_path*."""
-        self.base_path = base_path
+        self.base_path = Path(base_path)
 
     # ------------------------------------------------------------------
     #  storage protocol
