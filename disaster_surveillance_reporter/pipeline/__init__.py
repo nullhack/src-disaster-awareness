@@ -1,77 +1,66 @@
 """Pipeline orchestration for disaster incident processing.
 
-This module provides the Pipeline class that orchestrates the full processing flow:
-fetch from sources -> transform to schema -> classify -> store.
+Seven-step sequential pipeline:
+Fetch → Correlate → Initial Classify → Supplementary Search → AI Enrich →
+Override Re-evaluation → Store.
 """
 
-from dataclasses import dataclass
-from typing import Any
+from disaster_surveillance_reporter.adapters import SourceAdapter
+from disaster_surveillance_reporter.adapters.news import NewsSearcher
+from disaster_surveillance_reporter.ai.provider import AIProvider
+from disaster_surveillance_reporter.classification.classify import ClassifyEngine
+from disaster_surveillance_reporter.correlation.correlate import Correlator
+from disaster_surveillance_reporter.storage.store import StorageBackend
+from disaster_surveillance_reporter.types import IncidentBundle, RawRecord
 
-from disaster_surveillance_reporter.adapters import RawIncidentData
-from disaster_surveillance_reporter.classification import RulesLoader
-from disaster_surveillance_reporter.opencode import OpenCodeClient
-from disaster_surveillance_reporter.storage import StorageBackend
 
-
-@dataclass
 class Pipeline:
-    """Orchestrates the full incident processing pipeline."""
-
     def __init__(
         self,
-        sources: list,
-        storage: StorageBackend,
-        opencode_client: OpenCodeClient,
-        rules_loader: RulesLoader,
-    ):
-        self._sources = sources
-        self._storage = storage
-        self._opencode_client = opencode_client
-        self._rules_loader = rules_loader
+        adapters: list[SourceAdapter],
+        correlator: Correlator,
+        classify_engine: ClassifyEngine,
+        news_searcher: NewsSearcher,
+        ai_provider: AIProvider | None,
+        storage_backend: StorageBackend,
+    ) -> None:
+        self._adapters = adapters
+        self._correlator = correlator
+        self._classify_engine = classify_engine
+        self._news_searcher = news_searcher
+        self._ai_provider = ai_provider
+        self._storage_backend = storage_backend
 
-    def run_full_cycle(self) -> list[dict[str, Any]]:
-        """Run complete pipeline: fetch -> transform -> classify -> store."""
-        raw_incidents = self.fetch_all()
-        transformed = self.transform_all(raw_incidents)
-        classified = self.classify_all(transformed)
-        self.store_all(classified)
-        return classified
+    def run(self) -> list[IncidentBundle]:
+        raise NotImplementedError
 
-    def fetch_all(self) -> list[RawIncidentData]:
-        """Fetch incidents from all configured sources."""
-        all_incidents = []
-        for source in self._sources:
-            all_incidents.extend(source.fetch())
-        return all_incidents
+    def _fetch_sources(self) -> list[RawRecord]:
+        raise NotImplementedError
 
-    def transform_all(
-        self, raw_incidents: list[RawIncidentData]
-    ) -> list[dict[str, Any]]:
-        """Transform all raw incidents to schema format."""
-        result = []
-        for raw in raw_incidents:
-            transformed = self._opencode_client.transform(
-                {
-                    "source_name": raw.source_name,
-                    "source_url": raw.source_url,
-                    "incident_name": raw.incident_name,
-                    "country": raw.country,
-                    "disaster_type": raw.disaster_type,
-                    "report_date": raw.report_date,
-                    "raw_fields": raw.raw_fields,
-                }
-            )
-            result.append(transformed)
-        return result
+    def _correlate_records(
+        self, records: list[RawRecord]
+    ) -> list[IncidentBundle]:
+        raise NotImplementedError
 
-    def classify_all(self, incidents: list[dict[str, Any]]) -> list[dict[str, Any]]:
-        """Classify all incidents using OpenCode."""
-        result = []
-        for incident in incidents:
-            classified = self._opencode_client.classify(incident)
-            result.append(classified)
-        return result
+    def _classify_initial(
+        self, bundles: list[IncidentBundle]
+    ) -> list[IncidentBundle]:
+        raise NotImplementedError
 
-    def store_all(self, incidents: list[dict[str, Any]]) -> None:
-        """Store all incidents to the configured backend."""
-        self._storage.write(incidents)
+    def _supplementary_search(
+        self, bundles: list[IncidentBundle]
+    ) -> list[IncidentBundle]:
+        raise NotImplementedError
+
+    def _ai_enrich(
+        self, bundles: list[IncidentBundle]
+    ) -> list[IncidentBundle]:
+        raise NotImplementedError
+
+    def _reclassify_overrides(
+        self, bundles: list[IncidentBundle]
+    ) -> list[IncidentBundle]:
+        raise NotImplementedError
+
+    def _store_bundles(self, bundles: list[IncidentBundle]) -> int:
+        raise NotImplementedError

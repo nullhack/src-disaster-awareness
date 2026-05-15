@@ -17,7 +17,7 @@ Feature: Pipeline Orchestration
       When the AI enrichment step fails completely
       Then the bundle stores without AI enrichment
 
-    Example: Pipeline mid-batch failure preserves results
+    Example: Pipeline mid batch failure preserves results
       Given a batch of three incident bundles needing AI enrichment
       When AI enrichment fails after the first bundle processes
       Then successfully enriched bundles are preserved despite batch failure
