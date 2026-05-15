@@ -1,0 +1,6 @@
+def test_malformed_records_are_silently_skipped():
+    ...
+
+def test_all_malformed_yields_empty_list():
+    ...
+
