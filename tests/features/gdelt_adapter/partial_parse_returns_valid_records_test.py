@@ -3,7 +3,7 @@ import httpx
 from disaster_surveillance_reporter.adapters.gdelt import GDELTAdapter
 
 
-def test_malformed_records_are_silently_skipped():
+def test_gdelt_malformed_records_are_silently_skipped():
     valid_article = {
         "url": "https://example.com/article1",
         "url_mobile": "",
@@ -33,7 +33,7 @@ def test_malformed_records_are_silently_skipped():
     assert result[0].raw_fields["title"] == "Flooding devastates Bangladesh"
 
 
-def test_all_malformed_yields_empty_list():
+def test_gdelt_all_malformed_yields_empty_list():
     api_response = {
         "articles": [
             None,

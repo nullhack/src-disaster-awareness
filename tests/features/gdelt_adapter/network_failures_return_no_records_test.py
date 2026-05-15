@@ -8,7 +8,7 @@ from disaster_surveillance_reporter.adapters.gdelt import GDELTAdapter
 @example(error_type="DNS failure")
 @example(error_type="network unreachable")
 @given(error_type=st.text())
-def test_connection_failure_produces_empty_list(error_type):
+def test_gdelt_connection_failure_produces_empty_list(error_type):
     def handler(request):
         raise httpx.ConnectError(error_type, request=request)
 

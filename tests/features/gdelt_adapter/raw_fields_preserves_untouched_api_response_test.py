@@ -3,7 +3,7 @@ import httpx
 from disaster_surveillance_reporter.adapters.gdelt import GDELTAdapter
 
 
-def test_complete_api_response_is_preserved():
+def test_gdelt_api_response_is_preserved():
     article = {
         "url": "https://example.com/quake-report",
         "url_mobile": "https://m.example.com/quake-report",
