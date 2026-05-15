@@ -71,6 +71,11 @@ The legacy codebase was unmaintainable. This clean rewrite automates disaster in
 17. [DONE] `pipeline.py` — 7-step orchestration: Fetch → Correlate → Initial Classify → Supplementary Search → AI Enrich → Override Re-evaluation → Store
 18. [DONE] End-to-end test
 
+### Phase 5 — Incident Lifecycle (source-stable IDs + dedup + active monitoring)
+
+19. [ ] `incident_lifecycle` Feature A — source-stable incident IDs (use source-provided dates, not `fetched_at`), `source_fingerprints` on `IncidentBundle` (format: `{SOURCE_NAME}:{native_id}`), `StorageBackend.upsert/get_last_updated/exists_by_source_fingerprint`
+20. [ ] `incident_lifecycle` Feature B — lifecycle gating: 9-step pipeline with Source Pre-filter (step 2) and Active-Status Check (step 4), DDG search gating (`should_report AND (active OR missing_fields)`), stale skip (>7 days since `last_updated`)
+
 ## Deployment
 
 ### Runtime Model
@@ -106,13 +111,15 @@ DSR is a **CLI tool** executed as a scheduled batch process. There is no daemon,
 
 ```
 dsr-pipeline
-  ├─ Step 1: Fetch (GDACS, WHO, GDELT in parallel via httpx)
-  ├─ Step 2: Correlate (group into IncidentBundles)
-  ├─ Step 3: Initial Classify (deterministic, no I/O)
-  ├─ Step 4: Supplementary Search (DDG News for bundles missing fields)
-  ├─ Step 5: AI Enrich (Extractor → re-classify → Classifier, batched)
-  ├─ Step 6: Override Re-evaluation (deterministic, no I/O)
-  └─ Step 7: Store (JSONL or SQLite, atomic writes)
+  ├─ Step 1: Fetch (GDACS, WHO, GDELT via httpx)
+  ├─ Step 2: Source Pre-filter (discard records whose source_fingerprint already exists in storage)
+  ├─ Step 3: Correlate (group into IncidentBundles)
+  ├─ Step 4: Active-Status Check (skip stale bundles >7 days since last_updated; merge fingerprints for active bundles)
+  ├─ Step 5: Initial Classify (deterministic, no I/O)
+  ├─ Step 6: Supplementary Search (DDG News, gated: should_report AND (active OR missing_fields))
+  ├─ Step 7: AI Enrich (Extractor → re-classify → Classifier, batched)
+  ├─ Step 8: Override Re-evaluation (deterministic, no I/O)
+  └─ Step 9: Store (upsert via JSONL or SQLite; NEW → insert, ACTIVE with new fingerprints → update + reset last_updated, ACTIVE with no new fingerprints → no-op)
 ```
 
 Step 1 uses three independent HTTP requests (no parallelism framework — sequential or `httpx` connection pooling). Step 5 is the only step with variable latency (AI calls). All other steps are deterministic and fast.
@@ -129,6 +136,8 @@ Step 1 uses three independent HTTP requests (no parallelism framework — sequen
 | 6 | Performance | Full batch with AI in < 5 minutes | ~6 AI calls × 15s rate limit ≈ 90s for 50 incidents | Measured by E2E test with mocked AI latency |
 | 7 | Maintainability | Adding a new source adapter requires zero changes to core pipeline | New adapter implements `SourceAdapter` protocol, registered in config | No existing files modified when adding adapter |
 | 8 | Observability | Every pipeline run produces a structured log of step outcomes | Step-level timing, source fetch counts, classification distribution, storage count | `structlog` JSON output to stderr at `INFO` level |
+| 9 | Efficiency | Pipeline with no new data completes all steps in under 5s | Source pre-filter discards all stale/seen records; active-status check skips stale bundles; pipeline exits fast | Measured by E2E test with pre-populated storage and no new source data |
+| 10 | Data Integrity | Same source record never stored in two different bundles | Source fingerprint dedup via `exists_by_source_fingerprint`; upsert merges rather than duplicates | `pytest` integration: inject duplicate fingerprint, verify single stored result |
 
 ## Technology Stack
 

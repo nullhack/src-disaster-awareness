@@ -45,12 +45,21 @@
 
 ---
 
+## last_updated
+
+**Genus:** A datetime field on `IncidentBundle`
+**Differentia:** recording the most recent modification time of the bundle. Set at bundle creation (correlation time) and reset only when new data is added (new DDG articles, new primary records). NOT reset when the pipeline processes a bundle but finds no new fingerprints. Used by the Active-Status Check to determine whether a bundle is ACTIVE (≤7 days) or STALE (>7 days).
+
+**Source:** 2026-05-15
+
+---
+
 ## Incident ID
 
-**Genus:** A deterministic identifier for an incident bundle
-**Differentia:** formatted as `YYYYMMDD-CC-TTT` where YYYYMMDD is the report date, CC is the ISO 3166-1 alpha-2 country code, and TTT is the 3-character disaster type code (e.g., EQ=Earthquake, FL=Flood, TC=Cyclone).
+**Genus:** A deterministic, source-stable identifier for an incident bundle
+**Differentia:** formatted as `YYYYMMDD-CC-TTT` where YYYYMMDD is the earliest source-provided date (GDACS `fromdate`, WHO `PublicationDate`, GDELT `seendate`, DDG-NEWS `date`; falls back to `fetched_at` only if no source date exists), CC is the ISO 3166-1 alpha-2 country code, and TTT is the 3-character disaster type code (e.g., EQ=Earthquake, FL=Flood, TC=Cyclone). Using source dates makes IDs stable across pipeline runs — the same source article produces the same ID regardless of fetch time.
 
-**Source:** 2026-05-14
+**Source:** 2026-05-14 (updated 2026-05-15)
 
 ---
 
@@ -60,6 +69,33 @@
 **Differentia:** defining `source_name: str` and `fetch(client: httpx.Client) -> list[RawRecord]`, with the contract that it never raises exceptions (returns empty list on failure) and each `RawRecord.raw_fields` contains the complete, unmodified API response. Implemented by GDACS, WHO DON, and GDELT adapters.
 
 **Source:** 2026-05-14
+
+---
+
+## Source Fingerprint
+
+**Genus:** A globally unique identifier for a single source record
+**Differentia:** formatted as `{SOURCE_NAME}:{native_id}` where SOURCE_NAME is one of "GDACS", "WHO", "GDELT", or "DDG-NEWS" and native_id is source-specific: GDACS uses `eventid`, WHO uses `Id` or `DonId`, GDELT uses `url`, DDG-NEWS uses `url`. Used by the Source Pre-filter step to discard records already seen in previous pipeline runs.
+
+**Source:** 2026-05-15
+
+---
+
+## Stale Incident
+
+**Genus:** An incident bundle lifecycle status
+**Differentia:** indicating that no new data has been added to the bundle for 7 or more days (i.e., `now - last_updated > 7 days`). Stale incidents are removed from the pipeline during the Active-Status Check (step 4) — they are not re-classified, not re-searched via DDG, and not re-enriched by AI, saving processing cost.
+
+**Source:** 2026-05-15
+
+---
+
+## Active Incident
+
+**Genus:** An incident bundle lifecycle status
+**Differentia:** indicating that the bundle has received new data within the last 7 days (i.e., `now - last_updated ≤ 7 days`). Active incidents proceed through the full pipeline and are eligible for DDG supplementary search and AI enrichment.
+
+**Source:** 2026-05-15
 
 ---
 
@@ -102,9 +138,18 @@
 ## StorageBackend
 
 **Genus:** A Python Protocol for persistent storage adapters
-**Differentia:** defining three methods: `store(bundles) -> int` (persist bundles, skip existing IDs, return new count), `query(date_from, date_to, **filters) -> list[Incident]` (query flattened incidents by date range and filters), and `exists(incident_id) -> bool` (dedup check). Implemented by JSONLStore and SQLiteStore.
+**Differentia:** defining six methods: `store(bundles) -> int` (persist bundles, skip existing IDs, return new count), `query(date_from, date_to, **filters) -> list[Incident]` (query flattened incidents by date range and filters), `exists(incident_id) -> bool` (dedup check), `upsert(bundle) -> str` (insert new, update active with new fingerprints resetting `last_updated`, or no-op when no new data), `get_last_updated(incident_id) -> datetime | None` (query last modification time for active-status check), and `exists_by_source_fingerprint(fp) -> bool` (dedup by source fingerprint for pre-filter). Implemented by JSONLStore and SQLiteStore.
 
-**Source:** 2026-05-14
+**Source:** 2026-05-14 (updated 2026-05-15)
+
+---
+
+## Upsert
+
+**Genus:** A storage operation combining insert and update semantics
+**Differentia:** used in pipeline step 9 (Store) as the primary persistence method. For each bundle: if the `incident_id` is not in storage → insert a new record (set `last_updated` to correlation time). If the bundle is in storage and new `source_fingerprints` are found → update the existing record (merge fingerprints, reset `last_updated`). If the bundle is in storage but no new fingerprints are found → no-op (do not change `last_updated`, preserving the monitoring window). Returns one of `"inserted"`, `"updated"`, or `"noop"`.
+
+**Source:** 2026-05-15
 
 ---
 
@@ -390,18 +435,18 @@
 ## Dedup
 
 **Genus:** A data integrity mechanism
-**Differentia:** preventing duplicate incident entries by checking `incident_id` via `StorageBackend.exists()` before storing, so that `StorageBackend.store()` returns only the count of genuinely new bundles.
+**Differentia:** preventing duplicate entries through two layers: (1) source-level: `exists_by_source_fingerprint(fp)` prevents the same source record (identified by `{SOURCE_NAME}:{native_id}`) from being processed twice, and (2) bundle-level: `upsert()` merges new fingerprints into existing bundles rather than creating duplicates.
 
-**Source:** 2026-05-14
+**Source:** 2026-05-14 (updated 2026-05-15)
 
 ---
 
 ## Pipeline
 
 **Genus:** The orchestrator module (`pipeline.py`)
-**Differentia:** executing the seven-step sequential flow: (1) fetch all 3 primary sources, (2) correlate records into bundles, (3) classify deterministically (initial), (4) supplementary DDG News search for bundles needing context, (5) AI enrich in batches, (6) override re-evaluation, (7) store complete bundles.
+**Differentia:** executing the nine-step sequential flow: (1) fetch all 3 primary sources, (2) source pre-filter (discard seen records by fingerprint), (3) correlate records into bundles, (4) active-status check (skip stale bundles, merge fingerprints for active), (5) classify deterministically (initial), (6) supplementary DDG News search (gated: should_report AND (active OR missing_fields)), (7) AI enrich in batches, (8) override re-evaluation, (9) store with upsert semantics.
 
-**Source:** 2026-05-14
+**Source:** 2026-05-14 (updated 2026-05-15)
 
 ---
 
@@ -420,6 +465,15 @@
 **Differentia:** one of Green, Orange, or Red, mapped deterministically to incident levels: Green → 1, Orange → 3, Red → 4, with a severity bump for Group A countries.
 
 **Source:** 2026-05-14
+
+---
+
+## Active Monitoring Window
+
+**Genus:** A time-based lifecycle boundary for incident bundles
+**Differentia:** defined as 7 days from `last_updated`. Bundles with `now - last_updated ≤ 7 days` are ACTIVE — they are re-processed and re-checked for new data. Bundles with `now - last_updated > 7 days` are STALE — they are removed from the pipeline before classification to avoid unnecessary AI enrichment and processing costs.
+
+**Source:** 2026-05-15
 
 ---
 

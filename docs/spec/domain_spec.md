@@ -9,21 +9,23 @@
 
 ## Pipeline Overview
 
-The DSR pipeline is a seven-step sequential flow executed by `pipeline.py`:
+The DSR pipeline is a nine-step sequential flow executed by `pipeline.py`:
 
 ```
-Fetch → Correlate → Initial Classify → Supplementary Search → AI Enrich → Override Re-evaluation → Store
+Fetch → Source Pre-filter → Correlate → Active-Status Check → Initial Classify → Supplementary Search → AI Enrich → Override Re-evaluation → Store
 ```
 
 1. **Fetch**: Call all three primary adapters (GDACS, WHO, GDELT). Collect `list[RawRecord]`.
-2. **Correlate**: Group records about the same incident into `list[IncidentBundle]`.
-3. **Initial Classify**: Apply deterministic rules to assign preliminary level, priority, country group, and deterministic overrides (O2, O4, O6). No AI calls.
-4. **Supplementary Search**: For bundles needing more context (missing country or disaster type), query DDG News and append results to the bundle.
-5. **AI Enrich**: Run Extractor (fill missing fields) and Classifier (generate summaries, detect AI-assisted overrides O1, O3, O5) on batched bundles.
-6. **Override Re-evaluation**: Re-apply override evaluation now that AI-extracted data is available. Evaluate O1, O3, O5 using enriched fields. Re-run priority matrix if level changed.
-7. **Store**: Persist complete bundles to JSONL or SQLite.
+2. **Source Pre-filter**: For each `RawRecord`, compute `source_fingerprint` (format: `{SOURCE_NAME}:{native_id}`). If `storage.exists_by_source_fingerprint(fp)` → discard. Otherwise → pass to correlator.
+3. **Correlate**: Group records about the same incident into `list[IncidentBundle]`.
+4. **Active-Status Check**: For each bundle: if NEW → proceed. If in storage and ACTIVE (`now - last_updated <= 7 days`) → proceed, merge existing fingerprints. If STALE (`now - last_updated > 7 days`) → remove from pipeline.
+5. **Initial Classify**: Apply deterministic rules to assign preliminary level, priority, country group, and deterministic overrides (O2, O4, O6). No AI calls.
+6. **Supplementary Search**: For bundles needing more context (missing country or disaster type), query DDG News and append results to the bundle. Gated: `should_report AND (active OR missing_fields)`. Stale, fully-known incidents skip DDG.
+7. **AI Enrich**: Run Extractor (fill missing fields) and Classifier (generate summaries, detect AI-assisted overrides O1, O3, O5) on batched bundles.
+8. **Override Re-evaluation**: Re-apply override evaluation now that AI-extracted data is available. Evaluate O1, O3, O5 using enriched fields. Re-run priority matrix if level changed.
+9. **Store (upsert)**: Persist bundles. NEW bundles: insert. ACTIVE bundles with new fingerprints: update, reset `last_updated`. ACTIVE bundles with no new fingerprints: no-op (don't reset monitoring window). STALE bundles: (already removed at step 4).
 
-This ordering resolves the pipeline-order conflict (XCS-1): classification happens before supplementary search so we know what needs context, and override re-evaluation happens after AI enrichment so O1/O3/O5 can use AI-extracted data (CLS-4/XCS-2).
+This ordering resolves the pipeline-order conflict (XCS-1): classification happens before supplementary search so we know what needs context, and override re-evaluation happens after AI enrichment so O1/O3/O5 can use AI-extracted data (CLS-4/XCS-2). The two new steps (2: Source Pre-filter, 4: Active-Status Check) implement the incident lifecycle model — same source records are never processed twice, and stale incidents with no updates in 7+ days are skipped entirely.
 
 ---
 
@@ -222,12 +224,14 @@ The Correlation context groups `RawRecord`s from different sources that describe
 | enrichment_failed | bool | Yes | Whether AI enrichment failed mid-batch (default False). When True, AI fields are None but bundle is still stored. |
 | classified_at | datetime \| None | No | Timestamp of classification |
 | classification_date | date \| None | No | The date used for storage partitioning. Set to the earliest incident_date from the bundle's records at classification time. |
+| last_updated | datetime \| None | No | Most recent modification time. Set at bundle creation (correlation time). Reset when new data is added (new DDG articles, new primary records). NOT reset when pipeline processes but finds no new data. |
+| source_fingerprints | list[str] | Yes | Globally unique source record identifiers, format: `{SOURCE_NAME}:{native_id}`. GDACS: `eventid`, WHO: `Id` or `DonId`, GDELT: `url`, DDG-NEWS: `url`. |
 
 #### Incident ID Generation
 
 Format: `YYYYMMDD-CC-TTT`
 
-- **YYYYMMDD**: Earliest date from any record in the bundle. If no date is available, use the current UTC date.
+- **YYYYMMDD**: Earliest **source-provided** date from any record in the bundle. Source date fields: GDACS `fromdate`, WHO `PublicationDate`, GDELT `seendate`, DDG-NEWS `date`. If no source-provided date is available, fall back to `fetched_at` (the pipeline run time). **Using source dates makes IDs stable across pipeline runs** — the same article produces the same ID regardless of when it was fetched.
 - **CC**: ISO 3166-1 alpha-2 country code. If country is unknown, use `"UNX"`. If AI later fills in the country, the incident_id does NOT change — it is stable identity.
 - **TTT**: Disaster type code. Known codes: EQ (Earthquake), FL (Flood), TC (Cyclone), VO (Volcano), TS (Tsunami), DR (Drought), WF (Wildfire). If disaster type is unknown, use `"OTH"`.
 
@@ -301,6 +305,7 @@ Two records are candidates for correlation if ALL of the following pass:
 - Every `RawRecord` from the primary fetch MUST be assigned to exactly one `IncidentBundle`
 - An `IncidentBundle` MUST contain at least one `RawRecord`
 - `incident_id` MUST follow the `YYYYMMDD-CC-TTT` format with "UNX" for unknown country and "OTH" for unknown type
+- `incident_id` is source-stable: uses source-provided dates (GDACS `fromdate`, WHO `PublicationDate`, GDELT `seendate`, DDG-NEWS `date`). Only falls back to `fetched_at` if no source date is available.
 - `incident_id` is stable — once generated, it MUST NOT change even if AI enrichment fills in missing fields
 - Single-source records (no match found) MUST still become bundles with one record
 - Date proximity threshold: ±1 calendar day
@@ -647,12 +652,12 @@ After the Extractor agent fills in missing `country` or `disaster_type` fields:
 
 ### Context
 
-The Storage context persists complete `IncidentBundle`s (all raw records + classification + enrichment) using the adapter pattern with two backends: JSONL (default, append-only, date-partitioned) and SQLite (alternative, same protocol). Both implement the `StorageBackend` protocol. Queries return flattened `Incident` records (not raw bundles), filterable by date range, country group, disaster type, priority, should_report, and source name. Deduplication by `incident_id` prevents duplicate entries across pipeline runs. Storage uses atomic writes to prevent data corruption.
+The Storage context persists complete `IncidentBundle`s (all raw records + classification + enrichment) using the adapter pattern with two backends: JSONL (default, append-only, date-partitioned) and SQLite (alternative, same protocol). Both implement the `StorageBackend` protocol. Queries return flattened `Incident` records (not raw bundles), filterable by date range, country group, disaster type, priority, should_report, and source name. Deduplication by `source_fingerprint` (via `exists_by_source_fingerprint`) prevents duplicate records across pipeline runs. Stale incidents (no updates in 7+ days) are skipped — only active bundles are re-processed. The `upsert` method handles lifecycle transitions: inserts new bundles, updates active bundles with new fingerprints (resetting `last_updated`), and no-ops when no new data is found. Storage uses atomic writes to prevent data corruption.
 
 ### Entities
 
 #### StorageBackend (Protocol)
-- Purpose: Storage contract with three methods: `store`, `query`, `exists`. Implemented by JSONLStore and SQLiteStore.
+- Purpose: Storage contract with six methods: `store`, `query`, `exists`, `upsert`, `get_last_updated`, `exists_by_source_fingerprint`. Implemented by JSONLStore and SQLiteStore.
 
 #### JSONLStore
 - Purpose: Default backend. Append-only, date-partitioned files at `incidents/by-date/YYYY-MM-DD/incidents.jsonl`. Stores complete bundles. Dedup by incident_id. Uses atomic write (temp file + rename).
@@ -679,6 +684,8 @@ The Storage context persists complete `IncidentBundle`s (all raw records + class
 | overrides | list[str] | Yes | Applied overrides (may be empty) |
 | report_date | date | Yes | Report date |
 | source_urls | list[str] | **Optional** | All source URLs. Default: empty list. Collected from raw_fields where available: WHO has `ItemDefaultUrl` (prepend base), GDELT has url, DDG-NEWS has url, GDACS has `url.report`. |
+| last_updated | datetime \| None | No | Most recent modification time of the bundle |
+| source_fingerprints | list[str] | Yes | All source record identifiers in the bundle |
 | summary | str \| None | No | AI summary (if enriched) |
 | rationale | str \| None | No | AI rationale (if enriched) |
 | estimated_affected | int \| None | No | AI-extracted estimate |
@@ -718,14 +725,30 @@ Storage path: `incidents/by-date/YYYY-MM-DD/incidents.jsonl` where `YYYY-MM-DD` 
 ### Integration Points
 
 > **Context Map — Storage as downstream (Conformist):**
-> - **Classification → Storage**: Storage accepts `list[IncidentBundle]` from the pipeline and persists them without influencing the bundle format. Storage conforms to the upstream data model.
+> - **Fetching → Storage** (Source Pre-filter): The pipeline orchestrator checks `exists_by_source_fingerprint(fp)` against Storage before passing records to Correlation. Seen records are discarded.
+> - **Correlation → Storage** (Active-Status Check): Pipeline queries `get_last_updated(incident_id)` to determine whether each bundle is NEW, ACTIVE (≤7 days), or STALE (>7 days).
+> - **Classification → Storage**: Storage accepts `list[IncidentBundle]` from the pipeline and persists them via `upsert()` — insert new, update active with new fingerprints, no-op when unchanged. Storage conforms to the upstream data model.
 > - **Storage → CLI query**: Storage exposes query results as `list[Incident]` (flattened view) to external consumers via the `StorageBackend` protocol.
 
+#### Source Pre-filter -> Storage
+- Purpose: Discard records already seen in previous pipeline runs
+- Trigger: Pipeline orchestrator computes `source_fingerprint` for each fetched `RawRecord`, checks `storage.exists_by_source_fingerprint(fp)`
+- Payload: `{fingerprint: str}` per record
+- Response: `bool` — if True, discard record; if False, pass to correlator
+- Context: Customer-Supplier — Fetching produces records; Storage provides dedup check
+
+#### Active-Status Check -> Storage
+- Purpose: Determine lifecycle status of each bundle
+- Trigger: Pipeline orchestrator calls `storage.get_last_updated(incident_id)` and `storage.get_source_fingerprints(incident_id)` for each bundle
+- Payload: `{incident_id: str}`
+- Response: Existing `last_updated` and `source_fingerprints` if bundle exists; None if new
+- Context: Customer-Supplier — Correlation produces bundles; Storage provides lifecycle data
+
 #### Override Re-evaluation -> Storage
-- Purpose: Persist fully classified and enriched bundles
-- Trigger: Pipeline orchestrator calls `store.store(bundles)`
-- Payload: `list[IncidentBundle]`
-- Response: `{stored_count: int}` — count of new bundles (skips existing IDs)
+- Purpose: Persist fully classified and enriched bundles with upsert semantics
+- Trigger: Pipeline orchestrator calls `store.upsert(bundle)`
+- Payload: `IncidentBundle` with `source_fingerprints` and `last_updated`
+- Response: `{status: str}` — `"inserted"`, `"updated"`, or `"noop"`
 - Context: Conformist — Storage accepts whatever bundle format arrives; no feedback to upstream
 
 #### Storage -> CLI query
@@ -741,11 +764,11 @@ Storage path: `incidents/by-date/YYYY-MM-DD/incidents.jsonl` where `YYYY-MM-DD` 
 
 - **Actor**: Pipeline orchestrator
 - **Trigger**: `store.store(bundles)` called after override re-evaluation
-- **Input**: `list[IncidentBundle]` — complete bundles with all raw records and derived classification
+- **Input**: `list[IncidentBundle]` — complete bundles with all raw records, derived classification, and `source_fingerprints`
 - **Output**: `int` — count of new bundles stored (skips existing IDs)
 - **Errors**: Storage failure → log error, pipeline continues with next bundle
 - **Side Effects**: Writes to JSONL files or SQLite database
-- **Preconditions**: Bundles have valid `incident_id` fields
+- **Preconditions**: Bundles have valid `incident_id` and non-empty `source_fingerprints`
 
 **Atomic write (resolves STO-5):** JSONLStore writes using a temp-file-then-rename strategy:
 1. Write bundle data to a temporary file at `incidents/by-date/YYYY-MM-DD/.tmp_incidents.jsonl`.
@@ -775,11 +798,47 @@ SQLiteStore uses database transactions with COMMIT/ROLLBACK for the same atomici
 - **Side Effects**: Reads from disk
 - **Preconditions**: None
 
+#### StorageBackend: upsert()
+
+- **Actor**: Pipeline orchestrator (step 9 — Store)
+- **Trigger**: `store.upsert(bundle)` called per bundle after override re-evaluation
+- **Input**: `IncidentBundle` — complete bundle with `incident_id`, `source_fingerprints`, `last_updated`
+- **Output**: `str` — one of `"inserted"`, `"updated"`, `"noop"`
+- **Errors**: Storage failure → log error, return `"noop"` (safe default)
+- **Side Effects**: 
+  - NEW bundles (incident_id not in storage): insert new record, set `last_updated` to correlation time
+  - ACTIVE bundles (in storage, new fingerprints found): merge fingerprints, update bundle fields, reset `last_updated`
+  - ACTIVE bundles (in storage, no new fingerprints): no-op, do NOT reset `last_updated`
+- **Preconditions**: Bundle has valid `incident_id` and non-empty `source_fingerprints`
+
+#### StorageBackend: get_last_updated()
+
+- **Actor**: Pipeline orchestrator (step 4 — Active-Status Check)
+- **Trigger**: `store.get_last_updated(incident_id)` called during active-status check
+- **Input**: `{incident_id: str}`
+- **Output**: `datetime | None` — the bundle's `last_updated` timestamp, or None if not found
+- **Errors**: none
+- **Side Effects**: Reads from disk
+- **Preconditions**: None
+
+#### StorageBackend: exists_by_source_fingerprint()
+
+- **Actor**: Pipeline orchestrator (step 2 — Source Pre-filter)
+- **Trigger**: `store.exists_by_source_fingerprint(fp)` called for each fetched `RawRecord`
+- **Input**: `{fingerprint: str}` — format `{SOURCE_NAME}:{native_id}`
+- **Output**: `bool` — whether any stored bundle already contains this source fingerprint
+- **Errors**: none
+- **Side Effects**: Reads from disk
+- **Preconditions**: None
+
 ### Invariants
 
 - Storage MUST preserve complete `IncidentBundle`s including all raw records
 - Query MUST return `Incident` (flattened view), not raw `IncidentBundle`s
-- Dedup by `incident_id` — `store()` MUST skip bundles with existing IDs
+- Dedup by `source_fingerprint` — `exists_by_source_fingerprint(fp)` prevents duplicate source records
+- `upsert()` inserts new bundles, updates active bundles with new fingerprints (resetting `last_updated`), and no-ops when no new fingerprints found
+- `last_updated` is set at bundle creation and reset ONLY when new data is added to the bundle
+- Stale bundles (≥7 days since `last_updated`) are skipped during Active-Status Check
 - JSONL path: `incidents/by-date/YYYY-MM-DD/incidents.jsonl` where the date is `classification_date`
 - JSONL is append-only — records are never modified in place
 - Both backends MUST implement the same `StorageBackend` protocol
