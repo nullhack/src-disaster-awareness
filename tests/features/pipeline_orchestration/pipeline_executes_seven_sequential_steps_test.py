@@ -21,6 +21,7 @@ def test_pipeline_completes_all_seven_steps():
         records=[record],
         country="Philippines",
         disaster_type="Earthquake",
+        should_report=True,
     )
 
     mock_adapter = MagicMock()

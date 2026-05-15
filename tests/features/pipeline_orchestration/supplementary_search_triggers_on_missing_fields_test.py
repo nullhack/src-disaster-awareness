@@ -34,6 +34,7 @@ def test_pipeline_missing_field_triggers_search(field):
             records=[record],
             country=None,
             disaster_type="Earthquake",
+            should_report=True,
         )
     elif field == "disaster_type":
         bundle = IncidentBundle(
@@ -41,6 +42,7 @@ def test_pipeline_missing_field_triggers_search(field):
             records=[record],
             country="Philippines",
             disaster_type=None,
+            should_report=True,
         )
     elif field == "country and type":
         bundle = IncidentBundle(
@@ -48,6 +50,7 @@ def test_pipeline_missing_field_triggers_search(field):
             records=[record],
             country=None,
             disaster_type=None,
+            should_report=True,
         )
     else:  # "none"
         bundle = IncidentBundle(
@@ -55,6 +58,7 @@ def test_pipeline_missing_field_triggers_search(field):
             records=[record],
             country="Philippines",
             disaster_type="Earthquake",
+            should_report=True,
         )
 
     should_trigger = field in ("country", "disaster_type", "country and type")

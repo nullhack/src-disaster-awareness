@@ -154,15 +154,19 @@ class Pipeline:
         if not bundles:
             return bundles
 
+        relevant = [b for b in bundles if b.should_report]
+        if not relevant:
+            return bundles
+
         try:
-            bundles = self._extractor.extract(bundles)
+            relevant = self._extractor.extract(relevant)
         except Exception:
             logger.exception("pipeline_extractor_failed")
-            for b in bundles:
+            for b in relevant:
                 if not b.ai_enriched:
                     b.enrichment_failed = True
 
-        for bundle in bundles:
+        for bundle in relevant:
             try:
                 self._classify_engine.classify(bundle)
             except Exception:
@@ -172,10 +176,10 @@ class Pipeline:
                 )
 
         try:
-            bundles = self._classifier.enrich(bundles)
+            relevant = self._classifier.enrich(relevant)
         except Exception:
             logger.exception("pipeline_classifier_failed")
-            for b in bundles:
+            for b in relevant:
                 if not b.ai_enriched:
                     b.enrichment_failed = True
 
@@ -184,7 +188,10 @@ class Pipeline:
     def _reclassify_overrides(
         self, bundles: list[IncidentBundle],
     ) -> list[IncidentBundle]:
-        return [self._classify_engine.reevaluate_overrides(b) for b in bundles]
+        for b in bundles:
+            if b.should_report:
+                self._classify_engine.reevaluate_overrides(b)
+        return bundles
 
     def _store_bundles(self, bundles: list[IncidentBundle]) -> int:
         if not bundles:
@@ -193,6 +200,8 @@ class Pipeline:
 
     @staticmethod
     def _should_supplementary_search(bundle: IncidentBundle) -> bool:
+        if not bundle.should_report:
+            return False
         return bundle.country is None or bundle.disaster_type is None
 
     @staticmethod

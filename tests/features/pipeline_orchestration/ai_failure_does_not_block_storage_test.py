@@ -21,6 +21,7 @@ def test_pipeline_ai_failure_stores_unenriched():
         records=[record],
         country="Philippines",
         disaster_type="Earthquake",
+        should_report=True,
     )
 
     mock_adapter = MagicMock()
@@ -85,6 +86,8 @@ def test_pipeline_mid_batch_failure_preserves_results():
         )
 
     bundles = [make_bundle(i) for i in range(3)]
+    for b in bundles:
+        b.should_report = True
 
     mock_adapter = MagicMock()
     mock_adapter.source_name = "GDACS"

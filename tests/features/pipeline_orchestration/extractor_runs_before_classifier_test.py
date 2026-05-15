@@ -18,8 +18,9 @@ def test_pipeline_extraction_precedes_classification():
     bundle = IncidentBundle(
         incident_id="2026-05-15-PH-EQ",
         records=[record],
-        country=None,
-        disaster_type=None,
+        country="Philippines",
+        disaster_type="Earthquake",
+        should_report=True,
     )
 
     mock_adapter = MagicMock()
