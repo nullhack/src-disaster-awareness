@@ -7,22 +7,31 @@ Feature: Pipeline Orchestration
   post-extraction re-classification, and ensures failure isolation between steps. Runs
   as the dsr-pipeline CLI command. Single-process, single-threaded, idempotent.
 
-  # Business rules:
-  # - AI failure does not block storage — the bundle is stored with ai_enriched=False
-  #   when AI times out or fails completely
-  # - Extractor runs before Classifier with post-extraction re-classification between
-  #   them: Fetch → Correlate → Classify → Search → Extract → Re-classify → Enrich →
-  #   Re-evaluate → Store
-  # - Correlation result triggers supplementary search when country or type is missing
-  #   after initial classification — pipeline step 4 checks bundle fields
-  # - Full pipeline flow is: (1) Fetch all 3 primary sources, (2) Correlate records
-  #   into bundles, (3) Classify deterministically, (4) Supplementary DDG News search
-  #   for bundles needing context, (5) AI enrich in batches, (6) Override re-evaluation,
-  #   (7) Store complete bundles
-  # - Full batch with AI for 50 incidents completes in approximately 90 seconds (~6 AI
-  #   calls × 15s rate limit), well within the 5-minute target
-  # - Supplementary search query generation: "{title} {country} {disaster_type} latest
-  #   news". Omit unknown country. Substitute "disaster emergency" for unknown type
+  Rule: AI failure does not block storage
+    When AI enrichment times out or fails completely, the bundle is stored with
+    ai_enriched=False and all AI-extracted fields set to None. The pipeline
+    continues with the next bundle or step.
+
+  Rule: Extractor runs before Classifier
+    Within the AI Enrich step, the Extractor agent processes bundles with missing
+    fields before the Classifier agent generates summaries for reportable bundles.
+    Post-extraction re-classification runs between the two agents.
+
+  Rule: Supplementary search triggers on missing fields
+    After initial classification, bundles where country is None or disaster_type
+    is None trigger a supplementary DDG News search. Pipeline step 4 evaluates
+    the trigger condition using bundle fields.
+
+  Rule: Pipeline executes seven sequential steps
+    The pipeline orchestrates seven sequential steps: (1) Fetch all 3 primary
+    sources, (2) Correlate records into bundles, (3) Classify deterministically,
+    (4) Supplementary DDG News search for bundles needing context, (5) AI enrich
+    in batches, (6) Override re-evaluation, (7) Store complete bundles.
+
+  Rule: Search queries use templated fields
+    Supplementary search queries use the template "{title} {country} {disaster_type}
+    latest news". Unknown country is omitted from the query. Unknown disaster type
+    is substituted with "disaster emergency".
 
   # Constraints:
   # - Reproducibility: pipeline is idempotent — duplicate runs produce no duplicate
