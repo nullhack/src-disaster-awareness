@@ -8,17 +8,15 @@ Feature: AI Extractor
   with the newly populated fields (country group, level derivation, priority matrix). Lives
   in ai/extractor.py.
 
-  # Business rules:
-  # - Batched processing at approximately 10 bundles per AI call — 23 bundles split into
-  #   3 calls (10+10+3)
-  # - AI operates on IncidentBundle receiving all raw records for full context — including
-  #   supplementary DDG News results
-  # - Mid-batch failure keeps already-processed bundles enriched and marks remaining as
-  #   enrichment_failed=True and ai_enriched=False
-  # - Extractor runs before Classifier — missing fields extracted first, then post-
-  #   extraction re-classification runs, then summaries generated for reportable bundles
-  # - Post-extraction re-classification may upgrade level, change priority, or add O4
-  #   without regenerating incident_id
+  Rule: Extractor batches ten bundles per call
+
+  Rule: Extractor uses all raw records for context
+
+  Rule: Mid batch failure saves processed bundles
+
+  Rule: Extractor runs before Classifier agent
+
+  Rule: Re-classification preserves incident ID
 
   # Constraints:
   # - Reliability: AI extraction failure must not block storage — bundles stored with
