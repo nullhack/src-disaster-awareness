@@ -59,9 +59,15 @@ class ExtractorAgent:
         try:
             self._do_extract_batch(batch)
         except Exception:
-            for bundle in batch:
-                if not bundle.ai_enriched:
-                    bundle.enrichment_failed = True
+            self._mark_unenriched_failed(batch)
+
+    @staticmethod
+    def _mark_unenriched_failed(
+        bundles: list[IncidentBundle],
+    ) -> None:
+        for bundle in bundles:
+            if not bundle.ai_enriched:
+                bundle.enrichment_failed = True
 
     def _do_extract_batch(self, batch: list[IncidentBundle]) -> None:
         """Make the AI call for a batch and apply results to each bundle.
