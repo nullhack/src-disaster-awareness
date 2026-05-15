@@ -64,7 +64,7 @@ Feature: AI Extractor
       When the pipeline continues
       Then the Classifier processes the reportable bundles after Extractor failure
 
-  Rule: Re-classification preserves incident ID
+  Rule: Reclassification preserves incident ID
 
     Example: AI Extractor keeps incident ID unchanged
       Given a bundle with incident_id "20260514-UNX-OTH"

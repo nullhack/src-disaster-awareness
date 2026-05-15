@@ -1,0 +1,3 @@
+def test_ai_extractor_uses_all_multi_source_records():
+    ...
+

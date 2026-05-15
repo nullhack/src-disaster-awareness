@@ -1,0 +1,9 @@
+def test_ai_extractor_executes_before_classifier():
+    ...
+
+def test_ai_extractor_empty_classifier_still_runs():
+    ...
+
+def test_ai_extractor_failure_classifier_still_runs():
+    ...
+
