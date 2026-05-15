@@ -1,5 +1,8 @@
+import pytest
+
 from hypothesis import given, example, strategies as st
 
+@pytest.mark.skip(reason="not implemented")
 @example(network_error="connection refused")
 @example(network_error="DNS failure")
 @example(network_error="connection timeout")

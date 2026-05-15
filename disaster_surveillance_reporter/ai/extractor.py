@@ -105,13 +105,16 @@ class ExtractorAgent:
 
         for idx, bundle in enumerate(batch):
             parts.append(f"\nIncident {idx + 1} (ID: {bundle.incident_id}):")
-            for record in bundle.records:
-                parts.append(
-                    f"  Source {record.source_name}: "
-                    f"{json.dumps(record.raw_fields)}"
-                )
+            parts.extend(self._format_records(bundle.records))
 
         return "\n".join(parts)
+
+    @staticmethod
+    def _format_records(records: list) -> list[str]:
+        return [
+            f"  Source {r.source_name}: {json.dumps(r.raw_fields)}"
+            for r in records
+        ]
 
     def _apply_enrichment(
         self, bundle: IncidentBundle, data: dict[str, Any]
