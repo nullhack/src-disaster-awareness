@@ -135,7 +135,7 @@ class ClassifyEngine:
     def _derive_level(records: list[RawRecord], country_group: str) -> int:
         """Derive incident level from source records.
 
-        Source reliability order: GDACS > WHO > GDELT.
+        Source reliability order: GDACS > WHO > EONET > GDELT.
         First source that provides level data wins.
         Defaults to level 2 if no source provides level data.
         """
@@ -150,6 +150,13 @@ class ClassifyEngine:
         for record in records:
             if record.source_name == "WHO":
                 level = ClassifyEngine._who_level(record)
+                if level is not None:
+                    return level
+
+        # EONET
+        for record in records:
+            if record.source_name == "EONET" and "categories" in record.raw_fields:
+                level = ClassifyEngine._eonet_level(record)
                 if level is not None:
                     return level
 
@@ -208,6 +215,16 @@ class ClassifyEngine:
         if "minor" in title:
             return 1
         return None  # signal "no severity keyword" → default 2 later
+
+    @staticmethod
+    def _eonet_level(record: RawRecord) -> int | None:
+        categories = record.raw_fields.get("categories", [])
+        if not categories:
+            return None
+        titles = {c.get("title", "") for c in categories if isinstance(c, dict)}
+        if "Volcanoes" in titles:
+            return 3
+        return None  # default 2 later
 
     @staticmethod
     def _check_o2(records: list[RawRecord]) -> bool:

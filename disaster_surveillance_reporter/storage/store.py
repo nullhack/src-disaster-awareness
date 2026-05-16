@@ -99,7 +99,7 @@ class JSONLStore:
         for bundle in bundles:
             if self.exists(bundle.incident_id):
                 continue
-            cls_date = bundle.classification_date or dt.now(tz=dt.timezone.utc).date()
+            cls_date = bundle.classification_date or dt.datetime.now(tz=dt.timezone.utc).date()
             partition_dir = (
                 self.base_path / "incidents" / "by-date" / cls_date.isoformat()
             )
@@ -325,7 +325,7 @@ class SQLiteStore:
                 continue
             bundle_json = json.dumps(bundle, default=str)
             cls_date = (
-                bundle.classification_date or dt.now(tz=dt.timezone.utc).date()
+                bundle.classification_date or dt.datetime.now(tz=dt.timezone.utc).date()
             ).isoformat()
             self._conn.execute(
                 "INSERT INTO incidents (incident_id, bundle_json, classification_date)"
@@ -503,7 +503,7 @@ def _bundle_to_incident(bundle: IncidentBundle) -> Incident:
         priority=bundle.priority or "LOW",
         should_report=bundle.should_report or False,
         overrides=bundle.overrides,
-        report_date=bundle.classification_date or dt.now(tz=dt.timezone.utc).date(),
+        report_date=bundle.classification_date or dt.datetime.now(tz=dt.timezone.utc).date(),
         source_urls=_derive_source_urls(bundle.records),
         summary=bundle.summary,
         rationale=bundle.rationale,

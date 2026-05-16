@@ -103,9 +103,13 @@ class Correlator:
                 if ci is not None and cj is not None:
                     if ci != cj:
                         continue
-                # Both unknown country: shared missing country = match.
+                # Both unknown country: require title similarity.
                 elif ci is None and cj is None:
-                    pass
+                    if ti and tj:
+                        if difflib.SequenceMatcher(None, ti, tj).ratio() < 0.6:
+                            continue
+                    else:
+                        continue
                 # One has country, other unknown: require title similarity.
                 else:
                     if ti and tj:
