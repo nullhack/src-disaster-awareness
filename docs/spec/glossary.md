@@ -12,7 +12,7 @@
 ## Disaster Surveillance Reporter
 
 **Genus:** A backend data pipeline
-**Differentia:** that fetches disaster incident data from three free, zero-auth public APIs (GDACS, WHO DON, GDELT), correlates records about the same incident across sources, classifies deterministically with pure Python rules, enriches with pluggable AIProvider (Ollama/Gemini/OpenAI + DSPy), and stores complete bundles locally in JSONL or SQLite.
+**Differentia:** that fetches disaster incident data from four free, zero-auth public APIs (GDACS, WHO DON, GDELT, EONET), correlates records about the same incident across sources, classifies deterministically with pure Python rules, enriches with pluggable AIProvider (Ollama/Gemini/OpenAI + DSPy), and stores complete bundles locally in JSONL or SQLite.
 
 **Source:** 2026-05-14
 
@@ -57,7 +57,7 @@
 ## Incident ID
 
 **Genus:** A deterministic, source-stable identifier for an incident bundle
-**Differentia:** formatted as `YYYYMMDD-CC-TTT` where YYYYMMDD is the earliest source-provided date (GDACS `fromdate`, WHO `PublicationDate`, GDELT `seendate`, DDG-NEWS `date`; falls back to `fetched_at` only if no source date exists), CC is the ISO 3166-1 alpha-2 country code, and TTT is the 3-character disaster type code (e.g., EQ=Earthquake, FL=Flood, TC=Cyclone). Using source dates makes IDs stable across pipeline runs — the same source article produces the same ID regardless of fetch time.
+**Differentia:** formatted as `YYYYMMDD-CC-TTT` where YYYYMMDD is the earliest source-provided date (GDACS `fromdate`, WHO `PublicationDate`, GDELT `seendate`, EONET `geometry[0].date`, DDG-NEWS `date`; falls back to `fetched_at` only if no source date exists), CC is the ISO 3166-1 alpha-2 country code, and TTT is the 3-character disaster type code (e.g., EQ=Earthquake, FL=Flood, TC=Cyclone). Using source dates makes IDs stable across pipeline runs — the same source article produces the same ID regardless of fetch time.
 
 **Source:** 2026-05-14 (updated 2026-05-15)
 
@@ -66,7 +66,7 @@
 ## SourceAdapter
 
 **Genus:** A Python Protocol for primary API data fetchers
-**Differentia:** defining `source_name: str` and `fetch(client: httpx.Client) -> list[RawRecord]`, with the contract that it never raises exceptions (returns empty list on failure) and each `RawRecord.raw_fields` contains the complete, unmodified API response. Implemented by GDACS, WHO DON, and GDELT adapters.
+**Differentia:** defining `source_name: str` and `fetch(client: httpx.Client) -> list[RawRecord]`, with the contract that it never raises exceptions (returns empty list on failure) and each `RawRecord.raw_fields` contains the complete, unmodified API response. Implemented by GDACS, WHO DON, GDELT, and EONET adapters.
 
 **Source:** 2026-05-14
 
@@ -339,6 +339,15 @@
 **Differentia:** the Global Database of Events, Language, and Tone providing global news articles via a DOC API, with ~20% deterministic field availability. Country and disaster type must be extracted. ArtList mode has no tone field — level derivation uses title keyword scan instead of tone scores.
 
 **Source:** 2026-05-14
+
+---
+
+## EONET
+
+**Genus:** A free, zero-auth external data source
+**Differentia:** the NASA Earth Observatory Natural Event Tracker v3 providing curated near-real-time natural event metadata via a REST API. Returns structured JSON with 13 event categories (earthquakes, floods, volcanoes, wildfires, severe storms, droughts, landslides, and more). Each event includes coordinates, date, categories, source provenance, and optional magnitude. ~60% deterministic field availability: disaster type from categories, date from geometry, title verbatim. Country and impact estimates must be extracted via AI. Events sourced from GDACS (source.id=="GDACS") are duplicates — they are filtered at the adapter level.
+
+**Source:** 2026-05-16
 
 ---
 

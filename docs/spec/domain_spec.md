@@ -33,7 +33,7 @@ This ordering resolves the pipeline-order conflict (XCS-1): classification happe
 
 ### Context
 
-The Fetching context wraps external disaster data sources behind uniform protocols. Three primary source adapters (GDACS, WHO DON, GDELT) implement `SourceAdapter` to fetch incidents from free, zero-auth public APIs. One supplementary source adapter (DDG News) implements `NewsSearcher` to find additional articles when primary sources lack context. Each adapter receives an `httpx.Client`, makes HTTP requests to its source, and returns `list[RawRecord]`. Adapters never raise — they return empty lists on failure. Raw responses are preserved verbatim in `RawRecord.raw_fields` because field availability varies across sources and cannot be assumed until real data is observed (the uncertainty principle).
+The Fetching context wraps external disaster data sources behind uniform protocols. Four primary source adapters (GDACS, WHO DON, GDELT, EONET) implement `SourceAdapter` to fetch incidents from free, zero-auth public APIs. One supplementary source adapter (DDG News) implements `NewsSearcher` to find additional articles when primary sources lack context. Each adapter receives an `httpx.Client`, makes HTTP requests to its source, and returns `list[RawRecord]`. Adapters never raise — they return empty lists on failure. Raw responses are preserved verbatim in `RawRecord.raw_fields` because field availability varies across sources and cannot be assumed until real data is observed (the uncertainty principle).
 
 ### Entities
 
@@ -55,7 +55,7 @@ The Fetching context wraps external disaster data sources behind uniform protoco
 
 | Field | Type | Required | Constraints |
 |-------|------|----------|-------------|
-| source_name | str | Yes | One of: "GDACS", "WHO", "GDELT", "DDG-NEWS" |
+| source_name | str | Yes | One of: "GDACS", "WHO", "GDELT", "EONET", "DDG-NEWS" |
 | fetched_at | datetime | Yes | UTC timestamp of when the record was fetched |
 | raw_fields | dict | Yes | Complete, untouched source-specific API response. No normalization. |
 
@@ -133,6 +133,21 @@ The Fetching context wraps external disaster data sources behind uniform protoco
 | source | str | Publisher name, e.g. "ABC7 KABC" |
 | image | str | Image URL |
 
+#### EONET raw_fields (verified 2026-05-16)
+
+| Field | Type | Notes |
+|-------|------|-------|
+| id | str | EONET unique event ID, e.g. "EONET_20104" |
+| title | str | Human-readable title, e.g. "Flood in Bangladesh 1103878" |
+| description | str or null | Brief description, often null |
+| link | str | EONET API detail URL for this event |
+| closed | str or null | null if active; ISO 8601 date if ended |
+| categories | list[dict] | `[{id: "...", title: "..."}]` — one or more category objects |
+| sources | list[dict] | `[{id: "GDACS"\|"IRWIN"\|"SIVolcano"\|"EO", url: "..."}]` |
+| geometry | list[dict] | `[{date, type: "Point", coordinates: [lon, lat], magnitudeValue?, magnitudeUnit?}]` |
+
+> **Filtering rules:** Events where `sources` contain `id == "GDACS"` are duplicates of GDACS adapter data — skip them. Events with "Prescribed Fire" or "RX" in the title are controlled burns — skip them.
+
 ### Integration Points
 
 > **Context Map — Fetching as upstream:**
@@ -142,7 +157,7 @@ The Fetching context wraps external disaster data sources behind uniform protoco
 #### Fetching -> Correlation
 - Purpose: Pass all raw records from primary sources to the correlator
 - Trigger: Pipeline orchestrator collects all adapter results
-- Payload: `list[RawRecord]` (combined from GDACS, WHO, GDELT)
+- Payload: `list[RawRecord]` (combined from GDACS, WHO, GDELT, EONET)
 - Response: `list[IncidentBundle]` (grouped by incident)
 - Context: Customer-Supplier — Fetching produces records in a format designed for Correlation's grouping logic
 
@@ -183,7 +198,7 @@ The Fetching context wraps external disaster data sources behind uniform protoco
 
 - `fetch()` MUST NEVER raise an exception — always returns `list[RawRecord]` (possibly empty)
 - Every `RawRecord.raw_fields` MUST contain the complete, untouched API response — no normalization, no field removal
-- `source_name` in each record MUST exactly match the adapter's source: "GDACS", "WHO", "GDELT", or "DDG-NEWS"
+- `source_name` in each record MUST exactly match the adapter's source: "GDACS", "WHO", "GDELT", "EONET", or "DDG-NEWS"
 - No BaseAdapter — each adapter is a standalone class implementing the `SourceAdapter` protocol via structural typing
 
 ---
@@ -225,13 +240,13 @@ The Correlation context groups `RawRecord`s from different sources that describe
 | classified_at | datetime \| None | No | Timestamp of classification |
 | classification_date | date \| None | No | The date used for storage partitioning. Set to the earliest incident_date from the bundle's records at classification time. |
 | last_updated | datetime \| None | No | Most recent modification time. Set at bundle creation (correlation time). Reset when new data is added (new DDG articles, new primary records). NOT reset when pipeline processes but finds no new data. |
-| source_fingerprints | list[str] | Yes | Globally unique source record identifiers, format: `{SOURCE_NAME}:{native_id}`. GDACS: `eventid`, WHO: `Id` or `DonId`, GDELT: `url`, DDG-NEWS: `url`. |
+| source_fingerprints | list[str] | Yes | Globally unique source record identifiers, format: `{SOURCE_NAME}:{native_id}`. GDACS: `eventid`, WHO: `Id` or `DonId`, GDELT: `url`, EONET: `id`, DDG-NEWS: `url`. |
 
 #### Incident ID Generation
 
 Format: `YYYYMMDD-CC-TTT`
 
-- **YYYYMMDD**: Earliest **source-provided** date from any record in the bundle. Source date fields: GDACS `fromdate`, WHO `PublicationDate`, GDELT `seendate`, DDG-NEWS `date`. If no source-provided date is available, fall back to `fetched_at` (the pipeline run time). **Using source dates makes IDs stable across pipeline runs** — the same article produces the same ID regardless of when it was fetched.
+- **YYYYMMDD**: Earliest **source-provided** date from any record in the bundle. Source date fields: GDACS `fromdate`, WHO `PublicationDate`, GDELT `seendate`, EONET `geometry[0].date`, DDG-NEWS `date`. If no source-provided date is available, fall back to `fetched_at` (the pipeline run time). **Using source dates makes IDs stable across pipeline runs** — the same article produces the same ID regardless of when it was fetched.
 - **CC**: ISO 3166-1 alpha-2 country code. If country is unknown, use `"UNX"`. If AI later fills in the country, the incident_id does NOT change — it is stable identity.
 - **TTT**: Disaster type code. Known codes: EQ (Earthquake), FL (Flood), TC (Cyclone), VO (Volcano), TS (Tsunami), DR (Drought), WF (Wildfire). If disaster type is unknown, use `"OTH"`.
 
@@ -305,7 +320,7 @@ Two records are candidates for correlation if ALL of the following pass:
 - Every `RawRecord` from the primary fetch MUST be assigned to exactly one `IncidentBundle`
 - An `IncidentBundle` MUST contain at least one `RawRecord`
 - `incident_id` MUST follow the `YYYYMMDD-CC-TTT` format with "UNX" for unknown country and "OTH" for unknown type
-- `incident_id` is source-stable: uses source-provided dates (GDACS `fromdate`, WHO `PublicationDate`, GDELT `seendate`, DDG-NEWS `date`). Only falls back to `fetched_at` if no source date is available.
+- `incident_id` is source-stable: uses source-provided dates (GDACS `fromdate`, WHO `PublicationDate`, GDELT `seendate`, EONET `geometry[0].date`, DDG-NEWS `date`). Only falls back to `fetched_at` if no source date is available.
 - `incident_id` is stable — once generated, it MUST NOT change even if AI enrichment fills in missing fields
 - Single-source records (no match found) MUST still become bundles with one record
 - Date proximity threshold: ±1 calendar day
@@ -353,7 +368,7 @@ Level 1  MED/✓     LOW/✗      LOW/✗
 
 #### Level Derivation (source-specific)
 
-Uses **most-reliable-source-wins** (resolves CLS-6/Rule 19): when multiple sources in a bundle provide level-relevant data, use the level from the highest-reliability source that derived a level. Source reliability order: GDACS > WHO > GDELT > DDG-NEWS. If only one source derived a level, use that.
+Uses **most-reliable-source-wins** (resolves CLS-6/Rule 19): when multiple sources in a bundle provide level-relevant data, use the level from the highest-reliability source that derived a level. Source reliability order: GDACS > WHO > GDELT > EONET > DDG-NEWS. If only one source derived a level, use that.
 
 | Source | Rule |
 |--------|------|

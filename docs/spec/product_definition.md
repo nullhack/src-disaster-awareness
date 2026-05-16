@@ -56,25 +56,26 @@ The legacy codebase was unmaintainable. This clean rewrite automates disaster in
 8. [DONE] Run capture fixtures against real APIs
 9. [DONE] `adapters/gdacs.py` + tests (GeoJSON REST → `list[RawRecord]`)
 10. [DONE] `adapters/who.py` + tests (WHO DON REST → `list[RawRecord]`)
-11. [DONE] `adapters/gdelt.py` + tests (GDELT DOC ArtList API → `list[RawRecord]`)
-12. [DONE] `adapters/news.py` + tests (DDG News supplementary search via ddgs → `list[RawRecord]`)
+11. [DONE] `adapters/gdelt.py` + tests (GDELT DOC ArtList API → `list[RawRecord]`; gracefully returns [] when unreachable)
+12. [ ] `adapters/eonet.py` + tests (NASA EONET v3 REST API → `list[RawRecord]`; zero-auth, 13 categories, global event tracking)
+13. [DONE] `adapters/news.py` + tests (DDG News supplementary search via ddgs → `list[RawRecord]`)
 
 ### Phase 3 — AI (from day 1)
 
-13. [DONE] `ai/provider.py` — `AIProvider` protocol + pluggable backends (OllamaProvider, GeminiProvider, OpenAIProvider, OpencodeProvider)
-14. [DONE] `ai/extractor.py` — batched extraction agent with DSPy typed Signature subclasses
-15. [DONE] `ai/classifier.py` — batched classification agent with DSPy typed Signature subclasses
-16. [DONE] Integration tests (fixtures + mocked AI responses)
+14. [DONE] `ai/provider.py` — `AIProvider` protocol + pluggable backends
+15. [DONE] `ai/extractor.py` — batched extraction agent
+16. [DONE] `ai/classifier.py` — batched classification agent
+17. [DONE] Integration tests (fixtures + mocked AI responses)
 
 ### Phase 4 — Pipeline
 
-17. [DONE] `pipeline.py` — 7-step orchestration: Fetch → Correlate → Initial Classify → Supplementary Search → AI Enrich → Override Re-evaluation → Store
-18. [DONE] End-to-end test
+18. [DONE] `pipeline.py` — 9-step orchestration
+19. [DONE] End-to-end test
 
-### Phase 5 — Incident Lifecycle (source-stable IDs + dedup + active monitoring)
+### Phase 5 — Incident Lifecycle
 
-19. [ ] `incident_lifecycle` Feature A — source-stable incident IDs (use source-provided dates, not `fetched_at`), `source_fingerprints` on `IncidentBundle` (format: `{SOURCE_NAME}:{native_id}`), `StorageBackend.upsert/get_last_updated/exists_by_source_fingerprint`
-20. [ ] `incident_lifecycle` Feature B — lifecycle gating: 9-step pipeline with Source Pre-filter (step 2) and Active-Status Check (step 4), DDG search gating (`should_report AND (active OR missing_fields)`), stale skip (>7 days since `last_updated`)
+20. [DONE] Feature A — source-stable IDs, source_fingerprints, upsert
+21. [DONE] Feature B — lifecycle gating, pre-filter, active-check, DDG gate, stale skip
 
 ## Deployment
 
