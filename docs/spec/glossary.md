@@ -12,7 +12,7 @@
 ## Disaster Surveillance Reporter
 
 **Genus:** A backend data pipeline
-**Differentia:** that fetches disaster incident data from four free, zero-auth public APIs (GDACS, WHO DON, GDELT, EONET), correlates records about the same incident across sources, classifies deterministically with pure Python rules, enriches with pluggable AIProvider (Ollama/Gemini/OpenAI + DSPy), and stores complete bundles locally in JSONL or SQLite.
+**Differentia:** that fetches disaster incident data from free, zero-auth public APIs (GDACS, WHO DON, GDELT, EONET), correlates records about the same incident across sources, classifies deterministically with pure Python rules, enriches with pluggable AIProvider (Ollama/Gemini/OpenAI/Opencode/DuckAI + DSPy), and stores complete bundles locally in JSONL or SQLite.
 
 **Source:** 2026-05-14
 
@@ -111,18 +111,19 @@
 ## AIProvider
 
 **Genus:** A Python Protocol for abstract AI chat interfaces
-**Differentia:** defining `chat(prompt, *, model) -> str` that raises on unrecoverable failure (auth, network) but auto-retries on rate limits (HTTP 429). Implemented by pluggable backends: OllamaProvider (local, free), GeminiProvider (Google, free tier), OpenAIProvider (paid), or OpencodeProvider (local, free — uses opencode serve HTTP API). The pipeline also supports running with AI disabled entirely.
+**Differentia:** defining `chat(prompt, *, model) -> str` that raises on unrecoverable failure (auth, network) but auto-retries on rate limits (HTTP 429). Implemented by pluggable backends: OllamaProvider (local, free), GeminiProvider (Google, free tier), OpenAIProvider (paid), OpencodeProvider (local, free — uses opencode serve HTTP API), or DuckAIProvider (free — uses DuckDuckGo AI Chat via p2d-duck). The pipeline also supports running with AI disabled entirely.
 
 **Source:** 2026-05-14
 
 ---
 
-## DuckAIProvider (Retired)
+## DuckAIProvider
 
-**Genus:** ~~A concrete implementation of the AIProvider protocol~~
-**Differentia:** formerly calling DuckDuckGo's free `duckchat/v1` API via direct HTTP with VQD token + SSE streaming. **Retired** — the VQD token protocol was replaced by a JavaScript proof-of-work challenge, making it unusable. Replaced by pluggable AIProvider backends: OllamaProvider, GeminiProvider, OpenAIProvider, and OpencodeProvider. The VQD token and SSE protocol are no longer relevant.
+**Genus:** A concrete implementation of the AIProvider protocol
 
-**Source:** 2026-05-14 (deprecated)
+**Differentia:** using DuckDuckGo's free AI Chat (`duck.ai`) via the `p2d-duck` Python package, which embeds a mini-racer V8 JavaScript engine to solve the `x-vqd-hash-1` proof-of-work challenge that the `duckchat/v1` API requires. Zero-auth — no API key, no account, no registration. Models: GPT-4o mini (default), GPT-5 mini, Claude Haiku 4.5, Llama 4 Scout, Mistral Small, GPT-OSS 120B. Auto-retries on challenge failures with exponential backoff + jitter. Rate limit: ~1 request per 15 seconds. The model parameter is passed through to DuckChat.ask() but defaults to the DuckChat default model when unrecognized.
+
+**Source:** 2026-05-16
 
 ---
 

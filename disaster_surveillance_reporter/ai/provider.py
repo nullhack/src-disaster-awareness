@@ -6,8 +6,6 @@ import logging
 from typing import Protocol
 
 import httpx
-
-
 # ── Exceptions ─────────────────────────────────────────────────────────
 
 class AIProviderError(Exception):
@@ -341,6 +339,43 @@ class OpencodeProvider:
                 client.close()
 
 
+# ── DuckAIProvider (duck.ai via p2d-duck, free) ──────────────────────────
+
+class DuckAIProvider:
+    """Calls DuckDuckGo AI Chat via ``p2d-duck``.
+
+    Zero-auth: no API key, no account, no registration.
+    Uses DuckChat which auto-solves the x-vqd-hash-1 JS challenge.
+    Rate limit: ~1 request per 15 seconds (enforced by duck.ai).
+
+    Requires: ``pip install p2d-duck``.
+    """
+
+    def __init__(
+        self,
+        _api_key: str | None = None,
+        _base_url: str | None = None,
+        _client: object = None,
+    ) -> None:
+        del _api_key, _base_url, _client  # unused — DuckChat manages its own HTTP
+        try:
+            from duck_ai import DuckChat  # noqa: F811
+        except ImportError as exc:
+            raise ImportError(
+                "DuckAIProvider requires p2d-duck: pip install p2d-duck"
+            ) from exc
+        self._DuckChat = DuckChat
+
+    def chat(self, prompt: str, *, model: str) -> str:
+        try:
+            with self._DuckChat() as duck:
+                return duck.ask(prompt)
+        except ConnectionError as exc:
+            raise NetworkError(str(exc)) from exc
+        except TimeoutError as exc:
+            raise NetworkError(str(exc)) from exc
+
+
 # ── Factory ──────────────────────────────────────────────────────────────
 
 _PROVIDER_REGISTRY: dict[str, type] = {
@@ -348,6 +383,7 @@ _PROVIDER_REGISTRY: dict[str, type] = {
     "gemini": GeminiProvider,
     "openai": OpenAIProvider,
     "opencode": OpencodeProvider,
+    "duckai": DuckAIProvider,
 }
 
 

@@ -8,8 +8,8 @@
 ## What Disaster Surveillance Reporter IS
 
 - A deterministic classification engine that assigns incident levels (1–4), priorities (HIGH/MED/LOW), and country groups (A/B/C) using fixed Python rules — no AI for classification, ever. Source selection (GDACS, WHO, GDELT, EONET) is CLI-driven via the `dsr-pipeline` entry point.
-- A multi-source correlation pipeline that groups information about the same real-world incident from different APIs (GDACS, WHO DON, GDELT) into unified bundles, supplementing with DuckDuckGo News search when context is sparse.
-- An AI-augmented extraction and enrichment system for unstructured text (WHO, GDELT, DDG News), using a pluggable AIProvider (Ollama, Gemini, OpenAI, or OpencodeProvider) via DSPy for structured output, operating on batched `IncidentBundle`s.
+- A multi-source correlation pipeline that groups information about the same real-world incident from different APIs (GDACS, WHO DON, EONET) into unified bundles, supplementing with DuckDuckGo News search when context is sparse.
+- An AI-augmented extraction and enrichment system for unstructured text (WHO, GDELT, DDG News), using a pluggable AIProvider (Ollama, Gemini, OpenAI, OpencodeProvider, or DuckAI via p2d-duck) via DSPy for structured output, operating on batched `IncidentBundle`s.
 
 ## What Disaster Surveillance Reporter IS NOT
 
@@ -62,7 +62,7 @@ The legacy codebase was unmaintainable. This clean rewrite automates disaster in
 
 ### Phase 3 — AI (from day 1)
 
-14. [DONE] `ai/provider.py` — `AIProvider` protocol + pluggable backends
+14. [DONE] `ai/provider.py` — `AIProvider` protocol + pluggable backends (Ollama, Gemini, OpenAI, Opencode, DuckAI)
 15. [DONE] `ai/extractor.py` — batched extraction agent
 16. [DONE] `ai/classifier.py` — batched classification agent
 17. [DONE] Integration tests (fixtures + mocked AI responses)
@@ -93,7 +93,7 @@ DSR is a **CLI tool** executed as a scheduled batch process. There is no daemon,
 
 | Variable | Purpose | Default |
 |----------|---------|---------|
-| `DSR_AI_PROVIDER` | AI backend: `ollama`, `gemini`, `openai`, `opencode`, or `none` | `none` |
+| `DSR_AI_PROVIDER` | AI backend: `ollama`, `gemini`, `openai`, `opencode`, `duckai`, or `none` | `duckai` |
 | `DSR_AI_MODEL` | Model name for selected provider | Provider-specific |
 | `DSR_AI_API_KEY` | API key for Gemini/OpenAI (not needed for Ollama/opencode/none) | — |
 | `DSR_AI_BASE_URL` | Override base URL for AI provider (e.g., custom Ollama host) | Provider-specific |
@@ -154,7 +154,7 @@ AI enrichment is the only step with variable latency (AI calls). All other steps
 
 ### Key Design Principles
 
-1. **Minimal runtime dependencies** — 4 packages (httpx, dspy, ddgs, structlog) plus stdlib
+1. **Minimal runtime dependencies** — 5 packages (httpx, dspy, ddgs, structlog, p2d-duck) plus stdlib
 2. **No web framework** — CLI tool, not a server
 3. **No async** — single-process, single-threaded, synchronous execution
 4. **No ORM** — direct JSONL/SQLite via adapter pattern
@@ -172,6 +172,7 @@ AI enrichment is the only step with variable latency (AI calls). All other steps
 | ddgs | >= 9.14.2 | DuckDuckGo News search via `DDGS.news()`. Supplementary context when primary sources lack country/type data. | — |
 | pycountry | >= 24 | ISO 3166-1 alpha-2 country code lookups. Used by correlation for country normalization (name → code) and classification for country group assignment. | — |
 | structlog | * | Structured JSON logging. Step-level timing, source counts, classification distribution to stderr. | — |
+| p2d-duck | >= 1.2.0 | Free DuckDuckGo AI Chat client. Zero-auth, no API key. Solves JS challenge via embedded mini-racer V8 engine. Default AI backend for DSR. | — |
 
 ### Development
 
