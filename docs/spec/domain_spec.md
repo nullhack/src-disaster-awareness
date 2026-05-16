@@ -15,7 +15,7 @@ The DSR pipeline is a nine-step sequential flow executed by `pipeline.py`:
 Fetch → Source Pre-filter → Correlate → Active-Status Check → Initial Classify → Supplementary Search → AI Enrich → Override Re-evaluation → Store
 ```
 
-1. **Fetch**: Call all three primary adapters (GDACS, WHO, GDELT). Collect `list[RawRecord]`.
+1. **Fetch**: Call all four primary adapters (GDACS, WHO, GDELT, EONET). Collect `list[RawRecord]`.
 2. **Source Pre-filter**: For each `RawRecord`, compute `source_fingerprint` (format: `{SOURCE_NAME}:{native_id}`). If `storage.exists_by_source_fingerprint(fp)` → discard. Otherwise → pass to correlator.
 3. **Correlate**: Group records about the same incident into `list[IncidentBundle]`.
 4. **Active-Status Check**: For each bundle: if NEW → proceed. If in storage and ACTIVE (`now - last_updated <= 7 days`) → proceed, merge existing fingerprints. If STALE (`now - last_updated > 7 days`) → remove from pipeline.
@@ -368,13 +368,14 @@ Level 1  MED/✓     LOW/✗      LOW/✗
 
 #### Level Derivation (source-specific)
 
-Uses **most-reliable-source-wins** (resolves CLS-6/Rule 19): when multiple sources in a bundle provide level-relevant data, use the level from the highest-reliability source that derived a level. Source reliability order: GDACS > WHO > GDELT > EONET > DDG-NEWS. If only one source derived a level, use that.
+Uses **most-reliable-source-wins** (resolves CLS-6/Rule 19): when multiple sources in a bundle provide level-relevant data, use the level from the highest-reliability source that derived a level. Source reliability order: GDACS > WHO > EONET > GDELT > DDG-NEWS. If only one source derived a level, use that.
 
 | Source | Rule |
 |--------|------|
 | GDACS | Green → 1, Orange → 3, Red → 4. **Severity bump for Group A** (resolves CLS-1/Rule 10): when the bundle's primary country is in Group A, bump Orange from Level 3 to Level 4, and Green from Level 1 to Level 2. Red (Level 4) is not bumped (already max). Group B and Group C receive no bump. |
 | WHO | Keyword scan: "pandemic"/"PHEIC" → 4, "epidemic"/"widespread" → 3, "cluster"/"cases reported" → 2, "isolated case" → 1, default → 2 |
 | GDELT | ArtList mode has no tone field. Default Level 2 unless title keyword scan suggests higher: "major"/"catastrophic"/"deadly"/"massive" → 3, "devastating"/"hundreds dead"/"thousands displaced"/"PHEIC" → 4. Otherwise Level 1 if title seems minor. Default: Level 2. |
+| EONET | Default Level 2. Volcano category → Level 3. GDACS-sourced events (events with a GDACS source URL): use GDACS alert level from GDACS adapter (Green→1, Orange→3, Red→4) when available; otherwise follow GDACS derivation above. |
 
 **Default when no source provides level data:** Level 2.
 
@@ -479,9 +480,9 @@ Overrides are **independent and cumulative** (resolves CLS-3): each override tha
 - O2, O4, O6 MUST be evaluated during Initial Classification
 - Overrides are independent and cumulative — ALL matching overrides apply
 - GDACS severity bump: Group A only, Orange→4, Green→2, Red unchanged
-- Multi-source level: most-reliable-source-wins (GDACS > WHO > GDELT > DDG-NEWS)
+- Multi-source level: most-reliable-source-wins (GDACS > WHO > EONET > GDELT > DDG-NEWS)
 - Initial classification MUST complete in < 1 second for 50 bundles (no network calls)
-- Source reliability order MUST be GDACS > WHO > GDELT > DDG-NEWS
+- Source reliability order MUST be GDACS > WHO > EONET > GDELT > DDG-NEWS
 
 ---
 
@@ -711,7 +712,7 @@ The Storage context persists complete `IncidentBundle`s (all raw records + class
 #### incident_name Derivation (resolves COR-3/STO-3)
 
 The `incident_name` field is derived using the following algorithm:
-1. Use the title from the highest-reliability source's `raw_fields` (reliability order: GDACS > WHO > GDELT > DDG-NEWS).
+1. Use the title from the highest-reliability source's `raw_fields` (reliability order: GDACS > WHO > EONET > GDELT > DDG-NEWS).
 2. If the highest-reliability source has no title, try the next most reliable source.
 3. If no source has a title, generate a synthetic name: `"{disaster_type} in {country} ({date})"` using whatever fields are available. Substitute "Unknown disaster" for missing type, "Unknown location" for missing country, and the incident date for missing date.
 
