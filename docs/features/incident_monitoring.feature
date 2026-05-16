@@ -15,12 +15,15 @@ Feature: Incident Monitoring
   get_last_updated, exists_by_source_fingerprint; IncidentBundle.last_updated.
 
   Rule: Seven Day Active Window
-    The active monitoring window is 7 days from last_updated. Bundles with
-    now - last_updated ≤ 7 days are ACTIVE and proceed through the full
-    pipeline. Bundles with now - last_updated > 7 days are STALE and are
-    removed from the pipeline after classification (step D) and before search
-    updates (step E, active-status check) — they receive classification but
-    are not re-searched via DDG and not re-enriched by AI.
+    The active monitoring window is 7 days from last_updated. Step E
+    independently loads stored active bundles from storage via
+    get_active_bundles() and merges them with in-flight bundles from Step D
+    (in-flight wins on incident_id). Bundles with now - last_updated ≤ 7 days
+    are ACTIVE and proceed through the full pipeline. Bundles with now -
+    last_updated > 7 days are STALE and are removed from the pipeline after
+    classification (step D) and before search updates (step E, active-status
+    check) — they receive classification but are not re-searched via DDG and
+    not re-enriched by AI.
 
     Example: bundle within 7 days is active
       Given a bundle in storage with last_updated 3 days ago
@@ -65,6 +68,25 @@ Feature: Incident Monitoring
       Given a bundle in storage with incident_id "20260514-PH-EQ" and last_updated 3 days ago
       When the active-status check evaluates the bundle
       Then the bundle proceeds with merged source fingerprints
+
+  Rule: Active Bundles Loaded From Storage
+    Active bundles (should_report=True, last_updated within 7 days) stored
+    from prior pipeline runs are independently loaded by the active-status
+    check even when no new source records arrive. Stored active bundles with
+    no in-flight counterpart are re-classified as ACTIVE and proceed through
+    search-updates, AI enrichment, override re-evaluation, and storage.
+
+    Example: stored active bundle re-enters pipeline
+      Given a stored bundle with incident_id "20260514-PH-EQ", should_report=True,
+        and last_updated 3 days ago
+      When the active-status check runs
+      Then the stored bundle is loaded and proceeds through the pipeline
+
+    Example: in-flight bundle supersedes stored
+      Given a stored active bundle with incident_id "20260514-PH-EQ"
+      And an in-flight bundle with the same incident_id
+      When the active-status check runs
+      Then the in-flight bundle takes precedence
 
   Rule: Stale Bundles Skipped
     Bundles whose incident_id is in storage and whose last_updated is more

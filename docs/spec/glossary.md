@@ -93,9 +93,18 @@
 ## Active Incident
 
 **Genus:** An incident bundle lifecycle status
-**Differentia:** indicating that the bundle has received new data within the last 7 days (i.e., `now - last_updated ≤ 7 days`). Active incidents proceed from active-check through search and AI enrichment.
+**Differentia:** indicating that the bundle has received new data within the last 7 days (i.e., `now - last_updated ≤ 7 days`). Step E independently loads stored active bundles from storage via `get_active_bundles()` and merges them with in-flight bundles from Step D. Active incidents proceed from active-check through search and AI enrichment.
 
 **Source:** 2026-05-15
+
+---
+
+## get_active_bundles
+
+**Genus:** A StorageBackend method
+**Differentia:** `get_active_bundles(reference_time=None) -> list[IncidentBundle]` — Returns all stored bundles where `should_report=True` AND `now - last_updated ≤ 7 days`. Used by Step E (active-check) to load bundles that need re-searching even when no new source records are available for them, preventing the source pre-filter from causing active bundles to be lost.
+
+**Source:** 2026-05-16
 
 ---
 

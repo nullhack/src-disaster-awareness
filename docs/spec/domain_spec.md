@@ -28,7 +28,7 @@ Step D (classify) →
 
 **D — Classify**: Apply deterministic rules to assign preliminary level, priority, country group, and deterministic overrides (O2, O4, O6). No AI calls. Classification happens before active-check so we know which bundles are worth reporting. Bundles classified as **not-reportable** bypass enrichment entirely and exit directly to store.
 
-**E — Active-Status Check** (reportable only): For each bundle: if NEW → proceed. If in storage and ACTIVE (`now - last_updated <= 7 days`) → proceed, merge existing fingerprints. If STALE (`now - last_updated > 7 days`) → remove from pipeline.
+**E — Active-Status Check** (reportable only): Independently loads stored active bundles (`should_report=True`, within 7-day window) from storage via `get_active_bundles()`. Merges them with in-flight bundles from Step D (in-flight wins on `incident_id`). For each: NEW → proceed, ACTIVE → merge fingerprints+proceed, STALE → removed.
 
 **F — Search Updates** (reportable, active only): For bundles needing more context (missing country or disaster type), query DDG News and append results to the bundle. Gated: `should_report AND (active OR missing_fields)`. Stale, fully-known incidents skip DDG.
 
@@ -686,7 +686,7 @@ The Storage context persists complete `IncidentBundle`s (all raw records + class
 ### Entities
 
 #### StorageBackend (Protocol)
-- Purpose: Storage contract with seven methods: `store`, `query`, `exists`, `upsert`, `get_last_updated`, `get_source_fingerprints`, `exists_by_source_fingerprint`. Implemented by JSONLStore and SQLiteStore.
+- Purpose: Storage contract with eight methods: `store`, `query`, `exists`, `upsert`, `get_last_updated`, `get_source_fingerprints`, `exists_by_source_fingerprint`, `get_active_bundles`. Implemented by JSONLStore and SQLiteStore.
 
 #### JSONLStore
 - Purpose: Default backend. Append-only, date-partitioned files at `incidents/by-date/YYYY-MM-DD/incidents.jsonl`. Stores complete bundles. Dedup by incident_id. Uses atomic write (temp file + rename).
