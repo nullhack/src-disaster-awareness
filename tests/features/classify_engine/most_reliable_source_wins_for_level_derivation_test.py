@@ -1,3 +1,5 @@
+import pytest
+
 """Tests for most_reliable_source_wins_for_level_derivation."""
 
 import datetime
@@ -6,8 +8,8 @@ from disaster_surveillance_reporter.classification.classify import ClassifyEngin
 from disaster_surveillance_reporter.types import IncidentBundle, RawRecord
 
 
-def test_gdacs_level_wins_over_who_and_gdelt_levels():
-    """Test gdacs level wins over who and gdelt levels."""
+def test_gdacs_level_wins_over_who_gdelt_and_eonet_levels():
+    """Test gdacs level wins over who gdelt and eonet levels."""
     now = datetime.datetime.now(tz=datetime.timezone.utc)
     gdacs_record = RawRecord(
         source_name="GDACS",
@@ -37,8 +39,8 @@ def test_gdacs_level_wins_over_who_and_gdelt_levels():
     assert result.incident_level == 3
 
 
-def test_who_level_wins_over_gdelt_when_gdacs_provides_no_level():
-    """Test who level wins over gdelt when gdacs provides no level."""
+def test_who_level_wins_over_eonet_when_gdacs_provides_no_level():
+    """Test who level wins over eonet when gdacs provides no level."""
     now = datetime.datetime.now(tz=datetime.timezone.utc)
     gdacs_record = RawRecord(
         source_name="GDACS",
@@ -64,5 +66,6 @@ def test_who_level_wins_over_gdelt_when_gdacs_provides_no_level():
     result = ClassifyEngine().classify(bundle)
 
     # GDACS has no level → fall through to WHO (pandemic → 4).
-    # GDELT major → 3.  WHO wins → level 4.
+    # EONET volcano → 3.  WHO wins → level 4.
     assert result.incident_level == 4
+

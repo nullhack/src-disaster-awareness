@@ -13,6 +13,7 @@ _FIELD_MAP = {
     "WHO": "Id",
     "GDELT": "url",
     "DDG-NEWS": "url",
+    "EONET": "id",
 }
 
 
