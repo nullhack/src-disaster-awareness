@@ -328,13 +328,11 @@ class OpencodeProvider:
                 return "\n".join(texts)
 
             def make_request_with_refresh():
-                try:
+                response = make_request()
+                if response.status_code in (401, 404):
+                    self._recreate_session()
                     return make_request()
-                except httpx.HTTPStatusError as exc:
-                    if exc.response.status_code in (401, 404):
-                        self._recreate_session()
-                        return make_request()
-                    raise
+                return response
 
             return _chat_with_backoff(make_request_with_refresh, parse_response)
 
