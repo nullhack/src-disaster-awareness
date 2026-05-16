@@ -61,8 +61,25 @@ Feature: Domain Types
       When the correlator processes the record
       Then an IncidentBundle is created containing that one RawRecord
 
+  Rule: Source Fingerprints On Bundle
+
+    Each RawRecord in an IncidentBundle carries a source_fingerprint string
+    in the format "{SOURCE_NAME}:{native_id}". GDACS uses eventid, WHO
+    uses Id or DonId, GDELT uses url, and DDG-NEWS uses url. Source
+    fingerprints enable source-level dedup across pipeline runs.
+
+  Rule: Last Updated On Bundle
+
+    IncidentBundle has a last_updated timestamp set to the current UTC
+    time at creation. It is reset only when new source fingerprints are
+    added to an existing bundle. It is NOT reset when a pipeline run
+    processes the bundle but adds no new data, allowing the 7-day
+    active monitoring window to track true staleness.
+
   # Constraints:
   # - Testability: data shapes must support 100% rule coverage for all downstream
   #   classification, correlation, and storage rules
   # - Maintainability: adding a new source adapter requires zero changes to shared types
   #   — new adapters implement existing protocols without modifying types.py
+  # - Data Integrity: source_fingerprints field must be non-empty for all bundles
+  #   that have completed correlation; last_updated must be set at creation

@@ -36,7 +36,30 @@ def _extract_source_date(record: RawRecord) -> datetime | None:
     GDELT seendate, DDG-NEWS date.  Returns ``None`` if no
     source date is available or the date cannot be parsed.
     """
-    raise NotImplementedError
+    source = record.source_name
+    raw = record.raw_fields
+
+    if source == "GDACS":
+        date_str = raw.get("fromdate")
+    elif source == "WHO":
+        date_str = raw.get("PublicationDate")
+    elif source == "GDELT":
+        date_str = raw.get("seendate")
+    elif source == "DDG-NEWS":
+        date_str = raw.get("date")
+    else:
+        return None
+
+    if not date_str:
+        return None
+
+    date_str = str(date_str)
+    try:
+        if source == "GDELT":
+            return datetime.strptime(date_str, "%Y%m%dT%H%M%Sz")
+        return datetime.fromisoformat(date_str)
+    except (ValueError, TypeError):
+        return None
 
 
 def generate_source_fingerprint(record: RawRecord) -> str:
@@ -45,7 +68,24 @@ def generate_source_fingerprint(record: RawRecord) -> str:
     native_id is source-specific: GDACS uses eventid, WHO uses Id or DonId,
     GDELT uses url, DDG-NEWS uses url.
     """
-    raise NotImplementedError
+    source = record.source_name
+    raw = record.raw_fields
+
+    if source == "GDACS":
+        native_id = raw.get("eventid")
+    elif source == "WHO":
+        native_id = raw.get("Id") or raw.get("DonId")
+    elif source in ("GDELT", "DDG-NEWS"):
+        native_id = raw.get("url")
+    else:
+        raise ValueError(f"Unknown source: {source}")
+
+    if native_id is None:
+        raise ValueError(
+            f"No native identifier for source {source} in raw_fields"
+        )
+
+    return f"{source}:{native_id}"
 
 
 def generate_incident_id(
@@ -74,7 +114,12 @@ def generate_incident_id(
         date_part = datetime.now(tz=timezone.utc).strftime("%Y%m%d")
 
     cc = _country_to_alpha2(country)
-    ttt = _DISASTER_TYPE_CODE.get(disaster_type or "", "OTH")
+
+    dt = disaster_type or ""
+    if dt in _DISASTER_TYPE_CODE.values():
+        ttt = dt
+    else:
+        ttt = _DISASTER_TYPE_CODE.get(dt, "OTH")
 
     return f"{date_part}-{cc}-{ttt}"
 
@@ -131,6 +176,23 @@ class IncidentBundle:
                         f"IncidentBundle with ai_enriched=False must not have "
                         f"{field_name} set, got {getattr(self, field_name)!r}"
                     )
+
+    def is_active(self, reference_time: datetime | None = None) -> bool:
+        """Return True if the bundle was updated within the last 7 days.
+
+        A bundle with ``last_updated`` within 7 days of *reference_time*
+        is ACTIVE; otherwise it is STALE.
+        """
+        if self.last_updated is None:
+            return False
+        if reference_time is None:
+            reference_time = datetime.now(tz=timezone.utc)
+        last = self.last_updated
+        if reference_time.tzinfo is None and last.tzinfo is not None:
+            reference_time = reference_time.replace(tzinfo=timezone.utc)
+        elif reference_time.tzinfo is not None and last.tzinfo is None:
+            last = last.replace(tzinfo=timezone.utc)
+        return (reference_time - last).days <= 7
 
 
 @dataclass(frozen=True)

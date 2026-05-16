@@ -150,6 +150,14 @@ Feature: Record Correlator
     When the incident ID is generated
     Then the incident ID is "20260513-PH-EQ"
 
+  Rule: Incident ID Uses Source Dates
+    The date component of the incident_id uses the earliest source-provided
+    date from bundle records, not the pipeline's fetched_at time. GDACS
+    uses fromdate (ISO 8601), WHO uses PublicationDate, GDELT uses seendate
+    (YYYYMMDDTHHMMSSz), and DDG-NEWS uses date. If no source-provided date
+    is available from any record, fall back to the record's fetched_at
+    timestamp, and if none available, fall back to the current UTC date.
+
   # Constraints:
   # - Reproducibility: same set of raw records always produces the same grouping and
   #   incident IDs across repeated runs

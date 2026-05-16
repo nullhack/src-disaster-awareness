@@ -186,8 +186,39 @@ Feature: Storage Backends
       When the bundle is stored and queried
       Then the source_urls contains URLs from all three sources
 
+  Rule: Upsert Returns Status String
+
+    store() with upsert semantics returns "inserted" for a new incident_id,
+    "updated" when an existing bundle has new source fingerprints added
+    and last_updated is reset, and "unchanged" when the stored bundle
+    already contains all the fingerprints with no new data to add.
+
+  Rule: Get Last Updated Query
+
+    get_last_updated(incident_id) returns the last_updated datetime from
+    storage, or None if the incident_id is not found. The method must be
+    idempotent with no side effects and no errors.
+
+  Rule: Exists By Source Fingerprint
+
+    exists_by_source_fingerprint(fingerprint) returns True if any stored
+    bundle contains the given source fingerprint, False otherwise. It
+    must be idempotent with no side effects and no errors. Fingerprints
+    follow the "{SOURCE_NAME}:{native_id}" format.
+
+  Rule: Stale Bundles Skip Storage
+
+    Bundles with now - last_updated > 7 days are STALE and must be
+    skipped by the active-status check without reaching store(). Only
+    NEW and ACTIVE (now - last_updated <= 7 days) bundles proceed to
+    storage. Inverted date range (date_from > date_to) returns empty
+    list without error, consistent with existing query behavior.
+
   # Constraints:
   # - Performance: 50 incidents classified and stored without AI completes in under 5
   #   seconds (~65ms estimated, orders of magnitude faster than target)
   # - Testability: both JSONLStore and SQLiteStore must be tested against the same
   #   StorageBackend protocol with identical query semantics
+  # - Data Integrity: upsert must merge source_fingerprints without losing any
+  #   existing entries; last_updated must be reset only when new fingerprints
+  #   are actually added

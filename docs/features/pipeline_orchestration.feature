@@ -48,16 +48,35 @@ Feature: Pipeline Orchestration
         | disaster_type         |
         | country and type      |
 
-  Rule: Pipeline executes seven sequential steps
-    The pipeline orchestrates seven sequential steps: (1) Fetch all 3 primary
-    sources, (2) Correlate records into bundles, (3) Classify deterministically,
-    (4) Supplementary DDG News search for bundles needing context, (5) AI enrich
-    in batches, (6) Override re-evaluation, (7) Store complete bundles.
+  Rule: Pipeline executes nine sequential steps
+    The pipeline orchestrates nine sequential steps: (1) Fetch, (2) Source
+    Pre-filter, (3) Correlate, (4) Active-Status Check, (5) Classify,
+    (6) Supplementary DDG Search, (7) AI Enrich, (8) Override Re-evaluation,
+    (9) Store with upsert.
 
-    Example: Pipeline completes all seven steps
+    Example: Pipeline completes all nine steps
       Given raw records from all three primary sources
       When the pipeline orchestrator runs
-      Then seven pipeline steps execute in specified order
+      Then nine pipeline steps execute in specified order
+
+  Rule: Source filter discards seen records
+    Before correlation, the pipeline computes a source fingerprint for each
+    fetched RawRecord and checks exists_by_source_fingerprint() in storage.
+    Records with known fingerprints are discarded, preventing re-processing
+    of already-ingested source data.
+
+  Rule: Active status check gates bundles
+    After correlation, the pipeline checks each IncidentBundle's last_updated
+    and incident_id against storage. NEW bundles always proceed. ACTIVE
+    bundles (now - last_updated <= 7 days) proceed with existing fingerprints
+    merged. STALE bundles (now - last_updated > 7 days) are removed from
+    the pipeline.
+
+  Rule: DDG search gated on activity
+    Supplementary DDG News search is triggered only when all of the following
+    hold: the bundle's should_report is True, AND the bundle is either ACTIVE
+    (updated within 7 days) or has missing fields (country is None or
+    disaster_type is None). STALE bundles with fully known fields are excluded.
 
   Rule: Search queries use templated fields
     Supplementary search queries use the template "{title} {country} {disaster_type}
@@ -89,3 +108,6 @@ Feature: Pipeline Orchestration
   # - Observability: every pipeline run produces structured JSON log (via structlog) of
   #   step outcomes, timing, source fetch counts, classification distribution, and
   #   storage count to stderr at INFO level
+  # - Efficiency: with no new data across any source, source_fingerprint dedup at Step 2
+  #   discards all records, pipeline returns zero stored in < 5 seconds — fast exit
+  #   without redundant AI or DDG search for stale incidents

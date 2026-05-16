@@ -25,7 +25,7 @@ Feature: Incident Monitoring
       When the active-status check evaluates the bundle
       Then the bundle is STALE and removed from the pipeline
 
-  Rule: Source Pre-filter Discard
+  Rule: Source Filter Discard
     For each RawRecord fetched from primary sources, compute its
     source_fingerprint in the format {SOURCE_NAME}:{native_id}. If
     storage.exists_by_source_fingerprint(fp) returns True, the record has
