@@ -82,6 +82,7 @@ class ClassifierAgent:
             return
         prompt = self._build_batch_prompt(batch)
         response = self._provider.chat(prompt, model="classifier-v1")
+        response = self._strip_json_fences(response)
         results: list[dict[str, Any]] = json.loads(response)
         for bundle, data in zip(batch, results):
             pred = dspy.Prediction(ClassifyIncident, **{
@@ -142,3 +143,16 @@ class ClassifierAgent:
             bundle.overrides.append("O3")
         if result.override_forecast_warning:
             bundle.overrides.append("O5")
+
+    @staticmethod
+    def _strip_json_fences(text: str) -> str:
+        """Strip markdown code fences and extract JSON from LLM response."""
+        text = text.strip()
+        if text.startswith("```"):
+            first_newline = text.find("\n")
+            if first_newline != -1:
+                text = text[first_newline + 1:]
+            if text.endswith("```"):
+                text = text[:-3]
+            text = text.strip()
+        return text

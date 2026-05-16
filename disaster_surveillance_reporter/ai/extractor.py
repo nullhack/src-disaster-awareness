@@ -78,6 +78,7 @@ class ExtractorAgent:
             return
         prompt = self._build_batch_prompt(batch)
         response = self._provider.chat(prompt, model="extractor-v1")
+        response = self._strip_json_fences(response)
         enriched: list[dict[str, Any]] = json.loads(response)
         for bundle, data in zip(batch, enriched):
             pred = dspy.Prediction(ExtractFields, **{
@@ -129,3 +130,16 @@ class ExtractorAgent:
         if result.estimated_deaths is not None:
             bundle.estimated_deaths = int(result.estimated_deaths)
         bundle.ai_enriched = True
+
+    @staticmethod
+    def _strip_json_fences(text: str) -> str:
+        """Strip markdown code fences and extract JSON from LLM response."""
+        text = text.strip()
+        if text.startswith("```"):
+            first_newline = text.find("\n")
+            if first_newline != -1:
+                text = text[first_newline + 1:]
+            if text.endswith("```"):
+                text = text[:-3]
+            text = text.strip()
+        return text
