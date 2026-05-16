@@ -77,6 +77,8 @@ def generate_source_fingerprint(record: RawRecord) -> str:
         native_id = raw.get("Id") or raw.get("DonId")
     elif source in ("GDELT", "DDG-NEWS"):
         native_id = raw.get("url")
+    elif source == "EONET":
+        native_id = raw.get("id")
     else:
         raise ValueError(f"Unknown source: {source}")
 

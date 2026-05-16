@@ -10,6 +10,7 @@ from disaster_surveillance_reporter.types import IncidentBundle, RawRecord
 
 def test_gdacs_level_wins_over_who_gdelt_and_eonet_levels():
     """Test gdacs level wins over who gdelt and eonet levels."""
+    _ = 2  # EONET default level
     now = datetime.datetime.now(tz=datetime.timezone.utc)
     gdacs_record = RawRecord(
         source_name="GDACS",
