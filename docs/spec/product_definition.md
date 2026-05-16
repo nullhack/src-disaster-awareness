@@ -100,8 +100,9 @@ DSR is a **CLI tool** executed as a scheduled batch process. There is no daemon,
 | `OPENCODE_BASE_URL` | Base URL for opencode serve (opencode provider only) | `http://127.0.0.1:4096` |
 | `OPENCODE_SERVER_PASSWORD` | Password for opencode serve basic auth (required if provider=opencode) | — |
 | `OPENCODE_SESSION_TIMEOUT` | HTTP request timeout in seconds for opencode | 120 |
+| `DSR_SOURCES` | Comma-separated source list: `gdacs,who,eonet,gdelt` | `gdacs,who,eonet` |
 | `DSR_STORAGE_BACKEND` | Storage: `jsonl` or `sqlite` | `jsonl` |
-| `DSR_STORAGE_PATH` | Base directory for storage | `./incidents` |
+| `DSR_OUTPUT_DIR` | Base directory for storage | `./incidents` |
 | `DSR_LOG_LEVEL` | Logging verbosity: `DEBUG`, `INFO`, `WARNING`, `ERROR` | `INFO` |
 
 **Exit codes:** 0 = success (all steps completed, including partial AI failures), 1 = fatal error (storage completely unavailable, configuration invalid).

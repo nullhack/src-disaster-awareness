@@ -69,7 +69,7 @@ dsr-pipeline = "disaster_surveillance_reporter.cli:main"
 [tool.taskipy.tasks]
 test = "pytest"
 test-fast = "pytest -q"
-run = "python -m disaster_surveillance_reporter.cli pipeline"
+run = "python -m disaster_surveillance_reporter.cli pipeline ${*:1}"
 
 [dependency-groups]
 dev = [
