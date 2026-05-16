@@ -138,7 +138,7 @@
 ## StorageBackend
 
 **Genus:** A Python Protocol for persistent storage adapters
-**Differentia:** defining six methods: `store(bundles) -> int` (persist bundles, skip existing IDs, return new count), `query(date_from, date_to, **filters) -> list[Incident]` (query flattened incidents by date range and filters), `exists(incident_id) -> bool` (dedup check), `upsert(bundle) -> str` (insert new, update active with new fingerprints resetting `last_updated`, or no-op when no new data), `get_last_updated(incident_id) -> datetime | None` (query last modification time for active-status check), and `exists_by_source_fingerprint(fp) -> bool` (dedup by source fingerprint for pre-filter). Implemented by JSONLStore and SQLiteStore.
+**Differentia:** defining seven methods: `store(bundles) -> int` (persist bundles, skip existing IDs, return new count), `query(date_from, date_to, **filters) -> list[Incident]` (query flattened incidents by date range and filters), `exists(incident_id) -> bool` (dedup check), `upsert(bundle) -> str` (insert new, update active with new fingerprints resetting `last_updated`, or no-op when no new data), `get_last_updated(incident_id) -> datetime | None` (query last modification time for active-status check), `get_source_fingerprints(incident_id) -> list[str]` (retrieve all source fingerprints for a stored bundle, used during active-status check to merge existing fingerprints into in-flight bundles), and `exists_by_source_fingerprint(fp) -> bool` (dedup by source fingerprint for pre-filter). Implemented by JSONLStore and SQLiteStore.
 
 **Source:** 2026-05-14 (updated 2026-05-15)
 

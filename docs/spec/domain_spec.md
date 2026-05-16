@@ -657,7 +657,7 @@ The Storage context persists complete `IncidentBundle`s (all raw records + class
 ### Entities
 
 #### StorageBackend (Protocol)
-- Purpose: Storage contract with six methods: `store`, `query`, `exists`, `upsert`, `get_last_updated`, `exists_by_source_fingerprint`. Implemented by JSONLStore and SQLiteStore.
+- Purpose: Storage contract with seven methods: `store`, `query`, `exists`, `upsert`, `get_last_updated`, `get_source_fingerprints`, `exists_by_source_fingerprint`. Implemented by JSONLStore and SQLiteStore.
 
 #### JSONLStore
 - Purpose: Default backend. Append-only, date-partitioned files at `incidents/by-date/YYYY-MM-DD/incidents.jsonl`. Stores complete bundles. Dedup by incident_id. Uses atomic write (temp file + rename).
@@ -821,6 +821,16 @@ SQLiteStore uses database transactions with COMMIT/ROLLBACK for the same atomici
 - **Side Effects**: Reads from disk
 - **Preconditions**: None
 
+#### StorageBackend: get_source_fingerprints()
+
+- **Actor**: Pipeline orchestrator (step 4 — Active-Status Check)
+- **Trigger**: `store.get_source_fingerprints(incident_id)` called during active-status check
+- **Input**: `{incident_id: str}`
+- **Output**: `list[str]` — all source fingerprints for the stored bundle, or `[]` if not found
+- **Errors**: none
+- **Side Effects**: Reads from disk
+- **Preconditions**: None
+
 #### StorageBackend: exists_by_source_fingerprint()
 
 - **Actor**: Pipeline orchestrator (step 2 — Source Pre-filter)
@@ -838,7 +848,7 @@ SQLiteStore uses database transactions with COMMIT/ROLLBACK for the same atomici
 - Dedup by `source_fingerprint` — `exists_by_source_fingerprint(fp)` prevents duplicate source records
 - `upsert()` inserts new bundles, updates active bundles with new fingerprints (resetting `last_updated`), and no-ops when no new fingerprints found
 - `last_updated` is set at bundle creation and reset ONLY when new data is added to the bundle
-- Stale bundles (≥7 days since `last_updated`) are skipped during Active-Status Check
+- Stale bundles (>7 days since `last_updated`) are skipped during Active-Status Check
 - JSONL path: `incidents/by-date/YYYY-MM-DD/incidents.jsonl` where the date is `classification_date`
 - JSONL is append-only — records are never modified in place
 - Both backends MUST implement the same `StorageBackend` protocol

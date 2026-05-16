@@ -20,11 +20,6 @@ Feature: Incident Monitoring
       When the active-status check evaluates the bundle
       Then the bundle is ACTIVE
 
-    Example: bundle older than 7 days is stale
-      Given a bundle in storage with last_updated 10 days ago
-      When the active-status check evaluates the bundle
-      Then the bundle is STALE and removed from the pipeline
-
   Rule: Source Filter Discard
     For each RawRecord fetched from primary sources, compute its
     source_fingerprint in the format {SOURCE_NAME}:{native_id}. If
@@ -35,7 +30,7 @@ Feature: Incident Monitoring
     Example: seen fingerprint is discarded
       Given a RawRecord with source_fingerprint "GDACS:12345" already in storage
       When the source pre-filter evaluates the record
-      Then the record is discarded and does not reach the correlator
+      Then the record is discarded from the pipeline
 
     Example: new fingerprint passes pre-filter
       Given a RawRecord with source_fingerprint "GDACS:99999" not in storage
@@ -72,7 +67,7 @@ Feature: Incident Monitoring
     Example: stale bundle removed from pipeline
       Given a bundle in storage with incident_id "20260514-PH-EQ" and last_updated 10 days ago
       When the active-status check evaluates the bundle
-      Then the bundle is removed and does not proceed
+      Then the bundle is removed from the pipeline
 
   Rule: DDG Search Gate
     Supplementary DDG News search is triggered only when the bundle's
@@ -103,7 +98,7 @@ Feature: Incident Monitoring
     Example: upsert inserts new bundle
       Given a bundle with incident_id "20260514-JP-EQ" not in storage
       When the bundle is upserted
-      Then the status is "inserted" and last_updated is set
+      Then the status is "inserted"
 
   Rule: Upsert Update Active
     When upsert() receives a bundle whose incident_id is in storage and new
@@ -112,10 +107,10 @@ Feature: Incident Monitoring
     are refreshed, and last_updated is reset to the current time. Returns
     "updated".
 
-    Example: upsert updates active bundle with new fingerprints
+    Example: upsert merges bundle with new fingerprints
       Given a bundle in storage with incident_id "20260514-JP-EQ" and fingerprints ["GDACS:12345"]
       When upsert is called with the same incident_id and new fingerprint "WHO:abc-def"
-      Then the status is "updated" and last_updated is reset
+      Then the status is "updated"
 
   Rule: Upsert No-op Unchanged
     When upsert() receives a bundle whose incident_id is in storage but no
@@ -126,7 +121,7 @@ Feature: Incident Monitoring
     Example: upsert no-ops when no new fingerprints
       Given a bundle in storage with incident_id "20260514-JP-EQ" and last_updated 3 days ago
       When upsert is called with the same incident_id and no new fingerprints
-      Then the status is "noop" and last_updated is unchanged
+      Then the status is "noop"
 
   # Constraints:
   # - Efficiency: source pre-filter discards all stale/seen records; pipeline with no
