@@ -1,9 +1,10 @@
 Feature: Pipeline Orchestration
 
-  Seven-step sequential pipeline that orchestrates the full disaster surveillance flow:
-  Fetch → Correlate → Initial Classify → Supplementary Search → AI Enrich → Override
-  Re-evaluation → Store. The pipeline orchestrator coordinates all bounded contexts,
-  manages supplementary search query generation for bundles needing context, handles
+  Nine-state sequential flow per pipeline-flow v4: Fetch → Source Pre-filter → Correlate
+  → Classify, with reportable bundles proceeding through Active-Check → Search → AI
+  Enrich → Override Re-eval → Store, while not-reportable bundles exit directly to
+  store. The pipeline orchestrator coordinates all bounded contexts, manages
+  supplementary search query generation for bundles needing context, handles
   post-extraction re-classification, and ensures failure isolation between steps. Runs
   as the dsr-pipeline CLI command. Single-process, single-threaded, idempotent.
 
@@ -49,10 +50,12 @@ Feature: Pipeline Orchestration
         | country and type      |
 
   Rule: Pipeline executes nine sequential steps
-    The pipeline orchestrates nine sequential steps: (1) Fetch, (2) Source
-    Pre-filter, (3) Correlate, (4) Active-Status Check, (5) Classify,
-    (6) Supplementary DDG Search, (7) AI Enrich, (8) Override Re-evaluation,
-    (9) Store with upsert.
+    The pipeline orchestrates nine sequential steps: (A) Fetch, (B) Source
+    Pre-filter, (C) Correlate, (D) Classify, followed by a reportability
+    gate: not-reportable bundles exit directly to (I) Store, while
+    reportable bundles continue through (E) Active-Status Check,
+    (F) Supplementary DDG Search, (G) AI Enrich, (H) Override Re-evaluation,
+    and finally (I) Store with upsert.
 
     Example: Pipeline completes all nine steps
       Given raw records from all primary sources GDACS WHO and EONET
@@ -60,10 +63,10 @@ Feature: Pipeline Orchestration
       Then nine pipeline steps execute in specified order
 
   Rule: Source filter discards seen records
-    Before correlation, the pipeline computes a source fingerprint for each
-    fetched RawRecord and checks exists_by_source_fingerprint() in storage.
-    Records with known fingerprints are discarded, preventing re-processing
-    of already-ingested source data.
+    In the source pre-filter state (step B), before correlation, the pipeline
+    computes a source fingerprint for each fetched RawRecord and checks
+    exists_by_source_fingerprint() in storage. Records with known fingerprints
+    are discarded, preventing re-processing of already-ingested source data.
 
   Rule: Active status check gates bundles
     After correlation, the pipeline checks each IncidentBundle's last_updated
@@ -77,6 +80,8 @@ Feature: Pipeline Orchestration
     hold: the bundle's should_report is True, AND the bundle is either ACTIVE
     (updated within 7 days) or has missing fields (country is None or
     disaster_type is None). STALE bundles with fully known fields are excluded.
+    Note: should_report is implicit in v4 — only reportable bundles reach
+    search-updates.
 
   Rule: Search queries use templated fields
     Supplementary search queries use the template "{title} {country} {disaster_type}
@@ -102,7 +107,7 @@ Feature: Pipeline Orchestration
   #   each adapter returns empty list on failure, pipeline continues
   # - Reliability (AI): AI timeout or failure stores bundles without enrichment —
   #   ai_enriched=False, all AI fields None, bundle persisted to storage
-  # - Performance: pure Python path (Steps 2–3, 6–7) completes in < 5s for 50 bundles
+  # - Performance: Deterministic processing (classification, correlation, pre-filter) completes in < 5s for 50 bundles
   #   (~65ms estimated)
   # - Performance: full batch with AI completes in < 5 minutes (~90s estimated)
   # - Observability: every pipeline run produces structured JSON log (via structlog) of

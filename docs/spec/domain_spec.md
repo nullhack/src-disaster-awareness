@@ -9,23 +9,36 @@
 
 ## Pipeline Overview
 
-The DSR pipeline is a nine-step sequential flow executed by `pipeline.py`:
+The DSR pipeline is executed by `pipeline.py`. Source adapters are CLI-driven — no hardcoded adapter list. The flow is lettered (A–I) with a branch at classify (D):
 
 ```
-Fetch → Source Pre-filter → Correlate → Active-Status Check → Initial Classify → Supplementary Search → AI Enrich → Override Re-evaluation → Store
+Step A (fetch-sources) → Step B (source-prefilter) → Step C (correlate) → 
+Step D (classify) → 
+  ├─ reportable → Step E (active-check) → Step F (search-updates) → 
+  │              Step G (ai-enrich with post-extract re-classify) → 
+  │              Step H (override-reeval) → Step I (store)
+  └─ not-reportable → Step I (store)
 ```
 
-1. **Fetch**: Call all four primary adapters (GDACS, WHO, GDELT, EONET). Collect `list[RawRecord]`.
-2. **Source Pre-filter**: For each `RawRecord`, compute `source_fingerprint` (format: `{SOURCE_NAME}:{native_id}`). If `storage.exists_by_source_fingerprint(fp)` → discard. Otherwise → pass to correlator.
-3. **Correlate**: Group records about the same incident into `list[IncidentBundle]`.
-4. **Active-Status Check**: For each bundle: if NEW → proceed. If in storage and ACTIVE (`now - last_updated <= 7 days`) → proceed, merge existing fingerprints. If STALE (`now - last_updated > 7 days`) → remove from pipeline.
-5. **Initial Classify**: Apply deterministic rules to assign preliminary level, priority, country group, and deterministic overrides (O2, O4, O6). No AI calls.
-6. **Supplementary Search**: For bundles needing more context (missing country or disaster type), query DDG News and append results to the bundle. Gated: `should_report AND (active OR missing_fields)`. Stale, fully-known incidents skip DDG.
-7. **AI Enrich**: Run Extractor (fill missing fields) and Classifier (generate summaries, detect AI-assisted overrides O1, O3, O5) on batched bundles.
-8. **Override Re-evaluation**: Re-apply override evaluation now that AI-extracted data is available. Evaluate O1, O3, O5 using enriched fields. Re-run priority matrix if level changed.
-9. **Store (upsert)**: Persist bundles. NEW bundles: insert. ACTIVE bundles with new fingerprints: update, reset `last_updated`. ACTIVE bundles with no new fingerprints: no-op (don't reset monitoring window). STALE bundles: (already removed at step 4).
+**A — Fetch Sources**: Query each CLI-specified source adapter. Collect `list[RawRecord]`.
 
-This ordering resolves the pipeline-order conflict (XCS-1): classification happens before supplementary search so we know what needs context, and override re-evaluation happens after AI enrichment so O1/O3/O5 can use AI-extracted data (CLS-4/XCS-2). The two new steps (2: Source Pre-filter, 4: Active-Status Check) implement the incident lifecycle model — same source records are never processed twice, and stale incidents with no updates in 7+ days are skipped entirely.
+**B — Source Pre-filter**: For each `RawRecord`, compute `source_fingerprint` (format: `{SOURCE_NAME}:{native_id}`). If `storage.exists_by_source_fingerprint(fp)` → discard. Otherwise → pass to correlator.
+
+**C — Correlate**: Group records about the same incident into `list[IncidentBundle]`. Correlation uses date proximity to cluster records that are temporally close, recovering multi-source signals that would otherwise be fragmented.
+
+**D — Classify**: Apply deterministic rules to assign preliminary level, priority, country group, and deterministic overrides (O2, O4, O6). No AI calls. Classification happens before active-check so we know which bundles are worth reporting. Bundles classified as **not-reportable** bypass enrichment entirely and exit directly to store.
+
+**E — Active-Status Check** (reportable only): For each bundle: if NEW → proceed. If in storage and ACTIVE (`now - last_updated <= 7 days`) → proceed, merge existing fingerprints. If STALE (`now - last_updated > 7 days`) → remove from pipeline.
+
+**F — Search Updates** (reportable, active only): For bundles needing more context (missing country or disaster type), query DDG News and append results to the bundle. Gated: `should_report AND (active OR missing_fields)`. Stale, fully-known incidents skip DDG.
+
+**G — AI Enrich** (reportable, active only): Run Extractor (fill missing fields) and Classifier (generate summaries, detect AI-assisted overrides O1, O3, O5) on batched bundles. After extraction completes, a post-extract re-classification step re-runs the deterministic classifier on the enriched fields to catch any classification changes driven by newly extracted data.
+
+**H — Override Re-evaluation** (reportable, active only): Re-apply override evaluation now that AI-extracted data is available. Evaluate O1, O3, O5 using enriched fields. Re-run priority matrix if level changed.
+
+**I — Store (upsert)**: Persist bundles. NEW bundles: insert. ACTIVE bundles with new fingerprints: update, reset `last_updated`. ACTIVE bundles with no new fingerprints: no-op (don't reset monitoring window). Entry point for both reportable and not-reportable branches.
+
+This ordering resolves the pipeline-order conflict (XCS-1): classification (D) precedes all enrichment (E–H) so we know what needs context before spending resources, and override re-evaluation (H) happens after AI enrichment (G) so O1/O3/O5 can use AI-extracted data (CLS-4/XCS-2). The branch at classify ensures non-reportable incidents skip the full enrichment pipeline entirely and go straight to store, reducing wasted AI and search calls. The source pre-filter (B) and active-status check (E) implement the incident lifecycle model — same source records are never processed twice, and stale incidents with no updates in 7+ days are skipped.
 
 ---
 

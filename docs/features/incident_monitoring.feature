@@ -1,19 +1,26 @@
 Feature: Incident Monitoring
 
-  Lifecycle gating for incident bundles across the nine-step pipeline: a 7-day
-  active monitoring window, source pre-filter deduplication that discards seen
-  records, active-status checks that classify bundles as NEW/ACTIVE/STALE,
-  DDG News search gating, and upsert storage with insert/update/no-op semantics.
-  This feature spans the Pipeline, Storage, and Fetching contexts, ensuring stale
-  incidents are skipped to save processing cost. Key entities: StorageBackend.upsert,
+  Lifecycle gating for incident bundles across pipeline-flow v4: source
+  pre-filter deduplication discards seen records before correlation (step B),
+  deterministic classification (step D) runs before the active-status check,
+  so non-reportable bundles exit early to store. Only reportable bundles
+  continue through active-status checks (step E: bundles classified as
+  NEW/ACTIVE/STALE with staleness evaluated after classification), DDG News
+  search gating (step F), AI enrichment with post-extract re-classification
+  (step G), override re-evaluation (step H), and upsert storage (step I)
+  with insert/update/no-op semantics. This feature spans the Pipeline,
+  Storage, and Fetching contexts. The not-reportable shortcut saves
+  processing cost on classification, search, and AI enrichment for bundles
+  that should not be reported. Key entities: StorageBackend.upsert,
   get_last_updated, exists_by_source_fingerprint; IncidentBundle.last_updated.
 
   Rule: Seven Day Active Window
     The active monitoring window is 7 days from last_updated. Bundles with
     now - last_updated ≤ 7 days are ACTIVE and proceed through the full
     pipeline. Bundles with now - last_updated > 7 days are STALE and are
-    removed from the pipeline before classification — they are not re-classified,
-    not re-searched via DDG, and not re-enriched by AI.
+    removed from the pipeline after classification (step D) and before search
+    updates (step E, active-status check) — they receive classification but
+    are not re-searched via DDG and not re-enriched by AI.
 
     Example: bundle within 7 days is active
       Given a bundle in storage with last_updated 3 days ago
@@ -21,11 +28,12 @@ Feature: Incident Monitoring
       Then the bundle is ACTIVE
 
   Rule: Source Filter Discard
-    For each RawRecord fetched from primary sources, compute its
-    source_fingerprint in the format {SOURCE_NAME}:{native_id}. If
-    storage.exists_by_source_fingerprint(fp) returns True, the record has
-    already been processed in a prior pipeline run and is discarded. Only
-    records with fingerprints not in storage pass through to the correlator.
+    For each RawRecord fetched from primary sources (step A), compute its
+    source_fingerprint in the format {SOURCE_NAME}:{native_id}. In the source
+    pre-filter (step B), if storage.exists_by_source_fingerprint(fp) returns
+    True, the record has already been processed in a prior pipeline run and
+    is discarded. Only records with fingerprints not in storage pass through
+    to the correlator (step C).
 
     Example: seen fingerprint is discarded
       Given a RawRecord with source_fingerprint "GDACS:12345" already in storage
@@ -60,9 +68,10 @@ Feature: Incident Monitoring
 
   Rule: Stale Bundles Skipped
     Bundles whose incident_id is in storage and whose last_updated is more
-    than 7 days ago are STALE. Stale bundles are removed from the pipeline
-    entirely — they receive no classification, no supplementary search, no
-    AI enrichment, and no storage update.
+    than 7 days ago are STALE. In v4, classification (step D) precedes the
+    active-status check (step E), so stale bundles receive classification
+    but are removed at step E before supplementary search, AI enrichment,
+    and storage update.
 
     Example: stale bundle removed from pipeline
       Given a bundle in storage with incident_id "20260514-PH-EQ" and last_updated 10 days ago
@@ -70,11 +79,14 @@ Feature: Incident Monitoring
       Then the bundle is removed from the pipeline
 
   Rule: DDG Search Gate
-    Supplementary DDG News search is triggered only when the bundle's
+    Supplementary DDG News search (step F) is triggered only when the bundle's
     should_report is True AND either the bundle is ACTIVE (within the 7-day
     window) OR the bundle has missing fields (country is None or disaster_type
-    is None). Stale, fully-known incidents skip DDG search entirely to avoid
-    unnecessary API calls.
+    is None). In practice, should_report is always True at this stage in v4
+    because non-reportable bundles exit the pipeline at step D before reaching
+    this gate. Stale bundles are removed at step E and also never reach this
+    gate. Fully-known, active bundles skip DDG search to avoid unnecessary
+    API calls.
 
     Scenario Outline: DDG search triggered by gate condition
       Given a bundle with should_report "<should_report>" active "<active>" and missing_fields "<missing_fields>"

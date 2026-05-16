@@ -75,7 +75,7 @@
 ## Source Fingerprint
 
 **Genus:** A globally unique identifier for a single source record
-**Differentia:** formatted as `{SOURCE_NAME}:{native_id}` where SOURCE_NAME is one of "GDACS", "WHO", "GDELT", or "DDG-NEWS" and native_id is source-specific: GDACS uses `eventid`, WHO uses `Id` or `DonId`, GDELT uses `url`, DDG-NEWS uses `url`. Used by the Source Pre-filter step to discard records already seen in previous pipeline runs.
+**Differentia:** formatted as `{SOURCE_NAME}:{native_id}` where SOURCE_NAME is one of "GDACS", "WHO", "GDELT", or "DDG-NEWS" and native_id is source-specific: GDACS uses `eventid`, WHO uses `Id` or `DonId`, GDELT uses `url`, DDG-NEWS uses `url`. Used by the Source Pre-filter (step B) to discard records already seen in previous pipeline runs, and by store upsert for noop detection.
 
 **Source:** 2026-05-15
 
@@ -84,7 +84,7 @@
 ## Stale Incident
 
 **Genus:** An incident bundle lifecycle status
-**Differentia:** indicating that no new data has been added to the bundle for 7 or more days (i.e., `now - last_updated > 7 days`). Stale incidents are removed from the pipeline during the Active-Status Check (step 4) — they are not re-classified, not re-searched via DDG, and not re-enriched by AI, saving processing cost.
+**Differentia:** indicating that no new data has been added to the bundle for 7 or more days (i.e., `now - last_updated > 7 days`). Stale incidents are removed from the pipeline during the Active-Status Check (step E), which runs after classification.
 
 **Source:** 2026-05-15
 
@@ -93,7 +93,7 @@
 ## Active Incident
 
 **Genus:** An incident bundle lifecycle status
-**Differentia:** indicating that the bundle has received new data within the last 7 days (i.e., `now - last_updated ≤ 7 days`). Active incidents proceed through the full pipeline and are eligible for DDG supplementary search and AI enrichment.
+**Differentia:** indicating that the bundle has received new data within the last 7 days (i.e., `now - last_updated ≤ 7 days`). Active incidents proceed from active-check through search and AI enrichment.
 
 **Source:** 2026-05-15
 
@@ -147,7 +147,7 @@
 ## Upsert
 
 **Genus:** A storage operation combining insert and update semantics
-**Differentia:** used in pipeline step 9 (Store) as the primary persistence method. For each bundle: if the `incident_id` is not in storage → insert a new record (set `last_updated` to correlation time). If the bundle is in storage and new `source_fingerprints` are found → update the existing record (merge fingerprints, reset `last_updated`). If the bundle is in storage but no new fingerprints are found → no-op (do not change `last_updated`, preserving the monitoring window). Returns one of `"inserted"`, `"updated"`, or `"noop"`.
+**Differentia:** used in pipeline step I (Store) as the primary persistence method. For each bundle: if the `incident_id` is not in storage → insert a new record (set `last_updated` to correlation time). If the bundle is in storage and new `source_fingerprints` are found → update the existing record (merge fingerprints, reset `last_updated`). If the bundle is in storage but no new fingerprints are found → no-op (do not change `last_updated`, preserving the monitoring window). Returns one of `"inserted"`, `"updated"`, or `"noop"`.
 
 **Source:** 2026-05-15
 
@@ -381,7 +381,7 @@
 ## Correlation
 
 **Genus:** A pipeline step that groups records
-**Differentia:** matching `RawRecord`s from different sources that describe the same real-world incident into a single `IncidentBundle`, using date proximity (±1 day), ISO 3166-1 alpha-2 normalized country matching (via pycountry), and title similarity (SequenceMatcher ratio ≥ 0.6 after lowercase/strip/collapse normalization). When both records have country data, a country match is required — title similarity cannot override a country mismatch. Single-source records become bundles with one record.
+**Differentia:** matching `RawRecord`s from different sources that describe the same real-world incident into a single `IncidentBundle`, using date proximity (±1 calendar day), ISO 3166-1 alpha-2 normalized country matching (via pycountry), and title similarity (SequenceMatcher ratio ≥ 0.6 after lowercase/strip/collapse normalization). When both records have country data, a country match is required — title similarity cannot override a country mismatch. Single-source records become bundles with one record.
 
 **Source:** 2026-05-14
 
@@ -444,7 +444,7 @@
 ## Dedup
 
 **Genus:** A data integrity mechanism
-**Differentia:** preventing duplicate entries through two layers: (1) source-level: `exists_by_source_fingerprint(fp)` prevents the same source record (identified by `{SOURCE_NAME}:{native_id}`) from being processed twice, and (2) bundle-level: `upsert()` merges new fingerprints into existing bundles rather than creating duplicates.
+**Differentia:** preventing duplicate entries through two layers: (1) source-level: `exists_by_source_fingerprint(fp)` in step B prevents the same source record (identified by `{SOURCE_NAME}:{native_id}`) from being processed twice, and (2) bundle-level: `upsert()` in step I merges new fingerprints into existing bundles rather than creating duplicates.
 
 **Source:** 2026-05-14 (updated 2026-05-15)
 
@@ -453,7 +453,7 @@
 ## Pipeline
 
 **Genus:** The orchestrator module (`pipeline.py`)
-**Differentia:** executing the nine-step sequential flow: (1) fetch all 3 primary sources, (2) source pre-filter (discard seen records by fingerprint), (3) correlate records into bundles, (4) active-status check (skip stale bundles, merge fingerprints for active), (5) classify deterministically (initial), (6) supplementary DDG News search (gated: should_report AND (active OR missing_fields)), (7) AI enrich in batches, (8) override re-evaluation, (9) store with upsert semantics.
+**Differentia:** executing the nine-state sequential flow per pipeline-flow v4: (A) fetch all configured adapters, (B) source pre-filter (discard records whose source_fingerprint already exists in storage), (C) correlate into IncidentBundles using date proximity, country overlap, and title similarity, (D) classify deterministically (level, country_group, priority, should_report, initial overrides O2/O4/O6), after which not-reportable bundles exit early to store while reportable bundles continue through (E) active-status check (NEW → proceed, ACTIVE → merge fingerprints + proceed, STALE → removed), (F) supplementary DDG News search for active bundles, (G) AI enrich (extract fields → post-extract re-classify → generate summaries and detect O1/O3/O5), (H) override re-evaluation on post-enrichment flags, (I) store with upsert. The pipeline reads `pipeline-flow.yaml` at init time for state ordering and step configuration.
 
 **Source:** 2026-05-14 (updated 2026-05-15)
 

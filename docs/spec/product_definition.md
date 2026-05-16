@@ -7,7 +7,7 @@
 
 ## What Disaster Surveillance Reporter IS
 
-- A deterministic classification engine that assigns incident levels (1–4), priorities (HIGH/MED/LOW), and country groups (A/B/C) using fixed Python rules — no AI for classification, ever.
+- A deterministic classification engine that assigns incident levels (1–4), priorities (HIGH/MED/LOW), and country groups (A/B/C) using fixed Python rules — no AI for classification, ever. Source selection (GDACS, WHO, GDELT, EONET) is CLI-driven via the `dsr-pipeline` entry point.
 - A multi-source correlation pipeline that groups information about the same real-world incident from different APIs (GDACS, WHO DON, GDELT) into unified bundles, supplementing with DuckDuckGo News search when context is sparse.
 - An AI-augmented extraction and enrichment system for unstructured text (WHO, GDELT, DDG News), using a pluggable AIProvider (Ollama, Gemini, OpenAI, or OpencodeProvider) via DSPy for structured output, operating on batched `IncidentBundle`s.
 
@@ -69,7 +69,7 @@ The legacy codebase was unmaintainable. This clean rewrite automates disaster in
 
 ### Phase 4 — Pipeline
 
-18. [DONE] `pipeline.py` — 9-step orchestration
+18. [DONE] `pipeline.py` — 9-state orchestration per pipeline-flow v4
 19. [DONE] End-to-end test
 
 ### Phase 5 — Incident Lifecycle
@@ -83,7 +83,7 @@ The legacy codebase was unmaintainable. This clean rewrite automates disaster in
 
 DSR is a **CLI tool** executed as a scheduled batch process. There is no daemon, no web server, and no persistent process.
 
-**Execution:** `dsr-pipeline` CLI command (entry point defined in `pyproject.toml`). Each invocation runs the full 7-step pipeline once and exits.
+**Execution:** `dsr-pipeline` CLI command (entry point defined in `pyproject.toml`). Each invocation runs the pipeline once and exits.
 
 **Scheduling:** `cron` (Linux) or Task Scheduler (Windows). Recommended interval: every 6 hours. The pipeline is idempotent — duplicate runs produce no duplicate storage entries (dedup by `incident_id`).
 
@@ -106,24 +106,19 @@ DSR is a **CLI tool** executed as a scheduled batch process. There is no daemon,
 
 **Exit codes:** 0 = success (all steps completed, including partial AI failures), 1 = fatal error (storage completely unavailable, configuration invalid).
 
-**Single-process, single-threaded.** No multiprocessing, no async, no distributed execution. The pipeline processes bundles sequentially within each step.
+**Single-process, single-threaded.** No multiprocessing, no async, no distributed execution. The pipeline processes bundles sequentially within each state.
 
 ### Pipeline Execution Flow
 
+State ordering is configured in `pipeline-flow.yaml`; the `dsr-pipeline` entry point reads this file to determine the execution sequence.
+
 ```
-dsr-pipeline
-  ├─ Step 1: Fetch (GDACS, WHO, GDELT via httpx)
-  ├─ Step 2: Source Pre-filter (discard records whose source_fingerprint already exists in storage)
-  ├─ Step 3: Correlate (group into IncidentBundles)
-  ├─ Step 4: Active-Status Check (skip stale bundles >7 days since last_updated; merge fingerprints for active bundles)
-  ├─ Step 5: Initial Classify (deterministic, no I/O)
-  ├─ Step 6: Supplementary Search (DDG News, gated: should_report AND (active OR missing_fields))
-  ├─ Step 7: AI Enrich (Extractor → re-classify → Classifier, batched)
-  ├─ Step 8: Override Re-evaluation (deterministic, no I/O)
-  └─ Step 9: Store (upsert via JSONL or SQLite; NEW → insert, ACTIVE with new fingerprints → update + reset last_updated, ACTIVE with no new fingerprints → no-op)
+Fetch → Source Pre-filter → Correlate → Classify →
+  ├─ reportable → Active-Check → Search → AI Enrich → Override Re-eval → Store (upsert)
+  └─ not-reportable → Store (as-is)
 ```
 
-Step 1 uses three independent HTTP requests (no parallelism framework — sequential or `httpx` connection pooling). Step 5 is the only step with variable latency (AI calls). All other steps are deterministic and fast.
+AI enrichment is the only step with variable latency (AI calls). All other steps are deterministic and fast.
 
 ## Quality Attributes
 
@@ -145,7 +140,7 @@ Step 1 uses three independent HTTP requests (no parallelism framework — sequen
 | Layer | Choice | Rationale |
 |-------|--------|-----------|
 | Language | Python 3.14+ | Type hints (PEP 695), dataclasses, pattern matching; team expertise |
-| Architecture | Sequential pipeline (monolith) | 7 ordered steps with data dependencies; single-process CLI; no concurrency needed. See ADR 1. |
+| Architecture | Sequential pipeline (monolith) | 9 ordered states with data dependencies; single-process CLI; no concurrency needed. See ADR 1. |
 | HTTP Client | httpx >= 0.28 | Modern sync HTTP client; connection pooling; timeout control; used by all adapters |
 | AI Framework | DSPy | Typed signatures for structured LLM output; prompt optimization; composable modules. See ADR 3. |
 | News Search | ddgs >= 9.14.2 | DuckDuckGo News via `DDGS.news()`; supplementary context for sparse bundles |
