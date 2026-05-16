@@ -1,0 +1,6 @@
+def test_stored_active_bundle_reenters_pipeline():
+    ...
+
+def test_inflight_bundle_supersedes_stored_active():
+    ...
+

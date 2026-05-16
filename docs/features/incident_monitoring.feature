@@ -76,13 +76,12 @@ Feature: Incident Monitoring
     no in-flight counterpart are re-classified as ACTIVE and proceed through
     search-updates, AI enrichment, override re-evaluation, and storage.
 
-    Example: stored active bundle re-enters pipeline
-      Given a stored bundle with incident_id "20260514-PH-EQ", should_report=True,
-        and last_updated 3 days ago
+    Example: stored active bundle reenters pipeline
+      Given a stored bundle with incident_id "20260514-PH-EQ" should_report True and last_updated 3 days ago
       When the active-status check runs
       Then the stored bundle is loaded and proceeds through the pipeline
 
-    Example: in-flight bundle supersedes stored
+    Example: inflight bundle supersedes stored active
       Given a stored active bundle with incident_id "20260514-PH-EQ"
       And an in-flight bundle with the same incident_id
       When the active-status check runs
