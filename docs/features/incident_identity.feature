@@ -25,6 +25,7 @@ Feature: Incident Identity
         | GDACS     | 2026-05-14          | 20260514      |
         | WHO       | 2026-05-13          | 20260513      |
         | GDELT     | 20260512T120000z    | 20260512      |
+        | EONET     | 2026-05-11T06:00:00Z| 20260511      |
         | DDG-NEWS  | 2026-05-11          | 20260511      |
 
     Example: earliest source date wins
@@ -67,10 +68,10 @@ Feature: Incident Identity
   Rule: Source Fingerprint Format
     Each source fingerprint is a globally unique identifier for a single source
     record, formatted as {SOURCE_NAME}:{native_id}. SOURCE_NAME is one of
-    "GDACS", "WHO", "GDELT", or "DDG-NEWS". native_id is source-specific:
-    GDACS uses eventid, WHO uses Id or DonId, GDELT uses url, DDG-NEWS uses url.
-    The source_fingerprints list on IncidentBundle contains one fingerprint per
-    record in the bundle.
+    "GDACS", "WHO", "GDELT", "EONET", or "DDG-NEWS". native_id is source-specific:
+    GDACS uses eventid, WHO uses Id or DonId, GDELT uses url, EONET uses id,
+    DDG-NEWS uses url. The source_fingerprints list on IncidentBundle contains one
+    fingerprint per record in the bundle.
 
     Scenario Outline: source fingerprint is formatted correctly
       Given a RawRecord from "<source>" with native identifier "<native_id>"
@@ -82,6 +83,7 @@ Feature: Incident Identity
         | GDACS     | 12345                                        | GDACS:12345                                    |
         | WHO       | abc-def-456                                  | WHO:abc-def-456                                |
         | GDELT     | https://reuters.com/article/xyz              | GDELT:https://reuters.com/article/xyz          |
+        | EONET     | EONET_20104                                  | EONET:EONET_20104                              |
         | DDG-NEWS  | https://news.example.com/article/abc         | DDG-NEWS:https://news.example.com/article/abc  |
 
   Rule: Last Updated Timestamp

@@ -55,7 +55,7 @@ Feature: Pipeline Orchestration
     (9) Store with upsert.
 
     Example: Pipeline completes all nine steps
-      Given raw records from all three primary sources
+      Given raw records from all primary sources GDACS WHO and EONET
       When the pipeline orchestrator runs
       Then nine pipeline steps execute in specified order
 

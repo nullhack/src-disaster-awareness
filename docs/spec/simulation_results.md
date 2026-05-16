@@ -466,3 +466,349 @@ For each bounded context, rules from .feature files composed into a complete use
 | XCS-5 | Ambiguous | O2 evaluation phase inconsistency — Method column says "AI for others (post-enrichment)" but Evaluation Phase says "Initial (deterministic)" | Minor |
 | TTL-1 | Pre-existing | Rule title "Correlation Requires Date and Country or Title" = 7 words (exceeds 6-word limit). Frozen after iteration 2C PASS. | Cosmetic (frozen) |
 | TTL-2 | Pre-existing | Rule title "Incident ID Generated From Earliest Record Data" = 7 words (exceeds 6-word limit). Frozen after iteration 2C PASS. | Cosmetic (frozen) |
+
+---
+
+# Simulation Results — Iteration 4
+
+> **Status:** DRAFT (2026-05-16) — iteration 4, validating EONET integration as replacement for unreachable GDELT DOC API
+> Flow: spec-validation-flow / simulate-spec
+> Session: eonet
+> Owner: SA (System Architect)
+
+---
+
+## Resolution Status
+
+Iteration 4 validates EONET (NASA Earth Observatory Natural Event Tracker v3) as the fourth primary data source and replacement for the unreachable GDELT DOC API. Walkthroughs cover all four integration points: Fetching, Correlation, Classification, and Storage.
+
+### EONET Integration Validated
+
+| Integration Area | Source | Status |
+|-----------------|--------|--------|
+| Fetching (adapter, filtering, error handling) | domain_spec.md lines 136-149, interview Q14-17 | ✅ Validated |
+| Correlation (date via geometry, country via pycountry from title) | domain_spec.md lines 249, 323 | ✅ Validated |
+| Classification (level derivation: default 2, Volcano→3) | interview Q13 | ✅ Validated |
+| Storage (source_fingerprints EONET:{id}, source_urls from sources[]) | interview Q18-19 | ✅ Validated |
+| Reliability order: GDACS > WHO > EONET > DDG-NEWS | user instructions | ✅ Validated (but spec inconsistent) |
+| GDELT replacement completeness | user instructions | ❌ Spec partially updated — GDELT remnants remain |
+
+### Pre-Existing Findings Carried Forward
+
+| ID | Classification | Description | Status |
+|----|---------------|-------------|--------|
+| ENR-5 | Edge-case | Bundle at exact failure point during mid-batch AI failure | ⚠️ Open (minor) |
+| STO-6 | Ambiguous | SQLiteStore transaction granularity unclear | ⚠️ Open (minor) |
+| XCS-5 | Ambiguous | O2 evaluation phase inconsistency | ⚠️ Open (minor) |
+| TTL-1 | Pre-existing | Rule title length 7 words (frozen) | ⚠️ Noted (frozen) |
+| TTL-2 | Pre-existing | Rule title length 7 words (frozen) | ⚠️ Noted (frozen) |
+
+---
+
+## Summary
+
+- Iteration: 4 of max 5
+- Contexts simulated: 4 (EONET-specific: Fetching, Correlation, Classification, Storage)
+- Walkthroughs performed: 11 (3 Fetching + 3 Correlation + 3 Classification + 2 Storage)
+- New rules discovered: 8 (written to eonet_adapter.feature, classify_engine.feature, incident_identity.feature)
+- New rules written to .feature files: 8
+- Pain points found: 6 (all GDELT→EONET replacement inconsistencies in domain_spec.md)
+- Pain points resolved: 0 (domain spec needs fix-spec iteration to remove GDELT references)
+- Reviewer decision: **FAIL** — domain_spec.md has inconsistent GDELT remnants; requires fix-spec to fully replace GDELT with EONET in Pipeline Overview, reliability order, level derivation table, invariants, and source fingerprints description
+
+### Iteration History
+
+| Iteration | Date | Decision | Key Result |
+|-----------|------|----------|------------|
+| 1 | 2026-05-14 | FAIL | 21 pain points discovered |
+| 2 | 2026-05-14 | PASS (pre-fixture) | All 21 resolved in rewritten spec |
+| 2B | 2026-05-14 | FAIL | 18 fixture-correction issues |
+| 2C | 2026-05-14 | PASS | All 18 resolved, 3 minor advisory open |
+| 3 | 2026-05-15 | PASS | All 6 key updates validated, 2 new rules |
+| 4 | 2026-05-16 | FAIL | EONET integration functional, spec has GDELT remnants |
+
+### Metrics
+
+| Metric | Iteration 3 | Iteration 4 | Delta |
+|--------|-------------|-------------|-------|
+| EONET-specific walkthroughs | 0 | 11 | +11 |
+| I/O evidence files (EONET) | 0 | 20 (10 pairs) | +20 |
+| New rules added to .feature files | 59 | 67 | +8 |
+| Pain points found | 2 (pre-existing) | 6 (new) | +6 |
+| Pain points unresolved | 5 | 11 (5 old + 6 new) | +6 |
+| Feature files updated | 2 | 4 (eonet_adapter new, classify_engine, incident_identity, pipeline_orchestration) | +2 |
+
+---
+
+## EONET Fetching
+
+### Walkthroughs Performed
+
+| # | Walkthrough | Type | Outcome | Discovered Rule |
+|---|-------------|------|---------|-----------------|
+| 1 | EONET adapter fetches mixed events: valid, GDACS-sourced, prescribed fire | happy | PASS | "GDACS sourced events are filtered as duplicates", "Prescribed fires are filtered as controlled burns" |
+| 2 | EONET adapter handles HTTP 5xx, 429, timeout, network unreachable, malformed JSON | error | PASS | "HTTP errors return empty list", "Network failures return no records", "Partial parse returns valid records" |
+| 3 | EONET raw_fields preserved verbatim, source_name="EONET", fingerprint format EONET:{id} | happy | PASS | "raw_fields preserves untouched API response", "source_name is exactly EONET", "Source fingerprint is EONET colon id" |
+
+#### I/O Evidence
+
+All walkthroughs backed by I/O pairs in `/tmp/sim/eonet-fetching/`:
+
+- `/tmp/sim/eonet-fetching/walkthrough_01_in.json`, `walkthrough_01_out.json` — Happy path: 2 events pass filters, 2 filtered (GDACS dup, prescribed fire)
+- `/tmp/sim/eonet-fetching/walkthrough_02_in.json`, `walkthrough_02_out.json` — Error paths: HTTP 503, 429, timeout, DNS failure, malformed JSON → all return []
+
+### Walkthrough Details
+
+**Walkthrough 1 — Happy path with filtering:** EONET API returns 4 events: a Bangladesh flood (EO source), a Mexico volcano (SIVolcano source), a Japan earthquake (GDACS source → filtered), and a Florida prescribed fire (RX in title → filtered). Adapter returns 2 RawRecords. Source fingerprints: `EONET:EONET_20104` and `EONET:EONET_20105`. Raw fields preserved verbatim for each.
+
+**Walkthrough 2 — Error paths:** Adapter handles HTTP 503, HTTP 429, request timeout (30s), DNS resolution failure, and malformed JSON response. All scenarios return empty list `[]`. Never raises exceptions. Pipeline continues with GDACS and WHO adapters unaffected (QA-2 validated).
+
+**Walkthrough 3 — Data integrity:** Each returned RawRecord has `source_name="EONET"`, `raw_fields` containing the complete unmodified EONET event object (all fields: id, title, description, link, closed, categories, sources, geometry). Source fingerprint format `EONET:{id}` confirmed. Disaster type derived from categories array (floods→FL, volcanoes→VO).
+
+### Pain Points
+
+| ID | Classification | Description | Status |
+|----|---------------|-------------|--------|
+| EONET-1 | Contradictory | domain_spec.md line 15: Pipeline Overview says "all three primary adapters (GDACS, WHO, GDELT)" — EONET replaces GDELT. Should say "GDACS, WHO, EONET" (3 sources). | Open |
+| EONET-2 | Contradictory | domain_spec.md line 36: Fetching context says "three primary source adapters (GDACS, WHO DON, GDELT, EONET)" — list has 4 items but says "three". Must be reconciled. | Open |
+| EONET-3 | Contradictory | domain_spec.md line 58: source_name valid values still include "GDELT". If GDELT is replaced by EONET, GDELT should be removed. | Open |
+| EONET-4 | Contradictory | domain_spec.md line 371: Source reliability order is "GDACS > WHO > GDELT > EONET > DDG-NEWS" — includes GDELT which is replaced. Should be "GDACS > WHO > EONET > DDG-NEWS". | Open |
+| EONET-5 | Contradictory | domain_spec.md line 484: Invariant says reliability order is "GDACS > WHO > GDELT > DDG-NEWS" — EONET missing, GDELT present. Must be updated. | Open |
+| EONET-6 | Missing | domain_spec.md lines 369-379: Level Derivation table has no EONET row. EONET level derivation rules (default 2, Volcano→3) from interview Q13 not recorded in spec. | Open |
+
+### E2E Completeness
+
+The EONET Fetching flow is self-contained:
+1. Pipeline calls `eonet_adapter.fetch(client)` alongside GDACS and WHO
+2. Adapter makes GET request to `https://eonet.gsfc.nasa.gov/api/v3/events?status=open&limit=100`
+3. Response parsed: each event checked for GDACS source dedup and prescribed fire filter
+4. Valid events converted to `RawRecord` with source_name="EONET" and source_fingerprint `EONET:{id}`
+5. On any error → returns `[]`, pipeline continues
+6. Records combined with GDACS/WHO records for correlation
+
+All transitions defined. No undefined steps.
+
+---
+
+## EONET Correlation
+
+### Walkthroughs Performed
+
+| # | Walkthrough | Type | Outcome | Discovered Rule |
+|---|-------------|------|---------|-----------------|
+| 1 | EONET record correlates with GDACS record via shared country+date | happy | PASS | — (covered by "Country Match Required When Both Present", "Country Codes Are Normalized Via Pycountry") |
+| 2 | EONET-only volcano record becomes singleton bundle with MX country from title | edge | PASS | "Disaster type is derived from categories" |
+| 3 | EONET record with no extractable title defaults to UNX in incident_id | edge | PASS | — (covered by "Incident ID Format Stable") |
+
+#### I/O Evidence
+
+All walkthroughs backed by I/O pairs in `/tmp/sim/eonet-correlation/`:
+
+- `/tmp/sim/eonet-correlation/walkthrough_01_in.json`, `walkthrough_01_out.json` — EONET + GDACS correlation by BD country and date
+- `/tmp/sim/eonet-correlation/walkthrough_02_in.json`, `walkthrough_02_out.json` — EONET singleton volcano bundle with MX country from title
+- `/tmp/sim/eonet-correlation/walkthrough_03_in.json`, `walkthrough_03_out.json` — EONET record no title → UNX incident_id
+
+### Walkthrough Details
+
+**Walkthrough 1 — EONET+GDACS correlation:** EONET record (Flood in Bangladesh, geometry[0].date=2026-05-14) + GDACS record (Bangladesh flood, fromdate=2026-05-14). Country normalizes: BD/BD via pycountry → country criterion passes. Date: same day → date criterion passes. Title similarity: "Flood in Bangladesh 1103878" vs "Flood in Bangladesh" → ratio 0.82 ≥ 0.6 → PASS. Bundle created with incident_id `20260514-BD-FL`.
+
+**Walkthrough 2 — EONET singleton volcano:** "Volcano Popocatepetl Mexico" — country extracted from title as "Mexico" → MX via pycountry. Date from geometry[0].date=2026-05-14. Disaster type "Volcanoes" → VO. Singleton bundle with incident_id `20260514-MX-VO`.
+
+**Walkthrough 3 — EONET with no title fallback:** EONET event with null title, Droughts category, no extractable country. incident_id = `20260513-UNX-DR`. Country and country_code = None. AI Extractor can fill in later.
+
+### Pain Points
+
+None found specific to EONET correlation. pycountry normalization, date extraction from geometry, singleton bundle creation all validate cleanly.
+
+### E2E Completeness
+
+EONET correlation E2E:
+1. EONET RawRecords enter correlation alongside GDACS/WHO records
+2. Country extracted from title via pycountry (may be None if unparseable)
+3. Date extracted from `geometry[0].date`
+4. Compared pairwise against other source records using date ±1 day, country overlap, title similarity
+5. Correlated records form bundles; unmatched EONET records form singletons
+6. incident_id uses earliest source date — EONET geometry[0].date is one candidate
+7. source_fingerprints include `EONET:{id}` entries
+
+---
+
+## EONET Classification
+
+### Walkthroughs Performed
+
+| # | Walkthrough | Type | Outcome | Discovered Rule |
+|---|-------------|------|---------|-----------------|
+| 1 | EONET flood event (non-volcano) → default Level 2 | happy | PASS | "EONET event level derives from default or volcano category" |
+| 2 | EONET volcano event → Level 3 via Volcanoes category | happy | PASS | "EONET event level derives from default or volcano category" |
+| 3 | GDACS beats EONET in most-reliable-source-wins | edge | PASS | — (covered by "Most reliable source wins for level derivation") |
+
+#### I/O Evidence
+
+All walkthroughs backed by I/O pairs in `/tmp/sim/eonet-classification/`:
+
+- `/tmp/sim/eonet-classification/walkthrough_01_in.json`, `walkthrough_01_out.json` — EONET flood default Level 2, O4 triggers for FL in Group A
+- `/tmp/sim/eonet-classification/walkthrough_02_in.json`, `walkthrough_02_out.json` — EONET volcano Level 3, Group B → MED/True
+- `/tmp/sim/eonet-classification/walkthrough_03_in.json`, `walkthrough_03_out.json` — GDACS Green beats EONET default by reliability
+
+### Walkthrough Details
+
+**Walkthrough 1 — EONET default Level 2:** Flood in Bangladesh (BD → Group A). EONET default = Level 2. Priority matrix: Level 2 × Group A = MED/True. O4 triggers (FL + Group A) → priority bumped to HIGH. Final: Level 2, Group A, HIGH, True, [O4].
+
+**Walkthrough 2 — EONET volcano Level 3:** Volcano Popocatepetl Mexico (MX → Group B). Volcano rule → Level 3. Priority matrix: Level 3 × Group B = MED/True. No overrides trigger. Final: Level 3, Group B, MED, True, [].
+
+**Walkthrough 3 — GDACS beats EONET:** GDACS Green (bumped to 2 for Group A) + EONET default (2). GDACS reliability > EONET reliability → GDACS wins. Level 2 from GDACS. Priority matrix yields same result regardless: Level 2 × Group A = MED/True, O4 bumps to HIGH.
+
+### Pain Points
+
+None found specific to EONET classification. Level derivation, most-reliable-source-wins, and priority matrix all validate cleanly.
+
+**Note:** GDACS-sourced EONET events are filtered at the adapter level (EONET-1 walkthrough 1), so the "GDACS-sourced→4/3/1" level derivation rule from interview Q13 is a dead rule — those events never reach classification. The only active EONET-specific level rule is Volcano→3.
+
+### E2E Completeness
+
+EONET classification E2E:
+1. ClassifyEngine.classify(bundle) runs on bundles containing EONET records
+2. For EONET-only bundles: level from default 2 or Volcano→3
+3. For mixed bundles: most-reliable-source-wins selects GDACS/WHO over EONET
+4. Country group lookup from pycountry-normalized country code
+5. Priority matrix applied (level × group)
+6. Overrides evaluated: O4 may trigger for environmental EONET events in Group A countries
+
+---
+
+## EONET Storage
+
+### Walkthroughs Performed
+
+| # | Walkthrough | Type | Outcome | Discovered Rule |
+|---|-------------|------|---------|-----------------|
+| 1 | Mixed EONET+GDACS bundle: source_fingerprints, source_urls collected from both sources | happy | PASS | — (covered by "Source URLs collected per source") |
+| 2 | EONET-only bundle: incident_name from EONET title, multiple source_urls from sources[] array | edge | PASS | — (covered by "Incident name from most reliable source") |
+
+#### I/O Evidence
+
+All walkthroughs backed by I/O pairs in `/tmp/sim/eonet-storage/`:
+
+- `/tmp/sim/eonet-storage/walkthrough_01_in.json`, `walkthrough_01_out.json` — EONET+GDACS mixed bundle storage
+- `/tmp/sim/eonet-storage/walkthrough_02_in.json`, `walkthrough_02_out.json` — EONET-only volcano bundle storage
+
+### Walkthrough Details
+
+**Walkthrough 1 — Mixed bundle storage:** EONET record (fingerprint: `EONET:EONET_20104`, source URL from sources[0].url) + GDACS record (fingerprint: `GDACS:12345`, source URL from url.report). Incident name from GDACS (higher reliability): "Flood in Bangladesh". source_fingerprints: ["EONET:EONET_20104", "GDACS:12345"]. source_urls: ["https://earthobservatory.nasa.gov/...", "https://gdacs.org/report/123"]. source_names: ["GDACS", "EONET"]. record_count: 2.
+
+**Walkthrough 2 — EONET-only bundle storage:** EONET volcano record with 2 sources (SIVolcano, EO). source_fingerprints: ["EONET:EONET_20105"]. source_urls: ["https://volcano.si.edu/...", "https://earthobservatory.nasa.gov/..."]. Incident name from EONET title (only source): "Volcano Popocatepetl Mexico". source_names: ["EONET"]. record_count: 1.
+
+### Pain Points
+
+None found specific to EONET storage. source_fingerprints, source_urls collection from EONET sources[] array, incident_name derivation, and date partitioning all validate cleanly.
+
+### E2E Completeness
+
+EONET storage E2E:
+1. EONET bundles pass through pipeline to `store.upsert()`
+2. source_fingerprints include `EONET:{id}` entries
+3. source_urls collected from the `sources[].url` array of EONET raw_fields
+4. incident_name uses highest-reliability source title (may be EONET if only source)
+5. Date partitioning uses classification_date (earliest source date from geometry[0].date)
+6. Query returns flattened Incident with source_names including "EONET"
+
+---
+
+## E2E Completeness Walk (EONET)
+
+The full EONET pipeline integration composes a complete user journey:
+
+1. Pipeline step 1: `EONETAdapter.fetch(client)` → GET NASA v3 API → filter GDACS dups and prescribed fires → return `list[RawRecord]` with source_name="EONET"
+2. Pipeline step 2: Source Pre-filter checks `exists_by_source_fingerprint("EONET:{id}")` — skip if seen
+3. Pipeline step 3: Correlate EONET records with GDACS/WHO by date+country+title → form bundles or singletons; incident_id uses geometry[0].date
+4. Pipeline step 4: Active-Status Check — NEW/ACTIVE/STALE determination
+5. Pipeline step 5: Classify — default Level 2 (Volcano→3); country_group from pycountry; priority matrix; O4 if environmental+Group A
+6. Pipeline step 6: Supplementary Search — if country/type missing from EONET title parsing → DDG search triggered
+7. Pipeline step 7: AI Enrich — Extractor fills EONET gaps (country, casualties); Classifier generates summaries
+8. Pipeline step 8: Override Re-evaluation — O1/O3/O5 re-evaluated with enriched data
+9. Pipeline step 9: Store — upsert with EONET source_fingerprints and source_urls from sources[]
+
+All transitions have defined triggers and outputs. EONET data shapes (id, title, categories, sources, geometry) flow through entire pipeline.
+
+---
+
+## Cross-Context Consistency (EONET)
+
+### Integration Point Validation (EONET)
+
+| Integration Point | EONET Data Flow | Consistent |
+|-------------------|-----------------|------------|
+| Fetching → Correlation | EONET RawRecords with source_name="EONET" → correlate(records) | ✅ |
+| Correlation → Classification | EONET records in bundles → ClassifyEngine.classify() | ✅ |
+| Classification → Storage | EONET bundles with level/priority → StorageBackend.upsert() | ✅ |
+| EONET geometry[0].date → incident_id | Date extracted for YYYYMMDD component | ✅ |
+| EONET sources[].url → source_urls | URLs collected for storage Incident | ✅ |
+
+### Data Shape Matching (EONET)
+
+| Data Shape | EONET Source | Verified |
+|------------|-------------|----------|
+| EONET id → source_fingerprint | `EONET:{id}` | ✅ Walkthrough 1 (Fetching) |
+| EONET categories[] → disaster_type | floods→FL, volcanoes→VO, etc. | ✅ Walkthrough 1 (Fetching), Walkthrough 2 (Correlation) |
+| EONET geometry[0].date → source date | incident_id YYYYMMDD component | ✅ Walkthroughs 1, 2 (Correlation) |
+| EONET title → country extraction | pycountry via title pattern matching | ✅ Walkthrough 2 (Correlation) |
+| EONET sources[].url → source_urls | Multiple URLs per event | ✅ Walkthrough 2 (Storage) |
+
+---
+
+## Newly Added Feature File Rules (Iteration 4)
+
+### eonet_adapter.feature — New Feature File
+
+| Rule Title | Source Walkthroughs | Description |
+|------------|---------------------|-------------|
+| HTTP errors return empty list | EONET Fetching 2 | HTTP 5xx, 429, timeout → return [] (never raises) |
+| Network failures return no records | EONET Fetching 2 | Connection refused, DNS failure, network unreachable → return [] |
+| Partial parse returns valid records | EONET Fetching 2 | Malformed events skipped, valid ones returned |
+| raw_fields preserves untouched API response | EONET Fetching 3 | Complete EONET event JSON preserved verbatim |
+| source_name is exactly EONET | EONET Fetching 3 | Every RawRecord has source_name="EONET" |
+| GDACS sourced events are filtered as duplicates | EONET Fetching 1 | Events with source.id=="GDACS" skipped at adapter level |
+| Prescribed fires are filtered as controlled burns | EONET Fetching 1 | Events with "Prescribed Fire" or "RX" in title filtered |
+| Source fingerprint is EONET colon id | EONET Fetching 3 | Format `EONET:{id}` using EONET event id field |
+| Disaster type is derived from categories | EONET Correlation 2 | earthquakes→EQ, floods→FL, volcanoes→VO, wildfires→WF, severeStorms→TC, droughts→DR, landslides→LS |
+
+### classify_engine.feature — New Rule (Iteration 4)
+
+| Rule Title | Source Walkthroughs | Description |
+|------------|---------------------|-------------|
+| EONET event level derives from default or volcano category | Classification 1, 2 | Default Level 2; Volcanoes category or SIVolcano source → Level 3 |
+
+### incident_identity.feature — Updated Rules (Iteration 4)
+
+| Change | Description |
+|--------|-------------|
+| Source date examples | Added EONET row: `geometry[0].date` → YYYYMMDD component |
+| Source fingerprint examples | Added EONET row: `EONET:EONET_20104` |
+| Fingerprint format rule | Added EONET to SOURCE_NAME values and native_id description |
+
+---
+
+## Pain Points Summary (Iteration 4 — New)
+
+| Classification | Iteration 4 | Notes |
+|---------------|-------------|-------|
+| Contradictory | 5 (EONET-1 through EONET-5) | GDELT still referenced in domain_spec after EONET replacement |
+| Missing | 1 (EONET-6) | No EONET row in Level Derivation table |
+
+### All Open Pain Points (Cumulative After Iteration 4)
+
+| ID | Classification | Description | Severity |
+|----|---------------|-------------|----------|
+| ENR-5 | Edge-case | Mid-batch AI failure ambiguous status (carried from I2) | Minor |
+| STO-6 | Ambiguous | SQLiteStore transaction granularity (carried from I2) | Minor |
+| XCS-5 | Ambiguous | O2 evaluation phase inconsistency (carried from I2) | Minor |
+| TTL-1 | Pre-existing | Rule title length > 6 words (frozen I2C) | Cosmetic |
+| TTL-2 | Pre-existing | Rule title length > 6 words (frozen I2C) | Cosmetic |
+| TTL-3 | Pre-existing | 19 rules in classify_engine.feature exceed 6-word limit (systemic, inherited from I1) | Cosmetic (frozen) |
+| **EONET-1** | **Contradictory** | domain_spec.md line 15: Pipeline Overview says "three primary adapters (GDACS, WHO, GDELT)" — must say "GDACS, WHO, EONET" | **High** |
+| **EONET-2** | **Contradictory** | domain_spec.md line 36: "three primary source adapters" but lists 4 including GDELT | **High** |
+| **EONET-3** | **Contradictory** | domain_spec.md line 58: source_name still includes "GDELT" | **High** |
+| **EONET-4** | **Contradictory** | domain_spec.md line 371: reliability order "GDACS > WHO > GDELT > EONET" — must be "GDACS > WHO > EONET" | **High** |
+| **EONET-5** | **Contradictory** | domain_spec.md line 484: invariant reliability order "GDACS > WHO > GDELT > DDG-NEWS" — EONET missing, GDELT present | **High** |
+| **EONET-6** | **Missing** | domain_spec.md lines 369-379: no EONET row in Level Derivation table | **Medium** |

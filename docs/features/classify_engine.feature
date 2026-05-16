@@ -84,15 +84,33 @@ Feature: Classify Engine
       When the classify engine classifies the bundle
       Then the incident level is 2
 
-  Rule: Most reliable source wins for level derivation
+  Rule: EONET level from default or volcano
 
-    Example: GDACS level wins over WHO and GDELT levels
-      Given a bundle with a GDACS Orange record for Australia and a WHO pandemic record and a GDELT devastating record
+    EONET has no alert level or severity score. Default incident level is 2
+    (SIGNIFICANT). Events with a Volcanoes category or a SIVolcano source are
+    elevated to Level 3 (MAJOR). GDACS-sourced EONET events are filtered at the
+    adapter level and never reach classification. EONET is lower in the reliability
+    order than GDACS and WHO — if either provides level data, they take precedence.
+
+    Example: EONET non volcano event defaults to Level 2
+      Given a bundle with only an EONET record having a Floods category
+      When the classify engine classifies the bundle
+      Then the incident level is 2
+
+    Example: EONET volcano event elevated to Level 3
+      Given a bundle with only an EONET record having a Volcanoes category
       When the classify engine classifies the bundle
       Then the incident level is 3
 
-    Example: WHO level wins over GDELT when GDACS provides no level
-      Given a bundle with a WHO pandemic record and a GDELT major record but no GDACS level data
+  Rule: Most reliable source wins for level derivation
+
+    Example: GDACS level wins over WHO GDELT and EONET levels
+      Given a bundle with a GDACS Orange record for Australia and a WHO pandemic record and a GDELT devastating record and an EONET record defaulting to Level 2
+      When the classify engine classifies the bundle
+      Then the incident level is 3
+
+    Example: WHO level wins over EONET when GDACS provides no level
+      Given a bundle with a WHO pandemic record and an EONET volcano record but no GDACS level data
       When the classify engine classifies the bundle
       Then the incident level is 4
 
