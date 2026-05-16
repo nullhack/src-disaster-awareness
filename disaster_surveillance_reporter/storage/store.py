@@ -21,11 +21,97 @@ from disaster_surveillance_reporter.types import Incident, IncidentBundle, RawRe
 
 logger = logging.getLogger(__name__)
 
-_EVAL_NAMESPACE: dict[str, object] = {
-    "IncidentBundle": IncidentBundle,
-    "RawRecord": RawRecord,
-    "datetime": dt,
-}
+
+def _serialize_bundle(bundle: IncidentBundle) -> dict:
+    """Convert an IncidentBundle to a plain dict with ISO 8601 datetimes."""
+    data: dict[str, object] = {}
+    for field_name in (
+        "incident_id",
+        "country",
+        "country_code",
+        "disaster_type",
+        "country_group",
+        "incident_level",
+        "priority",
+        "should_report",
+        "overrides",
+        "ai_enriched",
+        "enrichment_failed",
+        "summary",
+        "rationale",
+        "estimated_affected",
+        "estimated_deaths",
+        "classification_date",
+        "last_updated",
+        "source_fingerprints",
+    ):
+        val = getattr(bundle, field_name, None)
+        if val is None:
+            data[field_name] = None
+        elif isinstance(val, (dt.datetime, date)):
+            data[field_name] = val.isoformat()
+        elif isinstance(val, date):
+            data[field_name] = val.isoformat()
+        else:
+            data[field_name] = val
+
+    data["records"] = [_serialize_record(r) for r in bundle.records]
+    data["classified_at"] = (
+        bundle.classified_at.isoformat() if bundle.classified_at else None
+    )
+    return data
+
+
+def _serialize_record(record: RawRecord) -> dict:
+    """Convert a RawRecord to a plain dict."""
+    return {
+        "source_name": record.source_name,
+        "fetched_at": record.fetched_at.isoformat(),
+        "raw_fields": record.raw_fields,
+    }
+
+
+def _deserialize_bundle(data: dict) -> IncidentBundle:
+    """Reconstruct an IncidentBundle from a plain dict."""
+    def _dt(val):
+        if val is None:
+            return None
+        return dt.datetime.fromisoformat(str(val))
+
+    records = [
+        RawRecord(
+            source_name=r["source_name"],
+            fetched_at=dt.datetime.fromisoformat(r["fetched_at"]),
+            raw_fields=r["raw_fields"],
+        )
+        for r in data.get("records", [])
+    ]
+    classification_date = data.get("classification_date")
+    if isinstance(classification_date, str):
+        classification_date = date.fromisoformat(classification_date)
+
+    return IncidentBundle(
+        incident_id=data["incident_id"],
+        records=records,
+        country=data.get("country"),
+        country_code=data.get("country_code"),
+        disaster_type=data.get("disaster_type"),
+        country_group=data.get("country_group"),
+        incident_level=data.get("incident_level", 1),
+        priority=data.get("priority", "LOW"),
+        should_report=data.get("should_report", False),
+        overrides=data.get("overrides", []),
+        ai_enriched=data.get("ai_enriched", False),
+        enrichment_failed=data.get("enrichment_failed", False),
+        summary=data.get("summary"),
+        rationale=data.get("rationale"),
+        estimated_affected=data.get("estimated_affected"),
+        estimated_deaths=data.get("estimated_deaths"),
+        classified_at=_dt(data.get("classified_at")),
+        classification_date=classification_date,
+        last_updated=_dt(data.get("last_updated")),
+        source_fingerprints=data.get("source_fingerprints", []),
+    )
 
 
 class StorageBackend(Protocol):
@@ -116,7 +202,7 @@ class JSONLStore:
             )
             partition_dir.mkdir(parents=True, exist_ok=True)
             jsonl_path = partition_dir / "incidents.jsonl"
-            line = json.dumps(bundle, default=str) + "\n"
+            line = json.dumps(_serialize_bundle(bundle)) + "\n"
             # Atomic append via temp-file-and-rename
             tmp_path = jsonl_path.with_suffix(jsonl_path.suffix + ".tmp")
             try:
@@ -161,7 +247,7 @@ class JSONLStore:
                         logger.warning("Skipping malformed JSONL line")
                         continue
                     try:
-                        bundle = self._reconstruct_bundle(parsed)
+                        bundle = _deserialize_bundle(parsed)
                     except Exception:
                         logger.warning("Skipping unparseable JSONL line")
                         continue
@@ -271,7 +357,7 @@ class JSONLStore:
                 except json.JSONDecodeError:
                     continue
                 try:
-                    bundle = self._reconstruct_bundle(parsed)
+                    bundle = _deserialize_bundle(parsed)
                 except Exception:
                     continue
                 if bundle is None:
@@ -291,7 +377,7 @@ class JSONLStore:
         )
         partition_dir.mkdir(parents=True, exist_ok=True)
         jsonl_path = partition_dir / "incidents.jsonl"
-        line = json.dumps(bundle, default=str) + "\n"
+        line = json.dumps(_serialize_bundle(bundle)) + "\n"
         tmp_path = jsonl_path.with_suffix(jsonl_path.suffix + ".tmp")
         try:
             existing = jsonl_path.read_text() if jsonl_path.exists() else ""
@@ -318,7 +404,7 @@ class JSONLStore:
                     new_lines.append(line)
                     continue
                 if bundle.incident_id in line_stripped:
-                    new_lines.append(json.dumps(bundle, default=str))
+                    new_lines.append(json.dumps(_serialize_bundle(bundle)))
                     updated = True
                 else:
                     new_lines.append(line)
@@ -332,14 +418,6 @@ class JSONLStore:
                         tmp_path.unlink(missing_ok=True)
                     raise
                 return
-        # Should not reach here if bundle exists
-        pass
-
-    @staticmethod
-    def _reconstruct_bundle(parsed: str) -> IncidentBundle | None:
-        if isinstance(parsed, str):
-            return eval(parsed, {"__builtins__": {}}, _EVAL_NAMESPACE)  # noqa: S307
-        return None
 
 
 class SQLiteStore:
@@ -367,7 +445,7 @@ class SQLiteStore:
         for bundle in bundles:
             if self.exists(bundle.incident_id):
                 continue
-            bundle_json = json.dumps(bundle, default=str)
+            bundle_json = json.dumps(_serialize_bundle(bundle))
             cls_date = (
                 bundle.classification_date or dt.datetime.now(tz=dt.timezone.utc).date()
             ).isoformat()
@@ -399,7 +477,7 @@ class SQLiteStore:
 
         for (bundle_json,) in rows:
             parsed = json.loads(bundle_json)
-            bundle = JSONLStore._reconstruct_bundle(parsed)
+            bundle = _deserialize_bundle(parsed)
             if bundle is None:
                 logger.warning("Skipping unparseable stored line")
                 continue
@@ -418,7 +496,7 @@ class SQLiteStore:
 
     def upsert(self, bundle: IncidentBundle) -> str:
         if not self.exists(bundle.incident_id):
-            bundle_json = json.dumps(bundle, default=str)
+            bundle_json = json.dumps(_serialize_bundle(bundle))
             cls_date = (
                 bundle.classification_date
                 or dt.datetime.now(tz=dt.timezone.utc).date()
@@ -436,7 +514,7 @@ class SQLiteStore:
         if not new_fps:
             return "noop"
 
-        bundle_json = json.dumps(bundle, default=str)
+        bundle_json = json.dumps(_serialize_bundle(bundle))
         cls_date = (
             bundle.classification_date
             or dt.datetime.now(tz=dt.timezone.utc).date()
@@ -457,7 +535,7 @@ class SQLiteStore:
         if row is None:
             return None
         bundle_str = json.loads(row[0])
-        bundle = JSONLStore._reconstruct_bundle(bundle_str)
+        bundle = _deserialize_bundle(bundle_str)
         if bundle is None:
             return None
         return bundle.last_updated
@@ -470,7 +548,7 @@ class SQLiteStore:
         if row is None:
             return []
         bundle_str = json.loads(row[0])
-        bundle = JSONLStore._reconstruct_bundle(bundle_str)
+        bundle = _deserialize_bundle(bundle_str)
         if bundle is None:
             return []
         return bundle.source_fingerprints
@@ -495,7 +573,7 @@ class SQLiteStore:
         rows = self._conn.execute("SELECT bundle_json FROM incidents").fetchall()
         for (bundle_json,) in rows:
             parsed = json.loads(bundle_json)
-            bundle = JSONLStore._reconstruct_bundle(parsed)
+            bundle = _deserialize_bundle(parsed)
             if bundle is None:
                 continue
             if bundle.should_report and bundle.is_active(reference_time):

@@ -7,7 +7,7 @@ from pathlib import Path
 
 import pytest
 
-from disaster_surveillance_reporter.storage.store import JSONLStore
+from disaster_surveillance_reporter.storage.store import JSONLStore, _serialize_bundle
 from disaster_surveillance_reporter.types import IncidentBundle, RawRecord
 
 
@@ -30,7 +30,7 @@ def test_malformed_jsonl_lines_skipped_with_warning(
         ],
         classification_date=date(2026, 5, 14),
     )
-    line_valid = json.dumps(valid_bundle, default=str)
+    line_valid = json.dumps(_serialize_bundle(valid_bundle))
 
     jsonl_path = partition_dir / "incidents.jsonl"
     jsonl_path.write_text(
