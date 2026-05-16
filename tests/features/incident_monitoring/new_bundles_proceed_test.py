@@ -1,0 +1,3 @@
+def test_new_bundle_proceeds_through_pipeline():
+    ...
+

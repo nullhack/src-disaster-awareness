@@ -32,9 +32,9 @@ Feature: Incident Monitoring
       When the source pre-filter evaluates the record
       Then the record is discarded from the pipeline
 
-    Example: new fingerprint passes pre-filter
+    Example: new fingerprint passes prefilter
       Given a RawRecord with source_fingerprint "GDACS:99999" not in storage
-      When the source pre-filter evaluates the record
+      When the source prefilter evaluates the record
       Then the record passes through to the correlator
 
   Rule: New Bundles Proceed
@@ -112,13 +112,13 @@ Feature: Incident Monitoring
       When upsert is called with the same incident_id and new fingerprint "WHO:abc-def"
       Then the status is "updated"
 
-  Rule: Upsert No-op Unchanged
+  Rule: Upsert Noop Unchanged
     When upsert() receives a bundle whose incident_id is in storage but no
     new source_fingerprints are found (all fingerprints already present in
-    the stored bundle), the operation is a no-op. last_updated is NOT reset,
+    the stored bundle), the operation is a noop. last_updated is NOT reset,
     preserving the monitoring window. Returns "noop".
 
-    Example: upsert no-ops when no new fingerprints
+    Example: upsert noops when no new fingerprints
       Given a bundle in storage with incident_id "20260514-JP-EQ" and last_updated 3 days ago
       When upsert is called with the same incident_id and no new fingerprints
       Then the status is "noop"

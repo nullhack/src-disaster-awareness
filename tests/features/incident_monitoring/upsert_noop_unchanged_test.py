@@ -1,0 +1,3 @@
+def test_upsert_noops_when_no_new_fingerprints():
+    ...
+

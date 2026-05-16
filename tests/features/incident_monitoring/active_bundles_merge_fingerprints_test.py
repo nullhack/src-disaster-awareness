@@ -1,0 +1,3 @@
+def test_active_bundle_merges_fingerprints():
+    ...
+

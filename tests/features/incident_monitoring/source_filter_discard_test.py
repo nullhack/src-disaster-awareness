@@ -1,0 +1,6 @@
+def test_seen_fingerprint_is_discarded():
+    ...
+
+def test_new_fingerprint_passes_prefilter():
+    ...
+

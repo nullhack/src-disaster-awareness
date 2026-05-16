@@ -1,0 +1,3 @@
+def test_stale_bundle_removed_from_pipeline():
+    ...
+

@@ -1,8 +1,8 @@
 """Pipeline orchestration for disaster incident processing.
 
-Seven-step sequential pipeline:
-Fetch -> Correlate -> Initial Classify -> Supplementary Search -> AI Enrich ->
-Override Re-evaluation -> Store.
+Nine-step sequential pipeline with lifecycle gating:
+Fetch -> Source Pre-filter -> Correlate -> Active-Status Check -> Initial Classify ->
+Supplementary Search -> AI Enrich -> Override Re-evaluation -> Store (upsert).
 """
 
 from __future__ import annotations
@@ -20,7 +20,7 @@ from disaster_surveillance_reporter.ai.provider import AIProvider
 from disaster_surveillance_reporter.classification.classify import ClassifyEngine
 from disaster_surveillance_reporter.correlation.correlate import Correlator
 from disaster_surveillance_reporter.storage.store import StorageBackend
-from disaster_surveillance_reporter.types import IncidentBundle, RawRecord
+from disaster_surveillance_reporter.types import IncidentBundle, RawRecord, generate_source_fingerprint
 
 logger = structlog.get_logger(__name__)
 
@@ -55,7 +55,14 @@ class Pipeline:
             logger.exception("pipeline_fetch_failed")
             raw_records = []
 
-        # Step 2: Correlate records into bundles
+        # Step 2: Source pre-filter — discard seen records
+        try:
+            raw_records = self._pre_filter(raw_records)
+            logger.info("pipeline_prefilter_done", record_count=len(raw_records))
+        except Exception:
+            logger.exception("pipeline_prefilter_failed")
+
+        # Step 3: Correlate records into bundles
         try:
             bundles = self._correlate_records(raw_records)
             logger.info("pipeline_correlate_done", bundle_count=len(bundles))
@@ -63,38 +70,45 @@ class Pipeline:
             logger.exception("pipeline_correlate_failed")
             bundles = []
 
-        # Step 3: Initial deterministic classification
+        # Step 4: Active-status check — classify bundles as NEW/ACTIVE/STALE
+        try:
+            bundles = self._active_status_check(bundles)
+            logger.info("pipeline_active_check_done", bundle_count=len(bundles))
+        except Exception:
+            logger.exception("pipeline_active_check_failed")
+
+        # Step 5: Initial deterministic classification
         try:
             bundles = self._classify_initial(bundles)
             logger.info("pipeline_classify_done")
         except Exception:
             logger.exception("pipeline_classify_failed")
 
-        # Step 4: Supplementary search for bundles needing context
+        # Step 6: Supplementary search for bundles needing context
         try:
             bundles = self._supplementary_search(bundles)
             logger.info("pipeline_supplementary_search_done")
         except Exception:
             logger.exception("pipeline_supplementary_search_failed")
 
-        # Step 5: AI enrichment (extract -> re-classify -> classify)
+        # Step 7: AI enrichment (extract -> re-classify -> classify)
         try:
             bundles = self._ai_enrich(bundles)
             logger.info("pipeline_ai_enrich_done")
         except Exception:
             logger.exception("pipeline_ai_enrich_failed")
 
-        # Step 6: Override re-evaluation
+        # Step 8: Override re-evaluation
         try:
             bundles = self._reclassify_overrides(bundles)
             logger.info("pipeline_override_reeval_done")
         except Exception:
             logger.exception("pipeline_override_reeval_failed")
 
-        # Step 7: Store complete bundles
+        # Step 9: Store (upsert) complete bundles
         try:
-            stored = self._store_bundles(bundles)
-            logger.info("pipeline_store_done", stored_count=stored)
+            upsert_results = self._store_bundles(bundles)
+            logger.info("pipeline_store_done", upsert_results=upsert_results)
         except Exception:
             logger.exception("pipeline_store_failed")
 
@@ -114,6 +128,16 @@ class Pipeline:
                         source=getattr(adapter, "source_name", "unknown"),
                     )
         return records
+
+    def _pre_filter(self, records: list[RawRecord]) -> list[RawRecord]:
+        """Discard records whose source_fingerprint already exists in storage."""
+        raise NotImplementedError
+
+    def _active_status_check(
+        self, bundles: list[IncidentBundle],
+    ) -> list[IncidentBundle]:
+        """Classify bundles as NEW/ACTIVE/STALE. Remove STALE, merge fingerprints for ACTIVE."""
+        raise NotImplementedError
 
     def _correlate_records(
         self, records: list[RawRecord],
@@ -193,16 +217,17 @@ class Pipeline:
                 self._classify_engine.reevaluate_overrides(b)
         return bundles
 
-    def _store_bundles(self, bundles: list[IncidentBundle]) -> int:
-        if not bundles:
-            return 0
-        return self._storage_backend.store(bundles)
+    def _store_bundles(self, bundles: list[IncidentBundle]) -> dict[str, int]:
+        """Upsert each bundle. Returns counts keyed by status."""
+        raise NotImplementedError
 
     @staticmethod
     def _should_supplementary_search(bundle: IncidentBundle) -> bool:
-        if not bundle.should_report:
-            return False
-        return bundle.country is None or bundle.disaster_type is None
+        """DDG search gate: should_report AND (active OR missing_fields).
+
+        Stale, fully-known incidents skip DDG search entirely.
+        """
+        raise NotImplementedError
 
     @staticmethod
     def _build_search_query(

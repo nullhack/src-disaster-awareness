@@ -37,6 +37,22 @@ class StorageBackend(Protocol):
         """Persist bundles, skip existing IDs, return count of new bundles stored."""
         ...
 
+    def upsert(self, bundle: IncidentBundle) -> str:
+        """Insert, update, or no-op a bundle. Returns "inserted", "updated", or "noop"."""
+        ...
+
+    def get_last_updated(self, incident_id: str) -> dt.datetime | None:
+        """Return the last_updated timestamp for *incident_id*, or None if not found."""
+        ...
+
+    def get_source_fingerprints(self, incident_id: str) -> list[str]:
+        """Return stored source fingerprints for *incident_id*, or empty list."""
+        ...
+
+    def exists_by_source_fingerprint(self, fingerprint: str) -> bool:
+        """Return True if *fingerprint* is stored in any bundle."""
+        ...
+
     def query(
         self,
         date_from: date,
@@ -157,6 +173,18 @@ class JSONLStore:
                 return True
         return False
 
+    def upsert(self, bundle: IncidentBundle) -> str:
+        raise NotImplementedError
+
+    def get_last_updated(self, incident_id: str) -> dt.datetime | None:
+        raise NotImplementedError
+
+    def get_source_fingerprints(self, incident_id: str) -> list[str]:
+        raise NotImplementedError
+
+    def exists_by_source_fingerprint(self, fingerprint: str) -> bool:
+        raise NotImplementedError
+
     # ------------------------------------------------------------------
     #  helpers
     # ------------------------------------------------------------------
@@ -241,6 +269,18 @@ class SQLiteStore:
             "SELECT 1 FROM incidents WHERE incident_id = ?", (incident_id,)
         ).fetchone()
         return row is not None
+
+    def upsert(self, bundle: IncidentBundle) -> str:
+        raise NotImplementedError
+
+    def get_last_updated(self, incident_id: str) -> dt.datetime | None:
+        raise NotImplementedError
+
+    def get_source_fingerprints(self, incident_id: str) -> list[str]:
+        raise NotImplementedError
+
+    def exists_by_source_fingerprint(self, fingerprint: str) -> bool:
+        raise NotImplementedError
 
 
 # =====================================================================
