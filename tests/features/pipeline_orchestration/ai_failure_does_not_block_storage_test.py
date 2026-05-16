@@ -43,7 +43,9 @@ def test_pipeline_ai_failure_stores_unenriched():
 
     mock_news = MagicMock()
     mock_storage = MagicMock()
-    mock_storage.store.return_value = 1
+    mock_storage.upsert.return_value = "inserted"
+    mock_storage.exists_by_source_fingerprint.return_value = False
+    mock_storage.get_source_fingerprints.return_value = []
 
     pipeline = Pipeline(
         adapters=[mock_adapter],
@@ -56,8 +58,9 @@ def test_pipeline_ai_failure_stores_unenriched():
     )
     result = pipeline.run()
 
-    mock_storage.store.assert_called_once()
-    stored_bundles = mock_storage.store.call_args[0][0]
+    mock_storage.upsert.assert_called()
+    stored_bundles = [c.args[0] for c in mock_storage.upsert.call_args_list]
+    assert len(stored_bundles) == 1
     assert len(stored_bundles) == 1
     assert stored_bundles[0].enrichment_failed is True
     assert stored_bundles[0].ai_enriched is False
@@ -124,7 +127,9 @@ def test_pipeline_mid_batch_failure_preserves_results():
     mock_classifier.enrich.return_value = bundles
 
     mock_storage = MagicMock()
-    mock_storage.store.return_value = 3
+    mock_storage.upsert.return_value = "inserted"
+    mock_storage.exists_by_source_fingerprint.return_value = False
+    mock_storage.get_source_fingerprints.return_value = []
 
     pipeline = Pipeline(
         adapters=[mock_adapter],
@@ -137,10 +142,9 @@ def test_pipeline_mid_batch_failure_preserves_results():
     )
     pipeline.run()
 
-    mock_storage.store.assert_called_once()
-    stored_bundles = mock_storage.store.call_args[0][0]
+    mock_storage.upsert.assert_called()
+    stored_bundles = [c.args[0] for c in mock_storage.upsert.call_args_list]
     assert len(stored_bundles) == 3
-
     enriched = [b for b in stored_bundles if b.ai_enriched]
     failed = [b for b in stored_bundles if b.enrichment_failed]
     assert len(enriched) > 0, "At least one bundle should be enriched"
