@@ -157,10 +157,37 @@ class Pipeline:
                 kept.append(record)
         return kept
 
+    def _load_active_bundles(self) -> list[IncidentBundle]:
+        """Load stored active bundles independent of fresh fetches.
+
+        Step E loads bundles where should_report=True and within the 7-day
+        monitoring window, even when no new source records arrive for them.
+        Returns [] on storage failure.
+        """
+        try:
+            return self._storage_backend.get_active_bundles()
+        except Exception:
+            logger.exception("pipeline_load_active_bundles_failed")
+            return []
+
     def _active_status_check(
         self, bundles: list[IncidentBundle],
     ) -> list[IncidentBundle]:
         """Classify bundles as NEW/ACTIVE/STALE. Remove STALE, merge fingerprints for ACTIVE."""
+        # Phase 1: load stored active bundles and merge with in-flight
+        stored_active = self._load_active_bundles()
+        if stored_active:
+            in_flight_ids = {b.incident_id for b in bundles}
+            for stored in stored_active:
+                if stored.incident_id not in in_flight_ids:
+                    bundles.append(stored)
+            logger.info(
+                "pipeline_active_check_loaded_from_storage",
+                loaded_count=len(stored_active),
+                merged_count=len(bundles),
+            )
+
+        # Phase 2: standard NEW/ACTIVE/STALE classification
         kept: list[IncidentBundle] = []
         for bundle in bundles:
             stored = self._storage_backend.exists(bundle.incident_id)

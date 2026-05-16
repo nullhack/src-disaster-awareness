@@ -20,6 +20,7 @@ def _make_pipeline(storage_backend):
 def test_new_bundle_proceeds_through_pipeline():
     now = datetime.now(tz=timezone.utc)
     storage = MagicMock()
+    storage.get_active_bundles.return_value = []
     storage.exists.return_value = False
     pipeline = _make_pipeline(storage)
 

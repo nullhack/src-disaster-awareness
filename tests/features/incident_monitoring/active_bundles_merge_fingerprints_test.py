@@ -20,6 +20,7 @@ def _make_pipeline(storage_backend):
 def test_active_bundle_merges_fingerprints():
     now = datetime.now(tz=timezone.utc)
     storage = MagicMock()
+    storage.get_active_bundles.return_value = []
     storage.exists.return_value = True
     storage.get_last_updated.return_value = now - timedelta(days=3)
     storage.get_source_fingerprints.return_value = ["WHO:old-123"]

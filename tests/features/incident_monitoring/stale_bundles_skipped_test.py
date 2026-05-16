@@ -20,6 +20,7 @@ def _make_pipeline(storage_backend):
 def test_stale_bundle_removed_from_pipeline():
     now = datetime.now(tz=timezone.utc)
     storage = MagicMock()
+    storage.get_active_bundles.return_value = []
     storage.exists.return_value = True
     storage.get_last_updated.return_value = now - timedelta(days=10)
 

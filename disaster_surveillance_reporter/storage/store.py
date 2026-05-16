@@ -72,6 +72,17 @@ class StorageBackend(Protocol):
         """Return ``True`` if *incident_id* is already stored.  No side effects."""
         ...
 
+    def get_active_bundles(
+        self, reference_time: dt.datetime | None = None,
+    ) -> list[IncidentBundle]:
+        """Return stored bundles that are still in the active monitoring window.
+
+        Filters to ``should_report=True`` and ``now - last_updated ≤ 7 days``.
+        Used by Step E (active-status check) to independently load bundles
+        that need re-search even when no fresh source records arrive.
+        """
+        ...
+
 
 class JSONLStore:
     r"""Append-only, date-partitioned JSONL storage backend.
@@ -235,6 +246,39 @@ class JSONLStore:
             if jsonl_path.exists() and fingerprint in jsonl_path.read_text():
                 return True
         return False
+
+    def get_active_bundles(
+        self,
+        reference_time: dt.datetime | None = None,
+    ) -> list[IncidentBundle]:
+        """Scan all date partitions and return active reportable bundles."""
+        if reference_time is None:
+            reference_time = dt.datetime.now(tz=dt.timezone.utc)
+        active: list[IncidentBundle] = []
+        base = self.base_path / "incidents" / "by-date"
+        if not base.exists():
+            return active
+        for date_dir in sorted(base.iterdir()):
+            jsonl_path = date_dir / "incidents.jsonl"
+            if not jsonl_path.exists():
+                continue
+            for line in jsonl_path.read_text().splitlines():
+                line = line.strip()
+                if not line:
+                    continue
+                try:
+                    parsed = json.loads(line)
+                except json.JSONDecodeError:
+                    continue
+                try:
+                    bundle = self._reconstruct_bundle(parsed)
+                except Exception:
+                    continue
+                if bundle is None:
+                    continue
+                if bundle.should_report and bundle.is_active(reference_time):
+                    active.append(bundle)
+        return active
 
     # ------------------------------------------------------------------
     #  helpers
@@ -439,6 +483,24 @@ class SQLiteStore:
             if fingerprint in bundle_json:
                 return True
         return False
+
+    def get_active_bundles(
+        self,
+        reference_time: dt.datetime | None = None,
+    ) -> list[IncidentBundle]:
+        """Return active reportable bundles from SQLite storage."""
+        if reference_time is None:
+            reference_time = dt.datetime.now(tz=dt.timezone.utc)
+        active: list[IncidentBundle] = []
+        rows = self._conn.execute("SELECT bundle_json FROM incidents").fetchall()
+        for (bundle_json,) in rows:
+            parsed = json.loads(bundle_json)
+            bundle = JSONLStore._reconstruct_bundle(parsed)
+            if bundle is None:
+                continue
+            if bundle.should_report and bundle.is_active(reference_time):
+                active.append(bundle)
+        return active
 
 
 # =====================================================================

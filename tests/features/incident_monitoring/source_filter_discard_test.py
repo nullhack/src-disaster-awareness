@@ -19,6 +19,7 @@ def _make_pipeline(storage_backend):
 
 def test_seen_fingerprint_is_discarded():
     storage = MagicMock()
+    storage.get_active_bundles.return_value = []
     storage.exists_by_source_fingerprint.return_value = True
     pipeline = _make_pipeline(storage)
 
@@ -36,6 +37,7 @@ def test_seen_fingerprint_is_discarded():
 
 def test_new_fingerprint_passes_prefilter():
     storage = MagicMock()
+    storage.get_active_bundles.return_value = []
     storage.exists_by_source_fingerprint.return_value = False
     pipeline = _make_pipeline(storage)
 
