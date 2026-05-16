@@ -14,7 +14,7 @@ Feature: EONET Adapter
     The adapter handles HTTP 5xx responses, HTTP 429 rate limiting, and request timeouts
     by returning an empty list of RawRecords without raising exceptions.
 
-    Scenario Outline: EONET server error produces empty list
+    Scenario Outline: EONET server error yields empty list
       Given the EONET API responds with HTTP status <status_code>
       When the adapter fetches records
       Then the adapter returns an empty list
@@ -36,7 +36,7 @@ Feature: EONET Adapter
     resolution failures by returning an empty list of RawRecords without raising
     exceptions.
 
-    Scenario Outline: EONET connection failure produces empty list
+    Scenario Outline: EONET connection failure yields empty list
       Given the EONET API connection fails with <error_type>
       When the adapter fetches records
       Then the adapter returns an empty list
@@ -53,7 +53,7 @@ Feature: EONET Adapter
     records, the adapter skips the malformed entries and returns the successfully
     parsed valid records. A response with no parseable records returns an empty list.
 
-    Example: EONET malformed records are silently skipped
+    Example: EONET malformed records silently skipped
       Given the EONET API response contains one valid and one malformed event
       When the adapter fetches records
       Then the adapter returns one record
@@ -68,7 +68,7 @@ Feature: EONET Adapter
     Each RawRecord's raw_fields dict contains the complete, unmodified EONET v3 API
     event object. No normalization, field removal, or transformation is applied.
 
-    Example: EONET API response is preserved verbatim
+    Example: EONET API response preserved verbatim
       Given the EONET API returns an event record
       When the adapter parses the response
       Then raw fields contains all API response fields including id title categories sources geometry
@@ -78,7 +78,7 @@ Feature: EONET Adapter
     Every RawRecord produced by this adapter has its source_name field set to the exact
     string "EONET".
 
-    Example: Source name is always EONET
+    Example: EONET source name is exact
       Given the EONET adapter fetches from the API
       When a raw record is produced
       Then the source name is "EONET"
@@ -91,12 +91,12 @@ Feature: EONET Adapter
     adapter level before records enter correlation.
 
     Example: EONET event with GDACS source is skipped
-      Given the EONET API returns an event with source id GDACS
+      Given the EONET API returns an event with source id "GDACS"
       When the adapter fetches records
       Then the event is not in the returned records
 
-    Example: EONET event without GDACS source returns normally
-      Given the EONET API returns an event with only source id EO
+    Example: EONET non GDACS event returns normally
+      Given the EONET API returns an event with only source id "EO"
       When the adapter fetches records
       Then the event is in the returned records
 
@@ -106,17 +106,18 @@ Feature: EONET Adapter
     filtered out and not returned as RawRecords. These are controlled managed burns,
     not disaster events.
 
-    Scenario Outline: Prescribed fire event is filtered
+    Scenario Outline: EONET prescribed fire is filtered
       Given the EONET API returns an event with title containing <fire_pattern>
       When the adapter fetches records
       Then the event is not in the returned records
 
       Examples:
         | fire_pattern      |
-        | Prescribed Fire   |
-        | RX Burn Project   |
+        | "Prescribed Fire" |
+        | "RX Burn Project" |
+        | "rx"              |
 
-    Example: Wildfire event without prescribed fire keywords returns normally
+    Example: EONET wildfire event returns normally
       Given the EONET API returns an event with title "Wildfire in California"
       When the adapter fetches records
       Then the event is in the returned records
@@ -128,7 +129,7 @@ Feature: EONET Adapter
     the id field of the EONET event.
 
     Example: EONET record fingerprint format
-      Given an EONET event with id EONET_20104
+      Given an EONET event with id "EONET_20104"
       When the source fingerprint is computed
       Then the fingerprint is "EONET:EONET_20104"
 
@@ -137,22 +138,23 @@ Feature: EONET Adapter
     The disaster type for each EONET event is derived from the categories array.
     Mapping: earthquakes→EQ, floods→FL, volcanoes→VO, wildfires→WF,
     severeStorms→TC, droughts→DR, landslides→LS. Unrecognized categories are
-    treated as unknown disaster type.
+    treated as "OTH".
 
-    Scenario Outline: EONET category maps to disaster type code
+    Scenario Outline: EONET category maps to type code
       Given an EONET event with category <category_title>
       When the disaster type is derived
       Then the type code is <type_code>
 
       Examples:
-        | category_title | type_code |
-        | Earthquakes    | EQ        |
-        | Floods         | FL        |
-        | Volcanoes      | VO        |
-        | Wildfires      | WF        |
-        | Severe Storms  | TC        |
-        | Drought        | DR        |
-        | Landslides     | LS        |
+        | category_title    | type_code |
+        | "Earthquakes"     | "EQ"      |
+        | "Floods"          | "FL"      |
+        | "Volcanoes"       | "VO"      |
+        | "Wildfires"       | "WF"      |
+        | "Severe Storms"   | "TC"      |
+        | "Drought"         | "DR"      |
+        | "Landslides"      | "LS"      |
+        | "UnknownCategory" | "OTH"     |
 
   # Constraints:
   # - Reliability: EONET API down must not affect GDACS, WHO, or DDG News adapters —
