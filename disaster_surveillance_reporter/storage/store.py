@@ -11,6 +11,7 @@ from __future__ import annotations
 import datetime as dt
 import json
 import logging
+import os
 import sqlite3
 from datetime import date
 from pathlib import Path
@@ -373,3 +374,29 @@ def _incident_in_file(incident_id: str, path: Path) -> bool:
         return incident_id in path.read_text()
     except Exception:
         return False
+
+
+def get_storage_backend(storage_path: str | Path | None = None) -> StorageBackend:
+    """Return a :class:`StorageBackend` instance selected by ``DSR_STORAGE_BACKEND``.
+
+    Reads the ``DSR_STORAGE_BACKEND`` environment variable:
+    - ``"jsonl"`` (default) → :class:`JSONLStore` using *storage_path*
+      or the ``DSR_STORAGE_PATH`` env var, falling back to ``./incidents``.
+    - ``"sqlite"`` → :class:`SQLiteStore` using
+      ``{storage_path}/incidents.db``.
+
+    Raises :class:`ValueError` for unknown backend names.
+    """
+    backend = os.environ.get("DSR_STORAGE_BACKEND", "jsonl").lower()
+    if storage_path is None:
+        storage_path = os.environ.get("DSR_STORAGE_PATH", "./incidents")
+    storage_path = Path(storage_path)
+
+    if backend == "jsonl":
+        return JSONLStore(storage_path)
+    if backend == "sqlite":
+        return SQLiteStore(storage_path / "incidents.db")
+    raise ValueError(
+        f"Unknown DSR_STORAGE_BACKEND '{backend}'. "
+        f"Supported: jsonl, sqlite"
+    )

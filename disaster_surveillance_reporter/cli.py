@@ -13,7 +13,7 @@ from disaster_surveillance_reporter.ai.provider import get_provider
 from disaster_surveillance_reporter.classification.classify import ClassifyEngine
 from disaster_surveillance_reporter.correlation.correlate import Correlator
 from disaster_surveillance_reporter.pipeline import Pipeline
-from disaster_surveillance_reporter.storage.store import JSONLStore
+from disaster_surveillance_reporter.storage import get_storage_backend
 
 
 def main() -> int:
@@ -53,7 +53,7 @@ def main() -> int:
             news_searcher=NewsSearcher(),
             extractor=extractor,
             classifier=classifier,
-            storage_backend=JSONLStore(args.output_dir),
+            storage_backend=get_storage_backend(args.output_dir),
         )
         result = pipeline.run()
         print(f"\n{result} bundles stored.")

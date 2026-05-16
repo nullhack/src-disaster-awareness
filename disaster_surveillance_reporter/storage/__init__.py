@@ -6,4 +6,4 @@ querying flattened :class:`~disaster_surveillance_reporter.types.Incident`
 records.
 """
 
-from .store import JSONLStore, SQLiteStore, StorageBackend  # noqa: F401
+from .store import JSONLStore, SQLiteStore, StorageBackend, get_storage_backend  # noqa: F401
