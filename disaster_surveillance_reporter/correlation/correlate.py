@@ -108,14 +108,14 @@ class Correlator:
                     if ti and tj:
                         if difflib.SequenceMatcher(None, ti, tj).ratio() < 0.6:
                             continue
-                    else:
+                    elif ti or tj:
                         continue
                 # One has country, other unknown: require title similarity.
                 else:
                     if ti and tj:
                         if difflib.SequenceMatcher(None, ti, tj).ratio() < 0.6:
                             continue
-                    else:
+                    elif ti or tj:
                         continue
 
                 union(i, j)
