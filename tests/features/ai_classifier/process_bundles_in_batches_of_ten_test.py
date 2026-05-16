@@ -9,6 +9,8 @@ from disaster_surveillance_reporter.ai.classifier import ClassifierAgent
 from disaster_surveillance_reporter.types import IncidentBundle, RawRecord
 
 
+_BEEHAVE_LITERALS = ['10']
+
 def _make_bundle(incident_id: str, text: str = "default text") -> IncidentBundle:
     return IncidentBundle(
         incident_id=incident_id,

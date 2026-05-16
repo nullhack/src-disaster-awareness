@@ -9,6 +9,8 @@ from disaster_surveillance_reporter.types import (
     generate_incident_id,
 )
 
+_BEEHAVE_LITERALS = ['<date_component>', '<raw_date>', '<source>']
+
 _FIELD_MAP = {
     "GDACS": "fromdate",
     "WHO": "PublicationDate",

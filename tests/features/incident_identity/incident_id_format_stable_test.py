@@ -5,6 +5,8 @@ from hypothesis import strategies as st
 
 from disaster_surveillance_reporter.types import RawRecord, generate_incident_id
 
+
+_BEEHAVE_LITERALS = ['<country_code>', '<expected_id>', '<source_date>', '<type_code>']
 _KNOWN_EXAMPLES = {
     ("2026-05-14", "PH", "EQ"): "20260514-PH-EQ",
     ("2026-05-14", "UNX", "FL"): "20260514-UNX-FL",

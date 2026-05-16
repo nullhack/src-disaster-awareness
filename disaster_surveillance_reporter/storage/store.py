@@ -175,20 +175,121 @@ class JSONLStore:
         return False
 
     def upsert(self, bundle: IncidentBundle) -> str:
-        raise NotImplementedError
+        if not self.exists(bundle.incident_id):
+            return self._insert_bundle(bundle)
+
+        existing_fps = set(self.get_source_fingerprints(bundle.incident_id))
+        new_fps = set(bundle.source_fingerprints) - existing_fps
+        if not new_fps:
+            return "noop"
+
+        self._update_bundle(bundle)
+        return "updated"
 
     def get_last_updated(self, incident_id: str) -> dt.datetime | None:
-        raise NotImplementedError
+        base = self.base_path / "incidents" / "by-date"
+        if not base.exists():
+            return None
+        for date_dir in sorted(base.iterdir()):
+            jsonl_path = date_dir / "incidents.jsonl"
+            if not jsonl_path.exists():
+                continue
+            for line in jsonl_path.read_text().splitlines():
+                line = line.strip()
+                if not line or incident_id not in line:
+                    continue
+                try:
+                    data = json.loads(line)
+                except json.JSONDecodeError:
+                    continue
+                ts = data.get("last_updated")
+                if ts:
+                    return dt.datetime.fromisoformat(ts)
+        return None
 
     def get_source_fingerprints(self, incident_id: str) -> list[str]:
-        raise NotImplementedError
+        base = self.base_path / "incidents" / "by-date"
+        if not base.exists():
+            return []
+        for date_dir in sorted(base.iterdir()):
+            jsonl_path = date_dir / "incidents.jsonl"
+            if not jsonl_path.exists():
+                continue
+            for line in jsonl_path.read_text().splitlines():
+                line = line.strip()
+                if not line or incident_id not in line:
+                    continue
+                try:
+                    data = json.loads(line)
+                except json.JSONDecodeError:
+                    continue
+                return data.get("source_fingerprints", [])
+        return []
 
     def exists_by_source_fingerprint(self, fingerprint: str) -> bool:
-        raise NotImplementedError
+        base = self.base_path / "incidents" / "by-date"
+        if not base.exists():
+            return False
+        for date_dir in base.iterdir():
+            jsonl_path = date_dir / "incidents.jsonl"
+            if jsonl_path.exists() and fingerprint in jsonl_path.read_text():
+                return True
+        return False
 
     # ------------------------------------------------------------------
     #  helpers
     # ------------------------------------------------------------------
+
+    def _insert_bundle(self, bundle: IncidentBundle) -> str:
+        cls_date = bundle.classification_date or dt.datetime.now(tz=dt.timezone.utc).date()
+        partition_dir = (
+            self.base_path / "incidents" / "by-date" / cls_date.isoformat()
+        )
+        partition_dir.mkdir(parents=True, exist_ok=True)
+        jsonl_path = partition_dir / "incidents.jsonl"
+        line = json.dumps(bundle, default=str) + "\n"
+        tmp_path = jsonl_path.with_suffix(jsonl_path.suffix + ".tmp")
+        try:
+            existing = jsonl_path.read_text() if jsonl_path.exists() else ""
+            tmp_path.write_text(existing + line)
+            tmp_path.rename(jsonl_path)
+        except Exception:
+            if tmp_path.exists():
+                tmp_path.unlink(missing_ok=True)
+            raise
+        return "inserted"
+
+    def _update_bundle(self, bundle: IncidentBundle) -> None:
+        base = self.base_path / "incidents" / "by-date"
+        for date_dir in sorted(base.iterdir()):
+            jsonl_path = date_dir / "incidents.jsonl"
+            if not jsonl_path.exists():
+                continue
+            lines = jsonl_path.read_text().splitlines()
+            updated = False
+            new_lines: list[str] = []
+            for line in lines:
+                line_stripped = line.strip()
+                if not line_stripped:
+                    new_lines.append(line)
+                    continue
+                if bundle.incident_id in line_stripped:
+                    new_lines.append(json.dumps(bundle, default=str))
+                    updated = True
+                else:
+                    new_lines.append(line)
+            if updated:
+                tmp_path = jsonl_path.with_suffix(jsonl_path.suffix + ".tmp")
+                try:
+                    tmp_path.write_text("\n".join(new_lines) + "\n")
+                    tmp_path.rename(jsonl_path)
+                except Exception:
+                    if tmp_path.exists():
+                        tmp_path.unlink(missing_ok=True)
+                    raise
+                return
+        # Should not reach here if bundle exists
+        pass
 
     @staticmethod
     def _reconstruct_bundle(parsed: str) -> IncidentBundle | None:
@@ -272,16 +373,72 @@ class SQLiteStore:
         return row is not None
 
     def upsert(self, bundle: IncidentBundle) -> str:
-        raise NotImplementedError
+        if not self.exists(bundle.incident_id):
+            bundle_json = json.dumps(bundle, default=str)
+            cls_date = (
+                bundle.classification_date
+                or dt.datetime.now(tz=dt.timezone.utc).date()
+            ).isoformat()
+            self._conn.execute(
+                "INSERT INTO incidents (incident_id, bundle_json, classification_date)"
+                " VALUES (?, ?, ?)",
+                (bundle.incident_id, bundle_json, cls_date),
+            )
+            self._conn.commit()
+            return "inserted"
+
+        existing_fps = set(self.get_source_fingerprints(bundle.incident_id))
+        new_fps = set(bundle.source_fingerprints) - existing_fps
+        if not new_fps:
+            return "noop"
+
+        bundle_json = json.dumps(bundle, default=str)
+        cls_date = (
+            bundle.classification_date
+            or dt.datetime.now(tz=dt.timezone.utc).date()
+        ).isoformat()
+        self._conn.execute(
+            "UPDATE incidents SET bundle_json = ?, classification_date = ?"
+            " WHERE incident_id = ?",
+            (bundle_json, cls_date, bundle.incident_id),
+        )
+        self._conn.commit()
+        return "updated"
 
     def get_last_updated(self, incident_id: str) -> dt.datetime | None:
-        raise NotImplementedError
+        row = self._conn.execute(
+            "SELECT bundle_json FROM incidents WHERE incident_id = ?",
+            (incident_id,),
+        ).fetchone()
+        if row is None:
+            return None
+        bundle_str = json.loads(row[0])
+        bundle = JSONLStore._reconstruct_bundle(bundle_str)
+        if bundle is None:
+            return None
+        return bundle.last_updated
 
     def get_source_fingerprints(self, incident_id: str) -> list[str]:
-        raise NotImplementedError
+        row = self._conn.execute(
+            "SELECT bundle_json FROM incidents WHERE incident_id = ?",
+            (incident_id,),
+        ).fetchone()
+        if row is None:
+            return []
+        bundle_str = json.loads(row[0])
+        bundle = JSONLStore._reconstruct_bundle(bundle_str)
+        if bundle is None:
+            return []
+        return bundle.source_fingerprints
 
     def exists_by_source_fingerprint(self, fingerprint: str) -> bool:
-        raise NotImplementedError
+        rows = self._conn.execute(
+            "SELECT bundle_json FROM incidents"
+        ).fetchall()
+        for (bundle_json,) in rows:
+            if fingerprint in bundle_json:
+                return True
+        return False
 
 
 # =====================================================================

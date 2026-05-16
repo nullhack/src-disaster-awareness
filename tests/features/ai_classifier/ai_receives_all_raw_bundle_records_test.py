@@ -5,6 +5,8 @@ from disaster_surveillance_reporter.ai.classifier import ClassifierAgent
 from disaster_surveillance_reporter.types import IncidentBundle, RawRecord
 
 
+_BEEHAVE_LITERALS = ['3']
+
 class _MockProvider:
     """Mock that captures the prompt for assertions."""
 

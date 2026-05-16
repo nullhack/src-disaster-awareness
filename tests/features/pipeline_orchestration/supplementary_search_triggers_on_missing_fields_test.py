@@ -7,6 +7,8 @@ from hypothesis import given, example, strategies as st
 
 from disaster_surveillance_reporter.pipeline import Pipeline
 
+_BEEHAVE_LITERALS = ['<field>']
+
 
 @example(field="country")
 @example(field="disaster_type")

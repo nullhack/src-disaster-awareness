@@ -9,6 +9,8 @@ from hypothesis import strategies as st
 from disaster_surveillance_reporter.pipeline import Pipeline
 
 
+_BEEHAVE_LITERALS = ['<country>', '<disaster_type>', '<expected_query>', '<title>']
+
 def _build_expected(title, country, disaster_type):
     """Build expected query from the template rule:
     {title} {country} {disaster_type} latest news

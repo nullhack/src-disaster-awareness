@@ -6,6 +6,8 @@ from hypothesis import strategies as st
 
 from disaster_surveillance_reporter.types import RawRecord, generate_source_fingerprint
 
+
+_BEEHAVE_LITERALS = ['<fingerprint>', '<native_id>', '<source>']
 _FIELD_MAP = {
     "GDACS": "eventid",
     "WHO": "Id",

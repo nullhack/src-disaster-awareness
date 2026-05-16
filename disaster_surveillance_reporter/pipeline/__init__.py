@@ -131,13 +131,42 @@ class Pipeline:
 
     def _pre_filter(self, records: list[RawRecord]) -> list[RawRecord]:
         """Discard records whose source_fingerprint already exists in storage."""
-        raise NotImplementedError
+        kept: list[RawRecord] = []
+        for record in records:
+            fp = generate_source_fingerprint(record)
+            if not self._storage_backend.exists_by_source_fingerprint(fp):
+                kept.append(record)
+        return kept
 
     def _active_status_check(
         self, bundles: list[IncidentBundle],
     ) -> list[IncidentBundle]:
         """Classify bundles as NEW/ACTIVE/STALE. Remove STALE, merge fingerprints for ACTIVE."""
-        raise NotImplementedError
+        kept: list[IncidentBundle] = []
+        for bundle in bundles:
+            stored = self._storage_backend.exists(bundle.incident_id)
+            if not stored:
+                # NEW bundle — proceed
+                kept.append(bundle)
+                continue
+
+            last_updated = self._storage_backend.get_last_updated(
+                bundle.incident_id
+            )
+            if last_updated is not None:
+                bundle.last_updated = last_updated
+
+            if bundle.is_active():
+                # ACTIVE — merge stored fingerprints
+                stored_fps = self._storage_backend.get_source_fingerprints(
+                    bundle.incident_id
+                )
+                all_fps = list(set(bundle.source_fingerprints) | set(stored_fps))
+                bundle.source_fingerprints = all_fps
+                kept.append(bundle)
+            # STALE bundles are removed (not appended to kept)
+
+        return kept
 
     def _correlate_records(
         self, records: list[RawRecord],
@@ -219,7 +248,11 @@ class Pipeline:
 
     def _store_bundles(self, bundles: list[IncidentBundle]) -> dict[str, int]:
         """Upsert each bundle. Returns counts keyed by status."""
-        raise NotImplementedError
+        counts: dict[str, int] = {"inserted": 0, "updated": 0, "noop": 0}
+        for bundle in bundles:
+            status = self._storage_backend.upsert(bundle)
+            counts[status] = counts.get(status, 0) + 1
+        return counts
 
     @staticmethod
     def _should_supplementary_search(bundle: IncidentBundle) -> bool:
@@ -227,7 +260,11 @@ class Pipeline:
 
         Stale, fully-known incidents skip DDG search entirely.
         """
-        raise NotImplementedError
+        if not bundle.should_report:
+            return False
+        active = bundle.is_active()
+        missing_fields = bundle.country is None or bundle.disaster_type is None
+        return active or missing_fields
 
     @staticmethod
     def _build_search_query(
