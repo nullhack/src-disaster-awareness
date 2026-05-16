@@ -21,6 +21,7 @@ _FIELD_MAP = {
 @example(source="WHO", native_id="abc-def-456", fingerprint="WHO:abc-def-456")
 @example(source="GDELT", native_id="https://reuters.com/article/xyz", fingerprint="GDELT:https://reuters.com/article/xyz")
 @example(source="DDG-NEWS", native_id="https://news.example.com/article/abc", fingerprint="DDG-NEWS:https://news.example.com/article/abc")
+@example(source="EONET", native_id="EONET_20104", fingerprint="EONET:EONET_20104")
 @given(source=st.text(), native_id=st.text(), fingerprint=st.text())
 def test_source_fingerprint_is_formatted_correctly(source, native_id, fingerprint):
     # beehave traceability: scenario outline placeholders

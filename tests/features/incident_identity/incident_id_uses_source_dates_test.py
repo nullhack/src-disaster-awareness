@@ -23,6 +23,7 @@ _FIELD_MAP = {
 @example(source="WHO", raw_date="2026-05-13", date_component=20260513)
 @example(source="GDELT", raw_date="20260512T120000z", date_component=20260512)
 @example(source="DDG-NEWS", raw_date="2026-05-11", date_component=20260511)
+@example(source="EONET", raw_date="2026-05-11T06:00:00Z", date_component=20260511)
 @given(source=st.text(), raw_date=st.text(), date_component=st.integers())
 def test_source_date_field_recognized(source, raw_date, date_component):
     # beehave traceability: scenario outline placeholders
