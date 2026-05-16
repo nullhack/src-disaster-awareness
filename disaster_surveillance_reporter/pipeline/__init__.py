@@ -1,8 +1,12 @@
 """Pipeline orchestration for disaster incident processing.
 
-Nine-step sequential pipeline with lifecycle gating:
-Fetch -> Source Pre-filter -> Correlate -> Active-Status Check -> Initial Classify ->
-Supplementary Search -> AI Enrich -> Override Re-evaluation -> Store (upsert).
+Nine-state sequential flow per pipeline-flow v4:
+Fetch → Source Pre-filter → Correlate → Classify →
+  ├─ reportable → Active-Check → Search → AI Enrich → Override Re-eval → Store
+  └─ not-reportable → Store
+
+Non-reportable bundles exit the pipeline early at the classify step,
+stored as-is without search, AI, or override re-evaluation.
 """
 
 from __future__ import annotations
@@ -43,11 +47,12 @@ class Pipeline:
         self._extractor = extractor
         self._classifier = classifier
         self._storage_backend = storage_backend
+        self._now = lambda: datetime.now(tz=timezone.utc)
 
     def run(self) -> list[IncidentBundle]:
         logger.info("pipeline_run_start", step="fetch")
 
-        # Step 1: Fetch all primary sources
+        # Step A: Fetch all primary sources
         try:
             raw_records = self._fetch_sources()
             logger.info("pipeline_fetch_done", record_count=len(raw_records))
@@ -55,14 +60,14 @@ class Pipeline:
             logger.exception("pipeline_fetch_failed")
             raw_records = []
 
-        # Step 2: Source pre-filter — discard seen records
+        # Step B: Source pre-filter — discard seen records
         try:
             raw_records = self._pre_filter(raw_records)
             logger.info("pipeline_prefilter_done", record_count=len(raw_records))
         except Exception:
             logger.exception("pipeline_prefilter_failed")
 
-        # Step 3: Correlate records into bundles
+        # Step C: Correlate records into bundles
         try:
             bundles = self._correlate_records(raw_records)
             logger.info("pipeline_correlate_done", bundle_count=len(bundles))
@@ -70,42 +75,56 @@ class Pipeline:
             logger.exception("pipeline_correlate_failed")
             bundles = []
 
-        # Step 4: Active-status check — classify bundles as NEW/ACTIVE/STALE
-        try:
-            bundles = self._active_status_check(bundles)
-            logger.info("pipeline_active_check_done", bundle_count=len(bundles))
-        except Exception:
-            logger.exception("pipeline_active_check_failed")
-
-        # Step 5: Initial deterministic classification
+        # Step D: Deterministic classification — reportable → active-check,
+        #         not-reportable → store directly
         try:
             bundles = self._classify_initial(bundles)
             logger.info("pipeline_classify_done")
         except Exception:
             logger.exception("pipeline_classify_failed")
 
-        # Step 6: Supplementary search for bundles needing context
+        reportable = [b for b in bundles if b.should_report]
+        not_reportable = [b for b in bundles if not b.should_report]
+
+        # Step D-exit: Store non-reportable bundles as-is
+        if not_reportable:
+            try:
+                self._store_bundles(not_reportable)
+                logger.info("pipeline_store_not_reportable_done",
+                            count=len(not_reportable))
+            except Exception:
+                logger.exception("pipeline_store_not_reportable_failed")
+        bundles = reportable
+
+        # Step E: Active-status check for reportable bundles only
+        try:
+            bundles = self._active_status_check(bundles)
+            logger.info("pipeline_active_check_done", bundle_count=len(bundles))
+        except Exception:
+            logger.exception("pipeline_active_check_failed")
+
+        # Step F: Supplementary search for active bundles
         try:
             bundles = self._supplementary_search(bundles)
             logger.info("pipeline_supplementary_search_done")
         except Exception:
             logger.exception("pipeline_supplementary_search_failed")
 
-        # Step 7: AI enrichment (extract -> re-classify -> classify)
+        # Step G: AI enrichment (extract → post-extract re-classify → classify)
         try:
             bundles = self._ai_enrich(bundles)
             logger.info("pipeline_ai_enrich_done")
         except Exception:
             logger.exception("pipeline_ai_enrich_failed")
 
-        # Step 8: Override re-evaluation
+        # Step H: Override re-evaluation
         try:
             bundles = self._reclassify_overrides(bundles)
             logger.info("pipeline_override_reeval_done")
         except Exception:
             logger.exception("pipeline_override_reeval_failed")
 
-        # Step 9: Store (upsert) complete bundles
+        # Step I: Store (upsert) reportable bundles
         try:
             upsert_results = self._store_bundles(bundles)
             logger.info("pipeline_store_done", upsert_results=upsert_results)
