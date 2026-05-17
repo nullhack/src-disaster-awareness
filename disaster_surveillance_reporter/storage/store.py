@@ -429,6 +429,7 @@ class SQLiteStore:
 
     def __init__(self, db_path: Path) -> None:
         """Create a SQLite store at *db_path*."""
+        db_path.parent.mkdir(parents=True, exist_ok=True)
         self._conn = sqlite3.connect(str(db_path))
         self._conn.execute(
             "CREATE TABLE IF NOT EXISTS incidents ("
