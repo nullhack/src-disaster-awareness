@@ -1,0 +1,169 @@
+flow: pipeline-flow
+version: 4.0.0
+exits:
+  - complete
+
+# Integration contract: pipeline.py reads this flow at init time and
+# drives state transitions via flowr.  Each state declares:
+#   method       – Pipeline method to invoke (mandatory)
+#   timeout      – per-state wall-clock deadline (optional, seconds)
+#   error_action – skip | abort | continue (default: continue)
+#   <domain>     – step-specific configuration (thresholds, lists, env vars)
+
+states:
+  # ── Step A: Fetch from adapters ──
+  - id: fetch-sources
+    attrs:
+      description: >
+        Fetch RawRecords from every configured adapter.  Each adapter
+        returns list[RawRecord] and never raises — an empty list signals
+        a failed source.  Adaptable source list provided by CLI caller.
+      method: _fetch_sources
+      timeout_per_adapter: 120
+      error_action: continue
+    next:
+      fetched: source-prefilter
+      all-failed: complete       # no data at all → exit early
+
+  # ── Step B: Source Pre-filter (dedup) ──
+  - id: source-prefilter
+    attrs:
+      description: >
+        Discard RawRecords whose source_fingerprint already exists in
+        storage.  Calls StorageBackend.exists_by_source_fingerprint() per
+        record.  Records surviving this gate have never been seen before.
+        When every record is discarded the pipeline exits early.
+      method: _pre_filter
+      error_action: continue       # fingerprint scan failure → keep all records
+    next:
+      filtered: correlate
+      all-seen: complete          # nothing new → exit, no work needed
+
+  # ── Step C: Correlate records into bundles ──
+  - id: correlate
+    attrs:
+      description: >
+        Group RawRecords into IncidentBundles using three matching criteria:
+        date proximity (±1 calendar day), country overlap (ISO 3166-1
+        alpha-2 via pycountry), and title similarity (SequenceMatcher ratio
+        ≥ 0.6).  Combination: date AND (country OR title).  Populates
+        source_fingerprints and last_updated on new bundles.  Singleton
+        bundles receive default classification (Level 1, Group C, LOW).
+      method: _correlate_records
+      date_proximity_days: 1
+      title_threshold: 0.6
+      match_algorithm: difflib.SequenceMatcher
+      error_action: abort
+    next:
+      correlated: classify
+
+  # ── Step D: Deterministic classification ──
+  - id: classify
+    attrs:
+      description: >
+        Deterministic classification.  Fills country and disaster_type
+        where source data provides the answer (GDACS iso3→alpha2,
+        GDACS eventtype→type, EONET categories→type).  Derives incident
+        level via most-reliable-source-wins (GDACS > WHO > EONET > GDELT).
+        Country groups: A (24), B (46+), C (rest).  Priority matrix
+        level×group→HIGH|MED|LOW + should_report.  Evaluates initial
+        overrides O2/O4/O6.  Non-reportable bundles are stored immediately
+        (upsert noop prevents storage bloat for stale non-reportables).
+        Reportable bundles proceed to active-status check.
+      method: _classify_initial
+      reliability: [gdacs, who, eonet, gdelt]
+      overrides_initial: [O2, O4, O6]
+      error_action: abort
+    next:
+      reportable: active-check
+      not-reportable: store
+
+  # ── Step E: Active-status check ──
+  - id: active-check
+    attrs:
+      description: >
+        Query storage for each reportable IncidentBundle by incident_id.
+        NEW (never stored) → search-updates.  ACTIVE (last_updated ≤ 7d)
+        → merge stored fingerprints, then search-updates.  STALE
+        (last_updated > 7d) → removed from pipeline.  Early-exit when
+        every bundle is stale (no search, no AI, no store work needed).
+      method: _active_status_check
+      monitoring_window_days: 7
+      error_action: continue       # storage query failed → treat as NEW
+    next:
+      active: search-updates
+      all-stale: complete
+
+  # ── Step F: Search for updates ──
+  - id: search-updates
+    attrs:
+      description: >
+        Search supplementary sources (DDG News) for new information about
+        active reportable bundles.  Builds query from bundle title, country,
+        and disaster_type.  Appends new RawRecords to bundle.records.
+        Never raises — returns bundles unchanged on search failure.
+        Stale, fully-known incidents are excluded by active-check.
+      method: _supplementary_search
+      searchers: [ddgs]
+      query_template: "{title} {country} {type} latest news"
+      max_results: 10
+      error_action: continue
+    next:
+      searched: ai-enrich
+
+  # ── Step G: AI enrichment ──
+  - id: ai-enrich
+    attrs:
+      description: >
+        AI enrichment for all reportable bundles with new data.  Three
+        internal phases: (1) ExtractorAgent extracts country, disaster_type,
+        estimated_affected, estimated_deaths from ALL raw records via DSPy
+        typed signatures.  (2) Post-extraction re-classification runs
+        ClassifyEngine.classify() again on every bundle the Extractor
+        modified, applying newly-extracted country/type to update
+        country_group, level, priority, and O4 override.  (3)
+        ClassifierAgent generates summary + rationale and detects O1/O3/O5
+        override flags.  Batches of ≤ 10 per call.  Mid-batch failure
+        preserves already-enriched bundles.  Disabled when
+        DSR_AI_PROVIDER=none.  incident_id is never regenerated.
+      method: _ai_enrich
+      provider_env: DSR_AI_PROVIDER
+      disabled_value: none
+      batch_size: 10
+      error_action: continue
+      post_extract_reclassify: true
+    next:
+      enriched: override-reeval
+
+  # ── Step H: Override re-evaluation ──
+  - id: override-reeval
+    attrs:
+      description: >
+        Re-evaluate O1 (humanitarian_crisis), O3 (likely_development), O5
+        (forecast) after AI enrichment.  O3 and O5 level bumps compound
+        (max +2, capped at level 4).  Re-applies priority matrix after
+        level changes.  Never regenerates incident_id.
+      method: _reclassify_overrides
+      overrides_post: [O1, O3, O5]
+      level_cap: 4
+      error_action: continue
+    next:
+      reevaluated: store
+
+  # ── Step I: Store (upsert) ──
+  - id: store
+    attrs:
+      description: >
+        Upsert bundles via StorageBackend.  NEW → insert with last_updated
+        set.  Existing with new fingerprints → update, last_updated reset
+        (renews the 7-day monitoring window).  Unchanged → no-op,
+        last_updated preserved.  Handles both reportable (after full
+        pipeline) and non-reportable (as-is from classify) bundles.
+        Returns {inserted, updated, noop} counts.
+      method: _store_bundles
+      mode: upsert
+      store_env: DSR_STORAGE_BACKEND
+      default_store: jsonl
+      error_action: abort
+    next:
+      stored: complete

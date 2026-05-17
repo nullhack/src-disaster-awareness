@@ -1,0 +1,700 @@
+r"""Storage backend protocol and implementations.
+
+.. note::
+   The ``_derived_columns`` module handles ``incident_name`` and
+   ``source_urls`` derivation from bundles — these are called during
+   :meth:`StorageBackend.store` to populate :class:`Incident` fields.
+"""
+
+from __future__ import annotations
+
+import datetime as dt
+import json
+import logging
+import os
+import sqlite3
+from datetime import date
+from pathlib import Path
+from typing import Protocol
+
+from disaster_surveillance_reporter.types import Incident, IncidentBundle, RawRecord
+
+logger = logging.getLogger(__name__)
+
+
+def _serialize_bundle(bundle: IncidentBundle) -> dict:
+    """Convert an IncidentBundle to a plain dict with ISO 8601 datetimes."""
+    data: dict[str, object] = {}
+    for field_name in (
+        "incident_id",
+        "country",
+        "country_code",
+        "disaster_type",
+        "country_group",
+        "incident_level",
+        "priority",
+        "should_report",
+        "overrides",
+        "ai_enriched",
+        "enrichment_failed",
+        "summary",
+        "rationale",
+        "estimated_affected",
+        "estimated_deaths",
+        "classification_date",
+        "last_updated",
+        "source_fingerprints",
+    ):
+        val = getattr(bundle, field_name, None)
+        if val is None:
+            data[field_name] = None
+        elif isinstance(val, (dt.datetime, date)):
+            data[field_name] = val.isoformat()
+        elif isinstance(val, date):
+            data[field_name] = val.isoformat()
+        else:
+            data[field_name] = val
+
+    data["records"] = [_serialize_record(r) for r in bundle.records]
+    data["classified_at"] = (
+        bundle.classified_at.isoformat() if bundle.classified_at else None
+    )
+    return data
+
+
+def _serialize_record(record: RawRecord) -> dict:
+    """Convert a RawRecord to a plain dict."""
+    return {
+        "source_name": record.source_name,
+        "fetched_at": record.fetched_at.isoformat(),
+        "raw_fields": record.raw_fields,
+    }
+
+
+def _deserialize_bundle(data: dict) -> IncidentBundle:
+    """Reconstruct an IncidentBundle from a plain dict."""
+    def _dt(val):
+        if val is None:
+            return None
+        return dt.datetime.fromisoformat(str(val))
+
+    records = [
+        RawRecord(
+            source_name=r["source_name"],
+            fetched_at=dt.datetime.fromisoformat(r["fetched_at"]),
+            raw_fields=r["raw_fields"],
+        )
+        for r in data.get("records", [])
+    ]
+    classification_date = data.get("classification_date")
+    if isinstance(classification_date, str):
+        classification_date = date.fromisoformat(classification_date)
+
+    return IncidentBundle(
+        incident_id=data["incident_id"],
+        records=records,
+        country=data.get("country"),
+        country_code=data.get("country_code"),
+        disaster_type=data.get("disaster_type"),
+        country_group=data.get("country_group"),
+        incident_level=data.get("incident_level", 1),
+        priority=data.get("priority", "LOW"),
+        should_report=data.get("should_report", False),
+        overrides=data.get("overrides", []),
+        ai_enriched=data.get("ai_enriched", False),
+        enrichment_failed=data.get("enrichment_failed", False),
+        summary=data.get("summary"),
+        rationale=data.get("rationale"),
+        estimated_affected=data.get("estimated_affected"),
+        estimated_deaths=data.get("estimated_deaths"),
+        classified_at=_dt(data.get("classified_at")),
+        classification_date=classification_date,
+        last_updated=_dt(data.get("last_updated")),
+        source_fingerprints=data.get("source_fingerprints", []),
+    )
+
+
+class StorageBackend(Protocol):
+    """Protocol for pluggable storage backends.
+
+    Implementations: :class:`JSONLStore` (default), :class:`SQLiteStore`.
+    """
+
+    def store(self, bundles: list[IncidentBundle]) -> int:
+        """Persist bundles, skip existing IDs, return count of new bundles stored."""
+        ...
+
+    def upsert(self, bundle: IncidentBundle) -> str:
+        """Insert, update, or no-op a bundle. Returns "inserted", "updated", or "noop"."""
+        ...
+
+    def get_last_updated(self, incident_id: str) -> dt.datetime | None:
+        """Return the last_updated timestamp for *incident_id*, or None if not found."""
+        ...
+
+    def get_source_fingerprints(self, incident_id: str) -> list[str]:
+        """Return stored source fingerprints for *incident_id*, or empty list."""
+        ...
+
+    def exists_by_source_fingerprint(self, fingerprint: str) -> bool:
+        """Return True if *fingerprint* is stored in any bundle."""
+        ...
+
+    def query(
+        self,
+        date_from: date,
+        date_to: date,
+        **filters: str | bool,
+    ) -> list[Incident]:
+        """Return flattened :class:`Incident` records matching date range and filters.
+
+        Filters: ``country_group``, ``disaster_type``, ``priority``,
+        ``should_report``, ``source_name``.  When *date_from > date_to*, return
+        an empty list without error.
+        """
+        ...
+
+    def exists(self, incident_id: str) -> bool:
+        """Return ``True`` if *incident_id* is already stored.  No side effects."""
+        ...
+
+    def get_active_bundles(
+        self, reference_time: dt.datetime | None = None,
+    ) -> list[IncidentBundle]:
+        """Return stored bundles that are still in the active monitoring window.
+
+        Filters to ``should_report=True`` and ``now - last_updated ≤ 7 days``.
+        Used by Step E (active-status check) to independently load bundles
+        that need re-search even when no fresh source records arrive.
+        """
+        ...
+
+
+class JSONLStore:
+    r"""Append-only, date-partitioned JSONL storage backend.
+
+    Complete :class:`IncidentBundle`\\ s are written to
+    ``{base_path}/incidents/by-date/{classification_date}/incidents.jsonl`` using a
+    temp-file-and-rename strategy for atomic writes.
+
+    :class:`Incident`\\ s returned by :meth:`query` are flattened — no
+    ``raw_records`` field is present.  Malformed JSONL lines are logged and
+    skipped.
+    """
+
+    def __init__(self, base_path: Path) -> None:
+        """Create a JSONL store at *base_path*."""
+        self.base_path = Path(base_path)
+
+    # ------------------------------------------------------------------
+    #  storage protocol
+    # ------------------------------------------------------------------
+
+    def store(self, bundles: list[IncidentBundle]) -> int:
+        """Store bundles to JSONL, returning count of new bundles."""
+        stored = 0
+        for bundle in bundles:
+            if self.exists(bundle.incident_id):
+                continue
+            cls_date = bundle.classification_date or dt.datetime.now(tz=dt.timezone.utc).date()
+            partition_dir = (
+                self.base_path / "incidents" / "by-date" / cls_date.isoformat()
+            )
+            partition_dir.mkdir(parents=True, exist_ok=True)
+            jsonl_path = partition_dir / "incidents.jsonl"
+            line = json.dumps(_serialize_bundle(bundle)) + "\n"
+            # Atomic append via temp-file-and-rename
+            tmp_path = jsonl_path.with_suffix(jsonl_path.suffix + ".tmp")
+            try:
+                existing = jsonl_path.read_text() if jsonl_path.exists() else ""
+                tmp_path.write_text(existing + line)
+                tmp_path.rename(jsonl_path)
+            except Exception:
+                if tmp_path.exists():
+                    tmp_path.unlink(missing_ok=True)
+                raise
+            stored += 1
+        return stored
+
+    def query(
+        self,
+        date_from: date,
+        date_to: date,
+        **filters: str | bool,
+    ) -> list[Incident]:
+        """Query stored incidents by date range and filters."""
+        if date_from > date_to:
+            return []
+
+        results: list[Incident] = []
+        curr = date_from
+        while curr <= date_to:
+            jsonl_path = (
+                self.base_path
+                / "incidents"
+                / "by-date"
+                / curr.isoformat()
+                / "incidents.jsonl"
+            )
+            if jsonl_path.exists():
+                for line in jsonl_path.read_text().splitlines():
+                    line = line.strip()
+                    if not line:
+                        continue
+                    try:
+                        parsed = json.loads(line)
+                    except json.JSONDecodeError:
+                        logger.warning("Skipping malformed JSONL line")
+                        continue
+                    try:
+                        bundle = _deserialize_bundle(parsed)
+                    except Exception:
+                        logger.warning("Skipping unparseable JSONL line")
+                        continue
+                    if bundle is None:
+                        continue
+                    incident = _bundle_to_incident(bundle)
+                    if _matches_filters(incident, filters):
+                        results.append(incident)
+            curr = date.fromordinal(curr.toordinal() + 1)
+
+        return results
+
+    def exists(self, incident_id: str) -> bool:
+        """Check if *incident_id* has been stored."""
+        base = self.base_path / "incidents" / "by-date"
+        if not base.exists():
+            return False
+        for date_dir in base.iterdir():
+            jsonl_path = date_dir / "incidents.jsonl"
+            if jsonl_path.exists() and _incident_in_file(incident_id, jsonl_path):
+                return True
+        return False
+
+    def upsert(self, bundle: IncidentBundle) -> str:
+        if not self.exists(bundle.incident_id):
+            return self._insert_bundle(bundle)
+
+        existing_fps = set(self.get_source_fingerprints(bundle.incident_id))
+        new_fps = set(bundle.source_fingerprints) - existing_fps
+        if not new_fps:
+            return "noop"
+
+        self._update_bundle(bundle)
+        return "updated"
+
+    def get_last_updated(self, incident_id: str) -> dt.datetime | None:
+        base = self.base_path / "incidents" / "by-date"
+        if not base.exists():
+            return None
+        for date_dir in sorted(base.iterdir()):
+            jsonl_path = date_dir / "incidents.jsonl"
+            if not jsonl_path.exists():
+                continue
+            for line in jsonl_path.read_text().splitlines():
+                line = line.strip()
+                if not line or incident_id not in line:
+                    continue
+                try:
+                    data = json.loads(line)
+                except json.JSONDecodeError:
+                    continue
+                ts = data.get("last_updated")
+                if ts:
+                    return dt.datetime.fromisoformat(ts)
+        return None
+
+    def get_source_fingerprints(self, incident_id: str) -> list[str]:
+        base = self.base_path / "incidents" / "by-date"
+        if not base.exists():
+            return []
+        for date_dir in sorted(base.iterdir()):
+            jsonl_path = date_dir / "incidents.jsonl"
+            if not jsonl_path.exists():
+                continue
+            for line in jsonl_path.read_text().splitlines():
+                line = line.strip()
+                if not line or incident_id not in line:
+                    continue
+                try:
+                    data = json.loads(line)
+                except json.JSONDecodeError:
+                    continue
+                return data.get("source_fingerprints", [])
+        return []
+
+    def exists_by_source_fingerprint(self, fingerprint: str) -> bool:
+        base = self.base_path / "incidents" / "by-date"
+        if not base.exists():
+            return False
+        for date_dir in base.iterdir():
+            jsonl_path = date_dir / "incidents.jsonl"
+            if jsonl_path.exists() and fingerprint in jsonl_path.read_text():
+                return True
+        return False
+
+    def get_active_bundles(
+        self,
+        reference_time: dt.datetime | None = None,
+    ) -> list[IncidentBundle]:
+        """Scan all date partitions and return active reportable bundles."""
+        if reference_time is None:
+            reference_time = dt.datetime.now(tz=dt.timezone.utc)
+        active: list[IncidentBundle] = []
+        base = self.base_path / "incidents" / "by-date"
+        if not base.exists():
+            return active
+        for date_dir in sorted(base.iterdir()):
+            jsonl_path = date_dir / "incidents.jsonl"
+            if not jsonl_path.exists():
+                continue
+            for line in jsonl_path.read_text().splitlines():
+                line = line.strip()
+                if not line:
+                    continue
+                try:
+                    parsed = json.loads(line)
+                except json.JSONDecodeError:
+                    continue
+                try:
+                    bundle = _deserialize_bundle(parsed)
+                except Exception:
+                    continue
+                if bundle is None:
+                    continue
+                if bundle.should_report and bundle.is_active(reference_time):
+                    active.append(bundle)
+        return active
+
+    # ------------------------------------------------------------------
+    #  helpers
+    # ------------------------------------------------------------------
+
+    def _insert_bundle(self, bundle: IncidentBundle) -> str:
+        cls_date = bundle.classification_date or dt.datetime.now(tz=dt.timezone.utc).date()
+        partition_dir = (
+            self.base_path / "incidents" / "by-date" / cls_date.isoformat()
+        )
+        partition_dir.mkdir(parents=True, exist_ok=True)
+        jsonl_path = partition_dir / "incidents.jsonl"
+        line = json.dumps(_serialize_bundle(bundle)) + "\n"
+        tmp_path = jsonl_path.with_suffix(jsonl_path.suffix + ".tmp")
+        try:
+            existing = jsonl_path.read_text() if jsonl_path.exists() else ""
+            tmp_path.write_text(existing + line)
+            tmp_path.rename(jsonl_path)
+        except Exception:
+            if tmp_path.exists():
+                tmp_path.unlink(missing_ok=True)
+            raise
+        return "inserted"
+
+    def _update_bundle(self, bundle: IncidentBundle) -> None:
+        base = self.base_path / "incidents" / "by-date"
+        for date_dir in sorted(base.iterdir()):
+            jsonl_path = date_dir / "incidents.jsonl"
+            if not jsonl_path.exists():
+                continue
+            lines = jsonl_path.read_text().splitlines()
+            updated = False
+            new_lines: list[str] = []
+            for line in lines:
+                line_stripped = line.strip()
+                if not line_stripped:
+                    new_lines.append(line)
+                    continue
+                if bundle.incident_id in line_stripped:
+                    new_lines.append(json.dumps(_serialize_bundle(bundle)))
+                    updated = True
+                else:
+                    new_lines.append(line)
+            if updated:
+                tmp_path = jsonl_path.with_suffix(jsonl_path.suffix + ".tmp")
+                try:
+                    tmp_path.write_text("\n".join(new_lines) + "\n")
+                    tmp_path.rename(jsonl_path)
+                except Exception:
+                    if tmp_path.exists():
+                        tmp_path.unlink(missing_ok=True)
+                    raise
+                return
+
+
+class SQLiteStore:
+    """SQLite storage backend with per-bundle atomic transactions.
+
+    Implements the same :class:`StorageBackend` protocol as
+    :class:`JSONLStore`.  Uses ``sqlite3`` from the standard library.
+    """
+
+    def __init__(self, db_path: Path) -> None:
+        """Create a SQLite store at *db_path*."""
+        db_path.parent.mkdir(parents=True, exist_ok=True)
+        self._conn = sqlite3.connect(str(db_path))
+        self._conn.execute(
+            "CREATE TABLE IF NOT EXISTS incidents ("
+            "  incident_id TEXT PRIMARY KEY,"
+            "  bundle_json TEXT NOT NULL,"
+            "  classification_date TEXT NOT NULL"
+            ")"
+        )
+        self._conn.commit()
+
+    def store(self, bundles: list[IncidentBundle]) -> int:
+        """Store bundles to JSONL, returning count of new bundles."""
+        stored = 0
+        for bundle in bundles:
+            if self.exists(bundle.incident_id):
+                continue
+            bundle_json = json.dumps(_serialize_bundle(bundle))
+            cls_date = (
+                bundle.classification_date or dt.datetime.now(tz=dt.timezone.utc).date()
+            ).isoformat()
+            self._conn.execute(
+                "INSERT INTO incidents (incident_id, bundle_json, classification_date)"
+                " VALUES (?, ?, ?)",
+                (bundle.incident_id, bundle_json, cls_date),
+            )
+            self._conn.commit()
+            stored += 1
+        return stored
+
+    def query(
+        self,
+        date_from: date,
+        date_to: date,
+        **filters: str | bool,
+    ) -> list[Incident]:
+        """Query stored incidents by date range and filters."""
+        if date_from > date_to:
+            return []
+
+        results: list[Incident] = []
+        rows = self._conn.execute(
+            "SELECT bundle_json FROM incidents"
+            " WHERE classification_date >= ? AND classification_date <= ?",
+            (date_from.isoformat(), date_to.isoformat()),
+        ).fetchall()
+
+        for (bundle_json,) in rows:
+            parsed = json.loads(bundle_json)
+            bundle = _deserialize_bundle(parsed)
+            if bundle is None:
+                logger.warning("Skipping unparseable stored line")
+                continue
+            incident = _bundle_to_incident(bundle)
+            if _matches_filters(incident, filters):
+                results.append(incident)
+
+        return results
+
+    def exists(self, incident_id: str) -> bool:
+        """Check if *incident_id* has been stored."""
+        row = self._conn.execute(
+            "SELECT 1 FROM incidents WHERE incident_id = ?", (incident_id,)
+        ).fetchone()
+        return row is not None
+
+    def upsert(self, bundle: IncidentBundle) -> str:
+        if not self.exists(bundle.incident_id):
+            bundle_json = json.dumps(_serialize_bundle(bundle))
+            cls_date = (
+                bundle.classification_date
+                or dt.datetime.now(tz=dt.timezone.utc).date()
+            ).isoformat()
+            self._conn.execute(
+                "INSERT INTO incidents (incident_id, bundle_json, classification_date)"
+                " VALUES (?, ?, ?)",
+                (bundle.incident_id, bundle_json, cls_date),
+            )
+            self._conn.commit()
+            return "inserted"
+
+        existing_fps = set(self.get_source_fingerprints(bundle.incident_id))
+        new_fps = set(bundle.source_fingerprints) - existing_fps
+        if not new_fps:
+            return "noop"
+
+        bundle_json = json.dumps(_serialize_bundle(bundle))
+        cls_date = (
+            bundle.classification_date
+            or dt.datetime.now(tz=dt.timezone.utc).date()
+        ).isoformat()
+        self._conn.execute(
+            "UPDATE incidents SET bundle_json = ?, classification_date = ?"
+            " WHERE incident_id = ?",
+            (bundle_json, cls_date, bundle.incident_id),
+        )
+        self._conn.commit()
+        return "updated"
+
+    def get_last_updated(self, incident_id: str) -> dt.datetime | None:
+        row = self._conn.execute(
+            "SELECT bundle_json FROM incidents WHERE incident_id = ?",
+            (incident_id,),
+        ).fetchone()
+        if row is None:
+            return None
+        bundle_str = json.loads(row[0])
+        bundle = _deserialize_bundle(bundle_str)
+        if bundle is None:
+            return None
+        return bundle.last_updated
+
+    def get_source_fingerprints(self, incident_id: str) -> list[str]:
+        row = self._conn.execute(
+            "SELECT bundle_json FROM incidents WHERE incident_id = ?",
+            (incident_id,),
+        ).fetchone()
+        if row is None:
+            return []
+        bundle_str = json.loads(row[0])
+        bundle = _deserialize_bundle(bundle_str)
+        if bundle is None:
+            return []
+        return bundle.source_fingerprints
+
+    def exists_by_source_fingerprint(self, fingerprint: str) -> bool:
+        rows = self._conn.execute(
+            "SELECT bundle_json FROM incidents"
+        ).fetchall()
+        for (bundle_json,) in rows:
+            if fingerprint in bundle_json:
+                return True
+        return False
+
+    def get_active_bundles(
+        self,
+        reference_time: dt.datetime | None = None,
+    ) -> list[IncidentBundle]:
+        """Return active reportable bundles from SQLite storage."""
+        if reference_time is None:
+            reference_time = dt.datetime.now(tz=dt.timezone.utc)
+        active: list[IncidentBundle] = []
+        rows = self._conn.execute("SELECT bundle_json FROM incidents").fetchall()
+        for (bundle_json,) in rows:
+            parsed = json.loads(bundle_json)
+            bundle = _deserialize_bundle(parsed)
+            if bundle is None:
+                continue
+            if bundle.should_report and bundle.is_active(reference_time):
+                active.append(bundle)
+        return active
+
+
+# =====================================================================
+#  Stand-alone helpers (shared by both stores)
+# =====================================================================
+
+_SOURCE_PRIORITY = ["GDACS", "WHO", "GDELT", "DDG-NEWS"]
+
+
+def _derive_incident_name(records: list[RawRecord]) -> str:
+    """Return the title from the highest-reliability source record."""
+    for source in _SOURCE_PRIORITY:
+        for record in records:
+            if record.source_name != source:
+                continue
+            if source == "GDACS":
+                title = record.raw_fields.get("title")
+                if title:
+                    return title
+            elif source == "WHO":
+                title = record.raw_fields.get("ReportTitle")
+                if title:
+                    return title
+            elif source in ("GDELT", "DDG-NEWS"):
+                title = record.raw_fields.get("title")
+                if title:
+                    return title
+    return ""
+
+
+def _derive_source_urls(records: list[RawRecord]) -> list[str]:
+    """Collect source URLs following source-specific extraction rules."""
+    urls: list[str] = []
+    for record in records:
+        source = record.source_name
+        if source == "GDACS":
+            url = record.raw_fields.get("url", {}).get("report")
+            if url:
+                urls.append(url)
+        elif source == "WHO":
+            item = record.raw_fields.get("ItemDefaultUrl")
+            if item:
+                urls.append("https://www.who.int" + item)
+        elif source in ("GDELT", "DDG-NEWS"):
+            url = record.raw_fields.get("url")
+            if url:
+                urls.append(url)
+    return urls
+
+
+def _bundle_to_incident(bundle: IncidentBundle) -> Incident:
+    """Flatten an :class:`IncidentBundle` into an :class:`Incident`."""
+    return Incident(
+        incident_id=bundle.incident_id,
+        source_names=[r.source_name for r in bundle.records],
+        incident_name=_derive_incident_name(bundle.records),
+        country=bundle.country,
+        country_code=bundle.country_code,
+        country_group=bundle.country_group or "C",
+        disaster_type=bundle.disaster_type,
+        incident_level=bundle.incident_level or 1,
+        priority=bundle.priority or "LOW",
+        should_report=bundle.should_report or False,
+        overrides=bundle.overrides,
+        report_date=bundle.classification_date or dt.datetime.now(tz=dt.timezone.utc).date(),
+        source_urls=_derive_source_urls(bundle.records),
+        summary=bundle.summary,
+        rationale=bundle.rationale,
+        estimated_affected=bundle.estimated_affected,
+        estimated_deaths=bundle.estimated_deaths,
+        ai_enriched=bundle.ai_enriched or False,
+        record_count=len(bundle.records),
+    )
+
+
+def _matches_filters(incident: Incident, filters: dict[str, str | bool]) -> bool:
+    """Return ``True`` if *incident* matches all supplied filters."""
+    for key, value in filters.items():
+        if key == "source_name":
+            if value not in incident.source_names:
+                return False
+        elif getattr(incident, key, None) != value:
+            return False
+    return True
+
+
+def _incident_in_file(incident_id: str, path: Path) -> bool:
+    """Check whether *incident_id* appears anywhere in *path*."""
+    try:
+        return incident_id in path.read_text()
+    except Exception:
+        return False
+
+
+def get_storage_backend(storage_path: str | Path | None = None) -> StorageBackend:
+    """Return a :class:`StorageBackend` instance selected by ``DSR_STORAGE_BACKEND``.
+
+    Reads the ``DSR_STORAGE_BACKEND`` environment variable:
+    - ``"jsonl"`` (default) → :class:`JSONLStore` using *storage_path*
+      or the ``DSR_STORAGE_PATH`` env var, falling back to ``./incidents``.
+    - ``"sqlite"`` → :class:`SQLiteStore` using
+      ``{storage_path}/incidents.db``.
+
+    Raises :class:`ValueError` for unknown backend names.
+    """
+    backend = os.environ.get("DSR_STORAGE_BACKEND", "jsonl").lower()
+    if storage_path is None:
+        storage_path = os.environ.get("DSR_STORAGE_PATH", "./incidents")
+    storage_path = Path(storage_path)
+
+    if backend == "jsonl":
+        return JSONLStore(storage_path)
+    if backend == "sqlite":
+        return SQLiteStore(storage_path / "incidents.db")
+    raise ValueError(
+        f"Unknown DSR_STORAGE_BACKEND '{backend}'. "
+        f"Supported: jsonl, sqlite"
+    )

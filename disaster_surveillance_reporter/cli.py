@@ -1,179 +1,96 @@
-"""CLI for Disaster Surveillance Reporter using Fire."""
+"""CLI entry point for the Disaster Surveillance Reporter pipeline."""
 
-import logging
-from pathlib import Path
+from __future__ import annotations
 
-import fire
+import argparse
+import os
+from collections.abc import Callable
 
+from disaster_surveillance_reporter.adapters import SourceAdapter
+from disaster_surveillance_reporter.adapters.eonet import EONETAdapter
 from disaster_surveillance_reporter.adapters.gdacs import GDACSAdapter
-from disaster_surveillance_reporter.classification import RulesLoader
-from disaster_surveillance_reporter.opencode import OpenCodeClient
+from disaster_surveillance_reporter.adapters.gdelt import GDELTAdapter
+from disaster_surveillance_reporter.adapters.news import NewsSearcher
+from disaster_surveillance_reporter.adapters.who import WHOAdapter
+from disaster_surveillance_reporter.ai.classifier import ClassifierAgent
+from disaster_surveillance_reporter.ai.extractor import ExtractorAgent
+from disaster_surveillance_reporter.ai.provider import get_provider
+from disaster_surveillance_reporter.classification.classify import ClassifyEngine
+from disaster_surveillance_reporter.correlation.correlate import Correlator
 from disaster_surveillance_reporter.pipeline import Pipeline
-from disaster_surveillance_reporter.storage.jsonl import JSONLBackend
+from disaster_surveillance_reporter.storage import get_storage_backend
 
-logger = logging.getLogger(__name__)
-
-
-class DisasterSurveillanceCLI:
-    """CLI for disaster surveillance incident processing."""
-
-    def __init__(
-        self,
-        storage_path: str = "incidents",
-        mock_ai: bool = True,
-    ):
-        """Initialize CLI with configuration.
-
-        Args:
-            storage_path: Base path for storage (default: incidents/)
-            mock_ai: Use mock AI responses (default: True for testing)
-        """
-        self._storage_path = Path(storage_path)
-        self._mock_ai = mock_ai
-
-    def fetch(self, source: str = "gdacs"):
-        """Fetch incidents from source(s).
-
-        Args:
-            source: Source name (gdacs, promed, reliefweb, healthmap, who)
-
-        Example:
-            python -m disaster_surveillance_reporter.cli fetch --source=gdacs
-        """
-        source_lower = source.lower()
-        if source_lower == "gdacs":
-            adapter = GDACSAdapter()  # pragma: no cover
-        else:
-            logger.warning(  # pragma: no cover
-                "Source '%s' not implemented, using GDACS", source
-            )
-            adapter = GDACSAdapter()  # pragma: no cover
-
-        incidents = adapter.fetch()
-        logger.info(f"Fetched {len(incidents)} incidents from {source}")
-        for inc in incidents:
-            print(f"  - {inc.incident_name} ({inc.country})")  # pragma: no cover
-
-    def classify(self, incident_ids: str | None = None):
-        """Classify incidents using OpenCode AI.
-
-        Args:
-            incident_ids: Comma-separated incident IDs (optional)
-
-        Example:
-            python -m disaster_surveillance_reporter.cli classify --ids=001,002
-        """
-        storage = JSONLBackend(self._storage_path)
-        incidents = storage.read()
-
-        if incident_ids:  # pragma: no cover
-            ids = set(incident_ids.split(","))
-            incidents = [i for i in incidents if i.get("incident_id") in ids]
-
-        ai_client = OpenCodeClient(mock_mode=self._mock_ai)
-        rules = RulesLoader()
-
-        classified = []
-        for inc in incidents:
-            classified_inc = ai_client.classify(inc)
-            classified.append(classified_inc)
-            print(
-                f"  Classified: {inc.get('incident_id')} - {classified_inc.get('priority')}"  # pragma: no cover
-            )
-
-        logger.info(f"Classified {len(classified)} incidents")
-
-    def store(self):
-        """Store processed incidents to storage.
-
-        Example:
-            python -m disaster_surveillance_reporter.cli store
-        """
-        storage = JSONLBackend(self._storage_path)
-        print(f"Storage path: {self._storage_path}")
-
-        incidents = storage.read()
-        print(f"Stored {len(incidents)} incidents")
-
-    def status(self):
-        """Show pipeline status and statistics.
-
-        Example:
-            python -m disaster_surveillance_reporter.cli status
-        """
-        storage = JSONLBackend(self._storage_path)
-        incidents = storage.read()
-
-        print("=== Disaster Surveillance Reporter Status ===")
-        print(f"Storage path: {self._storage_path}")
-        print(f"Total incidents: {len(incidents)}")
-
-        by_status = {}
-        by_priority = {}
-        by_country = {}
-
-        for inc in incidents:
-            status = inc.get("status", "Unknown")
-            priority = inc.get("priority", "Unknown")
-            country = inc.get("country", "Unknown")
-
-            by_status[status] = by_status.get(status, 0) + 1
-            by_priority[priority] = by_priority.get(priority, 0) + 1
-            by_country[country] = by_country.get(country, 0) + 1
-
-        print("\nBy Status:")
-        for s, c in sorted(by_status.items()):
-            print(f"  {s}: {c}")
-
-        print("\nBy Priority:")
-        for p, c in sorted(by_priority.items()):
-            print(f"  {p}: {c}")
-
-    def full_cycle(self, source: str = "gdacs"):
-        """Run complete pipeline: fetch → transform → classify → store.
-
-        Args:
-            source: Source name (gdacs, promed, reliefweb, healthmap, who)
-
-        Example:
-            python -m disaster_surveillance_reporter.cli full-cycle --source=gdacs
-        """
-        print("=== Running Full Pipeline ===")
-
-        sources = [GDACSAdapter()]
-        storage = JSONLBackend(self._storage_path)
-        ai_client = OpenCodeClient(mock_mode=self._mock_ai)
-        rules_loader = RulesLoader()
-
-        pipeline = Pipeline(sources, storage, ai_client, rules_loader)
-
-        print(f"1. Fetching from {source}...")
-        raw = pipeline.fetch_all()
-        print(f"   Found {len(raw)} raw incidents")
-
-        print("2. Transforming to schema...")
-        transformed = pipeline.transform_all(raw)
-        print(f"   Transformed {len(transformed)} incidents")
-
-        print("3. Classifying...")
-        classified = pipeline.classify_all(transformed)
-        print(f"   Classified {len(classified)} incidents")
-
-        print("4. Storing...")
-        pipeline.store_all(classified)
-        print(f"   Stored in {self._storage_path}")
-
-        print("\n=== Pipeline Complete ===")
+_ADAPTER_REGISTRY: dict[str, Callable[[], SourceAdapter]] = {
+    "gdacs": GDACSAdapter,
+    "who": WHOAdapter,
+    "eonet": EONETAdapter,
+    "gdelt": GDELTAdapter,
+}
 
 
-def main():  # pragma: no cover
-    """Main entry point for CLI."""
-    logging.basicConfig(
-        level=logging.INFO,
-        format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+def _build_adapters(sources: str) -> list[SourceAdapter]:
+    names = [s.strip().lower() for s in sources.split(",") if s.strip()]
+    adapters: list[SourceAdapter] = []
+    for name in names:
+        factory = _ADAPTER_REGISTRY.get(name)
+        if factory is None:
+            print(f"Warning: unknown source '{name}' — skipping")
+            continue
+        adapters.append(factory())
+    return adapters
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(
+        description="Disaster Surveillance Reporter"
     )
-    fire.Fire(DisasterSurveillanceCLI)
+    parser.add_argument(
+        "command",
+        choices=["pipeline"],
+        help="Command: pipeline",
+    )
+    parser.add_argument(
+        "--sources",
+        default=os.environ.get("DSR_SOURCES", "gdacs,who,eonet"),
+        help=(
+            "Comma-separated source list: gdacs,who,eonet,gdelt "
+            "(env: DSR_SOURCES, default: gdacs,who,eonet)"
+        ),
+    )
+    parser.add_argument(
+        "--output-dir",
+        default=os.environ.get("DSR_OUTPUT_DIR", "incidents"),
+        help="Output directory (env: DSR_OUTPUT_DIR, default: incidents)",
+    )
+    parser.add_argument(
+        "--ai-provider",
+        default=os.environ.get("DSR_AI_PROVIDER", "none"),
+        help=(
+            "AI provider: ollama, opencode, gemini, openai, none "
+            "(env: DSR_AI_PROVIDER, default: none)"
+        ),
+    )
+    args = parser.parse_args()
+
+    if args.command == "pipeline":
+        os.environ.setdefault("DSR_AI_PROVIDER", args.ai_provider)
+        provider = get_provider()
+        extractor = ExtractorAgent(provider)
+        classifier = ClassifierAgent(provider)
+        pipeline = Pipeline(
+            adapters=_build_adapters(args.sources),
+            correlator=Correlator(),
+            classify_engine=ClassifyEngine(),
+            news_searcher=NewsSearcher(),
+            extractor=extractor,
+            classifier=classifier,
+            storage_backend=get_storage_backend(args.output_dir),
+        )
+        result = pipeline.run()
+        print(f"\n{result} bundles stored.")
+        return 0
+    return 1
 
 
-if __name__ == "__main__":  # pragma: no cover
-    main()
+if __name__ == "__main__":
+    raise SystemExit(main())

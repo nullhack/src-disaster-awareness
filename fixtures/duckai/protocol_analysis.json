@@ -1,0 +1,33 @@
+{
+  "protocol_status": "BLOCKED",
+  "endpoint": "https://duckduckgo.com/duckchat/v1/chat",
+  "vqd_endpoint": "https://duckduckgo.com/duckchat/v1/status",
+  "observed_behavior": {
+    "status_endpoint": {
+      "status_code": 200,
+      "x_vqd_hash_1": "Returns a base64-encoded JavaScript challenge (not a VQD token)",
+      "body": "{\"status\":\"0\",\"secondaryStatus\":\"0\",\"statusV2\":0}",
+      "x_vqd_4_header": "NOT PRESENT"
+    },
+    "chat_endpoint_no_vqd": {
+      "status_code": 418,
+      "body_sample": "{\"action\":\"error\",\"status\":418,\"type\":\"ERR_CHALLENGE\"}",
+      "notes": "Requires challenge resolution (anti-bot)"
+    },
+    "chat_page": {
+      "status_code": 410,
+      "notes": "Gone"
+    },
+    "getvqd_endpoint": {
+      "status_code": 410,
+      "notes": "Gone"
+    }
+  },
+  "conclusion": "DuckDuckGo AI (duckchat/v1) has implemented challenge-based anti-bot protection as of 2026-05. The VQD token protocol no longer works. Direct HTTP access is blocked (418 ERR_CHALLENGE). This affects the AI enrichment strategy defined in the contract.",
+  "alternatives": [
+    "Use Ollama with local models (no API key needed)",
+    "Use DSPy with any API-key-backed provider (OpenAI, Anthropic, etc.)",
+    "Make AI enrichment fully optional - pipeline works without AI",
+    "Use free-tier APIs (Google Gemini free tier, etc.)"
+  ]
+}

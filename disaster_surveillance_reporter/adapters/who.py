@@ -1,114 +1,65 @@
-"""WHO health emergencies adapter."""
-
 from datetime import datetime, timedelta, timezone
 
-from disaster_surveillance_reporter.adapters._types import (
-    RawIncidentData,
-    SourceAdapter,
+import httpx
+
+from disaster_surveillance_reporter.types import RawRecord
+
+WHO_API = (
+    "https://www.who.int/api/emergencies/diseaseoutbreaknews"
+    "?$orderby=PublicationDate%20desc"
 )
+MAX_AGE_DAYS = 30
 
 
-class WHOAdapter(SourceAdapter):
-    """World Health Organization (WHO) adapter for health emergencies.
+class WHOAdapter:
+    source_name = "WHO"
 
-    Monitors WHO disease outbreak alerts and health emergencies.
-    """
+    def fetch(self, client: httpx.Client) -> list[RawRecord]:
+        try:
+            response = client.get(WHO_API)
+            response.raise_for_status()
+        except httpx.HTTPStatusError:
+            return []
+        except httpx.TimeoutException:
+            return []
+        except httpx.NetworkError:
+            return []
 
-    def __init__(self, mock_mode: bool = True):
-        self._source_name = "WHO"
-        self._mock_mode = mock_mode
+        try:
+            data = response.json()
+        except (ValueError, TypeError):
+            return []
 
-    @property
-    def source_name(self) -> str:
-        return self._source_name
+        articles = data.get("value", [])
+        if not isinstance(articles, list):
+            return []
 
-    def fetch(self) -> list[RawIncidentData]:
-        """Fetch health emergencies from WHO."""
-        if self._mock_mode:
-            return self._mock_fetch()
-        return self._real_fetch()
+        records: list[RawRecord] = []
+        fetched_at = datetime.now(tz=timezone.utc)
+        cutoff = fetched_at - timedelta(days=MAX_AGE_DAYS)
 
-    def _mock_fetch(self) -> list[RawIncidentData]:
-        """Return sample WHO-style health emergency data."""
-        now = datetime.now(timezone.utc)
-        return [
-            RawIncidentData(
-                source_name="WHO",
-                incident_name="Novel Coronavirus Alert - Global",
-                country="Global",
-                disaster_type="Disease",
-                report_date=(now - timedelta(hours=4)).isoformat(),
-                source_url="https://who.int/emergencies/disease-outbreaks/2026/novel-coronavirus",
-                raw_fields={
-                    "disease": "COVID-19 Variant X",
-                    "cases": 5000,
-                    "deaths": 25,
-                    "hospitalizations": 150,
-                    "countries_affected": 12,
-                },
-            ),
-            RawIncidentData(
-                source_name="WHO",
-                incident_name="Ebola Outbreak - DRC",
-                country="Democratic Republic of Congo",
-                disaster_type="Ebola",
-                report_date=(now - timedelta(hours=8)).isoformat(),
-                source_url="https://who.int/emergencies/disease-outbreaks/2026/ebola-drc",
-                raw_fields={
-                    "disease": "Ebola",
-                    "cases": 89,
-                    "deaths": 45,
-                    "hospitalizations": 32,
-                    "countries_affected": 1,
-                },
-            ),
-            RawIncidentData(
-                source_name="WHO",
-                incident_name="Avian Influenza - Multiple Countries",
-                country="Multiple",
-                disaster_type="Influenza",
-                report_date=(now - timedelta(days=1)).isoformat(),
-                source_url="https://who.int/emergencies/disease-outbreaks/2026/avian-influenza",
-                raw_fields={
-                    "disease": "H5N1 Avian Influenza",
-                    "cases": 156,
-                    "deaths": 8,
-                    "hospitalizations": 45,
-                    "countries_affected": 5,
-                },
-            ),
-            RawIncidentData(
-                source_name="WHO",
-                incident_name="Monkeypox - Africa Region",
-                country="Nigeria",
-                disaster_type="Monkeypox",
-                report_date=(now - timedelta(days=2)).isoformat(),
-                source_url="https://who.int/emergencies/disease-outbreaks/2026/monkeypox-africa",
-                raw_fields={
-                    "disease": "Monkeypox Clade II",
-                    "cases": 1200,
-                    "deaths": 18,
-                    "hospitalizations": 89,
-                    "countries_affected": 3,
-                },
-            ),
-            RawIncidentData(
-                source_name="WHO",
-                incident_name="Marburg Virus - Tanzania",
-                country="Tanzania",
-                disaster_type="Marburg",
-                report_date=(now - timedelta(days=3)).isoformat(),
-                source_url="https://who.int/emergencies/disease-outbreaks/2026/marburg-tanzania",
-                raw_fields={
-                    "disease": "Marburg Virus",
-                    "cases": 34,
-                    "deaths": 11,
-                    "hospitalizations": 28,
-                    "countries_affected": 1,
-                },
-            ),
-        ]
+        for article in articles:
+            if not isinstance(article, dict):
+                continue
+            if not article:
+                continue
 
-    def _real_fetch(self) -> list[RawIncidentData]:
-        """Fetch from WHO API (not implemented)."""
-        return []
+            pub_date_str = article.get("PublicationDate", "")
+            try:
+                pub_date = datetime.fromisoformat(
+                    pub_date_str.replace("Z", "+00:00")
+                )
+            except (ValueError, TypeError):
+                continue
+            if pub_date < cutoff:
+                continue
+
+            records.append(
+                RawRecord(
+                    source_name=self.source_name,
+                    fetched_at=fetched_at,
+                    raw_fields=article,
+                )
+            )
+
+        return records
