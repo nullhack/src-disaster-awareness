@@ -1,208 +1,194 @@
-# Disaster Surveillance Reporter - Development TODO
+# Fact-Table Dead Weight Audit
 
-This file tracks all development steps across AI sessions. Each session should read this file first, pick up from the last completed step, and update statuses before finishing.
-
-**Convention:** `[ ]` = pending, `[x]` = done, `[~]` = in progress, `[-]` = skipped
-
-> **For AI agents:** Use `/skill session-workflow` for the full session start/end protocol.
-
----
-
-## Phase 1: Project Foundation
-
-- [x] Project created via cookiecutter template
-- [x] Requirements gathered: modular sources, modular storage, OpenCode transformation, rule classification, test mocks
-- [x] Analysis document created: `docs/analysis.md` for architect review
-- [x] README.md updated with project-specific description
-- [x] Architect review completed: approved with required changes (fixed primitive obsession, chose OpenCode only, added error handling)
-- [x] Install dependencies: `uv venv && uv pip install -e '.[dev]'`
-- [x] Verify base tests pass: `task test`
+Column-by-column scan of `disaster.db` cross-referenced against the source
+adapters and `store/_source_factories.py`. Two categories: **buggy** (data
+exists upstream, we read the wrong key) and **truly dead** (upstream has no
+such field, so the column can never be populated).
 
 ---
 
-## Phase 2: Feature Definition
+## Category 1 — Buggy columns (fix the adapter/factory) — DONE
 
-- [x] Define core features using `/skill feature-definition`
-- [x] Document requirements and acceptance criteria in `docs/analysis.md`
-- [x] Review SOLID principles compliance in design
-- [x] Define SourceAdapter protocol with dataclass value objects
-- [x] Define StorageBackend protocol with Incident dataclass
-- [x] Define ClassificationRules loader with country groups
-- [x] Define OpenCodeClient for transformation and classification
-- [x] Define Pipeline orchestration class
-- [x] Define CLI interface with commands
+### `fact_usgs_earthquake.magnitude` — all rows `0.0` — FIXED
 
----
+- Factory read `raw_fields.get("magnitude")` but the USGS GeoJSON property key
+  is `mag`. `dict(p)` already copies it under the right name; only the factory
+  key was wrong.
+- **Fix:** `build_usgs` now reads `raw.raw_fields.get("mag", 0)`.
 
-## Phase 3: Prototype & Validation
+### `fact_usgs_earthquake.depth` — all rows `0.0` — FIXED
 
-- [x] Create prototype scripts using `/skill prototype-script`
-- [x] Validate core concepts with real data
-- [x] Document prototype outputs for implementation reference
+- Depth is not a GeoJSON *property*; it lives in
+  `feature["geometry"]["coordinates"][2]` (lon, lat, depth_km). The adapter
+  never read `geometry`, so the key was absent from `raw_fields`.
+- **Fix:** `usgs.py` `fetch()` now extracts `coords[2]` into
+  `raw_fields["depth"]`.
 
----
+### `fact_usgs_earthquake.place` — stored the *title*, not the place — FIXED
 
-## Phase 4: Test-Driven Development
-
-- [x] Write comprehensive test suite using `/skill tdd`
-- [x] Ensure all tests fail initially (RED phase)
-- [x] Cover unit, integration, and property-based tests
-- [x] Tests passing (34 unit tests)
+- The factory set `place=raw.incident_name`. `incident_name` comes from
+  `p.get("title")`, i.e. the event title. The GeoJSON also has a separate
+  `place` property (the human-readable location string). `dict(p)` already
+  copied it into `raw_fields["place"]`; the factory just passed the wrong
+  source field.
+- **Fix:** `build_usgs` now reads `raw.raw_fields.get("place", "")`.
 
 ---
 
-## Phase 5: Architecture Review
+## Category 2 — Truly dead columns (upstream provides nothing)
 
-- [x] Design interfaces using `/skill signature-design`
-- [x] Request architecture review from `@architect`
-- [x] Address any architectural concerns
+### GDACS XML *does* contain these — enhance the adapter — DONE
 
----
+`sources/gdacs.py` previously built `raw_fields` with only `eventtype`,
+`country`, `fromdate`, `event_id`. The five GDACS-namespaced elements were
+present in each `<item>` (namespace `g = http://www.gdacs.org`, bound as `_NS`)
+but ignored.
 
-## Phase 6: Implementation
+| column                    | before | GDACS element    |
+|---------------------------|--------|------------------|
+| `fact_gdacs_event.episodeid`   | `""` | `g:episodeid` (text)    |
+| `fact_gdacs_event.alertlevel`  | `""` | `g:alertlevel` (text)   |
+| `fact_gdacs_event.alertscore`  | `0`  | `g:alertscore` (text)   |
+| `fact_gdacs_event.severity`    | `""` | `g:severity` (text)     |
+| `fact_gdacs_event.population`  | `0`  | `g:population` (`value` attr) |
 
-- [x] Implement features using `/skill implementation`
-- [x] Make tests pass one at a time (GREEN phase)
-- [x] Refactor for quality (REFACTOR phase)
-- [x] Module structure: adapters, storage, classification, opencode, pipeline
-- [x] Tests passing with 97% coverage (35 tests)
+- **Fix:** `gdacs.py` `fetch()` now reads all five. `population` reads the
+  element's `value=` attribute (the text content is descriptive, e.g.
+  "20 thousand in 100km", and is not a clean integer); the other four read the
+  text. The factory (`build_gdacs`) was already keyed correctly.
 
----
+### WHO API has no such keys — remove the columns
 
-## Phase 7: Quality Assurance
+`sources/who.py` does `raw_fields = dict(it)`, copying every WHO API key. The
+API exposes `Title`, `OverrideTitle`, `PublicationDateAndTime`,
+`ItemDefaultUrl`, `Summary`, `Description`, etc. — but no key named
+`epidemiology`/`advice`/`assessment`/`overview`. These are aspirational columns
+with no source.
 
-- [x] Run linting: `task lint`
-- [x] Run type checking: `task static-check` (pyright: 0 errors)
-- [x] Verify coverage ≥ 100%: `task test` (97% - 4 lines not covered in real implementations)
-- [x] Tests passing: 35 passed
+| column                    | factory reads                   |
+|---------------------------|---------------------------------|
+| `fact_who_don.epidemiology` | `raw_fields.get("epidemiology")` |
+| `fact_who_don.advice`       | `raw_fields.get("advice")`       |
+| `fact_who_don.assessment`   | `raw_fields.get("assessment")`   |
+| `fact_who_don.overview`     | `raw_fields.get("overview")`     |
 
----
+**Direction:** drop the four columns via an Alembic migration.
 
-## Phase 8: Major Architecture Changes - Multi-Stage Pipeline
+### HealthMap listview has no such fields — remove the columns
 
-### Phase 8.1: Local JSONL + Upserts (Priority 1 - START HERE)
-- [x] **Content Similarity Matcher**: Implement fuzzy matching for duplicate detection
-  - [x] Feature definition with SOLID principles and rich domain objects
-  - [x] Requirements document with protocols, value objects, and acceptance criteria
-  - [x] Prototype validation: rapidfuzz selected, 0.8 threshold optimal, performance target met
-  - [x] TDD Test Suite: 71 comprehensive tests (unit, property-based, integration)
-  - [x] `ContentSimilarityMatcher` protocol with `SimilarityScore` and `DuplicationResult` value objects
-  - [x] `FuzzyContentSimilarityMatcher` implementation with Strategy pattern (using rapidfuzz)
-  - [x] **IMPLEMENTATION COMPLETE**: All 65 core tests passing (56 unit + 9 property-based)
-  - [x] **PERFORMANCE VERIFIED**: 1.9s estimated for 1000 incidents (target: <10s)
-  - [x] **PUBLIC API READY**: Full protocol implementation with SequenceMatcher & RapidFuzz strategies
-  - [x] Integration with JSONLBackend upsert capability
-  - [ ] Integration with Pipeline for Stage 1 deduplication
-- [x] **JSONL Upsert Capability**: Extend JSONLBackend to support upserts
-  - [x] Read existing incidents from JSONL file
-  - [x] Merge new incidents with existing (update vs insert)
-  - [x] Preserve original incident data, add new fields
-  - [x] Integration tests with similarity matcher
-- [ ] **Enhanced CLI Multi-Source**: Update CLI to handle multiple sources
-  - [ ] `--sources gdacs,promed,reliefweb,news` flag
-  - [ ] `--duplicate-threshold 0.8` flag for similarity scoring
-  - [ ] Process all sources and deduplicate in single command
+HealthMap `getAlerts.php` rows are `[place, date, summary, disease, location]`.
+There is no `species`/`cases`/`deaths`/`significance` anywhere in the response.
+Those data come from WHO/ProMED, not HealthMap.
 
-### Phase 8.2: Multi-Source CLI Integration  
-- [ ] **CLI Multi-Selection**: Extend CLI for multiple storage backends
-  - [ ] `--storage jsonl,sqlite,email,sheets` flag
-  - [ ] Support simultaneous output to multiple backends
-  - [ ] Error handling for partial storage failures
-- [ ] **Enhanced Pipeline Class**: Update Pipeline to support multi-stage flow
-  - [ ] Stage 1: Sources → JSONL with deduplication
-  - [ ] Stage 2: JSONL → Enhanced JSONL (placeholder for DSPy-AI)
-  - [ ] Stage 3: Enhanced JSONL → Multiple storage backends
+| column                        | factory reads                     |
+|-------------------------------|-----------------------------------|
+| `fact_healthmap_alert.species`      | `raw_fields.get("species")`      |
+| `fact_healthmap_alert.cases`        | `raw_fields.get("cases")`        |
+| `fact_healthmap_alert.deaths`       | `raw_fields.get("deaths")`       |
+| `fact_healthmap_alert.significance` | `raw_fields.get("significance")` |
 
-### Phase 8.3: DSPy-AI Enhancement Pipeline (Future)
-- [ ] **DSPy-AI Integration**: Add intelligence layer between JSONL stages
-  - [ ] `DSPyEnhancer` class for filling missing information
-  - [ ] Predefined formats for standardized output
-  - [ ] Additional source discovery for high-priority incidents
-- [ ] **Enhanced Data Flow**: Full multi-stage pipeline
-  - [ ] Skip re-researching already processed incidents
-  - [ ] Incremental processing with enhanced data tracking
+**Direction:** drop the four columns via an Alembic migration.
 
-### Phase 8.4: Test Restructuring
-- [ ] **Test Mark Implementation**: Add proper test categories
-  - [ ] `@pytest.mark.unit` for isolated unit tests
-  - [ ] `@pytest.mark.integration` for component integration
-  - [ ] `@pytest.mark.e2e` for end-to-end pipeline tests  
-  - [ ] `@pytest.mark.slow` for tests >50ms
-  - [ ] `@pytest.mark.mock` for mocked external services
-  - [ ] `@pytest.mark.real_api` for real API calls
-- [ ] **Mock-First Testing**: Convert existing tests to use mocks by default
-  - [ ] Mock all external services (DSPy-AI, source APIs, storage backends)  
-  - [ ] Create comprehensive mock fixtures
-  - [ ] Real API tests only for critical adapters (GDACS)
-- [ ] **Optional E2E Tests**: Add taskpy tasks for real API testing
-  - [ ] `task test-e2e` - Real API calls, not automated
-  - [ ] `task test-fast` - Mock tests only (fast CI)
-  - [ ] `task test-slow` - Integration tests with mocks
+### `fact_news_article.country_key` — redundant, drop
 
-### Remaining Original Features
-- [x] **GDACSAdapter**: https://www.gdacs.org/ - Uses USGS Earthquake API (M4.5+ earthquakes)
-- [x] **ProMEDAdapter**: https://www.promedmail.org/ - Disease database
-- [x] **ReliefWebAdapter**: https://reliefweb.int/ - Humanitarian data
-- [x] **HealthMapAdapter**: https://www.healthmap.org/ - Disease surveillance
-- [x] **WHOAdapter**: https://www.who.int/emergencies/ - Health emergencies
-- [x] **JSONLBackend**: Implemented with date-based subfolders (YYYY-MM-DD UTC)
-- [ ] **SQLiteBackend**: Store in incidents.db with schema
-- [ ] **EmailBackend**: Send incidents via SMTP
+The model column and FK exist, but `store/sqlite.py` `link_news` never assigns
+`country_key` when inserting a `FactNewsArticle`. Every row is `NULL`.
+
+A news article is always linked to exactly one `fact_incident` (via
+`incident_key`), and that incident already carries its `country_key`. The
+country is reachable as `fact_news_article → fact_incident → dim_country`, so
+the denormalised copy on the news row adds nothing — any country filter/join
+goes through the incident. Keeping the column would just be a redundant
+denormalisation we'd have to keep in sync.
+
+**Direction:** drop the column via an Alembic migration.
 
 ---
 
-## Phase 9: Release
+## Status
 
-- [ ] Create release using `@repo-manager /skill git-release`
-- [ ] Update documentation with new architecture
-- [ ] Deploy if applicable
+1. **Quick wins (no migration, data already fetched) — DONE:**
+   - USGS factory: reads `mag` (was `magnitude`); reads `place` from
+     `raw_fields["place"]` (was `incident_name`).
+   - USGS adapter: extracts `depth` from `geometry["coordinates"][2]` into
+     `raw_fields["depth"]`.
+   - GDACS adapter: reads the five `g:*` elements into `raw_fields`
+     (population via `value` attr); factory already keyed correctly.
+   - Tests updated: fixtures now use real keys (`mag`/`depth`/`place`);
+     `v_usgs_earthquake` test asserts depth + place round-trip; USGS + GDACS
+     adapter tests assert the new extractions. 96 passing.
+   - Existing `disaster.db` rows unchanged — the fixes apply to **new**
+     ingestions.
+2. **Column drops (Alembic migration `bdc77a90477b`) — DONE:**
+   - Dropped WHO `epidemiology`/`advice`/`assessment`/`overview`.
+   - Dropped HealthMap `species`/`cases`/`deaths`/`significance`.
+   - Dropped News `country_key` (redundant — incident already carries country).
+   - Migration recreates the 3 affected views (`v_who_don`,
+     `v_healthmap_alert`, `v_news_article`) without the dropped columns.
+   - `models.py` + `_source_factories.py` + `link_news` updated; schema test
+     asserts `country_key` is gone. `alembic check` clean on fresh DB.
+3. **Full rebuild of `disaster.db` — DONE (no re-ingest):**
+   - `DISASTER_DB_URL=sqlite:///disaster.db alembic upgrade head` created a
+     clean empty file at revision `bdc77a90477b` (correct
+     `REFERENCES fact_incident` everywhere). `/tmp/opencode/restore_clean.py`
+     then ATTACHed the prior backup and copied rows with explicit column
+     lists in FK order, `PRAGMA foreign_keys=ON` as the integrity check.
+   - All rows preserved (414 incidents / 25 WHO / 1121 HealthMap / 73 news /
+     113 GDACS / 21 USGS). Zero `PRAGMA foreign_key_check` violations; zero
+     `fact_incident_old` references remain. `alembic check` =
+     "No new upgrade operations detected". Backups at `disaster.db.bak{,2,3}`.
+4. **Backfill historical rows with real values — DONE:**
+   - `/tmp/opencode/backfill_sources.py` looked up each existing row by its
+     source-native ID and UPDATEd the stale placeholder values written by
+     pre-step-1 code: 21 USGS rows via the FDSN `eventid` archive
+     (`mag`/`depth`/`place`); 113 GDACS rows via `rss_7d.xml` indexed by
+     `eventid` (`episodeid`/`alertlevel`/`alertscore`/`severity`/`population`).
+   - Zero stale rows remain in either table; `v_usgs_earthquake` and
+     `v_gdacs_event` now show populated data. Data-only backfill, no schema
+     change (alembic check still clean).
+
+Each remaining step ships as its own Alembic migration + edit + test.
 
 ---
 
-## Session Log
+## Additional finding — Legacy FK corruption (pre-Alembic artifact) — RESOLVED
 
-| Date       | Session Summary                                                                  |
-|------------|--------------------------------------------------------------------------------|
-| 2026-04-09 | Requirements gathered: modular adapters, OpenCode, classification rules, tests with mocks |
-| 2026-04-09 | Analysis doc created at docs/analysis.md, README updated                             |
-| 2026-04-09 | Architect review: approved with changes (fixed primitive obsession, chose OpenCode only, added error handling) |
-| 2026-04-09 | Dependencies installed, base tests pass                                           |
-| 2026-04-09 | Feature definitions complete: protocols, value objects, pipeline, CLI           |
-| 2026-04-09 | Prototype validated: source adapters, classification rules, OpenCode, storage    |
-| 2026-04-09 | TDD tests written: 35 tests passing                                            |
-| 2026-04-09 | Implementation complete: adapters, storage, classification, opencode, pipeline |
-| 2026-04-09 | Quality checks pass: 35 tests, pyright 0 errors, 97% coverage                    |
-| 2026-04-09 | New requirements added: 5 source adapters, 3 storage backends, real-data tests   |
-| 2026-04-09 | Fixed GDACS adapter to use USGS API for M4.5+ earthquakes (11 real quakes today), fixed test mocks, tests pass |
-| 2026-04-10 | Added OpenCode model fallback (nemotron + minimax), implemented HealthMap/WHO adapters, fixed adapter imports, 52 tests pass |
-| 2026-04-10 | Content similarity prototype validated: rapidfuzz 17x faster, 0.8 threshold optimal, performance target met (7.4s for 1000 incidents) |
-| 2026-04-10 | **ContentSimilarityMatcher IMPLEMENTATION COMPLETE**: All 65 core tests pass, performance verified (1.9s for 1000 incidents), public API ready with protocols and strategies |
+### All five child tables reference a non-existent `fact_incident_old`
 
----
+- **Symptom:** `sqlite3 disaster.db ".schema"` shows every child fact table
+  (`fact_usgs_earthquake`, `fact_gdacs_event`, `fact_who_don`,
+  `fact_healthmap_alert`, `fact_news_article`) with
+  `FOREIGN KEY(incident_key) REFERENCES "fact_incident_old"` — a table that no
+  longer exists.
+- **Cause:** the one-shot `/tmp/opencode/migrate_drop_status.py` script (run
+  before Alembic existed) did `RENAME fact_incident TO fact_incident_old`,
+  created a new `fact_incident`, copied rows, then
+  `DROP TABLE fact_incident_old`. SQLite rewrote the child FK targets to follow
+  the rename, leaving them pointing at the dropped table. `PRAGMA
+  foreign_keys=OFF` was set during the script, so the dangling references never
+  raised.
+- **Why `alembic stamp head` didn't reconcile it:** stamping only writes the
+  version row; it does not rewrite physical DDL. The DB is *labelled*
+  `ec2f0a478cfa` but its schema still carries the corruption.
+- **Direction:** rebuild `disaster.db` from a clean `alembic upgrade head` on
+  an empty file. The baseline migration emits correct
+  `REFERENCES fact_incident`. Because ingest is idempotent and all 414 rows
+  come from live source feeds, re-running the pipeline repopulates everything.
+- **Resolution (step 3 above):** the full rebuild via `restore_clean.py` did
+  exactly this — clean `alembic upgrade head` + surgical row copy. All five
+  child tables now `REFERENCES fact_incident`; zero
+  `fact_incident_old` references; `PRAGMA foreign_key_check` clean.
 
-## Architecture Change Implementation Plan
+### Structurally single-value columns (expected, NOT dead)
 
-### Current Focus: Local JSONL + Upserts (Phase 8.1)
-**Priority**: Start with content similarity deduplication and JSONL upserts
-**Timeline**: This phase should be completed first before moving to other phases
+These look uniform but are correct by design — included so they are not
+mistaken for dead weight in a future audit:
 
-### Implementation Order:
-1. **Phase 8.1**: Local JSONL + Upserts (CRITICAL - START HERE)
-2. **Phase 8.2**: Multi-source CLI flags 
-3. **Phase 8.4**: Test restructuring with proper marks
-4. **Phase 8.3**: DSPy-AI enhancement (future enhancement)
-
-### Key Architectural Decisions Made:
-- **Local JSONL Format**: Normalized schema (not raw capture)
-- **Duplicate Strategy**: Content similarity with fuzzy matching on title/description
-- **CLI Interface**: Command flags (--sources, --storage, --duplicate-threshold) 
-- **Test Strategy**: Mock-first with optional E2E via taskpy
-
-## Notes for Next Session
-
-- **PRIORITY**: Implement Phase 8.1 (Local JSONL + Upserts) before anything else
-- **Architecture**: Multi-stage pipeline: Sources → JSONL (w/ dedup) → Enhancement → Storage
-- **CLI Changes**: Add `--sources` and `--storage` multi-selection flags
-- **Testing**: Add test marks and restructure to mock-first approach
-- **Real data verified**: GDACS adapter fetched 11 real earthquakes from USGS API (M4.5+) - all tests pass
-- **Linting issues**: 65 ruff errors exist (mostly style) - need cleanup but not blocking implementation
+- `source_key` on each child fact (each source owns one row in `dim_source`).
+- `fact_healthmap_alert.feed_source` — always `HealthMap`.
+- `fact_who_don.provider` — always `WHO Disease Outbreak News`.
+- `fact_incident` date columns — all `today` because every ingest so far was a
+  single-day run; will diversify once multi-day ingestion happens.
+- `type_key` on USGS — always `Earthquake` (USGS only serves quakes).
+- `fact_usgs_earthquake.tsunami` — structurally all `0` because no recent 4.5+
+  event triggered a tsunami warning; real signal, not a bug.
