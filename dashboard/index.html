@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Disaster Surveillance — Daily Digest</title>
+  <meta name="description" content="Daily digest of reportable disaster incidents for monitoring teams." />
+  <link rel="icon" href="data:," />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-theme="light">
+
+  <!-- ============ HEADER ============ -->
+  <header class="topbar">
+    <div class="topbar__brand">
+      <svg class="brand-mark" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M3 12h4l2-5 3 10 2-7 2 4h5" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="brand-text">
+        <h1>Disaster Surveillance</h1>
+        <span class="brand-sub">Daily Incident Digest</span>
+      </div>
+    </div>
+
+    <div class="topbar__controls">
+      <label class="digest-picker">
+        <span class="sr-only">Report date</span>
+        <select id="digestSelect" aria-label="Select report date"></select>
+      </label>
+      <div class="freshness" id="freshness" title="Data freshness">
+        <span class="freshness__dot"></span>
+        <span id="freshnessLabel">Loading…</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ KPI STRIP ============ -->
+  <section class="kpis" id="kpis" aria-label="Headline figures"></section>
+
+  <!-- ============ FILTER BAR ============ -->
+  <section class="filters" id="filters" aria-label="Filters">
+    <div class="filters__group">
+      <label>Severity
+        <div class="sevchips" id="sevChips" role="group" aria-label="Severity filter"></div>
+      </label>
+    </div>
+    <div class="filters__group">
+      <label>Type
+        <select id="typeFilter"><option value="">All types</option></select>
+      </label>
+    </div>
+    <div class="filters__group">
+      <label>Region
+        <select id="regionFilter"><option value="">All regions</option></select>
+      </label>
+    </div>
+    <div class="filters__group">
+      <label>Country
+        <select id="countryFilter"><option value="">All countries</option></select>
+      </label>
+    </div>
+    <div class="filters__group filters__group--grow">
+      <label>Search
+        <input id="searchFilter" type="search" placeholder="Disease, headline, id…" />
+      </label>
+    </div>
+    <button class="btn btn--ghost" id="clearFilters" type="button">Clear</button>
+  </section>
+
+  <main class="layout">
+
+    <!-- ============ MAP ============ -->
+    <section class="card card--map span-full" aria-label="World map">
+      <div class="card__head">
+        <h2>Geographic overview</h2>
+        <span class="card__hint">Bubble = country · colour = max severity · size = count · click to filter</span>
+      </div>
+      <div class="map-wrap">
+        <svg id="worldMap" role="img" aria-label="World map of active incidents"></svg>
+        <div class="map-legend" id="mapLegend"></div>
+      </div>
+    </section>
+
+    <!-- ============ TREND ============ -->
+    <section class="card card--trend" aria-label="Severity trend">
+      <div class="card__head">
+        <h2 id="trendTitle">Severity trend</h2>
+        <span class="card__hint">Each line = one severity, as % of the period's busiest day · hover for counts</span>
+      </div>
+      <div class="trend-legend" id="trendLegend" aria-hidden="true"></div>
+      <svg id="trendChart" role="img" aria-label="Incident trend chart"></svg>
+    </section>
+
+    <!-- ============ WATCHLIST (tabs) ============ -->
+    <section class="card card--table span-full" aria-label="Incident lists">
+      <div class="card__head card__head--tabs">
+        <div class="tabs" role="tablist">
+          <button class="tab tab--active" role="tab" data-tab="watchlist">Active watchlist <span class="tab__count" id="cntWatch">0</span></button>
+          <button class="tab" role="tab" data-tab="disease">Disease outbreaks <span class="tab__count" id="cntDisease">0</span></button>
+          <button class="tab" role="tab" data-tab="news">News pulse <span class="tab__count" id="cntNews">0</span></button>
+        </div>
+      </div>
+
+      <!-- Watchlist -->
+      <div class="tab-panel tab-panel--active" data-panel="watchlist">
+        <div class="table-scroll">
+          <table class="tbl" id="watchTable">
+            <thead>
+              <tr>
+                <th data-sort="severity" title="Worst-case severity of the incident">Severity</th>
+                <th data-sort="priority" title="Operational priority (HIGH/MED/LOW) used for triage">Priority</th>
+                <th data-sort="canonical_name" title="Canonical incident name">Incident</th>
+                <th data-sort="country" title="Affected country and region">Country</th>
+                <th data-sort="incident_type" title="Incident type (Earthquake, Disease, Flood…)">Type</th>
+                <th data-sort="event_date" title="Date the incident was first observed">Event date</th>
+                <th data-sort="news_total" class="num" title="Number of linked news articles">News</th>
+                <th data-sort="sources" class="num" title="Contributing data sources (WHO, USGS, GDACS, …)">Sources</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <p class="empty-state" id="watchEmpty" hidden>No incidents match the current filters.</p>
+      </div>
+
+      <!-- Disease -->
+      <div class="tab-panel" data-panel="disease">
+        <div class="disease-grid" id="diseaseGrid"></div>
+        <p class="empty-state" id="diseaseEmpty" hidden>No active disease outbreaks in this digest.</p>
+      </div>
+
+      <!-- News pulse -->
+      <div class="tab-panel" data-panel="news">
+        <div class="news-summary" id="newsSummary"></div>
+        <ul class="news-pulse" id="newsPulse"></ul>
+        <p class="empty-state" id="newsEmpty" hidden>No linked news in this digest.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ DETAIL DRAWER ============ -->
+  <aside class="drawer" id="drawer" aria-hidden="true" aria-label="Incident detail">
+    <div class="drawer__bar">
+      <span class="drawer__title" id="drawerTitle">Incident</span>
+      <button class="drawer__close" id="drawerClose" type="button" aria-label="Close">×</button>
+    </div>
+    <div class="drawer__body" id="drawerBody"></div>
+  </aside>
+  <div class="scrim" id="scrim" hidden></div>
+
+  <!-- ============ STATUS / ERROR ============ -->
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <footer class="footer">
+    <span>Daily digest · <code id="schemaVer">v1.0</code> · window <span id="winDays">14</span>d</span>
+    <span class="footer__note">Magnitude shown is USGS-instrumental max; AI summaries may cite higher figures driven by impact. All times UTC.</span>
+  </footer>
+
+  <!-- D3 + topojson from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
