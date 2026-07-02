@@ -15,6 +15,7 @@ EXPECTED_DIMENSIONS = frozenset(
         "dim_disease",
         "dim_priority",
         "dim_severity_level",
+        "dim_pandemic_potential",
     }
 )
 EXPECTED_FACTS = frozenset(
@@ -111,6 +112,7 @@ def test_given_galaxy_when_inspected_then_fact_incident_is_parent_referencing_co
         "dim_priority",
         "dim_severity_level",
         "dim_disease",
+        "dim_pandemic_potential",
     }
 
     date_fk_columns = _fk_columns_to(inspector, "fact_incident", "dim_date")
@@ -118,6 +120,10 @@ def test_given_galaxy_when_inspected_then_fact_incident_is_parent_referencing_co
 
     assert columns["disease_key"]["nullable"] is True
     assert columns["should_report"]["type"].python_type is bool
+    assert columns["pandemic_potential_key"]["nullable"] is True, (
+        "pandemic_potential_key must be nullable (physical incident or not yet digested)"
+    )
+    assert columns["event_status"]["nullable"] is True
 
 
 def test_given_galaxy_when_inspected_then_child_facts_link_to_parent_and_share_conformed_dims(

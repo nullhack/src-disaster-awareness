@@ -67,16 +67,47 @@ def test_ddg_news_search_passes_query_and_timelimit_to_sdk(monkeypatch, load_fix
 def test_ddg_news_search_returns_empty_when_ddgs_raises_no_results(monkeypatch):
     from ddgs.exceptions import DDGSException
 
+    calls = {"n": 0}
+
     class RaisingDDGS:
         def __init__(self, *args, **kwargs):
             pass
 
         def news(self, **kwargs):
+            calls["n"] += 1
             raise DDGSException("No results found.")
 
     monkeypatch.setattr("disaster_report.sources.ddg_news.DDGS", RaisingDDGS)
+    monkeypatch.setattr("disaster_report.sources.ddg_news.time.sleep", lambda _s: None)
 
     adapter = DdgNewsAdapter()
 
     assert adapter.search("unlikely-query-with-zero-results") == []
     assert adapter.fetch() == []
+    # retries are exhausted, not abandoned on the first failure
+    assert calls["n"] >= 2
+
+
+def test_ddg_news_search_retries_empty_then_returns_results(monkeypatch, load_fixture):
+    """A transient empty result (the yahoo IndexError burst pattern) is retried
+    and the call eventually returns the articles from a later attempt."""
+    items = json.loads(load_fixture("ddg_news.json"))
+
+    attempts = {"n": 0}
+
+    class FlakyDDGS:
+        def __init__(self, *args, **kwargs):
+            pass
+
+        def news(self, **kwargs):
+            attempts["n"] += 1
+            return [] if attempts["n"] == 1 else items
+
+    monkeypatch.setattr("disaster_report.sources.ddg_news.DDGS", FlakyDDGS)
+    monkeypatch.setattr("disaster_report.sources.ddg_news.time.sleep", lambda _s: None)
+
+    adapter = DdgNewsAdapter()
+    articles = adapter.search("Nipah India outbreak 2026", timelimit="m")
+
+    assert articles  # recovered
+    assert attempts["n"] == 2

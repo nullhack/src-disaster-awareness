@@ -99,6 +99,20 @@ def test_link_news_dedups_by_url_and_reports_newness(store):
     assert all(n.headline and n.published_date for n in news)
 
 
+def test_get_incident_news_full_returns_body_and_outlet(store):
+    key = store.upsert_incident(_record())
+    store.link_news(key, _article("https://n/1"))
+
+    full = store.get_incident_news_full(key)
+    assert len(full) == 1
+    row = full[0]
+    assert row["url"] == "https://n/1"
+    assert row["headline"] == "Quake shakes Sarangani"
+    assert row["body"] == "body"
+    assert row["outlet"] == "Reuters"
+    assert row["published_date"]
+
+
 def test_link_source_record_dedups_and_is_retrievable(store):
     key = store.upsert_incident(_record())
 
@@ -371,3 +385,515 @@ def test_country_key_normalizes_existing_xx_row_name_to_unknown(store):
             sa.select(DimCountry).where(DimCountry.iso2 == "XX")
         ).one()
     assert row.name == "Unknown"
+
+
+# --------------------------------------------------------------------------- #
+# set_digest ratchet + reclassify_all backfill
+# --------------------------------------------------------------------------- #
+
+def _row(store, incident_key: int) -> dict:
+    with store._engine.connect() as conn:
+        row = conn.exec_driver_sql(
+            "SELECT incident_id, priority, severity, should_report, summary, "
+            "canonical_name, pandemic_potential, event_status "
+            "FROM v_incident WHERE incident_key = ?",
+            (incident_key,),
+        ).one()
+    return row._mapping
+
+
+def test_set_digest_escalates_severity_and_latches_should_report(store):
+    # Start: LOW severity in group C (Germany) -> should_report = False.
+    key = store.upsert_incident(
+        _record(
+            "20260629-DE-EQ",
+            country="Germany",
+            priority="LOW",
+            severity_level=1,
+            should_report=False,
+            canonical_name="Initial",
+            summary="initial summary",
+        )
+    )
+    assert _row(store, key)["should_report"] == 0
+
+    store.set_digest(
+        key,
+        {
+            "summary": "Upgraded event.",
+            "severity": "CRITICAL",
+        },
+        digested_on=date(2026, 6, 29),
+        country="Germany",
+    )
+
+    row = _row(store, key)
+    assert row["severity"] == "CRITICAL"
+    assert row["priority"] == "HIGH"
+    assert row["should_report"] == 1
+    # canonical_name + search_keys are now DERIVED (not AI-authored) — assert refresh happened.
+    assert row["canonical_name"] == "Earthquake Germany June 2026"
+    assert row["summary"] == "Upgraded event."
+
+
+def test_set_digest_never_demotes_severity_or_clears_should_report(store):
+    key = store.upsert_incident(
+        _record(
+            "20260629-DE-EQ",
+            country="Germany",
+            priority="HIGH",
+            severity_level=4,
+            should_report=True,
+            canonical_name="Critical Quake",
+            summary="original",
+        )
+    )
+
+    # A later digest with a *lower* severity must not demote.
+    store.set_digest(
+        key,
+        {
+            "canonical_name": "Critical Quake",
+            "summary": "revised detail",
+            "severity": "LOW",
+            "search_keys": ["berlin"],
+        },
+        digested_on=date(2026, 6, 30),
+        country="Germany",
+    )
+
+    row = _row(store, key)
+    assert row["severity"] == "CRITICAL"
+    assert row["priority"] == "HIGH"
+    assert row["should_report"] == 1
+    # Content still refreshes.
+    assert row["summary"] == "revised detail"
+
+
+def test_reclassify_all_dry_run_writes_nothing(store):
+    # Group A MEDIUM earthquake deliberately mislabeled as not reportable:
+    # classify(2, "A") -> ("MEDIUM", True), so a delta is expected.
+    key = store.upsert_incident(
+        _record(
+            "20260629-PH-EQ",
+            country="Philippines",
+            priority="LOW",
+            severity_level=2,
+            should_report=False,
+        )
+    )
+    before = _row(store, key)
+
+    deltas = store.reclassify_all(dry_run=True)
+
+    after = _row(store, key)
+    assert any(d["incident_id"] == "20260629-PH-EQ" for d in deltas)
+    assert after == before, "dry-run must not persist changes"
+
+
+def test_reclassify_all_apply_persists_deltas_and_is_idempotent(store):
+    store.upsert_incident(
+        _record(
+            "20260629-PH-EQ",
+            country="Philippines",
+            priority="LOW",
+            severity_level=2,
+            should_report=False,
+        )
+    )
+
+    first = store.reclassify_all(dry_run=False)
+    assert any(d["incident_id"] == "20260629-PH-EQ" for d in first)
+
+    row = _row(store, store.find_by_incident_id("20260629-PH-EQ").incident_key)
+    assert row["priority"] == "MEDIUM"
+    assert row["should_report"] == 1
+
+    # Second run must produce no deltas (idempotent + monotonic).
+    second = store.reclassify_all(dry_run=False)
+    assert second == []
+
+
+def test_reclassify_all_ignores_already_correct_incidents(store):
+    # Group A MEDIUM incident: matrix already reports it (MEDIUM, True).
+    store.upsert_incident(
+        _record(
+            "20260629-PH-EQ",
+            country="Philippines",
+            priority="MEDIUM",
+            severity_level=2,
+            should_report=True,
+        )
+    )
+    deltas = store.reclassify_all(dry_run=True)
+    assert not any(d["incident_id"] == "20260629-PH-EQ" for d in deltas)
+
+
+# --------------------------------------------------------------------------- #
+# set_digest — pandemic_potential ratchet + event_status (disease track)
+# --------------------------------------------------------------------------- #
+
+def test_set_digest_persists_pandemic_potential_and_event_status(store):
+    # Disease incident, group C, LOW -> baseline ("LOW", False). AI digest drives
+    # the escalation via pandemic_potential=HIGH (the primary disease signal).
+    key = store.upsert_incident(
+        _record(
+            "20260629-DE-EP",
+            country="Germany",
+            incident_type="Disease",
+            priority="LOW",
+            severity_level=1,
+            should_report=False,
+            disease="Ebola",
+            canonical_name="Initial",
+            summary="initial",
+        )
+    )
+
+    store.set_digest(
+        key,
+        {
+            "canonical_name": "Berlin Ebola Case",
+            "summary": "A case was reported.",
+            "severity": "LOW",
+            "pandemic_potential": "HIGH",
+            "event_status": "new_outbreak",
+            "search_keys": ["ebola berlin"],
+        },
+        digested_on=date(2026, 6, 29),
+        country="Germany",
+    )
+
+    row = _row(store, key)
+    assert row["pandemic_potential"] == "HIGH"
+    assert row["event_status"] == "new_outbreak"
+    assert row["priority"] == "HIGH"
+    assert row["should_report"] == 1
+
+
+def test_set_digest_ratchets_pandemic_potential(store):
+    key = store.upsert_incident(
+        _record(
+            "20260629-DE-EP",
+            country="Germany",
+            incident_type="Disease",
+            priority="LOW",
+            severity_level=1,
+            should_report=False,
+            disease="Ebola",
+        )
+    )
+
+    store.set_digest(
+        key,
+        {"summary": "s1", "severity": "LOW", "pandemic_potential": "LOW",
+         "event_status": "new_outbreak", "search_keys": []},
+        digested_on=date(2026, 6, 29),
+        country="Germany",
+    )
+    assert _row(store, key)["pandemic_potential"] == "LOW"
+
+    # Escalate to CRITICAL.
+    store.set_digest(
+        key,
+        {"summary": "s2", "severity": "LOW", "pandemic_potential": "CRITICAL",
+         "event_status": "escalating", "search_keys": []},
+        digested_on=date(2026, 6, 30),
+        country="Germany",
+    )
+    row = _row(store, key)
+    assert row["pandemic_potential"] == "CRITICAL"
+    assert row["event_status"] == "escalating"
+
+    # A later lower AI assessment must NOT demote the ratcheted value.
+    store.set_digest(
+        key,
+        {"summary": "s3", "severity": "LOW", "pandemic_potential": "LOW",
+         "event_status": "new_outbreak", "search_keys": []},
+        digested_on=date(2026, 7, 1),
+        country="Germany",
+    )
+    row = _row(store, key)
+    assert row["pandemic_potential"] == "CRITICAL"
+    # event_status is refreshable (not ratcheted).
+    assert row["event_status"] == "new_outbreak"
+
+
+def test_set_digest_non_event_status_does_not_clear_should_report(store):
+    # set_digest is monotonic: even a non_event status (which classify suppresses)
+    # must not clear an already-latched should_report. The one-time destructive
+    # reflag is the only place suppression actually clears the flag.
+    key = store.upsert_incident(
+        _record(
+            "20260629-DE-EP",
+            country="Germany",
+            incident_type="Disease",
+            priority="HIGH",
+            severity_level=1,
+            should_report=True,
+            disease="Ebola",
+        )
+    )
+
+    store.set_digest(
+        key,
+        {"summary": "s", "severity": "LOW", "pandemic_potential": "HIGH",
+         "event_status": "non_event", "search_keys": []},
+        digested_on=date(2026, 6, 29),
+        country="Germany",
+    )
+
+    row = _row(store, key)
+    # event_status is recorded ...
+    assert row["event_status"] == "non_event"
+    # ... but should_report is preserved (monotonic set_digest).
+    assert row["should_report"] == 1
+
+
+def test_set_digest_skips_pandemic_potential_for_physical_incidents(store):
+    # A physical incident: passing pandemic_potential in the digest must not
+    # persist anything to the column (it stays NULL / not-applicable).
+    key = store.upsert_incident(
+        _record(
+            "20260629-DE-EQ",
+            country="Germany",
+            incident_type="Earthquake",
+            priority="LOW",
+            severity_level=1,
+            should_report=False,
+        )
+    )
+    store.set_digest(
+        key,
+        {"summary": "s", "severity": "LOW", "pandemic_potential": "HIGH",
+         "event_status": "new_outbreak", "search_keys": []},
+        digested_on=date(2026, 6, 29),
+        country="Germany",
+    )
+    # The digester won't send these keys for physical track, but if it leaks,
+    # set_digest still must not escalate a physical incident on pandemic grounds.
+    row = _row(store, key)
+    assert row["should_report"] == 0
+    assert row["priority"] == "LOW"
+
+
+def _last_updated_key(store, incident_key: int) -> int:
+    with store._engine.connect() as conn:
+        row = conn.exec_driver_sql(
+            "SELECT last_updated_date_key FROM fact_incident WHERE incident_key = ?",
+            (incident_key,),
+        ).one()
+    return row[0]
+
+
+def test_set_digest_clamps_endemic_pandemic_potential_to_low(store):
+    # COVID-19 is endemic: the AI over-rating pp=CRITICAL must be clamped to LOW
+    # on persist (de-escalation), so it never force-reports on pp alone.
+    key = store.upsert_incident(
+        _record(
+            "20260629-DE-EP",
+            country="Germany",
+            incident_type="Disease",
+            priority="LOW",
+            severity_level=1,
+            should_report=False,
+            disease="COVID-19",
+        )
+    )
+    store.set_digest(
+        key,
+        {"summary": "s", "severity": "LOW", "pandemic_potential": "CRITICAL",
+         "event_status": "ongoing", "search_keys": []},
+        digested_on=date(2026, 6, 29),
+        country="Germany",
+    )
+    row = _row(store, key)
+    assert row["pandemic_potential"] == "LOW"
+    # Matrix (1,C) = (LOW,False); endemic pp clamped -> no report.
+    assert row["should_report"] == 0
+    assert row["priority"] == "LOW"
+
+
+def test_set_digest_leaves_last_updated_date_unchanged(store):
+    # Regression guard: set_digest must NOT bump last_updated_date_key. That
+    # column reflects real new source/news reporting, not AI re-processing.
+    key = store.upsert_incident(_record())
+    assert _last_updated_key(store, key) == 20260629
+
+    store.set_digest(
+        key,
+        {"summary": "fresh summary", "severity": "HIGH", "search_keys": ["k"]},
+        digested_on=date(2026, 7, 5),
+        country="Philippines",
+    )
+    # last_updated stays at the original ingest date, NOT the digest date.
+    assert _last_updated_key(store, key) == 20260629
+
+
+def test_find_recent_disease_incident_returns_match_in_window(store):
+    key = store.upsert_incident(
+        _record(
+            "20260610-NG-EP",
+            country="Nigeria",
+            incident_type="Disease",
+            disease="Cholera",
+            last_updated_date="2026-06-10",
+            first_reported_date="2026-06-10",
+            event_date="2026-06-10",
+        )
+    )
+    # Within 30 days of 2026-06-29 -> match.
+    found = store.find_recent_disease_incident(
+        "Cholera", "Nigeria", date(2026, 6, 29), within_days=30
+    )
+    assert found == key
+
+
+def test_find_recent_disease_incident_returns_none_outside_window(store):
+    store.upsert_incident(
+        _record(
+            "20260401-NG-EP",
+            country="Nigeria",
+            incident_type="Disease",
+            disease="Cholera",
+            last_updated_date="2026-04-01",
+            first_reported_date="2026-04-01",
+            event_date="2026-04-01",
+        )
+    )
+    found = store.find_recent_disease_incident(
+        "Cholera", "Nigeria", date(2026, 6, 29), within_days=30
+    )
+    assert found is None
+
+
+def test_find_recent_disease_incident_ignores_different_disease(store):
+    store.upsert_incident(
+        _record(
+            "20260610-NG-EP",
+            country="Nigeria",
+            incident_type="Disease",
+            disease="Ebola",
+            last_updated_date="2026-06-10",
+            first_reported_date="2026-06-10",
+            event_date="2026-06-10",
+        )
+    )
+    found = store.find_recent_disease_incident(
+        "Cholera", "Nigeria", date(2026, 6, 29), within_days=30
+    )
+    assert found is None
+
+
+def test_merge_duplicate_disease_incidents_dry_run_writes_nothing(store):
+    k1 = store.upsert_incident(
+        _record(
+            "20260601-NG-EP",
+            country="Nigeria",
+            incident_type="Disease",
+            disease="Cholera",
+            first_reported_date="2026-06-01",
+            event_date="2026-06-01",
+            last_updated_date="2026-06-01",
+        )
+    )
+    k2 = store.upsert_incident(
+        _record(
+            "20260610-NG-EP",
+            country="Nigeria",
+            incident_type="Disease",
+            disease="Cholera",
+            first_reported_date="2026-06-10",
+            event_date="2026-06-10",
+            last_updated_date="2026-06-10",
+        )
+    )
+    store.link_news(k1, _article(url="https://n/a"))
+    store.link_news(k2, _article(url="https://n/b"))
+
+    deltas = store.merge_duplicate_disease_incidents(dry_run=True)
+    assert len(deltas) == 1
+    # Dry-run -> nothing merged.
+    assert store.count_incidents() == 2
+
+
+def test_merge_duplicate_disease_incidents_apply_merges_and_is_idempotent(store):
+    k1 = store.upsert_incident(
+        _record(
+            "20260601-NG-EP",
+            country="Nigeria",
+            incident_type="Disease",
+            disease="Cholera",
+            first_reported_date="2026-06-01",
+            event_date="2026-06-01",
+            last_updated_date="2026-06-01",
+        )
+    )
+    k2 = store.upsert_incident(
+        _record(
+            "20260610-NG-EP",
+            country="Nigeria",
+            incident_type="Disease",
+            disease="Cholera",
+            first_reported_date="2026-06-10",
+            event_date="2026-06-10",
+            last_updated_date="2026-06-10",
+        )
+    )
+    k3 = store.upsert_incident(
+        _record(
+            "20260620-NG-EP",
+            country="Nigeria",
+            incident_type="Disease",
+            disease="Cholera",
+            first_reported_date="2026-06-20",
+            event_date="2026-06-20",
+            last_updated_date="2026-06-20",
+        )
+    )
+    store.link_news(k1, _article(url="https://n/a"))
+    store.link_news(k2, _article(url="https://n/b"))
+    store.link_news(k3, _article(url="https://n/c"))
+
+    deltas = store.merge_duplicate_disease_incidents(dry_run=False)
+    # k2 and k3 chain into k1 (gaps <= 30) -> 2 merges.
+    assert len(deltas) == 2
+    # Only the survivor (k1, earliest) remains.
+    assert store.count_incidents() == 1
+    assert store.find_by_incident_id("20260601-NG-EP") is not None
+    # All news re-pointed to the survivor.
+    assert len(store.get_incident_news(k1)) == 3
+
+    # Idempotent: a second run produces no deltas.
+    again = store.merge_duplicate_disease_incidents(dry_run=False)
+    assert again == []
+    assert store.count_incidents() == 1
+
+
+def test_merge_duplicate_disease_incidents_keeps_separate_outbreaks(store):
+    # Two Cholera/Nigeria outbreaks >30 days apart must NOT merge.
+    store.upsert_incident(
+        _record(
+            "20260101-NG-EP",
+            country="Nigeria",
+            incident_type="Disease",
+            disease="Cholera",
+            first_reported_date="2026-01-01",
+            event_date="2026-01-01",
+            last_updated_date="2026-01-01",
+        )
+    )
+    store.upsert_incident(
+        _record(
+            "20260615-NG-EP",
+            country="Nigeria",
+            incident_type="Disease",
+            disease="Cholera",
+            first_reported_date="2026-06-15",
+            event_date="2026-06-15",
+            last_updated_date="2026-06-15",
+        )
+    )
+    deltas = store.merge_duplicate_disease_incidents(dry_run=False)
+    assert deltas == []
+    assert store.count_incidents() == 2

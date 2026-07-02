@@ -1,7 +1,10 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Any, Protocol
+from typing import TYPE_CHECKING, Any, Protocol
+
+if TYPE_CHECKING:
+    import httpx
 
 
 @dataclass(frozen=True)
@@ -39,3 +42,19 @@ class NewsAdapter(Protocol):
     def fetch(self) -> list[RawArticle]: ...
 
     def search(self, query: str, timelimit: str | None = None) -> list[RawArticle]: ...
+
+
+# Sentinel ``source_name`` used when re-feeding a prior AI summary back into the
+# digester (re-digest / retry paths) so the model sees the existing summary as a
+# pseudo source report. Shared by the pipeline and the store.
+PRIOR_DIGEST_SOURCE = "PRIOR_DIGEST"
+
+
+def json_list(response: "httpx.Response", key: str) -> list:
+    """Decode ``response`` and return ``json[key]`` as a list (default ``[]``).
+
+    Collapses the repeated ``response.json().get(key, [])`` chain (Law of
+    Demeter) across the JSON-backed source adapters (USGS / WHO / HealthMap).
+    """
+    value = response.json().get(key, [])
+    return value if isinstance(value, list) else []

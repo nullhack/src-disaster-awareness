@@ -12,6 +12,7 @@ dependencies = [
     "country-converter>=1.2",
     "pycountry>=26.2.16",
     "alembic>=1.18.5",
+    "dspy>=3.2.1",
 ]
 
 [build-system]
@@ -23,6 +24,7 @@ dev = [
     "eralchemy>=1.7.0",
     "pygraphviz>=2.0",
     "pytest>=8",
+    "vcrpy>=8.2.1",
 ]
 
 [tool.hatch.build.targets.wheel]

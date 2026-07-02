@@ -4,6 +4,12 @@ import tomllib
 from dataclasses import dataclass, field
 from pathlib import Path
 
+from disaster_report.classification import (
+    DEFAULT_ENDEMIC_DISEASES,
+    DEFAULT_OUTBREAK_OF_CONCERN_DISEASES,
+    DEFAULT_PANDEMIC_RISK_DISEASES,
+)
+
 _DEFAULT_MODELS = (
     "nvidia/nemotron-3-super-120b-a12b:free",
     "google/gemma-4-31b-it:free",
@@ -23,6 +29,10 @@ class Config:
     news_provider: str = "ddg"
     tracking_window_days: int = 7
     develop_re_digest_threshold: int = 3
+    pandemic_risk_diseases: tuple[str, ...] = DEFAULT_PANDEMIC_RISK_DISEASES
+    outbreak_of_concern_diseases: tuple[str, ...] = DEFAULT_OUTBREAK_OF_CONCERN_DISEASES
+    endemic_diseases: tuple[str, ...] = DEFAULT_ENDEMIC_DISEASES
+    disease_dedup_window_days: int = 30
 
     @classmethod
     def from_toml(cls, path: str | Path) -> Config:
@@ -33,6 +43,7 @@ class Config:
         sources = data.get("sources", {})
         news = data.get("news", {})
         tracking = data.get("tracking", {})
+        classification = data.get("classification", {})
         return cls(
             database_url=database.get("url", "sqlite:///./disaster.db"),
             ai_provider=ai.get("provider", "openrouter"),
@@ -45,5 +56,22 @@ class Config:
             tracking_window_days=int(tracking.get("window_days", 7)),
             develop_re_digest_threshold=int(
                 tracking.get("develop_re_digest_threshold", 3)
+            ),
+            pandemic_risk_diseases=tuple(
+                classification.get(
+                    "pandemic_risk_diseases", DEFAULT_PANDEMIC_RISK_DISEASES
+                )
+            ),
+            outbreak_of_concern_diseases=tuple(
+                classification.get(
+                    "outbreak_of_concern_diseases",
+                    DEFAULT_OUTBREAK_OF_CONCERN_DISEASES,
+                )
+            ),
+            endemic_diseases=tuple(
+                classification.get("endemic_diseases", DEFAULT_ENDEMIC_DISEASES)
+            ),
+            disease_dedup_window_days=int(
+                classification.get("disease_dedup_window_days", 30)
             ),
         )

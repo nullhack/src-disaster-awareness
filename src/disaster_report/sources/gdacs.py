@@ -2,10 +2,10 @@ from __future__ import annotations
 
 import re
 import xml.etree.ElementTree as ET
-from email.utils import parsedate_to_datetime
 
 import httpx
 
+from disaster_report.sources._dates import parse_date
 from disaster_report.sources.base import RawIncident
 
 _DEFAULT_URL = "https://www.gdacs.org/xml/rss_24h.xml"
@@ -24,10 +24,8 @@ _EVENTID_RE = re.compile(r"[?&]eventid=(\d+)", re.IGNORECASE)
 def _iso(s: str) -> str:
     if not s:
         return ""
-    try:
-        return parsedate_to_datetime(s).isoformat()
-    except (TypeError, ValueError):
-        return s
+    parsed = parse_date(s)
+    return parsed.isoformat() if parsed else s
 
 
 class GDACSAdapter:
@@ -38,14 +36,16 @@ class GDACSAdapter:
         self.timeout = timeout
 
     def fetch(self) -> list[RawIncident]:
-        resp = httpx.get(self.url, timeout=self.timeout, follow_redirects=True)
-        resp.raise_for_status()
-        root = ET.fromstring(resp.content)
+        response = httpx.get(self.url, timeout=self.timeout, follow_redirects=True)
+        response.raise_for_status()
+        root = ET.fromstring(response.content)
         out: list[RawIncident] = []
         for item in root.findall(".//item"):
             title = (item.findtext("title") or "").strip()
             link = (item.findtext("link") or "").strip()
-            et = (item.findtext("g:eventtype", default="", namespaces=_NS) or "").strip()
+            event_type = (
+                item.findtext("g:eventtype", default="", namespaces=_NS) or ""
+            ).strip()
             country = (
                 item.findtext("g:country", default="", namespaces=_NS) or ""
             ).strip()
@@ -57,7 +57,7 @@ class GDACSAdapter:
             pop_elt = item.find("g:population", namespaces=_NS)
             population_value = pop_elt.get("value", "0") if pop_elt is not None else "0"
             raw_fields = {
-                "eventtype": et,
+                "eventtype": event_type,
                 "country": country,
                 "fromdate": fromdate,
                 "event_id": event_id,
@@ -72,7 +72,7 @@ class GDACSAdapter:
                     source_name=self.source_name,
                     incident_name=title,
                     country=country,
-                    disaster_type=_TYPES.get(et, et),
+                    disaster_type=_TYPES.get(event_type, event_type),
                     report_date=_iso(fromdate),
                     source_url=link,
                     raw_fields=raw_fields,

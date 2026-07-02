@@ -84,6 +84,14 @@ class DimSeverityLevel(Base):
     description: Mapped[str] = mapped_column(String(200))
 
 
+class DimPandemicPotential(Base):
+    __tablename__ = "dim_pandemic_potential"
+
+    potential_key: Mapped[int] = mapped_column(init=False, primary_key=True)
+    potential_name: Mapped[str] = mapped_column(String(50))
+    description: Mapped[str] = mapped_column(String(200))
+
+
 class FactIncident(Base):
     __tablename__ = "fact_incident"
 
@@ -107,6 +115,10 @@ class FactIncident(Base):
     ai_digest_date_key: Mapped[int | None] = mapped_column(
         ForeignKey("dim_date.date_key"), default=None
     )
+    pandemic_potential_key: Mapped[int | None] = mapped_column(
+        ForeignKey("dim_pandemic_potential.potential_key"), default=None
+    )
+    event_status: Mapped[str | None] = mapped_column(Text, default=None)
 
 
 class FactGdacsEvent(Base):

@@ -13,18 +13,24 @@ logging.getLogger("country_converter").setLevel(logging.ERROR)
 
 _CC = coco.CountryConverter()
 
-_CONTINENT_TO_REGION = {
-    "Africa": "Africa",
-    "Asia": "Asia",
-    "Europe": "Europe",
-    "America": "Americas",
-    "Americas": "Americas",
-    "Oceania": "Oceania",
-    "Antarctica": "Antarctica",
-    "Seven seas (open ocean)": "Oceania",
-}
+_KNOWN_CONTINENTS = frozenset(
+    {"Africa", "America", "Antarctica", "Asia", "Europe", "Oceania"}
+)
 
-_FALLBACK_ISO2 = "XX"
+
+def _region_from_continent(continent: str) -> str:
+    # country_converter labels the continent "America"; normalize to "Americas".
+    # Unrecognized / NaN values fall back to "Unknown".
+    if continent == "America":
+        return "Americas"
+    if continent in _KNOWN_CONTINENTS:
+        return continent
+    return "Unknown"
+
+# ISO2 sentinel for an unrecognised / multi-country / "Unknown" place. Public so
+# callers (pipeline, news_filter, store) compare against it instead of re-typing
+# the literal "XX".
+UNKNOWN_ISO2 = "XX"
 
 
 @lru_cache(maxsize=1)
@@ -70,7 +76,7 @@ def all_countries() -> list[tuple[str, str, str]]:
     for _, row in _table().iterrows():
         name = str(row["name_short"])
         iso2 = str(row["ISO2"])
-        region = _CONTINENT_TO_REGION.get(str(row["continent"]), "Unknown")
+        region = _region_from_continent(str(row["continent"]))
         out.append((name, iso2, region))
     return out
 
@@ -101,7 +107,7 @@ def canonical_name(name: str) -> str:
 def country_from_place(place: str) -> tuple[str, str | None]:
     key = (place or "").strip()
     if not key:
-        return (_FALLBACK_ISO2, None)
+        return (UNKNOWN_ISO2, None)
     if len(key) == 2 and key.isalpha() and key.isupper():
         return (key, None)
     iso2 = _try_iso2(key)
@@ -117,17 +123,27 @@ def country_from_place(place: str) -> tuple[str, str | None]:
         hit = subs.get(seg.lower())
         if hit:
             return hit
-    return (_FALLBACK_ISO2, None)
+    return (UNKNOWN_ISO2, None)
 
 
 def country_iso2(name: str) -> str:
     return country_from_place(name)[0]
 
 
+def is_known_country(name: str) -> bool:
+    """True for a real, named country (not empty / not the Unknown sentinel).
+
+    The pipeline uses ``"Unknown"`` as the country for WHO multi-country DONs;
+    callers must not emit that token into search keys or place matching.
+    """
+    cleaned = (name or "").strip()
+    return bool(cleaned) and cleaned.lower() != "unknown"
+
+
 def country_info(name: str) -> tuple[str, str]:
     iso2 = country_iso2(name)
-    if iso2 == _FALLBACK_ISO2:
-        return (_FALLBACK_ISO2, "Unknown")
+    if iso2 == UNKNOWN_ISO2:
+        return (UNKNOWN_ISO2, "Unknown")
     try:
         with _silenced():
             continent = _CC.convert(names=iso2, to="continent", not_found=None)
@@ -135,4 +151,4 @@ def country_info(name: str) -> tuple[str, str]:
         continent = None
     if not continent or continent == "not found":
         return (iso2, "Unknown")
-    return (iso2, _CONTINENT_TO_REGION.get(str(continent), "Unknown"))
+    return (iso2, _region_from_continent(str(continent)))

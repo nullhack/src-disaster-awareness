@@ -1,9 +1,10 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from datetime import datetime
+from datetime import date
 
 from disaster_report.countries import country_from_place
+from disaster_report.sources._dates import parse_date
 from disaster_report.sources.base import RawIncident
 
 _TYPE_CODES: dict[str, str] = {
@@ -38,11 +39,9 @@ def _type_code(disaster_type: str) -> str:
 
 
 def _date_stamp(report_date: str) -> str:
-    text = (report_date or "").strip()
-    try:
-        parsed = datetime.fromisoformat(text.replace("Z", "+00:00"))
-    except ValueError:
-        parsed = datetime.fromisoformat(text[:10])
+    parsed = parse_date(report_date)
+    if parsed is None:
+        raise ValueError(f"unparseable report_date: {report_date!r}")
     return parsed.strftime("%Y%m%d")
 
 
@@ -50,6 +49,15 @@ def _date_stamp(report_date: str) -> str:
 class ResolvedIncident:
     incident_id: str
     incidents: tuple[RawIncident, ...] = field(default_factory=tuple)
+
+    @property
+    def primary(self) -> RawIncident:
+        """The representative source record (first / earliest by fetch order)."""
+        return self.incidents[0]
+
+    def is_today(self, today: date) -> bool:
+        """True when the primary record's report_date is ``today``."""
+        return parse_date(self.primary.report_date) == today
 
 
 class IncidentResolver:
@@ -66,10 +74,9 @@ class IncidentResolver:
             else:
                 cc, sub = country_from_place(raw.country)
             code = _type_code(raw.disaster_type)
-            if sub:
-                incident_id = f"{stamp}-{cc}-{sub}-{code}"
-            else:
-                incident_id = f"{stamp}-{cc}-{code}"
+            incident_id = (
+                f"{stamp}-{cc}-{sub}-{code}" if sub else f"{stamp}-{cc}-{code}"
+            )
             if incident_id not in groups:
                 groups[incident_id] = []
                 order.append(incident_id)

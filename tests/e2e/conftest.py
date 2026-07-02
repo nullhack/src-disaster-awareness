@@ -12,19 +12,24 @@ class FakeDigester:
     returns: dict = field(default_factory=dict)
     queue: list = field(default_factory=list)
     calls: list = field(default_factory=list)
+    raises: Exception | None = None
 
     def digest(self, sources: Any) -> dict:
         self.calls.append(sources)
+        if self.raises is not None:
+            raise self.raises
         if self.queue:
             current = self.queue.pop(0)
         else:
             current = self.returns
-        return {
-            "canonical_name": current.get("canonical_name", "Synthesized Incident"),
-            "summary": current.get("summary", "AI-generated summary."),
-            "severity": current.get("severity", "LOW"),
-            "search_keys": current.get("search_keys", ["incident"]),
+        result = {
+            "canonical_name": "Synthesized Incident",
+            "summary": "AI-generated summary.",
+            "severity": "LOW",
+            "search_keys": ["incident"],
         }
+        result.update(current)
+        return result
 
     @property
     def call_count(self) -> int:

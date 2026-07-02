@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from datetime import date, datetime
+from datetime import date
 from typing import TYPE_CHECKING, Callable
 
 from sqlalchemy import select
@@ -12,6 +12,7 @@ from disaster_report.models import (
     FactUsgsEarthquake,
     FactWhoDon,
 )
+from disaster_report.sources._dates import parse_date as _parse_date
 from disaster_report.sources.base import RawIncident
 
 if TYPE_CHECKING:
@@ -19,22 +20,13 @@ if TYPE_CHECKING:
 
 
 def parse_date(value: str) -> date:
-    text = (value or "").strip()
-    if not text:
-        return date.today()
-    try:
-        return datetime.fromisoformat(text.replace("Z", "+00:00")).date()
-    except ValueError:
-        try:
-            return date.fromisoformat(text[:10])
-        except ValueError:
-            return date.today()
+    return _parse_date(value) or date.today()
 
 
-def _has_row(session: Session, cls: type, natural_kw: dict[str, object]) -> bool:
-    stmt = select(cls)
-    for col, val in natural_kw.items():
-        stmt = stmt.where(getattr(cls, col) == val)
+def _has_row(session: Session, model: type, natural_kw: dict[str, object]) -> bool:
+    stmt = select(model)
+    for col, value in natural_kw.items():
+        stmt = stmt.where(getattr(model, col) == value)
     return session.execute(stmt).scalar_one_or_none() is not None
 
 

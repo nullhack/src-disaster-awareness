@@ -1,10 +1,9 @@
 from __future__ import annotations
 
-from datetime import UTC, datetime
-
 import httpx
 
-from disaster_report.sources.base import RawIncident
+from disaster_report.sources._dates import parse_date
+from disaster_report.sources.base import RawIncident, json_list
 
 _DEFAULT_URL = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson"
 
@@ -17,37 +16,35 @@ class USGSEarthquakesAdapter:
         self.timeout = timeout
 
     def fetch(self) -> list[RawIncident]:
-        resp = httpx.get(self.url, timeout=self.timeout, follow_redirects=True)
-        resp.raise_for_status()
-        features = resp.json().get("features", [])
+        response = httpx.get(self.url, timeout=self.timeout, follow_redirects=True)
+        response.raise_for_status()
         out: list[RawIncident] = []
-        for f in features:
-            p = f.get("properties", {}) or {}
-            ids = f.get("id") or ""
-            net = p.get("net") or ""
-            code = p.get("code") or ""
-            place = p.get("place", "") or ""
+        for feature in json_list(response, "features"):
+            properties = feature.get("properties", {}) or {}
+            feature_id = feature.get("id") or ""
+            net = properties.get("net") or ""
+            code = properties.get("code") or ""
+            place = properties.get("place", "") or ""
             country = place.strip()
-            ts = p.get("time")
-            report_date = (
-                datetime.fromtimestamp(ts / 1000, tz=UTC).isoformat()
-                if isinstance(ts, (int, float))
-                else ""
+            timestamp = properties.get("time")
+            parsed_timestamp = (
+                parse_date(str(timestamp)) if isinstance(timestamp, (int, float)) else None
             )
-            event_id = ids or f"{net}{code}" or (net + "_" + code)
-            coords = (f.get("geometry") or {}).get("coordinates") or []
-            depth = coords[2] if len(coords) > 2 else 0
-            raw_fields = dict(p)
+            report_date = parsed_timestamp.isoformat() if parsed_timestamp else ""
+            event_id = feature_id or f"{net}{code}" or (net + "_" + code)
+            coordinates = (feature.get("geometry") or {}).get("coordinates") or []
+            depth = coordinates[2] if len(coordinates) > 2 else 0
+            raw_fields = dict(properties)
             raw_fields["event_id"] = event_id
             raw_fields["depth"] = depth
             out.append(
                 RawIncident(
                     source_name=self.source_name,
-                    incident_name=p.get("title", "") or "",
+                    incident_name=properties.get("title", "") or "",
                     country=country,
                     disaster_type="Earthquake",
                     report_date=report_date,
-                    source_url=p.get("url", "") or "",
+                    source_url=properties.get("url", "") or "",
                     raw_fields=raw_fields,
                 )
             )
