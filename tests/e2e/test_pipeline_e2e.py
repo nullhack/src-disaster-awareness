@@ -26,7 +26,7 @@ def _store(db_url):
 def _dev_key(
     *,
     country="Philippines",
-    disaster_type="Earthquake",
+    incident_type="Earthquake",
     event_date=date(2026, 6, 29),
     place="near Sarangani, Philippines",
 ):
@@ -38,7 +38,7 @@ def _dev_key(
     """
     keys = derive_search_keys(
         DeriveInput(
-            incident_type=disaster_type,
+            incident_type=incident_type,
             country=country,
             event_date=event_date,
             place=place,
@@ -50,14 +50,14 @@ def _dev_key(
 def _dev_key_set(
     *,
     country="Philippines",
-    disaster_type="Earthquake",
+    incident_type="Earthquake",
     event_date=date(2026, 6, 29),
     place="near Sarangani, Philippines",
 ):
     """Full derived search_keys list (set_digest persists these deterministically)."""
     return derive_search_keys(
         DeriveInput(
-            incident_type=disaster_type,
+            incident_type=incident_type,
             country=country,
             event_date=event_date,
             place=place,
@@ -95,7 +95,7 @@ def test_same_incident_from_two_sources_resolves_to_one(db_url):
         source_name="GDACS",
         incident_name=usgs.incident_name,
         country=usgs.country,
-        disaster_type=usgs.disaster_type,
+        incident_type=usgs.incident_type,
         report_date=usgs.report_date,
         source_url="https://gdacs.example/x",
         raw_fields={},
@@ -332,7 +332,7 @@ def test_low_severity_group_C_incident_is_persisted_with_should_report_false(db_
         source_name="USGS",
         incident_name="M2.5 quake Germany",
         country="Germany",
-        disaster_type="Earthquake",
+        incident_type="Earthquake",
         report_date="2026-06-29T00:00:00Z",
         source_url="https://u/de",
         raw_fields={"event_id": "de1"},
@@ -360,7 +360,7 @@ def test_disease_name_flows_to_dim_disease_for_disease_incidents(db_url):
         source_name="WHO",
         incident_name="Marburg virus disease - Tanzania",
         country="Tanzania",
-        disaster_type="Disease",
+        incident_type="Disease",
         report_date="2026-06-29T00:00:00Z",
         source_url="https://who/marburg",
         raw_fields={"event_id": "who-marburg", "disease": "Marburg virus disease"},
@@ -395,7 +395,7 @@ def test_ai_disease_label_used_when_adapter_label_empty(db_url):
         source_name="WHO",
         incident_name="Ebola disease caused by Bundibugyo virus",
         country="Uganda",
-        disaster_type="Disease",
+        incident_type="Disease",
         report_date="2026-06-29T00:00:00Z",
         source_url="https://who/ebola-bundi",
         raw_fields={"event_id": "who-ebola-bundi", "disease": ""},
@@ -533,7 +533,7 @@ def test_develop_re_digest_passes_incident_identity_in_source_reports(db_url):
     # canonical_name is now DERIVED (not AI-authored) -> "{Type} {place} {Month YYYY}".
     assert identity["incident_name"] == "Earthquake Sarangani June 2026"
     assert identity["country"] == "Afghanistan"
-    assert identity["disaster_type"] == "Earthquake"
+    assert identity["incident_type"] == "Earthquake"
     assert identity["raw_fields"]["prior_summary"] == "initial"
     assert len(second_call["news_articles"]) == 3
 
@@ -663,7 +663,7 @@ def test_non_event_disease_incident_drops_news_but_keeps_row(db_url):
         source_name="WHO",
         incident_name="Cholera Outbreak Nigeria",
         country="Nigeria",
-        disaster_type="Disease",
+        incident_type="Disease",
         report_date="2026-06-29T00:00:00Z",
         source_url="https://who/cholera",
         raw_fields={"event_id": "who-cholera", "disease": "Cholera"},
@@ -711,7 +711,7 @@ def test_real_disease_incident_links_news_and_reports(db_url):
         source_name="WHO",
         incident_name="Ebola Outbreak Uganda",
         country="Uganda",
-        disaster_type="Disease",
+        incident_type="Disease",
         report_date="2026-06-29T00:00:00Z",
         source_url="https://who/ebola",
         raw_fields={"event_id": "who-ebola", "disease": "Ebola"},
@@ -757,7 +757,7 @@ def test_elimination_declared_disease_incident_drops_news(db_url):
         source_name="WHO",
         incident_name="Polio-free Declaration",
         country="Nigeria",
-        disaster_type="Disease",
+        incident_type="Disease",
         report_date="2026-06-29T00:00:00Z",
         source_url="https://who/polio",
         raw_fields={"event_id": "who-polio", "disease": "Polio"},
@@ -828,7 +828,7 @@ def test_disease_re_report_merges_into_existing_incident(db_url):
             last_updated_date="2026-06-20",
             should_report=True,
             search_keys=["k"],
-            disease="Cholera",
+            disease_name="Cholera",
         )
     )
     dig = FakeDigester(returns={
@@ -844,7 +844,7 @@ def test_disease_re_report_merges_into_existing_incident(db_url):
         source_name="WHO",
         incident_name="Cholera Outbreak Nigeria",
         country="Nigeria",
-        disaster_type="Disease",
+        incident_type="Disease",
         report_date="2026-06-29T00:00:00Z",
         source_url="https://who/cholera-repeat",
         raw_fields={"event_id": "who-cholera-2", "disease": "Cholera"},
@@ -897,14 +897,14 @@ def test_backdated_disease_re_report_merges_without_bumping_last_updated(db_url)
             last_updated_date="2026-06-20",
             should_report=True,
             search_keys=["k"],
-            disease="Cholera",
+            disease_name="Cholera",
         )
     )
     cholera = RawIncident(
         source_name="WHO",
         incident_name="Cholera Outbreak Nigeria",
         country="Nigeria",
-        disaster_type="Disease",
+        incident_type="Disease",
         report_date="2026-06-25T00:00:00Z",  # backdated, NOT today
         source_url="https://who/cholera-backdated",
         raw_fields={"event_id": "who-cholera-back", "disease": "Cholera"},

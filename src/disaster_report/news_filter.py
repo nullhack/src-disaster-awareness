@@ -65,10 +65,10 @@ def _tokens(text: str) -> set[str]:
     return {w for w in _WORD.findall((text or "").lower()) if w not in _STOP}
 
 
-def _type_tokens(disaster_type: str, disease: str | None = None) -> set[str]:
-    key = (disaster_type or "").lower().strip()
-    base = _TYPE_SYNONYMS.get(key, disaster_type or "")
-    return _tokens(f"{base} {disease or ''}")
+def _type_tokens(incident_type: str, disease_name: str | None = None) -> set[str]:
+    key = (incident_type or "").lower().strip()
+    base = _TYPE_SYNONYMS.get(key, incident_type or "")
+    return _tokens(f"{base} {disease_name or ''}")
 
 
 # Country name + first-level subdivision (state/province) name tokens, cached
@@ -119,7 +119,7 @@ def _place_tokens(country: str, is_disease_track: bool, incident_name: str, type
     return _tokens(f"{country} {incident_name}") - type_t
 
 
-def _type_match(art_t: set[str], type_t: set[str], is_disease_track: bool, disease: str | None) -> bool:
+def _type_match(art_t: set[str], type_t: set[str], is_disease_track: bool, disease_name: str | None) -> bool:
     if not type_t:
         return True
     overlap = art_t & type_t
@@ -128,7 +128,7 @@ def _type_match(art_t: set[str], type_t: set[str], is_disease_track: bool, disea
     # Disease track: a specific disease-name hit always qualifies; otherwise
     # require >=2 distinct type tokens to avoid single-word false positives
     # ("fever", "virus", "poisoning").
-    disease_t = _tokens(disease or "")
+    disease_t = _tokens(disease_name or "")
     disease_hit = bool(disease_t) and bool(art_t & disease_t)
     return disease_hit or len(overlap) >= 2
 
@@ -136,18 +136,18 @@ def _type_match(art_t: set[str], type_t: set[str], is_disease_track: bool, disea
 def is_relevant(
     article: RawArticle,
     *,
-    disaster_type: str,
+    incident_type: str,
     country: str,
     incident_name: str,
-    disease: str | None = None,
+    disease_name: str | None = None,
 ) -> bool:
-    is_disease_track = is_disease_type(disaster_type)
-    type_t = _type_tokens(disaster_type, disease)
+    is_disease_track = is_disease_type(incident_type)
+    type_t = _type_tokens(incident_type, disease_name)
     art_t = _tokens(f"{article.headline} {article.body}")
     place_t = _place_tokens(country, is_disease_track, incident_name, type_t)
     place_match = bool(art_t & place_t) if place_t else True
 
-    if not _type_match(art_t, type_t, is_disease_track, disease) or not place_match:
+    if not _type_match(art_t, type_t, is_disease_track, disease_name) or not place_match:
         return False
     # The junk stoplist is disease-context only (e.g. "floodwaters receding" is a
     # legitimate physical-disaster follow-up, not noise).

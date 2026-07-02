@@ -72,7 +72,7 @@ class GDACSAdapter:
                     source_name=self.source_name,
                     incident_name=title,
                     country=country,
-                    disaster_type=_TYPES.get(event_type, event_type),
+                    incident_type=_TYPES.get(event_type, event_type),
                     report_date=_iso(fromdate),
                     source_url=link,
                     raw_fields=raw_fields,

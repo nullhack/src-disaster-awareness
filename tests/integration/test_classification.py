@@ -91,31 +91,31 @@ def test_matrix_high_severity_reports_with_escalating_priority_by_group():
 def test_pandemic_risk_disease_force_reports_even_at_low_severity():
     # Ebola/Marburg/Nipah are first-case-flag pathogens -> HIGH + report at LOW.
     assert classify(ClassifyContext(
-        level=SEVERITY_LOW, country_group="C", incident_type="Disease", disease="Ebola"
+        level=SEVERITY_LOW, country_group="C", incident_type="Disease", disease_name="Ebola"
     )) == ("HIGH", True)
 
 
 def test_outbreak_of_concern_reports_only_at_medium_severity_and_above():
     # Cholera/Measles force-report only when severity is already MEDIUM+.
     assert classify(ClassifyContext(
-        level=SEVERITY_MEDIUM, country_group="C", incident_type="Disease", disease="Cholera"
+        level=SEVERITY_MEDIUM, country_group="C", incident_type="Disease", disease_name="Cholera"
     )) == ("MEDIUM", True)
     # At LOW severity the outbreak-of-concern tier is silent.
     assert classify(ClassifyContext(
-        level=SEVERITY_LOW, country_group="C", incident_type="Disease", disease="Cholera"
+        level=SEVERITY_LOW, country_group="C", incident_type="Disease", disease_name="Cholera"
     )) == ("LOW", False)
 
 
 def test_disease_factors_are_gated_on_disease_incident_type():
     # Ebola name present but incident_type physical -> no disease override.
     assert classify(ClassifyContext(
-        level=SEVERITY_LOW, country_group="C", incident_type="Earthquake", disease="Ebola"
+        level=SEVERITY_LOW, country_group="C", incident_type="Earthquake", disease_name="Ebola"
     )) == ("LOW", False)
 
 
 def test_non_reportable_disease_does_not_override_baseline():
     assert classify(ClassifyContext(
-        level=SEVERITY_LOW, country_group="C", incident_type="Disease", disease="Common Cold"
+        level=SEVERITY_LOW, country_group="C", incident_type="Disease", disease_name="Common Cold"
     )) == ("LOW", False)
 
 
@@ -137,7 +137,7 @@ def test_explicit_pandemic_none_suppresses_keyword_fallback():
     keyword fallback must NOT run when the AI explicitly assessed NONE."""
     assert classify(ClassifyContext(
         level=SEVERITY_LOW, country_group="C", incident_type="Disease",
-        disease="Ebola", pandemic_potential=PANDEMIC_NONE,
+        disease_name="Ebola", pandemic_potential=PANDEMIC_NONE,
     )) == ("LOW", False)
 
 
@@ -154,7 +154,7 @@ def test_pandemic_potential_ignored_for_physical_incidents():
 def test_non_event_and_elimination_declared_suppress_disease_report():
     assert classify(ClassifyContext(
         level=SEVERITY_LOW, country_group="C", incident_type="Disease",
-        disease="Ebola", event_status="non_event",
+        disease_name="Ebola", event_status="non_event",
     ))[1] is False
     assert classify(ClassifyContext(
         level=SEVERITY_MEDIUM, country_group="A", incident_type="Disease",
@@ -191,7 +191,7 @@ def test_tier_a_corroboration_forces_report():
 
 def test_factors_combine_capped_at_high():
     assert classify(ClassifyContext(
-        level=SEVERITY_MEDIUM, country_group="C", disease="Ebola",
+        level=SEVERITY_MEDIUM, country_group="C", disease_name="Ebola",
         population=500_000, incident_type="Disease",
     )) == ("HIGH", True)
 
@@ -204,10 +204,10 @@ def test_configure_disease_tiers_override_changes_classification():
     configure_disease_tiers(pandemic_risk=("custompathogen",), outbreak_of_concern=())
     # Ebola no longer in any tier -> baseline.
     assert classify(ClassifyContext(
-        level=SEVERITY_LOW, country_group="C", incident_type="Disease", disease="Ebola"
+        level=SEVERITY_LOW, country_group="C", incident_type="Disease", disease_name="Ebola"
     )) == ("LOW", False)
     assert classify(ClassifyContext(
-        level=SEVERITY_LOW, country_group="C", incident_type="Disease", disease="custompathogen"
+        level=SEVERITY_LOW, country_group="C", incident_type="Disease", disease_name="custompathogen"
     )) == ("HIGH", True)
 
 
@@ -239,18 +239,18 @@ def test_endemic_diseases_do_not_force_report_on_pandemic_potential():
     # Seasonal/endemic COVID/Flu with AI pp=CRITICAL must NOT escalate.
     assert classify(ClassifyContext(
         level=SEVERITY_LOW, country_group="C", incident_type="Disease",
-        disease="COVID-19", pandemic_potential=PANDEMIC_CRITICAL, event_status="ongoing",
+        disease_name="COVID-19", pandemic_potential=PANDEMIC_CRITICAL, event_status="ongoing",
     )) == ("LOW", False)
     assert classify(ClassifyContext(
         level=SEVERITY_LOW, country_group="A", incident_type="Disease",
-        disease="Influenza", pandemic_potential=PANDEMIC_HIGH, event_status="new_outbreak",
+        disease_name="Influenza", pandemic_potential=PANDEMIC_HIGH, event_status="new_outbreak",
     )) == ("LOW", False)
 
 
 def test_non_endemic_pandemic_prone_pathogen_still_force_reports():
     assert classify(ClassifyContext(
         level=SEVERITY_LOW, country_group="C", incident_type="Disease",
-        disease="Ebola", pandemic_potential=PANDEMIC_CRITICAL, event_status="new_outbreak",
+        disease_name="Ebola", pandemic_potential=PANDEMIC_CRITICAL, event_status="new_outbreak",
     )) == ("HIGH", True)
 
 
@@ -264,5 +264,5 @@ def test_configure_endemics_override_de_escalates_custom_pathogen():
     configure_endemics({"ebola"})
     assert classify(ClassifyContext(
         level=SEVERITY_LOW, country_group="C", incident_type="Disease",
-        disease="Ebola", pandemic_potential=PANDEMIC_CRITICAL, event_status="new_outbreak",
+        disease_name="Ebola", pandemic_potential=PANDEMIC_CRITICAL, event_status="new_outbreak",
     )) == ("LOW", False)

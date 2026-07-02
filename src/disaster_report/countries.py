@@ -81,7 +81,7 @@ def all_countries() -> list[tuple[str, str, str]]:
     return out
 
 
-def canonical_name(name: str) -> str:
+def normalize_country_name(name: str) -> str:
     key = (name or "").strip()
     if not key:
         return ""

@@ -42,7 +42,7 @@ class USGSEarthquakesAdapter:
                     source_name=self.source_name,
                     incident_name=properties.get("title", "") or "",
                     country=country,
-                    disaster_type="Earthquake",
+                    incident_type="Earthquake",
                     report_date=report_date,
                     source_url=properties.get("url", "") or "",
                     raw_fields=raw_fields,

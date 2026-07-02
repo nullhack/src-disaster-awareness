@@ -171,7 +171,7 @@ def _is_disease_material(reports: list[dict[str, Any]]) -> bool:
     for report in reports:
         if not isinstance(report, dict):
             continue
-        if is_disease_type(str(report.get("disaster_type", ""))):
+        if is_disease_type(str(report.get("incident_type", ""))):
             return True
     return False
 
@@ -180,7 +180,7 @@ class OpenRouterDigester:
     """LLM digester backed by dspy typed Signatures over OpenRouter.
 
     The AI surface is split into focused Signatures for partial-success:
-      * disease  -> DiseaseClassify (severity/disease_name/pp/es) + DiseaseSummary
+      * disease  -> DiseaseClassify (severity/disease_name/pandemic_potential/event_status) + DiseaseSummary
       * physical -> PhysicalSummary (summary only; severity is derived in code)
     Per-call ``lm=`` override is used so concurrent callers (e.g. the batch
     redigest) do not race on dspy's global LM setting. Each piece retries with
@@ -242,7 +242,7 @@ class OpenRouterDigester:
         return None, last_error
 
     def digest(self, sources: str | list[dict[str, Any]] | dict[str, Any]) -> dict[str, Any]:
-        """Route by disaster_type and run the focused Signatures.
+        """Route by incident_type and run the focused Signatures.
 
         Returns a dict of ONLY the AI-produced fields. Disease may yield any
         subset of {severity, disease_name, pandemic_potential, event_status,

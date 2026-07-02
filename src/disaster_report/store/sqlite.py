@@ -4,10 +4,10 @@ from dataclasses import replace
 from datetime import date, timedelta
 from typing import Any
 
-from sqlalchemy import create_engine, select
+from sqlalchemy import create_engine, func, select
 from sqlalchemy.orm import Session, sessionmaker
 
-from disaster_report.countries import UNKNOWN_ISO2, all_countries, canonical_name, country_info
+from disaster_report.countries import UNKNOWN_ISO2, all_countries, country_info, normalize_country_name
 from disaster_report.classification import (
     PANDEMIC_LEVEL_TO_NAME,
     PANDEMIC_NAME_TO_LEVEL,
@@ -130,30 +130,30 @@ class SqliteIncidentStore:
         with self._session() as session:
             for type_name, category in _INCIDENT_TYPES:
                 self._seed_if_missing(
-                    session, DimIncidentType, "type_name", type_name,
-                    type_name=type_name, category=category,
+                    session, DimIncidentType, "incident_type", type_name,
+                    incident_type=type_name, category=category,
                 )
             for name, rank in PRIORITY_RANK.items():
                 self._seed_if_missing(
-                    session, DimPriority, "priority_name", name,
-                    priority_name=name, rank=rank,
+                    session, DimPriority, "priority", name,
+                    priority=name, rank=rank,
                 )
             for name, desc in _SEVERITY_DESC.items():
                 self._seed_if_missing(
-                    session, DimSeverityLevel, "severity_name", name,
-                    severity_name=name, description=desc,
+                    session, DimSeverityLevel, "severity", name,
+                    severity=name, description=desc,
                 )
             for level, name in PANDEMIC_LEVEL_TO_NAME.items():
                 self._seed_if_missing(
-                    session, DimPandemicPotential, "potential_key", level,
-                    potential_key=level,
-                    potential_name=name,
+                    session, DimPandemicPotential, "pandemic_potential_key", level,
+                    pandemic_potential_key=level,
+                    pandemic_potential=name,
                     description=f"Pandemic potential: {name}",
                 )
             for name, src_type, tier, freshness in _SOURCES:
                 self._seed_if_missing(
-                    session, DimSource, "name", name,
-                    name=name, type=src_type,
+                    session, DimSource, "source_name", name,
+                    source_name=name, type=src_type,
                     reliability_tier=tier, data_freshness=freshness,
                 )
             existing_iso2 = set(
@@ -161,7 +161,7 @@ class SqliteIncidentStore:
             )
             session.add_all(
                 DimCountry(
-                    name=name,
+                    country_name=name,
                     iso2=iso2,
                     country_group=country_group(iso2),
                     region=region,
@@ -196,12 +196,12 @@ class SqliteIncidentStore:
             select(DimCountry).where(DimCountry.iso2 == iso2)
         ).scalar_one_or_none()
         if existing is not None:
-            if iso2 == UNKNOWN_ISO2 and existing.name != "Unknown":
-                existing.name = "Unknown"
+            if iso2 == UNKNOWN_ISO2 and existing.country_name != "Unknown":
+                existing.country_name = "Unknown"
             return existing.country_key
-        canonical = "Unknown" if iso2 == UNKNOWN_ISO2 else (canonical_name(name) or name)
+        canonical = "Unknown" if iso2 == UNKNOWN_ISO2 else (normalize_country_name(name) or name)
         row = DimCountry(
-            name=canonical,
+            country_name=canonical,
             iso2=iso2,
             country_group=country_group(iso2),
             region=region,
@@ -212,12 +212,12 @@ class SqliteIncidentStore:
 
     def _source_key(self, session: Session, name: str) -> int:
         existing = session.execute(
-            select(DimSource).where(DimSource.name == name)
+            select(DimSource).where(DimSource.source_name == name)
         ).scalar_one_or_none()
         if existing is not None:
             return existing.source_key
         row = DimSource(
-            name=name,
+            source_name=name,
             type="feed",
             reliability_tier="B",
             data_freshness="daily",
@@ -228,19 +228,19 @@ class SqliteIncidentStore:
 
     def _type_key(self, session: Session, type_name: str) -> int:
         existing = session.execute(
-            select(DimIncidentType).where(DimIncidentType.type_name == type_name)
+            select(DimIncidentType).where(DimIncidentType.incident_type == type_name)
         ).scalar_one_or_none()
         if existing is not None:
-            return existing.type_key
+            return existing.incident_type_key
         fallback = session.execute(
-            select(DimIncidentType).where(DimIncidentType.type_name == "Other")
+            select(DimIncidentType).where(DimIncidentType.incident_type == "Other")
         ).scalar_one_or_none()
         if fallback is not None:
-            return fallback.type_key
-        row = DimIncidentType(type_name="Other", category="Unknown")
+            return fallback.incident_type_key
+        row = DimIncidentType(incident_type="Other", category="Unknown")
         session.add(row)
         session.flush()
-        return row.type_key
+        return row.incident_type_key
 
     def _disease_key(self, session: Session, name: str | None) -> int | None:
         if not name:
@@ -257,11 +257,11 @@ class SqliteIncidentStore:
 
     def _priority_key(self, session: Session, name: str) -> int:
         existing = session.execute(
-            select(DimPriority).where(DimPriority.priority_name == name)
+            select(DimPriority).where(DimPriority.priority == name)
         ).scalar_one_or_none()
         if existing is not None:
             return existing.priority_key
-        row = DimPriority(priority_name=name, rank=PRIORITY_RANK.get(name, 9))
+        row = DimPriority(priority=name, rank=PRIORITY_RANK.get(name, 9))
         session.add(row)
         session.flush()
         return row.priority_key
@@ -269,24 +269,24 @@ class SqliteIncidentStore:
     def _level_key(self, session: Session, level: int) -> int:
         name = SEVERITY_NAMES.get(level, "UNKNOWN")
         existing = session.execute(
-            select(DimSeverityLevel).where(DimSeverityLevel.severity_name == name)
+            select(DimSeverityLevel).where(DimSeverityLevel.severity == name)
         ).scalar_one_or_none()
         if existing is not None:
-            return existing.level_key
+            return existing.severity_key
         row = DimSeverityLevel(
-            severity_name=name, description=_SEVERITY_DESC.get(name, "Unranked")
+            severity=name, description=_SEVERITY_DESC.get(name, "Unranked")
         )
         session.add(row)
         session.flush()
-        return row.level_key
+        return row.severity_key
 
     def _pandemic_potential_key(self, session: Session, level: int) -> int:
         existing = session.get(DimPandemicPotential, level)
         if existing is not None:
-            return existing.potential_key
+            return existing.pandemic_potential_key
         name = PANDEMIC_LEVEL_TO_NAME.get(level, "NONE")
         row = DimPandemicPotential(
-            potential_key=level, potential_name=name, description=f"Pandemic potential: {name}"
+            pandemic_potential_key=level, pandemic_potential=name, description=f"Pandemic potential: {name}"
         )
         session.add(row)
         session.flush()
@@ -346,8 +346,24 @@ class SqliteIncidentStore:
             select(DimCountry).where(DimCountry.country_key == incident.country_key)
         ).scalar_one()
         itype = session.execute(
-            select(DimIncidentType).where(DimIncidentType.type_key == incident.type_key)
+            select(DimIncidentType).where(DimIncidentType.incident_type_key == incident.incident_type_key)
         ).scalar_one()
+        severity = session.execute(
+            select(DimSeverityLevel).where(DimSeverityLevel.severity_key == incident.severity_key)
+        ).scalar_one()
+        priority = session.execute(
+            select(DimPriority).where(DimPriority.priority_key == incident.priority_key)
+        ).scalar_one()
+        pandemic_potential = ""
+        if incident.pandemic_potential_key is not None:
+            pp = session.get(DimPandemicPotential, incident.pandemic_potential_key)
+            if pp is not None:
+                pandemic_potential = pp.pandemic_potential or ""
+        disease_name: str | None = None
+        if incident.disease_key is not None:
+            dz = session.get(DimDisease, incident.disease_key)
+            if dz is not None:
+                disease_name = dz.disease_name
         return IncidentView(
             incident_key=incident.incident_key,
             incident_id=incident.incident_id,
@@ -356,12 +372,19 @@ class SqliteIncidentStore:
             event_date=event_date.full_date,
             search_keys=list(incident.search_keys or []),
             source_count=incident.source_count,
-            country_name=country.name,
+            country_name=country.country_name,
             country_iso2=country.iso2,
             ai_digest_date_key=incident.ai_digest_date_key,
             summary=incident.summary,
-            incident_type=itype.type_name,
+            incident_type=itype.incident_type,
             should_report=bool(incident.should_report),
+            severity=severity.severity,
+            priority=priority.priority,
+            priority_rank=priority.rank,
+            pandemic_potential=pandemic_potential,
+            event_status=incident.event_status or "",
+            disease_name=disease_name,
+            days_since_event=(last_updated.full_date - event_date.full_date).days,
         )
 
     def get_incident_sources(self, incident_key: int) -> list[SourceView]:
@@ -370,8 +393,8 @@ class SqliteIncidentStore:
             for fact_cls, date_col, key_col in (
                 (FactUsgsEarthquake, "time_key", "usgs_id"),
                 (FactGdacsEvent, "fromdate_key", "gdacs_eventid"),
-                (FactWhoDon, "publication_date_key", "don_id"),
-                (FactHealthmapAlert, "alert_date_key", "alert_id"),
+                (FactWhoDon, "source_date_key", "don_id"),
+                (FactHealthmapAlert, "source_date_key", "alert_id"),
             ):
                 rows = session.execute(
                     select(fact_cls).where(fact_cls.incident_key == incident_key)
@@ -385,7 +408,7 @@ class SqliteIncidentStore:
                     ).scalar_one()
                     out.append(
                         SourceView(
-                            source_name=source.name,
+                            source_name=source.source_name,
                             report_date=day.full_date.isoformat(),
                             source_url=getattr(row, key_col),
                         )
@@ -397,18 +420,19 @@ class SqliteIncidentStore:
             rows = session.execute(
                 select(FactNewsArticle)
                 .where(FactNewsArticle.incident_key == incident_key)
-                .order_by(FactNewsArticle.published_date_key)
+                .order_by(FactNewsArticle.source_date_key)
             ).scalars().all()
             out: list[NewsView] = []
             for row in rows:
                 day = session.execute(
-                    select(DimDate).where(DimDate.date_key == row.published_date_key)
+                    select(DimDate).where(DimDate.date_key == row.source_date_key)
                 ).scalar_one()
                 out.append(
                     NewsView(
                         headline=row.headline,
                         url=row.url,
                         published_date=day.full_date.isoformat(),
+                        outlet=row.outlet or "",
                     )
                 )
             return out
@@ -418,12 +442,12 @@ class SqliteIncidentStore:
             rows = session.execute(
                 select(FactNewsArticle)
                 .where(FactNewsArticle.incident_key == incident_key)
-                .order_by(FactNewsArticle.published_date_key)
+                .order_by(FactNewsArticle.source_date_key)
             ).scalars().all()
             out: list[dict] = []
             for row in rows:
                 day = session.execute(
-                    select(DimDate).where(DimDate.date_key == row.published_date_key)
+                    select(DimDate).where(DimDate.date_key == row.source_date_key)
                 ).scalar_one()
                 out.append(
                     {
@@ -447,6 +471,110 @@ class SqliteIncidentStore:
             ).scalars().all()
             return [self._to_view(session, incident) for incident in incidents]
 
+    # --- report read-port ------------------------------------------------------
+    def incident_source_counts(
+        self, incident_key: int
+    ) -> tuple[int, int, int, int, int]:
+        """``(who_don, usgs, gdacs, healthmap, news)`` fact counts."""
+        with self._session() as session:
+            who = session.execute(
+                select(func.count()).select_from(FactWhoDon).where(
+                    FactWhoDon.incident_key == incident_key
+                )
+            ).scalar_one()
+            usgs = session.execute(
+                select(func.count()).select_from(FactUsgsEarthquake).where(
+                    FactUsgsEarthquake.incident_key == incident_key
+                )
+            ).scalar_one()
+            gdacs = session.execute(
+                select(func.count()).select_from(FactGdacsEvent).where(
+                    FactGdacsEvent.incident_key == incident_key
+                )
+            ).scalar_one()
+            hm = session.execute(
+                select(func.count()).select_from(FactHealthmapAlert).where(
+                    FactHealthmapAlert.incident_key == incident_key
+                )
+            ).scalar_one()
+            news = session.execute(
+                select(func.count()).select_from(FactNewsArticle).where(
+                    FactNewsArticle.incident_key == incident_key
+                )
+            ).scalar_one()
+        return (who, usgs, gdacs, hm, news)
+
+    def incident_news_capped(self, incident_key: int, cap: int) -> list[NewsView]:
+        """News for one incident, newest-first, limited to ``cap``."""
+        with self._session() as session:
+            rows = session.execute(
+                select(FactNewsArticle)
+                .where(FactNewsArticle.incident_key == incident_key)
+                .order_by(FactNewsArticle.source_date_key.desc())
+                .limit(cap)
+            ).scalars().all()
+            out: list[NewsView] = []
+            for row in rows:
+                day = session.execute(
+                    select(DimDate).where(DimDate.date_key == row.source_date_key)
+                ).scalar_one()
+                out.append(
+                    NewsView(
+                        headline=row.headline,
+                        url=row.url,
+                        published_date=day.full_date.isoformat(),
+                        outlet=row.outlet or "",
+                    )
+                )
+            return out
+
+    def usgs_max_magnitude(self, incident_key: int) -> float | None:
+        """Max USGS magnitude across the incident's linked earthquakes."""
+        with self._session() as session:
+            return session.execute(
+                select(func.max(FactUsgsEarthquake.magnitude)).where(
+                    FactUsgsEarthquake.incident_key == incident_key
+                )
+            ).scalar_one_or_none()
+
+    def gdacs_alert(self, incident_key: int) -> tuple[str | None, int] | None:
+        """``(alertlevel, max_population)`` for the incident's GDACS events.
+
+        ``alertlevel`` joins the distinct levels (``","``-separated), mirroring
+        ``GROUP_CONCAT(DISTINCT alertlevel)``; ``None`` overall when the
+        incident has no GDACS rows.
+        """
+        with self._session() as session:
+            rows = session.execute(
+                select(FactGdacsEvent.alertlevel, FactGdacsEvent.population).where(
+                    FactGdacsEvent.incident_key == incident_key
+                )
+            ).all()
+        if not rows:
+            return None
+        distinct: list[str] = []
+        seen: set[str] = set()
+        for lvl, _pop in rows:
+            if lvl is not None and lvl not in seen:
+                seen.add(lvl)
+                distinct.append(lvl)
+        alertlevel = ",".join(distinct) if distinct else None
+        max_pop = max((int(p or 0) for _l, p in rows), default=0)
+        return (alertlevel, max_pop)
+
+    def who_don_range(self) -> tuple[str, str, int]:
+        """``(min_date_iso, max_date_iso, count)`` over all WHO DON rows."""
+        with self._session() as session:
+            row = session.execute(
+                select(func.min(DimDate.full_date), func.max(DimDate.full_date), func.count())
+                .select_from(FactWhoDon)
+                .join(DimDate, DimDate.date_key == FactWhoDon.source_date_key)
+            ).one()
+        min_d, max_d, n = row
+        if not n:
+            return ("", "", 0)
+        return (min_d.isoformat(), max_d.isoformat(), n)
+
     def get_source_records(self, incident_key: int) -> list[dict]:
         out: list[dict] = []
         with self._session() as session:
@@ -455,9 +583,9 @@ class SqliteIncidentStore:
             ).scalar_one()
             country_name = session.execute(
                 select(DimCountry).where(DimCountry.country_key == incident.country_key)
-            ).scalar_one().name
+            ).scalar_one().country_name
             itype = session.execute(
-                select(DimIncidentType).where(DimIncidentType.type_key == incident.type_key)
+                select(DimIncidentType).where(DimIncidentType.incident_type_key == incident.incident_type_key)
             ).scalar_one()
             disease_name: str | None = None
             if incident.disease_key is not None:
@@ -467,7 +595,7 @@ class SqliteIncidentStore:
             common = {
                 "incident_name": incident.canonical_name,
                 "country": country_name,
-                "disaster_type": itype.type_name,
+                "incident_type": itype.incident_type,
                 "source_name": PRIOR_DIGEST_SOURCE,
                 "source_url": "",
                 "report_date": "",
@@ -496,7 +624,7 @@ class SqliteIncidentStore:
             type_key = self._type_key(session, record.incident_type)
             priority_key = self._priority_key(session, record.priority)
             level_key = self._level_key(session, record.severity_level)
-            disease_key = self._disease_key(session, record.disease)
+            disease_key = self._disease_key(session, record.disease_name)
             first_key = self._date_key(session, parse_date(record.first_reported_date))
             last_key = self._date_key(session, parse_date(record.last_updated_date))
             event_key = self._date_key(session, parse_date(record.event_date))
@@ -508,9 +636,9 @@ class SqliteIncidentStore:
                 last_updated_date_key=last_key,
                 event_date_key=event_key,
                 country_key=country_key,
-                type_key=type_key,
+                incident_type_key=type_key,
                 priority_key=priority_key,
-                level_key=level_key,
+                severity_key=level_key,
                 source_count=0,
                 disease_key=disease_key,
                 should_report=record.should_report,
@@ -543,7 +671,7 @@ class SqliteIncidentStore:
                 return False
             row = FactNewsArticle(
                 source_key=self._source_key(session, article.source_name),
-                published_date_key=self._date_key(
+                source_date_key=self._date_key(
                     session, parse_date(article.published_date)
                 ),
                 url=article.url,
@@ -568,10 +696,10 @@ class SqliteIncidentStore:
             session.commit()
 
     def _current_level(self, session: Session, incident: FactIncident) -> int:
-        row = session.get(DimSeverityLevel, incident.level_key)
+        row = session.get(DimSeverityLevel, incident.severity_key)
         if row is None:
             return 1
-        return SEVERITY_LEVELS.get(row.severity_name, 1)
+        return SEVERITY_LEVELS.get(row.severity, 1)
 
     def _current_pandemic_potential(self, session: Session, incident: FactIncident) -> int | None:
         """Return the AI pandemic-potential level, or ``None`` when the column
@@ -581,7 +709,7 @@ class SqliteIncidentStore:
         row = session.get(DimPandemicPotential, incident.pandemic_potential_key)
         if row is None:
             return None
-        return PANDEMIC_NAME_TO_LEVEL.get(row.potential_name, 0)
+        return PANDEMIC_NAME_TO_LEVEL.get(row.pandemic_potential, 0)
 
     def _build_classify_context(
         self, session: Session, incident: FactIncident, level: int
@@ -592,9 +720,9 @@ class SqliteIncidentStore:
         country_group = (country.country_group if country else None) or "C"
         region = (country.region if country else "") or ""
         itype = session.execute(
-            select(DimIncidentType).where(DimIncidentType.type_key == incident.type_key)
+            select(DimIncidentType).where(DimIncidentType.incident_type_key == incident.incident_type_key)
         ).scalar_one_or_none()
-        incident_type = itype.type_name if itype else ""
+        incident_type = itype.incident_type if itype else ""
         disease_name: str | None = None
         if incident.disease_key is not None:
             disease = session.get(DimDisease, incident.disease_key)
@@ -630,7 +758,7 @@ class SqliteIncidentStore:
             level=level,
             country_group=country_group,
             region=region,
-            disease=disease_name,
+            disease_name=disease_name,
             incident_type=incident_type,
             population=population,
             source_tiers=tiers,
@@ -657,7 +785,7 @@ class SqliteIncidentStore:
                 DimPriority.priority_key == incident.priority_key
             )
         ).scalar_one_or_none()
-        cur_priority_name = cur_priority.priority_name if cur_priority else "LOW"
+        cur_priority_name = cur_priority.priority if cur_priority else "LOW"
         desired_priority_name = escalate_priority(cur_priority_name, recomputed_priority)
         desired_should = bool(incident.should_report) or bool(recomputed_should)
         return cur_priority_name, desired_priority_name, desired_should
@@ -673,13 +801,13 @@ class SqliteIncidentStore:
         country = session.execute(
             select(DimCountry).where(DimCountry.country_key == incident.country_key)
         ).scalar_one_or_none()
-        country_name = country.name if country else ""
+        country_name = country.country_name if country else ""
         itype = session.execute(
             select(DimIncidentType).where(
-                DimIncidentType.type_key == incident.type_key
+                DimIncidentType.incident_type_key == incident.incident_type_key
             )
         ).scalar_one_or_none()
-        incident_type = itype.type_name if itype else ""
+        incident_type = itype.incident_type if itype else ""
         disease_name = ""
         if incident.disease_key is not None:
             d = session.get(DimDisease, incident.disease_key)
@@ -699,7 +827,7 @@ class SqliteIncidentStore:
             incident_type=incident_type,
             country=country_name,
             event_date=event_date,
-            disease=disease_name,
+            disease_name=disease_name,
             place=place_row or "",
         )
         return derive_canonical_name(ctx), derive_search_keys(ctx)
@@ -740,7 +868,7 @@ class SqliteIncidentStore:
                 new_pandemic_potential = max(x for x in (current_pandemic_potential, ai_pandemic_potential) if x is not None)
             # De-escalate endemic pathogens (COVID/flu/fever): clamp stored pp to LOW
             # so the AI over-rating (e.g. seasonal flu -> CRITICAL) doesn't persist.
-            new_pandemic_potential = de_escalate_pandemic_potential(ctx.disease, new_pandemic_potential)
+            new_pandemic_potential = de_escalate_pandemic_potential(ctx.disease_name, new_pandemic_potential)
             ctx = replace(ctx, pandemic_potential=new_pandemic_potential, event_status=event_status)
             recomputed_priority, recomputed_should = classify(ctx)
             cur_priority_name, desired_priority_name, desired_should = (
@@ -761,7 +889,7 @@ class SqliteIncidentStore:
                 incident.search_keys = search_keys
                 changed = True
             if new_level > current_level:
-                incident.level_key = self._level_key(session, new_level)
+                incident.severity_key = self._level_key(session, new_level)
                 changed = True
             if desired_priority_name != cur_priority_name:
                 incident.priority_key = self._priority_key(session, desired_priority_name)
@@ -801,7 +929,7 @@ class SqliteIncidentStore:
         tokens = tuple(SOURCE_REGISTRY)
         with self._session() as session:
             rows = session.execute(
-                select(DimSource.name, DimSource.reliability_tier)
+                select(DimSource.source_name, DimSource.reliability_tier)
             ).all()
         token_tier: dict[str, str] = {}
         for name, tier in rows:
@@ -876,7 +1004,7 @@ class SqliteIncidentStore:
 
     def find_recent_disease_incident(
         self,
-        disease: str,
+        disease_name: str,
         country: str,
         as_of: date,
         within_days: int,
@@ -889,7 +1017,7 @@ class SqliteIncidentStore:
         into one incident instead of creating a new row each day. Only matches
         incidents that carry a non-null ``disease_key``.
         """
-        if not disease or within_days <= 0:
+        if not disease_name or within_days <= 0:
             return None
         iso2, _ = country_info(country)
         cutoff = as_of - timedelta(days=within_days)
@@ -901,7 +1029,7 @@ class SqliteIncidentStore:
                 .join(DimDisease, DimDisease.disease_key == FactIncident.disease_key)
                 .where(
                     DimCountry.iso2 == iso2,
-                    DimDisease.disease_name == disease,
+                    DimDisease.disease_name == disease_name,
                     FactIncident.last_updated_date_key >= cutoff_key,
                 )
                 .order_by(FactIncident.last_updated_date_key.desc())

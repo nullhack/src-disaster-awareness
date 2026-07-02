@@ -107,7 +107,7 @@ class WHODiseaseOutbreakAdapter:
                     source_name=self.source_name,
                     incident_name=title,
                     country=country,
-                    disaster_type="Disease",
+                    incident_type="Disease",
                     report_date=_to_iso(item.get("PublicationDateAndTime", "") or ""),
                     source_url=source_url,
                     raw_fields=raw_fields,

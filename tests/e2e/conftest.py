@@ -66,7 +66,7 @@ def quake(
         source_name=source,
         incident_name=name,
         country=country,
-        disaster_type="Earthquake",
+        incident_type="Earthquake",
         report_date=report_date,
         source_url=f"https://{source.lower()}.example/1",
         raw_fields={"mag": 5.2, "depth": 10.0, "place": "near Sarangani, Philippines"},

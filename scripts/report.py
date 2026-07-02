@@ -20,9 +20,9 @@ from pathlib import Path
 from disaster_report.report import (
     NEWS_CAP_DEFAULT,
     SEVERITY_CHOICES,
-    db_path_from_url,
     generate,
 )
+from disaster_report.store import SqliteIncidentStore
 
 
 def _load_config(config_path: Path) -> tuple[str, int]:
@@ -30,14 +30,14 @@ def _load_config(config_path: Path) -> tuple[str, int]:
         cfg = tomllib.load(fh)
     url = cfg.get("database", {}).get("url", "sqlite:///./disaster.db")
     window = int(cfg.get("tracking", {}).get("window_days", 7))
-    return db_path_from_url(url), window
+    return url, window
 
 
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description="Generate a Markdown disaster report.")
     ap.add_argument("--config", type=Path, default=Path("config.toml"),
                     help="Path to config.toml (for DB url + tracking window).")
-    ap.add_argument("--db", help="Override DB path (bypasses config parsing).")
+    ap.add_argument("--db", help="Override DB file path (bypasses config parsing).")
     ap.add_argument("--window", type=int, help="Override tracking_window_days.")
     ap.add_argument("--min-severity", choices=list(SEVERITY_CHOICES), default="HIGH",
                     help="Lowest severity to show (default HIGH = HIGH+CRITICAL).")
@@ -47,15 +47,16 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--as-of", help="Override 'today' (YYYY-MM-DD).")
     args = ap.parse_args(argv)
 
-    db_path = args.db
+    url = f"sqlite:///{args.db}" if args.db else None
     window = args.window
-    if db_path is None or window is None:
-        cfg_db, cfg_window = _load_config(args.config)
-        db_path = db_path or cfg_db
+    if url is None or window is None:
+        cfg_url, cfg_window = _load_config(args.config)
+        url = url or cfg_url
         window = window if window is not None else cfg_window
 
     as_of = date.fromisoformat(args.as_of) if args.as_of else date.today()
-    text = generate(db_path, as_of=as_of, window=window,
+    store = SqliteIncidentStore(url)
+    text = generate(store, as_of=as_of, window=window,
                     min_severity=args.min_severity, news_cap=args.news)
 
     if args.out:

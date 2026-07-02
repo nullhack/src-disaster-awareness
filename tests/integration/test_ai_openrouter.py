@@ -53,14 +53,14 @@ def _summary_pred(summary="a summary"):
 
 def _disease_sources(dtype="Disease"):
     return {
-        "source_reports": [{"source_name": "WHO", "disaster_type": dtype, "text": "x"}],
+        "source_reports": [{"source_name": "WHO", "incident_type": dtype, "text": "x"}],
         "news_articles": [],
     }
 
 
 def _physical_sources():
     return {
-        "source_reports": [{"source_name": "USGS", "disaster_type": "Earthquake", "text": "x"}],
+        "source_reports": [{"source_name": "USGS", "incident_type": "Earthquake", "text": "x"}],
         "news_articles": [],
     }
 
@@ -164,7 +164,7 @@ def test_predictor_receives_shaped_inputs():
     _, kw = stub.calls[0]
     assert "source_reports" in kw and "news_articles" in kw
     import json
-    assert json.loads(kw["source_reports"])[0]["disaster_type"] == "Earthquake"
+    assert json.loads(kw["source_reports"])[0]["incident_type"] == "Earthquake"
     assert kw["news_articles"] == "[]"
 
 

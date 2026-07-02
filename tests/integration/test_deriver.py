@@ -30,7 +30,7 @@ def test_disease_search_keys_include_disease_country_year():
         incident_type="Disease",
         country="Uganda",
         event_date=date(2026, 6, 29),
-        disease="Ebola",
+        disease_name="Ebola",
     )
     keys = derive_search_keys(ctx)
     assert keys[0] == "Ebola Uganda outbreak 2026"
@@ -46,7 +46,7 @@ def test_disease_search_keys_drop_unknown_country():
         incident_type="Disease",
         country="Unknown",
         event_date=date(2025, 11, 1),
-        disease="Diphtheria",
+        disease_name="Diphtheria",
     )
     keys = derive_search_keys(ctx)
     assert keys, "must still produce keys"
@@ -71,7 +71,7 @@ def test_canonical_name_disease_includes_outbreak_country_month():
         incident_type="Disease",
         country="Uganda",
         event_date=date(2026, 6, 29),
-        disease="Ebola",
+        disease_name="Ebola",
     )
     assert derive_canonical_name(ctx) == "Ebola outbreak Uganda June 2026"
 

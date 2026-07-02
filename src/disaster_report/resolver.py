@@ -28,8 +28,8 @@ _TYPE_CODES: dict[str, str] = {
 }
 
 
-def _type_code(disaster_type: str) -> str:
-    key = (disaster_type or "").strip().lower()
+def _type_code(incident_type: str) -> str:
+    key = (incident_type or "").strip().lower()
     if key in _TYPE_CODES:
         return _TYPE_CODES[key]
     cleaned = "".join(ch for ch in key if ch.isalnum())
@@ -73,7 +73,7 @@ class IncidentResolver:
                 sub = sub.upper()
             else:
                 cc, sub = country_from_place(raw.country)
-            code = _type_code(raw.disaster_type)
+            code = _type_code(raw.incident_type)
             incident_id = (
                 f"{stamp}-{cc}-{sub}-{code}" if sub else f"{stamp}-{cc}-{code}"
             )

@@ -10,7 +10,7 @@ from disaster_report.sources.base import RawIncident
 
 def _incident(
     country: str = "Philippines",
-    disaster_type: str = "Earthquake",
+    incident_type: str = "Earthquake",
     report_date: str = "2026-06-29T00:00:00Z",
     source: str = "USGS",
     url: str = "https://usgs.example/1",
@@ -20,7 +20,7 @@ def _incident(
         source_name=source,
         incident_name="M5.2 Earthquake near Sarangani",
         country=country,
-        disaster_type=disaster_type,
+        incident_type=incident_type,
         report_date=report_date,
         source_url=url,
         raw_fields=raw_fields or {},
@@ -65,8 +65,8 @@ def test_resolver_treats_different_countries_as_different_incidents():
 
 
 def test_resolver_treats_different_types_as_different_incidents():
-    a = _incident(disaster_type="Earthquake")
-    b = _incident(disaster_type="Flood", url="https://usgs.example/2")
+    a = _incident(incident_type="Earthquake")
+    b = _incident(incident_type="Flood", url="https://usgs.example/2")
 
     resolved = IncidentResolver().resolve([a, b])
 
@@ -104,7 +104,7 @@ def test_resolver_separates_same_country_different_states():
 def test_resolver_uses_raw_fields_subdivision_when_present():
     arizona = _incident(
         country="United States",
-        disaster_type="Disease",
+        incident_type="Disease",
         url="https://healthmap.example/az",
         raw_fields={"subdivision": "US-AZ"},
     )

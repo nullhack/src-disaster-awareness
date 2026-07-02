@@ -25,7 +25,7 @@ def test_gdacs_adapter_parses_captured_fixture(mock_httpx, load_fixture):
         incidents[0].country
         == (items[0].findtext("g:country", default="", namespaces=_NS) or "").strip()
     )
-    assert incidents[0].disaster_type != ""
+    assert incidents[0].incident_type != ""
     datetime.fromisoformat(incidents[0].report_date)
     first_item = items[0]
     assert incidents[0].raw_fields["alertlevel"] == (

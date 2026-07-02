@@ -97,7 +97,7 @@ class HealthMapAdapter:
                     source_name=self.source_name,
                     incident_name=_strip(summary_html),
                     country=country,
-                    disaster_type="Disease",
+                    incident_type="Disease",
                     report_date=report_date,
                     source_url=source_url,
                     raw_fields={

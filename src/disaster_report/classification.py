@@ -72,6 +72,15 @@ class Severity(IntEnum):
     HIGH = 3
     CRITICAL = 4
 
+    @classmethod
+    def from_name(cls, name: str | None) -> Severity | None:
+        """Resolve a label (``"HIGH"``) to its member, or ``None`` if unknown.
+
+        Case-insensitive; the preferred rich-model API over indexing
+        :data:`SEVERITY_LEVELS` directly.
+        """
+        return cls.__members__.get((name or "").strip().upper())
+
 
 # Backwards-compatible int aliases. ``Severity.LOW`` is already ``1``; these
 # keep the historical ``SEVERITY_*`` import names working across the codebase
@@ -97,6 +106,15 @@ class Pandemic(IntEnum):
     HIGH = 3
     CRITICAL = 4
 
+    @classmethod
+    def from_name(cls, name: str | None) -> Pandemic | None:
+        """Resolve a label (``"HIGH"``) to its member, or ``None`` if unknown.
+
+        Case-insensitive; the preferred rich-model API over indexing
+        :data:`PANDEMIC_NAME_TO_LEVEL` directly.
+        """
+        return cls.__members__.get((name or "").strip().upper())
+
 
 PANDEMIC_NONE = Pandemic.NONE
 PANDEMIC_LOW = Pandemic.LOW
@@ -114,8 +132,7 @@ def pandemic_potential_level(name: str | None) -> int | None:
     Returns ``None`` for an empty/unknown label so callers can distinguish
     "not yet digested" (``None``) from an explicit AI ``NONE`` (``0``).
     """
-    key = (name or "").strip().upper()
-    return PANDEMIC_NAME_TO_LEVEL.get(key)
+    return Pandemic.from_name(name)
 
 
 # Incident types that route to the disease prompt track and the disease
@@ -251,7 +268,7 @@ def _is_endemic(name: str | None) -> bool:
 
 
 def de_escalate_pandemic_potential(
-    disease: str | None, pandemic_potential: int | None
+    disease_name: str | None, pandemic_potential: int | None
 ) -> int | None:
     """Clamp pandemic_potential for endemic/background pathogens to LOW.
 
@@ -261,7 +278,7 @@ def de_escalate_pandemic_potential(
     """
     if pandemic_potential is None:
         return None
-    if _is_endemic(disease) and pandemic_potential > Pandemic.LOW:
+    if _is_endemic(disease_name) and pandemic_potential > Pandemic.LOW:
         return Pandemic.LOW
     return pandemic_potential
 
@@ -289,91 +306,97 @@ class ClassifyContext:
     level: int
     country_group: str
     region: str = ""
-    disease: str | None = None
+    disease_name: str | None = None
     incident_type: str = ""
     population: int = 0
     source_tiers: tuple[str, ...] = ()
     pandemic_potential: int | None = None
     event_status: str = ""
 
+    def verdict(self) -> tuple[str, bool]:
+        """Multi-factor reporting verdict (V3).
+
+        Starts from the baseline ``(level, country_group)`` matrix, then:
+
+        * **Disease incidents** (``incident_type`` in :data:`DISEASE_TYPES`):
+          the AI-assessed ``pandemic_potential`` is the PRIMARY signal. When it
+          is set, it overrides keyword tiers. When it is ``None`` (not yet
+          digested), the keyword tiers act as a bootstrap fallback.
+        * **All incidents**: monotonic physical factors (high-impact type,
+          population exposure, tier-A source corroboration) may escalate.
+        * **Disease incidents** with ``event_status`` in
+          :data:`NON_EVENT_STATUSES` are suppressed at the end (final word).
+
+        Returns ``(priority_name, should_report)``.
+        """
+        priority, should_report = PRIORITY_MATRIX.get(
+            (self.level, self.country_group), ("LOW", False)
+        )
+
+        incident_kind = self.incident_type.strip().lower()
+        is_disease = incident_kind in DISEASE_TYPES
+
+        # Factor: disease-led reporting (disease incidents only).
+        if is_disease:
+            # Endemic / background pathogens (seasonal flu, COVID-19,
+            # undiagnosed fever) never escalate reporting on
+            # pandemic_potential alone — clamp the AI's level to LOW first.
+            effective_pp = self.pandemic_potential
+            if _is_endemic(self.disease_name) and effective_pp is not None:
+                effective_pp = min(effective_pp, Pandemic.LOW)
+            if effective_pp is not None:
+                # AI signal is authoritative.
+                if effective_pp >= Pandemic.HIGH:
+                    should_report = True
+                    priority = escalate_priority(priority, "HIGH")
+                elif effective_pp == Pandemic.MEDIUM:
+                    should_report = True
+                    priority = escalate_priority(priority, "MEDIUM")
+                # Pandemic.LOW / Pandemic.NONE: no escalation (baseline stands).
+            else:
+                # Bootstrap fallback before first AI digest.
+                if _is_pandemic_risk(self.disease_name):
+                    should_report = True
+                    priority = escalate_priority(priority, "HIGH")
+                elif _is_outbreak_of_concern(self.disease_name) and self.level >= Severity.MEDIUM:
+                    should_report = True
+                    priority = escalate_priority(priority, "MEDIUM")
+
+        # Factor: high-impact physical events (tsunami, volcano) at MEDIUM+.
+        if incident_kind in HIGH_IMPACT_TYPES and self.level >= Severity.MEDIUM:
+            should_report = True
+            priority = escalate_priority(priority, "MEDIUM")
+
+        # Factor: GDACS population exposure.
+        if self.population >= POPULATION_REPORT_THRESHOLD:
+            should_report = True
+            priority = escalate_priority(priority, "MEDIUM")
+        elif self.population >= POPULATION_MEDIUM_FLOOR and self.level >= Severity.MEDIUM:
+            should_report = True
+
+        # Factor: tier-A source corroboration (>=2 authoritative feeds).
+        tier_a_count = sum(1 for tier in self.source_tiers if tier == "A")
+        if tier_a_count >= 2 and self.level >= Severity.MEDIUM:
+            should_report = True
+            priority = escalate_priority(priority, "MEDIUM")
+
+        # Suppression: AI-flagged non-events / declared-eliminations have the
+        # final word on disease incidents (e.g. polio-free milestones,
+        # computer-virus noise misrouted into the disease track).
+        if is_disease and self.event_status.strip().lower() in NON_EVENT_STATUSES:
+            should_report = False
+
+        return priority, should_report
+
 
 def classify(context: ClassifyContext) -> tuple[str, bool]:
-    """Multi-factor reporting verdict (V3).
+    """Module-level shortcut for :meth:`ClassifyContext.verdict`.
 
-    Starts from the baseline ``(level, country_group)`` matrix, then:
-
-    * **Disease incidents** (``incident_type`` in :data:`DISEASE_TYPES`):
-      the AI-assessed ``pandemic_potential`` is the PRIMARY signal. When it is
-      set, it overrides keyword tiers. When it is ``None`` (not yet digested),
-      the keyword tiers act as a bootstrap fallback.
-    * **All incidents**: monotonic physical factors (high-impact type,
-      population exposure, tier-A source corroboration) may escalate.
-    * **Disease incidents** with ``event_status`` in :data:`NON_EVENT_STATUSES`
-      are suppressed at the end (final word).
-
-    Returns ``(priority_name, should_report)``.
+    Kept so existing call sites (``classify(ctx)``) keep working; new code
+    should prefer ``ctx.verdict()``. The verdict logic lives on the context
+    object that owns the inputs (rich-model convention, see GLOSSARY.md).
     """
-    priority, should_report = PRIORITY_MATRIX.get(
-        (context.level, context.country_group), ("LOW", False)
-    )
-
-    incident_kind = context.incident_type.strip().lower()
-    is_disease = incident_kind in DISEASE_TYPES
-
-    # Factor: disease-led reporting (disease incidents only).
-    if is_disease:
-        # Endemic / background pathogens (seasonal flu, COVID-19, undiagnosed
-        # fever) never escalate reporting on pandemic_potential alone — clamp
-        # the AI's level to LOW before deciding.
-        effective_pp = context.pandemic_potential
-        if _is_endemic(context.disease) and effective_pp is not None:
-            effective_pp = min(effective_pp, Pandemic.LOW)
-        if effective_pp is not None:
-            # AI signal is authoritative.
-            if effective_pp >= Pandemic.HIGH:
-                should_report = True
-                priority = escalate_priority(priority, "HIGH")
-            elif effective_pp == Pandemic.MEDIUM:
-                should_report = True
-                priority = escalate_priority(priority, "MEDIUM")
-            # Pandemic.LOW / Pandemic.NONE: no escalation (baseline stands).
-        else:
-            # Bootstrap fallback before first AI digest.
-            if _is_pandemic_risk(context.disease):
-                should_report = True
-                priority = escalate_priority(priority, "HIGH")
-            elif _is_outbreak_of_concern(context.disease) and context.level >= Severity.MEDIUM:
-                should_report = True
-                priority = escalate_priority(priority, "MEDIUM")
-
-    # Factor: high-impact physical events (tsunami, volcano) at MEDIUM+.
-    if (
-        incident_kind in HIGH_IMPACT_TYPES
-        and context.level >= Severity.MEDIUM
-    ):
-        should_report = True
-        priority = escalate_priority(priority, "MEDIUM")
-
-    # Factor: GDACS population exposure.
-    if context.population >= POPULATION_REPORT_THRESHOLD:
-        should_report = True
-        priority = escalate_priority(priority, "MEDIUM")
-    elif context.population >= POPULATION_MEDIUM_FLOOR and context.level >= Severity.MEDIUM:
-        should_report = True
-
-    # Factor: tier-A source corroboration (>=2 authoritative feeds).
-    tier_a_count = sum(1 for tier in context.source_tiers if tier == "A")
-    if tier_a_count >= 2 and context.level >= Severity.MEDIUM:
-        should_report = True
-        priority = escalate_priority(priority, "MEDIUM")
-
-    # Suppression: AI-flagged non-events / declared-eliminations have the final
-    # word on disease incidents (e.g. polio-free milestones, computer-virus
-    # noise misrouted into the disease track).
-    if is_disease and context.event_status.strip().lower() in NON_EVENT_STATUSES:
-        should_report = False
-
-    return priority, should_report
+    return context.verdict()
 
 
 # --------------------------------------------------------------------------- #

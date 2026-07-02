@@ -83,7 +83,7 @@ def _stub_usgs_fetch():
             source_name="USGS",
             incident_name="M5.2 Earthquake near Sarangani",
             country="Philippines",
-            disaster_type="Earthquake",
+            incident_type="Earthquake",
             report_date="2026-06-29T00:00:00Z",
             source_url="https://earthquake.usgs.gov/ev/1",
             raw_fields={"magnitude": 5.2},
@@ -302,7 +302,7 @@ def _seed_disease_incident(store):
             last_updated_date="2026-06-29",
             should_report=False,
             search_keys=["Ebola Berlin"],
-            disease="Ebola",
+            disease_name="Ebola",
         )
     )
 

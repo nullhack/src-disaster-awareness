@@ -60,7 +60,7 @@ SOURCE_REGISTRY: dict[str, SourceSpec] = {
         data_freshness="near-real-time",
         adapter_cls=HealthMapAdapter,
     ),
-    # display_name "DDG" matches the seeded DimSource.name; the adapter's own
+    # display_name "DDG" matches the seeded DimSource.source_name; the adapter's own
     # source_name ("DuckDuckGo News") is what flows through RawArticle at
     # runtime. They intentionally differ (news adapter, not a feed).
     "ddg": SourceSpec(

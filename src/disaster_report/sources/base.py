@@ -12,7 +12,7 @@ class RawIncident:
     source_name: str
     incident_name: str
     country: str
-    disaster_type: str
+    incident_type: str
     report_date: str
     source_url: str
     raw_fields: dict[str, Any] = field(default_factory=dict)

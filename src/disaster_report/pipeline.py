@@ -52,7 +52,7 @@ def _raw_to_dict(raw: RawIncident) -> dict:
     return {
         "incident_name": raw.incident_name,
         "country": raw.country,
-        "disaster_type": raw.disaster_type,
+        "incident_type": raw.incident_type,
         "report_date": raw.report_date,
         "source_name": raw.source_name,
         "source_url": raw.source_url,
@@ -198,13 +198,13 @@ class Pipeline:
         primary: RawIncident,
         report_day: date,
         window: int,
-        disease: str | None,
+        disease_name: str | None,
     ) -> list[RawArticle]:
         """In-window news search + relevance filter for a fresh incident."""
         if country_iso2(primary.country) == UNKNOWN_ISO2:
-            query = f"{report_day.isoformat()} {primary.disaster_type}"
+            query = f"{report_day.isoformat()} {primary.incident_type}"
         else:
-            query = f"{report_day.isoformat()} {primary.disaster_type} {primary.country}"
+            query = f"{report_day.isoformat()} {primary.incident_type} {primary.country}"
         timelimit = _news_timelimit(window)
         log.info(
             "ingesting NEW incident %s (report_date=%s, in %d-day window); "
@@ -216,10 +216,10 @@ class Pipeline:
             a for a in raw_articles
             if is_relevant(
                 a,
-                disaster_type=primary.disaster_type,
+                incident_type=primary.incident_type,
                 country=primary.country,
                 incident_name=primary.incident_name,
-                disease=disease,
+                disease_name=disease_name,
             )
         ]
         log.info(
@@ -237,7 +237,7 @@ class Pipeline:
         is_today = report_day == today
         in_window = 0 <= (today - report_day).days <= window
         adapter_disease = primary.raw_fields.get("disease")
-        is_disease_track = is_disease_type(primary.disaster_type)
+        is_disease_track = is_disease_type(primary.incident_type)
 
         if in_window:
             bootstrap_articles = self._bootstrap_news(
@@ -283,10 +283,10 @@ class Pipeline:
         # present, always date-anchored) - not AI-authored. AI supplies only the
         # classification (severity/pp/es/disease_name) and the prose summary.
         derived_ctx = DeriveInput(
-            incident_type=primary.disaster_type,
+            incident_type=primary.incident_type,
             country=primary.country,
             event_date=report_day,
-            disease=disease,
+            disease_name=disease,
             place=str(primary.raw_fields.get("place", "") or ""),
         )
         derived_name = derive_canonical_name(derived_ctx)
@@ -310,8 +310,8 @@ class Pipeline:
             level=severity_level,
             country_group=country_group,
             region=region or "",
-            disease=disease,
-            incident_type=primary.disaster_type,
+            disease_name=disease,
+            incident_type=primary.incident_type,
             population=population,
             source_tiers=source_tiers,
             pandemic_potential=pandemic_potential,
@@ -359,7 +359,7 @@ class Pipeline:
             canonical_name=derived_name,
             summary="",
             country=primary.country,
-            incident_type=primary.disaster_type,
+            incident_type=primary.incident_type,
             priority=priority,
             severity_level=severity_level,
             event_date=report_day.isoformat(),
@@ -367,7 +367,7 @@ class Pipeline:
             last_updated_date=today.isoformat(),
             should_report=should_report,
             search_keys=derived_keys,
-            disease=disease,
+            disease_name=disease,
         )
         incident_key = self._store.upsert_incident(record)
         for raw in resolved.incidents:
@@ -386,7 +386,7 @@ class Pipeline:
 
         if digest is not None:
             log.info(
-                "incident %s: digested canonical=%r severity=%s pp=%s es=%s keys=%s",
+                "incident %s: digested canonical=%r severity=%s pandemic_potential=%s event_status=%s keys=%s",
                 resolved.incident_id, derived_name, severity_name,
                 digest.get("pandemic_potential"), event_status, derived_keys,
             )
@@ -427,10 +427,10 @@ class Pipeline:
             for article in self._news.search(key, timelimit=timelimit):
                 if not is_relevant(
                     article,
-                    disaster_type=incident.incident_type,
+                    incident_type=incident.incident_type,
                     country=incident.country_name,
                     incident_name=incident.canonical_name,
-                    disease=disease,
+                    disease_name=disease,
                 ):
                     continue
                 if self._store.link_news(incident.incident_key, article):
@@ -461,7 +461,7 @@ class Pipeline:
                             {
                                 "incident_name": incident.canonical_name,
                                 "country": incident.country_name,
-                                "disaster_type": incident.incident_type,
+                                "incident_type": incident.incident_type,
                                 "report_date": "",
                                 "source_name": PRIOR_DIGEST_SOURCE,
                                 "source_url": "",

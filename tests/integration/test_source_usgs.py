@@ -17,7 +17,7 @@ def test_usgs_adapter_parses_captured_fixture(mock_httpx, load_fixture):
 
     assert len(incidents) == len(features)
     assert all(i.source_name == "USGS Earthquakes" for i in incidents)
-    assert all(i.disaster_type == "Earthquake" for i in incidents)
+    assert all(i.incident_type == "Earthquake" for i in incidents)
     assert all(i.incident_name and i.report_date and i.source_url for i in incidents)
     assert all(
         i.source_url.startswith("https://earthquake.usgs.gov/") for i in incidents

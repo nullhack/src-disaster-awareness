@@ -34,7 +34,7 @@ def _raw_incident(source: str = "USGS", url: str = "https://usgs.example/1") -> 
         source_name=source,
         incident_name="M5.2 Earthquake near Sarangani",
         country="Philippines",
-        disaster_type="Earthquake",
+        incident_type="Earthquake",
         report_date="2026-06-29T00:00:00Z",
         source_url=url,
         raw_fields={"mag": 5.2, "depth": 10.0, "place": "near Sarangani, Philippines"},
@@ -243,7 +243,7 @@ def test_type_key_does_not_lazy_create_unknown_types(store):
 
     key = store.upsert_incident(_record("20260629-XX-OT", incident_type="Totally Novel Type"))
     with store._engine.connect() as conn:
-        rows = conn.execute(sa.select(DimIncidentType.type_name)).all()
+        rows = conn.execute(sa.select(DimIncidentType.incident_type)).all()
     names = {r[0] for r in rows}
     assert "Totally Novel Type" not in names, "unknown type must NOT be lazy-created"
     assert "Other" in names
@@ -258,7 +258,7 @@ def test_disease_key_lazy_creates_named_disease_from_record(store):
         _record(
             "20260629-XX-EP",
             incident_type="Disease",
-            disease="Marburg virus disease",
+            disease_name="Marburg virus disease",
         )
     )
     with store._engine.connect() as conn:
@@ -367,7 +367,7 @@ def test_unknown_country_row_is_named_unknown_not_raw_place_string(store):
         row = conn.execute(
             sa.select(DimCountry).where(DimCountry.iso2 == "XX")
         ).one()
-    assert row.name == "Unknown"
+    assert row.country_name == "Unknown"
 
 
 def test_country_key_normalizes_existing_xx_row_name_to_unknown(store):
@@ -377,14 +377,14 @@ def test_country_key_normalizes_existing_xx_row_name_to_unknown(store):
 
     with store._engine.begin() as conn:
         conn.execute(sa.text(
-            "UPDATE dim_country SET name = 'off the coast of Central America' WHERE iso2 = 'XX'"
+            "UPDATE dim_country SET country_name = 'off the coast of Central America' WHERE iso2 = 'XX'"
         ))
     store.upsert_incident(_record("20260629-XX-EQ", country="off the coast of Central America"))
     with store._engine.connect() as conn:
         row = conn.execute(
             sa.select(DimCountry).where(DimCountry.iso2 == "XX")
         ).one()
-    assert row.name == "Unknown"
+    assert row.country_name == "Unknown"
 
 
 # --------------------------------------------------------------------------- #
@@ -544,7 +544,7 @@ def test_set_digest_persists_pandemic_potential_and_event_status(store):
             priority="LOW",
             severity_level=1,
             should_report=False,
-            disease="Ebola",
+            disease_name="Ebola",
             canonical_name="Initial",
             summary="initial",
         )
@@ -580,7 +580,7 @@ def test_set_digest_ratchets_pandemic_potential(store):
             priority="LOW",
             severity_level=1,
             should_report=False,
-            disease="Ebola",
+            disease_name="Ebola",
         )
     )
 
@@ -631,7 +631,7 @@ def test_set_digest_non_event_status_does_not_clear_should_report(store):
             priority="HIGH",
             severity_level=1,
             should_report=True,
-            disease="Ebola",
+            disease_name="Ebola",
         )
     )
 
@@ -697,7 +697,7 @@ def test_set_digest_clamps_endemic_pandemic_potential_to_low(store):
             priority="LOW",
             severity_level=1,
             should_report=False,
-            disease="COVID-19",
+            disease_name="COVID-19",
         )
     )
     store.set_digest(
@@ -736,7 +736,7 @@ def test_find_recent_disease_incident_returns_match_in_window(store):
             "20260610-NG-EP",
             country="Nigeria",
             incident_type="Disease",
-            disease="Cholera",
+            disease_name="Cholera",
             last_updated_date="2026-06-10",
             first_reported_date="2026-06-10",
             event_date="2026-06-10",
@@ -755,7 +755,7 @@ def test_find_recent_disease_incident_returns_none_outside_window(store):
             "20260401-NG-EP",
             country="Nigeria",
             incident_type="Disease",
-            disease="Cholera",
+            disease_name="Cholera",
             last_updated_date="2026-04-01",
             first_reported_date="2026-04-01",
             event_date="2026-04-01",
@@ -773,7 +773,7 @@ def test_find_recent_disease_incident_ignores_different_disease(store):
             "20260610-NG-EP",
             country="Nigeria",
             incident_type="Disease",
-            disease="Ebola",
+            disease_name="Ebola",
             last_updated_date="2026-06-10",
             first_reported_date="2026-06-10",
             event_date="2026-06-10",
@@ -791,7 +791,7 @@ def test_merge_duplicate_disease_incidents_dry_run_writes_nothing(store):
             "20260601-NG-EP",
             country="Nigeria",
             incident_type="Disease",
-            disease="Cholera",
+            disease_name="Cholera",
             first_reported_date="2026-06-01",
             event_date="2026-06-01",
             last_updated_date="2026-06-01",
@@ -802,7 +802,7 @@ def test_merge_duplicate_disease_incidents_dry_run_writes_nothing(store):
             "20260610-NG-EP",
             country="Nigeria",
             incident_type="Disease",
-            disease="Cholera",
+            disease_name="Cholera",
             first_reported_date="2026-06-10",
             event_date="2026-06-10",
             last_updated_date="2026-06-10",
@@ -823,7 +823,7 @@ def test_merge_duplicate_disease_incidents_apply_merges_and_is_idempotent(store)
             "20260601-NG-EP",
             country="Nigeria",
             incident_type="Disease",
-            disease="Cholera",
+            disease_name="Cholera",
             first_reported_date="2026-06-01",
             event_date="2026-06-01",
             last_updated_date="2026-06-01",
@@ -834,7 +834,7 @@ def test_merge_duplicate_disease_incidents_apply_merges_and_is_idempotent(store)
             "20260610-NG-EP",
             country="Nigeria",
             incident_type="Disease",
-            disease="Cholera",
+            disease_name="Cholera",
             first_reported_date="2026-06-10",
             event_date="2026-06-10",
             last_updated_date="2026-06-10",
@@ -845,7 +845,7 @@ def test_merge_duplicate_disease_incidents_apply_merges_and_is_idempotent(store)
             "20260620-NG-EP",
             country="Nigeria",
             incident_type="Disease",
-            disease="Cholera",
+            disease_name="Cholera",
             first_reported_date="2026-06-20",
             event_date="2026-06-20",
             last_updated_date="2026-06-20",
@@ -877,7 +877,7 @@ def test_merge_duplicate_disease_incidents_keeps_separate_outbreaks(store):
             "20260101-NG-EP",
             country="Nigeria",
             incident_type="Disease",
-            disease="Cholera",
+            disease_name="Cholera",
             first_reported_date="2026-01-01",
             event_date="2026-01-01",
             last_updated_date="2026-01-01",
@@ -888,7 +888,7 @@ def test_merge_duplicate_disease_incidents_keeps_separate_outbreaks(store):
             "20260615-NG-EP",
             country="Nigeria",
             incident_type="Disease",
-            disease="Cholera",
+            disease_name="Cholera",
             first_reported_date="2026-06-15",
             event_date="2026-06-15",
             last_updated_date="2026-06-15",

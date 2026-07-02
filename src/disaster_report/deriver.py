@@ -24,8 +24,41 @@ class DeriveInput:
     incident_type: str
     country: str
     event_date: date | None
-    disease: str = ""
+    disease_name: str = ""
     place: str = ""
+
+    def search_keys(self) -> list[str]:
+        """Three DDG-friendly phrases, most specific first.
+
+        Date always present when ``event_date`` is known; de-duplicated; capped at 3.
+        """
+        country = _clean_country(self.country)
+        place = _clean_place(self.place)
+        type_lower = self.incident_type.strip().lower()
+        if is_disease_type(self.incident_type) and self.disease_name:
+            keys = _disease_keys(self, self.disease_name.strip(), country)
+        else:
+            keys = _physical_keys(self, country, place, type_lower)
+        return _dedupe(keys)
+
+    def canonical_name(self) -> str:
+        """Short display name.
+
+        "{Type} {place} {Month YYYY}" / "{Disease} outbreak {country} {Month YYYY}".
+        """
+        country = _clean_country(self.country)
+        if is_disease_type(self.incident_type):
+            base = (
+                f"{self.disease_name} outbreak {country}".strip()
+                if self.disease_name
+                else f"{self.incident_type} {country}".strip()
+            )
+        else:
+            place = _clean_place(self.place) or country
+            base = f"{self.incident_type} {place}".strip()
+        if self.event_date:
+            base = f"{base} {_month_year(self.event_date)}".strip()
+        return base[:120]
 
 
 def _clean_country(country: str) -> str:
@@ -72,16 +105,16 @@ def _year(event_date: date) -> str:
     return event_date.strftime("%Y")
 
 
-def _disease_keys(inputs: DeriveInput, disease: str, country: str) -> list[str]:
+def _disease_keys(inputs: DeriveInput, disease_name: str, country: str) -> list[str]:
     """Disease-track phrases: "{disease} {country} outbreak {YYYY}",
     "{disease} {country} {Month YYYY}", then the generic catch-all."""
     keys: list[str] = []
     if inputs.event_date:
-        keys.append(f"{disease} {country} outbreak {_year(inputs.event_date)}".strip())
-        keys.append(f"{disease} {country} {_month_year(inputs.event_date)}".strip())
+        keys.append(f"{disease_name} {country} outbreak {_year(inputs.event_date)}".strip())
+        keys.append(f"{disease_name} {country} {_month_year(inputs.event_date)}".strip())
     else:
-        keys.append(f"{disease} {country} outbreak".strip())
-    keys.append(f"{disease} outbreak cases deaths")
+        keys.append(f"{disease_name} {country} outbreak".strip())
+    keys.append(f"{disease_name} outbreak cases deaths")
     return keys
 
 
@@ -119,32 +152,10 @@ def _dedupe(keys: list[str], limit: int = 3) -> list[str]:
 
 
 def derive_search_keys(inputs: DeriveInput) -> list[str]:
-    """Three DDG-friendly phrases, most specific first.
-
-    Date always present when ``event_date`` is known; de-duplicated; capped at 3.
-    """
-    country = _clean_country(inputs.country)
-    place = _clean_place(inputs.place)
-    type_lower = inputs.incident_type.strip().lower()
-    if is_disease_type(inputs.incident_type) and inputs.disease:
-        keys = _disease_keys(inputs, inputs.disease.strip(), country)
-    else:
-        keys = _physical_keys(inputs, country, place, type_lower)
-    return _dedupe(keys)
+    """Thin delegator to :meth:`DeriveInput.search_keys` (kept for call sites)."""
+    return inputs.search_keys()
 
 
 def derive_canonical_name(inputs: DeriveInput) -> str:
-    """Short display name: "{Type} {place} {Month YYYY}" / "{Disease} outbreak {country} {Month YYYY}"."""
-    country = _clean_country(inputs.country)
-    if is_disease_type(inputs.incident_type):
-        base = (
-            f"{inputs.disease} outbreak {country}".strip()
-            if inputs.disease
-            else f"{inputs.incident_type} {country}".strip()
-        )
-    else:
-        place = _clean_place(inputs.place) or country
-        base = f"{inputs.incident_type} {place}".strip()
-    if inputs.event_date:
-        base = f"{base} {_month_year(inputs.event_date)}".strip()
-    return base[:120]
+    """Thin delegator to :meth:`DeriveInput.canonical_name` (kept for call sites)."""
+    return inputs.canonical_name()

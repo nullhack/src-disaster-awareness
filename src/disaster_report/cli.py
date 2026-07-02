@@ -16,7 +16,6 @@ from disaster_report.pipeline import Pipeline
 from disaster_report.report import (
     NEWS_CAP_DEFAULT,
     SEVERITY_CHOICES,
-    db_path_from_url,
     generate as generate_report,
 )
 from disaster_report.resolver import IncidentResolver
@@ -160,11 +159,11 @@ def report(config_path: str, window: int, min_severity: str, news: int,
     whose ``event_date`` falls in the tracking window are listed.
     """
     config = _load(config_path)
-    db_path = db_path_from_url(config.database_url)
+    store = SqliteIncidentStore(config.database_url)
     win = window if window is not None else config.tracking_window_days
     as_of_date = date.fromisoformat(as_of) if as_of else date.today()
     text = generate_report(
-        db_path, as_of=as_of_date, window=win,
+        store, as_of=as_of_date, window=win,
         min_severity=min_severity, news_cap=news,
     )
     if out:
@@ -274,10 +273,10 @@ def redigest(config_path: str, apply: bool, limit: int, undigested_only: bool) -
         fresh = store.find_by_incident_id(incident_id) or view
         ai_bits = []
         for key, label in (
-            ("disease_name", "disease"),
-            ("severity", "sev"),
-            ("pandemic_potential", "pp"),
-            ("event_status", "es"),
+            ("disease_name", "disease_name"),
+            ("severity", "severity"),
+            ("pandemic_potential", "pandemic_potential"),
+            ("event_status", "event_status"),
         ):
             value = digest.get(key)
             if value:

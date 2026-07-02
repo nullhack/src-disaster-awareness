@@ -36,7 +36,7 @@ class DimCountry(Base):
     __tablename__ = "dim_country"
 
     country_key: Mapped[int] = mapped_column(init=False, primary_key=True)
-    name: Mapped[str] = mapped_column(String(100))
+    country_name: Mapped[str] = mapped_column(String(100))
     iso2: Mapped[str] = mapped_column(String(2))
     country_group: Mapped[str] = mapped_column(String(1))
     region: Mapped[str] = mapped_column(String(100))
@@ -46,7 +46,7 @@ class DimSource(Base):
     __tablename__ = "dim_source"
 
     source_key: Mapped[int] = mapped_column(init=False, primary_key=True)
-    name: Mapped[str] = mapped_column(String(100))
+    source_name: Mapped[str] = mapped_column(String(100))
     type: Mapped[str] = mapped_column(String(50))
     reliability_tier: Mapped[str] = mapped_column(String(20))
     data_freshness: Mapped[str] = mapped_column(String(20))
@@ -55,8 +55,8 @@ class DimSource(Base):
 class DimIncidentType(Base):
     __tablename__ = "dim_incident_type"
 
-    type_key: Mapped[int] = mapped_column(init=False, primary_key=True)
-    type_name: Mapped[str] = mapped_column(String(50))
+    incident_type_key: Mapped[int] = mapped_column(init=False, primary_key=True)
+    incident_type: Mapped[str] = mapped_column(String(50))
     category: Mapped[str] = mapped_column(String(50))
 
 
@@ -72,23 +72,23 @@ class DimPriority(Base):
     __tablename__ = "dim_priority"
 
     priority_key: Mapped[int] = mapped_column(init=False, primary_key=True)
-    priority_name: Mapped[str] = mapped_column(String(10))
+    priority: Mapped[str] = mapped_column(String(10))
     rank: Mapped[int]
 
 
 class DimSeverityLevel(Base):
     __tablename__ = "dim_severity_level"
 
-    level_key: Mapped[int] = mapped_column(init=False, primary_key=True)
-    severity_name: Mapped[str] = mapped_column(String(50))
+    severity_key: Mapped[int] = mapped_column(init=False, primary_key=True)
+    severity: Mapped[str] = mapped_column(String(50))
     description: Mapped[str] = mapped_column(String(200))
 
 
 class DimPandemicPotential(Base):
     __tablename__ = "dim_pandemic_potential"
 
-    potential_key: Mapped[int] = mapped_column(init=False, primary_key=True)
-    potential_name: Mapped[str] = mapped_column(String(50))
+    pandemic_potential_key: Mapped[int] = mapped_column(init=False, primary_key=True)
+    pandemic_potential: Mapped[str] = mapped_column(String(50))
     description: Mapped[str] = mapped_column(String(200))
 
 
@@ -103,9 +103,9 @@ class FactIncident(Base):
     last_updated_date_key: Mapped[int] = mapped_column(ForeignKey("dim_date.date_key"))
     event_date_key: Mapped[int] = mapped_column(ForeignKey("dim_date.date_key"))
     country_key: Mapped[int] = mapped_column(ForeignKey("dim_country.country_key"))
-    type_key: Mapped[int] = mapped_column(ForeignKey("dim_incident_type.type_key"))
+    incident_type_key: Mapped[int] = mapped_column(ForeignKey("dim_incident_type.incident_type_key"))
     priority_key: Mapped[int] = mapped_column(ForeignKey("dim_priority.priority_key"))
-    level_key: Mapped[int] = mapped_column(ForeignKey("dim_severity_level.level_key"))
+    severity_key: Mapped[int] = mapped_column(ForeignKey("dim_severity_level.severity_key"))
     source_count: Mapped[int]
     disease_key: Mapped[int | None] = mapped_column(
         ForeignKey("dim_disease.disease_key"), default=None
@@ -116,7 +116,7 @@ class FactIncident(Base):
         ForeignKey("dim_date.date_key"), default=None
     )
     pandemic_potential_key: Mapped[int | None] = mapped_column(
-        ForeignKey("dim_pandemic_potential.potential_key"), default=None
+        ForeignKey("dim_pandemic_potential.pandemic_potential_key"), default=None
     )
     event_status: Mapped[str | None] = mapped_column(Text, default=None)
 
@@ -128,7 +128,7 @@ class FactGdacsEvent(Base):
     incident_key: Mapped[int] = mapped_column(ForeignKey("fact_incident.incident_key"))
     source_key: Mapped[int] = mapped_column(ForeignKey("dim_source.source_key"))
     country_key: Mapped[int] = mapped_column(ForeignKey("dim_country.country_key"))
-    type_key: Mapped[int] = mapped_column(ForeignKey("dim_incident_type.type_key"))
+    incident_type_key: Mapped[int] = mapped_column(ForeignKey("dim_incident_type.incident_type_key"))
     fromdate_key: Mapped[int] = mapped_column(ForeignKey("dim_date.date_key"))
     gdacs_eventid: Mapped[str] = mapped_column(String(64), unique=True)
     episodeid: Mapped[str] = mapped_column(String(64))
@@ -145,7 +145,7 @@ class FactWhoDon(Base):
     incident_key: Mapped[int] = mapped_column(ForeignKey("fact_incident.incident_key"))
     source_key: Mapped[int] = mapped_column(ForeignKey("dim_source.source_key"))
     country_key: Mapped[int] = mapped_column(ForeignKey("dim_country.country_key"))
-    publication_date_key: Mapped[int] = mapped_column(ForeignKey("dim_date.date_key"))
+    source_date_key: Mapped[int] = mapped_column(ForeignKey("dim_date.date_key"))
     don_id: Mapped[str] = mapped_column(String(32), unique=True)
     title: Mapped[str] = mapped_column(String(500))
     provider: Mapped[str] = mapped_column(String(100))
@@ -161,7 +161,7 @@ class FactHealthmapAlert(Base):
     incident_key: Mapped[int] = mapped_column(ForeignKey("fact_incident.incident_key"))
     source_key: Mapped[int] = mapped_column(ForeignKey("dim_source.source_key"))
     country_key: Mapped[int] = mapped_column(ForeignKey("dim_country.country_key"))
-    alert_date_key: Mapped[int] = mapped_column(ForeignKey("dim_date.date_key"))
+    source_date_key: Mapped[int] = mapped_column(ForeignKey("dim_date.date_key"))
     alert_id: Mapped[str] = mapped_column(String(32), unique=True)
     feed_source: Mapped[str] = mapped_column(String(100))
     disease_key: Mapped[int | None] = mapped_column(
@@ -176,7 +176,7 @@ class FactUsgsEarthquake(Base):
     incident_key: Mapped[int] = mapped_column(ForeignKey("fact_incident.incident_key"))
     source_key: Mapped[int] = mapped_column(ForeignKey("dim_source.source_key"))
     country_key: Mapped[int] = mapped_column(ForeignKey("dim_country.country_key"))
-    type_key: Mapped[int] = mapped_column(ForeignKey("dim_incident_type.type_key"))
+    incident_type_key: Mapped[int] = mapped_column(ForeignKey("dim_incident_type.incident_type_key"))
     time_key: Mapped[int] = mapped_column(ForeignKey("dim_date.date_key"))
     usgs_id: Mapped[str] = mapped_column(String(32), unique=True)
     magnitude: Mapped[float]
@@ -192,7 +192,7 @@ class FactNewsArticle(Base):
 
     news_key: Mapped[int] = mapped_column(init=False, primary_key=True)
     source_key: Mapped[int] = mapped_column(ForeignKey("dim_source.source_key"))
-    published_date_key: Mapped[int] = mapped_column(ForeignKey("dim_date.date_key"))
+    source_date_key: Mapped[int] = mapped_column(ForeignKey("dim_date.date_key"))
     url: Mapped[str] = mapped_column(String(500), unique=True)
     headline: Mapped[str] = mapped_column(String(500))
     body: Mapped[str] = mapped_column(Text)
