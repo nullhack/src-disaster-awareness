@@ -13,6 +13,12 @@ const TYPE_COLOR = {
   Wildfire: "#E8741E", "Tropical Cyclone": "#0E9594", Other: "#6E6E6E",
 };
 const typeColor = (t) => TYPE_COLOR[t] || TYPE_COLOR.Other;
+// distinct palette for disease pathogens (disease trend panel)
+const DISEASE_COLOR = {
+  Ebola: "#7A0019", Nipah: "#B4009E", Cholera: "#0E7C7B",
+  Mpox: "#C2410C", Dengue: "#1D4ED8", Other: "#6E6E6E",
+};
+const diseaseColor = (d) => DISEASE_COLOR[d] || DISEASE_COLOR.Other;
 
 /* ISO2 -> [lat, lon] centroids. Approximate country-level for the map. */
 const CENTROIDS = {
@@ -59,10 +65,19 @@ const CENTROIDS = {
 const STATE = {
   manifest: null,
   digest: null,
-  filters: { severities: new Set(["CRITICAL", "HIGH", "MEDIUM", "LOW"]), type: "", region: "", country: "", q: "" },
+  digestDates: [],       // available digest report dates (sorted oldest → newest)
+  digestByDate: {},      // date -> manifest entry
+  digestDate: "",        // currently loaded digest date
+  dpView: { y: 2026, m: 6 }, // calendar month being viewed (UTC, 0-based month)
+  aggIndex: null,       // {windows, default_window, files} from data/agg/index.json
+  agg: {},              // cache: window -> aggregation object (cumulative history)
+  filters: { severities: new Set(["CRITICAL", "HIGH", "MEDIUM", "LOW"]), type: "", region: "", q: "" },
   sort: { key: "severity", dir: "asc" },
   tab: "watchlist",
+  trend: { window: "30", metric: "n" }, // metric: n(news)|e(events); two panels: disease(by pathogen) + geo(by kind)
+  newsOpen: new Set(),  // expanded news-pulse group keys (persist across re-renders)
 };
+if (typeof window !== "undefined") window.STATE = STATE; // debug hook
 
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
@@ -73,6 +88,20 @@ const $$ = (s, r = document) => [...r.querySelectorAll(s)];
     STATE.manifest = await fetchJSON("data/index.json");
     fillDigestPicker();
     if (!STATE.manifest.digests.length) throw new Error("No digests available.");
+
+    // Aggregations are a SEPARATE, global historical artifact (not per-digest).
+    // Preload all of them once; the timeline reads from this cache.
+    try {
+      STATE.aggIndex = await fetchJSON("data/agg/index.json");
+      STATE.trend.window = String(STATE.aggIndex.default_window || STATE.aggIndex.windows[0] || "30");
+      const wins = STATE.aggIndex.windows || [];
+      STATE.agg = {};
+      await Promise.all(wins.map(async (w) => { STATE.agg[w] = await fetchJSON(`data/agg/${STATE.aggIndex.files[w] || (w + ".json")}`); }));
+    } catch (e) { console.warn("Aggregations unavailable, timeline disabled:", e.message); }
+    populateTrendWindow();
+    updateTrendSegs();
+    $("#trendTitle").textContent = `${STATE.trend.window}-day trend`;
+
     const latest = STATE.manifest.digests[STATE.manifest.digests.length - 1];
     await loadDigest(latest.file);
   } catch (err) {
@@ -88,26 +117,107 @@ async function fetchJSON(url) {
 }
 
 function fillDigestPicker() {
-  const sel = $("#digestSelect");
-  sel.innerHTML = STATE.manifest.digests
-    .map((d) => `<option value="${d.file}">${d.date} · ${d.reportable_total} reportable · ${d.critical} crit</option>`)
-    .join("");
-  sel.addEventListener("change", async (e) => {
-    try { await loadDigest(e.target.value); }
+  const digs = STATE.manifest.digests; // oldest → newest
+  STATE.digestDates = digs.map((d) => d.date);
+  STATE.digestByDate = Object.fromEntries(digs.map((d) => [d.date, d]));
+}
+
+const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const DOW = ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"];
+const isoOf = (y, m, d) => `${y}-${String(m + 1).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
+
+function renderCal() {
+  const { y, m } = STATE.dpView;
+  const firstDow = (new Date(Date.UTC(y, m, 1)).getUTCDay() + 6) % 7; // Monday-first
+  const dim = new Date(Date.UTC(y, m + 1, 0)).getUTCDate();
+  let cells = "";
+  for (let i = 0; i < firstDow; i++) cells += `<div class="dp__cell dp__cell--blank"></div>`;
+  for (let d = 1; d <= dim; d++) {
+    const iso = isoOf(y, m, d);
+    const avail = !!STATE.digestByDate[iso];
+    const sel = iso === STATE.digestDate;
+    cells += `<button class="dp__cell${avail ? " dp__cell--avail" : ""}${sel ? " dp__cell--sel" : ""}" data-date="${iso}"${avail ? "" : " disabled"}>${d}</button>`;
+  }
+  $("#dpCal").innerHTML =
+    `<div class="dp__cal-head">
+       <button class="dp__cal-nav" data-nav="-1" type="button" aria-label="Previous month">‹</button>
+       <span>${MONTHS[m]} ${y}</span>
+       <button class="dp__cal-nav" data-nav="1" type="button" aria-label="Next month">›</button>
+     </div>
+     <div class="dp__cal-grid">${DOW.map((d) => `<div class="dp__dow">${d}</div>`).join("")}${cells}</div>`;
+}
+function openCal() {
+  const base = STATE.digestDate ? new Date(STATE.digestDate + "T00:00:00Z") : new Date();
+  STATE.dpView = { y: base.getUTCFullYear(), m: base.getUTCMonth() };
+  renderCal();
+  $("#dpCal").hidden = false;
+  $("#dpLabel").setAttribute("aria-expanded", "true");
+}
+function closeCal() {
+  $("#dpCal").hidden = true;
+  $("#dpLabel").setAttribute("aria-expanded", "false");
+}
+function toggleCal() { $("#dpCal").hidden ? openCal() : closeCal(); }
+
+const tsOf = (iso) => new Date(iso + "T00:00:00Z").getTime();
+
+function nearestDigestDate(iso) {
+  const dates = STATE.digestDates;
+  if (!dates.length) return null;
+  if (dates.includes(iso)) return iso;
+  const t = tsOf(iso);
+  let best = dates[0], bestDiff = Math.abs(t - tsOf(best));
+  for (const d of dates) {
+    const diff = Math.abs(t - tsOf(d));
+    if (diff < bestDiff) { bestDiff = diff; best = d; }
+  }
+  return best;
+}
+
+async function loadDigestByDate(iso) {
+  const nearest = nearestDigestDate(iso);
+  if (!nearest) return;
+  if (nearest !== iso) showToast(`No digest for ${iso} — showing nearest: ${nearest}`);
+  const entry = STATE.digestByDate[nearest];
+  if (entry) {
+    try { await loadDigest(entry.file); }
     catch (err) { showError(err.message); }
-  });
+  }
+}
+
+function stepDigest(dir) {
+  const idx = STATE.digestDates.indexOf(STATE.digestDate);
+  if (idx < 0) return;
+  const ni = idx + dir;
+  if (ni < 0 || ni >= STATE.digestDates.length) return;
+  loadDigestByDate(STATE.digestDates[ni]);
+}
+
+function refreshDateControls() {
+  const idx = STATE.digestDates.indexOf(STATE.digestDate);
+  $("#dpLabel").textContent = STATE.digestDate ? fmtDate(STATE.digestDate) : "—";
+  $("#dpPrev").disabled = idx <= 0;
+  $("#dpNext").disabled = idx < 0 || idx >= STATE.digestDates.length - 1;
+  const entry = STATE.digestByDate[STATE.digestDate];
+  $("#digestMeta").textContent = entry
+    ? `${entry.reportable_total} reportable · ${entry.critical} critical · ${entry.disease_outbreaks} disease`
+    : "";
 }
 
 async function loadDigest(file) {
   STATE.digest = await fetchJSON(`data/${file}`);
   const d = STATE.digest;
-  $("#freshnessLabel").textContent = `Updated ${fmtTime(d.generated_at)} · ${d.report_date}`;
+  STATE.digestDate = d.report_date;
+  $("#freshnessLabel").textContent = `Updated ${(d.generated_at || "").slice(11, 16)} UTC`;
   $("#schemaVer").textContent = "v" + d.schema_version;
   $("#winDays").textContent = d.tracking_window_days;
   populateTypeFilter(d.incidents);
   populateRegionFilter(d.incidents);
-  populateCountryFilter(d.incidents);
-  $("#trendTitle").textContent = `${d.tracking_window_days}-day severity trend`;
+  refreshDateControls();
+  // reset filters to a clean view on digest switch
+  STATE.filters = { severities: new Set(SEV_ORDER), type: "", region: "", q: "" };
+  $("#typeFilter").value = ""; $("#regionFilter").value = ""; $("#searchFilter").value = "";
+  renderSevChips();
   renderAll();
 }
 
@@ -129,7 +239,6 @@ function getFiltered() {
     if (!f.severities.has(i.severity)) return false;
     if (f.type && i.incident_type !== f.type) return false;
     if (f.region && i.region !== f.region) return false;
-    if (f.country && i.country !== f.country) return false;
     if (q) {
       const hay = [i.canonical_name, i.country, i.disease_name, i.incident_id,
         ...(i.search_keys || []), ...(i.news || []).map((n) => n.headline)]
@@ -150,10 +259,13 @@ function populateRegionFilter(incs) {
   $("#regionFilter").innerHTML = `<option value="">All regions</option>` +
     regions.map((t) => `<option>${t}</option>`).join("");
 }
-function populateCountryFilter(incs) {
-  const countries = [...new Set(incs.map((i) => i.country).filter(Boolean))].sort();
-  $("#countryFilter").innerHTML = `<option value="">All countries</option>` +
-    countries.map((t) => `<option>${t}</option>`).join("");
+function populateTrendWindow() {
+  const wins = (STATE.aggIndex && STATE.aggIndex.windows) || ["30"];
+  $("#trendWindow").innerHTML = wins.map((w) => `<option value="${w}">${w} days</option>`).join("");
+  $("#trendWindow").value = STATE.trend.window;
+}
+function updateTrendSegs() {
+  $$(".seg__btn[data-tmetric]").forEach((b) => b.classList.toggle("is-active", b.dataset.tmetric === STATE.trend.metric));
 }
 
 function renderSevChips() {
@@ -170,9 +282,8 @@ function renderKPIs() {
     { label: "Reportable", value: s.reportable_total, sub: `+${s.new_today} new today`, cls: "", act: "reset", hint: "Reset filters" },
     { label: "Critical", value: s.critical, sub: `${s.high} high`, cls: "kpi--crit", act: "sev:CRITICAL", hint: "Show critical only" },
     { label: "Disease outbreaks", value: s.disease_outbreaks, sub: "biological track", cls: "kpi--disease", act: "tab:disease", hint: "Open disease pane" },
-    { label: "Countries", value: s.countries_affected, sub: "affected", cls: "kpi--country", act: "scroll:.card--map", hint: "Jump to map" },
-    { label: "News linked", value: s.news_total, sub: "articles", cls: "kpi--news", act: "tab:news", hint: "Open news pulse" },
-    { label: "Max magnitude", value: s.max_magnitude != null ? s.max_magnitude.toFixed(1) : "—", sub: "USGS instrumental", cls: "kpi--high", act: "maxmag", hint: "Open strongest event" },
+    { label: "Countries", value: s.countries_affected, sub: "affected", cls: "kpi--country", act: "sort:country:asc", hint: "Sort by country" },
+    { label: "News linked", value: s.news_total, sub: "articles", cls: "kpi--news", act: "sort:news_total:desc", hint: "Sort by coverage" },
   ];
   $("#kpis").innerHTML = items.map((it) => `
     <div class="kpi ${it.cls} is-action" role="button" tabindex="0" data-action="${it.act}">
@@ -185,27 +296,34 @@ function renderKPIs() {
 
 function applyKpiAction(act) {
   if (act === "reset") {
-    STATE.filters = { severities: new Set(SEV_ORDER), type: "", region: "", country: "", q: "" };
-    $("#typeFilter").value = ""; $("#regionFilter").value = ""; $("#countryFilter").value = ""; $("#searchFilter").value = "";
+    STATE.filters = { severities: new Set(SEV_ORDER), type: "", region: "", q: "" };
+    $("#typeFilter").value = ""; $("#regionFilter").value = ""; $("#searchFilter").value = "";
     renderSevChips();
+    renderAll();
+    showToast("Filters cleared");
   } else if (act.startsWith("sev:")) {
     const sev = act.split(":")[1];
     STATE.filters.severities = new Set([sev]);
     renderSevChips();
+    renderAll();
+    selectTab("watchlist");
+    showToast(`Filtered to ${sev} only`);
   } else if (act.startsWith("tab:")) {
     selectTab(act.split(":")[1]);
-  } else if (act.startsWith("scroll:")) {
-    const el = $(act.split(":")[1]); if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-  } else if (act === "maxmag") {
-    const incs = STATE.digest.incidents;
-    let best = null;
-    incs.forEach((i) => {
-      const m = i.physical && i.physical.max_magnitude;
-      if (m != null && (!best || m > (best.physical && best.physical.max_magnitude || -Infinity))) best = i;
-    });
-    if (best) { selectTab("watchlist"); openDrawer(best.incident_id); return; }
+  } else if (act.startsWith("sort:")) {
+    const [, key, dir] = act.split(":");
+    STATE.sort = { key, dir: dir || "asc" };
+    selectTab("watchlist");
+    renderWatchlist();
+    const labels = { country: "country", news_total: "news coverage", magnitude: "magnitude" };
+    showToast(`Watchlist sorted by ${labels[key] || key}`);
   }
-  renderAll();
+}
+
+function showToast(msg) {
+  const t = $("#toast"); t.textContent = msg; t.hidden = false;
+  clearTimeout(t._timer);
+  t._timer = setTimeout(() => { t.hidden = true; }, 2600);
 }
 
 /* ---------- MAP (D3) ---------- */
@@ -238,34 +356,37 @@ async function renderMap() {
     .selectAll("path").data(countries.features).join("path")
     .attr("class", "country").attr("d", _path);
 
-  // aggregate by country from filtered incidents
+  // aggregate by country from filtered incidents (size = linked news volume)
   const filtered = getFiltered();
   const byCountry = new Map();
   filtered.forEach((i) => {
     if (i.iso2 === "XX" || i.lat == null) return;
-    const c = byCountry.get(i.iso2) || { iso2: i.iso2, country: i.country, count: 0, maxRank: 99, lat: i.lat, lon: i.lon };
+    const c = byCountry.get(i.iso2) || { iso2: i.iso2, country: i.country, count: 0, news: 0, maxRank: 99, lat: i.lat, lon: i.lon };
     c.count += 1;
+    c.news += i.news_total || 0;
     c.maxRank = Math.min(c.maxRank, SEV_RANK[i.severity]);
     byCountry.set(i.iso2, c);
   });
   const bubbles = [...byCountry.values()];
 
-  const rScale = d3.scaleSqrt().domain([1, d3.max(bubbles, (d) => d.count) || 1]).range([5, 22]);
+  const newsMax = d3.max(bubbles, (d) => d.news) || 1;
+  const rScale = d3.scaleSqrt().domain([0, newsMax]).range([4, 24]);
 
   const bubbleG = g.append("g").attr("class", "bubbles");
   bubbleG.selectAll("circle").data(bubbles).join("circle")
-    .attr("class", (d) => "bubble" + (STATE.filters.country === d.country ? " bubble--sel" : ""))
+    .attr("class", (d) => "bubble" + (STATE.filters.q && STATE.filters.q.trim().toLowerCase() === d.country.toLowerCase() ? " bubble--sel" : ""))
     .attr("cx", (d) => _proj([d.lon, d.lat])[0])
     .attr("cy", (d) => _proj([d.lon, d.lat])[1])
-    .attr("r", (d) => rScale(d.count))
+    .attr("r", (d) => rScale(d.news))
     .attr("fill", (d) => SEV_COLOR[SEV_ORDER[d.maxRank]])
     .attr("fill-opacity", .78)
     .on("click", (e, d) => {
-      STATE.filters.country = (STATE.filters.country === d.country) ? "" : d.country;
-      $("#countryFilter").value = STATE.filters.country;
+      const cur = STATE.filters.q.trim().toLowerCase();
+      STATE.filters.q = (cur === d.country.toLowerCase()) ? "" : d.country;
+      $("#searchFilter").value = STATE.filters.q;
       renderAll();
     })
-    .append("title").text((d) => `${d.country} · ${d.count} incident(s) · max ${SEV_ORDER[d.maxRank]} · click to filter`);
+    .append("title").text((d) => `${d.country} · ${d.count} incident(s) · ${d.news} news · max ${SEV_ORDER[d.maxRank]} · click to filter`);
 
   if (!bubbles.length) {
     g.append("text").attr("x", width / 2).attr("y", height / 2)
@@ -277,96 +398,116 @@ async function renderMap() {
   const legend = $("#mapLegend");
   legend.innerHTML = SEV_ORDER.map((s) =>
     `<span><span class="dot dot--${s}"></span> ${s}</span>`).join("") +
-    `<span style="margin-top:4px;color:#6E6E6E">size = count</span>`;
+    `<span style="margin-top:4px;color:#6E6E6E">size = news volume</span>`;
 }
 
-/* ---------- TREND (multi-line, % of period peak) ---------- */
-function buildTrendSeries() {
-  const digest = STATE.digest;
-  const win = digest.tracking_window_days || 14;
-  const asOf = digest.as_of || digest.report_date;
-  const start = new Date(asOf + "T00:00:00Z");
-  start.setUTCDate(start.getUTCDate() - (win - 1));
-  const dates = [];
-  for (let i = 0; i < win; i++) {
-    const d = new Date(start);
-    d.setUTCDate(start.getUTCDate() + i);
-    dates.push(d.toISOString().slice(0, 10));
-  }
-  const byDate = new Map((digest.trend || []).map((d) => [d.date, d]));
-  const series = SEV_ORDER.map((sev) => ({
-    sev,
-    values: dates.map((dt) => {
-      const row = byDate.get(dt) || {};
-      return { date: dt, sev, count: row[sev] || 0 };
-    }),
+/* ---------- TREND (multi-line, raw counts on log scale) ---------- */
+const METRIC_LABEL = { n: "news", e: "events" };
+
+function buildSeries(data, groupField, keys, colorFn) {
+  const metric = STATE.trend.metric;
+  return keys.map((k) => ({
+    key: k, color: colorFn(k),
+    values: data.map((day) => ({ date: day.date, count: ((day[groupField] || {})[k] || {})[metric] || 0 })),
   }));
-  return { dates, series };
 }
 
-function renderTrend() {
-  const svg = d3.select("#trendChart");
+function renderTrendPanel(svgSel, legendSel, tdata, series, bucket) {
+  const svg = d3.select(svgSel);
   svg.selectAll("*").remove();
-  const { dates, series } = buildTrendSeries();
-  const globalMax = d3.max(series.flatMap((s) => s.values), (v) => v.count) || 1;
+  const t = STATE.trend;
+  const perLbl = bucket === "week" ? "wk" : "d";
+  const width = (document.querySelector(svgSel).clientWidth) || 520;
+  const height = 240, m = { t: 14, r: 16, b: 40, l: 40 };
 
-  // legend (color index)
-  $("#trendLegend").innerHTML = series.map((s) => {
-    const peak = d3.max(s.values, (v) => v.count) || 0;
-    return `<span class="trend-legend__item">
-      <span class="trend-legend__swatch" style="background:${SEV_COLOR[s.sev]}"></span>
-      ${s.sev} <span style="color:#6E6E6E;font-weight:500">(peak ${peak}/day)</span>
-    </span>`;
-  }).join("");
+  const totals = series.map((s) => ({ key: s.key, color: s.color, total: d3.sum(s.values, (v) => v.count), peak: d3.max(s.values, (v) => v.count) || 0 }));
+  totals.sort((a, b) => b.total - a.total);
+  const globalMax = d3.max(totals, (d) => d.peak) || 1;
 
-  const width = $("#trendChart").clientWidth || 600;
-  const height = 260, m = { t: 16, r: 18, b: 44, l: 40 };
+  // legend (color index) — ordered by total volume, only non-zero shown
+  const legendItems = totals.filter((d) => d.total > 0);
+  document.querySelector(legendSel).innerHTML = (legendItems.length ? legendItems : totals).map((d) =>
+    `<span class="trend-legend__item">
+      <span class="trend-legend__swatch" style="background:${d.color}"></span>
+      ${esc(d.key)} <span style="color:#6E6E6E;font-weight:500">(Σ${d.total} · peak ${d.peak}/${perLbl})</span>
+    </span>`).join("");
+
+  if (!tdata.length || globalMax <= 1 && legendItems.length === 0) {
+    svg.attr("viewBox", `0 0 ${width} ${height}`);
+    svg.append("text").attr("x", width / 2).attr("y", height / 2).attr("text-anchor", "middle")
+      .style("font-size", "13px").style("fill", "#6E6E6E").text("No data for this window.");
+    return;
+  }
+
   svg.attr("viewBox", `0 0 ${width} ${height}`);
+  const x = d3.scalePoint().domain(tdata.map((d) => d.date)).range([m.l, width - m.r]).padding(0.5);
+  const y = d3.scaleSymlog().constant(1).domain([0, globalMax]).range([height - m.b, m.t]);
+  const yTicks = [0, 1, 2, 5, 10, 20, 50, 100, 200, 500].filter((v) => v <= globalMax);
+  if (globalMax > 0 && !yTicks.includes(globalMax) && globalMax <= 500) yTicks.push(globalMax);
 
-  const x = d3.scalePoint().domain(dates).range([m.l, width - m.r]).padding(0.5);
-  const y = d3.scaleLinear().domain([0, 100]).range([height - m.b, m.t]);
-  const pct = (c) => y(globalMax ? (c / globalMax * 100) : 0);
-
-  // gridlines
-  svg.append("g").selectAll("line").data([0, 25, 50, 75, 100]).join("line")
+  svg.append("g").selectAll("line").data(yTicks).join("line")
     .attr("x1", m.l).attr("x2", width - m.r)
     .attr("y1", (d) => y(d)).attr("y2", (d) => y(d))
     .attr("stroke", "#ECEEF1");
 
-  // y axis (percent)
   svg.append("g").attr("transform", `translate(${m.l},0)`)
-    .call(d3.axisLeft(y).tickValues([0, 25, 50, 75, 100]).tickFormat((d) => d + "%").tickSize(0))
+    .call(d3.axisLeft(y).tickValues(yTicks).tickFormat((d) => d).tickSize(0))
     .call((g) => g.select(".domain").remove())
     .selectAll("text").classed("trend-axis-label", true);
   svg.append("text").attr("x", m.l).attr("y", m.t - 6)
-    .classed("trend-axis-label", true).text("% of peak day");
+    .classed("trend-axis-label", true).text(`${METRIC_LABEL[t.metric]} / ${bucket === "week" ? "wk" : "day"}`);
 
-  const line = d3.line()
-    .x((d) => x(d.date))
-    .y((d) => pct(d.count))
-    .curve(d3.curveMonotoneX);
-
+  const line = d3.line().x((d) => x(d.date)).y((d) => y(d.count)).curve(d3.curveMonotoneX);
   series.forEach((s) => {
     svg.append("path").datum(s.values).attr("d", line)
-      .attr("fill", "none").attr("stroke", SEV_COLOR[s.sev])
-      .attr("stroke-width", 2).attr("stroke-linejoin", "round");
-    svg.append("g").selectAll("circle").data(s.values).join("circle")
-      .attr("cx", (d) => x(d.date)).attr("cy", (d) => pct(d.count))
-      .attr("r", 2.6).attr("fill", SEV_COLOR[s.sev])
-      .style("cursor", "pointer")
-      .append("title")
-      .text((d) => `${fmtDate(d.date)} · ${s.sev}: ${d.count} incident(s)`);
+      .attr("fill", "none").attr("stroke", s.color)
+      .attr("stroke-width", 2).attr("stroke-linejoin", "round").attr("stroke-opacity", .9);
+    svg.append("g").selectAll("circle").data(s.values.filter((v) => v.count > 0)).join("circle")
+      .attr("cx", (d) => x(d.date)).attr("cy", (d) => y(d.count))
+      .attr("r", 2.6).attr("fill", s.color).style("cursor", "pointer")
+      .append("title").text((d) => `${fmtDate(d.date)} · ${s.key}: ${d.count} ${METRIC_LABEL[t.metric]}`);
   });
 
-  // x axis — thin labels to avoid overlap
-  const step = Math.max(1, Math.ceil(dates.length / 7));
-  const xAxis = d3.axisBottom(x).tickSize(0)
-    .tickValues(dates.filter((_, i) => i % step === 0))
-    .tickFormat((d) => fmtDate(d));
+  const step = Math.max(1, Math.ceil(tdata.length / 7));
   svg.append("g").attr("transform", `translate(0,${height - m.b})`)
-    .call(xAxis).call((g) => g.select(".domain").remove())
+    .call(d3.axisBottom(x).tickSize(0)
+      .tickValues(tdata.map((d) => d.date).filter((_, i) => i % step === 0))
+      .tickFormat((d) => (bucket === "week" ? fmtDateYear(d) : fmtDate(d))))
+    .call((g) => g.select(".domain").remove())
     .selectAll("text").classed("trend-axis-label", true)
     .attr("transform", "rotate(-30)").style("text-anchor", "end");
+}
+
+function renderTrend() {
+  const t = STATE.trend;
+  const agg = STATE.agg[t.window];
+  const data = (agg && agg.series) || [];
+  const bucket = (agg && agg.bucket) || "day";
+
+  const geoKeys = [...new Set(data.flatMap((d) => Object.keys(d.type || {})))].sort();
+  const disKeys = [...new Set(data.flatMap((d) => Object.keys(d.disease || {})))].sort();
+  const geoSeries = buildSeries(data, "type", geoKeys, typeColor);
+  const disSeries = buildSeries(data, "disease", disKeys, diseaseColor);
+
+  // shared leading-empty trim so both panels share the same x-range
+  const anyActive = (i) =>
+    geoSeries.some((s) => s.values[i].count > 0) || disSeries.some((s) => s.values[i].count > 0);
+  let firstAct = 0;
+  while (firstAct < data.length - 1 && !anyActive(firstAct)) firstAct++;
+  const tdata = data.slice(firstAct);
+  const tGeo = geoSeries.map((s) => ({ ...s, values: s.values.slice(firstAct) }));
+  const tDis = disSeries.map((s) => ({ ...s, values: s.values.slice(firstAct) }));
+
+  renderTrendPanel("#trendGeo", "#trendLegendGeo", tdata, tGeo, bucket);
+  renderTrendPanel("#trendDisease", "#trendLegendDisease", tdata, tDis, bucket);
+
+  const endIso = (agg && agg.as_of) || (tdata.length ? tdata[tdata.length - 1].date : "");
+  const startIso = tdata.length ? tdata[0].date : endIso;
+  const startLbl = startIso.slice(0, 4) === endIso.slice(0, 4) ? fmtDate(startIso) : fmtDateYear(startIso);
+  $("#trendHint").textContent = tdata.length
+    ? `${bucket === "week" ? "Weekly" : "Daily"} · ${METRIC_LABEL[t.metric]} · log scale · ${startLbl} → ${fmtDateYear(endIso)}${agg && agg.synthetic ? " · sample data" : ""}`
+    : "Aggregation unavailable for this window.";
+  $("#trendTitle").textContent = `${t.window}-day trend`;
 }
 
 /* ---------- WATCHLIST TABLE ---------- */
@@ -374,11 +515,12 @@ const sortableKeys = {
   severity: (i) => SEV_RANK[i.severity],
   priority: (i) => i.priority_rank || 99,
   canonical_name: (i) => i.canonical_name.toLowerCase(),
-  country: (i) => i.country.toLowerCase(),
+  country: (i) => (i.country || "").toLowerCase(),
   incident_type: (i) => i.incident_type,
   event_date: (i) => i.event_date,
   news_total: (i) => i.news_total,
   sources: (i) => i.source_count,
+  magnitude: (i) => (i.physical && i.physical.max_magnitude != null) ? i.physical.max_magnitude : -Infinity,
 };
 function renderWatchlist() {
   const tbody = $("#watchTable tbody");
@@ -395,7 +537,7 @@ function renderWatchlist() {
       </td>
       <td class="cell-country">${esc(i.country)}<small>${esc(i.region || "")}</small></td>
       <td>${typePill(i.incident_type)}</td>
-      <td><div class="cell-name">${i.event_date}</div><div class="cell-sub">${i.days_since_event ?? "?"}d ago</div></td>
+      <td><div class="cell-name">${fmtDate(i.event_date)}</div><div class="cell-sub">${i.days_since_event ?? "?"}d ago</div></td>
       <td class="num"><b>${i.news_total}</b></td>
       <td class="num">${sourceTags(i.sources)}</td>
     </tr>`).join("");
@@ -426,7 +568,7 @@ function renderDiseaseGrid() {
       <div class="disease-card__head">
         <div>
           <div class="disease-card__name">${esc(i.disease_name || i.canonical_name)}</div>
-          <div class="disease-card__meta">${esc(i.country)} · event ${i.event_date} · ${i.days_since_event ?? "?"}d ago</div>
+          <div class="disease-card__meta">${esc(i.country)} · event ${fmtDate(i.event_date)} · ${i.days_since_event ?? "?"}d ago</div>
         </div>
         <span class="chip chip--${i.severity}">${i.severity}</span>
       </div>
@@ -442,19 +584,17 @@ function renderDiseaseGrid() {
     c.addEventListener("click", () => openDrawer(c.dataset.id)));
 }
 
-/* ---------- NEWS PULSE ---------- */
+/* ---------- NEWS PULSE (grouped by kind, disease sub-grouped by pathogen) ---------- */
 function renderNewsPulse() {
   const items = getFiltered().flatMap((i) =>
     (i.news || []).map((n) => ({ ...n, incident: i })));
   items.sort((a, b) => (b.published_date || "").localeCompare(a.published_date || ""));
 
-  // total across the WHOLE digest (before filters) so users see the cap leak honestly
   const totalDigest = STATE.digest.summary.news_total || 0;
   const outlets = [...new Set(items.map((n) => n.outlet).filter(Boolean))];
   const dates = items.map((n) => n.published_date).filter(Boolean).sort();
   const range = dates.length ? `${fmtDate(dates[0])} → ${fmtDate(dates[dates.length - 1])}` : "—";
   const cap = 200;
-  const shown = items.slice(0, cap);
 
   $("#cntNews").textContent = items.length;
   $("#newsEmpty").hidden = items.length > 0;
@@ -462,19 +602,55 @@ function renderNewsPulse() {
     <span><b>${items.length}</b> article(s) linked to the filtered incidents</span>
     <span><b>${outlets.length}</b> outlet(s)</span>
     <span>published: <b>${range}</b></span>
-    <span>showing <b>${Math.min(shown.length, items.length)}</b> of <b>${items.length}</b>${totalDigest ? ` (digest total ${totalDigest})` : ""}</span>
-    <span class="news-summary__explain">Newest first · sorted by publish date · click any row to open the linked incident in the detail drawer.</span>`;
-  $("#newsPulse").innerHTML = shown.map((n) => `
-    <li data-id="${n.incident.incident_id}">
-      <span class="news-date">${esc(n.published_date || "—")}</span>
-      <span>
-        <div class="news-headline"><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.headline)}</a></div>
-        <div class="news-outlet">${esc(n.outlet || "")} · ${esc(n.incident.country)} · <code>${esc(n.incident.incident_id)}</code></div>
-      </span>
-      <span class="news-sev"><span class="dot dot--${n.incident.severity}"></span>${n.incident.severity}</span>
-    </li>`).join("");
-  $$("#newsPulse li").forEach((li) =>
-    li.addEventListener("click", (e) => { if (e.target.tagName !== "A") openDrawer(li.dataset.id); }));
+    <span>showing <b>${Math.min(items.length, cap)}</b> of <b>${items.length}</b>${totalDigest ? ` (digest total ${totalDigest})` : ""}</span>
+    <span class="news-summary__explain">Grouped by incident kind (disease split by pathogen), largest coverage first · click a bar to expand · click a row to open the linked incident.</span>`;
+
+  // group: disease -> pathogen name; otherwise incident_type
+  const groups = new Map();
+  items.forEach((n) => {
+    const inc = n.incident;
+    const isDisease = inc.is_disease;
+    const key = isDisease ? ("Disease: " + (inc.disease_name || "Disease")) : inc.incident_type;
+    const label = isDisease ? (inc.disease_name || "Disease") : inc.incident_type;
+    const color = typeColor(isDisease ? "Disease" : inc.incident_type);
+    let g = groups.get(key);
+    if (!g) { g = { key, label, color, items: [], incidents: new Set() }; groups.set(key, g); }
+    g.items.push(n); g.incidents.add(inc.incident_id);
+  });
+  const groupList = [...groups.values()].map((g) => ({
+    key: g.key, label: g.label, color: g.color, items: g.items, total: g.items.length, incidentCount: g.incidents.size,
+  })).sort((a, b) => b.total - a.total);
+
+  const maxTotal = groupList.length ? groupList[0].total : 1;
+  const shown = (arr) => arr.slice(0, cap);
+  $("#newsPulse").innerHTML = groupList.map((g) => `
+    <details class="news-group"${STATE.newsOpen.has(g.key) ? " open" : ""} data-key="${esc(g.key)}">
+      <summary class="news-group__head">
+        <span class="news-group__chev" aria-hidden="true"></span>
+        <span class="news-group__swatch" style="background:${g.color}"></span>
+        <span class="news-group__name">${esc(g.label)}</span>
+        <span class="news-group__count">${g.total} news · ${g.incidentCount} incident(s)</span>
+        <span class="news-group__bar"><span style="width:${Math.round(g.total / maxTotal * 100)}%"></span></span>
+      </summary>
+      <div class="news-group__items">
+        ${shown(g.items).map((n) => `
+          <div class="news-row" data-id="${n.incident.incident_id}">
+            <span class="news-date">${fmtDate(n.published_date) || "—"}</span>
+            <span>
+              <div class="news-headline"><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.headline)}</a></div>
+              <div class="news-outlet">${esc(n.outlet || "")} · ${esc(n.incident.country)} · <code>${esc(n.incident.incident_id)}</code></div>
+            </span>
+            <span class="news-sev"><span class="dot dot--${n.incident.severity}"></span>${n.incident.severity}</span>
+          </div>`).join("")}
+      </div>
+    </details>`).join("");
+  // persist expansion across re-renders
+  $$("#newsPulse details.news-group").forEach((d) =>
+    d.addEventListener("toggle", () => {
+      if (d.open) STATE.newsOpen.add(d.dataset.key); else STATE.newsOpen.delete(d.dataset.key);
+    }));
+  $$("#newsPulse .news-row").forEach((row) =>
+    row.addEventListener("click", (e) => { if (e.target.tagName !== "A") openDrawer(row.dataset.id); }));
 }
 
 /* ---------- DRAWER ---------- */
@@ -500,9 +676,9 @@ function openDrawer(id) {
         ${kv("Country", `${esc(i.country)} (${i.iso2})`)}
         ${kv("Region", esc(i.region || "—"))}
         ${kv("Country group", esc(i.country_group || "—"))}
-        ${kv("Event date", `${esc(i.event_date)} · ${i.days_since_event ?? "?"}d ago`)}
-        ${kv("First tracked", esc(i.first_reported_date || "—"))}
-        ${kv("Last updated", esc(i.last_updated_date || "—"))}
+        ${kv("Event date", `${fmtDate(i.event_date)} · ${i.days_since_event ?? "?"}d ago`)}
+        ${kv("First tracked", fmtDate(i.first_reported_date) || "—")}
+        ${kv("Last updated", fmtDate(i.last_updated_date) || "—")}
         ${i.disease_name ? kv("Disease", esc(i.disease_name)) : ""}
         ${phys.max_magnitude != null ? kv("Max magnitude", `M${phys.max_magnitude}`) : ""}
         ${phys.max_depth_km != null ? kv("Depth", `${phys.max_depth_km} km`) : ""}
@@ -512,14 +688,22 @@ function openDrawer(id) {
     ${phys.place ? `<div class="drawer__section"><h3>Locality</h3><div style="font-size:13px;color:#4A4A4A">${esc(phys.place)}</div></div>` : ""}
     <div class="drawer__section">
       <h3>Source coverage · ${i.source_count} record(s)</h3>
-      <div class="cell-src">
-        ${sourceTagsDetailed(i.sources)}
-      </div>
+      <div class="cell-src">${sourceTagsDetailed(i.sources)}</div>
+      ${(i.source_links && i.source_links.length) ? `
+        <h4 class="drawer__subhead">Original source records (${i.source_links.length})</h4>
+        <ul class="src-links">
+          ${i.source_links.map((L) => `
+            <li><a class="src-link" href="${esc(L.url)}" target="_blank" rel="noopener">
+              <span class="src-link__type src-link__type--${L.type}">${L.type}</span>
+              <span class="src-link__label">${esc(L.label)}${L.meta ? ` <em>${esc(L.meta)}</em>` : ""}</span>
+              <span class="src-link__arrow" aria-hidden="true">↗</span>
+            </a></li>`).join("")}
+        </ul>` : `<p class="muted">No deep links available for this incident.</p>`}
     </div>
     ${(i.news && i.news.length) ? `<div class="drawer__section"><h3>News · ${i.news_total} linked (${i.news.length} shown)</h3>
       <ul class="drawer__news">${i.news.map((n) => `
         <li><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.headline)}</a>
-        <div class="meta">${esc(n.published_date || "")} · ${esc(n.outlet || "")}</div></li>`).join("")}</ul></div>` : ""}
+        <div class="meta">${fmtDate(n.published_date) || ""} · ${esc(n.outlet || "")}</div></li>`).join("")}</ul></div>` : ""}
     ${(i.search_keys && i.search_keys.length) ? `<div class="drawer__section"><h3>Search keys</h3>
       <div class="keys">${i.search_keys.map((k) => `<code>${esc(k)}</code>`).join("")}</div></div>` : ""}
   `;
@@ -562,13 +746,21 @@ function sourceTagsDetailed(s) {
 function fmtTime(iso) {
   if (!iso) return "";
   const d = new Date(iso);
-  return d.toLocaleString("en-GB", { month: "short", day: "numeric", hour: "2-digit", minute: "2-digit", timeZone: "UTC" }) + " UTC";
+  const dd = String(d.getUTCDate()).padStart(2, "0");
+  const mm = String(d.getUTCMonth() + 1).padStart(2, "0");
+  const HH = String(d.getUTCHours()).padStart(2, "0");
+  const MM = String(d.getUTCMinutes()).padStart(2, "0");
+  return `${dd}/${mm}/${d.getUTCFullYear()} ${HH}:${MM} UTC`;
 }
+// All dates render day-first (dd/mm/yyyy) — never US month-first.
 function fmtDate(iso) {
   if (!iso) return "";
   const d = new Date(iso + "T00:00:00Z");
-  return d.toLocaleDateString("en-GB", { month: "short", day: "numeric", timeZone: "UTC" });
+  const dd = String(d.getUTCDate()).padStart(2, "0");
+  const mm = String(d.getUTCMonth() + 1).padStart(2, "0");
+  return `${dd}/${mm}/${d.getUTCFullYear()}`;
 }
+const fmtDateYear = fmtDate;
 function showError(msg) {
   const t = $("#toast"); t.textContent = msg; t.hidden = false;
   setTimeout(() => { t.hidden = true; }, 5000);
@@ -594,8 +786,35 @@ function wireGlobalEvents() {
   });
   $("#typeFilter").addEventListener("change", (e) => { STATE.filters.type = e.target.value; renderAll(); });
   $("#regionFilter").addEventListener("change", (e) => { STATE.filters.region = e.target.value; renderAll(); });
-  $("#countryFilter").addEventListener("change", (e) => { STATE.filters.country = e.target.value; renderAll(); });
   $("#searchFilter").addEventListener("input", (e) => { STATE.filters.q = e.target.value; renderAll(); });
+
+  // date picker
+  $("#dpPrev").addEventListener("click", () => stepDigest(-1));
+  $("#dpNext").addEventListener("click", () => stepDigest(1));
+  $("#dpLabel").addEventListener("click", toggleCal);
+  $("#dpCal").addEventListener("click", (e) => {
+    const nav = e.target.closest("[data-nav]");
+    if (nav) {
+      const nm = STATE.dpView.m + Number(nav.dataset.nav);
+      STATE.dpView = { y: STATE.dpView.y + Math.floor(nm / 12), m: ((nm % 12) + 12) % 12 };
+      renderCal();
+      return;
+    }
+    const cell = e.target.closest("[data-date]");
+    if (cell) { closeCal(); loadDigestByDate(cell.dataset.date); }
+  });
+  document.addEventListener("click", (e) => {
+    if (!$("#dpCal").hidden && !$("#digestPicker").contains(e.target)) closeCal();
+  });
+
+  // trend controls
+  $$(".seg__btn[data-tmetric]").forEach((b) => b.addEventListener("click", () => {
+    STATE.trend.metric = b.dataset.tmetric; updateTrendSegs(); renderTrend();
+  }));
+  $("#trendWindow").addEventListener("change", (e) => {
+    STATE.trend.window = e.target.value;
+    renderTrend();
+  });
 
   // KPI actions (click + keyboard)
   $("#kpis").addEventListener("click", (e) => {
@@ -609,8 +828,8 @@ function wireGlobalEvents() {
   });
 
   $("#clearFilters").addEventListener("click", () => {
-    STATE.filters = { severities: new Set(SEV_ORDER), type: "", region: "", country: "", q: "" };
-    $("#typeFilter").value = ""; $("#regionFilter").value = ""; $("#countryFilter").value = ""; $("#searchFilter").value = "";
+    STATE.filters = { severities: new Set(SEV_ORDER), type: "", region: "", q: "" };
+    $("#typeFilter").value = ""; $("#regionFilter").value = ""; $("#searchFilter").value = "";
     renderSevChips(); renderAll();
   });
 
@@ -629,7 +848,7 @@ function wireGlobalEvents() {
   // drawer close
   $("#drawerClose").addEventListener("click", closeDrawer);
   $("#scrim").addEventListener("click", closeDrawer);
-  document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeDrawer(); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") { closeCal(); closeDrawer(); } });
 
   // re-render charts on resize (debounced)
   let rt;

@@ -1,45 +1,43 @@
 {
   "schema_version": "1.4",
-  "report_date": "2026-07-02",
-  "generated_at": "2026-07-02T11:37:00Z",
-  "as_of": "2026-07-02",
+  "report_date": "2026-07-01",
+  "generated_at": "2026-07-01T11:37:00Z",
+  "as_of": "2026-07-01",
   "tracking_window_days": 14,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 26,
-    "new_today": 10,
+    "reportable_total": 18,
+    "new_today": 5,
     "critical": 3,
-    "high": 7,
-    "medium": 8,
+    "high": 5,
+    "medium": 2,
     "low": 8,
     "disease_outbreaks": 2,
-    "countries_affected": 18,
-    "news_total": 165,
+    "countries_affected": 14,
+    "news_total": 164,
     "max_magnitude": 6.0,
     "by_severity": {
       "CRITICAL": 3,
-      "HIGH": 7,
-      "MEDIUM": 8,
+      "HIGH": 5,
+      "MEDIUM": 2,
       "LOW": 8
     },
     "by_type": {
-      "Earthquake": 22,
+      "Earthquake": 14,
       "Disease": 2,
       "Tropical Cyclone": 2
     },
     "by_region": {
-      "Americas": 5,
-      "Asia": 13,
+      "Americas": 3,
+      "Asia": 10,
       "Africa": 1,
-      "Antarctica": 1,
-      "Europe": 1,
-      "Oceania": 5
+      "Oceania": 4
     }
   },
   "by_country": [
     {
       "country": "Philippines",
-      "count": 4,
+      "count": 3,
       "max_sev_rank": 1,
       "iso2": "PH",
       "region": "Asia",
@@ -66,20 +64,11 @@
     },
     {
       "country": "Japan",
-      "count": 3,
+      "count": 2,
       "max_sev_rank": 2,
       "iso2": "JP",
       "region": "Asia",
       "country_group": "A",
-      "max_severity": "HIGH"
-    },
-    {
-      "country": "Fiji",
-      "count": 2,
-      "max_sev_rank": 2,
-      "iso2": "FJ",
-      "region": "Oceania",
-      "country_group": "B",
       "max_severity": "HIGH"
     },
     {
@@ -92,21 +81,12 @@
       "max_severity": "HIGH"
     },
     {
-      "country": "South Georgia and South Sandwich Is.",
+      "country": "Fiji",
       "count": 1,
       "max_sev_rank": 2,
-      "iso2": "GS",
-      "region": "Antarctica",
-      "country_group": "C",
-      "max_severity": "HIGH"
-    },
-    {
-      "country": "Greece",
-      "count": 1,
-      "max_sev_rank": 2,
-      "iso2": "GR",
-      "region": "Europe",
-      "country_group": "C",
+      "iso2": "FJ",
+      "region": "Oceania",
+      "country_group": "B",
       "max_severity": "HIGH"
     },
     {
@@ -126,33 +106,6 @@
       "region": "Asia",
       "country_group": "A",
       "max_severity": "HIGH"
-    },
-    {
-      "country": "Indonesia",
-      "count": 2,
-      "max_sev_rank": 3,
-      "iso2": "ID",
-      "region": "Asia",
-      "country_group": "A",
-      "max_severity": "MEDIUM"
-    },
-    {
-      "country": "Peru",
-      "count": 1,
-      "max_sev_rank": 3,
-      "iso2": "PE",
-      "region": "Americas",
-      "country_group": "C",
-      "max_severity": "MEDIUM"
-    },
-    {
-      "country": "Chile",
-      "count": 1,
-      "max_sev_rank": 3,
-      "iso2": "CL",
-      "region": "Americas",
-      "country_group": "C",
-      "max_severity": "MEDIUM"
     },
     {
       "country": "Northern Mariana Islands",
@@ -188,6 +141,15 @@
       "iso2": "PG",
       "region": "Oceania",
       "country_group": "B",
+      "max_severity": "LOW"
+    },
+    {
+      "country": "Indonesia",
+      "count": 1,
+      "max_sev_rank": 4,
+      "iso2": "ID",
+      "region": "Asia",
+      "country_group": "A",
       "max_severity": "LOW"
     },
     {
@@ -596,164 +558,6 @@
         }
       ],
       "news_total": 28
-    },
-    {
-      "incident_id": "20260702-GS-EQ",
-      "canonical_name": "Earthquake South Sandwich Islands region July 2026",
-      "summary": "On July 2, 2026, a series of earthquakes occurred in the South Sandwich Islands region, with magnitudes ranging from 4.9 to 5.3. These seismic events took place at various depths, and reports indicate that no people were affected within 100km of the epicenters.",
-      "country": "South Georgia and South Sandwich Is.",
-      "iso2": "GS",
-      "lat": -54.43,
-      "lon": -36.58,
-      "country_group": "C",
-      "region": "Antarctica",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "HIGH",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": "NONE",
-      "event_status": null,
-      "disease_name": null,
-      "event_date": "2026-07-02",
-      "first_reported_date": "2026-07-02",
-      "last_updated_date": "2026-07-02",
-      "days_since_event": 0,
-      "source_count": 7,
-      "should_report": true,
-      "search_keys": [
-        "South Sandwich Islands region earthquake July 2026",
-        "South Georgia and South Sandwich Is. earthquake July 2026",
-        "South Sandwich Islands region earthquake 2026"
-      ],
-      "sources": {
-        "who_don": 0,
-        "usgs": 4,
-        "gdacs": 3,
-        "healthmap": 0,
-        "news": 0
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M5.3 \u00b7 South Sandwich Islands region",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9kl/executive",
-          "meta": "10 km depth"
-        },
-        {
-          "type": "USGS",
-          "label": "M5.2 \u00b7 east of the South Sandwich Islands",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9kj/executive",
-          "meta": "10 km depth"
-        },
-        {
-          "type": "USGS",
-          "label": "M5.2 \u00b7 South Sandwich Islands region",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9jv/executive",
-          "meta": "183 km depth"
-        },
-        {
-          "type": "USGS",
-          "label": "M4.9 \u00b7 South Sandwich Islands region",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9jm/executive",
-          "meta": "110 km depth"
-        },
-        {
-          "type": "GDACS",
-          "label": "Green alert \u00b7 Magnitude 5.2M, Depth:10km",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1549687&episodeid=1715779",
-          "meta": "pop 0"
-        },
-        {
-          "type": "GDACS",
-          "label": "Green alert \u00b7 Magnitude 5.2M, Depth:183.5km",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1549674&episodeid=1715765",
-          "meta": "pop 0"
-        },
-        {
-          "type": "GDACS",
-          "label": "Green alert \u00b7 Magnitude 4.9M, Depth:110.4km",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1549670&episodeid=1715760",
-          "meta": "pop 0"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 5.3,
-        "max_depth_km": 183.5,
-        "place": "South Sandwich Islands region,east of the South Sandwich Islands",
-        "felt": 0,
-        "sig": 432,
-        "tsunami": false,
-        "gdacs_alertlevel": "Green",
-        "gdacs_population": 0
-      },
-      "news": [],
-      "news_total": 0
-    },
-    {
-      "incident_id": "20260702-GR-EQ",
-      "canonical_name": "Earthquake 23 km SSE of Karpathos July 2026",
-      "summary": "A magnitude 5.2 earthquake occurred in Greece on July 2, 2026, at 11:06 UTC. The quake was located approximately 23 km south-southeast of Karpathos at a depth of 10 km.",
-      "country": "Greece",
-      "iso2": "GR",
-      "lat": 39.07,
-      "lon": 21.82,
-      "country_group": "C",
-      "region": "Europe",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "HIGH",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": "NONE",
-      "event_status": null,
-      "disease_name": null,
-      "event_date": "2026-07-02",
-      "first_reported_date": "2026-07-02",
-      "last_updated_date": "2026-07-02",
-      "days_since_event": 0,
-      "source_count": 2,
-      "should_report": true,
-      "search_keys": [
-        "23 km SSE of Karpathos earthquake July 2026",
-        "Greece earthquake July 2026",
-        "23 km SSE of Karpathos earthquake 2026"
-      ],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 1,
-        "healthmap": 0,
-        "news": 0
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M5.2 \u00b7 23 km SSE of Karpathos, Greece",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9lz/executive",
-          "meta": "10 km depth"
-        },
-        {
-          "type": "GDACS",
-          "label": "Green alert \u00b7 Magnitude 5.2M, Depth:10km",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1549734&episodeid=1715835",
-          "meta": "pop 1159"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 5.2,
-        "max_depth_km": 10.0,
-        "place": "23 km SSE of Karpathos, Greece",
-        "felt": 5,
-        "sig": 418,
-        "tsunami": false,
-        "gdacs_alertlevel": "Green",
-        "gdacs_population": 1159
-      },
-      "news": [],
-      "news_total": 0
     },
     {
       "incident_id": "20260701-JP-EQ",
@@ -1194,433 +998,6 @@
         }
       ],
       "news_total": 10
-    },
-    {
-      "incident_id": "20260702-PE-EQ",
-      "canonical_name": "Earthquake 20 km ESE of Chapimarca July 2026",
-      "summary": "A magnitude 4.8 earthquake struck Peru on July 2, 2026, occurring approximately 20 km ESE of Chapimarca at a depth of 87.863 km. The event was recorded by GDACS and the USGS, with no significant alerts or tsunami warnings reported.",
-      "country": "Peru",
-      "iso2": "PE",
-      "lat": null,
-      "lon": null,
-      "country_group": "C",
-      "region": "Americas",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": "NONE",
-      "event_status": null,
-      "disease_name": null,
-      "event_date": "2026-07-02",
-      "first_reported_date": "2026-07-02",
-      "last_updated_date": "2026-07-02",
-      "days_since_event": 0,
-      "source_count": 2,
-      "should_report": true,
-      "search_keys": [
-        "20 km ESE of Chapimarca earthquake July 2026",
-        "Peru earthquake July 2026",
-        "20 km ESE of Chapimarca earthquake 2026"
-      ],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 1,
-        "healthmap": 0,
-        "news": 1
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M4.8 \u00b7 20 km ESE of Chapimarca, Peru",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9ji/executive",
-          "meta": "88 km depth"
-        },
-        {
-          "type": "GDACS",
-          "label": "Green alert \u00b7 Magnitude 4.8M, Depth:87.9km",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1549666&episodeid=1715755",
-          "meta": "pop 733954"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 4.8,
-        "max_depth_km": 87.9,
-        "place": "20 km ESE of Chapimarca, Peru",
-        "felt": 1,
-        "sig": 355,
-        "tsunami": false,
-        "gdacs_alertlevel": "Green",
-        "gdacs_population": 733954
-      },
-      "news": [
-        {
-          "headline": "Venezuelan diaspora in Buenos Aires hold vigil for quake victims",
-          "url": "https://www.msn.com/en-us/news/world/venezuelan-diaspora-in-buenos-aires-hold-vigil-for-quake-victims/vi-AA271RUQ?ocid=BingNewsVerp",
-          "outlet": "Reuters on MSN",
-          "published_date": "2026-05-17"
-        }
-      ],
-      "news_total": 1
-    },
-    {
-      "incident_id": "20260702-FJ-EQ",
-      "canonical_name": "Earthquake Fiji region July 2026",
-      "summary": "A magnitude 4.7 earthquake occurred in the Fiji region on July 2, 2026, at a depth of approximately 555.3 km. The event was reported by GDACS and the USGS, with GDACS noting that a few people were affected within a 100km radius.",
-      "country": "Fiji",
-      "iso2": "FJ",
-      "lat": -17.71,
-      "lon": 178.06,
-      "country_group": "B",
-      "region": "Oceania",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": "NONE",
-      "event_status": null,
-      "disease_name": null,
-      "event_date": "2026-07-02",
-      "first_reported_date": "2026-07-02",
-      "last_updated_date": "2026-07-02",
-      "days_since_event": 0,
-      "source_count": 2,
-      "should_report": true,
-      "search_keys": [
-        "Fiji region earthquake July 2026",
-        "Fiji earthquake July 2026",
-        "Fiji region earthquake 2026"
-      ],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 1,
-        "healthmap": 0,
-        "news": 0
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M4.7 \u00b7 Fiji region",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9ja/executive",
-          "meta": "555 km depth"
-        },
-        {
-          "type": "GDACS",
-          "label": "Green alert \u00b7 Magnitude 4.7M, Depth:555.3km",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1549650&episodeid=1715738",
-          "meta": "pop 948"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 4.7,
-        "max_depth_km": 555.3,
-        "place": "Fiji region",
-        "felt": 0,
-        "sig": 340,
-        "tsunami": false,
-        "gdacs_alertlevel": "Green",
-        "gdacs_population": 948
-      },
-      "news": [],
-      "news_total": 0
-    },
-    {
-      "incident_id": "20260702-CL-EQ",
-      "canonical_name": "Earthquake 150 km WSW of Lebu July 2026",
-      "summary": "A magnitude 4.5 earthquake occurred off the coast of central Chile on July 2, 2026, at a depth of 10 km. The event took place approximately 150 km WSW of Lebu, with no reports of people affected.",
-      "country": "Chile",
-      "iso2": "CL",
-      "lat": null,
-      "lon": null,
-      "country_group": "C",
-      "region": "Americas",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": "NONE",
-      "event_status": null,
-      "disease_name": null,
-      "event_date": "2026-07-02",
-      "first_reported_date": "2026-07-02",
-      "last_updated_date": "2026-07-02",
-      "days_since_event": 0,
-      "source_count": 2,
-      "should_report": true,
-      "search_keys": [
-        "150 km WSW of Lebu earthquake July 2026",
-        "Chile earthquake July 2026",
-        "150 km WSW of Lebu earthquake 2026"
-      ],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 1,
-        "healthmap": 0,
-        "news": 0
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M4.5 \u00b7 150 km WSW of Lebu, Chile",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9j7/executive",
-          "meta": "10 km depth"
-        },
-        {
-          "type": "GDACS",
-          "label": "Green alert \u00b7 Magnitude 4.5M, Depth:10km",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1549644&episodeid=1715734",
-          "meta": "pop 0"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 4.5,
-        "max_depth_km": 10.0,
-        "place": "150 km WSW of Lebu, Chile",
-        "felt": 0,
-        "sig": 312,
-        "tsunami": false,
-        "gdacs_alertlevel": "Green",
-        "gdacs_population": 0
-      },
-      "news": [],
-      "news_total": 0
-    },
-    {
-      "incident_id": "20260702-JP-EQ",
-      "canonical_name": "Earthquake 39 km E of Uonuma July 2026",
-      "summary": "A magnitude 4.7 earthquake occurred in Japan on July 2, 2026, at 11:48 UTC, located approximately 39 km east of Uonuma. The quake had a depth of 141.674 km and was assigned a green alert level.",
-      "country": "Japan",
-      "iso2": "JP",
-      "lat": 36.2,
-      "lon": 138.25,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": "NONE",
-      "event_status": null,
-      "disease_name": null,
-      "event_date": "2026-07-02",
-      "first_reported_date": "2026-07-02",
-      "last_updated_date": "2026-07-02",
-      "days_since_event": 0,
-      "source_count": 2,
-      "should_report": true,
-      "search_keys": [
-        "39 km E of Uonuma earthquake July 2026",
-        "Japan earthquake July 2026",
-        "39 km E of Uonuma earthquake 2026"
-      ],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 1,
-        "healthmap": 0,
-        "news": 0
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M4.7 \u00b7 39 km E of Uonuma, Japan",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9m5/executive",
-          "meta": "142 km depth"
-        },
-        {
-          "type": "GDACS",
-          "label": "Green alert \u00b7 Magnitude 4.7M, Depth:141.7km",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1549745&episodeid=1715847",
-          "meta": "pop 7040974"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 4.7,
-        "max_depth_km": 141.7,
-        "place": "39 km E of Uonuma, Japan",
-        "felt": 1,
-        "sig": 340,
-        "tsunami": false,
-        "gdacs_alertlevel": "Green",
-        "gdacs_population": 7040974
-      },
-      "news": [],
-      "news_total": 0
-    },
-    {
-      "incident_id": "20260702-PH-EQ",
-      "canonical_name": "Earthquake 60 km WNW of Catuday July 2026",
-      "summary": "On July 2, 2026, a series of four earthquakes occurred west-northwest of Catuday in the Philippines. The tremors ranged in magnitude from 4.6 to 4.8, with depths between approximately 12.5 km and 22.6 km.",
-      "country": "Philippines",
-      "iso2": "PH",
-      "lat": 12.88,
-      "lon": 121.77,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": "NONE",
-      "event_status": null,
-      "disease_name": null,
-      "event_date": "2026-07-02",
-      "first_reported_date": "2026-07-02",
-      "last_updated_date": "2026-07-02",
-      "days_since_event": 0,
-      "source_count": 8,
-      "should_report": true,
-      "search_keys": [
-        "60 km WNW of Catuday earthquake July 2026",
-        "Philippines earthquake July 2026",
-        "60 km WNW of Catuday earthquake 2026"
-      ],
-      "sources": {
-        "who_don": 0,
-        "usgs": 4,
-        "gdacs": 4,
-        "healthmap": 0,
-        "news": 0
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M4.7 \u00b7 60 km WNW of Catuday, Philippines",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9m4/executive",
-          "meta": "22 km depth"
-        },
-        {
-          "type": "USGS",
-          "label": "M4.7 \u00b7 64 km WNW of Catuday, Philippines",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9ls/executive",
-          "meta": "22 km depth"
-        },
-        {
-          "type": "USGS",
-          "label": "M4.6 \u00b7 56 km WNW of Catuday, Philippines",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9li/executive",
-          "meta": "23 km depth"
-        },
-        {
-          "type": "USGS",
-          "label": "M4.8 \u00b7 65 km WNW of Catuday, Philippines",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9lc/executive",
-          "meta": "12 km depth"
-        },
-        {
-          "type": "GDACS",
-          "label": "Green alert \u00b7 Magnitude 4.7M, Depth:22km",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1549742&episodeid=1715848",
-          "meta": "pop 675807"
-        },
-        {
-          "type": "GDACS",
-          "label": "Green alert \u00b7 Magnitude 4.7M, Depth:22.1km",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1549725&episodeid=1715843",
-          "meta": "pop 635298"
-        },
-        {
-          "type": "GDACS",
-          "label": "Green alert \u00b7 Magnitude 4.6M, Depth:22.6km",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1549722&episodeid=1715825",
-          "meta": "pop 718857"
-        },
-        {
-          "type": "GDACS",
-          "label": "Green alert \u00b7 Magnitude 4.8M, Depth:12.5km",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1549720&episodeid=1715817",
-          "meta": "pop 598043"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 4.8,
-        "max_depth_km": 22.6,
-        "place": "60 km WNW of Catuday, Philippines,64 km WNW of Catuday, Philippines,56 km WNW of Catuday, Philippines,65 km WNW of Catuday, Philippines",
-        "felt": 0,
-        "sig": 354,
-        "tsunami": false,
-        "gdacs_alertlevel": "Green",
-        "gdacs_population": 718857
-      },
-      "news": [],
-      "news_total": 0
-    },
-    {
-      "incident_id": "20260702-ID-EQ",
-      "canonical_name": "Earthquake 88 km WSW of Gorontalo July 2026",
-      "summary": "A magnitude 4.5 earthquake struck approximately 88 km WSW of Gorontalo, Indonesia, on July 2, 2026, at 05:50 UTC. The quake occurred at a depth of 144.3 km, and according to GDACS, approximately 1.2 million people were within a 100 km radius of the epicenter.",
-      "country": "Indonesia",
-      "iso2": "ID",
-      "lat": -0.79,
-      "lon": 113.92,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": "NONE",
-      "event_status": null,
-      "disease_name": null,
-      "event_date": "2026-07-02",
-      "first_reported_date": "2026-07-02",
-      "last_updated_date": "2026-07-02",
-      "days_since_event": 0,
-      "source_count": 2,
-      "should_report": true,
-      "search_keys": [
-        "88 km WSW of Gorontalo earthquake July 2026",
-        "Indonesia earthquake July 2026",
-        "88 km WSW of Gorontalo earthquake 2026"
-      ],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 1,
-        "healthmap": 0,
-        "news": 0
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M4.5 \u00b7 88 km WSW of Gorontalo, Indonesia",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9kr/executive",
-          "meta": "144 km depth"
-        },
-        {
-          "type": "GDACS",
-          "label": "Green alert \u00b7 Magnitude 4.5M, Depth:144.3km",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1549697&episodeid=1715807",
-          "meta": "pop 1203065"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 4.5,
-        "max_depth_km": 144.3,
-        "place": "88 km WSW of Gorontalo, Indonesia",
-        "felt": 0,
-        "sig": 312,
-        "tsunami": false,
-        "gdacs_alertlevel": "Green",
-        "gdacs_population": 1203065
-      },
-      "news": [],
-      "news_total": 0
     },
     {
       "incident_id": "20260701-MP-TR",

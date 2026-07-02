@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,9 +16,8 @@
   <!-- ============ HEADER ============ -->
   <header class="topbar">
     <div class="topbar__brand">
-      <svg class="brand-mark" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path d="M3 12h4l2-5 3 10 2-7 2 4h5" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round"/>
+      <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true">
+        <path class="brand-mark__cross" d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6z"/>
       </svg>
       <div class="brand-text">
         <h1>Disaster Surveillance</h1>
@@ -27,57 +26,82 @@
     </div>
 
     <div class="topbar__controls">
-      <label class="digest-picker">
-        <span class="sr-only">Report date</span>
-        <select id="digestSelect" aria-label="Select report date"></select>
-      </label>
+      <div class="digest-picker" id="digestPicker">
+        <button class="dp__step" id="dpPrev" type="button" aria-label="Previous report">‹</button>
+        <button class="dp__label" id="dpLabel" type="button" aria-haspopup="dialog" aria-expanded="false" aria-label="Report date (day/month/year)">—</button>
+        <button class="dp__step" id="dpNext" type="button" aria-label="Next report">›</button>
+        <div class="dp__cal" id="dpCal" role="dialog" aria-label="Choose report date" hidden></div>
+        <span class="dp__meta" id="digestMeta"></span>
+      </div>
       <div class="freshness" id="freshness" title="Data freshness">
         <span class="freshness__dot"></span>
         <span id="freshnessLabel">Loading…</span>
       </div>
     </div>
-  </header>
 
-  <!-- ============ KPI STRIP ============ -->
-  <section class="kpis" id="kpis" aria-label="Headline figures"></section>
-
-  <!-- ============ FILTER BAR ============ -->
-  <section class="filters" id="filters" aria-label="Filters">
-    <div class="filters__group">
-      <label>Severity
+    <div class="topbar__filters" id="filters">
+      <div class="filters__group">
+        <label>Severity</label>
         <div class="sevchips" id="sevChips" role="group" aria-label="Severity filter"></div>
-      </label>
-    </div>
-    <div class="filters__group">
-      <label>Type
+      </div>
+      <div class="filters__group">
+        <label>Type</label>
         <select id="typeFilter"><option value="">All types</option></select>
-      </label>
-    </div>
-    <div class="filters__group">
-      <label>Region
+      </div>
+      <div class="filters__group">
+        <label>Region</label>
         <select id="regionFilter"><option value="">All regions</option></select>
-      </label>
+      </div>
+      <div class="filters__group filters__group--grow">
+        <label>Search</label>
+        <input id="searchFilter" type="search" placeholder="Country, disease, headline, id…" />
+      </div>
+      <button class="btn btn--ghost" id="clearFilters" type="button">Clear</button>
     </div>
-    <div class="filters__group">
-      <label>Country
-        <select id="countryFilter"><option value="">All countries</option></select>
-      </label>
-    </div>
-    <div class="filters__group filters__group--grow">
-      <label>Search
-        <input id="searchFilter" type="search" placeholder="Disease, headline, id…" />
-      </label>
-    </div>
-    <button class="btn btn--ghost" id="clearFilters" type="button">Clear</button>
-  </section>
+  </header>
 
   <main class="layout">
 
+    <!-- ============ TREND (Disease | Geophysical) ============ -->
+    <section class="card card--trend span-full" aria-label="Incident trend">
+      <div class="card__head card__head--trend">
+        <div>
+          <h2 id="trendTitle">Trend</h2>
+          <span class="card__hint" id="trendHint">Cumulative history · log scale · hover for exact counts</span>
+        </div>
+        <div class="trend-controls">
+          <div class="seg" role="group" aria-label="Metric">
+            <button class="seg__btn" type="button" data-tmetric="n">News</button>
+            <button class="seg__btn" type="button" data-tmetric="e">Events</button>
+          </div>
+          <label class="seg seg--select">Window
+            <select id="trendWindow" aria-label="Trend window"></select>
+          </label>
+        </div>
+      </div>
+      <div class="trend-grid">
+        <div class="trend-panel">
+          <div class="trend-panel__head">
+            <h3>Geophysical events <span class="trend-panel__sub">by kind</span></h3>
+            <div class="trend-legend" id="trendLegendGeo" aria-hidden="true"></div>
+          </div>
+          <svg id="trendGeo" role="img" aria-label="Geophysical event trend by kind"></svg>
+        </div>
+        <div class="trend-panel">
+          <div class="trend-panel__head">
+            <h3>Disease outbreaks <span class="trend-panel__sub">by pathogen</span></h3>
+            <div class="trend-legend" id="trendLegendDisease" aria-hidden="true"></div>
+          </div>
+          <svg id="trendDisease" role="img" aria-label="Disease outbreak trend by pathogen"></svg>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ MAP ============ -->
-    <section class="card card--map span-full" aria-label="World map">
+    <section class="card card--map" aria-label="World map">
       <div class="card__head">
         <h2>Geographic overview</h2>
-        <span class="card__hint">Bubble = country · colour = max severity · size = count · click to filter</span>
+        <span class="card__hint">Bubble = country · colour = max severity · size = news volume · click to filter</span>
       </div>
       <div class="map-wrap">
         <svg id="worldMap" role="img" aria-label="World map of active incidents"></svg>
@@ -85,15 +109,10 @@
       </div>
     </section>
 
-    <!-- ============ TREND ============ -->
-    <section class="card card--trend" aria-label="Severity trend">
-      <div class="card__head">
-        <h2 id="trendTitle">Severity trend</h2>
-        <span class="card__hint">Each line = one severity, as % of the period's busiest day · hover for counts</span>
-      </div>
-      <div class="trend-legend" id="trendLegend" aria-hidden="true"></div>
-      <svg id="trendChart" role="img" aria-label="Incident trend chart"></svg>
-    </section>
+    <!-- ============ KPI SIDEBAR ============ -->
+    <aside class="card card--kpi-side" aria-label="Headline figures">
+      <div class="kpis" id="kpis"></div>
+    </aside>
 
     <!-- ============ WATCHLIST (tabs) ============ -->
     <section class="card card--table span-full" aria-label="Incident lists">
@@ -136,7 +155,7 @@
       <!-- News pulse -->
       <div class="tab-panel" data-panel="news">
         <div class="news-summary" id="newsSummary"></div>
-        <ul class="news-pulse" id="newsPulse"></ul>
+        <div class="news-pulse" id="newsPulse"></div>
         <p class="empty-state" id="newsEmpty" hidden>No linked news in this digest.</p>
       </div>
     </section>
