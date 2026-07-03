@@ -189,14 +189,6 @@ def _render(as_of: date, window: int, incidents: list, src: dict, news: dict,
     lines.append("---\n")
     lines += _part("Part 2 — Disease outbreaks", disease, src, news, usgs_mag, gdacs)
 
-    lines += ["---\n", "**Notes**",
-              "- Report generation is deterministic (pure DB read, no AI calls). "
-              "The `summary`, `severity`, `pandemic_potential`, and `event_status` "
-              "fields were produced by the AI digester at ingest time.",
-              "- Magnitudes are USGS-instrumental (max across linked events); "
-              "the AI summary may cite report-based figures that differ for multi-event incidents.",
-              "- Incidents with 0 news are deep/low-impact or under-reported; they still "
-              "qualify on severity."]
     return "\n".join(lines)
 
 
