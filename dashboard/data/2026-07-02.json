@@ -6,34 +6,34 @@
   "tracking_window_days": 14,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 26,
-    "new_today": 10,
+    "reportable_total": 28,
+    "new_today": 12,
     "critical": 3,
-    "high": 7,
+    "high": 8,
     "medium": 8,
-    "low": 8,
+    "low": 9,
     "disease_outbreaks": 2,
-    "countries_affected": 18,
-    "news_total": 165,
+    "countries_affected": 20,
+    "news_total": 173,
     "max_magnitude": 6.0,
     "by_severity": {
       "CRITICAL": 3,
-      "HIGH": 7,
+      "HIGH": 8,
       "MEDIUM": 8,
-      "LOW": 8
+      "LOW": 9
     },
     "by_type": {
-      "Earthquake": 22,
+      "Earthquake": 23,
       "Disease": 2,
-      "Tropical Cyclone": 2
+      "Tropical Cyclone": 3
     },
     "by_region": {
       "Americas": 5,
-      "Asia": 13,
+      "Asia": 14,
       "Africa": 1,
       "Antarctica": 1,
       "Europe": 1,
-      "Oceania": 5
+      "Oceania": 6
     }
   },
   "by_country": [
@@ -119,6 +119,15 @@
       "max_severity": "HIGH"
     },
     {
+      "country": "Guam",
+      "count": 1,
+      "max_sev_rank": 2,
+      "iso2": "GU",
+      "region": "Oceania",
+      "country_group": "B",
+      "max_severity": "HIGH"
+    },
+    {
       "country": "India",
       "count": 1,
       "max_sev_rank": 2,
@@ -173,6 +182,15 @@
       "max_severity": "MEDIUM"
     },
     {
+      "country": "Taiwan",
+      "count": 1,
+      "max_sev_rank": 4,
+      "iso2": "TW",
+      "region": "Asia",
+      "country_group": "A",
+      "max_severity": "LOW"
+    },
+    {
       "country": "Mexico",
       "count": 1,
       "max_sev_rank": 4,
@@ -204,7 +222,7 @@
     {
       "incident_id": "20260629-VE-EQ",
       "canonical_name": "Earthquake 27 km N of Caraballeda June 2026",
-      "summary": "Twin earthquakes, including a magnitude 7.2 event, struck west of Caracas, Venezuela, on June 24, 2026, causing 1,943 deaths and damaging approximately 58,870 buildings. While international aid assisted in rescue operations, medical professionals warned that the disaster could trigger a wider healthcare crisis.",
+      "summary": "Two powerful earthquakes, including a magnitude 7.2 event, struck west of Caracas, Venezuela, on June 24, 2026, resulting in 1,943 deaths and damaging nearly 59,000 buildings. International rescue teams, including units from Costa Rica and South Florida, assisted in the aftermath, notably rescuing a man trapped under rubble for eight days.",
       "country": "Venezuela",
       "iso2": "VE",
       "lat": 6.42,
@@ -236,7 +254,7 @@
         "usgs": 1,
         "gdacs": 1,
         "healthmap": 0,
-        "news": 64
+        "news": 68
       },
       "source_links": [
         {
@@ -273,6 +291,12 @@
           "headline": "Video game simulation misrepresented as footage of Venezuela earthquake",
           "url": "https://www.yahoo.com/news/world/articles/video-game-simulation-misrepresented-footage-064613981.html",
           "outlet": "AFP \u00b7 via Yahoo News",
+          "published_date": "2026-07-02"
+        },
+        {
+          "headline": "Miami Fire Rescue team members help rescue Venezuela earthquake victim trapped...",
+          "url": "https://www.cbsnews.com/miami/news/miami-fire-rescue-venezuela-rescue-man-trapped-earthquake-hernan-alberto-flores-gil/",
+          "outlet": "CBS News",
           "published_date": "2026-07-02"
         },
         {
@@ -316,15 +340,9 @@
           "url": "https://www.yahoo.com/news/articles/european-rescue-teams-arrive-venezuela-073724222.html",
           "outlet": "Euronews \u00b7 via Yahoo News",
           "published_date": "2026-06-30"
-        },
-        {
-          "headline": "Venezuela\u2019s deadly earthquakes happened on a fault similar to the San Andreas, a...",
-          "url": "https://www.yahoo.com/news/science/articles/venezuela-deadly-earthquakes-happened-fault-131049097.html",
-          "outlet": "The Conversation \u00b7 via Yahoo News",
-          "published_date": "2026-06-30"
         }
       ],
-      "news_total": 64
+      "news_total": 68
     },
     {
       "incident_id": "20260629-PH-EQ",
@@ -460,7 +478,7 @@
     {
       "incident_id": "20260619-CD-EP",
       "canonical_name": "Ebola outbreak DR Congo June 2026",
-      "summary": "The World Health Organization declared a public health emergency of international concern in May 2026 following an Ebola outbreak caused by the Bundibugyo virus, centered in the Ituri Province of the Democratic Republic of the Congo. The virus has spread to multiple provinces and other countries, with the official death toll in the DRC exceeding 400 lives and cases topping 1,000. Response efforts face significant challenges, including a lack of licensed vaccines, shortages of protective gear for health workers, and the economic impact of the crisis.",
+      "summary": "The WHO has declared a public health emergency of international concern following an outbreak of Ebola disease caused by the Bundibugyo virus in the Democratic Republic of the Congo and Uganda. As of May 15, 2026, the DRC reported 246 suspected cases and 80 deaths, while Uganda confirmed two imported cases. Response efforts are focused on surveillance, infection prevention, and cross-border coordination, though efforts in the DRC's Ituri province are hindered by ongoing conflict and humanitarian crises.",
       "country": "DR Congo",
       "iso2": "CD",
       "lat": -4.04,
@@ -474,7 +492,7 @@
       "priority": "HIGH",
       "priority_rank": 1,
       "pandemic_potential": "HIGH",
-      "event_status": "escalating",
+      "event_status": "new_outbreak",
       "disease_name": "Ebola",
       "event_date": "2026-06-19",
       "first_reported_date": "2026-07-01",
@@ -492,7 +510,7 @@
         "usgs": 0,
         "gdacs": 0,
         "healthmap": 0,
-        "news": 28
+        "news": 30
       },
       "source_links": [
         {
@@ -565,6 +583,18 @@
           "published_date": "2026-07-02"
         },
         {
+          "headline": "Researchers launch study on Ebola treatments as Congo outbreak worsens - WTOP...",
+          "url": "https://wtop.com/national/2026/07/researchers-launch-study-on-ebola-treatments-as-congo-outbreak-worsens/",
+          "outlet": "WTOP Washington",
+          "published_date": "2026-07-02"
+        },
+        {
+          "headline": "Trial of potential Ebola treatments begins in DR Congo: WHO",
+          "url": "https://medicalxpress.com/news/2026-07-trial-potential-ebola-treatments-dr.html",
+          "outlet": "Medical Xpress",
+          "published_date": "2026-07-02"
+        },
+        {
           "headline": "What is Ebola and why is stopping the latest outbreak so difficult?",
           "url": "https://www.yahoo.com/news/articles/ebola-why-stopping-outbreak-difficult-141536657.html",
           "outlet": "BBC \u00b7 via Yahoo News",
@@ -581,21 +611,9 @@
           "url": "https://www.express.co.uk/news/world/2223923/congo-ebola-england-world-cup",
           "outlet": "Daily Express",
           "published_date": "2026-07-01"
-        },
-        {
-          "headline": "Ebola crisis in DR Congo could push a million more people into poverty",
-          "url": "https://www.msn.com/en-gb/health/other/ebola-crisis-in-dr-congo-could-push-a-million-more-people-into-poverty/ar-AA26Y9oM",
-          "outlet": "The Independent",
-          "published_date": "2026-07-01"
-        },
-        {
-          "headline": "Ebola-hit DR Congo suspends public gatherings ban so everyone can watch England game",
-          "url": "https://www.msn.com/en-gb/news/world/ebola-hit-dr-congo-suspends-public-gatherings-ban-so-everyone-can-watch-england-game/ar-AA26XE85",
-          "outlet": "Daily Express",
-          "published_date": "2026-07-01"
         }
       ],
-      "news_total": 28
+      "news_total": 30
     },
     {
       "incident_id": "20260702-GS-EQ",
@@ -1080,9 +1098,59 @@
       "news_total": 0
     },
     {
+      "incident_id": "20260701-GU-TR",
+      "canonical_name": "Tropical Cyclone Guam July 2026",
+      "summary": "Tropical Cyclone BAVI-26 has triggered a red notification for Guam and the Northern Mariana Islands. Approximately 50,254 people are affected by wind speeds of 120 km/h or higher, with maximum wind speeds reaching up to 278 km/h.",
+      "country": "Guam",
+      "iso2": "GU",
+      "lat": null,
+      "lon": null,
+      "country_group": "B",
+      "region": "Oceania",
+      "incident_type": "Tropical Cyclone",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "HIGH",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": "NONE",
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-07-01",
+      "first_reported_date": "2026-07-02",
+      "last_updated_date": "2026-07-02",
+      "days_since_event": 1,
+      "source_count": 0,
+      "should_report": true,
+      "search_keys": [
+        "Guam tropical cyclone July 2026",
+        "Guam tropical cyclone 2026"
+      ],
+      "sources": {
+        "who_don": 0,
+        "usgs": 0,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 0
+      },
+      "source_links": [],
+      "physical": {
+        "max_magnitude": null,
+        "max_depth_km": null,
+        "place": null,
+        "felt": 0,
+        "sig": 0,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": 0
+      },
+      "news": [],
+      "news_total": 0
+    },
+    {
       "incident_id": "20260625-IN-EP",
       "canonical_name": "Nipah outbreak India June 2026",
-      "summary": "India reported two Nipah virus cases among healthcare workers in West Bengal in January 2026, and a separate lone case in Kerala in June 2026, which has since been contained after all contacts completed quarantine. Concurrently, Kerala is managing a Shigella outbreak that recorded 267 cases and six deaths as of late June 2026.",
+      "summary": "India notified the WHO of two laboratory-confirmed cases of Nipah virus infection in West Bengal involving healthcare workers at a private hospital in Barasat. Health authorities tested over 190 contacts, all of whom were negative, and have implemented enhanced surveillance and infection control measures. WHO assesses the public health risk as moderate at the sub-national level and low at the national, regional, and global levels.",
       "country": "India",
       "iso2": "IN",
       "lat": 20.59,
@@ -1744,6 +1812,63 @@
       "news_total": 0
     },
     {
+      "incident_id": "20260702-TW-EQ",
+      "canonical_name": "Earthquake Taiwan July 2026",
+      "summary": "A magnitude 4.7 earthquake occurred in Taiwan on July 2, 2026, at 14:44 UTC. The quake had a depth of approximately 109.9 km, and the alert level was categorized as green.",
+      "country": "Taiwan",
+      "iso2": "TW",
+      "lat": null,
+      "lon": null,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "LOW",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": "NONE",
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-07-02",
+      "first_reported_date": "2026-07-02",
+      "last_updated_date": "2026-07-02",
+      "days_since_event": 0,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [
+        "Taiwan earthquake July 2026",
+        "Taiwan earthquake 2026"
+      ],
+      "sources": {
+        "who_don": 0,
+        "usgs": 0,
+        "gdacs": 1,
+        "healthmap": 0,
+        "news": 0
+      },
+      "source_links": [
+        {
+          "type": "GDACS",
+          "label": "Green alert \u00b7 Magnitude 4.7M, Depth:109.9km",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1549780&episodeid=1715886",
+          "meta": "pop 1248820"
+        }
+      ],
+      "physical": {
+        "max_magnitude": null,
+        "max_depth_km": null,
+        "place": null,
+        "felt": 0,
+        "sig": 0,
+        "tsunami": false,
+        "gdacs_alertlevel": "Green",
+        "gdacs_population": 1248820
+      },
+      "news": [],
+      "news_total": 0
+    },
+    {
       "incident_id": "20260630-JP-EQ",
       "canonical_name": "Earthquake 10 km WSW of Hy\u016bga June 2026",
       "summary": "On June 30, 2026, Japan experienced several earthquakes, including magnitude 4.8 quakes near Hy\u016bga and Noda, and a magnitude 4.6 quake near Koshima. No casualties or damages were reported, although millions of people were located within 100 km of the affected areas.",
@@ -1944,7 +2069,7 @@
         "usgs": 3,
         "gdacs": 3,
         "healthmap": 0,
-        "news": 7
+        "news": 8
       },
       "source_links": [
         {
@@ -2002,6 +2127,12 @@
           "published_date": "2026-07-01"
         },
         {
+          "headline": "What to know about earthquake risks at World Cup host stadiums",
+          "url": "https://www.accuweather.com/en/sports/what-to-know-about-earthquake-risks-at-world-cup-host-stadiums/1905396",
+          "outlet": "AccuWeather",
+          "published_date": "2026-06-26"
+        },
+        {
           "headline": "6.0-magnitude earthquake strikes in the Gulf of California",
           "url": "https://www.msn.com/en-us/public-safety-and-emergencies/natural-disasters/6-0-magnitude-earthquake-strikes-in-the-gulf-of-california/ar-AA26URTK?ocid=BingNewsVerp",
           "outlet": "News Nation on MSN",
@@ -2038,7 +2169,7 @@
           "published_date": "2026-06-03"
         }
       ],
-      "news_total": 7
+      "news_total": 8
     },
     {
       "incident_id": "20260630-PG-EQ",
@@ -2340,7 +2471,7 @@
         "usgs": 0,
         "gdacs": 2,
         "healthmap": 0,
-        "news": 6
+        "news": 7
       },
       "source_links": [
         {
@@ -2367,6 +2498,12 @@
         "gdacs_population": 306901
       },
       "news": [
+        {
+          "headline": "Rising Nu-Metal Band Killed in Building Collapse Caused by Earthquake",
+          "url": "https://www.vice.com/en/article/rising-nu-metal-band-killed-in-building-collapse-caused-by-earthquake/",
+          "outlet": "Vice",
+          "published_date": "2026-07-02"
+        },
         {
           "headline": "The earthquake disaster in Venezuela: A crime of US imperialism",
           "url": "https://www.wsws.org/en/articles/2026/06/29/mswg-j29.html",
@@ -2404,7 +2541,7 @@
           "published_date": "2026-06-09"
         }
       ],
-      "news_total": 6
+      "news_total": 7
     },
     {
       "incident_id": "20260628-PH-EQ",
