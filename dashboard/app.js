@@ -16,7 +16,9 @@ const typeColor = (t) => TYPE_COLOR[t] || TYPE_COLOR.Other;
 // distinct palette for disease pathogens (disease trend panel)
 const DISEASE_COLOR = {
   Ebola: "#7A0019", Nipah: "#B4009E", Cholera: "#0E7C7B",
-  Mpox: "#C2410C", Dengue: "#1D4ED8", Other: "#6E6E6E",
+  Mpox: "#C2410C", Dengue: "#1D4ED8",
+  Diphtheria: "#4C1D95", Hantavirus: "#15803D", MERS: "#B45309",
+  Measles: "#BE185D", "Unknown pathogen": "#6E6E6E", Other: "#6E6E6E",
 };
 const diseaseColor = (d) => DISEASE_COLOR[d] || DISEASE_COLOR.Other;
 
