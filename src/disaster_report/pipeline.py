@@ -2,8 +2,14 @@ from __future__ import annotations
 
 import logging
 import os
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import date
 from typing import Callable
+
+# DuckDuckGo News searches are the slowest ingest phase (~5-15s each, network
+# bound). Running them concurrently keeps a daily ingest to ~1-2 min instead of
+# many minutes. DB writes are NOT parallelised (SQLite serialises them).
+_DEV_SEARCH_WORKERS = 4
 
 from disaster_report.ai.base import AIDigester
 from disaster_report.classification import (
@@ -158,9 +164,25 @@ class Pipeline:
             if incident.should_report and incident.search_keys
             and (backfill_mode or incident.last_updated < today)
         ] + newly_enriched
+        # Run slow DDG news searches concurrently (network-bound); the
+        # relevance filter + link_news DB writes run serially afterwards.
+        searched: list[tuple[IncidentView, list[RawArticle]]] = []
+        if to_develop:
+            with ThreadPoolExecutor(max_workers=_DEV_SEARCH_WORKERS) as pool:
+                futures = {
+                    pool.submit(self._dev_search, inc, today): inc
+                    for inc in to_develop
+                }
+                for fut in as_completed(futures):
+                    inc = futures[fut]
+                    try:
+                        searched.append((inc, fut.result()))
+                    except Exception:
+                        log.exception("incident %s: dev-search failed", inc.incident_id)
+                        searched.append((inc, []))
         developed = 0
-        for incident in to_develop:
-            if self._develop(incident, today):
+        for incident, raw_articles in searched:
+            if self._dev_link(incident, raw_articles, today):
                 developed += 1
         if developed:
             log.info("developed %d incident(s) with new news", developed)
@@ -405,40 +427,57 @@ class Pipeline:
             )
         return self._store.find_by_incident_id(resolved.incident_id)
 
-    def _develop(
+    def _dev_search(
         self,
         incident: IncidentView,
         today: date,
-    ) -> bool:
+    ) -> list[RawArticle]:
+        """Network-only half of develop: run a single DuckDuckGo news search.
+
+        Safe to call concurrently across incidents. Does not touch the DB.
+        """
         window = self._config.tracking_window_days
         if incident.is_stale(today, window) or not incident.search_keys:
-            return False
+            return []
 
         timelimit = _news_timelimit(window)
-        disease = self._store.find_disease_name(incident.incident_key)
+        # Use only the MOST-SPECIFIC search key (longest). DDG News is slow and
+        # broader keys mostly return noisier overlap.
+        key = max(incident.search_keys, key=len)
+        log.debug(
+            "incident %s: dev-search key=%r timelimit=%r",
+            incident.incident_id, key, timelimit,
+        )
+        try:
+            return self._news.search(key, timelimit=timelimit)
+        except Exception:
+            log.exception("incident %s: dev-search failed", incident.incident_id)
+            return []
 
+    def _dev_link(
+        self,
+        incident: IncidentView,
+        raw_articles: list[RawArticle],
+        today: date,
+    ) -> bool:
+        """DB-write half of develop: filter for relevance, link new articles,
+        maybe re-digest. Must run serially (SQLite writes)."""
+        if not raw_articles:
+            return False
+
+        disease = self._store.find_disease_name(incident.incident_key)
         new_articles: list[RawArticle] = []
-        for key in sorted(incident.search_keys, key=len, reverse=True):
-            log.debug(
-                "incident %s: dev-search key=%r timelimit=%r",
-                incident.incident_id, key, timelimit,
-            )
-            key_articles: list[RawArticle] = []
-            for article in self._news.search(key, timelimit=timelimit):
-                if not is_relevant(
-                    article,
-                    incident_type=incident.incident_type,
-                    country=incident.country_name,
-                    incident_name=incident.canonical_name,
-                    disease_name=disease,
-                ):
-                    continue
-                if self._store.link_news(incident.incident_key, article):
-                    key_articles.append(article)
-            if key_articles:
-                new_articles.extend(key_articles)
-                break
-            # this key returned no usable results -> fall through to next key
+        for article in raw_articles:
+            if not is_relevant(
+                article,
+                incident_type=incident.incident_type,
+                country=incident.country_name,
+                incident_name=incident.canonical_name,
+                disease_name=disease,
+            ):
+                continue
+            if self._store.link_news(incident.incident_key, article):
+                new_articles.append(article)
 
         if not new_articles:
             return False
