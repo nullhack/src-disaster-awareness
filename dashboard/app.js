@@ -71,7 +71,7 @@ const STATE = {
   dpView: { y: 2026, m: 6 }, // calendar month being viewed (UTC, 0-based month)
   aggIndex: null,       // {windows, default_window, files} from data/agg/index.json
   agg: {},              // cache: window -> aggregation object (cumulative history)
-  filters: { severities: new Set(["CRITICAL", "HIGH", "MEDIUM", "LOW"]), type: "", region: "", q: "" },
+  filters: { severities: new Set(["CRITICAL", "HIGH", "MEDIUM", "LOW"]), types: new Set(), regions: new Set(), q: "" },
   sort: { key: "severity", dir: "asc" },
   tab: "news",
   trend: { window: "30", metric: "n" }, // metric: n(news)|e(events); two panels: disease(by pathogen) + geo(by kind)
@@ -217,10 +217,10 @@ async function loadDigest(file) {
   populateRegionFilter(d.incidents);
   refreshDateControls();
   // reset filters to a clean view on digest switch
-  STATE.filters = { severities: new Set(SEV_ORDER), type: "", region: "", q: "" };
+  STATE.filters = { severities: new Set(SEV_ORDER), types: new Set(), regions: new Set(), q: "" };
   STATE.kpiSel = { sev: null, sort: null, type: null };
   STATE.sort = { key: "severity", dir: "asc" };
-  $("#typeFilter").value = ""; $("#regionFilter").value = ""; $("#searchFilter").value = "";
+  $("#searchFilter").value = "";
   renderSevChips();
   renderAll();
 }
@@ -241,8 +241,8 @@ function getFiltered() {
   const q = f.q.trim().toLowerCase();
   return STATE.digest.incidents.filter((i) => {
     if (!f.severities.has(i.severity)) return false;
-    if (f.type && i.incident_type !== f.type) return false;
-    if (f.region && i.region !== f.region) return false;
+    if (f.types.size && !f.types.has(i.incident_type)) return false;
+    if (f.regions.size && !f.regions.has(i.region)) return false;
     if (q) {
       const hay = [i.canonical_name, i.country, i.disease_name, i.incident_id,
         ...(i.search_keys || []), ...(i.news || []).map((n) => n.headline)]
@@ -254,14 +254,27 @@ function getFiltered() {
 }
 
 function populateTypeFilter(incs) {
-  const types = [...new Set(incs.map((i) => i.incident_type))].sort();
-  $("#typeFilter").innerHTML = `<option value="">All types</option>` +
-    types.map((t) => `<option>${t}</option>`).join("");
+  STATE._typeKeys = [...new Set(incs.map((i) => i.incident_type))].sort();
+  renderTypeChips();
 }
 function populateRegionFilter(incs) {
-  const regions = [...new Set(incs.map((i) => i.region).filter(Boolean))].sort();
-  $("#regionFilter").innerHTML = `<option value="">All regions</option>` +
-    regions.map((t) => `<option>${t}</option>`).join("");
+  STATE._regionKeys = [...new Set(incs.map((i) => i.region).filter(Boolean))].sort();
+  renderRegionChips();
+}
+function renderTypeChips() {
+  const keys = STATE._typeKeys || [];
+  const set = STATE.filters.types;
+  $("#typeChips").innerHTML = keys.map((t) =>
+    `<button class="chip chip--type" type="button" data-val="${esc(t)}" data-on="${set.has(t)}"
+       style="--chip-accent:${typeColor(t)}">${esc(t)}</button>`
+  ).join("");
+}
+function renderRegionChips() {
+  const keys = STATE._regionKeys || [];
+  const set = STATE.filters.regions;
+  $("#regionChips").innerHTML = keys.map((r) =>
+    `<button class="chip chip--region" type="button" data-val="${esc(r)}" data-on="${set.has(r)}">${esc(r)}</button>`
+  ).join("");
 }
 function populateTrendWindow() {
   const wins = (STATE.aggIndex && STATE.aggIndex.windows) || ["30"];
@@ -352,12 +365,12 @@ function applyKpiAction(act) {
     renderWatchlist(); renderKPIs();
   } else if (act === "type:ALL") {
     if (k.type === "ALL") { k.type = null; targetTab = allClear() ? "news" : null; }
-    else { k.type = "ALL"; f.type = ""; $("#typeFilter").value = ""; renderAll(); showToast("Type filter cleared"); targetTab = "watchlist"; }
+    else { k.type = "ALL"; f.types = new Set(); renderTypeChips(); renderAll(); showToast("Type filter cleared"); targetTab = "watchlist"; }
     renderKPIs();
   } else if (act.startsWith("tab:")) {
     const name = act.split(":")[1];
     if (k.type === name) { k.type = null; targetTab = allClear() ? "news" : null; }
-    else { k.type = name; if (name === "disease") { f.type = ""; $("#typeFilter").value = ""; } renderAll(); targetTab = name; }
+    else { k.type = name; if (name === "disease") { f.types = new Set(); renderTypeChips(); } renderAll(); targetTab = name; }
     renderKPIs();
   }
   if (targetTab) selectTab(targetTab);
@@ -827,8 +840,18 @@ function wireGlobalEvents() {
     if (set.size === 0) SEV_ORDER.forEach((s) => set.add(s)); // never empty
     STATE.kpiSel.sev = null; renderSevChips(); renderAll();
   });
-  $("#typeFilter").addEventListener("change", (e) => { STATE.filters.type = e.target.value; STATE.kpiSel.type = null; renderAll(); });
-  $("#regionFilter").addEventListener("change", (e) => { STATE.filters.region = e.target.value; renderAll(); });
+  $("#typeChips").addEventListener("click", (e) => {
+    const b = e.target.closest(".chip"); if (!b) return;
+    const v = b.dataset.val, set = STATE.filters.types;
+    set.has(v) ? set.delete(v) : set.add(v);
+    STATE.kpiSel.type = null; renderTypeChips(); renderAll();
+  });
+  $("#regionChips").addEventListener("click", (e) => {
+    const b = e.target.closest(".chip"); if (!b) return;
+    const v = b.dataset.val, set = STATE.filters.regions;
+    set.has(v) ? set.delete(v) : set.add(v);
+    renderRegionChips(); renderAll();
+  });
   $("#searchFilter").addEventListener("input", (e) => { STATE.filters.q = e.target.value; renderAll(); });
 
   // date picker
@@ -871,11 +894,11 @@ function wireGlobalEvents() {
   });
 
   $("#clearFilters").addEventListener("click", () => {
-    STATE.filters = { severities: new Set(SEV_ORDER), type: "", region: "", q: "" };
+    STATE.filters = { severities: new Set(SEV_ORDER), types: new Set(), regions: new Set(), q: "" };
     STATE.kpiSel = { sev: null, sort: null, type: null };
     STATE.sort = { key: "severity", dir: "asc" };
-    $("#typeFilter").value = ""; $("#regionFilter").value = ""; $("#searchFilter").value = "";
-    renderSevChips(); renderAll(); selectTab("news");
+    $("#searchFilter").value = "";
+    renderSevChips(); renderTypeChips(); renderRegionChips(); renderAll(); selectTab("news");
   });
 
   // table sort

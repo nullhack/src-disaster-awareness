@@ -25,6 +25,11 @@
       </div>
     </div>
 
+    <div class="topbar__search">
+      <input id="searchFilter" type="search" placeholder="Country, disease, headline, id…" aria-label="Search incidents" />
+      <button class="btn btn--ghost" id="clearFilters" type="button">Clear</button>
+    </div>
+
     <div class="topbar__controls">
       <div class="digest-picker" id="digestPicker">
         <button class="dp__step" id="dpPrev" type="button" aria-label="Previous report">‹</button>
@@ -39,26 +44,22 @@
       </div>
     </div>
 
-    <div class="topbar__filters" id="filters">
-      <div class="filters__group">
-        <label>Severity</label>
-        <div class="sevchips" id="sevChips" role="group" aria-label="Severity filter"></div>
-      </div>
-      <div class="filters__group">
-        <label>Type</label>
-        <select id="typeFilter"><option value="">All types</option></select>
-      </div>
-      <div class="filters__group">
-        <label>Region</label>
-        <select id="regionFilter"><option value="">All regions</option></select>
-      </div>
-      <div class="filters__group filters__group--grow">
-        <label>Search</label>
-        <input id="searchFilter" type="search" placeholder="Country, disease, headline, id…" />
-      </div>
-      <button class="btn btn--ghost" id="clearFilters" type="button">Clear</button>
-    </div>
   </header>
+
+  <div class="filters" id="filters">
+    <div class="filter-group">
+      <span class="filter-group__label">Severity</span>
+      <div class="chips" id="sevChips" role="group" aria-label="Severity filter"></div>
+    </div>
+    <div class="filter-group">
+      <span class="filter-group__label">Type</span>
+      <div class="chips chips--accent" id="typeChips" role="group" aria-label="Incident type filter"></div>
+    </div>
+    <div class="filter-group">
+      <span class="filter-group__label">Region</span>
+      <div class="chips chips--neutral" id="regionChips" role="group" aria-label="Region filter"></div>
+    </div>
+  </div>
 
   <main class="layout">
 

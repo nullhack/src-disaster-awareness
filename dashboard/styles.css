@@ -40,6 +40,7 @@
   --shadow: 0 1px 2px rgba(16,24,40,.04), 0 4px 12px rgba(16,24,40,.06);
   --shadow-lg: 0 8px 32px rgba(16,24,40,.18);
   --maxw: 1480px;
+  --topbar-h: 54px;
   --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
 }
@@ -70,6 +71,18 @@ code { font-family: var(--mono); font-size: .9em; }
   box-shadow: 0 1px 2px rgba(17,24,39,.04);
 }
 .topbar__brand { order: 0; flex: 0 0 auto; }
+.topbar__search { order: 1; flex: 0 0 auto; margin: 0 auto; display: flex; align-items: center; gap: 8px; min-width: 0; }
+.topbar__search input {
+  width: 340px; max-width: 34vw; font-family: var(--font); font-size: 12.5px;
+  padding: 7px 12px; border: 1px solid var(--rc-line); border-radius: var(--radius-sm);
+  background: #FBFBFC; color: var(--rc-ink);
+}
+.topbar__search input:focus {
+  outline: none; border-color: var(--rc-red); background: #fff;
+  box-shadow: 0 0 0 3px rgba(228,0,43,.12);
+}
+.topbar__search .btn--ghost { background: transparent; color: var(--rc-slate); border-color: var(--rc-line); padding: 6px 12px; flex: none; }
+.topbar__search .btn--ghost:hover { border-color: var(--rc-red); color: var(--rc-red); }
 .topbar__controls { order: 2; flex: 0 0 auto; }
 .topbar__filters {
   order: 1; flex: 1 1 auto; min-width: 0;
@@ -94,6 +107,48 @@ code { font-family: var(--mono); font-size: .9em; }
 .topbar__filters .sevchip { padding: 5px 9px; }
 .topbar__filters .btn--ghost { background: transparent; color: var(--rc-slate); border-color: var(--rc-line); padding: 6px 10px; }
 .topbar__filters .btn--ghost:hover { border-color: var(--rc-red); color: var(--rc-red); }
+
+/* ============ FILTER STRIP (Severity / Type / Region chips) ============ */
+.filters {
+  position: sticky; top: var(--topbar-h); z-index: 38;
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 20px;
+  padding: 10px 28px;
+  background: #fff;
+  border-bottom: 1px solid var(--rc-line);
+  box-shadow: 0 1px 2px rgba(17,24,39,.04);
+}
+.filter-group { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.filter-group__label {
+  font-size: 10px; font-weight: 700; color: var(--rc-muted);
+  text-transform: uppercase; letter-spacing: .06em; white-space: nowrap;
+}
+.filter-group--grow { flex: 1 1 160px; min-width: 120px; }
+.filter-group--grow input { flex: 1; min-width: 0; }
+.filters .btn--ghost { background: transparent; color: var(--rc-slate); border-color: var(--rc-line); padding: 6px 12px; }
+.filters .btn--ghost:hover { border-color: var(--rc-red); color: var(--rc-red); }
+
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip {
+  font-family: var(--font); font-size: 11px; font-weight: 700; letter-spacing: .03em;
+  padding: 6px 11px; border-radius: 999px;
+  border: 1px solid var(--rc-line-strong); background: #fff; color: var(--rc-slate);
+  cursor: pointer; user-select: none; transition: all .12s; white-space: nowrap;
+}
+.chip:hover { border-color: var(--rc-ink); color: var(--rc-ink); }
+/* Type chips: coloured by --chip-accent (set inline per type). Active = solid accent. */
+.chip--type { border-color: color-mix(in srgb, var(--chip-accent, var(--rc-ink)) 45%, #fff); }
+.chip--type[data-on="true"] {
+  background: var(--chip-accent, var(--rc-ink)); color: #fff; border-color: transparent;
+}
+/* Region chips: neutral outlined. Active = ink fill + white text. */
+.chip--region[data-on="true"] { background: var(--rc-ink); color: #fff; border-color: transparent; }
+.filters input[type="search"] {
+  font-family: var(--font); font-size: 13px; padding: 7px 11px;
+  border: 1px solid var(--rc-line-strong); border-radius: var(--radius-sm);
+  background: #fff; color: var(--rc-ink);
+}
+.filters input[type="search"]:focus { outline: 2px solid var(--rc-red); outline-offset: 1px; border-color: var(--rc-red); }
+
 .topbar__brand { display: flex; align-items: center; gap: 12px; }
 .brand-mark {
   width: 32px; height: 32px;
@@ -540,6 +595,9 @@ code { font-family: var(--mono); font-size: .9em; }
 /* ============ RESPONSIVE ============ */
 @media (max-width: 1199px) {
   .topbar { flex-wrap: wrap; }
+  :root { --topbar-h: 108px; }
+  .topbar__search { flex: 1 1 100%; order: 99; margin: 0; }
+  .topbar__search input { width: 100%; max-width: none; }
 }
 @media (max-width: 1100px) {
   .kpis { grid-template-columns: repeat(3, 1fr); }
