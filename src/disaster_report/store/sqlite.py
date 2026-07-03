@@ -15,10 +15,13 @@ from disaster_report.classification import (
     SEVERITY_LEVELS,
     SEVERITY_NAMES,
     ClassifyContext,
+    GeophysicalFacts,
     classify,
     country_group,
     de_escalate_pandemic_potential,
+    derive_geophysical_severity,
     escalate_priority,
+    is_disease_type,
 )
 from disaster_report.deriver import DeriveInput, derive_canonical_name, derive_search_keys
 from disaster_report.models import (
@@ -562,6 +565,119 @@ class SqliteIncidentStore:
         max_pop = max((int(p or 0) for _l, p in rows), default=0)
         return (alertlevel, max_pop)
 
+    def _geophysical_facts(
+        self, session: Session, incident_key: int
+    ) -> tuple[GeophysicalFacts, str]:
+        """Gather deterministic-severity facts for one incident within a
+        session. Returns ``(facts, incident_type)``. ``incident_type`` lets the
+        caller decide whether to apply the geophysical model or skip (disease).
+        """
+        usgs = session.execute(
+            select(
+                func.max(FactUsgsEarthquake.magnitude),
+                func.max(FactUsgsEarthquake.sig),
+                func.max(FactUsgsEarthquake.tsunami),
+            ).where(FactUsgsEarthquake.incident_key == incident_key)
+        ).one()
+        max_mag, max_sig, max_tsu = usgs
+        gdacs_levels = [
+            str(lvl).strip().lower()
+            for lvl in session.execute(
+                select(FactGdacsEvent.alertlevel).where(
+                    FactGdacsEvent.incident_key == incident_key
+                )
+            ).scalars().all()
+            if lvl
+        ]
+        news_count = session.execute(
+            select(func.count())
+            .select_from(FactNewsArticle)
+            .where(FactNewsArticle.incident_key == incident_key)
+        ).scalar_one()
+        # Worst (most severe) GDACS alert present, Red > Orange > Green.
+        if "red" in gdacs_levels:
+            alert = "red"
+        elif "orange" in gdacs_levels:
+            alert = "orange"
+        elif "green" in gdacs_levels:
+            alert = "green"
+        else:
+            alert = None
+        itype = session.execute(
+            select(DimIncidentType).where(
+                DimIncidentType.incident_type_key
+                == session.get(FactIncident, incident_key).incident_type_key
+            )
+        ).scalar_one_or_none()
+        incident_type = itype.incident_type if itype else ""
+        facts = GeophysicalFacts(
+            max_magnitude=float(max_mag) if max_mag is not None else None,
+            max_significance=int(max_sig) if max_sig is not None else None,
+            tsunami=bool(max_tsu),
+            gdacs_alertlevel=alert,
+            news_count=int(news_count or 0),
+        )
+        return facts, incident_type
+
+    def rederive_geophysical_severity(
+        self, incident_key: int, apply: bool = True
+    ) -> dict | None:
+        """Re-derive severity for one incident from its current facts.
+
+        Deterministic and idempotent. Geophysical (non-disease) incidents are
+        re-derived fresh from instrumental + impact facts (magnitude, USGS sig,
+        tsunami, GDACS alert, news volume) — severity, priority and
+        ``should_report`` are SET to the fresh verdict, so legacy freezes that
+        sat too high/low self-correct. Disease incidents are skipped (their
+        severity stays AI-ratcheted via :meth:`set_digest`).
+
+        Returns a delta dict when classification changes, else ``None``.
+        """
+        with self._session() as session:
+            incident = session.get(FactIncident, incident_key)
+            if incident is None:
+                return None
+            facts, incident_type = self._geophysical_facts(session, incident_key)
+            if is_disease_type(incident_type):
+                return None
+            new_level = derive_geophysical_severity(facts)
+            current_level = self._current_level(session, incident)
+            ctx = self._build_classify_context(session, incident, new_level)
+            new_priority, new_should = classify(ctx)
+            cur_priority = session.execute(
+                select(DimPriority).where(
+                    DimPriority.priority_key == incident.priority_key
+                )
+            ).scalar_one_or_none()
+            cur_priority_name = cur_priority.priority if cur_priority else "LOW"
+
+            severity_changed = new_level != current_level
+            priority_changed = new_priority != cur_priority_name
+            should_changed = bool(new_should) != bool(incident.should_report)
+            if not (severity_changed or priority_changed or should_changed):
+                return None
+            delta = {
+                "incident_id": incident.incident_id,
+                "severity": {
+                    "from": SEVERITY_NAMES.get(current_level, "UNKNOWN"),
+                    "to": SEVERITY_NAMES.get(new_level, "UNKNOWN"),
+                },
+                "priority": {"from": cur_priority_name, "to": new_priority},
+                "should_report": {
+                    "from": bool(incident.should_report),
+                    "to": bool(new_should),
+                },
+            }
+            if apply:
+                if severity_changed:
+                    incident.severity_key = self._level_key(session, new_level)
+                if priority_changed:
+                    incident.priority_key = self._priority_key(session, new_priority)
+                if should_changed:
+                    incident.should_report = bool(new_should)
+                session.commit()
+        return delta
+
     def who_don_range(self) -> tuple[str, str, int]:
         """``(min_date_iso, max_date_iso, count)`` over all WHO DON rows."""
         with self._session() as session:
@@ -956,48 +1072,77 @@ class SqliteIncidentStore:
         )
 
     def reclassify_all(self, dry_run: bool = True) -> list[dict]:
-        """Recompute ``priority`` + ``should_report`` from current severity.
+        """Recompute classification from current facts.
 
-        Non-destructive: does NOT re-derive ``level_key`` from source events
-        (AI-assessed severity is preserved). Monotonic and idempotent — a
-        second run produces no deltas. Returns one delta dict per incident
-        whose classification actually changes.
+        Geophysical (non-disease) incidents are re-derived deterministically:
+        severity is SET fresh from instrumental + impact facts (can demote, so
+        legacy values that froze too high/low self-correct), and priority /
+        ``should_report`` follow the fresh verdict. Disease incidents keep
+        their AI-assessed severity and apply only the monotonic priority
+        ratchet. Idempotent — a second run produces no deltas.
+
+        Returns one delta dict per incident whose classification changes.
         """
         deltas: list[dict] = []
         with self._session() as session:
             incidents = session.execute(select(FactIncident)).scalars().all()
             for incident in incidents:
+                itype = session.execute(
+                    select(DimIncidentType).where(
+                        DimIncidentType.incident_type_key == incident.incident_type_key
+                    )
+                ).scalar_one_or_none()
+                incident_type = itype.incident_type if itype else ""
                 current_level = self._current_level(session, incident)
-                ctx = self._build_classify_context(session, incident, current_level)
-                recomputed_priority, recomputed_should = classify(ctx)
-                cur_priority_name, desired_priority_name, desired_should = (
-                    self._ratchet_priority(
+                cur_priority = session.execute(
+                    select(DimPriority).where(
+                        DimPriority.priority_key == incident.priority_key
+                    )
+                ).scalar_one_or_none()
+                cur_priority_name = cur_priority.priority if cur_priority else "LOW"
+
+                if not is_disease_type(incident_type):
+                    facts, _ = self._geophysical_facts(
+                        session, incident.incident_key
+                    )
+                    new_level = derive_geophysical_severity(facts)
+                    ctx = self._build_classify_context(session, incident, new_level)
+                    new_priority, new_should = classify(ctx)
+                else:
+                    # Disease: AI-assessed severity is preserved.
+                    new_level = current_level
+                    ctx = self._build_classify_context(session, incident, current_level)
+                    recomputed_priority, recomputed_should = classify(ctx)
+                    _, new_priority, new_should = self._ratchet_priority(
                         session, incident, recomputed_priority, recomputed_should
                     )
-                )
-                if (
-                    desired_priority_name == cur_priority_name
-                    and desired_should == bool(incident.should_report)
-                ):
+
+                severity_changed = new_level != current_level
+                priority_changed = new_priority != cur_priority_name
+                should_changed = bool(new_should) != bool(incident.should_report)
+                if not (severity_changed or priority_changed or should_changed):
                     continue
                 deltas.append(
                     {
                         "incident_id": incident.incident_id,
-                        "severity": SEVERITY_NAMES.get(current_level, "UNKNOWN"),
-                        "priority": {"from": cur_priority_name, "to": desired_priority_name},
+                        "severity": {
+                            "from": SEVERITY_NAMES.get(current_level, "UNKNOWN"),
+                            "to": SEVERITY_NAMES.get(new_level, "UNKNOWN"),
+                        },
+                        "priority": {"from": cur_priority_name, "to": new_priority},
                         "should_report": {
                             "from": bool(incident.should_report),
-                            "to": desired_should,
+                            "to": bool(new_should),
                         },
                     }
                 )
                 if not dry_run:
-                    if desired_priority_name != cur_priority_name:
-                        incident.priority_key = self._priority_key(
-                            session, desired_priority_name
-                        )
-                    if desired_should != bool(incident.should_report):
-                        incident.should_report = desired_should
+                    if severity_changed:
+                        incident.severity_key = self._level_key(session, new_level)
+                    if priority_changed:
+                        incident.priority_key = self._priority_key(session, new_priority)
+                    if should_changed:
+                        incident.should_report = bool(new_should)
             if not dry_run:
                 session.commit()
         return deltas

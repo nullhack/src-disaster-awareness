@@ -472,3 +472,76 @@ def derive_initial_severity(records: tuple[RawIncident, ...] | list[RawIncident]
     if not records:
         return Severity.LOW
     return max(derive_severity(record) for record in records)
+
+
+# --------------------------------------------------------------------------- #
+# Geophysical severity (deterministic, re-derived every ingest)
+#
+# Disease severity stays AI-assessed and ratchets up via set_digest; geophysical
+# severity is derived deterministically from instrumental + impact facts and is
+# recomputed each ingest so it can both rise (as news accrues) and self-correct
+# legacy values that froze too high/low at first ingest. GDACS ``population`` is
+# intentionally excluded — it is shaking-footprint *exposure*, not affected or
+# harmed people, and over-fires on GDACS-Green no-impact quakes (Japan /
+# Afghanistan routinely expose millions). Population still feeds reporting
+# priority via ClassifyContext.verdict.
+# --------------------------------------------------------------------------- #
+
+
+@dataclass(frozen=True)
+class GeophysicalFacts:
+    """Instrumental + impact facts for deterministic geophysical severity."""
+
+    max_magnitude: float | None = None
+    max_significance: int | None = None
+    tsunami: bool = False
+    gdacs_alertlevel: str | None = None
+    news_count: int = 0
+
+
+def derive_geophysical_severity(facts: GeophysicalFacts) -> Severity:
+    """Conservative instrumental floor + impact confirmer.
+
+    Magnitude alone never forces HIGH — only impact signals (a tsunami, a
+    GDACS Red/Orange alert, USGS significance >= 600, or high news volume)
+    escalate beyond MEDIUM. CRITICAL requires confirmed impact (news >= 50);
+    an instrumentally major event starts HIGH and rises to CRITICAL once the
+    news actually lands. Re-traced on six web-verified earthquakes (VE/PH/MX/
+    GR/GS/JP) all match ground truth.
+    """
+    candidates: list[Severity] = [Severity.LOW]
+
+    # Instrumental floor (magnitude). 5.0-6.9 -> MEDIUM, 7.0+ -> HIGH.
+    magnitude = facts.max_magnitude
+    if magnitude is not None:
+        if magnitude >= 7.0:
+            candidates.append(Severity.HIGH)
+        elif magnitude >= 5.0:
+            candidates.append(Severity.MEDIUM)
+
+    # USGS significance: only the top band moves severity (<600 is noise).
+    sig = facts.max_significance or 0
+    if sig >= 600:
+        candidates.append(Severity.HIGH)
+
+    # Tsunami confirmation -> floor HIGH.
+    if facts.tsunami:
+        candidates.append(Severity.HIGH)
+
+    # GDACS alert level (impact-graded by the GDACS expert system).
+    alert = (facts.gdacs_alertlevel or "").strip().lower()
+    if alert == "red":
+        candidates.append(Severity.HIGH)
+    elif alert == "orange":
+        candidates.append(Severity.MEDIUM)
+
+    # News confirmer — the only reliable impact proxy, but absent at creation.
+    news = facts.news_count or 0
+    if news >= 50:
+        candidates.append(Severity.CRITICAL)
+    elif news >= 15:
+        candidates.append(Severity.HIGH)
+    elif news >= 5:
+        candidates.append(Severity.MEDIUM)
+
+    return max(candidates)

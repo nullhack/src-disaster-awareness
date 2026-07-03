@@ -191,6 +191,13 @@ class Pipeline:
         if retried:
             log.info("retried %d pending digest(s)", retried)
 
+        # Re-derive deterministic geophysical severity from current facts so
+        # newly-linked source records / news correct the classification each
+        # ingest (also self-corrects legacy severity frozen at first ingest).
+        sev_deltas = self._store.reclassify_all(dry_run=False)
+        if sev_deltas:
+            log.info("reclassified %d incident(s)", len(sev_deltas))
+
     def _is_today(self, resolved: ResolvedIncident, today: date) -> bool:
         return resolved.is_today(today)
 

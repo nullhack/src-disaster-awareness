@@ -233,12 +233,12 @@ def test_cli_reclassify_apply_persists_changes(db_url, tmp_path):
             summary="A magnitude 5.2 earthquake struck near Sarangani, Philippines.",
             country="Philippines",
             incident_type="Earthquake",
-            priority="LOW",
+            priority="MEDIUM",
             severity_level=2,
             event_date="2026-06-29",
             first_reported_date="2026-06-29",
             last_updated_date="2026-06-29",
-            should_report=False,
+            should_report=True,
             search_keys=["Sarangani earthquake"],
         )
     )
@@ -252,21 +252,27 @@ def test_cli_reclassify_apply_persists_changes(db_url, tmp_path):
 
     with store._engine.connect() as conn:
         row = conn.exec_driver_sql(
-            "SELECT priority, should_report FROM v_incident WHERE incident_id = ?",
+            "SELECT priority, should_report, severity FROM v_incident WHERE incident_id = ?",
             ("20260629-PH-EQ",),
         ).one()
-    assert row.priority == "MEDIUM"
-    assert row.should_report == 1
+    # No linked USGS/GDACS facts -> deterministic geophysical derivation is LOW.
+    assert row.priority == "LOW"
+    assert row.should_report == 0
+    assert row.severity == "LOW"
 
 
 def test_cli_reclassify_no_changes_reports_cleanly(db_url, tmp_path):
     cfg = _write_config(db_url, tmp_path)
     store = SqliteIncidentStore(db_url)
-    _seed_one_incident(store)  # already correctly classified
+    _seed_one_incident(store)  # seeded MEDIUM; not yet at its derived state
 
     runner = CliRunner()
-    result = runner.invoke(app, ["reclassify", "--config", str(cfg)])
+    # Apply first to converge the seeded incident onto its deterministic state.
+    applied = runner.invoke(app, ["reclassify", "--config", str(cfg), "--apply"])
+    assert applied.exit_code == 0, applied.output
 
+    # A subsequent dry-run must be stable: nothing left to reclassify.
+    result = runner.invoke(app, ["reclassify", "--config", str(cfg)])
     assert result.exit_code == 0, result.output
     assert "no changes" in result.output
 
