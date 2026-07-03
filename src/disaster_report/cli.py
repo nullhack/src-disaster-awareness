@@ -181,11 +181,12 @@ def report(config_path: str, window: int, min_severity: str, news: int,
     help="Persist changes. Without this flag the command is a dry-run.",
 )
 def reclassify(config_path: str, apply: bool) -> None:
-    """Backfill priority + should_report from current severity (monotonic).
+    """Recompute classification from current facts.
 
-    Default is a dry-run. Pass --apply to persist. Idempotent: a second run
-    reports no deltas. Non-destructive: never re-derives severity from events
-    and never demotes an incident.
+    Geophysical incidents are re-derived deterministically (severity can
+    demote to self-correct legacy freezes); disease incidents keep AI-assessed
+    severity. Default is a dry-run; pass --apply to persist. Idempotent: a
+    second run reports no deltas.
     """
     config = _load(config_path)
     store = SqliteIncidentStore(config.database_url)
@@ -196,8 +197,14 @@ def reclassify(config_path: str, apply: bool) -> None:
         return
     click.echo(f"reclassify ({mode}): {len(deltas)} incident(s) changed")
     for delta in deltas:
+        sev = delta["severity"]
+        sev_str = (
+            f"severity {sev['from']} -> {sev['to']}, "
+            if sev.get("from") != sev.get("to")
+            else f"[{sev.get('to', '?')}] "
+        )
         click.echo(
-            f"- {delta['incident_id']} [{delta['severity']}] "
+            f"- {delta['incident_id']} {sev_str}"
             f"priority {delta['priority']['from']} -> {delta['priority']['to']}, "
             f"should_report {delta['should_report']['from']} -> {delta['should_report']['to']}"
         )

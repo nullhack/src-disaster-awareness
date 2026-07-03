@@ -492,30 +492,9 @@ def test_reclassify_all_dry_run_writes_nothing(store):
 
 
 def test_reclassify_all_apply_persists_deltas_and_is_idempotent(store):
-    store.upsert_incident(
-        _record(
-            "20260629-PH-EQ",
-            country="Philippines",
-            priority="LOW",
-            severity_level=2,
-            should_report=False,
-        )
-    )
-
-    first = store.reclassify_all(dry_run=False)
-    assert any(d["incident_id"] == "20260629-PH-EQ" for d in first)
-
-    row = _row(store, store.find_by_incident_id("20260629-PH-EQ").incident_key)
-    assert row["priority"] == "MEDIUM"
-    assert row["should_report"] == 1
-
-    # Second run must produce no deltas (idempotent + monotonic).
-    second = store.reclassify_all(dry_run=False)
-    assert second == []
-
-
-def test_reclassify_all_ignores_already_correct_incidents(store):
-    # Group A MEDIUM incident: matrix already reports it (MEDIUM, True).
+    # Group A earthquake with no linked USGS/GDACS facts: the deterministic
+    # geophysical model derives LOW (no instrumentation, no impact), so a seed
+    # flagged MEDIUM/MEDIUM/reportable is fully corrected on apply.
     store.upsert_incident(
         _record(
             "20260629-PH-EQ",
@@ -523,6 +502,32 @@ def test_reclassify_all_ignores_already_correct_incidents(store):
             priority="MEDIUM",
             severity_level=2,
             should_report=True,
+        )
+    )
+
+    first = store.reclassify_all(dry_run=False)
+    assert any(d["incident_id"] == "20260629-PH-EQ" for d in first)
+
+    row = _row(store, store.find_by_incident_id("20260629-PH-EQ").incident_key)
+    assert row["severity"] == "LOW"
+    assert row["priority"] == "LOW"
+    assert row["should_report"] == 0
+
+    # Second run must produce no deltas (idempotent + monotonic).
+    second = store.reclassify_all(dry_run=False)
+    assert second == []
+
+
+def test_reclassify_all_ignores_already_correct_incidents(store):
+    # Group A earthquake already at the derived stable state (LOW, not
+    # reportable): reclassification must report no delta.
+    store.upsert_incident(
+        _record(
+            "20260629-PH-EQ",
+            country="Philippines",
+            priority="LOW",
+            severity_level=1,
+            should_report=False,
         )
     )
     deltas = store.reclassify_all(dry_run=True)
