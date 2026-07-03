@@ -1,0 +1,309 @@
+{
+  "schema_version": "1.4",
+  "report_date": "2026-06-26",
+  "generated_at": "2026-06-26T11:37:00Z",
+  "as_of": "2026-06-26",
+  "tracking_window_days": 14,
+  "min_severity": "LOW",
+  "summary": {
+    "reportable_total": 2,
+    "new_today": 0,
+    "critical": 1,
+    "high": 1,
+    "medium": 0,
+    "low": 0,
+    "disease_outbreaks": 2,
+    "countries_affected": 2,
+    "news_total": 42,
+    "max_magnitude": null,
+    "by_severity": {
+      "CRITICAL": 1,
+      "HIGH": 1
+    },
+    "by_type": {
+      "Disease": 2
+    },
+    "by_region": {
+      "Africa": 1,
+      "Asia": 1
+    }
+  },
+  "by_country": [
+    {
+      "country": "DR Congo",
+      "count": 1,
+      "max_sev_rank": 1,
+      "iso2": "CD",
+      "region": "Africa",
+      "country_group": "C",
+      "max_severity": "CRITICAL"
+    },
+    {
+      "country": "India",
+      "count": 1,
+      "max_sev_rank": 2,
+      "iso2": "IN",
+      "region": "Asia",
+      "country_group": "A",
+      "max_severity": "HIGH"
+    }
+  ],
+  "incidents": [
+    {
+      "incident_id": "20260619-CD-EP",
+      "canonical_name": "Ebola outbreak DR Congo June 2026",
+      "summary": "The WHO has declared a public health emergency of international concern following an outbreak of Ebola disease caused by the Bundibugyo virus in the Democratic Republic of the Congo and Uganda. As of May 15, 2026, the DRC reported 246 suspected cases and 80 deaths, while Uganda confirmed two imported cases. Response efforts are focused on surveillance, infection prevention, and cross-border coordination, though efforts in the DRC's Ituri province are hindered by ongoing conflict and humanitarian crises.",
+      "country": "DR Congo",
+      "iso2": "CD",
+      "lat": -4.04,
+      "lon": 21.76,
+      "country_group": "C",
+      "region": "Africa",
+      "incident_type": "Disease",
+      "incident_category": "Biological",
+      "is_disease": true,
+      "severity": "CRITICAL",
+      "priority": "HIGH",
+      "priority_rank": 1,
+      "pandemic_potential": "HIGH",
+      "event_status": "new_outbreak",
+      "disease_name": "Ebola",
+      "event_date": "2026-06-19",
+      "first_reported_date": "2026-07-01",
+      "last_updated_date": "2026-07-01",
+      "days_since_event": 12,
+      "source_count": 6,
+      "should_report": true,
+      "search_keys": [
+        "Ebola DR Congo outbreak 2026",
+        "Ebola DR Congo June 2026",
+        "Ebola outbreak cases deaths"
+      ],
+      "sources": {
+        "who_don": 6,
+        "usgs": 0,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 32
+      },
+      "source_links": [
+        {
+          "type": "WHO",
+          "label": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo & Uganda",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON608",
+          "meta": "WHO Disease Outbreak News"
+        },
+        {
+          "type": "WHO",
+          "label": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo & Uganda",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON607",
+          "meta": "WHO Disease Outbreak News"
+        },
+        {
+          "type": "WHO",
+          "label": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo & Uganda",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON606",
+          "meta": "WHO Disease Outbreak News"
+        },
+        {
+          "type": "WHO",
+          "label": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo & Uganda",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON605",
+          "meta": "WHO Disease Outbreak News"
+        },
+        {
+          "type": "WHO",
+          "label": "Ebola disease caused by Bundibugyo virus \u2013 Democratic Republic of the Congo",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON603",
+          "meta": "WHO Disease Outbreak News"
+        },
+        {
+          "type": "WHO",
+          "label": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo & Uganda",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON602",
+          "meta": "WHO Disease Outbreak News"
+        }
+      ],
+      "physical": null,
+      "news": [
+        {
+          "headline": "More than 400 dead in DR Congo's spreading Ebola outbreak",
+          "url": "https://medicalxpress.com/news/2026-07-dead-dr-congo-ebola-outbreak.html",
+          "outlet": "Medical Xpress",
+          "published_date": "2026-07-03"
+        },
+        {
+          "headline": "An AP journalist describes a month in the epicenter of Congo's Ebola outbreak",
+          "url": "https://www.newsday.com/news/nation/congo-ebola-outbreak-dispatch-g74711",
+          "outlet": "Newsday",
+          "published_date": "2026-07-02"
+        },
+        {
+          "headline": "Population mobility and Ebola case containment in Ituri, DR Congo",
+          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01253-5/fulltext",
+          "outlet": "The Lancet",
+          "published_date": "2026-07-02"
+        },
+        {
+          "headline": "DR Congo's Ebola official death toll exceeds 400 \u2014 authorities",
+          "url": "https://www.jamaicaobserver.com/2026/07/02/dr-congos-ebola-official-death-toll-exceeds-400-authorities/",
+          "outlet": "Jamaica Observer",
+          "published_date": "2026-07-02"
+        },
+        {
+          "headline": "Stories from the epicenter of the Ebola outbreak",
+          "url": "https://apnews.com/article/congo-ebola-outbreak-dispatch-10a0c2ea31cb66f06414bc8b76ce60e2",
+          "outlet": "Associated Press News",
+          "published_date": "2026-07-02"
+        },
+        {
+          "headline": "An AP journalist describes a month in the epicenter of Congo's Ebola outbreak",
+          "url": "https://www.washingtonpost.com/world/2026/07/02/congo-ebola-outbreak-dispatch/a0e047a8-75d5-11f1-b665-5f8be87f3787_story.html",
+          "outlet": "The Washington Post",
+          "published_date": "2026-07-02"
+        },
+        {
+          "headline": "Researchers launch study on Ebola treatments as Congo outbreak worsens - WTOP...",
+          "url": "https://wtop.com/national/2026/07/researchers-launch-study-on-ebola-treatments-as-congo-outbreak-worsens/",
+          "outlet": "WTOP Washington",
+          "published_date": "2026-07-02"
+        },
+        {
+          "headline": "Trial of potential Ebola treatments begins in DR Congo: WHO",
+          "url": "https://medicalxpress.com/news/2026-07-trial-potential-ebola-treatments-dr.html",
+          "outlet": "Medical Xpress",
+          "published_date": "2026-07-02"
+        },
+        {
+          "headline": "What is Ebola and why is stopping the latest outbreak so difficult?",
+          "url": "https://www.yahoo.com/news/articles/ebola-why-stopping-outbreak-difficult-141536657.html",
+          "outlet": "BBC \u00b7 via Yahoo News",
+          "published_date": "2026-07-01"
+        },
+        {
+          "headline": "Mob burns Ebola treatment centre in eastern Congo, killing policeman",
+          "url": "https://www.yahoo.com/news/world/articles/mob-burns-ebola-treatment-centre-193430574.html",
+          "outlet": "dpa international \u00b7 via Yahoo News",
+          "published_date": "2026-07-01"
+        }
+      ],
+      "news_total": 32
+    },
+    {
+      "incident_id": "20260625-IN-EP",
+      "canonical_name": "Nipah outbreak India June 2026",
+      "summary": "India notified the WHO of two laboratory-confirmed cases of Nipah virus infection in West Bengal involving healthcare workers at a private hospital in Barasat. Health authorities tested over 190 contacts, all of whom were negative, and have implemented enhanced surveillance and infection control measures. WHO assesses the public health risk as moderate at the sub-national level and low at the national, regional, and global levels.",
+      "country": "India",
+      "iso2": "IN",
+      "lat": 20.59,
+      "lon": 78.96,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Disease",
+      "incident_category": "Biological",
+      "is_disease": true,
+      "severity": "HIGH",
+      "priority": "HIGH",
+      "priority_rank": 1,
+      "pandemic_potential": "MEDIUM",
+      "event_status": "containment",
+      "disease_name": "Nipah",
+      "event_date": "2026-06-25",
+      "first_reported_date": "2026-07-01",
+      "last_updated_date": "2026-07-01",
+      "days_since_event": 6,
+      "source_count": 2,
+      "should_report": true,
+      "search_keys": [
+        "Nipah India outbreak 2026",
+        "Nipah India June 2026",
+        "Nipah outbreak cases deaths"
+      ],
+      "sources": {
+        "who_don": 2,
+        "usgs": 0,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 10
+      },
+      "source_links": [
+        {
+          "type": "WHO",
+          "label": "Nipah virus disease - India",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON609",
+          "meta": "WHO Disease Outbreak News"
+        },
+        {
+          "type": "WHO",
+          "label": "Nipah virus disease - India",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON593",
+          "meta": "WHO Disease Outbreak News"
+        }
+      ],
+      "physical": null,
+      "news": [
+        {
+          "headline": "Kerala contains single Nipah case as Shigella adds 8 infections",
+          "url": "https://www.newsbytesapp.com/news/india/kerala-contains-single-nipah-case-as-shigella-adds-8-infections/tldr",
+          "outlet": "NewsBytes",
+          "published_date": "2026-06-30"
+        },
+        {
+          "headline": "Kerala clears contact quarantine in lone Nipah case, no new infections found",
+          "url": "https://www.indiatoday.in/india/story/kerala-nipah-case-all-close-contacts-finish-quarantine-only-three-under-watch-ptag-2937650-2026-06-30",
+          "outlet": "India Today",
+          "published_date": "2026-06-30"
+        },
+        {
+          "headline": "All contacts of Keralas lone Nipah patient complete quarantine: Minister",
+          "url": "https://www.msn.com/en-in/health/health-news/all-contacts-of-keralas-lone-nipah-patient-complete-quarantine-minister/ar-AA26SRDi",
+          "outlet": "News18",
+          "published_date": "2026-06-30"
+        },
+        {
+          "headline": "All contacts of Kerala's lone Nipah patient complete quarantine",
+          "url": "https://www.msn.com/en-in/news/other/all-contacts-of-kerala-s-lone-nipah-patient-complete-quarantine/ar-AA26TD4r",
+          "outlet": "Newspoint",
+          "published_date": "2026-06-30"
+        },
+        {
+          "headline": "Shigella alert in Kerala as cases climb to 267; outbreaks declared in four districts",
+          "url": "https://english.mathrubhumi.com/news/kerala/shigella-outbreak-kerala-2026-health-alert-k2ubof7r",
+          "outlet": "Mathrubhumi English",
+          "published_date": "2026-06-28"
+        },
+        {
+          "headline": "Shigella outbreak in Kerala: 10 new cases reported",
+          "url": "https://www.msn.com/en-in/health/diseases-and-conditions/shigella-outbreak-in-kerala-10-new-cases-reported/ar-AA26G0Iq",
+          "outlet": "News18",
+          "published_date": "2026-06-27"
+        },
+        {
+          "headline": "Kerala reports 10 more Shigella cases: June toll reaches 190 infections, 6 deaths",
+          "url": "http://www.uniindia.com/~/kerala-reports-10-more-shigella-cases-june-toll-reaches-190-infections-6-deaths/States/news/3891260.html",
+          "outlet": "UNITED NEWS OF INDIA",
+          "published_date": "2026-06-27"
+        },
+        {
+          "headline": "Kerala reports 8 more Shigella cases; June tally climbs to 180",
+          "url": "https://telanganatoday.com/kerala-reports-8-more-shigella-cases-june-tally-climbs-to-180",
+          "outlet": "Telangana Today",
+          "published_date": "2026-06-26"
+        },
+        {
+          "headline": "Kerala logs 180 Shigella cases in June, Nipah patient stays critical",
+          "url": "https://www.msn.com/en-in/health/health-news/kerala-logs-180-shigella-cases-in-june-nipah-patient-stays-critical/ar-AA26COLX",
+          "outlet": "India Today",
+          "published_date": "2026-06-26"
+        },
+        {
+          "headline": "Not just El Nino: What made June 2026 third driest in 100 years? IMD answers",
+          "url": "https://www.msn.com/en-in/entertainment/hollywood/not-just-el-nino-what-made-june-2026-third-driest-in-100-years-imd-answers/ar-AA26WliV?ocid=BingNewsVerp",
+          "outlet": "India Today on MSN",
+          "published_date": "2026-06-18"
+        }
+      ],
+      "news_total": 10
+    }
+  ]
+}

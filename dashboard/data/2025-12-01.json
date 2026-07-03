@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.4",
+  "report_date": "2025-12-01",
+  "generated_at": "2025-12-01T11:37:00Z",
+  "as_of": "2025-12-01",
+  "tracking_window_days": 14,
+  "min_severity": "LOW",
+  "summary": {
+    "reportable_total": 1,
+    "new_today": 0,
+    "critical": 0,
+    "high": 1,
+    "medium": 0,
+    "low": 0,
+    "disease_outbreaks": 1,
+    "countries_affected": 0,
+    "news_total": 3,
+    "max_magnitude": null,
+    "by_severity": {
+      "HIGH": 1
+    },
+    "by_type": {
+      "Disease": 1
+    },
+    "by_region": {
+      "Unknown": 1
+    }
+  },
+  "by_country": [
+    {
+      "country": "Unknown",
+      "count": 1,
+      "max_sev_rank": 2,
+      "iso2": "XX",
+      "region": "Unknown",
+      "country_group": "C",
+      "max_severity": "HIGH"
+    }
+  ],
+  "incidents": [
+    {
+      "incident_id": "20251121-XX-EP",
+      "canonical_name": "Diphtheria outbreak November 2025",
+      "summary": "Between January 1 and November 2, 2025, eight countries in the WHO African Region reported 20,412 suspected diphtheria cases and 1,252 deaths, primarily affecting children and young adults. Nigeria has reported the highest number of cases, while Guinea has experienced the highest case fatality rate. Response efforts are currently limited by low vaccination coverage, poor laboratory capacity, and a global shortage of antitoxin.",
+      "country": "Unknown",
+      "iso2": "XX",
+      "lat": 0,
+      "lon": 0,
+      "country_group": "C",
+      "region": "Unknown",
+      "incident_type": "Disease",
+      "incident_category": "Biological",
+      "is_disease": true,
+      "severity": "HIGH",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": "LOW",
+      "event_status": "ongoing",
+      "disease_name": "Diphtheria",
+      "event_date": "2025-11-21",
+      "first_reported_date": "2026-07-01",
+      "last_updated_date": "2026-07-01",
+      "days_since_event": 222,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [
+        "Diphtheria outbreak 2025",
+        "Diphtheria November 2025",
+        "Diphtheria outbreak cases deaths"
+      ],
+      "sources": {
+        "who_don": 1,
+        "usgs": 0,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 3
+      },
+      "source_links": [
+        {
+          "type": "WHO",
+          "label": "Diphtheria - African Region (AFRO)",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/DON588",
+          "meta": "WHO Disease Outbreak News"
+        }
+      ],
+      "physical": null,
+      "news": [
+        {
+          "headline": "American vaccines that transformed public health over 250 years: 'Outweighs harm'",
+          "url": "https://www.msn.com/en-us/science/biology/american-vaccines-that-transformed-public-health-over-250-years-outweighs-harm/ar-AA26YSap?ocid=BingNewsVerp",
+          "outlet": "FOX News on MSN",
+          "published_date": "2026-06-28"
+        },
+        {
+          "headline": "More than 400 dead in DR Congo's spreading Ebola outbreak",
+          "url": "https://www.channelnewsasia.com/world/ebola-outbreak-dr-congo-400-dead-6228901",
+          "outlet": "CNA",
+          "published_date": "2026-06-28"
+        },
+        {
+          "headline": "The Military Traded Its Flu Vaccine Mandate for \u201cMedical Freedom\u201d \u2014 An Outbreak ...",
+          "url": "https://www.yahoo.com/news/us/articles/military-traded-flu-vaccine-mandate-145129784.html",
+          "outlet": "Katie Couric Media \u00b7 via Yahoo News",
+          "published_date": "2026-06-25"
+        }
+      ],
+      "news_total": 3
+    }
+  ]
+}

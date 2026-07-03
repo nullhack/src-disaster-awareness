@@ -1,0 +1,1827 @@
+{
+  "schema_version": "1.4",
+  "report_date": "2026-06-30",
+  "generated_at": "2026-06-30T11:37:00Z",
+  "as_of": "2026-06-30",
+  "tracking_window_days": 14,
+  "min_severity": "LOW",
+  "summary": {
+    "reportable_total": 16,
+    "new_today": 6,
+    "critical": 2,
+    "high": 3,
+    "medium": 8,
+    "low": 3,
+    "disease_outbreaks": 2,
+    "countries_affected": 11,
+    "news_total": 197,
+    "max_magnitude": 6.0,
+    "by_severity": {
+      "CRITICAL": 2,
+      "HIGH": 3,
+      "MEDIUM": 8,
+      "LOW": 3
+    },
+    "by_type": {
+      "Earthquake": 14,
+      "Disease": 2
+    },
+    "by_region": {
+      "Americas": 3,
+      "Africa": 1,
+      "Asia": 10,
+      "Oceania": 1,
+      "Unknown": 1
+    }
+  },
+  "by_country": [
+    {
+      "country": "Venezuela",
+      "count": 1,
+      "max_sev_rank": 1,
+      "iso2": "VE",
+      "region": "Americas",
+      "country_group": "C",
+      "max_severity": "CRITICAL"
+    },
+    {
+      "country": "DR Congo",
+      "count": 1,
+      "max_sev_rank": 1,
+      "iso2": "CD",
+      "region": "Africa",
+      "country_group": "C",
+      "max_severity": "CRITICAL"
+    },
+    {
+      "country": "Philippines",
+      "count": 3,
+      "max_sev_rank": 2,
+      "iso2": "PH",
+      "region": "Asia",
+      "country_group": "A",
+      "max_severity": "HIGH"
+    },
+    {
+      "country": "Japan",
+      "count": 2,
+      "max_sev_rank": 2,
+      "iso2": "JP",
+      "region": "Asia",
+      "country_group": "A",
+      "max_severity": "HIGH"
+    },
+    {
+      "country": "India",
+      "count": 1,
+      "max_sev_rank": 2,
+      "iso2": "IN",
+      "region": "Asia",
+      "country_group": "A",
+      "max_severity": "HIGH"
+    },
+    {
+      "country": "China",
+      "count": 2,
+      "max_sev_rank": 3,
+      "iso2": "CN",
+      "region": "Asia",
+      "country_group": "A",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "Mexico",
+      "count": 1,
+      "max_sev_rank": 3,
+      "iso2": "MX",
+      "region": "Americas",
+      "country_group": "C",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "Papua New Guinea",
+      "count": 1,
+      "max_sev_rank": 3,
+      "iso2": "PG",
+      "region": "Oceania",
+      "country_group": "B",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "Afghanistan",
+      "count": 1,
+      "max_sev_rank": 3,
+      "iso2": "AF",
+      "region": "Asia",
+      "country_group": "A",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "Unknown",
+      "count": 1,
+      "max_sev_rank": 3,
+      "iso2": "XX",
+      "region": "Unknown",
+      "country_group": "C",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "United States",
+      "count": 1,
+      "max_sev_rank": 3,
+      "iso2": "US",
+      "region": "Americas",
+      "country_group": "C",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "Indonesia",
+      "count": 1,
+      "max_sev_rank": 4,
+      "iso2": "ID",
+      "region": "Asia",
+      "country_group": "A",
+      "max_severity": "LOW"
+    }
+  ],
+  "incidents": [
+    {
+      "incident_id": "20260629-VE-EQ",
+      "canonical_name": "Earthquake 27 km N of Caraballeda June 2026",
+      "summary": "Two powerful earthquakes, including a magnitude 7.2 event, struck west of Caracas, Venezuela, on June 24, 2026, resulting in 1,943 deaths and damaging nearly 59,000 buildings. International rescue teams, including units from Costa Rica and South Florida, assisted in the aftermath, notably rescuing a man trapped under rubble for eight days.",
+      "country": "Venezuela",
+      "iso2": "VE",
+      "lat": 6.42,
+      "lon": -66.59,
+      "country_group": "C",
+      "region": "Americas",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "CRITICAL",
+      "priority": "HIGH",
+      "priority_rank": 1,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-06-29",
+      "first_reported_date": "2026-06-29",
+      "last_updated_date": "2026-07-01",
+      "days_since_event": 2,
+      "source_count": 2,
+      "should_report": true,
+      "search_keys": [
+        "27 km N of Caraballeda earthquake June 2026",
+        "Venezuela earthquake June 2026",
+        "27 km N of Caraballeda earthquake 2026"
+      ],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 1,
+        "healthmap": 0,
+        "news": 68
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M4.6 \u00b7 27 km N of Caraballeda, Venezuela",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8yf/executive",
+          "meta": "10 km depth"
+        },
+        {
+          "type": "GDACS",
+          "label": "Green alert \u00b7 Magnitude 4.6M, Depth:10km",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1549175&episodeid=1715214",
+          "meta": "pop 3747"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 4.6,
+        "max_depth_km": 10.0,
+        "place": "27 km N of Caraballeda, Venezuela",
+        "felt": 81,
+        "sig": 357,
+        "tsunami": false,
+        "gdacs_alertlevel": "Green",
+        "gdacs_population": 3747
+      },
+      "news": [
+        {
+          "headline": "HAARP Accused (Again) Of Causing Extreme Weather And Earthquakes",
+          "url": "https://www.yahoo.com/news/science/articles/haarp-accused-again-causing-extreme-120656924.html",
+          "outlet": "Forbes \u00b7 via Yahoo News",
+          "published_date": "2026-07-02"
+        },
+        {
+          "headline": "Video game simulation misrepresented as footage of Venezuela earthquake",
+          "url": "https://www.yahoo.com/news/world/articles/video-game-simulation-misrepresented-footage-064613981.html",
+          "outlet": "AFP \u00b7 via Yahoo News",
+          "published_date": "2026-07-02"
+        },
+        {
+          "headline": "Miami Fire Rescue team members help rescue Venezuela earthquake victim trapped...",
+          "url": "https://www.cbsnews.com/miami/news/miami-fire-rescue-venezuela-rescue-man-trapped-earthquake-hernan-alberto-flores-gil/",
+          "outlet": "CBS News",
+          "published_date": "2026-07-02"
+        },
+        {
+          "headline": "Weeks-old CCTV footage from Philippines misrepresented as Venezuela earthquake",
+          "url": "https://www.yahoo.com/news/world/articles/weeks-old-cctv-footage-philippines-051233575.html",
+          "outlet": "AFP \u00b7 via Yahoo News",
+          "published_date": "2026-07-01"
+        },
+        {
+          "headline": "Spotless uniforms, stalled cranes: Inside Venezuela\u2019s faltering quake rescue eff...",
+          "url": "https://www.adn.com/nation-world/2026/07/01/spotless-uniforms-stalled-cranes-inside-venezuelas-faltering-quake-rescue-effort/",
+          "outlet": "Anchorage Daily News",
+          "published_date": "2026-07-01"
+        },
+        {
+          "headline": "Aid groups warn Venezuela\u2019s healthcare system is near its limit after earthquake...",
+          "url": "https://www.stamfordadvocate.com/news/world/article/aid-workers-warn-of-infectious-diseases-22326752.php",
+          "outlet": "Stamford Advocate",
+          "published_date": "2026-06-30"
+        },
+        {
+          "headline": "US Races To Reopen Venezuela Port As Quake Deaths Top 1,700",
+          "url": "https://www.channelstv.com/2026/06/29/us-races-to-reopen-venezuela-port-as-quake-deaths-top-1700/",
+          "outlet": "Channels Television",
+          "published_date": "2026-06-30"
+        },
+        {
+          "headline": "MLB, MLBPA donate $1 million to Red Cross for Venezuela earthquake relief",
+          "url": "https://www.mlb.com/news/mlb-mlbpa-venezuela-earthquake-relief-donation",
+          "outlet": "Major League Baseball",
+          "published_date": "2026-06-30"
+        },
+        {
+          "headline": "Venezuela Quake Death Toll Nears 2,000; Machado Stuck in Panama",
+          "url": "https://www.bloomberg.com/news/articles/2026-06-30/venezuela-quake-toll-nears-2-000-with-machado-stuck-in-panama",
+          "outlet": "Bloomberg",
+          "published_date": "2026-06-30"
+        },
+        {
+          "headline": "European rescue teams arrive in Venezuela in desperate bid to find quake...",
+          "url": "https://www.yahoo.com/news/articles/european-rescue-teams-arrive-venezuela-073724222.html",
+          "outlet": "Euronews \u00b7 via Yahoo News",
+          "published_date": "2026-06-30"
+        }
+      ],
+      "news_total": 68
+    },
+    {
+      "incident_id": "20260619-CD-EP",
+      "canonical_name": "Ebola outbreak DR Congo June 2026",
+      "summary": "The WHO has declared a public health emergency of international concern following an outbreak of Ebola disease caused by the Bundibugyo virus in the Democratic Republic of the Congo and Uganda. As of May 15, 2026, the DRC reported 246 suspected cases and 80 deaths, while Uganda confirmed two imported cases. Response efforts are focused on surveillance, infection prevention, and cross-border coordination, though efforts in the DRC's Ituri province are hindered by ongoing conflict and humanitarian crises.",
+      "country": "DR Congo",
+      "iso2": "CD",
+      "lat": -4.04,
+      "lon": 21.76,
+      "country_group": "C",
+      "region": "Africa",
+      "incident_type": "Disease",
+      "incident_category": "Biological",
+      "is_disease": true,
+      "severity": "CRITICAL",
+      "priority": "HIGH",
+      "priority_rank": 1,
+      "pandemic_potential": "HIGH",
+      "event_status": "new_outbreak",
+      "disease_name": "Ebola",
+      "event_date": "2026-06-19",
+      "first_reported_date": "2026-07-01",
+      "last_updated_date": "2026-07-01",
+      "days_since_event": 12,
+      "source_count": 6,
+      "should_report": true,
+      "search_keys": [
+        "Ebola DR Congo outbreak 2026",
+        "Ebola DR Congo June 2026",
+        "Ebola outbreak cases deaths"
+      ],
+      "sources": {
+        "who_don": 6,
+        "usgs": 0,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 32
+      },
+      "source_links": [
+        {
+          "type": "WHO",
+          "label": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo & Uganda",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON608",
+          "meta": "WHO Disease Outbreak News"
+        },
+        {
+          "type": "WHO",
+          "label": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo & Uganda",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON607",
+          "meta": "WHO Disease Outbreak News"
+        },
+        {
+          "type": "WHO",
+          "label": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo & Uganda",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON606",
+          "meta": "WHO Disease Outbreak News"
+        },
+        {
+          "type": "WHO",
+          "label": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo & Uganda",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON605",
+          "meta": "WHO Disease Outbreak News"
+        },
+        {
+          "type": "WHO",
+          "label": "Ebola disease caused by Bundibugyo virus \u2013 Democratic Republic of the Congo",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON603",
+          "meta": "WHO Disease Outbreak News"
+        },
+        {
+          "type": "WHO",
+          "label": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo & Uganda",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON602",
+          "meta": "WHO Disease Outbreak News"
+        }
+      ],
+      "physical": null,
+      "news": [
+        {
+          "headline": "More than 400 dead in DR Congo's spreading Ebola outbreak",
+          "url": "https://medicalxpress.com/news/2026-07-dead-dr-congo-ebola-outbreak.html",
+          "outlet": "Medical Xpress",
+          "published_date": "2026-07-03"
+        },
+        {
+          "headline": "An AP journalist describes a month in the epicenter of Congo's Ebola outbreak",
+          "url": "https://www.newsday.com/news/nation/congo-ebola-outbreak-dispatch-g74711",
+          "outlet": "Newsday",
+          "published_date": "2026-07-02"
+        },
+        {
+          "headline": "Population mobility and Ebola case containment in Ituri, DR Congo",
+          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01253-5/fulltext",
+          "outlet": "The Lancet",
+          "published_date": "2026-07-02"
+        },
+        {
+          "headline": "DR Congo's Ebola official death toll exceeds 400 \u2014 authorities",
+          "url": "https://www.jamaicaobserver.com/2026/07/02/dr-congos-ebola-official-death-toll-exceeds-400-authorities/",
+          "outlet": "Jamaica Observer",
+          "published_date": "2026-07-02"
+        },
+        {
+          "headline": "Stories from the epicenter of the Ebola outbreak",
+          "url": "https://apnews.com/article/congo-ebola-outbreak-dispatch-10a0c2ea31cb66f06414bc8b76ce60e2",
+          "outlet": "Associated Press News",
+          "published_date": "2026-07-02"
+        },
+        {
+          "headline": "An AP journalist describes a month in the epicenter of Congo's Ebola outbreak",
+          "url": "https://www.washingtonpost.com/world/2026/07/02/congo-ebola-outbreak-dispatch/a0e047a8-75d5-11f1-b665-5f8be87f3787_story.html",
+          "outlet": "The Washington Post",
+          "published_date": "2026-07-02"
+        },
+        {
+          "headline": "Researchers launch study on Ebola treatments as Congo outbreak worsens - WTOP...",
+          "url": "https://wtop.com/national/2026/07/researchers-launch-study-on-ebola-treatments-as-congo-outbreak-worsens/",
+          "outlet": "WTOP Washington",
+          "published_date": "2026-07-02"
+        },
+        {
+          "headline": "Trial of potential Ebola treatments begins in DR Congo: WHO",
+          "url": "https://medicalxpress.com/news/2026-07-trial-potential-ebola-treatments-dr.html",
+          "outlet": "Medical Xpress",
+          "published_date": "2026-07-02"
+        },
+        {
+          "headline": "What is Ebola and why is stopping the latest outbreak so difficult?",
+          "url": "https://www.yahoo.com/news/articles/ebola-why-stopping-outbreak-difficult-141536657.html",
+          "outlet": "BBC \u00b7 via Yahoo News",
+          "published_date": "2026-07-01"
+        },
+        {
+          "headline": "Mob burns Ebola treatment centre in eastern Congo, killing policeman",
+          "url": "https://www.yahoo.com/news/world/articles/mob-burns-ebola-treatment-centre-193430574.html",
+          "outlet": "dpa international \u00b7 via Yahoo News",
+          "published_date": "2026-07-01"
+        }
+      ],
+      "news_total": 32
+    },
+    {
+      "incident_id": "20260629-JP-EQ",
+      "canonical_name": "Earthquake Volcano Islands June 2026",
+      "summary": "Japan experienced a series of earthquakes in late June 2026, including a powerful 7.2-magnitude quake off the northern coast on June 25 that caused several injuries. Other seismic events occurred near Mt. Fuji and the Iwate coast, as well as a 4.5-magnitude quake in the Volcano Islands on June 29, though no tsunami warnings were triggered for these events.",
+      "country": "Japan",
+      "iso2": "JP",
+      "lat": 36.2,
+      "lon": 138.25,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "HIGH",
+      "priority": "HIGH",
+      "priority_rank": 1,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-06-29",
+      "first_reported_date": "2026-06-29",
+      "last_updated_date": "2026-07-01",
+      "days_since_event": 2,
+      "source_count": 2,
+      "should_report": true,
+      "search_keys": [
+        "Volcano Islands earthquake June 2026",
+        "Japan earthquake June 2026",
+        "Volcano Islands earthquake 2026"
+      ],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 1,
+        "healthmap": 0,
+        "news": 23
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M4.5 \u00b7 Volcano Islands, Japan region",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8xk/executive",
+          "meta": "179 km depth"
+        },
+        {
+          "type": "GDACS",
+          "label": "Green alert \u00b7 Magnitude 4.5M, Depth:179.4km",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1549152&episodeid=1715193",
+          "meta": "pop 0"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 4.5,
+        "max_depth_km": 179.4,
+        "place": "Volcano Islands, Japan region",
+        "felt": 0,
+        "sig": 312,
+        "tsunami": false,
+        "gdacs_alertlevel": "Green",
+        "gdacs_population": 0
+      },
+      "news": [
+        {
+          "headline": "ASTS Stock Eyes Comeback After 4-Week Slide: Japan Filing Confirms Rakuten-Led...",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/asts-stock-eyes-comeback-4-015243469.html",
+          "outlet": "Stocktwits \u00b7 via Yahoo Finance",
+          "published_date": "2026-07-01"
+        },
+        {
+          "headline": "ASTS Stock Logs Best Day In Nearly 2 Years: Japan\u2019s $926M Push For Rakuten-AST S...",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/asts-stock-logs-best-day-031545126.html",
+          "outlet": "Stocktwits \u00b7 via Yahoo Finance",
+          "published_date": "2026-06-30"
+        },
+        {
+          "headline": "Old Japan tsunami video falsely linked to 2026 Venezuela earthquake",
+          "url": "https://www.msn.com/en-us/public-safety-and-emergencies/natural-disasters/old-japan-tsunami-video-falsely-linked-to-2026-venezuela-earthquake/ar-AA26MG57",
+          "outlet": "AFP",
+          "published_date": "2026-06-29"
+        },
+        {
+          "headline": "6.1 magnitude earthquake off northeastern coastline rattles Japan; no tsunami warning issued",
+          "url": "https://www.thehindu.com/news/international/61-magnitude-earthquake-off-northeastern-coastline-rattles-japan-no-tsunami-warning-issued/article71156814.ece",
+          "outlet": "The Hindu",
+          "published_date": "2026-06-28"
+        },
+        {
+          "headline": "Magnitude 6.1 Earthquake Hits Off Iwate Coast In Japan; No Tsunami Risk, Says JMA",
+          "url": "https://www.republicworld.com/world-news/magnitude-61-earthquake-hits-off-iwate-coast-in-japan-no-tsunami-risk-says-jma-2026-06-28-130265",
+          "outlet": "Republic World",
+          "published_date": "2026-06-28"
+        },
+        {
+          "headline": "Japan: M5.6 quake hits eastern Yamanashi near Mt. Fuji, no link to volcanic activity",
+          "url": "https://www.msn.com/en-us/news/world/japan-m56-quake-hits-eastern-yamanashi-near-mt-fuji-no-link-to-volcanic-activity/vi-AA26EDO9",
+          "outlet": "Amazon S3",
+          "published_date": "2026-06-27"
+        },
+        {
+          "headline": "Ten sustain minor injuries in M5.6 quake near Japan's Mt. Fuji",
+          "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/06/27/ten-sustain-minor-injuries-in-m56-quake-near-japan039s-mt-fuji",
+          "outlet": "The Star",
+          "published_date": "2026-06-27"
+        },
+        {
+          "headline": "M5.6 quake hits Yamanashi in central Japan, nearby areas",
+          "url": "https://mainichi.jp/english/articles/20260626/p2g/00m/0na/046000c",
+          "outlet": "The Mainichi",
+          "published_date": "2026-06-27"
+        },
+        {
+          "headline": "Japan hit by second quake in two days, no tsunami warning",
+          "url": "https://www.khaosodenglish.com/news/international/2026/06/26/japan-hit-by-second-quake-in-two-days-no-tsunami-warning/",
+          "outlet": "Khaosod English",
+          "published_date": "2026-06-26"
+        },
+        {
+          "headline": "Video from Myanmar misrepresented as 2026 earthquake in Venezuela",
+          "url": "https://www.msn.com/en-us/news/world/video-from-myanmar-misrepresented-as-2026-earthquake-in-venezuela/ar-AA26CuyR",
+          "outlet": "AFP Fact Check",
+          "published_date": "2026-06-26"
+        }
+      ],
+      "news_total": 23
+    },
+    {
+      "incident_id": "20260629-PH-EQ",
+      "canonical_name": "Earthquake 107 km SSW of Sarangani June 2026",
+      "summary": "A magnitude 7.8 earthquake struck off Maasim, Sarangani, Philippines, on June 8, 2026, resulting in 81 deaths, 31 missing persons, and over 87,000 damaged houses. Infrastructure losses are estimated at approximately PHP 1.47 billion, prompting the National Housing Authority and DSWD to distribute millions in financial aid to affected families. Subsequent earthquakes, including one with a magnitude of 6.7, were also reported in the region later in June.",
+      "country": "Philippines",
+      "iso2": "PH",
+      "lat": 12.88,
+      "lon": 121.77,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "HIGH",
+      "priority": "HIGH",
+      "priority_rank": 1,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-06-29",
+      "first_reported_date": "2026-06-29",
+      "last_updated_date": "2026-06-29",
+      "days_since_event": 0,
+      "source_count": 3,
+      "should_report": true,
+      "search_keys": [
+        "107 km SSW of Sarangani earthquake June 2026",
+        "Philippines earthquake June 2026",
+        "107 km SSW of Sarangani earthquake 2026"
+      ],
+      "sources": {
+        "who_don": 0,
+        "usgs": 2,
+        "gdacs": 1,
+        "healthmap": 0,
+        "news": 19
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M5.2 \u00b7 107 km SSW of Sarangani, Philippines",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8x8/executive",
+          "meta": "10 km depth"
+        },
+        {
+          "type": "USGS",
+          "label": "M4.9 \u00b7 90 km S of Sarangani, Philippines",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8x6/executive",
+          "meta": "45 km depth"
+        },
+        {
+          "type": "GDACS",
+          "label": "Green alert \u00b7 Magnitude 4.9M, Depth:45.1km",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1549141&episodeid=1715174",
+          "meta": "pop 28967"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 5.2,
+        "max_depth_km": 45.1,
+        "place": "107 km SSW of Sarangani, Philippines,90 km S of Sarangani, Philippines",
+        "felt": 2,
+        "sig": 416,
+        "tsunami": false,
+        "gdacs_alertlevel": "Green",
+        "gdacs_population": 28967
+      },
+      "news": [
+        {
+          "headline": "Infra damage from Sarangani quake climbs to P1.4B",
+          "url": "https://www.pna.gov.ph/articles/1278224",
+          "outlet": "pna",
+          "published_date": "2026-06-29"
+        },
+        {
+          "headline": "Glan residents wait for quake aid as some left empty-handed",
+          "url": "https://davaotoday.com/headline/glan-residents-wait-for-quake-aid-as-some-left-empty-handed/",
+          "outlet": "Davao Today",
+          "published_date": "2026-06-29"
+        },
+        {
+          "headline": "Go urges aid for Filipinos in Venezuela",
+          "url": "https://www.msn.com/en-ph/news/national/go-urges-aid-for-filipinos-in-venezuela/ar-AA26ZJxv?ocid=BingNewsVerp",
+          "outlet": "The Manila Times on MSN",
+          "published_date": "2026-06-28"
+        },
+        {
+          "headline": "7.8 magnitude quake in the Philippines kills at least 35, collapses buildings and sparks tsunami",
+          "url": "https://spectrumlocalnews.com/us/snplus/news/2026/06/08/earthquake-rocks-the-southern-philippines",
+          "outlet": "spectrumlocalnews",
+          "published_date": "2026-06-27"
+        },
+        {
+          "headline": "DSWD-Davao disburses nearly P35M in ECT to quake-affected families",
+          "url": "https://www.sunstar.com.ph/davao/dswd-davao-disburses-nearly-p35m-in-ect-to-quake-affected-families",
+          "outlet": "SunStar",
+          "published_date": "2026-06-27"
+        },
+        {
+          "headline": "Death toll from Sarangani quake up to 81; 87,000 houses damaged",
+          "url": "https://manilastandard.net/news/314757971/death-toll-from-sarangani-quake-up-to-81-87000-houses-damaged.html",
+          "outlet": "Manila Standard",
+          "published_date": "2026-06-26"
+        },
+        {
+          "headline": "NDRRMC: Mindanao earthquake left 81 dead, 31 missing",
+          "url": "https://www.msn.com/en-ph/news/national/ndrrmc-mindanao-earthquake-left-81-dead-31-missing/ar-AA26AcbY",
+          "outlet": "GMA Network",
+          "published_date": "2026-06-26"
+        },
+        {
+          "headline": "Earthquake Of Magnitude 6.7 Hits Philippines, Residents Rush Outdoors",
+          "url": "https://www.oneindia.com/international/earthquake-of-magnitude-6-7-hits-philippines-residents-rush-outdoors-8130257.html",
+          "outlet": "Oneindia",
+          "published_date": "2026-06-26"
+        },
+        {
+          "headline": "Earthquake of 6.7 magnitude hits Philippines, tremors felt across the country",
+          "url": "https://www.indiatvnews.com/news/world/earthquake-of-6-7-magnitude-hits-philippines-a-day-after-venezuela-tragedy-check-photos-videos-2026-06-26-1046243",
+          "outlet": "India TV",
+          "published_date": "2026-06-26"
+        },
+        {
+          "headline": "Sarangani quake deaths climb to 81 - NDRRMC",
+          "url": "https://www.pna.gov.ph/articles/1278111",
+          "outlet": "pna",
+          "published_date": "2026-06-26"
+        }
+      ],
+      "news_total": 19
+    },
+    {
+      "incident_id": "20260625-IN-EP",
+      "canonical_name": "Nipah outbreak India June 2026",
+      "summary": "India notified the WHO of two laboratory-confirmed cases of Nipah virus infection in West Bengal involving healthcare workers at a private hospital in Barasat. Health authorities tested over 190 contacts, all of whom were negative, and have implemented enhanced surveillance and infection control measures. WHO assesses the public health risk as moderate at the sub-national level and low at the national, regional, and global levels.",
+      "country": "India",
+      "iso2": "IN",
+      "lat": 20.59,
+      "lon": 78.96,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Disease",
+      "incident_category": "Biological",
+      "is_disease": true,
+      "severity": "HIGH",
+      "priority": "HIGH",
+      "priority_rank": 1,
+      "pandemic_potential": "MEDIUM",
+      "event_status": "containment",
+      "disease_name": "Nipah",
+      "event_date": "2026-06-25",
+      "first_reported_date": "2026-07-01",
+      "last_updated_date": "2026-07-01",
+      "days_since_event": 6,
+      "source_count": 2,
+      "should_report": true,
+      "search_keys": [
+        "Nipah India outbreak 2026",
+        "Nipah India June 2026",
+        "Nipah outbreak cases deaths"
+      ],
+      "sources": {
+        "who_don": 2,
+        "usgs": 0,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 10
+      },
+      "source_links": [
+        {
+          "type": "WHO",
+          "label": "Nipah virus disease - India",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON609",
+          "meta": "WHO Disease Outbreak News"
+        },
+        {
+          "type": "WHO",
+          "label": "Nipah virus disease - India",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON593",
+          "meta": "WHO Disease Outbreak News"
+        }
+      ],
+      "physical": null,
+      "news": [
+        {
+          "headline": "Kerala contains single Nipah case as Shigella adds 8 infections",
+          "url": "https://www.newsbytesapp.com/news/india/kerala-contains-single-nipah-case-as-shigella-adds-8-infections/tldr",
+          "outlet": "NewsBytes",
+          "published_date": "2026-06-30"
+        },
+        {
+          "headline": "Kerala clears contact quarantine in lone Nipah case, no new infections found",
+          "url": "https://www.indiatoday.in/india/story/kerala-nipah-case-all-close-contacts-finish-quarantine-only-three-under-watch-ptag-2937650-2026-06-30",
+          "outlet": "India Today",
+          "published_date": "2026-06-30"
+        },
+        {
+          "headline": "All contacts of Keralas lone Nipah patient complete quarantine: Minister",
+          "url": "https://www.msn.com/en-in/health/health-news/all-contacts-of-keralas-lone-nipah-patient-complete-quarantine-minister/ar-AA26SRDi",
+          "outlet": "News18",
+          "published_date": "2026-06-30"
+        },
+        {
+          "headline": "All contacts of Kerala's lone Nipah patient complete quarantine",
+          "url": "https://www.msn.com/en-in/news/other/all-contacts-of-kerala-s-lone-nipah-patient-complete-quarantine/ar-AA26TD4r",
+          "outlet": "Newspoint",
+          "published_date": "2026-06-30"
+        },
+        {
+          "headline": "Shigella alert in Kerala as cases climb to 267; outbreaks declared in four districts",
+          "url": "https://english.mathrubhumi.com/news/kerala/shigella-outbreak-kerala-2026-health-alert-k2ubof7r",
+          "outlet": "Mathrubhumi English",
+          "published_date": "2026-06-28"
+        },
+        {
+          "headline": "Shigella outbreak in Kerala: 10 new cases reported",
+          "url": "https://www.msn.com/en-in/health/diseases-and-conditions/shigella-outbreak-in-kerala-10-new-cases-reported/ar-AA26G0Iq",
+          "outlet": "News18",
+          "published_date": "2026-06-27"
+        },
+        {
+          "headline": "Kerala reports 10 more Shigella cases: June toll reaches 190 infections, 6 deaths",
+          "url": "http://www.uniindia.com/~/kerala-reports-10-more-shigella-cases-june-toll-reaches-190-infections-6-deaths/States/news/3891260.html",
+          "outlet": "UNITED NEWS OF INDIA",
+          "published_date": "2026-06-27"
+        },
+        {
+          "headline": "Kerala reports 8 more Shigella cases; June tally climbs to 180",
+          "url": "https://telanganatoday.com/kerala-reports-8-more-shigella-cases-june-tally-climbs-to-180",
+          "outlet": "Telangana Today",
+          "published_date": "2026-06-26"
+        },
+        {
+          "headline": "Kerala logs 180 Shigella cases in June, Nipah patient stays critical",
+          "url": "https://www.msn.com/en-in/health/health-news/kerala-logs-180-shigella-cases-in-june-nipah-patient-stays-critical/ar-AA26COLX",
+          "outlet": "India Today",
+          "published_date": "2026-06-26"
+        },
+        {
+          "headline": "Not just El Nino: What made June 2026 third driest in 100 years? IMD answers",
+          "url": "https://www.msn.com/en-in/entertainment/hollywood/not-just-el-nino-what-made-june-2026-third-driest-in-100-years-imd-answers/ar-AA26WliV?ocid=BingNewsVerp",
+          "outlet": "India Today on MSN",
+          "published_date": "2026-06-18"
+        }
+      ],
+      "news_total": 10
+    },
+    {
+      "incident_id": "20260630-CN-EQ",
+      "canonical_name": "Earthquake 268 km SSE of Dunhuang June 2026",
+      "summary": "On June 30, 2026, a magnitude 5.2 earthquake occurred at a depth of 10 km approximately 268 km SSE of Dunhuang, China. According to reports from GDACS and USGS, there were no casualties or damage mentioned.",
+      "country": "China",
+      "iso2": "CN",
+      "lat": 35.86,
+      "lon": 104.2,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-06-30",
+      "first_reported_date": "2026-06-30",
+      "last_updated_date": "2026-06-30",
+      "days_since_event": 0,
+      "source_count": 2,
+      "should_report": true,
+      "search_keys": [
+        "268 km SSE of Dunhuang earthquake June 2026",
+        "China earthquake June 2026",
+        "268 km SSE of Dunhuang earthquake 2026"
+      ],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 1,
+        "healthmap": 0,
+        "news": 5
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M5.2 \u00b7 268 km SSE of Dunhuang, China",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9bg/executive",
+          "meta": "10 km depth"
+        },
+        {
+          "type": "GDACS",
+          "label": "Green alert \u00b7 Magnitude 5.2M, Depth:10km",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1549470&episodeid=1715540",
+          "meta": "pop 8505"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 5.2,
+        "max_depth_km": 10.0,
+        "place": "268 km SSE of Dunhuang, China",
+        "felt": 0,
+        "sig": 416,
+        "tsunami": false,
+        "gdacs_alertlevel": "Green",
+        "gdacs_population": 8505
+      },
+      "news": [
+        {
+          "headline": "RCSC to donate $300k to Venezuelan Red Cross to aid in earthquake relief efforts",
+          "url": "https://global.chinadaily.com.cn/a/202606/30/WS6a43c50ea310986e2b462c29.html",
+          "outlet": "China Daily Global Edition",
+          "published_date": "2026-06-30"
+        },
+        {
+          "headline": "China Earthquake SHOCKING VIDEO: Woman PROTECTS Child as 5.5 Magnitude Quake TRIGGERS Panic",
+          "url": "https://www.oneindia.com/videos/china-earthquake-shocking-video-woman-protects-child-as-5-5-magnitude-quake-triggers-panic-4313684.html",
+          "outlet": "Oneindia",
+          "published_date": "2026-06-29"
+        },
+        {
+          "headline": "Earthquake of magnitude 5.29 strikes Sichuan, China, GFZ says",
+          "url": "https://www.reuters.com/business/environment/earthquake-magnitude-529-strikes-sichuan-china-gfz-says-2026-06-28/",
+          "outlet": "Reuters",
+          "published_date": "2026-06-28"
+        },
+        {
+          "headline": "Earthquake today: 5.4 magnitude earthquake jolts Pakistan, epicenter was in\u2026",
+          "url": "https://news24online.com/world/earthquake-today-54-magnitude-earthquake-jolts-pakistan-here-what-we-know-so-far/872055/",
+          "outlet": "news24online",
+          "published_date": "2026-06-27"
+        },
+        {
+          "headline": "Magnitude 5.3 earthquake jolts northwestern China",
+          "url": "https://www.msn.com/en-ae/news/other/magnitude-53-earthquake-jolts-northwestern-china/ar-AA26Whft?ocid=BingNewsVerp",
+          "outlet": "Gulf News on MSN",
+          "published_date": "2026-06-20"
+        }
+      ],
+      "news_total": 5
+    },
+    {
+      "incident_id": "20260630-MX-EQ",
+      "canonical_name": "Earthquake 95 km SSW of El Progreso June 2026",
+      "summary": "A magnitude 6.0 earthquake struck the Gulf of California off the coast of La Paz and the Baja California peninsula in Mexico around June 30, 2026. Other seismic events were also noted near El Progreso and Topolobampo, though no casualties or damage have been reported.",
+      "country": "Mexico",
+      "iso2": "MX",
+      "lat": 23.63,
+      "lon": -102.55,
+      "country_group": "C",
+      "region": "Americas",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-06-30",
+      "first_reported_date": "2026-06-30",
+      "last_updated_date": "2026-06-30",
+      "days_since_event": 0,
+      "source_count": 6,
+      "should_report": true,
+      "search_keys": [
+        "95 km SSW of El Progreso earthquake June 2026",
+        "Mexico earthquake June 2026",
+        "95 km SSW of El Progreso earthquake 2026"
+      ],
+      "sources": {
+        "who_don": 0,
+        "usgs": 3,
+        "gdacs": 3,
+        "healthmap": 0,
+        "news": 8
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M5.3 \u00b7 95 km SSW of El Progreso, Mexico",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9a4/executive",
+          "meta": "10 km depth"
+        },
+        {
+          "type": "USGS",
+          "label": "M4.5 \u00b7 59 km SSW of Topolobampo, Mexico",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t99v/executive",
+          "meta": "10 km depth"
+        },
+        {
+          "type": "USGS",
+          "label": "M6.0 \u00b7 75 km SSW of El Progreso, Mexico",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t99j/executive",
+          "meta": "10 km depth"
+        },
+        {
+          "type": "GDACS",
+          "label": "Green alert \u00b7 Magnitude 5.3M, Depth:10km",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1549453&episodeid=1715547",
+          "meta": "pop 33586"
+        },
+        {
+          "type": "GDACS",
+          "label": "Green alert \u00b7 Magnitude 4.5M, Depth:10km",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1549447&episodeid=1715518",
+          "meta": "pop 649720"
+        },
+        {
+          "type": "GDACS",
+          "label": "Green alert \u00b7 Magnitude 6M, Depth:10km",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1549440&episodeid=1715504",
+          "meta": "pop 8860"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 6.0,
+        "max_depth_km": 10.0,
+        "place": "95 km SSW of El Progreso, Mexico,59 km SSW of Topolobampo, Mexico,75 km SSW of El Progreso, Mexico",
+        "felt": 15,
+        "sig": 559,
+        "tsunami": false,
+        "gdacs_alertlevel": "Green",
+        "gdacs_population": 649720
+      },
+      "news": [
+        {
+          "headline": "Mexico's legendary rescue brigade heads to Venezuela as earthquakes' death toll...",
+          "url": "https://www.latimes.com/world-nation/story/2026-07-01/mexicos-legendary-rescue-brigade-heads-to-venezuela-as-earthquakes-death-toll-tops-2-200",
+          "outlet": "Los Angeles Times",
+          "published_date": "2026-07-01"
+        },
+        {
+          "headline": "What to know about earthquake risks at World Cup host stadiums",
+          "url": "https://www.accuweather.com/en/sports/what-to-know-about-earthquake-risks-at-world-cup-host-stadiums/1905396",
+          "outlet": "AccuWeather",
+          "published_date": "2026-06-26"
+        },
+        {
+          "headline": "6.0-magnitude earthquake strikes in the Gulf of California",
+          "url": "https://www.msn.com/en-us/public-safety-and-emergencies/natural-disasters/6-0-magnitude-earthquake-strikes-in-the-gulf-of-california/ar-AA26URTK?ocid=BingNewsVerp",
+          "outlet": "News Nation on MSN",
+          "published_date": "2026-06-15"
+        },
+        {
+          "headline": "Magnitude 6.0 earthquake hits Mexico's Baja California peninsula along Pacific Ring of Fire",
+          "url": "https://www.msn.com/en-us/weather/topstories/magnitude-60-earthquake-hits-mexicos-baja-california-peninsula-along-pacific-ring-of-fire/ar-AA26UTrC?ocid=BingNewsVerp",
+          "outlet": "FOX Weather on MSN",
+          "published_date": "2026-06-14"
+        },
+        {
+          "headline": "Magnitude 6.0 earthquake hits Mexico's Baja California peninsula along Pacific Ring of Fire",
+          "url": "https://www.msn.com/en-us/news/other/magnitude-6-0-earthquake-hits-mexico-s-baja-california-peninsula-along-pacific-ring-of-fire/ar-AA26UTrC?ocid=BingNewsVerp",
+          "outlet": "Fox Weather on MSN",
+          "published_date": "2026-06-14"
+        },
+        {
+          "headline": "Map: 6.0-Magnitude Earthquake Shakes Off Mexico's Coast",
+          "url": "https://www.nytimes.com/interactive/2026/06/30/world/quake-tracker-gulf-of-california.html",
+          "outlet": "The New York Times",
+          "published_date": "2026-06-13"
+        },
+        {
+          "headline": "Magnitude-6.0 earthquake reported off Mexico in Gulf of California",
+          "url": "https://www.nbclosangeles.com/news/earthquakes/earthquake-mexico-gulf-of-california/3911172/",
+          "outlet": "NBC Los Angeles",
+          "published_date": "2026-06-11"
+        },
+        {
+          "headline": "Mexico fans celebrating World Cup win against Ecuador cause \u2018artificial\u2019 earthquake",
+          "url": "https://sports.yahoo.com/articles/mexico-fans-celebrating-world-cup-051012704.html",
+          "outlet": "Yahoo Sports",
+          "published_date": "2026-06-03"
+        }
+      ],
+      "news_total": 8
+    },
+    {
+      "incident_id": "20260630-PG-EQ",
+      "canonical_name": "Earthquake 90 km ESE of Kimbe June 2026",
+      "summary": "A magnitude 5.4 to 5.8 earthquake struck the New Britain region of Papua New Guinea, specifically 90 km east-southeast of Kimbe, on June 30, 2026. While reports from the German Research Centre for Geosciences, GDACS, and USGS confirmed the seismic activity, there were no immediate reports of casualties or damage.",
+      "country": "Papua New Guinea",
+      "iso2": "PG",
+      "lat": null,
+      "lon": null,
+      "country_group": "B",
+      "region": "Oceania",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-06-30",
+      "first_reported_date": "2026-06-30",
+      "last_updated_date": "2026-06-30",
+      "days_since_event": 0,
+      "source_count": 2,
+      "should_report": true,
+      "search_keys": [
+        "90 km ESE of Kimbe earthquake June 2026",
+        "Papua New Guinea earthquake June 2026",
+        "90 km ESE of Kimbe earthquake 2026"
+      ],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 1,
+        "healthmap": 0,
+        "news": 2
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M5.4 \u00b7 90 km ESE of Kimbe, Papua New Guinea",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t978/executive",
+          "meta": "35 km depth"
+        },
+        {
+          "type": "GDACS",
+          "label": "Green alert \u00b7 Magnitude 5.4M, Depth:35km",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1549407&episodeid=1715467",
+          "meta": "pop 206625"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 5.4,
+        "max_depth_km": 35.0,
+        "place": "90 km ESE of Kimbe, Papua New Guinea",
+        "felt": 0,
+        "sig": 449,
+        "tsunami": false,
+        "gdacs_alertlevel": "Green",
+        "gdacs_population": 206625
+      },
+      "news": [
+        {
+          "headline": "Seismic Shifts in New Britain: Papua New Guinea's Latest Earthquake",
+          "url": "https://www.devdiscourse.com/article/science-environment/3943115-seismic-shifts-in-new-britain-papua-new-guineas-latest-earthquake",
+          "outlet": "Devdiscourse",
+          "published_date": "2026-06-21"
+        },
+        {
+          "headline": "Magnitude 5.8 earthquake strikes New Britain Region, Papua New Guinea, GFZ says",
+          "url": "https://www.reuters.com/business/environment/magnitude-58-earthquake-strikes-new-britain-region-papua-new-guinea-gfz-says-2026-06-30/",
+          "outlet": "Reuters",
+          "published_date": "2026-06-20"
+        }
+      ],
+      "news_total": 2
+    },
+    {
+      "incident_id": "20260629-CN-EQ",
+      "canonical_name": "Earthquake 101 km ENE of Aksu June 2026",
+      "summary": "On June 29, 2026, a magnitude 4.8 earthquake occurred 101 km ENE of Aksu, China, with no reported casualties or damage. Separately, reports detailed seismic activity in China's Sichuan Province on the same date, including a magnitude 5.5 earthquake in Gao County and a magnitude 5.2 event.",
+      "country": "China",
+      "iso2": "CN",
+      "lat": 35.86,
+      "lon": 104.2,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-06-29",
+      "first_reported_date": "2026-06-29",
+      "last_updated_date": "2026-06-29",
+      "days_since_event": 0,
+      "source_count": 2,
+      "should_report": true,
+      "search_keys": [
+        "101 km ENE of Aksu earthquake June 2026",
+        "China earthquake June 2026",
+        "101 km ENE of Aksu earthquake 2026"
+      ],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 1,
+        "healthmap": 0,
+        "news": 7
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M4.8 \u00b7 101 km ENE of Aksu, China",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8z3/executive",
+          "meta": "10 km depth"
+        },
+        {
+          "type": "GDACS",
+          "label": "Green alert \u00b7 Magnitude 4.8M, Depth:10km",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1549180&episodeid=1715222",
+          "meta": "pop 1152"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 4.8,
+        "max_depth_km": 10.0,
+        "place": "101 km ENE of Aksu, China",
+        "felt": 0,
+        "sig": 354,
+        "tsunami": false,
+        "gdacs_alertlevel": "Green",
+        "gdacs_population": 1152
+      },
+      "news": [
+        {
+          "headline": "China: Surveillance footage shows home shaking during 5.5 earthquake in Sichuan",
+          "url": "https://www.msn.com/en-us/news/world/china-surveillance-footage-shows-home-shaking-during-5-5-earthquake-in-sichuan/vi-AA26YMRO?ocid=BingNewsVerp",
+          "outlet": "Amazon S3 on MSN",
+          "published_date": "2026-06-28"
+        },
+        {
+          "headline": "Dominican Republic and Nicaragua cap week of powerful earthquakes",
+          "url": "https://www.yahoo.com/news/weather-news/articles/dominican-republic-nicaragua-cap-week-172750228.html",
+          "outlet": "United Press International \u00b7 via Yahoo News",
+          "published_date": "2026-06-27"
+        },
+        {
+          "headline": "What is a doublet earthquake? The science behind twin tremors",
+          "url": "https://www.yahoo.com/news/articles/doublet-earthquake-science-behind-twin-211440113.html",
+          "outlet": "The Weather Network \u00b7 via Yahoo News",
+          "published_date": "2026-06-26"
+        },
+        {
+          "headline": "\u2018You could hear her voice shaking': Bay Area Venezuelans mobilize after deadly e...",
+          "url": "https://www.yahoo.com/news/world/articles/could-hear-her-voice-shaking-062652311.html",
+          "outlet": "San Francisco Chronicle \u00b7 via Yahoo News",
+          "published_date": "2026-06-26"
+        },
+        {
+          "headline": "5.2-Magnitude Earthquake Strikes China's Sichuan ProvincePublished on: June 29, 2026 2:44 AM",
+          "url": "https://www.msn.com/en-xl/asia/pakistan/52-magnitude-earthquake-strikes-chinas-sichuan-provincepublished-on-june-29-2026-244-am/ar-AA26KiPh?ocid=BingNewsVerp",
+          "outlet": "Daily Times on MSN",
+          "published_date": "2026-06-15"
+        },
+        {
+          "headline": "A level 3 emergency response mode has been introduced in China",
+          "url": "https://eadaily.com/en/news/2026/06/28/a-level-3-emergency-response-mode-has-been-introduced-in-china",
+          "outlet": "EADaily",
+          "published_date": "2026-06-08"
+        },
+        {
+          "headline": "Breaking News Highlights Updates: Earthquake of magnitude 5.29 strikes Sichuan, China",
+          "url": "https://economictimes.indiatimes.com/news/newsblogs/breaking-news-today-28-june-2026-modi-bjp-delhi-weather-temperature-ketan-murder-case-rain-monsoon-europe-heat-wave-alert-fifa-world-cup-football-earthquake-venezuela-trump/liveblog/132045352.cms",
+          "outlet": "The Economic Times",
+          "published_date": "2026-06-06"
+        }
+      ],
+      "news_total": 7
+    },
+    {
+      "incident_id": "20260629-AF-EQ",
+      "canonical_name": "Earthquake 40 km SW of Jurm June 2026",
+      "summary": "A magnitude 4.5 earthquake occurred 40 km southwest of Jurm, Afghanistan, on June 29, 2026, with no casualties or damage reported. This follows a series of stronger seismic events in the region throughout June, including a magnitude 6.2 earthquake on June 27 that was felt across Afghanistan, Pakistan, and northern India.",
+      "country": "Afghanistan",
+      "iso2": "AF",
+      "lat": 33.94,
+      "lon": 67.71,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-06-29",
+      "first_reported_date": "2026-06-29",
+      "last_updated_date": "2026-06-29",
+      "days_since_event": 0,
+      "source_count": 2,
+      "should_report": true,
+      "search_keys": [
+        "40 km SW of Jurm earthquake June 2026",
+        "Afghanistan earthquake June 2026",
+        "40 km SW of Jurm earthquake 2026"
+      ],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 1,
+        "healthmap": 0,
+        "news": 13
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M4.5 \u00b7 40 km SW of Jurm, Afghanistan",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8yu/executive",
+          "meta": "204 km depth"
+        },
+        {
+          "type": "GDACS",
+          "label": "Green alert \u00b7 Magnitude 4.5M, Depth:204.4km",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1549181&episodeid=1715228",
+          "meta": "pop 350387"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 4.5,
+        "max_depth_km": 204.4,
+        "place": "40 km SW of Jurm, Afghanistan",
+        "felt": 0,
+        "sig": 312,
+        "tsunami": false,
+        "gdacs_alertlevel": "Green",
+        "gdacs_population": 350387
+      },
+      "news": [
+        {
+          "headline": "North India feels tremors of 6.2 magnitude quake in Afghanistan",
+          "url": "https://theshillongtimes.com/2026/06/28/north-india-feels-tremors-of-6-2-magnitude-quake-in-afghanistan/",
+          "outlet": "The Shillong Times",
+          "published_date": "2026-06-28"
+        },
+        {
+          "headline": "6.2-magnitude earthquake hits Afghanistan, tremors felt across North India, Pakistan",
+          "url": "https://www.msn.com/en-in/public-safety-and-emergencies/natural-disasters/breaking-6-2-magnitude-earthquake-hits-afghanistan-tremors-felt-across-north-india-pakistan/ar-AA26Gj46",
+          "outlet": "Asianet Newsable",
+          "published_date": "2026-06-27"
+        },
+        {
+          "headline": "5.9 magnitude quake jolts PakistanPublished on: June 27, 2026 6:57 PM",
+          "url": "https://www.msn.com/en-xl/asia/pakistan/59-magnitude-quake-jolts-pakistanpublished-on-june-27-2026-657-pm/ar-AA26Geb5",
+          "outlet": "Daily Times",
+          "published_date": "2026-06-27"
+        },
+        {
+          "headline": "Strong earthquake hits Hindu Kush, shaking Afghanistan and Pakistan",
+          "url": "https://www.msn.com/en-us/news/world/strong-earthquake-hits-hindu-kush-shaking-afghanistan-and-pakistan/ar-AA26GARN",
+          "outlet": "Reuters",
+          "published_date": "2026-06-27"
+        },
+        {
+          "headline": "6.1 Magnitude Earthquake Hits Afghanistan \u2014 Report",
+          "url": "https://www.channelstv.com/2026/06/27/6-1-magnitude-earthquake-hits-afghanistan-report/",
+          "outlet": "Channels Television",
+          "published_date": "2026-06-27"
+        },
+        {
+          "headline": "Afghanistan hit with 6.2 earthquake, jolts Pakistan & Hindu Kush; tremors felt in Delhi-NCR",
+          "url": "https://www.msn.com/en-in/money/topstories/afghanistan-hit-with-62-earthquake-jolts-pakistan-hindu-kush-tremors-felt-in-delhi-ncr/ar-AA26G1d9",
+          "outlet": "Business Today",
+          "published_date": "2026-06-27"
+        },
+        {
+          "headline": "Strong earthquake hits Afghanistan's Hindu Kush region; no initial reports of injuries",
+          "url": "https://whbl.com/2026/06/27/strong-earthquake-hits-hindu-kush-shaking-afghanistan-and-pakistan/",
+          "outlet": "WHBL",
+          "published_date": "2026-06-27"
+        },
+        {
+          "headline": "5.9 magnitude earthquake shakes Pakistan and Afghanistan, no damage reported",
+          "url": "https://www.washingtonpost.com/world/2026/06/27/earthquake-pakistan-afghanistan/c6ae5100-7233-11f1-8730-e7fd0e2a6404_story.html",
+          "outlet": "The Washington Post",
+          "published_date": "2026-06-27"
+        },
+        {
+          "headline": "Strong earthquake hits Delhi-NCR, Kashmir, epicentre in Afghanistan",
+          "url": "https://www.indiatvnews.com/news/india/earthquake-strikes-kashmir-tremors-felt-in-delhi-ncr-2026-06-27-1046348",
+          "outlet": "India TV News",
+          "published_date": "2026-06-27"
+        },
+        {
+          "headline": "Tremors in the Hindu Kush: Earthquake Shakes Afghanistan and Pakistan",
+          "url": "https://www.devdiscourse.com/article/science-environment/3941714-tremors-in-the-hindu-kush-earthquake-shakes-afghanistan-and-pakistan",
+          "outlet": "Devdiscourse",
+          "published_date": "2026-06-27"
+        }
+      ],
+      "news_total": 13
+    },
+    {
+      "incident_id": "20260629-XX-EQ",
+      "canonical_name": "Earthquake off the coast of Central America June 2026",
+      "summary": "A magnitude 5.1 earthquake occurred off the coast of Central America on June 29, 2026, at 07:38 UTC. According to GDACS, there were no reported casualties or significant damages, and no people were affected within a 100 km radius.",
+      "country": "Unknown",
+      "iso2": "XX",
+      "lat": 0,
+      "lon": 0,
+      "country_group": "C",
+      "region": "Unknown",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-06-29",
+      "first_reported_date": "2026-06-29",
+      "last_updated_date": "2026-06-29",
+      "days_since_event": 0,
+      "source_count": 5,
+      "should_report": true,
+      "search_keys": [
+        "off the coast of Central America earthquake June 2026",
+        "earthquake June 2026",
+        "off the coast of Central America earthquake 2026"
+      ],
+      "sources": {
+        "who_don": 0,
+        "usgs": 2,
+        "gdacs": 3,
+        "healthmap": 0,
+        "news": 0
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M5.1 \u00b7 off the coast of Central America",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8xq/executive",
+          "meta": "10 km depth"
+        },
+        {
+          "type": "USGS",
+          "label": "M4.9 \u00b7 Kermadec Islands region",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8wr/executive",
+          "meta": "10 km depth"
+        },
+        {
+          "type": "GDACS",
+          "label": "Green alert \u00b7 Magnitude 5.1M, Depth:10km",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1549154&episodeid=1715190",
+          "meta": "pop 0"
+        },
+        {
+          "type": "GDACS",
+          "label": "Green alert \u00b7 Magnitude 4.6M, Depth:10km",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1549158&episodeid=1715199",
+          "meta": "pop 0"
+        },
+        {
+          "type": "GDACS",
+          "label": "Green alert \u00b7 Magnitude 4.9M, Depth:10km",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1549123&episodeid=1715152",
+          "meta": "pop 0"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 5.1,
+        "max_depth_km": 10.0,
+        "place": "off the coast of Central America,Kermadec Islands region",
+        "felt": 0,
+        "sig": 400,
+        "tsunami": false,
+        "gdacs_alertlevel": "Green",
+        "gdacs_population": 0
+      },
+      "news": [],
+      "news_total": 0
+    },
+    {
+      "incident_id": "20260629-US-EQ",
+      "canonical_name": "Earthquake United States June 2026",
+      "summary": "On June 29, 2026, a magnitude 5.3 to 5.5 earthquake occurred in the United States, with reports indicating it affected only a few people. Separately, a magnitude 3.5 earthquake was reported in the southern Illinois and Indiana border region on the same day.",
+      "country": "United States",
+      "iso2": "US",
+      "lat": 37.09,
+      "lon": -95.71,
+      "country_group": "C",
+      "region": "Americas",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-06-29",
+      "first_reported_date": "2026-06-29",
+      "last_updated_date": "2026-06-29",
+      "days_since_event": 0,
+      "source_count": 2,
+      "should_report": true,
+      "search_keys": [
+        "United States earthquake June 2026",
+        "United States earthquake 2026"
+      ],
+      "sources": {
+        "who_don": 0,
+        "usgs": 0,
+        "gdacs": 2,
+        "healthmap": 0,
+        "news": 7
+      },
+      "source_links": [
+        {
+          "type": "GDACS",
+          "label": "Green alert \u00b7 Magnitude 5.5M, Depth:10km",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1549176&episodeid=1715218",
+          "meta": "pop 27"
+        },
+        {
+          "type": "GDACS",
+          "label": "Green alert \u00b7 Magnitude 5.3M, Depth:13.6km",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1549124&episodeid=1715154",
+          "meta": "pop 306901"
+        }
+      ],
+      "physical": {
+        "max_magnitude": null,
+        "max_depth_km": null,
+        "place": null,
+        "felt": 0,
+        "sig": 0,
+        "tsunami": false,
+        "gdacs_alertlevel": "Green",
+        "gdacs_population": 306901
+      },
+      "news": [
+        {
+          "headline": "Rising Nu-Metal Band Killed in Building Collapse Caused by Earthquake",
+          "url": "https://www.vice.com/en/article/rising-nu-metal-band-killed-in-building-collapse-caused-by-earthquake/",
+          "outlet": "Vice",
+          "published_date": "2026-07-02"
+        },
+        {
+          "headline": "The earthquake disaster in Venezuela: A crime of US imperialism",
+          "url": "https://www.wsws.org/en/articles/2026/06/29/mswg-j29.html",
+          "outlet": "World Socialist Web Site",
+          "published_date": "2026-06-30"
+        },
+        {
+          "headline": "Venezuela quake death toll rises to 1,450 as aftershocks hamper rescues",
+          "url": "https://www.yahoo.com/news/world/articles/venezuela-quake-death-toll-rises-183900334.html",
+          "outlet": "Miami Herald \u00b7 via Yahoo News",
+          "published_date": "2026-06-28"
+        },
+        {
+          "headline": "Deportees on flight from the United States die in Venezuelan earthquake",
+          "url": "https://www.wsws.org/en/articles/2026/06/30/skhq-j30.html",
+          "outlet": "World Socialist Web Site",
+          "published_date": "2026-06-25"
+        },
+        {
+          "headline": "Hundreds report feeling M3.5 earthquake in southern Illinois",
+          "url": "https://www.msn.com/en-us/news/us/hundreds-report-feeling-m35-earthquake-in-southern-illinois/ar-AA26MBdN?ocid=BingNewsVerp",
+          "outlet": "KFVS12 on MSN",
+          "published_date": "2026-06-23"
+        },
+        {
+          "headline": "3.5 earthquake reported in Illinois, officials say",
+          "url": "https://www.14news.com/2026/06/29/35-earthquake-reported-illinois-officials-say/",
+          "outlet": "14 NEWS",
+          "published_date": "2026-06-22"
+        },
+        {
+          "headline": "Magnitude 6.0 Earthquake Strikes Off Western Mexico",
+          "url": "https://www.arabtimesonline.com/news/magnitude-60-earthquake-strikes-off-western-mexico/",
+          "outlet": "Arab Times",
+          "published_date": "2026-06-09"
+        }
+      ],
+      "news_total": 7
+    },
+    {
+      "incident_id": "20260628-PH-EQ",
+      "canonical_name": "Earthquake 65 km WNW of Catuday June 2026",
+      "summary": "An earthquake occurred 65 km west-northwest of Catuday, Philippines, in June 2026. No casualties or damages were reported.",
+      "country": "Philippines",
+      "iso2": "PH",
+      "lat": 12.88,
+      "lon": 121.77,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-06-28",
+      "first_reported_date": "2026-06-29",
+      "last_updated_date": "2026-06-29",
+      "days_since_event": 1,
+      "source_count": 5,
+      "should_report": true,
+      "search_keys": [
+        "65 km WNW of Catuday earthquake June 2026",
+        "Philippines earthquake June 2026",
+        "65 km WNW of Catuday earthquake 2026"
+      ],
+      "sources": {
+        "who_don": 0,
+        "usgs": 4,
+        "gdacs": 1,
+        "healthmap": 0,
+        "news": 0
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M4.7 \u00b7 65 km WNW of Catuday, Philippines",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8v9/executive",
+          "meta": "10 km depth"
+        },
+        {
+          "type": "USGS",
+          "label": "M4.6 \u00b7 63 km WNW of Catuday, Philippines",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8v2/executive",
+          "meta": "10 km depth"
+        },
+        {
+          "type": "USGS",
+          "label": "M5.0 \u00b7 68 km WNW of Catuday, Philippines",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8ux/executive",
+          "meta": "10 km depth"
+        },
+        {
+          "type": "USGS",
+          "label": "M4.5 \u00b7 10 km SSE of Kiupo, Philippines",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8uk/executive",
+          "meta": "60 km depth"
+        },
+        {
+          "type": "GDACS",
+          "label": "Green alert \u00b7 Magnitude 4.7M, Depth:10km",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1549066&episodeid=1715085",
+          "meta": "pop 535006"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 5.0,
+        "max_depth_km": 60.2,
+        "place": "65 km WNW of Catuday, Philippines,63 km WNW of Catuday, Philippines,68 km WNW of Catuday, Philippines,10 km SSE of Kiupo, Philippines",
+        "felt": 0,
+        "sig": 385,
+        "tsunami": false,
+        "gdacs_alertlevel": "Green",
+        "gdacs_population": 535006
+      },
+      "news": [],
+      "news_total": 0
+    },
+    {
+      "incident_id": "20260630-JP-EQ",
+      "canonical_name": "Earthquake 10 km WSW of Hy\u016bga June 2026",
+      "summary": "On June 30, 2026, Japan experienced several earthquakes, including magnitude 4.8 quakes near Hy\u016bga and Noda, and a magnitude 4.6 quake near Koshima. No casualties or damages were reported, although millions of people were located within 100 km of the affected areas.",
+      "country": "Japan",
+      "iso2": "JP",
+      "lat": 36.2,
+      "lon": 138.25,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "LOW",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-06-30",
+      "first_reported_date": "2026-06-30",
+      "last_updated_date": "2026-06-30",
+      "days_since_event": 0,
+      "source_count": 5,
+      "should_report": true,
+      "search_keys": [
+        "10 km WSW of Hy\u016bga earthquake June 2026",
+        "Japan earthquake June 2026",
+        "10 km WSW of Hy\u016bga earthquake 2026"
+      ],
+      "sources": {
+        "who_don": 0,
+        "usgs": 3,
+        "gdacs": 2,
+        "healthmap": 0,
+        "news": 2
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M4.8 \u00b7 10 km WSW of Hy\u016bga, Japan",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9bc/executive",
+          "meta": "42 km depth"
+        },
+        {
+          "type": "USGS",
+          "label": "M4.8 \u00b7 46 km E of Noda, Japan",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t973/executive",
+          "meta": "63 km depth"
+        },
+        {
+          "type": "USGS",
+          "label": "M4.6 \u00b7 168 km SSE of Koshima, Japan",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t96r/executive",
+          "meta": "10 km depth"
+        },
+        {
+          "type": "GDACS",
+          "label": "Green alert \u00b7 Magnitude 4.8M, Depth:41.6km",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1549469&episodeid=1715542",
+          "meta": "pop 204429"
+        },
+        {
+          "type": "GDACS",
+          "label": "Green alert \u00b7 Magnitude 4.8M, Depth:62.8km",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1549400&episodeid=1715460",
+          "meta": "pop 36357"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 4.8,
+        "max_depth_km": 62.8,
+        "place": "10 km WSW of Hy\u016bga, Japan,46 km E of Noda, Japan,168 km SSE of Koshima, Japan",
+        "felt": 3,
+        "sig": 355,
+        "tsunami": false,
+        "gdacs_alertlevel": "Green",
+        "gdacs_population": 204429
+      },
+      "news": [
+        {
+          "headline": "A powerful 7.2 magnitude earthquake strikes off northern Japan. No tsunami...",
+          "url": "https://www.mrt.com/news/world/article/powerful-6-9-magnitude-earthquake-strikes-off-22319679.php",
+          "outlet": "Midland Reporter-Telegram",
+          "published_date": "2026-06-25"
+        },
+        {
+          "headline": "Major earthquake rattles Venezuela, with reports of another off Japan - AOL",
+          "url": "https://www.aol.com/news/major-earthquake-rattles-venezuela-reports-220343398.html",
+          "outlet": "AOL",
+          "published_date": "2026-06-24"
+        }
+      ],
+      "news_total": 2
+    },
+    {
+      "incident_id": "20260630-PH-EQ",
+      "canonical_name": "Earthquake 8 km SE of Pangyan June 2026",
+      "summary": "A magnitude 4.9 earthquake occurred 8 km southeast of Pangyan, Philippines, on June 30, 2026, at a depth of 76.1 km. There were no reported casualties or damages associated with this event.",
+      "country": "Philippines",
+      "iso2": "PH",
+      "lat": 12.88,
+      "lon": 121.77,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "LOW",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-06-30",
+      "first_reported_date": "2026-06-30",
+      "last_updated_date": "2026-06-30",
+      "days_since_event": 0,
+      "source_count": 2,
+      "should_report": true,
+      "search_keys": [
+        "8 km SE of Pangyan earthquake June 2026",
+        "Philippines earthquake June 2026",
+        "8 km SE of Pangyan earthquake 2026"
+      ],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 1,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M4.9 \u00b7 8 km SE of Pangyan, Philippines",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9ad/executive",
+          "meta": "76 km depth"
+        },
+        {
+          "type": "GDACS",
+          "label": "Green alert \u00b7 Magnitude 4.9M, Depth:76.1km",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1549457&episodeid=1715526",
+          "meta": "pop 1177822"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 4.9,
+        "max_depth_km": 76.1,
+        "place": "8 km SE of Pangyan, Philippines",
+        "felt": 1,
+        "sig": 370,
+        "tsunami": false,
+        "gdacs_alertlevel": "Green",
+        "gdacs_population": 1177822
+      },
+      "news": [
+        {
+          "headline": "Weeks-old CCTV footage from Philippines misrepresented as Venezuela earthquake",
+          "url": "https://www.msn.com/en-us/public-safety-and-emergencies/natural-disasters/weeks-old-cctv-footage-from-philippines-misrepresented-as-venezuela-earthquake/ar-AA26WUVb?ocid=BingNewsVerp",
+          "outlet": "AFP Fact Check on MSN",
+          "published_date": "2026-06-22"
+        }
+      ],
+      "news_total": 1
+    },
+    {
+      "incident_id": "20260630-ID-EQ",
+      "canonical_name": "Earthquake 221 km NNE of Bitung June 2026",
+      "summary": "A magnitude 4.6 earthquake struck approximately 221 km north-northeast of Bitung, Indonesia, on June 30, 2026. The quake occurred at a depth of about 56.2 km, and no casualties or damages were reported.",
+      "country": "Indonesia",
+      "iso2": "ID",
+      "lat": -0.79,
+      "lon": 113.92,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "LOW",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-06-30",
+      "first_reported_date": "2026-06-30",
+      "last_updated_date": "2026-06-30",
+      "days_since_event": 0,
+      "source_count": 2,
+      "should_report": true,
+      "search_keys": [
+        "221 km NNE of Bitung earthquake June 2026",
+        "Indonesia earthquake June 2026",
+        "221 km NNE of Bitung earthquake 2026"
+      ],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 1,
+        "healthmap": 0,
+        "news": 0
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M4.6 \u00b7 221 km NNE of Bitung, Indonesia",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t977/executive",
+          "meta": "56 km depth"
+        },
+        {
+          "type": "GDACS",
+          "label": "Green alert \u00b7 Magnitude 4.6M, Depth:56.2km",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1549405&episodeid=1715487",
+          "meta": "pop 212087"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 4.6,
+        "max_depth_km": 56.2,
+        "place": "221 km NNE of Bitung, Indonesia",
+        "felt": 0,
+        "sig": 326,
+        "tsunami": false,
+        "gdacs_alertlevel": "Green",
+        "gdacs_population": 212087
+      },
+      "news": [],
+      "news_total": 0
+    }
+  ]
+}
