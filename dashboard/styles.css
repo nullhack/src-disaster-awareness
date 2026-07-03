@@ -175,15 +175,38 @@ code { font-family: var(--mono); font-size: .9em; }
 .kpi.is-action:hover .kpi__hint { opacity: 1; }
 
 /* ============ KPI SIDEBAR (beside map) ============ */
-.card--kpi-side { grid-column: span 5; align-self: start; padding: 0; }
-.card--kpi-side .kpis {
-  max-width: none; margin: 0; padding: 12px;
-  grid-template-columns: 1fr; gap: 10px;
+.card--kpi-side { grid-column: span 5; align-self: stretch; padding: 0; display: flex; }
+.card--kpi-side > .kpis {
+  flex: 1; display: flex; flex-direction: column;
+  margin: 0; padding: 14px; gap: 10px; max-width: none;
 }
-.card--kpi-side .kpi { padding: 11px 14px; }
-.card--kpi-side .kpi__value { font-size: 24px; }
-.card--kpi-side .kpi__label { margin-top: 4px; }
-.card--kpi-side .kpi__sub { margin-top: 1px; }
+.kpi-axis {
+  display: flex; flex-direction: column;
+  flex: 1 1 0; min-height: 0;
+}
+.kpi-axis + .kpi-axis { margin-top: 0; padding-top: 10px; border-top: 1px solid var(--rc-line); }
+.kpi-axis__label {
+  font-size: 10px; font-weight: 700; color: var(--rc-muted);
+  text-transform: uppercase; letter-spacing: .08em; margin: 0 0 8px 2px;
+}
+.kpis--pair {
+  flex: 1; margin: 0; padding: 0; max-width: none;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
+}
+.card--kpi-side .kpi {
+  padding: 10px 12px; display: flex; flex-direction: column; justify-content: center;
+}
+.card--kpi-side .kpi__value { font-size: 26px; }
+.card--kpi-side .kpi__label { margin-top: 4px; font-size: 11px; }
+.card--kpi-side .kpi__sub { margin-top: 1px; font-size: 10px; }
+.kpi--active::before { background: var(--rc-red); }
+
+/* selected toggle state */
+.kpi.is-selected { border-color: var(--rc-red); background: #FFF1F4; }
+.kpi.is-selected::after {
+  content: ""; position: absolute; right: 8px; top: 8px;
+  width: 7px; height: 7px; border-radius: 50%; background: var(--rc-red);
+}
 .filters__group { display: flex; flex-direction: column; gap: 5px; }
 .filters__group label { font-size: 11px; font-weight: 600; color: var(--rc-muted); text-transform: uppercase; letter-spacing: .04em; }
 .sevchips { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -525,10 +548,8 @@ code { font-family: var(--mono); font-size: .9em; }
 @media (max-width: 900px) {
   .trend-grid { grid-template-columns: 1fr; }
   .trend-panel + .trend-panel { border-left: none; border-top: 1px solid var(--rc-line); }
-  .card--kpi-side .kpis { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 640px) {
-  .card--kpi-side .kpis { grid-template-columns: 1fr; }
   .topbar { padding: 10px 16px; }
   .layout, .footer { padding-left: 16px; padding-right: 16px; }
   .news-row { grid-template-columns: 1fr; gap: 4px; }
