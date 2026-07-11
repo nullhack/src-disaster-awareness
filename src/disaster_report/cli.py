@@ -1,304 +1,234 @@
+
 from __future__ import annotations
 
-import json
+import functools
 import logging
-import os
 import sys
-from datetime import date
+from collections.abc import Callable
+from datetime import datetime, timezone
 from pathlib import Path
+from typing import Any
 
 import click
 
 from disaster_report.ai.openrouter import OpenRouterDigester
-from disaster_report.classification import configure_disease_tiers, configure_endemics
-from disaster_report.config import Config
-from disaster_report.pipeline import Pipeline
-from disaster_report.report import (
-    NEWS_CAP_DEFAULT,
-    SEVERITY_CHOICES,
-    generate as generate_report,
+from disaster_report.config import Settings
+from disaster_report.pipeline import (
+    generate_logs,
+    ingest_source_reports,
+    run_pipeline,
+    search_news,
 )
-from disaster_report.resolver import IncidentResolver
-from disaster_report.sources.registry import SOURCE_REGISTRY
-from disaster_report.store import SqliteIncidentStore
+from disaster_report.reporting.markdown import MarkdownRenderer
+from disaster_report.reporting.report import build_report
+from disaster_report.sources.ddg_news import DuckDuckGoNewsAdapter
+from disaster_report.sources.gdacs import GDACSAdapter
+from disaster_report.sources.usgs import USGSAdapter
+from disaster_report.sources.who import WHODiseaseOutbreakAdapter
+from disaster_report.store.base import Warehouse
 
-_OPENROUTER_AUTH_FALLBACK = Path.home() / ".local/share/opencode/auth.json"
-
-# Adapter registries are derived from the single SOURCE_REGISTRY in
-# sources.registry, filtered by source_type ("feed" -> incidents, "news" ->
-# searchable article adapter).
-_SOURCE_REGISTRY = {
-    token: spec.adapter_cls
-    for token, spec in SOURCE_REGISTRY.items()
-    if spec.source_type == "feed"
-}
-_NEWS_REGISTRY = {
-    token: spec.adapter_cls
-    for token, spec in SOURCE_REGISTRY.items()
-    if spec.source_type == "news"
-}
-
-# Mirrors _SOURCE_REGISTRY/_NEWS_REGISTRY so the digester is wired by config
-# token too, not by a hard-coded concrete import at the call site.
-_DIGESTER_REGISTRY = {
-    "openrouter": OpenRouterDigester,
-}
+_DEFAULT_CONFIG_PATH = "config.toml"
+_DEFAULT_SECRETS_PATH = "~/.secrets/disaster_report.env"
+_DEFAULT_NEWS_TIMELIMIT = "w"
 
 
 def _configure_logging(verbose: bool) -> None:
-    level = logging.DEBUG if verbose else logging.WARNING
+    if not verbose:
+        return
     logging.basicConfig(
-        level=logging.WARNING,
-        format="%(asctime)s %(levelname)-7s %(name)s: %(message)s",
-        datefmt="%H:%M:%S",
+        level=logging.INFO,
         stream=sys.stderr,
+        format="%(asctime)s %(name)s: %(levelname)s: %(message)s",
         force=True,
     )
-    logging.getLogger("disaster_report").setLevel(level)
+
+
+def _now() -> datetime:
+    return datetime.now(timezone.utc)
+
+
+def _load_settings(config_path: str, secrets_path: str) -> Settings:
+    return Settings.load(
+        config_path=config_path,
+        secrets_path=str(Path(secrets_path).expanduser()),
+    )
+
+
+def _bootstrap(config_path: str, secrets_path: str) -> tuple[Settings, Warehouse]:
+    settings = _load_settings(config_path, secrets_path)
+    warehouse = Warehouse(settings.db_url, clock=_now)
+    return settings, warehouse
+
+
+def _build_adapters(source: str | None) -> list[object]:
+    all_adapters: list[object] = [
+        USGSAdapter(),
+        GDACSAdapter(),
+        WHODiseaseOutbreakAdapter(),
+    ]
+    if source is None:
+        return all_adapters
+    needle = source.upper()
+    names = ["USGS", "GDACS", "WHO"]
+    return [
+        adapter
+        for name, adapter in zip(names, all_adapters, strict=True)
+        if name == needle
+    ]
+
+
+def _handle_errors(fn: Callable[..., None]) -> Callable[..., None]:
+    @functools.wraps(fn)
+    def wrapper(*args: Any, **kwargs: Any) -> None:
+        verbose: bool = kwargs.get("verbose", False)
+        _configure_logging(verbose)
+        try:
+            fn(*args, **kwargs)
+        except Exception as exc:
+            if verbose:
+                raise
+            label = fn.__name__.lstrip("_").replace("_", "-")
+            click.echo(f"{label} error: {exc}", err=True)
+            sys.exit(1)
+
+    return wrapper
 
 
 @click.group()
-@click.option("-v", "--verbose", is_flag=True, help="Emit progress logs to stderr.")
-def app(verbose: bool) -> None:
-    _configure_logging(verbose)
+def cli() -> None:
+
+    pass
 
 
-def _load(config_path: str) -> Config:
-    config = Config.from_toml(config_path)
-    configure_disease_tiers(
-        pandemic_risk=config.pandemic_risk_diseases,
-        outbreak_of_concern=config.outbreak_of_concern_diseases,
+@cli.command("ingest")
+@click.option("--config", "config_path", default=_DEFAULT_CONFIG_PATH)
+@click.option("--secrets", "secrets_path", default=_DEFAULT_SECRETS_PATH)
+@click.option("--source", default=None)
+@click.option("-v", "--verbose", is_flag=True, default=False)
+@_handle_errors
+def _ingest(
+    config_path: str,
+    secrets_path: str,
+    source: str | None,
+    verbose: bool,
+) -> None:
+
+    settings, warehouse = _bootstrap(config_path, secrets_path)
+    adapters = _build_adapters(source)
+    ddg = DuckDuckGoNewsAdapter()
+    digester = OpenRouterDigester(
+        settings.openrouter_model, settings.openrouter_api_key
     )
-    configure_endemics(config.endemic_diseases)
-    return config
-
-
-def _build_sources(config: Config) -> list:
-    sources = []
-    for name in config.sources_enabled:
-        token = name.lower()
-        factory = _SOURCE_REGISTRY.get(token)
-        if factory is None:
-            raise click.ClickException(f"unknown source: {name}")
-        sources.append(factory())
-    return sources
-
-
-def _build_news(config: Config):
-    factory = _NEWS_REGISTRY.get(config.news_provider.lower())
-    if factory is None:
-        raise click.ClickException(f"unknown news provider: {config.news_provider}")
-    return factory()
-
-
-def _resolve_api_key(config: Config) -> str:
-    if config.ai_api_key:
-        return config.ai_api_key
-    env_value = os.environ.get(config.ai_api_key_env, "")
-    if env_value:
-        return env_value
-    try:
-        data = json.loads(_OPENROUTER_AUTH_FALLBACK.read_text())
-        return data.get("openrouter", {}).get("key", "")
-    except (OSError, ValueError, KeyError):
-        return ""
-
-
-def _build_digester(config: Config):
-    factory = _DIGESTER_REGISTRY.get((config.ai_provider or "").lower())
-    if factory is None:
-        raise click.ClickException(f"unknown ai provider: {config.ai_provider}")
-    return factory(
-        api_key=_resolve_api_key(config),
-        base_url=config.ai_base_url,
-        models=config.ai_models,
+    result = run_pipeline(
+        adapters, warehouse, ddg, digester, _now,
+        min_news_threshold=settings.min_log_news_threshold,
+    )
+    click.echo(
+        f"ingested: source_reports_kept={result.source_reports_kept} "
+        f"ai_calls={result.ai_calls} ddg_calls={result.ddg_calls}"
     )
 
 
-@app.command()
-@click.option("--config", "config_path", required=True, type=click.Path(exists=True))
-def ingest(config_path: str) -> None:
-    config = _load(config_path)
-    store = SqliteIncidentStore(config.database_url)
-    pipeline = Pipeline(
-        sources=_build_sources(config),
-        news=_build_news(config),
-        resolver=IncidentResolver(),
-        digester=_build_digester(config),
-        store=store,
-        config=config,
-        clock=date.today,
-    )
-    pipeline.run()
-    click.echo(f"ingested: {store.count_incidents()} incident(s) tracked")
+@cli.command("ingest-records")
+@click.option("--config", "config_path", default=_DEFAULT_CONFIG_PATH)
+@click.option("--secrets", "secrets_path", default=_DEFAULT_SECRETS_PATH)
+@click.option("--source", default=None)
+@click.option("-v", "--verbose", is_flag=True, default=False)
+@_handle_errors
+def _ingest_records(
+    config_path: str,
+    secrets_path: str,
+    source: str | None,
+    verbose: bool,
+) -> None:
+
+    _, warehouse = _bootstrap(config_path, secrets_path)
+    adapters = _build_adapters(source)
+    kept = ingest_source_reports(adapters, warehouse)
+    click.echo(f"ingested: source_reports_kept={kept}")
 
 
-@app.command()
-@click.option("--config", "config_path", required=True, type=click.Path(exists=True))
-@click.option("--window", type=int, help="Override tracking_window_days.")
+@cli.command("search-news")
+@click.option("--config", "config_path", default=_DEFAULT_CONFIG_PATH)
+@click.option("--secrets", "secrets_path", default=_DEFAULT_SECRETS_PATH)
+@click.option("--source", default=None)
 @click.option(
-    "--min-severity",
-    type=click.Choice(SEVERITY_CHOICES, case_sensitive=False),
-    default="HIGH",
-    help="Lowest severity to show (default HIGH = HIGH+CRITICAL).",
+    "--source-id",
+    "source_id",
+    default=None,
+    help="Force news search for one source_id (bypasses should_monitor).",
 )
 @click.option(
-    "--news",
-    type=int,
-    default=NEWS_CAP_DEFAULT,
-    help="Max news articles to list per incident (default 5).",
+    "--news-timelimit",
+    "news_timelimit",
+    default=_DEFAULT_NEWS_TIMELIMIT,
+    help="DDG news window: d=day, w=week (default), m=month.",
 )
-@click.option("--out", type=click.Path(), help="Write to file instead of stdout.")
-@click.option("--as-of", help="Override 'today' (YYYY-MM-DD).")
-def report(config_path: str, window: int, min_severity: str, news: int,
-           out: str, as_of: str) -> None:
-    """Generate a Markdown disaster report.
-
-    Two parts (geophysical & weather first, disease outbreaks second), grouped
-    by severity and ordered by news volume. Only incidents with ``should_report=1``
-    whose ``event_date`` falls in the tracking window are listed.
-    """
-    config = _load(config_path)
-    store = SqliteIncidentStore(config.database_url)
-    win = window if window is not None else config.tracking_window_days
-    as_of_date = date.fromisoformat(as_of) if as_of else date.today()
-    text = generate_report(
-        store, as_of=as_of_date, window=win,
-        min_severity=min_severity, news_cap=news,
-    )
-    if out:
-        Path(out).write_text(text + "\n")
-        click.echo(f"wrote {out}", err=True)
-    else:
-        click.echo(text)
-
-
-@app.command()
-@click.option("--config", "config_path", required=True, type=click.Path(exists=True))
 @click.option(
-    "--apply",
+    "--repoll",
+    "repoll",
     is_flag=True,
-    help="Persist changes. Without this flag the command is a dry-run.",
+    default=False,
+    help="Repoll active incidents for news updates (skips per-report search).",
 )
-def reclassify(config_path: str, apply: bool) -> None:
-    """Recompute classification from current facts.
+@click.option("-v", "--verbose", is_flag=True, default=False)
+@_handle_errors
+def _search_news(
+    config_path: str,
+    secrets_path: str,
+    source: str | None,
+    source_id: str | None,
+    news_timelimit: str,
+    repoll: bool,
+    verbose: bool,
+) -> None:
 
-    Geophysical incidents are re-derived deterministically (severity can
-    demote to self-correct legacy freezes); disease incidents keep AI-assessed
-    severity. Default is a dry-run; pass --apply to persist. Idempotent: a
-    second run reports no deltas.
-    """
-    config = _load(config_path)
-    store = SqliteIncidentStore(config.database_url)
-    deltas = store.reclassify_all(dry_run=not apply)
-    mode = "applied" if apply else "dry-run"
-    if not deltas:
-        click.echo(f"reclassify ({mode}): no changes")
-        return
-    click.echo(f"reclassify ({mode}): {len(deltas)} incident(s) changed")
-    for delta in deltas:
-        sev = delta["severity"]
-        sev_str = (
-            f"severity {sev['from']} -> {sev['to']}, "
-            if sev.get("from") != sev.get("to")
-            else f"[{sev.get('to', '?')}] "
-        )
-        click.echo(
-            f"- {delta['incident_id']} {sev_str}"
-            f"priority {delta['priority']['from']} -> {delta['priority']['to']}, "
-            f"should_report {delta['should_report']['from']} -> {delta['should_report']['to']}"
-        )
-
-
-@app.command()
-@click.option("--config", "config_path", required=True, type=click.Path(exists=True))
-@click.option(
-    "--apply",
-    is_flag=True,
-    help="Issue AI digest requests and persist results. Without this flag the "
-    "command only reports what would be re-digested (no API calls).",
-)
-@click.option(
-    "--limit",
-    type=int,
-    default=0,
-    help="Max incidents to re-digest (0 = all). Use for chunking under rate limits.",
-)
-@click.option(
-    "--undigested",
-    "undigested_only",
-    is_flag=True,
-    help="Only target incidents with no AI digest yet (ai_digest_date_key IS NULL).",
-)
-def redigest(config_path: str, apply: bool, limit: int, undigested_only: bool) -> None:
-    """Re-run AI digestion on existing incidents to populate pandemic_potential
-    and event_status for the disease track.
-
-    Iterates all incidents (or --limit, or --undigested for only those missing a
-    digest) using existing store methods, feeds each incident's stored source
-    records + linked news back through the digester, and applies the digest via
-    the monotonic set_digest ratchet.
-    """
-    config = _load(config_path)
-    store = SqliteIncidentStore(config.database_url)
-    if undigested_only:
-        incident_ids = store.undigested_incident_ids()
-        scope = "undigested"
-    else:
-        incident_ids = store.all_incident_ids()
-        scope = "all"
-    if limit > 0:
-        incident_ids = incident_ids[:limit]
-    if not apply:
-        click.echo(
-            f"redigest (dry-run, {scope}): {len(incident_ids)} incident(s) would be re-digested"
-        )
-        return
-    digester = _build_digester(config)
-    today = date.today()
-    succeeded = 0
-    failed = 0
-    for incident_id in incident_ids:
-        view = store.find_by_incident_id(incident_id)
-        if view is None:
-            continue
-        materials = {
-            "source_reports": store.get_source_records(view.incident_key),
-            "news_articles": store.get_incident_news_full(view.incident_key),
-        }
-        try:
-            digest = digester.digest(materials)
-        except Exception as exc:
-            failed += 1
-            click.echo(f"- {incident_id}: digest failed: {exc}", err=True)
-            continue
-        store.set_digest(view.incident_key, digest, today, view.country_name)
-        succeeded += 1
-        # Re-fetch so the log shows the DERIVED canonical_name/search_keys that
-        # set_digest persisted (single source of truth), plus the AI bits just
-        # produced (read from the digest dict - IncidentView has no AI fields).
-        fresh = store.find_by_incident_id(incident_id) or view
-        ai_bits = []
-        for key, label in (
-            ("disease_name", "disease_name"),
-            ("severity", "severity"),
-            ("pandemic_potential", "pandemic_potential"),
-            ("event_status", "event_status"),
-        ):
-            value = digest.get(key)
-            if value:
-                ai_bits.append(f"{label}={value}")
-        summary = " ".join((digest.get("summary") or "").split())
-        if len(summary) > 80:
-            summary = summary[:77] + "..."
-        bits_str = " ".join(ai_bits)
-        bits_str = f"{bits_str} | " if bits_str else ""
-        click.echo(
-            f"- {incident_id} | {fresh.canonical_name} | "
-            f"{bits_str}{summary!r} | keys={list(fresh.search_keys or [])}"
-        )
-    click.echo(f"redigest (applied, {scope}): {succeeded} re-digested, {failed} failed")
+    settings, warehouse = _bootstrap(config_path, secrets_path)
+    adapters: list[object] = [] if repoll else _build_adapters(source)
+    ddg = DuckDuckGoNewsAdapter()
+    digester = OpenRouterDigester(
+        settings.openrouter_model, settings.openrouter_api_key
+    )
+    search_news(
+        warehouse,
+        adapters,
+        ddg,
+        digester,
+        _now,
+        news_timelimit=news_timelimit,
+        source_id=source_id,
+        active_window_days=settings.active_window_days,
+    )
+    click.echo("search-news: done")
 
 
-if __name__ == "__main__":
-    app()
+@cli.command("generate-logs")
+@click.option("--config", "config_path", default=_DEFAULT_CONFIG_PATH)
+@click.option("--secrets", "secrets_path", default=_DEFAULT_SECRETS_PATH)
+@click.option("-v", "--verbose", is_flag=True, default=False)
+@_handle_errors
+def _generate_logs(
+    config_path: str,
+    secrets_path: str,
+    verbose: bool,
+) -> None:
+
+    settings, warehouse = _bootstrap(config_path, secrets_path)
+    digester = OpenRouterDigester(
+        settings.openrouter_model, settings.openrouter_api_key
+    )
+    generate_logs(warehouse, digester, min_news_threshold=settings.min_log_news_threshold)
+    click.echo("generate-logs: done")
+
+
+@cli.command("report")
+@click.option("--config", "config_path", default=_DEFAULT_CONFIG_PATH)
+@click.option("--secrets", "secrets_path", default=_DEFAULT_SECRETS_PATH)
+@click.option("-v", "--verbose", is_flag=True, default=False)
+@_handle_errors
+def _report(config_path: str, secrets_path: str, verbose: bool) -> None:
+
+    _, warehouse = _bootstrap(config_path, secrets_path)
+    document = build_report(warehouse, _now)
+    output = MarkdownRenderer().render(document)
+    click.echo(output)

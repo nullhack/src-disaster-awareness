@@ -1,77 +1,76 @@
+
 from __future__ import annotations
 
 import tomllib
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from pathlib import Path
 
-from disaster_report.classification import (
-    DEFAULT_ENDEMIC_DISEASES,
-    DEFAULT_OUTBREAK_OF_CONCERN_DISEASES,
-    DEFAULT_PANDEMIC_RISK_DISEASES,
-)
+from dotenv import dotenv_values
 
-_DEFAULT_MODELS = (
-    "nvidia/nemotron-3-super-120b-a12b:free",
-    "google/gemma-4-31b-it:free",
-)
-_DEFAULT_SOURCES = ("gdacs", "usgs", "who", "healthmap")
+_DEFAULT_DB_URL = "sqlite:///./disaster_report.db"
+_API_KEY_ENV_NAME = "API_KEY"
+_DB_TOML_TABLE = "database"
+_DB_URL_TOML_KEY = "db_url"
+_OR_TOML_TABLE = "openrouter"
+_OR_MODEL_TOML_KEY = "model"
+_INGEST_TOML_TABLE = "ingest"
+_ACTIVE_WINDOW_TOML_KEY = "active_window_days"
+_MIN_LOG_NEWS_THRESHOLD_KEY = "min_log_news_threshold"
 
 
-@dataclass
-class Config:
-    database_url: str = "sqlite:///./disaster.db"
-    ai_provider: str = "openrouter"
-    ai_base_url: str = "https://openrouter.ai/api/v1"
-    ai_models: tuple[str, ...] = _DEFAULT_MODELS
-    ai_api_key: str = ""
-    ai_api_key_env: str = "OPENROUTER_API_KEY"
-    sources_enabled: tuple[str, ...] = _DEFAULT_SOURCES
-    news_provider: str = "ddg"
-    tracking_window_days: int = 7
-    develop_re_digest_threshold: int = 3
-    pandemic_risk_diseases: tuple[str, ...] = DEFAULT_PANDEMIC_RISK_DISEASES
-    outbreak_of_concern_diseases: tuple[str, ...] = DEFAULT_OUTBREAK_OF_CONCERN_DISEASES
-    endemic_diseases: tuple[str, ...] = DEFAULT_ENDEMIC_DISEASES
-    disease_dedup_window_days: int = 30
+@dataclass(frozen=True)
+class Settings:
+
+    db_url: str
+    openrouter_api_key: str
+    openrouter_model: str
+    active_window_days: int
+    min_log_news_threshold: int
+
+    def __init__(
+        self,
+        db_url: str,
+        openrouter_api_key: str,
+        openrouter_model: str,
+        active_window_days: int,
+        min_log_news_threshold: int = 3,
+    ) -> None:
+
+        if not openrouter_api_key:
+            raise ValueError("openrouter_api_key must not be empty")
+        if not openrouter_model:
+            raise ValueError("openrouter_model must not be empty")
+        object.__setattr__(self, "db_url", db_url or _DEFAULT_DB_URL)
+        object.__setattr__(self, "openrouter_api_key", openrouter_api_key)
+        object.__setattr__(self, "openrouter_model", openrouter_model)
+        object.__setattr__(self, "active_window_days", active_window_days)
+        object.__setattr__(self, "min_log_news_threshold", min_log_news_threshold)
 
     @classmethod
-    def from_toml(cls, path: str | Path) -> Config:
-        with open(path, "rb") as handle:
-            data = tomllib.load(handle)
-        database = data.get("database", {})
-        ai = data.get("ai", {})
-        sources = data.get("sources", {})
-        news = data.get("news", {})
-        tracking = data.get("tracking", {})
-        classification = data.get("classification", {})
+    def load(cls, *, config_path: str, secrets_path: str) -> Settings:
+
+        with open(config_path, "rb") as fp:
+            data = tomllib.load(fp)
+        db_url = data.get(_DB_TOML_TABLE, {}).get(_DB_URL_TOML_KEY, "") or ""
+        openrouter_model = (
+            data.get(_OR_TOML_TABLE, {}).get(_OR_MODEL_TOML_KEY, "") or ""
+        )
+
+        if not Path(secrets_path).is_file():
+            raise FileNotFoundError(secrets_path)
+        values = dotenv_values(secrets_path)
+        openrouter_api_key = values.get(_API_KEY_ENV_NAME) or ""
+        active_window_days = int(
+            data.get(_INGEST_TOML_TABLE, {}).get(_ACTIVE_WINDOW_TOML_KEY, 0)
+        )
+        min_log_news_threshold = int(
+            data.get(_INGEST_TOML_TABLE, {}).get(_MIN_LOG_NEWS_THRESHOLD_KEY, 3)
+        )
+
         return cls(
-            database_url=database.get("url", "sqlite:///./disaster.db"),
-            ai_provider=ai.get("provider", "openrouter"),
-            ai_base_url=ai.get("base_url", "https://openrouter.ai/api/v1"),
-            ai_models=tuple(ai.get("models", _DEFAULT_MODELS)),
-            ai_api_key=ai.get("api_key", ""),
-            ai_api_key_env=ai.get("api_key_env", "OPENROUTER_API_KEY"),
-            sources_enabled=tuple(sources.get("enabled", _DEFAULT_SOURCES)),
-            news_provider=news.get("provider", "ddg"),
-            tracking_window_days=int(tracking.get("window_days", 7)),
-            develop_re_digest_threshold=int(
-                tracking.get("develop_re_digest_threshold", 3)
-            ),
-            pandemic_risk_diseases=tuple(
-                classification.get(
-                    "pandemic_risk_diseases", DEFAULT_PANDEMIC_RISK_DISEASES
-                )
-            ),
-            outbreak_of_concern_diseases=tuple(
-                classification.get(
-                    "outbreak_of_concern_diseases",
-                    DEFAULT_OUTBREAK_OF_CONCERN_DISEASES,
-                )
-            ),
-            endemic_diseases=tuple(
-                classification.get("endemic_diseases", DEFAULT_ENDEMIC_DISEASES)
-            ),
-            disease_dedup_window_days=int(
-                classification.get("disease_dedup_window_days", 30)
-            ),
+            db_url=db_url,
+            openrouter_api_key=openrouter_api_key,
+            openrouter_model=openrouter_model,
+            active_window_days=int(active_window_days),
+            min_log_news_threshold=int(min_log_news_threshold),
         )

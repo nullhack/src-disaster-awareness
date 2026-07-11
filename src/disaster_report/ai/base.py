@@ -1,7 +1,18 @@
-from __future__ import annotations
 
-from typing import Any, Protocol
+from dataclasses import dataclass
+
+from disaster_report.models import NewsItem
 
 
-class AIDigester(Protocol):
-    def digest(self, sources: str | list[dict[str, Any]]) -> dict[str, Any]: ...
+@dataclass(frozen=True)
+class FilterResult:
+
+    selected_news: list[NewsItem]
+    relevance_scores: dict[str, float]
+
+
+@dataclass(frozen=True)
+class SummaryResult:
+
+    summary: str
+    has_relevant_updates: bool

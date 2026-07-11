@@ -1,0 +1,9 @@
+from disaster_report.models import SourceReport
+
+def disease_from_title(title: str) -> str: ...
+def derive_search_keys(
+    report: SourceReport,
+    *,
+    disease: str = ...,
+) -> tuple[str, str]: ...
+def derive_repoll_keys(report: SourceReport) -> list[str]: ...
