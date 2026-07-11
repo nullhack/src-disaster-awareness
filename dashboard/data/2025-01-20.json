@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.4",
+  "report_date": "2025-01-20",
+  "generated_at": "2026-07-11T20:50:41Z",
+  "as_of": "2025-01-20",
+  "tracking_window_days": 14,
+  "min_severity": "LOW",
+  "summary": {
+    "reportable_total": 1,
+    "new_today": 0,
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0,
+    "disease_outbreaks": 1,
+    "countries_affected": 1,
+    "news_total": 1,
+    "max_magnitude": null,
+    "by_severity": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 1,
+      "LOW": 0
+    },
+    "by_type": {
+      "Disease": 1
+    },
+    "by_region": {
+      "Africa": 1
+    }
+  },
+  "by_country": [
+    {
+      "country": "DR Congo",
+      "count": 1,
+      "max_sev_rank": 2,
+      "iso2": "CD",
+      "region": "Africa",
+      "country_group": "C",
+      "max_severity": "MEDIUM"
+    }
+  ],
+  "incidents": [
+    {
+      "incident_id": "20241227-CD-DI",
+      "canonical_name": "Acute respiratory infections complicated by malaria (previously undiagnosed disease) - Democratic Republic of the Congo",
+      "summary": "The previously undiagnosed disease in the Democratic Republic of the Congo has been identified as a combination of malaria, influenza, and malnutrition, according to a report published on January 16, 2025. This finding clarifies the nature of the acute respiratory infections complicated by malaria that had been reported in December 2024.",
+      "country": "DR Congo",
+      "iso2": "CD",
+      "lat": null,
+      "lon": null,
+      "country_group": "C",
+      "region": "Africa",
+      "incident_type": "Disease",
+      "incident_category": "Biological",
+      "is_disease": true,
+      "severity": "MEDIUM",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": "MEDIUM",
+      "event_status": null,
+      "disease_name": "Respiratory",
+      "event_date": "2024-12-27",
+      "first_reported_date": "2024-12-27",
+      "last_updated_date": "2025-01-16",
+      "days_since_event": 561,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 1,
+        "usgs": 0,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "WHO",
+          "label": "Acute respiratory infections complicated by malaria (previously undiagnosed disease) - Democratic Republic of the Congo",
+          "url": "/2024-DON547",
+          "meta": ""
+        }
+      ],
+      "physical": {
+        "max_magnitude": null,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Q&A: Cause of DRC outbreak identified as combination of malaria, flu and malnutrition",
+          "url": "https://www.healio.com/news/infectious-disease/20250116/qa-cause-of-drc-outbreak-identified-as-combination-of-malaria-flu-and-malnutrition",
+          "outlet": "Healio",
+          "published_date": "2025-01-16T00:00:00+00:00"
+        }
+      ],
+      "news_total": 1
+    }
+  ]
+}

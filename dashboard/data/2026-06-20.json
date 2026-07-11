@@ -1,0 +1,176 @@
+{
+  "schema_version": "1.4",
+  "report_date": "2026-06-20",
+  "generated_at": "2026-07-11T20:50:41Z",
+  "as_of": "2026-06-20",
+  "tracking_window_days": 14,
+  "min_severity": "LOW",
+  "summary": {
+    "reportable_total": 2,
+    "new_today": 0,
+    "critical": 0,
+    "high": 1,
+    "medium": 1,
+    "low": 0,
+    "disease_outbreaks": 0,
+    "countries_affected": 2,
+    "news_total": 2,
+    "max_magnitude": 7.4,
+    "by_severity": {
+      "CRITICAL": 0,
+      "HIGH": 1,
+      "MEDIUM": 1,
+      "LOW": 0
+    },
+    "by_type": {
+      "Earthquake": 2
+    },
+    "by_region": {
+      "Asia": 2
+    }
+  },
+  "by_country": [
+    {
+      "country": "China",
+      "count": 1,
+      "max_sev_rank": 2,
+      "iso2": "CN",
+      "region": "Asia",
+      "country_group": "A",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "Philippines",
+      "count": 1,
+      "max_sev_rank": 3,
+      "iso2": "PH",
+      "region": "Asia",
+      "country_group": "A",
+      "max_severity": "HIGH"
+    }
+  ],
+  "incidents": [
+    {
+      "incident_id": "20251010-PH-EQ",
+      "canonical_name": "Earthquake Philippines 2025-10",
+      "summary": "A powerful 7.4 magnitude earthquake struck off the southeastern coast of the Philippines on Friday morning, October 10, 2025, causing panic among residents who fled into the streets. The earthquake occurred near the Davao Oriental region.",
+      "country": "Philippines",
+      "iso2": "PH",
+      "lat": 7.2649,
+      "lon": 126.7545,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "HIGH",
+      "priority": "HIGH",
+      "priority_rank": 1,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2025-10-10",
+      "first_reported_date": "2025-10-10",
+      "last_updated_date": "2026-06-08",
+      "days_since_event": 274,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 0,
+        "gdacs": 1,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "GDACS",
+          "label": "Orange alert · Magnitude 7.4M, Depth:58.087km",
+          "url": "https://www.gdacs.org/report.aspx?eventid=1504268&episodeid=1665061&eventtype=EQ",
+          "meta": "Magnitude 7.4M, Depth:58.087km"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 7.4,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": "Orange",
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Powerful quake rattles southeastern Philippines sending panicked residents into...",
+          "url": "https://sports.yahoo.com/articles/7-4-magnitude-earthquake-hits-023746639.html",
+          "outlet": "CNN · via Yahoo Sports",
+          "published_date": "2026-06-08T00:00:00+00:00"
+        }
+      ],
+      "news_total": 1
+    },
+    {
+      "incident_id": "20260616-CN-EQ",
+      "canonical_name": "Earthquake China 2026-06",
+      "summary": "A magnitude 6.3 earthquake struck China on June 16, 2026, leaving at least one person dead and several others injured. This initial report details the earthquake's impact and casualties.",
+      "country": "China",
+      "iso2": "CN",
+      "lat": 37.8888,
+      "lon": 95.4028,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-06-16",
+      "first_reported_date": "2026-06-16",
+      "last_updated_date": "2026-06-13",
+      "days_since_event": 25,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 0,
+        "gdacs": 1,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "GDACS",
+          "label": "Orange alert · Magnitude 6.3M, Depth:10km",
+          "url": "https://www.gdacs.org/report.aspx?eventid=1546719&episodeid=1712478&eventtype=EQ",
+          "meta": "Magnitude 6.3M, Depth:10km"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 6.3,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": "Orange",
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Magnitude 6.3 earthquake rattles China, at least 1 dead, multiple injured",
+          "url": "https://www.yahoo.com/news/world/articles/magnitude-6-3-earthquake-rattles-130717611.html",
+          "outlet": "Yahoo",
+          "published_date": "2026-06-13T14:43:40+00:00"
+        }
+      ],
+      "news_total": 1
+    }
+  ]
+}

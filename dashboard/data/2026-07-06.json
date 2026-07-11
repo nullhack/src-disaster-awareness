@@ -1,0 +1,394 @@
+{
+  "schema_version": "1.4",
+  "report_date": "2026-07-06",
+  "generated_at": "2026-07-11T20:50:41Z",
+  "as_of": "2026-07-06",
+  "tracking_window_days": 14,
+  "min_severity": "LOW",
+  "summary": {
+    "reportable_total": 5,
+    "new_today": 0,
+    "critical": 0,
+    "high": 1,
+    "medium": 4,
+    "low": 0,
+    "disease_outbreaks": 0,
+    "countries_affected": 5,
+    "news_total": 6,
+    "max_magnitude": 6.2,
+    "by_severity": {
+      "CRITICAL": 0,
+      "HIGH": 1,
+      "MEDIUM": 4,
+      "LOW": 0
+    },
+    "by_type": {
+      "Earthquake": 5
+    },
+    "by_region": {
+      "Americas": 1,
+      "Asia": 3,
+      "Oceania": 1
+    }
+  },
+  "by_country": [
+    {
+      "country": "Japan",
+      "count": 1,
+      "max_sev_rank": 2,
+      "iso2": "JP",
+      "region": "Asia",
+      "country_group": "A",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "Papua New Guinea",
+      "count": 1,
+      "max_sev_rank": 2,
+      "iso2": "PG",
+      "region": "Oceania",
+      "country_group": "B",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "Afghanistan",
+      "count": 1,
+      "max_sev_rank": 2,
+      "iso2": "AF",
+      "region": "Asia",
+      "country_group": "A",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "Indonesia",
+      "count": 1,
+      "max_sev_rank": 2,
+      "iso2": "ID",
+      "region": "Asia",
+      "country_group": "A",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "Dominican Republic",
+      "count": 1,
+      "max_sev_rank": 3,
+      "iso2": "DO",
+      "region": "Americas",
+      "country_group": "C",
+      "max_severity": "HIGH"
+    }
+  ],
+  "incidents": [
+    {
+      "incident_id": "20250805-DO-EQ",
+      "canonical_name": "Earthquake 38 km SE of Boca de Yuma, Dominican Republic 2025-08",
+      "summary": "",
+      "country": "Dominican Republic",
+      "iso2": "DO",
+      "lat": 18.1665,
+      "lon": -68.3226,
+      "country_group": "C",
+      "region": "Americas",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "HIGH",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2025-08-05",
+      "first_reported_date": "2025-08-05",
+      "last_updated_date": "2026-06-26",
+      "days_since_event": 340,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 5.7 - 38 km SE of Boca de Yuma, Dominican Republic",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr2025217000",
+          "meta": "168 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 5.7,
+        "max_depth_km": 168.0,
+        "place": "38 km SE of Boca de Yuma, Dominican Republic",
+        "felt": 484,
+        "sig": 742,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Dominican Republic and Nicaragua cap week of powerful earthquakes",
+          "url": "https://www.msn.com/en-us/news/world/dominican-republic-and-nicaragua-cap-week-of-powerful-earthquakes/ar-AA26CRR8?ocid=BingNewsVerp",
+          "outlet": "UPI on MSN",
+          "published_date": "2026-06-26T04:00:00+00:00"
+        }
+      ],
+      "news_total": 1
+    },
+    {
+      "incident_id": "20260626-JP-EQ",
+      "canonical_name": "Earthquake 3 km SE of Yokoshiba, Japan 2026-06",
+      "summary": "A magnitude 5.8 earthquake struck Japan's Chiba prefecture on June 26, 2026, shaking areas near Tokyo. No tsunami warning was issued.",
+      "country": "Japan",
+      "iso2": "JP",
+      "lat": 35.6314,
+      "lon": 140.5099,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-06-26",
+      "first_reported_date": "2026-06-26",
+      "last_updated_date": "2026-06-26",
+      "days_since_event": 15,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 5.8 - 3 km SE of Yokoshiba, Japan",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8cy",
+          "meta": "43 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 5.8,
+        "max_depth_km": 43.0,
+        "place": "3 km SE of Yokoshiba, Japan",
+        "felt": 65,
+        "sig": 545,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Magnitude 5.8 earthquake strikes near Tokyo, no tsunami warning issued",
+          "url": "https://www.aa.com.tr/en/asia-pacific/magnitude-58-earthquake-strikes-near-tokyo-no-tsunami-warning-issued/3978380",
+          "outlet": "Anadolu Agency",
+          "published_date": "2026-06-26T00:00:00+00:00"
+        }
+      ],
+      "news_total": 1
+    },
+    {
+      "incident_id": "20260630-PG-EQ",
+      "canonical_name": "Earthquake 90 km ESE of Kimbe, Papua New Guinea 2026-06",
+      "summary": "A magnitude 5.8 earthquake struck the New Britain Region of Papua New Guinea on June 30, 2026, according to the German Research Centre for Geosciences (GFZ). The epicenter was located in the region near Kimbe, East New Britain.",
+      "country": "Papua New Guinea",
+      "iso2": "PG",
+      "lat": -5.727,
+      "lon": 150.9338,
+      "country_group": "B",
+      "region": "Oceania",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-06-30",
+      "first_reported_date": "2026-06-30",
+      "last_updated_date": "2026-06-30",
+      "days_since_event": 11,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 5.4 - 90 km ESE of Kimbe, Papua New Guinea",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t978",
+          "meta": "35 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 5.4,
+        "max_depth_km": 35.0,
+        "place": "90 km ESE of Kimbe, Papua New Guinea",
+        "felt": null,
+        "sig": 449,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Magnitude 5.8 earthquake strikes New Britain Region, Papua New Guinea, GFZ says",
+          "url": "https://www.reuters.com/business/environment/magnitude-58-earthquake-strikes-new-britain-region-papua-new-guinea-gfz-says-2026-06-30/",
+          "outlet": "Reuters",
+          "published_date": "2026-06-30T14:37:55+00:00"
+        }
+      ],
+      "news_total": 1
+    },
+    {
+      "incident_id": "20260701-AF-EQ",
+      "canonical_name": "Earthquake 47 km SW of Jurm, Afghanistan 2026-07",
+      "summary": "A 5.5 magnitude earthquake struck 47 km southwest of Jurm, Afghanistan, with tremors felt in neighboring Pakistan and northern India, including Jammu and Kashmir. The article notes this is the second earthquake in the region within five days.",
+      "country": "Afghanistan",
+      "iso2": "AF",
+      "lat": 36.567,
+      "lon": 70.4491,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-07-01",
+      "first_reported_date": "2026-07-01",
+      "last_updated_date": "2026-07-02",
+      "days_since_event": 10,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 5.5 - 47 km SW of Jurm, Afghanistan",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9gg",
+          "meta": "212.915 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 5.5,
+        "max_depth_km": 212.915,
+        "place": "47 km SW of Jurm, Afghanistan",
+        "felt": 2,
+        "sig": 466,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "5.5 magnitude earthquake hits Afghanistan, tremors felt in Jammu and Kashmir and…; second quake in 5 days",
+          "url": "https://news24online.com/world/5-5-magnitude-earthquake-hits-afghanistan-tremors-felt-in-pakistan-afghanistan-earthquake/875262/",
+          "outlet": "News24",
+          "published_date": "2026-07-02T00:00:00+00:00"
+        }
+      ],
+      "news_total": 1
+    },
+    {
+      "incident_id": "20260703-ID-EQ",
+      "canonical_name": "Earthquake 58 km W of Tobelo, Indonesia 2026-07",
+      "summary": "A magnitude 6.2 earthquake struck approximately 58 km west of Tobelo, Indonesia, on July 3, 2026, according to the USGS and Indonesia's BKMG. There was no tsunami threat, and no immediate reports of casualties or damage.",
+      "country": "Indonesia",
+      "iso2": "ID",
+      "lat": 1.8205,
+      "lon": 127.4916,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-07-03",
+      "first_reported_date": "2026-07-03",
+      "last_updated_date": "2026-06-17",
+      "days_since_event": 8,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 2
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 6.2 - 58 km W of Tobelo, Indonesia",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9r5",
+          "meta": "120.932 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 6.2,
+        "max_depth_km": 120.932,
+        "place": "58 km W of Tobelo, Indonesia",
+        "felt": 7,
+        "sig": 594,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Magnitude 6.2 earthquake strikes off eastern Indonesia, no tsunami threat",
+          "url": "https://www.asiaone.com/asia/indonesia-tolebo-maluku-earthquake",
+          "outlet": "Asia One",
+          "published_date": "2026-06-17T00:00:00+00:00"
+        },
+        {
+          "headline": "Magnitude 6.2 earthquake strikes off eastern Indonesia: USGS",
+          "url": "https://www.bssnews.net/international/402127",
+          "outlet": "Bangladesh Sangsbad Sangstha",
+          "published_date": "2026-06-17T00:00:00+00:00"
+        }
+      ],
+      "news_total": 2
+    }
+  ]
+}

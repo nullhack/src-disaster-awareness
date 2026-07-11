@@ -1,0 +1,170 @@
+{
+  "schema_version": "1.4",
+  "report_date": "2026-04-07",
+  "generated_at": "2026-07-11T20:50:41Z",
+  "as_of": "2026-04-07",
+  "tracking_window_days": 14,
+  "min_severity": "LOW",
+  "summary": {
+    "reportable_total": 2,
+    "new_today": 0,
+    "critical": 0,
+    "high": 1,
+    "medium": 1,
+    "low": 0,
+    "disease_outbreaks": 0,
+    "countries_affected": 2,
+    "news_total": 1,
+    "max_magnitude": 7.5,
+    "by_severity": {
+      "CRITICAL": 0,
+      "HIGH": 1,
+      "MEDIUM": 1,
+      "LOW": 0
+    },
+    "by_type": {
+      "Earthquake": 2
+    },
+    "by_region": {
+      "Asia": 1,
+      "Oceania": 1
+    }
+  },
+  "by_country": [
+    {
+      "country": "Indonesia",
+      "count": 1,
+      "max_sev_rank": 2,
+      "iso2": "ID",
+      "region": "Asia",
+      "country_group": "A",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "Tonga",
+      "count": 1,
+      "max_sev_rank": 3,
+      "iso2": "TO",
+      "region": "Oceania",
+      "country_group": "B",
+      "max_severity": "HIGH"
+    }
+  ],
+  "incidents": [
+    {
+      "incident_id": "20260402-ID-EQ",
+      "canonical_name": "Earthquake 126 km E of Bitung, Indonesia 2026-04",
+      "summary": "",
+      "country": "Indonesia",
+      "iso2": "ID",
+      "lat": 1.2212,
+      "lon": 126.241,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-04-02",
+      "first_reported_date": "2026-04-02",
+      "last_updated_date": "2026-04-02",
+      "days_since_event": 100,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 0
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 5.7 - 126 km E of Bitung, Indonesia",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000slww",
+          "meta": "35 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 5.7,
+        "max_depth_km": 35.0,
+        "place": "126 km E of Bitung, Indonesia",
+        "felt": null,
+        "sig": 500,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [],
+      "news_total": 0
+    },
+    {
+      "incident_id": "20260324-TO-EQ",
+      "canonical_name": "Earthquake 158 km W of Neiafu, Tonga 2026-03",
+      "summary": "A magnitude 7.5 earthquake struck deep beneath the South Pacific Ocean near Tonga on March 24, 2026, with some shaking felt in the region.",
+      "country": "Tonga",
+      "iso2": "TO",
+      "lat": -18.5387,
+      "lon": -175.4763,
+      "country_group": "B",
+      "region": "Oceania",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "HIGH",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-03-24",
+      "first_reported_date": "2026-03-24",
+      "last_updated_date": "2026-03-13",
+      "days_since_event": 109,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 7.5 - 158 km W of Neiafu, Tonga",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000s789",
+          "meta": "234 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 7.5,
+        "max_depth_km": 234.0,
+        "place": "158 km W of Neiafu, Tonga",
+        "felt": 19,
+        "sig": 875,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Strongest earthquake of 2026 strikes near Tonga in Pacific Ocean",
+          "url": "https://www.yahoo.com/news/articles/strongest-earthquake-2026-strikes-near-144157659.html",
+          "outlet": "AccuWeather · via Yahoo News",
+          "published_date": "2026-03-13T14:42:22+00:00"
+        }
+      ],
+      "news_total": 1
+    }
+  ]
+}

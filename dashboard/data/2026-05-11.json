@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.4",
+  "report_date": "2026-05-11",
+  "generated_at": "2026-07-11T20:50:41Z",
+  "as_of": "2026-05-11",
+  "tracking_window_days": 14,
+  "min_severity": "LOW",
+  "summary": {
+    "reportable_total": 1,
+    "new_today": 0,
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0,
+    "disease_outbreaks": 1,
+    "countries_affected": 0,
+    "news_total": 1,
+    "max_magnitude": null,
+    "by_severity": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 1,
+      "LOW": 0
+    },
+    "by_type": {
+      "Disease": 1
+    },
+    "by_region": {
+      "Unknown": 1
+    }
+  },
+  "by_country": [],
+  "incidents": [
+    {
+      "incident_id": "20240731-XX-DI",
+      "canonical_name": "Antimicrobial Resistance, Hypervirulent Klebsiella pneumoniae - Global situation",
+      "summary": "A multidrug-resistant strain of Klebsiella pneumoniae was detected in an 86-year-old woman with a urinary infection admitted to a hospital in Northeast Brazil in 2022. The strain proved resistant to all available antibiotics, highlighting the ongoing global challenge of antimicrobial resistance in hypervirulent K. pneumoniae.",
+      "country": "",
+      "iso2": "",
+      "lat": null,
+      "lon": null,
+      "country_group": "C",
+      "region": "Unknown",
+      "incident_type": "Disease",
+      "incident_category": "Biological",
+      "is_disease": true,
+      "severity": "MEDIUM",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": "MEDIUM",
+      "event_status": null,
+      "disease_name": "Antimicrobial",
+      "event_date": "2024-07-31",
+      "first_reported_date": "2024-07-31",
+      "last_updated_date": "2026-05-09",
+      "days_since_event": 710,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 1,
+        "usgs": 0,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "WHO",
+          "label": "Antimicrobial Resistance, Hypervirulent Klebsiella pneumoniae - Global situation",
+          "url": "/2024-DON527",
+          "meta": ""
+        }
+      ],
+      "physical": {
+        "max_magnitude": null,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Multidrug-resistant strain of K. pneumoniae detected in Northeast Brazil",
+          "url": "https://medicalxpress.com/news/2024-11-multidrug-resistant-strain-pneumoniae-northeast.html",
+          "outlet": "Medical Xpress",
+          "published_date": "2026-05-09T00:00:00+00:00"
+        }
+      ],
+      "news_total": 1
+    }
+  ]
+}

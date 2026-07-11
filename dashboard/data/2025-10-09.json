@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.4",
+  "report_date": "2025-10-09",
+  "generated_at": "2026-07-11T20:50:41Z",
+  "as_of": "2025-10-09",
+  "tracking_window_days": 14,
+  "min_severity": "LOW",
+  "summary": {
+    "reportable_total": 1,
+    "new_today": 0,
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0,
+    "disease_outbreaks": 1,
+    "countries_affected": 0,
+    "news_total": 3,
+    "max_magnitude": null,
+    "by_severity": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 1,
+      "LOW": 0
+    },
+    "by_type": {
+      "Disease": 1
+    },
+    "by_region": {
+      "Unknown": 1
+    }
+  },
+  "by_country": [],
+  "incidents": [
+    {
+      "incident_id": "20251003-XX-DI",
+      "canonical_name": "Chikungunya virus disease- Global situation",
+      "summary": "A major outbreak of chikungunya virus has occurred in China, prompting the CDC to issue a travel warning for Americans heading to the country. The outbreak has raised concerns about the virus's spread and its risk to other regions, including the UK and parts of the US.",
+      "country": "",
+      "iso2": "",
+      "lat": null,
+      "lon": null,
+      "country_group": "C",
+      "region": "Unknown",
+      "incident_type": "Disease",
+      "incident_category": "Biological",
+      "is_disease": true,
+      "severity": "MEDIUM",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": "MEDIUM",
+      "event_status": null,
+      "disease_name": "Chikungunya",
+      "event_date": "2025-10-03",
+      "first_reported_date": "2025-10-03",
+      "last_updated_date": "2025-08-15",
+      "days_since_event": 281,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 1,
+        "usgs": 0,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 3
+      },
+      "source_links": [
+        {
+          "type": "WHO",
+          "label": "Chikungunya virus disease- Global situation",
+          "url": "/2025-DON581",
+          "meta": ""
+        }
+      ],
+      "physical": {
+        "max_magnitude": null,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "What is chikungunya? Is it deadly? Are any cases in Mississippi? More on virus...",
+          "url": "https://www.yahoo.com/news/articles/chikungunya-deadly-cases-mississippi-more-155745719.html",
+          "outlet": "The Clarion Ledger · via Yahoo News",
+          "published_date": "2025-08-15T14:40:25+00:00"
+        },
+        {
+          "headline": "What is the chikungunya virus? Is it common in Arizona? Here's what to know",
+          "url": "https://www.yahoo.com/news/articles/chikungunya-virus-common-arizona-heres-175304365.html",
+          "outlet": "AZCentral | The Arizona Republic · via Yahoo News",
+          "published_date": "2025-08-15T14:40:31+00:00"
+        },
+        {
+          "headline": "What risk does chikungunya pose to the UK after virus outbreak in China?",
+          "url": "https://www.yahoo.com/news/articles/risk-does-chikungunya-pose-uk-165148945.html",
+          "outlet": "The Independent · via Yahoo News",
+          "published_date": "2025-08-15T14:42:07+00:00"
+        }
+      ],
+      "news_total": 3
+    }
+  ]
+}

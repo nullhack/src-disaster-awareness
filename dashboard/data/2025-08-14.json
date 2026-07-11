@@ -1,0 +1,178 @@
+{
+  "schema_version": "1.4",
+  "report_date": "2025-08-14",
+  "generated_at": "2026-07-11T20:50:41Z",
+  "as_of": "2025-08-14",
+  "tracking_window_days": 14,
+  "min_severity": "LOW",
+  "summary": {
+    "reportable_total": 2,
+    "new_today": 0,
+    "critical": 0,
+    "high": 2,
+    "medium": 0,
+    "low": 0,
+    "disease_outbreaks": 1,
+    "countries_affected": 2,
+    "news_total": 2,
+    "max_magnitude": 54735.0,
+    "by_severity": {
+      "CRITICAL": 0,
+      "HIGH": 2,
+      "MEDIUM": 0,
+      "LOW": 0
+    },
+    "by_type": {
+      "Forest Fire": 1,
+      "Disease": 1
+    },
+    "by_region": {
+      "Europe": 1,
+      "Asia": 1
+    }
+  },
+  "by_country": [
+    {
+      "country": "Portugal",
+      "count": 1,
+      "max_sev_rank": 3,
+      "iso2": "PT",
+      "region": "Europe",
+      "country_group": "C",
+      "max_severity": "HIGH"
+    },
+    {
+      "country": "Bangladesh",
+      "count": 1,
+      "max_sev_rank": 3,
+      "iso2": "BD",
+      "region": "Asia",
+      "country_group": "A",
+      "max_severity": "HIGH"
+    }
+  ],
+  "incidents": [
+    {
+      "incident_id": "20250810-PT-WF",
+      "canonical_name": "Forest Fire Portugal 2025-08",
+      "summary": "Portugal has extended the national alert status until August 13 due to intensifying wildfire risk, marking one of the worst wildfire seasons in years. The government's decision reflects the ongoing threat of forest fires across the country.",
+      "country": "Portugal",
+      "iso2": "PT",
+      "lat": 40.1947,
+      "lon": -7.7548,
+      "country_group": "C",
+      "region": "Europe",
+      "incident_type": "Forest Fire",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "HIGH",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2025-08-10",
+      "first_reported_date": "2025-08-10",
+      "last_updated_date": "2025-08-08",
+      "days_since_event": 335,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 0,
+        "gdacs": 1,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "GDACS",
+          "label": "Orange alert · Orange impact for forestfire in 54735 ha",
+          "url": "https://www.gdacs.org/report.aspx?eventid=1024588&episodeid=12&eventtype=WF",
+          "meta": "Orange impact for forestfire in 54735 ha"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 54735.0,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": "Orange",
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Portugal extends national alert amid worst wildfire season in years",
+          "url": "https://global.chinadaily.com.cn/a/202508/08/WS6895529aa3108a99c1905cbe.html",
+          "outlet": "China Daily Global Edition",
+          "published_date": "2025-08-08T00:00:00+00:00"
+        }
+      ],
+      "news_total": 1
+    },
+    {
+      "incident_id": "20250806-BD-DI",
+      "canonical_name": "Nipah Virus Infection - India",
+      "summary": "Two cases of the deadly Nipah virus have been confirmed in India, prompting authorities in Thailand, Singapore, Hong Kong, and Malaysia to implement airport checks across Asia.",
+      "country": "Bangladesh",
+      "iso2": "BD",
+      "lat": null,
+      "lon": null,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Disease",
+      "incident_category": "Biological",
+      "is_disease": true,
+      "severity": "HIGH",
+      "priority": "HIGH",
+      "priority_rank": 1,
+      "pandemic_potential": "HIGH",
+      "event_status": null,
+      "disease_name": "Nipah",
+      "event_date": "2025-08-06",
+      "first_reported_date": "2025-08-06",
+      "last_updated_date": "2018-05-22",
+      "days_since_event": 339,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 1,
+        "usgs": 0,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "WHO",
+          "label": "Nipah Virus Infection - India",
+          "url": "/2025-DON577",
+          "meta": ""
+        }
+      ],
+      "physical": {
+        "max_magnitude": null,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Nipah virus fears trigger airport checks across Asia after India confirms two cases",
+          "url": "https://www.aol.com/articles/nipah-virus-fears-trigger-airport-163348945.html",
+          "outlet": "AOL",
+          "published_date": "2018-05-22T00:00:00+00:00"
+        }
+      ],
+      "news_total": 1
+    }
+  ]
+}
