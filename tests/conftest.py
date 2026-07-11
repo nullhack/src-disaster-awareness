@@ -1,22 +1,7 @@
-from __future__ import annotations
-
-import shutil
-from pathlib import Path
-
 import pytest
 
-from disaster_report.store import SqliteIncidentStore
 
-
-@pytest.fixture(scope="session")
-def _db_template(tmp_path_factory):
-    tpl = tmp_path_factory.mktemp("tpl") / "template.db"
-    SqliteIncidentStore(f"sqlite:///{tpl}")
-    return tpl
-
-
-@pytest.fixture
-def db_url(_db_template, tmp_path):
-    dst = Path(tmp_path) / "store.db"
-    shutil.copy(_db_template, dst)
-    return f"sqlite:///{dst}"
+def pytest_collection_modifyitems(items: list[pytest.Item]) -> None:
+    for item in items:
+        if item.get_closest_marker("pending") is not None:
+            item.add_marker(pytest.mark.skip(reason="not implemented"))

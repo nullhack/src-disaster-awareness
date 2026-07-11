@@ -1,0 +1,9 @@
+from collections.abc import Mapping
+
+def extract_places_from_text(
+    *,
+    title: str,
+    body_sections: Mapping[str, str],
+) -> list[dict[str, str]]: ...
+def scan_countries(text: str) -> list[tuple[str, str]]: ...
+def scan_subdivision(text: str, alpha_2: str) -> str: ...

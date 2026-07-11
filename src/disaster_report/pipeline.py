@@ -1,549 +1,398 @@
+
 from __future__ import annotations
 
 import logging
-import os
-from concurrent.futures import ThreadPoolExecutor, as_completed
-from datetime import date
-from typing import Callable
+import time
+from dataclasses import dataclass
+from typing import Any, cast
 
-# DuckDuckGo News searches are the slowest ingest phase (~5-15s each, network
-# bound). Running them concurrently keeps a daily ingest to ~1-2 min instead of
-# many minutes. DB writes are NOT parallelised (SQLite serialises them).
-_DEV_SEARCH_WORKERS = 4
+from sqlalchemy.exc import IntegrityError
 
-from disaster_report.ai.base import AIDigester
-from disaster_report.classification import (
-    NON_EVENT_STATUSES,
-    SEVERITY_NAMES,
-    ClassifyContext,
-    classify,
-    derive_initial_severity,
-    is_disease_type,
-    pandemic_potential_level,
-)
-from disaster_report.config import Config
-from disaster_report.countries import UNKNOWN_ISO2, country_iso2
-from disaster_report.deriver import DeriveInput, derive_canonical_name, derive_search_keys
-from disaster_report.news_filter import is_relevant
-from disaster_report.resolver import IncidentResolver, ResolvedIncident
-from disaster_report.sources._dates import parse_date
-from disaster_report.sources.base import (
-    PRIOR_DIGEST_SOURCE,
-    NewsAdapter,
-    RawArticle,
-    RawIncident,
-    SourceAdapter,
-)
-from disaster_report.store.base import IncidentRecord, IncidentStore, IncidentView
+from disaster_report._search_keys import derive_repoll_keys
+from disaster_report.models import IncidentLog, NewsItem, SourceReport
+from disaster_report.sources.errors import SourceFetchError
+from disaster_report.store.base import Warehouse
 
-log = logging.getLogger(__name__)
+logger = logging.getLogger(__name__)
 
 
-def _news_timelimit(window_days: int) -> str:
-    if window_days <= 1:
-        return "d"
-    if window_days <= 7:
-        return "w"
-    return "m"
+def _mint_id() -> int:
+
+    return time.time_ns()
 
 
-def _parse_date(value: str) -> date:
-    parsed = parse_date(value)
-    if parsed is None:
-        raise ValueError(f"unparseable report_date: {value!r}")
-    return parsed
+@dataclass(frozen=True)
+class IngestReport:
+
+    source_reports_kept: int
+    ai_calls: int
+    ddg_calls: int
 
 
-def _raw_to_dict(raw: RawIncident) -> dict:
-    return {
-        "incident_name": raw.incident_name,
-        "country": raw.country,
-        "incident_type": raw.incident_type,
-        "report_date": raw.report_date,
-        "source_name": raw.source_name,
-        "source_url": raw.source_url,
-        "raw_fields": dict(raw.raw_fields),
-    }
+def _places_payload(report: SourceReport) -> list[dict[str, str]]:
 
-
-def _article_to_dict(article: RawArticle) -> dict:
-    return {
-        "headline": article.headline,
-        "url": article.url,
-        "body": article.body,
-        "outlet": article.outlet,
-        "published_date": article.published_date,
-    }
-
-
-def _digest_payload(
-    digest: dict,
-    name: str,
-    severity: str,
-    keys: list[str],
-    event_status: str,
-) -> dict:
-    """Build the set_digest body shared by the dedup-merge and new-row paths."""
-    return {
-        "canonical_name": name,
-        "summary": digest.get("summary", ""),
-        "severity": severity,
-        "search_keys": keys,
-        "pandemic_potential": digest.get("pandemic_potential"),
-        "event_status": event_status,
-    }
-
-
-class Pipeline:
-    def __init__(
-        self,
-        *,
-        sources: list[SourceAdapter],
-        news: NewsAdapter,
-        resolver: IncidentResolver,
-        digester: AIDigester,
-        store: IncidentStore,
-        config: Config,
-        clock: Callable[[], date],
-    ) -> None:
-        self._sources = sources
-        self._news = news
-        self._resolver = resolver
-        self._digester = digester
-        self._store = store
-        self._config = config
-        self._clock = clock
-
-    def run(self) -> None:
-        today = self._clock()
-        window = self._config.tracking_window_days
-        log.info("pipeline run for %s (tracking window=%d days)", today, window)
-
-        raw_incidents: list[RawIncident] = []
-        for source in self._sources:
-            log.debug("fetching source %s", type(source).__name__)
-            raw_incidents.extend(source.fetch())
-        log.info(
-            "fetched %d raw incident(s) from %d source(s)",
-            len(raw_incidents), len(self._sources),
-        )
-
-        resolved = self._resolver.resolve(raw_incidents)
-        log.info("resolved into %d unique incident(s)", len(resolved))
-
-        active_snapshot = self._store.get_active_incidents(as_of=today, within_days=window)
-        log.info("%d active incident(s) already tracked", len(active_snapshot))
-
-        known_ids = set(self._store.all_incident_ids())
-        new_count = 0
-        enriched_count = 0
-        newly_enriched: list[IncidentView] = []
-        for incident in resolved:
-            if incident.incident_id in known_ids:
-                continue
-            view = self._safe_ingest_new(incident, today)
-            new_count += 1
-            if not self._is_today(incident, today):
-                continue
-            enriched_count += 1
-            if view is not None:
-                newly_enriched.append(view)
-        log.info(
-            "ingested %d new incident(s) (%d AI-enriched as today's incidents)",
-            new_count, enriched_count,
-        )
-
-        backfill_mode = bool(os.environ.get("DR_BACKFILL_NEWS"))
-        if backfill_mode:
-            log.info(
-                "backfill mode active (DR_BACKFILL_NEWS set): _develop will also "
-                "process incidents last_updated today"
-            )
-        to_develop = [
-            incident for incident in active_snapshot
-            if incident.should_report and incident.search_keys
-            and (backfill_mode or incident.last_updated < today)
-        ] + newly_enriched
-        # Run slow DDG news searches concurrently (network-bound); the
-        # relevance filter + link_news DB writes run serially afterwards.
-        searched: list[tuple[IncidentView, list[RawArticle]]] = []
-        if to_develop:
-            with ThreadPoolExecutor(max_workers=_DEV_SEARCH_WORKERS) as pool:
-                futures = {
-                    pool.submit(self._dev_search, inc, today): inc
-                    for inc in to_develop
-                }
-                for fut in as_completed(futures):
-                    inc = futures[fut]
-                    try:
-                        searched.append((inc, fut.result()))
-                    except Exception:
-                        log.exception("incident %s: dev-search failed", inc.incident_id)
-                        searched.append((inc, []))
-        developed = 0
-        for incident, raw_articles in searched:
-            if self._dev_link(incident, raw_articles, today):
-                developed += 1
-        if developed:
-            log.info("developed %d incident(s) with new news", developed)
-
-        retried = self._retry_pending_digests(today)
-        if retried:
-            log.info("retried %d pending digest(s)", retried)
-
-        # Re-derive deterministic geophysical severity from current facts so
-        # newly-linked source records / news correct the classification each
-        # ingest (also self-corrects legacy severity frozen at first ingest).
-        sev_deltas = self._store.reclassify_all(dry_run=False)
-        if sev_deltas:
-            log.info("reclassified %d incident(s)", len(sev_deltas))
-
-    def _is_today(self, resolved: ResolvedIncident, today: date) -> bool:
-        return resolved.is_today(today)
-
-    def _safe_ingest_new(self, incident: ResolvedIncident, today: date) -> IncidentView | None:
-        try:
-            return self._ingest_new(incident, today)
-        except Exception as exc:
-            log.exception(
-                "incident %s: ingest failed; continuing with next incident",
-                incident.incident_id,
-            )
-            return None
-
-    def _safe_digest(self, incident_id: str, materials: dict) -> dict | None:
-        try:
-            return self._digester.digest(materials)
-        except Exception as exc:
-            log.warning(
-                "incident %s: digest failed, leaving degraded for retry: %s",
-                incident_id, exc,
-            )
-            return None
-
-    def _bootstrap_news(
-        self,
-        incident_id: str,
-        primary: RawIncident,
-        report_day: date,
-        window: int,
-        disease_name: str | None,
-    ) -> list[RawArticle]:
-        """In-window news search + relevance filter for a fresh incident."""
-        if country_iso2(primary.country) == UNKNOWN_ISO2:
-            query = f"{report_day.isoformat()} {primary.incident_type}"
-        else:
-            query = f"{report_day.isoformat()} {primary.incident_type} {primary.country}"
-        timelimit = _news_timelimit(window)
-        log.info(
-            "ingesting NEW incident %s (report_date=%s, in %d-day window); "
-            "bootstrap query=%r timelimit=%r",
-            incident_id, report_day, window, query, timelimit,
-        )
-        raw_articles = self._news.search(query, timelimit=timelimit)
-        relevant = [
-            a for a in raw_articles
-            if is_relevant(
-                a,
-                incident_type=primary.incident_type,
-                country=primary.country,
-                incident_name=primary.incident_name,
-                disease_name=disease_name,
-            )
-        ]
-        log.info(
-            "incident %s: %d bootstrap article(s) returned, %d relevant after filter",
-            incident_id, len(raw_articles), len(relevant),
-        )
-        return relevant
-
-    def _ingest_new(
-        self, resolved: ResolvedIncident, today: date
-    ) -> IncidentView | None:
-        primary = resolved.primary
-        report_day = _parse_date(primary.report_date)
-        window = self._config.tracking_window_days
-        is_today = report_day == today
-        in_window = 0 <= (today - report_day).days <= window
-        adapter_disease = primary.raw_fields.get("disease")
-        is_disease_track = is_disease_type(primary.incident_type)
-
-        if in_window:
-            bootstrap_articles = self._bootstrap_news(
-                resolved.incident_id, primary, report_day, window, adapter_disease,
-            )
-        else:
-            bootstrap_articles = []
-            log.info(
-                "skipping incident %s (report_date=%s is outside %d-day window of today=%s); "
-                "persisting without bootstrap news",
-                resolved.incident_id, report_day, window, today,
-            )
-
-        # AI judge runs BEFORE persistence so its verdict can gate storage.
-        # For disease incidents, pandemic_potential/event_status feed the single
-        # classify call below; a non_event/elimination_declared verdict drops the
-        # candidate news (incident row is kept, suppressed).
-        digest: dict | None = None
-        event_status = ""
-        pandemic_potential: int | None = None
-        materials = {
-            "source_reports": [_raw_to_dict(raw) for raw in resolved.incidents],
-            "news_articles": [_article_to_dict(a) for a in bootstrap_articles],
+    return [
+        {
+            "country_code": p.country_code,
+            "subdivision": p.subdivision,
+            "locality": p.locality,
         }
-        log.info("incident %s: requesting AI digest", resolved.incident_id)
-        digest = self._safe_digest(resolved.incident_id, materials)
-        if digest is not None:
-            event_status = str(digest.get("event_status", "")).strip().lower()
-            pandemic_potential = pandemic_potential_level(
-                digest.get("pandemic_potential")
-            )
+        for p in report.places
+    ]
 
-        # The AI-authored disease label is AUTHORITATIVE (robust to brittle /
-        # malformed source titles); fall back to the adapter's best-effort label
-        # when no digest ran (non-today incidents) or the model omitted it.
-        if digest is not None:
-            disease = (digest.get("disease_name") or "").strip() or adapter_disease
-        else:
-            disease = adapter_disease
 
-        severity_level = derive_initial_severity(resolved.incidents)
-        # canonical_name + search_keys are DERIVED from structured facts (always
-        # present, always date-anchored) - not AI-authored. AI supplies only the
-        # classification (severity/pp/es/disease_name) and the prose summary.
-        derived_ctx = DeriveInput(
-            incident_type=primary.incident_type,
-            country=primary.country,
-            event_date=report_day,
-            disease_name=disease,
-            place=str(primary.raw_fields.get("place", "") or ""),
-        )
-        derived_name = derive_canonical_name(derived_ctx)
-        derived_keys = derive_search_keys(derived_ctx)
-        if is_disease_track and digest and digest.get("severity"):
-            severity_name = str(digest["severity"]).upper()
-        else:
-            severity_name = SEVERITY_NAMES.get(severity_level, "LOW")
-        country_group, region = self._store.country_context(primary.country)
-        population = max(
-            (
-                int(r.raw_fields.get("population", 0) or 0)
-                for r in resolved.incidents
-            ),
-            default=0,
-        )
-        source_tiers = self._store.source_tiers(
-            [r.source_name for r in resolved.incidents]
-        )
-        ctx = ClassifyContext(
-            level=severity_level,
-            country_group=country_group,
-            region=region or "",
-            disease_name=disease,
-            incident_type=primary.incident_type,
-            population=population,
-            source_tiers=source_tiers,
-            pandemic_potential=pandemic_potential,
-            event_status=event_status,
-        )
-        priority, should_report = classify(ctx)
-        rejected = is_disease_track and event_status in NON_EVENT_STATUSES
+def _ddg_strict_loose(
+    ddg_adapter: Any, strict: str, loose: str, news_timelimit: str
+) -> list[NewsItem]:
 
-        # Disease dedup: a recurring re-report of a recent (disease, country)
-        # outbreak merges into the existing incident instead of spawning a new
-        # row each day. Link the new source + news, refresh last_updated (a real
-        # new source arrived), and re-digest so the survivor reflects the latest
-        # signal. Noise (non_event) is never merged into a real outbreak.
-        if is_disease_track and disease and not rejected:
-            existing_key = self._store.find_recent_disease_incident(
-                disease,
-                primary.country,
-                today,
-                self._config.disease_dedup_window_days,
-            )
-            if existing_key is not None:
-                for raw in resolved.incidents:
-                    self._store.link_source_record(existing_key, raw)
-                for article in bootstrap_articles:
-                    self._store.link_news(existing_key, article)
-                if is_today:
-                    self._store.set_last_updated(existing_key, today.isoformat())
-                if digest is not None:
-                    self._store.set_digest(
-                        existing_key,
-                        _digest_payload(
-                            digest, derived_name, severity_name, derived_keys, event_status,
-                        ),
-                        today,
-                        primary.country,
-                    )
-                log.info(
-                    "incident %s: merged into existing incident_key=%d (disease dedup)",
-                    resolved.incident_id, existing_key,
-                )
-                return None
+    candidates: list[NewsItem] = []
+    if strict:
+        candidates.extend(ddg_adapter.search(query=strict, timelimit=news_timelimit))
+    if not candidates and loose:
+        candidates.extend(ddg_adapter.search(query=loose, timelimit=news_timelimit))
+    return candidates
 
-        record = IncidentRecord(
-            incident_id=resolved.incident_id,
-            canonical_name=derived_name,
-            summary="",
-            country=primary.country,
-            incident_type=primary.incident_type,
-            priority=priority,
-            severity_level=severity_level,
-            event_date=report_day.isoformat(),
-            first_reported_date=today.isoformat(),
-            last_updated_date=today.isoformat(),
-            should_report=should_report,
-            search_keys=derived_keys,
-            disease_name=disease,
-        )
-        incident_key = self._store.upsert_incident(record)
-        for raw in resolved.incidents:
-            self._store.link_source_record(incident_key, raw)
 
-        if rejected:
-            log.info(
-                "incident %s: event_status=%s — dropping %d candidate news article(s); "
-                "incident row kept (should_report=%s)",
-                resolved.incident_id, event_status,
-                len(bootstrap_articles), should_report,
-            )
-        else:
-            for article in bootstrap_articles:
-                self._store.link_news(incident_key, article)
+def _passes_gate(adapter: Any, report: SourceReport) -> bool:
 
-        if digest is not None:
-            log.info(
-                "incident %s: digested canonical=%r severity=%s pandemic_potential=%s event_status=%s keys=%s",
-                resolved.incident_id, derived_name, severity_name,
-                digest.get("pandemic_potential"), event_status, derived_keys,
-            )
-            self._store.set_digest(
-                incident_key,
-                _digest_payload(
-                    digest, derived_name, severity_name, derived_keys, event_status,
-                ),
-                today,
-                primary.country,
-            )
-        else:
-            log.warning(
-                "incident %s: digest unavailable; persisted degraded (pending retry)",
-                resolved.incident_id,
-            )
-        return self._store.find_by_incident_id(resolved.incident_id)
-
-    def _dev_search(
-        self,
-        incident: IncidentView,
-        today: date,
-    ) -> list[RawArticle]:
-        """Network-only half of develop: run a single DuckDuckGo news search.
-
-        Safe to call concurrently across incidents. Does not touch the DB.
-        """
-        window = self._config.tracking_window_days
-        if incident.is_stale(today, window) or not incident.search_keys:
-            return []
-
-        timelimit = _news_timelimit(window)
-        # Use only the MOST-SPECIFIC search key (longest). DDG News is slow and
-        # broader keys mostly return noisier overlap.
-        key = max(incident.search_keys, key=len)
-        log.debug(
-            "incident %s: dev-search key=%r timelimit=%r",
-            incident.incident_id, key, timelimit,
-        )
-        try:
-            return self._news.search(key, timelimit=timelimit)
-        except Exception:
-            log.exception("incident %s: dev-search failed", incident.incident_id)
-            return []
-
-    def _dev_link(
-        self,
-        incident: IncidentView,
-        raw_articles: list[RawArticle],
-        today: date,
-    ) -> bool:
-        """DB-write half of develop: filter for relevance, link new articles,
-        maybe re-digest. Must run serially (SQLite writes)."""
-        if not raw_articles:
-            return False
-
-        disease = self._store.find_disease_name(incident.incident_key)
-        new_articles: list[RawArticle] = []
-        for article in raw_articles:
-            if not is_relevant(
-                article,
-                incident_type=incident.incident_type,
-                country=incident.country_name,
-                incident_name=incident.canonical_name,
-                disease_name=disease,
-            ):
-                continue
-            if self._store.link_news(incident.incident_key, article):
-                new_articles.append(article)
-
-        if not new_articles:
-            return False
-
-        log.info(
-            "incident %s bumped with %d new article(s)",
-            incident.incident_id, len(new_articles),
-        )
-
-        threshold = self._config.develop_re_digest_threshold
-        if threshold > 0 and len(new_articles) >= threshold:
-            log.info(
-                "incident %s: re-digesting after %d new articles (threshold=%d)",
-                incident.incident_id, len(new_articles), threshold,
-            )
-            try:
-                digest = self._digester.digest(
-                    {
-                        "source_reports": [
-                            {
-                                "incident_name": incident.canonical_name,
-                                "country": incident.country_name,
-                                "incident_type": incident.incident_type,
-                                "report_date": "",
-                                "source_name": PRIOR_DIGEST_SOURCE,
-                                "source_url": "",
-                                "raw_fields": {"prior_summary": incident.summary},
-                            }
-                        ],
-                        "news_articles": [_article_to_dict(a) for a in new_articles],
-                    }
-                )
-                self._store.set_digest(
-                    incident.incident_key, digest, today, incident.country_name
-                )
-                log.info("incident %s: re-digested", incident.incident_id)
-            except RuntimeError as exc:
-                log.warning("incident %s: re-digest failed: %s", incident.incident_id, exc)
+    if not hasattr(adapter, "should_monitor"):
         return True
+    return adapter.should_monitor(report)
 
-    def _retry_pending_digests(self, today: date) -> int:
-        window = self._config.tracking_window_days
-        candidates = [
-            incident for incident in self._store.get_active_incidents(as_of=today, within_days=window)
-            if incident.ai_digest_date_key is None and incident.event_date == today
-        ]
-        if not candidates:
-            return 0
-        log.info("found %d pending digest(s) to retry", len(candidates))
-        retried = 0
-        for incident in candidates:
-            materials = {
-                "source_reports": self._store.get_source_records(incident.incident_key),
-                "news_articles": self._store.get_incident_news_full(incident.incident_key),
-            }
-            digest = self._safe_digest(incident.incident_id, materials)
-            if digest is None:
+
+def _commit_news_for_report(
+    wh: Warehouse, report_id: int, selected_news: list[NewsItem]
+) -> None:
+
+    existing_report_incidents = wh.read_incident_ids_for_report(report_id)
+    birthed_incident_id: int | None = (
+        existing_report_incidents[0] if existing_report_incidents else None
+    )
+    for news in selected_news:
+        news_id = wh.ingest_news_item(news)
+        incident_id = wh.read_incident_for_news(news_id)
+        if incident_id is None:
+            if birthed_incident_id is None:
+                birthed_incident_id = _mint_id()
+            incident_id = birthed_incident_id
+            wh.assign_news_to_incident(news_id, incident_id)
+        wh.add_report_incident(report_id, incident_id)
+
+
+def _commit_news_for_incident(
+    wh: Warehouse, incident_id: int, selected_news: list[NewsItem]
+) -> None:
+
+    for news in selected_news:
+        news_id = wh.ingest_news_item(news)
+        if wh.read_incident_for_news(news_id) is None:
+            wh.assign_news_to_incident(news_id, incident_id)
+
+
+def _ingest_report(wh: Warehouse, report: SourceReport) -> int:
+
+    attempt = 0
+    while True:
+        try:
+            return wh.ingest_source_report(report)
+        except IntegrityError:
+            attempt += 1
+            if attempt >= 3:
+                raise
+            time.sleep(0.002)
+
+
+def _fetch_reports(adapter: Any) -> list[SourceReport]:
+
+    try:
+        return adapter.fetch()
+    except SourceFetchError as exc:
+        logger.warning("adapter %s: fetch failed: %s", type(adapter).__name__, exc)
+        return []
+
+
+def ingest_source_reports(adapters: object, warehouse: object) -> int:
+
+    wh = cast(Warehouse, warehouse)
+    existing_keys = wh.read_source_report_keys()
+    kept = 0
+    adapter_list = list(cast(Any, adapters))
+    for ai, adapter in enumerate(adapter_list, 1):
+        adapter_name = type(adapter).__name__
+        logger.info("ingest: [%d/%d] fetching %s", ai, len(adapter_list), adapter_name)
+        reports = _fetch_reports(adapter)
+        logger.info("ingest: %s returned %d reports", adapter_name, len(reports))
+        for ri, report in enumerate(reports, 1):
+            key = f"{report.source}:{report.source_id}"
+            if key in existing_keys:
                 continue
-            self._store.set_digest(incident.incident_key, digest, today, incident.country_name)
-            retried += 1
-            log.info("incident %s: pending digest completed on retry", incident.incident_id)
-        return retried
+            report_id = _ingest_report(wh, report)
+            wh.ingest_report_places(report_id, report.places)
+            existing_keys.add(key)
+            kept += 1
+            logger.info(
+                "ingest: [%d/%d] stored %s:%s — %s",
+                ri,
+                len(reports),
+                report.source,
+                report.source_id,
+                report.name,
+            )
+    logger.info("ingest: done, %d new reports stored", kept)
+    return kept
+
+
+def _search_one_report(
+    wh: Warehouse,
+    adapter: Any,
+    report: SourceReport,
+    ddg_adapter: Any,
+    digest_fn: Any,
+    searched_keys: set[str],
+    source_id: str | None,
+    news_timelimit: str,
+    iso_now: str,
+) -> None:
+
+    key = f"{report.source}:{report.source_id}"
+    forced = source_id is not None and report.source_id == source_id
+    if not forced:
+        if not _passes_gate(adapter, report):
+            logger.info("search: skip %s:%s — gate (should_monitor=False)", report.source, report.source_id)
+            return
+        if key in searched_keys:
+            logger.info("search: skip %s:%s — already searched", report.source, report.source_id)
+            return
+    else:
+        logger.info("search: forced %s:%s", report.source, report.source_id)
+    report_id = wh.ingest_source_report(report)
+    strict, loose = adapter.derive_keys(report)
+    logger.info("search: %s:%s — keys: strict=%r loose=%r", report.source, report.source_id, strict, loose)
+    candidates = _ddg_strict_loose(ddg_adapter, strict, loose, news_timelimit)
+    logger.info("search: %s:%s — %d DDG candidates", report.source, report.source_id, len(candidates))
+    if candidates:
+        result = digest_fn.filter(
+            candidates,
+            incident_type=report.incident_type,
+            incident_name=report.name,
+            incident_places=_places_payload(report),
+            incident_date=report.report_date,
+        )
+        logger.info("search: %s:%s — %d relevant after filter", report.source, report.source_id, len(result.selected_news))
+        if result.selected_news:
+            _commit_news_for_report(wh, report_id, result.selected_news)
+    wh.mark_report_searched(report.source, report.source_id, iso_now)
+    searched_keys.add(key)
+
+
+def _repoll_one_incident(
+    wh: Warehouse,
+    incident: Any,
+    ddg_adapter: Any,
+    digest_fn: Any,
+    news_timelimit: str,
+) -> None:
+
+    genesis = wh.read_source_report_by_id(incident.genesis_report_id)
+    if genesis is None:
+        return
+    logger.info("repoll: incident %d — %s", incident.incident_id, incident.name)
+    seen_urls: set[str] = set()
+    all_candidates: list[NewsItem] = []
+    for repoll_key in derive_repoll_keys(genesis):
+        for item in ddg_adapter.search(query=repoll_key, timelimit=news_timelimit):
+            if item.url not in seen_urls:
+                seen_urls.add(item.url)
+                all_candidates.append(item)
+    if not all_candidates:
+        logger.info("repoll: incident %d — no DDG candidates", incident.incident_id)
+        return
+    existing_urls = {n.url for n in wh.read_news(incident.incident_id)}
+    fresh = [n for n in all_candidates if n.url not in existing_urls]
+    logger.info("repoll: incident %d — %d candidates, %d fresh", incident.incident_id, len(all_candidates), len(fresh))
+    if not fresh:
+        return
+    result = digest_fn.filter(
+        fresh,
+        incident_type=incident.incident_type,
+        incident_name=incident.name,
+        incident_places=_places_payload(genesis),
+        incident_date=incident.first_seen_at,
+    )
+    logger.info("repoll: incident %d — %d relevant after filter", incident.incident_id, len(result.selected_news))
+    if result.selected_news:
+        _commit_news_for_incident(wh, incident.incident_id, result.selected_news)
+
+
+def search_news(
+    warehouse: object,
+    adapters: object,
+    ddg: object,
+    digester: object,
+    clock: object,
+    news_timelimit: str = "w",
+    source_id: str | None = None,
+    active_window_days: int = 7,
+) -> None:
+
+    wh = cast(Warehouse, warehouse)
+    ddg_adapter = cast(Any, ddg)
+    digest_fn = cast(Any, digester)
+    clock_fn = cast(Any, clock)
+    iso_now = clock_fn().replace(microsecond=0).isoformat()
+    cast(Any, wh)._clock = clock_fn
+    adapter_list = list(cast(Any, adapters))
+    if adapter_list:
+        searched_keys = wh.read_searched_report_keys()
+        all_reports = []
+        for adapter in adapter_list:
+            all_reports.extend((adapter, r) for r in _fetch_reports(adapter))
+        total = len(all_reports)
+        logger.info("search: per-report mode, %d reports, %d already searched", total, len(searched_keys))
+        for i, (adapter, report) in enumerate(all_reports, 1):
+            logger.info("search: [%d/%d] %s:%s", i, total, report.source, report.source_id)
+            _search_one_report(
+                wh,
+                adapter,
+                report,
+                ddg_adapter,
+                digest_fn,
+                searched_keys,
+                source_id,
+                news_timelimit,
+                iso_now,
+            )
+        logger.info("search: per-report mode done")
+        return
+    active = wh.active_incidents(active_window_days)
+    total_active = len(active)
+    logger.info("search: repoll mode, %d active incidents (window=%d days)", total_active, active_window_days)
+    for i, incident in enumerate(active, 1):
+        logger.info("search: [%d/%d] incident %d — %s", i, total_active, incident.incident_id, incident.name)
+        _repoll_one_incident(wh, incident, ddg_adapter, digest_fn, news_timelimit)
+    logger.info("search: repoll mode done")
+
+
+def _generate_logs_for_incident(
+    wh: Warehouse, digest_fn: Any, incident: Any, min_news_threshold: int
+) -> None:
+
+    already_linked = wh.read_summarized_news_ids(incident.incident_id)
+    all_news = wh.read_news(incident.incident_id)
+    unsummarized = [n for n in all_news if n.news_id not in already_linked]
+    if len(unsummarized) < min_news_threshold:
+        logger.info(
+            "logs: incident %d — %s — %d unsummarized, below threshold %d, skip",
+            incident.incident_id, incident.name, len(unsummarized), min_news_threshold,
+        )
+        return
+    logger.info("logs: incident %d — %s — %d unsummarized of %d total", incident.incident_id, incident.name, len(unsummarized), len(all_news))
+    prior = wh.read_timeline(incident.incident_id)
+    genesis = wh.read_source_report_by_id(incident.genesis_report_id)
+    places = _places_payload(genesis) if genesis is not None else []
+    summary_result = digest_fn.summarize(
+        unsummarized,
+        prior,
+        incident_type=incident.incident_type,
+        incident_name=incident.name,
+        incident_places=places,
+        incident_date=incident.first_seen_at,
+    )
+    if not summary_result.has_relevant_updates:
+        logger.info("logs: incident %d — no relevant updates, skip", incident.incident_id)
+        return
+    log_datetime = max(n.published_date for n in unsummarized)
+    if any(log.log_datetime == log_datetime for log in prior):
+        log_datetime = cast(Any, wh)._clock().replace(microsecond=0).isoformat()
+        logger.info("logs: incident %d — log_datetime collision, using clock fallback", incident.incident_id)
+    wh.append_timeline_with_provenance(
+        IncidentLog(
+            incident_id=incident.incident_id,
+            log_datetime=log_datetime,
+            summary=summary_result.summary,
+        ),
+        {n.news_id for n in unsummarized},
+    )
+    logger.info("logs: incident %d — wrote log at %s (%d news linked)", incident.incident_id, log_datetime, len(unsummarized))
+
+
+def generate_logs(
+    warehouse: object, digester: object, min_news_threshold: int = 3
+) -> None:
+
+    wh = cast(Warehouse, warehouse)
+    digest_fn = cast(Any, digester)
+    incidents = wh.read_incidents()
+    total = len(incidents)
+    logger.info("logs: %d incidents to process (threshold=%d)", total, min_news_threshold)
+    for i, incident in enumerate(incidents, 1):
+        logger.info("logs: [%d/%d] incident %d — %s", i, total, incident.incident_id, incident.name)
+        _generate_logs_for_incident(wh, digest_fn, incident, min_news_threshold)
+    logger.info("logs: done")
+
+
+class _CountingDDG:
+    def __init__(self, inner: Any) -> None:
+
+        self._inner = inner
+        self.calls = 0
+
+    def search(self, query: str, timelimit: str | None = None) -> Any:
+
+        self.calls += 1
+        return self._inner.search(query=query, timelimit=timelimit)
+
+
+class _CountingDigester:
+    def __init__(self, inner: Any) -> None:
+
+        self._inner = inner
+        self.filter_calls = 0
+        self.summarize_calls = 0
+
+    def filter(self, candidate_news: list[NewsItem], **kwargs: Any) -> Any:
+
+        self.filter_calls += 1
+        return self._inner.filter(candidate_news, **kwargs)
+
+    def summarize(
+        self,
+        selected_news: list[NewsItem],
+        prior_summaries: list[IncidentLog],
+        **kwargs: Any,
+    ) -> Any:
+
+        self.summarize_calls += 1
+        return self._inner.summarize(selected_news, prior_summaries, **kwargs)
+
+
+def run_pipeline(
+    adapters: object,
+    warehouse: object,
+    ddg: object,
+    digester: object,
+    clock: object,
+    min_news_threshold: int = 3,
+) -> IngestReport:
+
+    ddg_counter = _CountingDDG(ddg)
+    digester_counter = _CountingDigester(digester)
+    logger.info("pipeline: phase 1 — ingest records")
+    source_reports_kept = ingest_source_reports(adapters, warehouse)
+    logger.info("pipeline: phase 2a — search news (per-report)")
+    search_news(warehouse, adapters, ddg_counter, digester_counter, clock)
+    logger.info("pipeline: phase 2b — search news (repoll active)")
+    search_news(warehouse, [], ddg_counter, digester_counter, clock)
+    logger.info("pipeline: phase 3 — generate logs")
+    generate_logs(warehouse, digester_counter, min_news_threshold)
+    logger.info(
+        "pipeline: done — reports=%d ai_calls=%d ddg_calls=%d",
+        source_reports_kept,
+        digester_counter.filter_calls + digester_counter.summarize_calls,
+        ddg_counter.calls,
+    )
+    return IngestReport(
+        source_reports_kept=source_reports_kept,
+        ai_calls=digester_counter.filter_calls + digester_counter.summarize_calls,
+        ddg_calls=ddg_counter.calls,
+    )

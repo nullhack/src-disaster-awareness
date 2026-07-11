@@ -1,142 +1,211 @@
+
 from __future__ import annotations
 
 import logging
-import threading
+import re
 import time
+from datetime import datetime, timedelta, timezone
 from typing import Any
+from urllib.parse import urlparse
 
 from ddgs import DDGS
-from ddgs.exceptions import DDGSException
+from ddgs.exceptions import DDGSException, RatelimitException, TimeoutException
 
-from disaster_report.sources._dates import parse_date
-from disaster_report.sources.base import RawArticle
+from disaster_report.models import NewsItem
 
-log = logging.getLogger(__name__)
+logger = logging.getLogger(__name__)
 
-_DEFAULT_QUERY = "disaster"
-_DEFAULT_MAX_RESULTS = 25
-_DEFAULT_REGION = "wt-wt"
-# DDG's yahoo_news engine intermittently swallows an internal IndexError during
-# rapid successive calls and returns [] with a warning log (looks like an empty
-# result). Retry with a short backoff so a transient failure does not silently
-# starve an incident of news.
-_DEFAULT_RETRY_ATTEMPTS = 2
-_DEFAULT_RETRY_BACKOFF = 1.5
-# Hard wall-clock cap on a single DDGS().news() call. The ddgs library's
-# internal ThreadPoolExecutor calls shutdown(wait=True) on exit, which joins its
-# worker threads; those workers use primp, whose own timeout is not reliably
-# honoured when a connection stalls. A single stalled search can therefore block
-# the whole pipeline indefinitely. We run the call on a daemon thread and
-# abandon it past this deadline so ingest can never freeze on DuckDuckGo.
-_DEFAULT_SEARCH_DEADLINE = 15.0
+_REGION = "wt-wt"
+_SAFESEARCH = "on"
+_MAX_RESULTS = 25
 
+_MIN_DELAY_SECONDS = 3.0
+_MAX_RETRIES = 3
+_INITIAL_BACKOFF = 10.0
 
-def _to_iso(s: str) -> str:
-    parsed = parse_date(s)
-    return parsed.isoformat() if parsed is not None else s
+_CRAWL_WINDOW_SECONDS = 120
 
+_URL_DATE_RE_1 = re.compile(r"/(\d{4})/(\d{2})/(\d{2})/")
+_URL_DATE_RE_2 = re.compile(r"/(\d{8})/")
 
-def _news_with_deadline(
-    query: str,
-    region: str,
-    timelimit: str | None,
-    max_results: int,
-    deadline: float,
-) -> tuple[list[dict[str, Any]], bool]:
-    """Call ``DDGS().news(...)`` on a daemon thread with a hard deadline.
+_RELATIVE_RE = re.compile(
+    r"(\d+)\s*(minute|hour|day|week|month|year)s?\s*ago", re.IGNORECASE
+)
 
-    Returns ``(results, hung)``. ``hung`` is True when the call did not finish
-    in time; in that case ``results`` is ``[]`` and the worker is left running
-    (daemon, so it will not block process exit). Caller should stop retrying on
-    a hung result — DuckDuckGo is clearly stalled.
-    """
-    box: dict[str, Any] = {}
-
-    def _call() -> None:
-        try:
-            box["results"] = DDGS().news(
-                query=query,
-                region=region,
-                safesearch="on",
-                timelimit=timelimit,
-                max_results=max_results,
-            )
-        except BaseException as exc:  # noqa: BLE001 — surfaced to caller
-            box["error"] = exc
-
-    worker = threading.Thread(target=_call, daemon=True, name="ddg-news-guard")
-    worker.start()
-    worker.join(timeout=deadline)
-    if worker.is_alive():
-        log.warning(
-            "DDG news search %r exceeded %.0fs deadline; abandoning "
-            "(stalled worker left as daemon)", query, deadline,
-        )
-        return [], True
-    if "error" in box:
-        raise box["error"]
-    return box.get("results") or [], False
+_UNIT_TO_DELTA = {
+    "minute": "minutes",
+    "hour": "hours",
+    "day": "days",
+    "week": "weeks",
+    "month": "days",
+    "year": "days",
+}
+_MONTH_DAYS = 30
+_YEAR_DAYS = 365
 
 
-class DdgNewsAdapter:
-    source_name = "DuckDuckGo News"
+class DuckDuckGoNewsAdapter:
 
-    def __init__(
-        self,
-        query: str = _DEFAULT_QUERY,
-        max_results: int = _DEFAULT_MAX_RESULTS,
-        region: str = _DEFAULT_REGION,
-        timelimit: str | None = None,
-        retries: int = _DEFAULT_RETRY_ATTEMPTS,
-        backoff: float = _DEFAULT_RETRY_BACKOFF,
-        deadline: float = _DEFAULT_SEARCH_DEADLINE,
-    ) -> None:
-        self.query = query
-        self.max_results = max_results
-        self.region = region
-        self.timelimit = timelimit
-        self.retries = max(1, retries)
-        self.backoff = backoff
-        self.deadline = deadline
+    def __init__(self) -> None:
+        self._last_call_time: float = 0.0
 
-    def fetch(self) -> list[RawArticle]:
-        return self.search(self.query, timelimit=self.timelimit)
+    def search(self, query: str, timelimit: str | None = None) -> list[NewsItem]:
 
-    def search(self, query: str, timelimit: str | None = None) -> list[RawArticle]:
-        results: list[dict[str, Any]] = []
-        for attempt in range(self.retries):
+        elapsed = time.monotonic() - self._last_call_time
+        if elapsed < _MIN_DELAY_SECONDS:
+            time.sleep(_MIN_DELAY_SECONDS - elapsed)
+
+        backoff = _INITIAL_BACKOFF
+        for attempt in range(_MAX_RETRIES + 1):
             try:
-                results, hung = _news_with_deadline(
-                    query, self.region, timelimit, self.max_results, self.deadline,
+                self._last_call_time = time.monotonic()
+                results = DDGS().news(
+                    query=query,
+                    region=_REGION,
+                    safesearch=_SAFESEARCH,
+                    timelimit=timelimit,
+                    max_results=_MAX_RESULTS,
                 )
+                return [
+                    item
+                    for result in results
+                    if (item := _to_news_item(result, timelimit)) is not None
+                ]
+            except (RatelimitException, TimeoutException) as exc:
+                if attempt < _MAX_RETRIES:
+                    logger.warning(
+                        "ddg rate-limited (attempt %d/%d), backing off %.1fs: %s",
+                        attempt + 1,
+                        _MAX_RETRIES,
+                        backoff,
+                        exc,
+                    )
+                    time.sleep(backoff)
+                    backoff *= 2
+                else:
+                    logger.warning(
+                        "ddg rate-limited after %d retries, giving up: %s",
+                        _MAX_RETRIES,
+                        exc,
+                    )
+                    return []
             except DDGSException:
-                results, hung = [], False
-            except Exception as exc:  # noqa: BLE001 — never let DDG kill ingest
-                log.warning("DDG news search %r failed: %s", query, exc)
-                results, hung = [], False
-            if results:
-                break
-            if hung:
-                # DuckDuckGo is stalled — retrying would just burn the deadline
-                # again. Surface an empty result so the pipeline moves on.
-                break
-            if attempt < self.retries - 1:
-                time.sleep(self.backoff)
-        return self._build(results)
-
-    def _build(self, results: list[dict]) -> list[RawArticle]:
-        out: list[RawArticle] = []
-        for result in results:
-            out.append(
-                RawArticle(
-                    source_name=self.source_name,
-                    headline=result.get("title", "") or "",
-                    body=result.get("body", "") or "",
-                    url=result.get("url", "") or "",
-                    outlet=result.get("source", "") or "",
-                    published_date=_to_iso(result.get("date", "") or ""),
-                    image=result.get("image", "") or "",
-                    raw_fields=result,
+                return []
+            except Exception as exc:
+                logger.warning(
+                    "ddg unexpected error (query=%s): %r", query[:60], exc
                 )
-            )
-        return out
+                return []
+        return []
+
+
+def _normalize_date(raw: str) -> str:
+    if not raw:
+        return ""
+    try:
+        dt = datetime.fromisoformat(raw)
+        return dt.replace(microsecond=0).isoformat()
+    except ValueError:
+        pass
+    m = _RELATIVE_RE.search(raw)
+    if m:
+        n = int(m.group(1))
+        unit = m.group(2).lower()
+        if unit == "month":
+            delta = timedelta(days=n * _MONTH_DAYS)
+        elif unit == "year":
+            delta = timedelta(days=n * _YEAR_DAYS)
+        else:
+            delta = timedelta(**{_UNIT_TO_DELTA[unit]: n})
+        return (datetime.now(timezone.utc) - delta).replace(microsecond=0).isoformat()
+    return ""
+
+
+def _extract_url_date(url: str) -> str:
+    m = _URL_DATE_RE_1.search(url)
+    if m:
+        return f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
+    m = _URL_DATE_RE_2.search(url)
+    if m:
+        d = m.group(1)
+        if d.startswith("20"):
+            return f"{d[:4]}-{d[4:6]}-{d[6:8]}"
+    return ""
+
+
+def _is_crawl_timestamp(date_str: str) -> bool:
+    try:
+        dt = datetime.fromisoformat(date_str.replace("Z", "+00:00"))
+    except (ValueError, TypeError):
+        return False
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return (
+        abs((datetime.now(timezone.utc) - dt).total_seconds()) < _CRAWL_WINDOW_SECONDS
+    )
+
+
+_TIMELIMIT_DAYS: dict[str, int] = {
+    "d": 1,
+    "w": 7,
+    "m": 30,
+}
+
+
+def _resolve_date(raw_date: str, url: str, timelimit: str | None = None) -> str:
+    normalized = _normalize_date(raw_date)
+    if normalized and not _is_crawl_timestamp(normalized) and _date_in_range(
+        normalized, timelimit
+    ):
+        return normalized
+    if normalized:
+        logger.debug(
+            "ddg date rejected (crawl ts or out of range): %s for %s",
+            normalized,
+            url[:60],
+        )
+    url_date = _extract_url_date(url)
+    if url_date and _date_in_range(f"{url_date}T00:00:00+00:00", timelimit):
+        return f"{url_date}T00:00:00+00:00"
+    return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
+
+
+def _date_in_range(date_str: str, timelimit: str | None) -> bool:
+    if not date_str:
+        return False
+    try:
+        dt = datetime.fromisoformat(date_str.replace("Z", "+00:00"))
+    except (ValueError, TypeError):
+        return False
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    now = datetime.now(timezone.utc)
+    if dt > now:
+        return False
+    if timelimit and timelimit in _TIMELIMIT_DAYS:
+        max_age = timedelta(days=_TIMELIMIT_DAYS[timelimit])
+        if (now - dt) > max_age:
+            return False
+    return True
+
+
+def _to_news_item(result: Any, timelimit: str | None = None) -> NewsItem | None:
+    record = result if isinstance(result, dict) else {}
+    url = str(record.get("url") or "")
+    if not url:
+        return None
+    published = _resolve_date(str(record.get("date") or ""), url, timelimit)
+    return NewsItem(
+        url=url,
+        title=str(record.get("title") or ""),
+        body=str(record.get("body") or ""),
+        published_date=published,
+        source=str(record.get("source") or ""),
+        domain=_domain_of(url),
+        image=str(record.get("image") or ""),
+    )
+
+
+def _domain_of(url: str) -> str:
+    hostname = urlparse(url).hostname
+    return hostname or ""

@@ -1,0 +1,3 @@
+_COUNTRY_NAMES: dict[str, str]
+
+def country_name(alpha_2: str) -> str: ...

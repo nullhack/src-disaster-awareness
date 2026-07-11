@@ -1,54 +1,200 @@
+
 from __future__ import annotations
 
+import datetime
+import json
+import logging
+from typing import Any
+
 import httpx
+import pycountry
+from iso3166_2 import Subdivisions
 
-from disaster_report.sources._dates import parse_date
-from disaster_report.sources.base import RawIncident, json_list
+from disaster_report._country_names import country_name
+from disaster_report._regions import subregion_for_country
+from disaster_report._search_keys import derive_search_keys
+from disaster_report.models import ReportPlace, SourceReport
+from disaster_report.sources.errors import SourceFetchError
 
-_DEFAULT_URL = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson"
+_BASE_URL = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/"
+_DEFAULT_SLUG = "4.5_month.geojson"
+_SIGNIFICANT_MAGNITUDE = 5.5
+_LOOKUP_RADIUS_KM = 500
+_OCEAN_LOOKUP_RADIUS_KM = 2000
+
+_iso = Subdivisions()
+logger = logging.getLogger(__name__)
 
 
-class USGSEarthquakesAdapter:
-    source_name = "USGS Earthquakes"
+class USGSAdapter:
 
-    def __init__(self, url: str = _DEFAULT_URL, timeout: float = 30.0) -> None:
-        self.url = url
-        self.timeout = timeout
+    def __init__(
+        self,
+        slug: str = _DEFAULT_SLUG,
+    ) -> None:
+        self._slug = slug
 
-    def fetch(self) -> list[RawIncident]:
-        response = httpx.get(self.url, timeout=self.timeout, follow_redirects=True)
+    def fetch(self) -> list[SourceReport]:
+
+        url = f"{_BASE_URL}{self._slug}"
+        response = httpx.get(url, timeout=30.0, follow_redirects=True)
         response.raise_for_status()
-        out: list[RawIncident] = []
-        for feature in json_list(response, "features"):
-            properties = feature.get("properties", {}) or {}
-            feature_id = feature.get("id") or ""
-            net = properties.get("net") or ""
-            code = properties.get("code") or ""
-            place = properties.get("place", "") or ""
-            country = place.strip()
-            timestamp = properties.get("time")
-            parsed_timestamp = (
-                parse_date(str(timestamp)) if isinstance(timestamp, (int, float)) else None
+        body = response.text
+        if not body.lstrip().startswith("{"):
+            raise SourceFetchError(
+                f"USGS feed returned a non-JSON response for slug {self._slug!r}"
             )
-            report_date = parsed_timestamp.isoformat() if parsed_timestamp else ""
-            event_id = feature_id or f"{net}{code}" or (net + "_" + code)
-            coordinates = (feature.get("geometry") or {}).get("coordinates") or []
-            depth = coordinates[2] if len(coordinates) > 2 else 0
-            raw_fields = dict(properties)
-            raw_fields["event_id"] = event_id
-            raw_fields["depth"] = depth
-            out.append(
-                RawIncident(
-                    source_name=self.source_name,
-                    incident_name=properties.get("title", "") or "",
-                    country=country,
-                    incident_type="Earthquake",
-                    report_date=report_date,
-                    source_url=properties.get("url", "") or "",
-                    raw_fields=raw_fields,
-                )
-            )
-        return out
+        payload = _as_dict(json.loads(body))
+        features = payload.get("features")
+        if not isinstance(features, list):
+            return []
+        return [_feature_to_report(feature) for feature in features]
+
+    def should_monitor(self, report: SourceReport) -> bool:
+
+        mag = report.raw_fields.get("mag")
+        if isinstance(mag, bool) or not isinstance(mag, int | float):
+            return False
+        return mag >= _SIGNIFICANT_MAGNITUDE
+
+    def derive_keys(self, report: SourceReport) -> tuple[str, str]:
+
+        return derive_search_keys(report)
 
 
-UsgsAdapter = USGSEarthquakesAdapter
+def _feature_to_report(
+    feature: Any,
+) -> SourceReport:
+    feature_dict = _as_dict(feature)
+    properties = _as_dict(feature_dict.get("properties"))
+    geometry = _as_dict(feature_dict.get("geometry"))
+    coordinates = geometry.get("coordinates")
+    if not isinstance(coordinates, list):
+        coordinates = []
+    depth: object = coordinates[2] if len(coordinates) >= 3 else None
+    lat = coordinates[1] if len(coordinates) >= 2 else None
+    lon = coordinates[0] if len(coordinates) >= 1 else None
+    feature_id = feature_dict.get("id")
+    code = properties.get("code")
+    source_id = str(feature_id or code or "")
+    name = str(properties.get("title") or "")
+    place = str(properties.get("place") or "")
+    places = _extract_places(lat, lon, place)
+    return SourceReport(
+        source="USGS",
+        source_id=source_id,
+        incident_type="Earthquake",
+        name=name,
+        places=places,
+        report_date=_to_iso_date(properties.get("time")),
+        raw_fields={
+            **properties,
+            "geometry": {
+                "type": geometry.get("type"),
+                "coordinates": coordinates,
+            }
+            if coordinates
+            else {},
+            "depth": depth,
+            "place": place,
+        },
+    )
+
+
+def _extract_places(
+    lat: Any,
+    lon: Any,
+    place: str,
+) -> list[ReportPlace]:
+
+    subdivision = ""
+    country_code = ""
+    if isinstance(lat, int | float) and isinstance(lon, int | float):
+        matches = _iso.reverse_lookup(
+            latitude=float(lat),
+            longitude=float(lon),
+            radius_km=_LOOKUP_RADIUS_KM,
+            max_results=1,
+        )
+        if matches:
+            first = matches[0]
+            country_code = str(first.get("countryCode") or "")
+            subdivision = str(first.get("name") or "")
+    if not country_code:
+        _, country_code = _country_from_place_text(place)
+    if country_code:
+        return [
+            ReportPlace(
+                country_code=country_code,
+                subdivision=subdivision,
+                locality=_clean_locality(place),
+            )
+        ]
+    return [
+        ReportPlace(
+            country_code="",
+            subdivision="",
+            locality="Ocean",
+        )
+    ]
+
+
+def _nearest_subregion(lat: Any, lon: Any) -> str:
+
+    if not (isinstance(lat, int | float) and isinstance(lon, int | float)):
+        return ""
+    matches = _iso.reverse_lookup(
+        latitude=float(lat),
+        longitude=float(lon),
+        radius_km=_OCEAN_LOOKUP_RADIUS_KM,
+        max_results=1,
+    )
+    if not matches:
+        return ""
+    country_code = str(matches[0].get("countryCode") or "")
+    return subregion_for_country(country_code)
+
+
+def _clean_locality(place: str) -> str:
+
+    if not place:
+        return ""
+    if " of " in place:
+        after = place.split(" of ", 1)[1]
+        return after.split(",")[0].strip()
+    return place.split(",")[0].strip()
+
+
+def _country_from_place_text(place: str) -> tuple[str, str]:
+
+    if not place:
+        return "", ""
+    last = place.split(",")[-1].strip()
+    if not last:
+        return "", ""
+    try:
+        results = pycountry.countries.search_fuzzy(last)
+    except LookupError:
+        return "", ""
+    if not results:
+        return "", ""
+    country = results[0]
+    code = str(getattr(country, "alpha_2", ""))
+    return country_name(code), code
+
+
+def _as_dict(value: Any) -> dict:
+    return value if isinstance(value, dict) else {}
+
+
+def _to_iso_date(epoch_ms: object) -> str:
+    if isinstance(epoch_ms, bool) or not isinstance(epoch_ms, int | float):
+        return ""
+    try:
+        return (
+            datetime.datetime.fromtimestamp(epoch_ms / 1000, tz=datetime.timezone.utc)
+            .date()
+            .isoformat()
+        )
+    except (OverflowError, OSError, ValueError):
+        return ""

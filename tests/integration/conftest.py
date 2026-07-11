@@ -1,44 +1,36 @@
 from __future__ import annotations
 
-from pathlib import Path
-from types import SimpleNamespace
+from typing import TYPE_CHECKING
 
-import httpx
 import pytest
 
-_FIXTURES = Path(__file__).resolve().parent.parent / "fixtures" / "sources"
+if TYPE_CHECKING:
+    from collections.abc import Callable
+    from datetime import datetime
+
+    from disaster_report.config import Settings
 
 
 @pytest.fixture
-def load_fixture():
-    def _load(name: str) -> bytes:
-        return (_FIXTURES / name).read_bytes()
-
-    return _load
+def db_url(tmp_path: str) -> str:
+    return f"sqlite:///{tmp_path}/test.db"
 
 
 @pytest.fixture
-def mock_httpx(monkeypatch):
-    registry: dict[str, tuple[bytes, str]] = {}
+def test_settings(db_url: str) -> Settings:
+    from disaster_report.config import Settings
 
-    def register(url: str, content: bytes | str, content_type: str = "application/json") -> None:
-        registry[url] = (
-            content.encode() if isinstance(content, str) else content,
-            content_type,
-        )
+    return Settings(
+        db_url=db_url,
+        openrouter_api_key="test-key",
+        openrouter_model="test-model",
+        active_window_days=7,
+    )
 
-    def fake_get(url, *args, **kwargs):
-        req = httpx.Request("GET", url)
-        if url in registry:
-            content, ct = registry[url]
-            return httpx.Response(
-                200, content=content, headers={"content-type": ct}, request=req
-            )
-        return httpx.Response(
-            404,
-            content=b"no fixture registered for " + url.encode(),
-            request=req,
-        )
 
-    monkeypatch.setattr(httpx, "get", fake_get)
-    return SimpleNamespace(register=register)
+@pytest.fixture
+def clock() -> Callable[[], datetime]:
+    import datetime
+
+    fixed = datetime.datetime(2026, 7, 4, 12, 0, 0, 0, tzinfo=datetime.timezone.utc)
+    return lambda: fixed

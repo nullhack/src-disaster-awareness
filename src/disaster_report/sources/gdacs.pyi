@@ -1,0 +1,13 @@
+from disaster_report.models import SourceReport
+import logging
+
+logger: logging.Logger
+
+class GDACSAdapter:
+    def __init__(
+        self,
+        path: str = ...,
+    ) -> None: ...
+    def fetch(self) -> list[SourceReport]: ...
+    def should_monitor(self, report: SourceReport) -> bool: ...
+    def derive_keys(self, report: SourceReport) -> tuple[str, str]: ...

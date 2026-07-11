@@ -1,34 +1,140 @@
 [project]
-name = "src-disaster-report-v3"
+name = "src-disaster-report-v4"
 version = "0.1.0"
 description = "Disaster surveillance report pipeline"
 readme = "README.md"
-requires-python = ">=3.14"
+requires-python = ">=3.13"
+license = { file = "LICENSE" }
+authors = [
+    { name = "nullhack", email = "nullhack@users.noreply.github.com" }
+]
+maintainers = [
+    { name = "nullhack", email = "nullhack@users.noreply.github.com" }
+]
 dependencies = [
-    "sqlalchemy>=2.0",
-    "httpx>=0.27",
-    "ddgs>=9.14",
-    "click>=8.1",
-    "country-converter>=1.2",
-    "pycountry>=26.2.16",
     "alembic>=1.18.5",
-    "dspy>=3.2.1",
+    "ddgs>=9.14.4",
+    "dspy>=2.6.0",
+    "iso3166-2>=1.8.3",
+    "pycountry>=24.6.1",
+    "sqlalchemy>=2.0.51",
 ]
 
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+[project.urls]
+Homepage = "https://github.com/nullhack/src-disaster-report-v4"
+Repository = "https://github.com/nullhack/src-disaster-report-v4"
+
+[project.optional-dependencies]
+dev = [
+    "flowr>=1.2.1",
+    "pytest>=9.0.3",
+    "pytest-cov>=6.1.1",
+    "pytest-html>=4.0.0",
+    "pytest-mock>=3.14.0",
+    "pytest-vcr>=1.0.2",
+    "vcrpy>=6.0.1",
+    "ruff>=0.11.5",
+    "taskipy>=1.14.1",
+    "hypothesis>=6.148.4",
+    "pyright>=1.1.407",
+    "mypy>=1.13.0",
+    "safety>=3.7.0",
+]
+
+[tool.flowr]
+flows_dir = ".flowr/flows"
+sessions_dir = ".cache/sessions"
+default_flow = "pipeline-flow"
+default_session = "default"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["disaster_report"]
+
+[tool.ruff.lint]
+ignore = []
+select = [
+  "A",
+  "ASYNC",
+  "B",
+  "C9",
+  "DTZ",
+  "ERA",
+  "F",
+  "G",
+  "LOG",
+  "PYI",
+  "S",
+]
+mccabe.max-complexity = 10
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101", "S404"]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "bug: marks tests that reproduce a reported defect (deselect with '-m \"not bug\"')",
+    "pending: contract test defined in discovery but not yet implemented; auto-skipped (the backlog). Remove the marker to activate (red). Query with: -m pending",
+]
+addopts = """
+--maxfail=10 \
+--color=yes \
+--tb=short \
+-q \
+"""
+testpaths = ["tests"]
+pythonpath = ["src"]
+python_files = ["*_test.py"]
+python_functions = ["test_*"]
+
+[tool.coverage.report]
+fail_under = 80
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+]
+
+[tool.taskipy.tasks]
+run = "python -m disaster_report"
+test-build = """\
+pytest \
+  --doctest-modules \
+  --cov-config=pyproject.toml \
+  --cov-report html:docs/coverage \
+  --cov-report term:skip-covered \
+  --cov=disaster_report \
+  --hypothesis-show-statistics \
+  --html=docs/tests/report.html \
+  --self-contained-html \
+"""
+test = """\
+pytest \
+  --cov-config=pyproject.toml \
+  --cov-report= \
+  --cov=disaster_report
+"""
+test-fast = "pytest -m \"not slow\" -q --no-header --tb=no"
+test-slow = "pytest -m slow"
+ruff-check = "ruff check ."
+ruff-format = "ruff format ."
+ruff-format-check = "ruff format . --check"
+lint = "task ruff-check"
+lint-merge = "ruff check --extend-select SIM,RUF . && ruff format ."
+strip-docstrings = "python scripts/strip_docstrings.py"
+static-check = "pyright disaster_report tests"
+stubtest = "python -m mypy.stubtest disaster_report tests --ignore-missing-stub"
+validate-flows = "bash -c 'for f in .flowr/flows/*.yaml; do python -m flowr validate \"$f\"; done'"
+
+release-check = "task lint && task static-check && task stubtest && task test"
 
 [dependency-groups]
 dev = [
-    "eralchemy>=1.7.0",
-    "pygraphviz>=2.0",
-    "pytest>=8",
-    "vcrpy>=8.2.1",
+    "agents-smith>=1.0.0",
 ]
-
-[tool.hatch.build.targets.wheel]
-packages = ["src/disaster_report"]
-
-[tool.pytest.ini_options]
-testpaths = ["tests"]
