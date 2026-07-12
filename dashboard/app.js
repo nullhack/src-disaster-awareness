@@ -300,15 +300,14 @@ function renderKPIs() {
   const s = d.summary;
   const k = STATE.kpiSel;
   const asOf = d.as_of || d.report_date;
-  const todayIncs = d.incidents.filter((i) => i.event_date === asOf);
-  const countriesToday = new Set(todayIncs.map((i) => i.country)).size;
+  const countriesToday = new Set(d.incidents.map((i) => i.country).filter(Boolean)).size;
   const axes = [
     { label: "Severity", tiles: [
       { label: "High+", value: s.critical + s.high, sub: `${s.critical} critical`, cls: "kpi--high", act: "sev:HIGH_PLUS", sel: k.sev === "HIGH_PLUS", hint: "Filter to High + Critical" },
       { label: "Critical", value: s.critical, sub: `${s.high} high`, cls: "kpi--crit", act: "sev:CRITICAL", sel: k.sev === "CRITICAL", hint: "Filter to Critical only" },
     ]},
     { label: "Sort", tiles: [
-      { label: "Countries today", value: countriesToday, sub: `${todayIncs.length} today`, cls: "kpi--country", act: "sort:event_date:desc", sel: k.sort === "event_date", hint: "Sort by most recent first" },
+      { label: "Countries today", value: countriesToday, sub: `${d.incidents.length} incidents`, cls: "kpi--country", act: "sort:event_date:desc", sel: k.sort === "event_date", hint: "Sort by most recent first" },
       { label: "News linked", value: s.news_total, sub: "articles", cls: "kpi--news", act: "sort:news_total:desc", sel: k.sort === "news_total", hint: "Sort by news coverage" },
     ]},
     { label: "Type", tiles: [
