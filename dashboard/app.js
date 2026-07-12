@@ -793,7 +793,7 @@ function openDrawer(id) {
         <li class="log-entry">
           <details${idx === 0 ? " open" : ""}>
             <summary>
-              <span class="log-entry__date">${fmtDate(log.log_datetime) || ""}</span>
+              <span class="log-entry__date">${fmtDateTime(log.log_datetime) || ""}</span>
               <span class="log-entry__count">${log.news.length} article(s)</span>
             </summary>
             <div class="log-entry__summary">${esc(log.summary)}</div>
@@ -857,10 +857,21 @@ function fmtTime(iso) {
 // All dates render day-first (dd/mm/yyyy) — never US month-first.
 function fmtDate(iso) {
   if (!iso) return "";
-  const d = new Date(iso + "T00:00:00Z");
+  const d = new Date(iso.length > 10 ? iso : iso + "T00:00:00Z");
+  if (isNaN(d)) return "";
   const dd = String(d.getUTCDate()).padStart(2, "0");
   const mm = String(d.getUTCMonth() + 1).padStart(2, "0");
   return `${dd}/${mm}/${d.getUTCFullYear()}`;
+}
+function fmtDateTime(iso) {
+  if (!iso) return "";
+  const d = new Date(iso);
+  if (isNaN(d)) return "";
+  const dd = String(d.getUTCDate()).padStart(2, "0");
+  const mm = String(d.getUTCMonth() + 1).padStart(2, "0");
+  const hh = String(d.getUTCHours()).padStart(2, "0");
+  const mi = String(d.getUTCMinutes()).padStart(2, "0");
+  return `${dd}/${mm}/${d.getUTCFullYear()} ${hh}:${mi}`;
 }
 const fmtDateYear = fmtDate;
 function showError(msg) {
