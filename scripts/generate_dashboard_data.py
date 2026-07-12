@@ -460,10 +460,13 @@ def build_incident_object(conn: sqlite3.Connection, inc: dict, as_of_date: datet
                 "meta": " · ".join(meta_parts) if meta_parts else "",
             })
         elif r["source"] == "WHO":
+            who_url = rf.get("ItemDefaultUrl", "")
+            if who_url and not who_url.startswith("http"):
+                who_url = "https://www.who.int/emergencies/disease-outbreak-news/item/" + who_url.lstrip("/")
             source_links.append({
                 "type": "WHO",
                 "label": r["name"],
-                "url": rf.get("ItemDefaultUrl", ""),
+                "url": who_url,
                 "meta": "",
             })
 
