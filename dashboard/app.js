@@ -974,7 +974,8 @@ function wireGlobalEvents() {
 
   // drawer close
   $("#drawerClose").addEventListener("click", closeDrawer);
-  $("#scrim").addEventListener("click", closeDrawer);
+  $("#scrim").addEventListener("click", (e) => { if (e.target === $("#scrim")) closeDrawer(); });
+  $("#drawer").addEventListener("click", (e) => e.stopPropagation());
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") { closeCal(); closeDrawer(); } });
 
   // re-render charts on resize (debounced)
