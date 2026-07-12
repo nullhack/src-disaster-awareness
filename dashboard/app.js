@@ -464,10 +464,40 @@ const METRIC_LABEL = { n: "news", e: "events" };
 
 function buildSeries(data, groupField, keys, colorFn) {
   const metric = STATE.trend.metric;
+  const f = STATE.filters;
   return keys.map((k) => ({
     key: k, color: colorFn(k),
-    values: data.map((day) => ({ date: day.date, count: ((day[groupField] || {})[k] || {})[metric] || 0 })),
+    values: data.map((day) => {
+      let count = ((day[groupField] || {})[k] || {})[metric] || 0;
+      if (count > 0) {
+        if (groupField === "type" && f.types.size > 0 && !f.types.has(k)) count = 0;
+        if (groupField === "disease" && f.types.size > 0) {
+          const incType = diseaseToIncidentType(k);
+          if (incType && !f.types.has(incType)) count = 0;
+        }
+        if (f.severities.size > 0) {
+          const sevCount = Object.entries(day.sev || {})
+            .filter(([s]) => f.severities.has(s))
+            .reduce((sum, [, v]) => sum + (v[metric] || 0), 0);
+          const totalSev = Object.values(day.sev || {}).reduce((sum, v) => sum + (v[metric] || 0), 0);
+          if (totalSev > 0) count = Math.round(count * sevCount / totalSev);
+        }
+        if (f.regions.size > 0) {
+          const regCount = Object.entries(day.region || {})
+            .filter(([r]) => f.regions.has(r))
+            .reduce((sum, [, v]) => sum + (v[metric] || 0), 0);
+          const totalReg = Object.values(day.region || {}).reduce((sum, v) => sum + (v[metric] || 0), 0);
+          if (totalReg > 0) count = Math.round(count * regCount / totalReg);
+        }
+      }
+      return { date: day.date, count };
+    }),
   }));
+}
+
+function diseaseToIncidentType(disease) {
+  if (!disease) return null;
+  return "Disease";
 }
 
 function renderTrendPanel(svgSel, legendSel, tdata, series, bucket) {
@@ -758,7 +788,21 @@ function openDrawer(id) {
             </a></li>`).join("")}
         </ul>` : `<p class="muted">No deep links available for this incident.</p>`}
     </div>
-    ${(i.news && i.news.length) ? `<div class="drawer__section"><h3>News · ${i.news_total} linked (${i.news.length} shown)</h3>
+    ${(i.logs && i.logs.length) ? `<div class="drawer__section"><h3>Timeline · ${i.logs.length} log(s)</h3>
+      <ul class="drawer__logs">${i.logs.slice().reverse().map((log, idx) => `
+        <li class="log-entry">
+          <details${idx === 0 ? " open" : ""}>
+            <summary>
+              <span class="log-entry__date">${fmtDate(log.log_datetime) || ""}</span>
+              <span class="log-entry__count">${log.news.length} article(s)</span>
+            </summary>
+            <div class="log-entry__summary">${esc(log.summary)}</div>
+            ${log.news.length ? `<ul class="drawer__news">${log.news.map((n) => `
+              <li><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.headline)}</a>
+              <div class="meta">${fmtDate(n.published_date) || ""} · ${esc(n.outlet || "")}</div></li>`).join("")}</ul>` : `<p class="muted">No linked news.</p>`}
+          </details>
+        </li>`).join("")}</ul></div>` : ""}
+    ${(i.news && i.news.length && !(i.logs && i.logs.length)) ? `<div class="drawer__section"><h3>News · ${i.news_total} linked (${i.news.length} shown)</h3>
       <ul class="drawer__news">${i.news.map((n) => `
         <li><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.headline)}</a>
         <div class="meta">${fmtDate(n.published_date) || ""} · ${esc(n.outlet || "")}</div></li>`).join("")}</ul></div>` : ""}

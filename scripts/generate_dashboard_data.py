@@ -277,6 +277,45 @@ def load_log_count(conn: sqlite3.Connection, incident_id: int) -> int:
     return c.fetchone()[0]
 
 
+def load_logs_for_incident(conn: sqlite3.Connection, incident_id: int) -> list[dict]:
+    c = conn.cursor()
+    c.execute("""
+        SELECT il.log_datetime, il.summary
+        FROM incident_logs il
+        WHERE il.incident_id = ?
+        ORDER BY il.log_datetime
+    """, (incident_id,))
+    logs = []
+    for row in c.fetchall():
+        logs.append({
+            "log_datetime": row[0],
+            "summary": row[1] or "",
+            "news": [],
+        })
+    if not logs:
+        return logs
+    c.execute("""
+        SELECT iln.log_datetime, iln.news_id, ni.url, ni.title,
+               ni.published_date, ni.source, ni.domain
+        FROM incident_log_news iln
+        JOIN news_items ni ON ni.news_id = iln.news_id
+        WHERE iln.incident_id = ?
+        ORDER BY ni.published_date
+    """, (incident_id,))
+    log_map = {l["log_datetime"]: l for l in logs}
+    for row in c.fetchall():
+        ldt = row[0]
+        if ldt in log_map:
+            log_map[ldt]["news"].append({
+                "news_id": row[1],
+                "url": row[2],
+                "headline": row[3] or "",
+                "published_date": row[4],
+                "outlet": row[5] or row[6] or "",
+            })
+    return logs
+
+
 def build_incident_object(conn: sqlite3.Connection, inc: dict, as_of_date: datetime) -> dict | None:
     incident_id = inc["incident_id"]
     reports = load_reports_for_incident(conn, incident_id)
@@ -286,6 +325,7 @@ def build_incident_object(conn: sqlite3.Connection, inc: dict, as_of_date: datet
     news = load_news_for_incident(conn, incident_id)
     news_count = len(news)
     latest_summary = load_latest_log(conn, incident_id)
+    logs = load_logs_for_incident(conn, incident_id)
 
     genesis = None
     for r in reports:
@@ -495,6 +535,7 @@ def build_incident_object(conn: sqlite3.Connection, inc: dict, as_of_date: datet
         "physical": physical,
         "news": news_items,
         "news_total": news_count,
+        "logs": logs,
     }
 
 
@@ -628,11 +669,20 @@ def generate_agg_series(incidents: list[dict], window: int, as_of: datetime) -> 
                 disease_data[d_name]["e"] += 1
                 disease_data[d_name]["n"] += inc["news_total"]
 
+        region_data = {}
+        for inc in reportable:
+            r = inc["region"] or "Unknown"
+            if r not in region_data:
+                region_data[r] = {"e": 0, "n": 0}
+            region_data[r]["e"] += 1
+            region_data[r]["n"] += inc["news_total"]
+
         series.append({
             "date": d.strftime("%Y-%m-%d"),
             "sev": sev_data,
             "type": type_data,
             "disease": disease_data,
+            "region": region_data,
         })
     return series
 

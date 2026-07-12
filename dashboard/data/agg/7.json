@@ -2,36 +2,8 @@
   "schema_version": "1.4",
   "window": 7,
   "bucket": "day",
-  "as_of": "2026-07-11",
+  "as_of": "2026-07-12",
   "series": [
-    {
-      "date": "2026-07-05",
-      "sev": {
-        "CRITICAL": {
-          "e": 0,
-          "n": 0
-        },
-        "HIGH": {
-          "e": 1,
-          "n": 1
-        },
-        "MEDIUM": {
-          "e": 4,
-          "n": 5
-        },
-        "LOW": {
-          "e": 0,
-          "n": 0
-        }
-      },
-      "type": {
-        "Earthquake": {
-          "e": 5,
-          "n": 6
-        }
-      },
-      "disease": {}
-    },
     {
       "date": "2026-07-06",
       "sev": {
@@ -58,7 +30,21 @@
           "n": 6
         }
       },
-      "disease": {}
+      "disease": {},
+      "region": {
+        "Americas": {
+          "e": 1,
+          "n": 1
+        },
+        "Asia": {
+          "e": 3,
+          "n": 4
+        },
+        "Oceania": {
+          "e": 1,
+          "n": 1
+        }
+      }
     },
     {
       "date": "2026-07-07",
@@ -96,6 +82,24 @@
           "n": 2
         },
         "Mpox": {
+          "e": 1,
+          "n": 2
+        }
+      },
+      "region": {
+        "Americas": {
+          "e": 1,
+          "n": 1
+        },
+        "Asia": {
+          "e": 5,
+          "n": 6
+        },
+        "Oceania": {
+          "e": 1,
+          "n": 1
+        },
+        "Unknown": {
           "e": 1,
           "n": 2
         }
@@ -191,6 +195,32 @@
         "Food Safety": {
           "e": 1,
           "n": 7
+        }
+      },
+      "region": {
+        "Asia": {
+          "e": 46,
+          "n": 93
+        },
+        "Europe": {
+          "e": 3,
+          "n": 10
+        },
+        "Americas": {
+          "e": 12,
+          "n": 27
+        },
+        "Oceania": {
+          "e": 5,
+          "n": 5
+        },
+        "Africa": {
+          "e": 8,
+          "n": 30
+        },
+        "Unknown": {
+          "e": 2,
+          "n": 3
         }
       }
     },
@@ -289,6 +319,32 @@
           "e": 1,
           "n": 7
         }
+      },
+      "region": {
+        "Asia": {
+          "e": 46,
+          "n": 93
+        },
+        "Europe": {
+          "e": 3,
+          "n": 10
+        },
+        "Americas": {
+          "e": 13,
+          "n": 57
+        },
+        "Oceania": {
+          "e": 5,
+          "n": 5
+        },
+        "Africa": {
+          "e": 8,
+          "n": 30
+        },
+        "Unknown": {
+          "e": 2,
+          "n": 3
+        }
       }
     },
     {
@@ -385,6 +441,32 @@
         "Food Safety": {
           "e": 1,
           "n": 7
+        }
+      },
+      "region": {
+        "Asia": {
+          "e": 48,
+          "n": 114
+        },
+        "Europe": {
+          "e": 3,
+          "n": 10
+        },
+        "Americas": {
+          "e": 12,
+          "n": 56
+        },
+        "Oceania": {
+          "e": 6,
+          "n": 8
+        },
+        "Africa": {
+          "e": 8,
+          "n": 30
+        },
+        "Unknown": {
+          "e": 2,
+          "n": 3
         }
       }
     },
@@ -486,6 +568,159 @@
         "Food Safety": {
           "e": 1,
           "n": 7
+        }
+      },
+      "region": {
+        "Asia": {
+          "e": 52,
+          "n": 212
+        },
+        "Europe": {
+          "e": 4,
+          "n": 28
+        },
+        "Americas": {
+          "e": 13,
+          "n": 115
+        },
+        "Oceania": {
+          "e": 6,
+          "n": 8
+        },
+        "Africa": {
+          "e": 9,
+          "n": 75
+        },
+        "Unknown": {
+          "e": 2,
+          "n": 3
+        }
+      }
+    },
+    {
+      "date": "2026-07-12",
+      "sev": {
+        "CRITICAL": {
+          "e": 2,
+          "n": 139
+        },
+        "HIGH": {
+          "e": 47,
+          "n": 212
+        },
+        "MEDIUM": {
+          "e": 37,
+          "n": 90
+        },
+        "LOW": {
+          "e": 0,
+          "n": 0
+        }
+      },
+      "type": {
+        "Volcano": {
+          "e": 3,
+          "n": 6
+        },
+        "Tropical Cyclone": {
+          "e": 4,
+          "n": 86
+        },
+        "Forest Fire": {
+          "e": 3,
+          "n": 21
+        },
+        "Flood": {
+          "e": 5,
+          "n": 23
+        },
+        "Earthquake": {
+          "e": 49,
+          "n": 174
+        },
+        "Disease": {
+          "e": 22,
+          "n": 131
+        }
+      },
+      "disease": {
+        "Mpox": {
+          "e": 4,
+          "n": 11
+        },
+        "Oropouche": {
+          "e": 1,
+          "n": 2
+        },
+        "Polio": {
+          "e": 1,
+          "n": 3
+        },
+        "Cholera": {
+          "e": 1,
+          "n": 1
+        },
+        "Anthrax": {
+          "e": 1,
+          "n": 1
+        },
+        "Marburg": {
+          "e": 4,
+          "n": 18
+        },
+        "Respiratory": {
+          "e": 1,
+          "n": 1
+        },
+        "Measles": {
+          "e": 2,
+          "n": 6
+        },
+        "Avian Influenza": {
+          "e": 2,
+          "n": 4
+        },
+        "Nipah": {
+          "e": 2,
+          "n": 2
+        },
+        "Hantavirus": {
+          "e": 1,
+          "n": 30
+        },
+        "Ebola": {
+          "e": 1,
+          "n": 45
+        },
+        "Food Safety": {
+          "e": 1,
+          "n": 7
+        }
+      },
+      "region": {
+        "Asia": {
+          "e": 52,
+          "n": 212
+        },
+        "Europe": {
+          "e": 4,
+          "n": 28
+        },
+        "Americas": {
+          "e": 13,
+          "n": 115
+        },
+        "Oceania": {
+          "e": 6,
+          "n": 8
+        },
+        "Africa": {
+          "e": 9,
+          "n": 75
+        },
+        "Unknown": {
+          "e": 2,
+          "n": 3
         }
       }
     }
