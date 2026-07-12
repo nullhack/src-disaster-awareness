@@ -1,0 +1,134 @@
+{
+  "schema_version": "1.4",
+  "report_date": "2025-11-24",
+  "generated_at": "2026-07-12T02:16:11Z",
+  "as_of": "2025-11-24",
+  "tracking_window_days": 14,
+  "min_severity": "LOW",
+  "summary": {
+    "reportable_total": 1,
+    "new_today": 0,
+    "critical": 0,
+    "high": 1,
+    "medium": 0,
+    "low": 0,
+    "disease_outbreaks": 0,
+    "countries_affected": 1,
+    "news_total": 2,
+    "max_magnitude": 6.3,
+    "by_severity": {
+      "CRITICAL": 0,
+      "HIGH": 1,
+      "MEDIUM": 0,
+      "LOW": 0
+    },
+    "by_type": {
+      "Earthquake": 1
+    },
+    "by_region": {
+      "Asia": 1
+    }
+  },
+  "by_country": [
+    {
+      "country": "Afghanistan",
+      "count": 1,
+      "max_sev_rank": 3,
+      "iso2": "AF",
+      "region": "Asia",
+      "country_group": "A",
+      "max_severity": "HIGH"
+    }
+  ],
+  "incidents": [
+    {
+      "incident_id": "20251102-AF-EQ",
+      "canonical_name": "Earthquake Afghanistan 2025-11",
+      "summary": "A magnitude 6.3 earthquake struck northern Afghanistan, killing at least 20 people and injuring over 300. The earthquake caused significant damage and casualties in the Balkh region.",
+      "country": "Afghanistan",
+      "iso2": "AF",
+      "lat": 36.5894,
+      "lon": 67.4843,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "HIGH",
+      "priority": "HIGH",
+      "priority_rank": 1,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2025-11-02",
+      "first_reported_date": "2025-11-02",
+      "last_updated_date": "2025-11-13",
+      "days_since_event": 252,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 0,
+        "gdacs": 1,
+        "healthmap": 0,
+        "news": 2
+      },
+      "source_links": [
+        {
+          "type": "GDACS",
+          "label": "Red alert · Magnitude 6.3M, Depth:28km",
+          "url": "https://www.gdacs.org/report.aspx?eventid=1508467&episodeid=1669785&eventtype=EQ",
+          "meta": "Magnitude 6.3M, Depth:28km"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 6.3,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": "Red",
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "At Least 20 Dead and Over 300 Injured After 6.3-Magnitude Earthquake with...",
+          "url": "https://www.yahoo.com/news/articles/least-20-dead-over-300-111350992.html",
+          "outlet": "People · via Yahoo News",
+          "published_date": "2025-11-13T14:41:34+00:00"
+        },
+        {
+          "headline": "Powerful earthquake kills at least 20 and injures hundreds in Afghanistan",
+          "url": "https://www.yahoo.com/news/articles/powerful-earthquake-kills-least-20-113214314.html",
+          "outlet": "PA Media: World News · via Yahoo News",
+          "published_date": "2025-11-13T14:41:55+00:00"
+        }
+      ],
+      "news_total": 2,
+      "logs": [
+        {
+          "log_datetime": "2025-11-13T14:41:55+00:00",
+          "summary": "A magnitude 6.3 earthquake struck northern Afghanistan, killing at least 20 people and injuring over 300. The earthquake caused significant damage and casualties in the Balkh region.",
+          "news": [
+            {
+              "news_id": 1700001000388,
+              "url": "https://www.yahoo.com/news/articles/least-20-dead-over-300-111350992.html",
+              "headline": "At Least 20 Dead and Over 300 Injured After 6.3-Magnitude Earthquake with...",
+              "published_date": "2025-11-13T14:41:34+00:00",
+              "outlet": "People · via Yahoo News"
+            },
+            {
+              "news_id": 1700001000397,
+              "url": "https://www.yahoo.com/news/articles/powerful-earthquake-kills-least-20-113214314.html",
+              "headline": "Powerful earthquake kills at least 20 and injures hundreds in Afghanistan",
+              "published_date": "2025-11-13T14:41:55+00:00",
+              "outlet": "PA Media: World News · via Yahoo News"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

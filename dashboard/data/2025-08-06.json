@@ -1,0 +1,121 @@
+{
+  "schema_version": "1.4",
+  "report_date": "2025-08-06",
+  "generated_at": "2026-07-12T02:16:11Z",
+  "as_of": "2025-08-06",
+  "tracking_window_days": 14,
+  "min_severity": "LOW",
+  "summary": {
+    "reportable_total": 1,
+    "new_today": 1,
+    "critical": 0,
+    "high": 1,
+    "medium": 0,
+    "low": 0,
+    "disease_outbreaks": 1,
+    "countries_affected": 1,
+    "news_total": 1,
+    "max_magnitude": null,
+    "by_severity": {
+      "CRITICAL": 0,
+      "HIGH": 1,
+      "MEDIUM": 0,
+      "LOW": 0
+    },
+    "by_type": {
+      "Disease": 1
+    },
+    "by_region": {
+      "Asia": 1
+    }
+  },
+  "by_country": [
+    {
+      "country": "Bangladesh",
+      "count": 1,
+      "max_sev_rank": 3,
+      "iso2": "BD",
+      "region": "Asia",
+      "country_group": "A",
+      "max_severity": "HIGH"
+    }
+  ],
+  "incidents": [
+    {
+      "incident_id": "20250806-BD-DI",
+      "canonical_name": "Nipah Virus Infection - India",
+      "summary": "Two cases of the deadly Nipah virus have been confirmed in India, prompting authorities in Thailand, Singapore, Hong Kong, and Malaysia to implement airport checks across Asia.",
+      "country": "Bangladesh",
+      "iso2": "BD",
+      "lat": null,
+      "lon": null,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Disease",
+      "incident_category": "Biological",
+      "is_disease": true,
+      "severity": "HIGH",
+      "priority": "HIGH",
+      "priority_rank": 1,
+      "pandemic_potential": "HIGH",
+      "event_status": null,
+      "disease_name": "Nipah",
+      "event_date": "2025-08-06",
+      "first_reported_date": "2025-08-06",
+      "last_updated_date": "2018-05-22",
+      "days_since_event": 340,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 1,
+        "usgs": 0,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "WHO",
+          "label": "Nipah Virus Infection - India",
+          "url": "/2025-DON577",
+          "meta": ""
+        }
+      ],
+      "physical": {
+        "max_magnitude": null,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Nipah virus fears trigger airport checks across Asia after India confirms two cases",
+          "url": "https://www.aol.com/articles/nipah-virus-fears-trigger-airport-163348945.html",
+          "outlet": "AOL",
+          "published_date": "2018-05-22T00:00:00+00:00"
+        }
+      ],
+      "news_total": 1,
+      "logs": [
+        {
+          "log_datetime": "2018-05-22T00:00:00+00:00",
+          "summary": "Two cases of the deadly Nipah virus have been confirmed in India, prompting authorities in Thailand, Singapore, Hong Kong, and Malaysia to implement airport checks across Asia.",
+          "news": [
+            {
+              "news_id": 1700001000069,
+              "url": "https://www.aol.com/articles/nipah-virus-fears-trigger-airport-163348945.html",
+              "headline": "Nipah virus fears trigger airport checks across Asia after India confirms two cases",
+              "published_date": "2018-05-22T00:00:00+00:00",
+              "outlet": "AOL"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

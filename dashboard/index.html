@@ -163,14 +163,15 @@
   </main>
 
   <!-- ============ DETAIL DRAWER ============ -->
-  <aside class="drawer" id="drawer" aria-hidden="true" aria-label="Incident detail">
-    <div class="drawer__bar">
-      <span class="drawer__title" id="drawerTitle">Incident</span>
-      <button class="drawer__close" id="drawerClose" type="button" aria-label="Close">×</button>
-    </div>
-    <div class="drawer__body" id="drawerBody"></div>
-  </aside>
-  <div class="scrim" id="scrim" hidden></div>
+  <div class="scrim" id="scrim" hidden>
+    <aside class="drawer" id="drawer" aria-hidden="true" aria-label="Incident detail">
+      <div class="drawer__bar">
+        <span class="drawer__title" id="drawerTitle">Incident</span>
+        <button class="drawer__close" id="drawerClose" type="button" aria-label="Close">×</button>
+      </div>
+      <div class="drawer__body" id="drawerBody"></div>
+    </aside>
+  </div>
 
   <!-- ============ STATUS / ERROR ============ -->
   <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>

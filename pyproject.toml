@@ -48,7 +48,6 @@ default_flow = "pipeline-flow"
 default_session = "default"
 
 [tool.setuptools]
-package-dir = {"" = "src"}
 packages = ["disaster_report"]
 
 [tool.ruff.lint]
@@ -85,7 +84,6 @@ addopts = """
 -q \
 """
 testpaths = ["tests"]
-pythonpath = ["src"]
 python_files = ["*_test.py"]
 python_functions = ["test_*"]
 
