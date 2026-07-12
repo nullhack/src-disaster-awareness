@@ -791,12 +791,12 @@ function openDrawer(id) {
     ${(i.logs && i.logs.length) ? `<div class="drawer__section"><h3>Timeline · ${i.logs.length} log(s)</h3>
       <ul class="drawer__logs">${i.logs.slice().reverse().map((log, idx) => `
         <li class="log-entry">
-          <details${idx === 0 ? " open" : ""}>
+          <details>
             <summary>
               <span class="log-entry__date">${fmtDateTime(log.log_datetime) || ""}</span>
               <span class="log-entry__count">${log.news.length} article(s)</span>
-              <span class="log-entry__summary">${esc(log.summary)}</span>
             </summary>
+            <div class="log-entry__summary">${esc(log.summary)}</div>
             ${log.news.length ? `<ul class="drawer__news">${log.news.map((n) => `
               <li><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.headline)}</a>
               <div class="meta">${fmtDate(n.published_date) || ""} · ${esc(n.outlet || "")}</div></li>`).join("")}</ul>` : `<p class="muted">No linked news.</p>`}

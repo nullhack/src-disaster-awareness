@@ -587,8 +587,7 @@ code { font-family: var(--mono); font-size: .9em; }
 .log-entry details[open] summary::before { content: "▾"; }
 .log-entry__date { color: var(--rc-ink); white-space: nowrap; }
 .log-entry__count { color: var(--rc-muted); font-weight: 400; font-size: 11px; white-space: nowrap; }
-.log-entry__summary { font-size: 13px; line-height: 1.55; color: var(--rc-slate); flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.log-entry details[open] .log-entry__summary { display: none; }
+.log-entry__summary { font-size: 13px; line-height: 1.55; color: var(--rc-slate); padding: 2px 0 8px; }
 .keys { display: flex; flex-wrap: wrap; gap: 5px; }
 .keys code {
   font-size: 11px; background: var(--rc-bg); padding: 2px 7px; border-radius: 4px; color: var(--rc-slate);
