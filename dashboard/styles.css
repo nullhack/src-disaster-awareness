@@ -532,7 +532,7 @@ code { font-family: var(--mono); font-size: .9em; }
 .scrim[hidden] { display: none; }
 .scrim.show { opacity: 1; }
 .drawer {
-  position: relative; width: min(800px, 90vw); max-height: 85vh;
+  position: relative; width: min(1100px, 95vw); max-height: 90vh;
   background: #fff; z-index: 70; transform: scale(.96) translateY(8px);
   opacity: 0; transition: transform .25s cubic-bezier(.4,0,.2,1), opacity .2s;
   display: flex; flex-direction: column; box-shadow: var(--shadow-lg);
@@ -628,5 +628,5 @@ code { font-family: var(--mono); font-size: .9em; }
   .topbar { padding: 10px 16px; }
   .layout, .footer { padding-left: 16px; padding-right: 16px; }
   .news-row { grid-template-columns: 1fr; gap: 4px; }
-  .drawer { width: 95vw; max-height: 90vh; }
+  .drawer { width: 98vw; max-height: 95vh; }
 }
