@@ -795,8 +795,8 @@ function openDrawer(id) {
             <summary>
               <span class="log-entry__date">${fmtDateTime(log.log_datetime) || ""}</span>
               <span class="log-entry__count">${log.news.length} article(s)</span>
+              <span class="log-entry__summary">${esc(log.summary)}</span>
             </summary>
-            <div class="log-entry__summary">${esc(log.summary)}</div>
             ${log.news.length ? `<ul class="drawer__news">${log.news.map((n) => `
               <li><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.headline)}</a>
               <div class="meta">${fmtDate(n.published_date) || ""} · ${esc(n.outlet || "")}</div></li>`).join("")}</ul>` : `<p class="muted">No linked news.</p>`}
