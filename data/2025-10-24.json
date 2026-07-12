@@ -1,0 +1,197 @@
+{
+  "schema_version": "1.4",
+  "report_date": "2025-10-24",
+  "generated_at": "2026-07-12T02:16:11Z",
+  "as_of": "2025-10-24",
+  "tracking_window_days": 14,
+  "min_severity": "LOW",
+  "summary": {
+    "reportable_total": 2,
+    "new_today": 0,
+    "critical": 0,
+    "high": 0,
+    "medium": 2,
+    "low": 0,
+    "disease_outbreaks": 0,
+    "countries_affected": 1,
+    "news_total": 2,
+    "max_magnitude": 6.9,
+    "by_severity": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 2,
+      "LOW": 0
+    },
+    "by_type": {
+      "Earthquake": 2
+    },
+    "by_region": {
+      "Asia": 2
+    }
+  },
+  "by_country": [
+    {
+      "country": "Philippines",
+      "count": 2,
+      "max_sev_rank": 2,
+      "iso2": "PH",
+      "region": "Asia",
+      "country_group": "A",
+      "max_severity": "MEDIUM"
+    }
+  ],
+  "incidents": [
+    {
+      "incident_id": "20250930-PH-EQ",
+      "canonical_name": "Earthquake Philippines 2025-09",
+      "summary": "A magnitude 6.9 earthquake struck the central Philippines on September 30, 2025, causing the collapse of a centuries-old church's bell tower and leaving at least 69 people dead or injured.",
+      "country": "Philippines",
+      "iso2": "PH",
+      "lat": 11.1514,
+      "lon": 124.1376,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2025-09-30",
+      "first_reported_date": "2025-09-30",
+      "last_updated_date": "2025-10-14",
+      "days_since_event": 285,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 0,
+        "gdacs": 1,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "GDACS",
+          "label": "Orange alert · Magnitude 6.9M, Depth:10km",
+          "url": "https://www.gdacs.org/report.aspx?eventid=1502713&episodeid=1663312&eventtype=EQ",
+          "meta": "Magnitude 6.9M, Depth:10km"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 6.9,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": "Orange",
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Watch centuries-old church's bell tower crumble during Philippines earthquake",
+          "url": "https://www.yahoo.com/news/articles/watch-centuries-old-churchs-bell-224436046.html",
+          "outlet": "USA TODAY · via Yahoo News",
+          "published_date": "2025-10-14T14:42:40+00:00"
+        }
+      ],
+      "news_total": 1,
+      "logs": [
+        {
+          "log_datetime": "2025-10-14T14:42:40+00:00",
+          "summary": "A magnitude 6.9 earthquake struck the central Philippines on September 30, 2025, causing the collapse of a centuries-old church's bell tower and leaving at least 69 people dead or injured.",
+          "news": [
+            {
+              "news_id": 1700001000414,
+              "url": "https://www.yahoo.com/news/articles/watch-centuries-old-churchs-bell-224436046.html",
+              "headline": "Watch centuries-old church's bell tower crumble during Philippines earthquake",
+              "published_date": "2025-10-14T14:42:40+00:00",
+              "outlet": "USA TODAY · via Yahoo News"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "20251012-PH-EQ",
+      "canonical_name": "Earthquake Philippines 2025-10",
+      "summary": "A strong 6.9 magnitude earthquake struck the central Philippines, killing at least 60 people, according to reports from Tuesday.",
+      "country": "Philippines",
+      "iso2": "PH",
+      "lat": 10.9457,
+      "lon": 123.9375,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2025-10-12",
+      "first_reported_date": "2025-10-12",
+      "last_updated_date": "2025-10-01",
+      "days_since_event": 273,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 0,
+        "gdacs": 1,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "GDACS",
+          "label": "Orange alert · Magnitude 5.7M, Depth:10km",
+          "url": "https://www.gdacs.org/report.aspx?eventid=1504796&episodeid=1665698&eventtype=EQ",
+          "meta": "Magnitude 5.7M, Depth:10km"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 5.7,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": "Orange",
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "6.9 magnitude earthquake kills more than 60 in central Philippines",
+          "url": "https://sports.yahoo.com/articles/strong-6-9-magnitude-earthquake-172629964.html",
+          "outlet": "CNN · via Yahoo Sports",
+          "published_date": "2025-10-01T00:00:00+00:00"
+        }
+      ],
+      "news_total": 1,
+      "logs": [
+        {
+          "log_datetime": "2025-10-01T00:00:00+00:00",
+          "summary": "A strong 6.9 magnitude earthquake struck the central Philippines, killing at least 60 people, according to reports from Tuesday.",
+          "news": [
+            {
+              "news_id": 1700001000056,
+              "url": "https://sports.yahoo.com/articles/strong-6-9-magnitude-earthquake-172629964.html",
+              "headline": "6.9 magnitude earthquake kills more than 60 in central Philippines",
+              "published_date": "2025-10-01T00:00:00+00:00",
+              "outlet": "CNN · via Yahoo Sports"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

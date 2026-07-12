@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.4",
+  "report_date": "2026-04-13",
+  "generated_at": "2026-07-12T02:16:11Z",
+  "as_of": "2026-04-13",
+  "tracking_window_days": 14,
+  "min_severity": "LOW",
+  "summary": {
+    "reportable_total": 1,
+    "new_today": 0,
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0,
+    "disease_outbreaks": 0,
+    "countries_affected": 1,
+    "news_total": 0,
+    "max_magnitude": 5.7,
+    "by_severity": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 1,
+      "LOW": 0
+    },
+    "by_type": {
+      "Earthquake": 1
+    },
+    "by_region": {
+      "Asia": 1
+    }
+  },
+  "by_country": [
+    {
+      "country": "Indonesia",
+      "count": 1,
+      "max_sev_rank": 2,
+      "iso2": "ID",
+      "region": "Asia",
+      "country_group": "A",
+      "max_severity": "MEDIUM"
+    }
+  ],
+  "incidents": [
+    {
+      "incident_id": "20260402-ID-EQ",
+      "canonical_name": "Earthquake 126 km E of Bitung, Indonesia 2026-04",
+      "summary": "",
+      "country": "Indonesia",
+      "iso2": "ID",
+      "lat": 1.2212,
+      "lon": 126.241,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-04-02",
+      "first_reported_date": "2026-04-02",
+      "last_updated_date": "2026-04-02",
+      "days_since_event": 101,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 0
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 5.7 - 126 km E of Bitung, Indonesia",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000slww",
+          "meta": "35 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 5.7,
+        "max_depth_km": 35.0,
+        "place": "126 km E of Bitung, Indonesia",
+        "felt": null,
+        "sig": 500,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [],
+      "news_total": 0,
+      "logs": []
+    }
+  ]
+}

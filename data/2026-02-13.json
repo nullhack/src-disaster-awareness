@@ -1,0 +1,193 @@
+{
+  "schema_version": "1.4",
+  "report_date": "2026-02-13",
+  "generated_at": "2026-07-12T02:16:11Z",
+  "as_of": "2026-02-13",
+  "tracking_window_days": 14,
+  "min_severity": "LOW",
+  "summary": {
+    "reportable_total": 2,
+    "new_today": 0,
+    "critical": 0,
+    "high": 0,
+    "medium": 2,
+    "low": 0,
+    "disease_outbreaks": 0,
+    "countries_affected": 2,
+    "news_total": 2,
+    "max_magnitude": null,
+    "by_severity": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 2,
+      "LOW": 0
+    },
+    "by_type": {
+      "Flood": 2
+    },
+    "by_region": {
+      "Africa": 1,
+      "Americas": 1
+    }
+  },
+  "by_country": [
+    {
+      "country": "Mozambique",
+      "count": 1,
+      "max_sev_rank": 2,
+      "iso2": "MZ",
+      "region": "Africa",
+      "country_group": "C",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "Brazil",
+      "count": 1,
+      "max_sev_rank": 2,
+      "iso2": "BR",
+      "region": "Americas",
+      "country_group": "C",
+      "max_severity": "MEDIUM"
+    }
+  ],
+  "incidents": [
+    {
+      "incident_id": "20251222-MZ-FL",
+      "canonical_name": "Flood in Mozambique",
+      "summary": "A flood in Mozambique has displaced residents, including Emilia Machel and her three children, who are staying at the Chiaquelane site in Maputo. Victims are persevering despite their losses, expressing the need to rebuild their lives in the aftermath of the disaster.",
+      "country": "Mozambique",
+      "iso2": "MZ",
+      "lat": -20.1562,
+      "lon": 34.7383,
+      "country_group": "C",
+      "region": "Africa",
+      "incident_type": "Flood",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2025-12-22",
+      "first_reported_date": "2025-12-22",
+      "last_updated_date": "2026-02-11",
+      "days_since_event": 202,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 0,
+        "gdacs": 1,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "GDACS",
+          "label": "Orange alert · Magnitude 0 ",
+          "url": "https://www.gdacs.org/report.aspx?eventid=1103694&episodeid=1&eventtype=FL",
+          "meta": "Magnitude 0 "
+        }
+      ],
+      "physical": {
+        "max_magnitude": null,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": "Orange",
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "‘We have to rebuild’: Mozambique flood victims persevere in face of loss",
+          "url": "https://www.yahoo.com/news/articles/rebuild-mozambique-flood-victims-persevere-055743370.html",
+          "outlet": "Al Jazeera · via Yahoo News",
+          "published_date": "2026-02-11T14:41:58+00:00"
+        }
+      ],
+      "news_total": 1,
+      "logs": [
+        {
+          "log_datetime": "2026-02-11T14:41:58+00:00",
+          "summary": "A flood in Mozambique has displaced residents, including Emilia Machel and her three children, who are staying at the Chiaquelane site in Maputo. Victims are persevering despite their losses, expressing the need to rebuild their lives in the aftermath of the disaster.",
+          "news": [
+            {
+              "news_id": 1700001000398,
+              "url": "https://www.yahoo.com/news/articles/rebuild-mozambique-flood-victims-persevere-055743370.html",
+              "headline": "‘We have to rebuild’: Mozambique flood victims persevere in face of loss",
+              "published_date": "2026-02-11T14:41:58+00:00",
+              "outlet": "Al Jazeera · via Yahoo News"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "20260203-BR-FL",
+      "canonical_name": "Flood in Brazil",
+      "summary": "",
+      "country": "Brazil",
+      "iso2": "BR",
+      "lat": -9.0479,
+      "lon": -70.5265,
+      "country_group": "C",
+      "region": "Americas",
+      "incident_type": "Flood",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-02-03",
+      "first_reported_date": "2026-02-03",
+      "last_updated_date": "2026-02-11",
+      "days_since_event": 159,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 0,
+        "gdacs": 1,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "GDACS",
+          "label": "Orange alert · Magnitude 0 ",
+          "url": "https://www.gdacs.org/report.aspx?eventid=1103757&episodeid=25&eventtype=FL",
+          "meta": "Magnitude 0 "
+        }
+      ],
+      "physical": {
+        "max_magnitude": null,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": "Orange",
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Pipeline blast sends a wall of water crashing through Rio facility",
+          "url": "https://www.msn.com/en-xl/news/other/pipeline-blast-sends-a-wall-of-water-crashing-through-rio-facility/vi-AA1W5TUZ?ocid=BingNewsVerp",
+          "outlet": "KameraOne on MSN",
+          "published_date": "2026-02-11T05:00:00+00:00"
+        }
+      ],
+      "news_total": 1,
+      "logs": []
+    }
+  ]
+}

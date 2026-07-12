@@ -1,0 +1,207 @@
+{
+  "schema_version": "1.4",
+  "report_date": "2026-06-12",
+  "generated_at": "2026-07-12T02:16:11Z",
+  "as_of": "2026-06-12",
+  "tracking_window_days": 14,
+  "min_severity": "LOW",
+  "summary": {
+    "reportable_total": 2,
+    "new_today": 0,
+    "critical": 0,
+    "high": 1,
+    "medium": 1,
+    "low": 0,
+    "disease_outbreaks": 1,
+    "countries_affected": 2,
+    "news_total": 2,
+    "max_magnitude": 7.4,
+    "by_severity": {
+      "CRITICAL": 0,
+      "HIGH": 1,
+      "MEDIUM": 1,
+      "LOW": 0
+    },
+    "by_type": {
+      "Earthquake": 1,
+      "Disease": 1
+    },
+    "by_region": {
+      "Asia": 2
+    }
+  },
+  "by_country": [
+    {
+      "country": "Afghanistan",
+      "count": 1,
+      "max_sev_rank": 2,
+      "iso2": "AF",
+      "region": "Asia",
+      "country_group": "A",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "Philippines",
+      "count": 1,
+      "max_sev_rank": 3,
+      "iso2": "PH",
+      "region": "Asia",
+      "country_group": "A",
+      "max_severity": "HIGH"
+    }
+  ],
+  "incidents": [
+    {
+      "incident_id": "20251010-PH-EQ",
+      "canonical_name": "Earthquake Philippines 2025-10",
+      "summary": "A powerful 7.4 magnitude earthquake struck off the southeastern coast of the Philippines on Friday morning, October 10, 2025, causing panic among residents who fled into the streets. The earthquake occurred near the Davao Oriental region.",
+      "country": "Philippines",
+      "iso2": "PH",
+      "lat": 7.2649,
+      "lon": 126.7545,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "HIGH",
+      "priority": "HIGH",
+      "priority_rank": 1,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2025-10-10",
+      "first_reported_date": "2025-10-10",
+      "last_updated_date": "2026-06-08",
+      "days_since_event": 275,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 0,
+        "gdacs": 1,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "GDACS",
+          "label": "Orange alert · Magnitude 7.4M, Depth:58.087km",
+          "url": "https://www.gdacs.org/report.aspx?eventid=1504268&episodeid=1665061&eventtype=EQ",
+          "meta": "Magnitude 7.4M, Depth:58.087km"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 7.4,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": "Orange",
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Powerful quake rattles southeastern Philippines sending panicked residents into...",
+          "url": "https://sports.yahoo.com/articles/7-4-magnitude-earthquake-hits-023746639.html",
+          "outlet": "CNN · via Yahoo Sports",
+          "published_date": "2026-06-08T00:00:00+00:00"
+        }
+      ],
+      "news_total": 1,
+      "logs": [
+        {
+          "log_datetime": "2026-06-08T00:00:00+00:00",
+          "summary": "A powerful 7.4 magnitude earthquake struck off the southeastern coast of the Philippines on Friday morning, October 10, 2025, causing panic among residents who fled into the streets. The earthquake occurred near the Davao Oriental region.",
+          "news": [
+            {
+              "news_id": 1700001000050,
+              "url": "https://sports.yahoo.com/articles/7-4-magnitude-earthquake-hits-023746639.html",
+              "headline": "Powerful quake rattles southeastern Philippines sending panicked residents into...",
+              "published_date": "2026-06-08T00:00:00+00:00",
+              "outlet": "CNN · via Yahoo Sports"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "20250829-AF-DI",
+      "canonical_name": "Cholera – Multi-country with a focus on countries experiencing current surges",
+      "summary": "According to a report from Africa CDC, the continent is experiencing its worst cholera outbreak in 25 years, with Sudan among the countries facing surges. The outbreak is compounded by the annual rainy season and a collapsed health system in Sudan, which is also battling dengue fever.",
+      "country": "Afghanistan",
+      "iso2": "AF",
+      "lat": null,
+      "lon": null,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Disease",
+      "incident_category": "Biological",
+      "is_disease": true,
+      "severity": "MEDIUM",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": "MEDIUM",
+      "event_status": null,
+      "disease_name": "Cholera",
+      "event_date": "2025-08-29",
+      "first_reported_date": "2025-08-29",
+      "last_updated_date": "2026-06-05",
+      "days_since_event": 317,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 1,
+        "usgs": 0,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "WHO",
+          "label": "Cholera – Multi-country with a focus on countries experiencing current surges",
+          "url": "/2025-DON579",
+          "meta": ""
+        }
+      ],
+      "physical": {
+        "max_magnitude": null,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Africa experiencing worst outbreak of cholera in 25 years, Africa CDC says",
+          "url": "https://www.aol.com/articles/africa-experiencing-worst-outbreak-cholera-152739691.html",
+          "outlet": "AOL",
+          "published_date": "2026-06-05T00:00:00+00:00"
+        }
+      ],
+      "news_total": 1,
+      "logs": [
+        {
+          "log_datetime": "2026-06-05T00:00:00+00:00",
+          "summary": "According to a report from Africa CDC, the continent is experiencing its worst cholera outbreak in 25 years, with Sudan among the countries facing surges. The outbreak is compounded by the annual rainy season and a collapsed health system in Sudan, which is also battling dengue fever.",
+          "news": [
+            {
+              "news_id": 1700001000065,
+              "url": "https://www.aol.com/articles/africa-experiencing-worst-outbreak-cholera-152739691.html",
+              "headline": "Africa experiencing worst outbreak of cholera in 25 years, Africa CDC says",
+              "published_date": "2026-06-05T00:00:00+00:00",
+              "outlet": "AOL"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
