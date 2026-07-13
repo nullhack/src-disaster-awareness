@@ -5,7 +5,8 @@ Workflow:
 1. Run generate_dashboard_data.py -> temp dir
 2. Checkout gh-pages branch
 3. Replace data/ with the fresh JSON
-4. Commit + push
+4. Sync app.js, styles.css, index.html from dev's dashboard/ to gh-pages root
+5. Commit + push
 
 Usage:
     uv run python scripts/publish_dashboard_data.py [--db disaster_report.db]
@@ -80,6 +81,14 @@ def main() -> None:
         shutil.copytree(TMP_DIR, data_dir)
 
         run(["git", "add", "data/"])
+
+        print("Syncing app.js, styles.css, index.html from dev...")
+        for fname in ("app.js", "styles.css", "index.html"):
+            src = REPO_ROOT / "dashboard" / fname
+            if src.exists():
+                shutil.copy2(src, REPO_ROOT / fname)
+                run(["git", "add", fname])
+
         diff = subprocess.run(
             ["git", "diff", "--cached", "--quiet"],
             cwd=REPO_ROOT,
