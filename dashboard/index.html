@@ -37,6 +37,7 @@
         <button class="dp__step" id="dpNext" type="button" aria-label="Next report">›</button>
         <div class="dp__cal" id="dpCal" role="dialog" aria-label="Choose report date" hidden></div>
         <span class="dp__meta" id="digestMeta"></span>
+        <a class="dp__report" id="dpReport" href="#" target="_blank" rel="noopener" hidden>Report ↗</a>
       </div>
       <div class="freshness" id="freshness" title="Data freshness">
         <span class="freshness__dot"></span>
@@ -175,11 +176,6 @@
 
   <!-- ============ STATUS / ERROR ============ -->
   <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
-
-  <footer class="footer">
-    <span>Daily digest · <code id="schemaVer">v1.0</code> · window <span id="winDays">14</span>d</span>
-    <span class="footer__note">Magnitude shown is USGS-instrumental max; AI summaries may cite higher figures driven by impact. All times UTC.</span>
-  </footer>
 
   <!-- D3 + topojson from CDN -->
   <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>

@@ -206,6 +206,14 @@ function refreshDateControls() {
   $("#digestMeta").textContent = entry
     ? `${entry.reportable_total} reportable · ${entry.critical} critical · ${entry.disease_outbreaks} disease`
     : "";
+  const reportLink = $("#dpReport");
+  if (STATE.digestDate) {
+    const [y, m] = STATE.digestDate.split("-");
+    reportLink.href = `https://github.com/nullhack/src-disaster-awareness/blob/gh-pages/reports/${y}/${m}/${y}${m}${STATE.digestDate.slice(8)}.md`;
+    reportLink.hidden = false;
+  } else {
+    reportLink.hidden = true;
+  }
 }
 
 async function loadDigest(file) {
@@ -213,8 +221,7 @@ async function loadDigest(file) {
   const d = STATE.digest;
   STATE.digestDate = d.report_date;
   $("#freshnessLabel").textContent = `Updated ${(d.generated_at || "").slice(11, 16)} UTC`;
-  $("#schemaVer").textContent = "v" + d.schema_version;
-  $("#winDays").textContent = d.tracking_window_days;
+  
   populateTypeFilter(d.incidents);
   populateRegionFilter(d.incidents);
   refreshDateControls();

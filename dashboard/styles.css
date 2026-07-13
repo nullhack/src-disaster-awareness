@@ -192,6 +192,8 @@ code { font-family: var(--mono); font-size: .9em; }
 .dp__cell--avail:hover { background: var(--rc-red); color: #fff; }
 .dp__cell--sel { background: var(--rc-ink); color: #fff; }
 .dp__meta { display: none; }
+.dp__report { font-size: 11px; color: var(--rc-red); text-decoration: none; white-space: nowrap; }
+.dp__report:hover { text-decoration: underline; }
 .freshness { display: flex; align-items: center; gap: 7px; font-size: 12px; color: var(--rc-muted); }
 .freshness__dot {
   width: 8px; height: 8px; border-radius: 50%;

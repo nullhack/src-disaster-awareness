@@ -46,8 +46,10 @@ def main() -> None:
     ]
     if args.as_of:
         gen_args += ["--as-of", args.as_of]
-    print("Generating dashboard JSON...")
+    print("Generating dashboard JSON + MD reports...")
     run(gen_args)
+
+    md_src = TMP_DIR.parent / "reports"
 
     print("Stashing any working tree changes...")
     stash_result = subprocess.run(
@@ -80,13 +82,24 @@ def main() -> None:
             shutil.rmtree(data_dir)
         shutil.copytree(TMP_DIR, data_dir)
 
-        run(["git", "add", "data/"])
+        run(["git", "add", "-A", "data/"])
+
+        print("Syncing MD reports...")
+        reports_dir = REPO_ROOT / "reports"
+        if reports_dir.exists():
+            shutil.rmtree(reports_dir)
+        if md_src.exists():
+            shutil.copytree(md_src, reports_dir)
+            run(["git", "add", "-A", "reports/"])
 
         print("Syncing app.js, styles.css, index.html from dev...")
         for fname in ("app.js", "styles.css", "index.html"):
-            src = REPO_ROOT / "dashboard" / fname
-            if src.exists():
-                shutil.copy2(src, REPO_ROOT / fname)
+            result = subprocess.run(
+                ["git", "show", f"{current_branch}:dashboard/{fname}"],
+                cwd=REPO_ROOT, capture_output=True, text=True,
+            )
+            if result.returncode == 0:
+                (REPO_ROOT / fname).write_text(result.stdout)
                 run(["git", "add", fname])
 
         diff = subprocess.run(

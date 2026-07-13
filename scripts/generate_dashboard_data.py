@@ -73,6 +73,75 @@ for region, codes in REGION_MAP.items():
     for code in codes:
         ISO2_TO_REGION[code] = region
 
+ISO2_CENTROIDS: dict[str, tuple[float, float]] = {
+    "AF": (33.9, 67.7), "AL": (41.2, 20.2), "DZ": (28.0, 1.7), "AD": (42.5, 1.5),
+    "AO": (-11.2, 17.9), "AG": (17.1, -61.8), "AR": (-38.4, -63.6), "AM": (40.1, 45.0),
+    "AU": (-25.3, 133.8), "AT": (47.5, 14.6), "AZ": (40.1, 47.6), "BS": (25.0, -78.0),
+    "BH": (26.1, 50.6), "BD": (23.7, 90.4), "BB": (13.2, -59.5), "BY": (53.7, 27.9),
+    "BE": (50.5, 4.5), "BZ": (17.2, -88.5), "BJ": (9.3, 2.3), "BT": (27.5, 90.4),
+    "BO": (-16.3, -63.6), "BA": (43.9, 17.7), "BW": (-22.3, 24.7), "BR": (-14.2, -51.9),
+    "BN": (4.5, 114.7), "BG": (42.7, 25.5), "BF": (12.2, -1.6), "BI": (-3.4, 29.9),
+    "KH": (12.6, 104.9), "CM": (7.4, 12.4), "CA": (56.1, -106.3), "CV": (16.0, -24.0),
+    "CF": (6.6, 20.9), "TD": (15.5, 18.7), "CL": (-35.7, -71.5), "CN": (35.9, 104.2),
+    "CO": (4.6, -74.3), "KM": (-11.6, 43.3), "CD": (-4.0, 21.8), "CG": (-0.7, 23.7),
+    "CR": (9.7, -83.8), "CI": (7.5, -5.5), "HR": (45.1, 15.2), "CU": (21.5, -77.8),
+    "CY": (35.1, 33.4), "CZ": (49.8, 15.5), "DK": (56.3, 9.5), "DJ": (11.8, 42.6),
+    "DO": (18.7, -70.7), "EC": (-1.8, -78.2), "EG": (26.8, 30.8), "SV": (13.8, -88.9),
+    "GQ": (1.7, 10.3), "ER": (15.2, 39.8), "EE": (58.6, 25.0), "SZ": (-26.5, 31.5),
+    "ET": (9.1, 40.5), "FJ": (-16.6, 179.4), "FI": (61.9, 25.7), "FR": (46.2, 2.2),
+    "GA": (-0.8, 11.6), "GM": (13.4, -16.6), "GE": (42.3, 43.4), "DE": (51.2, 10.5),
+    "GH": (7.9, -1.0), "GR": (39.1, 21.8), "GD": (12.3, -61.7), "GT": (15.8, -90.2),
+    "GN": (9.9, -9.7), "GW": (11.8, -15.2), "GY": (4.9, -58.9), "HT": (18.9, -72.3),
+    "HN": (15.2, -86.2), "HK": (22.4, 114.2), "HU": (47.2, 19.5), "IS": (64.9, -19.0),
+    "IN": (20.6, 78.9), "ID": (-0.8, 113.9), "IR": (32.4, 53.7), "IQ": (33.2, 43.7),
+    "IE": (53.4, -8.2), "IL": (31.0, 34.9), "IT": (41.9, 12.6), "JM": (18.1, -77.3),
+    "JP": (36.2, 138.3), "JO": (30.6, 36.2), "KZ": (48.0, 66.9), "KE": (-0.0, 37.9),
+    "KI": (-3.4, 173.0), "KP": (40.3, 127.5), "KR": (35.9, 127.8), "KW": (29.3, 47.5),
+    "KG": (41.2, 74.8), "LA": (19.9, 102.5), "LV": (56.9, 24.6), "LB": (33.9, 35.9),
+    "LS": (-29.6, 28.2), "LR": (6.4, -9.4), "LY": (26.3, 17.2), "LT": (55.2, 23.9),
+    "LU": (49.8, 6.1), "MO": (22.2, 113.5), "MK": (41.6, 21.7), "MG": (-18.8, 47.1),
+    "MW": (-13.2, 34.3), "MY": (4.2, 109.7), "MV": (3.2, 73.2), "ML": (17.6, -4.0),
+    "MT": (35.9, 14.4), "MR": (21.0, -10.9), "MU": (-20.3, 57.6), "MX": (23.6, -102.6),
+    "MD": (47.4, 28.4), "MN": (46.9, 103.8), "ME": (42.7, 19.4), "MA": (31.8, -7.1),
+    "MZ": (-18.7, 35.5), "MM": (21.9, 95.9), "NA": (-22.9, 18.5), "NP": (28.4, 84.1),
+    "NL": (52.1, 5.3), "NZ": (-40.9, 174.9), "NI": (12.9, -85.2), "NE": (17.6, 8.1),
+    "NG": (9.1, 8.7), "NO": (60.5, 8.5), "OM": (21.5, 55.9), "PK": (30.4, 69.3),
+    "PS": (31.9, 35.2), "PA": (8.5, -80.8), "PG": (-6.3, 143.9), "PY": (-23.4, -58.4),
+    "PE": (-9.2, -75.0), "PH": (12.9, 121.8), "PL": (51.9, 19.1), "PT": (39.4, -8.2),
+    "PR": (18.2, -66.6), "QA": (25.4, 51.2), "RO": (45.9, 24.97), "RU": (61.5, 105.3),
+    "RW": (-1.9, 29.9), "SA": (23.9, 45.1), "SN": (14.5, -14.5), "RS": (44.0, 21.7),
+    "SC": (-4.7, 55.5), "SL": (8.5, -11.8), "SG": (1.4, 103.8), "SK": (48.7, 19.7),
+    "SI": (46.2, 14.99), "SO": (5.2, 46.2), "ZA": (-30.6, 22.9), "SS": (6.9, 31.3),
+    "LK": (7.9, 80.8), "SD": (12.9, 30.2), "SR": (3.9, -56.0), "SE": (60.1, 18.6),
+    "CH": (46.8, 8.2), "SY": (34.8, 38.9), "TW": (23.7, 121.0), "TJ": (38.9, 71.3),
+    "TZ": (-6.4, 34.9), "TH": (15.9, 100.99), "TL": (-8.9, 125.7), "TG": (8.6, 0.8),
+    "TO": (-21.2, -175.2), "TT": (10.7, -61.2), "TN": (33.9, 9.5), "TR": (38.9, 35.2),
+    "TM": (38.97, 59.6), "UG": (1.4, 32.3), "UA": (48.9, 31.2), "AE": (23.4, 53.8),
+    "GB": (55.4, -3.4), "US": (37.1, -95.7), "UY": (-32.5, -55.8), "UZ": (41.4, 64.6),
+    "VU": (-16.4, 167.3), "VE": (6.4, -66.6), "VN": (14.1, 108.3), "YE": (15.6, 48.5),
+    "ZM": (-13.1, 27.8), "ZW": (-19.0, 29.2), "WS": (-13.6, -172.4), "CD": (-4.0, 21.8),
+    "FK": (-51.8, -59.2), "GL": (-71.7, -42.6), "PF": (-17.7, -149.4), "NC": (-21.3, 165.5),
+    "NZ": (-40.9, 174.9), "AU": (-25.3, 133.8), "FJ": (-16.6, 179.4), "PG": (-6.3, 143.9),
+    "SB": (-9.4, 160.2), "VU": (-16.4, 167.3), "TO": (-21.2, -175.2), "TV": (-7.5, 178.7),
+    "KI": (-3.4, 173.0), "FM": (7.4, 150.5), "PW": (7.5, 134.5), "MH": (7.1, 171.2),
+    "NR": (-0.5, 166.9), "NU": (-19.0, -169.6), "CK": (-21.2, -159.8), "NF": (-29.0, 167.9),
+    "WF": (-13.3, -176.2), "PN": (-24.7, -127.4), "AS": (-14.3, -170.7), "GU": (13.4, 144.8),
+    "MP": (15.2, 145.3), "PW": (7.5, 134.5), "NF": (-29.0, 167.9), "CX": (-10.4, 105.7),
+    "CC": (-12.2, 96.8), "IO": (-6.3, 71.8), "TF": (-49.3, 69.3), "GS": (-54.4, -36.6),
+    "AQ": (-82.9, 135.0), "BV": (-54.4, 3.4), "HM": (-53.1, 72.5), "EH": (24.2, -12.9),
+    "ST": (0.2, 6.6), "KM": (-11.6, 43.3), "SC": (-4.7, 55.5), "MV": (3.2, 73.2),
+    "BN": (4.5, 114.7), "LA": (19.9, 102.5), "BT": (27.5, 90.4), "MO": (22.2, 113.5),
+    "KY": (19.3, -81.2), "BM": (32.3, -64.8), "AW": (12.5, -69.9), "BQ": (12.2, -68.3),
+    "CW": (12.1, -68.9), "SX": (18.0, -63.1), "TC": (21.7, -71.6), "DM": (15.4, -61.4),
+    "BL": (17.9, -62.8), "MF": (18.1, -63.1), "PM": (46.8, -56.3), "KN": (17.4, -62.7),
+    "LC": (13.9, -61.0), "VC": (13.2, -61.2), "AG": (17.1, -61.8), "MS": (16.7, -62.2),
+    "AI": (18.2, -63.1), "VG": (18.4, -64.6), "VI": (18.3, -64.9), "FK": (-51.8, -59.2),
+    "JE": (49.2, -2.1), "GG": (49.5, -2.6), "IM": (54.2, -4.5), "AD": (42.5, 1.5),
+    "LI": (47.2, 9.6), "MC": (43.7, 7.4), "SM": (43.9, 12.5), "VA": (41.9, 12.4),
+    "SJ": (77.5, 23.0), "FO": (62.0, -7.0), "GI": (36.1, -5.3), "RE": (-21.1, 55.5),
+    "MQ": (14.6, -61.0), "GP": (16.3, -61.6), "GF": (3.9, -53.1),
+}
+
 
 def country_group(iso2: str) -> str:
     if iso2 in COUNTRY_GROUPS_A:
@@ -507,6 +576,9 @@ def build_incident_object(conn: sqlite3.Connection, inc: dict, as_of_date: datet
         for n in news
     ]
 
+    if lat is None and iso2 and iso2 in ISO2_CENTROIDS:
+        lat, lon = ISO2_CENTROIDS[iso2]
+
     return {
         "incident_id": dashboard_id,
         "canonical_name": canonical_name,
@@ -797,8 +869,122 @@ def main() -> None:
             json.dump(agg, f, indent=2, ensure_ascii=False)
         print(f"  agg/{window}.json ({len(series)} days)")
 
+    print("Generating MD reports...")
+    md_root = output_dir.parent / "reports"
+    md_root.mkdir(parents=True, exist_ok=True)
+    md_count = 0
+    for i in range(total_days):
+        d = earliest_digest + timedelta(days=i)
+        if d > as_of_naive:
+            break
+        digest = generate_daily_digest(all_incidents, d, as_of)
+        if digest["summary"]["reportable_total"] > 0:
+            md = generate_md_report(digest, d)
+            year = d.strftime("%Y")
+            month = d.strftime("%m")
+            fname = f"{d.strftime('%Y%m%d')}.md"
+            md_dir = md_root / year / month
+            md_dir.mkdir(parents=True, exist_ok=True)
+            with open(md_dir / fname, "w") as f:
+                f.write(md)
+            md_count += 1
+    print(f"  {md_count} MD reports written")
+
     conn.close()
     print("Done.")
+
+
+def _fmt_dt(iso_str: str) -> str:
+    try:
+        dt = datetime.fromisoformat(iso_str.replace("Z", "+00:00"))
+        return dt.strftime("%Y-%m-%d %H:%M")
+    except (ValueError, AttributeError):
+        return iso_str[:16] if iso_str else ""
+
+
+def generate_md_report(digest: dict, target_date: datetime) -> str:
+    s = digest["summary"]
+    lines: list[str] = []
+    lines.append(f"# Daily Disaster Digest — {target_date.strftime('%Y-%m-%d')}")
+    lines.append("")
+    lines.append(
+        f"**{s['reportable_total']} active incidents** · "
+        f"{s['disease_outbreaks']} disease outbreaks · "
+        f"{s['countries_affected']} countries · "
+        f"{s['news_total']} news items"
+    )
+    if s["critical"] or s["high"]:
+        lines.append(
+            f"**{s['critical']} CRITICAL** · **{s['high']} HIGH** · "
+            f"{s['medium']} MEDIUM · {s['low']} LOW"
+        )
+    lines.append("")
+
+    high_plus = [
+        i for i in digest["incidents"]
+        if SEVERITY_RANK.get(i["severity"], 0) >= SEVERITY_RANK["HIGH"]
+    ]
+    high_plus.sort(key=lambda i: (-SEVERITY_RANK.get(i["severity"], 0), i.get("news_total", 0)), reverse=False)
+    high_plus.sort(key=lambda i: -SEVERITY_RANK.get(i["severity"], 0))
+
+    diseases = [i for i in high_plus if i["is_disease"]]
+    geos = [i for i in high_plus if not i["is_disease"]]
+
+    if geos:
+        lines.append("## Geophysical")
+        lines.append("")
+        for inc in geos:
+            _md_incident(lines, inc)
+    if diseases:
+        lines.append("## Disease Outbreaks")
+        lines.append("")
+        for inc in diseases:
+            _md_incident(lines, inc)
+
+    medium = [
+        i for i in digest["incidents"]
+        if SEVERITY_RANK.get(i["severity"], 0) == SEVERITY_RANK["MEDIUM"]
+    ]
+    if medium:
+        lines.append("## Medium Severity")
+        lines.append("")
+        for inc in sorted(medium, key=lambda i: -i.get("news_total", 0)):
+            name = inc["canonical_name"] or inc.get("incident_id", "")
+            itype = inc["incident_type"] or "Unknown"
+            news_n = inc.get("news_total", 0)
+            lines.append(f"- **{name}** ({itype}) — {news_n} news · {inc.get('country', '')}")
+        lines.append("")
+
+    return "\n".join(lines) + "\n"
+
+
+def _md_incident(lines: list[str], inc: dict) -> None:
+    name = inc["canonical_name"] or inc.get("incident_id", "")
+    itype = inc["incident_type"] or "Unknown"
+    sev = inc["severity"]
+    news_n = inc.get("news_total", 0)
+    logs = inc.get("logs", [])
+    country = inc.get("country", "")
+    lines.append(f"### {name} — {itype}")
+    meta_parts = [f"{sev}", f"{news_n} news", f"{len(logs)} logs"]
+    if country:
+        meta_parts.append(country)
+    lines.append(f"*{' · '.join(meta_parts)}*")
+    lines.append("")
+    if logs:
+        for log in logs:
+            ldt = _fmt_dt(log.get("log_datetime", ""))
+            n_linked = len(log.get("news", []))
+            lines.append(f"**{ldt}** ({n_linked} article{'s' if n_linked != 1 else ''})")
+            lines.append("")
+            summary = log.get("summary", "")
+            if summary:
+                lines.append(f"> {summary}")
+                lines.append("")
+    elif inc.get("summary"):
+        lines.append(f"> {inc['summary']}")
+        lines.append("")
+    lines.append("")
 
 
 if __name__ == "__main__":
