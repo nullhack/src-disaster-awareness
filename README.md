@@ -9,11 +9,52 @@ with the methodology layer (agents, skills, knowledge), the drift gates
 
 ## How to run
 
+### Full pipeline (one command)
+
 ```
-uv run python -m flowr session init pipeline-flow --name default
-uv run python -m flowr check --session default
-uv run python -m flowr next --session default
-uv run python -m flowr transition <trigger> --session default
+uv run python -m disaster_report ingest -v
+```
+
+Runs all three phases in sequence: fetch+store → search news → repoll active incidents → generate logs.
+
+### Step by step
+
+```bash
+# 1. Fetch + store source reports (USGS, GDACS, WHO)
+uv run python -m disaster_report ingest-records -v
+
+# 2. Search news for new reports (DDG + AI filter)
+uv run python -m disaster_report search-news -v
+
+# 3. Repoll active incidents for fresh news
+uv run python -m disaster_report search-news --repoll -v
+
+# 4. Generate delta summaries as logs
+uv run python -m disaster_report generate-logs -v
+
+# 5. Generate dashboard JSON from DB + push to gh-pages
+uv run python scripts/publish_dashboard_data.py
+```
+
+### Other commands
+
+```bash
+# Render the markdown brief from the read model
+uv run python -m disaster_report report
+
+# Generate dashboard JSON only (no gh-pages push)
+uv run python scripts/generate_dashboard_data.py
+
+# Inspect DB tables
+uv run python scripts/show_tables.py
+```
+
+### Options
+
+- `--source USGS|GDACS|WHO` — limit to one source (ingest-records, search-news)
+- `--source-id <id>` — force news search for one report (bypasses gate)
+- `--news-timelimit d|w|m` — DDG news window: day/week/month (default: w)
+- `-v` — verbose INFO logging with `[i/N]` progress indicators
 ```
 
 ## Secrets
