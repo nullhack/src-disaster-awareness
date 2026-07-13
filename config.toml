@@ -1,0 +1,9 @@
+[database]
+db_url = "sqlite:///./disaster_report.db"
+
+[openrouter]
+model = "openrouter/deepseek/deepseek-v4-flash"
+
+[ingest]
+active_window_days = 7
+min_log_news_threshold = 3
