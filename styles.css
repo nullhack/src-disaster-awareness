@@ -625,8 +625,25 @@ code { font-family: var(--mono); font-size: .9em; }
   .trend-panel + .trend-panel { border-left: none; border-top: 1px solid var(--rc-line); }
 }
 @media (max-width: 640px) {
-  .topbar { padding: 10px 16px; }
+  .topbar { padding: 10px 16px; flex-wrap: wrap; }
+  :root { --topbar-h: 100px; }
+  .topbar__search { flex: 1 1 100%; order: 99; margin: 0; }
+  .topbar__search input { width: 100%; max-width: none; }
+  .topbar__controls { gap: 8px; }
+  .topbar__controls .freshness { display: none; }
   .layout, .footer { padding-left: 16px; padding-right: 16px; }
   .news-row { grid-template-columns: 1fr; gap: 4px; }
   .drawer { width: 98vw; max-height: 95vh; }
+  .filters { padding: 8px 12px; gap: 6px 12px; }
+  .filter-group__label { font-size: 9px; }
+  .chip { padding: 5px 8px; font-size: 10px; }
+  .card--kpi-side > .kpis { padding: 8px; gap: 6px; flex-direction: row; }
+  .kpi-axis { flex: 1 1 0; }
+  .kpi-axis + .kpi-axis { padding-top: 0; padding-left: 6px; border-top: none; border-left: 1px solid var(--rc-line); }
+  .kpi-axis__label { font-size: 8px; margin-bottom: 4px; }
+  .kpis--pair { grid-template-columns: 1fr; gap: 4px; }
+  .card--kpi-side .kpi { padding: 5px 6px; }
+  .card--kpi-side .kpi__value { font-size: 16px; }
+  .card--kpi-side .kpi__label { font-size: 8px; margin-top: 1px; }
+  .card--kpi-side .kpi__sub { font-size: 7px; margin-top: 0; }
 }
