@@ -209,7 +209,7 @@ function refreshDateControls() {
   const reportLink = $("#dpReport");
   if (STATE.digestDate) {
     const [y, m] = STATE.digestDate.split("-");
-    reportLink.href = `reports/${y}/${m}/${y}${m}${STATE.digestDate.slice(8)}.md`;
+    reportLink.href = `https://github.com/nullhack/src-disaster-awareness/blob/gh-pages/reports/${y}/${m}/${y}${m}${STATE.digestDate.slice(8)}.md`;
     reportLink.hidden = false;
   } else {
     reportLink.hidden = true;
