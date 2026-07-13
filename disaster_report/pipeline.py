@@ -76,6 +76,8 @@ def _commit_news_for_report(
                 birthed_incident_id = _mint_id()
             incident_id = birthed_incident_id
             wh.assign_news_to_incident(news_id, incident_id)
+        elif birthed_incident_id is None:
+            birthed_incident_id = incident_id
         wh.add_report_incident(report_id, incident_id)
 
 
