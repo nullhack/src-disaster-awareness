@@ -206,6 +206,14 @@ function refreshDateControls() {
   $("#digestMeta").textContent = entry
     ? `${entry.reportable_total} reportable · ${entry.critical} critical · ${entry.disease_outbreaks} disease`
     : "";
+  const reportLink = $("#dpReport");
+  if (STATE.digestDate) {
+    const [y, m] = STATE.digestDate.split("-");
+    reportLink.href = `reports/${y}/${m}/${y}${m}${STATE.digestDate.slice(8)}.md`;
+    reportLink.hidden = false;
+  } else {
+    reportLink.hidden = true;
+  }
 }
 
 async function loadDigest(file) {
