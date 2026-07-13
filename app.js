@@ -221,8 +221,7 @@ async function loadDigest(file) {
   const d = STATE.digest;
   STATE.digestDate = d.report_date;
   $("#freshnessLabel").textContent = `Updated ${(d.generated_at || "").slice(11, 16)} UTC`;
-  $("#schemaVer").textContent = "v" + d.schema_version;
-  $("#winDays").textContent = d.tracking_window_days;
+  
   populateTypeFilter(d.incidents);
   populateRegionFilter(d.incidents);
   refreshDateControls();
