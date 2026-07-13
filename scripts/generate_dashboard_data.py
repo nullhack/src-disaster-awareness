@@ -797,8 +797,122 @@ def main() -> None:
             json.dump(agg, f, indent=2, ensure_ascii=False)
         print(f"  agg/{window}.json ({len(series)} days)")
 
+    print("Generating MD reports...")
+    md_root = output_dir.parent / "reports"
+    md_root.mkdir(parents=True, exist_ok=True)
+    md_count = 0
+    for i in range(total_days):
+        d = earliest_digest + timedelta(days=i)
+        if d > as_of_naive:
+            break
+        digest = generate_daily_digest(all_incidents, d, as_of)
+        if digest["summary"]["reportable_total"] > 0:
+            md = generate_md_report(digest, d)
+            year = d.strftime("%Y")
+            month = d.strftime("%m")
+            fname = f"{d.strftime('%Y%m%d')}.md"
+            md_dir = md_root / year / month
+            md_dir.mkdir(parents=True, exist_ok=True)
+            with open(md_dir / fname, "w") as f:
+                f.write(md)
+            md_count += 1
+    print(f"  {md_count} MD reports written")
+
     conn.close()
     print("Done.")
+
+
+def _fmt_dt(iso_str: str) -> str:
+    try:
+        dt = datetime.fromisoformat(iso_str.replace("Z", "+00:00"))
+        return dt.strftime("%Y-%m-%d %H:%M")
+    except (ValueError, AttributeError):
+        return iso_str[:16] if iso_str else ""
+
+
+def generate_md_report(digest: dict, target_date: datetime) -> str:
+    s = digest["summary"]
+    lines: list[str] = []
+    lines.append(f"# Daily Disaster Digest — {target_date.strftime('%Y-%m-%d')}")
+    lines.append("")
+    lines.append(
+        f"**{s['reportable_total']} active incidents** · "
+        f"{s['disease_outbreaks']} disease outbreaks · "
+        f"{s['countries_affected']} countries · "
+        f"{s['news_total']} news items"
+    )
+    if s["critical"] or s["high"]:
+        lines.append(
+            f"**{s['critical']} CRITICAL** · **{s['high']} HIGH** · "
+            f"{s['medium']} MEDIUM · {s['low']} LOW"
+        )
+    lines.append("")
+
+    high_plus = [
+        i for i in digest["incidents"]
+        if SEVERITY_RANK.get(i["severity"], 0) >= SEVERITY_RANK["HIGH"]
+    ]
+    high_plus.sort(key=lambda i: (-SEVERITY_RANK.get(i["severity"], 0), i.get("news_total", 0)), reverse=False)
+    high_plus.sort(key=lambda i: -SEVERITY_RANK.get(i["severity"], 0))
+
+    diseases = [i for i in high_plus if i["is_disease"]]
+    geos = [i for i in high_plus if not i["is_disease"]]
+
+    if geos:
+        lines.append("## Geophysical")
+        lines.append("")
+        for inc in geos:
+            _md_incident(lines, inc)
+    if diseases:
+        lines.append("## Disease Outbreaks")
+        lines.append("")
+        for inc in diseases:
+            _md_incident(lines, inc)
+
+    medium = [
+        i for i in digest["incidents"]
+        if SEVERITY_RANK.get(i["severity"], 0) == SEVERITY_RANK["MEDIUM"]
+    ]
+    if medium:
+        lines.append("## Medium Severity")
+        lines.append("")
+        for inc in sorted(medium, key=lambda i: -i.get("news_total", 0)):
+            name = inc["canonical_name"] or inc.get("incident_id", "")
+            itype = inc["incident_type"] or "Unknown"
+            news_n = inc.get("news_total", 0)
+            lines.append(f"- **{name}** ({itype}) — {news_n} news · {inc.get('country', '')}")
+        lines.append("")
+
+    return "\n".join(lines) + "\n"
+
+
+def _md_incident(lines: list[str], inc: dict) -> None:
+    name = inc["canonical_name"] or inc.get("incident_id", "")
+    itype = inc["incident_type"] or "Unknown"
+    sev = inc["severity"]
+    news_n = inc.get("news_total", 0)
+    logs = inc.get("logs", [])
+    country = inc.get("country", "")
+    lines.append(f"### {name} — {itype}")
+    meta_parts = [f"{sev}", f"{news_n} news", f"{len(logs)} logs"]
+    if country:
+        meta_parts.append(country)
+    lines.append(f"*{' · '.join(meta_parts)}*")
+    lines.append("")
+    if logs:
+        for log in logs:
+            ldt = _fmt_dt(log.get("log_datetime", ""))
+            n_linked = len(log.get("news", []))
+            lines.append(f"**{ldt}** ({n_linked} article{'s' if n_linked != 1 else ''})")
+            lines.append("")
+            summary = log.get("summary", "")
+            if summary:
+                lines.append(f"> {summary}")
+                lines.append("")
+    elif inc.get("summary"):
+        lines.append(f"> {inc['summary']}")
+        lines.append("")
+    lines.append("")
 
 
 if __name__ == "__main__":
