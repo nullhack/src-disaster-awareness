@@ -24,6 +24,11 @@ jobs:
           python-version: "3.13"
       - uses: astral-sh/setup-uv@v3
       - run: uv sync
+      - run: uv pip install -e .
+      - name: Configure git identity
+        run: |
+          git config --global user.name "eol"
+          git config --global user.email "nullhack@users.noreply.github.com"
       - name: Extract DB
         run: git show origin/db:disaster_report.db > disaster_report.db
       - name: Publish to gh-pages

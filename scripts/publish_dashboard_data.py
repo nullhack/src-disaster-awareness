@@ -26,7 +26,14 @@ TMP_DIR = REPO_ROOT / ".cache" / "dashboard-build"
 
 def run(cmd: list[str], cwd: Path | None = None) -> subprocess.CompletedProcess:
     print(f"  $ {' '.join(cmd)}")
-    return subprocess.run(cmd, cwd=cwd or REPO_ROOT, check=True, capture_output=True, text=True)
+    try:
+        return subprocess.run(cmd, cwd=cwd or REPO_ROOT, check=True, capture_output=True, text=True)
+    except subprocess.CalledProcessError as exc:
+        if exc.stdout:
+            print(exc.stdout, end="")
+        if exc.stderr:
+            print(exc.stderr, end="", file=sys.stderr)
+        raise
 
 
 def main() -> None:
