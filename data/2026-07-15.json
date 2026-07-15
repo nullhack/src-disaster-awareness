@@ -1,40 +1,40 @@
 {
   "schema_version": "1.4",
   "report_date": "2026-07-15",
-  "generated_at": "2026-07-15T04:27:38Z",
+  "generated_at": "2026-07-15T07:27:47Z",
   "as_of": "2026-07-15",
   "tracking_window_days": 14,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 85,
-    "new_today": 0,
+    "reportable_total": 89,
+    "new_today": 14,
     "critical": 2,
-    "high": 47,
+    "high": 51,
     "medium": 36,
     "low": 0,
     "disease_outbreaks": 22,
-    "countries_affected": 37,
-    "news_total": 479,
+    "countries_affected": 39,
+    "news_total": 576,
     "max_magnitude": 27577.0,
     "by_severity": {
       "CRITICAL": 2,
-      "HIGH": 47,
+      "HIGH": 51,
       "MEDIUM": 36,
       "LOW": 0
     },
     "by_type": {
       "Volcano": 3,
       "Tropical Cyclone": 4,
-      "Forest Fire": 3,
+      "Forest Fire": 5,
       "Flood": 5,
-      "Earthquake": 48,
+      "Earthquake": 50,
       "Disease": 22
     },
     "by_region": {
-      "Asia": 52,
-      "Europe": 4,
+      "Asia": 53,
+      "Europe": 6,
       "Americas": 13,
-      "Oceania": 5,
+      "Oceania": 6,
       "Africa": 9,
       "Unknown": 2
     }
@@ -60,7 +60,7 @@
     },
     {
       "country": "Philippines",
-      "count": 7,
+      "count": 8,
       "max_sev_rank": 2,
       "iso2": "PH",
       "region": "Asia",
@@ -212,6 +212,15 @@
       "max_severity": "MEDIUM"
     },
     {
+      "country": "Fiji",
+      "count": 1,
+      "max_sev_rank": 2,
+      "iso2": "FJ",
+      "region": "Oceania",
+      "country_group": "B",
+      "max_severity": "MEDIUM"
+    },
+    {
       "country": "United States",
       "count": 3,
       "max_sev_rank": 3,
@@ -226,6 +235,15 @@
       "max_sev_rank": 3,
       "iso2": "CL",
       "region": "Americas",
+      "country_group": "C",
+      "max_severity": "HIGH"
+    },
+    {
+      "country": "France",
+      "count": 2,
+      "max_sev_rank": 3,
+      "iso2": "FR",
+      "region": "Europe",
       "country_group": "C",
       "max_severity": "HIGH"
     },
@@ -261,15 +279,6 @@
       "count": 1,
       "max_sev_rank": 3,
       "iso2": "GR",
-      "region": "Europe",
-      "country_group": "C",
-      "max_severity": "HIGH"
-    },
-    {
-      "country": "France",
-      "count": 1,
-      "max_sev_rank": 3,
-      "iso2": "FR",
       "region": "Europe",
       "country_group": "C",
       "max_severity": "HIGH"
@@ -365,6 +374,15 @@
       "max_severity": "HIGH"
     },
     {
+      "country": "Spain",
+      "count": 1,
+      "max_sev_rank": 3,
+      "iso2": "ES",
+      "region": "Europe",
+      "country_group": "C",
+      "max_severity": "HIGH"
+    },
+    {
       "country": "Venezuela",
       "count": 1,
       "max_sev_rank": 4,
@@ -396,7 +414,7 @@
       "disease_name": null,
       "event_date": "2025-10-14",
       "first_reported_date": "2025-10-14",
-      "last_updated_date": "2026-07-12",
+      "last_updated_date": "2026-07-15",
       "days_since_event": 274,
       "source_count": 1,
       "should_report": true,
@@ -406,7 +424,7 @@
         "usgs": 0,
         "gdacs": 1,
         "healthmap": 0,
-        "news": 2
+        "news": 3
       },
       "source_links": [
         {
@@ -438,9 +456,15 @@
           "url": "https://databoks.katadata.co.id/en/demographics/statistics/508447b2114edeb/mount-lewotobi-lakilaki-erupted-again-this-morning-monday-13-july-2026",
           "outlet": "Databoks",
           "published_date": "2026-07-12T02:25:35+00:00"
+        },
+        {
+          "headline": "Alert! Mount Lewotobi Laki-laki Erupted Again Tonight (Tuesday, 14 July 2026)",
+          "url": "https://databoks.katadata.co.id/en/demographics/statistics/6addb0c64655265/alert-mount-lewotobi-lakilaki-erupted-again-tonight-tuesday-14-july-2026",
+          "outlet": "Databoks",
+          "published_date": "2026-07-15T06:44:48+00:00"
         }
       ],
-      "news_total": 2,
+      "news_total": 3,
       "logs": [
         {
           "log_datetime": "2026-07-08T19:01:18+00:00",
@@ -478,7 +502,7 @@
       "disease_name": null,
       "event_date": "2025-11-19",
       "first_reported_date": "2025-11-19",
-      "last_updated_date": "2026-07-08",
+      "last_updated_date": "2026-07-15",
       "days_since_event": 238,
       "source_count": 1,
       "should_report": true,
@@ -488,7 +512,7 @@
         "usgs": 0,
         "gdacs": 1,
         "healthmap": 0,
-        "news": 3
+        "news": 5
       },
       "source_links": [
         {
@@ -526,9 +550,21 @@
           "url": "https://www.newsday.com/news/nation/indonesia-mount-semeru-volcano-eruption-climbers-y41427",
           "outlet": "Newsday",
           "published_date": "2026-07-08T19:32:48+00:00"
+        },
+        {
+          "headline": "Mount Semeru Eruption Triggers Ash Rain in Lumajang",
+          "url": "https://en.tempo.co/read/2113750/mount-semeru-eruption-triggers-ash-rain-in-lumajang",
+          "outlet": "Tempo.co English",
+          "published_date": "2026-07-12T06:45:18+00:00"
+        },
+        {
+          "headline": "Mount Semeru Erupts Again This Afternoon, Ash Plume Reaches 800 Meters Above Peak",
+          "url": "https://databoks.katadata.co.id/en/demographics/statistics/42f08c57e8630d0/mount-semeru-erupts-again-this-afternoon-ash-plume-reaches-800-meters-above-peak",
+          "outlet": "Databoks",
+          "published_date": "2026-07-15T06:45:21+00:00"
         }
       ],
-      "news_total": 3,
+      "news_total": 5,
       "logs": [
         {
           "log_datetime": "2026-07-08T19:32:48+00:00",
@@ -580,7 +616,7 @@
       "disease_name": null,
       "event_date": "2026-03-15",
       "first_reported_date": "2026-03-15",
-      "last_updated_date": "2026-07-13",
+      "last_updated_date": "2026-07-15",
       "days_since_event": 122,
       "source_count": 1,
       "should_report": true,
@@ -590,7 +626,7 @@
         "usgs": 0,
         "gdacs": 1,
         "healthmap": 0,
-        "news": 5
+        "news": 6
       },
       "source_links": [
         {
@@ -640,9 +676,15 @@
           "url": "https://businessmirror.com.ph/2026/07/13/cebu-continues-monitoring-kanlaon-ashfall/",
           "outlet": "BusinessMirror",
           "published_date": "2026-07-13T00:00:00+00:00"
+        },
+        {
+          "headline": "DOST urges continued vigilance amid Kanlaon unrest",
+          "url": "https://www.philstar.com/the-freeman/cebu-news/2026/07/15/2542300/dost-urges-continued-vigilance-amid-kanlaon-unrest",
+          "outlet": "Philstar.com",
+          "published_date": "2026-07-15T00:00:00+00:00"
         }
       ],
-      "news_total": 5,
+      "news_total": 6,
       "logs": [
         {
           "log_datetime": "2026-07-04T16:49:11+00:00",
@@ -853,7 +895,7 @@
     {
       "incident_id": "20260701-CN-TC",
       "canonical_name": "Red notification for tropical cyclone BAVI-26. Population affected by Category 1 (120 km/h) wind speeds or higher is 36.778 million .",
-      "summary": "Typhoon Bavi made landfall in eastern China’s Zhejiang province on July 12, 2026, weakening to a severe tropical storm as it moved inland. Authorities evacuated 1.7 to nearly 3 million people ahead of the storm, which brought heavy rainfall and widespread flight and railway cancellations across the Yangtze River Delta region. The storm triggered red rainstorm alerts in parts of China and continued to cause flooding and infrastructure damage.",
+      "summary": "Typhoon Bavi, which made landfall in eastern China, forced more than 260,000 people to evacuate due to severe flooding. The storm has weakened but is shifting flood risk northward, and North Korea is now bracing for heavy rain and strong winds as the system approaches.",
       "country": "China",
       "iso2": "CN",
       "lat": 16.8,
@@ -871,7 +913,7 @@
       "disease_name": null,
       "event_date": "2026-07-01",
       "first_reported_date": "2026-07-01",
-      "last_updated_date": "2026-07-13",
+      "last_updated_date": "2026-07-15",
       "days_since_event": 14,
       "source_count": 1,
       "should_report": true,
@@ -881,7 +923,7 @@
         "usgs": 0,
         "gdacs": 1,
         "healthmap": 0,
-        "news": 92
+        "news": 95
       },
       "source_links": [
         {
@@ -1453,9 +1495,27 @@
           "url": "https://www.msn.com/en-in/weather/general/typhoon-bavi-makes-landfall-in-china-more-than-1-7-million-evacuated/ar-AA27JzmQ?ocid=BingNewsVerp",
           "outlet": "News9Live on MSN",
           "published_date": "2026-07-13T02:56:35+00:00"
+        },
+        {
+          "headline": "More than 260,000 evacuated as Typhoon Bavi brings severe floods",
+          "url": "https://www.channelnewsasia.com/east-asia/typhoon-bavi-china-floods-people-evacuated-6252536",
+          "outlet": "CNA",
+          "published_date": "2026-07-15T06:46:17+00:00"
+        },
+        {
+          "headline": "North Korea Braces for Storms as Typhoon Bavi Draw Nears",
+          "url": "https://en.tempo.co/read/2113682/north-korea-braces-for-storms-as-typhoon-bavi-draw-nears",
+          "outlet": "Tempo.co English",
+          "published_date": "2026-07-15T06:46:17+00:00"
+        },
+        {
+          "headline": "Typhoon weakens, but flood risk shifts northward",
+          "url": "https://global.chinadaily.com.cn/a/202607/14/WS6a557b67a310986e2b4650e6.html",
+          "outlet": "China Daily Global Edition",
+          "published_date": "2026-07-15T06:46:19+00:00"
         }
       ],
-      "news_total": 92,
+      "news_total": 95,
       "logs": [
         {
           "log_datetime": "2026-06-24T00:00:00+00:00",
@@ -2130,6 +2190,33 @@
               "outlet": "News9Live on MSN"
             }
           ]
+        },
+        {
+          "log_datetime": "2026-07-15T06:46:19+00:00",
+          "summary": "Typhoon Bavi, which made landfall in eastern China, forced more than 260,000 people to evacuate due to severe flooding. The storm has weakened but is shifting flood risk northward, and North Korea is now bracing for heavy rain and strong winds as the system approaches.",
+          "news": [
+            {
+              "news_id": 1784097998463,
+              "url": "https://www.channelnewsasia.com/east-asia/typhoon-bavi-china-floods-people-evacuated-6252536",
+              "headline": "More than 260,000 evacuated as Typhoon Bavi brings severe floods",
+              "published_date": "2026-07-15T06:46:17+00:00",
+              "outlet": "CNA"
+            },
+            {
+              "news_id": 1784097998478,
+              "url": "https://en.tempo.co/read/2113682/north-korea-braces-for-storms-as-typhoon-bavi-draw-nears",
+              "headline": "North Korea Braces for Storms as Typhoon Bavi Draw Nears",
+              "published_date": "2026-07-15T06:46:17+00:00",
+              "outlet": "Tempo.co English"
+            },
+            {
+              "news_id": 1784097998487,
+              "url": "https://global.chinadaily.com.cn/a/202607/14/WS6a557b67a310986e2b4650e6.html",
+              "headline": "Typhoon weakens, but flood risk shifts northward",
+              "published_date": "2026-07-15T06:46:19+00:00",
+              "outlet": "China Daily Global Edition"
+            }
+          ]
         }
       ]
     },
@@ -2621,7 +2708,7 @@
       "disease_name": null,
       "event_date": "2025-07-14",
       "first_reported_date": "2025-07-14",
-      "last_updated_date": "2026-07-08",
+      "last_updated_date": "2026-07-15",
       "days_since_event": 366,
       "source_count": 1,
       "should_report": true,
@@ -2631,7 +2718,7 @@
         "usgs": 0,
         "gdacs": 1,
         "healthmap": 0,
-        "news": 1
+        "news": 2
       },
       "source_links": [
         {
@@ -2657,9 +2744,15 @@
           "url": "https://www.trtworld.com/article/405c8476b0c5",
           "outlet": "TRT World",
           "published_date": "2026-07-08T15:13:52+00:00"
+        },
+        {
+          "headline": "Heavy Rain Collapses Roof and Kills 11 People in Northwest Pakistan",
+          "url": "https://www.msn.com/en-ae/news/other/heavy-rain-collapses-roof-and-kills-11-people-in-northwest-pakistan/ar-AA27RUFH?ocid=BingNewsVerp",
+          "outlet": "Asharq Alawsat (English) on MSN",
+          "published_date": "2026-07-15T06:48:32+00:00"
         }
       ],
-      "news_total": 1,
+      "news_total": 2,
       "logs": [
         {
           "log_datetime": "2026-07-08T15:13:52+00:00",
@@ -3095,7 +3188,7 @@
     {
       "incident_id": "20260606-CN-FL",
       "canonical_name": "Orange flood alert in China",
-      "summary": "Typhoon Bavi is approaching China's east coast, triggering floods and rare tornadoes. Devastating floods have also led to the escape of hundreds of snakes, including venomous cobras, from a breeding farm in Nanning.",
+      "summary": "As of July 14, China's National Meteorological Center issued an orange alert for rainstorms, noting that 169 tailings ponds are affected by rainfall. Typhoon Bavi, the strongest storm to hit mainland China this year, forced over 260,000 people to evacuate their homes in Liaoning province. Additionally, videos surfaced of hundreds of snakes escaping into floodwaters, reportedly after Typhoon Maysak.",
       "country": "China",
       "iso2": "CN",
       "lat": 27.1175905,
@@ -3105,15 +3198,15 @@
       "incident_type": "Flood",
       "incident_category": "Natural",
       "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
+      "severity": "HIGH",
+      "priority": "HIGH",
+      "priority_rank": 1,
       "pandemic_potential": null,
       "event_status": null,
       "disease_name": null,
       "event_date": "2026-06-06",
       "first_reported_date": "2026-06-06",
-      "last_updated_date": "2026-07-10",
+      "last_updated_date": "2026-07-15",
       "days_since_event": 39,
       "source_count": 1,
       "should_report": true,
@@ -3123,7 +3216,7 @@
         "usgs": 0,
         "gdacs": 1,
         "healthmap": 0,
-        "news": 11
+        "news": 17
       },
       "source_links": [
         {
@@ -3193,10 +3286,22 @@
           "published_date": "2026-07-08T17:32:40+00:00"
         },
         {
+          "headline": "Over 260,000 evacuated ahead of Bavi",
+          "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/07/15/over-260000-evacuated-ahead-of-bavi",
+          "outlet": "The Star",
+          "published_date": "2026-07-09T06:50:40+00:00"
+        },
+        {
           "headline": "China, Taiwan brace for Typhoon Bavi, possibly the most powerful storm in years...",
           "url": "https://bworldonline.com/world/2026/07/09/762297/china-taiwan-brace-for-typhoon-bavi-possibly-the-most-powerful-storm-in-years/",
           "outlet": "BusinessWorld",
           "published_date": "2026-07-09T17:32:37+00:00"
+        },
+        {
+          "headline": "China braces for a powerful typhoon after a week of deadly storms",
+          "url": "https://www.wral.com/news/ap/b2452-china-braces-for-a-powerful-typhoon-after-a-week-of-deadly-storms/",
+          "outlet": "WRAL.com Raleigh",
+          "published_date": "2026-07-10T06:50:36+00:00"
         },
         {
           "headline": "Typhoon Bavi takes aim at China as Taiwan's capital shuts schools",
@@ -3209,9 +3314,33 @@
           "url": "https://www.accuweather.com/en/severe-weather/torrential-rains-bring-devastating-floods-to-a-chinese-city-and-a-snake-invasion/1910146",
           "outlet": "AccuWeather",
           "published_date": "2026-07-10T17:32:37+00:00"
+        },
+        {
+          "headline": "Orange alert for rainstorms! A total of 169 tailings ponds are affected by the rainfall, including 33 \"head-impoundment\" ponds.",
+          "url": "https://news.chemnet.com/news-7485.html",
+          "outlet": "ChemNet News",
+          "published_date": "2026-07-11T06:50:37+00:00"
+        },
+        {
+          "headline": "Snake invasion in China: Chilling video of 900 snakes escaping in floodwaters...",
+          "url": "https://me.mashable.com/culture/73748/snake-invasion-in-china-chilling-video-of-900-snakes-escaping-in-floodwaters-leaves-internet-horrifi",
+          "outlet": "Mashable",
+          "published_date": "2026-07-13T06:50:36+00:00"
+        },
+        {
+          "headline": "China to See Unusually Active Typhoon Season After Bavi Passes",
+          "url": "https://www.insurancejournal.com/news/international/2026/07/13/877292.htm",
+          "outlet": "Insurance Journal",
+          "published_date": "2026-07-13T06:50:36+00:00"
+        },
+        {
+          "headline": "More than 260,000 evacuated as Typhoon Bavi hits China",
+          "url": "https://www.msn.com/en-ae/news/other/more-than-260000-evacuated-as-typhoon-bavi-hits-china/ar-AA27Rs16?ocid=BingNewsVerp",
+          "outlet": "Emirates News Agency on MSN",
+          "published_date": "2026-07-15T06:50:40+00:00"
         }
       ],
-      "news_total": 11,
+      "news_total": 17,
       "logs": [
         {
           "log_datetime": "2026-07-08T11:27:24+00:00",
@@ -3299,6 +3428,54 @@
               "headline": "Torrential rains bring devastating floods to a Chinese city and a snake invasion",
               "published_date": "2026-07-10T17:32:37+00:00",
               "outlet": "AccuWeather"
+            }
+          ]
+        },
+        {
+          "log_datetime": "2026-07-15T06:50:40+00:00",
+          "summary": "As of July 14, China's National Meteorological Center issued an orange alert for rainstorms, noting that 169 tailings ponds are affected by rainfall. Typhoon Bavi, the strongest storm to hit mainland China this year, forced over 260,000 people to evacuate their homes in Liaoning province. Additionally, videos surfaced of hundreds of snakes escaping into floodwaters, reportedly after Typhoon Maysak.",
+          "news": [
+            {
+              "news_id": 1784098268966,
+              "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/07/15/over-260000-evacuated-ahead-of-bavi",
+              "headline": "Over 260,000 evacuated ahead of Bavi",
+              "published_date": "2026-07-09T06:50:40+00:00",
+              "outlet": "The Star"
+            },
+            {
+              "news_id": 1784098268924,
+              "url": "https://www.wral.com/news/ap/b2452-china-braces-for-a-powerful-typhoon-after-a-week-of-deadly-storms/",
+              "headline": "China braces for a powerful typhoon after a week of deadly storms",
+              "published_date": "2026-07-10T06:50:36+00:00",
+              "outlet": "WRAL.com Raleigh"
+            },
+            {
+              "news_id": 1784098268946,
+              "url": "https://news.chemnet.com/news-7485.html",
+              "headline": "Orange alert for rainstorms! A total of 169 tailings ponds are affected by the rainfall, including 33 \"head-impoundment\" ponds.",
+              "published_date": "2026-07-11T06:50:37+00:00",
+              "outlet": "ChemNet News"
+            },
+            {
+              "news_id": 1784098268907,
+              "url": "https://me.mashable.com/culture/73748/snake-invasion-in-china-chilling-video-of-900-snakes-escaping-in-floodwaters-leaves-internet-horrifi",
+              "headline": "Snake invasion in China: Chilling video of 900 snakes escaping in floodwaters...",
+              "published_date": "2026-07-13T06:50:36+00:00",
+              "outlet": "Mashable"
+            },
+            {
+              "news_id": 1784098268935,
+              "url": "https://www.insurancejournal.com/news/international/2026/07/13/877292.htm",
+              "headline": "China to See Unusually Active Typhoon Season After Bavi Passes",
+              "published_date": "2026-07-13T06:50:36+00:00",
+              "outlet": "Insurance Journal"
+            },
+            {
+              "news_id": 1784098268955,
+              "url": "https://www.msn.com/en-ae/news/other/more-than-260000-evacuated-as-typhoon-bavi-hits-china/ar-AA27Rs16?ocid=BingNewsVerp",
+              "headline": "More than 260,000 evacuated as Typhoon Bavi hits China",
+              "published_date": "2026-07-15T06:50:40+00:00",
+              "outlet": "Emirates News Agency on MSN"
             }
           ]
         }
@@ -4038,7 +4215,7 @@
     {
       "incident_id": "20260607-PH-EQ",
       "canonical_name": "Earthquake Philippines 2026-06",
-      "summary": "A deadly 7.8 magnitude earthquake struck off the coast of the southern Philippines on June 8, 2026, killing several dozen people and collapsing structures, including in General Santos. Reports also note that an older earthquake video resurfaced online after the tremor. Schools cancelled classes as officials responded to the disaster.",
+      "summary": "A subsequent 6.2-magnitude earthquake struck 34 km WSW of Sarangani, Philippines on July 14, 2026. Separately, monsoon rains triggered landslides and floods across Mindanao, killing 12 people, while the region was still recovering from the earlier 7.8 magnitude earthquake.",
       "country": "Philippines",
       "iso2": "PH",
       "lat": 5.5918,
@@ -4056,7 +4233,7 @@
       "disease_name": null,
       "event_date": "2026-06-07",
       "first_reported_date": "2026-06-07",
-      "last_updated_date": "2026-07-11",
+      "last_updated_date": "2026-07-15",
       "days_since_event": 38,
       "source_count": 1,
       "should_report": true,
@@ -4066,7 +4243,7 @@
         "usgs": 0,
         "gdacs": 1,
         "healthmap": 0,
-        "news": 5
+        "news": 6
       },
       "source_links": [
         {
@@ -4116,9 +4293,15 @@
           "url": "https://davaotoday.com/headline/12-dead-as-monsoon-rains-trigger-landslides-flood-across-mindanao/",
           "outlet": "Davao Today",
           "published_date": "2026-07-11T02:41:07+00:00"
+        },
+        {
+          "headline": "6.2-magnitude quake hits 34 km WSW of Sarangani, Philippines: USGS",
+          "url": "https://thepeninsulaqatar.com/article/14/07/2026/62-magnitude-quake-hits-34-km-wsw-of-sarangani-philippines-usgs",
+          "outlet": "The Peninsula",
+          "published_date": "2026-07-15T06:54:07+00:00"
         }
       ],
-      "news_total": 5,
+      "news_total": 6,
       "logs": [
         {
           "log_datetime": "2026-07-08T21:49:20+00:00",
@@ -4144,6 +4327,33 @@
               "headline": "Months-old Philippine earthquake video resurfaces after deadly tremor",
               "published_date": "2026-07-08T21:49:20+00:00",
               "outlet": "AFP · via Yahoo News"
+            }
+          ]
+        },
+        {
+          "log_datetime": "2026-07-15T06:54:07+00:00",
+          "summary": "A subsequent 6.2-magnitude earthquake struck 34 km WSW of Sarangani, Philippines on July 14, 2026. Separately, monsoon rains triggered landslides and floods across Mindanao, killing 12 people, while the region was still recovering from the earlier 7.8 magnitude earthquake.",
+          "news": [
+            {
+              "news_id": 1783791377750,
+              "url": "https://www.manilatimes.net/2026/07/11/tmt-newswire/nustar-online-presents-bb-pilipinas-2026-natcos-competition-donates-p1m-to-prc-for-sarangani-earthquake-relief/2382701",
+              "headline": "Nustar Online presents Bb Pilipinas 2026 NatCos competition, donates P1M to PRC for Sarangani earthquake relief",
+              "published_date": "2026-07-11T00:00:00+00:00",
+              "outlet": "The Manila Times"
+            },
+            {
+              "news_id": 1783910542623,
+              "url": "https://davaotoday.com/headline/12-dead-as-monsoon-rains-trigger-landslides-flood-across-mindanao/",
+              "headline": "12 dead as monsoon rains trigger landslides, flood across Mindanao",
+              "published_date": "2026-07-11T02:41:07+00:00",
+              "outlet": "Davao Today"
+            },
+            {
+              "news_id": 1784098480273,
+              "url": "https://thepeninsulaqatar.com/article/14/07/2026/62-magnitude-quake-hits-34-km-wsw-of-sarangani-philippines-usgs",
+              "headline": "6.2-magnitude quake hits 34 km WSW of Sarangani, Philippines: USGS",
+              "published_date": "2026-07-15T06:54:07+00:00",
+              "outlet": "The Peninsula"
             }
           ]
         }
@@ -4351,7 +4561,7 @@
     {
       "incident_id": "20260624-VE-EQ",
       "canonical_name": "Earthquake 21 km ENE of San Felipe, Venezuela 2026-06",
-      "summary": "As of July 12, the death toll from the June 24 twin earthquakes in Venezuela has risen to 4,490. Animal shelters are overwhelmed with injured pets, and political responses include Delcy Rodríguez's pragmatic moves such as unblocking X and accepting aid. Relief efforts continue, with the Miami Marlins assisting in packing supplies, while opinion pieces highlight the worsening humanitarian crisis due to sanctions and long-term recovery challenges.",
+      "summary": "New reports detail ongoing recovery: the death toll remains at 4,490, while NASA radar data reveals significant ground shifts near La Guaira. Aid continues from Florida, Guyana, and Houston, bolstered by U.S. State Department support, and volunteers search tirelessly for missing victims. Lawmakers have urged lifting sanctions, and Venezuela’s inflation spike is compounding earthquake misery.",
       "country": "Venezuela",
       "iso2": "VE",
       "lat": 10.453,
@@ -4369,7 +4579,7 @@
       "disease_name": null,
       "event_date": "2026-06-24",
       "first_reported_date": "2026-06-24",
-      "last_updated_date": "2026-07-13",
+      "last_updated_date": "2026-07-15",
       "days_since_event": 21,
       "source_count": 3,
       "should_report": true,
@@ -4379,7 +4589,7 @@
         "usgs": 2,
         "gdacs": 1,
         "healthmap": 0,
-        "news": 67
+        "news": 81
       },
       "source_links": [
         {
@@ -4725,6 +4935,12 @@
           "published_date": "2026-07-10T05:52:01+00:00"
         },
         {
+          "headline": "Where Venezuela’s Earthquakes Shifted the Ground - NASA Science",
+          "url": "https://science.nasa.gov/earth/earth-observatory/where-venezuelas-earthquakes-shifted-the-ground/",
+          "outlet": "NASA",
+          "published_date": "2026-07-10T06:55:14+00:00"
+        },
+        {
           "headline": "US Provides $300 Million in Earthquake Recovery Money to Venezuela While Sitting...",
           "url": "https://www.commondreams.org/news/venezuela-oil-wealth-earthquake",
           "outlet": "CommonDreams.org",
@@ -4759,6 +4975,12 @@
           "url": "https://www.yahoo.com/news/politics/articles/contributor-sanctions-making-venezuelas-earthquake-100300122.html",
           "outlet": "Los Angeles Times Opinion · via Yahoo News",
           "published_date": "2026-07-11T03:07:07+00:00"
+        },
+        {
+          "headline": "Venezuelan fashion house stitches body bags for quake victims",
+          "url": "https://www.jamaicaobserver.com/2026/07/14/venezuelan-fashion-house-stitches-body-bags-quake-victims/",
+          "outlet": "Jamaica Observer",
+          "published_date": "2026-07-11T06:55:17+00:00"
         },
         {
           "headline": "Sanctions are making Venezuela’s earthquake toll so much worse",
@@ -4813,9 +5035,81 @@
           "url": "https://www.msn.com/en-us/news/world/death-toll-from-venezuela-earthquakes-rises-to-4490/ar-AA27KR9h?ocid=BingNewsVerp",
           "outlet": "Reuters on MSN",
           "published_date": "2026-07-13T03:07:04+00:00"
+        },
+        {
+          "headline": "Shakira Urges More Global Support for Schools After Earthquakes: ‘Venezuela, You...",
+          "url": "https://www.yahoo.com/entertainment/music/articles/shakira-urges-more-global-support-172128387.html",
+          "outlet": "Billboard · via Yahoo News",
+          "published_date": "2026-07-13T06:55:14+00:00"
+        },
+        {
+          "headline": "Venezuela quake death toll rises to 4,490, officials say, but no number given...",
+          "url": "https://www.yahoo.com/news/articles/venezuela-quake-death-toll-rises-064904067.html",
+          "outlet": "Euronews · via Yahoo News",
+          "published_date": "2026-07-13T06:55:14+00:00"
+        },
+        {
+          "headline": "Venezuela’s Inflation Spike Compounds Earthquake Misery",
+          "url": "https://www.bloomberg.com/news/articles/2026-07-13/venezuela-s-inflation-spike-compounds-earthquake-misery",
+          "outlet": "Bloomberg",
+          "published_date": "2026-07-13T06:55:17+00:00"
+        },
+        {
+          "headline": "Earthquake aid keeps flowing from Florida to Venezuela, as volunteers unite to help recovery",
+          "url": "https://www.bostonherald.com/2026/07/14/venezuela-earthquake-aid-volunteers/",
+          "outlet": "Boston Herald",
+          "published_date": "2026-07-14T00:00:00+00:00"
+        },
+        {
+          "headline": "Guyana-led humanitarian aid arrives in Venezuela for earthquake victims",
+          "url": "https://guyanachronicle.com/2026/07/14/guyana-led-humanitarian-aid-arrives-in-venezuela-for-earthquake-victims/",
+          "outlet": "Guyana Chronicle",
+          "published_date": "2026-07-14T00:00:00+00:00"
+        },
+        {
+          "headline": "From first aid to airplanes: How Houston’s relief efforts are reaching Venezuela",
+          "url": "https://www.houstonpublicmedia.org/articles/news/in-depth/2026/07/14/556958/houston-venezuela-relief/",
+          "outlet": "Houston Public Media",
+          "published_date": "2026-07-14T00:00:00+00:00"
+        },
+        {
+          "headline": "‘Pretty dire’: Aid workers reveal health needs in Venezuela amid recovery from earthquakes",
+          "url": "https://www.mycentraloregon.com/2026/07/14/pretty-dire-aid-workers-reveal-health-needs-in-venezuela-amid-recovery-from-earthquakes/",
+          "outlet": "MyCentralOregon.com",
+          "published_date": "2026-07-14T00:00:00+00:00"
+        },
+        {
+          "headline": "PSC commends members for humanitarian support to earthquake-hit Venezuela",
+          "url": "https://guyanachronicle.com/2026/07/14/psc-commends-members-for-humanitarian-support-to-earthquake-hit-venezuela/",
+          "outlet": "Guyana Chronicle",
+          "published_date": "2026-07-14T00:00:00+00:00"
+        },
+        {
+          "headline": "Earthquake aid keeps flowing from Florida to Venezuela, as volunteers unite to...",
+          "url": "https://www.newstimes.com/business/article/earthquake-aid-keeps-flowing-from-florida-to-22344413.php",
+          "outlet": "The News-Times",
+          "published_date": "2026-07-14T12:55:14+00:00"
+        },
+        {
+          "headline": "Earthquake aid keeps flowing from Florida to Venezuela, with help from the U.S. State Department",
+          "url": "https://www.msn.com/en-ph/news/world/earthquake-aid-keeps-flowing-from-florida-to-venezuela-with-help-from-the-us-state-department/ar-AA27UnjG?ocid=BingNewsVerp",
+          "outlet": "The Manila Times on MSN",
+          "published_date": "2026-07-15T06:55:17+00:00"
+        },
+        {
+          "headline": "Group of lawmakers ask Trump to lift sanctions on Venezuela to help respond to earthquake devastation",
+          "url": "https://english.elpais.com/usa/2026-07-14/group-of-lawmakers-ask-trump-to-lift-sanctions-on-venezuela-to-help-respond-to-earthquake-devastation.html",
+          "outlet": "EL PAÍS English",
+          "published_date": "2026-07-15T06:55:17+00:00"
+        },
+        {
+          "headline": "'Until the end': The tireless, traumatic search for Venezuela quake victims",
+          "url": "https://www.msn.com/en-in/news/news/until-the-end-the-tireless-traumatic-search-for-venezuela-quake-victims/ar-AA27Ralo?ocid=BingNewsVerp",
+          "outlet": "The Economic Times on MSN",
+          "published_date": "2026-07-15T06:55:17+00:00"
         }
       ],
-      "news_total": 67,
+      "news_total": 81,
       "logs": [
         {
           "log_datetime": "2026-06-28T00:00:00+00:00",
@@ -5315,13 +5609,117 @@
               "outlet": "Reuters on MSN"
             }
           ]
+        },
+        {
+          "log_datetime": "2026-07-15T06:55:17+00:00",
+          "summary": "New reports detail ongoing recovery: the death toll remains at 4,490, while NASA radar data reveals significant ground shifts near La Guaira. Aid continues from Florida, Guyana, and Houston, bolstered by U.S. State Department support, and volunteers search tirelessly for missing victims. Lawmakers have urged lifting sanctions, and Venezuela’s inflation spike is compounding earthquake misery.",
+          "news": [
+            {
+              "news_id": 1784098529984,
+              "url": "https://science.nasa.gov/earth/earth-observatory/where-venezuelas-earthquakes-shifted-the-ground/",
+              "headline": "Where Venezuela’s Earthquakes Shifted the Ground - NASA Science",
+              "published_date": "2026-07-10T06:55:14+00:00",
+              "outlet": "NASA"
+            },
+            {
+              "news_id": 1784098530044,
+              "url": "https://www.jamaicaobserver.com/2026/07/14/venezuelan-fashion-house-stitches-body-bags-quake-victims/",
+              "headline": "Venezuelan fashion house stitches body bags for quake victims",
+              "published_date": "2026-07-11T06:55:17+00:00",
+              "outlet": "Jamaica Observer"
+            },
+            {
+              "news_id": 1784098529871,
+              "url": "https://www.yahoo.com/entertainment/music/articles/shakira-urges-more-global-support-172128387.html",
+              "headline": "Shakira Urges More Global Support for Schools After Earthquakes: ‘Venezuela, You...",
+              "published_date": "2026-07-13T06:55:14+00:00",
+              "outlet": "Billboard · via Yahoo News"
+            },
+            {
+              "news_id": 1784098529924,
+              "url": "https://www.yahoo.com/news/articles/venezuela-quake-death-toll-rises-064904067.html",
+              "headline": "Venezuela quake death toll rises to 4,490, officials say, but no number given...",
+              "published_date": "2026-07-13T06:55:14+00:00",
+              "outlet": "Euronews · via Yahoo News"
+            },
+            {
+              "news_id": 1784098530078,
+              "url": "https://www.bloomberg.com/news/articles/2026-07-13/venezuela-s-inflation-spike-compounds-earthquake-misery",
+              "headline": "Venezuela’s Inflation Spike Compounds Earthquake Misery",
+              "published_date": "2026-07-13T06:55:17+00:00",
+              "outlet": "Bloomberg"
+            },
+            {
+              "news_id": 1784098529943,
+              "url": "https://www.bostonherald.com/2026/07/14/venezuela-earthquake-aid-volunteers/",
+              "headline": "Earthquake aid keeps flowing from Florida to Venezuela, as volunteers unite to help recovery",
+              "published_date": "2026-07-14T00:00:00+00:00",
+              "outlet": "Boston Herald"
+            },
+            {
+              "news_id": 1784098530023,
+              "url": "https://guyanachronicle.com/2026/07/14/guyana-led-humanitarian-aid-arrives-in-venezuela-for-earthquake-victims/",
+              "headline": "Guyana-led humanitarian aid arrives in Venezuela for earthquake victims",
+              "published_date": "2026-07-14T00:00:00+00:00",
+              "outlet": "Guyana Chronicle"
+            },
+            {
+              "news_id": 1784098530060,
+              "url": "https://www.houstonpublicmedia.org/articles/news/in-depth/2026/07/14/556958/houston-venezuela-relief/",
+              "headline": "From first aid to airplanes: How Houston’s relief efforts are reaching Venezuela",
+              "published_date": "2026-07-14T00:00:00+00:00",
+              "outlet": "Houston Public Media"
+            },
+            {
+              "news_id": 1784098530113,
+              "url": "https://www.mycentraloregon.com/2026/07/14/pretty-dire-aid-workers-reveal-health-needs-in-venezuela-amid-recovery-from-earthquakes/",
+              "headline": "‘Pretty dire’: Aid workers reveal health needs in Venezuela amid recovery from earthquakes",
+              "published_date": "2026-07-14T00:00:00+00:00",
+              "outlet": "MyCentralOregon.com"
+            },
+            {
+              "news_id": 1784098530132,
+              "url": "https://guyanachronicle.com/2026/07/14/psc-commends-members-for-humanitarian-support-to-earthquake-hit-venezuela/",
+              "headline": "PSC commends members for humanitarian support to earthquake-hit Venezuela",
+              "published_date": "2026-07-14T00:00:00+00:00",
+              "outlet": "Guyana Chronicle"
+            },
+            {
+              "news_id": 1784098529962,
+              "url": "https://www.newstimes.com/business/article/earthquake-aid-keeps-flowing-from-florida-to-22344413.php",
+              "headline": "Earthquake aid keeps flowing from Florida to Venezuela, as volunteers unite to...",
+              "published_date": "2026-07-14T12:55:14+00:00",
+              "outlet": "The News-Times"
+            },
+            {
+              "news_id": 1784098530004,
+              "url": "https://www.msn.com/en-ph/news/world/earthquake-aid-keeps-flowing-from-florida-to-venezuela-with-help-from-the-us-state-department/ar-AA27UnjG?ocid=BingNewsVerp",
+              "headline": "Earthquake aid keeps flowing from Florida to Venezuela, with help from the U.S. State Department",
+              "published_date": "2026-07-15T06:55:17+00:00",
+              "outlet": "The Manila Times on MSN"
+            },
+            {
+              "news_id": 1784098530095,
+              "url": "https://english.elpais.com/usa/2026-07-14/group-of-lawmakers-ask-trump-to-lift-sanctions-on-venezuela-to-help-respond-to-earthquake-devastation.html",
+              "headline": "Group of lawmakers ask Trump to lift sanctions on Venezuela to help respond to earthquake devastation",
+              "published_date": "2026-07-15T06:55:17+00:00",
+              "outlet": "EL PAÍS English"
+            },
+            {
+              "news_id": 1784098530150,
+              "url": "https://www.msn.com/en-in/news/news/until-the-end-the-tireless-traumatic-search-for-venezuela-quake-victims/ar-AA27Ralo?ocid=BingNewsVerp",
+              "headline": "'Until the end': The tireless, traumatic search for Venezuela quake victims",
+              "published_date": "2026-07-15T06:55:17+00:00",
+              "outlet": "The Economic Times on MSN"
+            }
+          ]
         }
       ]
     },
     {
       "incident_id": "20260626-PH-EQ",
       "canonical_name": "Earthquake Philippines 2026-06",
-      "summary": "A magnitude 6.6 earthquake struck off the coast of Sarangani, Davao Occidental, Philippines on June 26, 2026, at around 7:34 PM according to Phivolcs. The quake generated reports of strong shaking in nearby areas, and aftershocks are expected. No immediate damage or casualties have been reported in the available excerpts.",
+      "summary": "On July 14, 2026, a magnitude 6.5 offshore earthquake struck Davao Occidental province, likely related to the ongoing seismic activity following the June 26 quake, with aftershocks expected. Separately, a magnitude 5.2 aftershock hit Masbate, and Philippine officials thanked UAE for humanitarian aid to Mindanao earthquake victims.",
       "country": "Philippines",
       "iso2": "PH",
       "lat": 5.2392,
@@ -5339,7 +5737,7 @@
       "disease_name": null,
       "event_date": "2026-06-26",
       "first_reported_date": "2026-06-26",
-      "last_updated_date": "2026-07-08",
+      "last_updated_date": "2026-07-15",
       "days_since_event": 19,
       "source_count": 1,
       "should_report": true,
@@ -5349,7 +5747,7 @@
         "usgs": 0,
         "gdacs": 1,
         "healthmap": 0,
-        "news": 2
+        "news": 7
       },
       "source_links": [
         {
@@ -5381,9 +5779,39 @@
           "url": "https://www.khaleejtimes.com/world/asia/66-magnitude-earthquake-davao-philippines-aftershocks-june-26-2026",
           "outlet": "Khaleej Times",
           "published_date": "2026-07-08T22:10:39+00:00"
+        },
+        {
+          "headline": "Magnitude 5.2 earthquake rocks Philippines' Masbate",
+          "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/07/14/magnitude-52-earthquake-rocks-philippines039-masbate",
+          "outlet": "The Star",
+          "published_date": "2026-07-14T00:00:00+00:00"
+        },
+        {
+          "headline": "Earthquake of magnitude 6.05 strikes Mindanao, Philippines, GFZ says",
+          "url": "https://wtaq.com/2026/07/14/earthquake-of-magnitude-6-05-strikes-mindanao-philippines-gfz-says/",
+          "outlet": "WTAQ News Talk",
+          "published_date": "2026-07-14T00:00:00+00:00"
+        },
+        {
+          "headline": "6.5-magnitude offshore earthquake strikes S. Philippines",
+          "url": "https://www.thestar.com.my/news/world/2026/07/15/65-magnitude-offshore-earthquake-strikes-s-philippines",
+          "outlet": "The Star",
+          "published_date": "2026-07-15T00:00:00+00:00"
+        },
+        {
+          "headline": "Philippine Senate president praises UAE aid for Mindanao earthquake victims",
+          "url": "https://www.msn.com/en-ae/news/news/philippine-senate-president-praises-uae-aid-for-mindanao-earthquake-victims/ar-AA27SPD9?ocid=BingNewsVerp",
+          "outlet": "Emirates News Agency on MSN",
+          "published_date": "2026-07-15T06:55:35+00:00"
+        },
+        {
+          "headline": "Magnitude 5.2 aftershock struck Masbate —PHIVOLCS",
+          "url": "https://www.msn.com/en-ph/science/earth-science/magnitude-5-2-aftershock-struck-masbate-phivolcs/ar-AA27Su84?ocid=BingNewsVerp",
+          "outlet": "GMA News Online on MSN",
+          "published_date": "2026-07-15T06:55:35+00:00"
         }
       ],
-      "news_total": 2,
+      "news_total": 7,
       "logs": [
         {
           "log_datetime": "2026-07-08T22:10:39+00:00",
@@ -5402,6 +5830,47 @@
               "headline": "6.6-magnitude earthquake strikes southern Philippines; aftershocks expected",
               "published_date": "2026-07-08T22:10:39+00:00",
               "outlet": "Khaleej Times"
+            }
+          ]
+        },
+        {
+          "log_datetime": "2026-07-15T06:55:35+00:00",
+          "summary": "On July 14, 2026, a magnitude 6.5 offshore earthquake struck Davao Occidental province, likely related to the ongoing seismic activity following the June 26 quake, with aftershocks expected. Separately, a magnitude 5.2 aftershock hit Masbate, and Philippine officials thanked UAE for humanitarian aid to Mindanao earthquake victims.",
+          "news": [
+            {
+              "news_id": 1784098570900,
+              "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/07/14/magnitude-52-earthquake-rocks-philippines039-masbate",
+              "headline": "Magnitude 5.2 earthquake rocks Philippines' Masbate",
+              "published_date": "2026-07-14T00:00:00+00:00",
+              "outlet": "The Star"
+            },
+            {
+              "news_id": 1784098570932,
+              "url": "https://wtaq.com/2026/07/14/earthquake-of-magnitude-6-05-strikes-mindanao-philippines-gfz-says/",
+              "headline": "Earthquake of magnitude 6.05 strikes Mindanao, Philippines, GFZ says",
+              "published_date": "2026-07-14T00:00:00+00:00",
+              "outlet": "WTAQ News Talk"
+            },
+            {
+              "news_id": 1784098570836,
+              "url": "https://www.thestar.com.my/news/world/2026/07/15/65-magnitude-offshore-earthquake-strikes-s-philippines",
+              "headline": "6.5-magnitude offshore earthquake strikes S. Philippines",
+              "published_date": "2026-07-15T00:00:00+00:00",
+              "outlet": "The Star"
+            },
+            {
+              "news_id": 1784098570917,
+              "url": "https://www.msn.com/en-ae/news/news/philippine-senate-president-praises-uae-aid-for-mindanao-earthquake-victims/ar-AA27SPD9?ocid=BingNewsVerp",
+              "headline": "Philippine Senate president praises UAE aid for Mindanao earthquake victims",
+              "published_date": "2026-07-15T06:55:35+00:00",
+              "outlet": "Emirates News Agency on MSN"
+            },
+            {
+              "news_id": 1784098570948,
+              "url": "https://www.msn.com/en-ph/science/earth-science/magnitude-5-2-aftershock-struck-masbate-phivolcs/ar-AA27Su84?ocid=BingNewsVerp",
+              "headline": "Magnitude 5.2 aftershock struck Masbate —PHIVOLCS",
+              "published_date": "2026-07-15T06:55:35+00:00",
+              "outlet": "GMA News Online on MSN"
             }
           ]
         }
@@ -9837,7 +10306,7 @@
       "disease_name": "Measles",
       "event_date": "2026-04-23",
       "first_reported_date": "2026-04-23",
-      "last_updated_date": "2026-07-13",
+      "last_updated_date": "2026-07-15",
       "days_since_event": 83,
       "source_count": 1,
       "should_report": true,
@@ -9847,7 +10316,7 @@
         "usgs": 0,
         "gdacs": 0,
         "healthmap": 0,
-        "news": 10
+        "news": 11
       },
       "source_links": [
         {
@@ -9927,9 +10396,15 @@
           "url": "https://www.daily-sun.com/bangladesh/885772/complaint-against-yunus-3-others-over-measles-death-dismissed",
           "outlet": "Daily Sun",
           "published_date": "2026-07-13T03:33:42+00:00"
+        },
+        {
+          "headline": "Seven more children die from measles, symptoms",
+          "url": "https://www.daily-sun.com/bangladesh/886316",
+          "outlet": "Daily Sun",
+          "published_date": "2026-07-15T07:15:52+00:00"
         }
       ],
-      "news_total": 10,
+      "news_total": 11,
       "logs": [
         {
           "log_datetime": "2026-07-09T00:00:00+00:00",
@@ -11027,7 +11502,7 @@
     {
       "incident_id": "20250905-CD-DI",
       "canonical_name": "Ebola virus disease – Democratic Republic of the Congo",
-      "summary": "A U.S. citizen working for the humanitarian organization Samaritan's Purse has tested positive for Ebola in the Democratic Republic of the Congo, according to American and African health officials. The United Nations has also released additional emergency funding as the Bundibugyo Ebola outbreak in the DRC continues to worsen.",
+      "summary": "The Ebola outbreak in the DRC has escalated, with confirmed cases surpassing 2,000 and 754 deaths, while the WHO reports the true scale may be 2 to 4 times larger. A U.S. aid worker, the second American infected in this outbreak, has tested positive for Ebola, and international health agencies are scrambling to contain the spread.",
       "country": "DR Congo",
       "iso2": "CD",
       "lat": -4.0,
@@ -11045,7 +11520,7 @@
       "disease_name": "Ebola",
       "event_date": "2025-09-05",
       "first_reported_date": "2025-09-05",
-      "last_updated_date": "2026-07-12",
+      "last_updated_date": "2026-07-15",
       "days_since_event": 313,
       "source_count": 9,
       "should_report": true,
@@ -11055,7 +11530,7 @@
         "usgs": 0,
         "gdacs": 0,
         "healthmap": 0,
-        "news": 47
+        "news": 49
       },
       "source_links": [
         {
@@ -11405,9 +11880,21 @@
           "url": "https://www.bostonglobe.com/2026/07/11/world/us-citizen-tests-positive-ebola-congo/",
           "outlet": "The Boston Globe",
           "published_date": "2026-07-12T03:35:04+00:00"
+        },
+        {
+          "headline": "Urgent: Ebola caseload in DR Congo tops 2,000",
+          "url": "https://www.thestar.com.my/news/world/2026/07/15/urgent-ebola-caseload-in-dr-congo-tops-2000",
+          "outlet": "The Star",
+          "published_date": "2026-07-15T00:00:00+00:00"
+        },
+        {
+          "headline": "DRC Ebola outbreak 2 to 4 times bigger than official scale, says WHO",
+          "url": "https://www.msn.com/en-my/news/other/drc-ebola-outbreak-2-to-4-times-bigger-than-official-scale-says-who/ar-AA27SRLr?ocid=BingNewsVerp",
+          "outlet": "Free Malaysia Today on MSN",
+          "published_date": "2026-07-15T07:17:24+00:00"
         }
       ],
-      "news_total": 47,
+      "news_total": 49,
       "logs": [
         {
           "log_datetime": "2026-07-10T13:36:50+00:00",
@@ -11735,6 +12222,40 @@
               "outlet": "News8000"
             }
           ]
+        },
+        {
+          "log_datetime": "2026-07-15T07:17:24+00:00",
+          "summary": "The Ebola outbreak in the DRC has escalated, with confirmed cases surpassing 2,000 and 754 deaths, while the WHO reports the true scale may be 2 to 4 times larger. A U.S. aid worker, the second American infected in this outbreak, has tested positive for Ebola, and international health agencies are scrambling to contain the spread.",
+          "news": [
+            {
+              "news_id": 1783913736169,
+              "url": "https://www.realclearpolitics.com/articles/2026/07/07/the_scramble_to_contain_ebola_in_democratic_republic_of_congo_and_uganda.html",
+              "headline": "The Scramble To Contain Ebola in Democratic Republic of Congo and Uganda",
+              "published_date": "2026-07-07T03:35:04+00:00",
+              "outlet": "RealClearPolitics"
+            },
+            {
+              "news_id": 1783913736145,
+              "url": "https://www.bostonglobe.com/2026/07/11/world/us-citizen-tests-positive-ebola-congo/",
+              "headline": "US citizen tests positive for Ebola in Congo - The Boston Globe",
+              "published_date": "2026-07-12T03:35:04+00:00",
+              "outlet": "The Boston Globe"
+            },
+            {
+              "news_id": 1784099872001,
+              "url": "https://www.thestar.com.my/news/world/2026/07/15/urgent-ebola-caseload-in-dr-congo-tops-2000",
+              "headline": "Urgent: Ebola caseload in DR Congo tops 2,000",
+              "published_date": "2026-07-15T00:00:00+00:00",
+              "outlet": "The Star"
+            },
+            {
+              "news_id": 1784099872021,
+              "url": "https://www.msn.com/en-my/news/other/drc-ebola-outbreak-2-to-4-times-bigger-than-official-scale-says-who/ar-AA27SRLr?ocid=BingNewsVerp",
+              "headline": "DRC Ebola outbreak 2 to 4 times bigger than official scale, says WHO",
+              "published_date": "2026-07-15T07:17:24+00:00",
+              "outlet": "Free Malaysia Today on MSN"
+            }
+          ]
         }
       ]
     },
@@ -11982,6 +12503,1024 @@
               "headline": "EU food safety body sets ceiling for cereulide in infant formula",
               "published_date": "2026-07-08T20:53:10+00:00",
               "outlet": "MSN"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "20260714-FJ-EQ",
+      "canonical_name": "Earthquake Fiji region 2026-07",
+      "summary": "",
+      "country": "Fiji",
+      "iso2": "FJ",
+      "lat": -20.748,
+      "lon": -178.5092,
+      "country_group": "B",
+      "region": "Oceania",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-07-14",
+      "first_reported_date": "2026-07-14",
+      "last_updated_date": "2026-07-15",
+      "days_since_event": 1,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 5.5 - Fiji region",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t0hk",
+          "meta": "574.304 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 5.5,
+        "max_depth_km": 574.304,
+        "place": "Fiji region",
+        "felt": null,
+        "sig": 465,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "5.4-magnitude quake hits Fiji Islands region -- GFZ",
+          "url": "http://www.chinaview.cn/20260715/db86a556ee0a41caa0a876624a501ff2/c.html",
+          "outlet": "Xinhuanet",
+          "published_date": "2026-07-15T00:00:00+00:00"
+        }
+      ],
+      "news_total": 1,
+      "logs": []
+    },
+    {
+      "incident_id": "20260714-PH-EQ",
+      "canonical_name": "Earthquake 34 km WSW of Sarangani, Philippines 2026-07",
+      "summary": "A magnitude 6.2 earthquake struck 34 km southwest of Sarangani, Philippines on July 14, 2026, at 11:49 pm local time, with a depth of approximately 10 km. The Philippine Institute of Volcanology and Seismology (PHIVOLCS) initially recommended caution for minor sea-level disturbances but later cancelled the advisory, confirming no unusual sea-level changes and no tsunami threat from the event.",
+      "country": "Philippines",
+      "iso2": "PH",
+      "lat": 5.3269,
+      "lon": 125.1655,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "HIGH",
+      "priority": "HIGH",
+      "priority_rank": 1,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-07-14",
+      "first_reported_date": "2026-07-14",
+      "last_updated_date": "2026-07-15",
+      "days_since_event": 1,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 11
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 6.2 - 34 km WSW of Sarangani, Philippines",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t0d0",
+          "meta": "67.854 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 6.2,
+        "max_depth_km": 67.854,
+        "place": "34 km WSW of Sarangani, Philippines",
+        "felt": 62,
+        "sig": 628,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "BMKG: M6.2 Earthquake Strikes Mindanao, No Tsunami Threat",
+          "url": "https://en.tempo.co/read/2113729/bmkg-m6-2-earthquake-strikes-mindanao-no-tsunami-threat",
+          "outlet": "Tempo.co English",
+          "published_date": "2026-07-09T07:18:32+00:00"
+        },
+        {
+          "headline": "Seismic Activity Shakes Mindanao: A Closer Look",
+          "url": "https://www.devdiscourse.com/article/science-environment/3950243-seismic-activity-shakes-mindanao-a-closer-look",
+          "outlet": "devdiscourse",
+          "published_date": "2026-07-11T07:18:32+00:00"
+        },
+        {
+          "headline": "Magnitude 6.3 earthquake strikes off the coast of Balut Island, Sarangani, Davao Occidental",
+          "url": "https://www.msn.com/en-ph/news/national/magnitude-63-earthquake-struck-off-the-coast-of-balut-island-sarangani-davao-occidental/ar-AA27Uikr",
+          "outlet": "GMA News Online",
+          "published_date": "2026-07-14T16:15:00+00:00"
+        },
+        {
+          "headline": "Earthquake of magnitude 6.05 strikes Philippines' Mindanao",
+          "url": "https://www.khaleejtimes.com/world/asia/earthquake-of-magnitude-605-strikes-philippines-mindanao",
+          "outlet": "Khaleej Times",
+          "published_date": "2026-07-14T16:16:00+00:00"
+        },
+        {
+          "headline": "No unusual sea-level changes observed following strong earthquake off Balut Island, says PHIVOLCS",
+          "url": "https://www.msn.com/en-ph/news/other/no-unusual-sea-level-changes-observed-following-strong-earthquake-says-phivolcs/ar-AA27UAFk",
+          "outlet": "GMA News Online",
+          "published_date": "2026-07-14T22:01:29+00:00"
+        },
+        {
+          "headline": "Phivolcs: Tremors observed in Masbate, Davao Occidental",
+          "url": "https://newsinfo.inquirer.net/2263979/phivolcs-tremors-observed-in-masbate-davao-occidental",
+          "outlet": "Inquirer.net",
+          "published_date": "2026-07-15T02:02:00+00:00"
+        },
+        {
+          "headline": "Magnitude 6.2 earthquake strikes off southern Philippines following series of Ring of Fire quakes",
+          "url": "https://www.msn.com/en-us/news/world/magnitude-62-earthquake-strikes-off-southern-philippines-following-series-of-ring-of-fire-quakes/ar-AA27TNHy?ocid=BingNewsVerp",
+          "outlet": "FOX Weather on MSN",
+          "published_date": "2026-07-15T06:42:11+00:00"
+        },
+        {
+          "headline": "Magnitude 6.3 earthquake strikes off the coast of Balut Island, Sarangani, Davao Occidental",
+          "url": "https://www.msn.com/en-ph/news/national/magnitude-63-earthquake-struck-off-the-coast-of-balut-island-sarangani-davao-occidental/ar-AA27Uikr?ocid=BingNewsVerp",
+          "outlet": "GMA News Online on MSN",
+          "published_date": "2026-07-15T06:42:11+00:00"
+        },
+        {
+          "headline": "No unusual sea-level changes observed following strong earthquake off Balut Island, says PHIVOLCS",
+          "url": "https://www.msn.com/en-ph/news/national/no-unusual-sea-level-changes-observed-following-strong-earthquake-off-balut-island-says-phivolcs/ar-AA27UAFk?ocid=BingNewsVerp",
+          "outlet": "GMA Network on MSN",
+          "published_date": "2026-07-15T06:42:11+00:00"
+        },
+        {
+          "headline": "Minor sea level disturbance may occur after strong earthquake off the coast of Balut Island, Davao Occidental — PHIVOLCS",
+          "url": "https://www.msn.com/en-ph/news/national/minor-sea-level-disturbance-reported-after-strong-earthquake-off-the-coast-of-balut-island-davao-occidental/ar-AA27UC12?ocid=BingNewsVerp",
+          "outlet": "GMA News Online on MSN",
+          "published_date": "2026-07-15T06:42:11+00:00"
+        },
+        {
+          "headline": "6.2-magnitude earthquake strikes Pacific Ring of Fire: Normal activity or warning of a megaquake? Explained",
+          "url": "https://www.msn.com/en-in/lifestyle/whats-hot/62-magnitude-earthquake-strikes-pacific-ring-of-fire-normal-activity-or-warning-of-a-megaquake-explained/ar-AA27UAMb?ocid=BingNewsVerp",
+          "outlet": "Hindustan Times on MSN",
+          "published_date": "2026-07-15T07:18:33+00:00"
+        }
+      ],
+      "news_total": 11,
+      "logs": [
+        {
+          "log_datetime": "2026-07-15T07:18:33+00:00",
+          "summary": "A magnitude 6.2 earthquake struck 34 km southwest of Sarangani, Philippines on July 14, 2026, at 11:49 pm local time, with a depth of approximately 10 km. The Philippine Institute of Volcanology and Seismology (PHIVOLCS) initially recommended caution for minor sea-level disturbances but later cancelled the advisory, confirming no unusual sea-level changes and no tsunami threat from the event.",
+          "news": [
+            {
+              "news_id": 1784099950194,
+              "url": "https://en.tempo.co/read/2113729/bmkg-m6-2-earthquake-strikes-mindanao-no-tsunami-threat",
+              "headline": "BMKG: M6.2 Earthquake Strikes Mindanao, No Tsunami Threat",
+              "published_date": "2026-07-09T07:18:32+00:00",
+              "outlet": "Tempo.co English"
+            },
+            {
+              "news_id": 1784099950205,
+              "url": "https://www.devdiscourse.com/article/science-environment/3950243-seismic-activity-shakes-mindanao-a-closer-look",
+              "headline": "Seismic Activity Shakes Mindanao: A Closer Look",
+              "published_date": "2026-07-11T07:18:32+00:00",
+              "outlet": "devdiscourse"
+            },
+            {
+              "news_id": 1784097768462,
+              "url": "https://www.msn.com/en-ph/news/national/magnitude-63-earthquake-struck-off-the-coast-of-balut-island-sarangani-davao-occidental/ar-AA27Uikr",
+              "headline": "Magnitude 6.3 earthquake strikes off the coast of Balut Island, Sarangani, Davao Occidental",
+              "published_date": "2026-07-14T16:15:00+00:00",
+              "outlet": "GMA News Online"
+            },
+            {
+              "news_id": 1784097768393,
+              "url": "https://www.khaleejtimes.com/world/asia/earthquake-of-magnitude-605-strikes-philippines-mindanao",
+              "headline": "Earthquake of magnitude 6.05 strikes Philippines' Mindanao",
+              "published_date": "2026-07-14T16:16:00+00:00",
+              "outlet": "Khaleej Times"
+            },
+            {
+              "news_id": 1784097768473,
+              "url": "https://www.msn.com/en-ph/news/other/no-unusual-sea-level-changes-observed-following-strong-earthquake-says-phivolcs/ar-AA27UAFk",
+              "headline": "No unusual sea-level changes observed following strong earthquake off Balut Island, says PHIVOLCS",
+              "published_date": "2026-07-14T22:01:29+00:00",
+              "outlet": "GMA News Online"
+            },
+            {
+              "news_id": 1784097768484,
+              "url": "https://newsinfo.inquirer.net/2263979/phivolcs-tremors-observed-in-masbate-davao-occidental",
+              "headline": "Phivolcs: Tremors observed in Masbate, Davao Occidental",
+              "published_date": "2026-07-15T02:02:00+00:00",
+              "outlet": "Inquirer.net"
+            },
+            {
+              "news_id": 1784097768417,
+              "url": "https://www.msn.com/en-us/news/world/magnitude-62-earthquake-strikes-off-southern-philippines-following-series-of-ring-of-fire-quakes/ar-AA27TNHy?ocid=BingNewsVerp",
+              "headline": "Magnitude 6.2 earthquake strikes off southern Philippines following series of Ring of Fire quakes",
+              "published_date": "2026-07-15T06:42:11+00:00",
+              "outlet": "FOX Weather on MSN"
+            },
+            {
+              "news_id": 1784097768428,
+              "url": "https://www.msn.com/en-ph/news/national/magnitude-63-earthquake-struck-off-the-coast-of-balut-island-sarangani-davao-occidental/ar-AA27Uikr?ocid=BingNewsVerp",
+              "headline": "Magnitude 6.3 earthquake strikes off the coast of Balut Island, Sarangani, Davao Occidental",
+              "published_date": "2026-07-15T06:42:11+00:00",
+              "outlet": "GMA News Online on MSN"
+            },
+            {
+              "news_id": 1784097768439,
+              "url": "https://www.msn.com/en-ph/news/national/no-unusual-sea-level-changes-observed-following-strong-earthquake-off-balut-island-says-phivolcs/ar-AA27UAFk?ocid=BingNewsVerp",
+              "headline": "No unusual sea-level changes observed following strong earthquake off Balut Island, says PHIVOLCS",
+              "published_date": "2026-07-15T06:42:11+00:00",
+              "outlet": "GMA Network on MSN"
+            },
+            {
+              "news_id": 1784097768449,
+              "url": "https://www.msn.com/en-ph/news/national/minor-sea-level-disturbance-reported-after-strong-earthquake-off-the-coast-of-balut-island-davao-occidental/ar-AA27UC12?ocid=BingNewsVerp",
+              "headline": "Minor sea level disturbance may occur after strong earthquake off the coast of Balut Island, Davao Occidental — PHIVOLCS",
+              "published_date": "2026-07-15T06:42:11+00:00",
+              "outlet": "GMA News Online on MSN"
+            },
+            {
+              "news_id": 1784099950171,
+              "url": "https://www.msn.com/en-in/lifestyle/whats-hot/62-magnitude-earthquake-strikes-pacific-ring-of-fire-normal-activity-or-warning-of-a-megaquake-explained/ar-AA27UAMb?ocid=BingNewsVerp",
+              "headline": "6.2-magnitude earthquake strikes Pacific Ring of Fire: Normal activity or warning of a megaquake? Explained",
+              "published_date": "2026-07-15T07:18:33+00:00",
+              "outlet": "Hindustan Times on MSN"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "20260712-FR-WF",
+      "canonical_name": "Green forest fire notification in France",
+      "summary": "A wildfire erupted in the historic Fontainebleau forest south of Paris, burning over 2,000 hectares and prompting the evacuation of about 1,000 residents. French authorities arrested two people suspected of deliberately starting the blaze, while hundreds of firefighters and waterbombing aircraft worked to contain the fire as Europe faced another heatwave.",
+      "country": "France",
+      "iso2": "FR",
+      "lat": 48.37489160154457,
+      "lon": 2.549974455334049,
+      "country_group": "C",
+      "region": "Europe",
+      "incident_type": "Forest Fire",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "HIGH",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-07-12",
+      "first_reported_date": "2026-07-12",
+      "last_updated_date": "2026-07-15",
+      "days_since_event": 3,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 0,
+        "gdacs": 1,
+        "healthmap": 0,
+        "news": 26
+      },
+      "source_links": [
+        {
+          "type": "GDACS",
+          "label": "Green alert · Green forest fire notification in France",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=WF&eventid=1029489",
+          "meta": ""
+        }
+      ],
+      "physical": {
+        "max_magnitude": null,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": "Green",
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "French police detain 59 over nationwide wildfires, 2 linked to Fontainebleau blaze",
+          "url": "https://www.globaltimes.cn/page/202607/1365975.shtml",
+          "outlet": "Global Times",
+          "published_date": "2026-07-10T07:19:14+00:00"
+        },
+        {
+          "headline": "Macron warns of wildfire of 'exceptional magnitude' as residents evacuated from...",
+          "url": "https://www.yahoo.com/news/world/articles/residents-evacuated-fire-exceptional-scale-070033825.html",
+          "outlet": "Euronews · via Yahoo News",
+          "published_date": "2026-07-13T06:43:18+00:00"
+        },
+        {
+          "headline": "Firefighting aircraft battle forest blaze near Paris as Europe swelters under heatwave",
+          "url": "https://www.independent.ie/world-news/firefighting-aircraft-battle-forest-blaze-near-paris-as-europe-swelters-under-heatwave/a/158727960.html",
+          "outlet": "Independent.ie",
+          "published_date": "2026-07-13T07:19:10+00:00"
+        },
+        {
+          "headline": "In Fontainebleau, southern France firefighters share expertise with Paris-region colleagues",
+          "url": "https://www.lemonde.fr/en/environment/article/2026/07/14/in-fontainebleau-southern-france-firefighters-share-expertise-with-paris-region-colleagues_6755472_114.html",
+          "outlet": "Le Monde",
+          "published_date": "2026-07-14T00:00:00+00:00"
+        },
+        {
+          "headline": "Blaze near Paris burns on as Europe heats up",
+          "url": "https://www.thestar.com.my/news/world/2026/07/14/firefighters-battle-fontainebleau-forest-fire-near-paris-as-two-arrested",
+          "outlet": "The Star",
+          "published_date": "2026-07-14T00:00:00+00:00"
+        },
+        {
+          "headline": "Wildfires advance in forest south of Paris",
+          "url": "https://www.yahoo.com/news/world/articles/wildfires-advance-forest-south-paris-070210992.html",
+          "outlet": "AFP · via Yahoo News",
+          "published_date": "2026-07-14T06:43:18+00:00"
+        },
+        {
+          "headline": "Fifty-nine arrested over French wildfires, as Fontainebleau blaze continues",
+          "url": "https://www.yahoo.com/news/articles/fifty-nine-arrested-over-wildfires-062247928.html",
+          "outlet": "RFI · via Yahoo News",
+          "published_date": "2026-07-14T06:43:18+00:00"
+        },
+        {
+          "headline": "Planes scoop the Seine to battle wildfires near Paris as third heat wave...",
+          "url": "https://www.yahoo.com/news/weather-news/articles/planes-scoop-seine-battle-wildfires-113314480.html",
+          "outlet": "The Weather Channel · via Yahoo News",
+          "published_date": "2026-07-14T11:43:18+00:00"
+        },
+        {
+          "headline": "1,000 evacuated from Fontainebleau fires near Paris; Spanish authorities...",
+          "url": "https://www.sfgate.com/news/world/article/1-000-evacuated-from-fontainebleau-fire-near-22344388.php",
+          "outlet": "San Francisco Chronicle",
+          "published_date": "2026-07-14T12:43:18+00:00"
+        },
+        {
+          "headline": "Wildfires that ravaged historic forest outside Paris contained",
+          "url": "https://www.thelocal.fr/20260715/wildfires-that-ravaged-historic-forest-outside-paris-contained",
+          "outlet": "The Local",
+          "published_date": "2026-07-15T00:00:00+00:00"
+        },
+        {
+          "headline": "France forest fire prompts evacuations",
+          "url": "https://www.arkansasonline.com/news/2026/jul/14/france-forest-fire-prompts-evacuations/",
+          "outlet": "Arkansas Democrat-Gazette",
+          "published_date": "2026-07-15T06:43:19+00:00"
+        },
+        {
+          "headline": "Fontainebleau forest fire near Paris ‘contained’ but not extinguished",
+          "url": "https://www.france24.com/en/france/20260714-more-than-1-900-hectares-fontainebleau-forest-near-paris-destroyed-by-wildfires",
+          "outlet": "France 24",
+          "published_date": "2026-07-15T06:43:19+00:00"
+        },
+        {
+          "headline": "Wildfires advance in forest south of Paris",
+          "url": "https://www.msn.com/en-my/public-safety-and-emergencies/fire-and-rescue/wildfires-advance-in-forest-south-of-paris/ar-AA27SsIs?ocid=BingNewsVerp",
+          "outlet": "Free Malaysia Today on MSN",
+          "published_date": "2026-07-15T06:43:19+00:00"
+        },
+        {
+          "headline": "‘My heart is on fire’: Fontainebleau forest blaze leaves community reeling",
+          "url": "https://sg.news.yahoo.com/heart-fire-fontainebleau-forest-blaze-172246129.html",
+          "outlet": "Yahoo News Singapore",
+          "published_date": "2026-07-15T06:43:19+00:00"
+        },
+        {
+          "headline": "France Battles Spreading Wildfires As Nearly 1,900 Hectares Burn",
+          "url": "https://www.bernama.com/en/region/news.php?id=2580839",
+          "outlet": "BERNAMA",
+          "published_date": "2026-07-15T06:43:19+00:00"
+        },
+        {
+          "headline": "Fontainebleau fire still burning as 850 firefighters tackle blaze",
+          "url": "https://www.msn.com/en-gb/news/world/fontainebleau-fire-still-burning-as-850-firefighters-tackle-blaze/ar-AA27Shey?ocid=BingNewsVerp",
+          "outlet": "Euronews on MSN",
+          "published_date": "2026-07-15T07:19:10+00:00"
+        },
+        {
+          "headline": "Two arrested on suspicion of deliberately starting devastating wildfires near Paris",
+          "url": "https://www.independent.co.uk/news/world/europe/france-wildfires-paris-fontainebleu-heatwave-b3014451.html",
+          "outlet": "The Independent",
+          "published_date": "2026-07-15T07:19:10+00:00"
+        },
+        {
+          "headline": "Firefighters battle to stop forest blaze near Paris from erupting again",
+          "url": "https://apnews.com/video/firefighters-battle-to-stop-forest-blaze-near-paris-from-erupting-again-7695426ab5a640aaaeba50b30b47c40e",
+          "outlet": "Associated Press News",
+          "published_date": "2026-07-15T07:19:10+00:00"
+        },
+        {
+          "headline": "Wildfires advance in forest south of Paris",
+          "url": "https://www.msn.com/en-ph/news/world/wildfires-advance-in-forest-south-of-paris/ar-AA27SGh8?ocid=BingNewsVerp",
+          "outlet": "The Manila Times on MSN",
+          "published_date": "2026-07-15T07:19:10+00:00"
+        },
+        {
+          "headline": "Firefighters battle blaze in France's Fontainebleau forest amid deadly fires in Europe",
+          "url": "https://www.yahoo.com/news/videos/firefighters-battle-blaze-frances-fontainebleau-191457430.html",
+          "outlet": "Yahoo",
+          "published_date": "2026-07-15T07:19:10+00:00"
+        },
+        {
+          "headline": "Two arrested as firefighters battle Fontainebleau forest fire near Paris",
+          "url": "https://www.thehindu.com/news/international/two-arrested-as-firefighters-battle-fontainebleau-forest-fire-near-paris/article71220335.ece",
+          "outlet": "The Hindu",
+          "published_date": "2026-07-15T07:19:14+00:00"
+        },
+        {
+          "headline": "Firefighters battle Fontainebleau forest fire near Paris as two arrested",
+          "url": "https://www.msn.com/en-us/news/world/firefighters-battle-fontainebleau-forest-fire-near-paris-as-two-arrested/ar-AA27U0Km?ocid=BingNewsVerp",
+          "outlet": "Reuters on MSN",
+          "published_date": "2026-07-15T07:19:14+00:00"
+        },
+        {
+          "headline": "Fires advance in forest south of Paris as two arrested",
+          "url": "https://www.rte.ie/news/2026/0714/1583241-france-wildfires/",
+          "outlet": "RTÉ Ireland",
+          "published_date": "2026-07-15T07:19:14+00:00"
+        },
+        {
+          "headline": "Fire ravages historic forest outside Paris",
+          "url": "https://thepeninsulaqatar.com/article/14/07/2026/fire-ravages-historic-forest-outside-paris",
+          "outlet": "The Peninsula Qatar",
+          "published_date": "2026-07-15T07:19:14+00:00"
+        },
+        {
+          "headline": "France Arrests Arson Suspects Amid Fontainebleau Forest Fire",
+          "url": "https://en.tempo.co/read/2113659/france-arrests-arson-suspects-amid-fontainebleau-forest-fire",
+          "outlet": "Tempo.co English",
+          "published_date": "2026-07-15T07:19:14+00:00"
+        },
+        {
+          "headline": "Bastille Day celebrations in France tempered by fear of more wildfires",
+          "url": "https://www.theguardian.com/world/2026/jul/14/bastille-day-celebrations-france-tempered-fear-wildfires",
+          "outlet": "The Guardian",
+          "published_date": "2026-07-15T07:19:14+00:00"
+        }
+      ],
+      "news_total": 26,
+      "logs": [
+        {
+          "log_datetime": "2026-07-15T07:19:14+00:00",
+          "summary": "A wildfire erupted in the historic Fontainebleau forest south of Paris, burning over 2,000 hectares and prompting the evacuation of about 1,000 residents. French authorities arrested two people suspected of deliberately starting the blaze, while hundreds of firefighters and waterbombing aircraft worked to contain the fire as Europe faced another heatwave.",
+          "news": [
+            {
+              "news_id": 1784099993131,
+              "url": "https://www.globaltimes.cn/page/202607/1365975.shtml",
+              "headline": "French police detain 59 over nationwide wildfires, 2 linked to Fontainebleau blaze",
+              "published_date": "2026-07-10T07:19:14+00:00",
+              "outlet": "Global Times"
+            },
+            {
+              "news_id": 1784097823354,
+              "url": "https://www.yahoo.com/news/world/articles/residents-evacuated-fire-exceptional-scale-070033825.html",
+              "headline": "Macron warns of wildfire of 'exceptional magnitude' as residents evacuated from...",
+              "published_date": "2026-07-13T06:43:18+00:00",
+              "outlet": "Euronews · via Yahoo News"
+            },
+            {
+              "news_id": 1784099993057,
+              "url": "https://www.independent.ie/world-news/firefighting-aircraft-battle-forest-blaze-near-paris-as-europe-swelters-under-heatwave/a/158727960.html",
+              "headline": "Firefighting aircraft battle forest blaze near Paris as Europe swelters under heatwave",
+              "published_date": "2026-07-13T07:19:10+00:00",
+              "outlet": "Independent.ie"
+            },
+            {
+              "news_id": 1784097823362,
+              "url": "https://www.lemonde.fr/en/environment/article/2026/07/14/in-fontainebleau-southern-france-firefighters-share-expertise-with-paris-region-colleagues_6755472_114.html",
+              "headline": "In Fontainebleau, southern France firefighters share expertise with Paris-region colleagues",
+              "published_date": "2026-07-14T00:00:00+00:00",
+              "outlet": "Le Monde"
+            },
+            {
+              "news_id": 1784099993205,
+              "url": "https://www.thestar.com.my/news/world/2026/07/14/firefighters-battle-fontainebleau-forest-fire-near-paris-as-two-arrested",
+              "headline": "Blaze near Paris burns on as Europe heats up",
+              "published_date": "2026-07-14T00:00:00+00:00",
+              "outlet": "The Star"
+            },
+            {
+              "news_id": 1784097823334,
+              "url": "https://www.yahoo.com/news/world/articles/wildfires-advance-forest-south-paris-070210992.html",
+              "headline": "Wildfires advance in forest south of Paris",
+              "published_date": "2026-07-14T06:43:18+00:00",
+              "outlet": "AFP · via Yahoo News"
+            },
+            {
+              "news_id": 1784097823344,
+              "url": "https://www.yahoo.com/news/articles/fifty-nine-arrested-over-wildfires-062247928.html",
+              "headline": "Fifty-nine arrested over French wildfires, as Fontainebleau blaze continues",
+              "published_date": "2026-07-14T06:43:18+00:00",
+              "outlet": "RFI · via Yahoo News"
+            },
+            {
+              "news_id": 1784097823322,
+              "url": "https://www.yahoo.com/news/weather-news/articles/planes-scoop-seine-battle-wildfires-113314480.html",
+              "headline": "Planes scoop the Seine to battle wildfires near Paris as third heat wave...",
+              "published_date": "2026-07-14T11:43:18+00:00",
+              "outlet": "The Weather Channel · via Yahoo News"
+            },
+            {
+              "news_id": 1784097823312,
+              "url": "https://www.sfgate.com/news/world/article/1-000-evacuated-from-fontainebleau-fire-near-22344388.php",
+              "headline": "1,000 evacuated from Fontainebleau fires near Paris; Spanish authorities...",
+              "published_date": "2026-07-14T12:43:18+00:00",
+              "outlet": "San Francisco Chronicle"
+            },
+            {
+              "news_id": 1784099993143,
+              "url": "https://www.thelocal.fr/20260715/wildfires-that-ravaged-historic-forest-outside-paris-contained",
+              "headline": "Wildfires that ravaged historic forest outside Paris contained",
+              "published_date": "2026-07-15T00:00:00+00:00",
+              "outlet": "The Local"
+            },
+            {
+              "news_id": 1784097823293,
+              "url": "https://www.arkansasonline.com/news/2026/jul/14/france-forest-fire-prompts-evacuations/",
+              "headline": "France forest fire prompts evacuations",
+              "published_date": "2026-07-15T06:43:19+00:00",
+              "outlet": "Arkansas Democrat-Gazette"
+            },
+            {
+              "news_id": 1784097823373,
+              "url": "https://www.france24.com/en/france/20260714-more-than-1-900-hectares-fontainebleau-forest-near-paris-destroyed-by-wildfires",
+              "headline": "Fontainebleau forest fire near Paris ‘contained’ but not extinguished",
+              "published_date": "2026-07-15T06:43:19+00:00",
+              "outlet": "France 24"
+            },
+            {
+              "news_id": 1784097823387,
+              "url": "https://www.msn.com/en-my/public-safety-and-emergencies/fire-and-rescue/wildfires-advance-in-forest-south-of-paris/ar-AA27SsIs?ocid=BingNewsVerp",
+              "headline": "Wildfires advance in forest south of Paris",
+              "published_date": "2026-07-15T06:43:19+00:00",
+              "outlet": "Free Malaysia Today on MSN"
+            },
+            {
+              "news_id": 1784097823397,
+              "url": "https://sg.news.yahoo.com/heart-fire-fontainebleau-forest-blaze-172246129.html",
+              "headline": "‘My heart is on fire’: Fontainebleau forest blaze leaves community reeling",
+              "published_date": "2026-07-15T06:43:19+00:00",
+              "outlet": "Yahoo News Singapore"
+            },
+            {
+              "news_id": 1784097823406,
+              "url": "https://www.bernama.com/en/region/news.php?id=2580839",
+              "headline": "France Battles Spreading Wildfires As Nearly 1,900 Hectares Burn",
+              "published_date": "2026-07-15T06:43:19+00:00",
+              "outlet": "BERNAMA"
+            },
+            {
+              "news_id": 1784099993005,
+              "url": "https://www.msn.com/en-gb/news/world/fontainebleau-fire-still-burning-as-850-firefighters-tackle-blaze/ar-AA27Shey?ocid=BingNewsVerp",
+              "headline": "Fontainebleau fire still burning as 850 firefighters tackle blaze",
+              "published_date": "2026-07-15T07:19:10+00:00",
+              "outlet": "Euronews on MSN"
+            },
+            {
+              "news_id": 1784099993029,
+              "url": "https://www.independent.co.uk/news/world/europe/france-wildfires-paris-fontainebleu-heatwave-b3014451.html",
+              "headline": "Two arrested on suspicion of deliberately starting devastating wildfires near Paris",
+              "published_date": "2026-07-15T07:19:10+00:00",
+              "outlet": "The Independent"
+            },
+            {
+              "news_id": 1784099993046,
+              "url": "https://apnews.com/video/firefighters-battle-to-stop-forest-blaze-near-paris-from-erupting-again-7695426ab5a640aaaeba50b30b47c40e",
+              "headline": "Firefighters battle to stop forest blaze near Paris from erupting again",
+              "published_date": "2026-07-15T07:19:10+00:00",
+              "outlet": "Associated Press News"
+            },
+            {
+              "news_id": 1784099993072,
+              "url": "https://www.msn.com/en-ph/news/world/wildfires-advance-in-forest-south-of-paris/ar-AA27SGh8?ocid=BingNewsVerp",
+              "headline": "Wildfires advance in forest south of Paris",
+              "published_date": "2026-07-15T07:19:10+00:00",
+              "outlet": "The Manila Times on MSN"
+            },
+            {
+              "news_id": 1784099993083,
+              "url": "https://www.yahoo.com/news/videos/firefighters-battle-blaze-frances-fontainebleau-191457430.html",
+              "headline": "Firefighters battle blaze in France's Fontainebleau forest amid deadly fires in Europe",
+              "published_date": "2026-07-15T07:19:10+00:00",
+              "outlet": "Yahoo"
+            },
+            {
+              "news_id": 1784099993097,
+              "url": "https://www.thehindu.com/news/international/two-arrested-as-firefighters-battle-fontainebleau-forest-fire-near-paris/article71220335.ece",
+              "headline": "Two arrested as firefighters battle Fontainebleau forest fire near Paris",
+              "published_date": "2026-07-15T07:19:14+00:00",
+              "outlet": "The Hindu"
+            },
+            {
+              "news_id": 1784099993117,
+              "url": "https://www.msn.com/en-us/news/world/firefighters-battle-fontainebleau-forest-fire-near-paris-as-two-arrested/ar-AA27U0Km?ocid=BingNewsVerp",
+              "headline": "Firefighters battle Fontainebleau forest fire near Paris as two arrested",
+              "published_date": "2026-07-15T07:19:14+00:00",
+              "outlet": "Reuters on MSN"
+            },
+            {
+              "news_id": 1784099993155,
+              "url": "https://www.rte.ie/news/2026/0714/1583241-france-wildfires/",
+              "headline": "Fires advance in forest south of Paris as two arrested",
+              "published_date": "2026-07-15T07:19:14+00:00",
+              "outlet": "RTÉ Ireland"
+            },
+            {
+              "news_id": 1784099993166,
+              "url": "https://thepeninsulaqatar.com/article/14/07/2026/fire-ravages-historic-forest-outside-paris",
+              "headline": "Fire ravages historic forest outside Paris",
+              "published_date": "2026-07-15T07:19:14+00:00",
+              "outlet": "The Peninsula Qatar"
+            },
+            {
+              "news_id": 1784099993178,
+              "url": "https://en.tempo.co/read/2113659/france-arrests-arson-suspects-amid-fontainebleau-forest-fire",
+              "headline": "France Arrests Arson Suspects Amid Fontainebleau Forest Fire",
+              "published_date": "2026-07-15T07:19:14+00:00",
+              "outlet": "Tempo.co English"
+            },
+            {
+              "news_id": 1784099993191,
+              "url": "https://www.theguardian.com/world/2026/jul/14/bastille-day-celebrations-france-tempered-fear-wildfires",
+              "headline": "Bastille Day celebrations in France tempered by fear of more wildfires",
+              "published_date": "2026-07-15T07:19:14+00:00",
+              "outlet": "The Guardian"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "20260709-ES-WF",
+      "canonical_name": "Green forest fire notification in Spain",
+      "summary": "A fast-moving wildfire in southern Spain's Almería province, starting around July 9-10, 2026, killed at least 13 people and left over 20 missing, many of them foreign nationals (including British and Belgian). The fire, which prompted evacuations of roughly 800 people, is suspected to have been ignited by a broken power line amid a severe summer heatwave. It is considered one of Spain's deadliest wildfires on record.",
+      "country": "Spain",
+      "iso2": "ES",
+      "lat": 37.18048027589243,
+      "lon": -2.0011550270740166,
+      "country_group": "C",
+      "region": "Europe",
+      "incident_type": "Forest Fire",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "HIGH",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-07-09",
+      "first_reported_date": "2026-07-09",
+      "last_updated_date": "2026-07-15",
+      "days_since_event": 6,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 0,
+        "gdacs": 1,
+        "healthmap": 0,
+        "news": 22
+      },
+      "source_links": [
+        {
+          "type": "GDACS",
+          "label": "Green alert · Green forest fire notification in Spain",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=WF&eventid=1029448",
+          "meta": ""
+        }
+      ],
+      "physical": {
+        "max_magnitude": null,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": "Green",
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "11 dead, 19 missing in wildfire amid heat wave: 'The consequences have been terrible'",
+          "url": "https://www.nj.com/news/2026/07/11-dead-19-missing-in-wildfire-amid-heat-wave-the-consequences-have-been-terrible.html",
+          "outlet": "NJ.com",
+          "published_date": "2026-07-10T11:00:00+00:00"
+        },
+        {
+          "headline": "Eleven killed in fast-moving southern Spain wildfire, officials say",
+          "url": "https://www.msn.com/en-us/news/world/eleven-killed-in-fast-moving-southern-spain-wildfire-officials-say/ar-AA27C3md",
+          "outlet": "Reuters",
+          "published_date": "2026-07-10T11:30:00+00:00"
+        },
+        {
+          "headline": "Eleven Dead, 19 Missing As Spain Wildfire Roars Through Village",
+          "url": "https://www.channelstv.com/2026/07/10/eleven-dead-19-missing-as-spain-wildfire-roars-through-village/",
+          "outlet": "Channels Television",
+          "published_date": "2026-07-10T11:53:00+00:00"
+        },
+        {
+          "headline": "At least 11 people killed as wildfires sweep southern Spain",
+          "url": "https://www.msn.com/en-us/news/world/at-least-11-people-killed-as-wildfires-sweep-southern-spain/ar-AA27Ekoq",
+          "outlet": "The Washington Post",
+          "published_date": "2026-07-10T13:10:11+00:00"
+        },
+        {
+          "headline": "Spain wildfires UPDATES: At least 4 'Brits' dead as fire tears through Almeria",
+          "url": "https://www.msn.com/en-gb/news/world/spain-wildfires-updates-at-least-4-brits-dead-as-fire-tears-through-almeria/ar-AA27CXiC",
+          "outlet": "Daily Express",
+          "published_date": "2026-07-10T13:56:00+00:00"
+        },
+        {
+          "headline": "Majority of 12 victims of Spain wildfires believed to be foreigners, officials say",
+          "url": "https://www.yahoo.com/news/world/articles/majority-12-victims-spain-wildfires-160110522.html",
+          "outlet": "Yahoo",
+          "published_date": "2026-07-10T17:07:00+00:00"
+        },
+        {
+          "headline": "Fast-spreading wildfire kills at least 12 in southern Spain",
+          "url": "https://www.theguardian.com/world/2026/jul/10/wildfire-southern-spain-temperatures-almeria-los-gallardos-bedar",
+          "outlet": "The Guardian",
+          "published_date": "2026-07-10T20:37:00+00:00"
+        },
+        {
+          "headline": "One of Spain's deadliest wildfires has killed at least 12 people, with 23 others missing",
+          "url": "https://www.bostonherald.com/2026/07/10/spain-wildfires-deaths/",
+          "outlet": "Boston Herald",
+          "published_date": "2026-07-10T21:31:00+00:00"
+        },
+        {
+          "headline": "Twelve killed, 23 missing in one of Spain's deadliest wildfires",
+          "url": "https://www.msn.com/en-us/news/world/twelve-killed-23-missing-in-one-of-spains-deadliest-wildfires/ar-AA27Dy6G",
+          "outlet": "Reuters",
+          "published_date": "2026-07-11T09:41:00+00:00"
+        },
+        {
+          "headline": "Heat and fire generate overlapping problems for much of southern Europe",
+          "url": "https://www.msn.com/en-us/news/world/heat-and-fire-generate-overlapping-problems-for-much-of-southern-europe/ar-AA27HQVS",
+          "outlet": "CNN",
+          "published_date": "2026-07-11T13:59:54+00:00"
+        },
+        {
+          "headline": "A Wildfire Killed 12 People in Southern Spain. Here's the Latest.",
+          "url": "https://www.nytimes.com/2026/07/11/world/europe/spain-wildfire-kills-12-what-to-know.html",
+          "outlet": "The New York Times",
+          "published_date": "2026-07-11T14:45:00+00:00"
+        },
+        {
+          "headline": "Europe heatwaves: France battles massive Fontainebleau wildfires near Paris; Spain identifies victims of deadly blaze",
+          "url": "https://www.msn.com/en-in/public-safety-and-emergencies/fire-and-rescue/europe-heatwaves-france-battles-massive-fontainebleau-wildfires-near-paris-spain-identifies-victims-of-deadly-blaze/ar-AA27UWr9?ocid=BingNewsVerp",
+          "outlet": "India Blooms on MSN",
+          "published_date": "2026-07-13T07:19:56+00:00"
+        },
+        {
+          "headline": "Deadliest Spain wildfire in years kills at least 13 people near Los Gallardos",
+          "url": "https://www.deseret.com/environment/2026/07/13/deadly-wildfire-ravages-spain/",
+          "outlet": "Deseret News",
+          "published_date": "2026-07-13T22:53:00+00:00"
+        },
+        {
+          "headline": "1,000 evacuated from Fontainebleau fire near Paris; Spanish authorities identify some fire victims",
+          "url": "https://toronto.citynews.ca/2026/07/14/1000-evacuated-from-fontainebleau-fire-near-paris-spanish-authorities-identify-some-fire-victims/",
+          "outlet": "CityNews Toronto",
+          "published_date": "2026-07-14T00:00:00+00:00"
+        },
+        {
+          "headline": "Three Belgian victims identified in Spanish wildfires, foreign ministry asks travellers to consult advice",
+          "url": "https://www.vrt.be/vrtnws/en/2026/07/14/three-belgian-victims-identified-in-spanish-wildfires-foreign-m/",
+          "outlet": "VRT",
+          "published_date": "2026-07-14T00:00:00+00:00"
+        },
+        {
+          "headline": "Fire in Fontainebleau forest near Paris triggers evacuations; 10 still missing in Spanish wildfire",
+          "url": "https://apnews.com/article/france-fire-fontainebleau-heat-9231f354a12af0d1fd40aff4f759240b",
+          "outlet": "Associated Press News",
+          "published_date": "2026-07-14T03:38:00+00:00"
+        },
+        {
+          "headline": "Spanish PM Pedro Sánchez urges better prevention after deadly wildfire in south",
+          "url": "https://www.yahoo.com/news/weather-news/articles/spanish-pm-pedro-nchez-urges-064805427.html",
+          "outlet": "Euronews · via Yahoo News",
+          "published_date": "2026-07-14T06:43:44+00:00"
+        },
+        {
+          "headline": "Wildfires rage across France, Spain as Europe endures record summer heat",
+          "url": "https://www.13newsnow.com/article/weather/knowledge/wildfires-rage-across-france-spain-as-europe-endures-record-summer-heat/291-d1f1a3fc-0d74-4be7-9dab-50604c12993d",
+          "outlet": "13 News, WVEC Hampton Roads",
+          "published_date": "2026-07-14T06:43:44+00:00"
+        },
+        {
+          "headline": "1,000 evacuated from Fontainebleau fire near Paris; Spanish authorities identify some fire victims",
+          "url": "https://www.msn.com/en-gb/news/world/1000-evacuated-from-fontainebleau-fire-near-paris-spanish-authorities-identify-some-fire-victims/ar-AA27TboO?ocid=BingNewsVerp",
+          "outlet": "The Independent on MSN",
+          "published_date": "2026-07-15T07:19:53+00:00"
+        },
+        {
+          "headline": "Five Britons among foreign Spanish wildfire victims",
+          "url": "https://www.channelnewsasia.com/world/spain-wildfire-victims-britons-missing-6252011",
+          "outlet": "CNA",
+          "published_date": "2026-07-15T07:19:53+00:00"
+        },
+        {
+          "headline": "Spain confirms 12 foreigners among 13 wildfire victims",
+          "url": "https://www.straitstimes.com/world/europe/spain-confirms-12-foreigners-among-13-wildfire-victims",
+          "outlet": "The Straits Times",
+          "published_date": "2026-07-15T07:19:56+00:00"
+        },
+        {
+          "headline": "Seven Britons among 12 foreign nationals killed in Spain’s deadly wildfires",
+          "url": "https://www.theguardian.com/world/2026/jul/14/seven-britons-among-12-foreign-nationals-killed-in-spains-deadly-wildfires",
+          "outlet": "The Guardian",
+          "published_date": "2026-07-15T07:19:56+00:00"
+        }
+      ],
+      "news_total": 22,
+      "logs": [
+        {
+          "log_datetime": "2026-07-15T07:19:56+00:00",
+          "summary": "A fast-moving wildfire in southern Spain's Almería province, starting around July 9-10, 2026, killed at least 13 people and left over 20 missing, many of them foreign nationals (including British and Belgian). The fire, which prompted evacuations of roughly 800 people, is suspected to have been ignited by a broken power line amid a severe summer heatwave. It is considered one of Spain's deadliest wildfires on record.",
+          "news": [
+            {
+              "news_id": 1784097869120,
+              "url": "https://www.nj.com/news/2026/07/11-dead-19-missing-in-wildfire-amid-heat-wave-the-consequences-have-been-terrible.html",
+              "headline": "11 dead, 19 missing in wildfire amid heat wave: 'The consequences have been terrible'",
+              "published_date": "2026-07-10T11:00:00+00:00",
+              "outlet": "NJ.com"
+            },
+            {
+              "news_id": 1784097869131,
+              "url": "https://www.msn.com/en-us/news/world/eleven-killed-in-fast-moving-southern-spain-wildfire-officials-say/ar-AA27C3md",
+              "headline": "Eleven killed in fast-moving southern Spain wildfire, officials say",
+              "published_date": "2026-07-10T11:30:00+00:00",
+              "outlet": "Reuters"
+            },
+            {
+              "news_id": 1784097869074,
+              "url": "https://www.channelstv.com/2026/07/10/eleven-dead-19-missing-as-spain-wildfire-roars-through-village/",
+              "headline": "Eleven Dead, 19 Missing As Spain Wildfire Roars Through Village",
+              "published_date": "2026-07-10T11:53:00+00:00",
+              "outlet": "Channels Television"
+            },
+            {
+              "news_id": 1784097869062,
+              "url": "https://www.msn.com/en-us/news/world/at-least-11-people-killed-as-wildfires-sweep-southern-spain/ar-AA27Ekoq",
+              "headline": "At least 11 people killed as wildfires sweep southern Spain",
+              "published_date": "2026-07-10T13:10:11+00:00",
+              "outlet": "The Washington Post"
+            },
+            {
+              "news_id": 1784097869095,
+              "url": "https://www.msn.com/en-gb/news/world/spain-wildfires-updates-at-least-4-brits-dead-as-fire-tears-through-almeria/ar-AA27CXiC",
+              "headline": "Spain wildfires UPDATES: At least 4 'Brits' dead as fire tears through Almeria",
+              "published_date": "2026-07-10T13:56:00+00:00",
+              "outlet": "Daily Express"
+            },
+            {
+              "news_id": 1784097869051,
+              "url": "https://www.yahoo.com/news/world/articles/majority-12-victims-spain-wildfires-160110522.html",
+              "headline": "Majority of 12 victims of Spain wildfires believed to be foreigners, officials say",
+              "published_date": "2026-07-10T17:07:00+00:00",
+              "outlet": "Yahoo"
+            },
+            {
+              "news_id": 1784097869084,
+              "url": "https://www.theguardian.com/world/2026/jul/10/wildfire-southern-spain-temperatures-almeria-los-gallardos-bedar",
+              "headline": "Fast-spreading wildfire kills at least 12 in southern Spain",
+              "published_date": "2026-07-10T20:37:00+00:00",
+              "outlet": "The Guardian"
+            },
+            {
+              "news_id": 1784097869006,
+              "url": "https://www.bostonherald.com/2026/07/10/spain-wildfires-deaths/",
+              "headline": "One of Spain's deadliest wildfires has killed at least 12 people, with 23 others missing",
+              "published_date": "2026-07-10T21:31:00+00:00",
+              "outlet": "Boston Herald"
+            },
+            {
+              "news_id": 1784097868996,
+              "url": "https://www.msn.com/en-us/news/world/twelve-killed-23-missing-in-one-of-spains-deadliest-wildfires/ar-AA27Dy6G",
+              "headline": "Twelve killed, 23 missing in one of Spain's deadliest wildfires",
+              "published_date": "2026-07-11T09:41:00+00:00",
+              "outlet": "Reuters"
+            },
+            {
+              "news_id": 1784097869108,
+              "url": "https://www.msn.com/en-us/news/world/heat-and-fire-generate-overlapping-problems-for-much-of-southern-europe/ar-AA27HQVS",
+              "headline": "Heat and fire generate overlapping problems for much of southern Europe",
+              "published_date": "2026-07-11T13:59:54+00:00",
+              "outlet": "CNN"
+            },
+            {
+              "news_id": 1784097869016,
+              "url": "https://www.nytimes.com/2026/07/11/world/europe/spain-wildfire-kills-12-what-to-know.html",
+              "headline": "A Wildfire Killed 12 People in Southern Spain. Here's the Latest.",
+              "published_date": "2026-07-11T14:45:00+00:00",
+              "outlet": "The New York Times"
+            },
+            {
+              "news_id": 1784100028282,
+              "url": "https://www.msn.com/en-in/public-safety-and-emergencies/fire-and-rescue/europe-heatwaves-france-battles-massive-fontainebleau-wildfires-near-paris-spain-identifies-victims-of-deadly-blaze/ar-AA27UWr9?ocid=BingNewsVerp",
+              "headline": "Europe heatwaves: France battles massive Fontainebleau wildfires near Paris; Spain identifies victims of deadly blaze",
+              "published_date": "2026-07-13T07:19:56+00:00",
+              "outlet": "India Blooms on MSN"
+            },
+            {
+              "news_id": 1784097869035,
+              "url": "https://www.deseret.com/environment/2026/07/13/deadly-wildfire-ravages-spain/",
+              "headline": "Deadliest Spain wildfire in years kills at least 13 people near Los Gallardos",
+              "published_date": "2026-07-13T22:53:00+00:00",
+              "outlet": "Deseret News"
+            },
+            {
+              "news_id": 1784100028305,
+              "url": "https://toronto.citynews.ca/2026/07/14/1000-evacuated-from-fontainebleau-fire-near-paris-spanish-authorities-identify-some-fire-victims/",
+              "headline": "1,000 evacuated from Fontainebleau fire near Paris; Spanish authorities identify some fire victims",
+              "published_date": "2026-07-14T00:00:00+00:00",
+              "outlet": "CityNews Toronto"
+            },
+            {
+              "news_id": 1784100028330,
+              "url": "https://www.vrt.be/vrtnws/en/2026/07/14/three-belgian-victims-identified-in-spanish-wildfires-foreign-m/",
+              "headline": "Three Belgian victims identified in Spanish wildfires, foreign ministry asks travellers to consult advice",
+              "published_date": "2026-07-14T00:00:00+00:00",
+              "outlet": "VRT"
+            },
+            {
+              "news_id": 1784097868983,
+              "url": "https://apnews.com/article/france-fire-fontainebleau-heat-9231f354a12af0d1fd40aff4f759240b",
+              "headline": "Fire in Fontainebleau forest near Paris triggers evacuations; 10 still missing in Spanish wildfire",
+              "published_date": "2026-07-14T03:38:00+00:00",
+              "outlet": "Associated Press News"
+            },
+            {
+              "news_id": 1784097868960,
+              "url": "https://www.yahoo.com/news/weather-news/articles/spanish-pm-pedro-nchez-urges-064805427.html",
+              "headline": "Spanish PM Pedro Sánchez urges better prevention after deadly wildfire in south",
+              "published_date": "2026-07-14T06:43:44+00:00",
+              "outlet": "Euronews · via Yahoo News"
+            },
+            {
+              "news_id": 1784097868975,
+              "url": "https://www.13newsnow.com/article/weather/knowledge/wildfires-rage-across-france-spain-as-europe-endures-record-summer-heat/291-d1f1a3fc-0d74-4be7-9dab-50604c12993d",
+              "headline": "Wildfires rage across France, Spain as Europe endures record summer heat",
+              "published_date": "2026-07-14T06:43:44+00:00",
+              "outlet": "13 News, WVEC Hampton Roads"
+            },
+            {
+              "news_id": 1784100028253,
+              "url": "https://www.msn.com/en-gb/news/world/1000-evacuated-from-fontainebleau-fire-near-paris-spanish-authorities-identify-some-fire-victims/ar-AA27TboO?ocid=BingNewsVerp",
+              "headline": "1,000 evacuated from Fontainebleau fire near Paris; Spanish authorities identify some fire victims",
+              "published_date": "2026-07-15T07:19:53+00:00",
+              "outlet": "The Independent on MSN"
+            },
+            {
+              "news_id": 1784100028272,
+              "url": "https://www.channelnewsasia.com/world/spain-wildfire-victims-britons-missing-6252011",
+              "headline": "Five Britons among foreign Spanish wildfire victims",
+              "published_date": "2026-07-15T07:19:53+00:00",
+              "outlet": "CNA"
+            },
+            {
+              "news_id": 1784100028295,
+              "url": "https://www.straitstimes.com/world/europe/spain-confirms-12-foreigners-among-13-wildfire-victims",
+              "headline": "Spain confirms 12 foreigners among 13 wildfire victims",
+              "published_date": "2026-07-15T07:19:56+00:00",
+              "outlet": "The Straits Times"
+            },
+            {
+              "news_id": 1784100028316,
+              "url": "https://www.theguardian.com/world/2026/jul/14/seven-britons-among-12-foreign-nationals-killed-in-spains-deadly-wildfires",
+              "headline": "Seven Britons among 12 foreign nationals killed in Spain’s deadly wildfires",
+              "published_date": "2026-07-15T07:19:56+00:00",
+              "outlet": "The Guardian"
             }
           ]
         }
