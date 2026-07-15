@@ -1,25 +1,25 @@
 {
   "schema_version": "1.4",
-  "report_date": "2026-07-14",
+  "report_date": "2026-07-15",
   "generated_at": "2026-07-15T04:19:55Z",
-  "as_of": "2026-07-14",
+  "as_of": "2026-07-15",
   "tracking_window_days": 14,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 86,
+    "reportable_total": 85,
     "new_today": 0,
     "critical": 2,
     "high": 47,
-    "medium": 37,
+    "medium": 36,
     "low": 0,
     "disease_outbreaks": 22,
     "countries_affected": 37,
-    "news_total": 480,
+    "news_total": 479,
     "max_magnitude": 27577.0,
     "by_severity": {
       "CRITICAL": 2,
       "HIGH": 47,
-      "MEDIUM": 37,
+      "MEDIUM": 36,
       "LOW": 0
     },
     "by_type": {
@@ -27,14 +27,14 @@
       "Tropical Cyclone": 4,
       "Forest Fire": 3,
       "Flood": 5,
-      "Earthquake": 49,
+      "Earthquake": 48,
       "Disease": 22
     },
     "by_region": {
       "Asia": 52,
       "Europe": 4,
       "Americas": 13,
-      "Oceania": 6,
+      "Oceania": 5,
       "Africa": 9,
       "Unknown": 2
     }
@@ -104,21 +104,21 @@
       "max_severity": "MEDIUM"
     },
     {
-      "country": "Papua New Guinea",
-      "count": 3,
-      "max_sev_rank": 2,
-      "iso2": "PG",
-      "region": "Oceania",
-      "country_group": "B",
-      "max_severity": "MEDIUM"
-    },
-    {
       "country": "Pakistan",
       "count": 2,
       "max_sev_rank": 2,
       "iso2": "PK",
       "region": "Asia",
       "country_group": "A",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "Papua New Guinea",
+      "count": 2,
+      "max_sev_rank": 2,
+      "iso2": "PG",
+      "region": "Oceania",
+      "country_group": "B",
       "max_severity": "MEDIUM"
     },
     {
@@ -7482,82 +7482,6 @@
               "headline": "Magnitude 5.3 earthquake jolts waters off Sarangani — Phivolcs",
               "published_date": "2026-07-08T12:23:08+00:00",
               "outlet": "Inquirer.net"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "incident_id": "20260630-PG-EQ",
-      "canonical_name": "Earthquake 90 km ESE of Kimbe, Papua New Guinea 2026-06",
-      "summary": "A magnitude 5.8 earthquake struck the New Britain Region of Papua New Guinea on June 30, 2026, according to the German Research Centre for Geosciences (GFZ). The epicenter was located in the region near Kimbe, East New Britain.",
-      "country": "Papua New Guinea",
-      "iso2": "PG",
-      "lat": -5.727,
-      "lon": 150.9338,
-      "country_group": "B",
-      "region": "Oceania",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "disease_name": null,
-      "event_date": "2026-06-30",
-      "first_reported_date": "2026-06-30",
-      "last_updated_date": "2026-06-30",
-      "days_since_event": 15,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 0,
-        "healthmap": 0,
-        "news": 1
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 5.4 - 90 km ESE of Kimbe, Papua New Guinea",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t978",
-          "meta": "35 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 5.4,
-        "max_depth_km": 35.0,
-        "place": "90 km ESE of Kimbe, Papua New Guinea",
-        "felt": null,
-        "sig": 449,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Magnitude 5.8 earthquake strikes New Britain Region, Papua New Guinea, GFZ says",
-          "url": "https://www.reuters.com/business/environment/magnitude-58-earthquake-strikes-new-britain-region-papua-new-guinea-gfz-says-2026-06-30/",
-          "outlet": "Reuters",
-          "published_date": "2026-06-30T14:37:55+00:00"
-        }
-      ],
-      "news_total": 1,
-      "logs": [
-        {
-          "log_datetime": "2026-06-30T14:37:55+00:00",
-          "summary": "A magnitude 5.8 earthquake struck the New Britain Region of Papua New Guinea on June 30, 2026, according to the German Research Centre for Geosciences (GFZ). The epicenter was located in the region near Kimbe, East New Britain.",
-          "news": [
-            {
-              "news_id": 1700001000293,
-              "url": "https://www.reuters.com/business/environment/magnitude-58-earthquake-strikes-new-britain-region-papua-new-guinea-gfz-says-2026-06-30/",
-              "headline": "Magnitude 5.8 earthquake strikes New Britain Region, Papua New Guinea, GFZ says",
-              "published_date": "2026-06-30T14:37:55+00:00",
-              "outlet": "Reuters"
             }
           ]
         }
