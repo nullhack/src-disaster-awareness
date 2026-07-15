@@ -1,36 +1,36 @@
 {
   "schema_version": "1.4",
   "report_date": "2026-07-12",
-  "generated_at": "2026-07-15T09:29:11Z",
+  "generated_at": "2026-07-15T15:08:19Z",
   "as_of": "2026-07-12",
   "tracking_window_days": 14,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 73,
+    "reportable_total": 72,
     "new_today": 2,
     "critical": 0,
     "high": 44,
-    "medium": 29,
+    "medium": 28,
     "low": 0,
     "disease_outbreaks": 20,
-    "countries_affected": 33,
-    "news_total": 226,
+    "countries_affected": 32,
+    "news_total": 225,
     "max_magnitude": 27577.0,
     "by_severity": {
       "CRITICAL": 0,
       "HIGH": 44,
-      "MEDIUM": 29,
+      "MEDIUM": 28,
       "LOW": 0
     },
     "by_type": {
       "Tropical Cyclone": 3,
       "Forest Fire": 3,
-      "Flood": 2,
+      "Flood": 1,
       "Earthquake": 45,
       "Disease": 20
     },
     "by_region": {
-      "Asia": 41,
+      "Asia": 40,
       "Europe": 4,
       "Americas": 12,
       "Oceania": 6,
@@ -109,15 +109,6 @@
       "iso2": "PG",
       "region": "Oceania",
       "country_group": "B",
-      "max_severity": "MEDIUM"
-    },
-    {
-      "country": "Nepal",
-      "count": 1,
-      "max_sev_rank": 2,
-      "iso2": "NP",
-      "region": "Asia",
-      "country_group": "A",
       "max_severity": "MEDIUM"
     },
     {
@@ -1035,82 +1026,6 @@
       ],
       "news_total": 3,
       "logs": []
-    },
-    {
-      "incident_id": "20251003-NP-FL",
-      "canonical_name": "Flood in Nepal",
-      "summary": "Heavy rains caused severe flooding and landslides in Nepal and India’s eastern Himalayan region, resulting in devastating damage. The article examines the causes of the flood damage and how it was contained.",
-      "country": "Nepal",
-      "iso2": "NP",
-      "lat": 26.94,
-      "lon": 87.9248,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Flood",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "disease_name": null,
-      "event_date": "2025-10-03",
-      "first_reported_date": "2025-10-03",
-      "last_updated_date": "2026-07-08",
-      "days_since_event": 285,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 1,
-        "healthmap": 0,
-        "news": 1
-      },
-      "source_links": [
-        {
-          "type": "GDACS",
-          "label": "Orange alert · Magnitude 0 ",
-          "url": "https://www.gdacs.org/report.aspx?eventid=1103540&episodeid=2&eventtype=FL",
-          "meta": "Magnitude 0 "
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": "Orange",
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "What caused Nepal’s devastating flood damage and how was it contained?",
-          "url": "https://www.yahoo.com/news/articles/caused-nepal-devastating-flood-damage-120816471.html",
-          "outlet": "Al Jazeera · via Yahoo News",
-          "published_date": "2026-07-08T16:30:36+00:00"
-        }
-      ],
-      "news_total": 1,
-      "logs": [
-        {
-          "log_datetime": "2026-07-08T16:30:36+00:00",
-          "summary": "Heavy rains caused severe flooding and landslides in Nepal and India’s eastern Himalayan region, resulting in devastating damage. The article examines the causes of the flood damage and how it was contained.",
-          "news": [
-            {
-              "news_id": 1700001000362,
-              "url": "https://www.yahoo.com/news/articles/caused-nepal-devastating-flood-damage-120816471.html",
-              "headline": "What caused Nepal’s devastating flood damage and how was it contained?",
-              "published_date": "2026-07-08T16:30:36+00:00",
-              "outlet": "Al Jazeera · via Yahoo News"
-            }
-          ]
-        }
-      ]
     },
     {
       "incident_id": "20251117-TH-FL",
