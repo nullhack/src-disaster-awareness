@@ -1,25 +1,25 @@
 {
   "schema_version": "1.4",
   "report_date": "2026-07-16",
-  "generated_at": "2026-07-16T09:35:17Z",
+  "generated_at": "2026-07-16T15:17:50Z",
   "as_of": "2026-07-16",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 30,
-    "new_today": 7,
+    "reportable_total": 32,
+    "new_today": 11,
     "critical": 2,
-    "high": 11,
-    "medium": 16,
+    "high": 12,
+    "medium": 17,
     "low": 1,
     "disease_outbreaks": 7,
-    "countries_affected": 17,
-    "news_total": 510,
+    "countries_affected": 19,
+    "news_total": 572,
     "max_magnitude": 7.8,
     "by_severity": {
       "CRITICAL": 2,
-      "HIGH": 11,
-      "MEDIUM": 16,
+      "HIGH": 12,
+      "MEDIUM": 17,
       "LOW": 1
     },
     "by_type": {
@@ -27,15 +27,16 @@
       "Tropical Cyclone": 1,
       "Forest Fire": 4,
       "Flood": 5,
-      "Earthquake": 10,
-      "Disease": 7
+      "Earthquake": 11,
+      "Disease": 7,
+      "Drought": 1
     },
     "by_region": {
       "Asia": 18,
-      "Europe": 4,
+      "Europe": 5,
       "Americas": 2,
       "Unknown": 3,
-      "Oceania": 2,
+      "Oceania": 3,
       "Africa": 1
     }
   },
@@ -131,6 +132,15 @@
       "max_severity": "MEDIUM"
     },
     {
+      "country": "Austria",
+      "count": 1,
+      "max_sev_rank": 2,
+      "iso2": "AT",
+      "region": "Europe",
+      "country_group": "C",
+      "max_severity": "MEDIUM"
+    },
+    {
       "country": "China",
       "count": 2,
       "max_sev_rank": 3,
@@ -182,6 +192,15 @@
       "iso2": "ES",
       "region": "Europe",
       "country_group": "C",
+      "max_severity": "HIGH"
+    },
+    {
+      "country": "New Zealand",
+      "count": 1,
+      "max_sev_rank": 3,
+      "iso2": "NZ",
+      "region": "Oceania",
+      "country_group": "B",
       "max_severity": "HIGH"
     },
     {
@@ -2752,7 +2771,7 @@
     {
       "incident_id": "20260606-CN-FL",
       "canonical_name": "Orange flood alert in China",
-      "summary": "Record rainfall in China led to residents paddleboarding and swimming through flooded streets. Floodwaters swept away vehicles in Chengde following Typhoon Bavi, while emergency workers reinforced dikes in Shenyang. Torrential rains and widespread flooding continued to disrupt life across eastern China.",
+      "summary": "A rescuer carried a newborn to safety from a flooded maternity hospital in Guangxi. Heavy rains in Guangxi have left at least 39 people dead as of early July. An old video has also been misrepresented as rescue footage from these floods.",
       "country": "China",
       "iso2": "CN",
       "lat": 27.1175905,
@@ -2780,7 +2799,7 @@
         "usgs": 0,
         "gdacs": 1,
         "healthmap": 0,
-        "news": 22
+        "news": 24
       },
       "source_links": [
         {
@@ -2928,13 +2947,25 @@
           "published_date": "2026-07-15T09:02:23+00:00"
         },
         {
+          "headline": "Old video misrepresented as rescue footage from deadly 2026 floods in China",
+          "url": "https://www.yahoo.com/news/world/articles/old-video-misrepresented-rescue-footage-035737176.html",
+          "outlet": "AFP · via Yahoo News",
+          "published_date": "2026-07-16T03:41:00+00:00"
+        },
+        {
           "headline": "Rescuer carries newborn to safety during hospital flood in China",
           "url": "https://www.msn.com/en-nz/news/other/rescuer-carries-newborn-to-safety-during-hospital-flood-in-china/vi-AA27XkAS?ocid=BingNewsVerp",
           "outlet": "Stories by SWNS on MSN",
           "published_date": "2026-07-16T03:53:38+00:00"
+        },
+        {
+          "headline": "Old video misrepresented as rescue footage from deadly 2026 floods in China",
+          "url": "https://www.msn.com/en-us/public-safety-and-emergencies/natural-disasters/old-video-misrepresented-as-rescue-footage-from-deadly-2026-floods-in-china/ar-AA280qkP?ocid=BingNewsVerp",
+          "outlet": "AFP on MSN",
+          "published_date": "2026-07-16T14:41:00+00:00"
         }
       ],
-      "news_total": 22,
+      "news_total": 24,
       "logs": [
         {
           "log_datetime": "2026-07-08T11:27:24+00:00",
@@ -3104,6 +3135,33 @@
               "headline": "Torrential rains and floods disrupt life across eastern ChinaPublished on: July 14, 2026 4:39 PM",
               "published_date": "2026-07-15T09:02:23+00:00",
               "outlet": "Daily Times on MSN"
+            }
+          ]
+        },
+        {
+          "log_datetime": "2026-07-16T14:41:00+00:00",
+          "summary": "A rescuer carried a newborn to safety from a flooded maternity hospital in Guangxi. Heavy rains in Guangxi have left at least 39 people dead as of early July. An old video has also been misrepresented as rescue footage from these floods.",
+          "news": [
+            {
+              "news_id": 1784212904143,
+              "url": "https://www.yahoo.com/news/world/articles/old-video-misrepresented-rescue-footage-035737176.html",
+              "headline": "Old video misrepresented as rescue footage from deadly 2026 floods in China",
+              "published_date": "2026-07-16T03:41:00+00:00",
+              "outlet": "AFP · via Yahoo News"
+            },
+            {
+              "news_id": 1784174051433,
+              "url": "https://www.msn.com/en-nz/news/other/rescuer-carries-newborn-to-safety-during-hospital-flood-in-china/vi-AA27XkAS?ocid=BingNewsVerp",
+              "headline": "Rescuer carries newborn to safety during hospital flood in China",
+              "published_date": "2026-07-16T03:53:38+00:00",
+              "outlet": "Stories by SWNS on MSN"
+            },
+            {
+              "news_id": 1784212904147,
+              "url": "https://www.msn.com/en-us/public-safety-and-emergencies/natural-disasters/old-video-misrepresented-as-rescue-footage-from-deadly-2026-floods-in-china/ar-AA280qkP?ocid=BingNewsVerp",
+              "headline": "Old video misrepresented as rescue footage from deadly 2026 floods in China",
+              "published_date": "2026-07-16T14:41:00+00:00",
+              "outlet": "AFP on MSN"
             }
           ]
         }
@@ -3541,7 +3599,7 @@
         "usgs": 2,
         "gdacs": 1,
         "healthmap": 0,
-        "news": 96
+        "news": 99
       },
       "source_links": [
         {
@@ -3977,6 +4035,12 @@
           "published_date": "2026-07-12T10:07:07+00:00"
         },
         {
+          "headline": "Venezuela earthquake death toll nears 5,000 as families continue searching rubble",
+          "url": "https://www.khaosodenglish.com/news/2026/07/16/venezuela-earthquake-death-toll-nears-5000-as-families-continue-searching-rubble/",
+          "outlet": "Khaosod English",
+          "published_date": "2026-07-12T14:42:50+00:00"
+        },
+        {
           "headline": "Death toll after Venezuela earthquake rises to 4,333",
           "url": "https://www.accuweather.com/en/weather-news/death-toll-after-venezuela-earthquake-rises-to-4333/1910767",
           "outlet": "AccuWeather",
@@ -4055,10 +4119,22 @@
           "published_date": "2026-07-14T00:00:00+00:00"
         },
         {
+          "headline": "Venezuela's earthquake recovery overshadows its push for democracy",
+          "url": "https://www.npr.org/2026/07/14/nx-s1-5893438/venezuelas-democracy-delayed",
+          "outlet": "NPR",
+          "published_date": "2026-07-14T00:00:00+00:00"
+        },
+        {
           "headline": "Earthquake aid keeps flowing from Florida to Venezuela, as volunteers unite to...",
           "url": "https://www.newstimes.com/business/article/earthquake-aid-keeps-flowing-from-florida-to-22344413.php",
           "outlet": "The News-Times",
           "published_date": "2026-07-14T12:55:14+00:00"
+        },
+        {
+          "headline": "Venezuela welcomes aid from Caricom countries after twin quakes",
+          "url": "https://www.jamaicaobserver.com/2026/07/15/venezuela-welcomes-aid-caricom-countries-twin-quakes/",
+          "outlet": "Jamaica Observer",
+          "published_date": "2026-07-15T00:00:00+00:00"
         },
         {
           "headline": "Earthquake aid keeps flowing from Florida to Venezuela, as volunteers unite to...",
@@ -4151,7 +4227,7 @@
           "published_date": "2026-07-16T03:55:10+00:00"
         }
       ],
-      "news_total": 96,
+      "news_total": 99,
       "logs": [
         {
           "log_datetime": "2026-06-28T00:00:00+00:00",
@@ -4653,6 +4729,33 @@
           ]
         },
         {
+          "log_datetime": "2026-07-15T00:00:00+00:00",
+          "summary": "Venezuela's Acting President Delcy Rodríguez publicly thanked Caricom countries for their aid as the death toll from the twin earthquakes remained at 4,829, with thousands homeless and families continuing to search rubble. The earthquake recovery effort has also overshadowed the country's push for democracy, according to analysis.",
+          "news": [
+            {
+              "news_id": 1784212985058,
+              "url": "https://www.khaosodenglish.com/news/2026/07/16/venezuela-earthquake-death-toll-nears-5000-as-families-continue-searching-rubble/",
+              "headline": "Venezuela earthquake death toll nears 5,000 as families continue searching rubble",
+              "published_date": "2026-07-12T14:42:50+00:00",
+              "outlet": "Khaosod English"
+            },
+            {
+              "news_id": 1784212985056,
+              "url": "https://www.npr.org/2026/07/14/nx-s1-5893438/venezuelas-democracy-delayed",
+              "headline": "Venezuela's earthquake recovery overshadows its push for democracy",
+              "published_date": "2026-07-14T00:00:00+00:00",
+              "outlet": "NPR"
+            },
+            {
+              "news_id": 1784212985052,
+              "url": "https://www.jamaicaobserver.com/2026/07/15/venezuela-welcomes-aid-caricom-countries-twin-quakes/",
+              "headline": "Venezuela welcomes aid from Caricom countries after twin quakes",
+              "published_date": "2026-07-15T00:00:00+00:00",
+              "outlet": "Jamaica Observer"
+            }
+          ]
+        },
+        {
           "log_datetime": "2026-07-15T06:55:17+00:00",
           "summary": "New reports detail ongoing recovery: the death toll remains at 4,490, while NASA radar data reveals significant ground shifts near La Guaira. Aid continues from Florida, Guyana, and Houston, bolstered by U.S. State Department support, and volunteers search tirelessly for missing victims. Lawmakers have urged lifting sanctions, and Venezuela’s inflation spike is compounding earthquake misery.",
           "news": [
@@ -4906,7 +5009,7 @@
         "usgs": 0,
         "gdacs": 1,
         "healthmap": 0,
-        "news": 13
+        "news": 14
       },
       "source_links": [
         {
@@ -5000,13 +5103,19 @@
           "published_date": "2026-07-16T00:00:00+00:00"
         },
         {
+          "headline": "Suzuki Philippines extends assistance to earthquake-affected dealership employees in General Santos",
+          "url": "https://businessmirror.com.ph/2026/07/16/suzuki-philippines-extends-assistance-to-earthquake-affected-dealership-employees-in-general-santos/",
+          "outlet": "BusinessMirror",
+          "published_date": "2026-07-16T00:00:00+00:00"
+        },
+        {
           "headline": "DILG-Davao seeks strengthening of infrastructure audit program for death, damage prevention",
           "url": "https://www.sunstar.com.ph/davao/dilg-davao-seeks-strengthening-of-infrastructure-audit-program-for-death-damage-prevention",
           "outlet": "SunStar",
           "published_date": "2026-07-16T03:55:33+00:00"
         }
       ],
-      "news_total": 13,
+      "news_total": 14,
       "logs": [
         {
           "log_datetime": "2026-07-08T22:10:39+00:00",
@@ -5432,7 +5541,7 @@
     {
       "incident_id": "20250528-XX-DI",
       "canonical_name": "COVID-19 - Global Situation",
-      "summary": "New COVID-19 deaths in Andhra Pradesh have triggered a health alert in southern India. Officials note that widespread immune memory from vaccination and prior infection means there is no need for panic.",
+      "summary": "A study confirms that the 2025-2026 COVID-19 vaccines are effective at preventing emergency department/urgent care visits and hospitalizations among immunocompetent adults, providing updated evidence of protection against severe outcomes.",
       "country": "",
       "iso2": "",
       "lat": null,
@@ -5460,7 +5569,7 @@
         "usgs": 0,
         "gdacs": 0,
         "healthmap": 0,
-        "news": 9
+        "news": 11
       },
       "source_links": [
         {
@@ -5534,9 +5643,21 @@
           "url": "https://www.infectiousdiseaseadvisor.com/news/effectiveness-2025-2026-covid19-vaccines-severe-outcomes/",
           "outlet": "Infectious Disease Advisor",
           "published_date": "2026-07-15T09:25:38+00:00"
+        },
+        {
+          "headline": "Dr. Erica Schwartz faces vaccines questions at CDC director confirmation hearing",
+          "url": "https://www.yahoo.com/news/politics/articles/dr-erica-schwartz-appear-senate-090953431.html",
+          "outlet": "Good Morning America · via Yahoo News",
+          "published_date": "2026-07-15T18:45:32+00:00"
+        },
+        {
+          "headline": "Panel to study Pentagon’s COVID vaccine mandate, troops dismissal",
+          "url": "https://www.yahoo.com/news/politics/articles/panel-study-pentagon-covid-vaccine-200701635.html",
+          "outlet": "Military Times · via Yahoo News",
+          "published_date": "2026-07-15T19:45:32+00:00"
         }
       ],
-      "news_total": 9,
+      "news_total": 11,
       "logs": [
         {
           "log_datetime": "2026-07-08T15:12:31+00:00",
@@ -5605,6 +5726,33 @@
               "outlet": "Rediff.com"
             }
           ]
+        },
+        {
+          "log_datetime": "2026-07-15T19:45:32+00:00",
+          "summary": "A study confirms that the 2025-2026 COVID-19 vaccines are effective at preventing emergency department/urgent care visits and hospitalizations among immunocompetent adults, providing updated evidence of protection against severe outcomes.",
+          "news": [
+            {
+              "news_id": 1784107565908,
+              "url": "https://www.infectiousdiseaseadvisor.com/news/effectiveness-2025-2026-covid19-vaccines-severe-outcomes/",
+              "headline": "Updated 2025-2026 COVID-19 Vaccines Effective Against Medically Attended Disease",
+              "published_date": "2026-07-15T09:25:38+00:00",
+              "outlet": "Infectious Disease Advisor"
+            },
+            {
+              "news_id": 1784213152022,
+              "url": "https://www.yahoo.com/news/politics/articles/dr-erica-schwartz-appear-senate-090953431.html",
+              "headline": "Dr. Erica Schwartz faces vaccines questions at CDC director confirmation hearing",
+              "published_date": "2026-07-15T18:45:32+00:00",
+              "outlet": "Good Morning America · via Yahoo News"
+            },
+            {
+              "news_id": 1784213152018,
+              "url": "https://www.yahoo.com/news/politics/articles/panel-study-pentagon-covid-vaccine-200701635.html",
+              "headline": "Panel to study Pentagon’s COVID vaccine mandate, troops dismissal",
+              "published_date": "2026-07-15T19:45:32+00:00",
+              "outlet": "Military Times · via Yahoo News"
+            }
+          ]
         }
       ]
     },
@@ -5629,7 +5777,7 @@
       "disease_name": null,
       "event_date": "2024-05-30",
       "first_reported_date": "2024-05-30",
-      "last_updated_date": "2026-07-15",
+      "last_updated_date": "2026-07-16",
       "days_since_event": 777,
       "source_count": 1,
       "should_report": false,
@@ -5639,7 +5787,7 @@
         "usgs": 0,
         "gdacs": 0,
         "healthmap": 0,
-        "news": 6
+        "news": 7
       },
       "source_links": [
         {
@@ -5695,9 +5843,15 @@
           "url": "https://www.channelnewsasia.com/world/bangladesh-floods-dengue-cholera-risk-ifrc-6253181",
           "outlet": "CNA",
           "published_date": "2026-07-15T07:15:18+00:00"
+        },
+        {
+          "headline": "Two more die of dengue, 391 hospitalised in 24hrs",
+          "url": "https://www.daily-sun.com/bangladesh/886521/two-more-die-of-dengue-391-hospitalised-in-24hrs",
+          "outlet": "Daily Sun",
+          "published_date": "2026-07-16T14:45:52+00:00"
         }
       ],
-      "news_total": 6,
+      "news_total": 7,
       "logs": [
         {
           "log_datetime": "2026-07-08T14:57:06+00:00",
@@ -5758,7 +5912,7 @@
     {
       "incident_id": "20260423-BD-DI",
       "canonical_name": "Measles - Bangladesh",
-      "summary": "The measles outbreak in Bangladesh continues with renewed severity: between July 13 and 15, at least seven more children died from measles or suspected measles symptoms, and over 900 new suspected cases were reported in a single 24-hour period. The total confirmed cases since March 15 have reached 13,907, and the death toll has risen to 771. Health authorities are now facing an additional challenge as a major dengue fever outbreak simultaneously threatens to overwhelm hospitals.",
+      "summary": "The measles outbreak in Bangladesh continues to worsen, with eight more children dying from measles-like symptoms in the past 24 hours, raising the death toll to 779 (684 suspected, 95 laboratory-confirmed). Additionally, 974 new suspected cases were recorded, and total confirmed cases since March 15 have reached 14,104.",
       "country": "Bangladesh",
       "iso2": "BD",
       "lat": 23.7,
@@ -5786,7 +5940,7 @@
         "usgs": 0,
         "gdacs": 0,
         "healthmap": 0,
-        "news": 15
+        "news": 18
       },
       "source_links": [
         {
@@ -5896,9 +6050,27 @@
           "url": "https://bdnews24.com/health/9e74cd9ee57e",
           "outlet": "bdnews24",
           "published_date": "2026-07-16T03:58:24+00:00"
+        },
+        {
+          "headline": "Eight die with measles symptoms, 974 suspected cases recorded in 24hrs",
+          "url": "https://www.daily-sun.com/bangladesh/886660/eight-die-with-measles-symptoms-974-suspected-cases-recorded-in-24hrs",
+          "outlet": "Daily Sun",
+          "published_date": "2026-07-16T14:46:05+00:00"
+        },
+        {
+          "headline": "8 more Bangladeshi children die of measles-like symptoms",
+          "url": "https://www.aa.com.tr/en/asia-pacific/8-more-bangladeshi-children-die-of-measles-like-symptoms/4000428",
+          "outlet": "Anadolu Agency",
+          "published_date": "2026-07-16T14:46:05+00:00"
+        },
+        {
+          "headline": "Measles death toll rises to 779 as eight more children die in 24 hours",
+          "url": "https://www.tbsnews.net/bangladesh/health/measles-death-toll-rises-779-eight-more-children-die-24-hours-1489951",
+          "outlet": "The Business Standard",
+          "published_date": "2026-07-16T14:46:05+00:00"
         }
       ],
-      "news_total": 15,
+      "news_total": 18,
       "logs": [
         {
           "log_datetime": "2026-07-09T00:00:00+00:00",
@@ -6026,6 +6198,33 @@
               "headline": "Bangladesh reports five more suspected measles deaths, 172 new confirmed infections",
               "published_date": "2026-07-16T03:58:24+00:00",
               "outlet": "bdnews24"
+            }
+          ]
+        },
+        {
+          "log_datetime": "2026-07-16T14:46:05+00:00",
+          "summary": "The measles outbreak in Bangladesh continues to worsen, with eight more children dying from measles-like symptoms in the past 24 hours, raising the death toll to 779 (684 suspected, 95 laboratory-confirmed). Additionally, 974 new suspected cases were recorded, and total confirmed cases since March 15 have reached 14,104.",
+          "news": [
+            {
+              "news_id": 1784213186267,
+              "url": "https://www.daily-sun.com/bangladesh/886660/eight-die-with-measles-symptoms-974-suspected-cases-recorded-in-24hrs",
+              "headline": "Eight die with measles symptoms, 974 suspected cases recorded in 24hrs",
+              "published_date": "2026-07-16T14:46:05+00:00",
+              "outlet": "Daily Sun"
+            },
+            {
+              "news_id": 1784213186271,
+              "url": "https://www.aa.com.tr/en/asia-pacific/8-more-bangladeshi-children-die-of-measles-like-symptoms/4000428",
+              "headline": "8 more Bangladeshi children die of measles-like symptoms",
+              "published_date": "2026-07-16T14:46:05+00:00",
+              "outlet": "Anadolu Agency"
+            },
+            {
+              "news_id": 1784213186273,
+              "url": "https://www.tbsnews.net/bangladesh/health/measles-death-toll-rises-779-eight-more-children-die-24-hours-1489951",
+              "headline": "Measles death toll rises to 779 as eight more children die in 24 hours",
+              "published_date": "2026-07-16T14:46:05+00:00",
+              "outlet": "The Business Standard"
             }
           ]
         }
@@ -6755,7 +6954,7 @@
         "usgs": 0,
         "gdacs": 0,
         "healthmap": 0,
-        "news": 56
+        "news": 58
       },
       "source_links": [
         {
@@ -7159,9 +7358,21 @@
           "url": "https://www.msn.com/en-us/news/world/us-says-americans-returning-from-congo-must-wait-21-days-citing-ebola/ar-AA27YAjZ?ocid=BingNewsVerp",
           "outlet": "Reuters on MSN",
           "published_date": "2026-07-16T03:59:26+00:00"
+        },
+        {
+          "headline": "Trump’s CDC Nominee Is Actually Qualified. Will She Cave to MAHA?",
+          "url": "https://www.yahoo.com/news/politics/articles/trump-cdc-nominee-actually-qualified-140000087.html",
+          "outlet": "Rolling Stone · via Yahoo News",
+          "published_date": "2026-07-16T13:59:50+00:00"
+        },
+        {
+          "headline": "Ebola cases surge past 2,000, now fastest-growing outbreak in history",
+          "url": "https://www.cidrap.umn.edu/ebola/ebola-cases-surge-past-2000-now-fastest-growing-outbreak-history",
+          "outlet": "CIDRAP",
+          "published_date": "2026-07-16T14:46:50+00:00"
         }
       ],
-      "news_total": 56,
+      "news_total": 58,
       "logs": [
         {
           "log_datetime": "2026-07-10T13:36:50+00:00",
@@ -7608,7 +7819,7 @@
       "disease_name": null,
       "event_date": "2026-07-14",
       "first_reported_date": "2026-07-14",
-      "last_updated_date": "2026-07-15",
+      "last_updated_date": "2026-07-16",
       "days_since_event": 2,
       "source_count": 1,
       "should_report": true,
@@ -7618,7 +7829,7 @@
         "usgs": 1,
         "gdacs": 0,
         "healthmap": 0,
-        "news": 1
+        "news": 2
       },
       "source_links": [
         {
@@ -7644,9 +7855,15 @@
           "url": "http://www.chinaview.cn/20260715/db86a556ee0a41caa0a876624a501ff2/c.html",
           "outlet": "Xinhuanet",
           "published_date": "2026-07-15T00:00:00+00:00"
+        },
+        {
+          "headline": "Urgent: 6.0-magnitude quake hits south of Fiji Islands -- GFZ",
+          "url": "http://www.chinaview.cn/20260716/f2ad15c21ca44935952e41c1c561036f/c.html",
+          "outlet": "Xinhuanet",
+          "published_date": "2026-07-16T00:00:00+00:00"
         }
       ],
-      "news_total": 1,
+      "news_total": 2,
       "logs": []
     },
     {
@@ -7858,7 +8075,7 @@
     {
       "incident_id": "20260712-FR-WF",
       "canonical_name": "Green forest fire notification in France",
-      "summary": "The wildfires in the Fontainebleau forest have shown mixed status: some reports indicate containment, while others report the fire is still spreading with 850 firefighters and 200 vehicles deployed. Authorities discovered ten ignition points and arrested two suspects on suspicion of arson.",
+      "summary": "On July 15, approximately 800 firefighters continued to tackle flare-ups in the Fontainebleau forest as French President Emmanuel Macron pledged to replant the historic forest. Meanwhile, authorities are investigating a volunteer firefighter as a suspect in starting the devastating blaze, which burned over 2,000 hectares near Paris.",
       "country": "France",
       "iso2": "FR",
       "lat": 48.37489160154457,
@@ -7886,7 +8103,7 @@
         "usgs": 0,
         "gdacs": 1,
         "healthmap": 0,
-        "news": 35
+        "news": 37
       },
       "source_links": [
         {
@@ -7984,6 +8201,18 @@
           "url": "https://www.sfgate.com/news/world/article/1-000-evacuated-from-fontainebleau-fire-near-22344388.php",
           "outlet": "San Francisco Chronicle",
           "published_date": "2026-07-14T12:43:18+00:00"
+        },
+        {
+          "headline": "France's Macron pledges to replant Fontainebleau forest after devastating fire",
+          "url": "https://www.msn.com/en-us/news/world/frances-macron-pledges-to-replant-fontainebleau-forest-after-devastating-fire/ar-AA282Nn5?ocid=BingNewsVerp",
+          "outlet": "Reuters on MSN",
+          "published_date": "2026-07-14T14:48:30+00:00"
+        },
+        {
+          "headline": "Volunteer firefighter suspected of starting devastating France forest fire",
+          "url": "https://www.msn.com/en-us/news/world/volunteer-firefighter-suspected-of-starting-devastating-france-forest-fire/ar-AA282NRJ?ocid=BingNewsVerp",
+          "outlet": "BBC on MSN",
+          "published_date": "2026-07-14T14:48:33+00:00"
         },
         {
           "headline": "Wildfires that ravaged historic forest outside Paris contained",
@@ -8118,7 +8347,7 @@
           "published_date": "2026-07-15T12:00:52+00:00"
         }
       ],
-      "news_total": 35,
+      "news_total": 37,
       "logs": [
         {
           "log_datetime": "2026-07-15T07:19:14+00:00",
@@ -8362,6 +8591,40 @@
               "outlet": "Euronews on MSN"
             }
           ]
+        },
+        {
+          "log_datetime": "2026-07-15T12:00:52+00:00",
+          "summary": "On July 15, approximately 800 firefighters continued to tackle flare-ups in the Fontainebleau forest as French President Emmanuel Macron pledged to replant the historic forest. Meanwhile, authorities are investigating a volunteer firefighter as a suspect in starting the devastating blaze, which burned over 2,000 hectares near Paris.",
+          "news": [
+            {
+              "news_id": 1784174465664,
+              "url": "https://www.aljazeera.com/news/2026/7/13/wildfires-near-paris-force-evacuations-disrupt-train-lines-and-motorway",
+              "headline": "Wildfires near Paris force evacuations, disrupt train lines and motorway",
+              "published_date": "2026-07-13T04:00:52+00:00",
+              "outlet": "Al Jazeera"
+            },
+            {
+              "news_id": 1784213345319,
+              "url": "https://www.msn.com/en-us/news/world/frances-macron-pledges-to-replant-fontainebleau-forest-after-devastating-fire/ar-AA282Nn5?ocid=BingNewsVerp",
+              "headline": "France's Macron pledges to replant Fontainebleau forest after devastating fire",
+              "published_date": "2026-07-14T14:48:30+00:00",
+              "outlet": "Reuters on MSN"
+            },
+            {
+              "news_id": 1784213345322,
+              "url": "https://www.msn.com/en-us/news/world/volunteer-firefighter-suspected-of-starting-devastating-france-forest-fire/ar-AA282NRJ?ocid=BingNewsVerp",
+              "headline": "Volunteer firefighter suspected of starting devastating France forest fire",
+              "published_date": "2026-07-14T14:48:33+00:00",
+              "outlet": "BBC on MSN"
+            },
+            {
+              "news_id": 1784174465661,
+              "url": "https://www.yahoo.com/news/articles/firefighters-tackle-flare-ups-fontainebleau-114525556.html",
+              "headline": "Firefighters tackle flare-ups in Fontainebleau forest after fires brought under...",
+              "published_date": "2026-07-15T12:00:52+00:00",
+              "outlet": "RFI · via Yahoo News"
+            }
+          ]
         }
       ]
     },
@@ -8396,7 +8659,7 @@
         "usgs": 0,
         "gdacs": 1,
         "healthmap": 0,
-        "news": 27
+        "news": 29
       },
       "source_links": [
         {
@@ -8452,6 +8715,12 @@
           "url": "https://www.msn.com/en-gb/news/world/spain-wildfires-updates-at-least-4-brits-dead-as-fire-tears-through-almeria/ar-AA27CXiC",
           "outlet": "Daily Express",
           "published_date": "2026-07-10T13:56:00+00:00"
+        },
+        {
+          "headline": "Victims of Spanish wildfires were killed while trying to escape along river bed ...",
+          "url": "https://www.accuweather.com/en/weather-news/victims-of-spanish-wildfires-were-killed-while-trying-to-escape-along-river-bed-trap/1910038",
+          "outlet": "AccuWeather",
+          "published_date": "2026-07-10T14:49:08+00:00"
         },
         {
           "headline": "Majority of 12 victims of Spain wildfires believed to be foreigners, officials say",
@@ -8578,9 +8847,15 @@
           "url": "https://www.msn.com/en-my/public-safety-and-emergencies/health-and-safety-alerts/spain-confirms-12-foreigners-among-13-wildfire-victims/ar-AA27VmMi?ocid=BingNewsVerp",
           "outlet": "Free Malaysia Today on MSN",
           "published_date": "2026-07-16T04:01:08+00:00"
+        },
+        {
+          "headline": "Spain wildfires: with 13 dead, we need to start measuring fire damage in lives –...",
+          "url": "https://www.yahoo.com/news/world/articles/spain-wildfires-13-dead-start-081655406.html",
+          "outlet": "The Conversation en Español · via Yahoo News",
+          "published_date": "2026-07-16T07:49:08+00:00"
         }
       ],
-      "news_total": 27,
+      "news_total": 29,
       "logs": [
         {
           "log_datetime": "2026-07-15T07:19:56+00:00",
@@ -8780,6 +9055,691 @@
               "headline": "Spain confirms 12 foreigners among 13 wildfire victims",
               "published_date": "2026-07-16T04:01:08+00:00",
               "outlet": "Free Malaysia Today on MSN"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "20260716-NZ-EQ",
+      "canonical_name": "Earthquake 42 km NNW of Te Anau, New Zealand 2026-07",
+      "summary": "A magnitude 5.9 earthquake struck 42 km north-northwest of Te Anau, New Zealand, on July 16, 2026, initially reported as a 6.3 magnitude. The quake shook buildings across the South Island's tourist region and prompted a brief tsunami warning, which was later downgraded to a marine advisory. No injuries or damage were reported, and authorities lifted the tsunami alert shortly after.",
+      "country": "New Zealand",
+      "iso2": "NZ",
+      "lat": -45.0434,
+      "lon": 167.6107,
+      "country_group": "B",
+      "region": "Oceania",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "HIGH",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-07-16",
+      "first_reported_date": "2026-07-16",
+      "last_updated_date": "2026-07-16",
+      "days_since_event": 0,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 32
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 5.9 - 42 km NNW of Te Anau, New Zealand",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t0xb",
+          "meta": "76.397 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 5.9,
+        "max_depth_km": 76.397,
+        "place": "42 km NNW of Te Anau, New Zealand",
+        "felt": 27,
+        "sig": 547,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Live: NEMA warns of 'unpredictable surges' following quake, tsunami warning downgraded",
+          "url": "https://www.msn.com/en-nz/news/other/live-strong-shaking-as-magnitude-6-3-earthquake-strikes-southland/ar-AA2825hm?ocid=BingNewsVerp",
+          "outlet": "RNZ on MSN",
+          "published_date": "2026-07-12T14:49:32+00:00"
+        },
+        {
+          "headline": "6.3 magnitude earthquake hits New Zealand's South Island, tsunami alert issued",
+          "url": "https://www.msn.com/en-us/news/world/63-magnitude-earthquake-hits-new-zealands-south-island-tsunami-alert-issued/ar-AA281Rft?ocid=BingNewsVerp",
+          "outlet": "India Today on MSN",
+          "published_date": "2026-07-12T14:49:35+00:00"
+        },
+        {
+          "headline": "Magnitude 5.9 earthquake shakes New Zealand, triggering a Tsunami Warning in the Pacific Ring of Fire",
+          "url": "https://www.msn.com/en-us/news/world/magnitude-59-earthquake-shakes-new-zealand-triggering-a-tsunami-warning-in-the-pacific-ring-of-fire/ar-AA281Yl7?ocid=BingNewsVerp",
+          "outlet": "Fox Weather on MSN",
+          "published_date": "2026-07-13T14:34:30+00:00"
+        },
+        {
+          "headline": "6.3 magnitude earthquake hits New Zealand's South Island, tsunami alert issued",
+          "url": "https://www.msn.com/en-us/news/other/6-3-magnitude-earthquake-hits-new-zealand-s-south-island-tsunami-alert-issued/ar-AA281Rft?ocid=BingNewsVerp",
+          "outlet": "India Today on MSN",
+          "published_date": "2026-07-13T14:34:30+00:00"
+        },
+        {
+          "headline": "NZ's South Island struck by magnitude-5.9 earthquake",
+          "url": "https://www.msn.com/en-au/news/australia/nzs-south-island-struck-by-magnitude-59-earthquake/ar-AA281LBB?ocid=BingNewsVerp",
+          "outlet": "ABC (Australian Broadcasting Corporation) on MSN",
+          "published_date": "2026-07-13T14:49:32+00:00"
+        },
+        {
+          "headline": "Earthquake of magnitude 5.9 jolts New Zealand, tsunami advisory issued",
+          "url": "https://www.indiatvnews.com/news/world/strong-6-3-magnitude-earthquake-jolts-new-zealand-tsunami-warning-issued-2026-07-16-1048437",
+          "outlet": "India TV News",
+          "published_date": "2026-07-13T14:49:35+00:00"
+        },
+        {
+          "headline": "Strong 5.9-magnitude earthquake strikes New Zealand",
+          "url": "https://www.msn.com/en-us/news/world/strong-59-magnitude-earthquake-strikes-new-zealand/ar-AA281VKv?ocid=BingNewsVerp",
+          "outlet": "The Independent on MSN",
+          "published_date": "2026-07-14T14:34:30+00:00"
+        },
+        {
+          "headline": "New Zealand earthquake LIVE: Evacuation order as tsunami alert issued after 6.3 quake",
+          "url": "https://www.msn.com/en-gb/news/world/new-zealand-earthquake-live-evacuation-order-as-tsunami-alert-issued-after-63-quake/ar-AA2820GD?ocid=BingNewsVerp",
+          "outlet": "Daily Express on MSN",
+          "published_date": "2026-07-14T14:49:32+00:00"
+        },
+        {
+          "headline": "Strong earthquake rattles New Zealand's South Island, tsunami alert lifted",
+          "url": "https://www.msn.com/en-us/news/world/strong-earthquake-rattles-new-zealands-south-island-tsunami-alert-lifted/ar-AA282cah?ocid=BingNewsVerp",
+          "outlet": "Reuters on MSN",
+          "published_date": "2026-07-15T14:49:32+00:00"
+        },
+        {
+          "headline": "Magnitude 6.3 earthquake strikes near tourist hotspot in New Zealand’s South Island",
+          "url": "https://www.msn.com/en-us/news/other/magnitude-6-3-earthquake-strikes-near-tourist-hotspot-in-new-zealand-s-south-island/ar-AA282tyH?ocid=BingNewsVerp",
+          "outlet": "Cyprus Mail on MSN",
+          "published_date": "2026-07-15T14:49:35+00:00"
+        },
+        {
+          "headline": "5.9-magnitude quake hits 42 km NNW of Te Anau, New Zealand -- USGS",
+          "url": "http://www.chinaview.cn/20260716/3e0da76448824bba8b5ce1a3d99cbf64/c.html",
+          "outlet": "Xinhuanet",
+          "published_date": "2026-07-16T03:36:00+00:00"
+        },
+        {
+          "headline": "6.3-magnitude earthquake reported on South Island of New Zealand",
+          "url": "http://www.chinaview.cn/20260716/83450e72ce7e420fbf0d6bd6760eeaae/c.html",
+          "outlet": "Xinhuanet",
+          "published_date": "2026-07-16T04:54:00+00:00"
+        },
+        {
+          "headline": "Powerful 6.6 earthquake strikes near Te Anau and triggers tsunami warning in New Zealand",
+          "url": "https://www.adelaidenow.com.au/news/breaking-news/powerful-66-earthquake-strikes-near-te-anau-and-triggers-tsunami-warning-in-new-zealand/news-story/521decca0b50731eddf6d4b4e923c474",
+          "outlet": "The Advertiser",
+          "published_date": "2026-07-16T05:50:00+00:00"
+        },
+        {
+          "headline": "Powerful 5.9 earthquake strikes near Te Anau in New Zealand",
+          "url": "https://www.news.com.au/world/pacific/powerful-66-earthquake-strikes-near-te-anau-and-triggers-tsunami-warning-in-new-zealand/news-story/521decca0b50731eddf6d4b4e923c474",
+          "outlet": "news.com.au",
+          "published_date": "2026-07-16T06:21:00+00:00"
+        },
+        {
+          "headline": "Tsunami warning issued for NZ's South Island after magnitude-6.3 earthquake",
+          "url": "https://home.nzcity.co.nz/news/article.aspx?id=450058",
+          "outlet": "NZCity Personal Start Page",
+          "published_date": "2026-07-16T08:15:00+00:00"
+        },
+        {
+          "headline": "New Zealand downgrades tsunami alert for South Island after magnitude-5.9 earthquake",
+          "url": "https://www.sbs.com.au/news/article/new-zealand-tsunami-alert-south-island-earthquake/vya708v9j",
+          "outlet": "SBS",
+          "published_date": "2026-07-16T10:17:00+00:00"
+        },
+        {
+          "headline": "Magnitude 6.3 earthquake strikes near tourist hotspot in New Zealand's South Island",
+          "url": "https://theprint.in/world/magnitude-6-3-earthquake-strikes-near-tourist-hotspot-in-new-zealands-south-island/2988050/",
+          "outlet": "The Print",
+          "published_date": "2026-07-16T10:30:00+00:00"
+        },
+        {
+          "headline": "New Zealand downgrades tsunami alert after quake",
+          "url": "https://www.thehindu.com/news/international/new-zealand-earthquake-tsunami-warning/article71229406.ece",
+          "outlet": "The Hindu",
+          "published_date": "2026-07-16T10:36:00+00:00"
+        },
+        {
+          "headline": "6.3 magnitude earthquake hits New Zealand's South Island, tsunami alert issued",
+          "url": "https://www.msn.com/en-us/news/other/6-3-magnitude-earthquake-hits-new-zealand-s-south-island-tsunami-alert-issued/ar-AA281Rft",
+          "outlet": "India Today",
+          "published_date": "2026-07-16T10:36:55+00:00"
+        },
+        {
+          "headline": "Magnitude 5.9 earthquake shakes New Zealand, triggering a Tsunami Warning in the Pacific Ring of Fire",
+          "url": "https://www.msn.com/en-us/news/world/magnitude-59-earthquake-shakes-new-zealand-triggering-a-tsunami-warning-in-the-pacific-ring-of-fire/ar-AA281Yl7",
+          "outlet": "Fox Weather",
+          "published_date": "2026-07-16T10:40:05+00:00"
+        },
+        {
+          "headline": "Tremors in Te Anau: South Island Quake Alert",
+          "url": "https://www.devdiscourse.com/article/science-environment/3951259-tremors-in-te-anau-south-island-quake-alert",
+          "outlet": "Devdiscourse",
+          "published_date": "2026-07-16T10:48:00+00:00"
+        },
+        {
+          "headline": "Tsunami warning and immediate evacuation order issued after New Zealand quake",
+          "url": "https://www.msn.com/en-sg/weather/general/tsunami-warning-and-immediate-evacuation-order-issued-after-new-zealand-quake/ar-AA282MIL",
+          "outlet": "Metro",
+          "published_date": "2026-07-16T11:10:00+00:00"
+        },
+        {
+          "headline": "New Zealand Tsunami Alert: Strong Earthquake Near Te Anau Triggers Warning, Here's What Happened",
+          "url": "https://www.dynamitenews.com/international/new-zealand-tsunami-alert-strong-earthquake-near-te-anau-triggers-warning-heres-what-happened",
+          "outlet": "Dynamite News",
+          "published_date": "2026-07-16T11:13:00+00:00"
+        },
+        {
+          "headline": "Evacuation order issued in New Zealand as earthquake poses tsunami threat",
+          "url": "https://www.msn.com/en-gb/news/world/evacuation-order-issued-in-new-zealand-as-earthquake-poses-tsunami-threat/ar-AA282qsX",
+          "outlet": "Yorkshire Live",
+          "published_date": "2026-07-16T11:16:00+00:00"
+        },
+        {
+          "headline": "New Zealand On Tsunami Alert After 5.9 Magnitude Earthquake Jolts South Island; Evacuation Order Issued",
+          "url": "https://www.republicworld.com/world-news/tsunami-evacuations-ordered-on-new-zealands-south-island-after-59-earthquake-near-te-anau-2026-07-16-132498",
+          "outlet": "Republic World",
+          "published_date": "2026-07-16T11:25:00+00:00"
+        },
+        {
+          "headline": "5.9 magnitude earthquake hits New Zealand, tsunami alert issued",
+          "url": "https://indianexpress.com/article/world/new-zealand-earthquake-tsunami-alert-te-anau-10789489/",
+          "outlet": "The Indian Express",
+          "published_date": "2026-07-16T12:27:00+00:00"
+        },
+        {
+          "headline": "Strong 5.9-magnitude earthquake strikes New Zealand",
+          "url": "https://www.msn.com/en-us/news/world/strong-59-magnitude-earthquake-strikes-new-zealand/ar-AA281VKv",
+          "outlet": "The Independent",
+          "published_date": "2026-07-16T12:28:00+00:00"
+        },
+        {
+          "headline": "Strong earthquake rattles New Zealand's South Island, tsunami alert lifted",
+          "url": "https://www.msn.com/en-us/news/world/strong-earthquake-rattles-new-zealands-south-island-tsunami-alert-lifted/ar-AA282cah",
+          "outlet": "Reuters",
+          "published_date": "2026-07-16T12:51:30+00:00"
+        },
+        {
+          "headline": "Seismic Shake in Te Anau: A Close Call with Nature",
+          "url": "https://www.devdiscourse.com/article/science-environment/3951370-seismic-shake-in-te-anau-a-close-call-with-nature",
+          "outlet": "Devdiscourse",
+          "published_date": "2026-07-16T13:07:00+00:00"
+        },
+        {
+          "headline": "New Zealand Earthquake Today: 6.3-Magnitude Quake Triggers Tsunami Warning",
+          "url": "https://www.ibtimes.sg/new-zealand-earthquake-today-6-3-magnitude-quake-triggers-tsunami-warning-89908",
+          "outlet": "International Business Times Singapore",
+          "published_date": "2026-07-16T14:34:30+00:00"
+        },
+        {
+          "headline": "Magnitude 5.9 earthquake rattles New Zealand's South Island, tsunami alert lifted",
+          "url": "https://www.gmanetwork.com/news/topstories/world/995119/magnitude-5-9-earthquake-rattles-new-zealand-s-south-island-tsunami-alert-lifted/story/",
+          "outlet": "GMA Network",
+          "published_date": "2026-07-16T14:34:30+00:00"
+        },
+        {
+          "headline": "New Zealand downgrades tsunami alert after quake",
+          "url": "https://thepeninsulaqatar.com/article/16/07/2026/new-zealand-downgrades-tsunami-alert-after-quake",
+          "outlet": "The Peninsula Qatar",
+          "published_date": "2026-07-16T14:49:35+00:00"
+        }
+      ],
+      "news_total": 32,
+      "logs": [
+        {
+          "log_datetime": "2026-07-16T14:49:35+00:00",
+          "summary": "A magnitude 5.9 earthquake struck 42 km north-northwest of Te Anau, New Zealand, on July 16, 2026, initially reported as a 6.3 magnitude. The quake shook buildings across the South Island's tourist region and prompted a brief tsunami warning, which was later downgraded to a marine advisory. No injuries or damage were reported, and authorities lifted the tsunami alert shortly after.",
+          "news": [
+            {
+              "news_id": 1784213406735,
+              "url": "https://www.msn.com/en-nz/news/other/live-strong-shaking-as-magnitude-6-3-earthquake-strikes-southland/ar-AA2825hm?ocid=BingNewsVerp",
+              "headline": "Live: NEMA warns of 'unpredictable surges' following quake, tsunami warning downgraded",
+              "published_date": "2026-07-12T14:49:32+00:00",
+              "outlet": "RNZ on MSN"
+            },
+            {
+              "news_id": 1784213406741,
+              "url": "https://www.msn.com/en-us/news/world/63-magnitude-earthquake-hits-new-zealands-south-island-tsunami-alert-issued/ar-AA281Rft?ocid=BingNewsVerp",
+              "headline": "6.3 magnitude earthquake hits New Zealand's South Island, tsunami alert issued",
+              "published_date": "2026-07-12T14:49:35+00:00",
+              "outlet": "India Today on MSN"
+            },
+            {
+              "news_id": 1784212510604,
+              "url": "https://www.msn.com/en-us/news/world/magnitude-59-earthquake-shakes-new-zealand-triggering-a-tsunami-warning-in-the-pacific-ring-of-fire/ar-AA281Yl7?ocid=BingNewsVerp",
+              "headline": "Magnitude 5.9 earthquake shakes New Zealand, triggering a Tsunami Warning in the Pacific Ring of Fire",
+              "published_date": "2026-07-13T14:34:30+00:00",
+              "outlet": "Fox Weather on MSN"
+            },
+            {
+              "news_id": 1784212510613,
+              "url": "https://www.msn.com/en-us/news/other/6-3-magnitude-earthquake-hits-new-zealand-s-south-island-tsunami-alert-issued/ar-AA281Rft?ocid=BingNewsVerp",
+              "headline": "6.3 magnitude earthquake hits New Zealand's South Island, tsunami alert issued",
+              "published_date": "2026-07-13T14:34:30+00:00",
+              "outlet": "India Today on MSN"
+            },
+            {
+              "news_id": 1784213406729,
+              "url": "https://www.msn.com/en-au/news/australia/nzs-south-island-struck-by-magnitude-59-earthquake/ar-AA281LBB?ocid=BingNewsVerp",
+              "headline": "NZ's South Island struck by magnitude-5.9 earthquake",
+              "published_date": "2026-07-13T14:49:32+00:00",
+              "outlet": "ABC (Australian Broadcasting Corporation) on MSN"
+            },
+            {
+              "news_id": 1784213406738,
+              "url": "https://www.indiatvnews.com/news/world/strong-6-3-magnitude-earthquake-jolts-new-zealand-tsunami-warning-issued-2026-07-16-1048437",
+              "headline": "Earthquake of magnitude 5.9 jolts New Zealand, tsunami advisory issued",
+              "published_date": "2026-07-13T14:49:35+00:00",
+              "outlet": "India TV News"
+            },
+            {
+              "news_id": 1784212510610,
+              "url": "https://www.msn.com/en-us/news/world/strong-59-magnitude-earthquake-strikes-new-zealand/ar-AA281VKv?ocid=BingNewsVerp",
+              "headline": "Strong 5.9-magnitude earthquake strikes New Zealand",
+              "published_date": "2026-07-14T14:34:30+00:00",
+              "outlet": "The Independent on MSN"
+            },
+            {
+              "news_id": 1784213406732,
+              "url": "https://www.msn.com/en-gb/news/world/new-zealand-earthquake-live-evacuation-order-as-tsunami-alert-issued-after-63-quake/ar-AA2820GD?ocid=BingNewsVerp",
+              "headline": "New Zealand earthquake LIVE: Evacuation order as tsunami alert issued after 6.3 quake",
+              "published_date": "2026-07-14T14:49:32+00:00",
+              "outlet": "Daily Express on MSN"
+            },
+            {
+              "news_id": 1784213406726,
+              "url": "https://www.msn.com/en-us/news/world/strong-earthquake-rattles-new-zealands-south-island-tsunami-alert-lifted/ar-AA282cah?ocid=BingNewsVerp",
+              "headline": "Strong earthquake rattles New Zealand's South Island, tsunami alert lifted",
+              "published_date": "2026-07-15T14:49:32+00:00",
+              "outlet": "Reuters on MSN"
+            },
+            {
+              "news_id": 1784213406746,
+              "url": "https://www.msn.com/en-us/news/other/magnitude-6-3-earthquake-strikes-near-tourist-hotspot-in-new-zealand-s-south-island/ar-AA282tyH?ocid=BingNewsVerp",
+              "headline": "Magnitude 6.3 earthquake strikes near tourist hotspot in New Zealand’s South Island",
+              "published_date": "2026-07-15T14:49:35+00:00",
+              "outlet": "Cyprus Mail on MSN"
+            },
+            {
+              "news_id": 1784212510628,
+              "url": "http://www.chinaview.cn/20260716/3e0da76448824bba8b5ce1a3d99cbf64/c.html",
+              "headline": "5.9-magnitude quake hits 42 km NNW of Te Anau, New Zealand -- USGS",
+              "published_date": "2026-07-16T03:36:00+00:00",
+              "outlet": "Xinhuanet"
+            },
+            {
+              "news_id": 1784212510631,
+              "url": "http://www.chinaview.cn/20260716/83450e72ce7e420fbf0d6bd6760eeaae/c.html",
+              "headline": "6.3-magnitude earthquake reported on South Island of New Zealand",
+              "published_date": "2026-07-16T04:54:00+00:00",
+              "outlet": "Xinhuanet"
+            },
+            {
+              "news_id": 1784212510600,
+              "url": "https://www.adelaidenow.com.au/news/breaking-news/powerful-66-earthquake-strikes-near-te-anau-and-triggers-tsunami-warning-in-new-zealand/news-story/521decca0b50731eddf6d4b4e923c474",
+              "headline": "Powerful 6.6 earthquake strikes near Te Anau and triggers tsunami warning in New Zealand",
+              "published_date": "2026-07-16T05:50:00+00:00",
+              "outlet": "The Advertiser"
+            },
+            {
+              "news_id": 1784212510592,
+              "url": "https://www.news.com.au/world/pacific/powerful-66-earthquake-strikes-near-te-anau-and-triggers-tsunami-warning-in-new-zealand/news-story/521decca0b50731eddf6d4b4e923c474",
+              "headline": "Powerful 5.9 earthquake strikes near Te Anau in New Zealand",
+              "published_date": "2026-07-16T06:21:00+00:00",
+              "outlet": "news.com.au"
+            },
+            {
+              "news_id": 1784212510645,
+              "url": "https://home.nzcity.co.nz/news/article.aspx?id=450058",
+              "headline": "Tsunami warning issued for NZ's South Island after magnitude-6.3 earthquake",
+              "published_date": "2026-07-16T08:15:00+00:00",
+              "outlet": "NZCity Personal Start Page"
+            },
+            {
+              "news_id": 1784212510595,
+              "url": "https://www.sbs.com.au/news/article/new-zealand-tsunami-alert-south-island-earthquake/vya708v9j",
+              "headline": "New Zealand downgrades tsunami alert for South Island after magnitude-5.9 earthquake",
+              "published_date": "2026-07-16T10:17:00+00:00",
+              "outlet": "SBS"
+            },
+            {
+              "news_id": 1784212510622,
+              "url": "https://theprint.in/world/magnitude-6-3-earthquake-strikes-near-tourist-hotspot-in-new-zealands-south-island/2988050/",
+              "headline": "Magnitude 6.3 earthquake strikes near tourist hotspot in New Zealand's South Island",
+              "published_date": "2026-07-16T10:30:00+00:00",
+              "outlet": "The Print"
+            },
+            {
+              "news_id": 1784212510625,
+              "url": "https://www.thehindu.com/news/international/new-zealand-earthquake-tsunami-warning/article71229406.ece",
+              "headline": "New Zealand downgrades tsunami alert after quake",
+              "published_date": "2026-07-16T10:36:00+00:00",
+              "outlet": "The Hindu"
+            },
+            {
+              "news_id": 1784212510642,
+              "url": "https://www.msn.com/en-us/news/other/6-3-magnitude-earthquake-hits-new-zealand-s-south-island-tsunami-alert-issued/ar-AA281Rft",
+              "headline": "6.3 magnitude earthquake hits New Zealand's South Island, tsunami alert issued",
+              "published_date": "2026-07-16T10:36:55+00:00",
+              "outlet": "India Today"
+            },
+            {
+              "news_id": 1784212510637,
+              "url": "https://www.msn.com/en-us/news/world/magnitude-59-earthquake-shakes-new-zealand-triggering-a-tsunami-warning-in-the-pacific-ring-of-fire/ar-AA281Yl7",
+              "headline": "Magnitude 5.9 earthquake shakes New Zealand, triggering a Tsunami Warning in the Pacific Ring of Fire",
+              "published_date": "2026-07-16T10:40:05+00:00",
+              "outlet": "Fox Weather"
+            },
+            {
+              "news_id": 1784212510598,
+              "url": "https://www.devdiscourse.com/article/science-environment/3951259-tremors-in-te-anau-south-island-quake-alert",
+              "headline": "Tremors in Te Anau: South Island Quake Alert",
+              "published_date": "2026-07-16T10:48:00+00:00",
+              "outlet": "Devdiscourse"
+            },
+            {
+              "news_id": 1784212510651,
+              "url": "https://www.msn.com/en-sg/weather/general/tsunami-warning-and-immediate-evacuation-order-issued-after-new-zealand-quake/ar-AA282MIL",
+              "headline": "Tsunami warning and immediate evacuation order issued after New Zealand quake",
+              "published_date": "2026-07-16T11:10:00+00:00",
+              "outlet": "Metro"
+            },
+            {
+              "news_id": 1784212510634,
+              "url": "https://www.dynamitenews.com/international/new-zealand-tsunami-alert-strong-earthquake-near-te-anau-triggers-warning-heres-what-happened",
+              "headline": "New Zealand Tsunami Alert: Strong Earthquake Near Te Anau Triggers Warning, Here's What Happened",
+              "published_date": "2026-07-16T11:13:00+00:00",
+              "outlet": "Dynamite News"
+            },
+            {
+              "news_id": 1784212510653,
+              "url": "https://www.msn.com/en-gb/news/world/evacuation-order-issued-in-new-zealand-as-earthquake-poses-tsunami-threat/ar-AA282qsX",
+              "headline": "Evacuation order issued in New Zealand as earthquake poses tsunami threat",
+              "published_date": "2026-07-16T11:16:00+00:00",
+              "outlet": "Yorkshire Live"
+            },
+            {
+              "news_id": 1784212510619,
+              "url": "https://www.republicworld.com/world-news/tsunami-evacuations-ordered-on-new-zealands-south-island-after-59-earthquake-near-te-anau-2026-07-16-132498",
+              "headline": "New Zealand On Tsunami Alert After 5.9 Magnitude Earthquake Jolts South Island; Evacuation Order Issued",
+              "published_date": "2026-07-16T11:25:00+00:00",
+              "outlet": "Republic World"
+            },
+            {
+              "news_id": 1784212510648,
+              "url": "https://indianexpress.com/article/world/new-zealand-earthquake-tsunami-alert-te-anau-10789489/",
+              "headline": "5.9 magnitude earthquake hits New Zealand, tsunami alert issued",
+              "published_date": "2026-07-16T12:27:00+00:00",
+              "outlet": "The Indian Express"
+            },
+            {
+              "news_id": 1784212510639,
+              "url": "https://www.msn.com/en-us/news/world/strong-59-magnitude-earthquake-strikes-new-zealand/ar-AA281VKv",
+              "headline": "Strong 5.9-magnitude earthquake strikes New Zealand",
+              "published_date": "2026-07-16T12:28:00+00:00",
+              "outlet": "The Independent"
+            },
+            {
+              "news_id": 1784212510616,
+              "url": "https://www.msn.com/en-us/news/world/strong-earthquake-rattles-new-zealands-south-island-tsunami-alert-lifted/ar-AA282cah",
+              "headline": "Strong earthquake rattles New Zealand's South Island, tsunami alert lifted",
+              "published_date": "2026-07-16T12:51:30+00:00",
+              "outlet": "Reuters"
+            },
+            {
+              "news_id": 1784212510589,
+              "url": "https://www.devdiscourse.com/article/science-environment/3951370-seismic-shake-in-te-anau-a-close-call-with-nature",
+              "headline": "Seismic Shake in Te Anau: A Close Call with Nature",
+              "published_date": "2026-07-16T13:07:00+00:00",
+              "outlet": "Devdiscourse"
+            },
+            {
+              "news_id": 1784212510582,
+              "url": "https://www.ibtimes.sg/new-zealand-earthquake-today-6-3-magnitude-quake-triggers-tsunami-warning-89908",
+              "headline": "New Zealand Earthquake Today: 6.3-Magnitude Quake Triggers Tsunami Warning",
+              "published_date": "2026-07-16T14:34:30+00:00",
+              "outlet": "International Business Times Singapore"
+            },
+            {
+              "news_id": 1784212510607,
+              "url": "https://www.gmanetwork.com/news/topstories/world/995119/magnitude-5-9-earthquake-rattles-new-zealand-s-south-island-tsunami-alert-lifted/story/",
+              "headline": "Magnitude 5.9 earthquake rattles New Zealand's South Island, tsunami alert lifted",
+              "published_date": "2026-07-16T14:34:30+00:00",
+              "outlet": "GMA Network"
+            },
+            {
+              "news_id": 1784213406743,
+              "url": "https://thepeninsulaqatar.com/article/16/07/2026/new-zealand-downgrades-tsunami-alert-after-quake",
+              "headline": "New Zealand downgrades tsunami alert after quake",
+              "published_date": "2026-07-16T14:49:35+00:00",
+              "outlet": "The Peninsula Qatar"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "20251221-AT-DR",
+      "canonical_name": "Drought Green",
+      "summary": "Severe drought and heat across Europe are shrinking harvests, notably French maize, and causing water shortages in the Netherlands. The Rhine River has hit its lowest July level for decades, threatening energy and logistics, while Greek islands face drought during the tourist season; economists warn this extreme heat could raise food prices next year.",
+      "country": "Austria",
+      "iso2": "AT",
+      "lat": 47.5,
+      "lon": 14.6,
+      "country_group": "C",
+      "region": "Europe",
+      "incident_type": "Drought",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2025-12-21",
+      "first_reported_date": "2025-12-21",
+      "last_updated_date": "2026-07-16",
+      "days_since_event": 207,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 0,
+        "gdacs": 1,
+        "healthmap": 0,
+        "news": 11
+      },
+      "source_links": [
+        {
+          "type": "GDACS",
+          "label": "Green alert · Drought Green",
+          "url": "",
+          "meta": ""
+        }
+      ],
+      "physical": {
+        "max_magnitude": null,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": "Green",
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Wilting French maize to shrink Europe's harvest as farmers fear repeat of 1976",
+          "url": "https://finance.yahoo.com/markets/commodities/articles/wilting-french-maize-shrink-europes-122259321.html",
+          "outlet": "Reuters · via Yahoo Finance",
+          "published_date": "2026-07-10T14:35:42+00:00"
+        },
+        {
+          "headline": "Spain Wildfire Kills 12 as Extreme Heat Fuels Southern Europe Crisis",
+          "url": "https://www.nbcpalmsprings.com/2026/07/11/spain-wildfire-kills-12-as-extreme-heat-fuels-southern-europe-crisis",
+          "outlet": "NBC Palm Springs",
+          "published_date": "2026-07-11T14:35:42+00:00"
+        },
+        {
+          "headline": "Why this summer's heatwaves could raise your supermarket bill next year",
+          "url": "https://www.msn.com/en-us/money/general/why-this-summer-s-heatwaves-could-raise-your-supermarket-bill-next-year/ar-AA280SPm?ocid=BingNewsVerp",
+          "outlet": "Euronews on MSN",
+          "published_date": "2026-07-11T14:35:42+00:00"
+        },
+        {
+          "headline": "Greek islands face drought as tourist season hits",
+          "url": "https://www.msn.com/en-us/news/world/greek-islands-face-drought-as-tourist-season-hits/ar-AA281T0k?ocid=BingNewsVerp",
+          "outlet": "Reuters on MSN",
+          "published_date": "2026-07-12T14:35:42+00:00"
+        },
+        {
+          "headline": "Firefighters battle Fontainebleau forest fire near Paris as two arrested",
+          "url": "https://www.yahoo.com/news/articles/firefighters-battle-fontainebleau-forest-fire-072213488.html",
+          "outlet": "Reuters · via Yahoo News",
+          "published_date": "2026-07-14T14:35:42+00:00"
+        },
+        {
+          "headline": "German logistics caught between drought and engineering works",
+          "url": "https://www.trasportoeuropa.it/english/german-logistics-caught-between-drought-and-engineering-works/",
+          "outlet": "TrasportoEuropa",
+          "published_date": "2026-07-14T14:50:10+00:00"
+        },
+        {
+          "headline": "Heat and drought cause water shortage in Netherlands, government says",
+          "url": "https://www.msn.com/en-us/weather/topstories/heat-and-drought-cause-water-shortage-in-netherlands-government-says/ar-AA282XDg?ocid=BingNewsVerp",
+          "outlet": "Reuters on MSN",
+          "published_date": "2026-07-15T14:35:42+00:00"
+        },
+        {
+          "headline": "Europe's next energy shock is drying up in plain sight",
+          "url": "https://www.reuters.com/commentary/reuters-open-interest/europes-next-energy-shock-is-drying-up-plain-sight-2026-07-16/",
+          "outlet": "Reuters",
+          "published_date": "2026-07-16T06:35:42+00:00"
+        },
+        {
+          "headline": "Greece pins hopes on heat-seeking satellites to predict forest fires",
+          "url": "https://www.aljazeera.com/news/2026/7/16/greece-pins-hopes-on-heat-seeking-satellites-to-predict-wildfires",
+          "outlet": "Al Jazeera",
+          "published_date": "2026-07-16T08:35:42+00:00"
+        },
+        {
+          "headline": "Why this summer's heatwaves could raise your supermarket bill next year",
+          "url": "https://finance.yahoo.com/economy/articles/food-inflation-finally-slowing-why-045658286.html",
+          "outlet": "Euronews · via Yahoo Finance",
+          "published_date": "2026-07-16T09:35:42+00:00"
+        },
+        {
+          "headline": "Can agri-PV save Bavaria's hop gardens? 'Solar hats' help fight climate crisis",
+          "url": "https://www.msn.com/en-nz/news/other/can-agri-pv-save-bavaria-s-hop-gardens-solar-hats-help-fight-climate-crisis/ar-AA27YOgs?ocid=BingNewsVerp",
+          "outlet": "Euronews on MSN",
+          "published_date": "2026-07-16T14:50:07+00:00"
+        }
+      ],
+      "news_total": 11,
+      "logs": [
+        {
+          "log_datetime": "2026-07-16T14:50:07+00:00",
+          "summary": "Severe drought and heat across Europe are shrinking harvests, notably French maize, and causing water shortages in the Netherlands. The Rhine River has hit its lowest July level for decades, threatening energy and logistics, while Greek islands face drought during the tourist season; economists warn this extreme heat could raise food prices next year.",
+          "news": [
+            {
+              "news_id": 1784212593670,
+              "url": "https://finance.yahoo.com/markets/commodities/articles/wilting-french-maize-shrink-europes-122259321.html",
+              "headline": "Wilting French maize to shrink Europe's harvest as farmers fear repeat of 1976",
+              "published_date": "2026-07-10T14:35:42+00:00",
+              "outlet": "Reuters · via Yahoo Finance"
+            },
+            {
+              "news_id": 1784212593680,
+              "url": "https://www.nbcpalmsprings.com/2026/07/11/spain-wildfire-kills-12-as-extreme-heat-fuels-southern-europe-crisis",
+              "headline": "Spain Wildfire Kills 12 as Extreme Heat Fuels Southern Europe Crisis",
+              "published_date": "2026-07-11T14:35:42+00:00",
+              "outlet": "NBC Palm Springs"
+            },
+            {
+              "news_id": 1784212593694,
+              "url": "https://www.msn.com/en-us/money/general/why-this-summer-s-heatwaves-could-raise-your-supermarket-bill-next-year/ar-AA280SPm?ocid=BingNewsVerp",
+              "headline": "Why this summer's heatwaves could raise your supermarket bill next year",
+              "published_date": "2026-07-11T14:35:42+00:00",
+              "outlet": "Euronews on MSN"
+            },
+            {
+              "news_id": 1784212593683,
+              "url": "https://www.msn.com/en-us/news/world/greek-islands-face-drought-as-tourist-season-hits/ar-AA281T0k?ocid=BingNewsVerp",
+              "headline": "Greek islands face drought as tourist season hits",
+              "published_date": "2026-07-12T14:35:42+00:00",
+              "outlet": "Reuters on MSN"
+            },
+            {
+              "news_id": 1784212593686,
+              "url": "https://www.yahoo.com/news/articles/firefighters-battle-fontainebleau-forest-fire-072213488.html",
+              "headline": "Firefighters battle Fontainebleau forest fire near Paris as two arrested",
+              "published_date": "2026-07-14T14:35:42+00:00",
+              "outlet": "Reuters · via Yahoo News"
+            },
+            {
+              "news_id": 1784213439870,
+              "url": "https://www.trasportoeuropa.it/english/german-logistics-caught-between-drought-and-engineering-works/",
+              "headline": "German logistics caught between drought and engineering works",
+              "published_date": "2026-07-14T14:50:10+00:00",
+              "outlet": "TrasportoEuropa"
+            },
+            {
+              "news_id": 1784212593674,
+              "url": "https://www.msn.com/en-us/weather/topstories/heat-and-drought-cause-water-shortage-in-netherlands-government-says/ar-AA282XDg?ocid=BingNewsVerp",
+              "headline": "Heat and drought cause water shortage in Netherlands, government says",
+              "published_date": "2026-07-15T14:35:42+00:00",
+              "outlet": "Reuters on MSN"
+            },
+            {
+              "news_id": 1784212593677,
+              "url": "https://www.reuters.com/commentary/reuters-open-interest/europes-next-energy-shock-is-drying-up-plain-sight-2026-07-16/",
+              "headline": "Europe's next energy shock is drying up in plain sight",
+              "published_date": "2026-07-16T06:35:42+00:00",
+              "outlet": "Reuters"
+            },
+            {
+              "news_id": 1784212593691,
+              "url": "https://www.aljazeera.com/news/2026/7/16/greece-pins-hopes-on-heat-seeking-satellites-to-predict-wildfires",
+              "headline": "Greece pins hopes on heat-seeking satellites to predict forest fires",
+              "published_date": "2026-07-16T08:35:42+00:00",
+              "outlet": "Al Jazeera"
+            },
+            {
+              "news_id": 1784212593689,
+              "url": "https://finance.yahoo.com/economy/articles/food-inflation-finally-slowing-why-045658286.html",
+              "headline": "Why this summer's heatwaves could raise your supermarket bill next year",
+              "published_date": "2026-07-16T09:35:42+00:00",
+              "outlet": "Euronews · via Yahoo Finance"
+            },
+            {
+              "news_id": 1784213439867,
+              "url": "https://www.msn.com/en-nz/news/other/can-agri-pv-save-bavaria-s-hop-gardens-solar-hats-help-fight-climate-crisis/ar-AA27YOgs?ocid=BingNewsVerp",
+              "headline": "Can agri-PV save Bavaria's hop gardens? 'Solar hats' help fight climate crisis",
+              "published_date": "2026-07-16T14:50:07+00:00",
+              "outlet": "Euronews on MSN"
             }
           ]
         }

@@ -1,25 +1,25 @@
 {
   "schema_version": "1.4",
   "report_date": "2026-07-15",
-  "generated_at": "2026-07-16T09:35:17Z",
+  "generated_at": "2026-07-16T15:17:50Z",
   "as_of": "2026-07-15",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 95,
-    "new_today": 10,
+    "reportable_total": 93,
+    "new_today": 8,
     "critical": 0,
     "high": 45,
-    "medium": 48,
+    "medium": 46,
     "low": 2,
-    "disease_outbreaks": 23,
-    "countries_affected": 40,
-    "news_total": 344,
+    "disease_outbreaks": 22,
+    "countries_affected": 39,
+    "news_total": 341,
     "max_magnitude": 27577.0,
     "by_severity": {
       "CRITICAL": 0,
       "HIGH": 45,
-      "MEDIUM": 48,
+      "MEDIUM": 46,
       "LOW": 2
     },
     "by_type": {
@@ -27,16 +27,16 @@
       "Tropical Cyclone": 3,
       "Forest Fire": 5,
       "Flood": 5,
-      "Earthquake": 56,
-      "Disease": 23
+      "Earthquake": 55,
+      "Disease": 22
     },
     "by_region": {
       "Asia": 46,
       "Europe": 6,
       "Americas": 22,
       "Africa": 11,
-      "Oceania": 6,
-      "Unknown": 4
+      "Oceania": 5,
+      "Unknown": 3
     }
   },
   "by_country": [
@@ -290,15 +290,6 @@
       "iso2": "AT",
       "region": "Europe",
       "country_group": "C",
-      "max_severity": "MEDIUM"
-    },
-    {
-      "country": "Fiji",
-      "count": 1,
-      "max_sev_rank": 2,
-      "iso2": "FJ",
-      "region": "Oceania",
-      "country_group": "B",
       "max_severity": "MEDIUM"
     },
     {
@@ -7571,7 +7562,7 @@
     {
       "incident_id": "20250528-XX-DI",
       "canonical_name": "COVID-19 - Global Situation",
-      "summary": "New COVID-19 deaths in Andhra Pradesh have triggered a health alert in southern India. Officials note that widespread immune memory from vaccination and prior infection means there is no need for panic.",
+      "summary": "A study confirms that the 2025-2026 COVID-19 vaccines are effective at preventing emergency department/urgent care visits and hospitalizations among immunocompetent adults, providing updated evidence of protection against severe outcomes.",
       "country": "",
       "iso2": "",
       "lat": null,
@@ -7599,7 +7590,7 @@
         "usgs": 0,
         "gdacs": 0,
         "healthmap": 0,
-        "news": 9
+        "news": 11
       },
       "source_links": [
         {
@@ -7673,9 +7664,21 @@
           "url": "https://www.infectiousdiseaseadvisor.com/news/effectiveness-2025-2026-covid19-vaccines-severe-outcomes/",
           "outlet": "Infectious Disease Advisor",
           "published_date": "2026-07-15T09:25:38+00:00"
+        },
+        {
+          "headline": "Dr. Erica Schwartz faces vaccines questions at CDC director confirmation hearing",
+          "url": "https://www.yahoo.com/news/politics/articles/dr-erica-schwartz-appear-senate-090953431.html",
+          "outlet": "Good Morning America · via Yahoo News",
+          "published_date": "2026-07-15T18:45:32+00:00"
+        },
+        {
+          "headline": "Panel to study Pentagon’s COVID vaccine mandate, troops dismissal",
+          "url": "https://www.yahoo.com/news/politics/articles/panel-study-pentagon-covid-vaccine-200701635.html",
+          "outlet": "Military Times · via Yahoo News",
+          "published_date": "2026-07-15T19:45:32+00:00"
         }
       ],
-      "news_total": 9,
+      "news_total": 11,
       "logs": [
         {
           "log_datetime": "2026-07-08T15:12:31+00:00",
@@ -7742,6 +7745,33 @@
               "headline": "Andhra Covid Deaths Trigger Southern Alert",
               "published_date": "2026-07-14T07:14:19+00:00",
               "outlet": "Rediff.com"
+            }
+          ]
+        },
+        {
+          "log_datetime": "2026-07-15T19:45:32+00:00",
+          "summary": "A study confirms that the 2025-2026 COVID-19 vaccines are effective at preventing emergency department/urgent care visits and hospitalizations among immunocompetent adults, providing updated evidence of protection against severe outcomes.",
+          "news": [
+            {
+              "news_id": 1784107565908,
+              "url": "https://www.infectiousdiseaseadvisor.com/news/effectiveness-2025-2026-covid19-vaccines-severe-outcomes/",
+              "headline": "Updated 2025-2026 COVID-19 Vaccines Effective Against Medically Attended Disease",
+              "published_date": "2026-07-15T09:25:38+00:00",
+              "outlet": "Infectious Disease Advisor"
+            },
+            {
+              "news_id": 1784213152022,
+              "url": "https://www.yahoo.com/news/politics/articles/dr-erica-schwartz-appear-senate-090953431.html",
+              "headline": "Dr. Erica Schwartz faces vaccines questions at CDC director confirmation hearing",
+              "published_date": "2026-07-15T18:45:32+00:00",
+              "outlet": "Good Morning America · via Yahoo News"
+            },
+            {
+              "news_id": 1784213152018,
+              "url": "https://www.yahoo.com/news/politics/articles/panel-study-pentagon-covid-vaccine-200701635.html",
+              "headline": "Panel to study Pentagon’s COVID vaccine mandate, troops dismissal",
+              "published_date": "2026-07-15T19:45:32+00:00",
+              "outlet": "Military Times · via Yahoo News"
             }
           ]
         }
@@ -8398,153 +8428,6 @@
               "headline": "Undiagnosed disease in Congo may be linked to malaria: Africa CDC",
               "published_date": "2026-07-08T15:06:08+00:00",
               "outlet": "WBAL"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "incident_id": "20240530-XX-DI",
-      "canonical_name": "Dengue - Global situation",
-      "summary": "Sri Lanka is experiencing a significant dengue challenge, with rising cases prompting discussion of remote health monitoring as a digital solution. In Bangladesh, floods are heightening dengue risks according to the IFRC, and the country reported two additional deaths and 391 hospitalizations in the past 24 hours, bringing the total caseload to 9,370.",
-      "country": "",
-      "iso2": "",
-      "lat": null,
-      "lon": null,
-      "country_group": "C",
-      "region": "Unknown",
-      "incident_type": "Disease",
-      "incident_category": "Biological",
-      "is_disease": true,
-      "severity": "MEDIUM",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "disease_name": null,
-      "event_date": "2024-05-30",
-      "first_reported_date": "2024-05-30",
-      "last_updated_date": "2026-07-15",
-      "days_since_event": 777,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 1,
-        "usgs": 0,
-        "gdacs": 0,
-        "healthmap": 0,
-        "news": 6
-      },
-      "source_links": [
-        {
-          "type": "WHO",
-          "label": "Dengue - Global situation",
-          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2024-DON518",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Dengue fever is — unfortunately — having a banner year. Can it be quelled?",
-          "url": "https://www.npr.org/sections/goats-and-soda/2024/07/23/g-s1-12674/dengue-mosquitoes-climate-virus-americas",
-          "outlet": "NPR",
-          "published_date": "2024-07-23T00:00:00+00:00"
-        },
-        {
-          "headline": "UN agency authorizes second vaccine against dengue amid outbreaks in the Americas",
-          "url": "https://medicalxpress.com/news/2024-05-agency-authorizes-vaccine-dengue-outbreaks.html",
-          "outlet": "Medical Xpress",
-          "published_date": "2026-07-08T14:57:06+00:00"
-        },
-        {
-          "headline": "Dengue: Surge in US Cases This Year",
-          "url": "https://www.medscape.com/viewarticle/dengue-surge-us-cases-this-year-2024a1000bzw",
-          "outlet": "Medscape",
-          "published_date": "2026-07-08T14:57:06+00:00"
-        },
-        {
-          "headline": "Two more die of dengue, 391 hospitalised in 24hrs",
-          "url": "https://www.daily-sun.com/health/886521/two-more-die-of-dengue-391-hospitalised-in-24hrs",
-          "outlet": "Daily Sun",
-          "published_date": "2026-07-13T03:58:16+00:00"
-        },
-        {
-          "headline": "Remote health monitoring: A practical digital solution for dengue burden",
-          "url": "https://island.lk/remote-health-monitoring-a-practical-digital-solution-for-dengue-burden/",
-          "outlet": "The Island",
-          "published_date": "2026-07-15T01:15:18+00:00"
-        },
-        {
-          "headline": "Bangladesh floods heighten dengue, cholera risks, says IFRC",
-          "url": "https://www.channelnewsasia.com/world/bangladesh-floods-dengue-cholera-risk-ifrc-6253181",
-          "outlet": "CNA",
-          "published_date": "2026-07-15T07:15:18+00:00"
-        }
-      ],
-      "news_total": 6,
-      "logs": [
-        {
-          "log_datetime": "2026-07-08T14:57:06+00:00",
-          "summary": "The World Health Organization authorized a second dengue vaccine as outbreaks continue in the Americas. The US CDC issued an alert about increased dengue risk in the United States. In the Americas, nearly 10.4 million suspected dengue cases were reported to WHO by early July 2024.",
-          "news": [
-            {
-              "news_id": 1700001000277,
-              "url": "https://www.npr.org/sections/goats-and-soda/2024/07/23/g-s1-12674/dengue-mosquitoes-climate-virus-americas",
-              "headline": "Dengue fever is — unfortunately — having a banner year. Can it be quelled?",
-              "published_date": "2024-07-23T00:00:00+00:00",
-              "outlet": "NPR"
-            },
-            {
-              "news_id": 1700001000025,
-              "url": "https://medicalxpress.com/news/2024-05-agency-authorizes-vaccine-dengue-outbreaks.html",
-              "headline": "UN agency authorizes second vaccine against dengue amid outbreaks in the Americas",
-              "published_date": "2026-07-08T14:57:06+00:00",
-              "outlet": "Medical Xpress"
-            },
-            {
-              "news_id": 1700001000137,
-              "url": "https://www.medscape.com/viewarticle/dengue-surge-us-cases-this-year-2024a1000bzw",
-              "headline": "Dengue: Surge in US Cases This Year",
-              "published_date": "2026-07-08T14:57:06+00:00",
-              "outlet": "Medscape"
-            }
-          ]
-        },
-        {
-          "log_datetime": "2026-07-15T07:15:18+00:00",
-          "summary": "Sri Lanka is experiencing a significant dengue challenge, with rising cases prompting discussion of remote health monitoring as a digital solution. In Bangladesh, floods are heightening dengue risks according to the IFRC, and the country reported two additional deaths and 391 hospitalizations in the past 24 hours, bringing the total caseload to 9,370.",
-          "news": [
-            {
-              "news_id": 1784174301362,
-              "url": "https://www.daily-sun.com/health/886521/two-more-die-of-dengue-391-hospitalised-in-24hrs",
-              "headline": "Two more die of dengue, 391 hospitalised in 24hrs",
-              "published_date": "2026-07-13T03:58:16+00:00",
-              "outlet": "Daily Sun"
-            },
-            {
-              "news_id": 1784099736646,
-              "url": "https://island.lk/remote-health-monitoring-a-practical-digital-solution-for-dengue-burden/",
-              "headline": "Remote health monitoring: A practical digital solution for dengue burden",
-              "published_date": "2026-07-15T01:15:18+00:00",
-              "outlet": "The Island"
-            },
-            {
-              "news_id": 1784099736703,
-              "url": "https://www.channelnewsasia.com/world/bangladesh-floods-dengue-cholera-risk-ifrc-6253181",
-              "headline": "Bangladesh floods heighten dengue, cholera risks, says IFRC",
-              "published_date": "2026-07-15T07:15:18+00:00",
-              "outlet": "CNA"
             }
           ]
         }
@@ -9892,68 +9775,6 @@
       ]
     },
     {
-      "incident_id": "20260714-FJ-EQ",
-      "canonical_name": "Earthquake Fiji region 2026-07",
-      "summary": "",
-      "country": "Fiji",
-      "iso2": "FJ",
-      "lat": -20.748,
-      "lon": -178.5092,
-      "country_group": "B",
-      "region": "Oceania",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "disease_name": null,
-      "event_date": "2026-07-14",
-      "first_reported_date": "2026-07-14",
-      "last_updated_date": "2026-07-15",
-      "days_since_event": 2,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 0,
-        "healthmap": 0,
-        "news": 1
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 5.5 - Fiji region",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t0hk",
-          "meta": "574.304 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 5.5,
-        "max_depth_km": 574.304,
-        "place": "Fiji region",
-        "felt": null,
-        "sig": 465,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "5.4-magnitude quake hits Fiji Islands region -- GFZ",
-          "url": "http://www.chinaview.cn/20260715/db86a556ee0a41caa0a876624a501ff2/c.html",
-          "outlet": "Xinhuanet",
-          "published_date": "2026-07-15T00:00:00+00:00"
-        }
-      ],
-      "news_total": 1,
-      "logs": []
-    },
-    {
       "incident_id": "20260714-PH-EQ",
       "canonical_name": "Earthquake 34 km WSW of Sarangani, Philippines 2026-07",
       "summary": "A magnitude 6.2 earthquake struck 34 km southwest of Sarangani, Philippines on July 14, 2026, at 11:49 pm local time, with a depth of approximately 10 km. The Philippine Institute of Volcanology and Seismology (PHIVOLCS) initially recommended caution for minor sea-level disturbances but later cancelled the advisory, confirming no unusual sea-level changes and no tsunami threat from the event.",
@@ -10162,7 +9983,7 @@
     {
       "incident_id": "20260712-FR-WF",
       "canonical_name": "Green forest fire notification in France",
-      "summary": "The wildfires in the Fontainebleau forest have shown mixed status: some reports indicate containment, while others report the fire is still spreading with 850 firefighters and 200 vehicles deployed. Authorities discovered ten ignition points and arrested two suspects on suspicion of arson.",
+      "summary": "On July 15, approximately 800 firefighters continued to tackle flare-ups in the Fontainebleau forest as French President Emmanuel Macron pledged to replant the historic forest. Meanwhile, authorities are investigating a volunteer firefighter as a suspect in starting the devastating blaze, which burned over 2,000 hectares near Paris.",
       "country": "France",
       "iso2": "FR",
       "lat": 48.37489160154457,
@@ -10190,7 +10011,7 @@
         "usgs": 0,
         "gdacs": 1,
         "healthmap": 0,
-        "news": 35
+        "news": 37
       },
       "source_links": [
         {
@@ -10288,6 +10109,18 @@
           "url": "https://www.sfgate.com/news/world/article/1-000-evacuated-from-fontainebleau-fire-near-22344388.php",
           "outlet": "San Francisco Chronicle",
           "published_date": "2026-07-14T12:43:18+00:00"
+        },
+        {
+          "headline": "France's Macron pledges to replant Fontainebleau forest after devastating fire",
+          "url": "https://www.msn.com/en-us/news/world/frances-macron-pledges-to-replant-fontainebleau-forest-after-devastating-fire/ar-AA282Nn5?ocid=BingNewsVerp",
+          "outlet": "Reuters on MSN",
+          "published_date": "2026-07-14T14:48:30+00:00"
+        },
+        {
+          "headline": "Volunteer firefighter suspected of starting devastating France forest fire",
+          "url": "https://www.msn.com/en-us/news/world/volunteer-firefighter-suspected-of-starting-devastating-france-forest-fire/ar-AA282NRJ?ocid=BingNewsVerp",
+          "outlet": "BBC on MSN",
+          "published_date": "2026-07-14T14:48:33+00:00"
         },
         {
           "headline": "Wildfires that ravaged historic forest outside Paris contained",
@@ -10422,7 +10255,7 @@
           "published_date": "2026-07-15T12:00:52+00:00"
         }
       ],
-      "news_total": 35,
+      "news_total": 37,
       "logs": [
         {
           "log_datetime": "2026-07-15T07:19:14+00:00",
@@ -10664,6 +10497,40 @@
               "headline": "Fontainebleau fire still burning as 850 firefighters tackle blaze",
               "published_date": "2026-07-15T09:30:40+00:00",
               "outlet": "Euronews on MSN"
+            }
+          ]
+        },
+        {
+          "log_datetime": "2026-07-15T12:00:52+00:00",
+          "summary": "On July 15, approximately 800 firefighters continued to tackle flare-ups in the Fontainebleau forest as French President Emmanuel Macron pledged to replant the historic forest. Meanwhile, authorities are investigating a volunteer firefighter as a suspect in starting the devastating blaze, which burned over 2,000 hectares near Paris.",
+          "news": [
+            {
+              "news_id": 1784174465664,
+              "url": "https://www.aljazeera.com/news/2026/7/13/wildfires-near-paris-force-evacuations-disrupt-train-lines-and-motorway",
+              "headline": "Wildfires near Paris force evacuations, disrupt train lines and motorway",
+              "published_date": "2026-07-13T04:00:52+00:00",
+              "outlet": "Al Jazeera"
+            },
+            {
+              "news_id": 1784213345319,
+              "url": "https://www.msn.com/en-us/news/world/frances-macron-pledges-to-replant-fontainebleau-forest-after-devastating-fire/ar-AA282Nn5?ocid=BingNewsVerp",
+              "headline": "France's Macron pledges to replant Fontainebleau forest after devastating fire",
+              "published_date": "2026-07-14T14:48:30+00:00",
+              "outlet": "Reuters on MSN"
+            },
+            {
+              "news_id": 1784213345322,
+              "url": "https://www.msn.com/en-us/news/world/volunteer-firefighter-suspected-of-starting-devastating-france-forest-fire/ar-AA282NRJ?ocid=BingNewsVerp",
+              "headline": "Volunteer firefighter suspected of starting devastating France forest fire",
+              "published_date": "2026-07-14T14:48:33+00:00",
+              "outlet": "BBC on MSN"
+            },
+            {
+              "news_id": 1784174465661,
+              "url": "https://www.yahoo.com/news/articles/firefighters-tackle-flare-ups-fontainebleau-114525556.html",
+              "headline": "Firefighters tackle flare-ups in Fontainebleau forest after fires brought under...",
+              "published_date": "2026-07-15T12:00:52+00:00",
+              "outlet": "RFI · via Yahoo News"
             }
           ]
         }
