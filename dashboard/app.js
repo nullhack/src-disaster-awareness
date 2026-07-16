@@ -204,7 +204,7 @@ function refreshDateControls() {
   $("#dpNext").disabled = idx < 0 || idx >= STATE.digestDates.length - 1;
   const entry = STATE.digestByDate[STATE.digestDate];
   $("#digestMeta").textContent = entry
-    ? `${entry.reportable_total} reportable · ${entry.critical} critical · ${entry.disease_outbreaks} disease`
+    ? `${entry.reportable_total} active · ${entry.critical} critical · ${entry.disease_outbreaks} disease`
     : "";
   const reportLink = $("#dpReport");
   if (STATE.digestDate) {
