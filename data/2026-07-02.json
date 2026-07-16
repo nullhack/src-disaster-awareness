@@ -1,37 +1,48 @@
 {
   "schema_version": "1.4",
   "report_date": "2026-07-02",
-  "generated_at": "2026-07-16T04:39:16Z",
+  "generated_at": "2026-07-16T08:12:58Z",
   "as_of": "2026-07-02",
-  "tracking_window_days": 14,
+  "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 4,
+    "reportable_total": 7,
     "new_today": 1,
     "critical": 0,
     "high": 1,
-    "medium": 3,
-    "low": 0,
-    "disease_outbreaks": 0,
-    "countries_affected": 4,
-    "news_total": 4,
+    "medium": 5,
+    "low": 1,
+    "disease_outbreaks": 1,
+    "countries_affected": 7,
+    "news_total": 7,
     "max_magnitude": 5.8,
     "by_severity": {
       "CRITICAL": 0,
       "HIGH": 1,
-      "MEDIUM": 3,
-      "LOW": 0
+      "MEDIUM": 5,
+      "LOW": 1
     },
     "by_type": {
-      "Earthquake": 4
+      "Earthquake": 6,
+      "Disease": 1
     },
     "by_region": {
-      "Americas": 1,
-      "Asia": 2,
-      "Oceania": 1
+      "Americas": 2,
+      "Asia": 3,
+      "Oceania": 1,
+      "Africa": 1
     }
   },
   "by_country": [
+    {
+      "country": "Philippines",
+      "count": 1,
+      "max_sev_rank": 1,
+      "iso2": "PH",
+      "region": "Asia",
+      "country_group": "A",
+      "max_severity": "LOW"
+    },
     {
       "country": "Japan",
       "count": 1,
@@ -57,6 +68,24 @@
       "iso2": "AF",
       "region": "Asia",
       "country_group": "A",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "Nicaragua",
+      "count": 1,
+      "max_sev_rank": 2,
+      "iso2": "NI",
+      "region": "Americas",
+      "country_group": "C",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "Burkina Faso",
+      "count": 1,
+      "max_sev_rank": 2,
+      "iso2": "BF",
+      "region": "Africa",
+      "country_group": "C",
       "max_severity": "MEDIUM"
     },
     {
@@ -285,6 +314,82 @@
       ]
     },
     {
+      "incident_id": "20260630-PH-EQ",
+      "canonical_name": "Earthquake 6 km SE of Pangyan, Philippines 2026-06",
+      "summary": "The earthquake caused coastal uplift that created approximately 200 hectares of new land but devastated the Pangyan Marine Sanctuary and Sarangani Bay Protected Seascape, resulting in the death of corals, seagrass, giant clams, and reef fishes.",
+      "country": "Philippines",
+      "iso2": "PH",
+      "lat": 5.6532,
+      "lon": 125.3221,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "LOW",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-06-30",
+      "first_reported_date": "2026-06-30",
+      "last_updated_date": "2026-06-30",
+      "days_since_event": 16,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 4.9 - 6 km SE of Pangyan, Philippines",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9ad",
+          "meta": "75.515 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 4.9,
+        "max_depth_km": 75.515,
+        "place": "6 km SE of Pangyan, Philippines",
+        "felt": 2,
+        "sig": 370,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Sarangani earthquake gives birth to 200 hectares of new land—shatters marine sanctuary, habitats",
+          "url": "https://businessmirror.com.ph/2026/06/30/sarangani-earthquake-gives-birth-to-200-hectares-of-new-land-shatters-marine-sanctuary-habitats/",
+          "outlet": "BusinessMirror",
+          "published_date": "2026-06-30T14:30:07+00:00"
+        }
+      ],
+      "news_total": 1,
+      "logs": [
+        {
+          "log_datetime": "2026-06-30T14:30:07+00:00",
+          "summary": "The earthquake caused coastal uplift that created approximately 200 hectares of new land but devastated the Pangyan Marine Sanctuary and Sarangani Bay Protected Seascape, resulting in the death of corals, seagrass, giant clams, and reef fishes.",
+          "news": [
+            {
+              "news_id": 1700001000007,
+              "url": "https://businessmirror.com.ph/2026/06/30/sarangani-earthquake-gives-birth-to-200-hectares-of-new-land-shatters-marine-sanctuary-habitats/",
+              "headline": "Sarangani earthquake gives birth to 200 hectares of new land—shatters marine sanctuary, habitats",
+              "published_date": "2026-06-30T14:30:07+00:00",
+              "outlet": "BusinessMirror"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "incident_id": "20260701-AF-EQ",
       "canonical_name": "Earthquake 47 km SW of Jurm, Afghanistan 2026-07",
       "summary": "A 5.5 magnitude earthquake struck 47 km southwest of Jurm, Afghanistan, with tremors felt in neighboring Pakistan and northern India, including Jammu and Kashmir. The article notes this is the second earthquake in the region within five days.",
@@ -355,6 +460,144 @@
               "headline": "5.5 magnitude earthquake hits Afghanistan, tremors felt in Jammu and Kashmir and…; second quake in 5 days",
               "published_date": "2026-07-02T00:00:00+00:00",
               "outlet": "News24"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "20260326-NI-EQ",
+      "canonical_name": "Earthquake 2 km WSW of Ciudad Sandino, Nicaragua 2026-03",
+      "summary": "",
+      "country": "Nicaragua",
+      "iso2": "NI",
+      "lat": 12.1477,
+      "lon": -86.3658,
+      "country_group": "C",
+      "region": "Americas",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-03-26",
+      "first_reported_date": "2026-03-26",
+      "last_updated_date": "2026-06-27",
+      "days_since_event": 112,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 5.5 - 2 km WSW of Ciudad Sandino, Nicaragua",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000s7w6",
+          "meta": "159.972 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 5.5,
+        "max_depth_km": 159.972,
+        "place": "2 km WSW of Ciudad Sandino, Nicaragua",
+        "felt": 6,
+        "sig": 467,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Dominican Republic and Nicaragua cap week of powerful earthquakes",
+          "url": "https://www.yahoo.com/news/weather-news/articles/dominican-republic-nicaragua-cap-week-172750228.html",
+          "outlet": "United Press International · via Yahoo News",
+          "published_date": "2026-06-27T14:43:13+00:00"
+        }
+      ],
+      "news_total": 1,
+      "logs": []
+    },
+    {
+      "incident_id": "20240320-BF-DI",
+      "canonical_name": "Yellow fever – African Region (AFRO)",
+      "summary": "The World Health Organization has issued a warning about persistent yellow fever outbreaks across Africa and the Americas, attributing the resurgence to low vaccination coverage and climate-related factors. This update highlights ongoing risks in the African region, underscoring the continued threat of the disease.",
+      "country": "Burkina Faso",
+      "iso2": "BF",
+      "lat": 12.2,
+      "lon": -1.6,
+      "country_group": "C",
+      "region": "Africa",
+      "incident_type": "Disease",
+      "incident_category": "Biological",
+      "is_disease": true,
+      "severity": "MEDIUM",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": "MEDIUM",
+      "event_status": null,
+      "disease_name": "Yellow Fever",
+      "event_date": "2024-03-20",
+      "first_reported_date": "2024-03-20",
+      "last_updated_date": "2026-06-25",
+      "days_since_event": 848,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [],
+      "sources": {
+        "who_don": 1,
+        "usgs": 0,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "WHO",
+          "label": "Yellow fever – African Region (AFRO)",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2024-DON510",
+          "meta": ""
+        }
+      ],
+      "physical": {
+        "max_magnitude": null,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Yellow fever outbreaks persist across Africa, Americas — WHO",
+          "url": "https://www.msn.com/en-xl/africa/nigeria/yellow-fever-outbreaks-persist-across-africa-americas-who/ar-AA26tqbr?ocid=BingNewsVerp",
+          "outlet": "Tribune Online on MSN",
+          "published_date": "2026-06-25T04:00:00+00:00"
+        }
+      ],
+      "news_total": 1,
+      "logs": [
+        {
+          "log_datetime": "2026-06-25T04:00:00+00:00",
+          "summary": "The World Health Organization has issued a warning about persistent yellow fever outbreaks across Africa and the Americas, attributing the resurgence to low vaccination coverage and climate-related factors. This update highlights ongoing risks in the African region, underscoring the continued threat of the disease.",
+          "news": [
+            {
+              "news_id": 1700001000256,
+              "url": "https://www.msn.com/en-xl/africa/nigeria/yellow-fever-outbreaks-persist-across-africa-americas-who/ar-AA26tqbr?ocid=BingNewsVerp",
+              "headline": "Yellow fever outbreaks persist across Africa, Americas — WHO",
+              "published_date": "2026-06-25T04:00:00+00:00",
+              "outlet": "Tribune Online on MSN"
             }
           ]
         }

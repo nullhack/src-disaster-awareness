@@ -1,54 +1,64 @@
 {
   "schema_version": "1.4",
   "report_date": "2026-06-23",
-  "generated_at": "2026-07-16T04:39:16Z",
+  "generated_at": "2026-07-16T08:12:58Z",
   "as_of": "2026-06-23",
-  "tracking_window_days": 14,
+  "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 1,
+    "reportable_total": 2,
     "new_today": 0,
     "critical": 0,
     "high": 0,
-    "medium": 1,
+    "medium": 2,
     "low": 0,
     "disease_outbreaks": 0,
-    "countries_affected": 1,
-    "news_total": 1,
-    "max_magnitude": 6.3,
+    "countries_affected": 2,
+    "news_total": 4,
+    "max_magnitude": 6.2,
     "by_severity": {
       "CRITICAL": 0,
       "HIGH": 0,
-      "MEDIUM": 1,
+      "MEDIUM": 2,
       "LOW": 0
     },
     "by_type": {
-      "Earthquake": 1
+      "Earthquake": 2
     },
     "by_region": {
-      "Asia": 1
+      "Asia": 1,
+      "Europe": 1
     }
   },
   "by_country": [
     {
-      "country": "China",
+      "country": "Indonesia",
       "count": 1,
       "max_sev_rank": 2,
-      "iso2": "CN",
+      "iso2": "ID",
       "region": "Asia",
       "country_group": "A",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "Russia",
+      "count": 1,
+      "max_sev_rank": 2,
+      "iso2": "RU",
+      "region": "Europe",
+      "country_group": "C",
       "max_severity": "MEDIUM"
     }
   ],
   "incidents": [
     {
-      "incident_id": "20260616-CN-EQ",
-      "canonical_name": "Earthquake China 2026-06",
-      "summary": "A magnitude 6.3 earthquake struck China on June 16, 2026, leaving at least one person dead and several others injured. This initial report details the earthquake's impact and casualties.",
-      "country": "China",
-      "iso2": "CN",
-      "lat": 37.8888,
-      "lon": 95.4028,
+      "incident_id": "20260703-ID-EQ",
+      "canonical_name": "Earthquake 58 km W of Tobelo, Indonesia 2026-07",
+      "summary": "A magnitude 6.2 earthquake struck approximately 58 km west of Tobelo, Indonesia, on July 3, 2026, according to the USGS and Indonesia's BKMG. There was no tsunami threat, and no immediate reports of casualties or damage.",
+      "country": "Indonesia",
+      "iso2": "ID",
+      "lat": 1.8205,
+      "lon": 127.4916,
       "country_group": "A",
       "region": "Asia",
       "incident_type": "Earthquake",
@@ -60,58 +70,153 @@
       "pandemic_potential": null,
       "event_status": null,
       "disease_name": null,
-      "event_date": "2026-06-16",
-      "first_reported_date": "2026-06-16",
-      "last_updated_date": "2026-06-13",
-      "days_since_event": 30,
+      "event_date": "2026-07-03",
+      "first_reported_date": "2026-07-03",
+      "last_updated_date": "2026-06-17",
+      "days_since_event": 13,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
       "sources": {
         "who_don": 0,
-        "usgs": 0,
-        "gdacs": 1,
+        "usgs": 1,
+        "gdacs": 0,
         "healthmap": 0,
-        "news": 1
+        "news": 2
       },
       "source_links": [
         {
-          "type": "GDACS",
-          "label": "Orange alert · Magnitude 6.3M, Depth:10km",
-          "url": "https://www.gdacs.org/report.aspx?eventid=1546719&episodeid=1712478&eventtype=EQ",
-          "meta": "Magnitude 6.3M, Depth:10km"
+          "type": "USGS",
+          "label": "M 6.2 - 58 km W of Tobelo, Indonesia",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9r5",
+          "meta": "120.932 km depth"
         }
       ],
       "physical": {
-        "max_magnitude": 6.3,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
+        "max_magnitude": 6.2,
+        "max_depth_km": 120.932,
+        "place": "58 km W of Tobelo, Indonesia",
+        "felt": 7,
+        "sig": 594,
         "tsunami": false,
-        "gdacs_alertlevel": "Orange",
+        "gdacs_alertlevel": null,
         "gdacs_population": null
       },
       "news": [
         {
-          "headline": "Magnitude 6.3 earthquake rattles China, at least 1 dead, multiple injured",
-          "url": "https://www.yahoo.com/news/world/articles/magnitude-6-3-earthquake-rattles-130717611.html",
-          "outlet": "Yahoo",
-          "published_date": "2026-06-13T14:43:40+00:00"
+          "headline": "Magnitude 6.2 earthquake strikes off eastern Indonesia, no tsunami threat",
+          "url": "https://www.asiaone.com/asia/indonesia-tolebo-maluku-earthquake",
+          "outlet": "Asia One",
+          "published_date": "2026-06-17T00:00:00+00:00"
+        },
+        {
+          "headline": "Magnitude 6.2 earthquake strikes off eastern Indonesia: USGS",
+          "url": "https://www.bssnews.net/international/402127",
+          "outlet": "Bangladesh Sangsbad Sangstha",
+          "published_date": "2026-06-17T00:00:00+00:00"
         }
       ],
-      "news_total": 1,
+      "news_total": 2,
       "logs": [
         {
-          "log_datetime": "2026-06-13T14:43:40+00:00",
-          "summary": "A magnitude 6.3 earthquake struck China on June 16, 2026, leaving at least one person dead and several others injured. This initial report details the earthquake's impact and casualties.",
+          "log_datetime": "2026-06-17T00:00:00+00:00",
+          "summary": "A magnitude 6.2 earthquake struck approximately 58 km west of Tobelo, Indonesia, on July 3, 2026, according to the USGS and Indonesia's BKMG. There was no tsunami threat, and no immediate reports of casualties or damage.",
           "news": [
             {
-              "news_id": 1700001000444,
-              "url": "https://www.yahoo.com/news/world/articles/magnitude-6-3-earthquake-rattles-130717611.html",
-              "headline": "Magnitude 6.3 earthquake rattles China, at least 1 dead, multiple injured",
-              "published_date": "2026-06-13T14:43:40+00:00",
-              "outlet": "Yahoo"
+              "news_id": 1700001000072,
+              "url": "https://www.asiaone.com/asia/indonesia-tolebo-maluku-earthquake",
+              "headline": "Magnitude 6.2 earthquake strikes off eastern Indonesia, no tsunami threat",
+              "published_date": "2026-06-17T00:00:00+00:00",
+              "outlet": "Asia One"
+            },
+            {
+              "news_id": 1700001000079,
+              "url": "https://www.bssnews.net/international/402127",
+              "headline": "Magnitude 6.2 earthquake strikes off eastern Indonesia: USGS",
+              "published_date": "2026-06-17T00:00:00+00:00",
+              "outlet": "Bangladesh Sangsbad Sangstha"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "20260619-RU-EQ",
+      "canonical_name": "Earthquake 156 km ESE of Petropavlovsk-Kamchatsky, Russia 2026-06",
+      "summary": "An earthquake of magnitude 6.9 occurred off the coast of Kamchatka and was felt in some areas of Petropavlovsk-Kamchatsky with a force of up to four points. No evacuation of the population was required.",
+      "country": "Russia",
+      "iso2": "RU",
+      "lat": 52.69,
+      "lon": 160.8644,
+      "country_group": "C",
+      "region": "Europe",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-06-19",
+      "first_reported_date": "2026-06-19",
+      "last_updated_date": "2026-06-22",
+      "days_since_event": 27,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 2
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 6.0 - 156 km ESE of Petropavlovsk-Kamchatsky, Russia",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sui2",
+          "meta": "28.383 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 6.0,
+        "max_depth_km": 28.383,
+        "place": "156 km ESE of Petropavlovsk-Kamchatsky, Russia",
+        "felt": null,
+        "sig": 554,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Evacuation in Petropavlovsk-Kamchatsky was not required during the earthquake.",
+          "url": "https://iz.ru/en/node/2118182",
+          "outlet": "Izvestia",
+          "published_date": "2026-06-19T00:00:00+00:00"
+        },
+        {
+          "headline": "46 aftershocks occurred in Kamchatka during the week",
+          "url": "https://iz.ru/en/node/2119598",
+          "outlet": "Izvestia",
+          "published_date": "2026-06-22T00:00:00+00:00"
+        }
+      ],
+      "news_total": 2,
+      "logs": [
+        {
+          "log_datetime": "2026-06-19T00:00:00+00:00",
+          "summary": "An earthquake of magnitude 6.9 occurred off the coast of Kamchatka and was felt in some areas of Petropavlovsk-Kamchatsky with a force of up to four points. No evacuation of the population was required.",
+          "news": [
+            {
+              "news_id": 1700001000020,
+              "url": "https://iz.ru/en/node/2118182",
+              "headline": "Evacuation in Petropavlovsk-Kamchatsky was not required during the earthquake.",
+              "published_date": "2026-06-19T00:00:00+00:00",
+              "outlet": "Izvestia"
             }
           ]
         }

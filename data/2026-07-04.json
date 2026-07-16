@@ -1,45 +1,45 @@
 {
   "schema_version": "1.4",
   "report_date": "2026-07-04",
-  "generated_at": "2026-07-16T04:39:16Z",
+  "generated_at": "2026-07-16T08:12:58Z",
   "as_of": "2026-07-04",
-  "tracking_window_days": 14,
+  "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 5,
+    "reportable_total": 4,
     "new_today": 0,
     "critical": 0,
-    "high": 1,
-    "medium": 4,
-    "low": 0,
+    "high": 0,
+    "medium": 3,
+    "low": 1,
     "disease_outbreaks": 0,
-    "countries_affected": 5,
-    "news_total": 6,
-    "max_magnitude": 6.2,
+    "countries_affected": 4,
+    "news_total": 4,
+    "max_magnitude": 5.5,
     "by_severity": {
       "CRITICAL": 0,
-      "HIGH": 1,
-      "MEDIUM": 4,
-      "LOW": 0
+      "HIGH": 0,
+      "MEDIUM": 3,
+      "LOW": 1
     },
     "by_type": {
-      "Earthquake": 5
+      "Earthquake": 4
     },
     "by_region": {
-      "Americas": 1,
-      "Asia": 3,
-      "Oceania": 1
+      "Oceania": 1,
+      "Asia": 2,
+      "Americas": 1
     }
   },
   "by_country": [
     {
-      "country": "Japan",
+      "country": "Philippines",
       "count": 1,
-      "max_sev_rank": 2,
-      "iso2": "JP",
+      "max_sev_rank": 1,
+      "iso2": "PH",
       "region": "Asia",
       "country_group": "A",
-      "max_severity": "MEDIUM"
+      "max_severity": "LOW"
     },
     {
       "country": "Papua New Guinea",
@@ -60,163 +60,16 @@
       "max_severity": "MEDIUM"
     },
     {
-      "country": "Indonesia",
+      "country": "Nicaragua",
       "count": 1,
       "max_sev_rank": 2,
-      "iso2": "ID",
-      "region": "Asia",
-      "country_group": "A",
-      "max_severity": "MEDIUM"
-    },
-    {
-      "country": "Dominican Republic",
-      "count": 1,
-      "max_sev_rank": 3,
-      "iso2": "DO",
+      "iso2": "NI",
       "region": "Americas",
       "country_group": "C",
-      "max_severity": "HIGH"
+      "max_severity": "MEDIUM"
     }
   ],
   "incidents": [
-    {
-      "incident_id": "20250805-DO-EQ",
-      "canonical_name": "Earthquake 38 km SE of Boca de Yuma, Dominican Republic 2025-08",
-      "summary": "",
-      "country": "Dominican Republic",
-      "iso2": "DO",
-      "lat": 18.1665,
-      "lon": -68.3226,
-      "country_group": "C",
-      "region": "Americas",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "HIGH",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "disease_name": null,
-      "event_date": "2025-08-05",
-      "first_reported_date": "2025-08-05",
-      "last_updated_date": "2026-06-26",
-      "days_since_event": 345,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 0,
-        "healthmap": 0,
-        "news": 1
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 5.7 - 38 km SE of Boca de Yuma, Dominican Republic",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr2025217000",
-          "meta": "168 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 5.7,
-        "max_depth_km": 168.0,
-        "place": "38 km SE of Boca de Yuma, Dominican Republic",
-        "felt": 484,
-        "sig": 742,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Dominican Republic and Nicaragua cap week of powerful earthquakes",
-          "url": "https://www.msn.com/en-us/news/world/dominican-republic-and-nicaragua-cap-week-of-powerful-earthquakes/ar-AA26CRR8?ocid=BingNewsVerp",
-          "outlet": "UPI on MSN",
-          "published_date": "2026-06-26T04:00:00+00:00"
-        }
-      ],
-      "news_total": 1,
-      "logs": []
-    },
-    {
-      "incident_id": "20260626-JP-EQ",
-      "canonical_name": "Earthquake 3 km SE of Yokoshiba, Japan 2026-06",
-      "summary": "A magnitude 5.8 earthquake struck Japan's Chiba prefecture on June 26, 2026, shaking areas near Tokyo. No tsunami warning was issued.",
-      "country": "Japan",
-      "iso2": "JP",
-      "lat": 35.6314,
-      "lon": 140.5099,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "disease_name": null,
-      "event_date": "2026-06-26",
-      "first_reported_date": "2026-06-26",
-      "last_updated_date": "2026-06-26",
-      "days_since_event": 20,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 0,
-        "healthmap": 0,
-        "news": 1
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 5.8 - 3 km SE of Yokoshiba, Japan",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8cy",
-          "meta": "43 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 5.8,
-        "max_depth_km": 43.0,
-        "place": "3 km SE of Yokoshiba, Japan",
-        "felt": 65,
-        "sig": 545,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Magnitude 5.8 earthquake strikes near Tokyo, no tsunami warning issued",
-          "url": "https://www.aa.com.tr/en/asia-pacific/magnitude-58-earthquake-strikes-near-tokyo-no-tsunami-warning-issued/3978380",
-          "outlet": "Anadolu Agency",
-          "published_date": "2026-06-26T00:00:00+00:00"
-        }
-      ],
-      "news_total": 1,
-      "logs": [
-        {
-          "log_datetime": "2026-06-26T00:00:00+00:00",
-          "summary": "A magnitude 5.8 earthquake struck Japan's Chiba prefecture on June 26, 2026, shaking areas near Tokyo. No tsunami warning was issued.",
-          "news": [
-            {
-              "news_id": 1700001000062,
-              "url": "https://www.aa.com.tr/en/asia-pacific/magnitude-58-earthquake-strikes-near-tokyo-no-tsunami-warning-issued/3978380",
-              "headline": "Magnitude 5.8 earthquake strikes near Tokyo, no tsunami warning issued",
-              "published_date": "2026-06-26T00:00:00+00:00",
-              "outlet": "Anadolu Agency"
-            }
-          ]
-        }
-      ]
-    },
     {
       "incident_id": "20260630-PG-EQ",
       "canonical_name": "Earthquake 90 km ESE of Kimbe, Papua New Guinea 2026-06",
@@ -288,6 +141,82 @@
               "headline": "Magnitude 5.8 earthquake strikes New Britain Region, Papua New Guinea, GFZ says",
               "published_date": "2026-06-30T14:37:55+00:00",
               "outlet": "Reuters"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "20260630-PH-EQ",
+      "canonical_name": "Earthquake 6 km SE of Pangyan, Philippines 2026-06",
+      "summary": "The earthquake caused coastal uplift that created approximately 200 hectares of new land but devastated the Pangyan Marine Sanctuary and Sarangani Bay Protected Seascape, resulting in the death of corals, seagrass, giant clams, and reef fishes.",
+      "country": "Philippines",
+      "iso2": "PH",
+      "lat": 5.6532,
+      "lon": 125.3221,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "LOW",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-06-30",
+      "first_reported_date": "2026-06-30",
+      "last_updated_date": "2026-06-30",
+      "days_since_event": 16,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 4.9 - 6 km SE of Pangyan, Philippines",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9ad",
+          "meta": "75.515 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 4.9,
+        "max_depth_km": 75.515,
+        "place": "6 km SE of Pangyan, Philippines",
+        "felt": 2,
+        "sig": 370,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Sarangani earthquake gives birth to 200 hectares of new land—shatters marine sanctuary, habitats",
+          "url": "https://businessmirror.com.ph/2026/06/30/sarangani-earthquake-gives-birth-to-200-hectares-of-new-land-shatters-marine-sanctuary-habitats/",
+          "outlet": "BusinessMirror",
+          "published_date": "2026-06-30T14:30:07+00:00"
+        }
+      ],
+      "news_total": 1,
+      "logs": [
+        {
+          "log_datetime": "2026-06-30T14:30:07+00:00",
+          "summary": "The earthquake caused coastal uplift that created approximately 200 hectares of new land but devastated the Pangyan Marine Sanctuary and Sarangani Bay Protected Seascape, resulting in the death of corals, seagrass, giant clams, and reef fishes.",
+          "news": [
+            {
+              "news_id": 1700001000007,
+              "url": "https://businessmirror.com.ph/2026/06/30/sarangani-earthquake-gives-birth-to-200-hectares-of-new-land-shatters-marine-sanctuary-habitats/",
+              "headline": "Sarangani earthquake gives birth to 200 hectares of new land—shatters marine sanctuary, habitats",
+              "published_date": "2026-06-30T14:30:07+00:00",
+              "outlet": "BusinessMirror"
             }
           ]
         }
@@ -370,93 +299,66 @@
       ]
     },
     {
-      "incident_id": "20260703-ID-EQ",
-      "canonical_name": "Earthquake 58 km W of Tobelo, Indonesia 2026-07",
-      "summary": "A magnitude 6.2 earthquake struck approximately 58 km west of Tobelo, Indonesia, on July 3, 2026, according to the USGS and Indonesia's BKMG. There was no tsunami threat, and no immediate reports of casualties or damage.",
-      "country": "Indonesia",
-      "iso2": "ID",
-      "lat": 1.8205,
-      "lon": 127.4916,
-      "country_group": "A",
-      "region": "Asia",
+      "incident_id": "20260326-NI-EQ",
+      "canonical_name": "Earthquake 2 km WSW of Ciudad Sandino, Nicaragua 2026-03",
+      "summary": "",
+      "country": "Nicaragua",
+      "iso2": "NI",
+      "lat": 12.1477,
+      "lon": -86.3658,
+      "country_group": "C",
+      "region": "Americas",
       "incident_type": "Earthquake",
       "incident_category": "Natural",
       "is_disease": false,
       "severity": "MEDIUM",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
+      "priority": "LOW",
+      "priority_rank": 3,
       "pandemic_potential": null,
       "event_status": null,
       "disease_name": null,
-      "event_date": "2026-07-03",
-      "first_reported_date": "2026-07-03",
-      "last_updated_date": "2026-06-17",
-      "days_since_event": 13,
+      "event_date": "2026-03-26",
+      "first_reported_date": "2026-03-26",
+      "last_updated_date": "2026-06-27",
+      "days_since_event": 112,
       "source_count": 1,
-      "should_report": true,
+      "should_report": false,
       "search_keys": [],
       "sources": {
         "who_don": 0,
         "usgs": 1,
         "gdacs": 0,
         "healthmap": 0,
-        "news": 2
+        "news": 1
       },
       "source_links": [
         {
           "type": "USGS",
-          "label": "M 6.2 - 58 km W of Tobelo, Indonesia",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9r5",
-          "meta": "120.932 km depth"
+          "label": "M 5.5 - 2 km WSW of Ciudad Sandino, Nicaragua",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000s7w6",
+          "meta": "159.972 km depth"
         }
       ],
       "physical": {
-        "max_magnitude": 6.2,
-        "max_depth_km": 120.932,
-        "place": "58 km W of Tobelo, Indonesia",
-        "felt": 7,
-        "sig": 594,
+        "max_magnitude": 5.5,
+        "max_depth_km": 159.972,
+        "place": "2 km WSW of Ciudad Sandino, Nicaragua",
+        "felt": 6,
+        "sig": 467,
         "tsunami": false,
         "gdacs_alertlevel": null,
         "gdacs_population": null
       },
       "news": [
         {
-          "headline": "Magnitude 6.2 earthquake strikes off eastern Indonesia, no tsunami threat",
-          "url": "https://www.asiaone.com/asia/indonesia-tolebo-maluku-earthquake",
-          "outlet": "Asia One",
-          "published_date": "2026-06-17T00:00:00+00:00"
-        },
-        {
-          "headline": "Magnitude 6.2 earthquake strikes off eastern Indonesia: USGS",
-          "url": "https://www.bssnews.net/international/402127",
-          "outlet": "Bangladesh Sangsbad Sangstha",
-          "published_date": "2026-06-17T00:00:00+00:00"
+          "headline": "Dominican Republic and Nicaragua cap week of powerful earthquakes",
+          "url": "https://www.yahoo.com/news/weather-news/articles/dominican-republic-nicaragua-cap-week-172750228.html",
+          "outlet": "United Press International · via Yahoo News",
+          "published_date": "2026-06-27T14:43:13+00:00"
         }
       ],
-      "news_total": 2,
-      "logs": [
-        {
-          "log_datetime": "2026-06-17T00:00:00+00:00",
-          "summary": "A magnitude 6.2 earthquake struck approximately 58 km west of Tobelo, Indonesia, on July 3, 2026, according to the USGS and Indonesia's BKMG. There was no tsunami threat, and no immediate reports of casualties or damage.",
-          "news": [
-            {
-              "news_id": 1700001000072,
-              "url": "https://www.asiaone.com/asia/indonesia-tolebo-maluku-earthquake",
-              "headline": "Magnitude 6.2 earthquake strikes off eastern Indonesia, no tsunami threat",
-              "published_date": "2026-06-17T00:00:00+00:00",
-              "outlet": "Asia One"
-            },
-            {
-              "news_id": 1700001000079,
-              "url": "https://www.bssnews.net/international/402127",
-              "headline": "Magnitude 6.2 earthquake strikes off eastern Indonesia: USGS",
-              "published_date": "2026-06-17T00:00:00+00:00",
-              "outlet": "Bangladesh Sangsbad Sangstha"
-            }
-          ]
-        }
-      ]
+      "news_total": 1,
+      "logs": []
     }
   ]
 }

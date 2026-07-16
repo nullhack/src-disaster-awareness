@@ -1,47 +1,65 @@
 {
   "schema_version": "1.4",
   "report_date": "2026-07-12",
-  "generated_at": "2026-07-16T04:39:16Z",
+  "generated_at": "2026-07-16T08:12:58Z",
   "as_of": "2026-07-12",
-  "tracking_window_days": 14,
+  "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 72,
-    "new_today": 2,
+    "reportable_total": 85,
+    "new_today": 3,
     "critical": 0,
     "high": 44,
-    "medium": 28,
-    "low": 0,
-    "disease_outbreaks": 20,
-    "countries_affected": 32,
-    "news_total": 225,
+    "medium": 39,
+    "low": 2,
+    "disease_outbreaks": 24,
+    "countries_affected": 35,
+    "news_total": 248,
     "max_magnitude": 27577.0,
     "by_severity": {
       "CRITICAL": 0,
       "HIGH": 44,
-      "MEDIUM": 28,
-      "LOW": 0
+      "MEDIUM": 39,
+      "LOW": 2
     },
     "by_type": {
       "Tropical Cyclone": 3,
       "Forest Fire": 3,
-      "Flood": 1,
-      "Earthquake": 45,
-      "Disease": 20
+      "Flood": 2,
+      "Earthquake": 53,
+      "Disease": 24
     },
     "by_region": {
-      "Asia": 40,
+      "Asia": 39,
       "Europe": 4,
-      "Americas": 12,
-      "Oceania": 6,
-      "Africa": 8,
-      "Unknown": 2
+      "Americas": 23,
+      "Africa": 11,
+      "Oceania": 5,
+      "Unknown": 3
     }
   },
   "by_country": [
     {
+      "country": "Philippines",
+      "count": 5,
+      "max_sev_rank": 1,
+      "iso2": "PH",
+      "region": "Asia",
+      "country_group": "A",
+      "max_severity": "LOW"
+    },
+    {
+      "country": "Mexico",
+      "count": 2,
+      "max_sev_rank": 1,
+      "iso2": "MX",
+      "region": "Americas",
+      "country_group": "C",
+      "max_severity": "LOW"
+    },
+    {
       "country": "Indonesia",
-      "count": 9,
+      "count": 8,
       "max_sev_rank": 2,
       "iso2": "ID",
       "region": "Asia",
@@ -58,21 +76,30 @@
       "max_severity": "MEDIUM"
     },
     {
-      "country": "Afghanistan",
-      "count": 6,
-      "max_sev_rank": 2,
-      "iso2": "AF",
-      "region": "Asia",
-      "country_group": "A",
-      "max_severity": "MEDIUM"
-    },
-    {
       "country": "Angola",
-      "count": 6,
+      "count": 7,
       "max_sev_rank": 2,
       "iso2": "AO",
       "region": "Africa",
       "country_group": "C",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "United States",
+      "count": 6,
+      "max_sev_rank": 2,
+      "iso2": "US",
+      "region": "Americas",
+      "country_group": "C",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "Afghanistan",
+      "count": 5,
+      "max_sev_rank": 2,
+      "iso2": "AF",
+      "region": "Asia",
+      "country_group": "A",
       "max_severity": "MEDIUM"
     },
     {
@@ -85,12 +112,12 @@
       "max_severity": "MEDIUM"
     },
     {
-      "country": "Philippines",
-      "count": 4,
+      "country": "Chile",
+      "count": 3,
       "max_sev_rank": 2,
-      "iso2": "PH",
-      "region": "Asia",
-      "country_group": "A",
+      "iso2": "CL",
+      "region": "Americas",
+      "country_group": "C",
       "max_severity": "MEDIUM"
     },
     {
@@ -103,12 +130,57 @@
       "max_severity": "MEDIUM"
     },
     {
+      "country": "Cuba",
+      "count": 2,
+      "max_sev_rank": 2,
+      "iso2": "CU",
+      "region": "Americas",
+      "country_group": "C",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "Ethiopia",
+      "count": 2,
+      "max_sev_rank": 2,
+      "iso2": "ET",
+      "region": "Africa",
+      "country_group": "C",
+      "max_severity": "MEDIUM"
+    },
+    {
       "country": "Papua New Guinea",
-      "count": 3,
+      "count": 2,
       "max_sev_rank": 2,
       "iso2": "PG",
       "region": "Oceania",
       "country_group": "B",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "Costa Rica",
+      "count": 2,
+      "max_sev_rank": 2,
+      "iso2": "CR",
+      "region": "Americas",
+      "country_group": "C",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "Peru",
+      "count": 2,
+      "max_sev_rank": 2,
+      "iso2": "PE",
+      "region": "Americas",
+      "country_group": "C",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "Argentina",
+      "count": 2,
+      "max_sev_rank": 2,
+      "iso2": "AR",
+      "region": "Americas",
+      "country_group": "C",
       "max_severity": "MEDIUM"
     },
     {
@@ -126,6 +198,15 @@
       "max_sev_rank": 2,
       "iso2": "RU",
       "region": "Europe",
+      "country_group": "C",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "Colombia",
+      "count": 1,
+      "max_sev_rank": 2,
+      "iso2": "CO",
+      "region": "Americas",
       "country_group": "C",
       "max_severity": "MEDIUM"
     },
@@ -184,24 +265,6 @@
       "max_severity": "MEDIUM"
     },
     {
-      "country": "United States",
-      "count": 3,
-      "max_sev_rank": 3,
-      "iso2": "US",
-      "region": "Americas",
-      "country_group": "C",
-      "max_severity": "HIGH"
-    },
-    {
-      "country": "Chile",
-      "count": 2,
-      "max_sev_rank": 3,
-      "iso2": "CL",
-      "region": "Americas",
-      "country_group": "C",
-      "max_severity": "HIGH"
-    },
-    {
       "country": "Burundi",
       "count": 2,
       "max_sev_rank": 3,
@@ -247,15 +310,6 @@
       "max_severity": "HIGH"
     },
     {
-      "country": "Costa Rica",
-      "count": 1,
-      "max_sev_rank": 3,
-      "iso2": "CR",
-      "region": "Americas",
-      "country_group": "C",
-      "max_severity": "HIGH"
-    },
-    {
       "country": "Timor-Leste",
       "count": 1,
       "max_sev_rank": 3,
@@ -292,39 +346,12 @@
       "max_severity": "HIGH"
     },
     {
-      "country": "Peru",
-      "count": 1,
-      "max_sev_rank": 3,
-      "iso2": "PE",
-      "region": "Americas",
-      "country_group": "C",
-      "max_severity": "HIGH"
-    },
-    {
       "country": "Vanuatu",
       "count": 1,
       "max_sev_rank": 3,
       "iso2": "VU",
       "region": "Oceania",
       "country_group": "B",
-      "max_severity": "HIGH"
-    },
-    {
-      "country": "Cuba",
-      "count": 1,
-      "max_sev_rank": 3,
-      "iso2": "CU",
-      "region": "Americas",
-      "country_group": "C",
-      "max_severity": "HIGH"
-    },
-    {
-      "country": "Argentina",
-      "count": 1,
-      "max_sev_rank": 3,
-      "iso2": "AR",
-      "region": "Americas",
-      "country_group": "C",
       "max_severity": "HIGH"
     }
   ],
@@ -1028,6 +1055,95 @@
       "logs": []
     },
     {
+      "incident_id": "20251028-CU-FL",
+      "canonical_name": "Flood in Cuba",
+      "summary": "Hurricane Melissa, a Category 3 storm, barreled over eastern Cuba, bringing flooding and power outages. The storm hit Cuba after causing devastation in Haiti and Jamaica.",
+      "country": "Cuba",
+      "iso2": "CU",
+      "lat": 20.3701,
+      "lon": -76.4272,
+      "country_group": "C",
+      "region": "Americas",
+      "incident_type": "Flood",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2025-10-28",
+      "first_reported_date": "2025-10-28",
+      "last_updated_date": "2026-07-08",
+      "days_since_event": 261,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 0,
+        "gdacs": 1,
+        "healthmap": 0,
+        "news": 2
+      },
+      "source_links": [
+        {
+          "type": "GDACS",
+          "label": "Orange alert · Magnitude 0 ",
+          "url": "https://www.gdacs.org/report.aspx?eventid=1103585&episodeid=1&eventtype=FL",
+          "meta": "Magnitude 0 "
+        }
+      ],
+      "physical": {
+        "max_magnitude": null,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": "Orange",
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Hurricane Melissa washes over Cuba, bringing flooding and power outages",
+          "url": "https://www.yahoo.com/news/articles/hurricane-melissa-washes-over-cuba-095218713.html",
+          "outlet": "Miami Herald · via Yahoo News",
+          "published_date": "2026-07-08T19:11:37+00:00"
+        },
+        {
+          "headline": "Hurricane Melissa hits Cuba after killing dozens in Haiti, Jamaica",
+          "url": "https://www.yahoo.com/news/articles/jamaica-declares-disaster-monstrous-melissa-072700589.html",
+          "outlet": "Al Jazeera · via Yahoo News",
+          "published_date": "2026-07-08T19:11:37+00:00"
+        }
+      ],
+      "news_total": 2,
+      "logs": [
+        {
+          "log_datetime": "2026-07-08T19:11:37+00:00",
+          "summary": "Hurricane Melissa, a Category 3 storm, barreled over eastern Cuba, bringing flooding and power outages. The storm hit Cuba after causing devastation in Haiti and Jamaica.",
+          "news": [
+            {
+              "news_id": 1700001000381,
+              "url": "https://www.yahoo.com/news/articles/hurricane-melissa-washes-over-cuba-095218713.html",
+              "headline": "Hurricane Melissa washes over Cuba, bringing flooding and power outages",
+              "published_date": "2026-07-08T19:11:37+00:00",
+              "outlet": "Miami Herald · via Yahoo News"
+            },
+            {
+              "news_id": 1700001000382,
+              "url": "https://www.yahoo.com/news/articles/jamaica-declares-disaster-monstrous-melissa-072700589.html",
+              "headline": "Hurricane Melissa hits Cuba after killing dozens in Haiti, Jamaica",
+              "published_date": "2026-07-08T19:11:37+00:00",
+              "outlet": "Al Jazeera · via Yahoo News"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "incident_id": "20251117-TH-FL",
       "canonical_name": "Flood in Thailand",
       "summary": "A \"once-in-300-years\" storm battered southern Thailand, bringing floodwaters over eight feet and stranding a maternity ward. Additionally, widespread flooding across Asia, including Thailand, has resulted in over 1,000 deaths.",
@@ -1506,6 +1622,82 @@
               "headline": "Earthquake of magnitude 4.7 Hits China's Xinjiang, No Casualties Reported",
               "published_date": "2026-07-08T16:33:25+00:00",
               "outlet": "Times Now on MSN"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "20251011-ET-EQ",
+      "canonical_name": "Earthquake Ethiopia 2025-10",
+      "summary": "Ethiopia's Afar and Oromia regions have experienced several earthquakes and tremors since early 2025, with the strongest being a magnitude 5.7 event on 4 January. The article explores the connection between these earthquakes and volcanic activity in the area.",
+      "country": "Ethiopia",
+      "iso2": "ET",
+      "lat": 13.7902,
+      "lon": 39.8663,
+      "country_group": "C",
+      "region": "Africa",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2025-10-11",
+      "first_reported_date": "2025-10-11",
+      "last_updated_date": "2026-07-08",
+      "days_since_event": 278,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 0,
+        "gdacs": 1,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "GDACS",
+          "label": "Orange alert · Magnitude 5.6M, Depth:10km",
+          "url": "https://www.gdacs.org/report.aspx?eventid=1504616&episodeid=1665515&eventtype=EQ",
+          "meta": "Magnitude 5.6M, Depth:10km"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 5.6,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": "Orange",
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Ethiopian earthquakes and volcanic eruptions: earth scientist explains the link",
+          "url": "https://www.msn.com/en-us/weather/topstories/ethiopian-earthquakes-and-volcanic-eruptions-earth-scientist-explains-the-link/ar-AA1RcXCo?ocid=BingNewsVerp",
+          "outlet": "MSN",
+          "published_date": "2026-07-08T16:38:16+00:00"
+        }
+      ],
+      "news_total": 1,
+      "logs": [
+        {
+          "log_datetime": "2026-07-08T16:38:16+00:00",
+          "summary": "Ethiopia's Afar and Oromia regions have experienced several earthquakes and tremors since early 2025, with the strongest being a magnitude 5.7 event on 4 January. The article explores the connection between these earthquakes and volcanic activity in the area.",
+          "news": [
+            {
+              "news_id": 1700001000253,
+              "url": "https://www.msn.com/en-us/weather/topstories/ethiopian-earthquakes-and-volcanic-eruptions-earth-scientist-explains-the-link/ar-AA1RcXCo?ocid=BingNewsVerp",
+              "headline": "Ethiopian earthquakes and volcanic eruptions: earth scientist explains the link",
+              "published_date": "2026-07-08T16:38:16+00:00",
+              "outlet": "MSN"
             }
           ]
         }
@@ -2872,6 +3064,68 @@
       ]
     },
     {
+      "incident_id": "20251011-ET-EQ",
+      "canonical_name": "Earthquake 55 km NE of Mek'ele, Ethiopia 2025-10",
+      "summary": "",
+      "country": "Ethiopia",
+      "iso2": "ET",
+      "lat": 13.8064,
+      "lon": 39.8822,
+      "country_group": "C",
+      "region": "Africa",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2025-10-11",
+      "first_reported_date": "2025-10-11",
+      "last_updated_date": "2026-07-08",
+      "days_since_event": 278,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 5.6 - 55 km NE of Mek'ele, Ethiopia",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000rglb",
+          "meta": "10 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 5.6,
+        "max_depth_km": 10.0,
+        "place": "55 km NE of Mek'ele, Ethiopia",
+        "felt": 11,
+        "sig": 487,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Ethiopian earthquakes and volcanic eruptions: earth scientist explains the link",
+          "url": "https://www.yahoo.com/news/articles/ethiopian-earthquakes-volcanic-eruptions-earth-162709359.html",
+          "outlet": "The Conversation · via Yahoo News",
+          "published_date": "2026-07-08T18:59:20+00:00"
+        }
+      ],
+      "news_total": 1,
+      "logs": []
+    },
+    {
       "incident_id": "20251022-CR-EQ",
       "canonical_name": "Earthquake 21 km SSW of Quepos, Costa Rica 2025-10",
       "summary": "A magnitude 6 earthquake struck Costa Rica on October 21, 2025, at a depth of 31 km, according to the European Mediterranean Seismological Centre (EMSC). The quake was located approximately 21 km southwest of Quepos, Puntarenas.",
@@ -3100,6 +3354,95 @@
       ]
     },
     {
+      "incident_id": "20251104-US-EQ",
+      "canonical_name": "Earthquake 191 km WSW of Merizo Village, Guam 2025-11",
+      "summary": "Two strong earthquakes struck off the southern coast of Merizo Village, Guam, on November 4, 2025, according to the USGS. Both quakes were recorded in the same area, with one being the M6.0 event.",
+      "country": "United States",
+      "iso2": "US",
+      "lat": 12.3924,
+      "lon": 143.1427,
+      "country_group": "C",
+      "region": "Americas",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2025-11-04",
+      "first_reported_date": "2025-11-04",
+      "last_updated_date": "2026-07-08",
+      "days_since_event": 254,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 2
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 6.0 - 191 km WSW of Merizo Village, Guam",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000rlcd",
+          "meta": "65 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 6.0,
+        "max_depth_km": 65.0,
+        "place": "191 km WSW of Merizo Village, Guam",
+        "felt": 12,
+        "sig": 558,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Two earthquakes strike Guam: What to know",
+          "url": "https://www.msn.com/en-us/news/news/two-earthquakes-strike-guam-what-to-know/ar-AA1SYHTB?ocid=BingNewsVerp",
+          "outlet": "MSN",
+          "published_date": "2026-07-08T19:22:23+00:00"
+        },
+        {
+          "headline": "Two Earthquakes Strike Guam: What to Know",
+          "url": "https://www.newsweek.com/earthquake-guam-map-usgs-magnitude-11267773",
+          "outlet": "Newsweek",
+          "published_date": "2026-07-08T19:22:23+00:00"
+        }
+      ],
+      "news_total": 2,
+      "logs": [
+        {
+          "log_datetime": "2026-07-08T19:22:23+00:00",
+          "summary": "Two strong earthquakes struck off the southern coast of Merizo Village, Guam, on November 4, 2025, according to the USGS. Both quakes were recorded in the same area, with one being the M6.0 event.",
+          "news": [
+            {
+              "news_id": 1700001000220,
+              "url": "https://www.msn.com/en-us/news/news/two-earthquakes-strike-guam-what-to-know/ar-AA1SYHTB?ocid=BingNewsVerp",
+              "headline": "Two earthquakes strike Guam: What to know",
+              "published_date": "2026-07-08T19:22:23+00:00",
+              "outlet": "MSN"
+            },
+            {
+              "news_id": 1700001000273,
+              "url": "https://www.newsweek.com/earthquake-guam-map-usgs-magnitude-11267773",
+              "headline": "Two Earthquakes Strike Guam: What to Know",
+              "published_date": "2026-07-08T19:22:23+00:00",
+              "outlet": "Newsweek"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "incident_id": "20251206-CA-EQ",
       "canonical_name": "Earthquake 2025 Hubbard Glacier Earthquake 2025-12",
       "summary": "On December 6, 2025, a magnitude 7.0 earthquake struck the St. Elias mountain range, triggering mile-long landslides and significant destruction. The event aligns with the reported incident type, name, and date.",
@@ -3285,6 +3628,82 @@
               "headline": "Megaquake Warning Issued Over Fears That 98-Foot Tsunami Could Kill 200,000...",
               "published_date": "2026-07-08T19:47:59+00:00",
               "outlet": "Men's Journal · via Yahoo News"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "20251210-CO-EQ",
+      "canonical_name": "Earthquake 5 km WNW of Cepitá, Colombia 2025-12",
+      "summary": "A moderate 5.8-magnitude earthquake struck near Bogotá, Colombia on December 10, 2025, with the epicenter in the Santander region close to Cepitá. The event was captured in a video shared on social media, showing the city's response to the shaking.",
+      "country": "Colombia",
+      "iso2": "CO",
+      "lat": 6.7742,
+      "lon": -73.0156,
+      "country_group": "C",
+      "region": "Americas",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2025-12-10",
+      "first_reported_date": "2025-12-10",
+      "last_updated_date": "2026-07-08",
+      "days_since_event": 218,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 5.5 - 5 km WNW of Cepitá, Colombia",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000rtuk",
+          "meta": "164.124 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 5.5,
+        "max_depth_km": 164.124,
+        "place": "5 km WNW of Cepitá, Colombia",
+        "felt": 110,
+        "sig": 510,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Moderate 5.8-magnitude earthquake shakes Bogotá, Colombia",
+          "url": "https://www.msn.com/en-us/news/world/moderate-58-magnitude-earthquake-shakes-bogotá-colombia/vi-AA1S8Cpd?ocid=BingNewsVerp",
+          "outlet": "MSN",
+          "published_date": "2026-07-08T19:51:14+00:00"
+        }
+      ],
+      "news_total": 1,
+      "logs": [
+        {
+          "log_datetime": "2026-07-08T19:51:14+00:00",
+          "summary": "A moderate 5.8-magnitude earthquake struck near Bogotá, Colombia on December 10, 2025, with the epicenter in the Santander region close to Cepitá. The event was captured in a video shared on social media, showing the city's response to the shaking.",
+          "news": [
+            {
+              "news_id": 1700001000236,
+              "url": "https://www.msn.com/en-us/news/world/moderate-58-magnitude-earthquake-shakes-bogotá-colombia/vi-AA1S8Cpd?ocid=BingNewsVerp",
+              "headline": "Moderate 5.8-magnitude earthquake shakes Bogotá, Colombia",
+              "published_date": "2026-07-08T19:51:14+00:00",
+              "outlet": "MSN"
             }
           ]
         }
@@ -3689,6 +4108,82 @@
       ]
     },
     {
+      "incident_id": "20260519-PE-EQ",
+      "canonical_name": "Earthquake 20 km ESE of Pampa de Tate, Peru 2026-05",
+      "summary": "A 5.8 magnitude earthquake struck southern Peru, injuring 27 people and damaging buildings. No deaths were reported.",
+      "country": "Peru",
+      "iso2": "PE",
+      "lat": -14.1924,
+      "lon": -75.5064,
+      "country_group": "C",
+      "region": "Americas",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-05-19",
+      "first_reported_date": "2026-05-19",
+      "last_updated_date": "2026-07-08",
+      "days_since_event": 58,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 5.8 - 20 km ESE of Pampa de Tate, Peru",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000syt5",
+          "meta": "63.273 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 5.8,
+        "max_depth_km": 63.273,
+        "place": "20 km ESE of Pampa de Tate, Peru",
+        "felt": 28,
+        "sig": 532,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "5.8 magnitude earthquake hits Peru, damaging buildings and injuring 27",
+          "url": "https://www.wgrz.com/article/syndication/associatedpress/58-magnitude-earthquake-hits-peru-damaging-buildings-and-injuring-27/616-82149e3f-e263-471b-b4f5-8c8846f58847",
+          "outlet": "WGRZ",
+          "published_date": "2026-07-08T21:38:49+00:00"
+        }
+      ],
+      "news_total": 1,
+      "logs": [
+        {
+          "log_datetime": "2026-07-08T21:38:49+00:00",
+          "summary": "A 5.8 magnitude earthquake struck southern Peru, injuring 27 people and damaging buildings. No deaths were reported.",
+          "news": [
+            {
+              "news_id": 1700001000345,
+              "url": "https://www.wgrz.com/article/syndication/associatedpress/58-magnitude-earthquake-hits-peru-damaging-buildings-and-injuring-27/616-82149e3f-e263-471b-b4f5-8c8846f58847",
+              "headline": "5.8 magnitude earthquake hits Peru, damaging buildings and injuring 27",
+              "published_date": "2026-07-08T21:38:49+00:00",
+              "outlet": "WGRZ"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "incident_id": "20260525-CL-EQ",
       "canonical_name": "Earthquake 34 km ENE of Calama, Chile 2026-05",
       "summary": "A magnitude 6.9 earthquake struck near Calama, northern Chile, on May 25, 202, as reported by the Centro Sismológico Nacional (CSN) at the University of Chile. The event occurred at 34 km ENE of Calama.",
@@ -4083,182 +4578,132 @@
       ]
     },
     {
-      "incident_id": "20260630-PG-EQ",
-      "canonical_name": "Earthquake 90 km ESE of Kimbe, Papua New Guinea 2026-06",
-      "summary": "A magnitude 5.8 earthquake struck the New Britain Region of Papua New Guinea on June 30, 2026, according to the German Research Centre for Geosciences (GFZ). The epicenter was located in the region near Kimbe, East New Britain.",
-      "country": "Papua New Guinea",
-      "iso2": "PG",
-      "lat": -5.727,
-      "lon": 150.9338,
-      "country_group": "B",
-      "region": "Oceania",
+      "incident_id": "20260629-US-EQ",
+      "canonical_name": "Earthquake 218 km W of Bandon, Oregon 2026-06",
+      "summary": "A magnitude 5.5 earthquake struck off the Oregon coast on June 29, 2026, approximately 218 km west of Bandon, Oregon. Officials confirmed there is no tsunami threat, and the quake was followed by a 3.9 magnitude aftershock in the Blanco Fracture Zone.",
+      "country": "United States",
+      "iso2": "US",
+      "lat": 43.3828,
+      "lon": -127.0788,
+      "country_group": "C",
+      "region": "Americas",
       "incident_type": "Earthquake",
       "incident_category": "Natural",
       "is_disease": false,
       "severity": "MEDIUM",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-06-29",
+      "first_reported_date": "2026-06-29",
+      "last_updated_date": "2026-07-08",
+      "days_since_event": 17,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 3
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 5.5 - 218 km W of Bandon, Oregon",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8yt",
+          "meta": "10 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 5.5,
+        "max_depth_km": 10.0,
+        "place": "218 km W of Bandon, Oregon",
+        "felt": 22,
+        "sig": 471,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "No tsunami threat after 5.5 magnitude earthquake strikes off Oregon Coast",
+          "url": "https://www.msn.com/en-us/public-safety-and-emergencies/natural-disasters/no-tsunami-threat-after-5-5-magnitude-earthquake-strikes-off-oregon-coast/ar-AA26OjqP?ocid=BingNewsVerp",
+          "outlet": "KGW-TV Portland on MSN",
+          "published_date": "2026-07-08T11:36:56+00:00"
+        },
+        {
+          "headline": "Multiple earthquakes rumble off Oregon coast in Blanco Fracture Zone",
+          "url": "https://www.msn.com/en-us/weather/topstories/multiple-earthquakes-rumble-off-oregon-coast-in-blanco-fracture-zone/ar-AA26PZ6l?ocid=BingNewsVerp",
+          "outlet": "The Register-Guard on MSN",
+          "published_date": "2026-07-08T11:36:56+00:00"
+        },
+        {
+          "headline": "Magnitude 5.5 earthquake strikes off Oregon coast",
+          "url": "https://www.yahoo.com/news/weather-news/articles/magnitude-5-5-earthquake-strikes-142519886.html",
+          "outlet": "Yahoo",
+          "published_date": "2026-07-08T11:36:56+00:00"
+        }
+      ],
+      "news_total": 3,
+      "logs": [
+        {
+          "log_datetime": "2026-07-08T11:36:56+00:00",
+          "summary": "A magnitude 5.5 earthquake struck off the Oregon coast on June 29, 2026, approximately 218 km west of Bandon, Oregon. Officials confirmed there is no tsunami threat, and the quake was followed by a 3.9 magnitude aftershock in the Blanco Fracture Zone.",
+          "news": [
+            {
+              "news_id": 1700001000244,
+              "url": "https://www.msn.com/en-us/public-safety-and-emergencies/natural-disasters/no-tsunami-threat-after-5-5-magnitude-earthquake-strikes-off-oregon-coast/ar-AA26OjqP?ocid=BingNewsVerp",
+              "headline": "No tsunami threat after 5.5 magnitude earthquake strikes off Oregon Coast",
+              "published_date": "2026-07-08T11:36:56+00:00",
+              "outlet": "KGW-TV Portland on MSN"
+            },
+            {
+              "news_id": 1700001000254,
+              "url": "https://www.msn.com/en-us/weather/topstories/multiple-earthquakes-rumble-off-oregon-coast-in-blanco-fracture-zone/ar-AA26PZ6l?ocid=BingNewsVerp",
+              "headline": "Multiple earthquakes rumble off Oregon coast in Blanco Fracture Zone",
+              "published_date": "2026-07-08T11:36:56+00:00",
+              "outlet": "The Register-Guard on MSN"
+            },
+            {
+              "news_id": 1700001000429,
+              "url": "https://www.yahoo.com/news/weather-news/articles/magnitude-5-5-earthquake-strikes-142519886.html",
+              "headline": "Magnitude 5.5 earthquake strikes off Oregon coast",
+              "published_date": "2026-07-08T11:36:56+00:00",
+              "outlet": "Yahoo"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "20260630-MX-EQ",
+      "canonical_name": "Earthquake 75 km SSW of El Progreso, Mexico 2026-06",
+      "summary": "A magnitude-6.0 earthquake struck off the coast of southern Mexico near El Progreso on June 30, 2026, rattling communities across the region. The quake was reported at 12:45 p.m. in the Gulf of California.",
+      "country": "Mexico",
+      "iso2": "MX",
+      "lat": 24.8239,
+      "lon": -108.9285,
+      "country_group": "C",
+      "region": "Americas",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "LOW",
+      "priority_rank": 3,
       "pandemic_potential": null,
       "event_status": null,
       "disease_name": null,
       "event_date": "2026-06-30",
       "first_reported_date": "2026-06-30",
-      "last_updated_date": "2026-06-30",
+      "last_updated_date": "2026-07-08",
       "days_since_event": 16,
       "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 0,
-        "healthmap": 0,
-        "news": 1
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 5.4 - 90 km ESE of Kimbe, Papua New Guinea",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t978",
-          "meta": "35 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 5.4,
-        "max_depth_km": 35.0,
-        "place": "90 km ESE of Kimbe, Papua New Guinea",
-        "felt": null,
-        "sig": 449,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Magnitude 5.8 earthquake strikes New Britain Region, Papua New Guinea, GFZ says",
-          "url": "https://www.reuters.com/business/environment/magnitude-58-earthquake-strikes-new-britain-region-papua-new-guinea-gfz-says-2026-06-30/",
-          "outlet": "Reuters",
-          "published_date": "2026-06-30T14:37:55+00:00"
-        }
-      ],
-      "news_total": 1,
-      "logs": [
-        {
-          "log_datetime": "2026-06-30T14:37:55+00:00",
-          "summary": "A magnitude 5.8 earthquake struck the New Britain Region of Papua New Guinea on June 30, 2026, according to the German Research Centre for Geosciences (GFZ). The epicenter was located in the region near Kimbe, East New Britain.",
-          "news": [
-            {
-              "news_id": 1700001000293,
-              "url": "https://www.reuters.com/business/environment/magnitude-58-earthquake-strikes-new-britain-region-papua-new-guinea-gfz-says-2026-06-30/",
-              "headline": "Magnitude 5.8 earthquake strikes New Britain Region, Papua New Guinea, GFZ says",
-              "published_date": "2026-06-30T14:37:55+00:00",
-              "outlet": "Reuters"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "incident_id": "20260701-AF-EQ",
-      "canonical_name": "Earthquake 47 km SW of Jurm, Afghanistan 2026-07",
-      "summary": "A 5.5 magnitude earthquake struck 47 km southwest of Jurm, Afghanistan, with tremors felt in neighboring Pakistan and northern India, including Jammu and Kashmir. The article notes this is the second earthquake in the region within five days.",
-      "country": "Afghanistan",
-      "iso2": "AF",
-      "lat": 36.567,
-      "lon": 70.4491,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "disease_name": null,
-      "event_date": "2026-07-01",
-      "first_reported_date": "2026-07-01",
-      "last_updated_date": "2026-07-02",
-      "days_since_event": 15,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 0,
-        "healthmap": 0,
-        "news": 1
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 5.5 - 47 km SW of Jurm, Afghanistan",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9gg",
-          "meta": "212.915 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 5.5,
-        "max_depth_km": 212.915,
-        "place": "47 km SW of Jurm, Afghanistan",
-        "felt": 2,
-        "sig": 466,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "5.5 magnitude earthquake hits Afghanistan, tremors felt in Jammu and Kashmir and…; second quake in 5 days",
-          "url": "https://news24online.com/world/5-5-magnitude-earthquake-hits-afghanistan-tremors-felt-in-pakistan-afghanistan-earthquake/875262/",
-          "outlet": "News24",
-          "published_date": "2026-07-02T00:00:00+00:00"
-        }
-      ],
-      "news_total": 1,
-      "logs": [
-        {
-          "log_datetime": "2026-07-02T00:00:00+00:00",
-          "summary": "A 5.5 magnitude earthquake struck 47 km southwest of Jurm, Afghanistan, with tremors felt in neighboring Pakistan and northern India, including Jammu and Kashmir. The article notes this is the second earthquake in the region within five days.",
-          "news": [
-            {
-              "news_id": 1700001000041,
-              "url": "https://news24online.com/world/5-5-magnitude-earthquake-hits-afghanistan-tremors-felt-in-pakistan-afghanistan-earthquake/875262/",
-              "headline": "5.5 magnitude earthquake hits Afghanistan, tremors felt in Jammu and Kashmir and…; second quake in 5 days",
-              "published_date": "2026-07-02T00:00:00+00:00",
-              "outlet": "News24"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "incident_id": "20260703-ID-EQ",
-      "canonical_name": "Earthquake 58 km W of Tobelo, Indonesia 2026-07",
-      "summary": "A magnitude 6.2 earthquake struck approximately 58 km west of Tobelo, Indonesia, on July 3, 2026, according to the USGS and Indonesia's BKMG. There was no tsunami threat, and no immediate reports of casualties or damage.",
-      "country": "Indonesia",
-      "iso2": "ID",
-      "lat": 1.8205,
-      "lon": 127.4916,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "disease_name": null,
-      "event_date": "2026-07-03",
-      "first_reported_date": "2026-07-03",
-      "last_updated_date": "2026-06-17",
-      "days_since_event": 13,
-      "source_count": 1,
-      "should_report": true,
+      "should_report": false,
       "search_keys": [],
       "sources": {
         "who_don": 0,
@@ -4270,58 +4715,120 @@
       "source_links": [
         {
           "type": "USGS",
-          "label": "M 6.2 - 58 km W of Tobelo, Indonesia",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9r5",
-          "meta": "120.932 km depth"
+          "label": "M 6.0 - 75 km SSW of El Progreso, Mexico",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t99j",
+          "meta": "10 km depth"
         }
       ],
       "physical": {
-        "max_magnitude": 6.2,
-        "max_depth_km": 120.932,
-        "place": "58 km W of Tobelo, Indonesia",
-        "felt": 7,
-        "sig": 594,
+        "max_magnitude": 6.0,
+        "max_depth_km": 10.0,
+        "place": "75 km SSW of El Progreso, Mexico",
+        "felt": 15,
+        "sig": 559,
         "tsunami": false,
         "gdacs_alertlevel": null,
         "gdacs_population": null
       },
       "news": [
         {
-          "headline": "Magnitude 6.2 earthquake strikes off eastern Indonesia, no tsunami threat",
-          "url": "https://www.asiaone.com/asia/indonesia-tolebo-maluku-earthquake",
-          "outlet": "Asia One",
-          "published_date": "2026-06-17T00:00:00+00:00"
+          "headline": "A magnitude-6.0 earthquake struck southern Mexico near El Progreso",
+          "url": "https://www.msn.com/en-us/news/world/a-magnitude-6-0-earthquake-struck-southern-mexico-near-el-progreso/ar-AA270tp9?ocid=BingNewsVerp",
+          "outlet": "Morning Overview on MSN",
+          "published_date": "2026-07-08T12:35:18+00:00"
         },
         {
-          "headline": "Magnitude 6.2 earthquake strikes off eastern Indonesia: USGS",
-          "url": "https://www.bssnews.net/international/402127",
-          "outlet": "Bangladesh Sangsbad Sangstha",
-          "published_date": "2026-06-17T00:00:00+00:00"
+          "headline": "Magnitude-6.0 earthquake reported off Mexico in Gulf of California",
+          "url": "https://www.nbclosangeles.com/news/earthquakes/earthquake-mexico-gulf-of-california/3911172/",
+          "outlet": "NBC Los Angeles",
+          "published_date": "2026-07-08T12:35:18+00:00"
         }
       ],
       "news_total": 2,
       "logs": [
         {
-          "log_datetime": "2026-06-17T00:00:00+00:00",
-          "summary": "A magnitude 6.2 earthquake struck approximately 58 km west of Tobelo, Indonesia, on July 3, 2026, according to the USGS and Indonesia's BKMG. There was no tsunami threat, and no immediate reports of casualties or damage.",
+          "log_datetime": "2026-07-08T12:35:18+00:00",
+          "summary": "A magnitude-6.0 earthquake struck off the coast of southern Mexico near El Progreso on June 30, 2026, rattling communities across the region. The quake was reported at 12:45 p.m. in the Gulf of California.",
           "news": [
             {
-              "news_id": 1700001000072,
-              "url": "https://www.asiaone.com/asia/indonesia-tolebo-maluku-earthquake",
-              "headline": "Magnitude 6.2 earthquake strikes off eastern Indonesia, no tsunami threat",
-              "published_date": "2026-06-17T00:00:00+00:00",
-              "outlet": "Asia One"
+              "news_id": 1700001000227,
+              "url": "https://www.msn.com/en-us/news/world/a-magnitude-6-0-earthquake-struck-southern-mexico-near-el-progreso/ar-AA270tp9?ocid=BingNewsVerp",
+              "headline": "A magnitude-6.0 earthquake struck southern Mexico near El Progreso",
+              "published_date": "2026-07-08T12:35:18+00:00",
+              "outlet": "Morning Overview on MSN"
             },
             {
-              "news_id": 1700001000079,
-              "url": "https://www.bssnews.net/international/402127",
-              "headline": "Magnitude 6.2 earthquake strikes off eastern Indonesia: USGS",
-              "published_date": "2026-06-17T00:00:00+00:00",
-              "outlet": "Bangladesh Sangsbad Sangstha"
+              "news_id": 1700001000261,
+              "url": "https://www.nbclosangeles.com/news/earthquakes/earthquake-mexico-gulf-of-california/3911172/",
+              "headline": "Magnitude-6.0 earthquake reported off Mexico in Gulf of California",
+              "published_date": "2026-07-08T12:35:18+00:00",
+              "outlet": "NBC Los Angeles"
             }
           ]
         }
       ]
+    },
+    {
+      "incident_id": "20260630-MX-EQ",
+      "canonical_name": "Earthquake 59 km SSW of Topolobampo, Mexico 2026-06",
+      "summary": "",
+      "country": "Mexico",
+      "iso2": "MX",
+      "lat": 25.11,
+      "lon": -109.2907,
+      "country_group": "C",
+      "region": "Americas",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "LOW",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-06-30",
+      "first_reported_date": "2026-06-30",
+      "last_updated_date": "2026-07-08",
+      "days_since_event": 16,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 4.5 - 59 km SSW of Topolobampo, Mexico",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t99v",
+          "meta": "10 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 4.5,
+        "max_depth_km": 10.0,
+        "place": "59 km SSW of Topolobampo, Mexico",
+        "felt": 0,
+        "sig": 312,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Magnitude 6.0 quake strikes in Mexico’s Gulf of California, USGS says",
+          "url": "https://www.msn.com/en-us/news/us/magnitude-60-quake-strikes-in-mexico-s-gulf-of-california-usgs-says/ar-AA26ULL5?ocid=BingNewsVerp",
+          "outlet": "KCRA Channel 3 on MSN",
+          "published_date": "2026-07-08T12:35:18+00:00"
+        }
+      ],
+      "news_total": 1,
+      "logs": []
     },
     {
       "incident_id": "20260706-PH-EQ",
@@ -4446,6 +4953,184 @@
               "headline": "6 dead, 3 missing after landslide hits Sarangani village",
               "published_date": "2026-07-10T13:34:48+00:00",
               "outlet": "Inquirer on MSN"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "20260707-AR-EQ",
+      "canonical_name": "Earthquake 296 km SSE of Ushuaia, Argentina 2026-07",
+      "summary": "On July 7, 2026, a 5.8-magnitude earthquake struck 296 km southeast of Ushuaia in southern Argentina, according to the US Geological Survey. The earthquake occurred at a depth of 10 km.",
+      "country": "Argentina",
+      "iso2": "AR",
+      "lat": -57.3319,
+      "lon": -66.7593,
+      "country_group": "C",
+      "region": "Americas",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-07-07",
+      "first_reported_date": "2026-07-07",
+      "last_updated_date": "2026-07-07",
+      "days_since_event": 9,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 5.8 - 296 km SSE of Ushuaia, Argentina",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000takd",
+          "meta": "10 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 5.8,
+        "max_depth_km": 10.0,
+        "place": "296 km SSE of Ushuaia, Argentina",
+        "felt": null,
+        "sig": 518,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "5.8-magnitude earthquake strikes southern Argentina",
+          "url": "https://www.wam.ae/en/article/c13o6f1-58-magnitude-earthquake-strikes-southern",
+          "outlet": "Emirates News Agency",
+          "published_date": "2026-07-07T19:44:01+00:00"
+        }
+      ],
+      "news_total": 1,
+      "logs": [
+        {
+          "log_datetime": "2026-07-07T19:44:01+00:00",
+          "summary": "On July 7, 2026, a 5.8-magnitude earthquake struck 296 km southeast of Ushuaia in southern Argentina, according to the US Geological Survey. The earthquake occurred at a depth of 10 km.",
+          "news": [
+            {
+              "news_id": 1700001000339,
+              "url": "https://www.wam.ae/en/article/c13o6f1-58-magnitude-earthquake-strikes-southern",
+              "headline": "5.8-magnitude earthquake strikes southern Argentina",
+              "published_date": "2026-07-07T19:44:01+00:00",
+              "outlet": "Emirates News Agency"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "20260707-CR-EQ",
+      "canonical_name": "Earthquake 10 km WSW of Orotina, Costa Rica 2026-07",
+      "summary": "A magnitude 5.3–5.4 earthquake struck Costa Rica near the town of Orotina and the coastal area of Jacó on July 7, 2026, at approximately 12:11 p.m. local time (1811 GMT). The tremor, with a depth of about 29.4 km, was felt across the Central Pacific, Central Valley, and parts of Guanacaste. No immediate damage or casualties were reported in the initial coverage.",
+      "country": "Costa Rica",
+      "iso2": "CR",
+      "lat": 9.8644,
+      "lon": -84.6042,
+      "country_group": "C",
+      "region": "Americas",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-07-07",
+      "first_reported_date": "2026-07-07",
+      "last_updated_date": "2026-07-08",
+      "days_since_event": 9,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 3
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 5.3 - 10 km WSW of Orotina, Costa Rica",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tarc",
+          "meta": "47.784 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 5.3,
+        "max_depth_km": 47.784,
+        "place": "10 km WSW of Orotina, Costa Rica",
+        "felt": 28,
+        "sig": 444,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Strong 5.4 Earthquake Shakes Costa Rica Near Jacó",
+          "url": "https://ticotimes.net/2026/07/07/costa-rica-earthquake-jaco-july-2026",
+          "outlet": "The Tico Times",
+          "published_date": "2026-07-07T00:00:00+00:00"
+        },
+        {
+          "headline": "Map: 5.3-Magnitude Earthquake Shakes Costa Rica",
+          "url": "https://www.nytimes.com/interactive/2026/07/07/world/quake-tracker-costa-rica.html",
+          "outlet": "The New York Times",
+          "published_date": "2026-07-07T19:44:01+00:00"
+        },
+        {
+          "headline": "5.3-magnitude quake hits Costa Rica -- GFZ",
+          "url": "http://www.chinaview.cn/20260708/63006d5502f6426b92f180f2af8574db/c.html",
+          "outlet": "Xinhuanet",
+          "published_date": "2026-07-08T00:00:00+00:00"
+        }
+      ],
+      "news_total": 3,
+      "logs": [
+        {
+          "log_datetime": "2026-07-08T00:00:00+00:00",
+          "summary": "A magnitude 5.3–5.4 earthquake struck Costa Rica near the town of Orotina and the coastal area of Jacó on July 7, 2026, at approximately 12:11 p.m. local time (1811 GMT). The tremor, with a depth of about 29.4 km, was felt across the Central Pacific, Central Valley, and parts of Guanacaste. No immediate damage or casualties were reported in the initial coverage.",
+          "news": [
+            {
+              "news_id": 1783662868490,
+              "url": "https://ticotimes.net/2026/07/07/costa-rica-earthquake-jaco-july-2026",
+              "headline": "Strong 5.4 Earthquake Shakes Costa Rica Near Jacó",
+              "published_date": "2026-07-07T00:00:00+00:00",
+              "outlet": "The Tico Times"
+            },
+            {
+              "news_id": 1700001000283,
+              "url": "https://www.nytimes.com/interactive/2026/07/07/world/quake-tracker-costa-rica.html",
+              "headline": "Map: 5.3-Magnitude Earthquake Shakes Costa Rica",
+              "published_date": "2026-07-07T19:44:01+00:00",
+              "outlet": "The New York Times"
+            },
+            {
+              "news_id": 1783662868514,
+              "url": "http://www.chinaview.cn/20260708/63006d5502f6426b92f180f2af8574db/c.html",
+              "headline": "5.3-magnitude quake hits Costa Rica -- GFZ",
+              "published_date": "2026-07-08T00:00:00+00:00",
+              "outlet": "Xinhuanet"
             }
           ]
         }
@@ -5379,6 +6064,74 @@
           ]
         }
       ]
+    },
+    {
+      "incident_id": "20260708-PH-EQ",
+      "canonical_name": "Earthquake 69 km NE of Sulangan, Philippines 2026-07",
+      "summary": "",
+      "country": "Philippines",
+      "iso2": "PH",
+      "lat": 11.319,
+      "lon": 126.335,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "LOW",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-07-08",
+      "first_reported_date": "2026-07-08",
+      "last_updated_date": "2026-07-10",
+      "days_since_event": 8,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 2
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 4.9 - 69 km NE of Sulangan, Philippines",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sz31",
+          "meta": "10 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 4.9,
+        "max_depth_km": 10.0,
+        "place": "69 km NE of Sulangan, Philippines",
+        "felt": null,
+        "sig": 369,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "EARTHQUAKE: 4.5 Magnitude Quake Hits Eastern Samar",
+          "url": "https://philnews.ph/2026/07/09/earthquake-4-5-magnitude-quake-hits-eastern-samar-july-9-2026/",
+          "outlet": "Philippine News",
+          "published_date": "2026-07-09T00:00:00+00:00"
+        },
+        {
+          "headline": "EARTHQUAKE: 4.9 Magnitude Quake Hits Eastern Samar",
+          "url": "https://philnews.ph/2026/07/10/earthquake-4-9-magnitude-quake-hits-eastern-samar-july-10-2026/",
+          "outlet": "Philippine News",
+          "published_date": "2026-07-10T00:00:00+00:00"
+        }
+      ],
+      "news_total": 2,
+      "logs": []
     },
     {
       "incident_id": "20240614-BI-DI",
@@ -6412,6 +7165,158 @@
       ]
     },
     {
+      "incident_id": "20241208-AO-DI",
+      "canonical_name": "Undiagnosed disease – Democratic Republic of the Congo",
+      "summary": "As of December 14, health officials from the Africa CDC reported that a deadly, undiagnosed disease spreading in the Democratic Republic of the Congo may be linked to malaria. The update comes as the outbreak continues in the region.",
+      "country": "Angola",
+      "iso2": "AO",
+      "lat": -11.2,
+      "lon": 17.9,
+      "country_group": "C",
+      "region": "Africa",
+      "incident_type": "Disease",
+      "incident_category": "Biological",
+      "is_disease": true,
+      "severity": "MEDIUM",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2024-12-08",
+      "first_reported_date": "2024-12-08",
+      "last_updated_date": "2026-07-08",
+      "days_since_event": 585,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [],
+      "sources": {
+        "who_don": 1,
+        "usgs": 0,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "WHO",
+          "label": "Undiagnosed disease – Democratic Republic of the Congo",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2024-DON546",
+          "meta": ""
+        }
+      ],
+      "physical": {
+        "max_magnitude": null,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Undiagnosed disease in Congo may be linked to malaria: Africa CDC",
+          "url": "https://www.wbal.com/undiagnosed-disease-in-congo-may-be-linked-to-malaria-africa-cdc/",
+          "outlet": "WBAL",
+          "published_date": "2026-07-08T15:06:08+00:00"
+        }
+      ],
+      "news_total": 1,
+      "logs": [
+        {
+          "log_datetime": "2026-07-08T15:06:08+00:00",
+          "summary": "As of December 14, health officials from the Africa CDC reported that a deadly, undiagnosed disease spreading in the Democratic Republic of the Congo may be linked to malaria. The update comes as the outbreak continues in the region.",
+          "news": [
+            {
+              "news_id": 1700001000342,
+              "url": "https://www.wbal.com/undiagnosed-disease-in-congo-may-be-linked-to-malaria-africa-cdc/",
+              "headline": "Undiagnosed disease in Congo may be linked to malaria: Africa CDC",
+              "published_date": "2026-07-08T15:06:08+00:00",
+              "outlet": "WBAL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "20251205-US-DI",
+      "canonical_name": "Avian Influenza A(H5N5)- United States of America",
+      "summary": "A human infection with highly pathogenic avian influenza A(H5N5) virus has been reported in the United States, as detailed in a recent article in the New England Journal of Medicine. The report emphasizes the potential pandemic risk posed by such novel influenza A viruses and underscores the importance of timely detection and characterization.",
+      "country": "United States",
+      "iso2": "US",
+      "lat": 37.1,
+      "lon": -95.7,
+      "country_group": "C",
+      "region": "Americas",
+      "incident_type": "Disease",
+      "incident_category": "Biological",
+      "is_disease": true,
+      "severity": "MEDIUM",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": "MEDIUM",
+      "event_status": null,
+      "disease_name": "Avian Influenza",
+      "event_date": "2025-12-05",
+      "first_reported_date": "2025-12-05",
+      "last_updated_date": "2026-07-08",
+      "days_since_event": 223,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [],
+      "sources": {
+        "who_don": 1,
+        "usgs": 0,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "WHO",
+          "label": "Avian Influenza A(H5N5)- United States of America",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2025-DON590",
+          "meta": ""
+        }
+      ],
+      "physical": {
+        "max_magnitude": null,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Human Infection with Highly Pathogenic Avian Influenza A(H5N5) Virus",
+          "url": "https://www.nejm.org/doi/full/10.1056/NEJMc2518178",
+          "outlet": "The New England Journal of Medicine",
+          "published_date": "2026-07-08T19:45:21+00:00"
+        }
+      ],
+      "news_total": 1,
+      "logs": [
+        {
+          "log_datetime": "2026-07-08T19:45:21+00:00",
+          "summary": "A human infection with highly pathogenic avian influenza A(H5N5) virus has been reported in the United States, as detailed in a recent article in the New England Journal of Medicine. The report emphasizes the potential pandemic risk posed by such novel influenza A viruses and underscores the importance of timely detection and characterization.",
+          "news": [
+            {
+              "news_id": 1700001000263,
+              "url": "https://www.nejm.org/doi/full/10.1056/NEJMc2518178",
+              "headline": "Human Infection with Highly Pathogenic Avian Influenza A(H5N5) Virus",
+              "published_date": "2026-07-08T19:45:21+00:00",
+              "outlet": "The New England Journal of Medicine"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "incident_id": "20250107-CN-DI",
       "canonical_name": "Trends of acute respiratory infection, including human metapneumovirus, in the Northern Hemisphere",
       "summary": "A study published in *Pediatric Investigation* reports that COVID-19 restrictions have significantly altered how common respiratory pathogens spread and interact in hospitalized children, with infections rebounding and shifting after restrictions were lifted. These findings highlight changes in acute respiratory infection trends relevant to the Northern Hemisphere.",
@@ -6748,6 +7653,114 @@
               "headline": "Italy confirms Europe’s 1st human H9N2 bird flu case",
               "published_date": "2026-07-08T21:14:05+00:00",
               "outlet": "MSN"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "20251210-XX-DI",
+      "canonical_name": "Seasonal influenza - Global situation",
+      "summary": "Reports indicate a slow start to the flu season in Queensland, with experts attributing partial immunity from a severe 2025 season and urging improved vaccination rates. Hong Kong has entered a summer flu season with rising COVID-19 infections, with most severe adult flu cases occurring in unvaccinated individuals. The UK's NHS has updated its flu jab eligibility criteria, expanding vaccination availability to new age groups.",
+      "country": "",
+      "iso2": "",
+      "lat": null,
+      "lon": null,
+      "country_group": "C",
+      "region": "Unknown",
+      "incident_type": "Disease",
+      "incident_category": "Biological",
+      "is_disease": true,
+      "severity": "MEDIUM",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": "LOW",
+      "event_status": null,
+      "disease_name": "Influenza",
+      "event_date": "2025-12-10",
+      "first_reported_date": "2025-12-10",
+      "last_updated_date": "2026-07-12",
+      "days_since_event": 218,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [],
+      "sources": {
+        "who_don": 1,
+        "usgs": 0,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 4
+      },
+      "source_links": [
+        {
+          "type": "WHO",
+          "label": "Seasonal influenza - Global situation",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2025-DON586",
+          "meta": ""
+        }
+      ],
+      "physical": {
+        "max_magnitude": null,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Qld flu season’s slow start sparks urgent warning over vaccination rates",
+          "url": "https://www.dailytelegraph.com.au/health/conditions/cold-flu/qld-flu-seasons-slow-start-sparks-urgent-warning-over-vaccination-rates/news-story/96ba692abd04446a955556d17ba3ba15",
+          "outlet": "Daily Telegraph",
+          "published_date": "2026-07-08T11:27:24+00:00"
+        },
+        {
+          "headline": "Hong Kong enters summer flu season as Covid infections also climb",
+          "url": "https://www.msn.com/en-xl/health/diseases-and-conditions/hong-kong-enters-summer-flu-season-as-covid-infections-also-climb/ar-AA273FFK?ocid=BingNewsVerp",
+          "outlet": "South China Morning Post on MSN",
+          "published_date": "2026-07-08T11:27:24+00:00"
+        },
+        {
+          "headline": "NHS flu jab rule change from with new age threshold",
+          "url": "https://www.express.co.uk/life-style/health/2226362/nhs-flu-jab-rule-change",
+          "outlet": "Daily Express",
+          "published_date": "2026-07-10T18:02:46+00:00"
+        },
+        {
+          "headline": "Flu cases surge to record levels across New York state",
+          "url": "https://ny1.com/nyc/all-boroughs/health/2025/12/29/flu-cases-surge-in-new-york-state",
+          "outlet": "Spectrum News NY1",
+          "published_date": "2026-07-12T09:28:18+00:00"
+        }
+      ],
+      "news_total": 4,
+      "logs": [
+        {
+          "log_datetime": "2026-07-10T18:02:46+00:00",
+          "summary": "Reports indicate a slow start to the flu season in Queensland, with experts attributing partial immunity from a severe 2025 season and urging improved vaccination rates. Hong Kong has entered a summer flu season with rising COVID-19 infections, with most severe adult flu cases occurring in unvaccinated individuals. The UK's NHS has updated its flu jab eligibility criteria, expanding vaccination availability to new age groups.",
+          "news": [
+            {
+              "news_id": 1700001000097,
+              "url": "https://www.dailytelegraph.com.au/health/conditions/cold-flu/qld-flu-seasons-slow-start-sparks-urgent-warning-over-vaccination-rates/news-story/96ba692abd04446a955556d17ba3ba15",
+              "headline": "Qld flu season’s slow start sparks urgent warning over vaccination rates",
+              "published_date": "2026-07-08T11:27:24+00:00",
+              "outlet": "Daily Telegraph"
+            },
+            {
+              "news_id": 1700001000258,
+              "url": "https://www.msn.com/en-xl/health/diseases-and-conditions/hong-kong-enters-summer-flu-season-as-covid-infections-also-climb/ar-AA273FFK?ocid=BingNewsVerp",
+              "headline": "Hong Kong enters summer flu season as Covid infections also climb",
+              "published_date": "2026-07-08T11:27:24+00:00",
+              "outlet": "South China Morning Post on MSN"
+            },
+            {
+              "news_id": 1783792991955,
+              "url": "https://www.express.co.uk/life-style/health/2226362/nhs-flu-jab-rule-change",
+              "headline": "NHS flu jab rule change from with new age threshold",
+              "published_date": "2026-07-10T18:02:46+00:00",
+              "outlet": "Daily Express"
             }
           ]
         }
@@ -7734,6 +8747,82 @@
               "headline": "EU food safety body sets ceiling for cereulide in infant formula",
               "published_date": "2026-07-08T20:53:10+00:00",
               "outlet": "MSN"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "20240409-CL-DI",
+      "canonical_name": "Avian Influenza A(H5N1) – United States of America",
+      "summary": "The CDC confirmed the first severe human case of avian influenza A(H5N1) in the United States, marking a notable escalation in the outbreak. The case underscores the potential for serious illness from this virus.",
+      "country": "Chile",
+      "iso2": "CL",
+      "lat": -35.7,
+      "lon": -71.5,
+      "country_group": "C",
+      "region": "Americas",
+      "incident_type": "Disease",
+      "incident_category": "Biological",
+      "is_disease": true,
+      "severity": "MEDIUM",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": "MEDIUM",
+      "event_status": null,
+      "disease_name": "Avian Influenza",
+      "event_date": "2024-04-09",
+      "first_reported_date": "2024-04-09",
+      "last_updated_date": "2026-07-08",
+      "days_since_event": 828,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [],
+      "sources": {
+        "who_don": 1,
+        "usgs": 0,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "WHO",
+          "label": "Avian Influenza A(H5N1) – United States of America",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2024-DON512",
+          "meta": ""
+        }
+      ],
+      "physical": {
+        "max_magnitude": null,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "First ‘Severe’ Human Case of Bird Flu Found in U.S., CDC Confirms",
+          "url": "https://www.yahoo.com/news/cdc-confirms-first-severe-human-175411111.html",
+          "outlet": "People · via Yahoo News",
+          "published_date": "2026-07-08T17:30:47+00:00"
+        }
+      ],
+      "news_total": 1,
+      "logs": [
+        {
+          "log_datetime": "2026-07-08T17:30:47+00:00",
+          "summary": "The CDC confirmed the first severe human case of avian influenza A(H5N1) in the United States, marking a notable escalation in the outbreak. The case underscores the potential for serious illness from this virus.",
+          "news": [
+            {
+              "news_id": 1700001000417,
+              "url": "https://www.yahoo.com/news/cdc-confirms-first-severe-human-175411111.html",
+              "headline": "First ‘Severe’ Human Case of Bird Flu Found in U.S., CDC Confirms",
+              "published_date": "2026-07-08T17:30:47+00:00",
+              "outlet": "People · via Yahoo News"
             }
           ]
         }

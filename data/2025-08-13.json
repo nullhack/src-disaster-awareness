@@ -1,34 +1,32 @@
 {
   "schema_version": "1.4",
   "report_date": "2025-08-13",
-  "generated_at": "2026-07-16T04:39:16Z",
+  "generated_at": "2026-07-16T08:12:58Z",
   "as_of": "2025-08-13",
-  "tracking_window_days": 14,
+  "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 2,
+    "reportable_total": 1,
     "new_today": 0,
     "critical": 0,
-    "high": 2,
+    "high": 1,
     "medium": 0,
     "low": 0,
-    "disease_outbreaks": 1,
-    "countries_affected": 2,
-    "news_total": 2,
+    "disease_outbreaks": 0,
+    "countries_affected": 1,
+    "news_total": 1,
     "max_magnitude": 54735.0,
     "by_severity": {
       "CRITICAL": 0,
-      "HIGH": 2,
+      "HIGH": 1,
       "MEDIUM": 0,
       "LOW": 0
     },
     "by_type": {
-      "Forest Fire": 1,
-      "Disease": 1
+      "Forest Fire": 1
     },
     "by_region": {
-      "Europe": 1,
-      "Asia": 1
+      "Europe": 1
     }
   },
   "by_country": [
@@ -39,15 +37,6 @@
       "iso2": "PT",
       "region": "Europe",
       "country_group": "C",
-      "max_severity": "HIGH"
-    },
-    {
-      "country": "Bangladesh",
-      "count": 1,
-      "max_sev_rank": 3,
-      "iso2": "BD",
-      "region": "Asia",
-      "country_group": "A",
       "max_severity": "HIGH"
     }
   ],
@@ -123,82 +112,6 @@
               "headline": "Portugal extends national alert amid worst wildfire season in years",
               "published_date": "2025-08-08T00:00:00+00:00",
               "outlet": "China Daily Global Edition"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "incident_id": "20250806-BD-DI",
-      "canonical_name": "Nipah Virus Infection - India",
-      "summary": "Two cases of the deadly Nipah virus have been confirmed in India, prompting authorities in Thailand, Singapore, Hong Kong, and Malaysia to implement airport checks across Asia.",
-      "country": "Bangladesh",
-      "iso2": "BD",
-      "lat": 23.7,
-      "lon": 90.4,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Disease",
-      "incident_category": "Biological",
-      "is_disease": true,
-      "severity": "HIGH",
-      "priority": "HIGH",
-      "priority_rank": 1,
-      "pandemic_potential": "HIGH",
-      "event_status": null,
-      "disease_name": "Nipah",
-      "event_date": "2025-08-06",
-      "first_reported_date": "2025-08-06",
-      "last_updated_date": "2018-05-22",
-      "days_since_event": 344,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 1,
-        "usgs": 0,
-        "gdacs": 0,
-        "healthmap": 0,
-        "news": 1
-      },
-      "source_links": [
-        {
-          "type": "WHO",
-          "label": "Nipah Virus Infection - India",
-          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2025-DON577",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Nipah virus fears trigger airport checks across Asia after India confirms two cases",
-          "url": "https://www.aol.com/articles/nipah-virus-fears-trigger-airport-163348945.html",
-          "outlet": "AOL",
-          "published_date": "2018-05-22T00:00:00+00:00"
-        }
-      ],
-      "news_total": 1,
-      "logs": [
-        {
-          "log_datetime": "2018-05-22T00:00:00+00:00",
-          "summary": "Two cases of the deadly Nipah virus have been confirmed in India, prompting authorities in Thailand, Singapore, Hong Kong, and Malaysia to implement airport checks across Asia.",
-          "news": [
-            {
-              "news_id": 1700001000069,
-              "url": "https://www.aol.com/articles/nipah-virus-fears-trigger-airport-163348945.html",
-              "headline": "Nipah virus fears trigger airport checks across Asia after India confirms two cases",
-              "published_date": "2018-05-22T00:00:00+00:00",
-              "outlet": "AOL"
             }
           ]
         }

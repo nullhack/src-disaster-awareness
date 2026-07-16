@@ -1,36 +1,48 @@
 {
   "schema_version": "1.4",
   "report_date": "2026-06-18",
-  "generated_at": "2026-07-16T04:39:16Z",
+  "generated_at": "2026-07-16T08:12:58Z",
   "as_of": "2026-06-18",
-  "tracking_window_days": 14,
+  "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 3,
+    "reportable_total": 4,
     "new_today": 0,
     "critical": 0,
-    "high": 1,
-    "medium": 2,
+    "high": 0,
+    "medium": 4,
     "low": 0,
     "disease_outbreaks": 1,
     "countries_affected": 3,
-    "news_total": 3,
-    "max_magnitude": 7.4,
+    "news_total": 5,
+    "max_magnitude": 6.3,
     "by_severity": {
       "CRITICAL": 0,
-      "HIGH": 1,
-      "MEDIUM": 2,
+      "HIGH": 0,
+      "MEDIUM": 4,
       "LOW": 0
     },
     "by_type": {
+      "Flood": 1,
       "Earthquake": 2,
       "Disease": 1
     },
     "by_region": {
-      "Asia": 3
+      "Americas": 1,
+      "Asia": 2,
+      "Unknown": 1
     }
   },
   "by_country": [
+    {
+      "country": "United States",
+      "count": 1,
+      "max_sev_rank": 2,
+      "iso2": "US",
+      "region": "Americas",
+      "country_group": "C",
+      "max_severity": "MEDIUM"
+    },
     {
       "country": "China",
       "count": 1,
@@ -41,50 +53,41 @@
       "max_severity": "MEDIUM"
     },
     {
-      "country": "Afghanistan",
+      "country": "Indonesia",
       "count": 1,
       "max_sev_rank": 2,
-      "iso2": "AF",
+      "iso2": "ID",
       "region": "Asia",
       "country_group": "A",
       "max_severity": "MEDIUM"
-    },
-    {
-      "country": "Philippines",
-      "count": 1,
-      "max_sev_rank": 3,
-      "iso2": "PH",
-      "region": "Asia",
-      "country_group": "A",
-      "max_severity": "HIGH"
     }
   ],
   "incidents": [
     {
-      "incident_id": "20251010-PH-EQ",
-      "canonical_name": "Earthquake Philippines 2025-10",
-      "summary": "A powerful 7.4 magnitude earthquake struck off the southeastern coast of the Philippines on Friday morning, October 10, 2025, causing panic among residents who fled into the streets. The earthquake occurred near the Davao Oriental region.",
-      "country": "Philippines",
-      "iso2": "PH",
-      "lat": 7.2649,
-      "lon": 126.7545,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Earthquake",
+      "incident_id": "20250615-US-FL",
+      "canonical_name": "Flood in United States",
+      "summary": "A devastating flood in San Antonio on June 12, 2025, killed 13 people. Fifteen cars were found submerged near the Briar Glen Trailhead, having floated there after being caught in the floodwaters.",
+      "country": "United States",
+      "iso2": "US",
+      "lat": 34.8986,
+      "lon": -117.0244,
+      "country_group": "C",
+      "region": "Americas",
+      "incident_type": "Flood",
       "incident_category": "Natural",
       "is_disease": false,
-      "severity": "HIGH",
-      "priority": "HIGH",
-      "priority_rank": 1,
+      "severity": "MEDIUM",
+      "priority": "LOW",
+      "priority_rank": 3,
       "pandemic_potential": null,
       "event_status": null,
       "disease_name": null,
-      "event_date": "2025-10-10",
-      "first_reported_date": "2025-10-10",
-      "last_updated_date": "2026-06-08",
-      "days_since_event": 279,
+      "event_date": "2025-06-15",
+      "first_reported_date": "2025-06-15",
+      "last_updated_date": "2026-06-12",
+      "days_since_event": 396,
       "source_count": 1,
-      "should_report": true,
+      "should_report": false,
       "search_keys": [],
       "sources": {
         "who_don": 0,
@@ -96,13 +99,13 @@
       "source_links": [
         {
           "type": "GDACS",
-          "label": "Orange alert · Magnitude 7.4M, Depth:58.087km",
-          "url": "https://www.gdacs.org/report.aspx?eventid=1504268&episodeid=1665061&eventtype=EQ",
-          "meta": "Magnitude 7.4M, Depth:58.087km"
+          "label": "Orange alert · Magnitude 0 ",
+          "url": "https://www.gdacs.org/report.aspx?eventid=1103339&episodeid=33&eventtype=FL",
+          "meta": "Magnitude 0 "
         }
       ],
       "physical": {
-        "max_magnitude": 7.4,
+        "max_magnitude": null,
         "max_depth_km": null,
         "place": "",
         "felt": null,
@@ -113,24 +116,24 @@
       },
       "news": [
         {
-          "headline": "Powerful quake rattles southeastern Philippines sending panicked residents into...",
-          "url": "https://sports.yahoo.com/articles/7-4-magnitude-earthquake-hits-023746639.html",
-          "outlet": "CNN · via Yahoo Sports",
-          "published_date": "2026-06-08T00:00:00+00:00"
+          "headline": "TIMELINE: The devastating San Antonio floods that killed 13 people on June 12, 2025",
+          "url": "https://www.ksat.com/news/local/2026/06/12/timeline-the-devastating-san-antonio-floods-that-killed-13-people-on-june-12-2025/",
+          "outlet": "KSAT",
+          "published_date": "2026-06-12T00:00:00+00:00"
         }
       ],
       "news_total": 1,
       "logs": [
         {
-          "log_datetime": "2026-06-08T00:00:00+00:00",
-          "summary": "A powerful 7.4 magnitude earthquake struck off the southeastern coast of the Philippines on Friday morning, October 10, 2025, causing panic among residents who fled into the streets. The earthquake occurred near the Davao Oriental region.",
+          "log_datetime": "2026-07-08T15:13:07+00:00",
+          "summary": "A devastating flood in San Antonio on June 12, 2025, killed 13 people. Fifteen cars were found submerged near the Briar Glen Trailhead, having floated there after being caught in the floodwaters.",
           "news": [
             {
-              "news_id": 1700001000050,
-              "url": "https://sports.yahoo.com/articles/7-4-magnitude-earthquake-hits-023746639.html",
-              "headline": "Powerful quake rattles southeastern Philippines sending panicked residents into...",
-              "published_date": "2026-06-08T00:00:00+00:00",
-              "outlet": "CNN · via Yahoo Sports"
+              "news_id": 1700001000128,
+              "url": "https://www.ksat.com/news/local/2026/06/12/timeline-the-devastating-san-antonio-floods-that-killed-13-people-on-june-12-2025/",
+              "headline": "TIMELINE: The devastating San Antonio floods that killed 13 people on June 12, 2025",
+              "published_date": "2026-06-12T00:00:00+00:00",
+              "outlet": "KSAT"
             }
           ]
         }
@@ -213,30 +216,119 @@
       ]
     },
     {
-      "incident_id": "20250829-AF-DI",
-      "canonical_name": "Cholera – Multi-country with a focus on countries experiencing current surges",
-      "summary": "According to a report from Africa CDC, the continent is experiencing its worst cholera outbreak in 25 years, with Sudan among the countries facing surges. The outbreak is compounded by the annual rainy season and a collapsed health system in Sudan, which is also battling dengue fever.",
-      "country": "Afghanistan",
-      "iso2": "AF",
-      "lat": 33.9,
-      "lon": 67.7,
+      "incident_id": "20260703-ID-EQ",
+      "canonical_name": "Earthquake 58 km W of Tobelo, Indonesia 2026-07",
+      "summary": "A magnitude 6.2 earthquake struck approximately 58 km west of Tobelo, Indonesia, on July 3, 2026, according to the USGS and Indonesia's BKMG. There was no tsunami threat, and no immediate reports of casualties or damage.",
+      "country": "Indonesia",
+      "iso2": "ID",
+      "lat": 1.8205,
+      "lon": 127.4916,
       "country_group": "A",
       "region": "Asia",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-07-03",
+      "first_reported_date": "2026-07-03",
+      "last_updated_date": "2026-06-17",
+      "days_since_event": 13,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 2
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 6.2 - 58 km W of Tobelo, Indonesia",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9r5",
+          "meta": "120.932 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 6.2,
+        "max_depth_km": 120.932,
+        "place": "58 km W of Tobelo, Indonesia",
+        "felt": 7,
+        "sig": 594,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Magnitude 6.2 earthquake strikes off eastern Indonesia, no tsunami threat",
+          "url": "https://www.asiaone.com/asia/indonesia-tolebo-maluku-earthquake",
+          "outlet": "Asia One",
+          "published_date": "2026-06-17T00:00:00+00:00"
+        },
+        {
+          "headline": "Magnitude 6.2 earthquake strikes off eastern Indonesia: USGS",
+          "url": "https://www.bssnews.net/international/402127",
+          "outlet": "Bangladesh Sangsbad Sangstha",
+          "published_date": "2026-06-17T00:00:00+00:00"
+        }
+      ],
+      "news_total": 2,
+      "logs": [
+        {
+          "log_datetime": "2026-06-17T00:00:00+00:00",
+          "summary": "A magnitude 6.2 earthquake struck approximately 58 km west of Tobelo, Indonesia, on July 3, 2026, according to the USGS and Indonesia's BKMG. There was no tsunami threat, and no immediate reports of casualties or damage.",
+          "news": [
+            {
+              "news_id": 1700001000072,
+              "url": "https://www.asiaone.com/asia/indonesia-tolebo-maluku-earthquake",
+              "headline": "Magnitude 6.2 earthquake strikes off eastern Indonesia, no tsunami threat",
+              "published_date": "2026-06-17T00:00:00+00:00",
+              "outlet": "Asia One"
+            },
+            {
+              "news_id": 1700001000079,
+              "url": "https://www.bssnews.net/international/402127",
+              "headline": "Magnitude 6.2 earthquake strikes off eastern Indonesia: USGS",
+              "published_date": "2026-06-17T00:00:00+00:00",
+              "outlet": "Bangladesh Sangsbad Sangstha"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "20260624-XX-DI",
+      "canonical_name": "Yellow fever - Global",
+      "summary": "",
+      "country": "",
+      "iso2": "",
+      "lat": null,
+      "lon": null,
+      "country_group": "C",
+      "region": "Unknown",
       "incident_type": "Disease",
       "incident_category": "Biological",
       "is_disease": true,
       "severity": "MEDIUM",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
+      "priority": "LOW",
+      "priority_rank": 3,
       "pandemic_potential": "MEDIUM",
       "event_status": null,
-      "disease_name": "Cholera",
-      "event_date": "2025-08-29",
-      "first_reported_date": "2025-08-29",
-      "last_updated_date": "2026-06-05",
-      "days_since_event": 321,
+      "disease_name": "Yellow Fever",
+      "event_date": "2026-06-24",
+      "first_reported_date": "2026-06-24",
+      "last_updated_date": "2026-06-15",
+      "days_since_event": 22,
       "source_count": 1,
-      "should_report": true,
+      "should_report": false,
       "search_keys": [],
       "sources": {
         "who_don": 1,
@@ -248,8 +340,8 @@
       "source_links": [
         {
           "type": "WHO",
-          "label": "Cholera – Multi-country with a focus on countries experiencing current surges",
-          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2025-DON579",
+          "label": "Yellow fever - Global",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON610",
           "meta": ""
         }
       ],
@@ -265,28 +357,14 @@
       },
       "news": [
         {
-          "headline": "Africa experiencing worst outbreak of cholera in 25 years, Africa CDC says",
-          "url": "https://www.aol.com/articles/africa-experiencing-worst-outbreak-cholera-152739691.html",
-          "outlet": "AOL",
-          "published_date": "2026-06-05T00:00:00+00:00"
+          "headline": "Right Groups Accuse Nigerian Immigration Officials At Lagos Airport Of Yellow Card Extortion, Petition Aviation Minister Keyamo",
+          "url": "https://saharareporters.com/2026/06/16/right-groups-accuse-nigerian-immigration-officials-lagos-airport-yellow-card-extortion",
+          "outlet": "Sahara Reporters",
+          "published_date": "2026-06-15T04:00:00+00:00"
         }
       ],
       "news_total": 1,
-      "logs": [
-        {
-          "log_datetime": "2026-06-05T00:00:00+00:00",
-          "summary": "According to a report from Africa CDC, the continent is experiencing its worst cholera outbreak in 25 years, with Sudan among the countries facing surges. The outbreak is compounded by the annual rainy season and a collapsed health system in Sudan, which is also battling dengue fever.",
-          "news": [
-            {
-              "news_id": 1700001000065,
-              "url": "https://www.aol.com/articles/africa-experiencing-worst-outbreak-cholera-152739691.html",
-              "headline": "Africa experiencing worst outbreak of cholera in 25 years, Africa CDC says",
-              "published_date": "2026-06-05T00:00:00+00:00",
-              "outlet": "AOL"
-            }
-          ]
-        }
-      ]
+      "logs": []
     }
   ]
 }
