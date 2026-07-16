@@ -1,20 +1,20 @@
 {
   "schema_version": "1.4",
   "report_date": "2026-07-16",
-  "generated_at": "2026-07-16T15:17:50Z",
+  "generated_at": "2026-07-16T20:26:37Z",
   "as_of": "2026-07-16",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
     "reportable_total": 32,
-    "new_today": 11,
+    "new_today": 13,
     "critical": 2,
     "high": 12,
     "medium": 17,
     "low": 1,
     "disease_outbreaks": 7,
     "countries_affected": 19,
-    "news_total": 572,
+    "news_total": 600,
     "max_magnitude": 7.8,
     "by_severity": {
       "CRITICAL": 2,
@@ -2039,7 +2039,7 @@
     {
       "incident_id": "20260704-FR-WF",
       "canonical_name": "Orange forest fire notification in France",
-      "summary": "The wildfire in southern France has intensified, forcing the evacuation of over 10,000 people and scorching more than 11,000 acres (over 1,600 hectares). A 22-year-old volunteer firefighter died while battling the blaze. The third stage of the Tour de France proceeded with an adapted format, closed to the public due to the fire risk.",
+      "summary": "A July 11 article reports that the forest fire in the Pyrenees, which includes the Pyrénées-Orientales area, remains one of two widespread fires currently burning in France, forcing evacuations as southern Europe faces overlapping heat and fire problems.",
       "country": "France",
       "iso2": "FR",
       "lat": 42.672432960798744,
@@ -2057,7 +2057,7 @@
       "disease_name": null,
       "event_date": "2026-07-04",
       "first_reported_date": "2026-07-04",
-      "last_updated_date": "2026-07-12",
+      "last_updated_date": "2026-07-16",
       "days_since_event": 12,
       "source_count": 1,
       "should_report": true,
@@ -2067,7 +2067,7 @@
         "usgs": 0,
         "gdacs": 1,
         "healthmap": 0,
-        "news": 19
+        "news": 22
       },
       "source_links": [
         {
@@ -2191,6 +2191,12 @@
           "published_date": "2026-07-10T05:51:25+00:00"
         },
         {
+          "headline": "On the scene of the big wildfire near Paris as Europe faces deadly climate effects",
+          "url": "https://www.nbcnews.com/world/europe/scene-big-wildfire-paris-europe-faces-deadly-climate-effects-rcna587608",
+          "outlet": "NBC News",
+          "published_date": "2026-07-10T19:44:31+00:00"
+        },
+        {
           "headline": "Heat and fire generate overlapping problems for much of southern Europe",
           "url": "https://abc17news.com/news/national-world/cnn-world/2026/07/11/heat-and-fire-generate-overlapping-problems-for-much-of-southern-europe/",
           "outlet": "ABC17 NEWS",
@@ -2201,9 +2207,21 @@
           "url": "https://wsvn.com/news/us-world/heat-and-fire-generate-overlapping-problems-for-much-of-southern-europe/",
           "outlet": "7 News Miami",
           "published_date": "2026-07-12T12:32:06+00:00"
+        },
+        {
+          "headline": "Who are the people setting France's forests ablaze?",
+          "url": "https://www.lemonde.fr/en/les-decodeurs/article/2026/07/16/who-are-the-people-setting-france-s-forests-ablaze_6755553_8.html",
+          "outlet": "Le Monde",
+          "published_date": "2026-07-15T19:44:31+00:00"
+        },
+        {
+          "headline": "France's Macron pledges to replant Fontainebleau forest after devastating fire",
+          "url": "https://www.reuters.com/business/environment/frances-macron-pledges-replant-fontainebleau-forest-after-devastating-fire-2026-07-16/",
+          "outlet": "Reuters",
+          "published_date": "2026-07-16T11:44:32+00:00"
         }
       ],
-      "news_total": 19,
+      "news_total": 22,
       "logs": [
         {
           "log_datetime": "2026-07-05T00:00:00+00:00",
@@ -2335,6 +2353,47 @@
               "outlet": "Cycling Weekly · via Yahoo Sports"
             }
           ]
+        },
+        {
+          "log_datetime": "2026-07-16T11:44:32+00:00",
+          "summary": "A July 11 article reports that the forest fire in the Pyrenees, which includes the Pyrénées-Orientales area, remains one of two widespread fires currently burning in France, forcing evacuations as southern Europe faces overlapping heat and fire problems.",
+          "news": [
+            {
+              "news_id": 1784231103846,
+              "url": "https://www.nbcnews.com/world/europe/scene-big-wildfire-paris-europe-faces-deadly-climate-effects-rcna587608",
+              "headline": "On the scene of the big wildfire near Paris as Europe faces deadly climate effects",
+              "published_date": "2026-07-10T19:44:31+00:00",
+              "outlet": "NBC News"
+            },
+            {
+              "news_id": 1783790976900,
+              "url": "https://abc17news.com/news/national-world/cnn-world/2026/07/11/heat-and-fire-generate-overlapping-problems-for-much-of-southern-europe/",
+              "headline": "Heat and fire generate overlapping problems for much of southern Europe",
+              "published_date": "2026-07-11T14:29:09+00:00",
+              "outlet": "ABC17 NEWS"
+            },
+            {
+              "news_id": 1783910022843,
+              "url": "https://wsvn.com/news/us-world/heat-and-fire-generate-overlapping-problems-for-much-of-southern-europe/",
+              "headline": "Heat and fire generate overlapping problems for much of southern Europe - WSVN...",
+              "published_date": "2026-07-12T12:32:06+00:00",
+              "outlet": "7 News Miami"
+            },
+            {
+              "news_id": 1784231103836,
+              "url": "https://www.lemonde.fr/en/les-decodeurs/article/2026/07/16/who-are-the-people-setting-france-s-forests-ablaze_6755553_8.html",
+              "headline": "Who are the people setting France's forests ablaze?",
+              "published_date": "2026-07-15T19:44:31+00:00",
+              "outlet": "Le Monde"
+            },
+            {
+              "news_id": 1784231103841,
+              "url": "https://www.reuters.com/business/environment/frances-macron-pledges-replant-fontainebleau-forest-after-devastating-fire-2026-07-16/",
+              "headline": "France's Macron pledges to replant Fontainebleau forest after devastating fire",
+              "published_date": "2026-07-16T11:44:32+00:00",
+              "outlet": "Reuters"
+            }
+          ]
         }
       ]
     },
@@ -2359,7 +2418,7 @@
       "disease_name": null,
       "event_date": "2025-07-14",
       "first_reported_date": "2025-07-14",
-      "last_updated_date": "2026-07-15",
+      "last_updated_date": "2026-07-16",
       "days_since_event": 367,
       "source_count": 1,
       "should_report": true,
@@ -2369,7 +2428,7 @@
         "usgs": 0,
         "gdacs": 1,
         "healthmap": 0,
-        "news": 2
+        "news": 3
       },
       "source_links": [
         {
@@ -2401,9 +2460,15 @@
           "url": "https://www.msn.com/en-ae/news/other/heavy-rain-collapses-roof-and-kills-11-people-in-northwest-pakistan/ar-AA27RUFH?ocid=BingNewsVerp",
           "outlet": "Asharq Alawsat (English) on MSN",
           "published_date": "2026-07-15T06:48:32+00:00"
+        },
+        {
+          "headline": "Pakistan’s endless monsoon crisis: Is it prepared this time?",
+          "url": "https://www.dailymirror.lk/international/Pakistans-endless-monsoon-crisis-Is-it-prepared-this-time/107-345778",
+          "outlet": "Daily Mirror",
+          "published_date": "2026-07-16T07:45:07+00:00"
         }
       ],
-      "news_total": 2,
+      "news_total": 3,
       "logs": [
         {
           "log_datetime": "2026-07-08T15:13:52+00:00",
@@ -2799,7 +2864,7 @@
         "usgs": 0,
         "gdacs": 1,
         "healthmap": 0,
-        "news": 24
+        "news": 31
       },
       "source_links": [
         {
@@ -2899,6 +2964,12 @@
           "published_date": "2026-07-10T17:32:37+00:00"
         },
         {
+          "headline": "Typhoon Bavi takes aim at China as Taiwan’s capital shuts schools",
+          "url": "https://r.search.yahoo.com/_ylt=A2RRgKk4NVlqdQIA2rPQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzgEdnRpZAMEc2VjA3Ny/RV=2/RE=1785440825/RO=10/RU=https://www.columbian.com/news/2026/jul/10/typhoon-bavi-takes-aim-at-china-as-taiwans-capital-shuts-schools//RK=2/RS=TSXiJCEq2FQ1X60lLbDGzEih4Cw-",
+          "outlet": "The Columbian",
+          "published_date": "2026-07-10T19:47:05+00:00"
+        },
+        {
           "headline": "Orange alert for rainstorms! A total of 169 tailings ponds are affected by the rainfall, including 33 \"head-impoundment\" ponds.",
           "url": "https://news.chemnet.com/news-7485.html",
           "outlet": "ChemNet News",
@@ -2915,6 +2986,36 @@
           "url": "https://www.insurancejournal.com/news/international/2026/07/13/877292.htm",
           "outlet": "Insurance Journal",
           "published_date": "2026-07-13T06:50:36+00:00"
+        },
+        {
+          "headline": "Snake invasion in China: Chilling video of 900 snakes escaping in floodwaters...",
+          "url": "https://r.search.yahoo.com/_ylt=A2RRgKk4NVlqdQIAy7PQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzMEdnRpZAMEc2VjA3Ny/RV=2/RE=1785440825/RO=10/RU=https://me.mashable.com/culture/73748/snake-invasion-in-china-chilling-video-of-900-snakes-escaping-in-floodwaters-leaves-internet-horrifi/RK=2/RS=JBYltojunsC0Dk5yS0PkZeWZVLU-",
+          "outlet": "Mashable",
+          "published_date": "2026-07-13T19:47:05+00:00"
+        },
+        {
+          "headline": "China to See Unusually Active Typhoon Season After Bavi Passes",
+          "url": "https://r.search.yahoo.com/_ylt=A2RRgKk4NVlqdQIA3bPQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzkEdnRpZAMEc2VjA3Ny/RV=2/RE=1785440825/RO=10/RU=https://www.insurancejournal.com/news/international/2026/07/13/877292.htm/RK=2/RS=1OG968Thujk4WzzaO7TnzqCmNdc-",
+          "outlet": "Insurance Journal",
+          "published_date": "2026-07-13T19:47:05+00:00"
+        },
+        {
+          "headline": "Snake invasion in China: Chilling video of 900 snakes escaping in floodwaters...",
+          "url": "https://r.search.yahoo.com/_ylt=A2RRgHk7NVlqywIAruLQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzQEdnRpZAMEc2VjA3Ny/RV=2/RE=1785440828/RO=10/RU=https://me.mashable.com/culture/73748/snake-invasion-in-china-chilling-video-of-900-snakes-escaping-in-floodwaters-leaves-internet-horrifi/RK=2/RS=MNgl.sqK5sj29DBVnmlvA1XZ_Es-",
+          "outlet": "Mashable",
+          "published_date": "2026-07-13T19:47:08+00:00"
+        },
+        {
+          "headline": "Apocalyptic Videos Show Snakes Roaming in Floodwaters in China",
+          "url": "https://r.search.yahoo.com/_ylt=A2RRgHk7NVlqywIAveLQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzkEdnRpZAMEc2VjA3Ny/RV=2/RE=1785440828/RO=10/RU=https://petapixel.com/2026/07/13/apocalyptic-videos-show-snakes-roaming-in-floodwaters-in-china//RK=2/RS=eiv7nB2GZsI.KZGf1Sxoz1DphQQ-",
+          "outlet": "PetaPixel",
+          "published_date": "2026-07-13T19:47:08+00:00"
+        },
+        {
+          "headline": "Heavy floods submerge roads, vehicles in northern China - BusinessWorld Online",
+          "url": "https://r.search.yahoo.com/_ylt=A2RRgHk7NVlqywIAwOLQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzEwBHZ0aWQDBHNlYwNzcg--/RV=2/RE=1785440828/RO=10/RU=https://bworldonline.com/world/2026/07/13/762918/heavy-floods-submerge-roads-vehicles-in-northern-china//RK=2/RS=M7Uv6m_E.5nmOQWg09SLDu_hRb8-",
+          "outlet": "BusinessWorld",
+          "published_date": "2026-07-13T19:47:08+00:00"
         },
         {
           "headline": "More than 260,000 evacuated as Typhoon Bavi hits China",
@@ -2963,9 +3064,15 @@
           "url": "https://www.msn.com/en-us/public-safety-and-emergencies/natural-disasters/old-video-misrepresented-as-rescue-footage-from-deadly-2026-floods-in-china/ar-AA280qkP?ocid=BingNewsVerp",
           "outlet": "AFP on MSN",
           "published_date": "2026-07-16T14:41:00+00:00"
+        },
+        {
+          "headline": "Old video misrepresented as rescue footage from deadly 2026 floods in China",
+          "url": "https://www.msn.com/en-us/weather/general/old-video-misrepresented-as-rescue-footage-from-deadly-2026-floods-in-china/ar-AA280qkP?ocid=BingNewsVerp",
+          "outlet": "AFP on MSN",
+          "published_date": "2026-07-16T19:47:05+00:00"
         }
       ],
-      "news_total": 24,
+      "news_total": 31,
       "logs": [
         {
           "log_datetime": "2026-07-08T11:27:24+00:00",
@@ -3571,7 +3678,7 @@
     {
       "incident_id": "20260624-VE-EQ",
       "canonical_name": "Earthquake 21 km ENE of San Felipe, Venezuela 2026-06",
-      "summary": "The death toll from the twin earthquakes has officially risen to 4,829, according to government figures. The European Union has pledged an additional €20 million in humanitarian aid, while US troops unloaded China's only known aid flight at the scene. Reports also highlight engineers assessing structural damage, a benefit concert featuring Marc Anthony and Ricardo Montaner, and ongoing grassroots fundraising efforts from Florida to Minnesota.",
+      "summary": "The death toll from the twin earthquakes was officially confirmed at 4,829 by National Assembly President Jorge Rodriguez. A fake image of a dog protecting a child went viral and was debunked by fact-checkers. Meanwhile, recovery efforts include a World Cup halftime tribute featuring the NY Philharmonic and Gustavo Dudamel, and an opinion piece highlights the prioritization of critical health services in the aftermath.",
       "country": "Venezuela",
       "iso2": "VE",
       "lat": 10.453,
@@ -3599,7 +3706,7 @@
         "usgs": 2,
         "gdacs": 1,
         "healthmap": 0,
-        "news": 99
+        "news": 106
       },
       "source_links": [
         {
@@ -3975,6 +4082,18 @@
           "published_date": "2026-07-10T17:36:45+00:00"
         },
         {
+          "headline": "Fake image of dog protecting child spreads after deadly Venezuela earthquakes",
+          "url": "https://www.msn.com/en-us/news/world/fake-image-of-dog-protecting-child-spreads-after-deadly-venezuela-earthquakes/ar-AA282wCC?ocid=BingNewsVerp",
+          "outlet": "Snopes on MSN",
+          "published_date": "2026-07-10T19:50:37+00:00"
+        },
+        {
+          "headline": "Death toll from Venezuela quakes rises to 4,829, government says",
+          "url": "https://www.msn.com/en-us/news/other/death-toll-from-venezuela-quakes-rises-to-4-829-government-says/ar-AA282LxZ?ocid=BingNewsVerp",
+          "outlet": "Reuters on MSN",
+          "published_date": "2026-07-10T19:50:37+00:00"
+        },
+        {
           "headline": "Death toll in Venezuela earthquakes surpasses 4,300: Official",
           "url": "https://english.alarabiya.net/News/world/2026/07/11/death-toll-in-venezuela-earthquakes-surpasses-4300-official",
           "outlet": "Al Arabiya English",
@@ -4075,6 +4194,12 @@
           "url": "https://www.bloomberg.com/news/articles/2026-07-13/venezuela-s-inflation-spike-compounds-earthquake-misery",
           "outlet": "Bloomberg",
           "published_date": "2026-07-13T06:55:17+00:00"
+        },
+        {
+          "headline": "World Cup final: NY Philharmonic, Gustavo Dudamel lead Venezuela tribute",
+          "url": "https://www.msn.com/en-ca/music/news/world-cup-final-ny-philharmonic-gustavo-dudamel-lead-venezuela-tribute/ar-AA283LoU?ocid=BingNewsVerp",
+          "outlet": "Billboard on MSN",
+          "published_date": "2026-07-13T19:50:37+00:00"
         },
         {
           "headline": "Earthquake aid keeps flowing from Florida to Venezuela, as volunteers unite to help recovery",
@@ -4215,6 +4340,12 @@
           "published_date": "2026-07-15T19:55:13+00:00"
         },
         {
+          "headline": "Venezuela’s double whammy earthquakes: Critical health services take priority",
+          "url": "https://www.jamaicaobserver.com/2026/07/16/venezuelas-double-whammy-earthquakes-critical-health-services-take-priority/",
+          "outlet": "Jamaica Observer",
+          "published_date": "2026-07-16T00:00:00+00:00"
+        },
+        {
           "headline": "EU Provides Extra €20 Million in Aid for Venezuela After Earthquake",
           "url": "https://www.usnews.com/news/world/articles/2026-07-15/eu-provides-extra-20-million-in-aid-for-venezuela-after-earthquake",
           "outlet": "U.S. News & World Report",
@@ -4225,9 +4356,27 @@
           "url": "https://www.usnews.com/news/world/articles/2026-07-15/death-toll-from-venezuela-quakes-rises-to-4-829-government-says",
           "outlet": "U.S. News & World Report",
           "published_date": "2026-07-16T03:55:10+00:00"
+        },
+        {
+          "headline": "Fact Check: Fake image of dog protecting child spreads after deadly Venezuela...",
+          "url": "https://www.yahoo.com/news/world/articles/fact-check-fake-image-dog-130000810.html",
+          "outlet": "Snopes · via Yahoo News",
+          "published_date": "2026-07-16T12:50:34+00:00"
+        },
+        {
+          "headline": "Death toll from Venezuela earthquakes rises to 4,829",
+          "url": "https://www.msn.com/en-ae/news/other/death-toll-from-venezuela-earthquakes-rises-to-4829/ar-AA2809dv?ocid=BingNewsVerp",
+          "outlet": "Emirates News Agency on MSN",
+          "published_date": "2026-07-16T19:50:37+00:00"
+        },
+        {
+          "headline": "Venezuela’s recovery clouded by uncertainty three weeks after earthquake",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/7/16/venezuelas-recovery-clouded-by-uncertainty-three-weeks-after-earthquake",
+          "outlet": "Al Jazeera",
+          "published_date": "2026-07-16T19:50:37+00:00"
         }
       ],
-      "news_total": 99,
+      "news_total": 106,
       "logs": [
         {
           "log_datetime": "2026-06-28T00:00:00+00:00",
@@ -4973,6 +5122,61 @@
               "headline": "Death Toll From Venezuela Quakes Rises to 4,829, Government Says",
               "published_date": "2026-07-16T03:55:10+00:00",
               "outlet": "U.S. News & World Report"
+            }
+          ]
+        },
+        {
+          "log_datetime": "2026-07-16T19:50:37+00:00",
+          "summary": "The death toll from the twin earthquakes was officially confirmed at 4,829 by National Assembly President Jorge Rodriguez. A fake image of a dog protecting a child went viral and was debunked by fact-checkers. Meanwhile, recovery efforts include a World Cup halftime tribute featuring the NY Philharmonic and Gustavo Dudamel, and an opinion piece highlights the prioritization of critical health services in the aftermath.",
+          "news": [
+            {
+              "news_id": 1784231466725,
+              "url": "https://www.msn.com/en-us/news/world/fake-image-of-dog-protecting-child-spreads-after-deadly-venezuela-earthquakes/ar-AA282wCC?ocid=BingNewsVerp",
+              "headline": "Fake image of dog protecting child spreads after deadly Venezuela earthquakes",
+              "published_date": "2026-07-10T19:50:37+00:00",
+              "outlet": "Snopes on MSN"
+            },
+            {
+              "news_id": 1784231466738,
+              "url": "https://www.msn.com/en-us/news/other/death-toll-from-venezuela-quakes-rises-to-4-829-government-says/ar-AA282LxZ?ocid=BingNewsVerp",
+              "headline": "Death toll from Venezuela quakes rises to 4,829, government says",
+              "published_date": "2026-07-10T19:50:37+00:00",
+              "outlet": "Reuters on MSN"
+            },
+            {
+              "news_id": 1784231466741,
+              "url": "https://www.msn.com/en-ca/music/news/world-cup-final-ny-philharmonic-gustavo-dudamel-lead-venezuela-tribute/ar-AA283LoU?ocid=BingNewsVerp",
+              "headline": "World Cup final: NY Philharmonic, Gustavo Dudamel lead Venezuela tribute",
+              "published_date": "2026-07-13T19:50:37+00:00",
+              "outlet": "Billboard on MSN"
+            },
+            {
+              "news_id": 1784231466728,
+              "url": "https://www.jamaicaobserver.com/2026/07/16/venezuelas-double-whammy-earthquakes-critical-health-services-take-priority/",
+              "headline": "Venezuela’s double whammy earthquakes: Critical health services take priority",
+              "published_date": "2026-07-16T00:00:00+00:00",
+              "outlet": "Jamaica Observer"
+            },
+            {
+              "news_id": 1784231466722,
+              "url": "https://www.yahoo.com/news/world/articles/fact-check-fake-image-dog-130000810.html",
+              "headline": "Fact Check: Fake image of dog protecting child spreads after deadly Venezuela...",
+              "published_date": "2026-07-16T12:50:34+00:00",
+              "outlet": "Snopes · via Yahoo News"
+            },
+            {
+              "news_id": 1784231466732,
+              "url": "https://www.msn.com/en-ae/news/other/death-toll-from-venezuela-earthquakes-rises-to-4829/ar-AA2809dv?ocid=BingNewsVerp",
+              "headline": "Death toll from Venezuela earthquakes rises to 4,829",
+              "published_date": "2026-07-16T19:50:37+00:00",
+              "outlet": "Emirates News Agency on MSN"
+            },
+            {
+              "news_id": 1784231466735,
+              "url": "https://www.aljazeera.com/video/newsfeed/2026/7/16/venezuelas-recovery-clouded-by-uncertainty-three-weeks-after-earthquake",
+              "headline": "Venezuela’s recovery clouded by uncertainty three weeks after earthquake",
+              "published_date": "2026-07-16T19:50:37+00:00",
+              "outlet": "Al Jazeera"
             }
           ]
         }
@@ -5787,7 +5991,7 @@
         "usgs": 0,
         "gdacs": 0,
         "healthmap": 0,
-        "news": 7
+        "news": 8
       },
       "source_links": [
         {
@@ -5849,9 +6053,15 @@
           "url": "https://www.daily-sun.com/bangladesh/886521/two-more-die-of-dengue-391-hospitalised-in-24hrs",
           "outlet": "Daily Sun",
           "published_date": "2026-07-16T14:45:52+00:00"
+        },
+        {
+          "headline": "Two more die of dengue, 306 hospitalised in 24hrs",
+          "url": "https://www.daily-sun.com/health/886701/two-more-die-of-dengue-306-hospitalised-in-24hrs",
+          "outlet": "Daily Sun",
+          "published_date": "2026-07-16T19:53:01+00:00"
         }
       ],
-      "news_total": 7,
+      "news_total": 8,
       "logs": [
         {
           "log_datetime": "2026-07-08T14:57:06+00:00",
@@ -9063,7 +9273,7 @@
     {
       "incident_id": "20260716-NZ-EQ",
       "canonical_name": "Earthquake 42 km NNW of Te Anau, New Zealand 2026-07",
-      "summary": "A magnitude 5.9 earthquake struck 42 km north-northwest of Te Anau, New Zealand, on July 16, 2026, initially reported as a 6.3 magnitude. The quake shook buildings across the South Island's tourist region and prompted a brief tsunami warning, which was later downgraded to a marine advisory. No injuries or damage were reported, and authorities lifted the tsunami alert shortly after.",
+      "summary": "A tsunami warning and immediate evacuation order were issued for parts of the South Island's west coast following the earthquake, but the alert has since been lifted. The mayor of the affected area reported property damage, and GeoNet recorded several lighter aftershocks after the main quake.",
       "country": "New Zealand",
       "iso2": "NZ",
       "lat": -45.0434,
@@ -9091,7 +9301,7 @@
         "usgs": 1,
         "gdacs": 0,
         "healthmap": 0,
-        "news": 32
+        "news": 41
       },
       "source_links": [
         {
@@ -9112,6 +9322,12 @@
         "gdacs_population": null
       },
       "news": [
+        {
+          "headline": "New Zealand earthquake: Evacuation ordered with tsunami warning for 6.3-mag quake",
+          "url": "https://www.mirror.co.uk/news/world-news/new-zealand-earthquake-tsunami-live-37438903",
+          "outlet": "The Mirror",
+          "published_date": "2026-07-11T19:55:41+00:00"
+        },
         {
           "headline": "Live: NEMA warns of 'unpredictable surges' following quake, tsunami warning downgraded",
           "url": "https://www.msn.com/en-nz/news/other/live-strong-shaking-as-magnitude-6-3-earthquake-strikes-southland/ar-AA2825hm?ocid=BingNewsVerp",
@@ -9303,9 +9519,57 @@
           "url": "https://thepeninsulaqatar.com/article/16/07/2026/new-zealand-downgrades-tsunami-alert-after-quake",
           "outlet": "The Peninsula Qatar",
           "published_date": "2026-07-16T14:49:35+00:00"
+        },
+        {
+          "headline": "5.9 magnitude earthquake strikes New Zealand: USGC",
+          "url": "https://6abc.com/post/tsunami-advisory-cancelled-59-magnitude-earthquake-strikes-new-zealand/19519844/",
+          "outlet": "6abc Action News",
+          "published_date": "2026-07-16T19:55:41+00:00"
+        },
+        {
+          "headline": "Strong 5.9-magnitude earthquake strikes New Zealand",
+          "url": "https://www.msn.com/en-nz/news/news/strong-5-9-magnitude-earthquake-strikes-new-zealand/ar-AA281Okf?ocid=BingNewsVerp",
+          "outlet": "The Independent on MSN",
+          "published_date": "2026-07-16T19:55:41+00:00"
+        },
+        {
+          "headline": "New Zealand earthquake warning: Tsunami alert lifted after strong tremor shakes nation",
+          "url": "https://thenightly.com.au/world/new-zealand-earthquake-warning-evacuation-alert-after-strong-tremor-shakes-nation-c-22589149",
+          "outlet": "The Nightly",
+          "published_date": "2026-07-16T19:55:41+00:00"
+        },
+        {
+          "headline": "Tsunami alert lifted after earthquake shakes NZ",
+          "url": "https://www.standard.net.au/story/9312266/tsunami-alert-lifted-after-earthquake-shakes-nz/",
+          "outlet": "The Standard",
+          "published_date": "2026-07-16T19:55:41+00:00"
+        },
+        {
+          "headline": "Tsunami warning and immediate evacuation order issued after New Zealand quake",
+          "url": "https://www.msn.com/en-nz/news/news/tsunami-warning-and-immediate-evacuation-order-issued-after-new-zealand-quake/ar-AA282sKh?ocid=BingNewsVerp",
+          "outlet": "Metro on MSN",
+          "published_date": "2026-07-16T19:55:41+00:00"
+        },
+        {
+          "headline": "Huge 5.9-mag earthquake hits tourist hotspot in New Zealand sparking tsunami warning & order to ‘evacuate immediately’",
+          "url": "https://www.thesun.co.uk/news/39777439/earthquake-hits-new-zealand-sparking-tsunami-warning/",
+          "outlet": "The Sun",
+          "published_date": "2026-07-16T19:55:44+00:00"
+        },
+        {
+          "headline": "'Felt like a truck': Locals describe 5.9 magnitude Southland earthquake",
+          "url": "https://www.msn.com/en-nz/news/national/felt-like-a-truck-locals-describe-5-9-magnitude-southland-earthquake/ar-AA282t19?ocid=BingNewsVerp",
+          "outlet": "RNZ on MSN",
+          "published_date": "2026-07-16T19:55:44+00:00"
+        },
+        {
+          "headline": "Tsunami threat passes following strong quake, mayor says properties damaged",
+          "url": "https://www.msn.com/en-nz/news/national/tsunami-threat-passes-following-strong-quake-mayor-says-properties-damaged/ar-AA2825hm?ocid=BingNewsVerp",
+          "outlet": "RNZ on MSN",
+          "published_date": "2026-07-16T19:55:44+00:00"
         }
       ],
-      "news_total": 32,
+      "news_total": 41,
       "logs": [
         {
           "log_datetime": "2026-07-16T14:49:35+00:00",
@@ -9534,6 +9798,75 @@
               "headline": "New Zealand downgrades tsunami alert after quake",
               "published_date": "2026-07-16T14:49:35+00:00",
               "outlet": "The Peninsula Qatar"
+            }
+          ]
+        },
+        {
+          "log_datetime": "2026-07-16T19:55:44+00:00",
+          "summary": "A tsunami warning and immediate evacuation order were issued for parts of the South Island's west coast following the earthquake, but the alert has since been lifted. The mayor of the affected area reported property damage, and GeoNet recorded several lighter aftershocks after the main quake.",
+          "news": [
+            {
+              "news_id": 1784231793255,
+              "url": "https://www.mirror.co.uk/news/world-news/new-zealand-earthquake-tsunami-live-37438903",
+              "headline": "New Zealand earthquake: Evacuation ordered with tsunami warning for 6.3-mag quake",
+              "published_date": "2026-07-11T19:55:41+00:00",
+              "outlet": "The Mirror"
+            },
+            {
+              "news_id": 1784231793251,
+              "url": "https://6abc.com/post/tsunami-advisory-cancelled-59-magnitude-earthquake-strikes-new-zealand/19519844/",
+              "headline": "5.9 magnitude earthquake strikes New Zealand: USGC",
+              "published_date": "2026-07-16T19:55:41+00:00",
+              "outlet": "6abc Action News"
+            },
+            {
+              "news_id": 1784231793258,
+              "url": "https://www.msn.com/en-nz/news/news/strong-5-9-magnitude-earthquake-strikes-new-zealand/ar-AA281Okf?ocid=BingNewsVerp",
+              "headline": "Strong 5.9-magnitude earthquake strikes New Zealand",
+              "published_date": "2026-07-16T19:55:41+00:00",
+              "outlet": "The Independent on MSN"
+            },
+            {
+              "news_id": 1784231793260,
+              "url": "https://thenightly.com.au/world/new-zealand-earthquake-warning-evacuation-alert-after-strong-tremor-shakes-nation-c-22589149",
+              "headline": "New Zealand earthquake warning: Tsunami alert lifted after strong tremor shakes nation",
+              "published_date": "2026-07-16T19:55:41+00:00",
+              "outlet": "The Nightly"
+            },
+            {
+              "news_id": 1784231793264,
+              "url": "https://www.standard.net.au/story/9312266/tsunami-alert-lifted-after-earthquake-shakes-nz/",
+              "headline": "Tsunami alert lifted after earthquake shakes NZ",
+              "published_date": "2026-07-16T19:55:41+00:00",
+              "outlet": "The Standard"
+            },
+            {
+              "news_id": 1784231793267,
+              "url": "https://www.msn.com/en-nz/news/news/tsunami-warning-and-immediate-evacuation-order-issued-after-new-zealand-quake/ar-AA282sKh?ocid=BingNewsVerp",
+              "headline": "Tsunami warning and immediate evacuation order issued after New Zealand quake",
+              "published_date": "2026-07-16T19:55:41+00:00",
+              "outlet": "Metro on MSN"
+            },
+            {
+              "news_id": 1784231793270,
+              "url": "https://www.thesun.co.uk/news/39777439/earthquake-hits-new-zealand-sparking-tsunami-warning/",
+              "headline": "Huge 5.9-mag earthquake hits tourist hotspot in New Zealand sparking tsunami warning & order to ‘evacuate immediately’",
+              "published_date": "2026-07-16T19:55:44+00:00",
+              "outlet": "The Sun"
+            },
+            {
+              "news_id": 1784231793273,
+              "url": "https://www.msn.com/en-nz/news/national/felt-like-a-truck-locals-describe-5-9-magnitude-southland-earthquake/ar-AA282t19?ocid=BingNewsVerp",
+              "headline": "'Felt like a truck': Locals describe 5.9 magnitude Southland earthquake",
+              "published_date": "2026-07-16T19:55:44+00:00",
+              "outlet": "RNZ on MSN"
+            },
+            {
+              "news_id": 1784231793275,
+              "url": "https://www.msn.com/en-nz/news/national/tsunami-threat-passes-following-strong-quake-mayor-says-properties-damaged/ar-AA2825hm?ocid=BingNewsVerp",
+              "headline": "Tsunami threat passes following strong quake, mayor says properties damaged",
+              "published_date": "2026-07-16T19:55:44+00:00",
+              "outlet": "RNZ on MSN"
             }
           ]
         }
