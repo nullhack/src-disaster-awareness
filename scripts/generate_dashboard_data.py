@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 import json
 import sqlite3
+import tomllib
 from collections import Counter, defaultdict
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -17,7 +18,8 @@ from pathlib import Path
 from disaster_report._country_names import country_name
 
 SCHEMA_VERSION = "1.4"
-TRACKING_WINDOW_DAYS = 14
+TRACKING_WINDOW_DAYS = 7
+DEFAULT_TRACKING_WINDOW_DAYS = 7
 MIN_SEVERITY = "LOW"
 
 SEVERITY_RANK = {"LOW": 1, "MEDIUM": 2, "HIGH": 3, "CRITICAL": 4}
@@ -617,41 +619,22 @@ def build_incident_object(conn: sqlite3.Connection, inc: dict, as_of_date: datet
 def is_active_on_date(inc_obj: dict, target_date: datetime, window_days: int) -> bool:
     if target_date.tzinfo is not None:
         target_date = target_date.replace(tzinfo=None)
-    event_date_str = inc_obj.get("event_date")
     last_updated = inc_obj.get("last_updated_date", "")
-    if not event_date_str:
+    if inc_obj.get("news_total", 0) <= 0 or not last_updated:
         return False
     try:
-        event_date = datetime.fromisoformat(event_date_str)
+        last_dt = datetime.fromisoformat(last_updated[:10])
     except ValueError:
         return False
-    window_start = target_date - timedelta(days=window_days)
-    if event_date > target_date:
+    if last_dt > target_date:
         return False
-    if last_updated:
-        try:
-            last_dt = datetime.fromisoformat(last_updated[:10])
-            if last_dt > target_date:
-                return False
-        except ValueError:
-            pass
-    if event_date >= window_start:
-        return True
-    if inc_obj.get("news_total", 0) > 0 and last_updated:
-        try:
-            last_dt = datetime.fromisoformat(last_updated[:10])
-            if last_dt >= window_start:
-                return True
-        except ValueError:
-            pass
-    return False
+    window_start = target_date - timedelta(days=window_days)
+    return last_dt >= window_start
 
 
 def generate_daily_digest(incidents: list[dict], target_date: datetime, as_of: datetime) -> dict:
     active = [i for i in incidents if is_active_on_date(i, target_date, TRACKING_WINDOW_DAYS)]
-    reportable = [i for i in active if i["should_report"] and SEVERITY_RANK.get(i["severity"], 0) >= SEVERITY_RANK.get(MIN_SEVERITY, 0)]
-    if not reportable:
-        reportable = active
+    reportable = list(active)
 
     sev_counts = Counter(i["severity"] for i in reportable)
     type_counts = Counter(i["incident_type"] for i in reportable)
@@ -718,7 +701,7 @@ def generate_agg_series(incidents: list[dict], window: int, as_of: datetime) -> 
     for i in range(window - 1, -1, -1):
         d = as_of - timedelta(days=i)
         active = [inc for inc in incidents if is_active_on_date(inc, d, TRACKING_WINDOW_DAYS)]
-        reportable = [inc for inc in active if inc["should_report"]]
+        reportable = list(active)
 
         sev_data = {}
         for sev in ["CRITICAL", "HIGH", "MEDIUM", "LOW"]:
@@ -762,12 +745,27 @@ def generate_agg_series(incidents: list[dict], window: int, as_of: datetime) -> 
     return series
 
 
+def _resolve_tracking_window(config_path: str = "config.toml") -> int:
+    try:
+        with open(config_path, "rb") as fp:
+            data = tomllib.load(fp)
+        return int(data.get("ingest", {}).get("active_window_days", DEFAULT_TRACKING_WINDOW_DAYS))
+    except (FileNotFoundError, ValueError, TypeError, KeyError):
+        return DEFAULT_TRACKING_WINDOW_DAYS
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Generate dashboard JSON from v4 DB")
     parser.add_argument("--db", default="disaster_report.db")
     parser.add_argument("--output", default="dashboard/data")
     parser.add_argument("--as-of", default=None, help="Override as-of date (YYYY-MM-DD)")
+    parser.add_argument("--tracking-window", type=int, default=None,
+                        help="Override tracking window in days (default: ingest.active_window_days from config.toml)")
     args = parser.parse_args()
+
+    global TRACKING_WINDOW_DAYS
+    TRACKING_WINDOW_DAYS = args.tracking_window if args.tracking_window is not None else _resolve_tracking_window()
+    print(f"  tracking window: {TRACKING_WINDOW_DAYS} days")
 
     if args.as_of:
         as_of = datetime.fromisoformat(args.as_of).replace(tzinfo=timezone.utc)
