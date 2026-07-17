@@ -1,24 +1,24 @@
 {
   "schema_version": "1.4",
   "report_date": "2026-07-16",
-  "generated_at": "2026-07-17T03:27:55Z",
+  "generated_at": "2026-07-17T04:41:52Z",
   "as_of": "2026-07-16",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 32,
-    "new_today": 13,
-    "critical": 2,
-    "high": 12,
+    "reportable_total": 30,
+    "new_today": 11,
+    "critical": 1,
+    "high": 11,
     "medium": 17,
     "low": 1,
     "disease_outbreaks": 7,
-    "countries_affected": 19,
-    "news_total": 600,
+    "countries_affected": 17,
+    "news_total": 458,
     "max_magnitude": 7.8,
     "by_severity": {
-      "CRITICAL": 2,
-      "HIGH": 12,
+      "CRITICAL": 1,
+      "HIGH": 11,
       "MEDIUM": 17,
       "LOW": 1
     },
@@ -27,16 +27,16 @@
       "Tropical Cyclone": 1,
       "Forest Fire": 4,
       "Flood": 5,
-      "Earthquake": 11,
+      "Earthquake": 9,
       "Disease": 7,
       "Drought": 1
     },
     "by_region": {
       "Asia": 18,
       "Europe": 5,
-      "Americas": 2,
       "Unknown": 3,
-      "Oceania": 3,
+      "Oceania": 2,
+      "Americas": 1,
       "Africa": 1
     }
   },
@@ -193,31 +193,13 @@
       "region": "Europe",
       "country_group": "C",
       "max_severity": "HIGH"
-    },
-    {
-      "country": "New Zealand",
-      "count": 1,
-      "max_sev_rank": 3,
-      "iso2": "NZ",
-      "region": "Oceania",
-      "country_group": "B",
-      "max_severity": "HIGH"
-    },
-    {
-      "country": "Venezuela",
-      "count": 1,
-      "max_sev_rank": 4,
-      "iso2": "VE",
-      "region": "Americas",
-      "country_group": "C",
-      "max_severity": "LOW"
     }
   ],
   "incidents": [
     {
       "incident_id": "20251014-ID-VO",
       "canonical_name": "Eruption  Lewotobi",
-      "summary": "An eruption occurred at Indonesia's Mount Lewotobi Laki Laki volcano on Tuesday evening into Wednesday. The event is reported to have potential far-reaching effects, including unusual weather patterns such as snowfall in Canada.",
+      "summary": "Mount Lewotobi Laki-laki in East Nusa Tenggara, Indonesia, erupted repeatedly from July 13 to 15, 2026, marking its 3rd, 16th, and 18th eruptions within a single week. The volcano remains at Level III Alert with a 5 km exclusion zone, and Indonesia has recorded over 3,100 volcanic eruptions in total for 2026.",
       "country": "Indonesia",
       "iso2": "ID",
       "lat": -8.542,
@@ -245,7 +227,7 @@
         "usgs": 0,
         "gdacs": 1,
         "healthmap": 0,
-        "news": 3
+        "news": 4
       },
       "source_links": [
         {
@@ -279,13 +261,19 @@
           "published_date": "2026-07-12T02:25:35+00:00"
         },
         {
+          "headline": "Alert! Mount Lewotobi Laki-laki Erupts Again Tonight (Wednesday, 15 July 2026)",
+          "url": "https://databoks.katadata.co.id/en/demographics/statistics/50374dcd81c58c9/alert-mount-lewotobi-lakilaki-erupts-again-tonight-wednesday-15-july-2026",
+          "outlet": "Databoks",
+          "published_date": "2026-07-15T00:55:00+00:00"
+        },
+        {
           "headline": "Alert! Mount Lewotobi Laki-laki Erupted Again Tonight (Tuesday, 14 July 2026)",
           "url": "https://databoks.katadata.co.id/en/demographics/statistics/6addb0c64655265/alert-mount-lewotobi-lakilaki-erupted-again-tonight-tuesday-14-july-2026",
           "outlet": "Databoks",
           "published_date": "2026-07-15T06:44:48+00:00"
         }
       ],
-      "news_total": 3,
+      "news_total": 4,
       "logs": [
         {
           "log_date": "2026-07-08",
@@ -297,6 +285,33 @@
               "headline": "60 cm of snow in June? How a volcano half a world away stole Canada's summer",
               "published_date": "2026-07-08T19:01:18+00:00",
               "outlet": "The Weather Network · via Yahoo News"
+            }
+          ]
+        },
+        {
+          "log_date": "2026-07-17",
+          "summary": "Mount Lewotobi Laki-laki in East Nusa Tenggara, Indonesia, erupted repeatedly from July 13 to 15, 2026, marking its 3rd, 16th, and 18th eruptions within a single week. The volcano remains at Level III Alert with a 5 km exclusion zone, and Indonesia has recorded over 3,100 volcanic eruptions in total for 2026.",
+          "news": [
+            {
+              "news_id": 1783909654751,
+              "url": "https://databoks.katadata.co.id/en/demographics/statistics/508447b2114edeb/mount-lewotobi-lakilaki-erupted-again-this-morning-monday-13-july-2026",
+              "headline": "Mount Lewotobi Laki-laki Erupted Again This Morning (Monday, 13 July 2026)",
+              "published_date": "2026-07-12T02:25:35+00:00",
+              "outlet": "Databoks"
+            },
+            {
+              "news_id": 1784260151835,
+              "url": "https://databoks.katadata.co.id/en/demographics/statistics/50374dcd81c58c9/alert-mount-lewotobi-lakilaki-erupts-again-tonight-wednesday-15-july-2026",
+              "headline": "Alert! Mount Lewotobi Laki-laki Erupts Again Tonight (Wednesday, 15 July 2026)",
+              "published_date": "2026-07-15T00:55:00+00:00",
+              "outlet": "Databoks"
+            },
+            {
+              "news_id": 1784097917921,
+              "url": "https://databoks.katadata.co.id/en/demographics/statistics/6addb0c64655265/alert-mount-lewotobi-lakilaki-erupted-again-tonight-tuesday-14-july-2026",
+              "headline": "Alert! Mount Lewotobi Laki-laki Erupted Again Tonight (Tuesday, 14 July 2026)",
+              "published_date": "2026-07-15T06:44:48+00:00",
+              "outlet": "Databoks"
             }
           ]
         }
@@ -3670,1495 +3685,6 @@
       ]
     },
     {
-      "incident_id": "20260624-VE-EQ",
-      "canonical_name": "Earthquake 21 km ENE of San Felipe, Venezuela 2026-06",
-      "summary": "The death toll from the twin earthquakes has officially risen to 4,829, according to government figures. The European Union has pledged an additional €20 million in humanitarian aid, while US troops unloaded China's only known aid flight at the scene. Reports also highlight engineers assessing structural damage, a benefit concert featuring Marc Anthony and Ricardo Montaner, and ongoing grassroots fundraising efforts from Florida to Minnesota.\n\nThe death toll from the twin earthquakes was officially confirmed at 4,829 by National Assembly President Jorge Rodriguez. A fake image of a dog protecting a child went viral and was debunked by fact-checkers. Meanwhile, recovery efforts include a World Cup halftime tribute featuring the NY Philharmonic and Gustavo Dudamel, and an opinion piece highlights the prioritization of critical health services in the aftermath.",
-      "country": "Venezuela",
-      "iso2": "VE",
-      "lat": 10.453,
-      "lon": -68.5139,
-      "country_group": "C",
-      "region": "Americas",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "CRITICAL",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "disease_name": null,
-      "event_date": "2026-06-24",
-      "first_reported_date": "2026-06-24",
-      "last_updated_date": "2026-07-16",
-      "days_since_event": 23,
-      "source_count": 3,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 2,
-        "gdacs": 1,
-        "healthmap": 0,
-        "news": 106
-      },
-      "source_links": [
-        {
-          "type": "GDACS",
-          "label": "Red alert · Magnitude 7.5M, Depth:10km",
-          "url": "https://www.gdacs.org/report.aspx?eventid=1548377&episodeid=1714328&eventtype=EQ",
-          "meta": "Magnitude 7.5M, Depth:10km"
-        },
-        {
-          "type": "USGS",
-          "label": "M 7.2 - 21 km ENE of San Felipe, Venezuela",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t7zc",
-          "meta": "27.588 km depth"
-        },
-        {
-          "type": "USGS",
-          "label": "M 7.5 - 20 km ESE of Yumare, Venezuela",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t7zp",
-          "meta": "10 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 7.5,
-        "max_depth_km": 10.0,
-        "place": "21 km ENE of San Felipe, Venezuela",
-        "felt": 704,
-        "sig": 2612,
-        "tsunami": false,
-        "gdacs_alertlevel": "Red",
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "World reacts as devastating Venezuela earthquakes kill at least 188",
-          "url": "https://www.aljazeera.com/news/2026/6/25/world-reacts-as-devastating-venezuela-earthquakes-kill-at-least-32",
-          "outlet": "Al Jazeera English",
-          "published_date": "2026-06-24T00:00:00+00:00"
-        },
-        {
-          "headline": "Venezuela races to rescue hundreds after massive earthquakes. Updates",
-          "url": "https://www.usatoday.com/story/news/world/2026/06/25/venezuela-earthquakes-deaths-rescue-efforts-what-to-know/90688005007/",
-          "outlet": "USA TODAY",
-          "published_date": "2026-06-25T00:00:00+00:00"
-        },
-        {
-          "headline": "Venezuela Earthquake Live Updates: July 8, 2026",
-          "url": "https://www.wmnf.org/venezuela-earthquake-live-updates-july-8-2026/",
-          "outlet": "WMNF",
-          "published_date": "2026-06-25T00:00:00+00:00"
-        },
-        {
-          "headline": "Venezuela calls for release of frozen assets to help earthquake recovery efforts",
-          "url": "https://www.yahoo.com/news/articles/venezuela-calls-release-frozen-assets-163652539.html",
-          "outlet": "Euronews · via Yahoo News",
-          "published_date": "2026-06-25T00:00:00+00:00"
-        },
-        {
-          "headline": "More than 68,000 people still missing in Venezuela after devastating earthquakes",
-          "url": "https://www.yahoo.com/news/world/articles/more-68-000-people-still-084624028.html",
-          "outlet": "Euronews · via Yahoo News",
-          "published_date": "2026-06-25T00:00:00+00:00"
-        },
-        {
-          "headline": "Death toll from Venezuela earthquakes climbs over 3,800",
-          "url": "https://www.aol.com/articles/death-toll-venezuela-earthquakes-climbs-205057000.html",
-          "outlet": "AOL",
-          "published_date": "2026-06-26T00:00:00+00:00"
-        },
-        {
-          "headline": "Venezuela Earthquake Survivors Improvise Showers, Toilets Amid Water Shortages",
-          "url": "https://www.huffpost.com/entry/venezuela-earthquake-water-shortages_n_6a4ef7f4e4b01b9297114e67",
-          "outlet": "The Huffington Post",
-          "published_date": "2026-06-26T00:00:00+00:00"
-        },
-        {
-          "headline": "On La Guaira’s beaches, Venezuela quake survivors improvise showers and toilets amid water shortages",
-          "url": "https://www.latimes.com/world-nation/story/2026-07-08/on-la-guaira-beaches-venezuela-quake-survivors-improvise-showers-toilets",
-          "outlet": "Los Angeles Times",
-          "published_date": "2026-06-26T00:00:00+00:00"
-        },
-        {
-          "headline": "On La Guaira’s beaches, Venezuela quake survivors improvise showers and toilets ...",
-          "url": "https://www.wral.com/news/ap/d5dd3-on-la-guaira-s-beaches-venezuela-quake-survivors-improvise-showers-and-toilets-amid-water-shortages/",
-          "outlet": "WRAL.com Raleigh",
-          "published_date": "2026-06-26T00:00:00+00:00"
-        },
-        {
-          "headline": "Bad Bunny’s earthquake aid reaches Venezuela as country’s president publicly tha...",
-          "url": "https://www.yahoo.com/news/world/articles/bad-bunny-earthquake-aid-reaches-205307107.html",
-          "outlet": "TheGrio · via Yahoo News",
-          "published_date": "2026-06-26T00:00:00+00:00"
-        },
-        {
-          "headline": "Venezuela earthquake survivors face water shortages, receive aid packages",
-          "url": "https://apnews.com/video/venezuela-earthquake-survivors-face-water-shortages-receive-aid-packages-ab6e7b1b4e9643228ffcca7276966b75",
-          "outlet": "Associated Press News",
-          "published_date": "2026-06-27T00:00:00+00:00"
-        },
-        {
-          "headline": "World reacts as devastating Venezuela earthquakes kill at least 188",
-          "url": "https://www.yahoo.com/news/world/articles/world-reacts-devastating-venezuela-earthquakes-090640605.html",
-          "outlet": "Yahoo",
-          "published_date": "2026-06-27T14:43:52+00:00"
-        },
-        {
-          "headline": "Doctors seek to prevent health crisis after Venezuela earthquakes",
-          "url": "https://www.yahoo.com/news/world/articles/doctors-seek-prevent-health-crisis-171339079.html",
-          "outlet": "United Press International · via Yahoo News",
-          "published_date": "2026-06-28T00:00:00+00:00"
-        },
-        {
-          "headline": "Dodgers 50/50 Raffle Raising Money for Venezuela Earthquake Relief",
-          "url": "https://sports.yahoo.com/articles/dodgers-50-50-raffle-raising-021441847.html",
-          "outlet": "Dodgers Nation · via Yahoo Sports",
-          "published_date": "2026-06-30T00:00:00+00:00"
-        },
-        {
-          "headline": "President Ilham Aliyev sends letter to Acting President of Bolivarian Republic of Venezuela",
-          "url": "https://www.azernews.az/nation/260458.html",
-          "outlet": "AzerNews",
-          "published_date": "2026-06-30T00:00:00+00:00"
-        },
-        {
-          "headline": "He survived one of Venezuela's deadliest disasters. Years later, he was deported into another",
-          "url": "https://www.msn.com/en-us/news/world/he-survived-one-of-venezuelas-deadliest-disasters-years-later-he-was-deported-into-another/ar-AA27v05n?ocid=BingNewsVerp",
-          "outlet": "Miami Herald on MSN",
-          "published_date": "2026-06-30T00:00:00+00:00"
-        },
-        {
-          "headline": "Man pulled from rubble in ‘miraculous’ rescue 8 days after devastating Venezuela...",
-          "url": "https://www.cnn.com/2026/07/02/americas/venezuela-earthquake-survivor-rescued-intl-hnk",
-          "outlet": "CNN.com",
-          "published_date": "2026-07-02T08:12:35+00:00"
-        },
-        {
-          "headline": "Dodgers Rookie Eliezer Alfonzo Jr.'s Family Found Dead After Earthquakes in...",
-          "url": "https://www.si.com/mlb/dodgers/onsi/dodgers-rookie-family-found-dead-ahead-mlb-debut",
-          "outlet": "Sports Illustrated",
-          "published_date": "2026-07-06T00:00:00+00:00"
-        },
-        {
-          "headline": "Teen Venezuela quake survivor mourns her 'young forever' friends",
-          "url": "https://www.msn.com/en-us/news/world/teen-venezuela-quake-survivor-mourns-her-young-forever-friends/ar-AA27H2iE?ocid=BingNewsVerp",
-          "outlet": "Reuters on MSN",
-          "published_date": "2026-07-06T17:36:45+00:00"
-        },
-        {
-          "headline": "LA-area artists launch benefit exhibition and art sale for children of Venezuela",
-          "url": "https://www.dailynews.com/2026/07/07/la-area-artists-launch-benefit-exhibition-and-art-sale-for-children-of-venezuela/",
-          "outlet": "Los Angeles Daily News",
-          "published_date": "2026-07-07T00:00:00+00:00"
-        },
-        {
-          "headline": "Venezuela quake rescuers believe boy, 9, is alive under rubble after 16 days",
-          "url": "https://www.msn.com/en-us/news/world/venezuela-quake-rescuers-believe-boy-9-is-alive-under-rubble-after-16-days/ar-AA27GpBW?ocid=BingNewsVerp",
-          "outlet": "The Washington Post on MSN",
-          "published_date": "2026-07-07T17:36:48+00:00"
-        },
-        {
-          "headline": "Relief supplies leave for earthquake-ravaged Venezuela",
-          "url": "https://guyanachronicle.com/2026/07/08/relief-supplies-leave-for-earthquake-ravaged-venezuela/",
-          "outlet": "Guyana Chronicle",
-          "published_date": "2026-07-08T00:00:00+00:00"
-        },
-        {
-          "headline": "How rescuers carried out 180-hour ‘miracle’ amid Venezuela’s ruins",
-          "url": "https://ticotimes.net/2026/07/08/venezuela-earthquake-survivor-rescue",
-          "outlet": "The Tico Times",
-          "published_date": "2026-07-08T00:00:00+00:00"
-        },
-        {
-          "headline": "Venezuela’s acting president is facing her worst crisis yet. Could it help her s...",
-          "url": "https://www.cnn.com/2026/07/08/americas/venezuela-earthquake-delcy-rodriguez-intl-latam",
-          "outlet": "CNN.com",
-          "published_date": "2026-07-08T00:00:00+00:00"
-        },
-        {
-          "headline": "A spirit of resilience helps Venezuelans face healthcare challenges after the quakes",
-          "url": "https://www.npr.org/2026/07/08/g-s1-132410/venezuela-earthquake-healthcare",
-          "outlet": "NPR",
-          "published_date": "2026-07-08T00:00:00+00:00"
-        },
-        {
-          "headline": "Death toll from Venezuela earthquakes climbs over 3,800",
-          "url": "https://www.yahoo.com/news/world/articles/death-toll-venezuela-earthquakes-climbs-205057475.html",
-          "outlet": "ABC News · via Yahoo News",
-          "published_date": "2026-07-08T00:00:00+00:00"
-        },
-        {
-          "headline": "Delcy Rodríguez’s opening amidst the tragedy: temporary truce or permanent shift?",
-          "url": "https://efe.com/english/latest-news/2026-07-12/delcy-rodriguezs-opening-amidst-the-tragedy-temporary-truce-or-permanent-shift/",
-          "outlet": "Agencia EFE",
-          "published_date": "2026-07-08T02:43:18+00:00"
-        },
-        {
-          "headline": "Miami Marlins assist volunteers at GEM to pack supplies for Venezuela earthquake...",
-          "url": "https://wsvn.com/sports/miami-marlins/miami-marlins-assist-volunteers-at-gem-to-pack-supplies-for-venezuela-earthquake-victims/",
-          "outlet": "7 News Miami",
-          "published_date": "2026-07-08T03:07:04+00:00"
-        },
-        {
-          "headline": "\"Honour to serve people of Venezuela\": India thanks Venezuela for recognising 'Operation Amistad'",
-          "url": "https://www.aninews.in/news/world/asia/honour-to-serve-people-of-venezuela-india-thanks-venezuela-for-recognising-operation-amistad20260708083533/",
-          "outlet": "Asian News International",
-          "published_date": "2026-07-08T14:30:54+00:00"
-        },
-        {
-          "headline": "UAE expresses solidarity with Venezuela, conveys condolences over victims of two earthquakes",
-          "url": "https://www.msn.com/en-ae/news/news/uae-expresses-solidarity-with-venezuela-conveys-condolences-over-victims-of-two-earthquakes/ar-AA26vVE3?ocid=BingNewsVerp",
-          "outlet": "Emirates News Agency on MSN",
-          "published_date": "2026-07-08T22:07:18+00:00"
-        },
-        {
-          "headline": "UAE president conveys condolences to acting president of Venezuela over earthquake victims",
-          "url": "https://www.msn.com/en-ae/news/other/uae-president-conveys-condolences-to-acting-president-of-venezuela-over-earthquake-victims/ar-AA26Hl9C?ocid=BingNewsVerp",
-          "outlet": "Emirates News Agency on MSN",
-          "published_date": "2026-07-08T22:07:18+00:00"
-        },
-        {
-          "headline": "Seismic doublet: the phenomenon that turned Venezuela's tragedy into catastrophe",
-          "url": "https://www.msn.com/en-gb/news/world/seismic-doublet-the-phenomenon-that-turned-venezuelas-tragedy-into-catastrophe/ar-AA26Bctn?ocid=BingNewsVerp",
-          "outlet": "Euronews on MSN",
-          "published_date": "2026-07-08T22:07:18+00:00"
-        },
-        {
-          "headline": "Venezuela quake: Indian Army's 'Operation Amistad' brings comfort",
-          "url": "https://www.msn.com/en-in/public-safety-and-emergencies/general/venezuela-quake-indian-army-s-operation-amistad-brings-comfort/ar-AA27d6ea?ocid=BingNewsVerp",
-          "outlet": "Newsable Asianet News on MSN",
-          "published_date": "2026-07-08T22:07:18+00:00"
-        },
-        {
-          "headline": "Statement of the Chairperson of the African Union Commission following the earthquakes in Venezuela",
-          "url": "http://www.au.int/en/pressrelease/statement-chairperson-african-union-commission-following-earthquakes-venezuela",
-          "outlet": "African Union",
-          "published_date": "2026-07-08T22:08:25+00:00"
-        },
-        {
-          "headline": "UAE conveys condolences to Venezuela over victims of twin earthquakes",
-          "url": "https://www.msn.com/en-ae/news/national/uae-conveys-condolences-to-venezuela-over-victims-of-twin-earthquakes/ar-AA26vE6H?ocid=BingNewsVerp",
-          "outlet": "Khaleej Times on MSN",
-          "published_date": "2026-07-08T22:08:25+00:00"
-        },
-        {
-          "headline": "‘Help is coming’: UN relief chief briefs on Venezuela quake recovery",
-          "url": "https://news.un.org/en/story/2026/07/1167899",
-          "outlet": "UN News",
-          "published_date": "2026-07-09T00:00:00+00:00"
-        },
-        {
-          "headline": "Venezuela quake survivor Gil ‘reborn’",
-          "url": "https://www.taipeitimes.com/News/world/archives/2026/07/09/2003860474",
-          "outlet": "Taipei Times",
-          "published_date": "2026-07-09T00:00:00+00:00"
-        },
-        {
-          "headline": "Guyana donates 88 containers of relief supplies to earthquake-hit Venezuela",
-          "url": "https://www.jamaicaobserver.com/2026/07/09/guyana-donates-88-containers-relief-supplies-earthquake-hit-venezuela/",
-          "outlet": "Jamaica Observer",
-          "published_date": "2026-07-09T00:00:00+00:00"
-        },
-        {
-          "headline": "More than 3,800 killed in Venezuela earthquakes",
-          "url": "https://www.local10.com/video/news/2026/07/09/more-than-3800-killed-in-venezuela-earthquakes/",
-          "outlet": "WPLG Local 10",
-          "published_date": "2026-07-09T00:00:00+00:00"
-        },
-        {
-          "headline": "‘So happy to save a life:’ Palm Beach County firefighters help in international rescue efforts in Venezuela",
-          "url": "https://www.sun-sentinel.com/2026/07/09/so-happy-to-save-a-life-palm-beach-county-firefighters-help-in-international-rescue-efforts-in-venezuela/",
-          "outlet": "Sun Sentinel",
-          "published_date": "2026-07-09T00:00:00+00:00"
-        },
-        {
-          "headline": "Helping Venezuela: USS San Antonio serves at Port of La Guaira",
-          "url": "https://www.local10.com/news/world/2026/07/09/helping-venezuela-uss-san-antonio-serves-at-port-of-la-guaira/",
-          "outlet": "WPLG Local 10",
-          "published_date": "2026-07-09T00:00:00+00:00"
-        },
-        {
-          "headline": "Chronic illness and diarrhea surge in quake-hit Venezuelan communities as humanitarian crisis builds",
-          "url": "https://www.bostonherald.com/2026/07/09/venezuela-earthquake-disease-surge/",
-          "outlet": "Boston Herald",
-          "published_date": "2026-07-09T00:00:00+00:00"
-        },
-        {
-          "headline": "South Florida Rescue Team Reflects on 58-Hour Mission That Saved Trapped Man in Venezuela",
-          "url": "https://www.wflx.com/2026/07/10/south-florida-rescue-team-reflects-58-hour-mission-that-saved-trapped-man-venezuela/",
-          "outlet": "WFLX",
-          "published_date": "2026-07-10T00:00:00+00:00"
-        },
-        {
-          "headline": "Venezuela earthquakes toll rises to 3,889 as risk of disease grows",
-          "url": "https://www.yahoo.com/news/world/articles/venezuela-earthquakes-toll-rises-3-232550536.html",
-          "outlet": "Al Jazeera · via Yahoo News",
-          "published_date": "2026-07-10T03:07:07+00:00"
-        },
-        {
-          "headline": "Death toll from Venezuela quakes rises to 3,811",
-          "url": "https://www.msn.com/en-us/news/world/death-toll-from-venezuela-quakes-rises-to-3811/ar-AA27vHrv?ocid=BingNewsVerp",
-          "outlet": "Reuters on MSN",
-          "published_date": "2026-07-10T04:33:21+00:00"
-        },
-        {
-          "headline": "Venezuela Partners with the UN to Provide Prefabricated Homes for Thousands Displaced by Earthquakes",
-          "url": "https://www.cubaheadlines.com/articles/334635",
-          "outlet": "Cuba Headlines",
-          "published_date": "2026-07-10T04:33:21+00:00"
-        },
-        {
-          "headline": "Death toll from Venezuela quakes rises to 3,889",
-          "url": "https://www.rappler.com/world/latin-america/death-toll-venezuela-quakes-rises-update-july-9-2026/",
-          "outlet": "Rappler",
-          "published_date": "2026-07-10T04:33:21+00:00"
-        },
-        {
-          "headline": "Chronic illness and diarrhea surge in quake-hit Venezuelan communities as humanitarian crisis builds",
-          "url": "https://www.newsday.com/news/nation/venezuela-earthquake-humanitarian-aid-health-crisis-l35972",
-          "outlet": "Newsday",
-          "published_date": "2026-07-10T04:33:21+00:00"
-        },
-        {
-          "headline": "Earthquakes in Venezuela expose a severely under-resourced and unprepared healthcare system",
-          "url": "https://www.msn.com/en-us/news/other/earthquakes-in-venezuela-expose-a-severely-under-resourced-and-unprepared-healthcare-system/ar-AA27AbyC?ocid=BingNewsVerp",
-          "outlet": "Collinsville Daily News on MSN",
-          "published_date": "2026-07-10T04:33:21+00:00"
-        },
-        {
-          "headline": "‘It looked like an apocalypse’: Miami rescuers describe their efforts in Venezuela",
-          "url": "https://www.miamiherald.com/news/local/community/miami-dade/article316432950.html",
-          "outlet": "Miami Herald",
-          "published_date": "2026-07-10T04:33:21+00:00"
-        },
-        {
-          "headline": "Venezuelan cemetery expands burials for earthquake victims, many of whom remain...",
-          "url": "https://www.accuweather.com/en/weather-news/venezuelan-cemetery-expands-burials-for-earthquake-victims-many-of-whom-remain-unidentified/1909690",
-          "outlet": "AccuWeather",
-          "published_date": "2026-07-10T05:52:01+00:00"
-        },
-        {
-          "headline": "Venezuela Quake Death Toll Climbs to Nearly 3,000",
-          "url": "https://www.bloomberg.com/news/articles/2026-07-04/venezuela-quake-death-toll-climbs-to-nearly-3-000",
-          "outlet": "Bloomberg",
-          "published_date": "2026-07-10T05:52:01+00:00"
-        },
-        {
-          "headline": "Where Venezuela’s Earthquakes Shifted the Ground - NASA Science",
-          "url": "https://science.nasa.gov/earth/earth-observatory/where-venezuelas-earthquakes-shifted-the-ground/",
-          "outlet": "NASA",
-          "published_date": "2026-07-10T06:55:14+00:00"
-        },
-        {
-          "headline": "US Provides $300 Million in Earthquake Recovery Money to Venezuela While Sitting...",
-          "url": "https://www.commondreams.org/news/venezuela-oil-wealth-earthquake",
-          "outlet": "CommonDreams.org",
-          "published_date": "2026-07-10T13:33:05+00:00"
-        },
-        {
-          "headline": "Metallica Announces Earthquake Relief Donation Amid 2026 Tour",
-          "url": "https://parade.com/news/metallica-announces-major-move-outside-of-2026-tour",
-          "outlet": "Parade",
-          "published_date": "2026-07-10T13:33:05+00:00"
-        },
-        {
-          "headline": "The earthquake: the final straw for the already fragile mental health of Venezuelans",
-          "url": "https://efe.com/english/latest-news/2026-07-10/the-earthquake-the-final-straw-for-the-already-fragile-mental-health-of-venezuelans/",
-          "outlet": "Agencia EFE",
-          "published_date": "2026-07-10T17:36:45+00:00"
-        },
-        {
-          "headline": "ShelterBox Moves Into Active Relief Effort in Venezuela",
-          "url": "https://keyt.com/news/santa-barbara-s-county/2026/07/10/shelterbox-moves-into-active-relief-effort-in-venezuela/",
-          "outlet": "News Channel 3-12",
-          "published_date": "2026-07-10T17:36:45+00:00"
-        },
-        {
-          "headline": "Fake image of dog protecting child spreads after deadly Venezuela earthquakes",
-          "url": "https://www.msn.com/en-us/news/world/fake-image-of-dog-protecting-child-spreads-after-deadly-venezuela-earthquakes/ar-AA282wCC?ocid=BingNewsVerp",
-          "outlet": "Snopes on MSN",
-          "published_date": "2026-07-10T19:50:37+00:00"
-        },
-        {
-          "headline": "Death toll from Venezuela quakes rises to 4,829, government says",
-          "url": "https://www.msn.com/en-us/news/other/death-toll-from-venezuela-quakes-rises-to-4-829-government-says/ar-AA282LxZ?ocid=BingNewsVerp",
-          "outlet": "Reuters on MSN",
-          "published_date": "2026-07-10T19:50:37+00:00"
-        },
-        {
-          "headline": "Death toll in Venezuela earthquakes surpasses 4,300: Official",
-          "url": "https://english.alarabiya.net/News/world/2026/07/11/death-toll-in-venezuela-earthquakes-surpasses-4300-official",
-          "outlet": "Al Arabiya English",
-          "published_date": "2026-07-11T00:00:00+00:00"
-        },
-        {
-          "headline": "Contributor: Sanctions are making Venezuela's earthquake toll so much worse",
-          "url": "https://www.yahoo.com/news/politics/articles/contributor-sanctions-making-venezuelas-earthquake-100300122.html",
-          "outlet": "Los Angeles Times Opinion · via Yahoo News",
-          "published_date": "2026-07-11T03:07:07+00:00"
-        },
-        {
-          "headline": "On the Ground, Engineers Assess Damage in Venezuela Earthquake Zone",
-          "url": "https://www.enr.com/articles/63305-on-the-ground-engineers-assess-damage-in-venezuela-earthquake-zone",
-          "outlet": "Engineering News-Record",
-          "published_date": "2026-07-11T03:55:13+00:00"
-        },
-        {
-          "headline": "Venezuelan fashion house stitches body bags for quake victims",
-          "url": "https://www.jamaicaobserver.com/2026/07/14/venezuelan-fashion-house-stitches-body-bags-quake-victims/",
-          "outlet": "Jamaica Observer",
-          "published_date": "2026-07-11T06:55:17+00:00"
-        },
-        {
-          "headline": "Sanctions are making Venezuela’s earthquake toll so much worse",
-          "url": "https://www.latimes.com/opinion/story/2026-07-11/sanctions-venezuela-earthquake-imf",
-          "outlet": "Los Angeles Times",
-          "published_date": "2026-07-11T10:36:49+00:00"
-        },
-        {
-          "headline": "Venezuela Earthquake Live Updates: July 10, 2026",
-          "url": "https://www.wmnf.org/venezuela-earthquake-live-updates-july-10-2026/",
-          "outlet": "WMNF",
-          "published_date": "2026-07-11T17:36:45+00:00"
-        },
-        {
-          "headline": "Crematoria, morgues in Venezuela operate 24 hours a day as death toll increases to 4.118",
-          "url": "https://efe.com/english/latest-news/2026-07-11/crematoria-morgues-in-venezuela-operate-24-hours-a-day-as-death-toll-increases-to-4-118/",
-          "outlet": "Agencia EFE",
-          "published_date": "2026-07-11T17:36:45+00:00"
-        },
-        {
-          "headline": "Venezuela quake death toll rises to 4,118: top lawmaker",
-          "url": "https://www.globaltimes.cn/page/202607/1365669.shtml",
-          "outlet": "Global Times",
-          "published_date": "2026-07-11T17:36:49+00:00"
-        },
-        {
-          "headline": "Chaos in Venezuela's morgues fuels identification errors among Flight 164 victims",
-          "url": "https://www.msn.com/en-us/news/crime/chaos-in-venezuelas-morgues-fuels-identification-errors-among-flight-164-victims/ar-AA27Ezvf?ocid=BingNewsVerp",
-          "outlet": "Miami Herald on MSN",
-          "published_date": "2026-07-11T17:36:49+00:00"
-        },
-        {
-          "headline": "Cristina Guevara: What happens after the cameras leave a Venezuela torn apart by...",
-          "url": "https://www.chicagotribune.com/2026/07/12/opinion-venezuela-earthquakes-trauma-recovery/",
-          "outlet": "Chicago Tribune",
-          "published_date": "2026-07-12T10:07:07+00:00"
-        },
-        {
-          "headline": "Venezuela earthquake death toll nears 5,000 as families continue searching rubble",
-          "url": "https://www.khaosodenglish.com/news/2026/07/16/venezuela-earthquake-death-toll-nears-5000-as-families-continue-searching-rubble/",
-          "outlet": "Khaosod English",
-          "published_date": "2026-07-12T14:42:50+00:00"
-        },
-        {
-          "headline": "Death toll after Venezuela earthquake rises to 4,333",
-          "url": "https://www.accuweather.com/en/weather-news/death-toll-after-venezuela-earthquake-rises-to-4333/1910767",
-          "outlet": "AccuWeather",
-          "published_date": "2026-07-12T15:07:04+00:00"
-        },
-        {
-          "headline": "Venezuela animal shelters at capacity after earthquakes",
-          "url": "https://www.msn.com/en-us/news/world/venezuela-animal-shelters-at-capacity-after-earthquakes/vi-AA27JNqw?ocid=BingNewsVerp",
-          "outlet": "CNN on MSN",
-          "published_date": "2026-07-13T02:43:18+00:00"
-        },
-        {
-          "headline": "Death toll from Venezuela earthquakes rises to 4,490",
-          "url": "https://www.msn.com/en-us/news/world/death-toll-from-venezuela-earthquakes-rises-to-4490/ar-AA27KR9h?ocid=BingNewsVerp",
-          "outlet": "Reuters on MSN",
-          "published_date": "2026-07-13T03:07:04+00:00"
-        },
-        {
-          "headline": "Shakira Urges More Global Support for Schools After Earthquakes: ‘Venezuela, You...",
-          "url": "https://www.yahoo.com/entertainment/music/articles/shakira-urges-more-global-support-172128387.html",
-          "outlet": "Billboard · via Yahoo News",
-          "published_date": "2026-07-13T06:55:14+00:00"
-        },
-        {
-          "headline": "Venezuela quake death toll rises to 4,490, officials say, but no number given...",
-          "url": "https://www.yahoo.com/news/articles/venezuela-quake-death-toll-rises-064904067.html",
-          "outlet": "Euronews · via Yahoo News",
-          "published_date": "2026-07-13T06:55:14+00:00"
-        },
-        {
-          "headline": "Venezuela’s Inflation Spike Compounds Earthquake Misery",
-          "url": "https://www.bloomberg.com/news/articles/2026-07-13/venezuela-s-inflation-spike-compounds-earthquake-misery",
-          "outlet": "Bloomberg",
-          "published_date": "2026-07-13T06:55:17+00:00"
-        },
-        {
-          "headline": "World Cup final: NY Philharmonic, Gustavo Dudamel lead Venezuela tribute",
-          "url": "https://www.msn.com/en-ca/music/news/world-cup-final-ny-philharmonic-gustavo-dudamel-lead-venezuela-tribute/ar-AA283LoU?ocid=BingNewsVerp",
-          "outlet": "Billboard on MSN",
-          "published_date": "2026-07-13T19:50:37+00:00"
-        },
-        {
-          "headline": "Earthquake aid keeps flowing from Florida to Venezuela, as volunteers unite to help recovery",
-          "url": "https://www.bostonherald.com/2026/07/14/venezuela-earthquake-aid-volunteers/",
-          "outlet": "Boston Herald",
-          "published_date": "2026-07-14T00:00:00+00:00"
-        },
-        {
-          "headline": "Guyana-led humanitarian aid arrives in Venezuela for earthquake victims",
-          "url": "https://guyanachronicle.com/2026/07/14/guyana-led-humanitarian-aid-arrives-in-venezuela-for-earthquake-victims/",
-          "outlet": "Guyana Chronicle",
-          "published_date": "2026-07-14T00:00:00+00:00"
-        },
-        {
-          "headline": "From first aid to airplanes: How Houston’s relief efforts are reaching Venezuela",
-          "url": "https://www.houstonpublicmedia.org/articles/news/in-depth/2026/07/14/556958/houston-venezuela-relief/",
-          "outlet": "Houston Public Media",
-          "published_date": "2026-07-14T00:00:00+00:00"
-        },
-        {
-          "headline": "‘Pretty dire’: Aid workers reveal health needs in Venezuela amid recovery from earthquakes",
-          "url": "https://www.mycentraloregon.com/2026/07/14/pretty-dire-aid-workers-reveal-health-needs-in-venezuela-amid-recovery-from-earthquakes/",
-          "outlet": "MyCentralOregon.com",
-          "published_date": "2026-07-14T00:00:00+00:00"
-        },
-        {
-          "headline": "PSC commends members for humanitarian support to earthquake-hit Venezuela",
-          "url": "https://guyanachronicle.com/2026/07/14/psc-commends-members-for-humanitarian-support-to-earthquake-hit-venezuela/",
-          "outlet": "Guyana Chronicle",
-          "published_date": "2026-07-14T00:00:00+00:00"
-        },
-        {
-          "headline": "Earthquake aid keeps flowing from Florida to Venezuela, as volunteers unite to help recovery",
-          "url": "https://www.baltimoresun.com/2026/07/14/venezuela-earthquake-aid-volunteers/",
-          "outlet": "The Baltimore Sun",
-          "published_date": "2026-07-14T00:00:00+00:00"
-        },
-        {
-          "headline": "County firefighters helped rescue man buried by Venezuelan earthquakes",
-          "url": "https://www.palmbeachpost.com/story/news/local/2026/07/14/county-firefighters-helped-rescue-man-buried-by-venezuelan-earthquakes/90911079007/",
-          "outlet": "The Palm Beach Post",
-          "published_date": "2026-07-14T00:00:00+00:00"
-        },
-        {
-          "headline": "Venezuela's earthquake recovery overshadows its push for democracy",
-          "url": "https://www.npr.org/2026/07/14/nx-s1-5893438/venezuelas-democracy-delayed",
-          "outlet": "NPR",
-          "published_date": "2026-07-14T00:00:00+00:00"
-        },
-        {
-          "headline": "Earthquake aid keeps flowing from Florida to Venezuela, as volunteers unite to...",
-          "url": "https://www.newstimes.com/business/article/earthquake-aid-keeps-flowing-from-florida-to-22344413.php",
-          "outlet": "The News-Times",
-          "published_date": "2026-07-14T12:55:14+00:00"
-        },
-        {
-          "headline": "Venezuela welcomes aid from Caricom countries after twin quakes",
-          "url": "https://www.jamaicaobserver.com/2026/07/15/venezuela-welcomes-aid-caricom-countries-twin-quakes/",
-          "outlet": "Jamaica Observer",
-          "published_date": "2026-07-15T00:00:00+00:00"
-        },
-        {
-          "headline": "Earthquake aid keeps flowing from Florida to Venezuela, as volunteers unite to...",
-          "url": "https://www.sfgate.com/business/article/earthquake-aid-keeps-flowing-from-florida-to-22344413.php",
-          "outlet": "San Francisco Chronicle",
-          "published_date": "2026-07-15T03:55:10+00:00"
-        },
-        {
-          "headline": "Earthquake aid keeps flowing from Florida to Venezuela, with help from the U.S. State Department",
-          "url": "https://www.msn.com/en-ph/news/world/earthquake-aid-keeps-flowing-from-florida-to-venezuela-with-help-from-the-us-state-department/ar-AA27UnjG?ocid=BingNewsVerp",
-          "outlet": "The Manila Times on MSN",
-          "published_date": "2026-07-15T06:55:17+00:00"
-        },
-        {
-          "headline": "Group of lawmakers ask Trump to lift sanctions on Venezuela to help respond to earthquake devastation",
-          "url": "https://english.elpais.com/usa/2026-07-14/group-of-lawmakers-ask-trump-to-lift-sanctions-on-venezuela-to-help-respond-to-earthquake-devastation.html",
-          "outlet": "EL PAÍS English",
-          "published_date": "2026-07-15T06:55:17+00:00"
-        },
-        {
-          "headline": "'Until the end': The tireless, traumatic search for Venezuela quake victims",
-          "url": "https://www.msn.com/en-in/news/news/until-the-end-the-tireless-traumatic-search-for-venezuela-quake-victims/ar-AA27Ralo?ocid=BingNewsVerp",
-          "outlet": "The Economic Times on MSN",
-          "published_date": "2026-07-15T06:55:17+00:00"
-        },
-        {
-          "headline": "The black-and-white dog that became the face of hope in post-earthquake...",
-          "url": "https://www.csmonitor.com/World/Americas/2026/0715/venezuela-earthquakes-tsunami-rescue-dog-caracas",
-          "outlet": "The Christian Science Monitor",
-          "published_date": "2026-07-15T08:55:10+00:00"
-        },
-        {
-          "headline": "The Bizarre Partnership Between the U.S. and Venezuela",
-          "url": "https://www.theatlantic.com/science/2026/07/us-venezuela-earthquake-response/687907/",
-          "outlet": "The Atlantic",
-          "published_date": "2026-07-15T09:07:26+00:00"
-        },
-        {
-          "headline": "Venezuela quake death toll climbs to 4,561Published on: July 14, 2026 9:42 PM",
-          "url": "https://www.msn.com/en-xl/asia/pakistan/venezuela-quake-death-toll-climbs-to-4-561published-on-july-14-2026-9-42-pm/ar-AA27Uadu?ocid=BingNewsVerp",
-          "outlet": "Daily Times on MSN",
-          "published_date": "2026-07-15T09:07:26+00:00"
-        },
-        {
-          "headline": "Death toll from Venezuela quakes rises to 4,734, government says",
-          "url": "https://www.msn.com/en-us/news/world/death-toll-from-venezuela-quakes-rises-to-4734-government-says/ar-AA27U3ui?ocid=BingNewsVerp",
-          "outlet": "Reuters on MSN",
-          "published_date": "2026-07-15T09:07:26+00:00"
-        },
-        {
-          "headline": "Venezuela's earthquakes shifted the ground eastwards and westwards along the country's northern coast",
-          "url": "https://www.msn.com/en-gb/news/other/venezuela-s-earthquakes-shifted-the-ground-eastwards-and-westwards-along-the-country-s-northern-coast/ar-AA27TpXP?ocid=BingNewsVerp",
-          "outlet": "yourweather.co.uk on MSN",
-          "published_date": "2026-07-15T09:07:26+00:00"
-        },
-        {
-          "headline": "... Montaner among artists performing at Kaseya Center concert to benefit...",
-          "url": "https://wsvn.com/entertainment/marc-anthony-ricardo-montaner-among-artists-performing-at-kaseya-center-concert-to-benefit-victims-of-venezuela-earthquakes/",
-          "outlet": "7 News Miami",
-          "published_date": "2026-07-15T15:55:10+00:00"
-        },
-        {
-          "headline": "US troops unload China's only known aid flight to earthquake-ravaged Venezuela...",
-          "url": "https://www.yahoo.com/news/us/articles/us-troops-unload-chinas-only-190929821.html",
-          "outlet": "Fox News · via Yahoo News",
-          "published_date": "2026-07-15T18:55:10+00:00"
-        },
-        {
-          "headline": "Venezuela on the precipice; Before quakes, 8 of 28 million were on humanitarian...",
-          "url": "https://worldtribune.com/venezuela-on-the-precipice-before-quakes-8-of-28-million-were-on-humanitarian-assistance/",
-          "outlet": "World Tribune",
-          "published_date": "2026-07-15T18:55:10+00:00"
-        },
-        {
-          "headline": "St. Paul chef leads fundraiser for earthquake recovery in Venezuela",
-          "url": "https://www.mprnews.org/episode/2026/07/15/st-paul-chef-leads-fundraiser-for-earthquake-recovery-in-venezuela",
-          "outlet": "MPR News",
-          "published_date": "2026-07-15T19:55:13+00:00"
-        },
-        {
-          "headline": "Venezuela’s double whammy earthquakes: Critical health services take priority",
-          "url": "https://www.jamaicaobserver.com/2026/07/16/venezuelas-double-whammy-earthquakes-critical-health-services-take-priority/",
-          "outlet": "Jamaica Observer",
-          "published_date": "2026-07-16T00:00:00+00:00"
-        },
-        {
-          "headline": "EU Provides Extra €20 Million in Aid for Venezuela After Earthquake",
-          "url": "https://www.usnews.com/news/world/articles/2026-07-15/eu-provides-extra-20-million-in-aid-for-venezuela-after-earthquake",
-          "outlet": "U.S. News & World Report",
-          "published_date": "2026-07-16T03:55:10+00:00"
-        },
-        {
-          "headline": "Death Toll From Venezuela Quakes Rises to 4,829, Government Says",
-          "url": "https://www.usnews.com/news/world/articles/2026-07-15/death-toll-from-venezuela-quakes-rises-to-4-829-government-says",
-          "outlet": "U.S. News & World Report",
-          "published_date": "2026-07-16T03:55:10+00:00"
-        },
-        {
-          "headline": "Fact Check: Fake image of dog protecting child spreads after deadly Venezuela...",
-          "url": "https://www.yahoo.com/news/world/articles/fact-check-fake-image-dog-130000810.html",
-          "outlet": "Snopes · via Yahoo News",
-          "published_date": "2026-07-16T12:50:34+00:00"
-        },
-        {
-          "headline": "Death toll from Venezuela earthquakes rises to 4,829",
-          "url": "https://www.msn.com/en-ae/news/other/death-toll-from-venezuela-earthquakes-rises-to-4829/ar-AA2809dv?ocid=BingNewsVerp",
-          "outlet": "Emirates News Agency on MSN",
-          "published_date": "2026-07-16T19:50:37+00:00"
-        },
-        {
-          "headline": "Venezuela’s recovery clouded by uncertainty three weeks after earthquake",
-          "url": "https://www.aljazeera.com/video/newsfeed/2026/7/16/venezuelas-recovery-clouded-by-uncertainty-three-weeks-after-earthquake",
-          "outlet": "Al Jazeera",
-          "published_date": "2026-07-16T19:50:37+00:00"
-        }
-      ],
-      "news_total": 106,
-      "logs": [
-        {
-          "log_date": "2026-06-28",
-          "summary": "Two powerful earthquakes struck Venezuela, causing widespread devastation. Death toll reports vary, with some sources citing at least 188 killed and others reporting over 3,800 deaths, while more than 68,000 people remain missing. Survivors face water shortages, and international aid and domestic relief efforts are underway.",
-          "news": [
-            {
-              "news_id": 1700001000063,
-              "url": "https://www.aljazeera.com/news/2026/6/25/world-reacts-as-devastating-venezuela-earthquakes-kill-at-least-32",
-              "headline": "World reacts as devastating Venezuela earthquakes kill at least 188",
-              "published_date": "2026-06-24T00:00:00+00:00",
-              "outlet": "Al Jazeera English"
-            },
-            {
-              "news_id": 1700001000347,
-              "url": "https://www.wmnf.org/venezuela-earthquake-live-updates-july-8-2026/",
-              "headline": "Venezuela Earthquake Live Updates: July 8, 2026",
-              "published_date": "2026-06-25T00:00:00+00:00",
-              "outlet": "WMNF"
-            },
-            {
-              "news_id": 1700001000413,
-              "url": "https://www.yahoo.com/news/articles/venezuela-calls-release-frozen-assets-163652539.html",
-              "headline": "Venezuela calls for release of frozen assets to help earthquake recovery efforts",
-              "published_date": "2026-06-25T00:00:00+00:00",
-              "outlet": "Euronews · via Yahoo News"
-            },
-            {
-              "news_id": 1700001000447,
-              "url": "https://www.yahoo.com/news/world/articles/more-68-000-people-still-084624028.html",
-              "headline": "More than 68,000 people still missing in Venezuela after devastating earthquakes",
-              "published_date": "2026-06-25T00:00:00+00:00",
-              "outlet": "Euronews · via Yahoo News"
-            },
-            {
-              "news_id": 1700001000066,
-              "url": "https://www.aol.com/articles/death-toll-venezuela-earthquakes-climbs-205057000.html",
-              "headline": "Death toll from Venezuela earthquakes climbs over 3,800",
-              "published_date": "2026-06-26T00:00:00+00:00",
-              "outlet": "AOL"
-            },
-            {
-              "news_id": 1700001000120,
-              "url": "https://www.huffpost.com/entry/venezuela-earthquake-water-shortages_n_6a4ef7f4e4b01b9297114e67",
-              "headline": "Venezuela Earthquake Survivors Improvise Showers, Toilets Amid Water Shortages",
-              "published_date": "2026-06-26T00:00:00+00:00",
-              "outlet": "The Huffington Post"
-            },
-            {
-              "news_id": 1700001000129,
-              "url": "https://www.latimes.com/world-nation/story/2026-07-08/on-la-guaira-beaches-venezuela-quake-survivors-improvise-showers-toilets",
-              "headline": "On La Guaira’s beaches, Venezuela quake survivors improvise showers and toilets amid water shortages",
-              "published_date": "2026-06-26T00:00:00+00:00",
-              "outlet": "Los Angeles Times"
-            },
-            {
-              "news_id": 1700001000349,
-              "url": "https://www.wral.com/news/ap/d5dd3-on-la-guaira-s-beaches-venezuela-quake-survivors-improvise-showers-and-toilets-amid-water-shortages/",
-              "headline": "On La Guaira’s beaches, Venezuela quake survivors improvise showers and toilets ...",
-              "published_date": "2026-06-26T00:00:00+00:00",
-              "outlet": "WRAL.com Raleigh"
-            },
-            {
-              "news_id": 1700001000438,
-              "url": "https://www.yahoo.com/news/world/articles/bad-bunny-earthquake-aid-reaches-205307107.html",
-              "headline": "Bad Bunny’s earthquake aid reaches Venezuela as country’s president publicly tha...",
-              "published_date": "2026-06-26T00:00:00+00:00",
-              "outlet": "TheGrio · via Yahoo News"
-            },
-            {
-              "news_id": 1700001000006,
-              "url": "https://apnews.com/video/venezuela-earthquake-survivors-face-water-shortages-receive-aid-packages-ab6e7b1b4e9643228ffcca7276966b75",
-              "headline": "Venezuela earthquake survivors face water shortages, receive aid packages",
-              "published_date": "2026-06-27T00:00:00+00:00",
-              "outlet": "Associated Press News"
-            },
-            {
-              "news_id": 1700001000450,
-              "url": "https://www.yahoo.com/news/world/articles/world-reacts-devastating-venezuela-earthquakes-090640605.html",
-              "headline": "World reacts as devastating Venezuela earthquakes kill at least 188",
-              "published_date": "2026-06-27T14:43:52+00:00",
-              "outlet": "Yahoo"
-            },
-            {
-              "news_id": 1700001000441,
-              "url": "https://www.yahoo.com/news/world/articles/doctors-seek-prevent-health-crisis-171339079.html",
-              "headline": "Doctors seek to prevent health crisis after Venezuela earthquakes",
-              "published_date": "2026-06-28T00:00:00+00:00",
-              "outlet": "United Press International · via Yahoo News"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-02",
-          "summary": "A survivor was pulled from rubble eight days after the earthquakes, and reporting highlighted that more than 100 recently deported Venezuelans were among those trapped. International condolences and fundraising efforts, including a Dodgers 50/50 raffle, have emerged as responses to the disaster.",
-          "news": [
-            {
-              "news_id": 1700001000051,
-              "url": "https://sports.yahoo.com/articles/dodgers-50-50-raffle-raising-021441847.html",
-              "headline": "Dodgers 50/50 Raffle Raising Money for Venezuela Earthquake Relief",
-              "published_date": "2026-06-30T00:00:00+00:00",
-              "outlet": "Dodgers Nation · via Yahoo Sports"
-            },
-            {
-              "news_id": 1700001000073,
-              "url": "https://www.azernews.az/nation/260458.html",
-              "headline": "President Ilham Aliyev sends letter to Acting President of Bolivarian Republic of Venezuela",
-              "published_date": "2026-06-30T00:00:00+00:00",
-              "outlet": "AzerNews"
-            },
-            {
-              "news_id": 1700001000232,
-              "url": "https://www.msn.com/en-us/news/world/he-survived-one-of-venezuelas-deadliest-disasters-years-later-he-was-deported-into-another/ar-AA27v05n?ocid=BingNewsVerp",
-              "headline": "He survived one of Venezuela's deadliest disasters. Years later, he was deported into another",
-              "published_date": "2026-06-30T00:00:00+00:00",
-              "outlet": "Miami Herald on MSN"
-            },
-            {
-              "news_id": 1700001000089,
-              "url": "https://www.cnn.com/2026/07/02/americas/venezuela-earthquake-survivor-rescued-intl-hnk",
-              "headline": "Man pulled from rubble in ‘miraculous’ rescue 8 days after devastating Venezuela...",
-              "published_date": "2026-07-02T08:12:35+00:00",
-              "outlet": "CNN.com"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-10",
-          "summary": "The death toll from Venezuela's twin earthquakes has risen to between 3,811 and 3,889, with a survivor rescued after 183 hours. Health workers report surges in chronic illness and diarrhea due to crowded shelters and lack of clean water. International aid continues, including Guyana shipping 88 containers of supplies, India's Operation Amistad, and the USS San Antonio arriving at La Guaira port.",
-          "news": [
-            {
-              "news_id": 1700001000337,
-              "url": "https://www.usatoday.com/story/news/world/2026/06/25/venezuela-earthquakes-deaths-rescue-efforts-what-to-know/90688005007/",
-              "headline": "Venezuela races to rescue hundreds after massive earthquakes. Updates",
-              "published_date": "2026-06-25T00:00:00+00:00",
-              "outlet": "USA TODAY"
-            },
-            {
-              "news_id": 1700001000304,
-              "url": "https://www.si.com/mlb/dodgers/onsi/dodgers-rookie-family-found-dead-ahead-mlb-debut",
-              "headline": "Dodgers Rookie Eliezer Alfonzo Jr.'s Family Found Dead After Earthquakes in...",
-              "published_date": "2026-07-06T00:00:00+00:00",
-              "outlet": "Sports Illustrated"
-            },
-            {
-              "news_id": 1700001000096,
-              "url": "https://www.dailynews.com/2026/07/07/la-area-artists-launch-benefit-exhibition-and-art-sale-for-children-of-venezuela/",
-              "headline": "LA-area artists launch benefit exhibition and art sale for children of Venezuela",
-              "published_date": "2026-07-07T00:00:00+00:00",
-              "outlet": "Los Angeles Daily News"
-            },
-            {
-              "news_id": 1700001000019,
-              "url": "https://guyanachronicle.com/2026/07/08/relief-supplies-leave-for-earthquake-ravaged-venezuela/",
-              "headline": "Relief supplies leave for earthquake-ravaged Venezuela",
-              "published_date": "2026-07-08T00:00:00+00:00",
-              "outlet": "Guyana Chronicle"
-            },
-            {
-              "news_id": 1700001000061,
-              "url": "https://ticotimes.net/2026/07/08/venezuela-earthquake-survivor-rescue",
-              "headline": "How rescuers carried out 180-hour ‘miracle’ amid Venezuela’s ruins",
-              "published_date": "2026-07-08T00:00:00+00:00",
-              "outlet": "The Tico Times"
-            },
-            {
-              "news_id": 1700001000090,
-              "url": "https://www.cnn.com/2026/07/08/americas/venezuela-earthquake-delcy-rodriguez-intl-latam",
-              "headline": "Venezuela’s acting president is facing her worst crisis yet. Could it help her s...",
-              "published_date": "2026-07-08T00:00:00+00:00",
-              "outlet": "CNN.com"
-            },
-            {
-              "news_id": 1700001000276,
-              "url": "https://www.npr.org/2026/07/08/g-s1-132410/venezuela-earthquake-healthcare",
-              "headline": "A spirit of resilience helps Venezuelans face healthcare challenges after the quakes",
-              "published_date": "2026-07-08T00:00:00+00:00",
-              "outlet": "NPR"
-            },
-            {
-              "news_id": 1700001000440,
-              "url": "https://www.yahoo.com/news/world/articles/death-toll-venezuela-earthquakes-climbs-205057475.html",
-              "headline": "Death toll from Venezuela earthquakes climbs over 3,800",
-              "published_date": "2026-07-08T00:00:00+00:00",
-              "outlet": "ABC News · via Yahoo News"
-            },
-            {
-              "news_id": 1700001000064,
-              "url": "https://www.aninews.in/news/world/asia/honour-to-serve-people-of-venezuela-india-thanks-venezuela-for-recognising-operation-amistad20260708083533/",
-              "headline": "\"Honour to serve people of Venezuela\": India thanks Venezuela for recognising 'Operation Amistad'",
-              "published_date": "2026-07-08T14:30:54+00:00",
-              "outlet": "Asian News International"
-            },
-            {
-              "news_id": 1700001000142,
-              "url": "https://www.msn.com/en-ae/news/news/uae-expresses-solidarity-with-venezuela-conveys-condolences-over-victims-of-two-earthquakes/ar-AA26vVE3?ocid=BingNewsVerp",
-              "headline": "UAE expresses solidarity with Venezuela, conveys condolences over victims of two earthquakes",
-              "published_date": "2026-07-08T22:07:18+00:00",
-              "outlet": "Emirates News Agency on MSN"
-            },
-            {
-              "news_id": 1700001000144,
-              "url": "https://www.msn.com/en-ae/news/other/uae-president-conveys-condolences-to-acting-president-of-venezuela-over-earthquake-victims/ar-AA26Hl9C?ocid=BingNewsVerp",
-              "headline": "UAE president conveys condolences to acting president of Venezuela over earthquake victims",
-              "published_date": "2026-07-08T22:07:18+00:00",
-              "outlet": "Emirates News Agency on MSN"
-            },
-            {
-              "news_id": 1700001000160,
-              "url": "https://www.msn.com/en-gb/news/world/seismic-doublet-the-phenomenon-that-turned-venezuelas-tragedy-into-catastrophe/ar-AA26Bctn?ocid=BingNewsVerp",
-              "headline": "Seismic doublet: the phenomenon that turned Venezuela's tragedy into catastrophe",
-              "published_date": "2026-07-08T22:07:18+00:00",
-              "outlet": "Euronews on MSN"
-            },
-            {
-              "news_id": 1700001000181,
-              "url": "https://www.msn.com/en-in/public-safety-and-emergencies/general/venezuela-quake-indian-army-s-operation-amistad-brings-comfort/ar-AA27d6ea?ocid=BingNewsVerp",
-              "headline": "Venezuela quake: Indian Army's 'Operation Amistad' brings comfort",
-              "published_date": "2026-07-08T22:07:18+00:00",
-              "outlet": "Newsable Asianet News on MSN"
-            },
-            {
-              "news_id": 1700001000001,
-              "url": "http://www.au.int/en/pressrelease/statement-chairperson-african-union-commission-following-earthquakes-venezuela",
-              "headline": "Statement of the Chairperson of the African Union Commission following the earthquakes in Venezuela",
-              "published_date": "2026-07-08T22:08:25+00:00",
-              "outlet": "African Union"
-            },
-            {
-              "news_id": 1700001000141,
-              "url": "https://www.msn.com/en-ae/news/national/uae-conveys-condolences-to-venezuela-over-victims-of-twin-earthquakes/ar-AA26vE6H?ocid=BingNewsVerp",
-              "headline": "UAE conveys condolences to Venezuela over victims of twin earthquakes",
-              "published_date": "2026-07-08T22:08:25+00:00",
-              "outlet": "Khaleej Times on MSN"
-            },
-            {
-              "news_id": 1700001000040,
-              "url": "https://news.un.org/en/story/2026/07/1167899",
-              "headline": "‘Help is coming’: UN relief chief briefs on Venezuela quake recovery",
-              "published_date": "2026-07-09T00:00:00+00:00",
-              "outlet": "UN News"
-            },
-            {
-              "news_id": 1700001000311,
-              "url": "https://www.taipeitimes.com/News/world/archives/2026/07/09/2003860474",
-              "headline": "Venezuela quake survivor Gil ‘reborn’",
-              "published_date": "2026-07-09T00:00:00+00:00",
-              "outlet": "Taipei Times"
-            },
-            {
-              "news_id": 1783658001034,
-              "url": "https://www.jamaicaobserver.com/2026/07/09/guyana-donates-88-containers-relief-supplies-earthquake-hit-venezuela/",
-              "headline": "Guyana donates 88 containers of relief supplies to earthquake-hit Venezuela",
-              "published_date": "2026-07-09T00:00:00+00:00",
-              "outlet": "Jamaica Observer"
-            },
-            {
-              "news_id": 1783658001134,
-              "url": "https://www.local10.com/video/news/2026/07/09/more-than-3800-killed-in-venezuela-earthquakes/",
-              "headline": "More than 3,800 killed in Venezuela earthquakes",
-              "published_date": "2026-07-09T00:00:00+00:00",
-              "outlet": "WPLG Local 10"
-            },
-            {
-              "news_id": 1783658001160,
-              "url": "https://www.sun-sentinel.com/2026/07/09/so-happy-to-save-a-life-palm-beach-county-firefighters-help-in-international-rescue-efforts-in-venezuela/",
-              "headline": "‘So happy to save a life:’ Palm Beach County firefighters help in international rescue efforts in Venezuela",
-              "published_date": "2026-07-09T00:00:00+00:00",
-              "outlet": "Sun Sentinel"
-            },
-            {
-              "news_id": 1783658001182,
-              "url": "https://www.local10.com/news/world/2026/07/09/helping-venezuela-uss-san-antonio-serves-at-port-of-la-guaira/",
-              "headline": "Helping Venezuela: USS San Antonio serves at Port of La Guaira",
-              "published_date": "2026-07-09T00:00:00+00:00",
-              "outlet": "WPLG Local 10"
-            },
-            {
-              "news_id": 1783662721180,
-              "url": "https://www.bostonherald.com/2026/07/09/venezuela-earthquake-disease-surge/",
-              "headline": "Chronic illness and diarrhea surge in quake-hit Venezuelan communities as humanitarian crisis builds",
-              "published_date": "2026-07-09T00:00:00+00:00",
-              "outlet": "Boston Herald"
-            },
-            {
-              "news_id": 1783658001215,
-              "url": "https://www.wflx.com/2026/07/10/south-florida-rescue-team-reflects-58-hour-mission-that-saved-trapped-man-venezuela/",
-              "headline": "South Florida Rescue Team Reflects on 58-Hour Mission That Saved Trapped Man in Venezuela",
-              "published_date": "2026-07-10T00:00:00+00:00",
-              "outlet": "WFLX"
-            },
-            {
-              "news_id": 1783658001011,
-              "url": "https://www.msn.com/en-us/news/world/death-toll-from-venezuela-quakes-rises-to-3811/ar-AA27vHrv?ocid=BingNewsVerp",
-              "headline": "Death toll from Venezuela quakes rises to 3,811",
-              "published_date": "2026-07-10T04:33:21+00:00",
-              "outlet": "Reuters on MSN"
-            },
-            {
-              "news_id": 1783658001056,
-              "url": "https://www.cubaheadlines.com/articles/334635",
-              "headline": "Venezuela Partners with the UN to Provide Prefabricated Homes for Thousands Displaced by Earthquakes",
-              "published_date": "2026-07-10T04:33:21+00:00",
-              "outlet": "Cuba Headlines"
-            },
-            {
-              "news_id": 1783658001068,
-              "url": "https://www.rappler.com/world/latin-america/death-toll-venezuela-quakes-rises-update-july-9-2026/",
-              "headline": "Death toll from Venezuela quakes rises to 3,889",
-              "published_date": "2026-07-10T04:33:21+00:00",
-              "outlet": "Rappler"
-            },
-            {
-              "news_id": 1783658001088,
-              "url": "https://www.newsday.com/news/nation/venezuela-earthquake-humanitarian-aid-health-crisis-l35972",
-              "headline": "Chronic illness and diarrhea surge in quake-hit Venezuelan communities as humanitarian crisis builds",
-              "published_date": "2026-07-10T04:33:21+00:00",
-              "outlet": "Newsday"
-            },
-            {
-              "news_id": 1783658001112,
-              "url": "https://www.msn.com/en-us/news/other/earthquakes-in-venezuela-expose-a-severely-under-resourced-and-unprepared-healthcare-system/ar-AA27AbyC?ocid=BingNewsVerp",
-              "headline": "Earthquakes in Venezuela expose a severely under-resourced and unprepared healthcare system",
-              "published_date": "2026-07-10T04:33:21+00:00",
-              "outlet": "Collinsville Daily News on MSN"
-            },
-            {
-              "news_id": 1783658001198,
-              "url": "https://www.miamiherald.com/news/local/community/miami-dade/article316432950.html",
-              "headline": "‘It looked like an apocalypse’: Miami rescuers describe their efforts in Venezuela",
-              "published_date": "2026-07-10T04:33:21+00:00",
-              "outlet": "Miami Herald"
-            },
-            {
-              "news_id": 1783662721093,
-              "url": "https://www.accuweather.com/en/weather-news/venezuelan-cemetery-expands-burials-for-earthquake-victims-many-of-whom-remain-unidentified/1909690",
-              "headline": "Venezuelan cemetery expands burials for earthquake victims, many of whom remain...",
-              "published_date": "2026-07-10T05:52:01+00:00",
-              "outlet": "AccuWeather"
-            },
-            {
-              "news_id": 1783662721154,
-              "url": "https://www.bloomberg.com/news/articles/2026-07-04/venezuela-quake-death-toll-climbs-to-nearly-3-000",
-              "headline": "Venezuela Quake Death Toll Climbs to Nearly 3,000",
-              "published_date": "2026-07-10T05:52:01+00:00",
-              "outlet": "Bloomberg"
-            },
-            {
-              "news_id": 1783690385142,
-              "url": "https://www.commondreams.org/news/venezuela-oil-wealth-earthquake",
-              "headline": "US Provides $300 Million in Earthquake Recovery Money to Venezuela While Sitting...",
-              "published_date": "2026-07-10T13:33:05+00:00",
-              "outlet": "CommonDreams.org"
-            },
-            {
-              "news_id": 1783690385153,
-              "url": "https://parade.com/news/metallica-announces-major-move-outside-of-2026-tour",
-              "headline": "Metallica Announces Earthquake Relief Donation Amid 2026 Tour",
-              "published_date": "2026-07-10T13:33:05+00:00",
-              "outlet": "Parade"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-11",
-          "summary": "The death toll from the June 24 earthquakes has surpassed 4,300, with crematoria and morgues operating around the clock. Rescuers detected possible signs of life from a 9-year-old boy under rubble after 16 days, while the disaster has worsened mental health crises and caused identification errors in overwhelmed morgues, particularly affecting victims of a deportation flight. Relief efforts continue, with organizations like ShelterBox distributing aid and debates emerging about the impact of sanctions on recovery.",
-          "news": [
-            {
-              "news_id": 1783791435692,
-              "url": "https://www.msn.com/en-us/news/world/teen-venezuela-quake-survivor-mourns-her-young-forever-friends/ar-AA27H2iE?ocid=BingNewsVerp",
-              "headline": "Teen Venezuela quake survivor mourns her 'young forever' friends",
-              "published_date": "2026-07-06T17:36:45+00:00",
-              "outlet": "Reuters on MSN"
-            },
-            {
-              "news_id": 1783791435804,
-              "url": "https://www.msn.com/en-us/news/world/venezuela-quake-rescuers-believe-boy-9-is-alive-under-rubble-after-16-days/ar-AA27GpBW?ocid=BingNewsVerp",
-              "headline": "Venezuela quake rescuers believe boy, 9, is alive under rubble after 16 days",
-              "published_date": "2026-07-07T17:36:48+00:00",
-              "outlet": "The Washington Post on MSN"
-            },
-            {
-              "news_id": 1783791435733,
-              "url": "https://efe.com/english/latest-news/2026-07-10/the-earthquake-the-final-straw-for-the-already-fragile-mental-health-of-venezuelans/",
-              "headline": "The earthquake: the final straw for the already fragile mental health of Venezuelans",
-              "published_date": "2026-07-10T17:36:45+00:00",
-              "outlet": "Agencia EFE"
-            },
-            {
-              "news_id": 1783791435751,
-              "url": "https://keyt.com/news/santa-barbara-s-county/2026/07/10/shelterbox-moves-into-active-relief-effort-in-venezuela/",
-              "headline": "ShelterBox Moves Into Active Relief Effort in Venezuela",
-              "published_date": "2026-07-10T17:36:45+00:00",
-              "outlet": "News Channel 3-12"
-            },
-            {
-              "news_id": 1783791435673,
-              "url": "https://english.alarabiya.net/News/world/2026/07/11/death-toll-in-venezuela-earthquakes-surpasses-4300-official",
-              "headline": "Death toll in Venezuela earthquakes surpasses 4,300: Official",
-              "published_date": "2026-07-11T00:00:00+00:00",
-              "outlet": "Al Arabiya English"
-            },
-            {
-              "news_id": 1783791435767,
-              "url": "https://www.latimes.com/opinion/story/2026-07-11/sanctions-venezuela-earthquake-imf",
-              "headline": "Sanctions are making Venezuela’s earthquake toll so much worse",
-              "published_date": "2026-07-11T10:36:49+00:00",
-              "outlet": "Los Angeles Times"
-            },
-            {
-              "news_id": 1783791435654,
-              "url": "https://www.wmnf.org/venezuela-earthquake-live-updates-july-10-2026/",
-              "headline": "Venezuela Earthquake Live Updates: July 10, 2026",
-              "published_date": "2026-07-11T17:36:45+00:00",
-              "outlet": "WMNF"
-            },
-            {
-              "news_id": 1783791435715,
-              "url": "https://efe.com/english/latest-news/2026-07-11/crematoria-morgues-in-venezuela-operate-24-hours-a-day-as-death-toll-increases-to-4-118/",
-              "headline": "Crematoria, morgues in Venezuela operate 24 hours a day as death toll increases to 4.118",
-              "published_date": "2026-07-11T17:36:45+00:00",
-              "outlet": "Agencia EFE"
-            },
-            {
-              "news_id": 1783791435780,
-              "url": "https://www.globaltimes.cn/page/202607/1365669.shtml",
-              "headline": "Venezuela quake death toll rises to 4,118: top lawmaker",
-              "published_date": "2026-07-11T17:36:49+00:00",
-              "outlet": "Global Times"
-            },
-            {
-              "news_id": 1783791435792,
-              "url": "https://www.msn.com/en-us/news/crime/chaos-in-venezuelas-morgues-fuels-identification-errors-among-flight-164-victims/ar-AA27Ezvf?ocid=BingNewsVerp",
-              "headline": "Chaos in Venezuela's morgues fuels identification errors among Flight 164 victims",
-              "published_date": "2026-07-11T17:36:49+00:00",
-              "outlet": "Miami Herald on MSN"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-13",
-          "summary": "As of July 12, the death toll from the June 24 twin earthquakes in Venezuela has risen to 4,490. Animal shelters are overwhelmed with injured pets, and political responses include Delcy Rodríguez's pragmatic moves such as unblocking X and accepting aid. Relief efforts continue, with the Miami Marlins assisting in packing supplies, while opinion pieces highlight the worsening humanitarian crisis due to sanctions and long-term recovery challenges.",
-          "news": [
-            {
-              "news_id": 1783910609599,
-              "url": "https://efe.com/english/latest-news/2026-07-12/delcy-rodriguezs-opening-amidst-the-tragedy-temporary-truce-or-permanent-shift/",
-              "headline": "Delcy Rodríguez’s opening amidst the tragedy: temporary truce or permanent shift?",
-              "published_date": "2026-07-08T02:43:18+00:00",
-              "outlet": "Agencia EFE"
-            },
-            {
-              "news_id": 1783912060322,
-              "url": "https://wsvn.com/sports/miami-marlins/miami-marlins-assist-volunteers-at-gem-to-pack-supplies-for-venezuela-earthquake-victims/",
-              "headline": "Miami Marlins assist volunteers at GEM to pack supplies for Venezuela earthquake...",
-              "published_date": "2026-07-08T03:07:04+00:00",
-              "outlet": "7 News Miami"
-            },
-            {
-              "news_id": 1783912060344,
-              "url": "https://www.yahoo.com/news/world/articles/venezuela-earthquakes-toll-rises-3-232550536.html",
-              "headline": "Venezuela earthquakes toll rises to 3,889 as risk of disease grows",
-              "published_date": "2026-07-10T03:07:07+00:00",
-              "outlet": "Al Jazeera · via Yahoo News"
-            },
-            {
-              "news_id": 1783912060332,
-              "url": "https://www.yahoo.com/news/politics/articles/contributor-sanctions-making-venezuelas-earthquake-100300122.html",
-              "headline": "Contributor: Sanctions are making Venezuela's earthquake toll so much worse",
-              "published_date": "2026-07-11T03:07:07+00:00",
-              "outlet": "Los Angeles Times Opinion · via Yahoo News"
-            },
-            {
-              "news_id": 1783912060354,
-              "url": "https://www.chicagotribune.com/2026/07/12/opinion-venezuela-earthquakes-trauma-recovery/",
-              "headline": "Cristina Guevara: What happens after the cameras leave a Venezuela torn apart by...",
-              "published_date": "2026-07-12T10:07:07+00:00",
-              "outlet": "Chicago Tribune"
-            },
-            {
-              "news_id": 1783912060311,
-              "url": "https://www.accuweather.com/en/weather-news/death-toll-after-venezuela-earthquake-rises-to-4333/1910767",
-              "headline": "Death toll after Venezuela earthquake rises to 4,333",
-              "published_date": "2026-07-12T15:07:04+00:00",
-              "outlet": "AccuWeather"
-            },
-            {
-              "news_id": 1783910609584,
-              "url": "https://www.msn.com/en-us/news/world/venezuela-animal-shelters-at-capacity-after-earthquakes/vi-AA27JNqw?ocid=BingNewsVerp",
-              "headline": "Venezuela animal shelters at capacity after earthquakes",
-              "published_date": "2026-07-13T02:43:18+00:00",
-              "outlet": "CNN on MSN"
-            },
-            {
-              "news_id": 1783912060266,
-              "url": "https://www.msn.com/en-us/news/world/death-toll-from-venezuela-earthquakes-rises-to-4490/ar-AA27KR9h?ocid=BingNewsVerp",
-              "headline": "Death toll from Venezuela earthquakes rises to 4,490",
-              "published_date": "2026-07-13T03:07:04+00:00",
-              "outlet": "Reuters on MSN"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-15",
-          "summary": "Venezuela's Acting President Delcy Rodríguez publicly thanked Caricom countries for their aid as the death toll from the twin earthquakes remained at 4,829, with thousands homeless and families continuing to search rubble. The earthquake recovery effort has also overshadowed the country's push for democracy, according to analysis.\n\nNew reports detail ongoing recovery: the death toll remains at 4,490, while NASA radar data reveals significant ground shifts near La Guaira. Aid continues from Florida, Guyana, and Houston, bolstered by U.S. State Department support, and volunteers search tirelessly for missing victims. Lawmakers have urged lifting sanctions, and Venezuela’s inflation spike is compounding earthquake misery.\n\nNew reports as of July 14 show the earthquake death toll has risen to between 4,561 and 4,734. A Palm Beach County Fire Rescue team successfully rescued a man buried in rubble, and aid continues to flow from Florida and other regions to support recovery efforts.",
-          "news": [
-            {
-              "news_id": 1784098529984,
-              "url": "https://science.nasa.gov/earth/earth-observatory/where-venezuelas-earthquakes-shifted-the-ground/",
-              "headline": "Where Venezuela’s Earthquakes Shifted the Ground - NASA Science",
-              "published_date": "2026-07-10T06:55:14+00:00",
-              "outlet": "NASA"
-            },
-            {
-              "news_id": 1784098530044,
-              "url": "https://www.jamaicaobserver.com/2026/07/14/venezuelan-fashion-house-stitches-body-bags-quake-victims/",
-              "headline": "Venezuelan fashion house stitches body bags for quake victims",
-              "published_date": "2026-07-11T06:55:17+00:00",
-              "outlet": "Jamaica Observer"
-            },
-            {
-              "news_id": 1784212985058,
-              "url": "https://www.khaosodenglish.com/news/2026/07/16/venezuela-earthquake-death-toll-nears-5000-as-families-continue-searching-rubble/",
-              "headline": "Venezuela earthquake death toll nears 5,000 as families continue searching rubble",
-              "published_date": "2026-07-12T14:42:50+00:00",
-              "outlet": "Khaosod English"
-            },
-            {
-              "news_id": 1784098529871,
-              "url": "https://www.yahoo.com/entertainment/music/articles/shakira-urges-more-global-support-172128387.html",
-              "headline": "Shakira Urges More Global Support for Schools After Earthquakes: ‘Venezuela, You...",
-              "published_date": "2026-07-13T06:55:14+00:00",
-              "outlet": "Billboard · via Yahoo News"
-            },
-            {
-              "news_id": 1784098529924,
-              "url": "https://www.yahoo.com/news/articles/venezuela-quake-death-toll-rises-064904067.html",
-              "headline": "Venezuela quake death toll rises to 4,490, officials say, but no number given...",
-              "published_date": "2026-07-13T06:55:14+00:00",
-              "outlet": "Euronews · via Yahoo News"
-            },
-            {
-              "news_id": 1784098530078,
-              "url": "https://www.bloomberg.com/news/articles/2026-07-13/venezuela-s-inflation-spike-compounds-earthquake-misery",
-              "headline": "Venezuela’s Inflation Spike Compounds Earthquake Misery",
-              "published_date": "2026-07-13T06:55:17+00:00",
-              "outlet": "Bloomberg"
-            },
-            {
-              "news_id": 1784098529943,
-              "url": "https://www.bostonherald.com/2026/07/14/venezuela-earthquake-aid-volunteers/",
-              "headline": "Earthquake aid keeps flowing from Florida to Venezuela, as volunteers unite to help recovery",
-              "published_date": "2026-07-14T00:00:00+00:00",
-              "outlet": "Boston Herald"
-            },
-            {
-              "news_id": 1784098530023,
-              "url": "https://guyanachronicle.com/2026/07/14/guyana-led-humanitarian-aid-arrives-in-venezuela-for-earthquake-victims/",
-              "headline": "Guyana-led humanitarian aid arrives in Venezuela for earthquake victims",
-              "published_date": "2026-07-14T00:00:00+00:00",
-              "outlet": "Guyana Chronicle"
-            },
-            {
-              "news_id": 1784098530060,
-              "url": "https://www.houstonpublicmedia.org/articles/news/in-depth/2026/07/14/556958/houston-venezuela-relief/",
-              "headline": "From first aid to airplanes: How Houston’s relief efforts are reaching Venezuela",
-              "published_date": "2026-07-14T00:00:00+00:00",
-              "outlet": "Houston Public Media"
-            },
-            {
-              "news_id": 1784098530113,
-              "url": "https://www.mycentraloregon.com/2026/07/14/pretty-dire-aid-workers-reveal-health-needs-in-venezuela-amid-recovery-from-earthquakes/",
-              "headline": "‘Pretty dire’: Aid workers reveal health needs in Venezuela amid recovery from earthquakes",
-              "published_date": "2026-07-14T00:00:00+00:00",
-              "outlet": "MyCentralOregon.com"
-            },
-            {
-              "news_id": 1784098530132,
-              "url": "https://guyanachronicle.com/2026/07/14/psc-commends-members-for-humanitarian-support-to-earthquake-hit-venezuela/",
-              "headline": "PSC commends members for humanitarian support to earthquake-hit Venezuela",
-              "published_date": "2026-07-14T00:00:00+00:00",
-              "outlet": "Guyana Chronicle"
-            },
-            {
-              "news_id": 1784106459849,
-              "url": "https://www.baltimoresun.com/2026/07/14/venezuela-earthquake-aid-volunteers/",
-              "headline": "Earthquake aid keeps flowing from Florida to Venezuela, as volunteers unite to help recovery",
-              "published_date": "2026-07-14T00:00:00+00:00",
-              "outlet": "The Baltimore Sun"
-            },
-            {
-              "news_id": 1784106459855,
-              "url": "https://www.palmbeachpost.com/story/news/local/2026/07/14/county-firefighters-helped-rescue-man-buried-by-venezuelan-earthquakes/90911079007/",
-              "headline": "County firefighters helped rescue man buried by Venezuelan earthquakes",
-              "published_date": "2026-07-14T00:00:00+00:00",
-              "outlet": "The Palm Beach Post"
-            },
-            {
-              "news_id": 1784212985056,
-              "url": "https://www.npr.org/2026/07/14/nx-s1-5893438/venezuelas-democracy-delayed",
-              "headline": "Venezuela's earthquake recovery overshadows its push for democracy",
-              "published_date": "2026-07-14T00:00:00+00:00",
-              "outlet": "NPR"
-            },
-            {
-              "news_id": 1784098529962,
-              "url": "https://www.newstimes.com/business/article/earthquake-aid-keeps-flowing-from-florida-to-22344413.php",
-              "headline": "Earthquake aid keeps flowing from Florida to Venezuela, as volunteers unite to...",
-              "published_date": "2026-07-14T12:55:14+00:00",
-              "outlet": "The News-Times"
-            },
-            {
-              "news_id": 1784212985052,
-              "url": "https://www.jamaicaobserver.com/2026/07/15/venezuela-welcomes-aid-caricom-countries-twin-quakes/",
-              "headline": "Venezuela welcomes aid from Caricom countries after twin quakes",
-              "published_date": "2026-07-15T00:00:00+00:00",
-              "outlet": "Jamaica Observer"
-            },
-            {
-              "news_id": 1784098530004,
-              "url": "https://www.msn.com/en-ph/news/world/earthquake-aid-keeps-flowing-from-florida-to-venezuela-with-help-from-the-us-state-department/ar-AA27UnjG?ocid=BingNewsVerp",
-              "headline": "Earthquake aid keeps flowing from Florida to Venezuela, with help from the U.S. State Department",
-              "published_date": "2026-07-15T06:55:17+00:00",
-              "outlet": "The Manila Times on MSN"
-            },
-            {
-              "news_id": 1784098530095,
-              "url": "https://english.elpais.com/usa/2026-07-14/group-of-lawmakers-ask-trump-to-lift-sanctions-on-venezuela-to-help-respond-to-earthquake-devastation.html",
-              "headline": "Group of lawmakers ask Trump to lift sanctions on Venezuela to help respond to earthquake devastation",
-              "published_date": "2026-07-15T06:55:17+00:00",
-              "outlet": "EL PAÍS English"
-            },
-            {
-              "news_id": 1784098530150,
-              "url": "https://www.msn.com/en-in/news/news/until-the-end-the-tireless-traumatic-search-for-venezuela-quake-victims/ar-AA27Ralo?ocid=BingNewsVerp",
-              "headline": "'Until the end': The tireless, traumatic search for Venezuela quake victims",
-              "published_date": "2026-07-15T06:55:17+00:00",
-              "outlet": "The Economic Times on MSN"
-            },
-            {
-              "news_id": 1784106459852,
-              "url": "https://www.theatlantic.com/science/2026/07/us-venezuela-earthquake-response/687907/",
-              "headline": "The Bizarre Partnership Between the U.S. and Venezuela",
-              "published_date": "2026-07-15T09:07:26+00:00",
-              "outlet": "The Atlantic"
-            },
-            {
-              "news_id": 1784106459857,
-              "url": "https://www.msn.com/en-xl/asia/pakistan/venezuela-quake-death-toll-climbs-to-4-561published-on-july-14-2026-9-42-pm/ar-AA27Uadu?ocid=BingNewsVerp",
-              "headline": "Venezuela quake death toll climbs to 4,561Published on: July 14, 2026 9:42 PM",
-              "published_date": "2026-07-15T09:07:26+00:00",
-              "outlet": "Daily Times on MSN"
-            },
-            {
-              "news_id": 1784106459860,
-              "url": "https://www.msn.com/en-us/news/world/death-toll-from-venezuela-quakes-rises-to-4734-government-says/ar-AA27U3ui?ocid=BingNewsVerp",
-              "headline": "Death toll from Venezuela quakes rises to 4,734, government says",
-              "published_date": "2026-07-15T09:07:26+00:00",
-              "outlet": "Reuters on MSN"
-            },
-            {
-              "news_id": 1784106459863,
-              "url": "https://www.msn.com/en-gb/news/other/venezuela-s-earthquakes-shifted-the-ground-eastwards-and-westwards-along-the-country-s-northern-coast/ar-AA27TpXP?ocid=BingNewsVerp",
-              "headline": "Venezuela's earthquakes shifted the ground eastwards and westwards along the country's northern coast",
-              "published_date": "2026-07-15T09:07:26+00:00",
-              "outlet": "yourweather.co.uk on MSN"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-16",
-          "summary": "The death toll from the twin earthquakes has officially risen to 4,829, according to government figures. The European Union has pledged an additional €20 million in humanitarian aid, while US troops unloaded China's only known aid flight at the scene. Reports also highlight engineers assessing structural damage, a benefit concert featuring Marc Anthony and Ricardo Montaner, and ongoing grassroots fundraising efforts from Florida to Minnesota.\n\nThe death toll from the twin earthquakes was officially confirmed at 4,829 by National Assembly President Jorge Rodriguez. A fake image of a dog protecting a child went viral and was debunked by fact-checkers. Meanwhile, recovery efforts include a World Cup halftime tribute featuring the NY Philharmonic and Gustavo Dudamel, and an opinion piece highlights the prioritization of critical health services in the aftermath.",
-          "news": [
-            {
-              "news_id": 1784231466725,
-              "url": "https://www.msn.com/en-us/news/world/fake-image-of-dog-protecting-child-spreads-after-deadly-venezuela-earthquakes/ar-AA282wCC?ocid=BingNewsVerp",
-              "headline": "Fake image of dog protecting child spreads after deadly Venezuela earthquakes",
-              "published_date": "2026-07-10T19:50:37+00:00",
-              "outlet": "Snopes on MSN"
-            },
-            {
-              "news_id": 1784231466738,
-              "url": "https://www.msn.com/en-us/news/other/death-toll-from-venezuela-quakes-rises-to-4-829-government-says/ar-AA282LxZ?ocid=BingNewsVerp",
-              "headline": "Death toll from Venezuela quakes rises to 4,829, government says",
-              "published_date": "2026-07-10T19:50:37+00:00",
-              "outlet": "Reuters on MSN"
-            },
-            {
-              "news_id": 1784174130413,
-              "url": "https://www.enr.com/articles/63305-on-the-ground-engineers-assess-damage-in-venezuela-earthquake-zone",
-              "headline": "On the Ground, Engineers Assess Damage in Venezuela Earthquake Zone",
-              "published_date": "2026-07-11T03:55:13+00:00",
-              "outlet": "Engineering News-Record"
-            },
-            {
-              "news_id": 1784231466741,
-              "url": "https://www.msn.com/en-ca/music/news/world-cup-final-ny-philharmonic-gustavo-dudamel-lead-venezuela-tribute/ar-AA283LoU?ocid=BingNewsVerp",
-              "headline": "World Cup final: NY Philharmonic, Gustavo Dudamel lead Venezuela tribute",
-              "published_date": "2026-07-13T19:50:37+00:00",
-              "outlet": "Billboard on MSN"
-            },
-            {
-              "news_id": 1784174130407,
-              "url": "https://www.sfgate.com/business/article/earthquake-aid-keeps-flowing-from-florida-to-22344413.php",
-              "headline": "Earthquake aid keeps flowing from Florida to Venezuela, as volunteers unite to...",
-              "published_date": "2026-07-15T03:55:10+00:00",
-              "outlet": "San Francisco Chronicle"
-            },
-            {
-              "news_id": 1784174130402,
-              "url": "https://www.csmonitor.com/World/Americas/2026/0715/venezuela-earthquakes-tsunami-rescue-dog-caracas",
-              "headline": "The black-and-white dog that became the face of hope in post-earthquake...",
-              "published_date": "2026-07-15T08:55:10+00:00",
-              "outlet": "The Christian Science Monitor"
-            },
-            {
-              "news_id": 1784174130410,
-              "url": "https://wsvn.com/entertainment/marc-anthony-ricardo-montaner-among-artists-performing-at-kaseya-center-concert-to-benefit-victims-of-venezuela-earthquakes/",
-              "headline": "... Montaner among artists performing at Kaseya Center concert to benefit...",
-              "published_date": "2026-07-15T15:55:10+00:00",
-              "outlet": "7 News Miami"
-            },
-            {
-              "news_id": 1784174130400,
-              "url": "https://www.yahoo.com/news/us/articles/us-troops-unload-chinas-only-190929821.html",
-              "headline": "US troops unload China's only known aid flight to earthquake-ravaged Venezuela...",
-              "published_date": "2026-07-15T18:55:10+00:00",
-              "outlet": "Fox News · via Yahoo News"
-            },
-            {
-              "news_id": 1784174130405,
-              "url": "https://worldtribune.com/venezuela-on-the-precipice-before-quakes-8-of-28-million-were-on-humanitarian-assistance/",
-              "headline": "Venezuela on the precipice; Before quakes, 8 of 28 million were on humanitarian...",
-              "published_date": "2026-07-15T18:55:10+00:00",
-              "outlet": "World Tribune"
-            },
-            {
-              "news_id": 1784174130415,
-              "url": "https://www.mprnews.org/episode/2026/07/15/st-paul-chef-leads-fundraiser-for-earthquake-recovery-in-venezuela",
-              "headline": "St. Paul chef leads fundraiser for earthquake recovery in Venezuela",
-              "published_date": "2026-07-15T19:55:13+00:00",
-              "outlet": "MPR News"
-            },
-            {
-              "news_id": 1784231466728,
-              "url": "https://www.jamaicaobserver.com/2026/07/16/venezuelas-double-whammy-earthquakes-critical-health-services-take-priority/",
-              "headline": "Venezuela’s double whammy earthquakes: Critical health services take priority",
-              "published_date": "2026-07-16T00:00:00+00:00",
-              "outlet": "Jamaica Observer"
-            },
-            {
-              "news_id": 1784174130394,
-              "url": "https://www.usnews.com/news/world/articles/2026-07-15/eu-provides-extra-20-million-in-aid-for-venezuela-after-earthquake",
-              "headline": "EU Provides Extra €20 Million in Aid for Venezuela After Earthquake",
-              "published_date": "2026-07-16T03:55:10+00:00",
-              "outlet": "U.S. News & World Report"
-            },
-            {
-              "news_id": 1784174130397,
-              "url": "https://www.usnews.com/news/world/articles/2026-07-15/death-toll-from-venezuela-quakes-rises-to-4-829-government-says",
-              "headline": "Death Toll From Venezuela Quakes Rises to 4,829, Government Says",
-              "published_date": "2026-07-16T03:55:10+00:00",
-              "outlet": "U.S. News & World Report"
-            },
-            {
-              "news_id": 1784231466722,
-              "url": "https://www.yahoo.com/news/world/articles/fact-check-fake-image-dog-130000810.html",
-              "headline": "Fact Check: Fake image of dog protecting child spreads after deadly Venezuela...",
-              "published_date": "2026-07-16T12:50:34+00:00",
-              "outlet": "Snopes · via Yahoo News"
-            },
-            {
-              "news_id": 1784231466732,
-              "url": "https://www.msn.com/en-ae/news/other/death-toll-from-venezuela-earthquakes-rises-to-4829/ar-AA2809dv?ocid=BingNewsVerp",
-              "headline": "Death toll from Venezuela earthquakes rises to 4,829",
-              "published_date": "2026-07-16T19:50:37+00:00",
-              "outlet": "Emirates News Agency on MSN"
-            },
-            {
-              "news_id": 1784231466735,
-              "url": "https://www.aljazeera.com/video/newsfeed/2026/7/16/venezuelas-recovery-clouded-by-uncertainty-three-weeks-after-earthquake",
-              "headline": "Venezuela’s recovery clouded by uncertainty three weeks after earthquake",
-              "published_date": "2026-07-16T19:50:37+00:00",
-              "outlet": "Al Jazeera"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "incident_id": "20260626-PH-EQ",
       "canonical_name": "Earthquake Philippines 2026-06",
       "summary": "A magnitude 6.2–6.5 earthquake struck off the coast of Balut Island, Sarangani, Davao Occidental late Tuesday evening (July 14, 2026), causing a minor sea level disturbance reported by Phivolcs. The event follows the series of Ring of Fire quakes in the region, including the prior June 26 and July 14 events, and aftershocks remain possible.",
@@ -5939,7 +4465,7 @@
     {
       "incident_id": "20240530-XX-DI",
       "canonical_name": "Dengue - Global situation",
-      "summary": "Sri Lanka is experiencing a significant dengue challenge, with rising cases prompting discussion of remote health monitoring as a digital solution. In Bangladesh, floods are heightening dengue risks according to the IFRC, and the country reported two additional deaths and 391 hospitalizations in the past 24 hours, bringing the total caseload to 9,370.",
+      "summary": "In Bangladesh, two additional dengue-related deaths were reported in the past 24 hours, along with 306 new hospitalizations. The country's total caseload remains at 9,370 cases, as dengue continues to spread.",
       "country": "",
       "iso2": "",
       "lat": null,
@@ -5967,7 +4493,7 @@
         "usgs": 0,
         "gdacs": 0,
         "healthmap": 0,
-        "news": 8
+        "news": 9
       },
       "source_links": [
         {
@@ -6007,6 +4533,12 @@
           "published_date": "2026-07-08T14:57:06+00:00"
         },
         {
+          "headline": "Two more die of dengue, 306 hospitalised in 24hrs",
+          "url": "https://www.daily-sun.com/bangladesh/886701/two-more-die-of-dengue-306-hospitalised-in-24hrs",
+          "outlet": "Daily Sun",
+          "published_date": "2026-07-11T03:56:07+00:00"
+        },
+        {
           "headline": "Two more die of dengue, 391 hospitalised in 24hrs",
           "url": "https://www.daily-sun.com/health/886521/two-more-die-of-dengue-391-hospitalised-in-24hrs",
           "outlet": "Daily Sun",
@@ -6037,7 +4569,7 @@
           "published_date": "2026-07-16T19:53:01+00:00"
         }
       ],
-      "news_total": 8,
+      "news_total": 9,
       "logs": [
         {
           "log_date": "2026-07-08",
@@ -6092,6 +4624,33 @@
               "outlet": "CNA"
             }
           ]
+        },
+        {
+          "log_date": "2026-07-17",
+          "summary": "In Bangladesh, two additional dengue-related deaths were reported in the past 24 hours, along with 306 new hospitalizations. The country's total caseload remains at 9,370 cases, as dengue continues to spread.",
+          "news": [
+            {
+              "news_id": 1784260574722,
+              "url": "https://www.daily-sun.com/bangladesh/886701/two-more-die-of-dengue-306-hospitalised-in-24hrs",
+              "headline": "Two more die of dengue, 306 hospitalised in 24hrs",
+              "published_date": "2026-07-11T03:56:07+00:00",
+              "outlet": "Daily Sun"
+            },
+            {
+              "news_id": 1784213164930,
+              "url": "https://www.daily-sun.com/bangladesh/886521/two-more-die-of-dengue-391-hospitalised-in-24hrs",
+              "headline": "Two more die of dengue, 391 hospitalised in 24hrs",
+              "published_date": "2026-07-16T14:45:52+00:00",
+              "outlet": "Daily Sun"
+            },
+            {
+              "news_id": 1784231590103,
+              "url": "https://www.daily-sun.com/health/886701/two-more-die-of-dengue-306-hospitalised-in-24hrs",
+              "headline": "Two more die of dengue, 306 hospitalised in 24hrs",
+              "published_date": "2026-07-16T19:53:01+00:00",
+              "outlet": "Daily Sun"
+            }
+          ]
         }
       ]
     },
@@ -6126,7 +4685,7 @@
         "usgs": 0,
         "gdacs": 0,
         "healthmap": 0,
-        "news": 18
+        "news": 19
       },
       "source_links": [
         {
@@ -6220,6 +4779,12 @@
           "published_date": "2026-07-15T07:15:52+00:00"
         },
         {
+          "headline": "India sees sharp rise in measles cases as silent surge raises questions on elimination drive",
+          "url": "https://www.msn.com/en-us/health/other/india-sees-sharp-rise-in-measles-cases-as-silent-surge-raises-questions-on-elimination-drive/ar-AA285OdP?ocid=BingNewsVerp",
+          "outlet": "India Today on MSN",
+          "published_date": "2026-07-16T03:56:14+00:00"
+        },
+        {
           "headline": "Measles death toll reaches 771 as five more children die",
           "url": "https://www.tbsnews.net/bangladesh/health/measles-death-toll-reaches-771-five-more-children-die-1489051",
           "outlet": "The Business Standard",
@@ -6256,7 +4821,7 @@
           "published_date": "2026-07-16T14:46:05+00:00"
         }
       ],
-      "news_total": 18,
+      "news_total": 19,
       "logs": [
         {
           "log_date": "2026-07-09",
@@ -8277,7 +6842,7 @@
         "usgs": 0,
         "gdacs": 1,
         "healthmap": 0,
-        "news": 37
+        "news": 38
       },
       "source_links": [
         {
@@ -8345,6 +6910,12 @@
           "url": "https://english.alarabiya.net/News/world/2026/07/14/blaze-near-paris-burns-on-as-heatwave-tightens-across-europe",
           "outlet": "Al Arabiya English",
           "published_date": "2026-07-14T00:00:00+00:00"
+        },
+        {
+          "headline": "Fire in Fontainebleau forest near Paris triggers evacuations; 10 still missing...",
+          "url": "https://cdapress.com/news/2026/jul/13/fire-in-fontainebleau-forest-near-paris-triggers-evacuations-10-still-missing-in-spanish-wildfire/",
+          "outlet": "Coeur d'Alene Press",
+          "published_date": "2026-07-14T03:57:45+00:00"
         },
         {
           "headline": "Wildfires advance in forest south of Paris",
@@ -8521,7 +7092,7 @@
           "published_date": "2026-07-15T12:00:52+00:00"
         }
       ],
-      "news_total": 37,
+      "news_total": 38,
       "logs": [
         {
           "log_date": "2026-07-15",
@@ -8821,7 +7392,7 @@
         "usgs": 0,
         "gdacs": 1,
         "healthmap": 0,
-        "news": 29
+        "news": 30
       },
       "source_links": [
         {
@@ -9015,9 +7586,15 @@
           "url": "https://www.yahoo.com/news/world/articles/spain-wildfires-13-dead-start-081655406.html",
           "outlet": "The Conversation en Español · via Yahoo News",
           "published_date": "2026-07-16T07:49:08+00:00"
+        },
+        {
+          "headline": "Spain wildfires: with 13 dead, we need to start measuring fire damage in lives – not just hectares",
+          "url": "https://theconversation.com/spain-wildfires-with-13-dead-we-need-to-start-measuring-fire-damage-in-lives-not-just-hectares-287639",
+          "outlet": "The Conversation",
+          "published_date": "2026-07-16T09:58:07+00:00"
         }
       ],
-      "news_total": 29,
+      "news_total": 30,
       "logs": [
         {
           "log_date": "2026-07-15",
@@ -9217,602 +7794,6 @@
               "headline": "Spain confirms 12 foreigners among 13 wildfire victims",
               "published_date": "2026-07-16T04:01:08+00:00",
               "outlet": "Free Malaysia Today on MSN"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "incident_id": "20260716-NZ-EQ",
-      "canonical_name": "Earthquake 42 km NNW of Te Anau, New Zealand 2026-07",
-      "summary": "A magnitude 5.9 earthquake struck 42 km north-northwest of Te Anau, New Zealand, on July 16, 2026, initially reported as a 6.3 magnitude. The quake shook buildings across the South Island's tourist region and prompted a brief tsunami warning, which was later downgraded to a marine advisory. No injuries or damage were reported, and authorities lifted the tsunami alert shortly after.\n\nA tsunami warning and immediate evacuation order were issued for parts of the South Island's west coast following the earthquake, but the alert has since been lifted. The mayor of the affected area reported property damage, and GeoNet recorded several lighter aftershocks after the main quake.",
-      "country": "New Zealand",
-      "iso2": "NZ",
-      "lat": -45.0434,
-      "lon": 167.6107,
-      "country_group": "B",
-      "region": "Oceania",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "HIGH",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "disease_name": null,
-      "event_date": "2026-07-16",
-      "first_reported_date": "2026-07-16",
-      "last_updated_date": "2026-07-16",
-      "days_since_event": 1,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 0,
-        "healthmap": 0,
-        "news": 41
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 5.9 - 42 km NNW of Te Anau, New Zealand",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t0xb",
-          "meta": "76.397 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 5.9,
-        "max_depth_km": 76.397,
-        "place": "42 km NNW of Te Anau, New Zealand",
-        "felt": 27,
-        "sig": 547,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "New Zealand earthquake: Evacuation ordered with tsunami warning for 6.3-mag quake",
-          "url": "https://www.mirror.co.uk/news/world-news/new-zealand-earthquake-tsunami-live-37438903",
-          "outlet": "The Mirror",
-          "published_date": "2026-07-11T19:55:41+00:00"
-        },
-        {
-          "headline": "Live: NEMA warns of 'unpredictable surges' following quake, tsunami warning downgraded",
-          "url": "https://www.msn.com/en-nz/news/other/live-strong-shaking-as-magnitude-6-3-earthquake-strikes-southland/ar-AA2825hm?ocid=BingNewsVerp",
-          "outlet": "RNZ on MSN",
-          "published_date": "2026-07-12T14:49:32+00:00"
-        },
-        {
-          "headline": "6.3 magnitude earthquake hits New Zealand's South Island, tsunami alert issued",
-          "url": "https://www.msn.com/en-us/news/world/63-magnitude-earthquake-hits-new-zealands-south-island-tsunami-alert-issued/ar-AA281Rft?ocid=BingNewsVerp",
-          "outlet": "India Today on MSN",
-          "published_date": "2026-07-12T14:49:35+00:00"
-        },
-        {
-          "headline": "Magnitude 5.9 earthquake shakes New Zealand, triggering a Tsunami Warning in the Pacific Ring of Fire",
-          "url": "https://www.msn.com/en-us/news/world/magnitude-59-earthquake-shakes-new-zealand-triggering-a-tsunami-warning-in-the-pacific-ring-of-fire/ar-AA281Yl7?ocid=BingNewsVerp",
-          "outlet": "Fox Weather on MSN",
-          "published_date": "2026-07-13T14:34:30+00:00"
-        },
-        {
-          "headline": "6.3 magnitude earthquake hits New Zealand's South Island, tsunami alert issued",
-          "url": "https://www.msn.com/en-us/news/other/6-3-magnitude-earthquake-hits-new-zealand-s-south-island-tsunami-alert-issued/ar-AA281Rft?ocid=BingNewsVerp",
-          "outlet": "India Today on MSN",
-          "published_date": "2026-07-13T14:34:30+00:00"
-        },
-        {
-          "headline": "NZ's South Island struck by magnitude-5.9 earthquake",
-          "url": "https://www.msn.com/en-au/news/australia/nzs-south-island-struck-by-magnitude-59-earthquake/ar-AA281LBB?ocid=BingNewsVerp",
-          "outlet": "ABC (Australian Broadcasting Corporation) on MSN",
-          "published_date": "2026-07-13T14:49:32+00:00"
-        },
-        {
-          "headline": "Earthquake of magnitude 5.9 jolts New Zealand, tsunami advisory issued",
-          "url": "https://www.indiatvnews.com/news/world/strong-6-3-magnitude-earthquake-jolts-new-zealand-tsunami-warning-issued-2026-07-16-1048437",
-          "outlet": "India TV News",
-          "published_date": "2026-07-13T14:49:35+00:00"
-        },
-        {
-          "headline": "Strong 5.9-magnitude earthquake strikes New Zealand",
-          "url": "https://www.msn.com/en-us/news/world/strong-59-magnitude-earthquake-strikes-new-zealand/ar-AA281VKv?ocid=BingNewsVerp",
-          "outlet": "The Independent on MSN",
-          "published_date": "2026-07-14T14:34:30+00:00"
-        },
-        {
-          "headline": "New Zealand earthquake LIVE: Evacuation order as tsunami alert issued after 6.3 quake",
-          "url": "https://www.msn.com/en-gb/news/world/new-zealand-earthquake-live-evacuation-order-as-tsunami-alert-issued-after-63-quake/ar-AA2820GD?ocid=BingNewsVerp",
-          "outlet": "Daily Express on MSN",
-          "published_date": "2026-07-14T14:49:32+00:00"
-        },
-        {
-          "headline": "Strong earthquake rattles New Zealand's South Island, tsunami alert lifted",
-          "url": "https://www.msn.com/en-us/news/world/strong-earthquake-rattles-new-zealands-south-island-tsunami-alert-lifted/ar-AA282cah?ocid=BingNewsVerp",
-          "outlet": "Reuters on MSN",
-          "published_date": "2026-07-15T14:49:32+00:00"
-        },
-        {
-          "headline": "Magnitude 6.3 earthquake strikes near tourist hotspot in New Zealand’s South Island",
-          "url": "https://www.msn.com/en-us/news/other/magnitude-6-3-earthquake-strikes-near-tourist-hotspot-in-new-zealand-s-south-island/ar-AA282tyH?ocid=BingNewsVerp",
-          "outlet": "Cyprus Mail on MSN",
-          "published_date": "2026-07-15T14:49:35+00:00"
-        },
-        {
-          "headline": "5.9-magnitude quake hits 42 km NNW of Te Anau, New Zealand -- USGS",
-          "url": "http://www.chinaview.cn/20260716/3e0da76448824bba8b5ce1a3d99cbf64/c.html",
-          "outlet": "Xinhuanet",
-          "published_date": "2026-07-16T03:36:00+00:00"
-        },
-        {
-          "headline": "6.3-magnitude earthquake reported on South Island of New Zealand",
-          "url": "http://www.chinaview.cn/20260716/83450e72ce7e420fbf0d6bd6760eeaae/c.html",
-          "outlet": "Xinhuanet",
-          "published_date": "2026-07-16T04:54:00+00:00"
-        },
-        {
-          "headline": "Powerful 6.6 earthquake strikes near Te Anau and triggers tsunami warning in New Zealand",
-          "url": "https://www.adelaidenow.com.au/news/breaking-news/powerful-66-earthquake-strikes-near-te-anau-and-triggers-tsunami-warning-in-new-zealand/news-story/521decca0b50731eddf6d4b4e923c474",
-          "outlet": "The Advertiser",
-          "published_date": "2026-07-16T05:50:00+00:00"
-        },
-        {
-          "headline": "Powerful 5.9 earthquake strikes near Te Anau in New Zealand",
-          "url": "https://www.news.com.au/world/pacific/powerful-66-earthquake-strikes-near-te-anau-and-triggers-tsunami-warning-in-new-zealand/news-story/521decca0b50731eddf6d4b4e923c474",
-          "outlet": "news.com.au",
-          "published_date": "2026-07-16T06:21:00+00:00"
-        },
-        {
-          "headline": "Tsunami warning issued for NZ's South Island after magnitude-6.3 earthquake",
-          "url": "https://home.nzcity.co.nz/news/article.aspx?id=450058",
-          "outlet": "NZCity Personal Start Page",
-          "published_date": "2026-07-16T08:15:00+00:00"
-        },
-        {
-          "headline": "New Zealand downgrades tsunami alert for South Island after magnitude-5.9 earthquake",
-          "url": "https://www.sbs.com.au/news/article/new-zealand-tsunami-alert-south-island-earthquake/vya708v9j",
-          "outlet": "SBS",
-          "published_date": "2026-07-16T10:17:00+00:00"
-        },
-        {
-          "headline": "Magnitude 6.3 earthquake strikes near tourist hotspot in New Zealand's South Island",
-          "url": "https://theprint.in/world/magnitude-6-3-earthquake-strikes-near-tourist-hotspot-in-new-zealands-south-island/2988050/",
-          "outlet": "The Print",
-          "published_date": "2026-07-16T10:30:00+00:00"
-        },
-        {
-          "headline": "New Zealand downgrades tsunami alert after quake",
-          "url": "https://www.thehindu.com/news/international/new-zealand-earthquake-tsunami-warning/article71229406.ece",
-          "outlet": "The Hindu",
-          "published_date": "2026-07-16T10:36:00+00:00"
-        },
-        {
-          "headline": "6.3 magnitude earthquake hits New Zealand's South Island, tsunami alert issued",
-          "url": "https://www.msn.com/en-us/news/other/6-3-magnitude-earthquake-hits-new-zealand-s-south-island-tsunami-alert-issued/ar-AA281Rft",
-          "outlet": "India Today",
-          "published_date": "2026-07-16T10:36:55+00:00"
-        },
-        {
-          "headline": "Magnitude 5.9 earthquake shakes New Zealand, triggering a Tsunami Warning in the Pacific Ring of Fire",
-          "url": "https://www.msn.com/en-us/news/world/magnitude-59-earthquake-shakes-new-zealand-triggering-a-tsunami-warning-in-the-pacific-ring-of-fire/ar-AA281Yl7",
-          "outlet": "Fox Weather",
-          "published_date": "2026-07-16T10:40:05+00:00"
-        },
-        {
-          "headline": "Tremors in Te Anau: South Island Quake Alert",
-          "url": "https://www.devdiscourse.com/article/science-environment/3951259-tremors-in-te-anau-south-island-quake-alert",
-          "outlet": "Devdiscourse",
-          "published_date": "2026-07-16T10:48:00+00:00"
-        },
-        {
-          "headline": "Tsunami warning and immediate evacuation order issued after New Zealand quake",
-          "url": "https://www.msn.com/en-sg/weather/general/tsunami-warning-and-immediate-evacuation-order-issued-after-new-zealand-quake/ar-AA282MIL",
-          "outlet": "Metro",
-          "published_date": "2026-07-16T11:10:00+00:00"
-        },
-        {
-          "headline": "New Zealand Tsunami Alert: Strong Earthquake Near Te Anau Triggers Warning, Here's What Happened",
-          "url": "https://www.dynamitenews.com/international/new-zealand-tsunami-alert-strong-earthquake-near-te-anau-triggers-warning-heres-what-happened",
-          "outlet": "Dynamite News",
-          "published_date": "2026-07-16T11:13:00+00:00"
-        },
-        {
-          "headline": "Evacuation order issued in New Zealand as earthquake poses tsunami threat",
-          "url": "https://www.msn.com/en-gb/news/world/evacuation-order-issued-in-new-zealand-as-earthquake-poses-tsunami-threat/ar-AA282qsX",
-          "outlet": "Yorkshire Live",
-          "published_date": "2026-07-16T11:16:00+00:00"
-        },
-        {
-          "headline": "New Zealand On Tsunami Alert After 5.9 Magnitude Earthquake Jolts South Island; Evacuation Order Issued",
-          "url": "https://www.republicworld.com/world-news/tsunami-evacuations-ordered-on-new-zealands-south-island-after-59-earthquake-near-te-anau-2026-07-16-132498",
-          "outlet": "Republic World",
-          "published_date": "2026-07-16T11:25:00+00:00"
-        },
-        {
-          "headline": "5.9 magnitude earthquake hits New Zealand, tsunami alert issued",
-          "url": "https://indianexpress.com/article/world/new-zealand-earthquake-tsunami-alert-te-anau-10789489/",
-          "outlet": "The Indian Express",
-          "published_date": "2026-07-16T12:27:00+00:00"
-        },
-        {
-          "headline": "Strong 5.9-magnitude earthquake strikes New Zealand",
-          "url": "https://www.msn.com/en-us/news/world/strong-59-magnitude-earthquake-strikes-new-zealand/ar-AA281VKv",
-          "outlet": "The Independent",
-          "published_date": "2026-07-16T12:28:00+00:00"
-        },
-        {
-          "headline": "Strong earthquake rattles New Zealand's South Island, tsunami alert lifted",
-          "url": "https://www.msn.com/en-us/news/world/strong-earthquake-rattles-new-zealands-south-island-tsunami-alert-lifted/ar-AA282cah",
-          "outlet": "Reuters",
-          "published_date": "2026-07-16T12:51:30+00:00"
-        },
-        {
-          "headline": "Seismic Shake in Te Anau: A Close Call with Nature",
-          "url": "https://www.devdiscourse.com/article/science-environment/3951370-seismic-shake-in-te-anau-a-close-call-with-nature",
-          "outlet": "Devdiscourse",
-          "published_date": "2026-07-16T13:07:00+00:00"
-        },
-        {
-          "headline": "New Zealand Earthquake Today: 6.3-Magnitude Quake Triggers Tsunami Warning",
-          "url": "https://www.ibtimes.sg/new-zealand-earthquake-today-6-3-magnitude-quake-triggers-tsunami-warning-89908",
-          "outlet": "International Business Times Singapore",
-          "published_date": "2026-07-16T14:34:30+00:00"
-        },
-        {
-          "headline": "Magnitude 5.9 earthquake rattles New Zealand's South Island, tsunami alert lifted",
-          "url": "https://www.gmanetwork.com/news/topstories/world/995119/magnitude-5-9-earthquake-rattles-new-zealand-s-south-island-tsunami-alert-lifted/story/",
-          "outlet": "GMA Network",
-          "published_date": "2026-07-16T14:34:30+00:00"
-        },
-        {
-          "headline": "New Zealand downgrades tsunami alert after quake",
-          "url": "https://thepeninsulaqatar.com/article/16/07/2026/new-zealand-downgrades-tsunami-alert-after-quake",
-          "outlet": "The Peninsula Qatar",
-          "published_date": "2026-07-16T14:49:35+00:00"
-        },
-        {
-          "headline": "5.9 magnitude earthquake strikes New Zealand: USGC",
-          "url": "https://6abc.com/post/tsunami-advisory-cancelled-59-magnitude-earthquake-strikes-new-zealand/19519844/",
-          "outlet": "6abc Action News",
-          "published_date": "2026-07-16T19:55:41+00:00"
-        },
-        {
-          "headline": "Strong 5.9-magnitude earthquake strikes New Zealand",
-          "url": "https://www.msn.com/en-nz/news/news/strong-5-9-magnitude-earthquake-strikes-new-zealand/ar-AA281Okf?ocid=BingNewsVerp",
-          "outlet": "The Independent on MSN",
-          "published_date": "2026-07-16T19:55:41+00:00"
-        },
-        {
-          "headline": "New Zealand earthquake warning: Tsunami alert lifted after strong tremor shakes nation",
-          "url": "https://thenightly.com.au/world/new-zealand-earthquake-warning-evacuation-alert-after-strong-tremor-shakes-nation-c-22589149",
-          "outlet": "The Nightly",
-          "published_date": "2026-07-16T19:55:41+00:00"
-        },
-        {
-          "headline": "Tsunami alert lifted after earthquake shakes NZ",
-          "url": "https://www.standard.net.au/story/9312266/tsunami-alert-lifted-after-earthquake-shakes-nz/",
-          "outlet": "The Standard",
-          "published_date": "2026-07-16T19:55:41+00:00"
-        },
-        {
-          "headline": "Tsunami warning and immediate evacuation order issued after New Zealand quake",
-          "url": "https://www.msn.com/en-nz/news/news/tsunami-warning-and-immediate-evacuation-order-issued-after-new-zealand-quake/ar-AA282sKh?ocid=BingNewsVerp",
-          "outlet": "Metro on MSN",
-          "published_date": "2026-07-16T19:55:41+00:00"
-        },
-        {
-          "headline": "Huge 5.9-mag earthquake hits tourist hotspot in New Zealand sparking tsunami warning & order to ‘evacuate immediately’",
-          "url": "https://www.thesun.co.uk/news/39777439/earthquake-hits-new-zealand-sparking-tsunami-warning/",
-          "outlet": "The Sun",
-          "published_date": "2026-07-16T19:55:44+00:00"
-        },
-        {
-          "headline": "'Felt like a truck': Locals describe 5.9 magnitude Southland earthquake",
-          "url": "https://www.msn.com/en-nz/news/national/felt-like-a-truck-locals-describe-5-9-magnitude-southland-earthquake/ar-AA282t19?ocid=BingNewsVerp",
-          "outlet": "RNZ on MSN",
-          "published_date": "2026-07-16T19:55:44+00:00"
-        },
-        {
-          "headline": "Tsunami threat passes following strong quake, mayor says properties damaged",
-          "url": "https://www.msn.com/en-nz/news/national/tsunami-threat-passes-following-strong-quake-mayor-says-properties-damaged/ar-AA2825hm?ocid=BingNewsVerp",
-          "outlet": "RNZ on MSN",
-          "published_date": "2026-07-16T19:55:44+00:00"
-        }
-      ],
-      "news_total": 41,
-      "logs": [
-        {
-          "log_date": "2026-07-16",
-          "summary": "A magnitude 5.9 earthquake struck 42 km north-northwest of Te Anau, New Zealand, on July 16, 2026, initially reported as a 6.3 magnitude. The quake shook buildings across the South Island's tourist region and prompted a brief tsunami warning, which was later downgraded to a marine advisory. No injuries or damage were reported, and authorities lifted the tsunami alert shortly after.\n\nA tsunami warning and immediate evacuation order were issued for parts of the South Island's west coast following the earthquake, but the alert has since been lifted. The mayor of the affected area reported property damage, and GeoNet recorded several lighter aftershocks after the main quake.",
-          "news": [
-            {
-              "news_id": 1784231793255,
-              "url": "https://www.mirror.co.uk/news/world-news/new-zealand-earthquake-tsunami-live-37438903",
-              "headline": "New Zealand earthquake: Evacuation ordered with tsunami warning for 6.3-mag quake",
-              "published_date": "2026-07-11T19:55:41+00:00",
-              "outlet": "The Mirror"
-            },
-            {
-              "news_id": 1784213406735,
-              "url": "https://www.msn.com/en-nz/news/other/live-strong-shaking-as-magnitude-6-3-earthquake-strikes-southland/ar-AA2825hm?ocid=BingNewsVerp",
-              "headline": "Live: NEMA warns of 'unpredictable surges' following quake, tsunami warning downgraded",
-              "published_date": "2026-07-12T14:49:32+00:00",
-              "outlet": "RNZ on MSN"
-            },
-            {
-              "news_id": 1784213406741,
-              "url": "https://www.msn.com/en-us/news/world/63-magnitude-earthquake-hits-new-zealands-south-island-tsunami-alert-issued/ar-AA281Rft?ocid=BingNewsVerp",
-              "headline": "6.3 magnitude earthquake hits New Zealand's South Island, tsunami alert issued",
-              "published_date": "2026-07-12T14:49:35+00:00",
-              "outlet": "India Today on MSN"
-            },
-            {
-              "news_id": 1784212510604,
-              "url": "https://www.msn.com/en-us/news/world/magnitude-59-earthquake-shakes-new-zealand-triggering-a-tsunami-warning-in-the-pacific-ring-of-fire/ar-AA281Yl7?ocid=BingNewsVerp",
-              "headline": "Magnitude 5.9 earthquake shakes New Zealand, triggering a Tsunami Warning in the Pacific Ring of Fire",
-              "published_date": "2026-07-13T14:34:30+00:00",
-              "outlet": "Fox Weather on MSN"
-            },
-            {
-              "news_id": 1784212510613,
-              "url": "https://www.msn.com/en-us/news/other/6-3-magnitude-earthquake-hits-new-zealand-s-south-island-tsunami-alert-issued/ar-AA281Rft?ocid=BingNewsVerp",
-              "headline": "6.3 magnitude earthquake hits New Zealand's South Island, tsunami alert issued",
-              "published_date": "2026-07-13T14:34:30+00:00",
-              "outlet": "India Today on MSN"
-            },
-            {
-              "news_id": 1784213406729,
-              "url": "https://www.msn.com/en-au/news/australia/nzs-south-island-struck-by-magnitude-59-earthquake/ar-AA281LBB?ocid=BingNewsVerp",
-              "headline": "NZ's South Island struck by magnitude-5.9 earthquake",
-              "published_date": "2026-07-13T14:49:32+00:00",
-              "outlet": "ABC (Australian Broadcasting Corporation) on MSN"
-            },
-            {
-              "news_id": 1784213406738,
-              "url": "https://www.indiatvnews.com/news/world/strong-6-3-magnitude-earthquake-jolts-new-zealand-tsunami-warning-issued-2026-07-16-1048437",
-              "headline": "Earthquake of magnitude 5.9 jolts New Zealand, tsunami advisory issued",
-              "published_date": "2026-07-13T14:49:35+00:00",
-              "outlet": "India TV News"
-            },
-            {
-              "news_id": 1784212510610,
-              "url": "https://www.msn.com/en-us/news/world/strong-59-magnitude-earthquake-strikes-new-zealand/ar-AA281VKv?ocid=BingNewsVerp",
-              "headline": "Strong 5.9-magnitude earthquake strikes New Zealand",
-              "published_date": "2026-07-14T14:34:30+00:00",
-              "outlet": "The Independent on MSN"
-            },
-            {
-              "news_id": 1784213406732,
-              "url": "https://www.msn.com/en-gb/news/world/new-zealand-earthquake-live-evacuation-order-as-tsunami-alert-issued-after-63-quake/ar-AA2820GD?ocid=BingNewsVerp",
-              "headline": "New Zealand earthquake LIVE: Evacuation order as tsunami alert issued after 6.3 quake",
-              "published_date": "2026-07-14T14:49:32+00:00",
-              "outlet": "Daily Express on MSN"
-            },
-            {
-              "news_id": 1784213406726,
-              "url": "https://www.msn.com/en-us/news/world/strong-earthquake-rattles-new-zealands-south-island-tsunami-alert-lifted/ar-AA282cah?ocid=BingNewsVerp",
-              "headline": "Strong earthquake rattles New Zealand's South Island, tsunami alert lifted",
-              "published_date": "2026-07-15T14:49:32+00:00",
-              "outlet": "Reuters on MSN"
-            },
-            {
-              "news_id": 1784213406746,
-              "url": "https://www.msn.com/en-us/news/other/magnitude-6-3-earthquake-strikes-near-tourist-hotspot-in-new-zealand-s-south-island/ar-AA282tyH?ocid=BingNewsVerp",
-              "headline": "Magnitude 6.3 earthquake strikes near tourist hotspot in New Zealand’s South Island",
-              "published_date": "2026-07-15T14:49:35+00:00",
-              "outlet": "Cyprus Mail on MSN"
-            },
-            {
-              "news_id": 1784212510628,
-              "url": "http://www.chinaview.cn/20260716/3e0da76448824bba8b5ce1a3d99cbf64/c.html",
-              "headline": "5.9-magnitude quake hits 42 km NNW of Te Anau, New Zealand -- USGS",
-              "published_date": "2026-07-16T03:36:00+00:00",
-              "outlet": "Xinhuanet"
-            },
-            {
-              "news_id": 1784212510631,
-              "url": "http://www.chinaview.cn/20260716/83450e72ce7e420fbf0d6bd6760eeaae/c.html",
-              "headline": "6.3-magnitude earthquake reported on South Island of New Zealand",
-              "published_date": "2026-07-16T04:54:00+00:00",
-              "outlet": "Xinhuanet"
-            },
-            {
-              "news_id": 1784212510600,
-              "url": "https://www.adelaidenow.com.au/news/breaking-news/powerful-66-earthquake-strikes-near-te-anau-and-triggers-tsunami-warning-in-new-zealand/news-story/521decca0b50731eddf6d4b4e923c474",
-              "headline": "Powerful 6.6 earthquake strikes near Te Anau and triggers tsunami warning in New Zealand",
-              "published_date": "2026-07-16T05:50:00+00:00",
-              "outlet": "The Advertiser"
-            },
-            {
-              "news_id": 1784212510592,
-              "url": "https://www.news.com.au/world/pacific/powerful-66-earthquake-strikes-near-te-anau-and-triggers-tsunami-warning-in-new-zealand/news-story/521decca0b50731eddf6d4b4e923c474",
-              "headline": "Powerful 5.9 earthquake strikes near Te Anau in New Zealand",
-              "published_date": "2026-07-16T06:21:00+00:00",
-              "outlet": "news.com.au"
-            },
-            {
-              "news_id": 1784212510645,
-              "url": "https://home.nzcity.co.nz/news/article.aspx?id=450058",
-              "headline": "Tsunami warning issued for NZ's South Island after magnitude-6.3 earthquake",
-              "published_date": "2026-07-16T08:15:00+00:00",
-              "outlet": "NZCity Personal Start Page"
-            },
-            {
-              "news_id": 1784212510595,
-              "url": "https://www.sbs.com.au/news/article/new-zealand-tsunami-alert-south-island-earthquake/vya708v9j",
-              "headline": "New Zealand downgrades tsunami alert for South Island after magnitude-5.9 earthquake",
-              "published_date": "2026-07-16T10:17:00+00:00",
-              "outlet": "SBS"
-            },
-            {
-              "news_id": 1784212510622,
-              "url": "https://theprint.in/world/magnitude-6-3-earthquake-strikes-near-tourist-hotspot-in-new-zealands-south-island/2988050/",
-              "headline": "Magnitude 6.3 earthquake strikes near tourist hotspot in New Zealand's South Island",
-              "published_date": "2026-07-16T10:30:00+00:00",
-              "outlet": "The Print"
-            },
-            {
-              "news_id": 1784212510625,
-              "url": "https://www.thehindu.com/news/international/new-zealand-earthquake-tsunami-warning/article71229406.ece",
-              "headline": "New Zealand downgrades tsunami alert after quake",
-              "published_date": "2026-07-16T10:36:00+00:00",
-              "outlet": "The Hindu"
-            },
-            {
-              "news_id": 1784212510642,
-              "url": "https://www.msn.com/en-us/news/other/6-3-magnitude-earthquake-hits-new-zealand-s-south-island-tsunami-alert-issued/ar-AA281Rft",
-              "headline": "6.3 magnitude earthquake hits New Zealand's South Island, tsunami alert issued",
-              "published_date": "2026-07-16T10:36:55+00:00",
-              "outlet": "India Today"
-            },
-            {
-              "news_id": 1784212510637,
-              "url": "https://www.msn.com/en-us/news/world/magnitude-59-earthquake-shakes-new-zealand-triggering-a-tsunami-warning-in-the-pacific-ring-of-fire/ar-AA281Yl7",
-              "headline": "Magnitude 5.9 earthquake shakes New Zealand, triggering a Tsunami Warning in the Pacific Ring of Fire",
-              "published_date": "2026-07-16T10:40:05+00:00",
-              "outlet": "Fox Weather"
-            },
-            {
-              "news_id": 1784212510598,
-              "url": "https://www.devdiscourse.com/article/science-environment/3951259-tremors-in-te-anau-south-island-quake-alert",
-              "headline": "Tremors in Te Anau: South Island Quake Alert",
-              "published_date": "2026-07-16T10:48:00+00:00",
-              "outlet": "Devdiscourse"
-            },
-            {
-              "news_id": 1784212510651,
-              "url": "https://www.msn.com/en-sg/weather/general/tsunami-warning-and-immediate-evacuation-order-issued-after-new-zealand-quake/ar-AA282MIL",
-              "headline": "Tsunami warning and immediate evacuation order issued after New Zealand quake",
-              "published_date": "2026-07-16T11:10:00+00:00",
-              "outlet": "Metro"
-            },
-            {
-              "news_id": 1784212510634,
-              "url": "https://www.dynamitenews.com/international/new-zealand-tsunami-alert-strong-earthquake-near-te-anau-triggers-warning-heres-what-happened",
-              "headline": "New Zealand Tsunami Alert: Strong Earthquake Near Te Anau Triggers Warning, Here's What Happened",
-              "published_date": "2026-07-16T11:13:00+00:00",
-              "outlet": "Dynamite News"
-            },
-            {
-              "news_id": 1784212510653,
-              "url": "https://www.msn.com/en-gb/news/world/evacuation-order-issued-in-new-zealand-as-earthquake-poses-tsunami-threat/ar-AA282qsX",
-              "headline": "Evacuation order issued in New Zealand as earthquake poses tsunami threat",
-              "published_date": "2026-07-16T11:16:00+00:00",
-              "outlet": "Yorkshire Live"
-            },
-            {
-              "news_id": 1784212510619,
-              "url": "https://www.republicworld.com/world-news/tsunami-evacuations-ordered-on-new-zealands-south-island-after-59-earthquake-near-te-anau-2026-07-16-132498",
-              "headline": "New Zealand On Tsunami Alert After 5.9 Magnitude Earthquake Jolts South Island; Evacuation Order Issued",
-              "published_date": "2026-07-16T11:25:00+00:00",
-              "outlet": "Republic World"
-            },
-            {
-              "news_id": 1784212510648,
-              "url": "https://indianexpress.com/article/world/new-zealand-earthquake-tsunami-alert-te-anau-10789489/",
-              "headline": "5.9 magnitude earthquake hits New Zealand, tsunami alert issued",
-              "published_date": "2026-07-16T12:27:00+00:00",
-              "outlet": "The Indian Express"
-            },
-            {
-              "news_id": 1784212510639,
-              "url": "https://www.msn.com/en-us/news/world/strong-59-magnitude-earthquake-strikes-new-zealand/ar-AA281VKv",
-              "headline": "Strong 5.9-magnitude earthquake strikes New Zealand",
-              "published_date": "2026-07-16T12:28:00+00:00",
-              "outlet": "The Independent"
-            },
-            {
-              "news_id": 1784212510616,
-              "url": "https://www.msn.com/en-us/news/world/strong-earthquake-rattles-new-zealands-south-island-tsunami-alert-lifted/ar-AA282cah",
-              "headline": "Strong earthquake rattles New Zealand's South Island, tsunami alert lifted",
-              "published_date": "2026-07-16T12:51:30+00:00",
-              "outlet": "Reuters"
-            },
-            {
-              "news_id": 1784212510589,
-              "url": "https://www.devdiscourse.com/article/science-environment/3951370-seismic-shake-in-te-anau-a-close-call-with-nature",
-              "headline": "Seismic Shake in Te Anau: A Close Call with Nature",
-              "published_date": "2026-07-16T13:07:00+00:00",
-              "outlet": "Devdiscourse"
-            },
-            {
-              "news_id": 1784212510582,
-              "url": "https://www.ibtimes.sg/new-zealand-earthquake-today-6-3-magnitude-quake-triggers-tsunami-warning-89908",
-              "headline": "New Zealand Earthquake Today: 6.3-Magnitude Quake Triggers Tsunami Warning",
-              "published_date": "2026-07-16T14:34:30+00:00",
-              "outlet": "International Business Times Singapore"
-            },
-            {
-              "news_id": 1784212510607,
-              "url": "https://www.gmanetwork.com/news/topstories/world/995119/magnitude-5-9-earthquake-rattles-new-zealand-s-south-island-tsunami-alert-lifted/story/",
-              "headline": "Magnitude 5.9 earthquake rattles New Zealand's South Island, tsunami alert lifted",
-              "published_date": "2026-07-16T14:34:30+00:00",
-              "outlet": "GMA Network"
-            },
-            {
-              "news_id": 1784213406743,
-              "url": "https://thepeninsulaqatar.com/article/16/07/2026/new-zealand-downgrades-tsunami-alert-after-quake",
-              "headline": "New Zealand downgrades tsunami alert after quake",
-              "published_date": "2026-07-16T14:49:35+00:00",
-              "outlet": "The Peninsula Qatar"
-            },
-            {
-              "news_id": 1784231793251,
-              "url": "https://6abc.com/post/tsunami-advisory-cancelled-59-magnitude-earthquake-strikes-new-zealand/19519844/",
-              "headline": "5.9 magnitude earthquake strikes New Zealand: USGC",
-              "published_date": "2026-07-16T19:55:41+00:00",
-              "outlet": "6abc Action News"
-            },
-            {
-              "news_id": 1784231793258,
-              "url": "https://www.msn.com/en-nz/news/news/strong-5-9-magnitude-earthquake-strikes-new-zealand/ar-AA281Okf?ocid=BingNewsVerp",
-              "headline": "Strong 5.9-magnitude earthquake strikes New Zealand",
-              "published_date": "2026-07-16T19:55:41+00:00",
-              "outlet": "The Independent on MSN"
-            },
-            {
-              "news_id": 1784231793260,
-              "url": "https://thenightly.com.au/world/new-zealand-earthquake-warning-evacuation-alert-after-strong-tremor-shakes-nation-c-22589149",
-              "headline": "New Zealand earthquake warning: Tsunami alert lifted after strong tremor shakes nation",
-              "published_date": "2026-07-16T19:55:41+00:00",
-              "outlet": "The Nightly"
-            },
-            {
-              "news_id": 1784231793264,
-              "url": "https://www.standard.net.au/story/9312266/tsunami-alert-lifted-after-earthquake-shakes-nz/",
-              "headline": "Tsunami alert lifted after earthquake shakes NZ",
-              "published_date": "2026-07-16T19:55:41+00:00",
-              "outlet": "The Standard"
-            },
-            {
-              "news_id": 1784231793267,
-              "url": "https://www.msn.com/en-nz/news/news/tsunami-warning-and-immediate-evacuation-order-issued-after-new-zealand-quake/ar-AA282sKh?ocid=BingNewsVerp",
-              "headline": "Tsunami warning and immediate evacuation order issued after New Zealand quake",
-              "published_date": "2026-07-16T19:55:41+00:00",
-              "outlet": "Metro on MSN"
-            },
-            {
-              "news_id": 1784231793270,
-              "url": "https://www.thesun.co.uk/news/39777439/earthquake-hits-new-zealand-sparking-tsunami-warning/",
-              "headline": "Huge 5.9-mag earthquake hits tourist hotspot in New Zealand sparking tsunami warning & order to ‘evacuate immediately’",
-              "published_date": "2026-07-16T19:55:44+00:00",
-              "outlet": "The Sun"
-            },
-            {
-              "news_id": 1784231793273,
-              "url": "https://www.msn.com/en-nz/news/national/felt-like-a-truck-locals-describe-5-9-magnitude-southland-earthquake/ar-AA282t19?ocid=BingNewsVerp",
-              "headline": "'Felt like a truck': Locals describe 5.9 magnitude Southland earthquake",
-              "published_date": "2026-07-16T19:55:44+00:00",
-              "outlet": "RNZ on MSN"
-            },
-            {
-              "news_id": 1784231793275,
-              "url": "https://www.msn.com/en-nz/news/national/tsunami-threat-passes-following-strong-quake-mayor-says-properties-damaged/ar-AA2825hm?ocid=BingNewsVerp",
-              "headline": "Tsunami threat passes following strong quake, mayor says properties damaged",
-              "published_date": "2026-07-16T19:55:44+00:00",
-              "outlet": "RNZ on MSN"
             }
           ]
         }
