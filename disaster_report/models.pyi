@@ -30,7 +30,7 @@ class NewsItem:
 @dataclass(frozen=True)
 class IncidentLog:
     incident_id: int
-    log_datetime: str
+    log_date: str
     summary: str
 
 @dataclass(frozen=True)

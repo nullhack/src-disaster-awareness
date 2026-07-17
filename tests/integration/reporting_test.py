@@ -110,12 +110,12 @@ class TestMarkdownRenderer:
             timeline=[
                 IncidentLog(
                     incident_id=100,
-                    log_datetime="2026-07-04T12:00:00",
+                    log_date="2026-07-04",
                     summary="quake",
                 ),
                 IncidentLog(
                     incident_id=200,
-                    log_datetime="2026-07-04T12:00:00",
+                    log_date="2026-07-04",
                     summary="cholera",
                 ),
             ],
@@ -155,7 +155,7 @@ class TestMarkdownRenderer:
         warehouse.append_timeline(
             IncidentLog(
                 incident_id=incident_id,
-                log_datetime="2026-07-04T12:00:00",
+                log_date="2026-07-04",
                 summary="Ebola outbreak developing",
             )
         )
@@ -251,14 +251,14 @@ def build_populated_warehouse(db_url: str) -> Warehouse:
     warehouse.append_timeline(
         IncidentLog(
             incident_id=GEOPHYSICAL_INCIDENT_ID,
-            log_datetime="2026-07-04T12:00:00",
+            log_date="2026-07-04",
             summary=GEOPHYSICAL_TIMELINE_SUMMARY,
         )
     )
     warehouse.append_timeline(
         IncidentLog(
             incident_id=DISEASE_INCIDENT_ID,
-            log_datetime="2026-07-04T12:00:00",
+            log_date="2026-07-04",
             summary=UNESCAPED_AI_SUMMARY,
         )
     )

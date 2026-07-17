@@ -336,7 +336,7 @@ def load_latest_log(conn: sqlite3.Connection, incident_id: int) -> str | None:
     c.execute("""
         SELECT summary FROM incident_logs
         WHERE incident_id = ?
-        ORDER BY log_datetime DESC LIMIT 1
+        ORDER BY log_date DESC LIMIT 1
     """, (incident_id,))
     row = c.fetchone()
     return row[0] if row else None
@@ -351,29 +351,29 @@ def load_log_count(conn: sqlite3.Connection, incident_id: int) -> int:
 def load_logs_for_incident(conn: sqlite3.Connection, incident_id: int) -> list[dict]:
     c = conn.cursor()
     c.execute("""
-        SELECT il.log_datetime, il.summary
+        SELECT il.log_date, il.summary
         FROM incident_logs il
         WHERE il.incident_id = ?
-        ORDER BY il.log_datetime
+        ORDER BY il.log_date
     """, (incident_id,))
     logs = []
     for row in c.fetchall():
         logs.append({
-            "log_datetime": row[0],
+            "log_date": row[0],
             "summary": row[1] or "",
             "news": [],
         })
     if not logs:
         return logs
     c.execute("""
-        SELECT iln.log_datetime, iln.news_id, ni.url, ni.title,
+        SELECT iln.log_date, iln.news_id, ni.url, ni.title,
                ni.published_date, ni.source, ni.domain
         FROM incident_log_news iln
         JOIN news_items ni ON ni.news_id = iln.news_id
         WHERE iln.incident_id = ?
         ORDER BY ni.published_date
     """, (incident_id,))
-    log_map = {l["log_datetime"]: l for l in logs}
+    log_map = {l["log_date"]: l for l in logs}
     for row in c.fetchall():
         ldt = row[0]
         if ldt in log_map:
@@ -893,11 +893,15 @@ def main() -> None:
 
 
 def _fmt_dt(iso_str: str) -> str:
+    if not iso_str:
+        return ""
+    if len(iso_str) == 10:
+        return iso_str
     try:
         dt = datetime.fromisoformat(iso_str.replace("Z", "+00:00"))
         return dt.strftime("%Y-%m-%d %H:%M")
     except (ValueError, AttributeError):
-        return iso_str[:16] if iso_str else ""
+        return iso_str[:16]
 
 
 def generate_md_report(digest: dict, target_date: datetime) -> str:
@@ -971,7 +975,7 @@ def _md_incident(lines: list[str], inc: dict) -> None:
     lines.append("")
     if logs:
         for log in logs:
-            ldt = _fmt_dt(log.get("log_datetime", ""))
+            ldt = _fmt_dt(log.get("log_date", ""))
             n_linked = len(log.get("news", []))
             lines.append(f"**{ldt}** ({n_linked} article{'s' if n_linked != 1 else ''})")
             lines.append("")

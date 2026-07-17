@@ -626,7 +626,7 @@ class TestGenerateLogs:
         assert len(digester.captured_priors) >= 1
         assert digester.captured_priors[0] == []
 
-    def test_log_datetime_uses_max_published_date_of_batch(self) -> None:
+    def test_log_date_uses_run_date(self) -> None:
         from disaster_report.pipeline import (
             generate_logs,
             ingest_source_reports,
@@ -649,7 +649,7 @@ class TestGenerateLogs:
         incident = warehouse.read_incidents()[0]
         timeline = warehouse.read_timeline(incident.incident_id)
         assert len(timeline) > 0
-        assert timeline[0].log_datetime == "2026-06-15"
+        assert timeline[0].log_date == "2026-07-04"
 
     def test_generate_logs_batches_one_timeline_row_per_incident(self) -> None:
         from disaster_report.pipeline import (
@@ -802,16 +802,16 @@ class TestGenerateLogs:
         )
         incident = warehouse.read_incidents()[0]
         generate_logs(warehouse, _digester(), min_news_threshold=1)
-        first_log_datetime = warehouse.read_timeline(incident.incident_id)[
+        first_log_date = warehouse.read_timeline(incident.incident_id)[
             0
-        ].log_datetime
+        ].log_date
         for item in _late_news():
             nid = warehouse.ingest_news_item(item)
             warehouse.assign_news_to_incident(nid, incident.incident_id)
         generate_logs(warehouse, _digester(), min_news_threshold=1)
         timeline = warehouse.read_timeline(incident.incident_id)
-        assert len(timeline) == 2
-        assert any(log.log_datetime == first_log_datetime for log in timeline)
+        assert len(timeline) == 1
+        assert timeline[0].log_date == first_log_date
         assert warehouse.read_summarized_news_ids(incident.incident_id) == {
             n.news_id for n in warehouse.read_news(incident.incident_id)
         }
@@ -845,7 +845,7 @@ class TestGenerateLogs:
             warehouse.read_summarized_news_ids(incident.incident_id) == summarized_ids
         )
 
-    def test_generate_logs_log_datetime_fallback_on_pk_collision(self) -> None:
+    def test_generate_logs_upserts_same_day_log_on_rerun(self) -> None:
         from disaster_report.pipeline import (
             generate_logs,
             ingest_source_reports,
@@ -872,9 +872,9 @@ class TestGenerateLogs:
             warehouse.assign_news_to_incident(nid, incident.incident_id)
         generate_logs(warehouse, _digester(), min_news_threshold=1)
         timeline = warehouse.read_timeline(incident.incident_id)
-        assert len(timeline) == 2
-        fallback = clock().isoformat()
-        assert any(log.log_datetime == fallback for log in timeline)
+        assert len(timeline) == 1
+        assert timeline[0].log_date == "2026-07-04"
+        assert timeline[0].summary == "incident summary\n\nincident summary"
         assert warehouse.read_summarized_news_ids(incident.incident_id) == {
             n.news_id for n in warehouse.read_news(incident.incident_id)
         }

@@ -41,7 +41,7 @@ class NewsItem:
 class IncidentLog:
 
     incident_id: int
-    log_datetime: str
+    log_date: str
     summary: str
 
 

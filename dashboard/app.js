@@ -800,7 +800,7 @@ function openDrawer(id) {
           <details>
             <summary>
               <span class="log-entry__head">
-                <span class="log-entry__date">${fmtDateTime(log.log_datetime) || ""}</span>
+                <span class="log-entry__date">${fmtDateTime(log.log_date) || ""}</span>
                 <span class="log-entry__count">${log.news.length} article(s)</span>
               </span>
               <div class="log-entry__summary">${esc(log.summary)}</div>
@@ -873,6 +873,7 @@ function fmtDate(iso) {
 }
 function fmtDateTime(iso) {
   if (!iso) return "";
+  if (iso.length <= 10) return fmtDate(iso);
   const d = new Date(iso);
   if (isNaN(d)) return "";
   const dd = String(d.getUTCDate()).padStart(2, "0");
