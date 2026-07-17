@@ -904,6 +904,16 @@ def _fmt_dt(iso_str: str) -> str:
         return iso_str[:16]
 
 
+def _join_summary_paragraphs(text: str) -> str:
+    pieces = [p.strip() for p in text.split("\n") if p.strip()]
+    out = []
+    for p in pieces:
+        if p[-1] not in ".!?":
+            p += "."
+        out.append(p)
+    return " ".join(out)
+
+
 def generate_md_report(digest: dict, target_date: datetime) -> str:
     s = digest["summary"]
     lines: list[str] = []
@@ -979,12 +989,12 @@ def _md_incident(lines: list[str], inc: dict) -> None:
             n_linked = len(log.get("news", []))
             lines.append(f"**{ldt}** ({n_linked} article{'s' if n_linked != 1 else ''})")
             lines.append("")
-            summary = log.get("summary", "")
+            summary = _join_summary_paragraphs(log.get("summary", ""))
             if summary:
                 lines.append(f"> {summary}")
                 lines.append("")
     elif inc.get("summary"):
-        lines.append(f"> {inc['summary']}")
+        lines.append(f"> {_join_summary_paragraphs(inc['summary'])}")
         lines.append("")
     lines.append("")
 
