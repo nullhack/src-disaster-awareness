@@ -99,13 +99,11 @@ def main(argv: list[str]) -> int:
                     file=sys.stderr,
                 )
                 continue
-            log_datetime = max(n.published_date for n in batch)
-            if any(log.log_datetime == log_datetime for log in prior):
-                log_datetime = wh._clock().isoformat()
+            log_date = max(n.published_date for n in batch)[:10]
             wh.append_timeline_with_provenance(
                 IncidentLog(
                     incident_id=incident.incident_id,
-                    log_datetime=log_datetime,
+                    log_date=log_date,
                     summary=result.summary,
                 ),
                 {n.news_id for n in batch},
@@ -114,7 +112,7 @@ def main(argv: list[str]) -> int:
             wk_label = f"{week_key[0]}-W{week_key[1]:02d}"
             print(
                 f"  incident {incident.incident_id} week {wk_label}: "
-                f"{len(batch)} news -> log@{log_datetime}",
+                f"{len(batch)} news -> log@{log_date}",
                 file=sys.stderr,
             )
 

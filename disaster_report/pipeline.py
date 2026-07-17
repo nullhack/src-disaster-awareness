@@ -303,19 +303,16 @@ def _generate_logs_for_incident(
     if not summary_result.has_relevant_updates:
         logger.info("logs: incident %d — no relevant updates, skip", incident.incident_id)
         return
-    log_datetime = max(n.published_date for n in unsummarized)
-    if any(log.log_datetime == log_datetime for log in prior):
-        log_datetime = cast(Any, wh)._clock().replace(microsecond=0).isoformat()
-        logger.info("logs: incident %d — log_datetime collision, using clock fallback", incident.incident_id)
+    log_date = cast(Any, wh)._clock().date().isoformat()
     wh.append_timeline_with_provenance(
         IncidentLog(
             incident_id=incident.incident_id,
-            log_datetime=log_datetime,
+            log_date=log_date,
             summary=summary_result.summary,
         ),
         {n.news_id for n in unsummarized},
     )
-    logger.info("logs: incident %d — wrote log at %s (%d news linked)", incident.incident_id, log_datetime, len(unsummarized))
+    logger.info("logs: incident %d — wrote log for %s (%d news linked)", incident.incident_id, log_date, len(unsummarized))
 
 
 def generate_logs(

@@ -20,6 +20,7 @@ from sqlalchemy import (
     insert,
     select,
     text,
+    update,
 )
 
 from disaster_report.models import (
@@ -87,18 +88,18 @@ _incident_logs_t = Table(
     "incident_logs",
     _metadata,
     Column("incident_id", Integer, nullable=False),
-    Column("log_datetime", String, nullable=False),
+    Column("log_date", String, nullable=False),
     Column("summary", String, nullable=False),
-    PrimaryKeyConstraint("incident_id", "log_datetime"),
+    PrimaryKeyConstraint("incident_id", "log_date"),
 )
 
 _incident_log_news_t = Table(
     "incident_log_news",
     _metadata,
     Column("incident_id", Integer, nullable=False),
-    Column("log_datetime", String, nullable=False),
+    Column("log_date", String, nullable=False),
     Column("news_id", Integer, nullable=False),
-    PrimaryKeyConstraint("incident_id", "log_datetime", "news_id"),
+    PrimaryKeyConstraint("incident_id", "log_date", "news_id"),
 )
 
 _INCIDENTS_VIEW_SQL = """
@@ -157,7 +158,7 @@ def _place_from_row(row: Any) -> ReportPlace:
 def _log_from_row(row: Any) -> IncidentLog:
     return IncidentLog(
         incident_id=int(row["incident_id"]),
-        log_datetime=str(row["log_datetime"]),
+        log_date=str(row["log_date"]),
         summary=str(row["summary"]),
     )
 
@@ -179,19 +180,28 @@ def _as_utc(dt: datetime) -> datetime:
     return dt
 
 
-def _insert_log_if_absent(conn: Any, log: IncidentLog) -> None:
+def _upsert_log(conn: Any, log: IncidentLog) -> None:
     existing = conn.execute(
-        select(_incident_logs_t.c.log_datetime).where(
+        select(_incident_logs_t.c.summary).where(
             _incident_logs_t.c.incident_id == log.incident_id,
-            _incident_logs_t.c.log_datetime == log.log_datetime,
+            _incident_logs_t.c.log_date == log.log_date,
         )
     ).first()
     if existing is not None:
+        merged = f"{existing.summary}\n\n{log.summary}"
+        conn.execute(
+            update(_incident_logs_t)
+            .where(
+                _incident_logs_t.c.incident_id == log.incident_id,
+                _incident_logs_t.c.log_date == log.log_date,
+            )
+            .values(summary=merged)
+        )
         return
     conn.execute(
         insert(_incident_logs_t).values(
             incident_id=log.incident_id,
-            log_datetime=log.log_datetime,
+            log_date=log.log_date,
             summary=log.summary,
         )
     )
@@ -429,19 +439,19 @@ class Warehouse:
     def append_timeline(self, row: IncidentLog) -> None:
 
         with self._engine.begin() as conn:
-            _insert_log_if_absent(conn, row)
+            _upsert_log(conn, row)
 
     def append_timeline_with_provenance(
         self, log: IncidentLog, news_ids: set[int]
     ) -> None:
 
         with self._engine.begin() as conn:
-            _insert_log_if_absent(conn, log)
+            _upsert_log(conn, log)
             if news_ids:
                 rows = [
                     {
                         "incident_id": log.incident_id,
-                        "log_datetime": log.log_datetime,
+                        "log_date": log.log_date,
                         "news_id": nid,
                     }
                     for nid in news_ids
@@ -488,7 +498,7 @@ class Warehouse:
             rows = conn.execute(
                 select(_incident_logs_t)
                 .where(_incident_logs_t.c.incident_id == incident_id)
-                .order_by(_incident_logs_t.c.log_datetime)
+                .order_by(_incident_logs_t.c.log_date)
             ).fetchall()
         return [_log_from_row(row._mapping) for row in rows]
 

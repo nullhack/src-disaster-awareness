@@ -206,25 +206,41 @@ class TestNewsIncidents:
 
 
 class TestTimeline:
-    def test_append_row_keyed_by_incident_id_and_log_datetime(self, db_url) -> None:
+    def test_append_row_keyed_by_incident_id_and_log_date(self, db_url) -> None:
         wh = Warehouse(db_url)
-        log = build_timeline_row(incident_id=100, log_datetime="2026-06-24T12:00:00Z")
+        log = build_timeline_row(incident_id=100, log_date="2026-06-24")
         wh.append_timeline(log)
         result = wh.read_timeline(100)
         assert len(result) == 1
         assert result[0].summary == log.summary
 
-    def test_multiple_logs_same_incident_distinct_datetimes_admitted(
+    def test_multiple_logs_same_incident_distinct_dates_admitted(
         self, db_url
     ) -> None:
         wh = Warehouse(db_url)
         wh.append_timeline(
-            build_timeline_row(incident_id=100, log_datetime="2026-06-24T12:00:00Z")
+            build_timeline_row(incident_id=100, log_date="2026-06-24")
         )
         wh.append_timeline(
-            build_timeline_row(incident_id=100, log_datetime="2026-07-01T12:00:00Z")
+            build_timeline_row(incident_id=100, log_date="2026-07-01")
         )
         assert len(wh.read_timeline(100)) == 2
+
+    def test_same_day_log_upsert_merges_summary(self, db_url) -> None:
+        wh = Warehouse(db_url)
+        wh.append_timeline(
+            build_timeline_row(
+                incident_id=100, log_date="2026-06-24", summary="morning developments"
+            )
+        )
+        wh.append_timeline(
+            build_timeline_row(
+                incident_id=100, log_date="2026-06-24", summary="evening developments"
+            )
+        )
+        timeline = wh.read_timeline(100)
+        assert len(timeline) == 1
+        assert timeline[0].summary == "morning developments\n\nevening developments"
 
 
 class TestReadModel:
@@ -270,7 +286,7 @@ class TestReadModel:
         wh = Warehouse(db_url)
         wh.append_timeline(
             build_timeline_row(
-                incident_id=100, log_datetime="2026-06-24T12:00:00Z", summary="event"
+                incident_id=100, log_date="2026-06-24", summary="event"
             )
         )
         tl = wh.read_timeline(100)
@@ -374,7 +390,7 @@ class TestIncidentLogNews:
         n2 = wh.ingest_news_item(build_news_item(url="https://b.com"))
         wh.append_timeline_with_provenance(
             build_timeline_row(
-                incident_id=1782000000600, log_datetime="2026-07-04T12:00:00Z"
+                incident_id=1782000000600, log_date="2026-07-04"
             ),
             {n1, n2},
         )
@@ -389,14 +405,14 @@ class TestIncidentLogNews:
         n3 = wh.ingest_news_item(build_news_item(url="https://c.com"))
         wh.append_timeline_with_provenance(
             build_timeline_row(
-                incident_id=1782000000600, log_datetime="2026-07-04T12:00:00Z"
+                incident_id=1782000000600, log_date="2026-07-04"
             ),
             {n1, n2},
         )
         assert wh.read_summarized_news_ids(1782000000600) == {n1, n2}
         wh.append_timeline_with_provenance(
             build_timeline_row(
-                incident_id=1782000000600, log_datetime="2026-07-05T12:00:00Z"
+                incident_id=1782000000600, log_date="2026-07-05"
             ),
             {n3},
         )
@@ -408,13 +424,13 @@ class TestIncidentLogNews:
         n2 = wh.ingest_news_item(build_news_item(url="https://b.com"))
         wh.append_timeline_with_provenance(
             build_timeline_row(
-                incident_id=1782000000600, log_datetime="2026-07-04T12:00:00Z"
+                incident_id=1782000000600, log_date="2026-07-04"
             ),
             {n1},
         )
         wh.append_timeline_with_provenance(
             build_timeline_row(
-                incident_id=1782000000700, log_datetime="2026-07-04T12:00:00Z"
+                incident_id=1782000000700, log_date="2026-07-04"
             ),
             {n2},
         )
@@ -428,13 +444,13 @@ class TestIncidentLogNews:
         n1 = wh.ingest_news_item(build_news_item(url="https://a.com"))
         n2 = wh.ingest_news_item(build_news_item(url="https://b.com"))
         log = build_timeline_row(
-            incident_id=1782000000600, log_datetime="2026-07-04T12:00:00Z"
+            incident_id=1782000000600, log_date="2026-07-04"
         )
         wh.append_timeline_with_provenance(log, {n1, n2})
         timeline = wh.read_timeline(1782000000600)
         assert len(timeline) == 1
         assert timeline[0].summary == log.summary
-        assert timeline[0].log_datetime == log.log_datetime
+        assert timeline[0].log_date == log.log_date
         assert wh.read_summarized_news_ids(1782000000600) == {n1, n2}
 
     def test_append_timeline_with_provenance_junction_links_exactly_given_news_ids(
@@ -446,26 +462,28 @@ class TestIncidentLogNews:
         n3 = wh.ingest_news_item(build_news_item(url="https://c.com"))
         wh.append_timeline_with_provenance(
             build_timeline_row(
-                incident_id=1782000000600, log_datetime="2026-07-04T12:00:00Z"
+                incident_id=1782000000600, log_date="2026-07-04"
             ),
             {n1, n2},
         )
-        linked = _junction_news_ids(wh, 1782000000600, "2026-07-04T12:00:00Z")
+        linked = _junction_news_ids(wh, 1782000000600, "2026-07-04")
         assert linked == {n1, n2}
         assert n3 not in linked
 
-    def test_append_timeline_with_provenance_is_idempotent_on_log_pk_collision(
+    def test_append_timeline_with_provenance_upserts_same_day_log(
         self, db_url
     ) -> None:
         wh = Warehouse(db_url)
         n1 = wh.ingest_news_item(build_news_item(url="https://a.com"))
         log = build_timeline_row(
-            incident_id=1782000000600, log_datetime="2026-07-04T12:00:00Z"
+            incident_id=1782000000600, log_date="2026-07-04"
         )
         wh.append_timeline_with_provenance(log, {n1})
         wh.append_timeline_with_provenance(log, {n1})
-        assert len(wh.read_timeline(1782000000600)) == 1
-        assert _junction_news_ids(wh, 1782000000600, "2026-07-04T12:00:00Z") == {n1}
+        timeline = wh.read_timeline(1782000000600)
+        assert len(timeline) == 1
+        assert timeline[0].summary == log.summary + "\n\n" + log.summary
+        assert _junction_news_ids(wh, 1782000000600, "2026-07-04") == {n1}
 
     def test_append_timeline_with_provenance_rolls_back_on_junction_fk_failure(
         self, db_url
@@ -477,11 +495,11 @@ class TestIncidentLogNews:
                 text(
                     "CREATE TABLE incident_log_news ("
                     "incident_id INTEGER NOT NULL, "
-                    "log_datetime VARCHAR NOT NULL, "
+                    "log_date VARCHAR NOT NULL, "
                     "news_id INTEGER NOT NULL, "
-                    "PRIMARY KEY (incident_id, log_datetime, news_id), "
-                    "FOREIGN KEY (incident_id, log_datetime) "
-                    "REFERENCES incident_logs (incident_id, log_datetime) "
+                    "PRIMARY KEY (incident_id, log_date, news_id), "
+                    "FOREIGN KEY (incident_id, log_date) "
+                    "REFERENCES incident_logs (incident_id, log_date) "
                     "ON DELETE CASCADE, "
                     "FOREIGN KEY (news_id) REFERENCES news_items (news_id) "
                     "ON DELETE CASCADE)"
@@ -491,7 +509,7 @@ class TestIncidentLogNews:
         wh._engine.dispose()
         n1 = wh.ingest_news_item(build_news_item(url="https://a.com"))
         log = build_timeline_row(
-            incident_id=1782000000600, log_datetime="2026-07-04T12:00:00Z"
+            incident_id=1782000000600, log_date="2026-07-04"
         )
         with pytest.raises(IntegrityError):
             wh.append_timeline_with_provenance(log, {n1, 999999})
@@ -505,14 +523,14 @@ class TestIncidentLogNews:
         n1 = wh.ingest_news_item(build_news_item(url="https://a.com"))
         wh.append_timeline(
             build_timeline_row(
-                incident_id=1782000000600, log_datetime="2026-07-04T12:00:00Z"
+                incident_id=1782000000600, log_date="2026-07-04"
             )
         )
         assert len(wh.read_timeline(1782000000600)) == 1
         assert wh.read_summarized_news_ids(1782000000600) == set()
         wh.append_timeline_with_provenance(
             build_timeline_row(
-                incident_id=1782000000600, log_datetime="2026-07-05T12:00:00Z"
+                incident_id=1782000000600, log_date="2026-07-05"
             ),
             {n1},
         )
@@ -521,7 +539,7 @@ class TestIncidentLogNews:
 
 
 class TestIncidentLogNewsBackfill:
-    def test_backfill_links_existing_logs_to_news_published_before_log_datetime(
+    def test_backfill_links_existing_logs_to_news_published_before_log_date(
         self, db_url
     ) -> None:
         wh = Warehouse(db_url)
@@ -536,13 +554,13 @@ class TestIncidentLogNewsBackfill:
         wh.assign_news_to_incident(n2, 1782000000600)
         wh.append_timeline(
             build_timeline_row(
-                incident_id=1782000000600, log_datetime="2026-07-05T12:00:00Z"
+                incident_id=1782000000600, log_date="2026-07-05"
             )
         )
         _run_backfill(wh)
-        assert _junction_news_ids(wh, 1782000000600, "2026-07-05T12:00:00Z") == {n1, n2}
+        assert _junction_news_ids(wh, 1782000000600, "2026-07-05") == {n1, n2}
 
-    def test_backfill_does_not_link_news_published_after_log_datetime(
+    def test_backfill_does_not_link_news_published_after_log_date(
         self, db_url
     ) -> None:
         wh = Warehouse(db_url)
@@ -557,11 +575,11 @@ class TestIncidentLogNewsBackfill:
         wh.assign_news_to_incident(n_after, 1782000000600)
         wh.append_timeline(
             build_timeline_row(
-                incident_id=1782000000600, log_datetime="2026-07-05T12:00:00Z"
+                incident_id=1782000000600, log_date="2026-07-05"
             )
         )
         _run_backfill(wh)
-        linked = _junction_news_ids(wh, 1782000000600, "2026-07-05T12:00:00Z")
+        linked = _junction_news_ids(wh, 1782000000600, "2026-07-05")
         assert n_before in linked
         assert n_after not in linked
 
@@ -578,12 +596,12 @@ class TestIncidentLogNewsBackfill:
         wh.assign_news_to_incident(n2, 1782000000600)
         wh.append_timeline(
             build_timeline_row(
-                incident_id=1782000000600, log_datetime="2026-07-05T12:00:00Z"
+                incident_id=1782000000600, log_date="2026-07-05"
             )
         )
         _run_backfill(wh)
         _run_backfill(wh)
-        assert _junction_news_ids(wh, 1782000000600, "2026-07-05T12:00:00Z") == {n1, n2}
+        assert _junction_news_ids(wh, 1782000000600, "2026-07-05") == {n1, n2}
 
 
 def build_source_report(
@@ -631,12 +649,12 @@ def build_news_item(
 def build_timeline_row(
     *,
     incident_id: int = 100,
-    log_datetime: str = "2026-07-04T12:00:00Z",
+    log_date: str = "2026-07-04",
     summary: str = "new developments",
 ) -> IncidentLog:
     return IncidentLog(
         incident_id=incident_id,
-        log_datetime=log_datetime,
+        log_date=log_date,
         summary=summary,
     )
 
@@ -650,15 +668,15 @@ def first_incident(incidents: list[Incident]) -> Incident:
 
 
 def _junction_news_ids(
-    warehouse: Warehouse, incident_id: int, log_datetime: str
+    warehouse: Warehouse, incident_id: int, log_date: str
 ) -> set[int]:
     with warehouse._engine.connect() as conn:
         rows = conn.execute(
             text(
                 "SELECT news_id FROM incident_log_news "
-                "WHERE incident_id = :iid AND log_datetime = :dt"
+                "WHERE incident_id = :iid AND log_date = :dt"
             ),
-            {"iid": incident_id, "dt": log_datetime},
+            {"iid": incident_id, "dt": log_date},
         ).fetchall()
     return {int(row[0]) for row in rows}
 
@@ -669,9 +687,9 @@ def _create_junction_table(warehouse: Warehouse) -> None:
             text(
                 "CREATE TABLE IF NOT EXISTS incident_log_news ("
                 "incident_id INTEGER NOT NULL, "
-                "log_datetime VARCHAR NOT NULL, "
+                "log_date VARCHAR NOT NULL, "
                 "news_id INTEGER NOT NULL, "
-                "PRIMARY KEY (incident_id, log_datetime, news_id))"
+                "PRIMARY KEY (incident_id, log_date, news_id))"
             )
         )
 
@@ -681,12 +699,12 @@ def _run_backfill(warehouse: Warehouse) -> None:
         conn.execute(
             text(
                 "INSERT OR IGNORE INTO incident_log_news "
-                "(incident_id, log_datetime, news_id) "
-                "SELECT il.incident_id, il.log_datetime, ni.news_id "
+                "(incident_id, log_date, news_id) "
+                "SELECT il.incident_id, il.log_date, ni.news_id "
                 "FROM incident_logs il "
                 "JOIN news_incidents ni ON ni.incident_id = il.incident_id "
                 "JOIN news_items n ON n.news_id = ni.news_id "
-                "WHERE n.published_date <= il.log_datetime"
+                "WHERE substr(n.published_date,1,10) <= il.log_date"
             )
         )
 

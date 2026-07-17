@@ -29,7 +29,7 @@ class SummaryDigest(dspy.Signature):
     incident_date: str = dspy.InputField(desc="Report date ISO")
     prior_summaries: list = dspy.InputField(
         desc="Prior timeline entries for THIS incident, oldest-first: "
-        "list of {log_datetime, summary}. Empty for a brand-new incident."
+        "list of {log_date, summary}. Empty for a brand-new incident."
     )
     selected_news: list = dspy.InputField(
         desc="List of {url,title,body_excerpt,domain}"
@@ -92,7 +92,7 @@ class OpenRouterDigester:
         incident_date: str,
     ) -> SummaryResult:
         prior_payload = [
-            {"log_datetime": log.log_datetime, "summary": log.summary}
+            {"log_date": log.log_date, "summary": log.summary}
             for log in prior_summaries
         ]
         result = self._summary_cot(
