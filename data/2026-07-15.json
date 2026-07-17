@@ -1,38 +1,38 @@
 {
   "schema_version": "1.4",
   "report_date": "2026-07-15",
-  "generated_at": "2026-07-17T09:27:37Z",
+  "generated_at": "2026-07-17T14:57:59Z",
   "as_of": "2026-07-15",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 91,
-    "new_today": 7,
+    "reportable_total": 89,
+    "new_today": 6,
     "critical": 0,
-    "high": 44,
+    "high": 42,
     "medium": 45,
     "low": 2,
     "disease_outbreaks": 22,
-    "countries_affected": 39,
-    "news_total": 322,
+    "countries_affected": 38,
+    "news_total": 278,
     "max_magnitude": 27577.0,
     "by_severity": {
       "CRITICAL": 0,
-      "HIGH": 44,
+      "HIGH": 42,
       "MEDIUM": 45,
       "LOW": 2
     },
     "by_type": {
       "Volcano": 3,
       "Tropical Cyclone": 3,
-      "Forest Fire": 4,
+      "Forest Fire": 3,
       "Flood": 4,
-      "Earthquake": 55,
+      "Earthquake": 54,
       "Disease": 22
     },
     "by_region": {
-      "Asia": 45,
-      "Europe": 5,
+      "Asia": 44,
+      "Europe": 4,
       "Americas": 22,
       "Africa": 11,
       "Oceania": 5,
@@ -42,7 +42,7 @@
   "by_country": [
     {
       "country": "Philippines",
-      "count": 8,
+      "count": 7,
       "max_sev_rank": 1,
       "iso2": "PH",
       "region": "Asia",
@@ -379,15 +379,6 @@
       "max_sev_rank": 3,
       "iso2": "AR",
       "region": "Americas",
-      "country_group": "C",
-      "max_severity": "HIGH"
-    },
-    {
-      "country": "France",
-      "count": 1,
-      "max_sev_rank": 3,
-      "iso2": "FR",
-      "region": "Europe",
       "country_group": "C",
       "max_severity": "HIGH"
     }
@@ -1315,7 +1306,7 @@
     {
       "incident_id": "20250906-CN-TC",
       "canonical_name": "Tropical Cyclone China 2025-09",
-      "summary": "",
+      "summary": "Tropical Cyclone TAPAH-25 (referred to as Typhoon Ragasa in some reports) struck southern China, prompting the evacuation of nearly 2 million people. The storm caused at least 17 fatalities, brought severe flooding to Hong Kong, and led to the shutdown of schools and businesses in the region.",
       "country": "China",
       "iso2": "CN",
       "lat": 21.8,
@@ -1390,7 +1381,35 @@
         }
       ],
       "news_total": 3,
-      "logs": []
+      "logs": [
+        {
+          "log_date": "2026-07-17",
+          "summary": "Tropical Cyclone TAPAH-25 (referred to as Typhoon Ragasa in some reports) struck southern China, prompting the evacuation of nearly 2 million people. The storm caused at least 17 fatalities, brought severe flooding to Hong Kong, and led to the shutdown of schools and businesses in the region.",
+          "news": [
+            {
+              "news_id": 1700001000369,
+              "url": "https://www.yahoo.com/news/articles/deadly-typhoon-ragasa-slams-southern-022616329.html",
+              "headline": "Nearly 2 million evacuated as Ragasa slams into southern China, after killing at...",
+              "published_date": "2026-07-08T16:23:45+00:00",
+              "outlet": "CNN · via Yahoo News"
+            },
+            {
+              "news_id": 1700001000380,
+              "url": "https://www.yahoo.com/news/articles/hong-kong-streets-flood-powerful-102900025.html",
+              "headline": "Hong Kong streets flood as powerful Typhoon Ragasa churns toward landfall",
+              "published_date": "2026-07-08T16:23:45+00:00",
+              "outlet": "Good Morning America · via Yahoo News"
+            },
+            {
+              "news_id": 1700001000393,
+              "url": "https://www.yahoo.com/news/articles/megacity-shuts-down-schools-businesses-042000680.html",
+              "headline": "Megacity shuts down schools and businesses ahead of world's most powerful storm...",
+              "published_date": "2026-07-08T18:30:28+00:00",
+              "outlet": "The Cool Down · via Yahoo News"
+            }
+          ]
+        }
+      ]
     },
     {
       "incident_id": "20251003-NP-FL",
@@ -2543,153 +2562,6 @@
               "headline": "Terrified residents flee as China earthquake rocks building",
               "published_date": "2026-07-08T21:37:44+00:00",
               "outlet": "MSN"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "incident_id": "20260607-PH-EQ",
-      "canonical_name": "Earthquake Philippines 2026-06",
-      "summary": "A subsequent 6.2-magnitude earthquake struck 34 km WSW of Sarangani, Philippines on July 14, 2026. Separately, monsoon rains triggered landslides and floods across Mindanao, killing 12 people, while the region was still recovering from the earlier 7.8 magnitude earthquake.",
-      "country": "Philippines",
-      "iso2": "PH",
-      "lat": 5.5918,
-      "lon": 125.0469,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "HIGH",
-      "priority": "HIGH",
-      "priority_rank": 1,
-      "pandemic_potential": null,
-      "event_status": null,
-      "disease_name": null,
-      "event_date": "2026-06-07",
-      "first_reported_date": "2026-06-07",
-      "last_updated_date": "2026-07-15",
-      "days_since_event": 40,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 1,
-        "healthmap": 0,
-        "news": 6
-      },
-      "source_links": [
-        {
-          "type": "GDACS",
-          "label": "Orange alert · Magnitude 7.8M, Depth:55.193km",
-          "url": "https://www.gdacs.org/report.aspx?eventid=1544720&episodeid=1710268&eventtype=EQ",
-          "meta": "Magnitude 7.8M, Depth:55.193km"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 7.8,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": "Orange",
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Deadly 7.8 Magnitude Earthquake Leads Officials to Cancel Classes on First Day...",
-          "url": "https://www.yahoo.com/news/world/articles/deadly-7-8-magnitude-earthquake-222135924.html",
-          "outlet": "People · via Yahoo News",
-          "published_date": "2026-07-08T21:49:20+00:00"
-        },
-        {
-          "headline": "Massive earthquake strikes southern Philippines: What to know",
-          "url": "https://www.yahoo.com/news/world/articles/massive-earthquake-strikes-southern-philippines-153246576.html",
-          "outlet": "Deseret News · via Yahoo News",
-          "published_date": "2026-07-08T21:49:20+00:00"
-        },
-        {
-          "headline": "Months-old Philippine earthquake video resurfaces after deadly tremor",
-          "url": "https://www.yahoo.com/news/world/articles/months-old-philippine-earthquake-video-031951967.html",
-          "outlet": "AFP · via Yahoo News",
-          "published_date": "2026-07-08T21:49:20+00:00"
-        },
-        {
-          "headline": "Nustar Online presents Bb Pilipinas 2026 NatCos competition, donates P1M to PRC for Sarangani earthquake relief",
-          "url": "https://www.manilatimes.net/2026/07/11/tmt-newswire/nustar-online-presents-bb-pilipinas-2026-natcos-competition-donates-p1m-to-prc-for-sarangani-earthquake-relief/2382701",
-          "outlet": "The Manila Times",
-          "published_date": "2026-07-11T00:00:00+00:00"
-        },
-        {
-          "headline": "12 dead as monsoon rains trigger landslides, flood across Mindanao",
-          "url": "https://davaotoday.com/headline/12-dead-as-monsoon-rains-trigger-landslides-flood-across-mindanao/",
-          "outlet": "Davao Today",
-          "published_date": "2026-07-11T02:41:07+00:00"
-        },
-        {
-          "headline": "6.2-magnitude quake hits 34 km WSW of Sarangani, Philippines: USGS",
-          "url": "https://thepeninsulaqatar.com/article/14/07/2026/62-magnitude-quake-hits-34-km-wsw-of-sarangani-philippines-usgs",
-          "outlet": "The Peninsula",
-          "published_date": "2026-07-15T06:54:07+00:00"
-        }
-      ],
-      "news_total": 6,
-      "logs": [
-        {
-          "log_date": "2026-07-08",
-          "summary": "A deadly 7.8 magnitude earthquake struck off the coast of the southern Philippines on June 8, 2026, killing several dozen people and collapsing structures, including in General Santos. Reports also note that an older earthquake video resurfaced online after the tremor. Schools cancelled classes as officials responded to the disaster.",
-          "news": [
-            {
-              "news_id": 1700001000439,
-              "url": "https://www.yahoo.com/news/world/articles/deadly-7-8-magnitude-earthquake-222135924.html",
-              "headline": "Deadly 7.8 Magnitude Earthquake Leads Officials to Cancel Classes on First Day...",
-              "published_date": "2026-07-08T21:49:20+00:00",
-              "outlet": "People · via Yahoo News"
-            },
-            {
-              "news_id": 1700001000445,
-              "url": "https://www.yahoo.com/news/world/articles/massive-earthquake-strikes-southern-philippines-153246576.html",
-              "headline": "Massive earthquake strikes southern Philippines: What to know",
-              "published_date": "2026-07-08T21:49:20+00:00",
-              "outlet": "Deseret News · via Yahoo News"
-            },
-            {
-              "news_id": 1700001000446,
-              "url": "https://www.yahoo.com/news/world/articles/months-old-philippine-earthquake-video-031951967.html",
-              "headline": "Months-old Philippine earthquake video resurfaces after deadly tremor",
-              "published_date": "2026-07-08T21:49:20+00:00",
-              "outlet": "AFP · via Yahoo News"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-15",
-          "summary": "A subsequent 6.2-magnitude earthquake struck 34 km WSW of Sarangani, Philippines on July 14, 2026. Separately, monsoon rains triggered landslides and floods across Mindanao, killing 12 people, while the region was still recovering from the earlier 7.8 magnitude earthquake.",
-          "news": [
-            {
-              "news_id": 1783791377750,
-              "url": "https://www.manilatimes.net/2026/07/11/tmt-newswire/nustar-online-presents-bb-pilipinas-2026-natcos-competition-donates-p1m-to-prc-for-sarangani-earthquake-relief/2382701",
-              "headline": "Nustar Online presents Bb Pilipinas 2026 NatCos competition, donates P1M to PRC for Sarangani earthquake relief",
-              "published_date": "2026-07-11T00:00:00+00:00",
-              "outlet": "The Manila Times"
-            },
-            {
-              "news_id": 1783910542623,
-              "url": "https://davaotoday.com/headline/12-dead-as-monsoon-rains-trigger-landslides-flood-across-mindanao/",
-              "headline": "12 dead as monsoon rains trigger landslides, flood across Mindanao",
-              "published_date": "2026-07-11T02:41:07+00:00",
-              "outlet": "Davao Today"
-            },
-            {
-              "news_id": 1784098480273,
-              "url": "https://thepeninsulaqatar.com/article/14/07/2026/62-magnitude-quake-hits-34-km-wsw-of-sarangani-philippines-usgs",
-              "headline": "6.2-magnitude quake hits 34 km WSW of Sarangani, Philippines: USGS",
-              "published_date": "2026-07-15T06:54:07+00:00",
-              "outlet": "The Peninsula"
             }
           ]
         }
@@ -9624,556 +9496,6 @@
               "headline": "6.2-magnitude earthquake strikes Pacific Ring of Fire: Normal activity or warning of a megaquake? Explained",
               "published_date": "2026-07-15T07:18:33+00:00",
               "outlet": "Hindustan Times on MSN"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "incident_id": "20260712-FR-WF",
-      "canonical_name": "Green forest fire notification in France",
-      "summary": "A wildfire erupted in the historic Fontainebleau forest south of Paris, burning over 2,000 hectares and prompting the evacuation of about 1,000 residents. French authorities arrested two people suspected of deliberately starting the blaze, while hundreds of firefighters and waterbombing aircraft worked to contain the fire as Europe faced another heatwave.\n\nThe wildfires in the Fontainebleau forest have shown mixed status: some reports indicate containment, while others report the fire is still spreading with 850 firefighters and 200 vehicles deployed. Authorities discovered ten ignition points and arrested two suspects on suspicion of arson.\n\nOn July 15, approximately 800 firefighters continued to tackle flare-ups in the Fontainebleau forest as French President Emmanuel Macron pledged to replant the historic forest. Meanwhile, authorities are investigating a volunteer firefighter as a suspect in starting the devastating blaze, which burned over 2,000 hectares near Paris.",
-      "country": "France",
-      "iso2": "FR",
-      "lat": 48.37489160154457,
-      "lon": 2.549974455334049,
-      "country_group": "C",
-      "region": "Europe",
-      "incident_type": "Forest Fire",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "HIGH",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "disease_name": null,
-      "event_date": "2026-07-12",
-      "first_reported_date": "2026-07-12",
-      "last_updated_date": "2026-07-15",
-      "days_since_event": 5,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 1,
-        "healthmap": 0,
-        "news": 38
-      },
-      "source_links": [
-        {
-          "type": "GDACS",
-          "label": "Green alert · Green forest fire notification in France",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=WF&eventid=1029489",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": "Green",
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "French police detain 59 over nationwide wildfires, 2 linked to Fontainebleau blaze",
-          "url": "https://www.globaltimes.cn/page/202607/1365975.shtml",
-          "outlet": "Global Times",
-          "published_date": "2026-07-10T07:19:14+00:00"
-        },
-        {
-          "headline": "Wildfires near Paris force evacuations, disrupt train lines and motorway",
-          "url": "https://www.aljazeera.com/news/2026/7/13/wildfires-near-paris-force-evacuations-disrupt-train-lines-and-motorway",
-          "outlet": "Al Jazeera",
-          "published_date": "2026-07-13T04:00:52+00:00"
-        },
-        {
-          "headline": "Macron warns of wildfire of 'exceptional magnitude' as residents evacuated from...",
-          "url": "https://www.yahoo.com/news/world/articles/residents-evacuated-fire-exceptional-scale-070033825.html",
-          "outlet": "Euronews · via Yahoo News",
-          "published_date": "2026-07-13T06:43:18+00:00"
-        },
-        {
-          "headline": "Firefighting aircraft battle forest blaze near Paris as Europe swelters under heatwave",
-          "url": "https://www.independent.ie/world-news/firefighting-aircraft-battle-forest-blaze-near-paris-as-europe-swelters-under-heatwave/a/158727960.html",
-          "outlet": "Independent.ie",
-          "published_date": "2026-07-13T07:19:10+00:00"
-        },
-        {
-          "headline": "In Fontainebleau, southern France firefighters share expertise with Paris-region colleagues",
-          "url": "https://www.lemonde.fr/en/environment/article/2026/07/14/in-fontainebleau-southern-france-firefighters-share-expertise-with-paris-region-colleagues_6755472_114.html",
-          "outlet": "Le Monde",
-          "published_date": "2026-07-14T00:00:00+00:00"
-        },
-        {
-          "headline": "Blaze near Paris burns on as Europe heats up",
-          "url": "https://www.thestar.com.my/news/world/2026/07/14/firefighters-battle-fontainebleau-forest-fire-near-paris-as-two-arrested",
-          "outlet": "The Star",
-          "published_date": "2026-07-14T00:00:00+00:00"
-        },
-        {
-          "headline": "Bastille Day in France: World Cup matches, extreme heat and forest fires",
-          "url": "https://www.wbur.org/hereandnow/2026/07/14/bastille-day-heat-world-cup",
-          "outlet": "WBUR",
-          "published_date": "2026-07-14T00:00:00+00:00"
-        },
-        {
-          "headline": "Blaze near Paris burns on as heatwave tightens across Europe",
-          "url": "https://english.alarabiya.net/News/world/2026/07/14/blaze-near-paris-burns-on-as-heatwave-tightens-across-europe",
-          "outlet": "Al Arabiya English",
-          "published_date": "2026-07-14T00:00:00+00:00"
-        },
-        {
-          "headline": "Fire in Fontainebleau forest near Paris triggers evacuations; 10 still missing...",
-          "url": "https://cdapress.com/news/2026/jul/13/fire-in-fontainebleau-forest-near-paris-triggers-evacuations-10-still-missing-in-spanish-wildfire/",
-          "outlet": "Coeur d'Alene Press",
-          "published_date": "2026-07-14T03:57:45+00:00"
-        },
-        {
-          "headline": "Wildfires advance in forest south of Paris",
-          "url": "https://www.yahoo.com/news/world/articles/wildfires-advance-forest-south-paris-070210992.html",
-          "outlet": "AFP · via Yahoo News",
-          "published_date": "2026-07-14T06:43:18+00:00"
-        },
-        {
-          "headline": "Fifty-nine arrested over French wildfires, as Fontainebleau blaze continues",
-          "url": "https://www.yahoo.com/news/articles/fifty-nine-arrested-over-wildfires-062247928.html",
-          "outlet": "RFI · via Yahoo News",
-          "published_date": "2026-07-14T06:43:18+00:00"
-        },
-        {
-          "headline": "1,000 evacuated from Fontainebleau fires near Paris; Spanish authorities identify some fire victims",
-          "url": "https://www.newsday.com/news/nation/spain-france-wildfires-europe-climate-change-b21473",
-          "outlet": "Newsday",
-          "published_date": "2026-07-14T09:30:37+00:00"
-        },
-        {
-          "headline": "Planes scoop the Seine to battle wildfires near Paris as third heat wave...",
-          "url": "https://www.yahoo.com/news/weather-news/articles/planes-scoop-seine-battle-wildfires-113314480.html",
-          "outlet": "The Weather Channel · via Yahoo News",
-          "published_date": "2026-07-14T11:43:18+00:00"
-        },
-        {
-          "headline": "1,000 evacuated from Fontainebleau fires near Paris; Spanish authorities...",
-          "url": "https://www.sfgate.com/news/world/article/1-000-evacuated-from-fontainebleau-fire-near-22344388.php",
-          "outlet": "San Francisco Chronicle",
-          "published_date": "2026-07-14T12:43:18+00:00"
-        },
-        {
-          "headline": "France's Macron pledges to replant Fontainebleau forest after devastating fire",
-          "url": "https://www.msn.com/en-us/news/world/frances-macron-pledges-to-replant-fontainebleau-forest-after-devastating-fire/ar-AA282Nn5?ocid=BingNewsVerp",
-          "outlet": "Reuters on MSN",
-          "published_date": "2026-07-14T14:48:30+00:00"
-        },
-        {
-          "headline": "Volunteer firefighter suspected of starting devastating France forest fire",
-          "url": "https://www.msn.com/en-us/news/world/volunteer-firefighter-suspected-of-starting-devastating-france-forest-fire/ar-AA282NRJ?ocid=BingNewsVerp",
-          "outlet": "BBC on MSN",
-          "published_date": "2026-07-14T14:48:33+00:00"
-        },
-        {
-          "headline": "Wildfires that ravaged historic forest outside Paris contained",
-          "url": "https://www.thelocal.fr/20260715/wildfires-that-ravaged-historic-forest-outside-paris-contained",
-          "outlet": "The Local",
-          "published_date": "2026-07-15T00:00:00+00:00"
-        },
-        {
-          "headline": "France forest fire prompts evacuations",
-          "url": "https://www.arkansasonline.com/news/2026/jul/14/france-forest-fire-prompts-evacuations/",
-          "outlet": "Arkansas Democrat-Gazette",
-          "published_date": "2026-07-15T06:43:19+00:00"
-        },
-        {
-          "headline": "Fontainebleau forest fire near Paris ‘contained’ but not extinguished",
-          "url": "https://www.france24.com/en/france/20260714-more-than-1-900-hectares-fontainebleau-forest-near-paris-destroyed-by-wildfires",
-          "outlet": "France 24",
-          "published_date": "2026-07-15T06:43:19+00:00"
-        },
-        {
-          "headline": "Wildfires advance in forest south of Paris",
-          "url": "https://www.msn.com/en-my/public-safety-and-emergencies/fire-and-rescue/wildfires-advance-in-forest-south-of-paris/ar-AA27SsIs?ocid=BingNewsVerp",
-          "outlet": "Free Malaysia Today on MSN",
-          "published_date": "2026-07-15T06:43:19+00:00"
-        },
-        {
-          "headline": "‘My heart is on fire’: Fontainebleau forest blaze leaves community reeling",
-          "url": "https://sg.news.yahoo.com/heart-fire-fontainebleau-forest-blaze-172246129.html",
-          "outlet": "Yahoo News Singapore",
-          "published_date": "2026-07-15T06:43:19+00:00"
-        },
-        {
-          "headline": "France Battles Spreading Wildfires As Nearly 1,900 Hectares Burn",
-          "url": "https://www.bernama.com/en/region/news.php?id=2580839",
-          "outlet": "BERNAMA",
-          "published_date": "2026-07-15T06:43:19+00:00"
-        },
-        {
-          "headline": "Fontainebleau fire still burning as 850 firefighters tackle blaze",
-          "url": "https://www.msn.com/en-gb/news/world/fontainebleau-fire-still-burning-as-850-firefighters-tackle-blaze/ar-AA27Shey?ocid=BingNewsVerp",
-          "outlet": "Euronews on MSN",
-          "published_date": "2026-07-15T07:19:10+00:00"
-        },
-        {
-          "headline": "Two arrested on suspicion of deliberately starting devastating wildfires near Paris",
-          "url": "https://www.independent.co.uk/news/world/europe/france-wildfires-paris-fontainebleu-heatwave-b3014451.html",
-          "outlet": "The Independent",
-          "published_date": "2026-07-15T07:19:10+00:00"
-        },
-        {
-          "headline": "Firefighters battle to stop forest blaze near Paris from erupting again",
-          "url": "https://apnews.com/video/firefighters-battle-to-stop-forest-blaze-near-paris-from-erupting-again-7695426ab5a640aaaeba50b30b47c40e",
-          "outlet": "Associated Press News",
-          "published_date": "2026-07-15T07:19:10+00:00"
-        },
-        {
-          "headline": "Wildfires advance in forest south of Paris",
-          "url": "https://www.msn.com/en-ph/news/world/wildfires-advance-in-forest-south-of-paris/ar-AA27SGh8?ocid=BingNewsVerp",
-          "outlet": "The Manila Times on MSN",
-          "published_date": "2026-07-15T07:19:10+00:00"
-        },
-        {
-          "headline": "Firefighters battle blaze in France's Fontainebleau forest amid deadly fires in Europe",
-          "url": "https://www.yahoo.com/news/videos/firefighters-battle-blaze-frances-fontainebleau-191457430.html",
-          "outlet": "Yahoo",
-          "published_date": "2026-07-15T07:19:10+00:00"
-        },
-        {
-          "headline": "Two arrested as firefighters battle Fontainebleau forest fire near Paris",
-          "url": "https://www.thehindu.com/news/international/two-arrested-as-firefighters-battle-fontainebleau-forest-fire-near-paris/article71220335.ece",
-          "outlet": "The Hindu",
-          "published_date": "2026-07-15T07:19:14+00:00"
-        },
-        {
-          "headline": "Firefighters battle Fontainebleau forest fire near Paris as two arrested",
-          "url": "https://www.msn.com/en-us/news/world/firefighters-battle-fontainebleau-forest-fire-near-paris-as-two-arrested/ar-AA27U0Km?ocid=BingNewsVerp",
-          "outlet": "Reuters on MSN",
-          "published_date": "2026-07-15T07:19:14+00:00"
-        },
-        {
-          "headline": "Fires advance in forest south of Paris as two arrested",
-          "url": "https://www.rte.ie/news/2026/0714/1583241-france-wildfires/",
-          "outlet": "RTÉ Ireland",
-          "published_date": "2026-07-15T07:19:14+00:00"
-        },
-        {
-          "headline": "Fire ravages historic forest outside Paris",
-          "url": "https://thepeninsulaqatar.com/article/14/07/2026/fire-ravages-historic-forest-outside-paris",
-          "outlet": "The Peninsula Qatar",
-          "published_date": "2026-07-15T07:19:14+00:00"
-        },
-        {
-          "headline": "France Arrests Arson Suspects Amid Fontainebleau Forest Fire",
-          "url": "https://en.tempo.co/read/2113659/france-arrests-arson-suspects-amid-fontainebleau-forest-fire",
-          "outlet": "Tempo.co English",
-          "published_date": "2026-07-15T07:19:14+00:00"
-        },
-        {
-          "headline": "Bastille Day celebrations in France tempered by fear of more wildfires",
-          "url": "https://www.theguardian.com/world/2026/jul/14/bastille-day-celebrations-france-tempered-fear-wildfires",
-          "outlet": "The Guardian",
-          "published_date": "2026-07-15T07:19:14+00:00"
-        },
-        {
-          "headline": "Wildfires that ravaged historic forest outside Paris contained",
-          "url": "https://www.yahoo.com/news/weather-news/articles/fire-ravages-historic-forest-outside-101343610.html",
-          "outlet": "Yahoo",
-          "published_date": "2026-07-15T09:30:38+00:00"
-        },
-        {
-          "headline": "Two arrested on suspicion of deliberately starting devastating wildfires near Paris",
-          "url": "https://www.aol.com/news/two-arrested-suspicion-deliberately-starting-125850509.html",
-          "outlet": "AOL",
-          "published_date": "2026-07-15T09:30:40+00:00"
-        },
-        {
-          "headline": "Why Is France Celebrating Bastille Day Differently This Year?",
-          "url": "https://en.tempo.co/read/2113668/why-is-france-celebrating-bastille-day-differently-this-year",
-          "outlet": "Tempo.co English",
-          "published_date": "2026-07-15T09:30:40+00:00"
-        },
-        {
-          "headline": "Fontainebleau fire still burning as 850 firefighters tackle blaze",
-          "url": "https://www.msn.com/en-in/news/world/fontainebleau-fire-still-burning-as-850-firefighters-tackle-blaze/ar-AA27SeOS?ocid=BingNewsVerp",
-          "outlet": "Euronews on MSN",
-          "published_date": "2026-07-15T09:30:40+00:00"
-        },
-        {
-          "headline": "Firefighters tackle flare-ups in Fontainebleau forest after fires brought under...",
-          "url": "https://www.yahoo.com/news/articles/firefighters-tackle-flare-ups-fontainebleau-114525556.html",
-          "outlet": "RFI · via Yahoo News",
-          "published_date": "2026-07-15T12:00:52+00:00"
-        }
-      ],
-      "news_total": 38,
-      "logs": [
-        {
-          "log_date": "2026-07-15",
-          "summary": "A wildfire erupted in the historic Fontainebleau forest south of Paris, burning over 2,000 hectares and prompting the evacuation of about 1,000 residents. French authorities arrested two people suspected of deliberately starting the blaze, while hundreds of firefighters and waterbombing aircraft worked to contain the fire as Europe faced another heatwave.\n\nThe wildfires in the Fontainebleau forest have shown mixed status: some reports indicate containment, while others report the fire is still spreading with 850 firefighters and 200 vehicles deployed. Authorities discovered ten ignition points and arrested two suspects on suspicion of arson.\n\nOn July 15, approximately 800 firefighters continued to tackle flare-ups in the Fontainebleau forest as French President Emmanuel Macron pledged to replant the historic forest. Meanwhile, authorities are investigating a volunteer firefighter as a suspect in starting the devastating blaze, which burned over 2,000 hectares near Paris.",
-          "news": [
-            {
-              "news_id": 1784099993131,
-              "url": "https://www.globaltimes.cn/page/202607/1365975.shtml",
-              "headline": "French police detain 59 over nationwide wildfires, 2 linked to Fontainebleau blaze",
-              "published_date": "2026-07-10T07:19:14+00:00",
-              "outlet": "Global Times"
-            },
-            {
-              "news_id": 1784174465664,
-              "url": "https://www.aljazeera.com/news/2026/7/13/wildfires-near-paris-force-evacuations-disrupt-train-lines-and-motorway",
-              "headline": "Wildfires near Paris force evacuations, disrupt train lines and motorway",
-              "published_date": "2026-07-13T04:00:52+00:00",
-              "outlet": "Al Jazeera"
-            },
-            {
-              "news_id": 1784097823354,
-              "url": "https://www.yahoo.com/news/world/articles/residents-evacuated-fire-exceptional-scale-070033825.html",
-              "headline": "Macron warns of wildfire of 'exceptional magnitude' as residents evacuated from...",
-              "published_date": "2026-07-13T06:43:18+00:00",
-              "outlet": "Euronews · via Yahoo News"
-            },
-            {
-              "news_id": 1784099993057,
-              "url": "https://www.independent.ie/world-news/firefighting-aircraft-battle-forest-blaze-near-paris-as-europe-swelters-under-heatwave/a/158727960.html",
-              "headline": "Firefighting aircraft battle forest blaze near Paris as Europe swelters under heatwave",
-              "published_date": "2026-07-13T07:19:10+00:00",
-              "outlet": "Independent.ie"
-            },
-            {
-              "news_id": 1784097823362,
-              "url": "https://www.lemonde.fr/en/environment/article/2026/07/14/in-fontainebleau-southern-france-firefighters-share-expertise-with-paris-region-colleagues_6755472_114.html",
-              "headline": "In Fontainebleau, southern France firefighters share expertise with Paris-region colleagues",
-              "published_date": "2026-07-14T00:00:00+00:00",
-              "outlet": "Le Monde"
-            },
-            {
-              "news_id": 1784099993205,
-              "url": "https://www.thestar.com.my/news/world/2026/07/14/firefighters-battle-fontainebleau-forest-fire-near-paris-as-two-arrested",
-              "headline": "Blaze near Paris burns on as Europe heats up",
-              "published_date": "2026-07-14T00:00:00+00:00",
-              "outlet": "The Star"
-            },
-            {
-              "news_id": 1784107872577,
-              "url": "https://www.wbur.org/hereandnow/2026/07/14/bastille-day-heat-world-cup",
-              "headline": "Bastille Day in France: World Cup matches, extreme heat and forest fires",
-              "published_date": "2026-07-14T00:00:00+00:00",
-              "outlet": "WBUR"
-            },
-            {
-              "news_id": 1784107872580,
-              "url": "https://english.alarabiya.net/News/world/2026/07/14/blaze-near-paris-burns-on-as-heatwave-tightens-across-europe",
-              "headline": "Blaze near Paris burns on as heatwave tightens across Europe",
-              "published_date": "2026-07-14T00:00:00+00:00",
-              "outlet": "Al Arabiya English"
-            },
-            {
-              "news_id": 1784097823334,
-              "url": "https://www.yahoo.com/news/world/articles/wildfires-advance-forest-south-paris-070210992.html",
-              "headline": "Wildfires advance in forest south of Paris",
-              "published_date": "2026-07-14T06:43:18+00:00",
-              "outlet": "AFP · via Yahoo News"
-            },
-            {
-              "news_id": 1784097823344,
-              "url": "https://www.yahoo.com/news/articles/fifty-nine-arrested-over-wildfires-062247928.html",
-              "headline": "Fifty-nine arrested over French wildfires, as Fontainebleau blaze continues",
-              "published_date": "2026-07-14T06:43:18+00:00",
-              "outlet": "RFI · via Yahoo News"
-            },
-            {
-              "news_id": 1784107872570,
-              "url": "https://www.newsday.com/news/nation/spain-france-wildfires-europe-climate-change-b21473",
-              "headline": "1,000 evacuated from Fontainebleau fires near Paris; Spanish authorities identify some fire victims",
-              "published_date": "2026-07-14T09:30:37+00:00",
-              "outlet": "Newsday"
-            },
-            {
-              "news_id": 1784097823322,
-              "url": "https://www.yahoo.com/news/weather-news/articles/planes-scoop-seine-battle-wildfires-113314480.html",
-              "headline": "Planes scoop the Seine to battle wildfires near Paris as third heat wave...",
-              "published_date": "2026-07-14T11:43:18+00:00",
-              "outlet": "The Weather Channel · via Yahoo News"
-            },
-            {
-              "news_id": 1784097823312,
-              "url": "https://www.sfgate.com/news/world/article/1-000-evacuated-from-fontainebleau-fire-near-22344388.php",
-              "headline": "1,000 evacuated from Fontainebleau fires near Paris; Spanish authorities...",
-              "published_date": "2026-07-14T12:43:18+00:00",
-              "outlet": "San Francisco Chronicle"
-            },
-            {
-              "news_id": 1784213345319,
-              "url": "https://www.msn.com/en-us/news/world/frances-macron-pledges-to-replant-fontainebleau-forest-after-devastating-fire/ar-AA282Nn5?ocid=BingNewsVerp",
-              "headline": "France's Macron pledges to replant Fontainebleau forest after devastating fire",
-              "published_date": "2026-07-14T14:48:30+00:00",
-              "outlet": "Reuters on MSN"
-            },
-            {
-              "news_id": 1784213345322,
-              "url": "https://www.msn.com/en-us/news/world/volunteer-firefighter-suspected-of-starting-devastating-france-forest-fire/ar-AA282NRJ?ocid=BingNewsVerp",
-              "headline": "Volunteer firefighter suspected of starting devastating France forest fire",
-              "published_date": "2026-07-14T14:48:33+00:00",
-              "outlet": "BBC on MSN"
-            },
-            {
-              "news_id": 1784099993143,
-              "url": "https://www.thelocal.fr/20260715/wildfires-that-ravaged-historic-forest-outside-paris-contained",
-              "headline": "Wildfires that ravaged historic forest outside Paris contained",
-              "published_date": "2026-07-15T00:00:00+00:00",
-              "outlet": "The Local"
-            },
-            {
-              "news_id": 1784097823293,
-              "url": "https://www.arkansasonline.com/news/2026/jul/14/france-forest-fire-prompts-evacuations/",
-              "headline": "France forest fire prompts evacuations",
-              "published_date": "2026-07-15T06:43:19+00:00",
-              "outlet": "Arkansas Democrat-Gazette"
-            },
-            {
-              "news_id": 1784097823373,
-              "url": "https://www.france24.com/en/france/20260714-more-than-1-900-hectares-fontainebleau-forest-near-paris-destroyed-by-wildfires",
-              "headline": "Fontainebleau forest fire near Paris ‘contained’ but not extinguished",
-              "published_date": "2026-07-15T06:43:19+00:00",
-              "outlet": "France 24"
-            },
-            {
-              "news_id": 1784097823387,
-              "url": "https://www.msn.com/en-my/public-safety-and-emergencies/fire-and-rescue/wildfires-advance-in-forest-south-of-paris/ar-AA27SsIs?ocid=BingNewsVerp",
-              "headline": "Wildfires advance in forest south of Paris",
-              "published_date": "2026-07-15T06:43:19+00:00",
-              "outlet": "Free Malaysia Today on MSN"
-            },
-            {
-              "news_id": 1784097823397,
-              "url": "https://sg.news.yahoo.com/heart-fire-fontainebleau-forest-blaze-172246129.html",
-              "headline": "‘My heart is on fire’: Fontainebleau forest blaze leaves community reeling",
-              "published_date": "2026-07-15T06:43:19+00:00",
-              "outlet": "Yahoo News Singapore"
-            },
-            {
-              "news_id": 1784097823406,
-              "url": "https://www.bernama.com/en/region/news.php?id=2580839",
-              "headline": "France Battles Spreading Wildfires As Nearly 1,900 Hectares Burn",
-              "published_date": "2026-07-15T06:43:19+00:00",
-              "outlet": "BERNAMA"
-            },
-            {
-              "news_id": 1784099993005,
-              "url": "https://www.msn.com/en-gb/news/world/fontainebleau-fire-still-burning-as-850-firefighters-tackle-blaze/ar-AA27Shey?ocid=BingNewsVerp",
-              "headline": "Fontainebleau fire still burning as 850 firefighters tackle blaze",
-              "published_date": "2026-07-15T07:19:10+00:00",
-              "outlet": "Euronews on MSN"
-            },
-            {
-              "news_id": 1784099993029,
-              "url": "https://www.independent.co.uk/news/world/europe/france-wildfires-paris-fontainebleu-heatwave-b3014451.html",
-              "headline": "Two arrested on suspicion of deliberately starting devastating wildfires near Paris",
-              "published_date": "2026-07-15T07:19:10+00:00",
-              "outlet": "The Independent"
-            },
-            {
-              "news_id": 1784099993046,
-              "url": "https://apnews.com/video/firefighters-battle-to-stop-forest-blaze-near-paris-from-erupting-again-7695426ab5a640aaaeba50b30b47c40e",
-              "headline": "Firefighters battle to stop forest blaze near Paris from erupting again",
-              "published_date": "2026-07-15T07:19:10+00:00",
-              "outlet": "Associated Press News"
-            },
-            {
-              "news_id": 1784099993072,
-              "url": "https://www.msn.com/en-ph/news/world/wildfires-advance-in-forest-south-of-paris/ar-AA27SGh8?ocid=BingNewsVerp",
-              "headline": "Wildfires advance in forest south of Paris",
-              "published_date": "2026-07-15T07:19:10+00:00",
-              "outlet": "The Manila Times on MSN"
-            },
-            {
-              "news_id": 1784099993083,
-              "url": "https://www.yahoo.com/news/videos/firefighters-battle-blaze-frances-fontainebleau-191457430.html",
-              "headline": "Firefighters battle blaze in France's Fontainebleau forest amid deadly fires in Europe",
-              "published_date": "2026-07-15T07:19:10+00:00",
-              "outlet": "Yahoo"
-            },
-            {
-              "news_id": 1784099993097,
-              "url": "https://www.thehindu.com/news/international/two-arrested-as-firefighters-battle-fontainebleau-forest-fire-near-paris/article71220335.ece",
-              "headline": "Two arrested as firefighters battle Fontainebleau forest fire near Paris",
-              "published_date": "2026-07-15T07:19:14+00:00",
-              "outlet": "The Hindu"
-            },
-            {
-              "news_id": 1784099993117,
-              "url": "https://www.msn.com/en-us/news/world/firefighters-battle-fontainebleau-forest-fire-near-paris-as-two-arrested/ar-AA27U0Km?ocid=BingNewsVerp",
-              "headline": "Firefighters battle Fontainebleau forest fire near Paris as two arrested",
-              "published_date": "2026-07-15T07:19:14+00:00",
-              "outlet": "Reuters on MSN"
-            },
-            {
-              "news_id": 1784099993155,
-              "url": "https://www.rte.ie/news/2026/0714/1583241-france-wildfires/",
-              "headline": "Fires advance in forest south of Paris as two arrested",
-              "published_date": "2026-07-15T07:19:14+00:00",
-              "outlet": "RTÉ Ireland"
-            },
-            {
-              "news_id": 1784099993166,
-              "url": "https://thepeninsulaqatar.com/article/14/07/2026/fire-ravages-historic-forest-outside-paris",
-              "headline": "Fire ravages historic forest outside Paris",
-              "published_date": "2026-07-15T07:19:14+00:00",
-              "outlet": "The Peninsula Qatar"
-            },
-            {
-              "news_id": 1784099993178,
-              "url": "https://en.tempo.co/read/2113659/france-arrests-arson-suspects-amid-fontainebleau-forest-fire",
-              "headline": "France Arrests Arson Suspects Amid Fontainebleau Forest Fire",
-              "published_date": "2026-07-15T07:19:14+00:00",
-              "outlet": "Tempo.co English"
-            },
-            {
-              "news_id": 1784099993191,
-              "url": "https://www.theguardian.com/world/2026/jul/14/bastille-day-celebrations-france-tempered-fear-wildfires",
-              "headline": "Bastille Day celebrations in France tempered by fear of more wildfires",
-              "published_date": "2026-07-15T07:19:14+00:00",
-              "outlet": "The Guardian"
-            },
-            {
-              "news_id": 1784107872574,
-              "url": "https://www.yahoo.com/news/weather-news/articles/fire-ravages-historic-forest-outside-101343610.html",
-              "headline": "Wildfires that ravaged historic forest outside Paris contained",
-              "published_date": "2026-07-15T09:30:38+00:00",
-              "outlet": "Yahoo"
-            },
-            {
-              "news_id": 1784107872582,
-              "url": "https://www.aol.com/news/two-arrested-suspicion-deliberately-starting-125850509.html",
-              "headline": "Two arrested on suspicion of deliberately starting devastating wildfires near Paris",
-              "published_date": "2026-07-15T09:30:40+00:00",
-              "outlet": "AOL"
-            },
-            {
-              "news_id": 1784107872585,
-              "url": "https://en.tempo.co/read/2113668/why-is-france-celebrating-bastille-day-differently-this-year",
-              "headline": "Why Is France Celebrating Bastille Day Differently This Year?",
-              "published_date": "2026-07-15T09:30:40+00:00",
-              "outlet": "Tempo.co English"
-            },
-            {
-              "news_id": 1784107872588,
-              "url": "https://www.msn.com/en-in/news/world/fontainebleau-fire-still-burning-as-850-firefighters-tackle-blaze/ar-AA27SeOS?ocid=BingNewsVerp",
-              "headline": "Fontainebleau fire still burning as 850 firefighters tackle blaze",
-              "published_date": "2026-07-15T09:30:40+00:00",
-              "outlet": "Euronews on MSN"
-            },
-            {
-              "news_id": 1784174465661,
-              "url": "https://www.yahoo.com/news/articles/firefighters-tackle-flare-ups-fontainebleau-114525556.html",
-              "headline": "Firefighters tackle flare-ups in Fontainebleau forest after fires brought under...",
-              "published_date": "2026-07-15T12:00:52+00:00",
-              "outlet": "RFI · via Yahoo News"
             }
           ]
         }
