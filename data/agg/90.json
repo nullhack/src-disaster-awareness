@@ -2,32 +2,8 @@
   "schema_version": "1.4",
   "window": 90,
   "bucket": "day",
-  "as_of": "2026-07-16",
+  "as_of": "2026-07-17",
   "series": [
-    {
-      "date": "2026-04-18",
-      "sev": {
-        "CRITICAL": {
-          "e": 0,
-          "n": 0
-        },
-        "HIGH": {
-          "e": 0,
-          "n": 0
-        },
-        "MEDIUM": {
-          "e": 0,
-          "n": 0
-        },
-        "LOW": {
-          "e": 0,
-          "n": 0
-        }
-      },
-      "type": {},
-      "disease": {},
-      "region": {}
-    },
     {
       "date": "2026-04-19",
       "sev": {
@@ -3801,6 +3777,101 @@
         "Africa": {
           "e": 1,
           "n": 58
+        }
+      }
+    },
+    {
+      "date": "2026-07-17",
+      "sev": {
+        "CRITICAL": {
+          "e": 2,
+          "n": 203
+        },
+        "HIGH": {
+          "e": 10,
+          "n": 245
+        },
+        "MEDIUM": {
+          "e": 15,
+          "n": 106
+        },
+        "LOW": {
+          "e": 0,
+          "n": 0
+        }
+      },
+      "type": {
+        "Volcano": {
+          "e": 3,
+          "n": 14
+        },
+        "Tropical Cyclone": {
+          "e": 1,
+          "n": 97
+        },
+        "Forest Fire": {
+          "e": 4,
+          "n": 93
+        },
+        "Flood": {
+          "e": 5,
+          "n": 49
+        },
+        "Earthquake": {
+          "e": 8,
+          "n": 191
+        },
+        "Disease": {
+          "e": 5,
+          "n": 99
+        },
+        "Drought": {
+          "e": 1,
+          "n": 11
+        }
+      },
+      "disease": {
+        "Covid-19": {
+          "e": 1,
+          "n": 11
+        },
+        "Measles": {
+          "e": 1,
+          "n": 18
+        },
+        "Influenza": {
+          "e": 1,
+          "n": 4
+        },
+        "Ebola": {
+          "e": 1,
+          "n": 58
+        }
+      },
+      "region": {
+        "Asia": {
+          "e": 15,
+          "n": 220
+        },
+        "Europe": {
+          "e": 5,
+          "n": 104
+        },
+        "Americas": {
+          "e": 1,
+          "n": 106
+        },
+        "Unknown": {
+          "e": 3,
+          "n": 23
+        },
+        "Africa": {
+          "e": 1,
+          "n": 58
+        },
+        "Oceania": {
+          "e": 2,
+          "n": 43
         }
       }
     }
