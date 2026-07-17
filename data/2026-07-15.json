@@ -1,29 +1,29 @@
 {
   "schema_version": "1.4",
   "report_date": "2026-07-15",
-  "generated_at": "2026-07-17T14:57:59Z",
+  "generated_at": "2026-07-17T20:27:44Z",
   "as_of": "2026-07-15",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 89,
-    "new_today": 6,
+    "reportable_total": 88,
+    "new_today": 5,
     "critical": 0,
     "high": 42,
-    "medium": 45,
+    "medium": 44,
     "low": 2,
     "disease_outbreaks": 22,
     "countries_affected": 38,
-    "news_total": 278,
+    "news_total": 274,
     "max_magnitude": 27577.0,
     "by_severity": {
       "CRITICAL": 0,
       "HIGH": 42,
-      "MEDIUM": 45,
+      "MEDIUM": 44,
       "LOW": 2
     },
     "by_type": {
-      "Volcano": 3,
+      "Volcano": 2,
       "Tropical Cyclone": 3,
       "Forest Fire": 3,
       "Flood": 4,
@@ -31,7 +31,7 @@
       "Disease": 22
     },
     "by_region": {
-      "Asia": 44,
+      "Asia": 43,
       "Europe": 4,
       "Americas": 22,
       "Africa": 11,
@@ -60,7 +60,7 @@
     },
     {
       "country": "Indonesia",
-      "count": 10,
+      "count": 9,
       "max_sev_rank": 2,
       "iso2": "ID",
       "region": "Asia",
@@ -384,127 +384,6 @@
     }
   ],
   "incidents": [
-    {
-      "incident_id": "20251014-ID-VO",
-      "canonical_name": "Eruption  Lewotobi",
-      "summary": "Mount Lewotobi Laki-laki in East Nusa Tenggara, Indonesia, erupted repeatedly from July 13 to 15, 2026, marking its 3rd, 16th, and 18th eruptions within a single week. The volcano remains at Level III Alert with a 5 km exclusion zone, and Indonesia has recorded over 3,100 volcanic eruptions in total for 2026.",
-      "country": "Indonesia",
-      "iso2": "ID",
-      "lat": -8.542,
-      "lon": 122.775,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Volcano",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "disease_name": null,
-      "event_date": "2025-10-14",
-      "first_reported_date": "2025-10-14",
-      "last_updated_date": "2026-07-15",
-      "days_since_event": 276,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 1,
-        "healthmap": 0,
-        "news": 4
-      },
-      "source_links": [
-        {
-          "type": "GDACS",
-          "label": "Orange alert · ",
-          "url": "https://www.gdacs.org/report.aspx?eventid=1000122&episodeid=1&eventtype=VO",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": "Orange",
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "60 cm of snow in June? How a volcano half a world away stole Canada's summer",
-          "url": "https://www.yahoo.com/news/60-cm-snow-june-volcano-171159063.html",
-          "outlet": "The Weather Network · via Yahoo News",
-          "published_date": "2026-07-08T19:01:18+00:00"
-        },
-        {
-          "headline": "Mount Lewotobi Laki-laki Erupted Again This Morning (Monday, 13 July 2026)",
-          "url": "https://databoks.katadata.co.id/en/demographics/statistics/508447b2114edeb/mount-lewotobi-lakilaki-erupted-again-this-morning-monday-13-july-2026",
-          "outlet": "Databoks",
-          "published_date": "2026-07-12T02:25:35+00:00"
-        },
-        {
-          "headline": "Alert! Mount Lewotobi Laki-laki Erupts Again Tonight (Wednesday, 15 July 2026)",
-          "url": "https://databoks.katadata.co.id/en/demographics/statistics/50374dcd81c58c9/alert-mount-lewotobi-lakilaki-erupts-again-tonight-wednesday-15-july-2026",
-          "outlet": "Databoks",
-          "published_date": "2026-07-15T00:55:00+00:00"
-        },
-        {
-          "headline": "Alert! Mount Lewotobi Laki-laki Erupted Again Tonight (Tuesday, 14 July 2026)",
-          "url": "https://databoks.katadata.co.id/en/demographics/statistics/6addb0c64655265/alert-mount-lewotobi-lakilaki-erupted-again-tonight-tuesday-14-july-2026",
-          "outlet": "Databoks",
-          "published_date": "2026-07-15T06:44:48+00:00"
-        }
-      ],
-      "news_total": 4,
-      "logs": [
-        {
-          "log_date": "2026-07-08",
-          "summary": "An eruption occurred at Indonesia's Mount Lewotobi Laki Laki volcano on Tuesday evening into Wednesday. The event is reported to have potential far-reaching effects, including unusual weather patterns such as snowfall in Canada.",
-          "news": [
-            {
-              "news_id": 1700001000351,
-              "url": "https://www.yahoo.com/news/60-cm-snow-june-volcano-171159063.html",
-              "headline": "60 cm of snow in June? How a volcano half a world away stole Canada's summer",
-              "published_date": "2026-07-08T19:01:18+00:00",
-              "outlet": "The Weather Network · via Yahoo News"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-17",
-          "summary": "Mount Lewotobi Laki-laki in East Nusa Tenggara, Indonesia, erupted repeatedly from July 13 to 15, 2026, marking its 3rd, 16th, and 18th eruptions within a single week. The volcano remains at Level III Alert with a 5 km exclusion zone, and Indonesia has recorded over 3,100 volcanic eruptions in total for 2026.",
-          "news": [
-            {
-              "news_id": 1783909654751,
-              "url": "https://databoks.katadata.co.id/en/demographics/statistics/508447b2114edeb/mount-lewotobi-lakilaki-erupted-again-this-morning-monday-13-july-2026",
-              "headline": "Mount Lewotobi Laki-laki Erupted Again This Morning (Monday, 13 July 2026)",
-              "published_date": "2026-07-12T02:25:35+00:00",
-              "outlet": "Databoks"
-            },
-            {
-              "news_id": 1784260151835,
-              "url": "https://databoks.katadata.co.id/en/demographics/statistics/50374dcd81c58c9/alert-mount-lewotobi-lakilaki-erupts-again-tonight-wednesday-15-july-2026",
-              "headline": "Alert! Mount Lewotobi Laki-laki Erupts Again Tonight (Wednesday, 15 July 2026)",
-              "published_date": "2026-07-15T00:55:00+00:00",
-              "outlet": "Databoks"
-            },
-            {
-              "news_id": 1784097917921,
-              "url": "https://databoks.katadata.co.id/en/demographics/statistics/6addb0c64655265/alert-mount-lewotobi-lakilaki-erupted-again-tonight-tuesday-14-july-2026",
-              "headline": "Alert! Mount Lewotobi Laki-laki Erupted Again Tonight (Tuesday, 14 July 2026)",
-              "published_date": "2026-07-15T06:44:48+00:00",
-              "outlet": "Databoks"
-            }
-          ]
-        }
-      ]
-    },
     {
       "incident_id": "20251119-ID-VO",
       "canonical_name": "Eruption  Semeru",
