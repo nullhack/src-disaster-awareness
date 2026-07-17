@@ -1,0 +1,168 @@
+id: a040cfc45b76550e856a53c1a6d55d7f
+source: USGS
+source_id: us6000ta17
+incident_type: Earthquake
+name: M 4.6 - 91 km SE of Kumano, Japan
+report_date: '2026-07-04'
+news_searched_at: '2026-07-08T22:44:05+00:00'
+places:
+- country_code: JP
+  subdivision: Wakayama
+  locality: Kumano
+raw_fields:
+  mag: 4.6
+  place: 91 km SE of Kumano, Japan
+  time: 1783133775263
+  updated: 1783136206040
+  tz: null
+  url: https://earthquake.usgs.gov/earthquakes/eventpage/us6000ta17
+  felt: null
+  cdi: null
+  mmi: null
+  alert: null
+  status: reviewed
+  tsunami: 0
+  sig: 326
+  net: us
+  code: 6000ta17
+  ids: ',us6000ta17,'
+  sources: ',us,'
+  types: ',origin,phase-data,'
+  nst: 58
+  dmin: 1.973
+  rms: 0.68
+  gap: 95
+  magType: mb
+  type: earthquake
+  title: M 4.6 - 91 km SE of Kumano, Japan
+  products:
+    origin:
+    - indexid: 1978370
+      indexTime: 1783136213381
+      id: urn:usgs-product:us:origin:us6000ta17:1783136206040
+      type: origin
+      code: us6000ta17
+      source: us
+      updateTime: 1783136206040
+      status: UPDATE
+      properties:
+        azimuthal-gap: '95'
+        depth: '388.05'
+        depth-type: from location
+        error-ellipse-azimuth: '135'
+        error-ellipse-intermediate: '13664'
+        error-ellipse-major: '18880'
+        error-ellipse-minor: '10332'
+        error-ellipse-plunge: '2'
+        error-ellipse-rotation: '275'
+        evaluation-status: preliminary
+        event-type: earthquake
+        eventParametersPublicID: quakeml:us.anss.org/eventparameters/6000ta17/1783136208
+        eventsource: us
+        eventsourcecode: 6000ta17
+        eventtime: '2026-07-04T02:56:15.263Z'
+        eventtime-error: '1.38'
+        horizontal-error: '10.55'
+        latitude: '33.3762'
+        latitude-error: '0.0979'
+        longitude: '136.8775'
+        longitude-error: '0.1161'
+        magnitude: '4.6'
+        magnitude-error: '0.029'
+        magnitude-num-stations-used: '352'
+        magnitude-source: us
+        magnitude-type: mb
+        minimum-distance: '1.973'
+        num-phases-used: '58'
+        num-stations-used: '58'
+        origin-source: us
+        pdl-client-version: Version 3.5.4 2026-01-22
+        quakeml-magnitude-publicid: quakeml:us.anss.org/magnitude/6000ta17/mb
+        quakeml-origin-publicid: quakeml:us.anss.org/origin/6000ta17
+        quakeml-publicid: quakeml:us.anss.org/event/6000ta17
+        review-status: reviewed
+        standard-error: '0.68'
+        title: 91 km SE of Kumano, Japan
+        vertical-error: '6.829'
+      preferredWeight: 158
+      contents:
+        contents.xml:
+          contentType: application/xml
+          lastModified: 1783136210000
+          length: 195
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:origin:us6000ta17:1783136206040/contents/contents.xml
+          sha256: ABhLiaqdYWmIak24eD/csBAWouBShhatD9bUzLNEZFk=
+        quakeml.xml:
+          contentType: application/xml
+          lastModified: 1783136206000
+          length: 3813
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:origin:us6000ta17:1783136206040/contents/quakeml.xml
+          sha256: ce54O8sCq/oJTDvj+UsXk9r6bRKMv9l5NEQo8Yhhn0s=
+    phase-data:
+    - indexid: 1978371
+      indexTime: 1783136214832
+      id: urn:usgs-product:us:phase-data:us6000ta17:1783136206040
+      type: phase-data
+      code: us6000ta17
+      source: us
+      updateTime: 1783136206040
+      status: UPDATE
+      properties:
+        azimuthal-gap: '95'
+        depth: '388.05'
+        depth-type: from location
+        error-ellipse-azimuth: '135'
+        error-ellipse-intermediate: '13664'
+        error-ellipse-major: '18880'
+        error-ellipse-minor: '10332'
+        error-ellipse-plunge: '2'
+        error-ellipse-rotation: '275'
+        evaluation-status: preliminary
+        event-type: earthquake
+        eventParametersPublicID: quakeml:us.anss.org/eventparameters/6000ta17/1783136208
+        eventsource: us
+        eventsourcecode: 6000ta17
+        eventtime: '2026-07-04T02:56:15.263Z'
+        eventtime-error: '1.38'
+        horizontal-error: '10.55'
+        latitude: '33.3762'
+        latitude-error: '0.0979'
+        longitude: '136.8775'
+        longitude-error: '0.1161'
+        magnitude: '4.6'
+        magnitude-error: '0.029'
+        magnitude-num-stations-used: '352'
+        magnitude-source: us
+        magnitude-type: mb
+        minimum-distance: '1.973'
+        num-phases-used: '58'
+        num-stations-used: '58'
+        origin-source: us
+        pdl-client-version: Version 3.5.4 2026-01-22
+        quakeml-magnitude-publicid: quakeml:us.anss.org/magnitude/6000ta17/mb
+        quakeml-origin-publicid: quakeml:us.anss.org/origin/6000ta17
+        quakeml-publicid: quakeml:us.anss.org/event/6000ta17
+        review-status: reviewed
+        standard-error: '0.68'
+        vertical-error: '6.829'
+      preferredWeight: 158
+      contents:
+        contents.xml:
+          contentType: application/xml
+          lastModified: 1783136210000
+          length: 195
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:phase-data:us6000ta17:1783136206040/contents/contents.xml
+          sha256: ABhLiaqdYWmIak24eD/csBAWouBShhatD9bUzLNEZFk=
+        quakeml.xml:
+          contentType: application/xml
+          lastModified: 1783136206000
+          length: 568623
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:phase-data:us6000ta17:1783136206040/contents/quakeml.xml
+          sha256: KYwuZWbGXaKlmlm0nEjdR9YwP3m3nnv+hmeIj+2Z57M=
+  geometry:
+    type: Point
+    coordinates:
+    - 136.8775
+    - 33.3762
+    - 388.05
+  depth: 388.05

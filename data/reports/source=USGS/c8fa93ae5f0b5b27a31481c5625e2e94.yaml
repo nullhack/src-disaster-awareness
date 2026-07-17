@@ -1,0 +1,168 @@
+id: c8fa93ae5f0b5b27a31481c5625e2e94
+source: USGS
+source_id: us6000t907
+incident_type: Earthquake
+name: M 4.8 - south of the Fiji Islands
+report_date: '2026-06-29'
+news_searched_at: '2026-07-08T22:21:35+00:00'
+places:
+- country_code: ''
+  subdivision: ''
+  locality: Ocean
+raw_fields:
+  mag: 4.8
+  place: south of the Fiji Islands
+  time: 1782748278068
+  updated: 1782749172040
+  tz: null
+  url: https://earthquake.usgs.gov/earthquakes/eventpage/us6000t907
+  felt: null
+  cdi: null
+  mmi: null
+  alert: null
+  status: reviewed
+  tsunami: 0
+  sig: 354
+  net: us
+  code: 6000t907
+  ids: ',us6000t907,'
+  sources: ',us,'
+  types: ',origin,phase-data,'
+  nst: 34
+  dmin: 5.695
+  rms: 0.92
+  gap: 108
+  magType: mb
+  type: earthquake
+  title: M 4.8 - south of the Fiji Islands
+  products:
+    origin:
+    - indexid: 1964414
+      indexTime: 1782749180704
+      id: urn:usgs-product:us:origin:us6000t907:1782749172040
+      type: origin
+      code: us6000t907
+      source: us
+      updateTime: 1782749172040
+      status: UPDATE
+      properties:
+        azimuthal-gap: '108'
+        depth: '537.255'
+        depth-type: from location
+        error-ellipse-azimuth: '121'
+        error-ellipse-intermediate: '17326'
+        error-ellipse-major: '24391'
+        error-ellipse-minor: '13133'
+        error-ellipse-plunge: '19'
+        error-ellipse-rotation: '258'
+        evaluation-status: preliminary
+        event-type: earthquake
+        eventParametersPublicID: quakeml:us.anss.org/eventparameters/6000t907/1782749176
+        eventsource: us
+        eventsourcecode: 6000t907
+        eventtime: '2026-06-29T15:51:18.068Z'
+        eventtime-error: '1.87'
+        horizontal-error: '13.18'
+        latitude: '-23.8507'
+        latitude-error: '0.1116'
+        longitude: '179.9587'
+        longitude-error: '0.1426'
+        magnitude: '4.8'
+        magnitude-error: '0.116'
+        magnitude-num-stations-used: '27'
+        magnitude-source: us
+        magnitude-type: mb
+        minimum-distance: '5.695'
+        num-phases-used: '34'
+        num-stations-used: '34'
+        origin-source: us
+        pdl-client-version: Version 3.5.4 2026-01-22
+        quakeml-magnitude-publicid: quakeml:us.anss.org/magnitude/6000t907/mb
+        quakeml-origin-publicid: quakeml:us.anss.org/origin/6000t907
+        quakeml-publicid: quakeml:us.anss.org/event/6000t907
+        review-status: reviewed
+        standard-error: '0.92'
+        title: south of the Fiji Islands
+        vertical-error: '9.88'
+      preferredWeight: 158
+      contents:
+        contents.xml:
+          contentType: application/xml
+          lastModified: 1782749178000
+          length: 195
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:origin:us6000t907:1782749172040/contents/contents.xml
+          sha256: ABhLiaqdYWmIak24eD/csBAWouBShhatD9bUzLNEZFk=
+        quakeml.xml:
+          contentType: application/xml
+          lastModified: 1782749172000
+          length: 3815
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:origin:us6000t907:1782749172040/contents/quakeml.xml
+          sha256: ncRZIQlkEP2Vl5y/dWuKm3o7OJ9aCxL7yB6qwvXi8g4=
+    phase-data:
+    - indexid: 1964413
+      indexTime: 1782749180528
+      id: urn:usgs-product:us:phase-data:us6000t907:1782749172040
+      type: phase-data
+      code: us6000t907
+      source: us
+      updateTime: 1782749172040
+      status: UPDATE
+      properties:
+        azimuthal-gap: '108'
+        depth: '537.255'
+        depth-type: from location
+        error-ellipse-azimuth: '121'
+        error-ellipse-intermediate: '17326'
+        error-ellipse-major: '24391'
+        error-ellipse-minor: '13133'
+        error-ellipse-plunge: '19'
+        error-ellipse-rotation: '258'
+        evaluation-status: preliminary
+        event-type: earthquake
+        eventParametersPublicID: quakeml:us.anss.org/eventparameters/6000t907/1782749176
+        eventsource: us
+        eventsourcecode: 6000t907
+        eventtime: '2026-06-29T15:51:18.068Z'
+        eventtime-error: '1.87'
+        horizontal-error: '13.18'
+        latitude: '-23.8507'
+        latitude-error: '0.1116'
+        longitude: '179.9587'
+        longitude-error: '0.1426'
+        magnitude: '4.8'
+        magnitude-error: '0.116'
+        magnitude-num-stations-used: '27'
+        magnitude-source: us
+        magnitude-type: mb
+        minimum-distance: '5.695'
+        num-phases-used: '34'
+        num-stations-used: '34'
+        origin-source: us
+        pdl-client-version: Version 3.5.4 2026-01-22
+        quakeml-magnitude-publicid: quakeml:us.anss.org/magnitude/6000t907/mb
+        quakeml-origin-publicid: quakeml:us.anss.org/origin/6000t907
+        quakeml-publicid: quakeml:us.anss.org/event/6000t907
+        review-status: reviewed
+        standard-error: '0.92'
+        vertical-error: '9.88'
+      preferredWeight: 158
+      contents:
+        contents.xml:
+          contentType: application/xml
+          lastModified: 1782749178000
+          length: 195
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:phase-data:us6000t907:1782749172040/contents/contents.xml
+          sha256: ABhLiaqdYWmIak24eD/csBAWouBShhatD9bUzLNEZFk=
+        quakeml.xml:
+          contentType: application/xml
+          lastModified: 1782749172000
+          length: 84630
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:phase-data:us6000t907:1782749172040/contents/quakeml.xml
+          sha256: TtX8zjy16cnaif/dCepWaDHhTmfZjnT+WdNGtcDNZOA=
+  geometry:
+    type: Point
+    coordinates:
+    - 179.9587
+    - -23.8507
+    - 537.255
+  depth: 537.255

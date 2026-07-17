@@ -1,0 +1,168 @@
+id: 1e4714f3f26f5121ab019cd235416550
+source: USGS
+source_id: us6000t8yu
+incident_type: Earthquake
+name: M 4.5 - 40 km SW of Jurm, Afghanistan
+report_date: '2026-06-29'
+news_searched_at: '2026-07-08T22:20:29+00:00'
+places:
+- country_code: AF
+  subdivision: Takhār
+  locality: Jurm
+raw_fields:
+  mag: 4.5
+  place: 40 km SW of Jurm, Afghanistan
+  time: 1782732792639
+  updated: 1782739612040
+  tz: null
+  url: https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8yu
+  felt: null
+  cdi: null
+  mmi: null
+  alert: null
+  status: reviewed
+  tsunami: 0
+  sig: 312
+  net: us
+  code: 6000t8yu
+  ids: ',us6000t8yu,'
+  sources: ',us,'
+  types: ',origin,phase-data,'
+  nst: 49
+  dmin: 2.314
+  rms: 1.35
+  gap: 107
+  magType: mb
+  type: earthquake
+  title: M 4.5 - 40 km SW of Jurm, Afghanistan
+  products:
+    origin:
+    - indexid: 1963871
+      indexTime: 1782739626567
+      id: urn:usgs-product:us:origin:us6000t8yu:1782739612040
+      type: origin
+      code: us6000t8yu
+      source: us
+      updateTime: 1782739612040
+      status: UPDATE
+      properties:
+        azimuthal-gap: '107'
+        depth: '204.45'
+        depth-type: from location
+        error-ellipse-azimuth: '202'
+        error-ellipse-intermediate: '13786'
+        error-ellipse-major: '17931'
+        error-ellipse-minor: '11410'
+        error-ellipse-plunge: '10'
+        error-ellipse-rotation: '106'
+        evaluation-status: preliminary
+        event-type: earthquake
+        eventParametersPublicID: quakeml:us.anss.org/eventparameters/6000t8yu/1782739613
+        eventsource: us
+        eventsourcecode: 6000t8yu
+        eventtime: '2026-06-29T11:33:12.639Z'
+        eventtime-error: '2.75'
+        horizontal-error: '10.24'
+        latitude: '36.5625'
+        latitude-error: '0.1022'
+        longitude: '70.5788'
+        longitude-error: '0.1049'
+        magnitude: '4.5'
+        magnitude-error: '0.09'
+        magnitude-num-stations-used: '36'
+        magnitude-source: us
+        magnitude-type: mb
+        minimum-distance: '2.314'
+        num-phases-used: '49'
+        num-stations-used: '49'
+        origin-source: us
+        pdl-client-version: Version 3.5.4 2026-01-22
+        quakeml-magnitude-publicid: quakeml:us.anss.org/magnitude/6000t8yu/mb
+        quakeml-origin-publicid: quakeml:us.anss.org/origin/6000t8yu
+        quakeml-publicid: quakeml:us.anss.org/event/6000t8yu
+        review-status: reviewed
+        standard-error: '1.35'
+        title: 40 km SW of Jurm, Afghanistan
+        vertical-error: '7.798'
+      preferredWeight: 158
+      contents:
+        contents.xml:
+          contentType: application/xml
+          lastModified: 1782739615000
+          length: 195
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:origin:us6000t8yu:1782739612040/contents/contents.xml
+          sha256: ABhLiaqdYWmIak24eD/csBAWouBShhatD9bUzLNEZFk=
+        quakeml.xml:
+          contentType: application/xml
+          lastModified: 1782739612000
+          length: 3810
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:origin:us6000t8yu:1782739612040/contents/quakeml.xml
+          sha256: YfeKDJgIkdqPDSd4XioZH3t1cKhuEaW26MmDcbZkZBA=
+    phase-data:
+    - indexid: 1963872
+      indexTime: 1782739626930
+      id: urn:usgs-product:us:phase-data:us6000t8yu:1782739612040
+      type: phase-data
+      code: us6000t8yu
+      source: us
+      updateTime: 1782739612040
+      status: UPDATE
+      properties:
+        azimuthal-gap: '107'
+        depth: '204.45'
+        depth-type: from location
+        error-ellipse-azimuth: '202'
+        error-ellipse-intermediate: '13786'
+        error-ellipse-major: '17931'
+        error-ellipse-minor: '11410'
+        error-ellipse-plunge: '10'
+        error-ellipse-rotation: '106'
+        evaluation-status: preliminary
+        event-type: earthquake
+        eventParametersPublicID: quakeml:us.anss.org/eventparameters/6000t8yu/1782739613
+        eventsource: us
+        eventsourcecode: 6000t8yu
+        eventtime: '2026-06-29T11:33:12.639Z'
+        eventtime-error: '2.75'
+        horizontal-error: '10.24'
+        latitude: '36.5625'
+        latitude-error: '0.1022'
+        longitude: '70.5788'
+        longitude-error: '0.1049'
+        magnitude: '4.5'
+        magnitude-error: '0.09'
+        magnitude-num-stations-used: '36'
+        magnitude-source: us
+        magnitude-type: mb
+        minimum-distance: '2.314'
+        num-phases-used: '49'
+        num-stations-used: '49'
+        origin-source: us
+        pdl-client-version: Version 3.5.4 2026-01-22
+        quakeml-magnitude-publicid: quakeml:us.anss.org/magnitude/6000t8yu/mb
+        quakeml-origin-publicid: quakeml:us.anss.org/origin/6000t8yu
+        quakeml-publicid: quakeml:us.anss.org/event/6000t8yu
+        review-status: reviewed
+        standard-error: '1.35'
+        vertical-error: '7.798'
+      preferredWeight: 158
+      contents:
+        contents.xml:
+          contentType: application/xml
+          lastModified: 1782739616000
+          length: 195
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:phase-data:us6000t8yu:1782739612040/contents/contents.xml
+          sha256: ABhLiaqdYWmIak24eD/csBAWouBShhatD9bUzLNEZFk=
+        quakeml.xml:
+          contentType: application/xml
+          lastModified: 1782739612000
+          length: 124530
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:phase-data:us6000t8yu:1782739612040/contents/quakeml.xml
+          sha256: PaGEqZjQOYgiPGoXymxp91Zc10r/z41E9fXSN5tjoKc=
+  geometry:
+    type: Point
+    coordinates:
+    - 70.5788
+    - 36.5625
+    - 204.45
+  depth: 204.45

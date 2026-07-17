@@ -1,0 +1,168 @@
+id: bb80c96720e25369bc20b99ee582ce30
+source: USGS
+source_id: us6000t9jv
+incident_type: Earthquake
+name: M 5.2 - South Sandwich Islands region
+report_date: '2026-07-02'
+news_searched_at: '2026-07-08T22:31:32+00:00'
+places:
+- country_code: ''
+  subdivision: ''
+  locality: Ocean
+raw_fields:
+  mag: 5.2
+  place: South Sandwich Islands region
+  time: 1782961062207
+  updated: 1782961832040
+  tz: null
+  url: https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9jv
+  felt: null
+  cdi: null
+  mmi: null
+  alert: null
+  status: reviewed
+  tsunami: 0
+  sig: 416
+  net: us
+  code: 6000t9jv
+  ids: ',us6000t9jv,'
+  sources: ',us,'
+  types: ',origin,phase-data,'
+  nst: 61
+  dmin: 6.916
+  rms: 0.6
+  gap: 72
+  magType: mb
+  type: earthquake
+  title: M 5.2 - South Sandwich Islands region
+  products:
+    origin:
+    - indexid: 1972747
+      indexTime: 1782961839015
+      id: urn:usgs-product:us:origin:us6000t9jv:1782961832040
+      type: origin
+      code: us6000t9jv
+      source: us
+      updateTime: 1782961832040
+      status: UPDATE
+      properties:
+        azimuthal-gap: '72'
+        depth: '183.485'
+        depth-type: from location
+        error-ellipse-azimuth: '223'
+        error-ellipse-intermediate: '16620'
+        error-ellipse-major: '18654'
+        error-ellipse-minor: '11548'
+        error-ellipse-plunge: '6'
+        error-ellipse-rotation: '87'
+        evaluation-status: preliminary
+        event-type: earthquake
+        eventParametersPublicID: quakeml:us.anss.org/eventparameters/6000t9jv/1782961833
+        eventsource: us
+        eventsourcecode: 6000t9jv
+        eventtime: '2026-07-02T02:57:42.207Z'
+        eventtime-error: '1.22'
+        horizontal-error: '11.56'
+        latitude: '-58.4797'
+        latitude-error: '0.1043'
+        longitude: '-26.5923'
+        longitude-error: '0.1993'
+        magnitude: '5.2'
+        magnitude-error: '0.064'
+        magnitude-num-stations-used: '82'
+        magnitude-source: us
+        magnitude-type: mb
+        minimum-distance: '6.916'
+        num-phases-used: '61'
+        num-stations-used: '61'
+        origin-source: us
+        pdl-client-version: Version 3.5.4 2026-01-22
+        quakeml-magnitude-publicid: quakeml:us.anss.org/magnitude/6000t9jv/mb
+        quakeml-origin-publicid: quakeml:us.anss.org/origin/6000t9jv
+        quakeml-publicid: quakeml:us.anss.org/event/6000t9jv
+        review-status: reviewed
+        standard-error: '0.60'
+        title: South Sandwich Islands region
+        vertical-error: '7.679'
+      preferredWeight: 158
+      contents:
+        contents.xml:
+          contentType: application/xml
+          lastModified: 1782961836000
+          length: 195
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:origin:us6000t9jv:1782961832040/contents/contents.xml
+          sha256: ABhLiaqdYWmIak24eD/csBAWouBShhatD9bUzLNEZFk=
+        quakeml.xml:
+          contentType: application/xml
+          lastModified: 1782961832000
+          length: 3809
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:origin:us6000t9jv:1782961832040/contents/quakeml.xml
+          sha256: nqWtJfcr/naUAPENuvcK67lQHlF2s6dWCY+2GDdK1zw=
+    phase-data:
+    - indexid: 1972748
+      indexTime: 1782961839680
+      id: urn:usgs-product:us:phase-data:us6000t9jv:1782961832040
+      type: phase-data
+      code: us6000t9jv
+      source: us
+      updateTime: 1782961832040
+      status: UPDATE
+      properties:
+        azimuthal-gap: '72'
+        depth: '183.485'
+        depth-type: from location
+        error-ellipse-azimuth: '223'
+        error-ellipse-intermediate: '16620'
+        error-ellipse-major: '18654'
+        error-ellipse-minor: '11548'
+        error-ellipse-plunge: '6'
+        error-ellipse-rotation: '87'
+        evaluation-status: preliminary
+        event-type: earthquake
+        eventParametersPublicID: quakeml:us.anss.org/eventparameters/6000t9jv/1782961833
+        eventsource: us
+        eventsourcecode: 6000t9jv
+        eventtime: '2026-07-02T02:57:42.207Z'
+        eventtime-error: '1.22'
+        horizontal-error: '11.56'
+        latitude: '-58.4797'
+        latitude-error: '0.1043'
+        longitude: '-26.5923'
+        longitude-error: '0.1993'
+        magnitude: '5.2'
+        magnitude-error: '0.064'
+        magnitude-num-stations-used: '82'
+        magnitude-source: us
+        magnitude-type: mb
+        minimum-distance: '6.916'
+        num-phases-used: '61'
+        num-stations-used: '61'
+        origin-source: us
+        pdl-client-version: Version 3.5.4 2026-01-22
+        quakeml-magnitude-publicid: quakeml:us.anss.org/magnitude/6000t9jv/mb
+        quakeml-origin-publicid: quakeml:us.anss.org/origin/6000t9jv
+        quakeml-publicid: quakeml:us.anss.org/event/6000t9jv
+        review-status: reviewed
+        standard-error: '0.60'
+        vertical-error: '7.679'
+      preferredWeight: 158
+      contents:
+        contents.xml:
+          contentType: application/xml
+          lastModified: 1782961836000
+          length: 195
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:phase-data:us6000t9jv:1782961832040/contents/contents.xml
+          sha256: ABhLiaqdYWmIak24eD/csBAWouBShhatD9bUzLNEZFk=
+        quakeml.xml:
+          contentType: application/xml
+          lastModified: 1782961832000
+          length: 190756
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:phase-data:us6000t9jv:1782961832040/contents/quakeml.xml
+          sha256: 9wg1h2vWvrtDo0qUWweOJBn+/vTIww2XmMPIgE2Q6sU=
+  geometry:
+    type: Point
+    coordinates:
+    - -26.5923
+    - -58.4797
+    - 183.485
+  depth: 183.485

@@ -1,0 +1,168 @@
+id: 7390240d85b45ba3ace5f8866fa3301c
+source: USGS
+source_id: us6000ta95
+incident_type: Earthquake
+name: M 4.5 - 71 km W of Ovalle, Chile
+report_date: '2026-07-05'
+news_searched_at: '2026-07-08T22:47:34+00:00'
+places:
+- country_code: CL
+  subdivision: Coquimbo
+  locality: Ovalle
+raw_fields:
+  mag: 4.5
+  place: 71 km W of Ovalle, Chile
+  time: 1783252647433
+  updated: 1783254388040
+  tz: null
+  url: https://earthquake.usgs.gov/earthquakes/eventpage/us6000ta95
+  felt: null
+  cdi: null
+  mmi: null
+  alert: null
+  status: reviewed
+  tsunami: 0
+  sig: 312
+  net: us
+  code: 6000ta95
+  ids: ',us6000ta95,'
+  sources: ',us,'
+  types: ',origin,phase-data,'
+  nst: 44
+  dmin: 0.26
+  rms: 0.56
+  gap: 138
+  magType: mb
+  type: earthquake
+  title: M 4.5 - 71 km W of Ovalle, Chile
+  products:
+    origin:
+    - indexid: 1981482
+      indexTime: 1783254396203
+      id: urn:usgs-product:us:origin:us6000ta95:1783254388040
+      type: origin
+      code: us6000ta95
+      source: us
+      updateTime: 1783254388040
+      status: UPDATE
+      properties:
+        azimuthal-gap: '138'
+        depth: '17.675'
+        depth-type: from location
+        error-ellipse-azimuth: '278'
+        error-ellipse-intermediate: '5074'
+        error-ellipse-major: '10398'
+        error-ellipse-minor: '2619'
+        error-ellipse-plunge: '3'
+        error-ellipse-rotation: '258'
+        evaluation-status: preliminary
+        event-type: earthquake
+        eventParametersPublicID: quakeml:us.anss.org/eventparameters/6000ta95/1783254389
+        eventsource: us
+        eventsourcecode: 6000ta95
+        eventtime: '2026-07-05T11:57:27.433Z'
+        eventtime-error: '1.15'
+        horizontal-error: '4.74'
+        latitude: '-30.6592'
+        latitude-error: '0.0307'
+        longitude: '-71.9367'
+        longitude-error: '0.0708'
+        magnitude: '4.5'
+        magnitude-error: '0.112'
+        magnitude-num-stations-used: '23'
+        magnitude-source: us
+        magnitude-type: mb
+        minimum-distance: '0.260'
+        num-phases-used: '51'
+        num-stations-used: '44'
+        origin-source: us
+        pdl-client-version: Version 3.5.4 2026-01-22
+        quakeml-magnitude-publicid: quakeml:us.anss.org/magnitude/6000ta95/mb
+        quakeml-origin-publicid: quakeml:us.anss.org/origin/6000ta95
+        quakeml-publicid: quakeml:us.anss.org/event/6000ta95
+        review-status: reviewed
+        standard-error: '0.56'
+        title: 71 km W of Ovalle, Chile
+        vertical-error: '1.84'
+      preferredWeight: 158
+      contents:
+        contents.xml:
+          contentType: application/xml
+          lastModified: 1783254392000
+          length: 195
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:origin:us6000ta95:1783254388040/contents/contents.xml
+          sha256: ABhLiaqdYWmIak24eD/csBAWouBShhatD9bUzLNEZFk=
+        quakeml.xml:
+          contentType: application/xml
+          lastModified: 1783254388000
+          length: 3805
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:origin:us6000ta95:1783254388040/contents/quakeml.xml
+          sha256: /P5BLNNoHx1BUKZm9eKcq/iYodGUhFKASF9f1rYAOD8=
+    phase-data:
+    - indexid: 1981483
+      indexTime: 1783254397237
+      id: urn:usgs-product:us:phase-data:us6000ta95:1783254388040
+      type: phase-data
+      code: us6000ta95
+      source: us
+      updateTime: 1783254388040
+      status: UPDATE
+      properties:
+        azimuthal-gap: '138'
+        depth: '17.675'
+        depth-type: from location
+        error-ellipse-azimuth: '278'
+        error-ellipse-intermediate: '5074'
+        error-ellipse-major: '10398'
+        error-ellipse-minor: '2619'
+        error-ellipse-plunge: '3'
+        error-ellipse-rotation: '258'
+        evaluation-status: preliminary
+        event-type: earthquake
+        eventParametersPublicID: quakeml:us.anss.org/eventparameters/6000ta95/1783254389
+        eventsource: us
+        eventsourcecode: 6000ta95
+        eventtime: '2026-07-05T11:57:27.433Z'
+        eventtime-error: '1.15'
+        horizontal-error: '4.74'
+        latitude: '-30.6592'
+        latitude-error: '0.0307'
+        longitude: '-71.9367'
+        longitude-error: '0.0708'
+        magnitude: '4.5'
+        magnitude-error: '0.112'
+        magnitude-num-stations-used: '23'
+        magnitude-source: us
+        magnitude-type: mb
+        minimum-distance: '0.260'
+        num-phases-used: '51'
+        num-stations-used: '44'
+        origin-source: us
+        pdl-client-version: Version 3.5.4 2026-01-22
+        quakeml-magnitude-publicid: quakeml:us.anss.org/magnitude/6000ta95/mb
+        quakeml-origin-publicid: quakeml:us.anss.org/origin/6000ta95
+        quakeml-publicid: quakeml:us.anss.org/event/6000ta95
+        review-status: reviewed
+        standard-error: '0.56'
+        vertical-error: '1.84'
+      preferredWeight: 158
+      contents:
+        contents.xml:
+          contentType: application/xml
+          lastModified: 1783254392000
+          length: 195
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:phase-data:us6000ta95:1783254388040/contents/contents.xml
+          sha256: ABhLiaqdYWmIak24eD/csBAWouBShhatD9bUzLNEZFk=
+        quakeml.xml:
+          contentType: application/xml
+          lastModified: 1783254388000
+          length: 109322
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:phase-data:us6000ta95:1783254388040/contents/quakeml.xml
+          sha256: Jyh5Ud3oINin3rvSBskKvPXfJL2FjTcob08Tk+u9AJ4=
+  geometry:
+    type: Point
+    coordinates:
+    - -71.9367
+    - -30.6592
+    - 17.675
+  depth: 17.675

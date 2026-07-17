@@ -1,0 +1,168 @@
+id: dda77a26813f5091a21141914be6a334
+source: USGS
+source_id: us6000t8x6
+incident_type: Earthquake
+name: M 4.9 - 90 km S of Sarangani, Philippines
+report_date: '2026-06-29'
+news_searched_at: '2026-07-08T22:18:32+00:00'
+places:
+- country_code: PH
+  subdivision: Sarangani
+  locality: Sarangani
+raw_fields:
+  mag: 4.9
+  place: 90 km S of Sarangani, Philippines
+  time: 1782706473185
+  updated: 1782708789040
+  tz: null
+  url: https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8x6
+  felt: null
+  cdi: null
+  mmi: null
+  alert: null
+  status: reviewed
+  tsunami: 0
+  sig: 369
+  net: us
+  code: 6000t8x6
+  ids: ',us6000t8x6,'
+  sources: ',us,'
+  types: ',origin,phase-data,'
+  nst: 60
+  dmin: 2.469
+  rms: 0.7
+  gap: 104
+  magType: mb
+  type: earthquake
+  title: M 4.9 - 90 km S of Sarangani, Philippines
+  products:
+    origin:
+    - indexid: 1962754
+      indexTime: 1782708795282
+      id: urn:usgs-product:us:origin:us6000t8x6:1782708789040
+      type: origin
+      code: us6000t8x6
+      source: us
+      updateTime: 1782708789040
+      status: UPDATE
+      properties:
+        azimuthal-gap: '104'
+        depth: '45.108'
+        depth-type: from location
+        error-ellipse-azimuth: '257'
+        error-ellipse-intermediate: '11648'
+        error-ellipse-major: '17817'
+        error-ellipse-minor: '9645'
+        error-ellipse-plunge: '4'
+        error-ellipse-rotation: '80'
+        evaluation-status: preliminary
+        event-type: earthquake
+        eventParametersPublicID: quakeml:us.anss.org/eventparameters/6000t8x6/1782708790
+        eventsource: us
+        eventsourcecode: 6000t8x6
+        eventtime: '2026-06-29T04:14:33.185Z'
+        eventtime-error: '1.42'
+        horizontal-error: '9.45'
+        latitude: '4.5908'
+        latitude-error: '0.0707'
+        longitude: '125.4036'
+        longitude-error: '0.1041'
+        magnitude: '4.9'
+        magnitude-error: '0.052'
+        magnitude-num-stations-used: '116'
+        magnitude-source: us
+        magnitude-type: mb
+        minimum-distance: '2.469'
+        num-phases-used: '61'
+        num-stations-used: '60'
+        origin-source: us
+        pdl-client-version: Version 3.5.4 2026-01-22
+        quakeml-magnitude-publicid: quakeml:us.anss.org/magnitude/6000t8x6/mb
+        quakeml-origin-publicid: quakeml:us.anss.org/origin/6000t8x6
+        quakeml-publicid: quakeml:us.anss.org/event/6000t8x6
+        review-status: reviewed
+        standard-error: '0.70'
+        title: 90 km S of Sarangani, Philippines
+        vertical-error: '6.435'
+      preferredWeight: 158
+      contents:
+        contents.xml:
+          contentType: application/xml
+          lastModified: 1782708793000
+          length: 195
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:origin:us6000t8x6:1782708789040/contents/contents.xml
+          sha256: ABhLiaqdYWmIak24eD/csBAWouBShhatD9bUzLNEZFk=
+        quakeml.xml:
+          contentType: application/xml
+          lastModified: 1782708789000
+          length: 3807
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:origin:us6000t8x6:1782708789040/contents/quakeml.xml
+          sha256: BHrJ/uyuy1KZv4B+Qgbaimq2RrdgUCpdxPTjJnaN4S0=
+    phase-data:
+    - indexid: 1962755
+      indexTime: 1782708796528
+      id: urn:usgs-product:us:phase-data:us6000t8x6:1782708789040
+      type: phase-data
+      code: us6000t8x6
+      source: us
+      updateTime: 1782708789040
+      status: UPDATE
+      properties:
+        azimuthal-gap: '104'
+        depth: '45.108'
+        depth-type: from location
+        error-ellipse-azimuth: '257'
+        error-ellipse-intermediate: '11648'
+        error-ellipse-major: '17817'
+        error-ellipse-minor: '9645'
+        error-ellipse-plunge: '4'
+        error-ellipse-rotation: '80'
+        evaluation-status: preliminary
+        event-type: earthquake
+        eventParametersPublicID: quakeml:us.anss.org/eventparameters/6000t8x6/1782708790
+        eventsource: us
+        eventsourcecode: 6000t8x6
+        eventtime: '2026-06-29T04:14:33.185Z'
+        eventtime-error: '1.42'
+        horizontal-error: '9.45'
+        latitude: '4.5908'
+        latitude-error: '0.0707'
+        longitude: '125.4036'
+        longitude-error: '0.1041'
+        magnitude: '4.9'
+        magnitude-error: '0.052'
+        magnitude-num-stations-used: '116'
+        magnitude-source: us
+        magnitude-type: mb
+        minimum-distance: '2.469'
+        num-phases-used: '61'
+        num-stations-used: '60'
+        origin-source: us
+        pdl-client-version: Version 3.5.4 2026-01-22
+        quakeml-magnitude-publicid: quakeml:us.anss.org/magnitude/6000t8x6/mb
+        quakeml-origin-publicid: quakeml:us.anss.org/origin/6000t8x6
+        quakeml-publicid: quakeml:us.anss.org/event/6000t8x6
+        review-status: reviewed
+        standard-error: '0.70'
+        vertical-error: '6.435'
+      preferredWeight: 158
+      contents:
+        contents.xml:
+          contentType: application/xml
+          lastModified: 1782708793000
+          length: 195
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:phase-data:us6000t8x6:1782708789040/contents/contents.xml
+          sha256: ABhLiaqdYWmIak24eD/csBAWouBShhatD9bUzLNEZFk=
+        quakeml.xml:
+          contentType: application/xml
+          lastModified: 1782708789000
+          length: 235889
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:phase-data:us6000t8x6:1782708789040/contents/quakeml.xml
+          sha256: /vz7s2IuVGkOpyQjZbbcXryeBQHcV0cDm+9kY+vei3A=
+  geometry:
+    type: Point
+    coordinates:
+    - 125.4036
+    - 4.5908
+    - 45.108
+  depth: 45.108

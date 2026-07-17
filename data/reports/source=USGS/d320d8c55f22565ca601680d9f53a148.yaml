@@ -1,0 +1,168 @@
+id: d320d8c55f22565ca601680d9f53a148
+source: USGS
+source_id: us6000tai6
+incident_type: Earthquake
+name: M 4.6 - 52 km E of Noda, Japan
+report_date: '2026-07-06'
+news_searched_at: '2026-07-08T22:51:45+00:00'
+places:
+- country_code: JP
+  subdivision: Iwate
+  locality: Noda
+raw_fields:
+  mag: 4.6
+  place: 52 km E of Noda, Japan
+  time: 1783357743352
+  updated: 1783359255040
+  tz: null
+  url: https://earthquake.usgs.gov/earthquakes/eventpage/us6000tai6
+  felt: null
+  cdi: null
+  mmi: null
+  alert: null
+  status: reviewed
+  tsunami: 0
+  sig: 326
+  net: us
+  code: 6000tai6
+  ids: ',us6000tai6,'
+  sources: ',us,'
+  types: ',origin,phase-data,'
+  nst: 103
+  dmin: 1.2
+  rms: 0.76
+  gap: 135
+  magType: mb
+  type: earthquake
+  title: M 4.6 - 52 km E of Noda, Japan
+  products:
+    origin:
+    - indexid: 1984817
+      indexTime: 1783359262451
+      id: urn:usgs-product:us:origin:us6000tai6:1783359255040
+      type: origin
+      code: us6000tai6
+      source: us
+      updateTime: 1783359255040
+      status: UPDATE
+      properties:
+        azimuthal-gap: '135'
+        depth: '57.696'
+        depth-type: from location
+        error-ellipse-azimuth: '171'
+        error-ellipse-intermediate: '10166'
+        error-ellipse-major: '10520'
+        error-ellipse-minor: '8052'
+        error-ellipse-plunge: '50'
+        error-ellipse-rotation: '171'
+        evaluation-status: preliminary
+        event-type: earthquake
+        eventParametersPublicID: quakeml:us.anss.org/eventparameters/6000tai6/1783359257
+        eventsource: us
+        eventsourcecode: 6000tai6
+        eventtime: '2026-07-06T17:09:03.352Z'
+        eventtime-error: '1.55'
+        horizontal-error: '6'
+        latitude: '40.1864'
+        latitude-error: '0.0601'
+        longitude: '142.4253'
+        longitude-error: '0.0640'
+        magnitude: '4.6'
+        magnitude-error: '0.059'
+        magnitude-num-stations-used: '87'
+        magnitude-source: us
+        magnitude-type: mb
+        minimum-distance: '1.200'
+        num-phases-used: '105'
+        num-stations-used: '103'
+        origin-source: us
+        pdl-client-version: Version 3.5.4 2026-01-22
+        quakeml-magnitude-publicid: quakeml:us.anss.org/magnitude/6000tai6/mb
+        quakeml-origin-publicid: quakeml:us.anss.org/origin/6000tai6
+        quakeml-publicid: quakeml:us.anss.org/event/6000tai6
+        review-status: reviewed
+        standard-error: '0.76'
+        title: 52 km E of Noda, Japan
+        vertical-error: '6.815'
+      preferredWeight: 158
+      contents:
+        contents.xml:
+          contentType: application/xml
+          lastModified: 1783359260000
+          length: 195
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:origin:us6000tai6:1783359255040/contents/contents.xml
+          sha256: ABhLiaqdYWmIak24eD/csBAWouBShhatD9bUzLNEZFk=
+        quakeml.xml:
+          contentType: application/xml
+          lastModified: 1783359255000
+          length: 3811
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:origin:us6000tai6:1783359255040/contents/quakeml.xml
+          sha256: V2EuFsHDHZzS6NvReOrPD+f/KTevNkm6pxzHOjFQhHI=
+    phase-data:
+    - indexid: 1984818
+      indexTime: 1783359263416
+      id: urn:usgs-product:us:phase-data:us6000tai6:1783359255040
+      type: phase-data
+      code: us6000tai6
+      source: us
+      updateTime: 1783359255040
+      status: UPDATE
+      properties:
+        azimuthal-gap: '135'
+        depth: '57.696'
+        depth-type: from location
+        error-ellipse-azimuth: '171'
+        error-ellipse-intermediate: '10166'
+        error-ellipse-major: '10520'
+        error-ellipse-minor: '8052'
+        error-ellipse-plunge: '50'
+        error-ellipse-rotation: '171'
+        evaluation-status: preliminary
+        event-type: earthquake
+        eventParametersPublicID: quakeml:us.anss.org/eventparameters/6000tai6/1783359257
+        eventsource: us
+        eventsourcecode: 6000tai6
+        eventtime: '2026-07-06T17:09:03.352Z'
+        eventtime-error: '1.55'
+        horizontal-error: '6'
+        latitude: '40.1864'
+        latitude-error: '0.0601'
+        longitude: '142.4253'
+        longitude-error: '0.0640'
+        magnitude: '4.6'
+        magnitude-error: '0.059'
+        magnitude-num-stations-used: '87'
+        magnitude-source: us
+        magnitude-type: mb
+        minimum-distance: '1.200'
+        num-phases-used: '105'
+        num-stations-used: '103'
+        origin-source: us
+        pdl-client-version: Version 3.5.4 2026-01-22
+        quakeml-magnitude-publicid: quakeml:us.anss.org/magnitude/6000tai6/mb
+        quakeml-origin-publicid: quakeml:us.anss.org/origin/6000tai6
+        quakeml-publicid: quakeml:us.anss.org/event/6000tai6
+        review-status: reviewed
+        standard-error: '0.76'
+        vertical-error: '6.815'
+      preferredWeight: 158
+      contents:
+        contents.xml:
+          contentType: application/xml
+          lastModified: 1783359260000
+          length: 195
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:phase-data:us6000tai6:1783359255040/contents/contents.xml
+          sha256: ABhLiaqdYWmIak24eD/csBAWouBShhatD9bUzLNEZFk=
+        quakeml.xml:
+          contentType: application/xml
+          lastModified: 1783359255000
+          length: 255002
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:phase-data:us6000tai6:1783359255040/contents/quakeml.xml
+          sha256: YAgCAe5jqSg7sEWzUgH2tsDHVLU3SbxNHndmuVuhkn0=
+  geometry:
+    type: Point
+    coordinates:
+    - 142.4253
+    - 40.1864
+    - 57.696
+  depth: 57.696

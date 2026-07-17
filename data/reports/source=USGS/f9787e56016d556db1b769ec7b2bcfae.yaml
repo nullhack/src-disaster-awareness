@@ -1,0 +1,168 @@
+id: f9787e56016d556db1b769ec7b2bcfae
+source: USGS
+source_id: us6000talm
+incident_type: Earthquake
+name: M 5.0 - Reykjanes Ridge
+report_date: '2026-07-07'
+news_searched_at: '2026-07-08T22:53:16+00:00'
+places:
+- country_code: ''
+  subdivision: ''
+  locality: Ocean
+raw_fields:
+  mag: 5
+  place: Reykjanes Ridge
+  time: 1783413056236
+  updated: 1783414049040
+  tz: null
+  url: https://earthquake.usgs.gov/earthquakes/eventpage/us6000talm
+  felt: null
+  cdi: null
+  mmi: null
+  alert: null
+  status: reviewed
+  tsunami: 0
+  sig: 385
+  net: us
+  code: 6000talm
+  ids: ',us6000talm,'
+  sources: ',us,'
+  types: ',origin,phase-data,'
+  nst: 42
+  dmin: 6.773
+  rms: 0.79
+  gap: 65
+  magType: mww
+  type: earthquake
+  title: M 5.0 - Reykjanes Ridge
+  products:
+    origin:
+    - indexid: 1986801
+      indexTime: 1783414057827
+      id: urn:usgs-product:us:origin:us6000talm:1783414049040
+      type: origin
+      code: us6000talm
+      source: us
+      updateTime: 1783414049040
+      status: UPDATE
+      properties:
+        azimuthal-gap: '65'
+        depth: '10'
+        depth-type: operator assigned
+        error-ellipse-azimuth: '194'
+        error-ellipse-intermediate: '13700'
+        error-ellipse-major: '16765'
+        error-ellipse-minor: '2872'
+        error-ellipse-plunge: '0'
+        error-ellipse-rotation: '90'
+        evaluation-status: preliminary
+        event-type: earthquake
+        eventParametersPublicID: quakeml:us.anss.org/eventparameters/6000talm/1783414052
+        eventsource: us
+        eventsourcecode: 6000talm
+        eventtime: '2026-07-07T08:30:56.236Z'
+        eventtime-error: '1.60'
+        horizontal-error: '9.97'
+        latitude: '59.4768'
+        latitude-error: '0.0982'
+        longitude: '-30.3683'
+        longitude-error: '0.1620'
+        magnitude: '5.0'
+        magnitude-error: '0.069'
+        magnitude-num-stations-used: '20'
+        magnitude-source: us
+        magnitude-type: mww
+        minimum-distance: '6.773'
+        num-phases-used: '42'
+        num-stations-used: '42'
+        origin-source: us
+        pdl-client-version: Version 3.5.4 2026-01-22
+        quakeml-magnitude-publicid: quakeml:us.anss.org/magnitude/6000talm/mww
+        quakeml-origin-publicid: quakeml:us.anss.org/origin/6000talm
+        quakeml-publicid: quakeml:us.anss.org/event/6000talm
+        review-status: reviewed
+        standard-error: '0.79'
+        title: Reykjanes Ridge
+        vertical-error: '1.896'
+      preferredWeight: 158
+      contents:
+        contents.xml:
+          contentType: application/xml
+          lastModified: 1783414055000
+          length: 195
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:origin:us6000talm:1783414049040/contents/contents.xml
+          sha256: ABhLiaqdYWmIak24eD/csBAWouBShhatD9bUzLNEZFk=
+        quakeml.xml:
+          contentType: application/xml
+          lastModified: 1783414049000
+          length: 3760
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:origin:us6000talm:1783414049040/contents/quakeml.xml
+          sha256: Pis/tq3eOqZKrIAjpZLDw5xfEowoKhmM37G8ppDlb5o=
+    phase-data:
+    - indexid: 1986802
+      indexTime: 1783414058797
+      id: urn:usgs-product:us:phase-data:us6000talm:1783414049040
+      type: phase-data
+      code: us6000talm
+      source: us
+      updateTime: 1783414049040
+      status: UPDATE
+      properties:
+        azimuthal-gap: '65'
+        depth: '10'
+        depth-type: operator assigned
+        error-ellipse-azimuth: '194'
+        error-ellipse-intermediate: '13700'
+        error-ellipse-major: '16765'
+        error-ellipse-minor: '2872'
+        error-ellipse-plunge: '0'
+        error-ellipse-rotation: '90'
+        evaluation-status: preliminary
+        event-type: earthquake
+        eventParametersPublicID: quakeml:us.anss.org/eventparameters/6000talm/1783414052
+        eventsource: us
+        eventsourcecode: 6000talm
+        eventtime: '2026-07-07T08:30:56.236Z'
+        eventtime-error: '1.60'
+        horizontal-error: '9.97'
+        latitude: '59.4768'
+        latitude-error: '0.0982'
+        longitude: '-30.3683'
+        longitude-error: '0.1620'
+        magnitude: '5.0'
+        magnitude-error: '0.069'
+        magnitude-num-stations-used: '20'
+        magnitude-source: us
+        magnitude-type: mww
+        minimum-distance: '6.773'
+        num-phases-used: '42'
+        num-stations-used: '42'
+        origin-source: us
+        pdl-client-version: Version 3.5.4 2026-01-22
+        quakeml-magnitude-publicid: quakeml:us.anss.org/magnitude/6000talm/mww
+        quakeml-origin-publicid: quakeml:us.anss.org/origin/6000talm
+        quakeml-publicid: quakeml:us.anss.org/event/6000talm
+        review-status: reviewed
+        standard-error: '0.79'
+        vertical-error: '1.896'
+      preferredWeight: 158
+      contents:
+        contents.xml:
+          contentType: application/xml
+          lastModified: 1783414055000
+          length: 195
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:phase-data:us6000talm:1783414049040/contents/contents.xml
+          sha256: ABhLiaqdYWmIak24eD/csBAWouBShhatD9bUzLNEZFk=
+        quakeml.xml:
+          contentType: application/xml
+          lastModified: 1783414049000
+          length: 374112
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:phase-data:us6000talm:1783414049040/contents/quakeml.xml
+          sha256: fM3yJ4IXgBppxUzuR42mSAmX7Ho3yQe3VtJ+6BSbEI0=
+  geometry:
+    type: Point
+    coordinates:
+    - -30.3683
+    - 59.4768
+    - 10
+  depth: 10

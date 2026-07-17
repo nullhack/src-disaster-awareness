@@ -1,0 +1,168 @@
+id: d2b19fdd195456a18281e20758813bfa
+source: USGS
+source_id: us6000talr
+incident_type: Earthquake
+name: M 4.5 - 32 km NE of Yaguaraparo, Venezuela
+report_date: '2026-07-07'
+news_searched_at: '2026-07-08T22:53:25+00:00'
+places:
+- country_code: VE
+  subdivision: Sucre
+  locality: Yaguaraparo
+raw_fields:
+  mag: 4.5
+  place: 32 km NE of Yaguaraparo, Venezuela
+  time: 1783413697390
+  updated: 1783421788040
+  tz: null
+  url: https://earthquake.usgs.gov/earthquakes/eventpage/us6000talr
+  felt: null
+  cdi: null
+  mmi: null
+  alert: null
+  status: reviewed
+  tsunami: 0
+  sig: 312
+  net: us
+  code: 6000talr
+  ids: ',us6000talr,'
+  sources: ',us,'
+  types: ',origin,phase-data,'
+  nst: 52
+  dmin: 3.806
+  rms: 0.71
+  gap: 151
+  magType: mb
+  type: earthquake
+  title: M 4.5 - 32 km NE of Yaguaraparo, Venezuela
+  products:
+    origin:
+    - indexid: 1987310
+      indexTime: 1783421796833
+      id: urn:usgs-product:us:origin:us6000talr:1783421788040
+      type: origin
+      code: us6000talr
+      source: us
+      updateTime: 1783421788040
+      status: UPDATE
+      properties:
+        azimuthal-gap: '151'
+        depth: '126.81'
+        depth-type: from location
+        error-ellipse-azimuth: '225'
+        error-ellipse-intermediate: '16926'
+        error-ellipse-major: '20679'
+        error-ellipse-minor: '5008'
+        error-ellipse-plunge: '17'
+        error-ellipse-rotation: '71'
+        evaluation-status: preliminary
+        event-type: earthquake
+        eventParametersPublicID: quakeml:us.anss.org/eventparameters/6000talr/1783421791
+        eventsource: us
+        eventsourcecode: 6000talr
+        eventtime: '2026-07-07T08:41:37.390Z'
+        eventtime-error: '1.44'
+        horizontal-error: '11.75'
+        latitude: '10.7321'
+        latitude-error: '0.1028'
+        longitude: '-62.5800'
+        longitude-error: '0.1130'
+        magnitude: '4.5'
+        magnitude-error: '0.045'
+        magnitude-num-stations-used: '142'
+        magnitude-source: us
+        magnitude-type: mb
+        minimum-distance: '3.806'
+        num-phases-used: '52'
+        num-stations-used: '52'
+        origin-source: us
+        pdl-client-version: Version 3.5.4 2026-01-22
+        quakeml-magnitude-publicid: quakeml:us.anss.org/magnitude/6000talr/mb
+        quakeml-origin-publicid: quakeml:us.anss.org/origin/6000talr
+        quakeml-publicid: quakeml:us.anss.org/event/6000talr
+        review-status: reviewed
+        standard-error: '0.71'
+        title: 32 km NE of Yaguaraparo, Venezuela
+        vertical-error: '6.07'
+      preferredWeight: 158
+      contents:
+        contents.xml:
+          contentType: application/xml
+          lastModified: 1783421794000
+          length: 195
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:origin:us6000talr:1783421788040/contents/contents.xml
+          sha256: ABhLiaqdYWmIak24eD/csBAWouBShhatD9bUzLNEZFk=
+        quakeml.xml:
+          contentType: application/xml
+          lastModified: 1783421788000
+          length: 3812
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:origin:us6000talr:1783421788040/contents/quakeml.xml
+          sha256: bsJSvjJ4kc1P6rsB9gIefA3I3yU1TZck2/pstRa2YcM=
+    phase-data:
+    - indexid: 1987311
+      indexTime: 1783421798154
+      id: urn:usgs-product:us:phase-data:us6000talr:1783421788040
+      type: phase-data
+      code: us6000talr
+      source: us
+      updateTime: 1783421788040
+      status: UPDATE
+      properties:
+        azimuthal-gap: '151'
+        depth: '126.81'
+        depth-type: from location
+        error-ellipse-azimuth: '225'
+        error-ellipse-intermediate: '16926'
+        error-ellipse-major: '20679'
+        error-ellipse-minor: '5008'
+        error-ellipse-plunge: '17'
+        error-ellipse-rotation: '71'
+        evaluation-status: preliminary
+        event-type: earthquake
+        eventParametersPublicID: quakeml:us.anss.org/eventparameters/6000talr/1783421791
+        eventsource: us
+        eventsourcecode: 6000talr
+        eventtime: '2026-07-07T08:41:37.390Z'
+        eventtime-error: '1.44'
+        horizontal-error: '11.75'
+        latitude: '10.7321'
+        latitude-error: '0.1028'
+        longitude: '-62.5800'
+        longitude-error: '0.1130'
+        magnitude: '4.5'
+        magnitude-error: '0.045'
+        magnitude-num-stations-used: '142'
+        magnitude-source: us
+        magnitude-type: mb
+        minimum-distance: '3.806'
+        num-phases-used: '52'
+        num-stations-used: '52'
+        origin-source: us
+        pdl-client-version: Version 3.5.4 2026-01-22
+        quakeml-magnitude-publicid: quakeml:us.anss.org/magnitude/6000talr/mb
+        quakeml-origin-publicid: quakeml:us.anss.org/origin/6000talr
+        quakeml-publicid: quakeml:us.anss.org/event/6000talr
+        review-status: reviewed
+        standard-error: '0.71'
+        vertical-error: '6.07'
+      preferredWeight: 158
+      contents:
+        contents.xml:
+          contentType: application/xml
+          lastModified: 1783421794000
+          length: 195
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:phase-data:us6000talr:1783421788040/contents/contents.xml
+          sha256: ABhLiaqdYWmIak24eD/csBAWouBShhatD9bUzLNEZFk=
+        quakeml.xml:
+          contentType: application/xml
+          lastModified: 1783421788000
+          length: 260013
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:phase-data:us6000talr:1783421788040/contents/quakeml.xml
+          sha256: O3+Y3nJXUBtU3W8mgNnGInIqQkKa7Z5stxDEKYZ9PPw=
+  geometry:
+    type: Point
+    coordinates:
+    - -62.58
+    - 10.7321
+    - 126.81
+  depth: 126.81

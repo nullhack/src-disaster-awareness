@@ -15,6 +15,7 @@ class SourceReport:
     places: list[ReportPlace]
     report_date: str
     raw_fields: dict[str, object]
+    news_searched_at: str = ""
 
 @dataclass(frozen=True)
 class NewsItem:

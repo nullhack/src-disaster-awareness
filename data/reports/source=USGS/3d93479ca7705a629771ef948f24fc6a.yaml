@@ -1,0 +1,168 @@
+id: 3d93479ca7705a629771ef948f24fc6a
+source: USGS
+source_id: us6000t8xk
+incident_type: Earthquake
+name: M 4.5 - Volcano Islands, Japan region
+report_date: '2026-06-29'
+news_searched_at: '2026-07-08T22:18:53+00:00'
+places:
+- country_code: ''
+  subdivision: ''
+  locality: Ocean
+raw_fields:
+  mag: 4.5
+  place: Volcano Islands, Japan region
+  time: 1782716056912
+  updated: 1782721184040
+  tz: null
+  url: https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8xk
+  felt: null
+  cdi: null
+  mmi: null
+  alert: null
+  status: reviewed
+  tsunami: 0
+  sig: 312
+  net: us
+  code: 6000t8xk
+  ids: ',us6000t8xk,'
+  sources: ',us,'
+  types: ',origin,phase-data,'
+  nst: 78
+  dmin: 12.976
+  rms: 0.5
+  gap: 130
+  magType: mb
+  type: earthquake
+  title: M 4.5 - Volcano Islands, Japan region
+  products:
+    origin:
+    - indexid: 1963089
+      indexTime: 1782721192234
+      id: urn:usgs-product:us:origin:us6000t8xk:1782721184040
+      type: origin
+      code: us6000t8xk
+      source: us
+      updateTime: 1782721184040
+      status: UPDATE
+      properties:
+        azimuthal-gap: '130'
+        depth: '179.368'
+        depth-type: from location
+        error-ellipse-azimuth: '126'
+        error-ellipse-intermediate: '12972'
+        error-ellipse-major: '22315'
+        error-ellipse-minor: '4712'
+        error-ellipse-plunge: '6'
+        error-ellipse-rotation: '203'
+        evaluation-status: preliminary
+        event-type: earthquake
+        eventParametersPublicID: quakeml:us.anss.org/eventparameters/6000t8xk/1782721187
+        eventsource: us
+        eventsourcecode: 6000t8xk
+        eventtime: '2026-06-29T06:54:16.912Z'
+        eventtime-error: '1.01'
+        horizontal-error: '8.05'
+        latitude: '22.9945'
+        latitude-error: '0.0833'
+        longitude: '142.2351'
+        longitude-error: '0.1186'
+        magnitude: '4.5'
+        magnitude-error: '0.049'
+        magnitude-num-stations-used: '120'
+        magnitude-source: us
+        magnitude-type: mb
+        minimum-distance: '12.976'
+        num-phases-used: '78'
+        num-stations-used: '78'
+        origin-source: us
+        pdl-client-version: Version 3.5.4 2026-01-22
+        quakeml-magnitude-publicid: quakeml:us.anss.org/magnitude/6000t8xk/mb
+        quakeml-origin-publicid: quakeml:us.anss.org/origin/6000t8xk
+        quakeml-publicid: quakeml:us.anss.org/event/6000t8xk
+        review-status: reviewed
+        standard-error: '0.50'
+        title: Volcano Islands, Japan region
+        vertical-error: '8.056'
+      preferredWeight: 158
+      contents:
+        contents.xml:
+          contentType: application/xml
+          lastModified: 1782721190000
+          length: 195
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:origin:us6000t8xk:1782721184040/contents/contents.xml
+          sha256: ABhLiaqdYWmIak24eD/csBAWouBShhatD9bUzLNEZFk=
+        quakeml.xml:
+          contentType: application/xml
+          lastModified: 1782721184000
+          length: 3812
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:origin:us6000t8xk:1782721184040/contents/quakeml.xml
+          sha256: Fmll6kiSh7i7Z8GZr8jBzGqek2I0DAfKjvgP+7vhzig=
+    phase-data:
+    - indexid: 1963090
+      indexTime: 1782721193274
+      id: urn:usgs-product:us:phase-data:us6000t8xk:1782721184040
+      type: phase-data
+      code: us6000t8xk
+      source: us
+      updateTime: 1782721184040
+      status: UPDATE
+      properties:
+        azimuthal-gap: '130'
+        depth: '179.368'
+        depth-type: from location
+        error-ellipse-azimuth: '126'
+        error-ellipse-intermediate: '12972'
+        error-ellipse-major: '22315'
+        error-ellipse-minor: '4712'
+        error-ellipse-plunge: '6'
+        error-ellipse-rotation: '203'
+        evaluation-status: preliminary
+        event-type: earthquake
+        eventParametersPublicID: quakeml:us.anss.org/eventparameters/6000t8xk/1782721187
+        eventsource: us
+        eventsourcecode: 6000t8xk
+        eventtime: '2026-06-29T06:54:16.912Z'
+        eventtime-error: '1.01'
+        horizontal-error: '8.05'
+        latitude: '22.9945'
+        latitude-error: '0.0833'
+        longitude: '142.2351'
+        longitude-error: '0.1186'
+        magnitude: '4.5'
+        magnitude-error: '0.049'
+        magnitude-num-stations-used: '120'
+        magnitude-source: us
+        magnitude-type: mb
+        minimum-distance: '12.976'
+        num-phases-used: '78'
+        num-stations-used: '78'
+        origin-source: us
+        pdl-client-version: Version 3.5.4 2026-01-22
+        quakeml-magnitude-publicid: quakeml:us.anss.org/magnitude/6000t8xk/mb
+        quakeml-origin-publicid: quakeml:us.anss.org/origin/6000t8xk
+        quakeml-publicid: quakeml:us.anss.org/event/6000t8xk
+        review-status: reviewed
+        standard-error: '0.50'
+        vertical-error: '8.056'
+      preferredWeight: 158
+      contents:
+        contents.xml:
+          contentType: application/xml
+          lastModified: 1782721189000
+          length: 195
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:phase-data:us6000t8xk:1782721184040/contents/contents.xml
+          sha256: ABhLiaqdYWmIak24eD/csBAWouBShhatD9bUzLNEZFk=
+        quakeml.xml:
+          contentType: application/xml
+          lastModified: 1782721184000
+          length: 264948
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:phase-data:us6000t8xk:1782721184040/contents/quakeml.xml
+          sha256: 1ptt+T/LrTRhxJ6m8tCWuZOSud19HyviRcQ8jRUdxt0=
+  geometry:
+    type: Point
+    coordinates:
+    - 142.2351
+    - 22.9945
+    - 179.368
+  depth: 179.368

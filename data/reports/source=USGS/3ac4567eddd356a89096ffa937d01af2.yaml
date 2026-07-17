@@ -1,0 +1,168 @@
+id: 3ac4567eddd356a89096ffa937d01af2
+source: USGS
+source_id: us6000tacl
+incident_type: Earthquake
+name: M 4.7 - 91 km WNW of Tamarindo, Costa Rica
+report_date: '2026-07-06'
+news_searched_at: '2026-07-08T22:48:11+00:00'
+places:
+- country_code: NI
+  subdivision: Carazo
+  locality: Tamarindo
+raw_fields:
+  mag: 4.7
+  place: 91 km WNW of Tamarindo, Costa Rica
+  time: 1783305451983
+  updated: 1783306684040
+  tz: null
+  url: https://earthquake.usgs.gov/earthquakes/eventpage/us6000tacl
+  felt: null
+  cdi: null
+  mmi: null
+  alert: null
+  status: reviewed
+  tsunami: 0
+  sig: 340
+  net: us
+  code: 6000tacl
+  ids: ',us6000tacl,'
+  sources: ',us,'
+  types: ',origin,phase-data,'
+  nst: 52
+  dmin: 1.201
+  rms: 1.01
+  gap: 177
+  magType: mb
+  type: earthquake
+  title: M 4.7 - 91 km WNW of Tamarindo, Costa Rica
+  products:
+    origin:
+    - indexid: 1983088
+      indexTime: 1783306690032
+      id: urn:usgs-product:us:origin:us6000tacl:1783306684040
+      type: origin
+      code: us6000tacl
+      source: us
+      updateTime: 1783306684040
+      status: UPDATE
+      properties:
+        azimuthal-gap: '177'
+        depth: '10'
+        depth-type: operator assigned
+        error-ellipse-azimuth: '209'
+        error-ellipse-intermediate: '4890'
+        error-ellipse-major: '20226'
+        error-ellipse-minor: '2498'
+        error-ellipse-plunge: '1'
+        error-ellipse-rotation: '73'
+        evaluation-status: preliminary
+        event-type: earthquake
+        eventParametersPublicID: quakeml:us.anss.org/eventparameters/6000tacl/1783306685
+        eventsource: us
+        eventsourcecode: 6000tacl
+        eventtime: '2026-07-06T02:37:31.983Z'
+        eventtime-error: '2.04'
+        horizontal-error: '6.45'
+        latitude: '10.7504'
+        latitude-error: '0.1049'
+        longitude: '-86.5428'
+        longitude-error: '0.0651'
+        magnitude: '4.7'
+        magnitude-error: '0.036'
+        magnitude-num-stations-used: '237'
+        magnitude-source: us
+        magnitude-type: mb
+        minimum-distance: '1.201'
+        num-phases-used: '55'
+        num-stations-used: '52'
+        origin-source: us
+        pdl-client-version: Version 3.5.4 2026-01-22
+        quakeml-magnitude-publicid: quakeml:us.anss.org/magnitude/6000tacl/mb
+        quakeml-origin-publicid: quakeml:us.anss.org/origin/6000tacl
+        quakeml-publicid: quakeml:us.anss.org/event/6000tacl
+        review-status: reviewed
+        standard-error: '1.01'
+        title: 91 km WNW of Tamarindo, Costa Rica
+        vertical-error: '1.854'
+      preferredWeight: 158
+      contents:
+        contents.xml:
+          contentType: application/xml
+          lastModified: 1783306687000
+          length: 195
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:origin:us6000tacl:1783306684040/contents/contents.xml
+          sha256: ABhLiaqdYWmIak24eD/csBAWouBShhatD9bUzLNEZFk=
+        quakeml.xml:
+          contentType: application/xml
+          lastModified: 1783306684000
+          length: 3812
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:origin:us6000tacl:1783306684040/contents/quakeml.xml
+          sha256: fjsvsDcicElABAkUQfYGIyKOFBuIJw6xrqB1eGdM1Go=
+    phase-data:
+    - indexid: 1983089
+      indexTime: 1783306691063
+      id: urn:usgs-product:us:phase-data:us6000tacl:1783306684040
+      type: phase-data
+      code: us6000tacl
+      source: us
+      updateTime: 1783306684040
+      status: UPDATE
+      properties:
+        azimuthal-gap: '177'
+        depth: '10'
+        depth-type: operator assigned
+        error-ellipse-azimuth: '209'
+        error-ellipse-intermediate: '4890'
+        error-ellipse-major: '20226'
+        error-ellipse-minor: '2498'
+        error-ellipse-plunge: '1'
+        error-ellipse-rotation: '73'
+        evaluation-status: preliminary
+        event-type: earthquake
+        eventParametersPublicID: quakeml:us.anss.org/eventparameters/6000tacl/1783306685
+        eventsource: us
+        eventsourcecode: 6000tacl
+        eventtime: '2026-07-06T02:37:31.983Z'
+        eventtime-error: '2.04'
+        horizontal-error: '6.45'
+        latitude: '10.7504'
+        latitude-error: '0.1049'
+        longitude: '-86.5428'
+        longitude-error: '0.0651'
+        magnitude: '4.7'
+        magnitude-error: '0.036'
+        magnitude-num-stations-used: '237'
+        magnitude-source: us
+        magnitude-type: mb
+        minimum-distance: '1.201'
+        num-phases-used: '55'
+        num-stations-used: '52'
+        origin-source: us
+        pdl-client-version: Version 3.5.4 2026-01-22
+        quakeml-magnitude-publicid: quakeml:us.anss.org/magnitude/6000tacl/mb
+        quakeml-origin-publicid: quakeml:us.anss.org/origin/6000tacl
+        quakeml-publicid: quakeml:us.anss.org/event/6000tacl
+        review-status: reviewed
+        standard-error: '1.01'
+        vertical-error: '1.854'
+      preferredWeight: 158
+      contents:
+        contents.xml:
+          contentType: application/xml
+          lastModified: 1783306687000
+          length: 195
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:phase-data:us6000tacl:1783306684040/contents/contents.xml
+          sha256: ABhLiaqdYWmIak24eD/csBAWouBShhatD9bUzLNEZFk=
+        quakeml.xml:
+          contentType: application/xml
+          lastModified: 1783306684000
+          length: 398004
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:phase-data:us6000tacl:1783306684040/contents/quakeml.xml
+          sha256: jUjmixJY4DADjKTdt+5EGHJTDemtVDF/cf/5qBNjn4E=
+  geometry:
+    type: Point
+    coordinates:
+    - -86.5428
+    - 10.7504
+    - 10
+  depth: 10

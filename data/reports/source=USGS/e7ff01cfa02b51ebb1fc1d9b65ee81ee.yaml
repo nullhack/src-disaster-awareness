@@ -1,0 +1,168 @@
+id: e7ff01cfa02b51ebb1fc1d9b65ee81ee
+source: USGS
+source_id: us6000t8xp
+incident_type: Earthquake
+name: M 4.6 - 131 km E of Bitung, Indonesia
+report_date: '2026-06-29'
+news_searched_at: '2026-07-08T22:19:05+00:00'
+places:
+- country_code: ID
+  subdivision: Maluku Utara
+  locality: Bitung
+raw_fields:
+  mag: 4.6
+  place: 131 km E of Bitung, Indonesia
+  time: 1782717590329
+  updated: 1782722483040
+  tz: null
+  url: https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8xp
+  felt: null
+  cdi: null
+  mmi: null
+  alert: null
+  status: reviewed
+  tsunami: 0
+  sig: 326
+  net: us
+  code: 6000t8xp
+  ids: ',us6000t8xp,'
+  sources: ',us,'
+  types: ',origin,phase-data,'
+  nst: 53
+  dmin: 5.79
+  rms: 0.47
+  gap: 90
+  magType: mb
+  type: earthquake
+  title: M 4.6 - 131 km E of Bitung, Indonesia
+  products:
+    origin:
+    - indexid: 1963106
+      indexTime: 1782722489864
+      id: urn:usgs-product:us:origin:us6000t8xp:1782722483040
+      type: origin
+      code: us6000t8xp
+      source: us
+      updateTime: 1782722483040
+      status: UPDATE
+      properties:
+        azimuthal-gap: '90'
+        depth: '35'
+        depth-type: operator assigned
+        error-ellipse-azimuth: '256'
+        error-ellipse-intermediate: '11398'
+        error-ellipse-major: '14975'
+        error-ellipse-minor: '2894'
+        error-ellipse-plunge: '0'
+        error-ellipse-rotation: '89'
+        evaluation-status: preliminary
+        event-type: earthquake
+        eventParametersPublicID: quakeml:us.anss.org/eventparameters/6000t8xp/1782722485
+        eventsource: us
+        eventsourcecode: 6000t8xp
+        eventtime: '2026-06-29T07:19:50.329Z'
+        eventtime-error: '0.96'
+        horizontal-error: '8.59'
+        latitude: '1.2850'
+        latitude-error: '0.0687'
+        longitude: '126.2952'
+        longitude-error: '0.0876'
+        magnitude: '4.6'
+        magnitude-error: '0.089'
+        magnitude-num-stations-used: '38'
+        magnitude-source: us
+        magnitude-type: mb
+        minimum-distance: '5.790'
+        num-phases-used: '53'
+        num-stations-used: '53'
+        origin-source: us
+        pdl-client-version: Version 3.5.4 2026-01-22
+        quakeml-magnitude-publicid: quakeml:us.anss.org/magnitude/6000t8xp/mb
+        quakeml-origin-publicid: quakeml:us.anss.org/origin/6000t8xp
+        quakeml-publicid: quakeml:us.anss.org/event/6000t8xp
+        review-status: reviewed
+        standard-error: '0.47'
+        title: 131 km E of Bitung, Indonesia
+        vertical-error: '1.904'
+      preferredWeight: 158
+      contents:
+        contents.xml:
+          contentType: application/xml
+          lastModified: 1782722487000
+          length: 195
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:origin:us6000t8xp:1782722483040/contents/contents.xml
+          sha256: ABhLiaqdYWmIak24eD/csBAWouBShhatD9bUzLNEZFk=
+        quakeml.xml:
+          contentType: application/xml
+          lastModified: 1782722483000
+          length: 3808
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:origin:us6000t8xp:1782722483040/contents/quakeml.xml
+          sha256: 2QNgWoYrxfU78v/yDPhcxftHuoUws85+xhPHCzmwHRo=
+    phase-data:
+    - indexid: 1963107
+      indexTime: 1782722490671
+      id: urn:usgs-product:us:phase-data:us6000t8xp:1782722483040
+      type: phase-data
+      code: us6000t8xp
+      source: us
+      updateTime: 1782722483040
+      status: UPDATE
+      properties:
+        azimuthal-gap: '90'
+        depth: '35'
+        depth-type: operator assigned
+        error-ellipse-azimuth: '256'
+        error-ellipse-intermediate: '11398'
+        error-ellipse-major: '14975'
+        error-ellipse-minor: '2894'
+        error-ellipse-plunge: '0'
+        error-ellipse-rotation: '89'
+        evaluation-status: preliminary
+        event-type: earthquake
+        eventParametersPublicID: quakeml:us.anss.org/eventparameters/6000t8xp/1782722485
+        eventsource: us
+        eventsourcecode: 6000t8xp
+        eventtime: '2026-06-29T07:19:50.329Z'
+        eventtime-error: '0.96'
+        horizontal-error: '8.59'
+        latitude: '1.2850'
+        latitude-error: '0.0687'
+        longitude: '126.2952'
+        longitude-error: '0.0876'
+        magnitude: '4.6'
+        magnitude-error: '0.089'
+        magnitude-num-stations-used: '38'
+        magnitude-source: us
+        magnitude-type: mb
+        minimum-distance: '5.790'
+        num-phases-used: '53'
+        num-stations-used: '53'
+        origin-source: us
+        pdl-client-version: Version 3.5.4 2026-01-22
+        quakeml-magnitude-publicid: quakeml:us.anss.org/magnitude/6000t8xp/mb
+        quakeml-origin-publicid: quakeml:us.anss.org/origin/6000t8xp
+        quakeml-publicid: quakeml:us.anss.org/event/6000t8xp
+        review-status: reviewed
+        standard-error: '0.47'
+        vertical-error: '1.904'
+      preferredWeight: 158
+      contents:
+        contents.xml:
+          contentType: application/xml
+          lastModified: 1782722487000
+          length: 195
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:phase-data:us6000t8xp:1782722483040/contents/contents.xml
+          sha256: ABhLiaqdYWmIak24eD/csBAWouBShhatD9bUzLNEZFk=
+        quakeml.xml:
+          contentType: application/xml
+          lastModified: 1782722483000
+          length: 123942
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:phase-data:us6000t8xp:1782722483040/contents/quakeml.xml
+          sha256: 3s4Oel7DBZjP9TUzVJeZwWbFKylAmELffPjChzKanaU=
+  geometry:
+    type: Point
+    coordinates:
+    - 126.2952
+    - 1.285
+    - 35
+  depth: 35

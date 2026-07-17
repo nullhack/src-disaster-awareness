@@ -1,0 +1,168 @@
+id: aed873c043c2519b8cd5d26621956800
+source: USGS
+source_id: us6000taft
+incident_type: Earthquake
+name: M 5.1 - 211 km ESE of Hihifo, Tonga
+report_date: '2026-07-06'
+news_searched_at: '2026-07-08T22:49:51+00:00'
+places:
+- country_code: TO
+  subdivision: Vava'u
+  locality: Hihifo
+raw_fields:
+  mag: 5.1
+  place: 211 km ESE of Hihifo, Tonga
+  time: 1783349018525
+  updated: 1783351016040
+  tz: null
+  url: https://earthquake.usgs.gov/earthquakes/eventpage/us6000taft
+  felt: null
+  cdi: null
+  mmi: null
+  alert: null
+  status: reviewed
+  tsunami: 0
+  sig: 400
+  net: us
+  code: 6000taft
+  ids: ',us6000taft,'
+  sources: ',us,'
+  types: ',origin,phase-data,'
+  nst: 29
+  dmin: 2.979
+  rms: 0.77
+  gap: 68
+  magType: mb
+  type: earthquake
+  title: M 5.1 - 211 km ESE of Hihifo, Tonga
+  products:
+    origin:
+    - indexid: 1984383
+      indexTime: 1783351021789
+      id: urn:usgs-product:us:origin:us6000taft:1783351016040
+      type: origin
+      code: us6000taft
+      source: us
+      updateTime: 1783351016040
+      status: UPDATE
+      properties:
+        azimuthal-gap: '68'
+        depth: '10'
+        depth-type: operator assigned
+        error-ellipse-azimuth: '113'
+        error-ellipse-intermediate: '11709'
+        error-ellipse-major: '13030'
+        error-ellipse-minor: '2755'
+        error-ellipse-plunge: '0'
+        error-ellipse-rotation: '270'
+        evaluation-status: preliminary
+        event-type: earthquake
+        eventParametersPublicID: quakeml:us.anss.org/eventparameters/6000taft/1783351016
+        eventsource: us
+        eventsourcecode: 6000taft
+        eventtime: '2026-07-06T14:43:38.525Z'
+        eventtime-error: '1.57'
+        horizontal-error: '8.13'
+        latitude: '-16.8920'
+        latitude-error: '0.0706'
+        longitude: '-172.0700'
+        longitude-error: '0.0793'
+        magnitude: '5.1'
+        magnitude-error: '0.108'
+        magnitude-num-stations-used: '28'
+        magnitude-source: us
+        magnitude-type: mb
+        minimum-distance: '2.979'
+        num-phases-used: '29'
+        num-stations-used: '29'
+        origin-source: us
+        pdl-client-version: Version 3.5.4 2026-01-22
+        quakeml-magnitude-publicid: quakeml:us.anss.org/magnitude/6000taft/mb
+        quakeml-origin-publicid: quakeml:us.anss.org/origin/6000taft
+        quakeml-publicid: quakeml:us.anss.org/event/6000taft
+        review-status: reviewed
+        standard-error: '0.77'
+        title: 211 km ESE of Hihifo, Tonga
+        vertical-error: '1.816'
+      preferredWeight: 158
+      contents:
+        contents.xml:
+          contentType: application/xml
+          lastModified: 1783351019000
+          length: 195
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:origin:us6000taft:1783351016040/contents/contents.xml
+          sha256: ABhLiaqdYWmIak24eD/csBAWouBShhatD9bUzLNEZFk=
+        quakeml.xml:
+          contentType: application/xml
+          lastModified: 1783351016000
+          length: 3813
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:origin:us6000taft:1783351016040/contents/quakeml.xml
+          sha256: WFYUXGB65WjkuUAwdEhJ7UqWOZ74NZOZlSTYKyltjbw=
+    phase-data:
+    - indexid: 1984384
+      indexTime: 1783351022915
+      id: urn:usgs-product:us:phase-data:us6000taft:1783351016040
+      type: phase-data
+      code: us6000taft
+      source: us
+      updateTime: 1783351016040
+      status: UPDATE
+      properties:
+        azimuthal-gap: '68'
+        depth: '10'
+        depth-type: operator assigned
+        error-ellipse-azimuth: '113'
+        error-ellipse-intermediate: '11709'
+        error-ellipse-major: '13030'
+        error-ellipse-minor: '2755'
+        error-ellipse-plunge: '0'
+        error-ellipse-rotation: '270'
+        evaluation-status: preliminary
+        event-type: earthquake
+        eventParametersPublicID: quakeml:us.anss.org/eventparameters/6000taft/1783351016
+        eventsource: us
+        eventsourcecode: 6000taft
+        eventtime: '2026-07-06T14:43:38.525Z'
+        eventtime-error: '1.57'
+        horizontal-error: '8.13'
+        latitude: '-16.8920'
+        latitude-error: '0.0706'
+        longitude: '-172.0700'
+        longitude-error: '0.0793'
+        magnitude: '5.1'
+        magnitude-error: '0.108'
+        magnitude-num-stations-used: '28'
+        magnitude-source: us
+        magnitude-type: mb
+        minimum-distance: '2.979'
+        num-phases-used: '29'
+        num-stations-used: '29'
+        origin-source: us
+        pdl-client-version: Version 3.5.4 2026-01-22
+        quakeml-magnitude-publicid: quakeml:us.anss.org/magnitude/6000taft/mb
+        quakeml-origin-publicid: quakeml:us.anss.org/origin/6000taft
+        quakeml-publicid: quakeml:us.anss.org/event/6000taft
+        review-status: reviewed
+        standard-error: '0.77'
+        vertical-error: '1.816'
+      preferredWeight: 158
+      contents:
+        contents.xml:
+          contentType: application/xml
+          lastModified: 1783351019000
+          length: 195
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:phase-data:us6000taft:1783351016040/contents/contents.xml
+          sha256: ABhLiaqdYWmIak24eD/csBAWouBShhatD9bUzLNEZFk=
+        quakeml.xml:
+          contentType: application/xml
+          lastModified: 1783351016000
+          length: 97578
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:phase-data:us6000taft:1783351016040/contents/quakeml.xml
+          sha256: yK6Bl8qZW8G4D6N8PIh/Rq9iP+xAXea3OTkJZuZcSKk=
+  geometry:
+    type: Point
+    coordinates:
+    - -172.07
+    - -16.892
+    - 10
+  depth: 10

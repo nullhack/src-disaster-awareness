@@ -1,0 +1,168 @@
+id: 7f8358b18356566983fb03f4f00c9174
+source: USGS
+source_id: us6000tada
+incident_type: Earthquake
+name: M 4.6 - 112 km NNW of Neiafu, Tonga
+report_date: '2026-07-06'
+news_searched_at: '2026-07-08T22:48:28+00:00'
+places:
+- country_code: TO
+  subdivision: Vava'u
+  locality: Neiafu
+raw_fields:
+  mag: 4.6
+  place: 112 km NNW of Neiafu, Tonga
+  time: 1783325241524
+  updated: 1783331130040
+  tz: null
+  url: https://earthquake.usgs.gov/earthquakes/eventpage/us6000tada
+  felt: null
+  cdi: null
+  mmi: null
+  alert: null
+  status: reviewed
+  tsunami: 0
+  sig: 326
+  net: us
+  code: 6000tada
+  ids: ',us6000tada,'
+  sources: ',us,'
+  types: ',origin,phase-data,'
+  nst: 82
+  dmin: 4.414
+  rms: 1.1
+  gap: 52
+  magType: mb
+  type: earthquake
+  title: M 4.6 - 112 km NNW of Neiafu, Tonga
+  products:
+    origin:
+    - indexid: 1983563
+      indexTime: 1783331138137
+      id: urn:usgs-product:us:origin:us6000tada:1783331130040
+      type: origin
+      code: us6000tada
+      source: us
+      updateTime: 1783331130040
+      status: UPDATE
+      properties:
+        azimuthal-gap: '52'
+        depth: '113.237'
+        depth-type: from location
+        error-ellipse-azimuth: '203'
+        error-ellipse-intermediate: '11888'
+        error-ellipse-major: '15388'
+        error-ellipse-minor: '10064'
+        error-ellipse-plunge: '2'
+        error-ellipse-rotation: '66'
+        evaluation-status: preliminary
+        event-type: earthquake
+        eventParametersPublicID: quakeml:us.anss.org/eventparameters/6000tada/1783331132
+        eventsource: us
+        eventsourcecode: 6000tada
+        eventtime: '2026-07-06T08:07:21.524Z'
+        eventtime-error: '2.23'
+        horizontal-error: '8.8'
+        latitude: '-17.7009'
+        latitude-error: '0.0877'
+        longitude: '-174.3468'
+        longitude-error: '0.0765'
+        magnitude: '4.6'
+        magnitude-error: '0.041'
+        magnitude-num-stations-used: '181'
+        magnitude-source: us
+        magnitude-type: mb
+        minimum-distance: '4.414'
+        num-phases-used: '83'
+        num-stations-used: '82'
+        origin-source: us
+        pdl-client-version: Version 3.5.4 2026-01-22
+        quakeml-magnitude-publicid: quakeml:us.anss.org/magnitude/6000tada/mb
+        quakeml-origin-publicid: quakeml:us.anss.org/origin/6000tada
+        quakeml-publicid: quakeml:us.anss.org/event/6000tada
+        review-status: reviewed
+        standard-error: '1.10'
+        title: 112 km NNW of Neiafu, Tonga
+        vertical-error: '6.826'
+      preferredWeight: 158
+      contents:
+        contents.xml:
+          contentType: application/xml
+          lastModified: 1783331135000
+          length: 195
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:origin:us6000tada:1783331130040/contents/contents.xml
+          sha256: ABhLiaqdYWmIak24eD/csBAWouBShhatD9bUzLNEZFk=
+        quakeml.xml:
+          contentType: application/xml
+          lastModified: 1783331130000
+          length: 3812
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:origin:us6000tada:1783331130040/contents/quakeml.xml
+          sha256: RmERLBGg8mvK5p21ghOZn4gOcw4s73Luyo+bRiVDnJI=
+    phase-data:
+    - indexid: 1983564
+      indexTime: 1783331138888
+      id: urn:usgs-product:us:phase-data:us6000tada:1783331130040
+      type: phase-data
+      code: us6000tada
+      source: us
+      updateTime: 1783331130040
+      status: UPDATE
+      properties:
+        azimuthal-gap: '52'
+        depth: '113.237'
+        depth-type: from location
+        error-ellipse-azimuth: '203'
+        error-ellipse-intermediate: '11888'
+        error-ellipse-major: '15388'
+        error-ellipse-minor: '10064'
+        error-ellipse-plunge: '2'
+        error-ellipse-rotation: '66'
+        evaluation-status: preliminary
+        event-type: earthquake
+        eventParametersPublicID: quakeml:us.anss.org/eventparameters/6000tada/1783331132
+        eventsource: us
+        eventsourcecode: 6000tada
+        eventtime: '2026-07-06T08:07:21.524Z'
+        eventtime-error: '2.23'
+        horizontal-error: '8.8'
+        latitude: '-17.7009'
+        latitude-error: '0.0877'
+        longitude: '-174.3468'
+        longitude-error: '0.0765'
+        magnitude: '4.6'
+        magnitude-error: '0.041'
+        magnitude-num-stations-used: '181'
+        magnitude-source: us
+        magnitude-type: mb
+        minimum-distance: '4.414'
+        num-phases-used: '83'
+        num-stations-used: '82'
+        origin-source: us
+        pdl-client-version: Version 3.5.4 2026-01-22
+        quakeml-magnitude-publicid: quakeml:us.anss.org/magnitude/6000tada/mb
+        quakeml-origin-publicid: quakeml:us.anss.org/origin/6000tada
+        quakeml-publicid: quakeml:us.anss.org/event/6000tada
+        review-status: reviewed
+        standard-error: '1.10'
+        vertical-error: '6.826'
+      preferredWeight: 158
+      contents:
+        contents.xml:
+          contentType: application/xml
+          lastModified: 1783331135000
+          length: 195
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:phase-data:us6000tada:1783331130040/contents/contents.xml
+          sha256: ABhLiaqdYWmIak24eD/csBAWouBShhatD9bUzLNEZFk=
+        quakeml.xml:
+          contentType: application/xml
+          lastModified: 1783331130000
+          length: 359586
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:phase-data:us6000tada:1783331130040/contents/quakeml.xml
+          sha256: lIUNnxJysYFQ/iZ29GeCCMlbnQAxCV5fe28ISEQULx0=
+  geometry:
+    type: Point
+    coordinates:
+    - -174.3468
+    - -17.7009
+    - 113.237
+  depth: 113.237
