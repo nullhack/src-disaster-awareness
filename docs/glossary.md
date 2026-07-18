@@ -1,4 +1,4 @@
-# Glossary: src-disaster-report-v4
+# Glossary: src-disaster-report-v5
 
 > The ubiquitous language for this project — terms shared across conversation,
 > code, and documentation (Evans, 2003). Curated from the interview for the
@@ -6,6 +6,37 @@
 > where each term has one meaning. The tests are the source of truth for
 > behaviour; this glossary is the source of truth for names. Extend or revise
 > entries as understanding shifts.
+>
+> **v5 storage migration (2026-07-18):** the SQLite `Warehouse` was replaced
+> by `ContentStore`, a Git-backed YAML tree on the `data` branch. Several v4
+> terms below describe tables/fields that no longer exist (the `incidents`
+> table became a derived read; `incident_id` is now an opaque uuid, not
+> `source:source_id`). Such terms are marked **SUPERSEDED** inline with the
+> v5 replacement noted. The `db` branch is preserved as a historical binary
+> reference; the migration script (`scripts/migrate_v4_to_tree.py`) extracts
+> it once for bootstrap.
+
+## Context: v5 storage model
+
+### content tree
+An orphan git branch (`origin/data`) holding the v5 store as YAML files partitioned incident-rooted: `data/reports/source=<src>/<ruuid>.yaml` (staging, unlinked), `data/incidents/<iuuid>/{incident.yaml, reports/source=<src>/<ruuid>.yaml, news/<nuuid>.yaml (pending), logs/<YYYY-MM-DD>/{log.yaml, news/<nuuid>.yaml (summarized)}}`. Location IS the relationship — no junction tables, no reference fields, no persisted index. CI workflows attach this branch as a `git worktree add data origin/data` at run start, run the pipeline in-place, and commit changes via normal `git add -A && git commit && git push origin HEAD:data` (no force, no amend).
+*Aliases: data branch · Source: v5 rewire 2026-07-18*
+
+### ContentStore
+The v5 storage adapter (`disaster_report/store/content.py`) that owns reads/writes over the content tree. Full-scans the tree on init and builds in-memory indexes; writes mutate one YAML file plus the index. Public surface: 25 Warehouse-mirror methods (str IDs) plus `set_search_keys`, `merge_incidents`, `read_logs_with_news`. Replaces the v4 `Warehouse` (SQLAlchemy over `disaster_report.db`); the v4 class is deleted from main but the binary DB persists on `origin/db`.
+*Aliases: store · Source: v5 rewire 2026-07-18*
+
+### incident manifest
+A sparse YAML file `incidents/<iuuid>/incident.yaml` with shape `{id, search_keys}`. Holds NO genesis fields (name/type/category/first_seen_at are derived lazily at read time from the earliest-dated linked report) and NO report_ids list (location-derived). `search_keys` is materialised once at birth via `derive_repoll_keys(genesis_report)` and is the only mutable field besides append-only log/news additions.
+*Aliases: incident.yaml · Source: v5 rewire 2026-07-18*
+
+### location-as-link
+The v5 invariant that file/directory location encodes graph edges — no inline reference fields. (1) Report "linked" iff under `incidents/<iuuid>/reports/`, else staging. (2) News' incident = ancestor `<iuuid>` directory. (3) News "summarized" iff under `logs/<date>/news/`; pending iff under flat `news/`. (4) Log↔news = co-location (no `news_ids` field on `log.yaml`). Reassignment = atomic file move.
+*Aliases: none · Source: v5 rewire 2026-07-18*
+
+### uuid filename
+The deterministic naming scheme that makes the content tree idempotent without an index: `report_uuid = uuid5(NAMESPACE, f"report:{source}:{source_id}").hex`, `news_uuid = uuid5(NAMESPACE, f"news:{url}").hex`, `incident_uuid = uuid5(NAMESPACE, f"incident:{v4_int_id}").hex` for migration (or `uuid4().hex` at runtime for new births). `NAMESPACE = uuid.UUID("746d6665-6e61-626c-6521-000000000001")`. Re-ingest of the same natural key produces the same filename — a no-op overwrite, not a duplicate.
+*Aliases: none · Source: v5 rewire 2026-07-18*
 
 ## Context: Source records
 
@@ -98,10 +129,14 @@ A reconciled real-world event that is the connected component (the "cluster") in
 *Aliases: cluster · Source: discovery interview 2026-07-04*
 
 ### incident id
+**SUPERSEDED in v5** — see *uuid filename*. The deterministic string id `source:source_id` of the genesis report described here was never shipped: v4 minted `int` ids from `time.time_ns()` (pipeline) / `time.time()*1000` (store); v5 mints opaque uuids (uuid5 on natural key for reports/news, uuid4 for runtime incidents, uuid5 on v4-int for migration reproducibility). The text below is retained for historical context only.
+
 A deterministic label assigned to a cluster from the graph (never by AI), where news mapping to an existing incident takes that incident's id, news with no cluster mapping gets a new id, and news shared between two source records merges them into one incident. The id is `source:source_id` of the genesis (earliest-by-date) report — human-readable, stable across replays of the same batch. Stored as the PK of the `incidents` table.
 *Aliases: none · Source: discovery interview 2026-07-04 · revised 2026-07-08*
 
 ### incidents table
+**SUPERSEDED in v5** — see *incident manifest* + *ContentStore*. The v4 base table described here was actually a `VIEW` derived from `report_incidents ⋈ source_reports` (earliest report per incident by `report_date, report_id`). v5 has no `incidents` relation at all — incident identity is implicit in the directory tree, and the genesis projection (`incident_category`, `incident_type`, `name`, `first_seen_at`, `genesis_report_id`) is derived lazily at read time over the earliest-dated linked report.
+
 A warehouse table `(incident_id PK, incident_category, incident_type, name, first_seen_at, genesis_report_id)` that makes incident identity explicit (was: derived from `DISTINCT incident_logs.incident_id`). `incident_category` and `incident_type` are copied from the genesis source report at birth; `genesis_report_id` is the denormalized `source:source_id` (no FK — `source_reports` PK is composite). Birthed by `_commit_pending` after the clusterer assigns ids; upserted idempotently on `incident_id`.
 *Aliases: none · Source: discovery interview 2026-07-08*
 
@@ -162,8 +197,8 @@ A common JSON output materialised from the read model (incident + timeline + new
 *Aliases: none · Source: discovery interview 2026-07-04*
 
 ### Markdown brief
-A two-level report rendered from the read model (incidents + timeline + news), with no AI on the read path. Top level: `## Geophysical` / `## Disease` (fixed, 2 categories, stable order). Sub-sections: `### <incident_type>` (dynamic, alphabetical — e.g. `### Earthquake`, `### Ebola`). Routing by `incident.incident_category` (from the `incidents` table), NOT by token-scanning the `incident_id` string (the prior `_is_disease` was broken — `incident_id` is `source:source_id`, no disease tokens).
-*Aliases: MarkdownRenderer · Source: discovery interview 2026-07-04 · revised 2026-07-08*
+A two-level report rendered from the read model (incidents + timeline + news), with no AI on the read path. Top level: `## Geophysical` / `## Disease` (fixed, 2 categories, stable order). Sub-sections: `### <incident_type>` (dynamic, alphabetical — e.g. `### Earthquake`, `### Ebola`). Routing by `incident.incident_category` (derived at read time from the genesis report's source: WHO→disease, else→geophysical). **v5:** the rationale "from the `incidents` table, not token-scanning `incident_id`" still holds — incident ids are opaque uuids in v5, so token-scanning was never going to work; the source-based category rule is applied during the derived read.
+*Aliases: MarkdownRenderer · Source: discovery interview 2026-07-04 · revised 2026-07-08 · revised 2026-07-18 (v5)*
 
 ### renderer
 A consumer of the JSON report protocol; the Markdown brief is built, while the Dashboard feed, Telegram, and Email renderers are defined-on-protocol but not built in v4.
@@ -172,8 +207,8 @@ A consumer of the JSON report protocol; the Markdown brief is built, while the D
 ## Context: Configuration & CLI
 
 ### settings
-A frozen configuration loaded from `config.toml` (non-secret configurable things: db_url, openrouter_model, active_window_days) and `~/.secrets/<project>.env` (the AI key, via `dotenv_values()`), whose key and model are never logged or committed. `Settings.__init__` raises `ValueError` on empty `openrouter_api_key` or `openrouter_model` — fail-loud, no silent empty-string default.
-*Aliases: Settings · Source: discovery interview 2026-07-04 · revised 2026-07-07 · revised 2026-07-09*
+A frozen configuration loaded from `config.toml` (non-secret configurable things: `tree_root`, `openrouter_model`, `active_window_days`, `min_log_news_threshold`) and `~/.secrets/<project>.env` (the AI key, via `dotenv_values()`), whose key and model are never logged or committed. `Settings.__init__` raises `ValueError` on empty `openrouter_api_key` or `openrouter_model` — fail-loud, no silent empty-string default. **v5:** `db_url` was replaced by `tree_root` (default `"data"`); the `[database]` table was replaced by `[tree]`.
+*Aliases: Settings · Source: discovery interview 2026-07-04 · revised 2026-07-07 · revised 2026-07-09 · revised 2026-07-18 (v5 tree_root)*
 
 ### active_window_days
 A frozen `Settings` field read from `config.toml [ingest]` (default 7) that sets the re-poll active window: an incident is a re-poll candidate iff its most recent `report_news_links.linked_at` (news publication date) is within this many days of the injected clock's now. Changing the window is a config edit, not a code change.
