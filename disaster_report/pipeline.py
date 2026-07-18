@@ -3,8 +3,10 @@ from __future__ import annotations
 
 import dataclasses
 import logging
+import re
 import uuid
 from dataclasses import dataclass
+from datetime import date
 from typing import Any, cast
 
 from disaster_report._search_keys import derive_repoll_keys
@@ -40,6 +42,18 @@ def _enrich_news_items(items: list[NewsItem]) -> list[NewsItem]:
     for n in items:
         enriched.append(_enrich_one(n))
     return enriched
+
+
+_MAGNITUDE_PREFIX = re.compile(
+    r"^\s*(?:M(?:agnitude)?\s*\d+(?:\.\d+)?|Volcano|Earthquake)\s*[-–—:]\s*",
+    re.IGNORECASE,
+)
+
+
+def _normalize_incident_name(name: str) -> str:
+
+    stripped = _MAGNITUDE_PREFIX.sub("", name).strip()
+    return stripped or name
 
 
 @dataclass(frozen=True)
@@ -81,13 +95,80 @@ def _passes_gate(adapter: Any, report: SourceReport) -> bool:
     return adapter.should_monitor(report)
 
 
+def _parse_usgs_ids(value: object) -> set[str]:
+
+    if not isinstance(value, str) or not value:
+        return set()
+    return {x.strip() for x in value.split(",") if x.strip()}
+
+
+def _match_usgs_event_family(wh: ContentStore, report: SourceReport) -> str | None:
+
+    my_ids = _parse_usgs_ids(report.raw_fields.get("ids"))
+    if not my_ids:
+        return None
+    store = cast(Any, wh)
+    for ruuid, existing in store._reports.items():
+        if existing.get("source") != "USGS":
+            continue
+        existing_ids = _parse_usgs_ids(
+            existing.get("raw_fields", {}).get("ids")
+        )
+        if my_ids & existing_ids:
+            inc = store._report_incident.get(ruuid)
+            if inc:
+                return inc
+    return None
+
+
+def _match_by_window(wh: ContentStore, report: SourceReport) -> str | None:
+
+    my_countries = {p.country_code for p in report.places if p.country_code}
+    try:
+        my_date = date.fromisoformat(report.report_date[:10])
+    except (ValueError, TypeError):
+        return None
+    for inc in wh.read_incidents():
+        if inc.incident_type != report.incident_type:
+            continue
+        try:
+            inc_date = date.fromisoformat(inc.first_seen_at[:10])
+        except (ValueError, TypeError):
+            continue
+        if abs((my_date - inc_date).days) > 14:
+            continue
+        genesis = wh.read_source_report_by_id(inc.genesis_report_id)
+        if genesis is None:
+            continue
+        genesis_countries = {p.country_code for p in genesis.places if p.country_code}
+        if my_countries and genesis_countries and not (my_countries & genesis_countries):
+            continue
+        return inc.incident_id
+    return None
+
+
+def _find_existing_incident(wh: ContentStore, report: SourceReport) -> str | None:
+
+    if report.source == "USGS":
+        hit = _match_usgs_event_family(wh, report)
+        if hit:
+            return hit
+    return _match_by_window(wh, report)
+
+
 def _commit_news_for_report(
-    wh: ContentStore, report_id: str, selected_news: list[NewsItem]
+    wh: ContentStore,
+    report: SourceReport,
+    report_id: str,
+    selected_news: list[NewsItem],
 ) -> None:
 
     existing_report_incidents = wh.read_incident_ids_for_report(report_id)
+    pre_birth = (
+        _find_existing_incident(wh, report) if not existing_report_incidents else None
+    )
     birthed_incident_id: str | None = (
-        existing_report_incidents[0] if existing_report_incidents else None
+        existing_report_incidents[0] if existing_report_incidents else pre_birth
     )
     for news in selected_news:
         news_id = wh.ingest_news_item(news)
@@ -189,14 +270,14 @@ def _search_one_report(
         result = digest_fn.filter(
             candidates,
             incident_type=report.incident_type,
-            incident_name=report.name,
+            incident_name=_normalize_incident_name(report.name),
             incident_places=_places_payload(report),
             incident_date=report.report_date,
         )
         logger.info("search: %s:%s — %d relevant after filter", report.source, report.source_id, len(result.selected_news))
         if result.selected_news:
             enriched = _enrich_news_items(result.selected_news)
-            _commit_news_for_report(wh, report_id, enriched)
+            _commit_news_for_report(wh, report, report_id, enriched)
     wh.mark_report_searched(report.source, report.source_id, iso_now)
     searched_keys.add(key)
 
@@ -231,7 +312,7 @@ def _repoll_one_incident(
     result = digest_fn.filter(
         fresh,
         incident_type=incident.incident_type,
-        incident_name=incident.name,
+        incident_name=_normalize_incident_name(incident.name),
         incident_places=_places_payload(genesis),
         incident_date=incident.first_seen_at,
     )
