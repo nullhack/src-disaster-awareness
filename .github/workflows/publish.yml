@@ -29,8 +29,8 @@ jobs:
         run: |
           git config --global user.name "eol"
           git config --global user.email "nullhack@users.noreply.github.com"
-      - name: Extract DB
-        run: git show origin/db:disaster_report.db > disaster_report.db
+      - name: Attach data worktree
+        run: git worktree add data origin/data
       - name: Publish to gh-pages
         run: uv run python scripts/publish_dashboard_data.py
         env:

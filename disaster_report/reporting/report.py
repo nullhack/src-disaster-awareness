@@ -6,7 +6,7 @@ from dataclasses import dataclass
 from datetime import datetime
 
 from disaster_report.models import Incident, IncidentLog, NewsItem
-from disaster_report.store.base import Warehouse
+from disaster_report.store.content import ContentStore
 
 
 @dataclass(frozen=True)
@@ -19,7 +19,7 @@ class ReportDocument:
 
 
 def build_report(
-    warehouse: Warehouse,
+    warehouse: ContentStore,
     clock: Callable[[], datetime],
 ) -> ReportDocument:
 

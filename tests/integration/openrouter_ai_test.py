@@ -454,7 +454,7 @@ def build_prior_timeline() -> list[IncidentLog]:
 
     return [
         IncidentLog(
-            incident_id=100,
+            incident_id="100",
             log_date="2026-07-01",
             summary="prior summary",
         )

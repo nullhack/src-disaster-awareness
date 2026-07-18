@@ -25,7 +25,7 @@ from disaster_report.sources.ddg_news import DuckDuckGoNewsAdapter
 from disaster_report.sources.gdacs import GDACSAdapter
 from disaster_report.sources.usgs import USGSAdapter
 from disaster_report.sources.who import WHODiseaseOutbreakAdapter
-from disaster_report.store.base import Warehouse
+from disaster_report.store.content import ContentStore
 
 _DEFAULT_CONFIG_PATH = "config.toml"
 _DEFAULT_SECRETS_PATH = "~/.secrets/disaster_report.env"
@@ -54,9 +54,9 @@ def _load_settings(config_path: str, secrets_path: str) -> Settings:
     )
 
 
-def _bootstrap(config_path: str, secrets_path: str) -> tuple[Settings, Warehouse]:
+def _bootstrap(config_path: str, secrets_path: str) -> tuple[Settings, ContentStore]:
     settings = _load_settings(config_path, secrets_path)
-    warehouse = Warehouse(settings.db_url, clock=_now)
+    warehouse = ContentStore(settings.tree_root, clock=_now)
     return settings, warehouse
 
 

@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
-"""Regenerate dashboard JSON from the DB and push to the gh-pages branch.
+"""Regenerate dashboard JSON from the v5 tree and push to the gh-pages branch.
 
 Workflow:
-1. Run generate_dashboard_data.py -> temp dir
+1. Run generate_dashboard_data.py against the data/ worktree -> temp dir
 2. Checkout gh-pages branch
 3. Replace data/ with the fresh JSON
-4. Sync app.js, styles.css, index.html from dev's dashboard/ to gh-pages root
+4. Sync app.js, styles.css, index.html from current branch's dashboard/ to gh-pages root
 5. Commit + push
 
 Usage:
-    uv run python scripts/publish_dashboard_data.py [--db disaster_report.db]
+    uv run python scripts/publish_dashboard_data.py [--tree-root data] [--as-of YYYY-MM-DD]
 """
 
 from __future__ import annotations
@@ -38,7 +38,7 @@ def run(cmd: list[str], cwd: Path | None = None) -> subprocess.CompletedProcess:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Regenerate + push dashboard data to gh-pages")
-    parser.add_argument("--db", default="disaster_report.db")
+    parser.add_argument("--tree-root", default="data")
     parser.add_argument("--as-of", default=None, help="Override as-of date (YYYY-MM-DD)")
     args = parser.parse_args()
 
@@ -48,7 +48,7 @@ def main() -> None:
 
     gen_args = [
         "uv", "run", "python", "scripts/generate_dashboard_data.py",
-        "--db", args.db,
+        "--tree-root", args.tree_root,
         "--output", str(TMP_DIR),
     ]
     if args.as_of:
@@ -57,12 +57,6 @@ def main() -> None:
     run(gen_args)
 
     md_src = TMP_DIR.parent / "reports"
-
-    print("Stashing any working tree changes...")
-    stash_result = subprocess.run(
-        ["git", "stash", "list"],
-        cwd=REPO_ROOT, capture_output=True, text=True,
-    )
 
     current_branch = subprocess.run(
         ["git", "rev-parse", "--abbrev-ref", "HEAD"],
@@ -99,7 +93,7 @@ def main() -> None:
             shutil.copytree(md_src, reports_dir)
             run(["git", "add", "-A", "reports/"])
 
-        print("Syncing app.js, styles.css, index.html from dev...")
+        print("Syncing app.js, styles.css, index.html from current branch...")
         for fname in ("app.js", "styles.css", "index.html"):
             result = subprocess.run(
                 ["git", "show", f"{current_branch}:dashboard/{fname}"],

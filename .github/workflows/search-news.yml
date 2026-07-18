@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: db-update
+  group: data-update
   cancel-in-progress: false
 
 permissions:
@@ -28,19 +28,31 @@ jobs:
         run: |
           git config --global user.name "eol"
           git config --global user.email "nullhack@users.noreply.github.com"
-      - name: Extract DB
-        run: git show origin/db:disaster_report.db > disaster_report.db
+      - name: Attach data worktree
+        run: git worktree add data origin/data
       - name: Create env
         run: echo "API_KEY=${{ secrets.OPENROUTER_API_KEY }}" > .env
+      - name: Count before
+        id: before
+        run: |
+          echo "news=$(find data/news data/incidents -path '*/news/*.yaml' -not -path '*/logs/*' | wc -l)" >> "$GITHUB_OUTPUT"
+          echo "incidents=$(find data/incidents -maxdepth 1 -mindepth 1 -type d | wc -l)" >> "$GITHUB_OUTPUT"
       - name: Run search-news (per-report)
         run: uv run python -m disaster_report search-news --secrets .env -v
       - name: Run search-news (repoll)
         run: uv run python -m disaster_report search-news --repoll --secrets .env -v
-      - name: Push DB
+      - name: Count after
+        id: after
         run: |
-          git worktree add /tmp/db-wt db
-          cp disaster_report.db /tmp/db-wt/disaster_report.db
-          cd /tmp/db-wt
-          git add disaster_report.db
-          git commit --amend --no-edit --reset-author
-          git push --force origin db
+          echo "news=$(find data/news data/incidents -path '*/news/*.yaml' -not -path '*/logs/*' | wc -l)" >> "$GITHUB_OUTPUT"
+      - name: Commit + push data
+        working-directory: data
+        run: |
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+          added=$(($(echo "${{ steps.after.outputs.news }}" - ${{ steps.before.outputs.news }})))
+          git commit -m "chore(data): search news — ${added} new items (${{ steps.after.outputs.news }} pending total)"
+          git push origin data

@@ -4,12 +4,12 @@ import pytest
 
 
 class TestSettings:
-    def test_loads_database_url_from_config(self, monkeypatch, tmp_path) -> None:
+    def test_loads_tree_root_from_config(self, monkeypatch, tmp_path) -> None:
         from disaster_report.config import Settings
 
         config_file = tmp_path / "config.toml"
         config_file.write_text(
-            '[database]\ndb_url = "sqlite:///./from_config.db"\n'
+            '[tree]\nroot = "from_config_tree"\n'
             '[openrouter]\nmodel = "openrouter/deepseek/deepseek-v4"\n'
             "[ingest]\nactive_window_days = 7\n"
         )
@@ -18,14 +18,14 @@ class TestSettings:
         settings = Settings.load(
             config_path=str(config_file), secrets_path=str(secrets_file)
         )
-        assert settings.db_url == "sqlite:///./from_config.db"
+        assert settings.tree_root == "from_config_tree"
 
     def test_openrouter_key_from_secrets_file(self, monkeypatch, tmp_path) -> None:
         from disaster_report.config import Settings
 
         config_file = tmp_path / "config.toml"
         config_file.write_text(
-            '[database]\n[openrouter]\nmodel = "openrouter/deepseek/deepseek-v4"\n'
+            '[tree]\n[openrouter]\nmodel = "openrouter/deepseek/deepseek-v4"\n'
             "[ingest]\nactive_window_days = 7\n"
         )
         secrets_file = tmp_path / "secrets.env"
@@ -55,7 +55,7 @@ class TestSettings:
 
         with pytest.raises(ValueError):
             Settings(
-                db_url="sqlite:///./x.db",
+                tree_root="data",
                 openrouter_api_key="",
                 openrouter_model="openrouter/deepseek/deepseek-v4",
                 active_window_days=7,
@@ -66,7 +66,7 @@ class TestSettings:
 
         with pytest.raises(ValueError):
             Settings(
-                db_url="sqlite:///./x.db",
+                tree_root="data",
                 openrouter_api_key="sk-or-test",
                 openrouter_model="",
                 active_window_days=7,
@@ -78,24 +78,24 @@ class TestSettings:
         from disaster_report.config import Settings
 
         settings = Settings(
-            db_url="sqlite:///./x.db",
+            tree_root="data",
             openrouter_api_key="sk-or-test",
             openrouter_model="openrouter/deepseek/deepseek-v4",
             active_window_days=7,
         )
         with pytest.raises(FrozenInstanceError):
-            settings.db_url = "sqlite:///./y.db"  # type: ignore[misc]
+            settings.tree_root = "other"  # type: ignore[misc]
 
-    def test_db_url_defaults_to_local_sqlite(self) -> None:
+    def test_tree_root_defaults_to_data(self) -> None:
         from disaster_report.config import Settings
 
         settings = Settings(
-            db_url="",
+            tree_root="",
             openrouter_api_key="sk-or-test",
             openrouter_model="openrouter/deepseek/deepseek-v4",
             active_window_days=7,
         )
-        assert settings.db_url == "sqlite:///./disaster_report.db"
+        assert settings.tree_root == "data"
 
     def test_missing_secrets_file_raises_clear_error(
         self, monkeypatch, tmp_path
@@ -103,7 +103,7 @@ class TestSettings:
         from disaster_report.config import Settings
 
         config_file = tmp_path / "config.toml"
-        config_file.write_text("[database]\n")
+        config_file.write_text("[tree]\n")
         with pytest.raises(FileNotFoundError):
             Settings.load(
                 config_path=str(config_file), secrets_path=str(tmp_path / "missing.env")
@@ -118,7 +118,7 @@ class TestSettings:
         secrets_file.write_text("API_KEY=sk-or-secret\n")
         config_file = tmp_path / "config.toml"
         config_file.write_text(
-            '[database]\n[openrouter]\nmodel = "openrouter/deepseek/deepseek-v4"\n'
+            '[tree]\n[openrouter]\nmodel = "openrouter/deepseek/deepseek-v4"\n'
             "[ingest]\nactive_window_days = 7\n"
         )
         with caplog.at_level(logging.DEBUG):

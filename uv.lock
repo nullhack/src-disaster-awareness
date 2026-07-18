@@ -2413,6 +2413,7 @@ dependencies = [
     { name = "dspy" },
     { name = "iso3166-2" },
     { name = "pycountry" },
+    { name = "pyyaml" },
     { name = "sqlalchemy" },
 ]
 
@@ -2454,6 +2455,7 @@ requires-dist = [
     { name = "pytest-html", marker = "extra == 'dev'", specifier = ">=4.0.0" },
     { name = "pytest-mock", marker = "extra == 'dev'", specifier = ">=3.14.0" },
     { name = "pytest-vcr", marker = "extra == 'dev'", specifier = ">=1.0.2" },
+    { name = "pyyaml", specifier = ">=6.0.3" },
     { name = "ruff", marker = "extra == 'dev'", specifier = ">=0.11.5" },
     { name = "safety", marker = "extra == 'dev'", specifier = ">=3.7.0" },
     { name = "sqlalchemy", specifier = ">=2.0.51" },

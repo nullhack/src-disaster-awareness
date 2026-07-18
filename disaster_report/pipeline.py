@@ -2,23 +2,21 @@
 from __future__ import annotations
 
 import logging
-import time
+import uuid
 from dataclasses import dataclass
 from typing import Any, cast
-
-from sqlalchemy.exc import IntegrityError
 
 from disaster_report._search_keys import derive_repoll_keys
 from disaster_report.models import IncidentLog, NewsItem, SourceReport
 from disaster_report.sources.errors import SourceFetchError
-from disaster_report.store.base import Warehouse
+from disaster_report.store.content import ContentStore
 
 logger = logging.getLogger(__name__)
 
 
-def _mint_id() -> int:
+def _mint_id() -> str:
 
-    return time.time_ns()
+    return uuid.uuid4().hex
 
 
 @dataclass(frozen=True)
@@ -61,11 +59,11 @@ def _passes_gate(adapter: Any, report: SourceReport) -> bool:
 
 
 def _commit_news_for_report(
-    wh: Warehouse, report_id: int, selected_news: list[NewsItem]
+    wh: ContentStore, report_id: str, selected_news: list[NewsItem]
 ) -> None:
 
     existing_report_incidents = wh.read_incident_ids_for_report(report_id)
-    birthed_incident_id: int | None = (
+    birthed_incident_id: str | None = (
         existing_report_incidents[0] if existing_report_incidents else None
     )
     for news in selected_news:
@@ -82,7 +80,7 @@ def _commit_news_for_report(
 
 
 def _commit_news_for_incident(
-    wh: Warehouse, incident_id: int, selected_news: list[NewsItem]
+    wh: ContentStore, incident_id: str, selected_news: list[NewsItem]
 ) -> None:
 
     for news in selected_news:
@@ -91,17 +89,9 @@ def _commit_news_for_incident(
             wh.assign_news_to_incident(news_id, incident_id)
 
 
-def _ingest_report(wh: Warehouse, report: SourceReport) -> int:
+def _ingest_report(wh: ContentStore, report: SourceReport) -> str:
 
-    attempt = 0
-    while True:
-        try:
-            return wh.ingest_source_report(report)
-        except IntegrityError:
-            attempt += 1
-            if attempt >= 3:
-                raise
-            time.sleep(0.002)
+    return wh.ingest_source_report(report)
 
 
 def _fetch_reports(adapter: Any) -> list[SourceReport]:
@@ -115,7 +105,7 @@ def _fetch_reports(adapter: Any) -> list[SourceReport]:
 
 def ingest_source_reports(adapters: object, warehouse: object) -> int:
 
-    wh = cast(Warehouse, warehouse)
+    wh = cast(ContentStore, warehouse)
     existing_keys = wh.read_source_report_keys()
     kept = 0
     adapter_list = list(cast(Any, adapters))
@@ -145,7 +135,7 @@ def ingest_source_reports(adapters: object, warehouse: object) -> int:
 
 
 def _search_one_report(
-    wh: Warehouse,
+    wh: ContentStore,
     adapter: Any,
     report: SourceReport,
     ddg_adapter: Any,
@@ -188,7 +178,7 @@ def _search_one_report(
 
 
 def _repoll_one_incident(
-    wh: Warehouse,
+    wh: ContentStore,
     incident: Any,
     ddg_adapter: Any,
     digest_fn: Any,
@@ -198,7 +188,7 @@ def _repoll_one_incident(
     genesis = wh.read_source_report_by_id(incident.genesis_report_id)
     if genesis is None:
         return
-    logger.info("repoll: incident %d — %s", incident.incident_id, incident.name)
+    logger.info("repoll: incident %s — %s", incident.incident_id, incident.name)
     seen_urls: set[str] = set()
     all_candidates: list[NewsItem] = []
     for repoll_key in derive_repoll_keys(genesis):
@@ -207,11 +197,11 @@ def _repoll_one_incident(
                 seen_urls.add(item.url)
                 all_candidates.append(item)
     if not all_candidates:
-        logger.info("repoll: incident %d — no DDG candidates", incident.incident_id)
+        logger.info("repoll: incident %s — no DDG candidates", incident.incident_id)
         return
     existing_urls = {n.url for n in wh.read_news(incident.incident_id)}
     fresh = [n for n in all_candidates if n.url not in existing_urls]
-    logger.info("repoll: incident %d — %d candidates, %d fresh", incident.incident_id, len(all_candidates), len(fresh))
+    logger.info("repoll: incident %s — %d candidates, %d fresh", incident.incident_id, len(all_candidates), len(fresh))
     if not fresh:
         return
     result = digest_fn.filter(
@@ -221,7 +211,7 @@ def _repoll_one_incident(
         incident_places=_places_payload(genesis),
         incident_date=incident.first_seen_at,
     )
-    logger.info("repoll: incident %d — %d relevant after filter", incident.incident_id, len(result.selected_news))
+    logger.info("repoll: incident %s — %d relevant after filter", incident.incident_id, len(result.selected_news))
     if result.selected_news:
         _commit_news_for_incident(wh, incident.incident_id, result.selected_news)
 
@@ -237,7 +227,7 @@ def search_news(
     active_window_days: int = 7,
 ) -> None:
 
-    wh = cast(Warehouse, warehouse)
+    wh = cast(ContentStore, warehouse)
     ddg_adapter = cast(Any, ddg)
     digest_fn = cast(Any, digester)
     clock_fn = cast(Any, clock)
@@ -270,13 +260,13 @@ def search_news(
     total_active = len(active)
     logger.info("search: repoll mode, %d active incidents (window=%d days)", total_active, active_window_days)
     for i, incident in enumerate(active, 1):
-        logger.info("search: [%d/%d] incident %d — %s", i, total_active, incident.incident_id, incident.name)
+        logger.info("search: [%d/%d] incident %s — %s", i, total_active, incident.incident_id, incident.name)
         _repoll_one_incident(wh, incident, ddg_adapter, digest_fn, news_timelimit)
     logger.info("search: repoll mode done")
 
 
 def _generate_logs_for_incident(
-    wh: Warehouse, digest_fn: Any, incident: Any, min_news_threshold: int
+    wh: ContentStore, digest_fn: Any, incident: Any, min_news_threshold: int
 ) -> None:
 
     already_linked = wh.read_summarized_news_ids(incident.incident_id)
@@ -284,11 +274,11 @@ def _generate_logs_for_incident(
     unsummarized = [n for n in all_news if n.news_id not in already_linked]
     if len(unsummarized) < min_news_threshold:
         logger.info(
-            "logs: incident %d — %s — %d unsummarized, below threshold %d, skip",
+            "logs: incident %s — %s — %d unsummarized, below threshold %d, skip",
             incident.incident_id, incident.name, len(unsummarized), min_news_threshold,
         )
         return
-    logger.info("logs: incident %d — %s — %d unsummarized of %d total", incident.incident_id, incident.name, len(unsummarized), len(all_news))
+    logger.info("logs: incident %s — %s — %d unsummarized of %d total", incident.incident_id, incident.name, len(unsummarized), len(all_news))
     prior = wh.read_timeline(incident.incident_id)
     genesis = wh.read_source_report_by_id(incident.genesis_report_id)
     places = _places_payload(genesis) if genesis is not None else []
@@ -301,7 +291,7 @@ def _generate_logs_for_incident(
         incident_date=incident.first_seen_at,
     )
     if not summary_result.has_relevant_updates:
-        logger.info("logs: incident %d — no relevant updates, skip", incident.incident_id)
+        logger.info("logs: incident %s — no relevant updates, skip", incident.incident_id)
         return
     log_date = cast(Any, wh)._clock().date().isoformat()
     wh.append_timeline_with_provenance(
@@ -312,20 +302,20 @@ def _generate_logs_for_incident(
         ),
         {n.news_id for n in unsummarized},
     )
-    logger.info("logs: incident %d — wrote log for %s (%d news linked)", incident.incident_id, log_date, len(unsummarized))
+    logger.info("logs: incident %s — wrote log for %s (%d news linked)", incident.incident_id, log_date, len(unsummarized))
 
 
 def generate_logs(
     warehouse: object, digester: object, min_news_threshold: int = 3
 ) -> None:
 
-    wh = cast(Warehouse, warehouse)
+    wh = cast(ContentStore, warehouse)
     digest_fn = cast(Any, digester)
     incidents = wh.read_incidents()
     total = len(incidents)
     logger.info("logs: %d incidents to process (threshold=%d)", total, min_news_threshold)
     for i, incident in enumerate(incidents, 1):
-        logger.info("logs: [%d/%d] incident %d — %s", i, total, incident.incident_id, incident.name)
+        logger.info("logs: [%d/%d] incident %s — %s", i, total, incident.incident_id, incident.name)
         _generate_logs_for_incident(wh, digest_fn, incident, min_news_threshold)
     logger.info("logs: done")
 
