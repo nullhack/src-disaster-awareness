@@ -1,54 +1,54 @@
 {
   "schema_version": "1.4",
-  "report_date": "2026-07-17",
+  "report_date": "2026-07-18",
   "generated_at": "2026-07-18T04:25:55Z",
-  "as_of": "2026-07-17",
+  "as_of": "2026-07-18",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 31,
-    "new_today": 7,
+    "reportable_total": 29,
+    "new_today": 2,
     "critical": 2,
     "high": 13,
-    "medium": 15,
-    "low": 1,
+    "medium": 14,
+    "low": 0,
     "disease_outbreaks": 6,
     "countries_affected": 19,
-    "news_total": 619,
+    "news_total": 653,
     "max_magnitude": 7.8,
     "by_severity": {
       "CRITICAL": 2,
       "HIGH": 13,
-      "MEDIUM": 15,
-      "LOW": 1
+      "MEDIUM": 14,
+      "LOW": 0
     },
     "by_type": {
       "Volcano": 3,
       "Tropical Cyclone": 1,
       "Forest Fire": 4,
       "Flood": 5,
-      "Earthquake": 11,
+      "Earthquake": 9,
       "Disease": 6,
       "Drought": 1
     },
     "by_region": {
-      "Asia": 18,
+      "Asia": 15,
       "Europe": 6,
-      "Americas": 1,
-      "Unknown": 2,
-      "Oceania": 3,
-      "Africa": 1
+      "Americas": 2,
+      "Unknown": 3,
+      "Africa": 1,
+      "Oceania": 2
     }
   },
   "by_country": [
     {
       "country": "Philippines",
-      "count": 6,
-      "max_sev_rank": 1,
+      "count": 4,
+      "max_sev_rank": 2,
       "iso2": "PH",
       "region": "Asia",
       "country_group": "A",
-      "max_severity": "LOW"
+      "max_severity": "MEDIUM"
     },
     {
       "country": "Indonesia",
@@ -114,15 +114,6 @@
       "max_severity": "MEDIUM"
     },
     {
-      "country": "Australia",
-      "count": 1,
-      "max_sev_rank": 2,
-      "iso2": "AU",
-      "region": "Oceania",
-      "country_group": "B",
-      "max_severity": "MEDIUM"
-    },
-    {
       "country": "Fiji",
       "count": 1,
       "max_sev_rank": 2,
@@ -160,7 +151,7 @@
     },
     {
       "country": "Japan",
-      "count": 2,
+      "count": 1,
       "max_sev_rank": 3,
       "iso2": "JP",
       "region": "Asia",
@@ -192,6 +183,15 @@
       "iso2": "NZ",
       "region": "Oceania",
       "country_group": "B",
+      "max_severity": "HIGH"
+    },
+    {
+      "country": "Guatemala",
+      "count": 1,
+      "max_sev_rank": 3,
+      "iso2": "GT",
+      "region": "Americas",
+      "country_group": "C",
       "max_severity": "HIGH"
     },
     {
@@ -3480,133 +3480,6 @@
       ]
     },
     {
-      "incident_id": "20260420-JP-EQ",
-      "canonical_name": "Earthquake Japan 2026-04",
-      "summary": "A powerful earthquake with a magnitude between 7.4 and 7.7 struck off the northeast coast of Japan on April 20, 2026, prompting a short-lived tsunami warning for coastal areas. The Japan Meteorological Agency issued alerts, and local residents were advised to evacuate to higher ground. Additionally, misinformation about an \"artificial earthquake\" began spreading online following the event.",
-      "country": "Japan",
-      "iso2": "JP",
-      "lat": 39.9532,
-      "lon": 143.0462,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "HIGH",
-      "priority": "HIGH",
-      "priority_rank": 1,
-      "pandemic_potential": null,
-      "event_status": null,
-      "disease_name": null,
-      "event_date": "2026-04-20",
-      "first_reported_date": "2026-04-20",
-      "last_updated_date": "2026-07-10",
-      "days_since_event": 89,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 1,
-        "healthmap": 0,
-        "news": 6
-      },
-      "source_links": [
-        {
-          "type": "GDACS",
-          "label": "Orange alert · Magnitude 7.4M, Depth:35km",
-          "url": "https://www.gdacs.org/report.aspx?eventid=1536386&episodeid=1701063&eventtype=EQ",
-          "meta": "Magnitude 7.4M, Depth:35km"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 7.4,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": "Orange",
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Japan weighs AI-powered disaster relief distribution",
-          "url": "https://asia.nikkei.com/business/technology/artificial-intelligence/japan-weighs-ai-powered-disaster-relief-distribution",
-          "outlet": "Nikkei Asian Review",
-          "published_date": "2026-07-06T17:34:44+00:00"
-        },
-        {
-          "headline": "'An Artificial Earthquake': Japan Quake Misinformation Spreads Online",
-          "url": "https://www.yahoo.com/news/articles/artificial-earthquake-japan-quake-misinformation-113631295.html",
-          "outlet": "Forbes · via Yahoo News",
-          "published_date": "2026-07-08T21:20:07+00:00"
-        },
-        {
-          "headline": "Japan On Alert For Potential Megaquake After 7.4M Quake Causes Tsunami Warning...",
-          "url": "https://www.yahoo.com/news/articles/japan-alert-potential-megaquake-7-161200590.html",
-          "outlet": "The Weather Channel · via Yahoo News",
-          "published_date": "2026-07-08T21:20:07+00:00"
-        },
-        {
-          "headline": "What we know about Monday’s 7.7-magnitude earthquake in Japan",
-          "url": "https://www.yahoo.com/news/articles/know-monday-7-7-magnitude-181721303.html",
-          "outlet": "Deseret News · via Yahoo News",
-          "published_date": "2026-07-08T21:20:07+00:00"
-        },
-        {
-          "headline": "Tsunami warning in Japan: What coastal residents should know about the waves and...",
-          "url": "https://www.yahoo.com/news/articles/tsunami-warning-japan-coastal-residents-171706591.html",
-          "outlet": "Houston Chronicle · via Yahoo News",
-          "published_date": "2026-07-08T21:20:07+00:00"
-        },
-        {
-          "headline": "Pilot of relief missions during Japanese disaster returns to command US air base",
-          "url": "https://www.stripes.com/theaters/asia_pacific/2026-07-10/yokota-air-base-374-airlift-wing-mendoza-22227770.html",
-          "outlet": "Stars and Stripes",
-          "published_date": "2026-07-10T17:34:44+00:00"
-        }
-      ],
-      "news_total": 6,
-      "logs": [
-        {
-          "log_date": "2026-07-08",
-          "summary": "A powerful earthquake with a magnitude between 7.4 and 7.7 struck off the northeast coast of Japan on April 20, 2026, prompting a short-lived tsunami warning for coastal areas. The Japan Meteorological Agency issued alerts, and local residents were advised to evacuate to higher ground. Additionally, misinformation about an \"artificial earthquake\" began spreading online following the event.",
-          "news": [
-            {
-              "news_id": 1700001000358,
-              "url": "https://www.yahoo.com/news/articles/artificial-earthquake-japan-quake-misinformation-113631295.html",
-              "headline": "'An Artificial Earthquake': Japan Quake Misinformation Spreads Online",
-              "published_date": "2026-07-08T21:20:07+00:00",
-              "outlet": "Forbes · via Yahoo News"
-            },
-            {
-              "news_id": 1700001000383,
-              "url": "https://www.yahoo.com/news/articles/japan-alert-potential-megaquake-7-161200590.html",
-              "headline": "Japan On Alert For Potential Megaquake After 7.4M Quake Causes Tsunami Warning...",
-              "published_date": "2026-07-08T21:20:07+00:00",
-              "outlet": "The Weather Channel · via Yahoo News"
-            },
-            {
-              "news_id": 1700001000385,
-              "url": "https://www.yahoo.com/news/articles/know-monday-7-7-magnitude-181721303.html",
-              "headline": "What we know about Monday’s 7.7-magnitude earthquake in Japan",
-              "published_date": "2026-07-08T21:20:07+00:00",
-              "outlet": "Deseret News · via Yahoo News"
-            },
-            {
-              "news_id": 1700001000412,
-              "url": "https://www.yahoo.com/news/articles/tsunami-warning-japan-coastal-residents-171706591.html",
-              "headline": "Tsunami warning in Japan: What coastal residents should know about the waves and...",
-              "published_date": "2026-07-08T21:20:07+00:00",
-              "outlet": "Houston Chronicle · via Yahoo News"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "incident_id": "20260607-PH-EQ",
       "canonical_name": "Earthquake Philippines 2026-06",
       "summary": "A subsequent 6.2-magnitude earthquake struck 34 km WSW of Sarangani, Philippines on July 14, 2026. Separately, monsoon rains triggered landslides and floods across Mindanao, killing 12 people, while the region was still recovering from the earlier 7.8 magnitude earthquake.",
@@ -5799,202 +5672,6 @@
       ]
     },
     {
-      "incident_id": "20260706-PH-EQ",
-      "canonical_name": "Earthquake 48 km SSW of Sarangani, Philippines 2026-07",
-      "summary": "A magnitude 5.8 earthquake struck east of Balut Island in the municipality of Sarangani, Davao Occidental on July 6, 2026. The Philippine Institute of Volcanology and Seismology reported the quake as an aftershock.",
-      "country": "Philippines",
-      "iso2": "PH",
-      "lat": 4.9886,
-      "lon": 125.326,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "disease_name": null,
-      "event_date": "2026-07-06",
-      "first_reported_date": "2026-07-06",
-      "last_updated_date": "2026-07-10",
-      "days_since_event": 12,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 0,
-        "healthmap": 0,
-        "news": 5
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 5.8 - 48 km SSW of Sarangani, Philippines",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tadc",
-          "meta": "35 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 5.8,
-        "max_depth_km": 35.0,
-        "place": "48 km SSW of Sarangani, Philippines",
-        "felt": 10,
-        "sig": 523,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Magnitude 5.8 earthquake rattles Balut Island",
-          "url": "https://www.manilatimes.net/2026/07/06/news/magnitude-58-earthquake-rattles-balut-island/2378865",
-          "outlet": "manilatimes",
-          "published_date": "2026-07-06T00:00:00+00:00"
-        },
-        {
-          "headline": "Magnitude 5.8 aftershock jolts off Balut Island in Davao Occidental",
-          "url": "https://www.gmanetwork.com/news/topstories/regions/993925/magnitude-5-8-aftershock-jolts-off-balut-island-in-davao-occidental/story/",
-          "outlet": "GMA Network",
-          "published_date": "2026-07-08T12:50:04+00:00"
-        },
-        {
-          "headline": "Major landslide in the southern Philippines kills 10",
-          "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/07/10/major-landslide-in-the-southern-philippines-kills-10",
-          "outlet": "The Star",
-          "published_date": "2026-07-10T00:00:00+00:00"
-        },
-        {
-          "headline": "Landslide hits Malapatan, Sarangani; 8 dead, 2 missing",
-          "url": "https://www.gmanetwork.com/news/topstories/regions/994409/landslide-malapatan-sarangani-search/story/",
-          "outlet": "GMA Network",
-          "published_date": "2026-07-10T13:34:48+00:00"
-        },
-        {
-          "headline": "6 dead, 3 missing after landslide hits Sarangani village",
-          "url": "https://www.msn.com/en-ph/news/other/6-dead-3-missing-after-landslide-hits-sarangani-village/ar-AA27BVjU?ocid=BingNewsVerp",
-          "outlet": "Inquirer on MSN",
-          "published_date": "2026-07-10T13:34:48+00:00"
-        }
-      ],
-      "news_total": 5,
-      "logs": [
-        {
-          "log_date": "2026-07-10",
-          "summary": "A magnitude 5.8 earthquake struck east of Balut Island in the municipality of Sarangani, Davao Occidental on July 6, 2026. The Philippine Institute of Volcanology and Seismology reported the quake as an aftershock.",
-          "news": [
-            {
-              "news_id": 1700001000134,
-              "url": "https://www.manilatimes.net/2026/07/06/news/magnitude-58-earthquake-rattles-balut-island/2378865",
-              "headline": "Magnitude 5.8 earthquake rattles Balut Island",
-              "published_date": "2026-07-06T00:00:00+00:00",
-              "outlet": "manilatimes"
-            },
-            {
-              "news_id": 1700001000114,
-              "url": "https://www.gmanetwork.com/news/topstories/regions/993925/magnitude-5-8-aftershock-jolts-off-balut-island-in-davao-occidental/story/",
-              "headline": "Magnitude 5.8 aftershock jolts off Balut Island in Davao Occidental",
-              "published_date": "2026-07-08T12:50:04+00:00",
-              "outlet": "GMA Network"
-            },
-            {
-              "news_id": 1783690488046,
-              "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/07/10/major-landslide-in-the-southern-philippines-kills-10",
-              "headline": "Major landslide in the southern Philippines kills 10",
-              "published_date": "2026-07-10T00:00:00+00:00",
-              "outlet": "The Star"
-            },
-            {
-              "news_id": 1783690488033,
-              "url": "https://www.gmanetwork.com/news/topstories/regions/994409/landslide-malapatan-sarangani-search/story/",
-              "headline": "Landslide hits Malapatan, Sarangani; 8 dead, 2 missing",
-              "published_date": "2026-07-10T13:34:48+00:00",
-              "outlet": "GMA Network"
-            },
-            {
-              "news_id": 1783690488056,
-              "url": "https://www.msn.com/en-ph/news/other/6-dead-3-missing-after-landslide-hits-sarangani-village/ar-AA27BVjU?ocid=BingNewsVerp",
-              "headline": "6 dead, 3 missing after landslide hits Sarangani village",
-              "published_date": "2026-07-10T13:34:48+00:00",
-              "outlet": "Inquirer on MSN"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "incident_id": "20260708-PH-EQ",
-      "canonical_name": "Earthquake 69 km NE of Sulangan, Philippines 2026-07",
-      "summary": "",
-      "country": "Philippines",
-      "iso2": "PH",
-      "lat": 11.319,
-      "lon": 126.335,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "LOW",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "disease_name": null,
-      "event_date": "2026-07-08",
-      "first_reported_date": "2026-07-08",
-      "last_updated_date": "2026-07-10",
-      "days_since_event": 10,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 0,
-        "healthmap": 0,
-        "news": 2
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 4.9 - 69 km NE of Sulangan, Philippines",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sz31",
-          "meta": "10 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 4.9,
-        "max_depth_km": 10.0,
-        "place": "69 km NE of Sulangan, Philippines",
-        "felt": null,
-        "sig": 369,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "EARTHQUAKE: 4.5 Magnitude Quake Hits Eastern Samar",
-          "url": "https://philnews.ph/2026/07/09/earthquake-4-5-magnitude-quake-hits-eastern-samar-july-9-2026/",
-          "outlet": "Philippine News",
-          "published_date": "2026-07-09T00:00:00+00:00"
-        },
-        {
-          "headline": "EARTHQUAKE: 4.9 Magnitude Quake Hits Eastern Samar",
-          "url": "https://philnews.ph/2026/07/10/earthquake-4-9-magnitude-quake-hits-eastern-samar-july-10-2026/",
-          "outlet": "Philippine News",
-          "published_date": "2026-07-10T00:00:00+00:00"
-        }
-      ],
-      "news_total": 2,
-      "logs": []
-    },
-    {
       "incident_id": "20250528-XX-DI",
       "canonical_name": "COVID-19 - Global Situation",
       "summary": "A study confirms that the 2025-2026 COVID-19 vaccines are effective at preventing emergency department/urgent care visits and hospitalizations among immunocompetent adults, providing updated evidence of protection against severe outcomes.",
@@ -6207,6 +5884,204 @@
               "headline": "Panel to study Pentagon’s COVID vaccine mandate, troops dismissal",
               "published_date": "2026-07-15T19:45:32+00:00",
               "outlet": "Military Times · via Yahoo News"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "20240530-XX-DI",
+      "canonical_name": "Dengue - Global situation",
+      "summary": "In Bangladesh, two additional dengue-related deaths were reported in the past 24 hours, along with 306 new hospitalizations. The country's total caseload remains at 9,370 cases, as dengue continues to spread.",
+      "country": "",
+      "iso2": "",
+      "lat": null,
+      "lon": null,
+      "country_group": "C",
+      "region": "Unknown",
+      "incident_type": "Disease",
+      "incident_category": "Biological",
+      "is_disease": true,
+      "severity": "MEDIUM",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2024-05-30",
+      "first_reported_date": "2024-05-30",
+      "last_updated_date": "2026-07-18",
+      "days_since_event": 779,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [],
+      "sources": {
+        "who_don": 1,
+        "usgs": 0,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 10
+      },
+      "source_links": [
+        {
+          "type": "WHO",
+          "label": "Dengue - Global situation",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2024-DON518",
+          "meta": ""
+        }
+      ],
+      "physical": {
+        "max_magnitude": null,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Dengue fever is — unfortunately — having a banner year. Can it be quelled?",
+          "url": "https://www.npr.org/sections/goats-and-soda/2024/07/23/g-s1-12674/dengue-mosquitoes-climate-virus-americas",
+          "outlet": "NPR",
+          "published_date": "2024-07-23T00:00:00+00:00"
+        },
+        {
+          "headline": "UN agency authorizes second vaccine against dengue amid outbreaks in the Americas",
+          "url": "https://medicalxpress.com/news/2024-05-agency-authorizes-vaccine-dengue-outbreaks.html",
+          "outlet": "Medical Xpress",
+          "published_date": "2026-07-08T14:57:06+00:00"
+        },
+        {
+          "headline": "Dengue: Surge in US Cases This Year",
+          "url": "https://www.medscape.com/viewarticle/dengue-surge-us-cases-this-year-2024a1000bzw",
+          "outlet": "Medscape",
+          "published_date": "2026-07-08T14:57:06+00:00"
+        },
+        {
+          "headline": "Two more die of dengue, 306 hospitalised in 24hrs",
+          "url": "https://www.daily-sun.com/bangladesh/886701/two-more-die-of-dengue-306-hospitalised-in-24hrs",
+          "outlet": "Daily Sun",
+          "published_date": "2026-07-11T03:56:07+00:00"
+        },
+        {
+          "headline": "Two more die of dengue, 391 hospitalised in 24hrs",
+          "url": "https://www.daily-sun.com/health/886521/two-more-die-of-dengue-391-hospitalised-in-24hrs",
+          "outlet": "Daily Sun",
+          "published_date": "2026-07-13T03:58:16+00:00"
+        },
+        {
+          "headline": "Remote health monitoring: A practical digital solution for dengue burden",
+          "url": "https://island.lk/remote-health-monitoring-a-practical-digital-solution-for-dengue-burden/",
+          "outlet": "The Island",
+          "published_date": "2026-07-15T01:15:18+00:00"
+        },
+        {
+          "headline": "Bangladesh floods heighten dengue, cholera risks, says IFRC",
+          "url": "https://www.channelnewsasia.com/world/bangladesh-floods-dengue-cholera-risk-ifrc-6253181",
+          "outlet": "CNA",
+          "published_date": "2026-07-15T07:15:18+00:00"
+        },
+        {
+          "headline": "Two more die of dengue, 391 hospitalised in 24hrs",
+          "url": "https://www.daily-sun.com/bangladesh/886521/two-more-die-of-dengue-391-hospitalised-in-24hrs",
+          "outlet": "Daily Sun",
+          "published_date": "2026-07-16T14:45:52+00:00"
+        },
+        {
+          "headline": "Two more die of dengue, 306 hospitalised in 24hrs",
+          "url": "https://www.daily-sun.com/health/886701/two-more-die-of-dengue-306-hospitalised-in-24hrs",
+          "outlet": "Daily Sun",
+          "published_date": "2026-07-16T19:53:01+00:00"
+        },
+        {
+          "headline": "UKHSA travel illness warning as more than 1,000 cases so far this year",
+          "url": "https://www.mirror.co.uk/news/health/ukhsa-travel-illness-warning-more-37444934",
+          "outlet": "The Mirror",
+          "published_date": "2026-07-18T03:46:52+00:00"
+        }
+      ],
+      "news_total": 10,
+      "logs": [
+        {
+          "log_date": "2026-07-08",
+          "summary": "The World Health Organization authorized a second dengue vaccine as outbreaks continue in the Americas. The US CDC issued an alert about increased dengue risk in the United States. In the Americas, nearly 10.4 million suspected dengue cases were reported to WHO by early July 2024.",
+          "news": [
+            {
+              "news_id": 1700001000277,
+              "url": "https://www.npr.org/sections/goats-and-soda/2024/07/23/g-s1-12674/dengue-mosquitoes-climate-virus-americas",
+              "headline": "Dengue fever is — unfortunately — having a banner year. Can it be quelled?",
+              "published_date": "2024-07-23T00:00:00+00:00",
+              "outlet": "NPR"
+            },
+            {
+              "news_id": 1700001000025,
+              "url": "https://medicalxpress.com/news/2024-05-agency-authorizes-vaccine-dengue-outbreaks.html",
+              "headline": "UN agency authorizes second vaccine against dengue amid outbreaks in the Americas",
+              "published_date": "2026-07-08T14:57:06+00:00",
+              "outlet": "Medical Xpress"
+            },
+            {
+              "news_id": 1700001000137,
+              "url": "https://www.medscape.com/viewarticle/dengue-surge-us-cases-this-year-2024a1000bzw",
+              "headline": "Dengue: Surge in US Cases This Year",
+              "published_date": "2026-07-08T14:57:06+00:00",
+              "outlet": "Medscape"
+            }
+          ]
+        },
+        {
+          "log_date": "2026-07-15",
+          "summary": "Sri Lanka is experiencing a significant dengue challenge, with rising cases prompting discussion of remote health monitoring as a digital solution. In Bangladesh, floods are heightening dengue risks according to the IFRC, and the country reported two additional deaths and 391 hospitalizations in the past 24 hours, bringing the total caseload to 9,370.",
+          "news": [
+            {
+              "news_id": 1784174301362,
+              "url": "https://www.daily-sun.com/health/886521/two-more-die-of-dengue-391-hospitalised-in-24hrs",
+              "headline": "Two more die of dengue, 391 hospitalised in 24hrs",
+              "published_date": "2026-07-13T03:58:16+00:00",
+              "outlet": "Daily Sun"
+            },
+            {
+              "news_id": 1784099736646,
+              "url": "https://island.lk/remote-health-monitoring-a-practical-digital-solution-for-dengue-burden/",
+              "headline": "Remote health monitoring: A practical digital solution for dengue burden",
+              "published_date": "2026-07-15T01:15:18+00:00",
+              "outlet": "The Island"
+            },
+            {
+              "news_id": 1784099736703,
+              "url": "https://www.channelnewsasia.com/world/bangladesh-floods-dengue-cholera-risk-ifrc-6253181",
+              "headline": "Bangladesh floods heighten dengue, cholera risks, says IFRC",
+              "published_date": "2026-07-15T07:15:18+00:00",
+              "outlet": "CNA"
+            }
+          ]
+        },
+        {
+          "log_date": "2026-07-17",
+          "summary": "In Bangladesh, two additional dengue-related deaths were reported in the past 24 hours, along with 306 new hospitalizations. The country's total caseload remains at 9,370 cases, as dengue continues to spread.",
+          "news": [
+            {
+              "news_id": 1784260574722,
+              "url": "https://www.daily-sun.com/bangladesh/886701/two-more-die-of-dengue-306-hospitalised-in-24hrs",
+              "headline": "Two more die of dengue, 306 hospitalised in 24hrs",
+              "published_date": "2026-07-11T03:56:07+00:00",
+              "outlet": "Daily Sun"
+            },
+            {
+              "news_id": 1784213164930,
+              "url": "https://www.daily-sun.com/bangladesh/886521/two-more-die-of-dengue-391-hospitalised-in-24hrs",
+              "headline": "Two more die of dengue, 391 hospitalised in 24hrs",
+              "published_date": "2026-07-16T14:45:52+00:00",
+              "outlet": "Daily Sun"
+            },
+            {
+              "news_id": 1784231590103,
+              "url": "https://www.daily-sun.com/health/886701/two-more-die-of-dengue-306-hospitalised-in-24hrs",
+              "headline": "Two more die of dengue, 306 hospitalised in 24hrs",
+              "published_date": "2026-07-16T19:53:01+00:00",
+              "outlet": "Daily Sun"
             }
           ]
         }
@@ -6739,108 +6614,6 @@
               "headline": "NHS flu jab rule change from with new age threshold",
               "published_date": "2026-07-10T18:02:46+00:00",
               "outlet": "Daily Express"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "incident_id": "20240607-AU-DI",
-      "canonical_name": "Avian Influenza A (H5N1) - Australia",
-      "summary": "The first cases of H5N1 bird flu have been detected in Australian seabirds. A confirmed case was found in a brown skua in Cape Le Grand, Western Australia, and a suspected case in a giant petrel near Hawks Nest, New South Wales. Additionally, CSIRO lab testing confirmed the strain in a greater crested tern.",
-      "country": "Australia",
-      "iso2": "AU",
-      "lat": -25.3,
-      "lon": 133.8,
-      "country_group": "B",
-      "region": "Oceania",
-      "incident_type": "Disease",
-      "incident_category": "Biological",
-      "is_disease": true,
-      "severity": "MEDIUM",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": "MEDIUM",
-      "event_status": null,
-      "disease_name": "Avian Influenza",
-      "event_date": "2024-06-07",
-      "first_reported_date": "2024-06-07",
-      "last_updated_date": "2026-07-10",
-      "days_since_event": 771,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 1,
-        "usgs": 0,
-        "gdacs": 0,
-        "healthmap": 0,
-        "news": 3
-      },
-      "source_links": [
-        {
-          "type": "WHO",
-          "label": "Avian Influenza A (H5N1) - Australia",
-          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2024-DON519",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "A suspected bird flu case has now been found in NSW. Here’s what that means",
-          "url": "https://www.msn.com/en-au/health/other/a-suspected-bird-flu-case-has-now-been-found-in-nsw-here-s-what-that-means/ar-AA277fjX?ocid=BingNewsVerp",
-          "outlet": "The Conversation on MSN",
-          "published_date": "2026-07-08T14:58:04+00:00"
-        },
-        {
-          "headline": "The first case of H5N1 bird flu in Australia has been confirmed. What does this mean?",
-          "url": "https://www.msn.com/en-au/health/other/the-first-case-of-h5n1-bird-flu-in-australia-has-been-confirmed-what-does-this-mean/ar-AA26aDXX?ocid=BingNewsVerp",
-          "outlet": "The Conversation on MSN",
-          "published_date": "2026-07-08T14:58:04+00:00"
-        },
-        {
-          "headline": "H5 bird flu strain detected in Australian seabird for first time",
-          "url": "https://www.msn.com/en-au/health/other/h5-bird-flu-strain-detected-in-australian-seabird-for-first-time/ar-AA27Bp8I?ocid=BingNewsVerp",
-          "outlet": "ABC (Australian Broadcasting Corporation) on MSN",
-          "published_date": "2026-07-10T13:36:14+00:00"
-        }
-      ],
-      "news_total": 3,
-      "logs": [
-        {
-          "log_date": "2026-07-10",
-          "summary": "The first cases of H5N1 bird flu have been detected in Australian seabirds. A confirmed case was found in a brown skua in Cape Le Grand, Western Australia, and a suspected case in a giant petrel near Hawks Nest, New South Wales. Additionally, CSIRO lab testing confirmed the strain in a greater crested tern.",
-          "news": [
-            {
-              "news_id": 1700001000146,
-              "url": "https://www.msn.com/en-au/health/other/a-suspected-bird-flu-case-has-now-been-found-in-nsw-here-s-what-that-means/ar-AA277fjX?ocid=BingNewsVerp",
-              "headline": "A suspected bird flu case has now been found in NSW. Here’s what that means",
-              "published_date": "2026-07-08T14:58:04+00:00",
-              "outlet": "The Conversation on MSN"
-            },
-            {
-              "news_id": 1700001000148,
-              "url": "https://www.msn.com/en-au/health/other/the-first-case-of-h5n1-bird-flu-in-australia-has-been-confirmed-what-does-this-mean/ar-AA26aDXX?ocid=BingNewsVerp",
-              "headline": "The first case of H5N1 bird flu in Australia has been confirmed. What does this mean?",
-              "published_date": "2026-07-08T14:58:04+00:00",
-              "outlet": "The Conversation on MSN"
-            },
-            {
-              "news_id": 1783690574666,
-              "url": "https://www.msn.com/en-au/health/other/h5-bird-flu-strain-detected-in-australian-seabird-for-first-time/ar-AA27Bp8I?ocid=BingNewsVerp",
-              "headline": "H5 bird flu strain detected in Australian seabird for first time",
-              "published_date": "2026-07-10T13:36:14+00:00",
-              "outlet": "ABC (Australian Broadcasting Corporation) on MSN"
             }
           ]
         }
@@ -10037,6 +9810,595 @@
               "headline": "Can agri-PV save Bavaria's hop gardens? 'Solar hats' help fight climate crisis",
               "published_date": "2026-07-16T14:50:07+00:00",
               "outlet": "Euronews on MSN"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "20260717-GT-EQ",
+      "canonical_name": "Earthquake 58 km WSW of Puerto Madero, Mexico 2026-07",
+      "summary": "The tsunami warning triggered by the 7.3 magnitude earthquake was lifted later on July 17, with authorities reporting no significant damage. However, local media noted two injuries resulting from the quake, which was felt across southern Mexico, Guatemala, and El Salvador. No fatalities or major structural damage were reported.",
+      "country": "Guatemala",
+      "iso2": "GT",
+      "lat": 14.6043,
+      "lon": -92.9517,
+      "country_group": "C",
+      "region": "Americas",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "HIGH",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-07-17",
+      "first_reported_date": "2026-07-17",
+      "last_updated_date": "2026-07-18",
+      "days_since_event": 1,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 40
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 7.3 - 58 km WSW of Puerto Madero, Mexico",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t1bu",
+          "meta": "18.584 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 7.3,
+        "max_depth_km": 18.584,
+        "place": "58 km WSW of Puerto Madero, Mexico",
+        "felt": 258,
+        "sig": 1139,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Magnitude 7.3 earthquake strikes off Mexico’s Pacific coast, prompts tsunami threat",
+          "url": "https://www.local10.com/weather/2026/07/17/magnitude-73-earthquake-strikes-off-mexicos-pacific-coast-prompts-tsunami-threat/",
+          "outlet": "WPLG Local 10",
+          "published_date": "2026-07-11T19:54:22+00:00"
+        },
+        {
+          "headline": "Earthquake of 7.3 hits Mexico's Pacific coast, felt in Guatemala too",
+          "url": "https://www.yahoo.com/news/weather-news/articles/earthquake-7-3-hits-mexicos-185302299.html",
+          "outlet": "Yahoo",
+          "published_date": "2026-07-12T19:41:52+00:00"
+        },
+        {
+          "headline": "Major earthquake strikes off Mexico, Guatemala coast",
+          "url": "https://au.news.yahoo.com/major-earthquake-strikes-off-mexico-141958032.html",
+          "outlet": "Yahoo News Australia",
+          "published_date": "2026-07-12T19:54:22+00:00"
+        },
+        {
+          "headline": "Strong earthquake hits Mexico-Guatemala border, tsunami alert lifted",
+          "url": "https://www.yahoo.com/news/world/articles/strong-earthquake-hits-mexico-guatemala-172243597.html",
+          "outlet": "Yahoo",
+          "published_date": "2026-07-13T03:49:36+00:00"
+        },
+        {
+          "headline": "7.4 magnitude earthquake jolts southern MexicoPublished on: July 17, 2026 9:43 PM",
+          "url": "https://www.msn.com/en-xl/asia/pakistan/74-magnitude-earthquake-jolts-southern-mexicopublished-on-july-17-2026-943-pm/ar-AA288tDi?ocid=BingNewsVerp",
+          "outlet": "Daily Times on MSN",
+          "published_date": "2026-07-13T03:49:39+00:00"
+        },
+        {
+          "headline": "Magnitude 7.4 earthquake strikes Puerto Madero, Mexico, USGS says",
+          "url": "https://www.reuters.com/business/environment/magnitude-74-earthquake-strikes-puerto-madero-mexico-usgs-says-2026-07-17/",
+          "outlet": "Reuters",
+          "published_date": "2026-07-13T19:41:52+00:00"
+        },
+        {
+          "headline": "Map: 7.3-Magnitude Earthquake Hits Off Mexico's Coast",
+          "url": "https://www.nytimes.com/interactive/2026/07/17/world/earthquake-mexico-guatemala.html",
+          "outlet": "The New York Times",
+          "published_date": "2026-07-13T19:54:22+00:00"
+        },
+        {
+          "headline": "7.3 magnitude earthquake strikes near Mexico-Guatemala border",
+          "url": "https://www.msn.com/en-us/news/world/73-magnitude-earthquake-strikes-near-mexico-guatemala-border/vi-AA2894DU?ocid=BingNewsVerp",
+          "outlet": "ABC10 on MSN",
+          "published_date": "2026-07-14T03:49:36+00:00"
+        },
+        {
+          "headline": "Powerful 7.3-magnitude earthquake strikes Mexico triggering tsunami alert",
+          "url": "https://www.msn.com/en-ph/news/other/powerful-73-magnitude-earthquake-strikes-mexico-triggering-tsunami-alert/ar-AA28899E?ocid=BingNewsVerp",
+          "outlet": "Metro on MSN",
+          "published_date": "2026-07-14T19:41:52+00:00"
+        },
+        {
+          "headline": "7.3 magnitude earthquake quake strikes off Mexico coast",
+          "url": "https://www.msn.com/en-us/news/world/73-magnitude-earthquake-quake-strikes-off-mexico-coast/ar-AA288Pil?ocid=BingNewsVerp",
+          "outlet": "BBC on MSN",
+          "published_date": "2026-07-14T19:41:52+00:00"
+        },
+        {
+          "headline": "Powerful earthquake in Mexico shakes Guatemala and El Salvador",
+          "url": "https://www.msn.com/en-us/news/world/powerful-earthquake-in-mexico-shakes-guatemala-and-el-salvador/ar-AA288h16?ocid=BingNewsVerp",
+          "outlet": "CNN on MSN",
+          "published_date": "2026-07-14T19:54:20+00:00"
+        },
+        {
+          "headline": "Powerful magnitude 7.3 earthquake rattles coast of Mexico, Guatemala",
+          "url": "https://www.msn.com/en-us/news/world/powerful-magnitude-7-3-earthquake-rattles-coast-of-mexico-guatemala/vi-AA288eqp?ocid=BingNewsVerp",
+          "outlet": "Fox Weather on MSN",
+          "published_date": "2026-07-14T19:54:20+00:00"
+        },
+        {
+          "headline": "A magnitude-7.3 earthquake struck off southern Mexico, according to the USGS",
+          "url": "https://www.kfvs12.com/2026/07/17/magnitude-73-earthquake-struck-off-southern-mexico-according-usgs/",
+          "outlet": "KFVS12",
+          "published_date": "2026-07-14T19:54:22+00:00"
+        },
+        {
+          "headline": "Magnitude 7.3 quake hits Mexican coast near Guatemala, triggering tsunami alert",
+          "url": "https://malaysia.news.yahoo.com/magnitude-7-3-quake-hits-164217828.html",
+          "outlet": "Yahoo Malaysia",
+          "published_date": "2026-07-14T19:54:22+00:00"
+        },
+        {
+          "headline": "Magnitude 7.3 earthquake quake strikes off Mexico coast",
+          "url": "https://www.msn.com/en-ae/news/other/magnitude-7-3-earthquake-quake-strikes-off-mexico-coast/ar-AA28a87o?ocid=BingNewsVerp",
+          "outlet": "Emirates News Agency on MSN",
+          "published_date": "2026-07-15T03:49:39+00:00"
+        },
+        {
+          "headline": "7.4-magnitude earthquake jolts southern Mexico, tsunami warning issued",
+          "url": "https://www.indiablooms.com/health/74-magnitude-earthquake-jolts-southern-mexico-tsunami-warning-issued/details",
+          "outlet": "Indiablooms",
+          "published_date": "2026-07-15T19:41:52+00:00"
+        },
+        {
+          "headline": "Earthquake of 7.4 Magnitude Strikes Mexico's Chiapas State",
+          "url": "https://www.cubaheadlines.com/articles/335380",
+          "outlet": "Cuba Headlines",
+          "published_date": "2026-07-15T19:41:52+00:00"
+        },
+        {
+          "headline": "Powerful earthquake hits Mexico-Guatemala border, triggering temporary tsunami alert",
+          "url": "https://www.cbsnews.com/news/earthquake-mexico-guatemala-tsunami-alert/",
+          "outlet": "CBS News",
+          "published_date": "2026-07-15T19:41:52+00:00"
+        },
+        {
+          "headline": "Strong earthquake rocks Mexico and Guatemala",
+          "url": "https://www.yahoo.com/news/weather-news/articles/strong-earthquake-rocks-mexico-guatemala-170759869.html",
+          "outlet": "Yahoo",
+          "published_date": "2026-07-15T19:54:20+00:00"
+        },
+        {
+          "headline": "Powerful quake off southern Mexico rattles Guatemala and Central America",
+          "url": "https://apnews.com/video/powerful-quake-off-southern-mexico-rattles-guatemala-and-central-america-0e78860009d24f5a847cf02612d61499",
+          "outlet": "Associated Press News",
+          "published_date": "2026-07-15T19:54:22+00:00"
+        },
+        {
+          "headline": "7.3 magnitude earthquake strikes Mexico and Guatemala coasts, tsunami alert issued",
+          "url": "https://www.msn.com/en-us/news/world/7-3-magnitude-earthquake-strikes-mexico-and-guatemala-coasts-tsunami-alert-issued/ar-AA288bvb?ocid=BingNewsVerp",
+          "outlet": "Euronews on MSN",
+          "published_date": "2026-07-15T19:54:22+00:00"
+        },
+        {
+          "headline": "Mexico-Guatemala border quake triggers tsunami warning, leaves two injured",
+          "url": "https://www.msn.com/en-us/news/world/mexico-guatemala-border-quake-triggers-tsunami-warning-leaves-two-injured/ar-AA289sZn?ocid=BingNewsVerp",
+          "outlet": "India Today on MSN",
+          "published_date": "2026-07-16T03:49:39+00:00"
+        },
+        {
+          "headline": "7.3-Magnitude Earthquake in Central America Sets Off Tsunami Threat",
+          "url": "https://www.nytimes.com/2026/07/17/world/americas/earthquake-tsunami-warning-mexico-guatemala.html",
+          "outlet": "The New York Times",
+          "published_date": "2026-07-16T19:54:20+00:00"
+        },
+        {
+          "headline": "Mexico earthquake LIVE: Tsunami threat after huge tremor rocks Guatemala",
+          "url": "https://www.msn.com/en-gb/news/world/mexico-earthquake-live-tsunami-threat-after-huge-tremor-rocks-guatemala/ar-AA288xUb?ocid=BingNewsVerp",
+          "outlet": "Daily Express on MSN",
+          "published_date": "2026-07-16T19:54:22+00:00"
+        },
+        {
+          "headline": "Tsunami warning issued for Mexican coast after huge earthquake",
+          "url": "https://www.telegraph.co.uk/us/news/2026/07/17/tsunami-warning-issued-mexico/",
+          "outlet": "The Telegraph",
+          "published_date": "2026-07-17T00:00:00+00:00"
+        },
+        {
+          "headline": "No tsunami threat to Hawaii from magnitude 7.3 quake off Mexico",
+          "url": "https://www.staradvertiser.com/2026/07/17/breaking-news/no-tsunami-threat-to-hawaii-from-magnitude-7-3-quake-off-mexico/",
+          "outlet": "Honolulu Star-Advertiser",
+          "published_date": "2026-07-17T00:00:00+00:00"
+        },
+        {
+          "headline": "Tsunami threat lifted after 7.3 magnitude quake off Mexican coast",
+          "url": "https://www.msn.com/en-us/news/world/tsunami-threat-lifted-after-73-magnitude-quake-off-mexican-coast/ar-AA288iYe?ocid=BingNewsVerp",
+          "outlet": "The Independent on MSN",
+          "published_date": "2026-07-17T03:49:36+00:00"
+        },
+        {
+          "headline": "Powerful 7.3 Earthquake Rocks Southern Mexico",
+          "url": "https://www.wbrz.com/news/powerful-7-3-earthquake-rocks-southern-mexico/",
+          "outlet": "WBRZ 2 Baton Rouge",
+          "published_date": "2026-07-17T06:54:22+00:00"
+        },
+        {
+          "headline": "Major earthquake strikes off Mexico, Guatemala coast",
+          "url": "https://www.yahoo.com/news/weather-news/articles/major-earthquake-strikes-off-mexico-141958203.html",
+          "outlet": "The Weather Channel · via Yahoo News",
+          "published_date": "2026-07-17T13:54:22+00:00"
+        },
+        {
+          "headline": "Strong earthquake prompts tsunami threat for Mexico, Guatemala",
+          "url": "https://www.accuweather.com/en/weather-news/strong-earthquake-prompts-tsunami-threat-for-mexico-guatemala/1912735",
+          "outlet": "AccuWeather",
+          "published_date": "2026-07-17T15:54:22+00:00"
+        },
+        {
+          "headline": "7.3 magnitude earthquake hits off Mexico's southwest coast",
+          "url": "https://www.10tv.com/article/news/nation-world/earthquake-mexico-off-coast-friday/507-0c5d08e5-b7e9-4df9-b89d-608e206449d1",
+          "outlet": "WBNS-10TV Columbus",
+          "published_date": "2026-07-17T15:54:22+00:00"
+        },
+        {
+          "headline": "Strong M7.3 earthquake strikes off coast of Chiapas, Mexico",
+          "url": "https://www.yahoo.com/news/articles/strong-m7-3-earthquake-strikes-152814679.html",
+          "outlet": "The Weather Network · via Yahoo News",
+          "published_date": "2026-07-17T16:54:22+00:00"
+        },
+        {
+          "headline": "7.3 earthquake strikes off coast of southern Mexico, prompts tsunami warning",
+          "url": "https://www.ktvu.com/news/7-3-earthquake-strikes-off-coast-southern-mexico-prompts-tsunami-warning",
+          "outlet": "KTVU",
+          "published_date": "2026-07-17T16:54:22+00:00"
+        },
+        {
+          "headline": "Powerful earthquake in Mexico shakes Guatemala and El Salvador",
+          "url": "https://www.yahoo.com/news/weather-news/articles/powerful-earthquake-mexico-shakes-guatemala-165346124.html",
+          "outlet": "CNN · via Yahoo News",
+          "published_date": "2026-07-17T18:54:22+00:00"
+        },
+        {
+          "headline": "Mexico struck by powerful 7.4 earthquake as buildings shake and tsunami warning issued",
+          "url": "https://www.independent.ie/world-news/mexico-struck-by-powerful-7.4-earthquake-as-buildings-shake-and-tsunami-warning-issued/a/158887426.html",
+          "outlet": "Independent.ie",
+          "published_date": "2026-07-17T19:41:53+00:00"
+        },
+        {
+          "headline": "Strong quake off Mexican coast rattles Guatemala and El Salvador",
+          "url": "https://www.scmp.com/news/world/americas/article/3361017/strong-quake-mexican-coast-rattles-guatemala-and-el-salvador",
+          "outlet": "South China Morning Post",
+          "published_date": "2026-07-18T03:49:37+00:00"
+        },
+        {
+          "headline": "Powerful 7.3 earthquake rocks Guatemala and Mexico as residents evacuated from buildings",
+          "url": "https://www.msn.com/en-us/news/world/powerful-7-3-earthquake-rocks-guatemala-and-mexico-as-residents-evacuated-from-buildings/vi-AA288tTN?ocid=BingNewsVerp",
+          "outlet": "New York Post on MSN",
+          "published_date": "2026-07-18T03:49:37+00:00"
+        },
+        {
+          "headline": "7.3 earthquake hits Mexico-Guatemala border with no immediate damage reported",
+          "url": "https://www.newindianexpress.com/world/2026/Jul/17/73-earthquake-hits-mexico-guatemala-border-with-no-immediate-damage-reported",
+          "outlet": "The New Indian Express",
+          "published_date": "2026-07-18T03:49:40+00:00"
+        },
+        {
+          "headline": "Mexico-Guatemala border quake felt across region, no major damage reported",
+          "url": "https://www.msn.com/en-us/news/world/mexico-guatemala-border-quake-felt-across-region-no-major-damage-reported/ar-AA2889hQ?ocid=BingNewsVerp",
+          "outlet": "India Today on MSN",
+          "published_date": "2026-07-18T03:49:40+00:00"
+        },
+        {
+          "headline": "Tsunami threat lifted after 7.3 magnitude quake off Mexican coast",
+          "url": "https://www.msn.com/en-us/news/world/tsunami-warning-issued-after-7-3-magnitude-quake-off-mexican-coast/ar-AA288iYe?ocid=BingNewsVerp",
+          "outlet": "The Independent on MSN",
+          "published_date": "2026-07-18T03:49:40+00:00"
+        }
+      ],
+      "news_total": 40,
+      "logs": [
+        {
+          "log_date": "2026-07-17",
+          "summary": "A powerful magnitude 7.3-7.4 earthquake struck off the southern Pacific coast of Mexico near Puerto Madero on July 17, 2026, triggering tsunami warnings for nearby coasts of Mexico and Guatemala. The quake was felt across southern Mexico, Guatemala, and El Salvador, prompting evacuations in Guatemala City. No immediate reports of major damage or casualties were available as authorities continued to assess the situation.",
+          "news": [
+            {
+              "news_id": 1784318095355,
+              "url": "https://www.local10.com/weather/2026/07/17/magnitude-73-earthquake-strikes-off-mexicos-pacific-coast-prompts-tsunami-threat/",
+              "headline": "Magnitude 7.3 earthquake strikes off Mexico’s Pacific coast, prompts tsunami threat",
+              "published_date": "2026-07-11T19:54:22+00:00",
+              "outlet": "WPLG Local 10"
+            },
+            {
+              "news_id": 1784317329010,
+              "url": "https://www.yahoo.com/news/weather-news/articles/earthquake-7-3-hits-mexicos-185302299.html",
+              "headline": "Earthquake of 7.3 hits Mexico's Pacific coast, felt in Guatemala too",
+              "published_date": "2026-07-12T19:41:52+00:00",
+              "outlet": "Yahoo"
+            },
+            {
+              "news_id": 1784318095373,
+              "url": "https://au.news.yahoo.com/major-earthquake-strikes-off-mexico-141958032.html",
+              "headline": "Major earthquake strikes off Mexico, Guatemala coast",
+              "published_date": "2026-07-12T19:54:22+00:00",
+              "outlet": "Yahoo News Australia"
+            },
+            {
+              "news_id": 1784317328990,
+              "url": "https://www.reuters.com/business/environment/magnitude-74-earthquake-strikes-puerto-madero-mexico-usgs-says-2026-07-17/",
+              "headline": "Magnitude 7.4 earthquake strikes Puerto Madero, Mexico, USGS says",
+              "published_date": "2026-07-13T19:41:52+00:00",
+              "outlet": "Reuters"
+            },
+            {
+              "news_id": 1784318095351,
+              "url": "https://www.nytimes.com/interactive/2026/07/17/world/earthquake-mexico-guatemala.html",
+              "headline": "Map: 7.3-Magnitude Earthquake Hits Off Mexico's Coast",
+              "published_date": "2026-07-13T19:54:22+00:00",
+              "outlet": "The New York Times"
+            },
+            {
+              "news_id": 1784317328995,
+              "url": "https://www.msn.com/en-ph/news/other/powerful-73-magnitude-earthquake-strikes-mexico-triggering-tsunami-alert/ar-AA28899E?ocid=BingNewsVerp",
+              "headline": "Powerful 7.3-magnitude earthquake strikes Mexico triggering tsunami alert",
+              "published_date": "2026-07-14T19:41:52+00:00",
+              "outlet": "Metro on MSN"
+            },
+            {
+              "news_id": 1784317328998,
+              "url": "https://www.msn.com/en-us/news/world/73-magnitude-earthquake-quake-strikes-off-mexico-coast/ar-AA288Pil?ocid=BingNewsVerp",
+              "headline": "7.3 magnitude earthquake quake strikes off Mexico coast",
+              "published_date": "2026-07-14T19:41:52+00:00",
+              "outlet": "BBC on MSN"
+            },
+            {
+              "news_id": 1784318095343,
+              "url": "https://www.msn.com/en-us/news/world/powerful-earthquake-in-mexico-shakes-guatemala-and-el-salvador/ar-AA288h16?ocid=BingNewsVerp",
+              "headline": "Powerful earthquake in Mexico shakes Guatemala and El Salvador",
+              "published_date": "2026-07-14T19:54:20+00:00",
+              "outlet": "CNN on MSN"
+            },
+            {
+              "news_id": 1784318095345,
+              "url": "https://www.msn.com/en-us/news/world/powerful-magnitude-7-3-earthquake-rattles-coast-of-mexico-guatemala/vi-AA288eqp?ocid=BingNewsVerp",
+              "headline": "Powerful magnitude 7.3 earthquake rattles coast of Mexico, Guatemala",
+              "published_date": "2026-07-14T19:54:20+00:00",
+              "outlet": "Fox Weather on MSN"
+            },
+            {
+              "news_id": 1784318095349,
+              "url": "https://www.kfvs12.com/2026/07/17/magnitude-73-earthquake-struck-off-southern-mexico-according-usgs/",
+              "headline": "A magnitude-7.3 earthquake struck off southern Mexico, according to the USGS",
+              "published_date": "2026-07-14T19:54:22+00:00",
+              "outlet": "KFVS12"
+            },
+            {
+              "news_id": 1784318095353,
+              "url": "https://malaysia.news.yahoo.com/magnitude-7-3-quake-hits-164217828.html",
+              "headline": "Magnitude 7.3 quake hits Mexican coast near Guatemala, triggering tsunami alert",
+              "published_date": "2026-07-14T19:54:22+00:00",
+              "outlet": "Yahoo Malaysia"
+            },
+            {
+              "news_id": 1784317329003,
+              "url": "https://www.indiablooms.com/health/74-magnitude-earthquake-jolts-southern-mexico-tsunami-warning-issued/details",
+              "headline": "7.4-magnitude earthquake jolts southern Mexico, tsunami warning issued",
+              "published_date": "2026-07-15T19:41:52+00:00",
+              "outlet": "Indiablooms"
+            },
+            {
+              "news_id": 1784317329005,
+              "url": "https://www.cubaheadlines.com/articles/335380",
+              "headline": "Earthquake of 7.4 Magnitude Strikes Mexico's Chiapas State",
+              "published_date": "2026-07-15T19:41:52+00:00",
+              "outlet": "Cuba Headlines"
+            },
+            {
+              "news_id": 1784317329007,
+              "url": "https://www.cbsnews.com/news/earthquake-mexico-guatemala-tsunami-alert/",
+              "headline": "Powerful earthquake hits Mexico-Guatemala border, triggering temporary tsunami alert",
+              "published_date": "2026-07-15T19:41:52+00:00",
+              "outlet": "CBS News"
+            },
+            {
+              "news_id": 1784318095347,
+              "url": "https://www.yahoo.com/news/weather-news/articles/strong-earthquake-rocks-mexico-guatemala-170759869.html",
+              "headline": "Strong earthquake rocks Mexico and Guatemala",
+              "published_date": "2026-07-15T19:54:20+00:00",
+              "outlet": "Yahoo"
+            },
+            {
+              "news_id": 1784318095357,
+              "url": "https://apnews.com/video/powerful-quake-off-southern-mexico-rattles-guatemala-and-central-america-0e78860009d24f5a847cf02612d61499",
+              "headline": "Powerful quake off southern Mexico rattles Guatemala and Central America",
+              "published_date": "2026-07-15T19:54:22+00:00",
+              "outlet": "Associated Press News"
+            },
+            {
+              "news_id": 1784318095360,
+              "url": "https://www.msn.com/en-us/news/world/7-3-magnitude-earthquake-strikes-mexico-and-guatemala-coasts-tsunami-alert-issued/ar-AA288bvb?ocid=BingNewsVerp",
+              "headline": "7.3 magnitude earthquake strikes Mexico and Guatemala coasts, tsunami alert issued",
+              "published_date": "2026-07-15T19:54:22+00:00",
+              "outlet": "Euronews on MSN"
+            },
+            {
+              "news_id": 1784318095340,
+              "url": "https://www.nytimes.com/2026/07/17/world/americas/earthquake-tsunami-warning-mexico-guatemala.html",
+              "headline": "7.3-Magnitude Earthquake in Central America Sets Off Tsunami Threat",
+              "published_date": "2026-07-16T19:54:20+00:00",
+              "outlet": "The New York Times"
+            },
+            {
+              "news_id": 1784318095371,
+              "url": "https://www.msn.com/en-gb/news/world/mexico-earthquake-live-tsunami-threat-after-huge-tremor-rocks-guatemala/ar-AA288xUb?ocid=BingNewsVerp",
+              "headline": "Mexico earthquake LIVE: Tsunami threat after huge tremor rocks Guatemala",
+              "published_date": "2026-07-16T19:54:22+00:00",
+              "outlet": "Daily Express on MSN"
+            },
+            {
+              "news_id": 1784318095377,
+              "url": "https://www.wbrz.com/news/powerful-7-3-earthquake-rocks-southern-mexico/",
+              "headline": "Powerful 7.3 Earthquake Rocks Southern Mexico",
+              "published_date": "2026-07-17T06:54:22+00:00",
+              "outlet": "WBRZ 2 Baton Rouge"
+            },
+            {
+              "news_id": 1784318095364,
+              "url": "https://www.yahoo.com/news/weather-news/articles/major-earthquake-strikes-off-mexico-141958203.html",
+              "headline": "Major earthquake strikes off Mexico, Guatemala coast",
+              "published_date": "2026-07-17T13:54:22+00:00",
+              "outlet": "The Weather Channel · via Yahoo News"
+            },
+            {
+              "news_id": 1784318095369,
+              "url": "https://www.accuweather.com/en/weather-news/strong-earthquake-prompts-tsunami-threat-for-mexico-guatemala/1912735",
+              "headline": "Strong earthquake prompts tsunami threat for Mexico, Guatemala",
+              "published_date": "2026-07-17T15:54:22+00:00",
+              "outlet": "AccuWeather"
+            },
+            {
+              "news_id": 1784318095375,
+              "url": "https://www.10tv.com/article/news/nation-world/earthquake-mexico-off-coast-friday/507-0c5d08e5-b7e9-4df9-b89d-608e206449d1",
+              "headline": "7.3 magnitude earthquake hits off Mexico's southwest coast",
+              "published_date": "2026-07-17T15:54:22+00:00",
+              "outlet": "WBNS-10TV Columbus"
+            },
+            {
+              "news_id": 1784318095366,
+              "url": "https://www.yahoo.com/news/articles/strong-m7-3-earthquake-strikes-152814679.html",
+              "headline": "Strong M7.3 earthquake strikes off coast of Chiapas, Mexico",
+              "published_date": "2026-07-17T16:54:22+00:00",
+              "outlet": "The Weather Network · via Yahoo News"
+            },
+            {
+              "news_id": 1784318095379,
+              "url": "https://www.ktvu.com/news/7-3-earthquake-strikes-off-coast-southern-mexico-prompts-tsunami-warning",
+              "headline": "7.3 earthquake strikes off coast of southern Mexico, prompts tsunami warning",
+              "published_date": "2026-07-17T16:54:22+00:00",
+              "outlet": "KTVU"
+            },
+            {
+              "news_id": 1784318095362,
+              "url": "https://www.yahoo.com/news/weather-news/articles/powerful-earthquake-mexico-shakes-guatemala-165346124.html",
+              "headline": "Powerful earthquake in Mexico shakes Guatemala and El Salvador",
+              "published_date": "2026-07-17T18:54:22+00:00",
+              "outlet": "CNN · via Yahoo News"
+            },
+            {
+              "news_id": 1784317329000,
+              "url": "https://www.independent.ie/world-news/mexico-struck-by-powerful-7.4-earthquake-as-buildings-shake-and-tsunami-warning-issued/a/158887426.html",
+              "headline": "Mexico struck by powerful 7.4 earthquake as buildings shake and tsunami warning issued",
+              "published_date": "2026-07-17T19:41:53+00:00",
+              "outlet": "Independent.ie"
+            }
+          ]
+        },
+        {
+          "log_date": "2026-07-18",
+          "summary": "The tsunami warning triggered by the 7.3 magnitude earthquake was lifted later on July 17, with authorities reporting no significant damage. However, local media noted two injuries resulting from the quake, which was felt across southern Mexico, Guatemala, and El Salvador. No fatalities or major structural damage were reported.",
+          "news": [
+            {
+              "news_id": 1784346602227,
+              "url": "https://www.yahoo.com/news/world/articles/strong-earthquake-hits-mexico-guatemala-172243597.html",
+              "headline": "Strong earthquake hits Mexico-Guatemala border, tsunami alert lifted",
+              "published_date": "2026-07-13T03:49:36+00:00",
+              "outlet": "Yahoo"
+            },
+            {
+              "news_id": 1784346602250,
+              "url": "https://www.msn.com/en-xl/asia/pakistan/74-magnitude-earthquake-jolts-southern-mexicopublished-on-july-17-2026-943-pm/ar-AA288tDi?ocid=BingNewsVerp",
+              "headline": "7.4 magnitude earthquake jolts southern MexicoPublished on: July 17, 2026 9:43 PM",
+              "published_date": "2026-07-13T03:49:39+00:00",
+              "outlet": "Daily Times on MSN"
+            },
+            {
+              "news_id": 1784346602232,
+              "url": "https://www.msn.com/en-us/news/world/73-magnitude-earthquake-strikes-near-mexico-guatemala-border/vi-AA2894DU?ocid=BingNewsVerp",
+              "headline": "7.3 magnitude earthquake strikes near Mexico-Guatemala border",
+              "published_date": "2026-07-14T03:49:36+00:00",
+              "outlet": "ABC10 on MSN"
+            },
+            {
+              "news_id": 1784346602253,
+              "url": "https://www.msn.com/en-ae/news/other/magnitude-7-3-earthquake-quake-strikes-off-mexico-coast/ar-AA28a87o?ocid=BingNewsVerp",
+              "headline": "Magnitude 7.3 earthquake quake strikes off Mexico coast",
+              "published_date": "2026-07-15T03:49:39+00:00",
+              "outlet": "Emirates News Agency on MSN"
+            },
+            {
+              "news_id": 1784346602245,
+              "url": "https://www.msn.com/en-us/news/world/mexico-guatemala-border-quake-triggers-tsunami-warning-leaves-two-injured/ar-AA289sZn?ocid=BingNewsVerp",
+              "headline": "Mexico-Guatemala border quake triggers tsunami warning, leaves two injured",
+              "published_date": "2026-07-16T03:49:39+00:00",
+              "outlet": "India Today on MSN"
+            },
+            {
+              "news_id": 1784346602247,
+              "url": "https://www.telegraph.co.uk/us/news/2026/07/17/tsunami-warning-issued-mexico/",
+              "headline": "Tsunami warning issued for Mexican coast after huge earthquake",
+              "published_date": "2026-07-17T00:00:00+00:00",
+              "outlet": "The Telegraph"
+            },
+            {
+              "news_id": 1784346602255,
+              "url": "https://www.staradvertiser.com/2026/07/17/breaking-news/no-tsunami-threat-to-hawaii-from-magnitude-7-3-quake-off-mexico/",
+              "headline": "No tsunami threat to Hawaii from magnitude 7.3 quake off Mexico",
+              "published_date": "2026-07-17T00:00:00+00:00",
+              "outlet": "Honolulu Star-Advertiser"
+            },
+            {
+              "news_id": 1784346602237,
+              "url": "https://www.msn.com/en-us/news/world/tsunami-threat-lifted-after-73-magnitude-quake-off-mexican-coast/ar-AA288iYe?ocid=BingNewsVerp",
+              "headline": "Tsunami threat lifted after 7.3 magnitude quake off Mexican coast",
+              "published_date": "2026-07-17T03:49:36+00:00",
+              "outlet": "The Independent on MSN"
+            },
+            {
+              "news_id": 1784346602230,
+              "url": "https://www.scmp.com/news/world/americas/article/3361017/strong-quake-mexican-coast-rattles-guatemala-and-el-salvador",
+              "headline": "Strong quake off Mexican coast rattles Guatemala and El Salvador",
+              "published_date": "2026-07-18T03:49:37+00:00",
+              "outlet": "South China Morning Post"
+            },
+            {
+              "news_id": 1784346602235,
+              "url": "https://www.msn.com/en-us/news/world/powerful-7-3-earthquake-rocks-guatemala-and-mexico-as-residents-evacuated-from-buildings/vi-AA288tTN?ocid=BingNewsVerp",
+              "headline": "Powerful 7.3 earthquake rocks Guatemala and Mexico as residents evacuated from buildings",
+              "published_date": "2026-07-18T03:49:37+00:00",
+              "outlet": "New York Post on MSN"
+            },
+            {
+              "news_id": 1784346602240,
+              "url": "https://www.newindianexpress.com/world/2026/Jul/17/73-earthquake-hits-mexico-guatemala-border-with-no-immediate-damage-reported",
+              "headline": "7.3 earthquake hits Mexico-Guatemala border with no immediate damage reported",
+              "published_date": "2026-07-18T03:49:40+00:00",
+              "outlet": "The New Indian Express"
+            },
+            {
+              "news_id": 1784346602242,
+              "url": "https://www.msn.com/en-us/news/world/mexico-guatemala-border-quake-felt-across-region-no-major-damage-reported/ar-AA2889hQ?ocid=BingNewsVerp",
+              "headline": "Mexico-Guatemala border quake felt across region, no major damage reported",
+              "published_date": "2026-07-18T03:49:40+00:00",
+              "outlet": "India Today on MSN"
+            },
+            {
+              "news_id": 1784346602257,
+              "url": "https://www.msn.com/en-us/news/world/tsunami-warning-issued-after-7-3-magnitude-quake-off-mexican-coast/ar-AA288iYe?ocid=BingNewsVerp",
+              "headline": "Tsunami threat lifted after 7.3 magnitude quake off Mexican coast",
+              "published_date": "2026-07-18T03:49:40+00:00",
+              "outlet": "The Independent on MSN"
             }
           ]
         }
