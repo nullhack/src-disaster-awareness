@@ -121,7 +121,9 @@ def _match_usgs_event_family(wh: ContentStore, report: SourceReport) -> str | No
     return None
 
 
-def _match_by_window(wh: ContentStore, report: SourceReport) -> str | None:
+def _match_by_window(
+    wh: ContentStore, report: SourceReport, window_days: int = 7
+) -> str | None:
 
     my_countries = {p.country_code for p in report.places if p.country_code}
     try:
@@ -135,7 +137,7 @@ def _match_by_window(wh: ContentStore, report: SourceReport) -> str | None:
             inc_date = date.fromisoformat(inc.first_seen_at[:10])
         except (ValueError, TypeError):
             continue
-        if abs((my_date - inc_date).days) > 14:
+        if abs((my_date - inc_date).days) > window_days:
             continue
         genesis = wh.read_source_report_by_id(inc.genesis_report_id)
         if genesis is None:
@@ -147,13 +149,15 @@ def _match_by_window(wh: ContentStore, report: SourceReport) -> str | None:
     return None
 
 
-def _find_existing_incident(wh: ContentStore, report: SourceReport) -> str | None:
+def _find_existing_incident(
+    wh: ContentStore, report: SourceReport, window_days: int = 7
+) -> str | None:
 
     if report.source == "USGS":
         hit = _match_usgs_event_family(wh, report)
         if hit:
             return hit
-    return _match_by_window(wh, report)
+    return _match_by_window(wh, report, window_days)
 
 
 def _commit_news_for_report(
@@ -161,11 +165,14 @@ def _commit_news_for_report(
     report: SourceReport,
     report_id: str,
     selected_news: list[NewsItem],
+    window_days: int = 7,
 ) -> None:
 
     existing_report_incidents = wh.read_incident_ids_for_report(report_id)
     pre_birth = (
-        _find_existing_incident(wh, report) if not existing_report_incidents else None
+        _find_existing_incident(wh, report, window_days)
+        if not existing_report_incidents
+        else None
     )
     birthed_incident_id: str | None = (
         existing_report_incidents[0] if existing_report_incidents else pre_birth
@@ -248,6 +255,7 @@ def _search_one_report(
     source_id: str | None,
     news_timelimit: str,
     iso_now: str,
+    window_days: int = 7,
 ) -> None:
 
     key = f"{report.source}:{report.source_id}"
@@ -277,7 +285,7 @@ def _search_one_report(
         logger.info("search: %s:%s — %d relevant after filter", report.source, report.source_id, len(result.selected_news))
         if result.selected_news:
             enriched = _enrich_news_items(result.selected_news)
-            _commit_news_for_report(wh, report, report_id, enriched)
+            _commit_news_for_report(wh, report, report_id, enriched, window_days)
     wh.mark_report_searched(report.source, report.source_id, iso_now)
     searched_keys.add(key)
 
@@ -359,6 +367,7 @@ def search_news(
                 source_id,
                 news_timelimit,
                 iso_now,
+                active_window_days,
             )
         logger.info("search: per-report mode done")
         return

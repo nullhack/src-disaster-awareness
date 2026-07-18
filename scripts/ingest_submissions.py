@@ -4,12 +4,19 @@ For each issue:
   1. Extract the first http(s) URL from the body. None → reject + close.
   2. Compute ``source_id = sha1(url)[:16]``. If a MANUAL report with that id
      already exists → relabel ``submission-imported`` (idempotent skip).
-  3. Fetch article via trafilatura. None → reject + close with reason.
-  4. DSPy ``classify_submission``. Not a disaster → reject + close with reason.
-  5. Synthesize SourceReport(source="MANUAL", source_id=...) and ingest.
-  6. Birth an incident (or reuse if the report already had one).
-  7. Ingest news + link to incident.
-  8. Relabel ``submission-imported`` and comment with the incident id.
+  3. URL dedup: if URL is already a news item in the store, short-circuit with
+     ``imported:existing-news`` — no fetch, no DSPy, no ingest.
+  4. Fetch article via trafilatura. None → reject + close with reason.
+  5. DSPy ``classify_submission``. Not a disaster → reject + close with reason.
+     Empty country_code → reject (cannot dedup-place).
+  6. Synthesize SourceReport(source="MANUAL", source_id=...) and ingest.
+  7. Pre-birth dedup gate: ``_find_existing_incident`` (country + incident_type
+     + date window). Hit → link MANUAL report to existing incident; URL news
+     already on a different incident → reject as duplicate.
+  8. Birth an incident (or reuse if matched).
+  9. Ingest news + link to incident (only if URL news has no prior assignment;
+     never steal pending news from another incident).
+ 10. Relabel ``submission-imported`` and comment with the incident id.
 
 Requires the ``gh`` CLI on PATH with repo write access for issues + labels.
 """
@@ -25,6 +32,7 @@ import sys
 import uuid
 from datetime import datetime, timezone
 from pathlib import Path
+from typing import Any, cast
 from urllib.parse import urlparse
 
 _REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -34,6 +42,7 @@ if str(_REPO_ROOT) not in sys.path:
 from disaster_report.ai.openrouter import OpenRouterDigester
 from disaster_report.fetchers import fetch_article
 from disaster_report.models import NewsItem, ReportPlace, SourceReport
+from disaster_report.pipeline import _find_existing_incident
 from disaster_report.store.content import ContentStore
 
 logger = logging.getLogger(__name__)
@@ -126,11 +135,61 @@ def _reject(number: int, reason: str) -> None:
     _close(number, f"Rejected: {reason}")
 
 
+def _url_already_tracked(number: int, store: ContentStore, url: str) -> str | None:
+    nuuid = cast(Any, store)._news_by_url.get(url)
+    if not nuuid:
+        return None
+    existing_inc = store.read_incident_for_news(nuuid)
+    if existing_inc:
+        _remove_label(number, PENDING_LABEL)
+        _add_label(number, IMPORTED_LABEL)
+        _comment(
+            number,
+            f"URL already tracked as news on incident `{existing_inc[:8]}`. Relabeled.",
+        )
+    else:
+        _remove_label(number, PENDING_LABEL)
+        _add_label(number, IMPORTED_LABEL)
+        _comment(number, "URL already in store as pending news. Relabeled.")
+    return "imported:existing-news"
+
+
+def _resolve_incident(
+    store: ContentStore,
+    report: SourceReport,
+    rid: str,
+    window_days: int,
+) -> tuple[str, str]:
+    existing_inc = store.read_incident_ids_for_report(rid)
+    if existing_inc:
+        return existing_inc[0], "imported:existing"
+    hit = _find_existing_incident(store, report, window_days)
+    if hit:
+        return hit, "imported:existing-incident"
+    return uuid.uuid4().hex, "imported:new"
+
+
+def _ingest_news_safely(
+    store: ContentStore, news: NewsItem, incident_id: str, number: int
+) -> None:
+    nid = store.ingest_news_item(news)
+    current_inc = store.read_incident_for_news(nid)
+    if current_inc is None:
+        store.assign_news_to_incident(nid, incident_id)
+        return
+    if current_inc != incident_id:
+        logger.warning(
+            "issue %s: news %s already on %s, not stealing (target %s)",
+            number, nid[:8], current_inc[:8], incident_id[:8],
+        )
+
+
 def _process_issue(
     issue: dict,
     store: ContentStore,
     digester: OpenRouterDigester,
     manual_keys: set[str],
+    window_days: int,
 ) -> str:
     number = issue["number"]
     body = issue.get("body") or ""
@@ -144,6 +203,9 @@ def _process_issue(
         _add_label(number, IMPORTED_LABEL)
         _comment(number, f"Already tracked as `MANUAL:{sid}`. Relabeled.")
         return "imported:existing"
+    url_short = _url_already_tracked(number, store, url)
+    if url_short:
+        return url_short
     fetched = fetch_article(url)
     if fetched is None:
         _reject(number, f"could not fetch article from {url}")
@@ -154,9 +216,12 @@ def _process_issue(
     if not cls.is_disaster:
         _reject(number, "DSPy classifier says this is not a disaster event.")
         return "rejected:not-disaster"
-    places: list[ReportPlace] = []
-    if cls.country_code:
-        places.append(ReportPlace(country_code=cls.country_code, subdivision="", locality=""))
+    if not cls.country_code:
+        _reject(number, "DSPy classifier could not determine the event country.")
+        return "rejected:no-country"
+    places: list[ReportPlace] = [
+        ReportPlace(country_code=cls.country_code, subdivision="", locality="")
+    ]
     report = SourceReport(
         source="MANUAL",
         source_id=sid,
@@ -176,9 +241,9 @@ def _process_issue(
     )
     rid = store.ingest_source_report(report)
     store.ingest_report_places(rid, report.places)
-    existing_inc = store.read_incident_ids_for_report(rid)
-    incident_id = existing_inc[0] if existing_inc else uuid.uuid4().hex
-    store.add_report_incident(rid, incident_id)
+    incident_id, outcome = _resolve_incident(store, report, rid, window_days)
+    if outcome != "imported:existing":
+        store.add_report_incident(rid, incident_id)
     news = NewsItem(
         url=url,
         title=fetched.title,
@@ -190,8 +255,7 @@ def _process_issue(
         author=fetched.author,
         sitename=fetched.sitename,
     )
-    nid = store.ingest_news_item(news)
-    store.assign_news_to_incident(nid, incident_id)
+    _ingest_news_safely(store, news, incident_id, number)
     _remove_label(number, PENDING_LABEL)
     _add_label(number, IMPORTED_LABEL)
     _comment(
@@ -200,7 +264,7 @@ def _process_issue(
         f"Type={cls.incident_type or 'Unknown'}, country={cls.country_code or '?'}.",
     )
     manual_keys.add(sid)
-    return "imported:new"
+    return outcome
 
 
 def main() -> int:
@@ -212,6 +276,12 @@ def main() -> int:
         "--api-key-env",
         default="OPENROUTER_API_KEY",
         help="env var to read when --api-key is empty",
+    )
+    parser.add_argument(
+        "--window",
+        type=int,
+        default=7,
+        help="dedup gate date window in days (default: 7)",
     )
     parser.add_argument("--limit", type=int, default=50)
     parser.add_argument("-v", "--verbose", action="store_true")
@@ -236,10 +306,20 @@ def main() -> int:
 
     pending = _list_pending_issues()
     logger.info("submissions: %d pending issues", len(pending))
-    counts = {"imported:new": 0, "imported:existing": 0, "rejected:no-url": 0, "rejected:fetch-failed": 0, "rejected:not-disaster": 0, "error": 0}
+    counts = {
+        "imported:new": 0,
+        "imported:existing": 0,
+        "imported:existing-news": 0,
+        "imported:existing-incident": 0,
+        "rejected:no-url": 0,
+        "rejected:fetch-failed": 0,
+        "rejected:not-disaster": 0,
+        "rejected:no-country": 0,
+        "error": 0,
+    }
     for issue in pending[: args.limit]:
         try:
-            outcome = _process_issue(issue, store, digester, manual_keys)
+            outcome = _process_issue(issue, store, digester, manual_keys, args.window)
         except Exception as exc:
             logger.exception("issue %s failed", issue.get("number"))
             counts["error"] += 1
@@ -253,9 +333,12 @@ def main() -> int:
         "submissions: "
         f"new={counts['imported:new']} "
         f"existing={counts['imported:existing']} "
+        f"existing-news={counts['imported:existing-news']} "
+        f"existing-incident={counts['imported:existing-incident']} "
         f"rejected(no-url)={counts['rejected:no-url']} "
         f"rejected(fetch)={counts['rejected:fetch-failed']} "
         f"rejected(not-disaster)={counts['rejected:not-disaster']} "
+        f"rejected(no-country)={counts['rejected:no-country']} "
         f"errors={counts['error']}"
     )
     return 0
