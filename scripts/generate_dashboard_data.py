@@ -13,6 +13,7 @@ import tomllib
 from collections import Counter
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from typing import Any, cast
 
 from disaster_report._country_names import country_name
 from disaster_report.store.content import ContentStore
@@ -545,6 +546,9 @@ def build_incident_object(store: ContentStore, inc: dict, as_of_date: datetime) 
         "priority_rank": priority_rank,
         "pandemic_potential": pandemic_pot,
         "event_status": None,
+        "extended_monitoring": bool(
+            cast(Any, store)._incidents.get(incident_id, {}).get("extended_monitoring", False)
+        ),
         "disease_name": disease_name,
         "event_date": event_date_short,
         "first_reported_date": event_date_short,
