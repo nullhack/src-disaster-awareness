@@ -101,6 +101,25 @@ class TestSourceId:
 
 
 class TestProcessIssue:
+    def _patch_common(self, monkeypatch: pytest.MonkeyPatch) -> None:
+        from scripts import ingest_submissions as mod
+
+        monkeypatch.setattr(mod, "_reject", lambda *a, **k: pytest.fail("should not reject"))
+        monkeypatch.setattr(mod, "_remove_label", lambda *a, **k: None)
+        monkeypatch.setattr(mod, "_add_label", lambda *a, **k: None)
+        monkeypatch.setattr(mod, "_comment", lambda *a, **k: None)
+        monkeypatch.setattr(
+            mod, "_find_existing_incident", lambda *a, **k: None
+        )
+
+    def _make_store(self) -> MagicMock:
+        store = MagicMock()
+        store.read_source_report_keys.return_value = []
+        store.read_incident_ids_for_report.return_value = []
+        store._news_by_url = {}
+        store.ingest_source_report.return_value = "rid-1"
+        return store
+
     def test_rejects_when_body_has_no_url(
         self,
         tmp_path: "Path",
@@ -116,7 +135,7 @@ class TestProcessIssue:
         store = MagicMock()
         digester = MagicMock()
         issue = _make_issue(body="no url here")
-        outcome = mod._process_issue(issue, store, digester, set())
+        outcome = mod._process_issue(issue, store, digester, set(), window_days=7)
         assert outcome == "rejected:no-url"
         assert calls and calls[0][0] == "reject"
 
@@ -140,7 +159,7 @@ class TestProcessIssue:
         url = "https://cnn.com/article"
         existing_sid = mod._source_id(url)
         outcome = mod._process_issue(
-            _make_issue(body=url), store, digester, {existing_sid}
+            _make_issue(body=url), store, digester, {existing_sid}, window_days=7
         )
         assert outcome == "imported:existing"
         assert fetch_calls == []
@@ -157,8 +176,9 @@ class TestProcessIssue:
         monkeypatch.setattr(mod, "_reject", lambda n, r: rejected.append((n, r)))
         monkeypatch.setattr(mod, "fetch_article", lambda url: None)
         store = MagicMock()
+        store._news_by_url = {}
         digester = MagicMock()
-        outcome = mod._process_issue(_make_issue(), store, digester, set())
+        outcome = mod._process_issue(_make_issue(), store, digester, set(), window_days=7)
         assert outcome == "rejected:fetch-failed"
         assert rejected and "could not fetch" in rejected[0][1]
 
@@ -173,11 +193,30 @@ class TestProcessIssue:
         monkeypatch.setattr(mod, "_reject", lambda n, r: rejected.append((n, r)))
         monkeypatch.setattr(mod, "fetch_article", lambda url: _make_fetched())
         store = MagicMock()
+        store._news_by_url = {}
         digester = MagicMock()
         digester.classify_submission.return_value = _make_classification(is_disaster=False)
-        outcome = mod._process_issue(_make_issue(), store, digester, set())
+        outcome = mod._process_issue(_make_issue(), store, digester, set(), window_days=7)
         assert outcome == "rejected:not-disaster"
         assert rejected
+
+    def test_rejects_when_classifier_returns_no_country(
+        self,
+        tmp_path: "Path",
+        monkeypatch: pytest.MonkeyPatch,
+    ) -> None:
+        from scripts import ingest_submissions as mod
+
+        rejected: list[tuple] = []
+        monkeypatch.setattr(mod, "_reject", lambda n, r: rejected.append((n, r)))
+        monkeypatch.setattr(mod, "fetch_article", lambda url: _make_fetched())
+        store = MagicMock()
+        store._news_by_url = {}
+        digester = MagicMock()
+        digester.classify_submission.return_value = _make_classification(country_code="")
+        outcome = mod._process_issue(_make_issue(), store, digester, set(), window_days=7)
+        assert outcome == "rejected:no-country"
+        assert rejected and "country" in rejected[0][1]
 
     def test_full_ingest_path_births_incident_and_links_news(
         self,
@@ -186,18 +225,13 @@ class TestProcessIssue:
     ) -> None:
         from scripts import ingest_submissions as mod
 
-        monkeypatch.setattr(mod, "_reject", lambda *a, **k: pytest.fail("should not reject"))
-        monkeypatch.setattr(mod, "_remove_label", lambda *a, **k: None)
-        monkeypatch.setattr(mod, "_add_label", lambda *a, **k: None)
-        monkeypatch.setattr(mod, "_comment", lambda *a, **k: None)
+        self._patch_common(monkeypatch)
         monkeypatch.setattr(mod, "fetch_article", lambda url: _make_fetched())
-        store = MagicMock()
-        store.read_source_report_keys.return_value = []
-        store.read_incident_ids_for_report.return_value = []
-        store.ingest_source_report.return_value = "rid-1"
+        store = self._make_store()
+        store.read_incident_for_news.return_value = None
         digester = MagicMock()
         digester.classify_submission.return_value = _make_classification()
-        outcome = mod._process_issue(_make_issue(), store, digester, set())
+        outcome = mod._process_issue(_make_issue(), store, digester, set(), window_days=7)
         assert outcome == "imported:new"
         store.ingest_source_report.assert_called_once()
         store.ingest_report_places.assert_called_once()
@@ -207,3 +241,94 @@ class TestProcessIssue:
         assert isinstance(args[1], str) and len(args[1]) == 32  # uuid4 hex
         store.ingest_news_item.assert_called_once()
         store.assign_news_to_incident.assert_called_once()
+
+    def test_short_circuits_when_url_already_on_existing_incident(
+        self,
+        tmp_path: "Path",
+        monkeypatch: pytest.MonkeyPatch,
+    ) -> None:
+        from scripts import ingest_submissions as mod
+
+        comments: list[str] = []
+        monkeypatch.setattr(mod, "_reject", lambda *a, **k: pytest.fail("should not reject"))
+        monkeypatch.setattr(mod, "_remove_label", lambda *a, **k: None)
+        monkeypatch.setattr(mod, "_add_label", lambda *a, **k: None)
+        monkeypatch.setattr(mod, "_comment", lambda n, body: comments.append(body))
+        fetch_calls: list[str] = []
+        monkeypatch.setattr(mod, "fetch_article", lambda url: fetch_calls.append(url))
+        store = MagicMock()
+        store._news_by_url = {"https://cnn.com/article": "nuuid-existing"}
+        store.read_incident_for_news.return_value = "incident-abcdef1234"
+        digester = MagicMock()
+        outcome = mod._process_issue(
+            _make_issue(), store, digester, set(), window_days=7
+        )
+        assert outcome == "imported:existing-news"
+        assert fetch_calls == []
+        digester.classify_submission.assert_not_called()
+        store.ingest_source_report.assert_not_called()
+        assert any("incident `incident`" in c for c in comments)
+
+    def test_short_circuits_when_url_in_staging(
+        self,
+        tmp_path: "Path",
+        monkeypatch: pytest.MonkeyPatch,
+    ) -> None:
+        from scripts import ingest_submissions as mod
+
+        comments: list[str] = []
+        monkeypatch.setattr(mod, "_reject", lambda *a, **k: pytest.fail("should not reject"))
+        monkeypatch.setattr(mod, "_remove_label", lambda *a, **k: None)
+        monkeypatch.setattr(mod, "_add_label", lambda *a, **k: None)
+        monkeypatch.setattr(mod, "_comment", lambda n, body: comments.append(body))
+        monkeypatch.setattr(mod, "fetch_article", lambda url: pytest.fail("should not fetch"))
+        store = MagicMock()
+        store._news_by_url = {"https://cnn.com/article": "nuuid-staging"}
+        store.read_incident_for_news.return_value = None
+        digester = MagicMock()
+        outcome = mod._process_issue(
+            _make_issue(), store, digester, set(), window_days=7
+        )
+        assert outcome == "imported:existing-news"
+        store.ingest_source_report.assert_not_called()
+        assert any("pending news" in c for c in comments)
+
+    def test_dedup_gate_links_to_existing_incident(
+        self,
+        tmp_path: "Path",
+        monkeypatch: pytest.MonkeyPatch,
+    ) -> None:
+        from scripts import ingest_submissions as mod
+
+        self._patch_common(monkeypatch)
+        monkeypatch.setattr(
+            mod, "_find_existing_incident", lambda *a, **k: "incident-dedup-hit"
+        )
+        monkeypatch.setattr(mod, "fetch_article", lambda url: _make_fetched())
+        store = self._make_store()
+        store.read_incident_for_news.return_value = None
+        digester = MagicMock()
+        digester.classify_submission.return_value = _make_classification()
+        outcome = mod._process_issue(_make_issue(), store, digester, set(), window_days=7)
+        assert outcome == "imported:existing-incident"
+        store.add_report_incident.assert_called_once()
+        args, _ = store.add_report_incident.call_args
+        assert args == ("rid-1", "incident-dedup-hit")
+
+    def test_news_not_stolen_when_already_on_different_incident(
+        self,
+        tmp_path: "Path",
+        monkeypatch: pytest.MonkeyPatch,
+    ) -> None:
+        from scripts import ingest_submissions as mod
+
+        self._patch_common(monkeypatch)
+        monkeypatch.setattr(mod, "fetch_article", lambda url: _make_fetched())
+        store = self._make_store()
+        store.read_incident_for_news.return_value = "incident-original"
+        digester = MagicMock()
+        digester.classify_submission.return_value = _make_classification()
+        outcome = mod._process_issue(_make_issue(), store, digester, set(), window_days=7)
+        assert outcome == "imported:new"
+        store.ingest_news_item.assert_called_once()
+        store.assign_news_to_incident.assert_not_called()
