@@ -1,0 +1,93 @@
+name: 📰 Disaster news submission
+description: Submit a news article about a disaster event for the pipeline to track
+title: "[Submission]: "
+labels: ["submission-pending"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to submit a disaster-related news article!
+
+        **The URL is the only required field.** Our pipeline will fetch the article,
+        extract its metadata via `trafilatura`, classify it via DSPy, and birth a new
+        incident if it's disaster-related. The optional fields below are hints — they
+        are not required, and the classifier may still override them.
+
+        After submission:
+        - The `ingest-submissions` workflow runs at **00:01, 09:00, 17:00 UTC** (3×/day).
+        - You'll see a comment on this issue with the resulting incident id and classification.
+        - If the article is rejected (not disaster-related, paywall, fetch failed), the issue
+          will be closed with a reason and labeled `submission-rejected`.
+        - If accepted, it will be labeled `submission-imported` and the incident will appear
+          on the dashboard after the next publish cycle.
+
+  - type: input
+    id: url
+    attributes:
+      label: Article URL
+      description: Full URL of the news article. Must start with `http://` or `https://`.
+      placeholder: https://www.example.com/news/2026-07-18/earthquake-strikes-city
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category hint (optional)
+      description: Rough category. Leave as-is to let the classifier decide.
+      options:
+        - 🤖 Let the AI classify (default)
+        - 🌋 Earthquake
+        - 🌊 Tsunami
+        - 🌋 Volcanic eruption
+        - 🌧️ Flood
+        - 🌀 Cyclone / Hurricane / Typhoon
+        - 🪨 Landslide / Mudslide
+        - 🔥 Wildfire
+        - 🏜️ Drought
+        - 🦠 Disease outbreak
+        - 🥵 Heat wave
+        - ⛈️ Severe storm
+        - ❓ Other
+    validations:
+      required: false
+
+  - type: input
+    id: country
+    attributes:
+      label: Country (optional)
+      description: ISO-2 code (e.g. `JP`, `US`) or country name. Helps geo-location.
+      placeholder: JP
+    validations:
+      required: false
+
+  - type: input
+    id: event-date
+    attributes:
+      label: Event date (optional)
+      description: When the disaster happened (not the article publish date). `YYYY-MM-DD`.
+      placeholder: 2026-07-18
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes (optional)
+      description: Any additional context — why this is important, sources you cross-referenced, etc.
+      placeholder: This article contradicts an earlier report from…
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Submission etiquette
+      description: Quick sanity checks before submitting.
+      options:
+        - label: This URL points to a real, currently-public news article (not paywalled, not 404).
+          required: true
+        - label: The event described is disaster-related (geophysical, meteorological, or disease outbreak).
+          required: true
+        - label: I have not already submitted this same URL under a different issue.
+          required: true
