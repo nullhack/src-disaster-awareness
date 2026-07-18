@@ -1,0 +1,168 @@
+id: 520df918da645914b8b193f4709eb286
+source: USGS
+source_id: us6000t9j7
+incident_type: Earthquake
+name: M 4.5 - 150 km WSW of Lebu, Chile
+report_date: '2026-07-02'
+news_searched_at: '2026-07-08T22:30:02+00:00'
+places:
+- country_code: CL
+  subdivision: Biobío
+  locality: Lebu
+raw_fields:
+  mag: 4.5
+  place: 150 km WSW of Lebu, Chile
+  time: 1782951919888
+  updated: 1782953107040
+  tz: null
+  url: https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9j7
+  felt: null
+  cdi: null
+  mmi: null
+  alert: null
+  status: reviewed
+  tsunami: 0
+  sig: 312
+  net: us
+  code: 6000t9j7
+  ids: ',us6000t9j7,'
+  sources: ',us,'
+  types: ',origin,phase-data,'
+  nst: 23
+  dmin: 2.239
+  rms: 1.3
+  gap: 148
+  magType: mb
+  type: earthquake
+  title: M 4.5 - 150 km WSW of Lebu, Chile
+  products:
+    origin:
+    - indexid: 1972396
+      indexTime: 1782953114015
+      id: urn:usgs-product:us:origin:us6000t9j7:1782953107040
+      type: origin
+      code: us6000t9j7
+      source: us
+      updateTime: 1782953107040
+      status: UPDATE
+      properties:
+        azimuthal-gap: '148'
+        depth: '10'
+        depth-type: operator assigned
+        error-ellipse-azimuth: '195'
+        error-ellipse-intermediate: '5555'
+        error-ellipse-major: '12047'
+        error-ellipse-minor: '1872'
+        error-ellipse-plunge: '0'
+        error-ellipse-rotation: '116'
+        evaluation-status: preliminary
+        event-type: earthquake
+        eventParametersPublicID: quakeml:us.anss.org/eventparameters/6000t9j7/1782953109
+        eventsource: us
+        eventsourcecode: 6000t9j7
+        eventtime: '2026-07-02T00:25:19.888Z'
+        eventtime-error: '2.64'
+        horizontal-error: '5.15'
+        latitude: '-38.1347'
+        latitude-error: '0.0692'
+        longitude: '-75.2307'
+        longitude-error: '0.0438'
+        magnitude: '4.5'
+        magnitude-error: '0.139'
+        magnitude-num-stations-used: '15'
+        magnitude-source: us
+        magnitude-type: mb
+        minimum-distance: '2.239'
+        num-phases-used: '23'
+        num-stations-used: '23'
+        origin-source: us
+        pdl-client-version: Version 3.5.4 2026-01-22
+        quakeml-magnitude-publicid: quakeml:us.anss.org/magnitude/6000t9j7/mb
+        quakeml-origin-publicid: quakeml:us.anss.org/origin/6000t9j7
+        quakeml-publicid: quakeml:us.anss.org/event/6000t9j7
+        review-status: reviewed
+        standard-error: '1.30'
+        title: 150 km WSW of Lebu, Chile
+        vertical-error: '1.928'
+      preferredWeight: 158
+      contents:
+        contents.xml:
+          contentType: application/xml
+          lastModified: 1782953111000
+          length: 195
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:origin:us6000t9j7:1782953107040/contents/contents.xml
+          sha256: ABhLiaqdYWmIak24eD/csBAWouBShhatD9bUzLNEZFk=
+        quakeml.xml:
+          contentType: application/xml
+          lastModified: 1782953107000
+          length: 3811
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:origin:us6000t9j7:1782953107040/contents/quakeml.xml
+          sha256: LlqJdogI/abqUi0hdOb3H7Wb63LugkLDqdXvez54ezc=
+    phase-data:
+    - indexid: 1972397
+      indexTime: 1782953114811
+      id: urn:usgs-product:us:phase-data:us6000t9j7:1782953107040
+      type: phase-data
+      code: us6000t9j7
+      source: us
+      updateTime: 1782953107040
+      status: UPDATE
+      properties:
+        azimuthal-gap: '148'
+        depth: '10'
+        depth-type: operator assigned
+        error-ellipse-azimuth: '195'
+        error-ellipse-intermediate: '5555'
+        error-ellipse-major: '12047'
+        error-ellipse-minor: '1872'
+        error-ellipse-plunge: '0'
+        error-ellipse-rotation: '116'
+        evaluation-status: preliminary
+        event-type: earthquake
+        eventParametersPublicID: quakeml:us.anss.org/eventparameters/6000t9j7/1782953109
+        eventsource: us
+        eventsourcecode: 6000t9j7
+        eventtime: '2026-07-02T00:25:19.888Z'
+        eventtime-error: '2.64'
+        horizontal-error: '5.15'
+        latitude: '-38.1347'
+        latitude-error: '0.0692'
+        longitude: '-75.2307'
+        longitude-error: '0.0438'
+        magnitude: '4.5'
+        magnitude-error: '0.139'
+        magnitude-num-stations-used: '15'
+        magnitude-source: us
+        magnitude-type: mb
+        minimum-distance: '2.239'
+        num-phases-used: '23'
+        num-stations-used: '23'
+        origin-source: us
+        pdl-client-version: Version 3.5.4 2026-01-22
+        quakeml-magnitude-publicid: quakeml:us.anss.org/magnitude/6000t9j7/mb
+        quakeml-origin-publicid: quakeml:us.anss.org/origin/6000t9j7
+        quakeml-publicid: quakeml:us.anss.org/event/6000t9j7
+        review-status: reviewed
+        standard-error: '1.30'
+        vertical-error: '1.928'
+      preferredWeight: 158
+      contents:
+        contents.xml:
+          contentType: application/xml
+          lastModified: 1782953111000
+          length: 195
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:phase-data:us6000t9j7:1782953107040/contents/contents.xml
+          sha256: ABhLiaqdYWmIak24eD/csBAWouBShhatD9bUzLNEZFk=
+        quakeml.xml:
+          contentType: application/xml
+          lastModified: 1782953107000
+          length: 84717
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:phase-data:us6000t9j7:1782953107040/contents/quakeml.xml
+          sha256: AnVeBJCV3zNEgBgbsOFaZMwlXEMnEwnd/kQcTi+16TU=
+  geometry:
+    type: Point
+    coordinates:
+    - -75.2307
+    - -38.1347
+    - 10
+  depth: 10

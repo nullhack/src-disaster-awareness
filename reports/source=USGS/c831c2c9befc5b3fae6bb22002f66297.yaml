@@ -1,0 +1,168 @@
+id: c831c2c9befc5b3fae6bb22002f66297
+source: USGS
+source_id: us6000t9li
+incident_type: Earthquake
+name: M 4.6 - 56 km WNW of Catuday, Philippines
+report_date: '2026-07-02'
+news_searched_at: '2026-07-08T22:34:05+00:00'
+places:
+- country_code: PH
+  subdivision: La Union
+  locality: Catuday
+raw_fields:
+  mag: 4.6
+  place: 56 km WNW of Catuday, Philippines
+  time: 1782984613542
+  updated: 1782989223040
+  tz: null
+  url: https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9li
+  felt: null
+  cdi: null
+  mmi: null
+  alert: null
+  status: reviewed
+  tsunami: 0
+  sig: 326
+  net: us
+  code: 6000t9li
+  ids: ',us6000t9li,'
+  sources: ',us,'
+  types: ',origin,phase-data,'
+  nst: 49
+  dmin: 6.585
+  rms: 0.65
+  gap: 108
+  magType: mb
+  type: earthquake
+  title: M 4.6 - 56 km WNW of Catuday, Philippines
+  products:
+    origin:
+    - indexid: 1973756
+      indexTime: 1782989229383
+      id: urn:usgs-product:us:origin:us6000t9li:1782989223040
+      type: origin
+      code: us6000t9li
+      source: us
+      updateTime: 1782989223040
+      status: UPDATE
+      properties:
+        azimuthal-gap: '108'
+        depth: '22.639'
+        depth-type: from location
+        error-ellipse-azimuth: '266'
+        error-ellipse-intermediate: '15508'
+        error-ellipse-major: '21571'
+        error-ellipse-minor: '8184'
+        error-ellipse-plunge: '2'
+        error-ellipse-rotation: '79'
+        evaluation-status: preliminary
+        event-type: earthquake
+        eventParametersPublicID: quakeml:us.anss.org/eventparameters/6000t9li/1782989224
+        eventsource: us
+        eventsourcecode: 6000t9li
+        eventtime: '2026-07-02T09:30:13.542Z'
+        eventtime-error: '1.33'
+        horizontal-error: '11.96'
+        latitude: '16.4182'
+        latitude-error: '0.0908'
+        longitude: '119.2935'
+        longitude-error: '0.1329'
+        magnitude: '4.6'
+        magnitude-error: '0.084'
+        magnitude-num-stations-used: '42'
+        magnitude-source: us
+        magnitude-type: mb
+        minimum-distance: '6.585'
+        num-phases-used: '49'
+        num-stations-used: '49'
+        origin-source: us
+        pdl-client-version: Version 3.5.4 2026-01-22
+        quakeml-magnitude-publicid: quakeml:us.anss.org/magnitude/6000t9li/mb
+        quakeml-origin-publicid: quakeml:us.anss.org/origin/6000t9li
+        quakeml-publicid: quakeml:us.anss.org/event/6000t9li
+        review-status: reviewed
+        standard-error: '0.65'
+        title: 56 km WNW of Catuday, Philippines
+        vertical-error: '5.638'
+      preferredWeight: 158
+      contents:
+        contents.xml:
+          contentType: application/xml
+          lastModified: 1782989227000
+          length: 195
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:origin:us6000t9li:1782989223040/contents/contents.xml
+          sha256: ABhLiaqdYWmIak24eD/csBAWouBShhatD9bUzLNEZFk=
+        quakeml.xml:
+          contentType: application/xml
+          lastModified: 1782989223000
+          length: 3807
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:origin:us6000t9li:1782989223040/contents/quakeml.xml
+          sha256: pzTGloWKPXE5VjwdTeXU82wP18W5F+5p8Wayh2wuyD0=
+    phase-data:
+    - indexid: 1973757
+      indexTime: 1782989230192
+      id: urn:usgs-product:us:phase-data:us6000t9li:1782989223040
+      type: phase-data
+      code: us6000t9li
+      source: us
+      updateTime: 1782989223040
+      status: UPDATE
+      properties:
+        azimuthal-gap: '108'
+        depth: '22.639'
+        depth-type: from location
+        error-ellipse-azimuth: '266'
+        error-ellipse-intermediate: '15508'
+        error-ellipse-major: '21571'
+        error-ellipse-minor: '8184'
+        error-ellipse-plunge: '2'
+        error-ellipse-rotation: '79'
+        evaluation-status: preliminary
+        event-type: earthquake
+        eventParametersPublicID: quakeml:us.anss.org/eventparameters/6000t9li/1782989224
+        eventsource: us
+        eventsourcecode: 6000t9li
+        eventtime: '2026-07-02T09:30:13.542Z'
+        eventtime-error: '1.33'
+        horizontal-error: '11.96'
+        latitude: '16.4182'
+        latitude-error: '0.0908'
+        longitude: '119.2935'
+        longitude-error: '0.1329'
+        magnitude: '4.6'
+        magnitude-error: '0.084'
+        magnitude-num-stations-used: '42'
+        magnitude-source: us
+        magnitude-type: mb
+        minimum-distance: '6.585'
+        num-phases-used: '49'
+        num-stations-used: '49'
+        origin-source: us
+        pdl-client-version: Version 3.5.4 2026-01-22
+        quakeml-magnitude-publicid: quakeml:us.anss.org/magnitude/6000t9li/mb
+        quakeml-origin-publicid: quakeml:us.anss.org/origin/6000t9li
+        quakeml-publicid: quakeml:us.anss.org/event/6000t9li
+        review-status: reviewed
+        standard-error: '0.65'
+        vertical-error: '5.638'
+      preferredWeight: 158
+      contents:
+        contents.xml:
+          contentType: application/xml
+          lastModified: 1782989227000
+          length: 195
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:phase-data:us6000t9li:1782989223040/contents/contents.xml
+          sha256: ABhLiaqdYWmIak24eD/csBAWouBShhatD9bUzLNEZFk=
+        quakeml.xml:
+          contentType: application/xml
+          lastModified: 1782989223000
+          length: 124120
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:phase-data:us6000t9li:1782989223040/contents/quakeml.xml
+          sha256: 7mByKvpnMcBct4E668W7Fae2kQLsNHtnmTe/VKlxQzs=
+  geometry:
+    type: Point
+    coordinates:
+    - 119.2935
+    - 16.4182
+    - 22.639
+  depth: 22.639

@@ -1,0 +1,168 @@
+id: 009ca5935ee457b8a9c5c327250d045d
+source: USGS
+source_id: us6000t8vm
+incident_type: Earthquake
+name: M 4.9 - 173 km S of Lembar, Indonesia
+report_date: '2026-06-28'
+news_searched_at: '2026-07-08T22:17:17+00:00'
+places:
+- country_code: ID
+  subdivision: Nusa Tenggara Barat
+  locality: Lembar
+raw_fields:
+  mag: 4.9
+  place: 173 km S of Lembar, Indonesia
+  time: 1782683031471
+  updated: 1782696750040
+  tz: null
+  url: https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8vm
+  felt: null
+  cdi: null
+  mmi: null
+  alert: null
+  status: reviewed
+  tsunami: 0
+  sig: 369
+  net: us
+  code: 6000t8vm
+  ids: ',us6000t8vm,'
+  sources: ',us,'
+  types: ',origin,phase-data,'
+  nst: 39
+  dmin: 2.675
+  rms: 0.6
+  gap: 77
+  magType: mb
+  type: earthquake
+  title: M 4.9 - 173 km S of Lembar, Indonesia
+  products:
+    origin:
+    - indexid: 1962453
+      indexTime: 1782696759340
+      id: urn:usgs-product:us:origin:us6000t8vm:1782696750040
+      type: origin
+      code: us6000t8vm
+      source: us
+      updateTime: 1782696750040
+      status: UPDATE
+      properties:
+        azimuthal-gap: '77'
+        depth: '10'
+        depth-type: operator assigned
+        error-ellipse-azimuth: '242'
+        error-ellipse-intermediate: '11866'
+        error-ellipse-major: '19786'
+        error-ellipse-minor: '840'
+        error-ellipse-plunge: '3'
+        error-ellipse-rotation: '81'
+        evaluation-status: confirmed
+        event-type: earthquake
+        eventParametersPublicID: quakeml:us.anss.org/eventparameters/6000t8vm/1782696752
+        eventsource: us
+        eventsourcecode: 6000t8vm
+        eventtime: '2026-06-28T21:43:51.471Z'
+        eventtime-error: '1.21'
+        horizontal-error: '10.01'
+        latitude: '-10.2969'
+        latitude-error: '0.0818'
+        longitude: '116.1434'
+        longitude-error: '0.1103'
+        magnitude: '4.9'
+        magnitude-error: '0.099'
+        magnitude-num-stations-used: '33'
+        magnitude-source: us
+        magnitude-type: mb
+        minimum-distance: '2.675'
+        num-phases-used: '40'
+        num-stations-used: '39'
+        origin-source: us
+        pdl-client-version: Version 3.5.4 2026-01-22
+        quakeml-magnitude-publicid: quakeml:us.anss.org/magnitude/6000t8vm/mb
+        quakeml-origin-publicid: quakeml:us.anss.org/origin/6000t8vm
+        quakeml-publicid: quakeml:us.anss.org/event/6000t8vm
+        review-status: reviewed
+        standard-error: '0.60'
+        title: 173 km S of Lembar, Indonesia
+        vertical-error: '1.54'
+      preferredWeight: 158
+      contents:
+        contents.xml:
+          contentType: application/xml
+          lastModified: 1782696754000
+          length: 195
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:origin:us6000t8vm:1782696750040/contents/contents.xml
+          sha256: ABhLiaqdYWmIak24eD/csBAWouBShhatD9bUzLNEZFk=
+        quakeml.xml:
+          contentType: application/xml
+          lastModified: 1782696750000
+          length: 3807
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:origin:us6000t8vm:1782696750040/contents/quakeml.xml
+          sha256: 3IczO/dqfq8wzdwdOa3LcjZbgkcFMfPSG10DDxOAMRQ=
+    phase-data:
+    - indexid: 1962454
+      indexTime: 1782696760532
+      id: urn:usgs-product:us:phase-data:us6000t8vm:1782696750040
+      type: phase-data
+      code: us6000t8vm
+      source: us
+      updateTime: 1782696750040
+      status: UPDATE
+      properties:
+        azimuthal-gap: '77'
+        depth: '10'
+        depth-type: operator assigned
+        error-ellipse-azimuth: '242'
+        error-ellipse-intermediate: '11866'
+        error-ellipse-major: '19786'
+        error-ellipse-minor: '840'
+        error-ellipse-plunge: '3'
+        error-ellipse-rotation: '81'
+        evaluation-status: confirmed
+        event-type: earthquake
+        eventParametersPublicID: quakeml:us.anss.org/eventparameters/6000t8vm/1782696752
+        eventsource: us
+        eventsourcecode: 6000t8vm
+        eventtime: '2026-06-28T21:43:51.471Z'
+        eventtime-error: '1.21'
+        horizontal-error: '10.01'
+        latitude: '-10.2969'
+        latitude-error: '0.0818'
+        longitude: '116.1434'
+        longitude-error: '0.1103'
+        magnitude: '4.9'
+        magnitude-error: '0.099'
+        magnitude-num-stations-used: '33'
+        magnitude-source: us
+        magnitude-type: mb
+        minimum-distance: '2.675'
+        num-phases-used: '40'
+        num-stations-used: '39'
+        origin-source: us
+        pdl-client-version: Version 3.5.4 2026-01-22
+        quakeml-magnitude-publicid: quakeml:us.anss.org/magnitude/6000t8vm/mb
+        quakeml-origin-publicid: quakeml:us.anss.org/origin/6000t8vm
+        quakeml-publicid: quakeml:us.anss.org/event/6000t8vm
+        review-status: reviewed
+        standard-error: '0.60'
+        vertical-error: '1.54'
+      preferredWeight: 158
+      contents:
+        contents.xml:
+          contentType: application/xml
+          lastModified: 1782696754000
+          length: 195
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:phase-data:us6000t8vm:1782696750040/contents/contents.xml
+          sha256: ABhLiaqdYWmIak24eD/csBAWouBShhatD9bUzLNEZFk=
+        quakeml.xml:
+          contentType: application/xml
+          lastModified: 1782696750000
+          length: 111327
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:phase-data:us6000t8vm:1782696750040/contents/quakeml.xml
+          sha256: PBayKJVjKdoAWQk0PvTIAVvQ3G9e4JbmpQptzjodWUs=
+  geometry:
+    type: Point
+    coordinates:
+    - 116.1434
+    - -10.2969
+    - 10
+  depth: 10

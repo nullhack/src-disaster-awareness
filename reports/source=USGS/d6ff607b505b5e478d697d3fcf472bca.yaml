@@ -1,0 +1,168 @@
+id: d6ff607b505b5e478d697d3fcf472bca
+source: USGS
+source_id: us6000t8uk
+incident_type: Earthquake
+name: M 4.5 - 5 km ESE of Pangyan, Philippines
+report_date: '2026-06-28'
+news_searched_at: '2026-07-08T22:14:32+00:00'
+places:
+- country_code: PH
+  subdivision: Sarangani
+  locality: Pangyan
+raw_fields:
+  mag: 4.5
+  place: 5 km ESE of Pangyan, Philippines
+  time: 1782669435770
+  updated: 1783359562040
+  tz: null
+  url: https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8uk
+  felt: null
+  cdi: null
+  mmi: null
+  alert: null
+  status: reviewed
+  tsunami: 0
+  sig: 312
+  net: us
+  code: 6000t8uk
+  ids: ',us6000t8uk,'
+  sources: ',us,'
+  types: ',origin,phase-data,'
+  nst: 60
+  dmin: 1.396
+  rms: 0.62
+  gap: 69
+  magType: mb
+  type: earthquake
+  title: M 4.5 - 5 km ESE of Pangyan, Philippines
+  products:
+    origin:
+    - indexid: 1984839
+      indexTime: 1783359569406
+      id: urn:usgs-product:us:origin:us6000t8uk:1783359562040
+      type: origin
+      code: us6000t8uk
+      source: us
+      updateTime: 1783359562040
+      status: UPDATE
+      properties:
+        azimuthal-gap: '69'
+        depth: '49.534'
+        depth-type: from location
+        error-ellipse-azimuth: '262'
+        error-ellipse-intermediate: '12247'
+        error-ellipse-major: '20214'
+        error-ellipse-minor: '9236'
+        error-ellipse-plunge: '2'
+        error-ellipse-rotation: '88'
+        evaluation-status: confirmed
+        event-type: earthquake
+        eventParametersPublicID: quakeml:us.anss.org/eventparameters/6000t8uk/1783359564
+        eventsource: us
+        eventsourcecode: 6000t8uk
+        eventtime: '2026-06-28T17:57:15.770Z'
+        eventtime-error: '1.26'
+        horizontal-error: '10.35'
+        latitude: '5.6871'
+        latitude-error: '0.0735'
+        longitude: '125.3273'
+        longitude-error: '0.1194'
+        magnitude: '4.5'
+        magnitude-error: '0.073'
+        magnitude-num-stations-used: '55'
+        magnitude-source: us
+        magnitude-type: mb
+        minimum-distance: '1.396'
+        num-phases-used: '60'
+        num-stations-used: '60'
+        origin-source: us
+        pdl-client-version: Version 3.5.4 2026-01-22
+        quakeml-magnitude-publicid: quakeml:us.anss.org/magnitude/6000t8uk/mb
+        quakeml-origin-publicid: quakeml:us.anss.org/origin/6000t8uk
+        quakeml-publicid: quakeml:us.anss.org/event/6000t8uk
+        review-status: reviewed
+        standard-error: '0.62'
+        title: 5 km ESE of Pangyan, Philippines
+        vertical-error: '6.097'
+      preferredWeight: 158
+      contents:
+        contents.xml:
+          contentType: application/xml
+          lastModified: 1783359567000
+          length: 195
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:origin:us6000t8uk:1783359562040/contents/contents.xml
+          sha256: ABhLiaqdYWmIak24eD/csBAWouBShhatD9bUzLNEZFk=
+        quakeml.xml:
+          contentType: application/xml
+          lastModified: 1783359562000
+          length: 3801
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:origin:us6000t8uk:1783359562040/contents/quakeml.xml
+          sha256: C+3hE00JDx7uPU84O+tyIeTkqbOzylJSjnDb23W/qC4=
+    phase-data:
+    - indexid: 1984840
+      indexTime: 1783359570373
+      id: urn:usgs-product:us:phase-data:us6000t8uk:1783359562040
+      type: phase-data
+      code: us6000t8uk
+      source: us
+      updateTime: 1783359562040
+      status: UPDATE
+      properties:
+        azimuthal-gap: '69'
+        depth: '49.534'
+        depth-type: from location
+        error-ellipse-azimuth: '262'
+        error-ellipse-intermediate: '12247'
+        error-ellipse-major: '20214'
+        error-ellipse-minor: '9236'
+        error-ellipse-plunge: '2'
+        error-ellipse-rotation: '88'
+        evaluation-status: confirmed
+        event-type: earthquake
+        eventParametersPublicID: quakeml:us.anss.org/eventparameters/6000t8uk/1783359564
+        eventsource: us
+        eventsourcecode: 6000t8uk
+        eventtime: '2026-06-28T17:57:15.770Z'
+        eventtime-error: '1.26'
+        horizontal-error: '10.35'
+        latitude: '5.6871'
+        latitude-error: '0.0735'
+        longitude: '125.3273'
+        longitude-error: '0.1194'
+        magnitude: '4.5'
+        magnitude-error: '0.073'
+        magnitude-num-stations-used: '55'
+        magnitude-source: us
+        magnitude-type: mb
+        minimum-distance: '1.396'
+        num-phases-used: '60'
+        num-stations-used: '60'
+        origin-source: us
+        pdl-client-version: Version 3.5.4 2026-01-22
+        quakeml-magnitude-publicid: quakeml:us.anss.org/magnitude/6000t8uk/mb
+        quakeml-origin-publicid: quakeml:us.anss.org/origin/6000t8uk
+        quakeml-publicid: quakeml:us.anss.org/event/6000t8uk
+        review-status: reviewed
+        standard-error: '0.62'
+        vertical-error: '6.097'
+      preferredWeight: 158
+      contents:
+        contents.xml:
+          contentType: application/xml
+          lastModified: 1783359567000
+          length: 195
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:phase-data:us6000t8uk:1783359562040/contents/contents.xml
+          sha256: ABhLiaqdYWmIak24eD/csBAWouBShhatD9bUzLNEZFk=
+        quakeml.xml:
+          contentType: application/xml
+          lastModified: 1783359562000
+          length: 155570
+          url: https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:phase-data:us6000t8uk:1783359562040/contents/quakeml.xml
+          sha256: n8QWOAu4pYV5m8oSCliLHT2MDL44xmx5oGtimB0YJk8=
+  geometry:
+    type: Point
+    coordinates:
+    - 125.3273
+    - 5.6871
+    - 49.534
+  depth: 49.534
