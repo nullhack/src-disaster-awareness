@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import dspy
 
-from disaster_report.ai.base import FilterResult, SummaryResult
+from disaster_report.ai.base import FilterResult, SubmissionClassification, SummaryResult
 from disaster_report.models import IncidentLog, NewsItem
 
 
@@ -47,6 +47,31 @@ class SummaryDigest(dspy.Signature):
     )
 
 
+class SubmissionClassifier(dspy.Signature):
+
+    url: str = dspy.InputField(desc="URL of the submitted article")
+    title: str = dspy.InputField(desc="Article title")
+    body: str = dspy.InputField(desc="Article description / snippet")
+    is_disaster: bool = dspy.OutputField(
+        desc="True if this article reports an ongoing or recent disaster / outbreak / hazard event"
+    )
+    incident_type: str = dspy.OutputField(
+        desc="Short incident type label (e.g. Earthquake, Flood, Ebola). Empty if not a disaster."
+    )
+    country_code: str = dspy.OutputField(
+        desc="ISO-3166-1 alpha-2 country code where the event is occurring. Empty if unknown."
+    )
+    country_name: str = dspy.OutputField(
+        desc="Country name in English. Empty if unknown."
+    )
+    summary: str = dspy.OutputField(
+        desc="One-sentence summary of the event. Empty if not a disaster."
+    )
+    event_date: str = dspy.OutputField(
+        desc="Event date as YYYY-MM-DD if discoverable, else empty."
+    )
+
+
 class OpenRouterDigester:
 
     def __init__(self, model: str, api_key: str) -> None:
@@ -54,6 +79,7 @@ class OpenRouterDigester:
         dspy.configure(lm=self._lm)
         self._filter_cot = dspy.ChainOfThought(FilterDigest)
         self._summary_cot = dspy.ChainOfThought(SummaryDigest)
+        self._submission_cot = dspy.ChainOfThought(SubmissionClassifier)
 
     def filter(
         self,
@@ -106,6 +132,19 @@ class OpenRouterDigester:
         return SummaryResult(
             summary=str(result.summary or ""),
             has_relevant_updates=bool(result.has_relevant_updates),
+        )
+
+    def classify_submission(
+        self, *, url: str, title: str, body: str
+    ) -> SubmissionClassification:
+        result = self._submission_cot(url=url, title=title, body=body)
+        return SubmissionClassification(
+            is_disaster=bool(result.is_disaster),
+            incident_type=str(getattr(result, "incident_type", "") or ""),
+            country_code=str(getattr(result, "country_code", "") or "").upper(),
+            country_name=str(getattr(result, "country_name", "") or ""),
+            summary=str(getattr(result, "summary", "") or ""),
+            event_date=str(getattr(result, "event_date", "") or ""),
         )
 
 
