@@ -55,4 +55,4 @@ jobs:
           fi
           added=$(($(echo "${{ steps.after.outputs.news }}" - ${{ steps.before.outputs.news }})))
           git commit -m "chore(data): search news — ${added} new items (${{ steps.after.outputs.news }} pending total)"
-          git push origin data
+          git push origin HEAD:data

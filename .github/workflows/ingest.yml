@@ -52,4 +52,4 @@ jobs:
           fi
           added=$(($(echo "${{ steps.after.outputs.count }}" - ${{ steps.before.outputs.count }})))
           git commit -m "chore(data): ingest records — ${added} new reports (${{ steps.after.outputs.count }} total)"
-          git push origin data
+          git push origin HEAD:data
