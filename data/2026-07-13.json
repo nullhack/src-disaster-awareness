@@ -1,39 +1,39 @@
 {
   "schema_version": "1.4",
   "report_date": "2026-07-13",
-  "generated_at": "2026-07-18T08:43:35Z",
+  "generated_at": "2026-07-18T09:08:41Z",
   "as_of": "2026-07-13",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 86,
-    "new_today": 2,
+    "reportable_total": 85,
+    "new_today": 1,
     "critical": 0,
     "high": 43,
-    "medium": 41,
+    "medium": 40,
     "low": 2,
     "disease_outbreaks": 24,
-    "countries_affected": 36,
-    "news_total": 238,
+    "countries_affected": 35,
+    "news_total": 235,
     "max_magnitude": 27577.0,
     "by_severity": {
       "CRITICAL": 0,
       "HIGH": 43,
-      "MEDIUM": 41,
+      "MEDIUM": 40,
       "LOW": 2
     },
     "by_type": {
       "Disease": 24,
       "Earthquake": 54,
       "Forest Fire": 2,
-      "Flood": 3,
-      "Tropical Cyclone": 3
+      "Tropical Cyclone": 3,
+      "Flood": 2
     },
     "by_region": {
       "Americas": 23,
       "Oceania": 5,
       "Africa": 11,
-      "Asia": 41,
+      "Asia": 40,
       "Europe": 3,
       "Unknown": 3
     }
@@ -244,15 +244,6 @@
       "iso2": "RU",
       "region": "Europe",
       "country_group": "C",
-      "max_severity": "MEDIUM"
-    },
-    {
-      "country": "Pakistan",
-      "count": 1,
-      "max_sev_rank": 2,
-      "iso2": "PK",
-      "region": "Asia",
-      "country_group": "A",
       "max_severity": "MEDIUM"
     },
     {
@@ -2315,96 +2306,6 @@
               "published_date": "2026-07-08T18:15:12+00:00",
               "outlet": "Daily Mail on MSN",
               "image": "https://www.bing.com/th?id=ONUT.R85mHJ4w2ezfGv4QyAtu9Q"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "incident_id": "20250814-PK-FL",
-      "canonical_name": "Flood in Pakistan",
-      "summary": "On July 6, 2025, a glacier lake outburst flood (GLOF) struck the village of Hassanabad in Pakistan's Hunza Valley, destroying houses and irrigation systems. The event was triggered by a glacial lake outburst, causing significant damage to the community.",
-      "country": "Pakistan",
-      "iso2": "PK",
-      "lat": 34.002,
-      "lon": 71.4805,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Flood",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "disease_name": null,
-      "event_date": "2025-08-14",
-      "first_reported_date": "2025-08-14",
-      "last_updated_date": "2026-07-13",
-      "days_since_event": 338,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 1,
-        "healthmap": 0,
-        "news": 3
-      },
-      "source_links": [
-        {
-          "type": "GDACS",
-          "label": "Orange alert · Magnitude 0 ",
-          "url": "https://www.gdacs.org/report.aspx?eventid=1103435&episodeid=4&eventtype=FL",
-          "meta": "Magnitude 0 "
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": "Orange",
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "UN office's recovery plan advances flood relief efforts in Pakistan",
-          "url": "https://phys.org/news/2026-04-office-recovery-advances-relief-efforts.html",
-          "outlet": "Phys.org",
-          "published_date": "2026-07-08T15:44:57+00:00"
-        },
-        {
-          "headline": "Stakeholders blamed for Tarbela-5 cofferdam collapse",
-          "url": "https://www.dawn.com/news/2014942/stakeholders-blamed-for-tarbela-5-cofferdam-collapse",
-          "outlet": "Dawn",
-          "published_date": "2026-07-12T03:00:08+00:00"
-        },
-        {
-          "headline": "Climate Change and the Rising Threat of Flash Floods in Gilgit-Baltistan",
-          "url": "https://www.suchtv.pk/pakistan/gilgit-baltistan/item/136477-climate-change-and-the-rising-threat-of-flash-floods-in-gilgit-baltistan.html",
-          "outlet": "SUCH TV",
-          "published_date": "2026-07-13T02:34:47+00:00"
-        }
-      ],
-      "news_total": 3,
-      "logs": [
-        {
-          "log_date": "2026-07-08",
-          "summary": "On July 6, 2025, a glacier lake outburst flood (GLOF) struck the village of Hassanabad in Pakistan's Hunza Valley, destroying houses and irrigation systems. The event was triggered by a glacial lake outburst, causing significant damage to the community.",
-          "news": [
-            {
-              "news_id": "024bad36c9b255fa869e2b1f96dd2aec",
-              "url": "https://phys.org/news/2026-04-office-recovery-advances-relief-efforts.html",
-              "headline": "UN office's recovery plan advances flood relief efforts in Pakistan",
-              "body": "On the evening of July 6, 2025, a glacier lake outburst flood (GLOF) surged through the village of Hassanabad in Pakistan's Hunza Valley, destroying houses and irrigation systems. Triggered by the ...",
-              "published_date": "2026-07-08T15:44:57+00:00",
-              "outlet": "Phys.org",
-              "image": ""
             }
           ]
         }
