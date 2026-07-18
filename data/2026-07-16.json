@@ -1,39 +1,39 @@
 {
   "schema_version": "1.4",
   "report_date": "2026-07-16",
-  "generated_at": "2026-07-18T14:34:50Z",
+  "generated_at": "2026-07-18T17:31:21Z",
   "as_of": "2026-07-16",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 17,
-    "new_today": 5,
+    "reportable_total": 14,
+    "new_today": 4,
     "critical": 0,
-    "high": 7,
-    "medium": 9,
+    "high": 6,
+    "medium": 7,
     "low": 1,
-    "disease_outbreaks": 4,
+    "disease_outbreaks": 3,
     "countries_affected": 11,
-    "news_total": 172,
+    "news_total": 149,
     "max_magnitude": 7.8,
     "by_severity": {
       "CRITICAL": 0,
-      "HIGH": 7,
-      "MEDIUM": 9,
+      "HIGH": 6,
+      "MEDIUM": 7,
       "LOW": 1
     },
     "by_type": {
-      "Disease": 4,
-      "Volcano": 2,
+      "Disease": 3,
       "Flood": 1,
+      "Volcano": 1,
       "Drought": 1,
-      "Earthquake": 6,
+      "Earthquake": 5,
       "Forest Fire": 3
     },
     "by_region": {
-      "Unknown": 2,
       "Oceania": 2,
-      "Asia": 8,
+      "Unknown": 1,
+      "Asia": 6,
       "Europe": 4,
       "Americas": 1
     }
@@ -41,21 +41,12 @@
   "by_country": [
     {
       "country": "Philippines",
-      "count": 4,
+      "count": 3,
       "max_sev_rank": 1,
       "iso2": "PH",
       "region": "Asia",
       "country_group": "A",
       "max_severity": "LOW"
-    },
-    {
-      "country": "Indonesia",
-      "count": 2,
-      "max_sev_rank": 2,
-      "iso2": "ID",
-      "region": "Asia",
-      "country_group": "A",
-      "max_severity": "MEDIUM"
     },
     {
       "country": "Australia",
@@ -103,6 +94,15 @@
       "max_severity": "MEDIUM"
     },
     {
+      "country": "Indonesia",
+      "count": 1,
+      "max_sev_rank": 3,
+      "iso2": "ID",
+      "region": "Asia",
+      "country_group": "A",
+      "max_severity": "HIGH"
+    },
+    {
       "country": "Japan",
       "count": 1,
       "max_sev_rank": 3,
@@ -140,216 +140,6 @@
     }
   ],
   "incidents": [
-    {
-      "incident_id": "20240530-XX-DI",
-      "canonical_name": "Dengue - Global situation",
-      "summary": "In Bangladesh, two additional dengue-related deaths were reported in the past 24 hours, along with 306 new hospitalizations. The country's total caseload remains at 9,370 cases, as dengue continues to spread.",
-      "country": "",
-      "iso2": "",
-      "lat": null,
-      "lon": null,
-      "country_group": "C",
-      "region": "Unknown",
-      "incident_type": "Disease",
-      "incident_category": "Biological",
-      "is_disease": true,
-      "severity": "MEDIUM",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "disease_name": null,
-      "event_date": "2024-05-30",
-      "first_reported_date": "2024-05-30",
-      "last_updated_date": "2026-07-16",
-      "days_since_event": 779,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 1,
-        "usgs": 0,
-        "gdacs": 0,
-        "healthmap": 0,
-        "news": 9
-      },
-      "source_links": [
-        {
-          "type": "WHO",
-          "label": "Dengue - Global situation",
-          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2024-DON518",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Dengue fever is — unfortunately — having a banner year. Can it be quelled?",
-          "url": "https://www.npr.org/sections/goats-and-soda/2024/07/23/g-s1-12674/dengue-mosquitoes-climate-virus-americas",
-          "outlet": "NPR",
-          "published_date": "2024-07-23T00:00:00+00:00"
-        },
-        {
-          "headline": "UN agency authorizes second vaccine against dengue amid outbreaks in the Americas",
-          "url": "https://medicalxpress.com/news/2024-05-agency-authorizes-vaccine-dengue-outbreaks.html",
-          "outlet": "Medical Xpress",
-          "published_date": "2026-07-08T14:57:06+00:00"
-        },
-        {
-          "headline": "Dengue: Surge in US Cases This Year",
-          "url": "https://www.medscape.com/viewarticle/dengue-surge-us-cases-this-year-2024a1000bzw",
-          "outlet": "Medscape",
-          "published_date": "2026-07-08T14:57:06+00:00"
-        },
-        {
-          "headline": "Two more die of dengue, 306 hospitalised in 24hrs",
-          "url": "https://www.daily-sun.com/bangladesh/886701/two-more-die-of-dengue-306-hospitalised-in-24hrs",
-          "outlet": "Daily Sun",
-          "published_date": "2026-07-11T03:56:07+00:00"
-        },
-        {
-          "headline": "Two more die of dengue, 391 hospitalised in 24hrs",
-          "url": "https://www.daily-sun.com/health/886521/two-more-die-of-dengue-391-hospitalised-in-24hrs",
-          "outlet": "Daily Sun",
-          "published_date": "2026-07-13T03:58:16+00:00"
-        },
-        {
-          "headline": "Remote health monitoring: A practical digital solution for dengue burden",
-          "url": "https://island.lk/remote-health-monitoring-a-practical-digital-solution-for-dengue-burden/",
-          "outlet": "The Island",
-          "published_date": "2026-07-15T01:15:18+00:00"
-        },
-        {
-          "headline": "Bangladesh floods heighten dengue, cholera risks, says IFRC",
-          "url": "https://www.channelnewsasia.com/world/bangladesh-floods-dengue-cholera-risk-ifrc-6253181",
-          "outlet": "CNA",
-          "published_date": "2026-07-15T07:15:18+00:00"
-        },
-        {
-          "headline": "Two more die of dengue, 391 hospitalised in 24hrs",
-          "url": "https://www.daily-sun.com/bangladesh/886521/two-more-die-of-dengue-391-hospitalised-in-24hrs",
-          "outlet": "Daily Sun",
-          "published_date": "2026-07-16T14:45:52+00:00"
-        },
-        {
-          "headline": "Two more die of dengue, 306 hospitalised in 24hrs",
-          "url": "https://www.daily-sun.com/health/886701/two-more-die-of-dengue-306-hospitalised-in-24hrs",
-          "outlet": "Daily Sun",
-          "published_date": "2026-07-16T19:53:01+00:00"
-        }
-      ],
-      "news_total": 9,
-      "logs": [
-        {
-          "log_date": "2026-07-08",
-          "summary": "The World Health Organization authorized a second dengue vaccine as outbreaks continue in the Americas. The US CDC issued an alert about increased dengue risk in the United States. In the Americas, nearly 10.4 million suspected dengue cases were reported to WHO by early July 2024.",
-          "news": [
-            {
-              "news_id": "7e19082e3a5f5ef599ebac390d6edf7c",
-              "url": "https://medicalxpress.com/news/2024-05-agency-authorizes-vaccine-dengue-outbreaks.html",
-              "headline": "UN agency authorizes second vaccine against dengue amid outbreaks in the Americas",
-              "body": "A health worker fumigates for mosquitoes inside a home to help mitigate the spread of dengue in the Las Penitas area of Talara, Peru, Friday, March 1, 2024.The World Health Organization on Wednesday, ...",
-              "published_date": "2026-07-08T14:57:06+00:00",
-              "outlet": "Medical Xpress",
-              "image": ""
-            },
-            {
-              "news_id": "e503ebb6fcdb5c678fa3cc7dcb115da8",
-              "url": "https://www.medscape.com/viewarticle/dengue-surge-us-cases-this-year-2024a1000bzw",
-              "headline": "Dengue: Surge in US Cases This Year",
-              "body": "Federal health officials with the US Centers for Disease Control and Prevention (CDC) have issued an alert, warning health professionals and the public about an increased risk for dengue virus ...",
-              "published_date": "2026-07-08T14:57:06+00:00",
-              "outlet": "Medscape",
-              "image": ""
-            },
-            {
-              "news_id": "e3557f7e1358509cbde59ef9f9b948eb",
-              "url": "https://www.npr.org/sections/goats-and-soda/2024/07/23/g-s1-12674/dengue-mosquitoes-climate-virus-americas",
-              "headline": "Dengue fever is — unfortunately — having a banner year. Can it be quelled?",
-              "body": "In the Americas alone, almost 10.4 million suspected cases of dengue, a mosquito-borne viral disease, were reported to the World Health Organization in 2024 as of the first week of July, an increase ...",
-              "published_date": "2024-07-23T00:00:00+00:00",
-              "outlet": "NPR",
-              "image": ""
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-15",
-          "summary": "Sri Lanka is experiencing a significant dengue challenge, with rising cases prompting discussion of remote health monitoring as a digital solution. In Bangladesh, floods are heightening dengue risks according to the IFRC, and the country reported two additional deaths and 391 hospitalizations in the past 24 hours, bringing the total caseload to 9,370.",
-          "news": [
-            {
-              "news_id": "459955f1491954c499ca77b7d6c19407",
-              "url": "https://www.daily-sun.com/health/886521/two-more-die-of-dengue-391-hospitalised-in-24hrs",
-              "headline": "Two more die of dengue, 391 hospitalised in 24hrs",
-              "body": "In the 24-hour span, 391 more patients were hospitalised with viral fever, raising the total caseload to 9,370 in ...",
-              "published_date": "2026-07-13T03:58:16+00:00",
-              "outlet": "Daily Sun",
-              "image": "https://www.bing.com/th?id=ONUT.DdVCN9msdHTum_aTitqatQ"
-            },
-            {
-              "news_id": "e650fa40d4eb5afeacfcc438088fc8d2",
-              "url": "https://island.lk/remote-health-monitoring-a-practical-digital-solution-for-dengue-burden/",
-              "headline": "Remote health monitoring: A practical digital solution for dengue burden",
-              "body": "Sri Lanka is once again facing a significant dengue challenge. With rising numbers of suspected and confirmed cases reported across the country, especially during the rainy season, dengue has become ...",
-              "published_date": "2026-07-15T01:15:18+00:00",
-              "outlet": "The Island",
-              "image": ""
-            },
-            {
-              "news_id": "e1c68a9ee7c45bf0958c2969a5e8d70a",
-              "url": "https://www.channelnewsasia.com/world/bangladesh-floods-dengue-cholera-risk-ifrc-6253181",
-              "headline": "Bangladesh floods heighten dengue, cholera risks, says IFRC",
-              "body": "Sonakshi Dey, the International Federation of Red Cross and Red Crescent Societies’ (IFRC) Bangladesh programme director, ...",
-              "published_date": "2026-07-15T07:15:18+00:00",
-              "outlet": "CNA",
-              "image": "https://www.bing.com/th?id=ONUT.ACQWLJBb60HInp9S0xhATw"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-17",
-          "summary": "In Bangladesh, two additional dengue-related deaths were reported in the past 24 hours, along with 306 new hospitalizations. The country's total caseload remains at 9,370 cases, as dengue continues to spread.",
-          "news": [
-            {
-              "news_id": "530678cfb1a55efea197360b65529a7d",
-              "url": "https://www.daily-sun.com/health/886701/two-more-die-of-dengue-306-hospitalised-in-24hrs",
-              "headline": "Two more die of dengue, 306 hospitalised in 24hrs",
-              "body": "Two more deaths were reported from dengue in the past 24 hours till Thursday morning, raising the number of fatalities from ...",
-              "published_date": "2026-07-16T19:53:01+00:00",
-              "outlet": "Daily Sun",
-              "image": "https://www.bing.com/th?id=ONUT.P9_doGWI_406hQ0Ad3JM9g"
-            },
-            {
-              "news_id": "3cf034d31c115bd7867d956c229b143f",
-              "url": "https://www.daily-sun.com/bangladesh/886701/two-more-die-of-dengue-306-hospitalised-in-24hrs",
-              "headline": "Two more die of dengue, 306 hospitalised in 24hrs",
-              "body": "Two more deaths were reported from dengue in the past 24 hours till Thursday morning, raising the number of fatalities from ...",
-              "published_date": "2026-07-11T03:56:07+00:00",
-              "outlet": "Daily Sun",
-              "image": "https://www.bing.com/th?id=ONUT.P9_doGWI_406hQ0Ad3JM9g"
-            },
-            {
-              "news_id": "fc04fb9128f35420b061ed88ed3e5269",
-              "url": "https://www.daily-sun.com/bangladesh/886521/two-more-die-of-dengue-391-hospitalised-in-24hrs",
-              "headline": "Two more die of dengue, 391 hospitalised in 24hrs",
-              "body": "In the 24-hour span, 391 more patients were hospitalised with viral fever, raising the total caseload to 9,370 in ...",
-              "published_date": "2026-07-16T14:45:52+00:00",
-              "outlet": "Daily Sun",
-              "image": "https://www.bing.com/th?id=ONUT.DdVCN9msdHTum_aTitqatQ"
-            }
-          ]
-        }
-      ]
-    },
     {
       "incident_id": "20240607-AU-DI",
       "canonical_name": "Avian Influenza A (H5N1) - Australia",
@@ -692,135 +482,6 @@
               "body": "The 2025-2026 SARS-CoV-2 vaccines provided protection against ED/UC visits and hospitalizations among immunocompetent adults.",
               "published_date": "2026-07-15T09:25:38+00:00",
               "outlet": "Infectious Disease Advisor",
-              "image": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "incident_id": "20251014-ID-VO",
-      "canonical_name": "Eruption  Lewotobi",
-      "summary": "Mount Lewotobi Laki-laki in East Nusa Tenggara, Indonesia, erupted repeatedly from July 13 to 15, 2026, marking its 3rd, 16th, and 18th eruptions within a single week. The volcano remains at Level III Alert with a 5 km exclusion zone, and Indonesia has recorded over 3,100 volcanic eruptions in total for 2026.",
-      "country": "Indonesia",
-      "iso2": "ID",
-      "lat": -8.542,
-      "lon": 122.775,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Volcano",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "disease_name": null,
-      "event_date": "2025-10-14",
-      "first_reported_date": "2025-10-14",
-      "last_updated_date": "2026-07-15",
-      "days_since_event": 277,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 1,
-        "healthmap": 0,
-        "news": 4
-      },
-      "source_links": [
-        {
-          "type": "GDACS",
-          "label": "Orange alert · ",
-          "url": "https://www.gdacs.org/report.aspx?eventid=1000122&episodeid=1&eventtype=VO",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": "Orange",
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "60 cm of snow in June? How a volcano half a world away stole Canada's summer",
-          "url": "https://www.yahoo.com/news/60-cm-snow-june-volcano-171159063.html",
-          "outlet": "The Weather Network · via Yahoo News",
-          "published_date": "2026-07-08T19:01:18+00:00"
-        },
-        {
-          "headline": "Mount Lewotobi Laki-laki Erupted Again This Morning (Monday, 13 July 2026)",
-          "url": "https://databoks.katadata.co.id/en/demographics/statistics/508447b2114edeb/mount-lewotobi-lakilaki-erupted-again-this-morning-monday-13-july-2026",
-          "outlet": "Databoks",
-          "published_date": "2026-07-12T02:25:35+00:00"
-        },
-        {
-          "headline": "Alert! Mount Lewotobi Laki-laki Erupts Again Tonight (Wednesday, 15 July 2026)",
-          "url": "https://databoks.katadata.co.id/en/demographics/statistics/50374dcd81c58c9/alert-mount-lewotobi-lakilaki-erupts-again-tonight-wednesday-15-july-2026",
-          "outlet": "Databoks",
-          "published_date": "2026-07-15T00:55:00+00:00"
-        },
-        {
-          "headline": "Alert! Mount Lewotobi Laki-laki Erupted Again Tonight (Tuesday, 14 July 2026)",
-          "url": "https://databoks.katadata.co.id/en/demographics/statistics/6addb0c64655265/alert-mount-lewotobi-lakilaki-erupted-again-tonight-tuesday-14-july-2026",
-          "outlet": "Databoks",
-          "published_date": "2026-07-15T06:44:48+00:00"
-        }
-      ],
-      "news_total": 4,
-      "logs": [
-        {
-          "log_date": "2026-07-08",
-          "summary": "An eruption occurred at Indonesia's Mount Lewotobi Laki Laki volcano on Tuesday evening into Wednesday. The event is reported to have potential far-reaching effects, including unusual weather patterns such as snowfall in Canada.",
-          "news": [
-            {
-              "news_id": "7f6a4e3ce64f5db2b9cec51df4f606dd",
-              "url": "https://www.yahoo.com/news/60-cm-snow-june-volcano-171159063.html",
-              "headline": "60 cm of snow in June? How a volcano half a world away stole Canada's summer",
-              "body": "An eruption at Indonesia's Mount Lewotobi Laki Laki volcano Tuesday evening into Wednesday has...",
-              "published_date": "2026-07-08T19:01:18+00:00",
-              "outlet": "The Weather Network · via Yahoo News",
-              "image": "https://media.zenfs.com/en/the_weather_network_616/b448a666943f50fb06833da5473d8fe9"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-17",
-          "summary": "Mount Lewotobi Laki-laki in East Nusa Tenggara, Indonesia, erupted repeatedly from July 13 to 15, 2026, marking its 3rd, 16th, and 18th eruptions within a single week. The volcano remains at Level III Alert with a 5 km exclusion zone, and Indonesia has recorded over 3,100 volcanic eruptions in total for 2026.",
-          "news": [
-            {
-              "news_id": "b2eeed5b128e545896be1b87b5e1b5d0",
-              "url": "https://databoks.katadata.co.id/en/demographics/statistics/50374dcd81c58c9/alert-mount-lewotobi-lakilaki-erupts-again-tonight-wednesday-15-july-2026",
-              "headline": "Alert! Mount Lewotobi Laki-laki Erupts Again Tonight (Wednesday, 15 July 2026)",
-              "body": "Mount Lewotobi Laki-laki (East Nusa Tenggara) erupted on 15 July 2026, with 18 eruptions in one week; it remains at Level III Alert. 3185 total Indonesian volcanic eruptions were logged in 2026 so far",
-              "published_date": "2026-07-15T00:55:00+00:00",
-              "outlet": "Databoks",
-              "image": "https://cdn1.katadata.co.id/media/chart_thumbnail/231991-alert-mount-lewotobi-lakilaki-erupts-again-tonight-wednesday-15-july-2026.png?v=1784008540"
-            },
-            {
-              "news_id": "5f97729be8e457bb9ad75ce589f6a2f4",
-              "url": "https://databoks.katadata.co.id/en/demographics/statistics/6addb0c64655265/alert-mount-lewotobi-lakilaki-erupted-again-tonight-tuesday-14-july-2026",
-              "headline": "Alert! Mount Lewotobi Laki-laki Erupted Again Tonight (Tuesday, 14 July 2026)",
-              "body": "Mount Lewotobi Laki-laki (NTT, Indonesia) erupted 16 times in one week, latest 14 July 2026. It is at Level III alert, 5km ...",
-              "published_date": "2026-07-15T06:44:48+00:00",
-              "outlet": "Databoks",
-              "image": "https://www.bing.com/th?id=ONUT.gIIxc6mNwJjTiL9I5rqt-Q"
-            },
-            {
-              "news_id": "2b2466fdcd4f535d8cc5825a4a6dd2ff",
-              "url": "https://databoks.katadata.co.id/en/demographics/statistics/508447b2114edeb/mount-lewotobi-lakilaki-erupted-again-this-morning-monday-13-july-2026",
-              "headline": "Mount Lewotobi Laki-laki Erupted Again This Morning (Monday, 13 July 2026)",
-              "body": "On 13 July 2026, Mount Lewotobi Laki-laki (East Nusa Tenggara) erupted for the 3rd time in one week. It is at Level III Alert, with 5km exclusion zone. Indonesia recorded 3144 total eruptions in 2026 ...",
-              "published_date": "2026-07-12T02:25:35+00:00",
-              "outlet": "Databoks",
               "image": ""
             }
           ]
@@ -2984,7 +2645,7 @@
         "usgs": 0,
         "gdacs": 1,
         "healthmap": 0,
-        "news": 31
+        "news": 32
       },
       "source_links": [
         {
@@ -3082,6 +2743,12 @@
           "url": "https://www.msn.com/en-us/news/world/heat-and-fire-generate-overlapping-problems-for-much-of-southern-europe/ar-AA27HQVS",
           "outlet": "CNN",
           "published_date": "2026-07-11T13:59:54+00:00"
+        },
+        {
+          "headline": "Hundreds of firefighters battle wildfire in southern Spain that killed at least...",
+          "url": "https://www.ksdk.com/article/syndication/associatedpress/hundreds-of-firefighters-battle-wildfire-in-southern-spain-that-killed-at-least-12/616-268f47e9-fbf2-4afd-9255-77635459b104",
+          "outlet": "KSDK St. Louis",
+          "published_date": "2026-07-11T14:25:04+00:00"
         },
         {
           "headline": "A Wildfire Killed 12 People in Southern Spain. Here's the Latest.",
@@ -3192,7 +2859,7 @@
           "published_date": "2026-07-16T09:58:07+00:00"
         }
       ],
-      "news_total": 31,
+      "news_total": 32,
       "logs": [
         {
           "log_date": "2026-07-15",
@@ -3450,6 +3117,21 @@
           ]
         },
         {
+          "log_date": "2026-07-17",
+          "summary": "New details emerged about the Almería wildfire, with reports indicating that victims were killed while attempting to escape along a river bed. The fire has scorched approximately 66 square kilometers (25 square miles) of forest and farmland, with hundreds of firefighters continuing to battle the blaze. Additionally, discussions have begun about implementing bushfire bunkers as a safety measure in Spain.",
+          "news": [
+            {
+              "news_id": "f9bb34943931527398ba3726bd7d6884",
+              "url": "https://www.ksdk.com/article/syndication/associatedpress/hundreds-of-firefighters-battle-wildfire-in-southern-spain-that-killed-at-least-12/616-268f47e9-fbf2-4afd-9255-77635459b104",
+              "headline": "Hundreds of firefighters battle wildfire in southern Spain that killed at least...",
+              "body": "The fire has scorched some 66 square kilometers (25 square miles) of forest and farmland, about the...",
+              "published_date": "2026-07-11T14:25:04+00:00",
+              "outlet": "KSDK St. Louis",
+              "image": "https://s.yimg.com/am/60d/38033e5aba068d3a082f70751c580223"
+            }
+          ]
+        },
+        {
           "log_date": "2026-07-18",
           "summary": "New details emerged that the victims of the July 9 wildfire in Almería were killed while trying to escape along a river bed. Additionally, authorities are considering the adoption of bushfire bunkers, similar to those used in Australia, as a potential life-saving measure in future wildfires.",
           "news": [
@@ -3560,234 +3242,6 @@
       ],
       "news_total": 2,
       "logs": []
-    },
-    {
-      "incident_id": "20260714-PH-EQ",
-      "canonical_name": "Earthquake 34 km WSW of Sarangani, Philippines 2026-07",
-      "summary": "A magnitude 6.2 earthquake struck 34 km southwest of Sarangani, Philippines on July 14, 2026, at 11:49 pm local time, with a depth of approximately 10 km. The Philippine Institute of Volcanology and Seismology (PHIVOLCS) initially recommended caution for minor sea-level disturbances but later cancelled the advisory, confirming no unusual sea-level changes and no tsunami threat from the event.",
-      "country": "Philippines",
-      "iso2": "PH",
-      "lat": 5.3269,
-      "lon": 125.1655,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "HIGH",
-      "priority": "HIGH",
-      "priority_rank": 1,
-      "pandemic_potential": null,
-      "event_status": null,
-      "disease_name": null,
-      "event_date": "2026-07-14",
-      "first_reported_date": "2026-07-14",
-      "last_updated_date": "2026-07-15",
-      "days_since_event": 4,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 0,
-        "healthmap": 0,
-        "news": 11
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 6.2 - 34 km WSW of Sarangani, Philippines",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t0d0",
-          "meta": "67.854 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 6.2,
-        "max_depth_km": 67.854,
-        "place": "34 km WSW of Sarangani, Philippines",
-        "felt": 62,
-        "sig": 628,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "BMKG: M6.2 Earthquake Strikes Mindanao, No Tsunami Threat",
-          "url": "https://en.tempo.co/read/2113729/bmkg-m6-2-earthquake-strikes-mindanao-no-tsunami-threat",
-          "outlet": "Tempo.co English",
-          "published_date": "2026-07-09T07:18:32+00:00"
-        },
-        {
-          "headline": "Seismic Activity Shakes Mindanao: A Closer Look",
-          "url": "https://www.devdiscourse.com/article/science-environment/3950243-seismic-activity-shakes-mindanao-a-closer-look",
-          "outlet": "devdiscourse",
-          "published_date": "2026-07-11T07:18:32+00:00"
-        },
-        {
-          "headline": "Magnitude 6.3 earthquake strikes off the coast of Balut Island, Sarangani, Davao Occidental",
-          "url": "https://www.msn.com/en-ph/news/national/magnitude-63-earthquake-struck-off-the-coast-of-balut-island-sarangani-davao-occidental/ar-AA27Uikr",
-          "outlet": "GMA News Online",
-          "published_date": "2026-07-14T16:15:00+00:00"
-        },
-        {
-          "headline": "Earthquake of magnitude 6.05 strikes Philippines' Mindanao",
-          "url": "https://www.khaleejtimes.com/world/asia/earthquake-of-magnitude-605-strikes-philippines-mindanao",
-          "outlet": "Khaleej Times",
-          "published_date": "2026-07-14T16:16:00+00:00"
-        },
-        {
-          "headline": "No unusual sea-level changes observed following strong earthquake off Balut Island, says PHIVOLCS",
-          "url": "https://www.msn.com/en-ph/news/other/no-unusual-sea-level-changes-observed-following-strong-earthquake-says-phivolcs/ar-AA27UAFk",
-          "outlet": "GMA News Online",
-          "published_date": "2026-07-14T22:01:29+00:00"
-        },
-        {
-          "headline": "Phivolcs: Tremors observed in Masbate, Davao Occidental",
-          "url": "https://newsinfo.inquirer.net/2263979/phivolcs-tremors-observed-in-masbate-davao-occidental",
-          "outlet": "Inquirer.net",
-          "published_date": "2026-07-15T02:02:00+00:00"
-        },
-        {
-          "headline": "Magnitude 6.2 earthquake strikes off southern Philippines following series of Ring of Fire quakes",
-          "url": "https://www.msn.com/en-us/news/world/magnitude-62-earthquake-strikes-off-southern-philippines-following-series-of-ring-of-fire-quakes/ar-AA27TNHy?ocid=BingNewsVerp",
-          "outlet": "FOX Weather on MSN",
-          "published_date": "2026-07-15T06:42:11+00:00"
-        },
-        {
-          "headline": "Magnitude 6.3 earthquake strikes off the coast of Balut Island, Sarangani, Davao Occidental",
-          "url": "https://www.msn.com/en-ph/news/national/magnitude-63-earthquake-struck-off-the-coast-of-balut-island-sarangani-davao-occidental/ar-AA27Uikr?ocid=BingNewsVerp",
-          "outlet": "GMA News Online on MSN",
-          "published_date": "2026-07-15T06:42:11+00:00"
-        },
-        {
-          "headline": "Minor sea level disturbance may occur after strong earthquake off the coast of Balut Island, Davao Occidental — PHIVOLCS",
-          "url": "https://www.msn.com/en-ph/news/national/minor-sea-level-disturbance-reported-after-strong-earthquake-off-the-coast-of-balut-island-davao-occidental/ar-AA27UC12?ocid=BingNewsVerp",
-          "outlet": "GMA News Online on MSN",
-          "published_date": "2026-07-15T06:42:11+00:00"
-        },
-        {
-          "headline": "No unusual sea-level changes observed following strong earthquake off Balut Island, says PHIVOLCS",
-          "url": "https://www.msn.com/en-ph/news/national/no-unusual-sea-level-changes-observed-following-strong-earthquake-off-balut-island-says-phivolcs/ar-AA27UAFk?ocid=BingNewsVerp",
-          "outlet": "GMA Network on MSN",
-          "published_date": "2026-07-15T06:42:11+00:00"
-        },
-        {
-          "headline": "6.2-magnitude earthquake strikes Pacific Ring of Fire: Normal activity or warning of a megaquake? Explained",
-          "url": "https://www.msn.com/en-in/lifestyle/whats-hot/62-magnitude-earthquake-strikes-pacific-ring-of-fire-normal-activity-or-warning-of-a-megaquake-explained/ar-AA27UAMb?ocid=BingNewsVerp",
-          "outlet": "Hindustan Times on MSN",
-          "published_date": "2026-07-15T07:18:33+00:00"
-        }
-      ],
-      "news_total": 11,
-      "logs": [
-        {
-          "log_date": "2026-07-15",
-          "summary": "A magnitude 6.2 earthquake struck 34 km southwest of Sarangani, Philippines on July 14, 2026, at 11:49 pm local time, with a depth of approximately 10 km. The Philippine Institute of Volcanology and Seismology (PHIVOLCS) initially recommended caution for minor sea-level disturbances but later cancelled the advisory, confirming no unusual sea-level changes and no tsunami threat from the event.",
-          "news": [
-            {
-              "news_id": "2d2b74738d9c53eca61f01c95d86b9bd",
-              "url": "https://www.msn.com/en-us/news/world/magnitude-62-earthquake-strikes-off-southern-philippines-following-series-of-ring-of-fire-quakes/ar-AA27TNHy?ocid=BingNewsVerp",
-              "headline": "Magnitude 6.2 earthquake strikes off southern Philippines following series of Ring of Fire quakes",
-              "body": "A magnitude 6.2 earthquake struck off the coast of the southern Philippines late Tuesday night.",
-              "published_date": "2026-07-15T06:42:11+00:00",
-              "outlet": "FOX Weather on MSN",
-              "image": "https://www.bing.com/th?id=ORMS.7ab5578986001a44cbe3cd82397dba50"
-            },
-            {
-              "news_id": "33b294c86fcc55e2a27f5480872ef320",
-              "url": "https://www.msn.com/en-ph/news/national/magnitude-63-earthquake-struck-off-the-coast-of-balut-island-sarangani-davao-occidental/ar-AA27Uikr?ocid=BingNewsVerp",
-              "headline": "Magnitude 6.3 earthquake strikes off the coast of Balut Island, Sarangani, Davao Occidental",
-              "body": "A magnitude 6.3 earthquake struck southwest of Balut Island, Sarangani, Davao Occidental late Tuesday evening, the Philippine ...",
-              "published_date": "2026-07-15T06:42:11+00:00",
-              "outlet": "GMA News Online on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.9riz-CdojH7gvRmBpssKpw"
-            },
-            {
-              "news_id": "edc72b9c57aa57b29ee619241ab57e65",
-              "url": "https://newsinfo.inquirer.net/2263979/phivolcs-tremors-observed-in-masbate-davao-occidental",
-              "headline": "Phivolcs: Tremors observed in Masbate, Davao Occidental",
-              "body": "Maps released by the state seismology bureau indicate the epicenters of tremors in Masbate (left) and Davao Occidental, which occurred on July 14 and 15, respectively. — Photos from",
-              "published_date": "2026-07-15T02:02:00+00:00",
-              "outlet": "Inquirer.net",
-              "image": "https://newsinfo.inquirer.net/files/2026/07/earthquake.png"
-            },
-            {
-              "news_id": "c98b8387615d50559c743c85f500edd2",
-              "url": "https://www.msn.com/en-in/lifestyle/whats-hot/62-magnitude-earthquake-strikes-pacific-ring-of-fire-normal-activity-or-warning-of-a-megaquake-explained/ar-AA27UAMb?ocid=BingNewsVerp",
-              "headline": "6.2-magnitude earthquake strikes Pacific Ring of Fire: Normal activity or warning of a megaquake? Explained",
-              "body": "A magnitude 6.2 earthquake struck off the southern Philippines near Mindanao, recorded at a depth of 42.2 miles.",
-              "published_date": "2026-07-15T07:18:33+00:00",
-              "outlet": "Hindustan Times on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.w5q7kHWQnLq2cc6pYDwp5w"
-            },
-            {
-              "news_id": "994254a4148b5d7bbc21964ea15e15f0",
-              "url": "https://www.khaleejtimes.com/world/asia/earthquake-of-magnitude-605-strikes-philippines-mindanao",
-              "headline": "Earthquake of magnitude 6.05 strikes Philippines' Mindanao",
-              "body": "A magnitude 6.05 earthquake struck Mindanao in the Philippines on Tuesday, according to a Institute of Volcanology and Seismology (Phivolcs) bulletin. The quake was at a depth of 10 km (6.21 miles), and it struck on July 14 at 11:49pm local time.",
-              "published_date": "2026-07-14T16:16:00+00:00",
-              "outlet": "Khaleej Times",
-              "image": "https://imgengine.khaleejtimes.com/khaleejtimes-english/2026-07-14/erh22y30/earthquake.jpeg?width=1200&height=630&q=60&format=auto&ogImage=true&mode=crop&rect=34,0,486,324"
-            },
-            {
-              "news_id": "e9ade98d8edf5dfb98c2805ca7700fdf",
-              "url": "https://www.msn.com/en-ph/news/national/magnitude-63-earthquake-struck-off-the-coast-of-balut-island-sarangani-davao-occidental/ar-AA27Uikr",
-              "headline": "Magnitude 6.3 earthquake strikes off the coast of Balut Island, Sarangani, Davao Occidental",
-              "body": "A magnitude 6.3 earthquake struck southwest of Balut Island, Sarangani, Davao Occidental late Tuesday evening, the Philippine Institute of Volcanology and Seismology (PHIVOLCS) reported. PHIVOLCS earlier reported that a magnitude 6.",
-              "published_date": "2026-07-14T16:15:00+00:00",
-              "outlet": "GMA News Online",
-              "image": "https://images.gmanews.tv/webpics/2026/07/Magnitude_6_2026_07_15_00_14_43.jpg"
-            },
-            {
-              "news_id": "0085f738b2d359cfb9cfee2601997439",
-              "url": "https://www.msn.com/en-ph/news/national/minor-sea-level-disturbance-reported-after-strong-earthquake-off-the-coast-of-balut-island-davao-occidental/ar-AA27UC12?ocid=BingNewsVerp",
-              "headline": "Minor sea level disturbance may occur after strong earthquake off the coast of Balut Island, Davao Occidental — PHIVOLCS",
-              "body": "A minor sea level disturbance may be expected following the magnitude 6.5 earthquake that struck off the coast of Balut ...",
-              "published_date": "2026-07-15T06:42:11+00:00",
-              "outlet": "GMA News Online on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.f8_KuGs538bvv2nZt09lQg"
-            },
-            {
-              "news_id": "aa7dc684c246561ca6d2214cb701cf27",
-              "url": "https://en.tempo.co/read/2113729/bmkg-m6-2-earthquake-strikes-mindanao-no-tsunami-threat",
-              "headline": "BMKG: M6.2 Earthquake Strikes Mindanao, No Tsunami Threat",
-              "body": "Indonesian Meteorology, Climatology, and Geophysics Agency (BMKG) reported a tectonic earthquake shaking the Mindanao region, ...",
-              "published_date": "2026-07-09T07:18:32+00:00",
-              "outlet": "Tempo.co English",
-              "image": "https://www.bing.com/th?id=ONUT.sVjmfenuQdX0-eWZFiP8PQ"
-            },
-            {
-              "news_id": "3a6275ff56a75d3a925b065a921df41b",
-              "url": "https://www.msn.com/en-ph/news/national/no-unusual-sea-level-changes-observed-following-strong-earthquake-off-balut-island-says-phivolcs/ar-AA27UAFk?ocid=BingNewsVerp",
-              "headline": "No unusual sea-level changes observed following strong earthquake off Balut Island, says PHIVOLCS",
-              "body": "The recommendation for minor sea-level disturbances for the strong earthquake that occurred on Tuesday, July 14, 2026 has been cancelled, the Philippine Institute of Volcanology and Seismology ...",
-              "published_date": "2026-07-15T06:42:11+00:00",
-              "outlet": "GMA Network on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "f4153ef680425ede83436c8be8afb082",
-              "url": "https://www.msn.com/en-ph/news/other/no-unusual-sea-level-changes-observed-following-strong-earthquake-says-phivolcs/ar-AA27UAFk",
-              "headline": "No unusual sea-level changes observed following strong earthquake off Balut Island, says PHIVOLCS",
-              "body": "The recommendation for minor sea-level disturbances for the strong earthquake that occurred on Tuesday, July 14, 2026 has been cancelled, the Philippine Institute of Volcanology and Seismology (PHIVOLCS) reported.",
-              "published_date": "2026-07-14T22:01:29+00:00",
-              "outlet": "GMA News Online",
-              "image": "https://images.gmanews.tv/webpics/2022/07/phivolcs_building_2022_07_27_19_42_29.jpg"
-            },
-            {
-              "news_id": "3b1b86fc5b125506aa54c07181e7eba3",
-              "url": "https://www.devdiscourse.com/article/science-environment/3950243-seismic-activity-shakes-mindanao-a-closer-look",
-              "headline": "Seismic Activity Shakes Mindanao: A Closer Look",
-              "body": "A 6.05 magnitude earthquake struck Mindanao, Philippines, on Tuesday. The German Research Centre for Geosciences reported the quake, which had a depth of 10 km. The event highlights the region's ...",
-              "published_date": "2026-07-11T07:18:32+00:00",
-              "outlet": "devdiscourse",
-              "image": ""
-            }
-          ]
-        }
-      ]
     }
   ]
 }
