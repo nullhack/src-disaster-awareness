@@ -1,5 +1,4 @@
 import logging
-import httpx
 
 from disaster_report.models import FetchedArticle
 

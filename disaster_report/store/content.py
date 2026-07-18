@@ -226,6 +226,15 @@ class ContentStore:
         inc["search_keys"] = list(search_keys)
         dump_yaml(incident_manifest_path(self._root, incident_id), inc)
 
+    def set_extended_monitoring(
+        self, incident_id: str, enabled: bool
+    ) -> None:
+        inc = self._ensure_incident(incident_id)
+        if bool(inc.get("extended_monitoring", False)) == bool(enabled):
+            return
+        inc["extended_monitoring"] = bool(enabled)
+        dump_yaml(incident_manifest_path(self._root, incident_id), inc)
+
     # ----------------------------------------------------- source reports in
 
     def ingest_source_report(self, report: SourceReport) -> str:
@@ -527,6 +536,31 @@ class ContentStore:
             return []
         by_id = {i.incident_id: i for i in self.read_incidents()}
         return [by_id[i] for i in sorted(active_ids) if i in by_id]
+
+    def extended_monitoring_incidents(self) -> list[Incident]:
+        flagged = [
+            iuuid
+            for iuuid, inc in self._incidents.items()
+            if inc.get("extended_monitoring", False)
+        ]
+        if not flagged:
+            return []
+        by_id = {i.incident_id: i for i in self.read_incidents()}
+        return [by_id[i] for i in sorted(flagged) if i in by_id]
+
+    def repolllable_incidents(self, window_days: int) -> list[Incident]:
+        seen: set[str] = set()
+        union: list[Incident] = []
+        for inc in self.active_incidents(window_days):
+            if inc.incident_id not in seen:
+                seen.add(inc.incident_id)
+                union.append(inc)
+        for inc in self.extended_monitoring_incidents():
+            if inc.incident_id not in seen:
+                seen.add(inc.incident_id)
+                union.append(inc)
+        union.sort(key=lambda i: i.first_seen_at)
+        return union
 
     def read_logs_with_news(
         self, incident_id: str

@@ -558,3 +558,78 @@ class TestResumabilityStamp:
         store = ContentStore(tmp_path)
         store.ingest_source_report(_build_report(source="USGS", source_id="us6001"))
         assert store.read_searched_report_keys() == set()
+
+
+class TestExtendedMonitoring:
+    def _birth(self, store: ContentStore, tmp_path: Path, *, source_id: str) -> str:
+        rid = store.ingest_source_report(_build_report(source_id=source_id))
+        inc = _new_incident_id()
+        store.add_report_incident(rid, inc)
+        return inc
+
+    def test_set_extended_monitoring_writes_flag(self, tmp_path: Path) -> None:
+        store = ContentStore(tmp_path)
+        inc = self._birth(store, tmp_path, source_id="us-em-1")
+        store.set_extended_monitoring(inc, True)
+        import yaml
+        manifest = yaml.safe_load(
+            (incident_dir(tmp_path, inc) / "incident.yaml").read_text()
+        )
+        assert manifest["extended_monitoring"] is True
+
+    def test_extended_monitoring_incidents_returns_only_flagged(
+        self, tmp_path: Path
+    ) -> None:
+        store = ContentStore(tmp_path)
+        inc_a = self._birth(store, tmp_path, source_id="us-em-a")
+        inc_b = self._birth(store, tmp_path, source_id="us-em-b")
+        store.set_extended_monitoring(inc_a, True)
+        flagged = store.extended_monitoring_incidents()
+        assert {i.incident_id for i in flagged} == {inc_a}
+        assert inc_b not in {i.incident_id for i in flagged}
+
+    def test_extended_monitoring_default_false_when_absent(
+        self, tmp_path: Path
+    ) -> None:
+        store = ContentStore(tmp_path)
+        inc = self._birth(store, tmp_path, source_id="us-em-d")
+        assert store.extended_monitoring_incidents() == []
+        assert inc not in {i.incident_id for i in store.extended_monitoring_incidents()}
+
+    def test_repolllable_unions_active_and_extended(self, tmp_path: Path) -> None:
+        store = ContentStore(tmp_path, clock=_clock)
+        # active incident: report + pending news in window
+        rid_a = store.ingest_source_report(
+            _build_report(source_id="us-active")
+        )
+        nid_a = store.ingest_news_item(
+            _build_news(url="https://a.com", published_date="2026-06-30T10:00:00Z")
+        )
+        inc_a = _new_incident_id()
+        store.add_report_incident(rid_a, inc_a)
+        store.assign_news_to_incident(nid_a, inc_a)
+        # dormant incident: report only, no pending news
+        rid_d = store.ingest_source_report(
+            _build_report(source_id="us-dormant")
+        )
+        inc_d = _new_incident_id()
+        store.add_report_incident(rid_d, inc_d)
+        # dormant not in active set
+        assert inc_d not in {i.incident_id for i in store.active_incidents(WINDOW)}
+        # flag dormant
+        store.set_extended_monitoring(inc_d, True)
+        repoll = store.repolllable_incidents(WINDOW)
+        ids = {i.incident_id for i in repoll}
+        assert inc_a in ids
+        assert inc_d in ids
+
+    def test_set_extended_monitoring_noop_when_unchanged(
+        self, tmp_path: Path
+    ) -> None:
+        store = ContentStore(tmp_path)
+        inc = self._birth(store, tmp_path, source_id="us-em-n")
+        store.set_extended_monitoring(inc, True)
+        mtime1 = (incident_dir(tmp_path, inc) / "incident.yaml").stat().st_mtime_ns
+        store.set_extended_monitoring(inc, True)
+        mtime2 = (incident_dir(tmp_path, inc) / "incident.yaml").stat().st_mtime_ns
+        assert mtime1 == mtime2

@@ -335,11 +335,15 @@ def search_news(
             )
         logger.info("search: per-report mode done")
         return
-    active = wh.active_incidents(active_window_days)
-    total_active = len(active)
-    logger.info("search: repoll mode, %d active incidents (window=%d days)", total_active, active_window_days)
-    for i, incident in enumerate(active, 1):
-        logger.info("search: [%d/%d] incident %s — %s", i, total_active, incident.incident_id, incident.name)
+    active_n = len(wh.active_incidents(active_window_days))
+    extended_n = len(wh.extended_monitoring_incidents())
+    repoll = wh.repolllable_incidents(active_window_days)
+    logger.info(
+        "search: repoll mode, active=%d extended_monitoring=%d repolllable=%d (window=%d days)",
+        active_n, extended_n, len(repoll), active_window_days,
+    )
+    for i, incident in enumerate(repoll, 1):
+        logger.info("search: [%d/%d] incident %s — %s", i, len(repoll), incident.incident_id, incident.name)
         _repoll_one_incident(wh, incident, ddg_adapter, digest_fn, news_timelimit)
     logger.info("search: repoll mode done")
 
