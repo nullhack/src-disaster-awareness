@@ -108,9 +108,6 @@ class TestProcessIssue:
         monkeypatch.setattr(mod, "_remove_label", lambda *a, **k: None)
         monkeypatch.setattr(mod, "_add_label", lambda *a, **k: None)
         monkeypatch.setattr(mod, "_comment", lambda *a, **k: None)
-        monkeypatch.setattr(
-            mod, "_find_existing_incident", lambda *a, **k: None
-        )
 
     def _make_store(self) -> MagicMock:
         store = MagicMock()
@@ -135,7 +132,7 @@ class TestProcessIssue:
         store = MagicMock()
         digester = MagicMock()
         issue = _make_issue(body="no url here")
-        outcome = mod._process_issue(issue, store, digester, set(), window_days=7)
+        outcome = mod._process_issue(issue, store, digester, set())
         assert outcome == "rejected:no-url"
         assert calls and calls[0][0] == "reject"
 
@@ -145,7 +142,6 @@ class TestProcessIssue:
         monkeypatch: pytest.MonkeyPatch,
     ) -> None:
         from scripts import ingest_submissions as mod
-
 
         sid_seen: list[str] = []
         monkeypatch.setattr(mod, "_reject", lambda *a, **k: pytest.fail("should not reject"))
@@ -159,7 +155,7 @@ class TestProcessIssue:
         url = "https://cnn.com/article"
         existing_sid = mod._source_id(url)
         outcome = mod._process_issue(
-            _make_issue(body=url), store, digester, {existing_sid}, window_days=7
+            _make_issue(body=url), store, digester, {existing_sid}
         )
         assert outcome == "imported:existing"
         assert fetch_calls == []
@@ -178,7 +174,7 @@ class TestProcessIssue:
         store = MagicMock()
         store._news_by_url = {}
         digester = MagicMock()
-        outcome = mod._process_issue(_make_issue(), store, digester, set(), window_days=7)
+        outcome = mod._process_issue(_make_issue(), store, digester, set())
         assert outcome == "rejected:fetch-failed"
         assert rejected and "could not fetch" in rejected[0][1]
 
@@ -196,7 +192,7 @@ class TestProcessIssue:
         store._news_by_url = {}
         digester = MagicMock()
         digester.classify_submission.return_value = _make_classification(is_disaster=False)
-        outcome = mod._process_issue(_make_issue(), store, digester, set(), window_days=7)
+        outcome = mod._process_issue(_make_issue(), store, digester, set())
         assert outcome == "rejected:not-disaster"
         assert rejected
 
@@ -214,7 +210,7 @@ class TestProcessIssue:
         store._news_by_url = {}
         digester = MagicMock()
         digester.classify_submission.return_value = _make_classification(country_code="")
-        outcome = mod._process_issue(_make_issue(), store, digester, set(), window_days=7)
+        outcome = mod._process_issue(_make_issue(), store, digester, set())
         assert outcome == "rejected:no-country"
         assert rejected and "country" in rejected[0][1]
 
@@ -231,7 +227,7 @@ class TestProcessIssue:
         store.read_incident_for_news.return_value = None
         digester = MagicMock()
         digester.classify_submission.return_value = _make_classification()
-        outcome = mod._process_issue(_make_issue(), store, digester, set(), window_days=7)
+        outcome = mod._process_issue(_make_issue(), store, digester, set())
         assert outcome == "imported:new"
         store.ingest_source_report.assert_called_once()
         store.ingest_report_places.assert_called_once()
@@ -260,9 +256,7 @@ class TestProcessIssue:
         store._news_by_url = {"https://cnn.com/article": "nuuid-existing"}
         store.read_incident_for_news.return_value = "incident-abcdef1234"
         digester = MagicMock()
-        outcome = mod._process_issue(
-            _make_issue(), store, digester, set(), window_days=7
-        )
+        outcome = mod._process_issue(_make_issue(), store, digester, set())
         assert outcome == "imported:existing-news"
         assert fetch_calls == []
         digester.classify_submission.assert_not_called()
@@ -286,34 +280,10 @@ class TestProcessIssue:
         store._news_by_url = {"https://cnn.com/article": "nuuid-staging"}
         store.read_incident_for_news.return_value = None
         digester = MagicMock()
-        outcome = mod._process_issue(
-            _make_issue(), store, digester, set(), window_days=7
-        )
+        outcome = mod._process_issue(_make_issue(), store, digester, set())
         assert outcome == "imported:existing-news"
         store.ingest_source_report.assert_not_called()
         assert any("pending news" in c for c in comments)
-
-    def test_dedup_gate_links_to_existing_incident(
-        self,
-        tmp_path: "Path",
-        monkeypatch: pytest.MonkeyPatch,
-    ) -> None:
-        from scripts import ingest_submissions as mod
-
-        self._patch_common(monkeypatch)
-        monkeypatch.setattr(
-            mod, "_find_existing_incident", lambda *a, **k: "incident-dedup-hit"
-        )
-        monkeypatch.setattr(mod, "fetch_article", lambda url: _make_fetched())
-        store = self._make_store()
-        store.read_incident_for_news.return_value = None
-        digester = MagicMock()
-        digester.classify_submission.return_value = _make_classification()
-        outcome = mod._process_issue(_make_issue(), store, digester, set(), window_days=7)
-        assert outcome == "imported:existing-incident"
-        store.add_report_incident.assert_called_once()
-        args, _ = store.add_report_incident.call_args
-        assert args == ("rid-1", "incident-dedup-hit")
 
     def test_news_not_stolen_when_already_on_different_incident(
         self,
@@ -328,7 +298,7 @@ class TestProcessIssue:
         store.read_incident_for_news.return_value = "incident-original"
         digester = MagicMock()
         digester.classify_submission.return_value = _make_classification()
-        outcome = mod._process_issue(_make_issue(), store, digester, set(), window_days=7)
+        outcome = mod._process_issue(_make_issue(), store, digester, set())
         assert outcome == "imported:new"
         store.ingest_news_item.assert_called_once()
         store.assign_news_to_incident.assert_not_called()
