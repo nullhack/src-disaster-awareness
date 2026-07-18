@@ -1,30 +1,30 @@
 {
   "schema_version": "1.4",
   "report_date": "2026-07-09",
-  "generated_at": "2026-07-18T09:08:41Z",
+  "generated_at": "2026-07-18T14:34:50Z",
   "as_of": "2026-07-09",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 78,
+    "reportable_total": 79,
     "new_today": 1,
     "critical": 0,
     "high": 41,
-    "medium": 36,
+    "medium": 37,
     "low": 1,
     "disease_outbreaks": 22,
-    "countries_affected": 32,
-    "news_total": 196,
+    "countries_affected": 33,
+    "news_total": 202,
     "max_magnitude": 27577.0,
     "by_severity": {
       "CRITICAL": 0,
       "HIGH": 41,
-      "MEDIUM": 36,
+      "MEDIUM": 37,
       "LOW": 1
     },
     "by_type": {
       "Disease": 22,
-      "Earthquake": 50,
+      "Earthquake": 51,
       "Forest Fire": 2,
       "Tropical Cyclone": 3,
       "Flood": 1
@@ -32,7 +32,7 @@
     "by_region": {
       "Americas": 23,
       "Africa": 11,
-      "Asia": 35,
+      "Asia": 36,
       "Oceania": 4,
       "Europe": 3,
       "Unknown": 2
@@ -217,6 +217,15 @@
       "iso2": "NZ",
       "region": "Oceania",
       "country_group": "B",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "Myanmar",
+      "count": 1,
+      "max_sev_rank": 2,
+      "iso2": "MM",
+      "region": "Asia",
+      "country_group": "A",
       "max_severity": "MEDIUM"
     },
     {
@@ -1624,6 +1633,141 @@
               "body": "A magnitude 6.8 earthquake has struck the Kermadec Islands region near New Zealand. The tremor stuck the region, which is north east of New Zealand just before 11am AEDT, at a depth of 10km, according ...",
               "published_date": "2026-07-08T15:14:51+00:00",
               "outlet": "MSN",
+              "image": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "20250718-MM-EQ",
+      "canonical_name": "Earthquake Myanmar 2025-07",
+      "summary": "The March 2025 earthquake in Myanmar ruptured nearly 500 kilometers of the Sagaing Fault at supershear speeds, as detailed in new studies. Humanitarian organizations like HelpAge International supported older people through a six-month response, while the World Bank reported moderate signs of economic recovery in Myanmar amid ongoing conflict and earthquake impacts.",
+      "country": "Myanmar",
+      "iso2": "MM",
+      "lat": 22.6861,
+      "lon": 96.0157,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2025-07-18",
+      "first_reported_date": "2025-07-18",
+      "last_updated_date": "2026-07-08",
+      "days_since_event": 365,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 0,
+        "gdacs": 1,
+        "healthmap": 0,
+        "news": 6
+      },
+      "source_links": [
+        {
+          "type": "GDACS",
+          "label": "Orange alert · Magnitude 5.4M, Depth:10km",
+          "url": "https://www.gdacs.org/report.aspx?eventid=1490667&episodeid=1648883&eventtype=EQ",
+          "meta": "Magnitude 5.4M, Depth:10km"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 5.4,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": "Orange",
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Thai-Chinese company denies flouting safety measures in probe of skyscraper collapse following quake | The Asahi Shimbun: Breaking News, Japan News and Analysis",
+          "url": "https://www.asahi.com/ajw/articles/15719981",
+          "outlet": "The Asahi Shimbun",
+          "published_date": "2025-04-22"
+        },
+        {
+          "headline": "Supershear rupture sustained in thick fault zone during 2025 Mandalay earthquake, study in research package shows",
+          "url": "https://www.eurekalert.org/news-releases/1102952",
+          "outlet": "EurekAlert!",
+          "published_date": "2025-10-30"
+        },
+        {
+          "headline": "Rebuilding lives with dignity: How AGE Myanmar supported older people after the 2025 earthquake",
+          "url": "https://www.helpage.org/news/how-age-myanmar-supported-older-people-after-the-2025-earthquake/",
+          "outlet": "HelpAge International",
+          "published_date": "2025-11-03"
+        },
+        {
+          "headline": "Myanmar’s Economy Shows Moderate Signs of Recovery Amid Earthquake and Conflict Impacts",
+          "url": "https://www.worldbank.org/en/news/press-release/2025/12/08/myanmar-s-economy-shows-moderate-signs-of-recovery-amid-earthquake-and-conflict-impacts",
+          "outlet": "World Bank",
+          "published_date": "2025-12-08"
+        },
+        {
+          "headline": "Satellite data helps UNM researchers map massive rupture of 2025 Myanmar earthquake",
+          "url": "https://www.eurekalert.org/news-releases/1109421",
+          "outlet": "EurekAlert!",
+          "published_date": "2025-12-10"
+        },
+        {
+          "headline": "Myanmar's deadliest earthquake results in 500 km rupture and signs of a rare supershear break",
+          "url": "https://www.yahoo.com/news/science/articles/myanmars-deadliest-earthquake-results-500-230700862.html",
+          "outlet": "The Brighter Side of News · via Yahoo News",
+          "published_date": "2026-07-08"
+        }
+      ],
+      "news_total": 6,
+      "logs": [
+        {
+          "log_date": "2026-07-08",
+          "summary": "The March 2025 earthquake in Myanmar ruptured nearly 500 kilometers of the Sagaing Fault at supershear speeds, as detailed in new studies. Humanitarian organizations like HelpAge International supported older people through a six-month response, while the World Bank reported moderate signs of economic recovery in Myanmar amid ongoing conflict and earthquake impacts.",
+          "news": [
+            {
+              "news_id": "b7abbf5469b858768b9741e7c2ef619e",
+              "url": "https://www.eurekalert.org/news-releases/1102952",
+              "headline": "Supershear rupture sustained in thick fault zone during 2025 Mandalay earthquake, study in research package shows",
+              "body": "A massive March 2025 earthquake in Myanmar tore through nearly 500 kilometers of the Sagaing Fault at extremely high speeds. In a new study – part of a package of four research articles on seismic activity in Myanmar – researchers show that an unusually thick, low-velocity fault zone acted like a high-speed corridor, driving one of the fastest and longest continental ruptures ever recorded. The largest earthquakes that occur within continental crusts can rupture faults extending for hundreds of kilometers and pose significant seismic threats. Many of these powerful events evolve into supershear ruptures – earthquakes in which the rupture front moves faster than the speed at which shear waves travel through the crust, making them especially powerful. This behavior often occurs on simple, straight faults like the San Andreas, North Anatolian, and Sagaing faults, which let energy concentrate instead of dispersing. During such quakes, parts of the crust around the fault weaken, forming damage zones that can affect how future earthquakes unfold. However, the relationship between fault zones and major strike-slip ruptures, and their influence on long-lasting supershear events, remains poorly understood. According to Shengji Wei and colleagues, the March 28, 2025, magnitude 7.8 Mandalay earthquake in Myanmar offers new insight into these seismic dynamics. The Mandalay quake struck along the Sagaing Fault, breaking a 250-kilometer section that hadn’t ruptured in over a century, and produced a surface rupture exceeding 450 kilometers that reached supershear speeds. Using an interdisciplinary approach that combined satellite geodesy, broadband seismic data, receiver function imaging, and numerical simulations, Wei et al. reconstructed the earthquake’s 3D surface deformation, slip distribution, and rupture dynamics. They discovered that the rupture started in both directions from the epicenter and transitioned to supershear speeds (~5.3 km/s) about 100 kilometers to the south. This transition occurred along a roughly 2-kilometer-thick low-velocity fault zone, where shear-wave speeds were reduced by about 45%, coinciding with a shift in fault shape and structure. Wei et al. argue that it is these factors likely enabled the initiation and continuation of the supershear rupture and suggest that these events are more likely to occur along wide, simple strike-slip faults that have evolved through repeated seismic activity. Such insights could improve hazard assessments for major continental faults, such as California’s San Andreas and Türkiye’s North Anatolian faults, where similar conditions exist.",
+              "published_date": "2025-10-30",
+              "outlet": "EurekAlert!",
+              "image": ""
+            },
+            {
+              "news_id": "3e2b23fe5524552884c94b241492b69d",
+              "url": "https://www.eurekalert.org/news-releases/1109421",
+              "headline": "Satellite data helps UNM researchers map massive rupture of 2025 Myanmar earthquake",
+              "body": "An international team of researchers led by The University of New Mexico set out to understand how these mature faults break during massive seismic events, focusing on a long-debated phenomenon known as the “shallow slip deficit.” In many earthquakes, the surface shifts far less than the rocks deep underground, leaving scientists to question whether the missing energy is absorbed by surrounding rock or simply unmeasured. By analyzing the 2025 Myanmar earthquake, the team aimed to determine how a simple, ancient fault system releases energy, and whether that energy reaches the surface.",
+              "published_date": "2025-12-10",
+              "outlet": "EurekAlert!",
+              "image": ""
+            },
+            {
+              "news_id": "ff4b3e7632975894b860cf66efe51f38",
+              "url": "https://www.helpage.org/news/how-age-myanmar-supported-older-people-after-the-2025-earthquake/",
+              "headline": "Rebuilding lives with dignity: How AGE Myanmar supported older people after the 2025 earthquake",
+              "body": "Phase 1 of the six-month DEC Myanmar Earthquake Response has now come to a successful close, achieving remarkable results across affected communities.",
+              "published_date": "2025-11-03",
+              "outlet": "HelpAge International",
+              "image": ""
+            },
+            {
+              "news_id": "ef91e5613be85603ac8646528aa9020b",
+              "url": "https://www.worldbank.org/en/news/press-release/2025/12/08/myanmar-s-economy-shows-moderate-signs-of-recovery-amid-earthquake-and-conflict-impacts",
+              "headline": "Myanmar’s Economy Shows Moderate Signs of Recovery Amid Earthquake and Conflict Impacts",
+              "body": "Myanmar’s Economy Shows Moderate Signs of Recovery Amid Earthquake and Conflict Impacts Economic growth remains constrained due to weak domestic demand, labor shortages, and frequent power outages",
+              "published_date": "2025-12-08",
+              "outlet": "World Bank",
               "image": ""
             }
           ]

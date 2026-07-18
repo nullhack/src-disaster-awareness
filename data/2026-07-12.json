@@ -1,29 +1,29 @@
 {
   "schema_version": "1.4",
   "report_date": "2026-07-12",
-  "generated_at": "2026-07-18T09:08:41Z",
+  "generated_at": "2026-07-18T14:34:50Z",
   "as_of": "2026-07-12",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 84,
-    "new_today": 2,
+    "reportable_total": 83,
+    "new_today": 0,
     "critical": 0,
-    "high": 43,
+    "high": 42,
     "medium": 39,
     "low": 2,
-    "disease_outbreaks": 24,
-    "countries_affected": 34,
-    "news_total": 229,
+    "disease_outbreaks": 23,
+    "countries_affected": 35,
+    "news_total": 226,
     "max_magnitude": 27577.0,
     "by_severity": {
       "CRITICAL": 0,
-      "HIGH": 43,
+      "HIGH": 42,
       "MEDIUM": 39,
       "LOW": 2
     },
     "by_type": {
-      "Disease": 24,
+      "Disease": 23,
       "Earthquake": 53,
       "Forest Fire": 2,
       "Tropical Cyclone": 3,
@@ -35,7 +35,7 @@
       "Africa": 11,
       "Asia": 39,
       "Europe": 3,
-      "Unknown": 3
+      "Unknown": 2
     }
   },
   "by_country": [
@@ -103,15 +103,6 @@
       "max_severity": "MEDIUM"
     },
     {
-      "country": "Japan",
-      "count": 4,
-      "max_sev_rank": 2,
-      "iso2": "JP",
-      "region": "Asia",
-      "country_group": "A",
-      "max_severity": "MEDIUM"
-    },
-    {
       "country": "Chile",
       "count": 3,
       "max_sev_rank": 2,
@@ -125,6 +116,15 @@
       "count": 3,
       "max_sev_rank": 2,
       "iso2": "BD",
+      "region": "Asia",
+      "country_group": "A",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "Japan",
+      "count": 3,
+      "max_sev_rank": 2,
+      "iso2": "JP",
       "region": "Asia",
       "country_group": "A",
       "max_severity": "MEDIUM"
@@ -226,6 +226,15 @@
       "iso2": "NZ",
       "region": "Oceania",
       "country_group": "B",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "Myanmar",
+      "count": 1,
+      "max_sev_rank": 2,
+      "iso2": "MM",
+      "region": "Asia",
+      "country_group": "A",
       "max_severity": "MEDIUM"
     },
     {
@@ -1750,6 +1759,141 @@
               "body": "A magnitude 6.8 earthquake has struck the Kermadec Islands region near New Zealand. The tremor stuck the region, which is north east of New Zealand just before 11am AEDT, at a depth of 10km, according ...",
               "published_date": "2026-07-08T15:14:51+00:00",
               "outlet": "MSN",
+              "image": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "20250718-MM-EQ",
+      "canonical_name": "Earthquake Myanmar 2025-07",
+      "summary": "The March 2025 earthquake in Myanmar ruptured nearly 500 kilometers of the Sagaing Fault at supershear speeds, as detailed in new studies. Humanitarian organizations like HelpAge International supported older people through a six-month response, while the World Bank reported moderate signs of economic recovery in Myanmar amid ongoing conflict and earthquake impacts.",
+      "country": "Myanmar",
+      "iso2": "MM",
+      "lat": 22.6861,
+      "lon": 96.0157,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2025-07-18",
+      "first_reported_date": "2025-07-18",
+      "last_updated_date": "2026-07-08",
+      "days_since_event": 365,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 0,
+        "gdacs": 1,
+        "healthmap": 0,
+        "news": 6
+      },
+      "source_links": [
+        {
+          "type": "GDACS",
+          "label": "Orange alert · Magnitude 5.4M, Depth:10km",
+          "url": "https://www.gdacs.org/report.aspx?eventid=1490667&episodeid=1648883&eventtype=EQ",
+          "meta": "Magnitude 5.4M, Depth:10km"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 5.4,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": "Orange",
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Thai-Chinese company denies flouting safety measures in probe of skyscraper collapse following quake | The Asahi Shimbun: Breaking News, Japan News and Analysis",
+          "url": "https://www.asahi.com/ajw/articles/15719981",
+          "outlet": "The Asahi Shimbun",
+          "published_date": "2025-04-22"
+        },
+        {
+          "headline": "Supershear rupture sustained in thick fault zone during 2025 Mandalay earthquake, study in research package shows",
+          "url": "https://www.eurekalert.org/news-releases/1102952",
+          "outlet": "EurekAlert!",
+          "published_date": "2025-10-30"
+        },
+        {
+          "headline": "Rebuilding lives with dignity: How AGE Myanmar supported older people after the 2025 earthquake",
+          "url": "https://www.helpage.org/news/how-age-myanmar-supported-older-people-after-the-2025-earthquake/",
+          "outlet": "HelpAge International",
+          "published_date": "2025-11-03"
+        },
+        {
+          "headline": "Myanmar’s Economy Shows Moderate Signs of Recovery Amid Earthquake and Conflict Impacts",
+          "url": "https://www.worldbank.org/en/news/press-release/2025/12/08/myanmar-s-economy-shows-moderate-signs-of-recovery-amid-earthquake-and-conflict-impacts",
+          "outlet": "World Bank",
+          "published_date": "2025-12-08"
+        },
+        {
+          "headline": "Satellite data helps UNM researchers map massive rupture of 2025 Myanmar earthquake",
+          "url": "https://www.eurekalert.org/news-releases/1109421",
+          "outlet": "EurekAlert!",
+          "published_date": "2025-12-10"
+        },
+        {
+          "headline": "Myanmar's deadliest earthquake results in 500 km rupture and signs of a rare supershear break",
+          "url": "https://www.yahoo.com/news/science/articles/myanmars-deadliest-earthquake-results-500-230700862.html",
+          "outlet": "The Brighter Side of News · via Yahoo News",
+          "published_date": "2026-07-08"
+        }
+      ],
+      "news_total": 6,
+      "logs": [
+        {
+          "log_date": "2026-07-08",
+          "summary": "The March 2025 earthquake in Myanmar ruptured nearly 500 kilometers of the Sagaing Fault at supershear speeds, as detailed in new studies. Humanitarian organizations like HelpAge International supported older people through a six-month response, while the World Bank reported moderate signs of economic recovery in Myanmar amid ongoing conflict and earthquake impacts.",
+          "news": [
+            {
+              "news_id": "b7abbf5469b858768b9741e7c2ef619e",
+              "url": "https://www.eurekalert.org/news-releases/1102952",
+              "headline": "Supershear rupture sustained in thick fault zone during 2025 Mandalay earthquake, study in research package shows",
+              "body": "A massive March 2025 earthquake in Myanmar tore through nearly 500 kilometers of the Sagaing Fault at extremely high speeds. In a new study – part of a package of four research articles on seismic activity in Myanmar – researchers show that an unusually thick, low-velocity fault zone acted like a high-speed corridor, driving one of the fastest and longest continental ruptures ever recorded. The largest earthquakes that occur within continental crusts can rupture faults extending for hundreds of kilometers and pose significant seismic threats. Many of these powerful events evolve into supershear ruptures – earthquakes in which the rupture front moves faster than the speed at which shear waves travel through the crust, making them especially powerful. This behavior often occurs on simple, straight faults like the San Andreas, North Anatolian, and Sagaing faults, which let energy concentrate instead of dispersing. During such quakes, parts of the crust around the fault weaken, forming damage zones that can affect how future earthquakes unfold. However, the relationship between fault zones and major strike-slip ruptures, and their influence on long-lasting supershear events, remains poorly understood. According to Shengji Wei and colleagues, the March 28, 2025, magnitude 7.8 Mandalay earthquake in Myanmar offers new insight into these seismic dynamics. The Mandalay quake struck along the Sagaing Fault, breaking a 250-kilometer section that hadn’t ruptured in over a century, and produced a surface rupture exceeding 450 kilometers that reached supershear speeds. Using an interdisciplinary approach that combined satellite geodesy, broadband seismic data, receiver function imaging, and numerical simulations, Wei et al. reconstructed the earthquake’s 3D surface deformation, slip distribution, and rupture dynamics. They discovered that the rupture started in both directions from the epicenter and transitioned to supershear speeds (~5.3 km/s) about 100 kilometers to the south. This transition occurred along a roughly 2-kilometer-thick low-velocity fault zone, where shear-wave speeds were reduced by about 45%, coinciding with a shift in fault shape and structure. Wei et al. argue that it is these factors likely enabled the initiation and continuation of the supershear rupture and suggest that these events are more likely to occur along wide, simple strike-slip faults that have evolved through repeated seismic activity. Such insights could improve hazard assessments for major continental faults, such as California’s San Andreas and Türkiye’s North Anatolian faults, where similar conditions exist.",
+              "published_date": "2025-10-30",
+              "outlet": "EurekAlert!",
+              "image": ""
+            },
+            {
+              "news_id": "3e2b23fe5524552884c94b241492b69d",
+              "url": "https://www.eurekalert.org/news-releases/1109421",
+              "headline": "Satellite data helps UNM researchers map massive rupture of 2025 Myanmar earthquake",
+              "body": "An international team of researchers led by The University of New Mexico set out to understand how these mature faults break during massive seismic events, focusing on a long-debated phenomenon known as the “shallow slip deficit.” In many earthquakes, the surface shifts far less than the rocks deep underground, leaving scientists to question whether the missing energy is absorbed by surrounding rock or simply unmeasured. By analyzing the 2025 Myanmar earthquake, the team aimed to determine how a simple, ancient fault system releases energy, and whether that energy reaches the surface.",
+              "published_date": "2025-12-10",
+              "outlet": "EurekAlert!",
+              "image": ""
+            },
+            {
+              "news_id": "ff4b3e7632975894b860cf66efe51f38",
+              "url": "https://www.helpage.org/news/how-age-myanmar-supported-older-people-after-the-2025-earthquake/",
+              "headline": "Rebuilding lives with dignity: How AGE Myanmar supported older people after the 2025 earthquake",
+              "body": "Phase 1 of the six-month DEC Myanmar Earthquake Response has now come to a successful close, achieving remarkable results across affected communities.",
+              "published_date": "2025-11-03",
+              "outlet": "HelpAge International",
+              "image": ""
+            },
+            {
+              "news_id": "ef91e5613be85603ac8646528aa9020b",
+              "url": "https://www.worldbank.org/en/news/press-release/2025/12/08/myanmar-s-economy-shows-moderate-signs-of-recovery-amid-earthquake-and-conflict-impacts",
+              "headline": "Myanmar’s Economy Shows Moderate Signs of Recovery Amid Earthquake and Conflict Impacts",
+              "body": "Myanmar’s Economy Shows Moderate Signs of Recovery Amid Earthquake and Conflict Impacts Economic growth remains constrained due to weak domestic demand, labor shortages, and frequent power outages",
+              "published_date": "2025-12-08",
+              "outlet": "World Bank",
               "image": ""
             }
           ]
@@ -3650,49 +3794,49 @@
           "headline": "‘Once-in-300-years’ rain leaves Thai city flooded and maternity ward stranded",
           "url": "https://sports.yahoo.com/articles/once-300-years-rain-leaves-060722138.html",
           "outlet": "CNN · via Yahoo Sports",
-          "published_date": "2026-07-08T19:31:46+00:00"
-        },
-        {
-          "headline": "Over 1,000 Killed and Hundreds Missing After Heavy Rain Triggers Flooding and...",
-          "url": "https://www.yahoo.com/news/articles/over-1-000-killed-hundreds-204808413.html",
-          "outlet": "People · via Yahoo News",
-          "published_date": "2026-07-08T19:31:46+00:00"
-        },
-        {
-          "headline": "Asia floods: Death toll crosses 1,500 as rescuers race to reach isolated...",
-          "url": "https://www.yahoo.com/news/articles/asia-floods-death-toll-crosses-081250338.html",
-          "outlet": "The Independent · via Yahoo News",
-          "published_date": "2026-07-08T19:31:46+00:00"
-        },
-        {
-          "headline": "Floods and cyclonic storms across Thailand, Sri Lanka and Indonesia leave over...",
-          "url": "https://www.yahoo.com/news/articles/floods-cyclonic-storms-across-thailand-042544787.html",
-          "outlet": "The Independent · via Yahoo News",
-          "published_date": "2026-07-08T19:31:46+00:00"
-        },
-        {
-          "headline": "Floods in Indonesia, Sri Lanka, Thailand leave more than 1,140 dead",
-          "url": "https://www.yahoo.com/news/articles/floods-indonesia-sri-lanka-thailand-065450927.html",
-          "outlet": "Al Jazeera · via Yahoo News",
-          "published_date": "2026-07-08T19:31:46+00:00"
-        },
-        {
-          "headline": "At least 1,250 people dead: What caused the devastating Asia floods?",
-          "url": "https://www.yahoo.com/news/articles/least-1-250-people-dead-095834397.html",
-          "outlet": "Al Jazeera · via Yahoo News",
-          "published_date": "2026-07-08T19:31:46+00:00"
+          "published_date": "2025-11-25"
         },
         {
           "headline": "Death toll from Sri Lanka landslides and floods rises to 69",
           "url": "https://www.yahoo.com/news/articles/sri-lanka-landslides-floods-death-063932046.html",
           "outlet": "Al Jazeera · via Yahoo News",
-          "published_date": "2026-07-08T19:40:01+00:00"
+          "published_date": "2025-11-28"
         },
         {
-          "headline": "ADB Gives $2 Million to Help Flood-Hit Communities in Southern Thailand",
+          "headline": "Over 1,000 Killed and Hundreds Missing After Heavy Rain Triggers Flooding and Mudslides",
+          "url": "https://www.yahoo.com/news/articles/over-1-000-killed-hundreds-204808413.html",
+          "outlet": "People · via Yahoo News",
+          "published_date": "2025-12-01"
+        },
+        {
+          "headline": "Floods in Indonesia, Sri Lanka, Thailand leave more than 1,140 dead",
+          "url": "https://www.yahoo.com/news/articles/floods-indonesia-sri-lanka-thailand-065450927.html",
+          "outlet": "Al Jazeera · via Yahoo News",
+          "published_date": "2025-12-01"
+        },
+        {
+          "headline": "Floods and cyclonic storms across Thailand, Sri Lanka and Indonesia leave over 1,200 dead and hundreds missing",
+          "url": "https://www.yahoo.com/news/articles/floods-cyclonic-storms-across-thailand-042544787.html",
+          "outlet": "The Independent · via Yahoo News",
+          "published_date": "2025-12-02"
+        },
+        {
+          "headline": "At least 1,250 people dead: What caused the devastating Asia floods?",
+          "url": "https://www.yahoo.com/news/articles/least-1-250-people-dead-095834397.html",
+          "outlet": "Al Jazeera · via Yahoo News",
+          "published_date": "2025-12-02"
+        },
+        {
+          "headline": "Asia floods: Death toll crosses 1,500 as rescuers race to reach isolated villages",
+          "url": "https://www.yahoo.com/news/articles/asia-floods-death-toll-crosses-081250338.html",
+          "outlet": "The Independent · via Yahoo News",
+          "published_date": "2025-12-04"
+        },
+        {
+          "headline": "ADB Gives $2 Million to Help Flood-Hit Communities in Southern Thailand | Business",
           "url": "https://www.devdiscourse.com/article/business/3948787-adb-gives-2-million-to-help-flood-hit-communities-in-southern-thailand",
           "outlet": "Devdiscourse",
-          "published_date": "2026-07-11T17:32:13+00:00"
+          "published_date": "2026-07-11"
         },
         {
           "headline": "ADB Provides $2 Million Grant to Support Flood-Affected Communities in Thailand",
@@ -3711,35 +3855,35 @@
               "news_id": "3543eddd608b5e8db6145ea573c8dd6d",
               "url": "https://sports.yahoo.com/articles/once-300-years-rain-leaves-060722138.html",
               "headline": "‘Once-in-300-years’ rain leaves Thai city flooded and maternity ward stranded",
-              "body": "A “once in 300 year” storm has battered southern Thailand, bringing floodwaters more than eight feet...",
-              "published_date": "2026-07-08T19:31:46+00:00",
+              "body": "A “once in 300 year” storm has battered southern Thailand, bringing floodwaters more than eight feet high that in one city cut off access to a maternity ward holding 30 newborn babies, staff and officials said.",
+              "published_date": "2025-11-25",
               "outlet": "CNN · via Yahoo Sports",
               "image": "https://media.zenfs.com/en/aol_cnn_articles_945/3fbb41aed8c76ad736926ebe7acf1e7e"
             },
             {
               "news_id": "8ddb9238f0fb5fcbbe07fa1810d179f6",
               "url": "https://www.yahoo.com/news/articles/over-1-000-killed-hundreds-204808413.html",
-              "headline": "Over 1,000 Killed and Hundreds Missing After Heavy Rain Triggers Flooding and...",
-              "body": "NEED TO KNOW Over 1,000 deaths have been reported in Southeast Asia after storms triggered flooding...",
-              "published_date": "2026-07-08T19:31:46+00:00",
+              "headline": "Over 1,000 Killed and Hundreds Missing After Heavy Rain Triggers Flooding and Mudslides",
+              "body": "The disaster occurred during the monsoon season, which experts have said is particularly severe this year",
+              "published_date": "2025-12-01",
               "outlet": "People · via Yahoo News",
               "image": "https://media.zenfs.com/en/people_218/e0f711c7dac34ebb1d7d50465d5bec0a"
             },
             {
               "news_id": "227756574d005486908a2965b1a22b8f",
               "url": "https://www.yahoo.com/news/articles/asia-floods-death-toll-crosses-081250338.html",
-              "headline": "Asia floods: Death toll crosses 1,500 as rescuers race to reach isolated...",
-              "body": "Rescuers were still struggling to reach isolated communities a week after catastrophic floods and...",
-              "published_date": "2026-07-08T19:31:46+00:00",
+              "headline": "Asia floods: Death toll crosses 1,500 as rescuers race to reach isolated villages",
+              "body": "Hundreds of villages remain buried under mud and debris",
+              "published_date": "2025-12-04",
               "outlet": "The Independent · via Yahoo News",
               "image": "https://media.zenfs.com/en/the_independent_635/f25116719f5ba4869a0534e4b2a0b513"
             },
             {
               "news_id": "a4dcdaf473ca53a3b343a484d6930595",
               "url": "https://www.yahoo.com/news/articles/floods-cyclonic-storms-across-thailand-042544787.html",
-              "headline": "Floods and cyclonic storms across Thailand, Sri Lanka and Indonesia leave over...",
-              "body": "The death toll from the devastating flooding in Asia has surpassed 1,200, with storms and cyclones...",
-              "published_date": "2026-07-08T19:31:46+00:00",
+              "headline": "Floods and cyclonic storms across Thailand, Sri Lanka and Indonesia leave over 1,200 dead and hundreds missing",
+              "body": "Catastrophic flooding displaces more than four million people",
+              "published_date": "2025-12-02",
               "outlet": "The Independent · via Yahoo News",
               "image": "https://media.zenfs.com/en/the_independent_635/85731b46bab39623de53adfba18545a8"
             },
@@ -3747,8 +3891,8 @@
               "news_id": "15fcb7c8e7ed517d993e653c12db1174",
               "url": "https://www.yahoo.com/news/articles/floods-indonesia-sri-lanka-thailand-065450927.html",
               "headline": "Floods in Indonesia, Sri Lanka, Thailand leave more than 1,140 dead",
-              "body": "Flooding and landslides have killed more than 1,140 people across Indonesia, Sri Lanka, Thailand and...",
-              "published_date": "2026-07-08T19:31:46+00:00",
+              "body": "Heavy rains have left Sri Lanka and parts of Indonesia’s Sumatra, southern Thailand and northern Malaysia under water.",
+              "published_date": "2025-12-01",
               "outlet": "Al Jazeera · via Yahoo News",
               "image": "https://media.zenfs.com/en/al_jazeera_289/4539417989a473058dc8394544c83649"
             },
@@ -3756,8 +3900,8 @@
               "news_id": "a447b4f0ed0b59faa05b7865b99600fb",
               "url": "https://www.yahoo.com/news/articles/sri-lanka-landslides-floods-death-063932046.html",
               "headline": "Death toll from Sri Lanka landslides and floods rises to 69",
-              "body": "Sri Lanka has closed government offices and schools as the death toll from floods and landslides...",
-              "published_date": "2026-07-08T19:40:01+00:00",
+              "body": "The government announces the closing of all government offices and schools as weather conditions grow worse.",
+              "published_date": "2025-11-28",
               "outlet": "Al Jazeera · via Yahoo News",
               "image": "https://media.zenfs.com/en/al_jazeera_289/66e4fff4801419edce6c5e4feee68ec4"
             },
@@ -3765,8 +3909,8 @@
               "news_id": "bd0e6b677d58518387036d918c346f75",
               "url": "https://www.yahoo.com/news/articles/least-1-250-people-dead-095834397.html",
               "headline": "At least 1,250 people dead: What caused the devastating Asia floods?",
-              "body": "Tropical storms and heavy rainfall have caused devastating flooding and landslides across much of...",
-              "published_date": "2026-07-08T19:31:46+00:00",
+              "body": "Climate advocates say it’s time to move to accountability for climate change, as people in Asia are living the evidence.",
+              "published_date": "2025-12-02",
               "outlet": "Al Jazeera · via Yahoo News",
               "image": "https://media.zenfs.com/en/al_jazeera_289/2511169ae4f1d07883c18eaec88a0706"
             }
@@ -4425,120 +4569,6 @@
               "body": "Japan issued a special advisory on Monday warning of an increased risk of earthquakes at magnitude 8.0 or stronger, after a powerful jolt rattled the country's north and prompted a tsunami warning.",
               "published_date": "2026-07-08T19:47:59+00:00",
               "outlet": "MSN",
-              "image": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "incident_id": "20251210-XX-DI",
-      "canonical_name": "Seasonal influenza - Global situation",
-      "summary": "Reports indicate a slow start to the flu season in Queensland, with experts attributing partial immunity from a severe 2025 season and urging improved vaccination rates. Hong Kong has entered a summer flu season with rising COVID-19 infections, with most severe adult flu cases occurring in unvaccinated individuals. The UK's NHS has updated its flu jab eligibility criteria, expanding vaccination availability to new age groups.",
-      "country": "",
-      "iso2": "",
-      "lat": null,
-      "lon": null,
-      "country_group": "C",
-      "region": "Unknown",
-      "incident_type": "Disease",
-      "incident_category": "Biological",
-      "is_disease": true,
-      "severity": "MEDIUM",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": "LOW",
-      "event_status": null,
-      "disease_name": "Influenza",
-      "event_date": "2025-12-10",
-      "first_reported_date": "2025-12-10",
-      "last_updated_date": "2026-07-12",
-      "days_since_event": 220,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 1,
-        "usgs": 0,
-        "gdacs": 0,
-        "healthmap": 0,
-        "news": 4
-      },
-      "source_links": [
-        {
-          "type": "WHO",
-          "label": "Seasonal influenza - Global situation",
-          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2025-DON586",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Hong Kong enters summer flu season as Covid infections also climb",
-          "url": "https://www.msn.com/en-xl/health/diseases-and-conditions/hong-kong-enters-summer-flu-season-as-covid-infections-also-climb/ar-AA273FFK?ocid=BingNewsVerp",
-          "outlet": "South China Morning Post on MSN",
-          "published_date": "2026-07-08T11:27:24+00:00"
-        },
-        {
-          "headline": "Qld flu season’s slow start sparks urgent warning over vaccination rates",
-          "url": "https://www.dailytelegraph.com.au/health/conditions/cold-flu/qld-flu-seasons-slow-start-sparks-urgent-warning-over-vaccination-rates/news-story/96ba692abd04446a955556d17ba3ba15",
-          "outlet": "Daily Telegraph",
-          "published_date": "2026-07-08T11:27:24+00:00"
-        },
-        {
-          "headline": "NHS flu jab rule change from with new age threshold",
-          "url": "https://www.express.co.uk/life-style/health/2226362/nhs-flu-jab-rule-change",
-          "outlet": "Daily Express",
-          "published_date": "2026-07-10T18:02:46+00:00"
-        },
-        {
-          "headline": "Flu cases surge to record levels across New York state",
-          "url": "https://ny1.com/nyc/all-boroughs/health/2025/12/29/flu-cases-surge-in-new-york-state",
-          "outlet": "Spectrum News NY1",
-          "published_date": "2026-07-12T09:28:18+00:00"
-        }
-      ],
-      "news_total": 4,
-      "logs": [
-        {
-          "log_date": "2026-07-10",
-          "summary": "Reports indicate a slow start to the flu season in Queensland, with experts attributing partial immunity from a severe 2025 season and urging improved vaccination rates. Hong Kong has entered a summer flu season with rising COVID-19 infections, with most severe adult flu cases occurring in unvaccinated individuals. The UK's NHS has updated its flu jab eligibility criteria, expanding vaccination availability to new age groups.",
-          "news": [
-            {
-              "news_id": "4079c2d1ba955caca38676d6671149cd",
-              "url": "https://www.msn.com/en-xl/health/diseases-and-conditions/hong-kong-enters-summer-flu-season-as-covid-infections-also-climb/ar-AA273FFK?ocid=BingNewsVerp",
-              "headline": "Hong Kong enters summer flu season as Covid infections also climb",
-              "body": "Most of 23 adults with severe flu infections recorded last week had not received protective flu jabs under latest vaccination ...",
-              "published_date": "2026-07-08T11:27:24+00:00",
-              "outlet": "South China Morning Post on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.XwSsCJEjls5gqeWY6A2RtQ"
-            },
-            {
-              "news_id": "448d5e9e24d8519589d6d9b7ac386eb9",
-              "url": "https://www.express.co.uk/life-style/health/2226362/nhs-flu-jab-rule-change",
-              "headline": "NHS flu jab rule change from with new age threshold",
-              "body": "The move will supplement vaccinations already available through GP surgeries, which will begin administering flu vaccines ...",
-              "published_date": "2026-07-10T18:02:46+00:00",
-              "outlet": "Daily Express",
-              "image": "https://www.bing.com/th?id=ONUT.qmqYp9qKnCYh4UJauoSSZQ"
-            },
-            {
-              "news_id": "d0816d0b90d55acfb7f2d7e2036ba231",
-              "url": "https://www.dailytelegraph.com.au/health/conditions/cold-flu/qld-flu-seasons-slow-start-sparks-urgent-warning-over-vaccination-rates/news-story/96ba692abd04446a955556d17ba3ba15",
-              "headline": "Qld flu season’s slow start sparks urgent warning over vaccination rates",
-              "body": "And infectious disease experts suspect 2025 was such a horrendous flu year that many Queenslanders have built up some level of immunity. But infectious diseases expert Paul Griffin says the state’s ...",
-              "published_date": "2026-07-08T11:27:24+00:00",
-              "outlet": "Daily Telegraph",
               "image": ""
             }
           ]
@@ -7724,126 +7754,6 @@
               "body": "A man talks on his mobile phone near a building damaged in an earthquake in Palu, Central Sulawesi, Tuesday, June 16, 2026. - AP PALU, Indonesia: A shallow 6.7 magnitude earthquake struck central ...",
               "published_date": "2026-06-16T00:00:00+00:00",
               "outlet": "The Star",
-              "image": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "incident_id": "20260624-JP-EQ",
-      "canonical_name": "Earthquake 33 km ENE of Noda, Japan 2026-06",
-      "summary": "A strong earthquake, initially reported with magnitudes between 6.9 and 7.2, struck off the northern coast of Japan on June 24, 2026. The Japan Meteorological Agency stated that there was no danger of a tsunami, and no tsunami warning was issued.",
-      "country": "Japan",
-      "iso2": "JP",
-      "lat": 40.2515,
-      "lon": 142.1614,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "HIGH",
-      "priority": "HIGH",
-      "priority_rank": 1,
-      "pandemic_potential": null,
-      "event_status": null,
-      "disease_name": null,
-      "event_date": "2026-06-24",
-      "first_reported_date": "2026-06-24",
-      "last_updated_date": "2026-07-12",
-      "days_since_event": 24,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 0,
-        "healthmap": 0,
-        "news": 5
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 6.9 - 33 km ENE of Noda, Japan",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t7zq",
-          "meta": "34 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 6.9,
-        "max_depth_km": 34.0,
-        "place": "33 km ENE of Noda, Japan",
-        "felt": 95,
-        "sig": 798,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "A powerful 7.2 magnitude earthquake strikes off northern Japan. No tsunami warning is triggered",
-          "url": "https://www.washingtonpost.com/world/2026/06/24/japan-earthquake-tsunami/df1db75a-701f-11f1-8730-e7fd0e2a6404_story.html",
-          "outlet": "The Washington Post",
-          "published_date": "2026-06-24T00:00:00+00:00"
-        },
-        {
-          "headline": "Powerful 6.9-magnitude earthquake strikes off northern Japan. No tsunami warning",
-          "url": "https://www.local10.com/news/world/2026/06/24/powerful-69-magnitude-earthquake-strikes-off-northern-japan-no-tsunami-warning/",
-          "outlet": "WPLG Local 10",
-          "published_date": "2026-06-24T00:00:00+00:00"
-        },
-        {
-          "headline": "Go-bags and pet food: Experts talk disaster prep at Navy base in Japan",
-          "url": "https://www.stripes.com/theaters/asia_pacific/2026-07-07/disaster-preparation-japan-naf-atsugi-navy-22197401.html",
-          "outlet": "Stars and Stripes",
-          "published_date": "2026-07-07T03:18:02+00:00"
-        },
-        {
-          "headline": "A powerful magnitude 7.2 earthquake strikes off northern Japan",
-          "url": "https://www.msn.com/en-us/news/world/a-powerful-magnitude-72-earthquake-strikes-off-northern-japan/ar-AA26xzUf?ocid=BingNewsVerp",
-          "outlet": "Los Angeles Times on MSN",
-          "published_date": "2026-07-08T22:09:47+00:00"
-        },
-        {
-          "headline": "Farm experiences in disaster-hit Japanese area attracting children",
-          "url": "https://www.japantimes.co.jp/news/2026/07/12/japan/farm-experience-program-children-miyagi/",
-          "outlet": "The Japan Times",
-          "published_date": "2026-07-12T00:00:00+00:00"
-        }
-      ],
-      "news_total": 5,
-      "logs": [
-        {
-          "log_date": "2026-07-08",
-          "summary": "A strong earthquake, initially reported with magnitudes between 6.9 and 7.2, struck off the northern coast of Japan on June 24, 2026. The Japan Meteorological Agency stated that there was no danger of a tsunami, and no tsunami warning was issued.",
-          "news": [
-            {
-              "news_id": "68e653b93a9b5ca688e78bb181ec76cb",
-              "url": "https://www.msn.com/en-us/news/world/a-powerful-magnitude-72-earthquake-strikes-off-northern-japan/ar-AA26xzUf?ocid=BingNewsVerp",
-              "headline": "A powerful magnitude 7.2 earthquake strikes off northern Japan",
-              "body": "A powerful earthquake has struck off Japan's northern coast but there was no danger of a tsunami, the country's ...",
-              "published_date": "2026-07-08T22:09:47+00:00",
-              "outlet": "Los Angeles Times on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.Yys3pyw0XhHjQwr7WvdxZw"
-            },
-            {
-              "news_id": "435195b6366857e0ac8162ea6f59cfc2",
-              "url": "https://www.washingtonpost.com/world/2026/06/24/japan-earthquake-tsunami/df1db75a-701f-11f1-8730-e7fd0e2a6404_story.html",
-              "headline": "A powerful 7.2 magnitude earthquake strikes off northern Japan. No tsunami warning is triggered",
-              "body": "A powerful earthquake has struck off Japan’s northern coast but there was no danger of a tsunami, the country’s ...",
-              "published_date": "2026-06-24T00:00:00+00:00",
-              "outlet": "The Washington Post",
-              "image": "https://www.bing.com/th?id=ONUT.CLx2epeHpCJm2U2jM7TSLg"
-            },
-            {
-              "news_id": "7f4af6607b40569cb331a48123ed0912",
-              "url": "https://www.local10.com/news/world/2026/06/24/powerful-69-magnitude-earthquake-strikes-off-northern-japan-no-tsunami-warning/",
-              "headline": "Powerful 6.9-magnitude earthquake strikes off northern Japan. No tsunami warning",
-              "body": "A powerful earthquake struck off Japan’s northern coast on Thursday, but the country’s meteorological agency said there was no danger of a tsunami.",
-              "published_date": "2026-06-24T00:00:00+00:00",
-              "outlet": "WPLG Local 10",
               "image": ""
             }
           ]
