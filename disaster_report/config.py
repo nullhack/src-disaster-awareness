@@ -7,10 +7,10 @@ from pathlib import Path
 
 from dotenv import dotenv_values
 
-_DEFAULT_DB_URL = "sqlite:///./disaster_report.db"
+_DEFAULT_TREE_ROOT = "data"
 _API_KEY_ENV_NAME = "API_KEY"
-_DB_TOML_TABLE = "database"
-_DB_URL_TOML_KEY = "db_url"
+_TREE_TOML_TABLE = "tree"
+_TREE_ROOT_TOML_KEY = "root"
 _OR_TOML_TABLE = "openrouter"
 _OR_MODEL_TOML_KEY = "model"
 _INGEST_TOML_TABLE = "ingest"
@@ -21,7 +21,7 @@ _MIN_LOG_NEWS_THRESHOLD_KEY = "min_log_news_threshold"
 @dataclass(frozen=True)
 class Settings:
 
-    db_url: str
+    tree_root: str
     openrouter_api_key: str
     openrouter_model: str
     active_window_days: int
@@ -29,7 +29,7 @@ class Settings:
 
     def __init__(
         self,
-        db_url: str,
+        tree_root: str,
         openrouter_api_key: str,
         openrouter_model: str,
         active_window_days: int,
@@ -40,7 +40,7 @@ class Settings:
             raise ValueError("openrouter_api_key must not be empty")
         if not openrouter_model:
             raise ValueError("openrouter_model must not be empty")
-        object.__setattr__(self, "db_url", db_url or _DEFAULT_DB_URL)
+        object.__setattr__(self, "tree_root", tree_root or _DEFAULT_TREE_ROOT)
         object.__setattr__(self, "openrouter_api_key", openrouter_api_key)
         object.__setattr__(self, "openrouter_model", openrouter_model)
         object.__setattr__(self, "active_window_days", active_window_days)
@@ -51,7 +51,7 @@ class Settings:
 
         with open(config_path, "rb") as fp:
             data = tomllib.load(fp)
-        db_url = data.get(_DB_TOML_TABLE, {}).get(_DB_URL_TOML_KEY, "") or ""
+        tree_root = data.get(_TREE_TOML_TABLE, {}).get(_TREE_ROOT_TOML_KEY, "") or ""
         openrouter_model = (
             data.get(_OR_TOML_TABLE, {}).get(_OR_MODEL_TOML_KEY, "") or ""
         )
@@ -68,7 +68,7 @@ class Settings:
         )
 
         return cls(
-            db_url=db_url,
+            tree_root=tree_root,
             openrouter_api_key=openrouter_api_key,
             openrouter_model=openrouter_model,
             active_window_days=int(active_window_days),

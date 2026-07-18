@@ -82,14 +82,15 @@ class TestDuckDuckGoNewsAdapter:
         assert DuckDuckGoNewsAdapter().search("", timelimit=None) == []
 
     def test_crawl_timestamp_falls_back_to_url_date(self) -> None:
-        from datetime import datetime, timezone
+        from datetime import datetime, timedelta, timezone
 
         from disaster_report.sources.ddg_news import _resolve_date
 
+        recent = datetime.now(timezone.utc) - timedelta(days=2)
         now_iso = datetime.now(timezone.utc).isoformat()
-        url = "https://example.com/news/2026/07/08/some-article"
+        url = recent.strftime("https://example.com/news/%Y/%m/%d/some-article")
         result = _resolve_date(now_iso, url)
-        assert result == "2026-07-08T00:00:00+00:00"
+        assert result == recent.replace(hour=0, minute=0, second=0, microsecond=0).isoformat()
 
     def test_crawl_timestamp_falls_back_to_ingest_time_when_no_url_date(self) -> None:
         from datetime import datetime, timezone
@@ -127,13 +128,17 @@ class TestDuckDuckGoNewsAdapter:
         assert abs((datetime.now(timezone.utc) - parsed).total_seconds()) < 5
 
     def test_future_date_rejected_falls_back_to_url_date(self) -> None:
+        from datetime import datetime, timedelta, timezone
+
         from disaster_report.sources.ddg_news import _resolve_date
 
+        recent = datetime.now(timezone.utc) - timedelta(days=2)
+        url = recent.strftime("https://example.com/news/%Y/%m/%d/article")
         result = _resolve_date(
             "2099-12-31T00:00:00+00:00",
-            "https://example.com/news/2026/07/08/article",
+            url,
         )
-        assert result == "2026-07-08T00:00:00+00:00"
+        assert result == recent.replace(hour=0, minute=0, second=0, microsecond=0).isoformat()
 
     def test_future_date_rejected_falls_back_to_ingest_time(self) -> None:
         from datetime import datetime, timezone
@@ -148,14 +153,18 @@ class TestDuckDuckGoNewsAdapter:
         assert abs((datetime.now(timezone.utc) - parsed).total_seconds()) < 5
 
     def test_date_outside_timelimit_window_rejected(self) -> None:
+        from datetime import datetime, timedelta, timezone
+
         from disaster_report.sources.ddg_news import _resolve_date
 
+        recent = datetime.now(timezone.utc) - timedelta(days=2)
+        url = recent.strftime("https://example.com/news/%Y/%m/%d/article")
         result = _resolve_date(
-            "2026-01-01T00:00:00+00:00",
-            "https://example.com/news/2026/07/08/article",
+            "2020-01-01T00:00:00+00:00",
+            url,
             timelimit="w",
         )
-        assert result == "2026-07-08T00:00:00+00:00"
+        assert result == recent.replace(hour=0, minute=0, second=0, microsecond=0).isoformat()
 
     def test_date_within_timelimit_window_kept(self) -> None:
         from datetime import datetime, timedelta, timezone

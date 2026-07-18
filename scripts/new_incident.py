@@ -124,13 +124,13 @@ def main() -> int:
     if args.summary and news_ids:
         log_date = args.log_date or args.date
         store.append_timeline_with_provenance(
-            IncidentLog(incident_id=incident_id, log_date=log_date, summary=args.summary),  # type: ignore[arg-type]
+            IncidentLog(incident_id=incident_id, log_date=log_date, summary=args.summary),
             news_ids,
         )
     elif args.summary:
         log_date = args.log_date or args.date
         store.append_timeline(
-            IncidentLog(incident_id=incident_id, log_date=log_date, summary=args.summary)  # type: ignore[arg-type]
+            IncidentLog(incident_id=incident_id, log_date=log_date, summary=args.summary)
         )
 
     print(f"incident: {incident_manifest_path(Path(args.tree_root), incident_id)}")

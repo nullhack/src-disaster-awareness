@@ -166,7 +166,7 @@ def migrate(db_file: Path, tree_root: Path) -> None:
         }
         store.append_timeline_with_provenance(
             IncidentLog(
-                incident_id=iuuid,  # type: ignore[arg-type]
+                incident_id=iuuid,
                 log_date=row["log_date"],
                 summary=row["summary"],
             ),

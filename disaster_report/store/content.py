@@ -210,12 +210,12 @@ class ContentStore:
             category = "disease" if source == "WHO" else "geophysical"
             result.append(
                 Incident(
-                    incident_id=iuuid,  # type: ignore[arg-type]
+                    incident_id=iuuid,
                     incident_category=category,
                     incident_type=greport.get("incident_type", ""),
                     name=greport.get("name", ""),
                     first_seen_at=greport.get("report_date", ""),
-                    genesis_report_id=genesis,  # type: ignore[arg-type]
+                    genesis_report_id=genesis,
                 )
             )
         result.sort(key=lambda i: i.first_seen_at)
@@ -337,7 +337,7 @@ class ContentStore:
             source=d.get("source", ""),
             domain=d.get("domain", ""),
             image=d.get("image", ""),
-            news_id=nuuid,  # type: ignore[arg-type]
+            news_id=nuuid,
         )
 
     def ingest_news_item(self, item: NewsItem) -> str:
@@ -481,7 +481,7 @@ class ContentStore:
         bucket = self._logs.get(incident_id, {})
         return [
             IncidentLog(
-                incident_id=incident_id,  # type: ignore[arg-type]
+                incident_id=incident_id,
                 log_date=log_date,
                 summary=bucket[log_date].get("summary", ""),
             )
@@ -531,7 +531,7 @@ class ContentStore:
         out: list[tuple[IncidentLog, list[NewsItem]]] = []
         for log_date in sorted(bucket):
             log = IncidentLog(
-                incident_id=incident_id,  # type: ignore[arg-type]
+                incident_id=incident_id,
                 log_date=log_date,
                 summary=bucket[log_date].get("summary", ""),
             )

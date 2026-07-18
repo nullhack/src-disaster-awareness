@@ -2,20 +2,20 @@
 """Generate dashboard JSON data from the v4 disaster_report DB.
 
 Outputs daily digest files (YYYY-MM-DD.json), index.json, and aggregation
-files (agg/{7,30,90,365}.json + agg/index.json) under dashboard/data/.
+files (agg/{1,3,7,30,90,365}.json + agg/index.json) under dashboard/data/.
 """
 
 from __future__ import annotations
 
 import argparse
 import json
-import sqlite3
 import tomllib
-from collections import Counter, defaultdict
+from collections import Counter
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from disaster_report._country_names import country_name
+from disaster_report.store.content import ContentStore
 
 SCHEMA_VERSION = "1.4"
 TRACKING_WINDOW_DAYS = 7
@@ -67,7 +67,7 @@ REGION_MAP = {
     "Asia": frozenset({"AF","AM","AZ","BH","BD","BT","BN","KH","CN","CY","GE","IN","ID","IR","IQ","IL","JP","JO","KZ","KP","KR","KW","KG","LA","LB","MO","MY","MV","MN","MM","NP","OM","PK","PS","PH","QA","SA","SG","LK","SY","TW","TJ","TH","TL","TR","TM","AE","UZ","VN","YE"}),
     "Europe": frozenset({"AL","AD","AT","BY","BE","BA","BG","HR","CZ","DK","EE","FO","FI","FR","DE","GI","GR","GG","HU","IS","IE","IM","IT","JE","LV","LI","LT","LU","MK","MT","MD","MC","ME","NL","NO","PL","PT","RO","RU","SM","RS","SK","SI","ES","SJ","SE","CH","UA","GB","VA"}),
     "Oceania": frozenset({"AS","AU","CK","FJ","PF","GU","KI","MH","FM","NR","NC","NZ","NU","NF","MP","PW","PG","PN","WS","SB","TK","TO","TV","VU","WF"}),
-    "Antarctica": frozenset({"AQ","BV","HM","GS","IO","TF","CC","CX","HM","NF","AQ"}),
+    "Antarctica": frozenset({"AQ","BV","HM","GS","IO","TF","CC","CX","NF"}),
 }
 
 ISO2_TO_REGION: dict[str, str] = {}
@@ -121,24 +121,21 @@ ISO2_CENTROIDS: dict[str, tuple[float, float]] = {
     "TM": (38.97, 59.6), "UG": (1.4, 32.3), "UA": (48.9, 31.2), "AE": (23.4, 53.8),
     "GB": (55.4, -3.4), "US": (37.1, -95.7), "UY": (-32.5, -55.8), "UZ": (41.4, 64.6),
     "VU": (-16.4, 167.3), "VE": (6.4, -66.6), "VN": (14.1, 108.3), "YE": (15.6, 48.5),
-    "ZM": (-13.1, 27.8), "ZW": (-19.0, 29.2), "WS": (-13.6, -172.4), "CD": (-4.0, 21.8),
+    "ZM": (-13.1, 27.8), "ZW": (-19.0, 29.2), "WS": (-13.6, -172.4),
     "FK": (-51.8, -59.2), "GL": (-71.7, -42.6), "PF": (-17.7, -149.4), "NC": (-21.3, 165.5),
-    "NZ": (-40.9, 174.9), "AU": (-25.3, 133.8), "FJ": (-16.6, 179.4), "PG": (-6.3, 143.9),
-    "SB": (-9.4, 160.2), "VU": (-16.4, 167.3), "TO": (-21.2, -175.2), "TV": (-7.5, 178.7),
-    "KI": (-3.4, 173.0), "FM": (7.4, 150.5), "PW": (7.5, 134.5), "MH": (7.1, 171.2),
+    "SB": (-9.4, 160.2), "TV": (-7.5, 178.7), "FM": (7.4, 150.5), "PW": (7.5, 134.5), "MH": (7.1, 171.2),
     "NR": (-0.5, 166.9), "NU": (-19.0, -169.6), "CK": (-21.2, -159.8), "NF": (-29.0, 167.9),
     "WF": (-13.3, -176.2), "PN": (-24.7, -127.4), "AS": (-14.3, -170.7), "GU": (13.4, 144.8),
-    "MP": (15.2, 145.3), "PW": (7.5, 134.5), "NF": (-29.0, 167.9), "CX": (-10.4, 105.7),
+    "MP": (15.2, 145.3), "CX": (-10.4, 105.7),
     "CC": (-12.2, 96.8), "IO": (-6.3, 71.8), "TF": (-49.3, 69.3), "GS": (-54.4, -36.6),
     "AQ": (-82.9, 135.0), "BV": (-54.4, 3.4), "HM": (-53.1, 72.5), "EH": (24.2, -12.9),
-    "ST": (0.2, 6.6), "KM": (-11.6, 43.3), "SC": (-4.7, 55.5), "MV": (3.2, 73.2),
-    "BN": (4.5, 114.7), "LA": (19.9, 102.5), "BT": (27.5, 90.4), "MO": (22.2, 113.5),
+    "ST": (0.2, 6.6),
     "KY": (19.3, -81.2), "BM": (32.3, -64.8), "AW": (12.5, -69.9), "BQ": (12.2, -68.3),
     "CW": (12.1, -68.9), "SX": (18.0, -63.1), "TC": (21.7, -71.6), "DM": (15.4, -61.4),
     "BL": (17.9, -62.8), "MF": (18.1, -63.1), "PM": (46.8, -56.3), "KN": (17.4, -62.7),
-    "LC": (13.9, -61.0), "VC": (13.2, -61.2), "AG": (17.1, -61.8), "MS": (16.7, -62.2),
-    "AI": (18.2, -63.1), "VG": (18.4, -64.6), "VI": (18.3, -64.9), "FK": (-51.8, -59.2),
-    "JE": (49.2, -2.1), "GG": (49.5, -2.6), "IM": (54.2, -4.5), "AD": (42.5, 1.5),
+    "LC": (13.9, -61.0), "VC": (13.2, -61.2), "MS": (16.7, -62.2),
+    "AI": (18.2, -63.1), "VG": (18.4, -64.6), "VI": (18.3, -64.9),
+    "JE": (49.2, -2.1), "GG": (49.5, -2.6), "IM": (54.2, -4.5),
     "LI": (47.2, 9.6), "MC": (43.7, 7.4), "SM": (43.9, 12.5), "VA": (41.9, 12.4),
     "SJ": (77.5, 23.0), "FO": (62.0, -7.0), "GI": (36.1, -5.3), "RE": (-21.1, 55.5),
     "MQ": (14.6, -61.0), "GP": (16.3, -61.6), "GF": (3.9, -53.1),
@@ -256,147 +253,96 @@ def short_type(incident_type: str, is_disease: bool) -> str:
     return incident_type
 
 
-def load_incidents(conn: sqlite3.Connection) -> list[dict]:
-    c = conn.cursor()
-    c.execute("""
-        SELECT i.incident_id, i.incident_category, i.incident_type, i.name,
-               i.first_seen_at, i.genesis_report_id
-        FROM incidents i
-        ORDER BY i.incident_id
-    """)
-    incidents = []
-    for row in c.fetchall():
-        incidents.append({
-            "incident_id": row[0],
-            "incident_category": row[1],
-            "incident_type": row[2],
-            "name": row[3],
-            "first_seen_at": row[4],
-            "genesis_report_id": row[5],
-        })
-    return incidents
+def load_incidents(store: ContentStore) -> list[dict]:
+    return [
+        {
+            "incident_id": inc.incident_id,
+            "incident_category": inc.incident_category,
+            "incident_type": inc.incident_type,
+            "name": inc.name,
+            "first_seen_at": inc.first_seen_at,
+            "genesis_report_id": inc.genesis_report_id,
+        }
+        for inc in store.read_incidents()
+    ]
 
 
-def load_reports_for_incident(conn: sqlite3.Connection, incident_id: int) -> list[dict]:
-    c = conn.cursor()
-    c.execute("""
-        SELECT sr.report_id, sr.source, sr.source_id, sr.incident_type,
-               sr.name, sr.report_date, sr.raw_fields
-        FROM source_reports sr
-        JOIN report_incidents ri ON ri.report_id = sr.report_id
-        WHERE ri.incident_id = ?
-        ORDER BY sr.report_date
-    """, (incident_id,))
+def load_reports_for_incident(store: ContentStore, incident_id: str) -> list[dict]:
     reports = []
-    for row in c.fetchall():
+    for rid in store.read_report_ids_for_incident(incident_id):
+        r = store.read_source_report_by_id(rid)
+        if r is None:
+            continue
         reports.append({
-            "report_id": row[0],
-            "source": row[1],
-            "source_id": row[2],
-            "incident_type": row[3],
-            "name": row[4],
-            "report_date": row[5],
-            "raw_fields": json.loads(row[6]) if row[6] else {},
+            "report_id": rid,
+            "source": r.source,
+            "source_id": r.source_id,
+            "incident_type": r.incident_type,
+            "name": r.name,
+            "report_date": r.report_date,
+            "raw_fields": dict(r.raw_fields) if r.raw_fields else {},
         })
+    reports.sort(key=lambda x: x["report_date"])
     return reports
 
 
-def load_places_for_report(conn: sqlite3.Connection, report_id: int) -> list[dict]:
-    c = conn.cursor()
-    c.execute("SELECT country_code, subdivision, locality FROM report_places WHERE report_id = ?", (report_id,))
-    return [{"country_code": row[0], "subdivision": row[1], "locality": row[2]} for row in c.fetchall()]
+def load_places_for_report(store: ContentStore, report_id: str) -> list[dict]:
+    return [
+        {"country_code": p.country_code, "subdivision": p.subdivision, "locality": p.locality}
+        for p in store.read_report_places(report_id)
+    ]
 
 
-def load_news_for_incident(conn: sqlite3.Connection, incident_id: int) -> list[dict]:
-    c = conn.cursor()
-    c.execute("""
-        SELECT ni.news_id, ni.url, ni.title, ni.body, ni.published_date,
-               ni.source, ni.domain, ni.image
-        FROM news_items ni
-        JOIN news_incidents ni2 ON ni2.news_id = ni.news_id
-        WHERE ni2.incident_id = ?
-        ORDER BY ni.published_date
-    """, (incident_id,))
-    news = []
-    for row in c.fetchall():
-        news.append({
-            "news_id": row[0],
-            "url": row[1],
-            "headline": row[2],
-            "body": row[3],
-            "published_date": row[4],
-            "outlet": row[5] or row[6],
-            "image": row[7],
-        })
+def _news_to_dict(n: object) -> dict:
+    return {
+        "news_id": getattr(n, "news_id", ""),
+        "url": getattr(n, "url", ""),
+        "headline": getattr(n, "title", ""),
+        "body": getattr(n, "body", ""),
+        "published_date": getattr(n, "published_date", ""),
+        "outlet": getattr(n, "source", "") or getattr(n, "domain", "") or "",
+        "image": getattr(n, "image", ""),
+    }
+
+
+def load_news_for_incident(store: ContentStore, incident_id: str) -> list[dict]:
+    news = [_news_to_dict(n) for n in store.read_news(incident_id)]
+    news.sort(key=lambda x: x["published_date"])
     return news
 
 
-def load_latest_log(conn: sqlite3.Connection, incident_id: int) -> str | None:
-    c = conn.cursor()
-    c.execute("""
-        SELECT summary FROM incident_logs
-        WHERE incident_id = ?
-        ORDER BY log_date DESC LIMIT 1
-    """, (incident_id,))
-    row = c.fetchone()
-    return row[0] if row else None
+def load_latest_log(store: ContentStore, incident_id: str) -> str | None:
+    timeline = store.read_timeline(incident_id)
+    if not timeline:
+        return None
+    return timeline[-1].summary
 
 
-def load_log_count(conn: sqlite3.Connection, incident_id: int) -> int:
-    c = conn.cursor()
-    c.execute("SELECT COUNT(*) FROM incident_logs WHERE incident_id = ?", (incident_id,))
-    return c.fetchone()[0]
+def load_log_count(store: ContentStore, incident_id: str) -> int:
+    return len(store.read_timeline(incident_id))
 
 
-def load_logs_for_incident(conn: sqlite3.Connection, incident_id: int) -> list[dict]:
-    c = conn.cursor()
-    c.execute("""
-        SELECT il.log_date, il.summary
-        FROM incident_logs il
-        WHERE il.incident_id = ?
-        ORDER BY il.log_date
-    """, (incident_id,))
-    logs = []
-    for row in c.fetchall():
+def load_logs_for_incident(store: ContentStore, incident_id: str) -> list[dict]:
+    logs: list[dict] = []
+    for log, linked_news in store.read_logs_with_news(incident_id):
         logs.append({
-            "log_date": row[0],
-            "summary": row[1] or "",
-            "news": [],
+            "log_date": log.log_date,
+            "summary": log.summary or "",
+            "news": [_news_to_dict(n) for n in linked_news],
         })
-    if not logs:
-        return logs
-    c.execute("""
-        SELECT iln.log_date, iln.news_id, ni.url, ni.title,
-               ni.published_date, ni.source, ni.domain
-        FROM incident_log_news iln
-        JOIN news_items ni ON ni.news_id = iln.news_id
-        WHERE iln.incident_id = ?
-        ORDER BY ni.published_date
-    """, (incident_id,))
-    log_map = {l["log_date"]: l for l in logs}
-    for row in c.fetchall():
-        ldt = row[0]
-        if ldt in log_map:
-            log_map[ldt]["news"].append({
-                "news_id": row[1],
-                "url": row[2],
-                "headline": row[3] or "",
-                "published_date": row[4],
-                "outlet": row[5] or row[6] or "",
-            })
     return logs
 
 
-def build_incident_object(conn: sqlite3.Connection, inc: dict, as_of_date: datetime) -> dict | None:
+def build_incident_object(store: ContentStore, inc: dict, as_of_date: datetime) -> dict | None:
     incident_id = inc["incident_id"]
-    reports = load_reports_for_incident(conn, incident_id)
+    reports = load_reports_for_incident(store, incident_id)
     if not reports:
         return None
 
-    news = load_news_for_incident(conn, incident_id)
+    news = load_news_for_incident(store, incident_id)
     news_count = len(news)
-    latest_summary = load_latest_log(conn, incident_id)
-    logs = load_logs_for_incident(conn, incident_id)
+    latest_summary = load_latest_log(store, incident_id)
+    logs = load_logs_for_incident(store, incident_id)
 
     genesis = None
     for r in reports:
@@ -408,7 +354,7 @@ def build_incident_object(conn: sqlite3.Connection, inc: dict, as_of_date: datet
 
     all_places = []
     for r in reports:
-        places = load_places_for_report(conn, r["report_id"])
+        places = load_places_for_report(store, r["report_id"])
         all_places.extend(places)
 
     iso2 = ""
@@ -755,8 +701,8 @@ def _resolve_tracking_window(config_path: str = "config.toml") -> int:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Generate dashboard JSON from v4 DB")
-    parser.add_argument("--db", default="disaster_report.db")
+    parser = argparse.ArgumentParser(description="Generate dashboard JSON from v5 content tree")
+    parser.add_argument("--tree-root", default="data")
     parser.add_argument("--output", default="dashboard/data")
     parser.add_argument("--as-of", default=None, help="Override as-of date (YYYY-MM-DD)")
     parser.add_argument("--tracking-window", type=int, default=None,
@@ -777,17 +723,16 @@ def main() -> None:
     agg_dir = output_dir / "agg"
     agg_dir.mkdir(exist_ok=True)
 
-    conn = sqlite3.connect(args.db)
-    conn.row_factory = sqlite3.Row
+    store = ContentStore(args.tree_root)
 
-    print("Loading incidents from DB...")
-    raw_incidents = load_incidents(conn)
+    print("Loading incidents from content tree...")
+    raw_incidents = load_incidents(store)
     print(f"  {len(raw_incidents)} incidents found")
 
     print("Building incident objects...")
     all_incidents = []
     for inc in raw_incidents:
-        obj = build_incident_object(conn, inc, as_of)
+        obj = build_incident_object(store, inc, as_of)
         if obj:
             all_incidents.append(obj)
     print(f"  {len(all_incidents)} incident objects built")
@@ -844,17 +789,18 @@ def main() -> None:
     print("  index.json written")
 
     print("Generating aggregation files...")
+    agg_windows = [1, 3, 7, 30, 90, 365]
     agg_index = {
         "schema_version": SCHEMA_VERSION,
         "as_of": as_of.strftime("%Y-%m-%d"),
-        "windows": ["7", "30", "90", "365"],
+        "windows": [str(w) for w in agg_windows],
         "default_window": 30,
-        "files": {"7": "7.json", "30": "30.json", "90": "90.json", "365": "365.json"},
+        "files": {str(w): f"{w}.json" for w in agg_windows},
     }
     with open(agg_dir / "index.json", "w") as f:
         json.dump(agg_index, f, indent=2, ensure_ascii=False)
 
-    for window in [7, 30, 90, 365]:
+    for window in agg_windows:
         series = generate_agg_series(all_incidents, window, as_of)
         agg = {
             "schema_version": SCHEMA_VERSION,
@@ -888,7 +834,6 @@ def main() -> None:
             md_count += 1
     print(f"  {md_count} MD reports written")
 
-    conn.close()
     print("Done.")
 
 

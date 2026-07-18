@@ -35,13 +35,13 @@ class NewsItem:
     source: str
     domain: str
     image: str
-    news_id: int = 0
+    news_id: str = ""
 
 
 @dataclass(frozen=True)
 class IncidentLog:
 
-    incident_id: int
+    incident_id: str
     log_date: str
     summary: str
 
@@ -49,9 +49,9 @@ class IncidentLog:
 @dataclass(frozen=True)
 class Incident:
 
-    incident_id: int
+    incident_id: str
     incident_category: str
     incident_type: str
     name: str
     first_seen_at: str
-    genesis_report_id: int
+    genesis_report_id: str

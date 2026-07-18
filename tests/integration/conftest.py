@@ -7,21 +7,22 @@ import pytest
 if TYPE_CHECKING:
     from collections.abc import Callable
     from datetime import datetime
+    from pathlib import Path
 
     from disaster_report.config import Settings
 
 
 @pytest.fixture
-def db_url(tmp_path: str) -> str:
-    return f"sqlite:///{tmp_path}/test.db"
+def tree_root(tmp_path: Path) -> Path:
+    return tmp_path
 
 
 @pytest.fixture
-def test_settings(db_url: str) -> Settings:
+def test_settings(tree_root: Path) -> Settings:
     from disaster_report.config import Settings
 
     return Settings(
-        db_url=db_url,
+        tree_root=str(tree_root),
         openrouter_api_key="test-key",
         openrouter_model="test-model",
         active_window_days=7,
