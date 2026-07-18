@@ -1,0 +1,45 @@
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: tests-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+      - uses: astral-sh/setup-uv@v4
+      - run: uv sync
+
+      - name: ruff
+        run: uv run ruff check disaster_report/ tests/
+
+      - name: pyright
+        run: uv run pyright disaster_report/ tests/
+
+      - name: pytest
+        run: uv run pytest tests/ -o pythonpath=. -q
+
+      - name: mypy.stubtest
+        run: |
+          uv run --with mypy python -m mypy.stubtest disaster_report.store.content \
+                                                disaster_report.config \
+                                                disaster_report.models \
+                                                disaster_report.pipeline \
+                                                disaster_report.fetchers
