@@ -338,6 +338,8 @@ class ContentStore:
             domain=d.get("domain", ""),
             image=d.get("image", ""),
             news_id=nuuid,
+            author=d.get("author", ""),
+            sitename=d.get("sitename", ""),
         )
 
     def ingest_news_item(self, item: NewsItem) -> str:
@@ -353,6 +355,8 @@ class ContentStore:
             "source": item.source,
             "domain": item.domain,
             "image": item.image,
+            "author": item.author,
+            "sitename": item.sitename,
         }
         path = news_staging_path(self._root, nuuid)
         dump_yaml(path, data)

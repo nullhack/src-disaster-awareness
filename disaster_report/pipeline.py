@@ -1,12 +1,14 @@
 
 from __future__ import annotations
 
+import dataclasses
 import logging
 import uuid
 from dataclasses import dataclass
 from typing import Any, cast
 
 from disaster_report._search_keys import derive_repoll_keys
+from disaster_report.fetchers import fetch_article
 from disaster_report.models import IncidentLog, NewsItem, SourceReport
 from disaster_report.sources.errors import SourceFetchError
 from disaster_report.store.content import ContentStore
@@ -17,6 +19,27 @@ logger = logging.getLogger(__name__)
 def _mint_id() -> str:
 
     return uuid.uuid4().hex
+
+
+def _enrich_one(news: NewsItem) -> NewsItem:
+    fetched = fetch_article(news.url)
+    if fetched is None:
+        return news
+    return dataclasses.replace(
+        news,
+        title=fetched.title or news.title,
+        body=fetched.description or news.body,
+        published_date=fetched.published_date or news.published_date,
+        author=fetched.author,
+        sitename=fetched.sitename,
+    )
+
+
+def _enrich_news_items(items: list[NewsItem]) -> list[NewsItem]:
+    enriched: list[NewsItem] = []
+    for n in items:
+        enriched.append(_enrich_one(n))
+    return enriched
 
 
 @dataclass(frozen=True)
@@ -172,7 +195,8 @@ def _search_one_report(
         )
         logger.info("search: %s:%s — %d relevant after filter", report.source, report.source_id, len(result.selected_news))
         if result.selected_news:
-            _commit_news_for_report(wh, report_id, result.selected_news)
+            enriched = _enrich_news_items(result.selected_news)
+            _commit_news_for_report(wh, report_id, enriched)
     wh.mark_report_searched(report.source, report.source_id, iso_now)
     searched_keys.add(key)
 
@@ -213,7 +237,8 @@ def _repoll_one_incident(
     )
     logger.info("repoll: incident %s — %d relevant after filter", incident.incident_id, len(result.selected_news))
     if result.selected_news:
-        _commit_news_for_incident(wh, incident.incident_id, result.selected_news)
+        enriched = _enrich_news_items(result.selected_news)
+        _commit_news_for_incident(wh, incident.incident_id, enriched)
 
 
 def search_news(

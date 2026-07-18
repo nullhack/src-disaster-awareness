@@ -36,6 +36,8 @@ class NewsItem:
     domain: str
     image: str
     news_id: str = ""
+    author: str = ""
+    sitename: str = ""
 
 
 @dataclass(frozen=True)
@@ -55,3 +57,16 @@ class Incident:
     name: str
     first_seen_at: str
     genesis_report_id: str
+
+
+@dataclass(frozen=True)
+class FetchedArticle:
+
+    url: str
+    title: str
+    description: str
+    body: str
+    published_date: str
+    author: str
+    sitename: str
+

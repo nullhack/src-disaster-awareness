@@ -1,6 +1,8 @@
 from dataclasses import dataclass
 import logging
 
+from disaster_report.models import NewsItem
+
 logger: logging.Logger
 
 @dataclass(frozen=True)
@@ -9,6 +11,9 @@ class IngestReport:
     ai_calls: int
     ddg_calls: int
 
+def _mint_id() -> str: ...
+def _enrich_one(news: NewsItem) -> NewsItem: ...
+def _enrich_news_items(items: list[NewsItem]) -> list[NewsItem]: ...
 def ingest_source_reports(adapters: object, warehouse: object) -> int: ...
 def search_news(
     warehouse: object,

@@ -1,4 +1,4 @@
-from disaster_report.ai.base import FilterResult, SummaryResult
+from disaster_report.ai.base import FilterResult, SubmissionClassification, SummaryResult
 from disaster_report.models import IncidentLog, NewsItem
 
 class OpenRouterDigester:
@@ -22,3 +22,6 @@ class OpenRouterDigester:
         incident_places: list,
         incident_date: str,
     ) -> SummaryResult: ...
+    def classify_submission(
+        self, *, url: str, title: str, body: str
+    ) -> SubmissionClassification: ...
