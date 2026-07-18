@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4",
   "report_date": "2026-06-25",
-  "generated_at": "2026-07-18T04:25:55Z",
+  "generated_at": "2026-07-18T08:43:35Z",
   "as_of": "2026-06-25",
   "tracking_window_days": 7,
   "min_severity": "LOW",
@@ -23,24 +23,15 @@
       "LOW": 0
     },
     "by_type": {
-      "Earthquake": 1,
-      "Disease": 1
+      "Disease": 1,
+      "Earthquake": 1
     },
     "by_region": {
-      "Europe": 1,
-      "Africa": 1
+      "Africa": 1,
+      "Europe": 1
     }
   },
   "by_country": [
-    {
-      "country": "Russia",
-      "count": 1,
-      "max_sev_rank": 2,
-      "iso2": "RU",
-      "region": "Europe",
-      "country_group": "C",
-      "max_severity": "MEDIUM"
-    },
     {
       "country": "Burkina Faso",
       "count": 1,
@@ -49,9 +40,96 @@
       "region": "Africa",
       "country_group": "C",
       "max_severity": "MEDIUM"
+    },
+    {
+      "country": "Russia",
+      "count": 1,
+      "max_sev_rank": 2,
+      "iso2": "RU",
+      "region": "Europe",
+      "country_group": "C",
+      "max_severity": "MEDIUM"
     }
   ],
   "incidents": [
+    {
+      "incident_id": "20240320-BF-DI",
+      "canonical_name": "Yellow fever – African Region (AFRO)",
+      "summary": "The World Health Organization has issued a warning about persistent yellow fever outbreaks across Africa and the Americas, attributing the resurgence to low vaccination coverage and climate-related factors. This update highlights ongoing risks in the African region, underscoring the continued threat of the disease.",
+      "country": "Burkina Faso",
+      "iso2": "BF",
+      "lat": 12.2,
+      "lon": -1.6,
+      "country_group": "C",
+      "region": "Africa",
+      "incident_type": "Disease",
+      "incident_category": "Biological",
+      "is_disease": true,
+      "severity": "MEDIUM",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": "MEDIUM",
+      "event_status": null,
+      "disease_name": "Yellow Fever",
+      "event_date": "2024-03-20",
+      "first_reported_date": "2024-03-20",
+      "last_updated_date": "2026-06-25",
+      "days_since_event": 850,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [],
+      "sources": {
+        "who_don": 1,
+        "usgs": 0,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "WHO",
+          "label": "Yellow fever – African Region (AFRO)",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2024-DON510",
+          "meta": ""
+        }
+      ],
+      "physical": {
+        "max_magnitude": null,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Yellow fever outbreaks persist across Africa, Americas — WHO",
+          "url": "https://www.msn.com/en-xl/africa/nigeria/yellow-fever-outbreaks-persist-across-africa-americas-who/ar-AA26tqbr?ocid=BingNewsVerp",
+          "outlet": "Tribune Online on MSN",
+          "published_date": "2026-06-25T04:00:00+00:00"
+        }
+      ],
+      "news_total": 1,
+      "logs": [
+        {
+          "log_date": "2026-06-25",
+          "summary": "The World Health Organization has issued a warning about persistent yellow fever outbreaks across Africa and the Americas, attributing the resurgence to low vaccination coverage and climate-related factors. This update highlights ongoing risks in the African region, underscoring the continued threat of the disease.",
+          "news": [
+            {
+              "news_id": "95a1ed6de1685814b5efd1af3173fe1f",
+              "url": "https://www.msn.com/en-xl/africa/nigeria/yellow-fever-outbreaks-persist-across-africa-americas-who/ar-AA26tqbr?ocid=BingNewsVerp",
+              "headline": "Yellow fever outbreaks persist across Africa, Americas — WHO",
+              "body": "Yellow fever is making a troubling comeback across Africa and the Americas, prompting fresh warnings from the World Health Organisation (WHO) over the risks posed by low vaccination coverage, climate ...",
+              "published_date": "2026-06-25T04:00:00+00:00",
+              "outlet": "Tribune Online on MSN",
+              "image": ""
+            }
+          ]
+        }
+      ]
+    },
     {
       "incident_id": "20260619-RU-EQ",
       "canonical_name": "Earthquake 156 km ESE of Petropavlovsk-Kamchatsky, Russia 2026-06",
@@ -124,87 +202,13 @@
           "summary": "An earthquake of magnitude 6.9 occurred off the coast of Kamchatka and was felt in some areas of Petropavlovsk-Kamchatsky with a force of up to four points. No evacuation of the population was required.",
           "news": [
             {
-              "news_id": 1700001000020,
+              "news_id": "1bed090115cf5f20b5320cb904cdd735",
               "url": "https://iz.ru/en/node/2118182",
               "headline": "Evacuation in Petropavlovsk-Kamchatsky was not required during the earthquake.",
+              "body": "An earthquake of magnitude 6.9, which occurred off the coast of Kamchatka, was felt in some areas of Petropavlovsk-Kamchatsky with a force of up to four points, no evacuation of the population was ...",
               "published_date": "2026-06-19T00:00:00+00:00",
-              "outlet": "Izvestia"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "incident_id": "20240320-BF-DI",
-      "canonical_name": "Yellow fever – African Region (AFRO)",
-      "summary": "The World Health Organization has issued a warning about persistent yellow fever outbreaks across Africa and the Americas, attributing the resurgence to low vaccination coverage and climate-related factors. This update highlights ongoing risks in the African region, underscoring the continued threat of the disease.",
-      "country": "Burkina Faso",
-      "iso2": "BF",
-      "lat": 12.2,
-      "lon": -1.6,
-      "country_group": "C",
-      "region": "Africa",
-      "incident_type": "Disease",
-      "incident_category": "Biological",
-      "is_disease": true,
-      "severity": "MEDIUM",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": "MEDIUM",
-      "event_status": null,
-      "disease_name": "Yellow Fever",
-      "event_date": "2024-03-20",
-      "first_reported_date": "2024-03-20",
-      "last_updated_date": "2026-06-25",
-      "days_since_event": 850,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 1,
-        "usgs": 0,
-        "gdacs": 0,
-        "healthmap": 0,
-        "news": 1
-      },
-      "source_links": [
-        {
-          "type": "WHO",
-          "label": "Yellow fever – African Region (AFRO)",
-          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2024-DON510",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Yellow fever outbreaks persist across Africa, Americas — WHO",
-          "url": "https://www.msn.com/en-xl/africa/nigeria/yellow-fever-outbreaks-persist-across-africa-americas-who/ar-AA26tqbr?ocid=BingNewsVerp",
-          "outlet": "Tribune Online on MSN",
-          "published_date": "2026-06-25T04:00:00+00:00"
-        }
-      ],
-      "news_total": 1,
-      "logs": [
-        {
-          "log_date": "2026-06-25",
-          "summary": "The World Health Organization has issued a warning about persistent yellow fever outbreaks across Africa and the Americas, attributing the resurgence to low vaccination coverage and climate-related factors. This update highlights ongoing risks in the African region, underscoring the continued threat of the disease.",
-          "news": [
-            {
-              "news_id": 1700001000256,
-              "url": "https://www.msn.com/en-xl/africa/nigeria/yellow-fever-outbreaks-persist-across-africa-americas-who/ar-AA26tqbr?ocid=BingNewsVerp",
-              "headline": "Yellow fever outbreaks persist across Africa, Americas — WHO",
-              "published_date": "2026-06-25T04:00:00+00:00",
-              "outlet": "Tribune Online on MSN"
+              "outlet": "Izvestia",
+              "image": ""
             }
           ]
         }

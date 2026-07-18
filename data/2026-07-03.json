@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4",
   "report_date": "2026-07-03",
-  "generated_at": "2026-07-18T04:25:55Z",
+  "generated_at": "2026-07-18T08:43:35Z",
   "as_of": "2026-07-03",
   "tracking_window_days": 7,
   "min_severity": "LOW",
@@ -42,6 +42,15 @@
       "max_severity": "LOW"
     },
     {
+      "country": "Nicaragua",
+      "count": 1,
+      "max_sev_rank": 2,
+      "iso2": "NI",
+      "region": "Americas",
+      "country_group": "C",
+      "max_severity": "MEDIUM"
+    },
+    {
       "country": "Japan",
       "count": 1,
       "max_sev_rank": 2,
@@ -66,15 +75,6 @@
       "iso2": "AF",
       "region": "Asia",
       "country_group": "A",
-      "max_severity": "MEDIUM"
-    },
-    {
-      "country": "Nicaragua",
-      "count": 1,
-      "max_sev_rank": 2,
-      "iso2": "NI",
-      "region": "Americas",
-      "country_group": "C",
       "max_severity": "MEDIUM"
     },
     {
@@ -151,6 +151,68 @@
       "logs": []
     },
     {
+      "incident_id": "20260326-NI-EQ",
+      "canonical_name": "Earthquake 2 km WSW of Ciudad Sandino, Nicaragua 2026-03",
+      "summary": "",
+      "country": "Nicaragua",
+      "iso2": "NI",
+      "lat": 12.1477,
+      "lon": -86.3658,
+      "country_group": "C",
+      "region": "Americas",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-03-26",
+      "first_reported_date": "2026-03-26",
+      "last_updated_date": "2026-06-27",
+      "days_since_event": 114,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 5.5 - 2 km WSW of Ciudad Sandino, Nicaragua",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000s7w6",
+          "meta": "159.972 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 5.5,
+        "max_depth_km": 159.972,
+        "place": "2 km WSW of Ciudad Sandino, Nicaragua",
+        "felt": 6,
+        "sig": 467,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Dominican Republic and Nicaragua cap week of powerful earthquakes",
+          "url": "https://www.yahoo.com/news/weather-news/articles/dominican-republic-nicaragua-cap-week-172750228.html",
+          "outlet": "United Press International · via Yahoo News",
+          "published_date": "2026-06-27T14:43:13+00:00"
+        }
+      ],
+      "news_total": 1,
+      "logs": []
+    },
+    {
       "incident_id": "20260626-JP-EQ",
       "canonical_name": "Earthquake 3 km SE of Yokoshiba, Japan 2026-06",
       "summary": "A magnitude 5.8 earthquake struck Japan's Chiba prefecture on June 26, 2026, shaking areas near Tokyo. No tsunami warning was issued.",
@@ -216,87 +278,13 @@
           "summary": "A magnitude 5.8 earthquake struck Japan's Chiba prefecture on June 26, 2026, shaking areas near Tokyo. No tsunami warning was issued.",
           "news": [
             {
-              "news_id": 1700001000062,
+              "news_id": "ea71dfb65fdf566ea4daa2ec5dfdb9e6",
               "url": "https://www.aa.com.tr/en/asia-pacific/magnitude-58-earthquake-strikes-near-tokyo-no-tsunami-warning-issued/3978380",
               "headline": "Magnitude 5.8 earthquake strikes near Tokyo, no tsunami warning issued",
+              "body": "ISTANBUL (AA) - A magnitude 5.8 earthquake struck Japan's Chiba prefecture Friday, shaking areas near Tokyo but prompting no ...",
               "published_date": "2026-06-26T00:00:00+00:00",
-              "outlet": "Anadolu Agency"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "incident_id": "20260630-PG-EQ",
-      "canonical_name": "Earthquake 90 km ESE of Kimbe, Papua New Guinea 2026-06",
-      "summary": "A magnitude 5.8 earthquake struck the New Britain Region of Papua New Guinea on June 30, 2026, according to the German Research Centre for Geosciences (GFZ). The epicenter was located in the region near Kimbe, East New Britain.",
-      "country": "Papua New Guinea",
-      "iso2": "PG",
-      "lat": -5.727,
-      "lon": 150.9338,
-      "country_group": "B",
-      "region": "Oceania",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "disease_name": null,
-      "event_date": "2026-06-30",
-      "first_reported_date": "2026-06-30",
-      "last_updated_date": "2026-06-30",
-      "days_since_event": 18,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 0,
-        "healthmap": 0,
-        "news": 1
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 5.4 - 90 km ESE of Kimbe, Papua New Guinea",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t978",
-          "meta": "35 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 5.4,
-        "max_depth_km": 35.0,
-        "place": "90 km ESE of Kimbe, Papua New Guinea",
-        "felt": null,
-        "sig": 449,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Magnitude 5.8 earthquake strikes New Britain Region, Papua New Guinea, GFZ says",
-          "url": "https://www.reuters.com/business/environment/magnitude-58-earthquake-strikes-new-britain-region-papua-new-guinea-gfz-says-2026-06-30/",
-          "outlet": "Reuters",
-          "published_date": "2026-06-30T14:37:55+00:00"
-        }
-      ],
-      "news_total": 1,
-      "logs": [
-        {
-          "log_date": "2026-06-30",
-          "summary": "A magnitude 5.8 earthquake struck the New Britain Region of Papua New Guinea on June 30, 2026, according to the German Research Centre for Geosciences (GFZ). The epicenter was located in the region near Kimbe, East New Britain.",
-          "news": [
-            {
-              "news_id": 1700001000293,
-              "url": "https://www.reuters.com/business/environment/magnitude-58-earthquake-strikes-new-britain-region-papua-new-guinea-gfz-says-2026-06-30/",
-              "headline": "Magnitude 5.8 earthquake strikes New Britain Region, Papua New Guinea, GFZ says",
-              "published_date": "2026-06-30T14:37:55+00:00",
-              "outlet": "Reuters"
+              "outlet": "Anadolu Agency",
+              "image": "https://www.bing.com/th?id=ONUT.21B5pBa6flE4Nz23Oi2QwQ"
             }
           ]
         }
@@ -368,11 +356,91 @@
           "summary": "The earthquake caused coastal uplift that created approximately 200 hectares of new land but devastated the Pangyan Marine Sanctuary and Sarangani Bay Protected Seascape, resulting in the death of corals, seagrass, giant clams, and reef fishes.",
           "news": [
             {
-              "news_id": 1700001000007,
+              "news_id": "a7dfcb557010580ca43a981f861a2755",
               "url": "https://businessmirror.com.ph/2026/06/30/sarangani-earthquake-gives-birth-to-200-hectares-of-new-land-shatters-marine-sanctuary-habitats/",
               "headline": "Sarangani earthquake gives birth to 200 hectares of new land—shatters marine sanctuary, habitats",
+              "body": "DEAD corals, seagrass, giant clams, and reef fishes are some of the casualties in the coastal uplift that pushed shoreline and devastated the Pangyan Marine Sanctuary and the Saranani Bay Protected ...",
               "published_date": "2026-06-30T14:30:07+00:00",
-              "outlet": "BusinessMirror"
+              "outlet": "BusinessMirror",
+              "image": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "20260630-PG-EQ",
+      "canonical_name": "Earthquake 90 km ESE of Kimbe, Papua New Guinea 2026-06",
+      "summary": "A magnitude 5.8 earthquake struck the New Britain Region of Papua New Guinea on June 30, 2026, according to the German Research Centre for Geosciences (GFZ). The epicenter was located in the region near Kimbe, East New Britain.",
+      "country": "Papua New Guinea",
+      "iso2": "PG",
+      "lat": -5.727,
+      "lon": 150.9338,
+      "country_group": "B",
+      "region": "Oceania",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-06-30",
+      "first_reported_date": "2026-06-30",
+      "last_updated_date": "2026-06-30",
+      "days_since_event": 18,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 5.4 - 90 km ESE of Kimbe, Papua New Guinea",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t978",
+          "meta": "35 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 5.4,
+        "max_depth_km": 35.0,
+        "place": "90 km ESE of Kimbe, Papua New Guinea",
+        "felt": null,
+        "sig": 449,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Magnitude 5.8 earthquake strikes New Britain Region, Papua New Guinea, GFZ says",
+          "url": "https://www.reuters.com/business/environment/magnitude-58-earthquake-strikes-new-britain-region-papua-new-guinea-gfz-says-2026-06-30/",
+          "outlet": "Reuters",
+          "published_date": "2026-06-30T14:37:55+00:00"
+        }
+      ],
+      "news_total": 1,
+      "logs": [
+        {
+          "log_date": "2026-06-30",
+          "summary": "A magnitude 5.8 earthquake struck the New Britain Region of Papua New Guinea on June 30, 2026, according to the German Research Centre for Geosciences (GFZ). The epicenter was located in the region near Kimbe, East New Britain.",
+          "news": [
+            {
+              "news_id": "7fa7127bf3a75a239341e73e81348ad6",
+              "url": "https://www.reuters.com/business/environment/magnitude-58-earthquake-strikes-new-britain-region-papua-new-guinea-gfz-says-2026-06-30/",
+              "headline": "Magnitude 5.8 earthquake strikes New Britain Region, Papua New Guinea, GFZ says",
+              "body": "An earthquake of magnitude 5.8 struck the New Britain Region of Papua New Guinea on Wednesday, the German Research Centre for Geosciences said.",
+              "published_date": "2026-06-30T14:37:55+00:00",
+              "outlet": "Reuters",
+              "image": ""
             }
           ]
         }
@@ -444,77 +512,17 @@
           "summary": "A 5.5 magnitude earthquake struck 47 km southwest of Jurm, Afghanistan, with tremors felt in neighboring Pakistan and northern India, including Jammu and Kashmir. The article notes this is the second earthquake in the region within five days.",
           "news": [
             {
-              "news_id": 1700001000041,
+              "news_id": "9121cd08f98a5e06880814f42868ee7d",
               "url": "https://news24online.com/world/5-5-magnitude-earthquake-hits-afghanistan-tremors-felt-in-pakistan-afghanistan-earthquake/875262/",
               "headline": "5.5 magnitude earthquake hits Afghanistan, tremors felt in Jammu and Kashmir and…; second quake in 5 days",
+              "body": "Earthquakes in Afghanistan are often felt neighbouring Pakistan, and in northern India, particularly in Jammu and Kashmir.",
               "published_date": "2026-07-02T00:00:00+00:00",
-              "outlet": "News24"
+              "outlet": "News24",
+              "image": ""
             }
           ]
         }
       ]
-    },
-    {
-      "incident_id": "20260326-NI-EQ",
-      "canonical_name": "Earthquake 2 km WSW of Ciudad Sandino, Nicaragua 2026-03",
-      "summary": "",
-      "country": "Nicaragua",
-      "iso2": "NI",
-      "lat": 12.1477,
-      "lon": -86.3658,
-      "country_group": "C",
-      "region": "Americas",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "disease_name": null,
-      "event_date": "2026-03-26",
-      "first_reported_date": "2026-03-26",
-      "last_updated_date": "2026-06-27",
-      "days_since_event": 114,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 0,
-        "healthmap": 0,
-        "news": 1
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 5.5 - 2 km WSW of Ciudad Sandino, Nicaragua",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000s7w6",
-          "meta": "159.972 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 5.5,
-        "max_depth_km": 159.972,
-        "place": "2 km WSW of Ciudad Sandino, Nicaragua",
-        "felt": 6,
-        "sig": 467,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Dominican Republic and Nicaragua cap week of powerful earthquakes",
-          "url": "https://www.yahoo.com/news/weather-news/articles/dominican-republic-nicaragua-cap-week-172750228.html",
-          "outlet": "United Press International · via Yahoo News",
-          "published_date": "2026-06-27T14:43:13+00:00"
-        }
-      ],
-      "news_total": 1,
-      "logs": []
     }
   ]
 }

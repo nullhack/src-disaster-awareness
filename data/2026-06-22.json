@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4",
   "report_date": "2026-06-22",
-  "generated_at": "2026-07-18T04:25:55Z",
+  "generated_at": "2026-07-18T08:43:35Z",
   "as_of": "2026-06-22",
   "tracking_window_days": 7,
   "min_severity": "LOW",
@@ -27,21 +27,12 @@
       "Disease": 1
     },
     "by_region": {
-      "Asia": 1,
       "Europe": 1,
-      "Unknown": 1
+      "Unknown": 1,
+      "Asia": 1
     }
   },
   "by_country": [
-    {
-      "country": "Indonesia",
-      "count": 1,
-      "max_sev_rank": 2,
-      "iso2": "ID",
-      "region": "Asia",
-      "country_group": "A",
-      "max_severity": "MEDIUM"
-    },
     {
       "country": "Russia",
       "count": 1,
@@ -50,98 +41,18 @@
       "region": "Europe",
       "country_group": "C",
       "max_severity": "MEDIUM"
+    },
+    {
+      "country": "Indonesia",
+      "count": 1,
+      "max_sev_rank": 2,
+      "iso2": "ID",
+      "region": "Asia",
+      "country_group": "A",
+      "max_severity": "MEDIUM"
     }
   ],
   "incidents": [
-    {
-      "incident_id": "20260703-ID-EQ",
-      "canonical_name": "Earthquake 58 km W of Tobelo, Indonesia 2026-07",
-      "summary": "A magnitude 6.2 earthquake struck approximately 58 km west of Tobelo, Indonesia, on July 3, 2026, according to the USGS and Indonesia's BKMG. There was no tsunami threat, and no immediate reports of casualties or damage.",
-      "country": "Indonesia",
-      "iso2": "ID",
-      "lat": 1.8205,
-      "lon": 127.4916,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "disease_name": null,
-      "event_date": "2026-07-03",
-      "first_reported_date": "2026-07-03",
-      "last_updated_date": "2026-06-17",
-      "days_since_event": 15,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 0,
-        "healthmap": 0,
-        "news": 2
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 6.2 - 58 km W of Tobelo, Indonesia",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9r5",
-          "meta": "120.932 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 6.2,
-        "max_depth_km": 120.932,
-        "place": "58 km W of Tobelo, Indonesia",
-        "felt": 7,
-        "sig": 594,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Magnitude 6.2 earthquake strikes off eastern Indonesia, no tsunami threat",
-          "url": "https://www.asiaone.com/asia/indonesia-tolebo-maluku-earthquake",
-          "outlet": "Asia One",
-          "published_date": "2026-06-17T00:00:00+00:00"
-        },
-        {
-          "headline": "Magnitude 6.2 earthquake strikes off eastern Indonesia: USGS",
-          "url": "https://www.bssnews.net/international/402127",
-          "outlet": "Bangladesh Sangsbad Sangstha",
-          "published_date": "2026-06-17T00:00:00+00:00"
-        }
-      ],
-      "news_total": 2,
-      "logs": [
-        {
-          "log_date": "2026-06-17",
-          "summary": "A magnitude 6.2 earthquake struck approximately 58 km west of Tobelo, Indonesia, on July 3, 2026, according to the USGS and Indonesia's BKMG. There was no tsunami threat, and no immediate reports of casualties or damage.",
-          "news": [
-            {
-              "news_id": 1700001000072,
-              "url": "https://www.asiaone.com/asia/indonesia-tolebo-maluku-earthquake",
-              "headline": "Magnitude 6.2 earthquake strikes off eastern Indonesia, no tsunami threat",
-              "published_date": "2026-06-17T00:00:00+00:00",
-              "outlet": "Asia One"
-            },
-            {
-              "news_id": 1700001000079,
-              "url": "https://www.bssnews.net/international/402127",
-              "headline": "Magnitude 6.2 earthquake strikes off eastern Indonesia: USGS",
-              "published_date": "2026-06-17T00:00:00+00:00",
-              "outlet": "Bangladesh Sangsbad Sangstha"
-            }
-          ]
-        }
-      ]
-    },
     {
       "incident_id": "20260619-RU-EQ",
       "canonical_name": "Earthquake 156 km ESE of Petropavlovsk-Kamchatsky, Russia 2026-06",
@@ -214,11 +125,13 @@
           "summary": "An earthquake of magnitude 6.9 occurred off the coast of Kamchatka and was felt in some areas of Petropavlovsk-Kamchatsky with a force of up to four points. No evacuation of the population was required.",
           "news": [
             {
-              "news_id": 1700001000020,
+              "news_id": "1bed090115cf5f20b5320cb904cdd735",
               "url": "https://iz.ru/en/node/2118182",
               "headline": "Evacuation in Petropavlovsk-Kamchatsky was not required during the earthquake.",
+              "body": "An earthquake of magnitude 6.9, which occurred off the coast of Kamchatka, was felt in some areas of Petropavlovsk-Kamchatsky with a force of up to four points, no evacuation of the population was ...",
               "published_date": "2026-06-19T00:00:00+00:00",
-              "outlet": "Izvestia"
+              "outlet": "Izvestia",
+              "image": ""
             }
           ]
         }
@@ -285,6 +198,99 @@
       ],
       "news_total": 1,
       "logs": []
+    },
+    {
+      "incident_id": "20260703-ID-EQ",
+      "canonical_name": "Earthquake 58 km W of Tobelo, Indonesia 2026-07",
+      "summary": "A magnitude 6.2 earthquake struck approximately 58 km west of Tobelo, Indonesia, on July 3, 2026, according to the USGS and Indonesia's BKMG. There was no tsunami threat, and no immediate reports of casualties or damage.",
+      "country": "Indonesia",
+      "iso2": "ID",
+      "lat": 1.8205,
+      "lon": 127.4916,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-07-03",
+      "first_reported_date": "2026-07-03",
+      "last_updated_date": "2026-06-17",
+      "days_since_event": 15,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 2
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 6.2 - 58 km W of Tobelo, Indonesia",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9r5",
+          "meta": "120.932 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 6.2,
+        "max_depth_km": 120.932,
+        "place": "58 km W of Tobelo, Indonesia",
+        "felt": 7,
+        "sig": 594,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Magnitude 6.2 earthquake strikes off eastern Indonesia, no tsunami threat",
+          "url": "https://www.asiaone.com/asia/indonesia-tolebo-maluku-earthquake",
+          "outlet": "Asia One",
+          "published_date": "2026-06-17T00:00:00+00:00"
+        },
+        {
+          "headline": "Magnitude 6.2 earthquake strikes off eastern Indonesia: USGS",
+          "url": "https://www.bssnews.net/international/402127",
+          "outlet": "Bangladesh Sangsbad Sangstha",
+          "published_date": "2026-06-17T00:00:00+00:00"
+        }
+      ],
+      "news_total": 2,
+      "logs": [
+        {
+          "log_date": "2026-06-17",
+          "summary": "A magnitude 6.2 earthquake struck approximately 58 km west of Tobelo, Indonesia, on July 3, 2026, according to the USGS and Indonesia's BKMG. There was no tsunami threat, and no immediate reports of casualties or damage.",
+          "news": [
+            {
+              "news_id": "ffff2a548e365bad8ddca8a23e1e2ef8",
+              "url": "https://www.asiaone.com/asia/indonesia-tolebo-maluku-earthquake",
+              "headline": "Magnitude 6.2 earthquake strikes off eastern Indonesia, no tsunami threat",
+              "body": "A magnitude 6.2 earthquake struck off eastern Indonesia on Friday (July 3) morning, Indonesia's Meteorological, Climatological and Geophysical Agency (BKMG) said, with no immediate reports of ...",
+              "published_date": "2026-06-17T00:00:00+00:00",
+              "outlet": "Asia One",
+              "image": ""
+            },
+            {
+              "news_id": "b522736c824c58ffa52a1502ea2a5e37",
+              "url": "https://www.bssnews.net/international/402127",
+              "headline": "Magnitude 6.2 earthquake strikes off eastern Indonesia: USGS",
+              "body": "TERNATE, Indonesia, July 3, 2026 (BSS/AFP) - A 6.2 magnitude quake struck off eastern Indonesia on Friday, the US Geological Survey (USGS) said, with no immediate reports of casualties or damage. The ...",
+              "published_date": "2026-06-17T00:00:00+00:00",
+              "outlet": "Bangladesh Sangsbad Sangstha",
+              "image": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

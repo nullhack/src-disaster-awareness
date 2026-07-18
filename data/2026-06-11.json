@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4",
   "report_date": "2026-06-11",
-  "generated_at": "2026-07-18T04:25:55Z",
+  "generated_at": "2026-07-18T08:43:35Z",
   "as_of": "2026-06-11",
   "tracking_window_days": 7,
   "min_severity": "LOW",
@@ -23,8 +23,8 @@
       "LOW": 0
     },
     "by_type": {
-      "Earthquake": 2,
-      "Disease": 1
+      "Disease": 1,
+      "Earthquake": 2
     },
     "by_region": {
       "Asia": 2,
@@ -33,21 +33,21 @@
   },
   "by_country": [
     {
-      "country": "Cuba",
-      "count": 1,
-      "max_sev_rank": 2,
-      "iso2": "CU",
-      "region": "Americas",
-      "country_group": "C",
-      "max_severity": "MEDIUM"
-    },
-    {
       "country": "Afghanistan",
       "count": 1,
       "max_sev_rank": 2,
       "iso2": "AF",
       "region": "Asia",
       "country_group": "A",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "Cuba",
+      "count": 1,
+      "max_sev_rank": 2,
+      "iso2": "CU",
+      "region": "Americas",
+      "country_group": "C",
       "max_severity": "MEDIUM"
     },
     {
@@ -61,144 +61,6 @@
     }
   ],
   "incidents": [
-    {
-      "incident_id": "20251010-PH-EQ",
-      "canonical_name": "Earthquake Philippines 2025-10",
-      "summary": "A powerful 7.4 magnitude earthquake struck off the southeastern coast of the Philippines on Friday morning, October 10, 2025, causing panic among residents who fled into the streets. The earthquake occurred near the Davao Oriental region.",
-      "country": "Philippines",
-      "iso2": "PH",
-      "lat": 7.2649,
-      "lon": 126.7545,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "HIGH",
-      "priority": "HIGH",
-      "priority_rank": 1,
-      "pandemic_potential": null,
-      "event_status": null,
-      "disease_name": null,
-      "event_date": "2025-10-10",
-      "first_reported_date": "2025-10-10",
-      "last_updated_date": "2026-06-08",
-      "days_since_event": 281,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 1,
-        "healthmap": 0,
-        "news": 1
-      },
-      "source_links": [
-        {
-          "type": "GDACS",
-          "label": "Orange alert · Magnitude 7.4M, Depth:58.087km",
-          "url": "https://www.gdacs.org/report.aspx?eventid=1504268&episodeid=1665061&eventtype=EQ",
-          "meta": "Magnitude 7.4M, Depth:58.087km"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 7.4,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": "Orange",
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Powerful quake rattles southeastern Philippines sending panicked residents into...",
-          "url": "https://sports.yahoo.com/articles/7-4-magnitude-earthquake-hits-023746639.html",
-          "outlet": "CNN · via Yahoo Sports",
-          "published_date": "2026-06-08T00:00:00+00:00"
-        }
-      ],
-      "news_total": 1,
-      "logs": [
-        {
-          "log_date": "2026-06-08",
-          "summary": "A powerful 7.4 magnitude earthquake struck off the southeastern coast of the Philippines on Friday morning, October 10, 2025, causing panic among residents who fled into the streets. The earthquake occurred near the Davao Oriental region.",
-          "news": [
-            {
-              "news_id": 1700001000050,
-              "url": "https://sports.yahoo.com/articles/7-4-magnitude-earthquake-hits-023746639.html",
-              "headline": "Powerful quake rattles southeastern Philippines sending panicked residents into...",
-              "published_date": "2026-06-08T00:00:00+00:00",
-              "outlet": "CNN · via Yahoo Sports"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "incident_id": "20260208-CU-EQ",
-      "canonical_name": "Earthquake 42 km SSW of Maisí, Cuba 2026-02",
-      "summary": "",
-      "country": "Cuba",
-      "iso2": "CU",
-      "lat": 19.9214,
-      "lon": -74.3748,
-      "country_group": "C",
-      "region": "Americas",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "disease_name": null,
-      "event_date": "2026-02-08",
-      "first_reported_date": "2026-02-08",
-      "last_updated_date": "2026-06-09",
-      "days_since_event": 160,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 0,
-        "healthmap": 0,
-        "news": 1
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 5.5 - 42 km SSW of Maisí, Cuba",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000s799",
-          "meta": "10 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 5.5,
-        "max_depth_km": 10.0,
-        "place": "42 km SSW of Maisí, Cuba",
-        "felt": 14,
-        "sig": 470,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Could Florida feel aftershocks after Cuba earthquake? How to check",
-          "url": "https://www.usatoday.com/story/news/state/2026/06/09/florida-earthquake-cuba-aftershocks/90470779007/",
-          "outlet": "USA Today",
-          "published_date": "2026-06-09T00:00:00+00:00"
-        }
-      ],
-      "news_total": 1,
-      "logs": []
-    },
     {
       "incident_id": "20250829-AF-DI",
       "canonical_name": "Cholera – Multi-country with a focus on countries experiencing current surges",
@@ -265,15 +127,157 @@
           "summary": "According to a report from Africa CDC, the continent is experiencing its worst cholera outbreak in 25 years, with Sudan among the countries facing surges. The outbreak is compounded by the annual rainy season and a collapsed health system in Sudan, which is also battling dengue fever.",
           "news": [
             {
-              "news_id": 1700001000065,
+              "news_id": "b22052a6b3de5e2fa7fa82c864b0c214",
               "url": "https://www.aol.com/articles/africa-experiencing-worst-outbreak-cholera-152739691.html",
               "headline": "Africa experiencing worst outbreak of cholera in 25 years, Africa CDC says",
+              "body": "A Sudanese doctor sits on a bed while monitoring dengue fever patients at Omdurman Hospital, as Sudan grapples with outbreaks of dengue and cholera amid the annual rainy season and a collapsed ...",
               "published_date": "2026-06-05T00:00:00+00:00",
-              "outlet": "AOL"
+              "outlet": "AOL",
+              "image": ""
             }
           ]
         }
       ]
+    },
+    {
+      "incident_id": "20251010-PH-EQ",
+      "canonical_name": "Earthquake Philippines 2025-10",
+      "summary": "A powerful 7.4 magnitude earthquake struck off the southeastern coast of the Philippines on Friday morning, October 10, 2025, causing panic among residents who fled into the streets. The earthquake occurred near the Davao Oriental region.",
+      "country": "Philippines",
+      "iso2": "PH",
+      "lat": 7.2649,
+      "lon": 126.7545,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "HIGH",
+      "priority": "HIGH",
+      "priority_rank": 1,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2025-10-10",
+      "first_reported_date": "2025-10-10",
+      "last_updated_date": "2026-06-08",
+      "days_since_event": 281,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 0,
+        "gdacs": 1,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "GDACS",
+          "label": "Orange alert · Magnitude 7.4M, Depth:58.087km",
+          "url": "https://www.gdacs.org/report.aspx?eventid=1504268&episodeid=1665061&eventtype=EQ",
+          "meta": "Magnitude 7.4M, Depth:58.087km"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 7.4,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": "Orange",
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Powerful quake rattles southeastern Philippines sending panicked residents into...",
+          "url": "https://sports.yahoo.com/articles/7-4-magnitude-earthquake-hits-023746639.html",
+          "outlet": "CNN · via Yahoo Sports",
+          "published_date": "2026-06-08T00:00:00+00:00"
+        }
+      ],
+      "news_total": 1,
+      "logs": [
+        {
+          "log_date": "2026-06-08",
+          "summary": "A powerful 7.4 magnitude earthquake struck off the southeastern coast of the Philippines on Friday morning, October 10, 2025, causing panic among residents who fled into the streets. The earthquake occurred near the Davao Oriental region.",
+          "news": [
+            {
+              "news_id": "1d8afa1ca5eb5a2ebb6b0a6539591f10",
+              "url": "https://sports.yahoo.com/articles/7-4-magnitude-earthquake-hits-023746639.html",
+              "headline": "Powerful quake rattles southeastern Philippines sending panicked residents into...",
+              "body": "A 7.4 magnitude earthquake struck off the southeastern coast of the Philippines Friday morning,...",
+              "published_date": "2026-06-08T00:00:00+00:00",
+              "outlet": "CNN · via Yahoo Sports",
+              "image": "https://media.zenfs.com/en/aol_cnn_articles_945/2eb03fc6b48ba7375de6d63d8a226c3a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "20260208-CU-EQ",
+      "canonical_name": "Earthquake 42 km SSW of Maisí, Cuba 2026-02",
+      "summary": "",
+      "country": "Cuba",
+      "iso2": "CU",
+      "lat": 19.9214,
+      "lon": -74.3748,
+      "country_group": "C",
+      "region": "Americas",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-02-08",
+      "first_reported_date": "2026-02-08",
+      "last_updated_date": "2026-06-09",
+      "days_since_event": 160,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 5.5 - 42 km SSW of Maisí, Cuba",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000s799",
+          "meta": "10 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 5.5,
+        "max_depth_km": 10.0,
+        "place": "42 km SSW of Maisí, Cuba",
+        "felt": 14,
+        "sig": 470,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Could Florida feel aftershocks after Cuba earthquake? How to check",
+          "url": "https://www.usatoday.com/story/news/state/2026/06/09/florida-earthquake-cuba-aftershocks/90470779007/",
+          "outlet": "USA Today",
+          "published_date": "2026-06-09T00:00:00+00:00"
+        }
+      ],
+      "news_total": 1,
+      "logs": []
     }
   ]
 }

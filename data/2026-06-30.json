@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4",
   "report_date": "2026-06-30",
-  "generated_at": "2026-07-18T04:25:55Z",
+  "generated_at": "2026-07-18T08:43:35Z",
   "as_of": "2026-06-30",
   "tracking_window_days": 7,
   "min_severity": "LOW",
@@ -23,14 +23,14 @@
       "LOW": 1
     },
     "by_type": {
-      "Earthquake": 5,
-      "Disease": 1
+      "Disease": 1,
+      "Earthquake": 5
     },
     "by_region": {
+      "Africa": 1,
       "Americas": 2,
       "Asia": 2,
-      "Oceania": 1,
-      "Africa": 1
+      "Oceania": 1
     }
   },
   "by_country": [
@@ -42,6 +42,24 @@
       "region": "Asia",
       "country_group": "A",
       "max_severity": "LOW"
+    },
+    {
+      "country": "Burkina Faso",
+      "count": 1,
+      "max_sev_rank": 2,
+      "iso2": "BF",
+      "region": "Africa",
+      "country_group": "C",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "Nicaragua",
+      "count": 1,
+      "max_sev_rank": 2,
+      "iso2": "NI",
+      "region": "Americas",
+      "country_group": "C",
+      "max_severity": "MEDIUM"
     },
     {
       "country": "Japan",
@@ -62,24 +80,6 @@
       "max_severity": "MEDIUM"
     },
     {
-      "country": "Nicaragua",
-      "count": 1,
-      "max_sev_rank": 2,
-      "iso2": "NI",
-      "region": "Americas",
-      "country_group": "C",
-      "max_severity": "MEDIUM"
-    },
-    {
-      "country": "Burkina Faso",
-      "count": 1,
-      "max_sev_rank": 2,
-      "iso2": "BF",
-      "region": "Africa",
-      "country_group": "C",
-      "max_severity": "MEDIUM"
-    },
-    {
       "country": "Dominican Republic",
       "count": 1,
       "max_sev_rank": 3,
@@ -90,6 +90,84 @@
     }
   ],
   "incidents": [
+    {
+      "incident_id": "20240320-BF-DI",
+      "canonical_name": "Yellow fever – African Region (AFRO)",
+      "summary": "The World Health Organization has issued a warning about persistent yellow fever outbreaks across Africa and the Americas, attributing the resurgence to low vaccination coverage and climate-related factors. This update highlights ongoing risks in the African region, underscoring the continued threat of the disease.",
+      "country": "Burkina Faso",
+      "iso2": "BF",
+      "lat": 12.2,
+      "lon": -1.6,
+      "country_group": "C",
+      "region": "Africa",
+      "incident_type": "Disease",
+      "incident_category": "Biological",
+      "is_disease": true,
+      "severity": "MEDIUM",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": "MEDIUM",
+      "event_status": null,
+      "disease_name": "Yellow Fever",
+      "event_date": "2024-03-20",
+      "first_reported_date": "2024-03-20",
+      "last_updated_date": "2026-06-25",
+      "days_since_event": 850,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [],
+      "sources": {
+        "who_don": 1,
+        "usgs": 0,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "WHO",
+          "label": "Yellow fever – African Region (AFRO)",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2024-DON510",
+          "meta": ""
+        }
+      ],
+      "physical": {
+        "max_magnitude": null,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Yellow fever outbreaks persist across Africa, Americas — WHO",
+          "url": "https://www.msn.com/en-xl/africa/nigeria/yellow-fever-outbreaks-persist-across-africa-americas-who/ar-AA26tqbr?ocid=BingNewsVerp",
+          "outlet": "Tribune Online on MSN",
+          "published_date": "2026-06-25T04:00:00+00:00"
+        }
+      ],
+      "news_total": 1,
+      "logs": [
+        {
+          "log_date": "2026-06-25",
+          "summary": "The World Health Organization has issued a warning about persistent yellow fever outbreaks across Africa and the Americas, attributing the resurgence to low vaccination coverage and climate-related factors. This update highlights ongoing risks in the African region, underscoring the continued threat of the disease.",
+          "news": [
+            {
+              "news_id": "95a1ed6de1685814b5efd1af3173fe1f",
+              "url": "https://www.msn.com/en-xl/africa/nigeria/yellow-fever-outbreaks-persist-across-africa-americas-who/ar-AA26tqbr?ocid=BingNewsVerp",
+              "headline": "Yellow fever outbreaks persist across Africa, Americas — WHO",
+              "body": "Yellow fever is making a troubling comeback across Africa and the Americas, prompting fresh warnings from the World Health Organisation (WHO) over the risks posed by low vaccination coverage, climate ...",
+              "published_date": "2026-06-25T04:00:00+00:00",
+              "outlet": "Tribune Online on MSN",
+              "image": ""
+            }
+          ]
+        }
+      ]
+    },
     {
       "incident_id": "20250805-DO-EQ",
       "canonical_name": "Earthquake 38 km SE of Boca de Yuma, Dominican Republic 2025-08",
@@ -147,6 +225,68 @@
           "url": "https://www.msn.com/en-us/news/world/dominican-republic-and-nicaragua-cap-week-of-powerful-earthquakes/ar-AA26CRR8?ocid=BingNewsVerp",
           "outlet": "UPI on MSN",
           "published_date": "2026-06-26T04:00:00+00:00"
+        }
+      ],
+      "news_total": 1,
+      "logs": []
+    },
+    {
+      "incident_id": "20260326-NI-EQ",
+      "canonical_name": "Earthquake 2 km WSW of Ciudad Sandino, Nicaragua 2026-03",
+      "summary": "",
+      "country": "Nicaragua",
+      "iso2": "NI",
+      "lat": 12.1477,
+      "lon": -86.3658,
+      "country_group": "C",
+      "region": "Americas",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": null,
+      "event_status": null,
+      "disease_name": null,
+      "event_date": "2026-03-26",
+      "first_reported_date": "2026-03-26",
+      "last_updated_date": "2026-06-27",
+      "days_since_event": 114,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 5.5 - 2 km WSW of Ciudad Sandino, Nicaragua",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000s7w6",
+          "meta": "159.972 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 5.5,
+        "max_depth_km": 159.972,
+        "place": "2 km WSW of Ciudad Sandino, Nicaragua",
+        "felt": 6,
+        "sig": 467,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Dominican Republic and Nicaragua cap week of powerful earthquakes",
+          "url": "https://www.yahoo.com/news/weather-news/articles/dominican-republic-nicaragua-cap-week-172750228.html",
+          "outlet": "United Press International · via Yahoo News",
+          "published_date": "2026-06-27T14:43:13+00:00"
         }
       ],
       "news_total": 1,
@@ -218,87 +358,13 @@
           "summary": "A magnitude 5.8 earthquake struck Japan's Chiba prefecture on June 26, 2026, shaking areas near Tokyo. No tsunami warning was issued.",
           "news": [
             {
-              "news_id": 1700001000062,
+              "news_id": "ea71dfb65fdf566ea4daa2ec5dfdb9e6",
               "url": "https://www.aa.com.tr/en/asia-pacific/magnitude-58-earthquake-strikes-near-tokyo-no-tsunami-warning-issued/3978380",
               "headline": "Magnitude 5.8 earthquake strikes near Tokyo, no tsunami warning issued",
+              "body": "ISTANBUL (AA) - A magnitude 5.8 earthquake struck Japan's Chiba prefecture Friday, shaking areas near Tokyo but prompting no ...",
               "published_date": "2026-06-26T00:00:00+00:00",
-              "outlet": "Anadolu Agency"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "incident_id": "20260630-PG-EQ",
-      "canonical_name": "Earthquake 90 km ESE of Kimbe, Papua New Guinea 2026-06",
-      "summary": "A magnitude 5.8 earthquake struck the New Britain Region of Papua New Guinea on June 30, 2026, according to the German Research Centre for Geosciences (GFZ). The epicenter was located in the region near Kimbe, East New Britain.",
-      "country": "Papua New Guinea",
-      "iso2": "PG",
-      "lat": -5.727,
-      "lon": 150.9338,
-      "country_group": "B",
-      "region": "Oceania",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "disease_name": null,
-      "event_date": "2026-06-30",
-      "first_reported_date": "2026-06-30",
-      "last_updated_date": "2026-06-30",
-      "days_since_event": 18,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 0,
-        "healthmap": 0,
-        "news": 1
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 5.4 - 90 km ESE of Kimbe, Papua New Guinea",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t978",
-          "meta": "35 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 5.4,
-        "max_depth_km": 35.0,
-        "place": "90 km ESE of Kimbe, Papua New Guinea",
-        "felt": null,
-        "sig": 449,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Magnitude 5.8 earthquake strikes New Britain Region, Papua New Guinea, GFZ says",
-          "url": "https://www.reuters.com/business/environment/magnitude-58-earthquake-strikes-new-britain-region-papua-new-guinea-gfz-says-2026-06-30/",
-          "outlet": "Reuters",
-          "published_date": "2026-06-30T14:37:55+00:00"
-        }
-      ],
-      "news_total": 1,
-      "logs": [
-        {
-          "log_date": "2026-06-30",
-          "summary": "A magnitude 5.8 earthquake struck the New Britain Region of Papua New Guinea on June 30, 2026, according to the German Research Centre for Geosciences (GFZ). The epicenter was located in the region near Kimbe, East New Britain.",
-          "news": [
-            {
-              "news_id": 1700001000293,
-              "url": "https://www.reuters.com/business/environment/magnitude-58-earthquake-strikes-new-britain-region-papua-new-guinea-gfz-says-2026-06-30/",
-              "headline": "Magnitude 5.8 earthquake strikes New Britain Region, Papua New Guinea, GFZ says",
-              "published_date": "2026-06-30T14:37:55+00:00",
-              "outlet": "Reuters"
+              "outlet": "Anadolu Agency",
+              "image": "https://www.bing.com/th?id=ONUT.21B5pBa6flE4Nz23Oi2QwQ"
             }
           ]
         }
@@ -370,41 +436,43 @@
           "summary": "The earthquake caused coastal uplift that created approximately 200 hectares of new land but devastated the Pangyan Marine Sanctuary and Sarangani Bay Protected Seascape, resulting in the death of corals, seagrass, giant clams, and reef fishes.",
           "news": [
             {
-              "news_id": 1700001000007,
+              "news_id": "a7dfcb557010580ca43a981f861a2755",
               "url": "https://businessmirror.com.ph/2026/06/30/sarangani-earthquake-gives-birth-to-200-hectares-of-new-land-shatters-marine-sanctuary-habitats/",
               "headline": "Sarangani earthquake gives birth to 200 hectares of new land—shatters marine sanctuary, habitats",
+              "body": "DEAD corals, seagrass, giant clams, and reef fishes are some of the casualties in the coastal uplift that pushed shoreline and devastated the Pangyan Marine Sanctuary and the Saranani Bay Protected ...",
               "published_date": "2026-06-30T14:30:07+00:00",
-              "outlet": "BusinessMirror"
+              "outlet": "BusinessMirror",
+              "image": ""
             }
           ]
         }
       ]
     },
     {
-      "incident_id": "20260326-NI-EQ",
-      "canonical_name": "Earthquake 2 km WSW of Ciudad Sandino, Nicaragua 2026-03",
-      "summary": "",
-      "country": "Nicaragua",
-      "iso2": "NI",
-      "lat": 12.1477,
-      "lon": -86.3658,
-      "country_group": "C",
-      "region": "Americas",
+      "incident_id": "20260630-PG-EQ",
+      "canonical_name": "Earthquake 90 km ESE of Kimbe, Papua New Guinea 2026-06",
+      "summary": "A magnitude 5.8 earthquake struck the New Britain Region of Papua New Guinea on June 30, 2026, according to the German Research Centre for Geosciences (GFZ). The epicenter was located in the region near Kimbe, East New Britain.",
+      "country": "Papua New Guinea",
+      "iso2": "PG",
+      "lat": -5.727,
+      "lon": 150.9338,
+      "country_group": "B",
+      "region": "Oceania",
       "incident_type": "Earthquake",
       "incident_category": "Natural",
       "is_disease": false,
       "severity": "MEDIUM",
-      "priority": "LOW",
-      "priority_rank": 3,
+      "priority": "MEDIUM",
+      "priority_rank": 2,
       "pandemic_potential": null,
       "event_status": null,
       "disease_name": null,
-      "event_date": "2026-03-26",
-      "first_reported_date": "2026-03-26",
-      "last_updated_date": "2026-06-27",
-      "days_since_event": 114,
+      "event_date": "2026-06-30",
+      "first_reported_date": "2026-06-30",
+      "last_updated_date": "2026-06-30",
+      "days_since_event": 18,
       "source_count": 1,
-      "should_report": false,
+      "should_report": true,
       "search_keys": [],
       "sources": {
         "who_don": 0,
@@ -416,103 +484,43 @@
       "source_links": [
         {
           "type": "USGS",
-          "label": "M 5.5 - 2 km WSW of Ciudad Sandino, Nicaragua",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000s7w6",
-          "meta": "159.972 km depth"
+          "label": "M 5.4 - 90 km ESE of Kimbe, Papua New Guinea",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t978",
+          "meta": "35 km depth"
         }
       ],
       "physical": {
-        "max_magnitude": 5.5,
-        "max_depth_km": 159.972,
-        "place": "2 km WSW of Ciudad Sandino, Nicaragua",
-        "felt": 6,
-        "sig": 467,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Dominican Republic and Nicaragua cap week of powerful earthquakes",
-          "url": "https://www.yahoo.com/news/weather-news/articles/dominican-republic-nicaragua-cap-week-172750228.html",
-          "outlet": "United Press International · via Yahoo News",
-          "published_date": "2026-06-27T14:43:13+00:00"
-        }
-      ],
-      "news_total": 1,
-      "logs": []
-    },
-    {
-      "incident_id": "20240320-BF-DI",
-      "canonical_name": "Yellow fever – African Region (AFRO)",
-      "summary": "The World Health Organization has issued a warning about persistent yellow fever outbreaks across Africa and the Americas, attributing the resurgence to low vaccination coverage and climate-related factors. This update highlights ongoing risks in the African region, underscoring the continued threat of the disease.",
-      "country": "Burkina Faso",
-      "iso2": "BF",
-      "lat": 12.2,
-      "lon": -1.6,
-      "country_group": "C",
-      "region": "Africa",
-      "incident_type": "Disease",
-      "incident_category": "Biological",
-      "is_disease": true,
-      "severity": "MEDIUM",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": "MEDIUM",
-      "event_status": null,
-      "disease_name": "Yellow Fever",
-      "event_date": "2024-03-20",
-      "first_reported_date": "2024-03-20",
-      "last_updated_date": "2026-06-25",
-      "days_since_event": 850,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 1,
-        "usgs": 0,
-        "gdacs": 0,
-        "healthmap": 0,
-        "news": 1
-      },
-      "source_links": [
-        {
-          "type": "WHO",
-          "label": "Yellow fever – African Region (AFRO)",
-          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2024-DON510",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
+        "max_magnitude": 5.4,
+        "max_depth_km": 35.0,
+        "place": "90 km ESE of Kimbe, Papua New Guinea",
         "felt": null,
-        "sig": null,
+        "sig": 449,
         "tsunami": false,
         "gdacs_alertlevel": null,
         "gdacs_population": null
       },
       "news": [
         {
-          "headline": "Yellow fever outbreaks persist across Africa, Americas — WHO",
-          "url": "https://www.msn.com/en-xl/africa/nigeria/yellow-fever-outbreaks-persist-across-africa-americas-who/ar-AA26tqbr?ocid=BingNewsVerp",
-          "outlet": "Tribune Online on MSN",
-          "published_date": "2026-06-25T04:00:00+00:00"
+          "headline": "Magnitude 5.8 earthquake strikes New Britain Region, Papua New Guinea, GFZ says",
+          "url": "https://www.reuters.com/business/environment/magnitude-58-earthquake-strikes-new-britain-region-papua-new-guinea-gfz-says-2026-06-30/",
+          "outlet": "Reuters",
+          "published_date": "2026-06-30T14:37:55+00:00"
         }
       ],
       "news_total": 1,
       "logs": [
         {
-          "log_date": "2026-06-25",
-          "summary": "The World Health Organization has issued a warning about persistent yellow fever outbreaks across Africa and the Americas, attributing the resurgence to low vaccination coverage and climate-related factors. This update highlights ongoing risks in the African region, underscoring the continued threat of the disease.",
+          "log_date": "2026-06-30",
+          "summary": "A magnitude 5.8 earthquake struck the New Britain Region of Papua New Guinea on June 30, 2026, according to the German Research Centre for Geosciences (GFZ). The epicenter was located in the region near Kimbe, East New Britain.",
           "news": [
             {
-              "news_id": 1700001000256,
-              "url": "https://www.msn.com/en-xl/africa/nigeria/yellow-fever-outbreaks-persist-across-africa-americas-who/ar-AA26tqbr?ocid=BingNewsVerp",
-              "headline": "Yellow fever outbreaks persist across Africa, Americas — WHO",
-              "published_date": "2026-06-25T04:00:00+00:00",
-              "outlet": "Tribune Online on MSN"
+              "news_id": "7fa7127bf3a75a239341e73e81348ad6",
+              "url": "https://www.reuters.com/business/environment/magnitude-58-earthquake-strikes-new-britain-region-papua-new-guinea-gfz-says-2026-06-30/",
+              "headline": "Magnitude 5.8 earthquake strikes New Britain Region, Papua New Guinea, GFZ says",
+              "body": "An earthquake of magnitude 5.8 struck the New Britain Region of Papua New Guinea on Wednesday, the German Research Centre for Geosciences said.",
+              "published_date": "2026-06-30T14:37:55+00:00",
+              "outlet": "Reuters",
+              "image": ""
             }
           ]
         }
