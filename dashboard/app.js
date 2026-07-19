@@ -748,14 +748,31 @@ function renderNewsPulse() {
 }
 
 /* ---------- DRAWER ---------- */
-function openDrawer(id) {
-  const i = STATE.digest.incidents.find((x) => x.incident_id === id);
+function monitoringRequestUrl(i) {
+  const repo = "https://github.com/nullhack/src-disaster-awareness";
+  const params = new URLSearchParams({
+    template: "monitoring_request.yml",
+    title: `[Monitoring]: ${i.incident_id.slice(0, 8)} — ${i.canonical_name || ""}`.slice(0, 80),
+  });
+  params.set("incident-id", i.incident_id);
+  return `${repo}/issues/new?${params.toString()}`;
+}
+
+function openDrawer(id) {  const i = STATE.digest.incidents.find((x) => x.incident_id === id);
   if (!i) return;
   $("#drawerTitle").textContent = i.canonical_name;
   const phys = i.physical || {};
   const body = `
     <h2>${esc(i.canonical_name)}</h2>
-    <div class="drawer__id"><code>${i.incident_id}</code></div>
+    <div class="drawer__id">
+      <code>${i.incident_id}</code>
+      <a class="drawer__monitor-link"
+         title="Open a GitHub issue to toggle extended monitoring for this incident"
+         href="${monitoringRequestUrl(i)}"
+         target="_blank" rel="noopener">
+        🔁 Flag for extended monitoring
+      </a>
+    </div>
     <div style="display:flex; gap:6px; margin-top:10px; flex-wrap:wrap">
       <span class="chip chip--${i.severity}">${i.severity}</span>
       ${i.priority ? `<span class="chip chip--pri${i.priority === 'HIGH' ? 'HIGH' : ''}">Priority ${i.priority}</span>` : ""}

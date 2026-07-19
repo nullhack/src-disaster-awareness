@@ -50,6 +50,12 @@ PENDING_LABEL = "submission-pending"
 IMPORTED_LABEL = "submission-imported"
 REJECTED_LABEL = "submission-rejected"
 
+_MONITORING_LABELS = (
+    "monitoring-request",
+    "monitoring-applied",
+    "monitoring-rejected",
+)
+
 
 def _now_iso() -> str:
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
@@ -79,7 +85,13 @@ def _list_pending_issues() -> list[dict]:
             "--label",
             PENDING_LABEL,
             "--search",
-            f"-label:{IMPORTED_LABEL} -label:{REJECTED_LABEL}",
+            " ".join(
+                [
+                    f"-label:{IMPORTED_LABEL}",
+                    f"-label:{REJECTED_LABEL}",
+                    *[f"-label:{lbl}" for lbl in _MONITORING_LABELS],
+                ]
+            ),
             "--json",
             "number,title,body,author,createdAt,url",
             "--limit",
