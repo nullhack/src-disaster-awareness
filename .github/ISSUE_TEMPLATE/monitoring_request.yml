@@ -1,0 +1,52 @@
+name: 🔁 Extended monitoring request
+description: Toggle the extended_monitoring flag for an existing incident
+title: "[Monitoring]: "
+labels: ["monitoring-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to enable or disable **extended monitoring** for a specific incident.
+
+        Extended monitoring keeps an incident under perpetual repoll (every 6h via the
+        existing `search-news --repoll` cycle) regardless of whether any recent news
+        matches it. Useful for long-running events: outbreaks, aftershock sequences,
+        slow-onset disasters, chronic crises.
+
+        After submission:
+        - The `process-monitoring` workflow runs **once per day** (06:00 UTC).
+        - You'll see a comment confirming the toggle and the new flag state.
+        - Bad incident id or ambiguous prefix → issue is closed with `monitoring-rejected`.
+        - Successful toggle → issue is labeled `monitoring-applied` (kept open as a record).
+
+  - type: input
+    id: incident-id
+    attributes:
+      label: Incident ID
+      description: >
+        The incident UUID (32 hex chars) or an 8-char unique prefix. Both are accepted.
+        Find the full UUID in the dashboard drawer (click any incident → look for the
+        `<code>` block at the top).
+      placeholder: "e.g. 03d6656a or 03d6656a4a1852ff91933c72703262d9"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: action
+    attributes:
+      label: Action
+      description: Enable turns the flag on; Disable turns it off.
+      options:
+        - Enable extended monitoring
+        - Disable extended monitoring
+    validations:
+      required: true
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale (optional)
+      description: Why this incident needs perpetual monitoring. Helps reviewers and future you.
+      placeholder: e.g. "Aftershock sequence still active as of 2026-07-18, expect continued coverage."
+    validations:
+      required: false

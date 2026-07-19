@@ -1,0 +1,50 @@
+name: Process monitoring requests
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: data-update
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  process-monitoring:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+      - uses: astral-sh/setup-uv@v4
+      - run: uv sync
+      - name: Configure git identity
+        run: |
+          git config --global user.name "eol"
+          git config --global user.email "nullhack@users.noreply.github.com"
+      - name: Attach data worktree
+        run: git worktree add data origin/data
+      - name: Run process_monitoring_requests
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          uv run python scripts/process_monitoring_requests.py \
+            --tree-root data \
+            -v
+      - name: Commit + push data
+        working-directory: data
+        run: |
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No data changes."
+            exit 0
+          fi
+          git commit -m "chore(data): monitoring requests applied"
+          git push origin HEAD:data
