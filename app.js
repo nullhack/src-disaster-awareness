@@ -626,7 +626,7 @@ function renderWatchlist() {
       <td><span class="chip chip--${i.severity}"><span class="dot dot--${i.severity}"></span>${i.severity}</span></td>
       <td>${i.priority ? `<span class="chip chip--pri${i.priority === 'HIGH' ? 'HIGH' : ''}">${i.priority}</span>` : "—"}</td>
       <td>
-        <div class="cell-name">${esc(i.canonical_name)}</div>
+        <div class="cell-name">${i.extended_monitoring ? '<span title="Extended monitoring" style="cursor:help">🔁</span> ' : ""}${esc(i.canonical_name)}</div>
         <div class="cell-sub">${i.incident_id}${i.disease_name ? " · " + esc(i.disease_name) : ""}</div>
       </td>
       <td class="cell-country">${esc(i.country)}<small>${esc(i.region || "")}</small></td>
@@ -762,6 +762,7 @@ function openDrawer(id) {
       <span class="chip chip--pri">${typePill(i.incident_type)}</span>
       ${i.is_disease && i.pandemic_potential && i.pandemic_potential !== "NONE" ? `<span class="tag tag--pp">Pandemic ${esc(i.pandemic_potential)}</span>` : ""}
       ${i.event_status ? `<span class="tag tag--status">${esc(i.event_status.replace(/_/g," "))}</span>` : ""}
+      ${i.extended_monitoring ? `<span class="tag" title="Perpetual monitoring regardless of news recency" style="cursor:help">🔁 Extended monitoring</span>` : ""}
     </div>
     ${i.summary ? `<div class="drawer__summary">${esc(i.summary)}</div>` : ""}
     <div class="drawer__section">
