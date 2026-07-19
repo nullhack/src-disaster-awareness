@@ -1,29 +1,29 @@
 {
   "schema_version": "1.4",
   "report_date": "2026-07-18",
-  "generated_at": "2026-07-19T14:38:55Z",
+  "generated_at": "2026-07-19T20:23:26Z",
   "as_of": "2026-07-18",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 26,
-    "new_today": 16,
+    "reportable_total": 25,
+    "new_today": 15,
     "critical": 3,
     "high": 10,
-    "medium": 13,
+    "medium": 12,
     "low": 0,
-    "disease_outbreaks": 6,
+    "disease_outbreaks": 5,
     "countries_affected": 17,
-    "news_total": 662,
+    "news_total": 651,
     "max_magnitude": 7.8,
     "by_severity": {
       "CRITICAL": 3,
       "HIGH": 10,
-      "MEDIUM": 13,
+      "MEDIUM": 12,
       "LOW": 0
     },
     "by_type": {
-      "Disease": 6,
+      "Disease": 5,
       "Flood": 4,
       "Volcano": 2,
       "Drought": 1,
@@ -32,7 +32,7 @@
       "Forest Fire": 4
     },
     "by_region": {
-      "Unknown": 4,
+      "Unknown": 3,
       "Asia": 11,
       "Africa": 2,
       "Europe": 5,
@@ -196,229 +196,6 @@
     }
   ],
   "incidents": [
-    {
-      "incident_id": "20240530-XX-DI",
-      "canonical_name": "Dengue - Global situation",
-      "summary": "In Bangladesh, two additional dengue-related deaths were reported in the past 24 hours, along with 306 new hospitalizations. The country's total caseload remains at 9,370 cases, as dengue continues to spread.",
-      "country": "",
-      "iso2": "",
-      "lat": null,
-      "lon": null,
-      "country_group": "C",
-      "region": "Unknown",
-      "incident_type": "Disease",
-      "incident_category": "Biological",
-      "is_disease": true,
-      "severity": "MEDIUM",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2024-05-30",
-      "first_reported_date": "2024-05-30",
-      "last_updated_date": "2026-07-18",
-      "days_since_event": 780,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 1,
-        "usgs": 0,
-        "gdacs": 0,
-        "healthmap": 0,
-        "news": 11
-      },
-      "source_links": [
-        {
-          "type": "WHO",
-          "label": "Dengue - Global situation",
-          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2024-DON518",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Dengue fever is — unfortunately — having a banner year. Can it be quelled?",
-          "url": "https://www.npr.org/sections/goats-and-soda/2024/07/23/g-s1-12674/dengue-mosquitoes-climate-virus-americas",
-          "outlet": "NPR",
-          "published_date": "2024-07-23T00:00:00+00:00"
-        },
-        {
-          "headline": "UN agency authorizes second vaccine against dengue amid outbreaks in the Americas",
-          "url": "https://medicalxpress.com/news/2024-05-agency-authorizes-vaccine-dengue-outbreaks.html",
-          "outlet": "Medical Xpress",
-          "published_date": "2026-07-08T14:57:06+00:00"
-        },
-        {
-          "headline": "Dengue: Surge in US Cases This Year",
-          "url": "https://www.medscape.com/viewarticle/dengue-surge-us-cases-this-year-2024a1000bzw",
-          "outlet": "Medscape",
-          "published_date": "2026-07-08T14:57:06+00:00"
-        },
-        {
-          "headline": "Two more die of dengue, 306 hospitalised in 24hrs",
-          "url": "https://www.daily-sun.com/bangladesh/886701/two-more-die-of-dengue-306-hospitalised-in-24hrs",
-          "outlet": "Daily Sun",
-          "published_date": "2026-07-11T03:56:07+00:00"
-        },
-        {
-          "headline": "Two more die of dengue, 391 hospitalised in 24hrs",
-          "url": "https://www.daily-sun.com/health/886521/two-more-die-of-dengue-391-hospitalised-in-24hrs",
-          "outlet": "Daily Sun",
-          "published_date": "2026-07-13T03:58:16+00:00"
-        },
-        {
-          "headline": "Sri Lanka expands anti-dengue drive as deaths mount",
-          "url": "https://medicalxpress.com/news/2026-07-sri-lanka-anti-dengue-deaths.html",
-          "outlet": "Medical Xpress",
-          "published_date": "2026-07-15"
-        },
-        {
-          "headline": "Remote health monitoring: A practical digital solution for dengue burden",
-          "url": "https://island.lk/remote-health-monitoring-a-practical-digital-solution-for-dengue-burden/",
-          "outlet": "The Island",
-          "published_date": "2026-07-15T01:15:18+00:00"
-        },
-        {
-          "headline": "Bangladesh floods heighten dengue, cholera risks, says IFRC",
-          "url": "https://www.channelnewsasia.com/world/bangladesh-floods-dengue-cholera-risk-ifrc-6253181",
-          "outlet": "CNA",
-          "published_date": "2026-07-15T07:15:18+00:00"
-        },
-        {
-          "headline": "Two more die of dengue, 391 hospitalised in 24hrs",
-          "url": "https://www.daily-sun.com/bangladesh/886521/two-more-die-of-dengue-391-hospitalised-in-24hrs",
-          "outlet": "Daily Sun",
-          "published_date": "2026-07-16T14:45:52+00:00"
-        },
-        {
-          "headline": "Two more die of dengue, 306 hospitalised in 24hrs",
-          "url": "https://www.daily-sun.com/health/886701/two-more-die-of-dengue-306-hospitalised-in-24hrs",
-          "outlet": "Daily Sun",
-          "published_date": "2026-07-16T19:53:01+00:00"
-        },
-        {
-          "headline": "UKHSA travel illness warning as more than 1,000 cases so far this year",
-          "url": "https://www.mirror.co.uk/news/health/ukhsa-travel-illness-warning-more-37444934",
-          "outlet": "The Mirror",
-          "published_date": "2026-07-18T03:46:52+00:00"
-        }
-      ],
-      "news_total": 11,
-      "logs": [
-        {
-          "log_date": "2026-07-08",
-          "summary": "The World Health Organization authorized a second dengue vaccine as outbreaks continue in the Americas. The US CDC issued an alert about increased dengue risk in the United States. In the Americas, nearly 10.4 million suspected dengue cases were reported to WHO by early July 2024.",
-          "news": [
-            {
-              "news_id": "7e19082e3a5f5ef599ebac390d6edf7c",
-              "url": "https://medicalxpress.com/news/2024-05-agency-authorizes-vaccine-dengue-outbreaks.html",
-              "headline": "UN agency authorizes second vaccine against dengue amid outbreaks in the Americas",
-              "body": "A health worker fumigates for mosquitoes inside a home to help mitigate the spread of dengue in the Las Penitas area of Talara, Peru, Friday, March 1, 2024.The World Health Organization on Wednesday, ...",
-              "published_date": "2026-07-08T14:57:06+00:00",
-              "outlet": "Medical Xpress",
-              "image": ""
-            },
-            {
-              "news_id": "e503ebb6fcdb5c678fa3cc7dcb115da8",
-              "url": "https://www.medscape.com/viewarticle/dengue-surge-us-cases-this-year-2024a1000bzw",
-              "headline": "Dengue: Surge in US Cases This Year",
-              "body": "Federal health officials with the US Centers for Disease Control and Prevention (CDC) have issued an alert, warning health professionals and the public about an increased risk for dengue virus ...",
-              "published_date": "2026-07-08T14:57:06+00:00",
-              "outlet": "Medscape",
-              "image": ""
-            },
-            {
-              "news_id": "e3557f7e1358509cbde59ef9f9b948eb",
-              "url": "https://www.npr.org/sections/goats-and-soda/2024/07/23/g-s1-12674/dengue-mosquitoes-climate-virus-americas",
-              "headline": "Dengue fever is — unfortunately — having a banner year. Can it be quelled?",
-              "body": "In the Americas alone, almost 10.4 million suspected cases of dengue, a mosquito-borne viral disease, were reported to the World Health Organization in 2024 as of the first week of July, an increase ...",
-              "published_date": "2024-07-23T00:00:00+00:00",
-              "outlet": "NPR",
-              "image": ""
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-15",
-          "summary": "Sri Lanka is experiencing a significant dengue challenge, with rising cases prompting discussion of remote health monitoring as a digital solution. In Bangladesh, floods are heightening dengue risks according to the IFRC, and the country reported two additional deaths and 391 hospitalizations in the past 24 hours, bringing the total caseload to 9,370.",
-          "news": [
-            {
-              "news_id": "459955f1491954c499ca77b7d6c19407",
-              "url": "https://www.daily-sun.com/health/886521/two-more-die-of-dengue-391-hospitalised-in-24hrs",
-              "headline": "Two more die of dengue, 391 hospitalised in 24hrs",
-              "body": "In the 24-hour span, 391 more patients were hospitalised with viral fever, raising the total caseload to 9,370 in ...",
-              "published_date": "2026-07-13T03:58:16+00:00",
-              "outlet": "Daily Sun",
-              "image": "https://www.bing.com/th?id=ONUT.DdVCN9msdHTum_aTitqatQ"
-            },
-            {
-              "news_id": "e650fa40d4eb5afeacfcc438088fc8d2",
-              "url": "https://island.lk/remote-health-monitoring-a-practical-digital-solution-for-dengue-burden/",
-              "headline": "Remote health monitoring: A practical digital solution for dengue burden",
-              "body": "Sri Lanka is once again facing a significant dengue challenge. With rising numbers of suspected and confirmed cases reported across the country, especially during the rainy season, dengue has become ...",
-              "published_date": "2026-07-15T01:15:18+00:00",
-              "outlet": "The Island",
-              "image": ""
-            },
-            {
-              "news_id": "e1c68a9ee7c45bf0958c2969a5e8d70a",
-              "url": "https://www.channelnewsasia.com/world/bangladesh-floods-dengue-cholera-risk-ifrc-6253181",
-              "headline": "Bangladesh floods heighten dengue, cholera risks, says IFRC",
-              "body": "Sonakshi Dey, the International Federation of Red Cross and Red Crescent Societies’ (IFRC) Bangladesh programme director, ...",
-              "published_date": "2026-07-15T07:15:18+00:00",
-              "outlet": "CNA",
-              "image": "https://www.bing.com/th?id=ONUT.ACQWLJBb60HInp9S0xhATw"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-17",
-          "summary": "In Bangladesh, two additional dengue-related deaths were reported in the past 24 hours, along with 306 new hospitalizations. The country's total caseload remains at 9,370 cases, as dengue continues to spread.",
-          "news": [
-            {
-              "news_id": "530678cfb1a55efea197360b65529a7d",
-              "url": "https://www.daily-sun.com/health/886701/two-more-die-of-dengue-306-hospitalised-in-24hrs",
-              "headline": "Two more die of dengue, 306 hospitalised in 24hrs",
-              "body": "Two more deaths were reported from dengue in the past 24 hours till Thursday morning, raising the number of fatalities from ...",
-              "published_date": "2026-07-16T19:53:01+00:00",
-              "outlet": "Daily Sun",
-              "image": "https://www.bing.com/th?id=ONUT.P9_doGWI_406hQ0Ad3JM9g"
-            },
-            {
-              "news_id": "3cf034d31c115bd7867d956c229b143f",
-              "url": "https://www.daily-sun.com/bangladesh/886701/two-more-die-of-dengue-306-hospitalised-in-24hrs",
-              "headline": "Two more die of dengue, 306 hospitalised in 24hrs",
-              "body": "Two more deaths were reported from dengue in the past 24 hours till Thursday morning, raising the number of fatalities from ...",
-              "published_date": "2026-07-11T03:56:07+00:00",
-              "outlet": "Daily Sun",
-              "image": "https://www.bing.com/th?id=ONUT.P9_doGWI_406hQ0Ad3JM9g"
-            },
-            {
-              "news_id": "fc04fb9128f35420b061ed88ed3e5269",
-              "url": "https://www.daily-sun.com/bangladesh/886521/two-more-die-of-dengue-391-hospitalised-in-24hrs",
-              "headline": "Two more die of dengue, 391 hospitalised in 24hrs",
-              "body": "In the 24-hour span, 391 more patients were hospitalised with viral fever, raising the total caseload to 9,370 in ...",
-              "published_date": "2026-07-16T14:45:52+00:00",
-              "outlet": "Daily Sun",
-              "image": "https://www.bing.com/th?id=ONUT.DdVCN9msdHTum_aTitqatQ"
-            }
-          ]
-        }
-      ]
-    },
     {
       "incident_id": "20250528-XX-DI",
       "canonical_name": "COVID-19 - Global Situation",
