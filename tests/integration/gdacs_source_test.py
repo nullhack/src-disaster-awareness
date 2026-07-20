@@ -127,6 +127,49 @@ class TestGDACSAdapter:
             GDACSAdapter(path=ERROR_CASSETTE_SLUG).fetch()
 
 
+class TestExtractPlaces:
+    def test_iso3_with_land_coordinates_returns_country_and_subdivision(self) -> None:
+        from disaster_report.sources.gdacs import _extract_places
+
+        places = _extract_places("PER", "Peru", -12.0429, -75.3013)
+        assert places and places[0].country_code == "PE"
+        assert places[0].subdivision  # Junín or similar
+
+    def test_iso3_with_far_land_coords_returns_subdivision(self) -> None:
+        from disaster_report.sources.gdacs import _extract_places
+
+        places = _extract_places("CHN", "China", 31.5649, 104.126)
+        assert places and places[0].country_code == "CN"
+        assert places[0].subdivision  # Sichuan Sheng
+
+    def test_ocean_event_falls_back_to_geo_country(self) -> None:
+        from disaster_report.sources.gdacs import _extract_places
+
+        # Owen Fracture Zone — no iso3, no country match by text, but near UAE
+        places = _extract_places("", "Owen Fracture Zone Region", 25.0, 57.0)
+        assert places and places[0].country_code  # AE or nearby
+
+    def test_true_mid_ocean_returns_empty(self) -> None:
+        from disaster_report.sources.gdacs import _extract_places
+
+        # Deep southern Indian Ocean — no land within 200km
+        places = _extract_places("", "Mid-Indian Ridge", -25.0, 70.0)
+        assert places == []
+
+    def test_no_coordinates_returns_country_only(self) -> None:
+        from disaster_report.sources.gdacs import _extract_places
+
+        places = _extract_places("PER", "Peru", None, None)
+        assert places and places[0].country_code == "PE"
+        assert places[0].subdivision == ""
+
+    def test_no_iso3_no_text_no_coords_returns_empty(self) -> None:
+        from disaster_report.sources.gdacs import _extract_places
+
+        places = _extract_places("", "", None, None)
+        assert places == []
+
+
 def first_source_report(reports: list[SourceReport]) -> SourceReport:
     return reports[0]
 

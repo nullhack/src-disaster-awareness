@@ -33,7 +33,8 @@ _TYPES: dict[str, str] = {
     "Wildfire": "Forest Fire",
 }
 _SIGNIFICANT_ALERTLEVELS = {"Orange", "Red"}
-_LOOKUP_RADIUS_KM = 50
+_LOOKUP_RADIUS_KM = 200
+_OCEAN_FALLBACK_RADIUS_KM = 200
 
 _iso = Subdivisions()
 logger = logging.getLogger(__name__)
@@ -150,9 +151,8 @@ def _extract_places(
     for _, code in secondaries:
         if code and code not in codes:
             codes.append(code)
-    if not codes:
-        return []
     subdivision = ""
+    geo_country = ""
     if isinstance(lat, int | float) and isinstance(lon, int | float):
         matches = _iso.reverse_lookup(
             latitude=float(lat),
@@ -162,6 +162,11 @@ def _extract_places(
         )
         if matches:
             subdivision = str(matches[0].get("name") or "")
+            geo_country = str(matches[0].get("countryCode") or "")
+    if not codes and geo_country:
+        codes.append(geo_country)
+    if not codes:
+        return []
     places: list[ReportPlace] = []
     for i, code in enumerate(codes):
         places.append(
