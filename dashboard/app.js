@@ -750,12 +750,18 @@ function renderNewsPulse() {
 /* ---------- DRAWER ---------- */
 function monitoringRequestUrl(i) {
   const repo = "https://github.com/nullhack/src-disaster-awareness";
+  const treeId = i.tree_id || i.incident_id;
   const params = new URLSearchParams({
     template: "monitoring_request.yml",
-    title: `[Monitoring]: ${i.incident_id.slice(0, 8)} — ${i.canonical_name || ""}`.slice(0, 80),
+    title: `[Monitoring]: ${treeId.slice(0, 8)} — ${i.canonical_name || ""}`.slice(0, 80),
   });
-  params.set("incident-id", i.incident_id);
+  params.set("incident-id", treeId);
   return `${repo}/issues/new?${params.toString()}`;
+}
+
+function dataBranchUrl(i) {
+  const treeId = i.tree_id || i.incident_id;
+  return `https://github.com/nullhack/src-disaster-awareness/tree/data/incidents/${treeId}`;
 }
 
 function openDrawer(id) {  const i = STATE.digest.incidents.find((x) => x.incident_id === id);
@@ -771,6 +777,12 @@ function openDrawer(id) {  const i = STATE.digest.incidents.find((x) => x.incide
          href="${monitoringRequestUrl(i)}"
          target="_blank" rel="noopener">
         🔁 Flag for extended monitoring
+      </a>
+      <a class="drawer__data-link"
+         title="Browse this incident's files (manifest, reports, news, logs) on the data branch"
+         href="${dataBranchUrl(i)}"
+         target="_blank" rel="noopener">
+        📁 Browse files
       </a>
     </div>
     <div style="display:flex; gap:6px; margin-top:10px; flex-wrap:wrap">
