@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4",
   "report_date": "2026-07-18",
-  "generated_at": "2026-07-20T05:06:22Z",
+  "generated_at": "2026-07-20T07:48:48Z",
   "as_of": "2026-07-18",
   "tracking_window_days": 7,
   "min_severity": "LOW",
@@ -13,7 +13,7 @@
     "medium": 12,
     "low": 0,
     "disease_outbreaks": 5,
-    "countries_affected": 17,
+    "countries_affected": 18,
     "news_total": 640,
     "max_magnitude": 7.8,
     "by_severity": {
@@ -32,11 +32,11 @@
       "Forest Fire": 4
     },
     "by_region": {
-      "Unknown": 3,
+      "Unknown": 2,
       "Asia": 10,
       "Africa": 2,
       "Europe": 5,
-      "Americas": 2,
+      "Americas": 3,
       "Oceania": 2
     }
   },
@@ -111,6 +111,15 @@
       "iso2": "FJ",
       "region": "Oceania",
       "country_group": "B",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "Peru",
+      "count": 1,
+      "max_sev_rank": 2,
+      "iso2": "PE",
+      "region": "Americas",
+      "country_group": "C",
       "max_severity": "MEDIUM"
     },
     {
@@ -11339,15 +11348,15 @@
       ]
     },
     {
-      "incident_id": "20260719-XX-EQ",
+      "incident_id": "20260719-PE-EQ",
       "canonical_name": "Orange earthquake (Magnitude 5.5M, Depth:10km) in Peru 19/07/2026 02:24 UTC, 20 thousand (in MMI>=VII).",
       "summary": "",
-      "country": "",
-      "iso2": "",
+      "country": "Peru",
+      "iso2": "PE",
       "lat": -12.0429,
       "lon": -75.3013,
       "country_group": "C",
-      "region": "Unknown",
+      "region": "Americas",
       "incident_type": "Earthquake",
       "incident_category": "Natural",
       "is_disease": false,
