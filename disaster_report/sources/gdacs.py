@@ -8,7 +8,7 @@ from typing import Any
 from xml.etree import ElementTree as ET
 
 import httpx
-import pycountry
+import country_converter as coco
 from iso3166_2 import Subdivisions
 
 from disaster_report._country_names import country_name
@@ -35,8 +35,10 @@ _TYPES: dict[str, str] = {
 _SIGNIFICANT_ALERTLEVELS = {"Orange", "Red"}
 _LOOKUP_RADIUS_KM = 200
 _OCEAN_FALLBACK_RADIUS_KM = 200
+_NOT_FOUND = "not found"
 
 _iso = Subdivisions()
+_cc = coco.CountryConverter()
 logger = logging.getLogger(__name__)
 
 
@@ -182,10 +184,9 @@ def _extract_places(
 def _country_name_and_alpha2_from_iso3(iso3: str) -> tuple[str, str]:
     if not iso3:
         return "", ""
-    country = pycountry.countries.get(alpha_3=iso3)
-    if country is None:
+    code = str(_cc.convert(names=iso3, src="ISO3", to="ISO2"))
+    if not code or code == _NOT_FOUND:
         return "", ""
-    code = str(country.alpha_2)
     return country_name(code), code
 
 
@@ -196,19 +197,18 @@ def _country_names_and_alpha2_from_text(
     out: list[tuple[str, str]] = []
     if not country_text:
         return out
-    for segment in country_text.split(","):
-        seg = segment.strip()
-        if not seg:
+    segments = [s.strip() for s in country_text.split(",") if s.strip()]
+    if not segments:
+        return out
+    converted = _cc.convert(names=segments, to="ISO2")
+    if isinstance(converted, str):
+        converted = [converted]
+    for code in converted:
+        if not code or code == _NOT_FOUND:
             continue
-        try:
-            results = pycountry.countries.search_fuzzy(seg)
-        except LookupError:
-            continue
-        if results:
-            code = str(getattr(results[0], "alpha_2", ""))
-            name = country_name(code)
-            if name and not any(c == code for _, c in out):
-                out.append((name, code))
+        name = country_name(code)
+        if name and not any(c == code for _, c in out):
+            out.append((name, code))
     return out
 
 

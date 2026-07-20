@@ -2,9 +2,8 @@
 from __future__ import annotations
 
 import re
-from typing import Any, cast
 
-import pycountry
+import country_converter as coco
 from iso3166_2 import Subdivisions
 from iso3166_2.exceptions import InvalidCountryCode
 
@@ -13,6 +12,7 @@ from disaster_report._regions import subregion_for_country
 
 
 _iso = Subdivisions()
+_cc = coco.CountryConverter()
 
 
 def _safe_subdivision_names(alpha_2: str) -> list[str]:
@@ -30,42 +30,8 @@ def _safe_subdivision_names(alpha_2: str) -> list[str]:
     return names
 
 
-# Country-name aliases that pycountry's canonical names miss.  Keys are
-# the strings that appear in WHO prose; values are the alpha_2 codes.
-# Longest-first matching at the regex level ensures multi-word aliases
-# (``"Democratic Republic of the Congo"``) win over their substrings
-# (``"Congo"``).
-_ALIASES: dict[str, str] = {
-    "Democratic Republic of the Congo": "CD",
-    "Democratic Republic of Congo": "CD",
-    "Republic of the Congo": "CG",
-    "DRC": "CD",
-    "South Korea": "KR",
-    "Republic of Korea": "KR",
-    "North Korea": "KP",
-    "Iran": "IR",
-    "Russia": "RU",
-    "Russian Federation": "RU",
-    "Vietnam": "VN",
-    "Syria": "SY",
-    "Venezuela": "VE",
-    "Bolivia": "BO",
-    "Taiwan": "TW",
-    "United States": "US",
-    "USA": "US",
-    "United Kingdom": "GB",
-    "UK": "GB",
-    "Czech Republic": "CZ",
-    "Cape Verde": "CV",
-    "Burma": "MM",
-    "Macedonia": "MK",
-    "North Macedonia": "MK",
-    "Hong Kong": "HK",
-    "Congo": "CG",
-}
-
 # Uninhabited / external territories without a UN M49 subregion; the
-# scanner resolves them via pycountry but they carry no disaster-relevant
+# scanner resolves them via coco but they carry no disaster-relevant
 # signal and are dropped before returning.
 _DROPPED_ALPHA2: frozenset[str] = frozenset(
     {
@@ -81,15 +47,30 @@ _DROPPED_ALPHA2: frozenset[str] = frozenset(
     }
 )
 
+# Aliases commonly used in WHO prose that coco's name_short/name_official
+# do not cover (abbreviations and short forms).  coco handles all other
+# canonical-name quirks (DRC full name with "the", South Korea, Iran, etc.).
+_EXTRA_ALIASES: dict[str, str] = {
+    "DRC": "CD",
+    "Democratic Republic of Congo": "CD",
+    "Congo": "CG",
+    "UK": "GB",
+    "USA": "US",
+    "UAE": "AE",
+}
+
 
 def _build_alias_map() -> dict[str, str]:
     out: dict[str, str] = {}
-    for country in cast("list[Any]", pycountry.countries):
-        for attr in ("name", "common_name", "official_name"):
-            value = getattr(country, attr, None)
-            if value:
-                out[value] = country.alpha_2
-    out.update(_ALIASES)
+    for _, row in _cc.data.iterrows():
+        for col in ("name_short", "name_official"):
+            value = row[col]
+            if not isinstance(value, str) or not value:
+                continue
+            iso2 = str(_cc.convert(names=value, to="ISO2"))
+            if iso2 and iso2 != "not found":
+                out[value] = iso2
+    out.update(_EXTRA_ALIASES)
     return out
 
 
