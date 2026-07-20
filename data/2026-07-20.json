@@ -1,24 +1,24 @@
 {
   "schema_version": "1.4",
   "report_date": "2026-07-20",
-  "generated_at": "2026-07-20T07:48:48Z",
+  "generated_at": "2026-07-20T09:50:14Z",
   "as_of": "2026-07-20",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 28,
-    "new_today": 0,
+    "reportable_total": 29,
+    "new_today": 3,
     "critical": 3,
-    "high": 12,
+    "high": 13,
     "medium": 13,
     "low": 0,
     "disease_outbreaks": 6,
     "countries_affected": 17,
-    "news_total": 725,
+    "news_total": 743,
     "max_magnitude": 7.8,
     "by_severity": {
       "CRITICAL": 3,
-      "HIGH": 12,
+      "HIGH": 13,
       "MEDIUM": 13,
       "LOW": 0
     },
@@ -27,16 +27,16 @@
       "Flood": 4,
       "Volcano": 3,
       "Drought": 1,
-      "Earthquake": 9,
+      "Earthquake": 10,
       "Tropical Cyclone": 1,
       "Forest Fire": 4
     },
     "by_region": {
-      "Unknown": 3,
+      "Unknown": 4,
       "Asia": 13,
       "Africa": 2,
-      "Europe": 5,
-      "Americas": 3,
+      "Americas": 4,
+      "Europe": 4,
       "Oceania": 2
     }
   },
@@ -78,15 +78,6 @@
       "max_severity": "MEDIUM"
     },
     {
-      "country": "Austria",
-      "count": 1,
-      "max_sev_rank": 2,
-      "iso2": "AT",
-      "region": "Europe",
-      "country_group": "C",
-      "max_severity": "MEDIUM"
-    },
-    {
       "country": "Bangladesh",
       "count": 1,
       "max_sev_rank": 2,
@@ -114,10 +105,10 @@
       "max_severity": "MEDIUM"
     },
     {
-      "country": "Peru",
+      "country": "Canada",
       "count": 1,
       "max_sev_rank": 2,
-      "iso2": "PE",
+      "iso2": "CA",
       "region": "Americas",
       "country_group": "C",
       "max_severity": "MEDIUM"
@@ -174,6 +165,15 @@
       "iso2": "NZ",
       "region": "Oceania",
       "country_group": "B",
+      "max_severity": "HIGH"
+    },
+    {
+      "country": "Peru",
+      "count": 1,
+      "max_sev_rank": 3,
+      "iso2": "PE",
+      "region": "Americas",
+      "country_group": "C",
       "max_severity": "HIGH"
     },
     {
@@ -2052,7 +2052,7 @@
       "disease_name": null,
       "event_date": "2025-10-03",
       "first_reported_date": "2025-10-03",
-      "last_updated_date": "2026-07-18",
+      "last_updated_date": "2026-07-20",
       "days_since_event": 290,
       "source_count": 1,
       "should_report": true,
@@ -2062,7 +2062,7 @@
         "usgs": 0,
         "gdacs": 1,
         "healthmap": 0,
-        "news": 3
+        "news": 4
       },
       "source_links": [
         {
@@ -2100,9 +2100,15 @@
           "url": "https://www.msn.com/en-in/weather/general/nepal-rainfall-swells-kosi-and-gandak-triggers-flood-fears-in-north-bihar-dists/ar-AA27UyLz?ocid=BingNewsVerp",
           "outlet": "The Times of India on MSN",
           "published_date": "2026-07-18"
+        },
+        {
+          "headline": "MSN",
+          "url": "https://www.msn.com/en-in/weather/extreme-weather-events/heavy-rainfall-in-nepal-swells-kosi-inundates-parts-of-n-bihar/ar-AA28eIfW?ocid=BingNewsVerp",
+          "outlet": "The Times of India on MSN",
+          "published_date": "2026-07-20"
         }
       ],
-      "news_total": 3,
+      "news_total": 4,
       "logs": [
         {
           "log_date": "2026-07-08",
@@ -2500,15 +2506,15 @@
       ]
     },
     {
-      "incident_id": "20251221-AT-DR",
+      "incident_id": "20251221-XX-DR",
       "canonical_name": "Drought Green",
       "summary": "Severe drought and heat across Europe are shrinking harvests, notably French maize, and causing water shortages in the Netherlands. The Rhine River has hit its lowest July level for decades, threatening energy and logistics, while Greek islands face drought during the tourist season; economists warn this extreme heat could raise food prices next year.",
-      "country": "Austria",
-      "iso2": "AT",
-      "lat": 47.5,
-      "lon": 14.6,
+      "country": "",
+      "iso2": "",
+      "lat": null,
+      "lon": null,
       "country_group": "C",
-      "region": "Europe",
+      "region": "Unknown",
       "incident_type": "Drought",
       "incident_category": "Natural",
       "is_disease": false,
@@ -12936,26 +12942,26 @@
       "incident_type": "Earthquake",
       "incident_category": "Natural",
       "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "LOW",
-      "priority_rank": 3,
+      "severity": "HIGH",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
       "pandemic_potential": null,
       "event_status": null,
       "extended_monitoring": false,
       "disease_name": null,
       "event_date": "2026-07-19",
       "first_reported_date": "2026-07-19",
-      "last_updated_date": "2026-07-14",
+      "last_updated_date": "2026-07-20",
       "days_since_event": 1,
       "source_count": 1,
-      "should_report": false,
+      "should_report": true,
       "search_keys": [],
       "sources": {
         "who_don": 0,
         "usgs": 0,
         "gdacs": 1,
         "healthmap": 0,
-        "news": 1
+        "news": 17
       },
       "source_links": [
         {
@@ -12981,6 +12987,165 @@
           "url": "https://www.usnews.com/news/world/articles/2026-07-18/earthquake-of-magnitude-5-6-strikes-central-peru-emsc-says",
           "outlet": "U.S. News & World Report",
           "published_date": "2026-07-14T04:05:12+00:00"
+        },
+        {
+          "headline": "Earthquake of 5.1 magnitude kills six in Peru",
+          "url": "https://www.daily-sun.com/world/887405/earthquake-of-5-1-magnitude-kills-six-in-peru",
+          "outlet": "Daily Sun",
+          "published_date": "2026-07-16T09:46:01+00:00"
+        },
+        {
+          "headline": "Atleast five killed as 5.5 magnitude earthquake hits Peru's Andes region",
+          "url": "https://www.newindianexpress.com/world/2026/Jul/19/atleast-five-killed-as-55-magnitude-earthquake-hits-perus-andes-region",
+          "outlet": "The New Indian Express",
+          "published_date": "2026-07-19"
+        },
+        {
+          "headline": "At least 6 dead and 21 injured after 2 earthquakes in Peru | Honolulu Star-Advertiser",
+          "url": "https://www.staradvertiser.com/2026/07/19/breaking-news/at-least-6-dead-and-21-injured-after-2-earthquakes-in-peru/",
+          "outlet": "Honolulu Star-Advertiser",
+          "published_date": "2026-07-19"
+        },
+        {
+          "headline": "Map: 5.5-Magnitude Earthquake Shakes Peru",
+          "url": "https://www.nytimes.com/interactive/2026/07/19/world/americas/quake-tracker-peru.html",
+          "outlet": "The New York Times",
+          "published_date": "2026-07-19"
+        },
+        {
+          "headline": "5.5 Magnitude Earthquake Strikes Peru's Andes Region, Kills At Least 5",
+          "url": "https://www.timesnownews.com/world/5-5-magnitude-earthquake-strikes-perus-andes-region-kills-at-least-5-article-155134581",
+          "outlet": "Times Now",
+          "published_date": "2026-07-19"
+        },
+        {
+          "headline": "5.5 magnitude earthquake hits Peru's Andes region, killing at least 5 people",
+          "url": "https://lasvegassun.com/news/2026/jul/19/55-magnitude-earthquake-hits-perus-andes-region-ki/",
+          "outlet": "Las Vegas Sun",
+          "published_date": "2026-07-19"
+        },
+        {
+          "headline": "6 killed, over 30 injured in Peru quake",
+          "url": "https://pajhwok.com/2026/07/20/6-killed-over-30-injured-in-peru-quake/",
+          "outlet": "Pajhwok Afghan News",
+          "published_date": "2026-07-20"
+        },
+        {
+          "headline": "Peru’s central region hit by 5.1 quake weeks after Venezuela",
+          "url": "https://www.japantimes.co.jp/news/2026/07/20/world/peru-51-earthquake-venezuela/",
+          "outlet": "The Japan Times",
+          "published_date": "2026-07-20"
+        },
+        {
+          "headline": "MSN",
+          "url": "https://www.msn.com/en-in/news/world/peru-earthquake-at-least-five-people-lose-their-lives-more-than-20-sustain-injuries/vi-AA28fgyU?ocid=BingNewsVerp",
+          "outlet": "WION on MSN",
+          "published_date": "2026-07-20"
+        },
+        {
+          "headline": "MSN",
+          "url": "https://www.msn.com/en-us/news/world/at-least-5-dead-in-peru-earthquake-as-aftershocks-continue-in-mexico/ar-AA28eVHM?ocid=BingNewsVerp",
+          "outlet": "Newsweek on MSN",
+          "published_date": "2026-07-20"
+        },
+        {
+          "headline": "MSN",
+          "url": "https://www.msn.com/en-us/news/other/rescuers-race-to-save-person-trapped-after-peru-earthquake/vi-AA28f2NX?ocid=BingNewsVerp",
+          "outlet": "New York Post on MSN",
+          "published_date": "2026-07-20"
+        },
+        {
+          "headline": "MSN",
+          "url": "https://www.msn.com/en-us/news/other/rescuers-search-rubble-after-5-5-magnitude-earthquake-hits-peru-s-andes-region-killing-at-least-5/vi-AA28ewQf?ocid=BingNewsVerp",
+          "outlet": "AP Newsroom on MSN",
+          "published_date": "2026-07-20"
+        },
+        {
+          "headline": "5.1 magnitude quake strikes Peru after Venezuela: 5 killed, 32 injured so far",
+          "url": "https://www.hindustantimes.com/world-news/51-magnitude-quake-strikes-peru-after-venezuela-5-killed-32-injured-so-far-101784520585021.html",
+          "outlet": "Hindustan Times",
+          "published_date": "2026-07-20"
+        },
+        {
+          "headline": "MSN",
+          "url": "https://www.msn.com/en-us/news/other/magnitude-5-5-earthquake-hits-peru-s-andes-region-killing-at-least-5/ar-AA28eNmn?ocid=BingNewsVerp",
+          "outlet": "Los Angeles Times on MSN",
+          "published_date": "2026-07-20"
+        },
+        {
+          "headline": "MSN",
+          "url": "https://www.msn.com/en-nz/news/other/55-magnitude-earthquake-in-peru-leaves-at-least-five-dead/ar-AA28f0hJ?ocid=BingNewsVerp",
+          "outlet": "The Independent on MSN",
+          "published_date": "2026-07-20"
+        },
+        {
+          "headline": "Peru’s Central Region Hit by 5.1 Quake, Killing at Least Four",
+          "url": "https://www.bloomberg.com/news/articles/2026-07-19/peru-s-central-region-hit-by-5-1-quake-killing-at-least-four",
+          "outlet": "Bloomberg L.P.",
+          "published_date": "2026-07-20T09:46:03+00:00"
+        }
+      ],
+      "news_total": 17,
+      "logs": []
+    },
+    {
+      "incident_id": "20260720-CA-EQ",
+      "canonical_name": "Earthquake 208 km SW of Port McNeill, Canada 2026-07",
+      "summary": "",
+      "country": "Canada",
+      "iso2": "CA",
+      "lat": 49.4076,
+      "lon": -129.342,
+      "country_group": "C",
+      "region": "Americas",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": null,
+      "event_status": null,
+      "extended_monitoring": false,
+      "disease_name": null,
+      "event_date": "2026-07-20",
+      "first_reported_date": "2026-07-20",
+      "last_updated_date": "2026-07-20",
+      "days_since_event": 0,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 5.6 - 208 km SW of Port McNeill, Canada",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t1w2",
+          "meta": "10 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 5.6,
+        "max_depth_km": 10.0,
+        "place": "208 km SW of Port McNeill, Canada",
+        "felt": 4,
+        "sig": 484,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "MSN",
+          "url": "https://www.msn.com/en-us/weather/topstories/magnitude-40-earthquake-reported-off-the-coast-of-vancouver-island-near-port-mcneill/ar-AA27TMSb",
+          "outlet": "KGW-TV Portland",
+          "published_date": "2026-07-20"
         }
       ],
       "news_total": 1,

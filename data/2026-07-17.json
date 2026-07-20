@@ -1,25 +1,25 @@
 {
   "schema_version": "1.4",
   "report_date": "2026-07-17",
-  "generated_at": "2026-07-20T07:48:48Z",
+  "generated_at": "2026-07-20T09:50:14Z",
   "as_of": "2026-07-17",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 14,
+    "reportable_total": 13,
     "new_today": 0,
     "critical": 0,
     "high": 5,
-    "medium": 8,
+    "medium": 7,
     "low": 1,
     "disease_outbreaks": 2,
-    "countries_affected": 11,
-    "news_total": 120,
+    "countries_affected": 9,
+    "news_total": 119,
     "max_magnitude": 7.8,
     "by_severity": {
       "CRITICAL": 0,
       "HIGH": 5,
-      "MEDIUM": 8,
+      "MEDIUM": 7,
       "LOW": 1
     },
     "by_type": {
@@ -27,15 +27,14 @@
       "Flood": 1,
       "Volcano": 1,
       "Drought": 1,
-      "Earthquake": 6,
+      "Earthquake": 5,
       "Forest Fire": 3
     },
     "by_region": {
       "Oceania": 2,
-      "Unknown": 1,
+      "Unknown": 2,
       "Asia": 6,
-      "Europe": 4,
-      "Americas": 1
+      "Europe": 3
     }
   },
   "by_country": [
@@ -67,15 +66,6 @@
       "max_severity": "MEDIUM"
     },
     {
-      "country": "Austria",
-      "count": 1,
-      "max_sev_rank": 2,
-      "iso2": "AT",
-      "region": "Europe",
-      "country_group": "C",
-      "max_severity": "MEDIUM"
-    },
-    {
       "country": "Portugal",
       "count": 1,
       "max_sev_rank": 2,
@@ -91,15 +81,6 @@
       "iso2": "FJ",
       "region": "Oceania",
       "country_group": "B",
-      "max_severity": "MEDIUM"
-    },
-    {
-      "country": "Peru",
-      "count": 1,
-      "max_sev_rank": 2,
-      "iso2": "PE",
-      "region": "Americas",
-      "country_group": "C",
       "max_severity": "MEDIUM"
     },
     {
@@ -799,15 +780,15 @@
       ]
     },
     {
-      "incident_id": "20251221-AT-DR",
+      "incident_id": "20251221-XX-DR",
       "canonical_name": "Drought Green",
       "summary": "Severe drought and heat across Europe are shrinking harvests, notably French maize, and causing water shortages in the Netherlands. The Rhine River has hit its lowest July level for decades, threatening energy and logistics, while Greek islands face drought during the tourist season; economists warn this extreme heat could raise food prices next year.",
-      "country": "Austria",
-      "iso2": "AT",
-      "lat": 47.5,
-      "lon": 14.6,
+      "country": "",
+      "iso2": "",
+      "lat": null,
+      "lon": null,
       "country_group": "C",
-      "region": "Europe",
+      "region": "Unknown",
       "incident_type": "Drought",
       "incident_category": "Natural",
       "is_disease": false,
@@ -2711,69 +2692,6 @@
         }
       ],
       "news_total": 2,
-      "logs": []
-    },
-    {
-      "incident_id": "20260719-PE-EQ",
-      "canonical_name": "Orange earthquake (Magnitude 5.5M, Depth:10km) in Peru 19/07/2026 02:24 UTC, 20 thousand (in MMI>=VII).",
-      "summary": "",
-      "country": "Peru",
-      "iso2": "PE",
-      "lat": -12.0429,
-      "lon": -75.3013,
-      "country_group": "C",
-      "region": "Americas",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-07-19",
-      "first_reported_date": "2026-07-19",
-      "last_updated_date": "2026-07-14",
-      "days_since_event": 1,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 1,
-        "healthmap": 0,
-        "news": 1
-      },
-      "source_links": [
-        {
-          "type": "GDACS",
-          "label": "Orange alert · Orange earthquake (Magnitude 5.5M, Depth:10km) in Peru 19/07/2026 02:24 UTC, 20 thousand (in MMI>=VII).",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1552752",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": "Orange",
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Earthquake of Magnitude 5.6 Strikes Central Peru, EMSC Says",
-          "url": "https://www.usnews.com/news/world/articles/2026-07-18/earthquake-of-magnitude-5-6-strikes-central-peru-emsc-says",
-          "outlet": "U.S. News & World Report",
-          "published_date": "2026-07-14T04:05:12+00:00"
-        }
-      ],
-      "news_total": 1,
       "logs": []
     }
   ]

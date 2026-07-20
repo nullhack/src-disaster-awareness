@@ -1,36 +1,36 @@
 {
   "schema_version": "1.4",
   "report_date": "2026-07-14",
-  "generated_at": "2026-07-20T07:48:48Z",
+  "generated_at": "2026-07-20T09:50:14Z",
   "as_of": "2026-07-14",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 85,
-    "new_today": 2,
+    "reportable_total": 84,
+    "new_today": 1,
     "critical": 0,
     "high": 42,
-    "medium": 41,
+    "medium": 40,
     "low": 2,
     "disease_outbreaks": 23,
     "countries_affected": 36,
-    "news_total": 232,
+    "news_total": 231,
     "max_magnitude": 27577.0,
     "by_severity": {
       "CRITICAL": 0,
       "HIGH": 42,
-      "MEDIUM": 41,
+      "MEDIUM": 40,
       "LOW": 2
     },
     "by_type": {
       "Disease": 23,
-      "Earthquake": 54,
+      "Earthquake": 53,
       "Forest Fire": 3,
       "Tropical Cyclone": 3,
       "Flood": 2
     },
     "by_region": {
-      "Americas": 24,
+      "Americas": 23,
       "Oceania": 5,
       "Africa": 11,
       "Asia": 39,
@@ -130,15 +130,6 @@
       "max_severity": "MEDIUM"
     },
     {
-      "country": "Peru",
-      "count": 3,
-      "max_sev_rank": 2,
-      "iso2": "PE",
-      "region": "Americas",
-      "country_group": "C",
-      "max_severity": "MEDIUM"
-    },
-    {
       "country": "Papua New Guinea",
       "count": 2,
       "max_sev_rank": 2,
@@ -170,6 +161,15 @@
       "count": 2,
       "max_sev_rank": 2,
       "iso2": "CU",
+      "region": "Americas",
+      "country_group": "C",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "Peru",
+      "count": 2,
+      "max_sev_rank": 2,
+      "iso2": "PE",
       "region": "Americas",
       "country_group": "C",
       "max_severity": "MEDIUM"
@@ -9116,69 +9116,6 @@
         }
       ],
       "news_total": 2,
-      "logs": []
-    },
-    {
-      "incident_id": "20260719-PE-EQ",
-      "canonical_name": "Orange earthquake (Magnitude 5.5M, Depth:10km) in Peru 19/07/2026 02:24 UTC, 20 thousand (in MMI>=VII).",
-      "summary": "",
-      "country": "Peru",
-      "iso2": "PE",
-      "lat": -12.0429,
-      "lon": -75.3013,
-      "country_group": "C",
-      "region": "Americas",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-07-19",
-      "first_reported_date": "2026-07-19",
-      "last_updated_date": "2026-07-14",
-      "days_since_event": 1,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 1,
-        "healthmap": 0,
-        "news": 1
-      },
-      "source_links": [
-        {
-          "type": "GDACS",
-          "label": "Orange alert · Orange earthquake (Magnitude 5.5M, Depth:10km) in Peru 19/07/2026 02:24 UTC, 20 thousand (in MMI>=VII).",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1552752",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": "Orange",
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Earthquake of Magnitude 5.6 Strikes Central Peru, EMSC Says",
-          "url": "https://www.usnews.com/news/world/articles/2026-07-18/earthquake-of-magnitude-5-6-strikes-central-peru-emsc-says",
-          "outlet": "U.S. News & World Report",
-          "published_date": "2026-07-14T04:05:12+00:00"
-        }
-      ],
-      "news_total": 1,
       "logs": []
     }
   ]
