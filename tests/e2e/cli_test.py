@@ -1,5 +1,14 @@
 from __future__ import annotations
 
+from unittest.mock import MagicMock
+
+
+def _patch_bootstrap(monkeypatch) -> None:
+    monkeypatch.setattr(
+        "disaster_report.cli._bootstrap",
+        lambda *a, **kw: (MagicMock(), object()),
+    )
+
 
 class TestCliE2E:
     def test_ingest_command_calls_run_pipeline(self, monkeypatch) -> None:
@@ -17,13 +26,13 @@ class TestCliE2E:
 
         monkeypatch.setattr("disaster_report.cli.run_pipeline", fake_run_pipeline)
         monkeypatch.setattr("disaster_report.cli._build_adapters", lambda source: [])
-        monkeypatch.setattr("disaster_report.cli.ContentStore", lambda *a, **kw: object())
         monkeypatch.setattr(
             "disaster_report.cli.OpenRouterDigester", lambda *a, **kw: object()
         )
         monkeypatch.setattr(
             "disaster_report.cli.DuckDuckGoNewsAdapter", lambda *a, **kw: object()
         )
+        _patch_bootstrap(monkeypatch)
         result = CliRunner().invoke(cli, ["ingest", "--source", "USGS", "-v"])
         assert captured.get("called") is True
         assert result.exit_code == 0
@@ -43,7 +52,7 @@ class TestCliE2E:
 
         monkeypatch.setattr("disaster_report.cli.ingest_source_reports", fake_ingest)
         monkeypatch.setattr("disaster_report.cli._build_adapters", lambda source: [])
-        monkeypatch.setattr("disaster_report.cli.ContentStore", lambda *a, **kw: object())
+        _patch_bootstrap(monkeypatch)
         result = CliRunner().invoke(cli, ["ingest-records", "--source", "USGS"])
         assert captured.get("called") is True
         assert result.exit_code == 0
@@ -61,13 +70,13 @@ class TestCliE2E:
 
         monkeypatch.setattr("disaster_report.cli.search_news", fake_search)
         monkeypatch.setattr("disaster_report.cli._build_adapters", lambda source: [])
-        monkeypatch.setattr("disaster_report.cli.ContentStore", lambda *a, **kw: object())
         monkeypatch.setattr(
             "disaster_report.cli.DuckDuckGoNewsAdapter", lambda *a, **kw: object()
         )
         monkeypatch.setattr(
             "disaster_report.cli.OpenRouterDigester", lambda *a, **kw: object()
         )
+        _patch_bootstrap(monkeypatch)
         result = CliRunner().invoke(cli, ["search-news", "--source", "USGS"])
         assert captured.get("called") is True
         assert result.exit_code == 0
@@ -84,10 +93,10 @@ class TestCliE2E:
             return 0
 
         monkeypatch.setattr("disaster_report.cli.generate_logs", fake_generate)
-        monkeypatch.setattr("disaster_report.cli.ContentStore", lambda *a, **kw: object())
         monkeypatch.setattr(
             "disaster_report.cli.OpenRouterDigester", lambda *a, **kw: object()
         )
+        _patch_bootstrap(monkeypatch)
         result = CliRunner().invoke(cli, ["generate-logs"])
         assert captured.get("called") is True
         assert result.exit_code == 0
@@ -98,9 +107,7 @@ class TestCliE2E:
         from disaster_report.cli import cli
         from disaster_report.reporting.report import ReportDocument
 
-        monkeypatch.setattr(
-            "disaster_report.cli.ContentStore", lambda *a, **kw: object()
-        )
+        _patch_bootstrap(monkeypatch)
         monkeypatch.setattr(
             "disaster_report.cli.build_report",
             lambda *a, **kw: ReportDocument(
