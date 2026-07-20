@@ -7,7 +7,7 @@ import logging
 from typing import Any
 
 import httpx
-import pycountry
+import country_converter as coco
 from iso3166_2 import Subdivisions
 
 from disaster_report._country_names import country_name
@@ -21,8 +21,10 @@ _DEFAULT_SLUG = "4.5_month.geojson"
 _SIGNIFICANT_MAGNITUDE = 5.5
 _LOOKUP_RADIUS_KM = 500
 _OCEAN_LOOKUP_RADIUS_KM = 2000
+_NOT_FOUND = "not found"
 
 _iso = Subdivisions()
+_cc = coco.CountryConverter()
 logger = logging.getLogger(__name__)
 
 
@@ -172,14 +174,9 @@ def _country_from_place_text(place: str) -> tuple[str, str]:
     last = place.split(",")[-1].strip()
     if not last:
         return "", ""
-    try:
-        results = pycountry.countries.search_fuzzy(last)
-    except LookupError:
+    code = str(_cc.convert(names=last, to="ISO2"))
+    if not code or code == _NOT_FOUND:
         return "", ""
-    if not results:
-        return "", ""
-    country = results[0]
-    code = str(getattr(country, "alpha_2", ""))
     return country_name(code), code
 
 
