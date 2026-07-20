@@ -1,24 +1,24 @@
 {
   "schema_version": "1.4",
   "report_date": "2026-07-18",
-  "generated_at": "2026-07-20T15:28:58Z",
+  "generated_at": "2026-07-20T20:48:18Z",
   "as_of": "2026-07-18",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
     "reportable_total": 21,
     "new_today": 12,
-    "critical": 3,
-    "high": 8,
+    "critical": 4,
+    "high": 7,
     "medium": 10,
     "low": 0,
     "disease_outbreaks": 5,
     "countries_affected": 15,
-    "news_total": 587,
+    "news_total": 589,
     "max_magnitude": 7.8,
     "by_severity": {
-      "CRITICAL": 3,
-      "HIGH": 8,
+      "CRITICAL": 4,
+      "HIGH": 7,
       "MEDIUM": 10,
       "LOW": 0
     },
@@ -141,15 +141,6 @@
       "max_severity": "HIGH"
     },
     {
-      "country": "New Zealand",
-      "count": 1,
-      "max_sev_rank": 3,
-      "iso2": "NZ",
-      "region": "Oceania",
-      "country_group": "B",
-      "max_severity": "HIGH"
-    },
-    {
       "country": "Venezuela",
       "count": 1,
       "max_sev_rank": 4,
@@ -165,6 +156,15 @@
       "iso2": "CN",
       "region": "Asia",
       "country_group": "A",
+      "max_severity": "LOW"
+    },
+    {
+      "country": "New Zealand",
+      "count": 1,
+      "max_sev_rank": 4,
+      "iso2": "NZ",
+      "region": "Oceania",
+      "country_group": "B",
       "max_severity": "LOW"
     },
     {
@@ -8248,9 +8248,9 @@
       "incident_type": "Earthquake",
       "incident_category": "Natural",
       "is_disease": false,
-      "severity": "HIGH",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
+      "severity": "CRITICAL",
+      "priority": "HIGH",
+      "priority_rank": 1,
       "pandemic_potential": null,
       "event_status": null,
       "extended_monitoring": false,
@@ -8267,7 +8267,7 @@
         "usgs": 1,
         "gdacs": 0,
         "healthmap": 0,
-        "news": 49
+        "news": 51
       },
       "source_links": [
         {
@@ -8292,6 +8292,12 @@
           "headline": "'Felt like a truck': Locals describe 5.9 magnitude Southland earthquake",
           "url": "https://www.rnz.co.nz/news/emergencies/727264/felt-like-a-truck-locals-describe-5-point-9-magnitude-southland-earthquake",
           "outlet": "RNZ",
+          "published_date": "2026-07-16"
+        },
+        {
+          "headline": "New Zealand under tsunami alert after coastal quake shakes South Island",
+          "url": "https://rollingout.com/2026/07/16/new-zealand-tsunami-alert-coastal-quake/",
+          "outlet": "Rolling Out",
           "published_date": "2026-07-16"
         },
         {
@@ -8431,6 +8437,12 @@
           "url": "https://www.thesun.co.uk/news/39777439/earthquake-hits-new-zealand-sparking-tsunami-warning/",
           "outlet": "The Sun",
           "published_date": "2026-07-16T19:55:44+00:00"
+        },
+        {
+          "headline": "Strong earthquake rattles New Zealand’s South Island, tsunami alert lifted By Re...",
+          "url": "https://www.investing.com/news/world-news/magnitude-63-earthquake-strikes-near-tourist-hotspot-in-new-zealands-south-island-4795141",
+          "outlet": "Investing.com",
+          "published_date": "2026-07-16T20:10:19+00:00"
         },
         {
           "headline": "Strong earthquake strikes New Zealand's South IslandPublished on: July 16, 2026 9:45 PM",
@@ -8583,7 +8595,7 @@
           "published_date": "2026-07-18"
         }
       ],
-      "news_total": 49,
+      "news_total": 51,
       "logs": [
         {
           "log_date": "2026-07-16",

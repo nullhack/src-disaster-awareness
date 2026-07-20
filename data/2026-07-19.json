@@ -1,24 +1,24 @@
 {
   "schema_version": "1.4",
   "report_date": "2026-07-19",
-  "generated_at": "2026-07-20T15:28:58Z",
+  "generated_at": "2026-07-20T20:48:18Z",
   "as_of": "2026-07-19",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
     "reportable_total": 25,
     "new_today": 5,
-    "critical": 3,
-    "high": 11,
+    "critical": 4,
+    "high": 10,
     "medium": 11,
     "low": 0,
     "disease_outbreaks": 6,
     "countries_affected": 14,
-    "news_total": 672,
+    "news_total": 675,
     "max_magnitude": 7.8,
     "by_severity": {
-      "CRITICAL": 3,
-      "HIGH": 11,
+      "CRITICAL": 4,
+      "HIGH": 10,
       "MEDIUM": 11,
       "LOW": 0
     },
@@ -141,21 +141,21 @@
       "max_severity": "HIGH"
     },
     {
-      "country": "New Zealand",
-      "count": 1,
-      "max_sev_rank": 3,
-      "iso2": "NZ",
-      "region": "Oceania",
-      "country_group": "B",
-      "max_severity": "HIGH"
-    },
-    {
       "country": "Venezuela",
       "count": 1,
       "max_sev_rank": 4,
       "iso2": "VE",
       "region": "Americas",
       "country_group": "C",
+      "max_severity": "LOW"
+    },
+    {
+      "country": "New Zealand",
+      "count": 1,
+      "max_sev_rank": 4,
+      "iso2": "NZ",
+      "region": "Oceania",
+      "country_group": "B",
       "max_severity": "LOW"
     },
     {
@@ -9576,7 +9576,7 @@
       "incident_id": "20260714-PH-EQ",
       "tree_id": "6b641167ea035850822c4c571885d00d",
       "canonical_name": "Earthquake 34 km WSW of Sarangani, Philippines 2026-07",
-      "summary": "A magnitude 6.2 earthquake struck 34 km southwest of Sarangani, Philippines on July 14, 2026, at 11:49 pm local time, with a depth of approximately 10 km. The Philippine Institute of Volcanology and Seismology (PHIVOLCS) initially recommended caution for minor sea-level disturbances but later cancelled the advisory, confirming no unusual sea-level changes and no tsunami threat from the event.",
+      "summary": "Following the M6.2 earthquake near Sarangani, the Eastern Mindanao Command placed its disaster response units on standby to assist local governments. Suzuki Philippines extended assistance to employees of two dealerships in General Santos City to support their recovery.",
       "country": "Philippines",
       "iso2": "PH",
       "lat": 5.3269,
@@ -9605,7 +9605,7 @@
         "usgs": 1,
         "gdacs": 0,
         "healthmap": 0,
-        "news": 13
+        "news": 14
       },
       "source_links": [
         {
@@ -9626,6 +9626,12 @@
         "gdacs_population": null
       },
       "news": [
+        {
+          "headline": "Suzuki extends assistance to earthquake-affected dealership employees in GenSan",
+          "url": "https://www.manilatimes.net/2026/07/21/tmt-newswire/suzuki-extends-assistance-to-earthquake-affected-dealership-employees-in-gensan/2387454",
+          "outlet": "The Manila Times",
+          "published_date": "2026-07-01"
+        },
         {
           "headline": "BMKG: M6.2 Earthquake Strikes Mindanao, No Tsunami Threat",
           "url": "https://en.tempo.co/read/2113729/bmkg-m6-2-earthquake-strikes-mindanao-no-tsunami-threat",
@@ -9705,7 +9711,7 @@
           "published_date": "2026-07-19"
         }
       ],
-      "news_total": 13,
+      "news_total": 14,
       "logs": [
         {
           "log_date": "2026-07-15",
@@ -9811,6 +9817,39 @@
               "image": ""
             }
           ]
+        },
+        {
+          "log_date": "2026-07-20",
+          "summary": "Following the M6.2 earthquake near Sarangani, the Eastern Mindanao Command placed its disaster response units on standby to assist local governments. Suzuki Philippines extended assistance to employees of two dealerships in General Santos City to support their recovery.",
+          "news": [
+            {
+              "news_id": "cd432add4d7a5e76a8f7631c551e2aca",
+              "url": "https://www.sunstar.com.ph/davao/eastmincoms-disaster-response-units-on-standby-for-rescue-ops",
+              "headline": "Eastmincom’s disaster response units on standby for rescue ops",
+              "body": "THE Eastern Mindanao Command (Eastmincom) has placed its disaster response units on standby to augment local government ...",
+              "published_date": "2026-07-18T08:29:31+00:00",
+              "outlet": "SunStar",
+              "image": "https://www.bing.com/th?id=ONUT.6ZtYTRRviXbquogtSoFDQw"
+            },
+            {
+              "news_id": "b3d3bc8750b451fea0bd73918612493c",
+              "url": "https://www.manilatimes.net/2026/07/21/tmt-newswire/suzuki-extends-assistance-to-earthquake-affected-dealership-employees-in-gensan/2387454",
+              "headline": "Suzuki extends assistance to earthquake-affected dealership employees in GenSan",
+              "body": "FOLLOWING the recent earthquake that affected parts of Mindanao, Suzuki Philippines immediately extended assistance to employees of Suzuki Auto General Santos and Suzuki Auto SM City General Santos to help support them during the initial stages of recovery.",
+              "published_date": "2026-07-01",
+              "outlet": "The Manila Times",
+              "image": ""
+            },
+            {
+              "news_id": "6838979dca81521e9dadad7608db8d14",
+              "url": "https://mb.com.ph/2026/07/19/suzuki-philippines-sends-relief-to-general-santos-dealership-workers",
+              "headline": "Suzuki Philippines sends relief to General Santos dealership workers",
+              "body": "Suzuki Philippines provided assistance to employees of two dealerships in General Santos City following the major earthquake that struck the waters off...",
+              "published_date": "2026-07-19",
+              "outlet": "Manila Bulletin",
+              "image": "https://www.bing.com/th?id=ONUT.6aoDKxLKHsGc6E428A9lDg"
+            }
+          ]
         }
       ]
     },
@@ -9828,9 +9867,9 @@
       "incident_type": "Earthquake",
       "incident_category": "Natural",
       "is_disease": false,
-      "severity": "HIGH",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
+      "severity": "CRITICAL",
+      "priority": "HIGH",
+      "priority_rank": 1,
       "pandemic_potential": null,
       "event_status": null,
       "extended_monitoring": false,
@@ -9847,7 +9886,7 @@
         "usgs": 1,
         "gdacs": 0,
         "healthmap": 0,
-        "news": 49
+        "news": 51
       },
       "source_links": [
         {
@@ -9872,6 +9911,12 @@
           "headline": "'Felt like a truck': Locals describe 5.9 magnitude Southland earthquake",
           "url": "https://www.rnz.co.nz/news/emergencies/727264/felt-like-a-truck-locals-describe-5-point-9-magnitude-southland-earthquake",
           "outlet": "RNZ",
+          "published_date": "2026-07-16"
+        },
+        {
+          "headline": "New Zealand under tsunami alert after coastal quake shakes South Island",
+          "url": "https://rollingout.com/2026/07/16/new-zealand-tsunami-alert-coastal-quake/",
+          "outlet": "Rolling Out",
           "published_date": "2026-07-16"
         },
         {
@@ -10011,6 +10056,12 @@
           "url": "https://www.thesun.co.uk/news/39777439/earthquake-hits-new-zealand-sparking-tsunami-warning/",
           "outlet": "The Sun",
           "published_date": "2026-07-16T19:55:44+00:00"
+        },
+        {
+          "headline": "Strong earthquake rattles New Zealand’s South Island, tsunami alert lifted By Re...",
+          "url": "https://www.investing.com/news/world-news/magnitude-63-earthquake-strikes-near-tourist-hotspot-in-new-zealands-south-island-4795141",
+          "outlet": "Investing.com",
+          "published_date": "2026-07-16T20:10:19+00:00"
         },
         {
           "headline": "Strong earthquake strikes New Zealand's South IslandPublished on: July 16, 2026 9:45 PM",
@@ -10163,7 +10214,7 @@
           "published_date": "2026-07-18"
         }
       ],
-      "news_total": 49,
+      "news_total": 51,
       "logs": [
         {
           "log_date": "2026-07-16",
