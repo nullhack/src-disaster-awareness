@@ -530,6 +530,7 @@ def build_incident_object(store: ContentStore, inc: dict, as_of_date: datetime) 
 
     return {
         "incident_id": dashboard_id,
+        "tree_id": incident_id,
         "canonical_name": canonical_name,
         "summary": latest_summary or "",
         "country": country,
