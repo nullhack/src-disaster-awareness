@@ -1,29 +1,29 @@
 {
   "schema_version": "1.4",
   "report_date": "2026-07-19",
-  "generated_at": "2026-07-21T04:47:32Z",
+  "generated_at": "2026-07-21T10:02:40Z",
   "as_of": "2026-07-19",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 25,
+    "reportable_total": 24,
     "new_today": 5,
     "critical": 4,
-    "high": 10,
+    "high": 9,
     "medium": 11,
     "low": 0,
-    "disease_outbreaks": 6,
+    "disease_outbreaks": 5,
     "countries_affected": 14,
-    "news_total": 675,
+    "news_total": 666,
     "max_magnitude": 7.8,
     "by_severity": {
       "CRITICAL": 4,
-      "HIGH": 10,
+      "HIGH": 9,
       "MEDIUM": 11,
       "LOW": 0
     },
     "by_type": {
-      "Disease": 6,
+      "Disease": 5,
       "Flood": 3,
       "Volcano": 3,
       "Drought": 1,
@@ -34,7 +34,7 @@
     "by_region": {
       "Unknown": 4,
       "Asia": 12,
-      "Africa": 2,
+      "Africa": 1,
       "Americas": 2,
       "Europe": 3,
       "Oceania": 2
@@ -96,21 +96,21 @@
       "max_severity": "MEDIUM"
     },
     {
-      "country": "DR Congo",
-      "count": 2,
-      "max_sev_rank": 3,
-      "iso2": "CD",
-      "region": "Africa",
-      "country_group": "C",
-      "max_severity": "HIGH"
-    },
-    {
       "country": "China",
       "count": 2,
       "max_sev_rank": 3,
       "iso2": "CN",
       "region": "Asia",
       "country_group": "A",
+      "max_severity": "HIGH"
+    },
+    {
+      "country": "DR Congo",
+      "count": 1,
+      "max_sev_rank": 3,
+      "iso2": "CD",
+      "region": "Africa",
+      "country_group": "C",
       "max_severity": "HIGH"
     },
     {
@@ -11886,212 +11886,6 @@
               "published_date": "2026-07-18T08:31:22+00:00",
               "outlet": "Amazon S3 on MSN",
               "image": "https://www.bing.com/th?id=ONUT.A1BoTiV3C-jaSvL5nU41IQ"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "incident_id": "20260717-CD-DI",
-      "tree_id": "4fdd952a2a3f43ce95b8d35e423d2e19",
-      "canonical_name": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo & Uganda",
-      "summary": "The Ebola outbreak in DR Congo has surged by about 70% over the past two weeks, with over 40 new cases reported daily. Confirmed cases have risen to 2,181 with 864 deaths, and most deaths are occurring outside health facilities due to funeral practices. A US citizen working for a humanitarian organization has tested positive, and US aid workers have been quarantined in Kenya as the CDC expands travel restrictions.",
-      "country": "DR Congo",
-      "iso2": "CD",
-      "lat": -4.0,
-      "lon": 21.8,
-      "country_group": "C",
-      "region": "Africa",
-      "incident_type": "Disease",
-      "incident_category": "Biological",
-      "is_disease": true,
-      "severity": "HIGH",
-      "priority": "HIGH",
-      "priority_rank": 1,
-      "pandemic_potential": "HIGH",
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": "Ebola",
-      "event_date": "2026-07-17",
-      "first_reported_date": "2026-07-17",
-      "last_updated_date": "2026-07-18",
-      "days_since_event": 4,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 1,
-        "usgs": 0,
-        "gdacs": 0,
-        "healthmap": 0,
-        "news": 9
-      },
-      "source_links": [
-        {
-          "type": "WHO",
-          "label": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo & Uganda",
-          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON613",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Aid group says seven Americans quarantining at Kenya Ebola facility after US travel ban",
-          "url": "https://www.straitstimes.com/world/europe/aid-group-says-seven-americans-quarantining-at-kenya-ebola-facility-after-us-travel-ban",
-          "outlet": "The Straits Times",
-          "published_date": "2026-07-16T19:42:09+00:00"
-        },
-        {
-          "headline": "The Lessons About Ebola the U.S. Wants to Forget",
-          "url": "https://www.theatlantic.com/health/2026/07/ebola-promises-united-states/687905/",
-          "outlet": "The Atlantic",
-          "published_date": "2026-07-16T21:42:09+00:00"
-        },
-        {
-          "headline": "World News in Brief: Appeal for calm in Kashmir, women on the move, increased Ebola deaths in communities, 12th anniversary of MH17",
-          "url": "https://news.un.org/en/story/2026/07/1167970",
-          "outlet": "UN News",
-          "published_date": "2026-07-17"
-        },
-        {
-          "headline": "Confirmed Ebola cases in DR Congo rise to 2,181",
-          "url": "https://www.wam.ae/en/article/c1a7xzp-confirmed-ebola-cases-congo-rise-2181",
-          "outlet": "Emirates News Agency",
-          "published_date": "2026-07-17T08:48:15+00:00"
-        },
-        {
-          "headline": "US aid workers quarantined in Kenya as CDC expands Ebola travel restrictions",
-          "url": "https://www.cidrap.umn.edu/ebola/us-aid-workers-quarantined-kenya-cdc-expands-ebola-travel-restrictions",
-          "outlet": "Center for Infectious Disease Research and Policy",
-          "published_date": "2026-07-17T20:48:12+00:00"
-        },
-        {
-          "headline": "US citizen tests positive for Ebola in Congo",
-          "url": "https://www.ksdk.com/article/syndication/associatedpress/us-citizen-tests-positive-for-ebola-in-congo/616-a5c71127-5fe2-4552-9ba8-dfa12e4990bd",
-          "outlet": "KSDK St. Louis",
-          "published_date": "2026-07-18T08:48:12+00:00"
-        },
-        {
-          "headline": "UN agency warns funeral practices fueling Ebola spread in DR Congo",
-          "url": "https://www.aa.com.tr/en/health/un-agency-warns-funeral-practices-fueling-ebola-spread-in-dr-congo/4001797",
-          "outlet": "Anadolu Agency",
-          "published_date": "2026-07-18T08:48:12+00:00"
-        },
-        {
-          "headline": "US citizen tests positive for Ebola while working in Democratic Republic of...",
-          "url": "https://www.kvue.com/article/news/nation-world/us-citizen-ebola-democratic-republic-congo/507-bd37a4b1-c1cc-40ac-b8f6-9eeaa9d5c8ac",
-          "outlet": "KVUE-TV Austin",
-          "published_date": "2026-07-18T08:48:12+00:00"
-        },
-        {
-          "headline": "Most Ebola deaths in DR Congo outbreak occurring outside health facilities",
-          "url": "https://www.msn.com/en-ae/health/general/most-ebola-deaths-in-dr-congo-outbreak-occurring-outside-health-facilities/ar-AA2898KC?ocid=BingNewsVerp",
-          "outlet": "Emirates News Agency on MSN",
-          "published_date": "2026-07-18T08:48:15+00:00"
-        }
-      ],
-      "news_total": 9,
-      "logs": [
-        {
-          "log_date": "2026-07-17",
-          "summary": "Seven American aid workers who had been combating the ongoing Ebola outbreak in the Democratic Republic of the Congo are now quarantining at a facility in Kenya following a US travel ban. This development highlights ongoing international response and containment efforts related to the Bundibugyo virus outbreak.",
-          "news": [
-            {
-              "news_id": "596e82cd030459c08bbcfbefb89ec705",
-              "url": "https://www.straitstimes.com/world/europe/aid-group-says-seven-americans-quarantining-at-kenya-ebola-facility-after-us-travel-ban",
-              "headline": "Aid group says seven Americans quarantining at Kenya Ebola facility after US travel ban",
-              "body": "GENEVA/NAIROBI, July 17 - Seven American aid workers who had been in Congo to fight the Ebola outbreak are quarantining at an ...",
-              "published_date": "2026-07-16T19:42:09+00:00",
-              "outlet": "The Straits Times",
-              "image": "https://www.bing.com/th?id=ONUT.-8F0jk-zpRzcqSKI2dUrIw"
-            },
-            {
-              "news_id": "a7e6d24a5da4529b98d931c5b9dccddf",
-              "url": "https://www.theatlantic.com/health/2026/07/ebola-promises-united-states/687905/",
-              "headline": "The Lessons About Ebola the U.S. Wants to Forget",
-              "body": "The world’s capacity to control the disease has improved in the past decade, but only because of dedicated investment and ...",
-              "published_date": "2026-07-16T21:42:09+00:00",
-              "outlet": "The Atlantic",
-              "image": "https://www.bing.com/th?id=ONUT.d52USV2oxoZO5vQpLUsVgw"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-18",
-          "summary": "The Ebola outbreak in DR Congo has surged by about 70% over the past two weeks, with over 40 new cases reported daily. Confirmed cases have risen to 2,181 with 864 deaths, and most deaths are occurring outside health facilities due to funeral practices. A US citizen working for a humanitarian organization has tested positive, and US aid workers have been quarantined in Kenya as the CDC expands travel restrictions.",
-          "news": [
-            {
-              "news_id": "592ad3b27c4e5e60b48dc1c8259c5d42",
-              "url": "https://www.msn.com/en-ae/health/general/most-ebola-deaths-in-dr-congo-outbreak-occurring-outside-health-facilities/ar-AA2898KC?ocid=BingNewsVerp",
-              "headline": "Most Ebola deaths in DR Congo outbreak occurring outside health facilities",
-              "body": "GENEVA, 17th July, 2026 (WAM) -- The ongoing Ebola outbreak in the Democratic Republic of the Congo (DRC) has surged by around 70% over the past two weeks, with more than 40 new cases reported each ...",
-              "published_date": "2026-07-18T08:48:15+00:00",
-              "outlet": "Emirates News Agency on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "cae152e5eb5754b7a8fee5f24ebbdf0d",
-              "url": "https://www.ksdk.com/article/syndication/associatedpress/us-citizen-tests-positive-for-ebola-in-congo/616-a5c71127-5fe2-4552-9ba8-dfa12e4990bd",
-              "headline": "US citizen tests positive for Ebola in Congo",
-              "body": "A US citizen working for a humanitarian organization in Congo has tested positive for the Ebola virus, the U.S. Centers for Disease Control and Preventio...",
-              "published_date": "2026-07-18T08:48:12+00:00",
-              "outlet": "KSDK St. Louis",
-              "image": "https://s.yimg.com/am/60d/08dcf2d1eef5b7301ff0e1416bc05331"
-            },
-            {
-              "news_id": "2a445121080b547b8b1bcc393f451fcc",
-              "url": "https://www.aa.com.tr/en/health/un-agency-warns-funeral-practices-fueling-ebola-spread-in-dr-congo/4001797",
-              "headline": "UN agency warns funeral practices fueling Ebola spread in DR Congo",
-              "body": "The movement of Ebola victims' bodies across the Democratic Republic of Congo for burial in their home communities is ...",
-              "published_date": "2026-07-18T08:48:12+00:00",
-              "outlet": "Anadolu Agency",
-              "image": "https://www.bing.com/th?id=ONUT.iezYuJLzHSdLhQYsP9GFSQ"
-            },
-            {
-              "news_id": "fc7282b75e0b5f46b49221fe621e07c8",
-              "url": "https://www.wam.ae/en/article/c1a7xzp-confirmed-ebola-cases-congo-rise-2181",
-              "headline": "Confirmed Ebola cases in DR Congo rise to 2,181",
-              "body": "The number of confirmed Ebola cases in the Democratic Republic of the Congo has risen to 2,181, with 864 reported deaths, ...",
-              "published_date": "2026-07-17T08:48:15+00:00",
-              "outlet": "Emirates News Agency",
-              "image": "https://www.bing.com/th?id=ONUT.rmlrqOvHt4Otiu-x9PXAKw"
-            },
-            {
-              "news_id": "d7b9adf910545db780eda4759ef41aa5",
-              "url": "https://news.un.org/en/story/2026/07/1167970",
-              "headline": "World News in Brief: Appeal for calm in Kashmir, women on the move, increased Ebola deaths in communities, 12th anniversary of MH17",
-              "body": "The UN human rights chief, Volker Türk, has appealed for calm in Pakistan-Administered Kashmir amid unrest ahead of regional elections.",
-              "published_date": "2026-07-17",
-              "outlet": "UN News",
-              "image": "https://www.bing.com/th?id=ONUT.3ma7aZHOL8TH4h-znj0__w"
-            },
-            {
-              "news_id": "dd2a9f3c232f58089c0ad6cc86a8da44",
-              "url": "https://www.cidrap.umn.edu/ebola/us-aid-workers-quarantined-kenya-cdc-expands-ebola-travel-restrictions",
-              "headline": "US aid workers quarantined in Kenya as CDC expands Ebola travel restrictions",
-              "body": "The first Americans affected by the policy are 7 aid workers who had been responding to the DR Congo...",
-              "published_date": "2026-07-17T20:48:12+00:00",
-              "outlet": "Center for Infectious Disease Research and Policy",
-              "image": "https://s.yimg.com/am/60d/1c323f7285d47c6af6f4ee33baf3b0a7"
-            },
-            {
-              "news_id": "dbed4e80f0145d3c8953e2213f7349a0",
-              "url": "https://www.kvue.com/article/news/nation-world/us-citizen-ebola-democratic-republic-congo/507-bd37a4b1-c1cc-40ac-b8f6-9eeaa9d5c8ac",
-              "headline": "US citizen tests positive for Ebola while working in Democratic Republic of...",
-              "body": "A U.S. citizen working with a humanitarian aid group in the Democratic Republic of Congo has tested...",
-              "published_date": "2026-07-18T08:48:12+00:00",
-              "outlet": "KVUE-TV Austin",
-              "image": "https://s.yimg.com/am/60d/ff53d7ec70718688f7a222eac39f5582"
             }
           ]
         }
