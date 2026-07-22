@@ -501,8 +501,6 @@ def build_incident_object(store: ContentStore, inc: dict, as_of_date: datetime) 
     dashboard_id = f"{date_part}-{iso2 or 'XX'}-{type_code}"
 
     canonical_name = inc["name"]
-    if not is_disease and max_mag is not None:
-        canonical_name = f"{inc_type} {place_str or country} {event_date_short[:7] if event_date_short else ''}".strip()
 
     physical = {
         "max_magnitude": max_mag,

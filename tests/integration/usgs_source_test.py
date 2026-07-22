@@ -203,3 +203,52 @@ def build_kept_report(
         report_date=report_date,
         raw_fields=raw_fields if raw_fields is not None else defaults,
     )
+
+
+class TestUSGSExtractCanonicalName:
+    def test_usgs_earthquake_with_magnitude_and_locality(self) -> None:
+        from disaster_report.sources.usgs import _extract_canonical_name
+
+        result = _extract_canonical_name(
+            {"mag": 7.5},
+            [ReportPlace("VE", "Yaracuy", "Yumare")],
+            "2026-06-24",
+            "Earthquake",
+        )
+        assert result == "Earthquake M7.5 Yumare, Venezuela 2026-06-24"
+
+    def test_usgs_earthquake_missing_magnitude(self) -> None:
+        from disaster_report.sources.usgs import _extract_canonical_name
+
+        result = _extract_canonical_name(
+            {}, [ReportPlace("VE", "", "Yumare")], "2026-06-24", "Earthquake"
+        )
+        assert result == "Earthquake Yumare, Venezuela 2026-06-24"
+
+    def test_usgs_earthquake_no_places(self) -> None:
+        from disaster_report.sources.usgs import _extract_canonical_name
+
+        result = _extract_canonical_name({"mag": 5.5}, [], "2026-07-14", "Earthquake")
+        assert result == "Earthquake M5.5 2026-07-14"
+
+    def test_usgs_earthquake_offshore_locality(self) -> None:
+        from disaster_report.sources.usgs import _extract_canonical_name
+
+        result = _extract_canonical_name(
+            {"mag": 5.5},
+            [ReportPlace("", "", "Ocean")],
+            "2026-07-14",
+            "Earthquake",
+        )
+        assert result == "Earthquake M5.5 Ocean 2026-07-14"
+
+    def test_usgs_earthquake_normalises_subdivision_when_no_locality(self) -> None:
+        from disaster_report.sources.usgs import _extract_canonical_name
+
+        result = _extract_canonical_name(
+            {"mag": 6.0},
+            [ReportPlace("PH", "Sarangani", "")],
+            "2026-06-07",
+            "Earthquake",
+        )
+        assert result == "Earthquake M6.0 Sarangani, Philippines 2026-06-07"

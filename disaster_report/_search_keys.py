@@ -48,7 +48,7 @@ def derive_search_keys(
     if len(report.places) == 1 and report.places[0].country_code:
         place = report.places[0]
         country = country_name(place.country_code)
-        token = _place_token(place)
+        token = place_token(place)
         place_str = f"{token}, {country}" if token else country
         strict = " ".join(
             p for p in (incident_type, place_str, month_year_label, disease) if p
@@ -109,7 +109,7 @@ def _shared_continent_tokens(regions: list[str]) -> str:
     return " ".join(winners)
 
 
-def _place_token(place: ReportPlace) -> str:
+def place_token(place: ReportPlace) -> str:
     locality = place.locality
     if not locality:
         return ""

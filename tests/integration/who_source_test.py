@@ -38,13 +38,12 @@ class TestWHODiseaseOutbreakAdapter:
     def test_each_source_report_carries_specific_disease_type(self) -> None:
         import vcr
 
-        from disaster_report._search_keys import disease_from_title
         from disaster_report.sources.who import WHODiseaseOutbreakAdapter
 
         with vcr.use_cassette(f"tests/cassettes/{CASSETTE}"):
             reports = WHODiseaseOutbreakAdapter().fetch()
         assert all(
-            report.incident_type == (disease_from_title(report.name) or "Disease")
+            report.incident_type and report.incident_type != "Disease"
             for report in reports
         )
 
@@ -204,3 +203,124 @@ def build_who_report(
         report_date=report_date,
         raw_fields=raw_fields if raw_fields is not None else defaults,
     )
+
+
+class TestWHOExtractCanonicalName:
+    def test_disease_with_country_only(self) -> None:
+        from disaster_report.sources.who import _extract_canonical_name
+
+        result = _extract_canonical_name(
+            {},
+            [ReportPlace("UG", "", "")],
+            "2025-09-05",
+            "Ebola",
+        )
+        assert result == "Ebola Uganda 2025-09-05"
+
+    def test_disease_global_no_places_uses_Global(self) -> None:
+        from disaster_report.sources.who import _extract_canonical_name
+
+        result = _extract_canonical_name(
+            {},
+            [],
+            "2025-05-28",
+            "COVID-19",
+        )
+        assert result == "COVID-19 Global 2025-05-28"
+
+    def test_disease_uses_subdivision_when_available(self) -> None:
+        from disaster_report.sources.who import _extract_canonical_name
+
+        result = _extract_canonical_name(
+            {},
+            [ReportPlace("CD", "Kinshasa", "")],
+            "2025-09-05",
+            "Ebola",
+        )
+        assert result == "Ebola Kinshasa, DR Congo 2025-09-05"
+
+    def test_disease_normalises_messy_incident_type(self) -> None:
+        from disaster_report.sources.who import _extract_canonical_name
+
+        result = _extract_canonical_name(
+            {},
+            [ReportPlace("US", "", "")],
+            "2025-04-01",
+            "Avian Influenza A(H5N1)",
+        )
+        assert result == "Avian Influenza United States 2025-04-01"
+
+    def test_disease_unknown_falls_back_to_first_word(self) -> None:
+        from disaster_report.sources.who import _extract_canonical_name
+
+        result = _extract_canonical_name(
+            {},
+            [ReportPlace("UG", "", "")],
+            "2025-09-05",
+            "Mysterious Novel Pathogen X",
+        )
+        assert result == "Mysterious Uganda 2025-09-05"
+
+    def test_disease_normalises_long_country_name(self) -> None:
+        from disaster_report.sources.who import _extract_canonical_name
+
+        result = _extract_canonical_name(
+            {},
+            [ReportPlace("CD", "", "")],
+            "2025-09-05",
+            "Ebola",
+        )
+        assert "DR Congo" in result
+        assert "Democratic Republic" not in result
+
+    def test_title_suffix_country_overrides_body_scan_places(self) -> None:
+        from disaster_report.sources.who import _extract_canonical_name
+
+        result = _extract_canonical_name(
+            {"title": "Marburg virus disease - Ethiopia"},
+            [
+                ReportPlace("AO", "", ""),
+                ReportPlace("CD", "", ""),
+                ReportPlace("ET", "", ""),
+                ReportPlace("UG", "", ""),
+            ],
+            "2025-09-05",
+            "Marburg",
+        )
+        assert result == "Marburg Ethiopia 2025-09-05"
+
+    def test_title_global_suffix_overrides_places(self) -> None:
+        from disaster_report.sources.who import _extract_canonical_name
+
+        result = _extract_canonical_name(
+            {"title": "Yellow fever - Global situation"},
+            [ReportPlace("BR", "", ""), ReportPlace("CO", "", "")],
+            "2025-06-24",
+            "Yellow fever",
+        )
+        assert result == "Yellow fever Global 2025-06-24"
+
+    def test_title_country_match_uses_subdivision_when_available(self) -> None:
+        from disaster_report.sources.who import _extract_canonical_name
+
+        result = _extract_canonical_name(
+            {"title": "Ebola virus disease – Democratic Republic of the Congo"},
+            [
+                ReportPlace("CD", "Kinshasa", ""),
+                ReportPlace("UG", "Bundibugyo", ""),
+            ],
+            "2025-09-05",
+            "Ebola",
+        )
+        assert result == "Ebola Kinshasa, DR Congo 2025-09-05"
+
+    def test_title_without_suffix_falls_back_to_places(self) -> None:
+        from disaster_report.sources.who import _extract_canonical_name
+
+        result = _extract_canonical_name(
+            {"title": "Ebola disease caused by Bundibugyo virus"},
+            [ReportPlace("UG", "", "")],
+            "2025-09-05",
+            "Ebola",
+        )
+        assert result == "Ebola Uganda 2025-09-05"
