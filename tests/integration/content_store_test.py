@@ -414,10 +414,28 @@ class TestActiveIncidents:
         store.assign_news_to_incident(nid, inc)
         assert store.active_incidents(WINDOW) == []
 
-    def test_active_ignores_summarized_news(self, tmp_path: Path) -> None:
+    def test_active_keeps_incident_with_recent_summarized_news(
+        self, tmp_path: Path
+    ) -> None:
         store = ContentStore(tmp_path, clock=_clock)
         rid = store.ingest_source_report(_build_report())
         nid = store.ingest_news_item(_build_news(published_date="2026-06-30T10:00:00Z"))
+        inc = _new_incident_id()
+        store.add_report_incident(rid, inc)
+        store.assign_news_to_incident(nid, inc)
+        store.append_timeline_with_provenance(
+            _build_log(incident_id=inc), {nid}
+        )
+        active = store.active_incidents(WINDOW)
+        assert len(active) == 1
+        assert active[0].incident_id == inc
+
+    def test_active_drops_incident_when_summarized_news_outside_window(
+        self, tmp_path: Path
+    ) -> None:
+        store = ContentStore(tmp_path, clock=_clock)
+        rid = store.ingest_source_report(_build_report())
+        nid = store.ingest_news_item(_build_news(published_date="2025-01-01T00:00:00Z"))
         inc = _new_incident_id()
         store.add_report_incident(rid, inc)
         store.assign_news_to_incident(nid, inc)
