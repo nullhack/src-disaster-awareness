@@ -513,11 +513,11 @@ class ContentStore:
             if self._news_incident.get(nuuid) == incident_id
         ]
 
-    def _pending_news_max_dates(self) -> dict[str, datetime]:
+    def _recent_news_max_dates(self) -> dict[str, datetime]:
         max_pub: dict[str, datetime] = {}
         for nuuid, n in self._news.items():
             inc = self._news_incident.get(nuuid)
-            if inc is None or self._news_log.get(nuuid) is not None:
+            if inc is None:
                 continue
             try:
                 dt = _as_utc(datetime.fromisoformat(n.get("published_date", "")))
@@ -530,7 +530,7 @@ class ContentStore:
     def active_incidents(self, window_days: int) -> list[Incident]:
         now = _as_utc(self._clock())
         cutoff = now - timedelta(days=window_days)
-        max_pub = self._pending_news_max_dates()
+        max_pub = self._recent_news_max_dates()
         active_ids = [inc for inc, dt in max_pub.items() if cutoff <= dt <= now]
         if not active_ids:
             return []
