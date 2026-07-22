@@ -1,40 +1,40 @@
 {
   "schema_version": "1.4",
   "report_date": "2026-07-17",
-  "generated_at": "2026-07-21T20:45:24Z",
+  "generated_at": "2026-07-22T04:47:07Z",
   "as_of": "2026-07-17",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 13,
+    "reportable_total": 11,
     "new_today": 0,
     "critical": 0,
-    "high": 5,
-    "medium": 7,
+    "high": 4,
+    "medium": 6,
     "low": 1,
-    "disease_outbreaks": 2,
-    "countries_affected": 9,
-    "news_total": 119,
+    "disease_outbreaks": 1,
+    "countries_affected": 8,
+    "news_total": 76,
     "max_magnitude": 7.8,
     "by_severity": {
       "CRITICAL": 0,
-      "HIGH": 5,
-      "MEDIUM": 7,
+      "HIGH": 4,
+      "MEDIUM": 6,
       "LOW": 1
     },
     "by_type": {
-      "Disease": 2,
+      "Disease": 1,
       "Flood": 1,
       "Volcano": 1,
       "Drought": 1,
       "Earthquake": 5,
-      "Forest Fire": 3
+      "Forest Fire": 2
     },
     "by_region": {
       "Oceania": 2,
-      "Unknown": 2,
       "Asia": 6,
-      "Europe": 3
+      "Unknown": 1,
+      "Europe": 2
     }
   },
   "by_country": [
@@ -109,15 +109,6 @@
       "region": "Europe",
       "country_group": "C",
       "max_severity": "HIGH"
-    },
-    {
-      "country": "Spain",
-      "count": 1,
-      "max_sev_rank": 3,
-      "iso2": "ES",
-      "region": "Europe",
-      "country_group": "C",
-      "max_severity": "HIGH"
     }
   ],
   "incidents": [
@@ -145,7 +136,7 @@
       "event_date": "2024-06-07",
       "first_reported_date": "2024-06-07",
       "last_updated_date": "2026-07-10",
-      "days_since_event": 774,
+      "days_since_event": 775,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -232,248 +223,6 @@
       ]
     },
     {
-      "incident_id": "20250528-XX-DI",
-      "tree_id": "2988d8638e0956a89029b6059b7c5f7f",
-      "canonical_name": "COVID-19 - Global Situation",
-      "summary": "A study confirms that the 2025-2026 COVID-19 vaccines are effective at preventing emergency department/urgent care visits and hospitalizations among immunocompetent adults, providing updated evidence of protection against severe outcomes.",
-      "country": "",
-      "iso2": "",
-      "lat": null,
-      "lon": null,
-      "country_group": "C",
-      "region": "Unknown",
-      "incident_type": "Disease",
-      "incident_category": "Biological",
-      "is_disease": true,
-      "severity": "MEDIUM",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": "LOW",
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": "Covid-19",
-      "event_date": "2025-05-28",
-      "first_reported_date": "2025-05-28",
-      "last_updated_date": "2026-07-15",
-      "days_since_event": 419,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 1,
-        "usgs": 0,
-        "gdacs": 0,
-        "healthmap": 0,
-        "news": 11
-      },
-      "source_links": [
-        {
-          "type": "WHO",
-          "label": "COVID-19 - Global Situation",
-          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2025-DON572",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Are the New COVID Vaccines Available, and Should You Get One? Experts Explain",
-          "url": "https://www.today.com/health/coronavirus/covid-vaccine-2025-2026-rcna228529",
-          "outlet": "Today",
-          "published_date": "2026-07-08T15:12:31+00:00"
-        },
-        {
-          "headline": "CDC blocked a COVID vaccine study’s release–now you can read the whole thing",
-          "url": "https://www.msn.com/en-us/health/general/cdc-blocked-a-covid-vaccine-study-s-release-now-you-can-read-the-whole-thing/ar-AA26Q57n?ocid=BingNewsVerp",
-          "outlet": "Newsweek on MSN",
-          "published_date": "2026-07-08T15:12:31+00:00"
-        },
-        {
-          "headline": "IMF forecasts dramatic global economic slowdown",
-          "url": "https://finance.yahoo.com/economy/articles/imf-forecasts-dramatic-global-economic-230448061.html",
-          "outlet": "Deseret News · via Yahoo Finance",
-          "published_date": "2026-07-09T03:32:11+00:00"
-        },
-        {
-          "headline": "Jersey Mike’s IPO reflects growing investor appetite for restaurants",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jersey-mike-inspire-brands-ipos-083900287.html",
-          "outlet": "Restaurant Dive · via Yahoo Finance",
-          "published_date": "2026-07-09T03:32:11+00:00"
-        },
-        {
-          "headline": "The Meridian, a $24M mixed-use development, breaks ground in Thiensville",
-          "url": "https://www.yahoo.com/news/us/articles/meridian-24m-mixed-development-breaks-100404828.html",
-          "outlet": "Milwaukee Journal Sentinel · via Yahoo News",
-          "published_date": "2026-07-10T03:32:11+00:00"
-        },
-        {
-          "headline": "Linda Noskova holds off Karolina Muchova to win Wimbledon women's final",
-          "url": "https://sports.yahoo.com/articles/wimbledon-womens-final-watch-linda-001901956.html",
-          "outlet": "USA TODAY Sports · via Yahoo Sports",
-          "published_date": "2026-07-11T03:32:11+00:00"
-        },
-        {
-          "headline": "TV host Lee Teng opens up about wife's miscarriage during pandemic: ‘I felt like an empty shell'",
-          "url": "https://cnalifestyle.channelnewsasia.com/entertainment/lee-teng-gina-lin-miscarriage-pandemic-585986",
-          "outlet": "CNA Lifestyle",
-          "published_date": "2026-07-11T07:14:19+00:00"
-        },
-        {
-          "headline": "Andhra Covid Deaths Trigger Southern Alert",
-          "url": "https://www.rediff.com/news/report/andhra-covid-deaths-trigger-southern-alert/20260715.htm",
-          "outlet": "Rediff.com",
-          "published_date": "2026-07-14T07:14:19+00:00"
-        },
-        {
-          "headline": "Updated 2025-2026 COVID-19 Vaccines Effective Against Medically Attended Disease",
-          "url": "https://www.infectiousdiseaseadvisor.com/news/effectiveness-2025-2026-covid19-vaccines-severe-outcomes/",
-          "outlet": "Infectious Disease Advisor",
-          "published_date": "2026-07-15T09:25:38+00:00"
-        },
-        {
-          "headline": "Dr. Erica Schwartz faces vaccines questions at CDC director confirmation hearing",
-          "url": "https://www.yahoo.com/news/politics/articles/dr-erica-schwartz-appear-senate-090953431.html",
-          "outlet": "Good Morning America · via Yahoo News",
-          "published_date": "2026-07-15T18:45:32+00:00"
-        },
-        {
-          "headline": "Panel to study Pentagon’s COVID vaccine mandate, troops dismissal",
-          "url": "https://www.yahoo.com/news/politics/articles/panel-study-pentagon-covid-vaccine-200701635.html",
-          "outlet": "Military Times · via Yahoo News",
-          "published_date": "2026-07-15T19:45:32+00:00"
-        }
-      ],
-      "news_total": 11,
-      "logs": [
-        {
-          "log_date": "2026-07-08",
-          "summary": "A study on COVID-19 vaccine effectiveness that was previously blocked by the CDC has now been released in full, detailing its findings. Meanwhile, new COVID-19 vaccines for the 2025-2026 season are becoming available, though access may be limited for some individuals.",
-          "news": [
-            {
-              "news_id": "f52126221c25577babbbb623df4cf035",
-              "url": "https://www.today.com/health/coronavirus/covid-vaccine-2025-2026-rcna228529",
-              "headline": "Are the New COVID Vaccines Available, and Should You Get One? Experts Explain",
-              "body": "As respiratory virus season approaches, you may be wondering if you should get the new COVID-19 vaccine to protect yourself. However, it may be more difficult for some people to find the shot this ...",
-              "published_date": "2026-07-08T15:12:31+00:00",
-              "outlet": "Today",
-              "image": ""
-            },
-            {
-              "news_id": "ff7d04e04b6157d59fbfeda0f4cd5118",
-              "url": "https://www.msn.com/en-us/health/general/cdc-blocked-a-covid-vaccine-study-s-release-now-you-can-read-the-whole-thing/ar-AA26Q57n?ocid=BingNewsVerp",
-              "headline": "CDC blocked a COVID vaccine study’s release–now you can read the whole thing",
-              "body": "The CDC blocked the release of a study about COVID-19 vaccine effectiveness. Here's what it contains.",
-              "published_date": "2026-07-08T15:12:31+00:00",
-              "outlet": "Newsweek on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.UkYafoaYVW2mm2fZDxb3Pw"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-14",
-          "summary": "New COVID-19 deaths in Andhra Pradesh have triggered a health alert in southern India. Officials note that widespread immune memory from vaccination and prior infection means there is no need for panic.",
-          "news": [
-            {
-              "news_id": "ba1626c0b3795d8f8e1c433ac5e17d42",
-              "url": "https://cnalifestyle.channelnewsasia.com/entertainment/lee-teng-gina-lin-miscarriage-pandemic-585986",
-              "headline": "TV host Lee Teng opens up about wife's miscarriage during pandemic: ‘I felt like an empty shell'",
-              "body": "The Taiwan-born Singaporean host flew to Taiwan immediately after receiving the devastating news to be with his wife, but had ...",
-              "published_date": "2026-07-11T07:14:19+00:00",
-              "outlet": "CNA Lifestyle",
-              "image": "https://www.bing.com/th?id=ONUT.VBIrDzWAg9wDbCNXrdm7KQ"
-            },
-            {
-              "news_id": "add2047f970d5e889931605f6cd22650",
-              "url": "https://www.rediff.com/news/report/andhra-covid-deaths-trigger-southern-alert/20260715.htm",
-              "headline": "Andhra Covid Deaths Trigger Southern Alert",
-              "body": "There is no need for panic as there is widespread protective immune memory in the population from vaccination as well as ...",
-              "published_date": "2026-07-14T07:14:19+00:00",
-              "outlet": "Rediff.com",
-              "image": "https://www.bing.com/th?id=ONUT.O4IIi5N_lrXB0ZlH8G-CGA"
-            },
-            {
-              "news_id": "e5943ee954605253b41ba39e21388307",
-              "url": "https://www.yahoo.com/news/us/articles/meridian-24m-mixed-development-breaks-100404828.html",
-              "headline": "The Meridian, a $24M mixed-use development, breaks ground in Thiensville",
-              "body": "But it had a slow start due to the COVID-19 pandemic, Rosing said. In 2025, the village updated its...",
-              "published_date": "2026-07-10T03:32:11+00:00",
-              "outlet": "Milwaukee Journal Sentinel · via Yahoo News",
-              "image": "https://media.zenfs.com/en/milwaukee_journal_sentinel_natl_articles_362/5b24c7733f3299a0e44e93584f1eaa56"
-            },
-            {
-              "news_id": "5c50b336f3435df3acddba55bc9fdb07",
-              "url": "https://finance.yahoo.com/economy/articles/imf-forecasts-dramatic-global-economic-230448061.html",
-              "headline": "IMF forecasts dramatic global economic slowdown",
-              "body": "Updated IMF Growth Forecasts for 2026: US: 2.3% Germany...the fastest growth since 2021, when the economy saw a significant rebound from the COVID-19...",
-              "published_date": "2026-07-09T03:32:11+00:00",
-              "outlet": "Deseret News · via Yahoo Finance",
-              "image": "https://media.zenfs.com/en/deseret_news_992/bc1cdfd83f71311a156b3d2e72e2cce7"
-            },
-            {
-              "news_id": "47399e4cbb18504286bb3c3f8fbf586f",
-              "url": "https://sports.yahoo.com/articles/wimbledon-womens-final-watch-linda-001901956.html",
-              "headline": "Linda Noskova holds off Karolina Muchova to win Wimbledon women's final",
-              "body": "Serena Williams, 6–3, 6–3 2019: Simona Halep def. Serena Williams, 6–2, 6–2 2020: No tournament (COV...",
-              "published_date": "2026-07-11T03:32:11+00:00",
-              "outlet": "USA TODAY Sports · via Yahoo Sports",
-              "image": "https://media.zenfs.com/en/usa_today_sports_articles_558/9ceb32ed8bced038c2a33a6f2f0ac8bb"
-            },
-            {
-              "news_id": "297b4b6edc445e8b914e2776665044d1",
-              "url": "https://finance.yahoo.com/markets/stocks/articles/jersey-mike-inspire-brands-ipos-083900287.html",
-              "headline": "Jersey Mike’s IPO reflects growing investor appetite for restaurants",
-              "body": "The last time the IPO market was hot for restaurant chains was in 2021 when sales and profits were o...",
-              "published_date": "2026-07-09T03:32:11+00:00",
-              "outlet": "Restaurant Dive · via Yahoo Finance",
-              "image": "https://media.zenfs.com/en/restaurant_dive_404/d009dfa48eae776ccd1ef8c5a62894ad"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-15",
-          "summary": "A study confirms that the 2025-2026 COVID-19 vaccines are effective at preventing emergency department/urgent care visits and hospitalizations among immunocompetent adults, providing updated evidence of protection against severe outcomes.",
-          "news": [
-            {
-              "news_id": "62b567c8a75454dfa7bbc2391b4ab469",
-              "url": "https://www.yahoo.com/news/politics/articles/panel-study-pentagon-covid-vaccine-200701635.html",
-              "headline": "Panel to study Pentagon’s COVID vaccine mandate, troops dismissal",
-              "body": "The Department of Defense plans to convene a panel to study its mid-2021 decision to require the...",
-              "published_date": "2026-07-15T19:45:32+00:00",
-              "outlet": "Military Times · via Yahoo News",
-              "image": "https://media.zenfs.com/en/military_times_968/ba746566ab92d5d0b7427d5d78ca8595"
-            },
-            {
-              "news_id": "8fafcf361d225d0a8d70d4d9f18b34ee",
-              "url": "https://www.yahoo.com/news/politics/articles/dr-erica-schwartz-appear-senate-090953431.html",
-              "headline": "Dr. Erica Schwartz faces vaccines questions at CDC director confirmation hearing",
-              "body": "Kaufman has claimed without evidence that the COVID-19 vaccine caused \"excessive death and injury...",
-              "published_date": "2026-07-15T18:45:32+00:00",
-              "outlet": "Good Morning America · via Yahoo News",
-              "image": "https://media.zenfs.com/en/us.abcnews.gma.com/b2052f0c41bfc34561c6b542ee1d233a"
-            },
-            {
-              "news_id": "58bbc5d315ce50628dab6b9310dc2e76",
-              "url": "https://www.infectiousdiseaseadvisor.com/news/effectiveness-2025-2026-covid19-vaccines-severe-outcomes/",
-              "headline": "Updated 2025-2026 COVID-19 Vaccines Effective Against Medically Attended Disease",
-              "body": "The 2025-2026 SARS-CoV-2 vaccines provided protection against ED/UC visits and hospitalizations among immunocompetent adults.",
-              "published_date": "2026-07-15T09:25:38+00:00",
-              "outlet": "Infectious Disease Advisor",
-              "image": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
       "incident_id": "20251117-TH-FL",
       "tree_id": "e59b45493d7c5b468529a4c0d90061e9",
       "canonical_name": "Flood in Thailand",
@@ -497,7 +246,7 @@
       "event_date": "2025-11-17",
       "first_reported_date": "2025-11-17",
       "last_updated_date": "2026-07-11",
-      "days_since_event": 246,
+      "days_since_event": 247,
       "source_count": 2,
       "should_report": true,
       "search_keys": [],
@@ -685,7 +434,7 @@
       "event_date": "2025-11-19",
       "first_reported_date": "2025-11-19",
       "last_updated_date": "2026-07-15",
-      "days_since_event": 244,
+      "days_since_event": 245,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -807,7 +556,7 @@
       "event_date": "2025-12-21",
       "first_reported_date": "2025-12-21",
       "last_updated_date": "2026-07-16",
-      "days_since_event": 212,
+      "days_since_event": 213,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -1037,7 +786,7 @@
       "event_date": "2026-04-20",
       "first_reported_date": "2026-04-20",
       "last_updated_date": "2026-07-10",
-      "days_since_event": 92,
+      "days_since_event": 93,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -1174,7 +923,7 @@
       "event_date": "2026-06-07",
       "first_reported_date": "2026-06-07",
       "last_updated_date": "2026-07-15",
-      "days_since_event": 44,
+      "days_since_event": 45,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -1335,7 +1084,7 @@
       "event_date": "2026-07-02",
       "first_reported_date": "2026-07-02",
       "last_updated_date": "2026-07-14",
-      "days_since_event": 19,
+      "days_since_event": 20,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -1481,7 +1230,7 @@
       "event_date": "2026-07-04",
       "first_reported_date": "2026-07-04",
       "last_updated_date": "2026-07-16",
-      "days_since_event": 17,
+      "days_since_event": 18,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -1888,7 +1637,7 @@
       "event_date": "2026-07-06",
       "first_reported_date": "2026-07-06",
       "last_updated_date": "2026-07-10",
-      "days_since_event": 15,
+      "days_since_event": 16,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -2028,7 +1777,7 @@
       "event_date": "2026-07-08",
       "first_reported_date": "2026-07-08",
       "last_updated_date": "2026-07-10",
-      "days_since_event": 13,
+      "days_since_event": 14,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -2075,569 +1824,6 @@
       "logs": []
     },
     {
-      "incident_id": "20260709-ES-WF",
-      "tree_id": "1fd5e3cabb385953bcd34f79bfd6a753",
-      "canonical_name": "Green forest fire notification in Spain",
-      "summary": "New details emerged that the victims of the July 9 wildfire in Almería were killed while trying to escape along a river bed. Additionally, authorities are considering the adoption of bushfire bunkers, similar to those used in Australia, as a potential life-saving measure in future wildfires.",
-      "country": "Spain",
-      "iso2": "ES",
-      "lat": 37.18048027589243,
-      "lon": -2.0011550270740166,
-      "country_group": "C",
-      "region": "Europe",
-      "incident_type": "Forest Fire",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "HIGH",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-07-09",
-      "first_reported_date": "2026-07-09",
-      "last_updated_date": "2026-07-16",
-      "days_since_event": 12,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 1,
-        "healthmap": 0,
-        "news": 32
-      },
-      "source_links": [
-        {
-          "type": "GDACS",
-          "label": "Green alert · Green forest fire notification in Spain",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=WF&eventid=1029448",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": "Green",
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Wildfires across Europe have killed hundreds over the last decade",
-          "url": "https://www.mrt.com/news/world/article/wildfires-across-europe-have-killed-hundreds-over-22340098.php",
-          "outlet": "Midland Reporter-Telegram",
-          "published_date": "2026-07-10T04:01:05+00:00"
-        },
-        {
-          "headline": "11 dead, 19 missing in wildfire amid heat wave: 'The consequences have been terrible'",
-          "url": "https://www.nj.com/news/2026/07/11-dead-19-missing-in-wildfire-amid-heat-wave-the-consequences-have-been-terrible.html",
-          "outlet": "NJ.com",
-          "published_date": "2026-07-10T11:00:00+00:00"
-        },
-        {
-          "headline": "Eleven killed in fast-moving southern Spain wildfire, officials say",
-          "url": "https://www.msn.com/en-us/news/world/eleven-killed-in-fast-moving-southern-spain-wildfire-officials-say/ar-AA27C3md",
-          "outlet": "Reuters",
-          "published_date": "2026-07-10T11:30:00+00:00"
-        },
-        {
-          "headline": "Eleven Dead, 19 Missing As Spain Wildfire Roars Through Village",
-          "url": "https://www.channelstv.com/2026/07/10/eleven-dead-19-missing-as-spain-wildfire-roars-through-village/",
-          "outlet": "Channels Television",
-          "published_date": "2026-07-10T11:53:00+00:00"
-        },
-        {
-          "headline": "At least 11 people killed as wildfires sweep southern Spain",
-          "url": "https://www.msn.com/en-us/news/world/at-least-11-people-killed-as-wildfires-sweep-southern-spain/ar-AA27Ekoq",
-          "outlet": "The Washington Post",
-          "published_date": "2026-07-10T13:10:11+00:00"
-        },
-        {
-          "headline": "Spain wildfires UPDATES: At least 4 'Brits' dead as fire tears through Almeria",
-          "url": "https://www.msn.com/en-gb/news/world/spain-wildfires-updates-at-least-4-brits-dead-as-fire-tears-through-almeria/ar-AA27CXiC",
-          "outlet": "Daily Express",
-          "published_date": "2026-07-10T13:56:00+00:00"
-        },
-        {
-          "headline": "Victims of Spanish wildfires were killed while trying to escape along river bed ...",
-          "url": "https://www.accuweather.com/en/weather-news/victims-of-spanish-wildfires-were-killed-while-trying-to-escape-along-river-bed-trap/1910038",
-          "outlet": "AccuWeather",
-          "published_date": "2026-07-10T14:49:08+00:00"
-        },
-        {
-          "headline": "Majority of 12 victims of Spain wildfires believed to be foreigners, officials say",
-          "url": "https://www.yahoo.com/news/world/articles/majority-12-victims-spain-wildfires-160110522.html",
-          "outlet": "Yahoo",
-          "published_date": "2026-07-10T17:07:00+00:00"
-        },
-        {
-          "headline": "Fast-spreading wildfire kills at least 12 in southern Spain",
-          "url": "https://www.theguardian.com/world/2026/jul/10/wildfire-southern-spain-temperatures-almeria-los-gallardos-bedar",
-          "outlet": "The Guardian",
-          "published_date": "2026-07-10T20:37:00+00:00"
-        },
-        {
-          "headline": "One of Spain's deadliest wildfires has killed at least 12 people, with 23 others missing",
-          "url": "https://www.bostonherald.com/2026/07/10/spain-wildfires-deaths/",
-          "outlet": "Boston Herald",
-          "published_date": "2026-07-10T21:31:00+00:00"
-        },
-        {
-          "headline": "Hundreds of firefighters battle wildfire in southern Spain that killed at least...",
-          "url": "https://www.wsls.com/news/world/2026/07/11/hundreds-of-firefighters-battle-wildfire-in-southern-spain-that-killed-at-least-12/",
-          "outlet": "WSLS Newschannel 10 Roanoke",
-          "published_date": "2026-07-11T09:31:15+00:00"
-        },
-        {
-          "headline": "Twelve killed, 23 missing in one of Spain's deadliest wildfires",
-          "url": "https://www.msn.com/en-us/news/world/twelve-killed-23-missing-in-one-of-spains-deadliest-wildfires/ar-AA27Dy6G",
-          "outlet": "Reuters",
-          "published_date": "2026-07-11T09:41:00+00:00"
-        },
-        {
-          "headline": "Heat and fire generate overlapping problems for much of southern Europe",
-          "url": "https://www.msn.com/en-us/news/world/heat-and-fire-generate-overlapping-problems-for-much-of-southern-europe/ar-AA27HQVS",
-          "outlet": "CNN",
-          "published_date": "2026-07-11T13:59:54+00:00"
-        },
-        {
-          "headline": "Hundreds of firefighters battle wildfire in southern Spain that killed at least...",
-          "url": "https://www.ksdk.com/article/syndication/associatedpress/hundreds-of-firefighters-battle-wildfire-in-southern-spain-that-killed-at-least-12/616-268f47e9-fbf2-4afd-9255-77635459b104",
-          "outlet": "KSDK St. Louis",
-          "published_date": "2026-07-11T14:25:04+00:00"
-        },
-        {
-          "headline": "A Wildfire Killed 12 People in Southern Spain. Here's the Latest.",
-          "url": "https://www.nytimes.com/2026/07/11/world/europe/spain-wildfire-kills-12-what-to-know.html",
-          "outlet": "The New York Times",
-          "published_date": "2026-07-11T14:45:00+00:00"
-        },
-        {
-          "headline": "Europe heatwaves: France battles massive Fontainebleau wildfires near Paris; Spain identifies victims of deadly blaze",
-          "url": "https://www.msn.com/en-in/public-safety-and-emergencies/fire-and-rescue/europe-heatwaves-france-battles-massive-fontainebleau-wildfires-near-paris-spain-identifies-victims-of-deadly-blaze/ar-AA27UWr9?ocid=BingNewsVerp",
-          "outlet": "India Blooms on MSN",
-          "published_date": "2026-07-13T07:19:56+00:00"
-        },
-        {
-          "headline": "Deadliest Spain wildfire in years kills at least 13 people near Los Gallardos",
-          "url": "https://www.deseret.com/environment/2026/07/13/deadly-wildfire-ravages-spain/",
-          "outlet": "Deseret News",
-          "published_date": "2026-07-13T22:53:00+00:00"
-        },
-        {
-          "headline": "Three Belgian victims identified in Spanish wildfires, foreign ministry asks travellers to consult advice",
-          "url": "https://www.vrt.be/vrtnws/en/2026/07/14/three-belgian-victims-identified-in-spanish-wildfires-foreign-m/",
-          "outlet": "VRT",
-          "published_date": "2026-07-14T00:00:00+00:00"
-        },
-        {
-          "headline": "1,000 evacuated from Fontainebleau fire near Paris; Spanish authorities identify some fire victims",
-          "url": "https://toronto.citynews.ca/2026/07/14/1000-evacuated-from-fontainebleau-fire-near-paris-spanish-authorities-identify-some-fire-victims/",
-          "outlet": "CityNews Toronto",
-          "published_date": "2026-07-14T00:00:00+00:00"
-        },
-        {
-          "headline": "Fire in Fontainebleau forest near Paris triggers evacuations; 10 still missing in Spanish wildfire",
-          "url": "https://apnews.com/article/france-fire-fontainebleau-heat-9231f354a12af0d1fd40aff4f759240b",
-          "outlet": "Associated Press News",
-          "published_date": "2026-07-14T03:38:00+00:00"
-        },
-        {
-          "headline": "Wildfires rage across France, Spain as Europe endures record summer heat",
-          "url": "https://www.13newsnow.com/article/weather/knowledge/wildfires-rage-across-france-spain-as-europe-endures-record-summer-heat/291-d1f1a3fc-0d74-4be7-9dab-50604c12993d",
-          "outlet": "13 News, WVEC Hampton Roads",
-          "published_date": "2026-07-14T06:43:44+00:00"
-        },
-        {
-          "headline": "Spanish PM Pedro Sánchez urges better prevention after deadly wildfire in south",
-          "url": "https://www.yahoo.com/news/weather-news/articles/spanish-pm-pedro-nchez-urges-064805427.html",
-          "outlet": "Euronews · via Yahoo News",
-          "published_date": "2026-07-14T06:43:44+00:00"
-        },
-        {
-          "headline": "Spanish authorities identify all 13 victims of deadly southern fire",
-          "url": "https://www.washingtonpost.com/world/2026/07/15/spain-fire-victims-identified-climate-change/29d9124e-8042-11f1-8a16-393bd03340b0_story.html",
-          "outlet": "The Washington Post",
-          "published_date": "2026-07-15T00:00:00+00:00"
-        },
-        {
-          "headline": "1,000 evacuated from Fontainebleau fire near Paris; Spanish authorities identify some fire victims",
-          "url": "https://www.msn.com/en-gb/news/world/1000-evacuated-from-fontainebleau-fire-near-paris-spanish-authorities-identify-some-fire-victims/ar-AA27TboO?ocid=BingNewsVerp",
-          "outlet": "The Independent on MSN",
-          "published_date": "2026-07-15T07:19:53+00:00"
-        },
-        {
-          "headline": "Five Britons among foreign Spanish wildfire victims",
-          "url": "https://www.channelnewsasia.com/world/spain-wildfire-victims-britons-missing-6252011",
-          "outlet": "CNA",
-          "published_date": "2026-07-15T07:19:53+00:00"
-        },
-        {
-          "headline": "Seven Britons among 12 foreign nationals killed in Spain’s deadly wildfires",
-          "url": "https://www.theguardian.com/world/2026/jul/14/seven-britons-among-12-foreign-nationals-killed-in-spains-deadly-wildfires",
-          "outlet": "The Guardian",
-          "published_date": "2026-07-15T07:19:56+00:00"
-        },
-        {
-          "headline": "Spain confirms 12 foreigners among 13 wildfire victims",
-          "url": "https://www.straitstimes.com/world/europe/spain-confirms-12-foreigners-among-13-wildfire-victims",
-          "outlet": "The Straits Times",
-          "published_date": "2026-07-15T07:19:56+00:00"
-        },
-        {
-          "headline": "Spanish authorities identify all 13 victims of deadly southern fire",
-          "url": "https://www.sfgate.com/news/world/article/spanish-authorities-identify-all-13-victims-of-22346020.php",
-          "outlet": "San Francisco Chronicle",
-          "published_date": "2026-07-15T12:01:05+00:00"
-        },
-        {
-          "headline": "Spain confirms 12 foreigners among 13 wildfire victims",
-          "url": "https://www.msn.com/en-my/public-safety-and-emergencies/health-and-safety-alerts/spain-confirms-12-foreigners-among-13-wildfire-victims/ar-AA27VmMi?ocid=BingNewsVerp",
-          "outlet": "Free Malaysia Today on MSN",
-          "published_date": "2026-07-16T04:01:08+00:00"
-        },
-        {
-          "headline": "Spain wildfires: with 13 dead, we need to start measuring fire damage in lives –...",
-          "url": "https://www.yahoo.com/news/world/articles/spain-wildfires-13-dead-start-081655406.html",
-          "outlet": "The Conversation en Español · via Yahoo News",
-          "published_date": "2026-07-16T07:49:08+00:00"
-        },
-        {
-          "headline": "Spain’s wildfire nightmare deepens as heads turn to bushfire bunkers in the hope of saving lives",
-          "url": "https://euroweeklynews.com/2026/07/17/spains-wildfire-nightmare-deepens-as-heads-turn-to-bushfire-bunkers-in-the-hope-of-saving-lives/",
-          "outlet": "Euro Weekly News",
-          "published_date": "2026-07-16T08:48:15+00:00"
-        },
-        {
-          "headline": "Spain wildfires: with 13 dead, we need to start measuring fire damage in lives – not just hectares",
-          "url": "https://theconversation.com/spain-wildfires-with-13-dead-we-need-to-start-measuring-fire-damage-in-lives-not-just-hectares-287639",
-          "outlet": "The Conversation",
-          "published_date": "2026-07-16T09:58:07+00:00"
-        }
-      ],
-      "news_total": 32,
-      "logs": [
-        {
-          "log_date": "2026-07-15",
-          "summary": "A fast-moving wildfire in southern Spain's Almería province, starting around July 9-10, 2026, killed at least 13 people and left over 20 missing, many of them foreign nationals (including British and Belgian). The fire, which prompted evacuations of roughly 800 people, is suspected to have been ignited by a broken power line amid a severe summer heatwave. It is considered one of Spain's deadliest wildfires on record.",
-          "news": [
-            {
-              "news_id": "3a8315ea1f5c5c9da1055aa60b4c74c6",
-              "url": "https://apnews.com/article/france-fire-fontainebleau-heat-9231f354a12af0d1fd40aff4f759240b",
-              "headline": "Fire in Fontainebleau forest near Paris triggers evacuations; 10 still missing in Spanish wildfire",
-              "body": "A fire is raging in the historic Fontainebleau forest south of Paris, prompting evacuations and disrupting train traffic.",
-              "published_date": "2026-07-14T03:38:00+00:00",
-              "outlet": "Associated Press News",
-              "image": "https://dims.apnews.com/dims4/default/295c329/2147483647/strip/true/crop/675x450+12+0/resize/980x653!/quality/90/?url=https://assets.apnews.com/90/29/4e3c1cc7446089a9101a7bdff4c8/defaultshareimage-copy.png"
-            },
-            {
-              "news_id": "198199cfb9e4568da369ede7404aadc3",
-              "url": "https://www.13newsnow.com/article/weather/knowledge/wildfires-rage-across-france-spain-as-europe-endures-record-summer-heat/291-d1f1a3fc-0d74-4be7-9dab-50604c12993d",
-              "headline": "Wildfires rage across France, Spain as Europe endures record summer heat",
-              "body": "Europe battles escalating wildfire threats as record heat and dry conditions fuel major blazes in...",
-              "published_date": "2026-07-14T06:43:44+00:00",
-              "outlet": "13 News, WVEC Hampton Roads",
-              "image": "https://s.yimg.com/am/60d/14449783d39d085819376a05aa18328a"
-            },
-            {
-              "news_id": "d2436f0e98fb54e090b8430959c8b5d3",
-              "url": "https://www.deseret.com/environment/2026/07/13/deadly-wildfire-ravages-spain/",
-              "headline": "Deadliest Spain wildfire in years kills at least 13 people near Los Gallardos",
-              "body": "At least 13 people have died in one of the deadliest fires on record in Spain. \"We are facing one of the fastest and most complex fires in recent times,\" Andalusian President Juanma Moreno said in a statement shortly after the fire started last Thursday.",
-              "published_date": "2026-07-13T22:53:00+00:00",
-              "outlet": "Deseret News",
-              "image": "https://www.deseret.com/resizer/v2/QFJ2QA53DRHQJMKLRLKGKPJAQQ.jpg?focal=0,0&auth=1c4da2670f01e24fd2bb7fee61e03ce8f4bda9e9111089bea2178dfb586635b8&width=630&height=331"
-            },
-            {
-              "news_id": "698f67213ab152249f339e4ee0960a54",
-              "url": "https://www.msn.com/en-us/news/world/heat-and-fire-generate-overlapping-problems-for-much-of-southern-europe/ar-AA27HQVS",
-              "headline": "Heat and fire generate overlapping problems for much of southern Europe",
-              "body": "Nearly 20 people are still unaccounted for after a wildfire ripped through a tinder-dry area close to Spain's Mediterranean coast on Thursday, according to regional officials.",
-              "published_date": "2026-07-11T13:59:54+00:00",
-              "outlet": "CNN",
-              "image": "https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2285568660.jpg?c=16x9&q=w_800,c_fill"
-            },
-            {
-              "news_id": "e312f652ef395ede817321e6a8946cd3",
-              "url": "https://www.nytimes.com/2026/07/11/world/europe/spain-wildfire-kills-12-what-to-know.html",
-              "headline": "A Wildfire Killed 12 People in Southern Spain. Here's the Latest.",
-              "body": "Officials said more than 20 people were still missing because of the fire, one of the deadliest in Spain's history. Most of those confirmed to have been killed were from Belgium or Britain.",
-              "published_date": "2026-07-11T14:45:00+00:00",
-              "outlet": "The New York Times",
-              "image": "https://static01.nyt.com/images/2026/07/11/multimedia/11int-spain-fire-fhqc/11int-spain-fire-fhqc-facebookJumbo.jpg"
-            },
-            {
-              "news_id": "60162724d89f5e3bba42550d77f562e9",
-              "url": "https://www.msn.com/en-us/news/world/twelve-killed-23-missing-in-one-of-spains-deadliest-wildfires/ar-AA27Dy6G",
-              "headline": "Twelve killed, 23 missing in one of Spain's deadliest wildfires",
-              "body": "By Loyola Perez de Villegas Muniz and Emma Pinedo LOS GALLARDOS, Spain, July 10 (Reuters) - At least 12 people died attempting to flee a wildfire in southern Spain and 23 were missing, officials said on Friday,",
-              "published_date": "2026-07-11T09:41:00+00:00",
-              "outlet": "Reuters",
-              "image": "https://www.reuters.com/resizer/v2/YMVKIEPDPVPEVOIMK6N23B4VQI.jpg?auth=f537ee652d229c8a7e5a1382d75c399c4f44284f71374fce21d7a0435a378449&height=1005&width=1920&quality=80&smart=true"
-            },
-            {
-              "news_id": "8ccd638e5f3f5006b713d68ce89cc9c5",
-              "url": "https://www.msn.com/en-gb/news/world/1000-evacuated-from-fontainebleau-fire-near-paris-spanish-authorities-identify-some-fire-victims/ar-AA27TboO?ocid=BingNewsVerp",
-              "headline": "1,000 evacuated from Fontainebleau fire near Paris; Spanish authorities identify some fire victims",
-              "body": "1,000 evacuated from Fontainebleau fire near Paris; Spanish authorities identify some fire victims - Hundreds of firefighters ...",
-              "published_date": "2026-07-15T07:19:53+00:00",
-              "outlet": "The Independent on MSN",
-              "image": "https://www.bing.com/th?id=ORMS.cb9115fa02f780a97d6e833796cc50dc"
-            },
-            {
-              "news_id": "0595cc4d3c0955898c57baead976a907",
-              "url": "https://www.yahoo.com/news/weather-news/articles/spanish-pm-pedro-nchez-urges-064805427.html",
-              "headline": "Spanish PM Pedro Sánchez urges better prevention after deadly wildfire in south",
-              "body": "...authorities suspect the wildfire began when a power line broke, setting fire to vegetation that...",
-              "published_date": "2026-07-14T06:43:44+00:00",
-              "outlet": "Euronews · via Yahoo News",
-              "image": "https://media.zenfs.com/en/euronews_us_news_articles_566/9c6d683b690359efaaa5b61a7213c9f1"
-            },
-            {
-              "news_id": "43ad66068e845357b3ec6e9dd436ce95",
-              "url": "https://www.msn.com/en-us/news/world/eleven-killed-in-fast-moving-southern-spain-wildfire-officials-say/ar-AA27C3md",
-              "headline": "Eleven killed in fast-moving southern Spain wildfire, officials say",
-              "body": "MADRID, July 10 (Reuters) - Eleven people were killed in a wildfire in Almeria in southern Spain, as 150 firefighters battled to bring the blaze under control, Andalusia's head of emergencies, Antonio Sanz,",
-              "published_date": "2026-07-10T11:30:00+00:00",
-              "outlet": "Reuters",
-              "image": "https://prod-img.independent.ie/public/incoming/nzyq8m-an-emergency-worker-looks-on-during-a-wildfire-in-almeria/alternates/SIXTEEN_NINE_1200/An+emergency+worker+looks+on+during+a+wildfire+in+Almeria"
-            },
-            {
-              "news_id": "4462dc21ed06590b912b2f74b3f56ac8",
-              "url": "https://www.channelstv.com/2026/07/10/eleven-dead-19-missing-as-spain-wildfire-roars-through-village/",
-              "headline": "Eleven Dead, 19 Missing As Spain Wildfire Roars Through Village",
-              "body": "Eleven people were killed and 19 are missing after a wildfire tore through a Spanish village, with four victims who may have been British who were burnt in their car, authorities said Friday.",
-              "published_date": "2026-07-10T11:53:00+00:00",
-              "outlet": "Channels Television",
-              "image": "https://www.channelstv.com/wp-content/uploads/2026/07/asADDDA.jpg"
-            },
-            {
-              "news_id": "9631d3d6064358868c9b0d12f9dee1e3",
-              "url": "https://www.vrt.be/vrtnws/en/2026/07/14/three-belgian-victims-identified-in-spanish-wildfires-foreign-m/",
-              "headline": "Three Belgian victims identified in Spanish wildfires, foreign ministry asks travellers to consult advice",
-              "body": "The bodies of two further Belgian victims of the Spanish forest fire at Bédar (Andalusia) have now also been identified.",
-              "published_date": "2026-07-14T00:00:00+00:00",
-              "outlet": "VRT",
-              "image": "https://www.bing.com/th?id=ONUT.9acCqA4iH29P-UPii6mULw"
-            },
-            {
-              "news_id": "1d4cde31319f57c6a75c70dfa8adc867",
-              "url": "https://www.msn.com/en-us/news/world/at-least-11-people-killed-as-wildfires-sweep-southern-spain/ar-AA27Ekoq",
-              "headline": "At least 11 people killed as wildfires sweep southern Spain",
-              "body": "The deaths in Andalusia included foreign nationals, and high temperatures raised fears of more fires across Europe.",
-              "published_date": "2026-07-10T13:10:11+00:00",
-              "outlet": "The Washington Post",
-              "image": "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://cloudfront-us-east-1.images.arcpublishing.com/wapo/EYIZRZ5CI3UPLQYZJCUSANJCRY.JPG&w=1440"
-            },
-            {
-              "news_id": "b123be215bf6592a9a89e99a5f24de53",
-              "url": "https://www.theguardian.com/world/2026/jul/14/seven-britons-among-12-foreign-nationals-killed-in-spains-deadly-wildfires",
-              "headline": "Seven Britons among 12 foreign nationals killed in Spain’s deadly wildfires",
-              "body": "Fire broke out last Thursday in the southeastern province of Almería, which is home to many foreign residents ...",
-              "published_date": "2026-07-15T07:19:56+00:00",
-              "outlet": "The Guardian",
-              "image": ""
-            },
-            {
-              "news_id": "59ca4c15c6dd5437bb470dfd1e02fe27",
-              "url": "https://toronto.citynews.ca/2026/07/14/1000-evacuated-from-fontainebleau-fire-near-paris-spanish-authorities-identify-some-fire-victims/",
-              "headline": "1,000 evacuated from Fontainebleau fire near Paris; Spanish authorities identify some fire victims",
-              "body": "Hundreds of firefighters battled two blazes Tuesday in the Fontainebleau forest south of Paris that have consumed nearly ...",
-              "published_date": "2026-07-14T00:00:00+00:00",
-              "outlet": "CityNews Toronto",
-              "image": "https://www.bing.com/th?id=ONUT.Tt-8fLLM1kXwVbF8nGinCw"
-            },
-            {
-              "news_id": "16ac1102d21a5f5ca63c3bbd32d1df00",
-              "url": "https://www.yahoo.com/news/world/articles/majority-12-victims-spain-wildfires-160110522.html",
-              "headline": "Majority of 12 victims of Spain wildfires believed to be foreigners, officials say",
-              "body": "Around 500 firefighters, backed by Spain's Military Emergency Unit, battled to contain the flames and search for victims. Around 800 people were evacuated, including nearly 200 to temporary shelters.",
-              "published_date": "2026-07-10T17:07:00+00:00",
-              "outlet": "Yahoo",
-              "image": "https://s.yimg.com/lo/mysterio/api/42e918ed55d5d652e08c426015f7d70452f32c46a1b11b3e761dd0e8372c8923/lightyear_networkapi/resizefill_w800_h450;quality_80;format_webp/https://media.zenfs.com/en/euronews_us_news_articles_566/86d55834da4e5959e6dd37610ebf8d9b"
-            },
-            {
-              "news_id": "3a92ef62eecb5f07947989e02c6052a1",
-              "url": "https://www.msn.com/en-in/public-safety-and-emergencies/fire-and-rescue/europe-heatwaves-france-battles-massive-fontainebleau-wildfires-near-paris-spain-identifies-victims-of-deadly-blaze/ar-AA27UWr9?ocid=BingNewsVerp",
-              "headline": "Europe heatwaves: France battles massive Fontainebleau wildfires near Paris; Spain identifies victims of deadly blaze",
-              "body": "India, July 14 -- A massive wildfire raging through the historic Fontainebleau forest south of Paris forced the evacuation of ...",
-              "published_date": "2026-07-13T07:19:56+00:00",
-              "outlet": "India Blooms on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.qpW3UO6Bq_fqruIsWOFVZw"
-            },
-            {
-              "news_id": "82fa67963f6d5904858717d5d1f2fbb0",
-              "url": "https://www.bostonherald.com/2026/07/10/spain-wildfires-deaths/",
-              "headline": "One of Spain's deadliest wildfires has killed at least 12 people, with 23 others missing",
-              "body": "One of Spain's deadliest wildfires on record killed 12 people overnight into Friday, authorities said, as soaring temperatures grip much of the country. Several victims of the fire in the southern province of Almeria,",
-              "published_date": "2026-07-10T21:31:00+00:00",
-              "outlet": "Boston Herald",
-              "image": "https://www.bostonherald.com/wp-content/uploads/2026/07/Spain_Wildfire_65942-1.jpg?w=1024&h=682"
-            },
-            {
-              "news_id": "11bc6bbc8c53557c8b0d7e1d80d823af",
-              "url": "https://www.straitstimes.com/world/europe/spain-confirms-12-foreigners-among-13-wildfire-victims",
-              "headline": "Spain confirms 12 foreigners among 13 wildfire victims",
-              "body": "The blaze ripped through forests and scrubland made tinderbox dry by extreme high temperatures. Read more at straitstimes.com ...",
-              "published_date": "2026-07-15T07:19:56+00:00",
-              "outlet": "The Straits Times",
-              "image": "https://www.bing.com/th?id=ONUT.89jlnIbEIrfxSvcWIk1Z1A"
-            },
-            {
-              "news_id": "5582f86499725f0da5619fed2f87a6e3",
-              "url": "https://www.channelnewsasia.com/world/spain-wildfire-victims-britons-missing-6252011",
-              "headline": "Five Britons among foreign Spanish wildfire victims",
-              "body": "Authorities said the number of missing people remains uncertain until autopsies and the identification of bodies are ...",
-              "published_date": "2026-07-15T07:19:53+00:00",
-              "outlet": "CNA",
-              "image": "https://www.bing.com/th?id=ONUT.DiqXQE8Z-ikAvqcvYXgSwg"
-            },
-            {
-              "news_id": "5d56f0bd64e954919353d0b357a56a82",
-              "url": "https://www.theguardian.com/world/2026/jul/10/wildfire-southern-spain-temperatures-almeria-los-gallardos-bedar",
-              "headline": "Fast-spreading wildfire kills at least 12 in southern Spain",
-              "body": "Wildfire comes as Spain suffers a heatwave, with scorching temperatures triggering orange weather warnings",
-              "published_date": "2026-07-10T20:37:00+00:00",
-              "outlet": "The Guardian",
-              "image": ""
-            },
-            {
-              "news_id": "726524143beb5349aa79247cee17fa13",
-              "url": "https://www.nj.com/news/2026/07/11-dead-19-missing-in-wildfire-amid-heat-wave-the-consequences-have-been-terrible.html",
-              "headline": "11 dead, 19 missing in wildfire amid heat wave: 'The consequences have been terrible'",
-              "body": "Eleven people are dead, at least eight injured and 19 more are missing in Spain's deadliest wildfire on record, as soaring temperatures grip much of the country. Authorities said Friday several victims of the fire in Almeria,",
-              "published_date": "2026-07-10T11:00:00+00:00",
-              "outlet": "NJ.com",
-              "image": "https://www.nj.com/resizer/v2/QJUJGFB3P5CJ7D4TGUFE33U4QQ.jpg?auth=d5b03b930178cb9dcb9242153f03267f35dd48b8db1582f922d59968b14be4fd&width=1280&smart=true&quality=90"
-            },
-            {
-              "news_id": "5a69742034a75a7b8fe1e74fffb33659",
-              "url": "https://www.msn.com/en-gb/news/world/spain-wildfires-updates-at-least-4-brits-dead-as-fire-tears-through-almeria/ar-AA27CXiC",
-              "headline": "Spain wildfires UPDATES: At least 4 'Brits' dead as fire tears through Almeria",
-              "body": "At least 11 people have died in the fire, most of whom are feared to be foreign nationals.",
-              "published_date": "2026-07-10T13:56:00+00:00",
-              "outlet": "Daily Express",
-              "image": "https://cdn.images.express.co.uk/img/dynamic/78/1200x630/7032786.jpg"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-16",
-          "summary": "Spanish authorities identified all 13 victims of the wildfire, confirming 12 were foreign nationals: seven from the UK, three from Belgium, and one each from France and the US. This identification occurred five days after the fire ravaged a remote expat community in Almería.",
-          "news": [
-            {
-              "news_id": "91c3af4c03025203961047b29bb824c1",
-              "url": "https://www.sfgate.com/news/world/article/spanish-authorities-identify-all-13-victims-of-22346020.php",
-              "headline": "Spanish authorities identify all 13 victims of deadly southern fire",
-              "body": "Five days after a fire ravaged a remote expat community in southern Spain, authorities late Tuesday...",
-              "published_date": "2026-07-15T12:01:05+00:00",
-              "outlet": "San Francisco Chronicle",
-              "image": "https://s.yimg.com/am/60d/0ff2200761a8805c82cff5102fc6ddad"
-            },
-            {
-              "news_id": "d1f8661076cd5abf95247ff1f88fd6d2",
-              "url": "https://www.washingtonpost.com/world/2026/07/15/spain-fire-victims-identified-climate-change/29d9124e-8042-11f1-8a16-393bd03340b0_story.html",
-              "headline": "Spanish authorities identify all 13 victims of deadly southern fire",
-              "body": "Spanish authorities have identified all 13 victims of a devastating fire in a remote expat community in southern Spain ...",
-              "published_date": "2026-07-15T00:00:00+00:00",
-              "outlet": "The Washington Post",
-              "image": "https://www.bing.com/th?id=ONUT.zXMDfSfCYsq24Gb3AwLCcQ"
-            },
-            {
-              "news_id": "0e915ceb5fb55147a51bd47cffcfc6e5",
-              "url": "https://www.msn.com/en-my/public-safety-and-emergencies/health-and-safety-alerts/spain-confirms-12-foreigners-among-13-wildfire-victims/ar-AA27VmMi?ocid=BingNewsVerp",
-              "headline": "Spain confirms 12 foreigners among 13 wildfire victims",
-              "body": "Post-mortem examinations revealed seven victims were from the UK, three from Belgium, and one each from France and the US.",
-              "published_date": "2026-07-16T04:01:08+00:00",
-              "outlet": "Free Malaysia Today on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.5ApU7sRLLClM6UHjqkIRNA"
-            },
-            {
-              "news_id": "6f6cf9c7d23351a6b590a833334cbe21",
-              "url": "https://www.mrt.com/news/world/article/wildfires-across-europe-have-killed-hundreds-over-22340098.php",
-              "headline": "Wildfires across Europe have killed hundreds over the last decade",
-              "body": "A wildfire in southern Spain killed at least 11 people overnight into Friday morning, making it one ...",
-              "published_date": "2026-07-10T04:01:05+00:00",
-              "outlet": "Midland Reporter-Telegram",
-              "image": "https://s.yimg.com/am/60d/2f91fbcdc4f4ecdb27d6e74e28693cc5"
-            },
-            {
-              "news_id": "febc294855665f7ab976c63ba907686b",
-              "url": "https://www.wsls.com/news/world/2026/07/11/hundreds-of-firefighters-battle-wildfire-in-southern-spain-that-killed-at-least-12/",
-              "headline": "Hundreds of firefighters battle wildfire in southern Spain that killed at least...",
-              "body": "Europe is the world’s fastest-warming continent, with temperatures increasing twice as fast as the g...",
-              "published_date": "2026-07-11T09:31:15+00:00",
-              "outlet": "WSLS Newschannel 10 Roanoke",
-              "image": "https://s.yimg.com/am/60d/bc3bcfb6a1201253f70e5d204fa7e7f3"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-17",
-          "summary": "New details emerged about the Almería wildfire, with reports indicating that victims were killed while attempting to escape along a river bed. The fire has scorched approximately 66 square kilometers (25 square miles) of forest and farmland, with hundreds of firefighters continuing to battle the blaze. Additionally, discussions have begun about implementing bushfire bunkers as a safety measure in Spain.",
-          "news": [
-            {
-              "news_id": "f9bb34943931527398ba3726bd7d6884",
-              "url": "https://www.ksdk.com/article/syndication/associatedpress/hundreds-of-firefighters-battle-wildfire-in-southern-spain-that-killed-at-least-12/616-268f47e9-fbf2-4afd-9255-77635459b104",
-              "headline": "Hundreds of firefighters battle wildfire in southern Spain that killed at least...",
-              "body": "The fire has scorched some 66 square kilometers (25 square miles) of forest and farmland, about the...",
-              "published_date": "2026-07-11T14:25:04+00:00",
-              "outlet": "KSDK St. Louis",
-              "image": "https://s.yimg.com/am/60d/38033e5aba068d3a082f70751c580223"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-18",
-          "summary": "New details emerged that the victims of the July 9 wildfire in Almería were killed while trying to escape along a river bed. Additionally, authorities are considering the adoption of bushfire bunkers, similar to those used in Australia, as a potential life-saving measure in future wildfires.",
-          "news": [
-            {
-              "news_id": "13467ac138ea532a9c5c67e95dcf7b21",
-              "url": "https://www.yahoo.com/news/world/articles/spain-wildfires-13-dead-start-081655406.html",
-              "headline": "Spain wildfires: with 13 dead, we need to start measuring fire damage in lives –...",
-              "body": "The fire did not just tear through a forested area – it was able to spread directly into the places ...",
-              "published_date": "2026-07-16T07:49:08+00:00",
-              "outlet": "The Conversation en Español · via Yahoo News",
-              "image": "https://media.zenfs.com/en/the_conversation_en_espa_ol/295e5e40506377d78c7132433163b922"
-            },
-            {
-              "news_id": "46b0dadc50235c88851c361fb82f46fa",
-              "url": "https://euroweeklynews.com/2026/07/17/spains-wildfire-nightmare-deepens-as-heads-turn-to-bushfire-bunkers-in-the-hope-of-saving-lives/",
-              "headline": "Spain’s wildfire nightmare deepens as heads turn to bushfire bunkers in the hope of saving lives",
-              "body": "As wildfires become faster, more destructive and increasingly deadly, could a last-resort shelter used in Australia offer ...",
-              "published_date": "2026-07-16T08:48:15+00:00",
-              "outlet": "Euro Weekly News",
-              "image": "https://www.bing.com/th?id=ONUT.8Lc8mg0th30FklKwKkw0wQ"
-            },
-            {
-              "news_id": "129fc00f75a45ef780b57a180d4adad2",
-              "url": "https://www.accuweather.com/en/weather-news/victims-of-spanish-wildfires-were-killed-while-trying-to-escape-along-river-bed-trap/1910038",
-              "headline": "Victims of Spanish wildfires were killed while trying to escape along river bed ...",
-              "body": "(CNN) — At least 12 people have been killed in one of southern Spain’s worst-ever wildfires, local o...",
-              "published_date": "2026-07-10T14:49:08+00:00",
-              "outlet": "AccuWeather",
-              "image": "https://s.yimg.com/am/60d/1718956d694f0b5a080b7aeca1962503"
-            },
-            {
-              "news_id": "c1637f167e10549195d40e9c6db88c86",
-              "url": "https://theconversation.com/spain-wildfires-with-13-dead-we-need-to-start-measuring-fire-damage-in-lives-not-just-hectares-287639",
-              "headline": "Spain wildfires: with 13 dead, we need to start measuring fire damage in lives – not just hectares",
-              "body": "The July 9 wildfire in Los Gallardos – in Almería, eastern Andalusia – was a tragedy with a huge human and social impact.",
-              "published_date": "2026-07-16T09:58:07+00:00",
-              "outlet": "The Conversation",
-              "image": "https://www.bing.com/th?id=ONUT.28Zwj3QHzWguDWn3Ze-fRw"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "incident_id": "20260714-FJ-EQ",
       "tree_id": "06c9c020b3f85f05a26d27bd05728190",
       "canonical_name": "Earthquake Fiji region 2026-07",
@@ -2661,7 +1847,7 @@
       "event_date": "2026-07-14",
       "first_reported_date": "2026-07-14",
       "last_updated_date": "2026-07-16",
-      "days_since_event": 7,
+      "days_since_event": 8,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
