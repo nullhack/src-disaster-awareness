@@ -212,3 +212,145 @@ def build_gdacs_report(
         report_date=report_date,
         raw_fields=raw_fields if raw_fields is not None else defaults,
     )
+
+
+class TestGDACSExtractCanonicalName:
+    def test_earthquake_extracts_magnitude_from_numeric_severity(self) -> None:
+        from disaster_report.sources.gdacs import _extract_canonical_name
+
+        result = _extract_canonical_name(
+            {"eventtype": "EQ", "severity": 7.8, "severitytext": "Magnitude 7.8M"},
+            [ReportPlace("AF", "Balkh", "")],
+            "2025-10-15",
+            "Earthquake",
+        )
+        assert result == "Earthquake M7.8 Balkh, Afghanistan 2025-10-15"
+
+    def test_earthquake_extracts_magnitude_from_severitytext_string(self) -> None:
+        from disaster_report.sources.gdacs import _extract_canonical_name
+
+        result = _extract_canonical_name(
+            {
+                "eventtype": "EQ",
+                "severity": "Magnitude 5M, Depth:10km",
+                "severitytext": "Magnitude 5M, Depth:10km",
+                "title": "Earthquake in Afghanistan",
+            },
+            [ReportPlace("AF", "Balkh", "")],
+            "2025-10-15",
+            "Earthquake",
+        )
+        assert result == "Earthquake M5.0 Balkh, Afghanistan 2025-10-15"
+
+    def test_tropical_cyclone_uses_eventname_when_present(self) -> None:
+        from disaster_report.sources.gdacs import _extract_canonical_name
+
+        result = _extract_canonical_name(
+            {
+                "eventtype": "TC",
+                "eventname": "BAVI-26",
+                "title": "Red notification for tropical cyclone BAVI-26. Population.",
+            },
+            [ReportPlace("CN", "", "")],
+            "2026-07-01",
+            "Tropical Cyclone",
+        )
+        assert result == "Tropical Cyclone BAVI-26 China 2026-07-01"
+
+    def test_tropical_cyclone_parses_storm_name_from_title_when_eventname_empty(
+        self,
+    ) -> None:
+        from disaster_report.sources.gdacs import _extract_canonical_name
+
+        result = _extract_canonical_name(
+            {
+                "eventtype": "TC",
+                "eventname": "",
+                "title": "Tropical Cyclone TAPAH-25",
+            },
+            [ReportPlace("CN", "Macao SAR", "")],
+            "2025-09-20",
+            "Tropical Cyclone",
+        )
+        assert result == "Tropical Cyclone TAPAH-25 Macao, China 2025-09-20"
+
+    def test_volcano_extracts_name_from_title(self) -> None:
+        from disaster_report.sources.gdacs import _extract_canonical_name
+
+        result = _extract_canonical_name(
+            {
+                "eventtype": "VO",
+                "title": "Eruption  Kanlaon",
+            },
+            [ReportPlace("PH", "Negros Occidental", "")],
+            "2025-10-14",
+            "Volcano",
+        )
+        assert result == "Volcano Kanlaon, Philippines 2025-10-14"
+
+    def test_flood_omits_identifier(self) -> None:
+        from disaster_report.sources.gdacs import _extract_canonical_name
+
+        result = _extract_canonical_name(
+            {
+                "eventtype": "FL",
+                "title": "Orange flood alert in China",
+                "alertlevel": "Orange",
+            },
+            [ReportPlace("CN", "Hunan Sheng", "")],
+            "2026-06-06",
+            "Flood",
+        )
+        assert result == "Flood Hunan, China 2026-06-06"
+
+    def test_forest_fire_omits_identifier(self) -> None:
+        from disaster_report.sources.gdacs import _extract_canonical_name
+
+        result = _extract_canonical_name(
+            {
+                "eventtype": "WF",
+                "title": "Orange forest fire notification in France",
+                "alertlevel": "Orange",
+            },
+            [ReportPlace("FR", "Pyrénées-Orientales", "")],
+            "2026-07-04",
+            "Forest Fire",
+        )
+        assert result == "Forest Fire Pyrenees-Orientales, France 2026-07-04"
+
+    def test_drought_with_country(self) -> None:
+        from disaster_report.sources.gdacs import _extract_canonical_name
+
+        result = _extract_canonical_name(
+            {
+                "eventtype": "DR",
+                "title": "Drought in Kenya, Somalia",
+                "alertlevel": "Orange",
+            },
+            [ReportPlace("KE", "Shabeellaha Hoose", "")],
+            "2025-12-01",
+            "Drought",
+        )
+        assert result == "Drought Shabeellaha Hoose, Kenya 2025-12-01"
+
+    def test_drought_degenerate_no_place(self) -> None:
+        from disaster_report.sources.gdacs import _extract_canonical_name
+
+        result = _extract_canonical_name(
+            {"eventtype": "DR", "title": "Drought Green", "alertlevel": "Green"},
+            [],
+            "2025-12-21",
+            "Drought",
+        )
+        assert result == "Drought 2025-12-21"
+
+    def test_normalises_chinese_subdivision(self) -> None:
+        from disaster_report.sources.gdacs import _extract_canonical_name
+
+        result = _extract_canonical_name(
+            {"eventtype": "FL", "title": "Flood in China"},
+            [ReportPlace("CN", "Sichuan Sheng", "")],
+            "2026-07-15",
+            "Flood",
+        )
+        assert result == "Flood Sichuan, China 2026-07-15"

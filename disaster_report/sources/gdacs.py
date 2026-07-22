@@ -13,6 +13,7 @@ from iso3166_2 import Subdivisions
 
 from disaster_report._country_names import country_name
 from disaster_report._search_keys import derive_search_keys
+from disaster_report._title_format import format_place, format_title, smallest_place
 from disaster_report.models import ReportPlace, SourceReport
 from disaster_report.sources.errors import SourceFetchError
 
@@ -22,6 +23,11 @@ _G = "{http://www.gdacs.org}"
 _GEO = "{http://www.w3.org/2003/01/geo/wgs84_pos#}"
 _DC = "{http://purl.org/dc/elements/1.1/}"
 _EVENTID_RE = re.compile(r"[?&]eventid=(\d+)", re.IGNORECASE)
+_MAGNITUDE_RE = re.compile(r"Magnitude\s+(\d+(?:\.\d+)?)", re.IGNORECASE)
+_STORM_NAME_RE = re.compile(
+    r"(?:Tropical Cyclone|Typhoon|Hurricane|Cyclone)\s+([A-Z][A-Z]*-?\d*)",
+)
+_VOLCANO_NAME_RE = re.compile(r"^Eruption\s+(.+?)\s*$", re.IGNORECASE)
 _TYPES: dict[str, str] = {
     "TC": "Tropical Cyclone",
     "EQ": "Earthquake",
@@ -82,7 +88,6 @@ class GDACSAdapter:
 
 def _item_to_report(item: Any) -> SourceReport:
     raw_fields = _build_raw_fields(item)
-    title = str(raw_fields.get("title") or "")
     link = str(raw_fields.get("link") or "")
     eventtype = str(raw_fields.get("eventtype") or "")
     fromdate = str(raw_fields.get("fromdate") or "")
@@ -91,15 +96,79 @@ def _item_to_report(item: Any) -> SourceReport:
     lat = raw_fields.get("geo_lat")
     lon = raw_fields.get("geo_long")
     places = _extract_places(iso3, country_text, lat, lon)
+    incident_type = _TYPES.get(eventtype, eventtype)
+    report_date = _to_iso_date(fromdate)
     return SourceReport(
         source="GDACS",
         source_id=_extract_event_id(link),
-        incident_type=_TYPES.get(eventtype, eventtype),
-        name=title,
+        incident_type=incident_type,
+        name=_extract_canonical_name(raw_fields, places, report_date, incident_type),
         places=places,
-        report_date=_to_iso_date(fromdate),
+        report_date=report_date,
         raw_fields=raw_fields,
     )
+
+
+def _extract_canonical_name(
+    raw_fields: dict[str, object],
+    places: list[ReportPlace],
+    report_date: str,
+    incident_type: str,
+) -> str:
+    identifier = _extract_gdacs_identifier(incident_type, raw_fields)
+    smallest, country = smallest_place(places)
+    if incident_type == "Volcano" and identifier:
+        return format_title(incident_type, format_place(identifier, country), report_date)
+    return format_title(
+        incident_type,
+        identifier,
+        format_place(smallest, country),
+        report_date,
+    )
+
+
+def _extract_gdacs_identifier(
+    incident_type: str,
+    raw_fields: dict[str, object],
+) -> str:
+    if incident_type == "Earthquake":
+        return _extract_magnitude(raw_fields)
+    if incident_type == "Tropical Cyclone":
+        return _extract_storm_name(raw_fields)
+    if incident_type == "Volcano":
+        return _extract_volcano_name(raw_fields)
+    return ""
+
+
+def _extract_magnitude(raw_fields: dict[str, object]) -> str:
+    severity = raw_fields.get("severity")
+    if isinstance(severity, int | float) and not isinstance(severity, bool):
+        return f"M{float(severity):.1f}"
+    severitytext = str(raw_fields.get("severitytext") or "")
+    match = _MAGNITUDE_RE.search(severitytext)
+    if not match and isinstance(severity, str):
+        match = _MAGNITUDE_RE.search(severity)
+    if match:
+        try:
+            return f"M{float(match.group(1)):.1f}"
+        except ValueError:
+            return ""
+    return ""
+
+
+def _extract_storm_name(raw_fields: dict[str, object]) -> str:
+    eventname = str(raw_fields.get("eventname") or "").strip()
+    if eventname:
+        return eventname
+    title = str(raw_fields.get("title") or "")
+    match = _STORM_NAME_RE.search(title)
+    return match.group(1).strip() if match else ""
+
+
+def _extract_volcano_name(raw_fields: dict[str, object]) -> str:
+    title = str(raw_fields.get("title") or "").strip()
+    match = _VOLCANO_NAME_RE.match(title)
+    return match.group(1).strip() if match else ""
 
 
 def _build_raw_fields(item: Any) -> dict[str, object]:

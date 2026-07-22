@@ -1,6 +1,13 @@
-from disaster_report.models import SourceReport
+from disaster_report.models import ReportPlace, SourceReport
 
 class WHODiseaseOutbreakAdapter:
     def __init__(self, orderby: str = ...) -> None: ...
     def fetch(self) -> list[SourceReport]: ...
     def derive_keys(self, report: SourceReport) -> tuple[str, str]: ...
+
+def _extract_canonical_name(
+    raw_fields: dict[str, object],
+    places: list[ReportPlace],
+    report_date: str,
+    incident_type: str,
+) -> str: ...

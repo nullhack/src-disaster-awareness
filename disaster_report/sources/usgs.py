@@ -13,6 +13,7 @@ from iso3166_2 import Subdivisions
 from disaster_report._country_names import country_name
 from disaster_report._regions import subregion_for_country
 from disaster_report._search_keys import derive_search_keys
+from disaster_report._title_format import format_place, format_title, smallest_place
 from disaster_report.models import ReportPlace, SourceReport
 from disaster_report.sources.errors import SourceFetchError
 
@@ -79,28 +80,42 @@ def _feature_to_report(
     feature_id = feature_dict.get("id")
     code = properties.get("code")
     source_id = str(feature_id or code or "")
-    name = str(properties.get("title") or "")
     place = str(properties.get("place") or "")
     places = _extract_places(lat, lon, place)
+    raw_fields = {
+        **properties,
+        "geometry": {
+            "type": geometry.get("type"),
+            "coordinates": coordinates,
+        }
+        if coordinates
+        else {},
+        "depth": depth,
+        "place": place,
+    }
     return SourceReport(
         source="USGS",
         source_id=source_id,
         incident_type="Earthquake",
-        name=name,
+        name=_extract_canonical_name(raw_fields, places, _to_iso_date(properties.get("time")), "Earthquake"),
         places=places,
         report_date=_to_iso_date(properties.get("time")),
-        raw_fields={
-            **properties,
-            "geometry": {
-                "type": geometry.get("type"),
-                "coordinates": coordinates,
-            }
-            if coordinates
-            else {},
-            "depth": depth,
-            "place": place,
-        },
+        raw_fields=raw_fields,
     )
+
+
+def _extract_canonical_name(
+    raw_fields: dict[str, object],
+    places: list[ReportPlace],
+    report_date: str,
+    incident_type: str,
+) -> str:
+    mag = raw_fields.get("mag")
+    mag_str = ""
+    if isinstance(mag, int | float) and not isinstance(mag, bool):
+        mag_str = f"M{float(mag):.1f}"
+    smallest, country = smallest_place(places)
+    return format_title(incident_type, mag_str, format_place(smallest, country), report_date)
 
 
 def _extract_places(
