@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from datetime import datetime, timezone
 
-from scripts.generate_dashboard_data import _resolve_region, generate_md_report
+from scripts.generate_dashboard_data import _resolve_gdacs_link, _resolve_region, generate_md_report
 
 
 class TestResolveRegion:
@@ -22,6 +22,31 @@ class TestResolveRegion:
     def test_disease_with_country_in_summary_returns_that_region(self) -> None:
         summary = "Outbreak reported in Japan with rising case counts."
         assert _resolve_region("Disease Japan 2025-01-01", summary, True) == "Asia"
+
+
+class TestResolveGdacsLink:
+    def test_link_field_used_directly_when_present(self) -> None:
+        rf: dict[str, object] = {"link": "https://www.gdacs.org/report.aspx?eventid=1&episodeid=2&eventtype=EQ"}
+        assert _resolve_gdacs_link(rf, "1", "Earthquake") == rf["link"]
+
+    def test_url_dict_report_subkey_used_when_no_link(self) -> None:
+        rf: dict[str, object] = {"url": {"report": "https://www.gdacs.org/report.aspx?eventid=2&episodeid=3&eventtype=WF"}}
+        assert _resolve_gdacs_link(rf, "2", "Forest Fire") == "https://www.gdacs.org/report.aspx?eventid=2&episodeid=3&eventtype=WF"
+
+    def test_constructed_from_source_id_and_episodeid_for_degenerate_drought(self) -> None:
+        rf: dict[str, object] = {"alertlevel": "Green", "severity": "Minor", "population": 0, "episodeid": "14"}
+        url = _resolve_gdacs_link(rf, "1018332", "Drought")
+        assert url == "https://www.gdacs.org/report.aspx?eventid=1018332&episodeid=14&eventtype=DR"
+
+    def test_eventid_in_raw_fields_preferred_over_source_id(self) -> None:
+        rf: dict[str, object] = {"eventid": "999", "episodeid": "5", "eventtype": "FL"}
+        url = _resolve_gdacs_link(rf, "ignored", "Flood")
+        assert "eventid=999" in url
+        assert "episodeid=5" in url
+
+    def test_returns_empty_when_nothing_reconstructable(self) -> None:
+        rf: dict[str, object] = {}
+        assert _resolve_gdacs_link(rf, "", "Drought") == ""
 
 
 def _make_incident(
