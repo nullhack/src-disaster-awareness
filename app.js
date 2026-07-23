@@ -734,14 +734,14 @@ function renderRecentActivity() {
       <span class="recent-stats__total"><b>${events.length}</b> events</span>
       <span class="recent-stats__since">since ${cutoffLbl}</span>
       <span class="recent-stats__breakdown">
-        <span class="recent-stats__chip recent-badge--new">NEW ${newCt}</span>
+        <span class="recent-stats__chip recent-badge--new">OPENED ${newCt}</span>
         <span class="recent-stats__chip recent-badge--log">LOG ${logCt}</span>
-        <span class="recent-stats__chip recent-badge--news">NEWS ${newsCt}</span>
+        <span class="recent-stats__chip recent-badge--news">ARTICLES ${newsCt}</span>
       </span>
     </div>`;
 
   const BADGE = { NEW: "recent-badge--new", LOG: "recent-badge--log", NEWS: "recent-badge--news" };
-  const LABEL = { NEW: "NEW", LOG: "LOG", NEWS: "NEWS" };
+  const LABEL = { NEW: "OPENED", LOG: "LOG", NEWS: "ARTICLES" };
   $("#recentFeed").innerHTML = events.map((e) => {
     const tsLbl = (e.ts || "").slice(0, 16).replace("T", " ") || "—";
     const name = e.incident_name || e.detail;
