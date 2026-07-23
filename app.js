@@ -816,9 +816,15 @@ function renderRecentActivity() {
   const newsCt = events.filter((e) => e.kind === "NEWS").length;
   const cutoffLbl = cutoff ? cutoff.toISOString().slice(0, 10) : "—";
   $("#recentSummary").innerHTML = `
-    <span><b>${events.length}</b> event(s) in the last 48h (since ${cutoffLbl})</span>
-    <span><b>${newCt}</b> new incident(s) · <b>${logCt}</b> new log(s) · <b>${newsCt}</b> news burst(s)</span>
-    <span class="news-summary__explain">Newest first · click a row to open the incident · grouped chronologically.</span>`;
+    <div class="recent-stats">
+      <span class="recent-stats__total"><b>${events.length}</b> events</span>
+      <span class="recent-stats__since">since ${cutoffLbl}</span>
+      <span class="recent-stats__breakdown">
+        <span class="recent-stats__chip recent-badge--new">NEW ${newCt}</span>
+        <span class="recent-stats__chip recent-badge--log">LOG ${logCt}</span>
+        <span class="recent-stats__chip recent-badge--news">NEWS ${newsCt}</span>
+      </span>
+    </div>`;
 
   const BADGE = { NEW: "recent-badge--new", LOG: "recent-badge--log", NEWS: "recent-badge--news" };
   const LABEL = { NEW: "NEW", LOG: "LOG", NEWS: "NEWS" };
