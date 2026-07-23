@@ -69,7 +69,7 @@
       <div class="card__head card__head--trend">
         <div>
           <h2 id="trendTitle">Trend</h2>
-          <span class="card__hint" id="trendHint">Cumulative history · log scale · hover for exact counts</span>
+          <span class="card__hint" id="trendHint">Daily · log scale · hover for exact counts</span>
         </div>
         <div class="trend-controls">
           <div class="seg" role="group" aria-label="Metric">
@@ -82,19 +82,19 @@
         </div>
       </div>
       <div class="trend-grid">
-        <div class="trend-panel">
+        <div class="trend-panel" id="trendPanelGeo">
           <div class="trend-panel__head">
-            <h3>Geophysical events <span class="trend-panel__sub">by kind</span></h3>
-            <div class="trend-legend" id="trendLegendGeo" aria-hidden="true"></div>
+            <h3>Geophysical events <span class="trend-panel__sub">by kind · hover for detail</span></h3>
           </div>
           <svg id="trendGeo" role="img" aria-label="Geophysical event trend by kind"></svg>
+          <div class="trend-tooltip" id="trendTipGeo" hidden></div>
         </div>
-        <div class="trend-panel">
+        <div class="trend-panel" id="trendPanelDisease">
           <div class="trend-panel__head">
-            <h3>Disease outbreaks <span class="trend-panel__sub">by pathogen</span></h3>
-            <div class="trend-legend" id="trendLegendDisease" aria-hidden="true"></div>
+            <h3>Disease outbreaks <span class="trend-panel__sub">by pathogen · hover for detail</span></h3>
           </div>
           <svg id="trendDisease" role="img" aria-label="Disease outbreak trend by pathogen"></svg>
+          <div class="trend-tooltip" id="trendTipDisease" hidden></div>
         </div>
       </div>
     </section>
@@ -122,7 +122,7 @@
         <div class="tabs" role="tablist">
           <button class="tab tab--active" role="tab" data-tab="watchlist">Active watchlist <span class="tab__count" id="cntWatch">0</span></button>
           <button class="tab" role="tab" data-tab="disease">Disease outbreaks <span class="tab__count" id="cntDisease">0</span></button>
-          <button class="tab" role="tab" data-tab="news">News pulse <span class="tab__count" id="cntNews">0</span></button>
+          <button class="tab" role="tab" data-tab="recent">Recent activity <span class="tab__count" id="cntRecent">0</span></button>
         </div>
       </div>
 
@@ -154,11 +154,11 @@
         <p class="empty-state" id="diseaseEmpty" hidden>No active disease outbreaks in this digest.</p>
       </div>
 
-      <!-- News pulse -->
-      <div class="tab-panel" data-panel="news">
-        <div class="news-summary" id="newsSummary"></div>
-        <div class="news-pulse" id="newsPulse"></div>
-        <p class="empty-state" id="newsEmpty" hidden>No linked news in this digest.</p>
+      <!-- Recent activity (48h) -->
+      <div class="tab-panel" data-panel="recent">
+        <div class="recent-summary" id="recentSummary"></div>
+        <div class="recent-feed" id="recentFeed"></div>
+        <p class="empty-state" id="recentEmpty" hidden>No activity in the last 48 hours.</p>
       </div>
     </section>
   </main>

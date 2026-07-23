@@ -75,9 +75,8 @@ const STATE = {
   agg: {},              // cache: window -> aggregation object (cumulative history)
   filters: { severities: new Set(["CRITICAL", "HIGH", "MEDIUM", "LOW"]), types: new Set(), regions: new Set(), q: "" },
   sort: { key: "severity", dir: "asc" },
-  tab: "news",
+  tab: "watchlist",
   trend: { window: "30", metric: "n" }, // metric: n(news)|e(events); two panels: disease(by pathogen) + geo(by kind)
-  newsOpen: new Set(),  // expanded news-pulse group keys (persist across re-renders)
   kpiSel: { sev: null, sort: null, type: null }, // explicit per-axis KPI selection (null = none)
 };
 if (typeof window !== "undefined") window.STATE = STATE; // debug hook
@@ -107,7 +106,7 @@ const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 
     const latest = STATE.manifest.digests[STATE.manifest.digests.length - 1];
     await loadDigest(latest.file);
-    selectTab(STATE.tab); // sync tab DOM to default (news pulse)
+    selectTab(STATE.tab); // sync tab DOM to default (active watchlist)
   } catch (err) {
     showError(`Failed to load: ${err.message}`);
   }
@@ -241,7 +240,7 @@ function renderAll() {
   renderTrend();
   renderWatchlist();
   renderDiseaseGrid();
-  renderNewsPulse();
+  renderRecentActivity();
 }
 
 /* ---------- filters ---------- */
@@ -354,7 +353,7 @@ function applyKpiAction(act) {
       k.sev = null;
       f.severities = new Set(SEV_ORDER);
       showToast("Severity filter cleared");
-      targetTab = allClear() ? "news" : null;
+      targetTab = allClear() ? "watchlist" : null;
     }
     renderSevChips(); renderAll();
   } else if (act.startsWith("sort:")) {
@@ -368,16 +367,16 @@ function applyKpiAction(act) {
     } else {
       k.sort = null; STATE.sort = { key: "severity", dir: "asc" };
       showToast("Sort reset to severity");
-      targetTab = allClear() ? "news" : null;
+      targetTab = allClear() ? "watchlist" : null;
     }
     renderWatchlist(); renderKPIs();
   } else if (act === "type:ALL") {
-    if (k.type === "ALL") { k.type = null; targetTab = allClear() ? "news" : null; }
+    if (k.type === "ALL") { k.type = null; targetTab = allClear() ? "watchlist" : null; }
     else { k.type = "ALL"; f.types = new Set(); renderTypeChips(); renderAll(); showToast("Type filter cleared"); targetTab = "watchlist"; }
     renderKPIs();
   } else if (act.startsWith("tab:")) {
     const name = act.split(":")[1];
-    if (k.type === name) { k.type = null; targetTab = allClear() ? "news" : null; }
+    if (k.type === name) { k.type = null; targetTab = allClear() ? "watchlist" : null; }
     else { k.type = name; if (name === "disease") { f.types = new Set(); renderTypeChips(); } renderAll(); targetTab = name; }
     renderKPIs();
   }
@@ -506,7 +505,7 @@ function diseaseToIncidentType(disease) {
   return "Disease";
 }
 
-function renderTrendPanel(svgSel, legendSel, tdata, series, bucket) {
+function renderTrendPanel(svgSel, tooltipSel, tdata, series, bucket) {
   const svg = d3.select(svgSel);
   svg.selectAll("*").remove();
   const t = STATE.trend;
@@ -517,16 +516,10 @@ function renderTrendPanel(svgSel, legendSel, tdata, series, bucket) {
   const totals = series.map((s) => ({ key: s.key, color: s.color, total: d3.sum(s.values, (v) => v.count), peak: d3.max(s.values, (v) => v.count) || 0 }));
   totals.sort((a, b) => b.total - a.total);
   const globalMax = d3.max(totals, (d) => d.peak) || 1;
+  // active series = those with any non-zero value across the window
+  const activeSeries = totals.filter((d) => d.total > 0);
 
-  // legend (color index) — ordered by total volume, only non-zero shown
-  const legendItems = totals.filter((d) => d.total > 0);
-  document.querySelector(legendSel).innerHTML = (legendItems.length ? legendItems : totals).map((d) =>
-    `<span class="trend-legend__item">
-      <span class="trend-legend__swatch" style="background:${d.color}"></span>
-      ${esc(d.key)} <span style="color:#6E6E6E;font-weight:500">(Σ${d.total} · peak ${d.peak}/${perLbl})</span>
-    </span>`).join("");
-
-  if (!tdata.length || globalMax <= 1 && legendItems.length === 0) {
+  if (!tdata.length || (globalMax <= 1 && activeSeries.length === 0)) {
     svg.attr("viewBox", `0 0 ${width} ${height}`);
     svg.append("text").attr("x", width / 2).attr("y", height / 2).attr("text-anchor", "middle")
       .style("font-size", "13px").style("fill", "#6E6E6E").text("No data for this window.");
@@ -551,8 +544,12 @@ function renderTrendPanel(svgSel, legendSel, tdata, series, bucket) {
   svg.append("text").attr("x", m.l).attr("y", m.t - 6)
     .classed("trend-axis-label", true).text(`${METRIC_LABEL[t.metric]} / ${bucket === "week" ? "wk" : "day"}`);
 
+  // active series only — keeps hover tooltip concise
+  const seriesByKey = new Map(series.map((s) => [s.key, s]));
+  const plotted = activeSeries.map((d) => seriesByKey.get(d.key)).filter(Boolean);
+
   const line = d3.line().x((d) => x(d.date)).y((d) => y(d.count)).curve(d3.curveMonotoneX);
-  series.forEach((s) => {
+  plotted.forEach((s) => {
     svg.append("path").datum(s.values).attr("d", line)
       .attr("fill", "none").attr("stroke", s.color)
       .attr("stroke-width", 2).attr("stroke-linejoin", "round").attr("stroke-opacity", .9);
@@ -570,6 +567,66 @@ function renderTrendPanel(svgSel, legendSel, tdata, series, bucket) {
     .call((g) => g.select(".domain").remove())
     .selectAll("text").classed("trend-axis-label", true)
     .attr("transform", "rotate(-30)").style("text-anchor", "end");
+
+  // ---- hover tooltip overlay ----
+  const tipEl = document.querySelector(tooltipSel);
+  if (!tipEl || !plotted.length) return;
+  const dates = tdata.map((d) => d.date);
+  // vertical tracker line (hidden until hover)
+  const tracker = svg.append("line")
+    .attr("class", "trend-tracker")
+    .attr("x1", 0).attr("x2", 0)
+    .attr("y1", m.t).attr("y2", height - m.b)
+    .style("opacity", 0);
+  const panelEl = svg.node().closest(".trend-panel");
+  const fmtDateLong = (iso) => {
+    const dt = new Date(iso + (iso.length === 10 ? "T00:00:00Z" : ""));
+    return dt.toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" });
+  };
+  const renderTip = (iso) => {
+    const rows = plotted.map((s) => {
+      const v = s.values.find((vv) => vv.date === iso);
+      const c = v ? v.count : 0;
+      return `<div class="trend-tooltip__row">
+        <span class="trend-tooltip__swatch" style="background:${s.color}"></span>
+        <span class="trend-tooltip__name">${esc(s.key)}</span>
+        <span class="trend-tooltip__value">${c}</span>
+      </div>`;
+    }).join("");
+    return `<div class="trend-tooltip__date">${fmtDateLong(iso)}</div>${rows}`;
+  };
+  const showTip = (evt, iso) => {
+    tipEl.innerHTML = renderTip(iso);
+    tipEl.hidden = false;
+    const px = x(iso);
+    tracker.attr("x1", px).attr("x2", px).style("opacity", 1);
+    // position tooltip near the cursor, clamped to panel
+    const panelRect = panelEl.getBoundingClientRect();
+    const tipW = tipEl.offsetWidth, tipH = tipEl.offsetHeight;
+    let lx = evt.clientX - panelRect.left + 12;
+    let ly = evt.clientY - panelRect.top - tipH - 8;
+    if (lx + tipW > panelRect.width - 4) lx = evt.clientX - panelRect.left - tipW - 12;
+    if (ly < 4) ly = evt.clientY - panelRect.top + 16;
+    tipEl.style.left = `${Math.max(4, lx)}px`;
+    tipEl.style.top = `${Math.max(4, ly)}px`;
+  };
+  const hideTip = () => {
+    tipEl.hidden = true;
+    tracker.style("opacity", 0);
+  };
+  svg.on("mousemove", function (evt) {
+    const rect = svg.node().getBoundingClientRect();
+    const px = (evt.clientX - rect.left) * (width / rect.width);
+    if (px < m.l || px > width - m.r) { hideTip(); return; }
+    // nearest date by x position
+    let best = dates[0], bestDist = Infinity;
+    for (const d of dates) {
+      const dist = Math.abs(x(d) - px);
+      if (dist < bestDist) { bestDist = dist; best = d; }
+    }
+    showTip(evt, best);
+  });
+  svg.on("mouseleave", hideTip);
 }
 
 function renderTrend() {
@@ -592,8 +649,8 @@ function renderTrend() {
   const tGeo = geoSeries.map((s) => ({ ...s, values: s.values.slice(firstAct) }));
   const tDis = disSeries.map((s) => ({ ...s, values: s.values.slice(firstAct) }));
 
-  renderTrendPanel("#trendGeo", "#trendLegendGeo", tdata, tGeo, bucket);
-  renderTrendPanel("#trendDisease", "#trendLegendDisease", tdata, tDis, bucket);
+  renderTrendPanel("#trendGeo", "#trendTipGeo", tdata, tGeo, bucket);
+  renderTrendPanel("#trendDisease", "#trendTipDisease", tdata, tDis, bucket);
 
   const endIso = (agg && agg.as_of) || (tdata.length ? tdata[tdata.length - 1].date : "");
   const startIso = tdata.length ? tdata[0].date : endIso;
@@ -678,73 +735,112 @@ function renderDiseaseGrid() {
     c.addEventListener("click", () => openDrawer(c.dataset.id)));
 }
 
-/* ---------- NEWS PULSE (grouped by kind, disease sub-grouped by pathogen) ---------- */
-function renderNewsPulse() {
-  const items = getFiltered().flatMap((i) =>
-    (i.news || []).map((n) => ({ ...n, incident: i })));
-  items.sort((a, b) => (b.published_date || "").localeCompare(a.published_date || ""));
+/* ---------- RECENT ACTIVITY (48h) ---------- */
+function renderRecentActivity() {
+  // cutoff = digest.as_of - 48h; fall back to latest log/news date if as_of missing
+  const asOf = STATE.digest.as_of || STATE.digest.report_date || "";
+  const asOfDt = asOf ? new Date(asOf.endsWith("Z") ? asOf : asOf + "T00:00:00Z") : null;
+  const cutoff = asOfDt ? new Date(asOfDt.getTime() - 48 * 3600 * 1000) : null;
+  const within = (iso) => {
+    if (!iso || !cutoff) return false;
+    const dt = new Date((iso.length === 10 ? iso + "T00:00:00Z" : iso));
+    return dt >= cutoff && dt <= asOfDt;
+  };
 
-  const totalDigest = STATE.digest.summary.news_total || 0;
-  const outlets = [...new Set(items.map((n) => n.outlet).filter(Boolean))];
-  const dates = items.map((n) => n.published_date).filter(Boolean).sort();
-  const range = dates.length ? `${fmtDate(dates[0])} → ${fmtDate(dates[dates.length - 1])}` : "—";
-  const cap = 200;
-
-  $("#cntNews").textContent = items.length;
-  $("#newsEmpty").hidden = items.length > 0;
-  $("#newsSummary").innerHTML = `
-    <span><b>${items.length}</b> article(s) linked to the filtered incidents</span>
-    <span><b>${outlets.length}</b> outlet(s)</span>
-    <span>published: <b>${range}</b></span>
-    <span>showing <b>${Math.min(items.length, cap)}</b> of <b>${items.length}</b>${totalDigest ? ` (digest total ${totalDigest})` : ""}</span>
-    <span class="news-summary__explain">Grouped by incident kind (disease split by pathogen), largest coverage first · click a bar to expand · click a row to open the linked incident.</span>`;
-
-  // group: disease -> pathogen name; otherwise incident_type
-  const groups = new Map();
-  items.forEach((n) => {
-    const inc = n.incident;
-    const isDisease = inc.is_disease;
-    const key = isDisease ? ("Disease: " + (inc.disease_name || "Disease")) : inc.incident_type;
-    const label = isDisease ? (inc.disease_name || "Disease") : inc.incident_type;
-    const color = typeColor(isDisease ? "Disease" : inc.incident_type);
-    let g = groups.get(key);
-    if (!g) { g = { key, label, color, items: [], incidents: new Set() }; groups.set(key, g); }
-    g.items.push(n); g.incidents.add(inc.incident_id);
+  // collect events from filtered incidents
+  const events = [];
+  getFiltered().forEach((inc) => {
+    const id = inc.incident_id;
+    const name = inc.canonical_name || id;
+    const country = inc.iso2 === "XX" ? "Global" : (inc.country || "");
+    // new incident: first_reported_date within 48h
+    if (within(inc.first_reported_date || inc.event_date)) {
+      events.push({
+        ts: inc.first_reported_date || inc.event_date,
+        kind: "NEW",
+        title: "New incident reported",
+        detail: name,
+        country,
+        severity: inc.severity,
+        incident_id: id,
+      });
+    }
+    // new logs
+    (inc.logs || []).forEach((log) => {
+      if (!within(log.log_date)) return;
+      events.push({
+        ts: log.log_date,
+        kind: "LOG",
+        title: "New log written",
+        detail: (log.summary || "").slice(0, 140),
+        incident_name: name,
+        country,
+        severity: inc.severity,
+        incident_id: id,
+      });
+    });
+    // new news (group as one event per incident per day with count)
+    const freshNews = (inc.news || []).filter((n) => within(n.published_date));
+    if (freshNews.length) {
+      // group by date for a concise per-day count
+      const byDay = new Map();
+      freshNews.forEach((n) => {
+        const d = (n.published_date || "").slice(0, 10);
+        if (!byDay.has(d)) byDay.set(d, []);
+        byDay.get(d).push(n);
+      });
+      [...byDay.entries()].sort((a, b) => (a[0] < b[0] ? 1 : -1)).forEach(([d, items]) => {
+        events.push({
+          ts: items[0].published_date,
+          kind: "NEWS",
+          title: `${items.length} new article${items.length === 1 ? "" : "s"}`,
+          detail: items[0].headline || name,
+          incident_name: name,
+          country,
+          severity: inc.severity,
+          incident_id: id,
+        });
+      });
+    }
   });
-  const groupList = [...groups.values()].map((g) => ({
-    key: g.key, label: g.label, color: g.color, items: g.items, total: g.items.length, incidentCount: g.incidents.size,
-  })).sort((a, b) => b.total - a.total);
 
-  const maxTotal = groupList.length ? groupList[0].total : 1;
-  const shown = (arr) => arr.slice(0, cap);
-  $("#newsPulse").innerHTML = groupList.map((g) => `
-    <details class="news-group"${STATE.newsOpen.has(g.key) ? " open" : ""} data-key="${esc(g.key)}">
-      <summary class="news-group__head">
-        <span class="news-group__chev" aria-hidden="true"></span>
-        <span class="news-group__swatch" style="background:${g.color}"></span>
-        <span class="news-group__name">${esc(g.label)}</span>
-        <span class="news-group__count">${g.total} news · ${g.incidentCount} incident(s)</span>
-        <span class="news-group__bar"><span style="width:${Math.round(g.total / maxTotal * 100)}%"></span></span>
-      </summary>
-      <div class="news-group__items">
-        ${shown(g.items).map((n) => `
-          <div class="news-row" data-id="${n.incident.incident_id}">
-            <span class="news-date">${fmtDate(n.published_date) || "—"}</span>
-            <span>
-              <div class="news-headline"><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.headline)}</a></div>
-              <div class="news-outlet">${esc(n.outlet || "")} · ${esc(n.incident.country)} · <code>${esc(n.incident.incident_id)}</code></div>
-            </span>
-            <span class="news-sev"><span class="dot dot--${n.incident.severity}"></span>${n.incident.severity}</span>
-          </div>`).join("")}
-      </div>
-    </details>`).join("");
-  // persist expansion across re-renders
-  $$("#newsPulse details.news-group").forEach((d) =>
-    d.addEventListener("toggle", () => {
-      if (d.open) STATE.newsOpen.add(d.dataset.key); else STATE.newsOpen.delete(d.dataset.key);
-    }));
-  $$("#newsPulse .news-row").forEach((row) =>
-    row.addEventListener("click", (e) => { if (e.target.tagName !== "A") openDrawer(row.dataset.id); }));
+  events.sort((a, b) => (b.ts || "").localeCompare(a.ts || ""));
+
+  $("#cntRecent").textContent = events.length;
+  $("#recentEmpty").hidden = events.length > 0;
+
+  // summary line
+  const newCt = events.filter((e) => e.kind === "NEW").length;
+  const logCt = events.filter((e) => e.kind === "LOG").length;
+  const newsCt = events.filter((e) => e.kind === "NEWS").length;
+  const cutoffLbl = cutoff ? cutoff.toISOString().slice(0, 10) : "—";
+  $("#recentSummary").innerHTML = `
+    <span><b>${events.length}</b> event(s) in the last 48h (since ${cutoffLbl})</span>
+    <span><b>${newCt}</b> new incident(s) · <b>${logCt}</b> new log(s) · <b>${newsCt}</b> news burst(s)</span>
+    <span class="news-summary__explain">Newest first · click a row to open the incident · grouped chronologically.</span>`;
+
+  const BADGE = { NEW: "recent-badge--new", LOG: "recent-badge--log", NEWS: "recent-badge--news" };
+  const LABEL = { NEW: "NEW", LOG: "LOG", NEWS: "NEWS" };
+  $("#recentFeed").innerHTML = events.map((e) => {
+    const tsLbl = (e.ts || "").slice(0, 16).replace("T", " ") || "—";
+    const name = e.incident_name || e.detail;
+    const detailLine = e.kind === "NEW" ? e.detail : e.detail;
+    return `
+      <div class="recent-row" data-id="${esc(e.incident_id)}">
+        <span class="recent-ts">${esc(tsLbl)}</span>
+        <span class="recent-badge ${BADGE[e.kind]}">${LABEL[e.kind]}</span>
+        <span class="recent-main">
+          <div class="recent-name">${esc(name)}</div>
+          <div class="recent-detail">${esc(detailLine)}</div>
+        </span>
+        <span class="recent-meta">
+          <span class="dot dot--${e.severity}"></span>${esc(e.severity)} · ${esc(e.country)}
+        </span>
+      </div>`;
+  }).join("");
+
+  $$("#recentFeed .recent-row").forEach((row) =>
+    row.addEventListener("click", () => openDrawer(row.dataset.id)));
 }
 
 /* ---------- DRAWER ---------- */
@@ -994,7 +1090,7 @@ function wireGlobalEvents() {
     STATE.kpiSel = { sev: null, sort: null, type: null };
     STATE.sort = { key: "severity", dir: "asc" };
     $("#searchFilter").value = "";
-    renderSevChips(); renderTypeChips(); renderRegionChips(); renderAll(); selectTab("news");
+    renderSevChips(); renderTypeChips(); renderRegionChips(); renderAll(); selectTab("watchlist");
   });
 
   // table sort
