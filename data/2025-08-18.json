@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4",
   "report_date": "2025-08-18",
-  "generated_at": "2026-07-23T02:06:12Z",
+  "generated_at": "2026-07-23T02:19:46Z",
   "as_of": "2025-08-18",
   "tracking_window_days": 7,
   "min_severity": "LOW",
@@ -13,7 +13,7 @@
     "medium": 1,
     "low": 0,
     "disease_outbreaks": 1,
-    "countries_affected": 0,
+    "countries_affected": 1,
     "news_total": 3,
     "max_magnitude": null,
     "by_severity": {
@@ -29,7 +29,17 @@
       "Global": 1
     }
   },
-  "by_country": [],
+  "by_country": [
+    {
+      "country": "",
+      "count": 1,
+      "max_sev_rank": 2,
+      "iso2": "XX",
+      "region": "Global",
+      "country_group": "C",
+      "max_severity": "MEDIUM"
+    }
+  ],
   "incidents": [
     {
       "incident_id": "20251003-XX-DI",
@@ -37,7 +47,7 @@
       "canonical_name": "Chikungunya Global 2025-10-03",
       "summary": "A major outbreak of chikungunya virus has occurred in China, prompting the CDC to issue a travel warning for Americans heading to the country. The outbreak has raised concerns about the virus's spread and its risk to other regions, including the UK and parts of the US.",
       "country": "",
-      "iso2": "",
+      "iso2": "XX",
       "lat": null,
       "lon": null,
       "country_group": "C",
