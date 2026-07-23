@@ -231,31 +231,7 @@ code { font-family: var(--mono); font-size: .9em; }
 }
 .kpi.is-action:hover .kpi__hint { opacity: 1; }
 
-/* ============ KPI SIDEBAR (beside map) ============ */
-.card--kpi-side { grid-column: span 5; align-self: stretch; padding: 0; display: flex; }
-.card--kpi-side > .kpis {
-  flex: 1; display: flex; flex-direction: column;
-  margin: 0; padding: 14px; gap: 10px; max-width: none;
-}
-.kpi-axis {
-  display: flex; flex-direction: column;
-  flex: 1 1 0; min-height: 0;
-}
-.kpi-axis + .kpi-axis { margin-top: 0; padding-top: 10px; border-top: 1px solid var(--rc-line); }
-.kpi-axis__label {
-  font-size: 10px; font-weight: 700; color: var(--rc-muted);
-  text-transform: uppercase; letter-spacing: .08em; margin: 0 0 8px 2px;
-}
-.kpis--pair {
-  flex: 1; margin: 0; padding: 0; max-width: none;
-  display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
-}
-.card--kpi-side .kpi {
-  padding: 10px 12px; display: flex; flex-direction: column; justify-content: center;
-}
-.card--kpi-side .kpi__value { font-size: 26px; }
-.card--kpi-side .kpi__label { margin-top: 4px; font-size: 11px; }
-.card--kpi-side .kpi__sub { margin-top: 1px; font-size: 10px; }
+/* ============ (KPI sidebar removed — redundant with top filters) ============ */
 .kpi--active::before { background: var(--rc-red); }
 
 /* selected toggle state */
@@ -297,8 +273,8 @@ code { font-family: var(--mono); font-size: .9em; }
   display: flex; flex-direction: column; overflow: hidden;
 }
 .span-full { grid-column: span 12; }
-.card--map { grid-column: span 7; }
-.card--trend { grid-column: span 12; }
+.card--map { grid-column: span 6; }
+.card--trend { grid-column: span 6; }
 .card--table { grid-column: span 12; }
 .card__head {
   display: flex; align-items: baseline; justify-content: space-between;
@@ -324,11 +300,11 @@ code { font-family: var(--mono); font-size: .9em; }
 
 /* ============ TREND PANELS ============ */
 .trend-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+  display: grid; grid-template-columns: 1fr; gap: 0;
   border-top: 1px solid var(--rc-line);
 }
 .trend-panel { position: relative; padding: 12px 18px 16px; min-width: 0; }
-.trend-panel + .trend-panel { border-left: 1px solid var(--rc-line); }
+.trend-panel + .trend-panel { border-left: none; border-top: 1px solid var(--rc-line); }
 .trend-panel__head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 4px; }
 .trend-panel__head h3 { font-size: 13px; font-weight: 700; color: var(--rc-ink); }
 .trend-panel__sub { font-size: 11px; font-weight: 500; color: var(--rc-muted); }
@@ -634,7 +610,7 @@ code { font-family: var(--mono); font-size: .9em; }
 }
 @media (max-width: 1100px) {
   .kpis { grid-template-columns: repeat(3, 1fr); }
-  .card--map, .card--trend, .card--kpi-side { grid-column: span 12; }
+  .card--map, .card--trend { grid-column: span 12; }
 }
 @media (max-width: 900px) {
   .trend-grid { grid-template-columns: 1fr; }
@@ -653,13 +629,4 @@ code { font-family: var(--mono); font-size: .9em; }
   .filters { padding: 8px 12px; gap: 6px 12px; }
   .filter-group__label { font-size: 9px; }
   .chip { padding: 5px 8px; font-size: 10px; }
-  .card--kpi-side > .kpis { padding: 8px; gap: 6px; flex-direction: row; }
-  .kpi-axis { flex: 1 1 0; }
-  .kpi-axis + .kpi-axis { padding-top: 0; padding-left: 6px; border-top: none; border-left: 1px solid var(--rc-line); }
-  .kpi-axis__label { font-size: 8px; margin-bottom: 4px; }
-  .kpis--pair { grid-template-columns: 1fr; gap: 4px; }
-  .card--kpi-side .kpi { padding: 5px 6px; }
-  .card--kpi-side .kpi__value { font-size: 16px; }
-  .card--kpi-side .kpi__label { font-size: 8px; margin-top: 1px; }
-  .card--kpi-side .kpi__sub { font-size: 7px; margin-top: 0; }
 }
