@@ -587,12 +587,13 @@ function renderTrendPanel(svgSel, tooltipSel, tdata, series, bucket) {
     const rows = plotted.map((s) => {
       const v = s.values.find((vv) => vv.date === iso);
       const c = v ? v.count : 0;
-      return `<div class="trend-tooltip__row">
-        <span class="trend-tooltip__swatch" style="background:${s.color}"></span>
-        <span class="trend-tooltip__name">${esc(s.key)}</span>
-        <span class="trend-tooltip__value">${c}</span>
-      </div>`;
-    }).join("");
+      return { key: s.key, color: s.color, count: c };
+    }).sort((a, b) => b.count - a.count).map((r) =>
+      `<div class="trend-tooltip__row">
+        <span class="trend-tooltip__swatch" style="background:${r.color}"></span>
+        <span class="trend-tooltip__name">${esc(r.key)}</span>
+        <span class="trend-tooltip__value">${r.count}</span>
+      </div>`).join("");
     return `<div class="trend-tooltip__date">${fmtDateLong(iso)}</div>${rows}`;
   };
   const showTip = (evt, iso) => {
