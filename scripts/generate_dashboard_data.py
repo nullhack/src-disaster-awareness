@@ -15,6 +15,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, cast
 
+from disaster_report._countries import scan_countries
 from disaster_report._country_names import country_name
 from disaster_report.store.content import ContentStore
 
@@ -334,6 +335,15 @@ def load_logs_for_incident(store: ContentStore, incident_id: str) -> list[dict]:
     return logs
 
 
+def _resolve_region(name: str, latest_summary: str | None, is_disease: bool) -> str:
+    if "global" in (name or "").lower():
+        return "Global"
+    scanned = scan_countries(latest_summary or "")
+    if scanned:
+        return ISO2_TO_REGION.get(scanned[0][1], "Unknown")
+    return "Global" if is_disease else "Unknown"
+
+
 def build_incident_object(store: ContentStore, inc: dict, as_of_date: datetime) -> dict | None:
     incident_id = inc["incident_id"]
     reports = load_reports_for_incident(store, incident_id)
@@ -364,11 +374,16 @@ def build_incident_object(store: ContentStore, inc: dict, as_of_date: datetime) 
             iso2 = p["country_code"]
             break
 
-    country = country_name(iso2) if iso2 else ""
-    group = country_group(iso2) if iso2 else "C"
-    region = ISO2_TO_REGION.get(iso2, "Unknown") if iso2 else "Unknown"
-
     is_disease = inc["incident_category"] == "disease"
+
+    if iso2:
+        country = country_name(iso2)
+        group = country_group(iso2)
+        region = ISO2_TO_REGION.get(iso2, "Unknown")
+    else:
+        country = ""
+        group = "C"
+        region = _resolve_region(inc["name"], latest_summary, is_disease)
     inc_type = inc["incident_type"] or ""
     disease_name = parse_disease_name(inc["name"]) if is_disease else None
     pandemic_pot = parse_pandemic_potential(disease_name) if is_disease else None
