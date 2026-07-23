@@ -64,8 +64,20 @@
 
   <main class="layout">
 
-    <!-- ============ TREND (Disease | Geophysical) ============ -->
-    <section class="card card--trend span-full" aria-label="Incident trend">
+    <!-- ============ MAP (left half) ============ -->
+    <section class="card card--map" aria-label="World map">
+      <div class="card__head">
+        <h2>Geographic overview</h2>
+        <span class="card__hint">Bubble = country · colour = max severity · size = news volume · click to filter</span>
+      </div>
+      <div class="map-wrap">
+        <svg id="worldMap" role="img" aria-label="World map of active incidents"></svg>
+        <div class="map-legend" id="mapLegend"></div>
+      </div>
+    </section>
+
+    <!-- ============ TREND (right half) ============ -->
+    <section class="card card--trend" aria-label="Incident trend">
       <div class="card__head card__head--trend">
         <div>
           <h2 id="trendTitle">Trend</h2>
@@ -98,23 +110,6 @@
         </div>
       </div>
     </section>
-
-    <!-- ============ MAP ============ -->
-    <section class="card card--map" aria-label="World map">
-      <div class="card__head">
-        <h2>Geographic overview</h2>
-        <span class="card__hint">Bubble = country · colour = max severity · size = news volume · click to filter</span>
-      </div>
-      <div class="map-wrap">
-        <svg id="worldMap" role="img" aria-label="World map of active incidents"></svg>
-        <div class="map-legend" id="mapLegend"></div>
-      </div>
-    </section>
-
-    <!-- ============ KPI SIDEBAR ============ -->
-    <aside class="card card--kpi-side" aria-label="Headline figures">
-      <div class="kpis" id="kpis"></div>
-    </aside>
 
     <!-- ============ WATCHLIST (tabs) ============ -->
     <section class="card card--table span-full" aria-label="Incident lists">

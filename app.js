@@ -77,7 +77,6 @@ const STATE = {
   sort: { key: "severity", dir: "asc" },
   tab: "watchlist",
   trend: { window: "30", metric: "n" }, // metric: n(news)|e(events); two panels: disease(by pathogen) + geo(by kind)
-  kpiSel: { sev: null, sort: null, type: null }, // explicit per-axis KPI selection (null = none)
 };
 if (typeof window !== "undefined") window.STATE = STATE; // debug hook
 
@@ -226,7 +225,6 @@ async function loadDigest(file) {
   refreshDateControls();
   // reset filters to a clean view on digest switch
   STATE.filters = { severities: new Set(SEV_ORDER), types: new Set(), regions: new Set(), q: "" };
-  STATE.kpiSel = { sev: null, sort: null, type: null };
   STATE.sort = { key: "severity", dir: "asc" };
   $("#searchFilter").value = "";
   renderSevChips();
@@ -235,7 +233,6 @@ async function loadDigest(file) {
 
 /* ---------- top-level render ---------- */
 function renderAll() {
-  renderKPIs();
   renderMap();
   renderTrend();
   renderWatchlist();
@@ -298,89 +295,6 @@ function renderSevChips() {
   $("#sevChips").innerHTML = SEV_ORDER.map((s) =>
     `<button class="sevchip" type="button" data-sev="${s}" data-on="${f.severities.has(s)}">${s}</button>`
   ).join("");
-}
-
-/* ---------- KPIs (3 axes, 2 tiles each, explicit toggle selection) ---------- */
-function renderKPIs() {
-  const d = STATE.digest;
-  const s = d.summary;
-  const k = STATE.kpiSel;
-  const asOf = d.as_of || d.report_date;
-  const countriesToday = new Set(d.incidents.map((i) => i.country).filter(Boolean)).size;
-  const axes = [
-    { label: "Severity", tiles: [
-      { label: "High+", value: s.critical + s.high, sub: `${s.critical} critical`, cls: "kpi--high", act: "sev:HIGH_PLUS", sel: k.sev === "HIGH_PLUS", hint: "Filter to High + Critical" },
-      { label: "Critical", value: s.critical, sub: `${s.high} high`, cls: "kpi--crit", act: "sev:CRITICAL", sel: k.sev === "CRITICAL", hint: "Filter to Critical only" },
-    ]},
-    { label: "Sort", tiles: [
-      { label: "Countries today", value: countriesToday, sub: `${d.incidents.length} incidents`, cls: "kpi--country", act: "sort:event_date:desc", sel: k.sort === "event_date", hint: "Sort by most recent first" },
-      { label: "News linked", value: s.news_total, sub: "articles", cls: "kpi--news", act: "sort:news_total:desc", sel: k.sort === "news_total", hint: "Sort by news coverage" },
-    ]},
-    { label: "Type", tiles: [
-      { label: "Active incidents", value: s.reportable_total, sub: `+${s.new_today} today`, cls: "kpi--active", act: "type:ALL", sel: k.type === "ALL", hint: "All types · open watchlist" },
-      { label: "Disease outbreaks", value: s.disease_outbreaks, sub: "biological track", cls: "kpi--disease", act: "tab:disease", sel: k.type === "disease", hint: "Open disease pane" },
-    ]},
-  ];
-  $("#kpis").innerHTML = axes.map((ax) => `
-    <div class="kpi-axis">
-      <h4 class="kpi-axis__label">${ax.label}</h4>
-      <div class="kpis kpis--pair">
-        ${ax.tiles.map((it) => `
-          <div class="kpi ${it.cls} is-action ${it.sel ? "is-selected" : ""}" role="button" tabindex="0"
-               aria-pressed="${it.sel}" data-action="${it.act}" title="${esc(it.hint)}">
-            <span class="kpi__value">${it.value}</span>
-            <span class="kpi__label">${esc(it.label)}</span>
-            <span class="kpi__sub">${esc(it.sub)}</span>
-          </div>`).join("")}
-      </div>
-    </div>`).join("");
-}
-
-function applyKpiAction(act) {
-  const f = STATE.filters;
-  const k = STATE.kpiSel;
-  const allClear = () => !k.sev && !k.sort && !k.type; // nothing selected in any axis
-  let targetTab = null; // null = leave the current tab alone
-  if (act === "sev:HIGH_PLUS" || act === "sev:CRITICAL") {
-    const target = act === "sev:HIGH_PLUS" ? "HIGH_PLUS" : "CRITICAL";
-    const turningOn = k.sev !== target;
-    if (turningOn) {
-      k.sev = target;
-      f.severities = (target === "HIGH_PLUS") ? new Set(["CRITICAL", "HIGH"]) : new Set(["CRITICAL"]);
-      showToast(target === "HIGH_PLUS" ? "Filtered to High + Critical" : "Filtered to Critical");
-      targetTab = "watchlist";
-    } else {
-      k.sev = null;
-      f.severities = new Set(SEV_ORDER);
-      showToast("Severity filter cleared");
-      targetTab = allClear() ? "watchlist" : null;
-    }
-    renderSevChips(); renderAll();
-  } else if (act.startsWith("sort:")) {
-    const [, key, dir] = act.split(":");
-    const tag = key; // "event_date" | "news_total"
-    const turningOn = k.sort !== tag;
-    if (turningOn) {
-      k.sort = tag; STATE.sort = { key, dir: dir || "asc" };
-      showToast(tag === "event_date" ? "Sorted by most recent" : "Sorted by news coverage");
-      targetTab = "watchlist";
-    } else {
-      k.sort = null; STATE.sort = { key: "severity", dir: "asc" };
-      showToast("Sort reset to severity");
-      targetTab = allClear() ? "watchlist" : null;
-    }
-    renderWatchlist(); renderKPIs();
-  } else if (act === "type:ALL") {
-    if (k.type === "ALL") { k.type = null; targetTab = allClear() ? "watchlist" : null; }
-    else { k.type = "ALL"; f.types = new Set(); renderTypeChips(); renderAll(); showToast("Type filter cleared"); targetTab = "watchlist"; }
-    renderKPIs();
-  } else if (act.startsWith("tab:")) {
-    const name = act.split(":")[1];
-    if (k.type === name) { k.type = null; targetTab = allClear() ? "watchlist" : null; }
-    else { k.type = name; if (name === "disease") { f.types = new Set(); renderTypeChips(); } renderAll(); targetTab = name; }
-    renderKPIs();
-  }
-  if (targetTab) selectTab(targetTab);
 }
 
 function showToast(msg) {
@@ -1037,13 +951,13 @@ function wireGlobalEvents() {
     const set = STATE.filters.severities;
     set.has(sev) ? set.delete(sev) : set.add(sev);
     if (set.size === 0) SEV_ORDER.forEach((s) => set.add(s)); // never empty
-    STATE.kpiSel.sev = null; renderSevChips(); renderAll();
+    renderSevChips(); renderAll();
   });
   $("#typeChips").addEventListener("click", (e) => {
     const b = e.target.closest(".chip"); if (!b) return;
     const v = b.dataset.val, set = STATE.filters.types;
     set.has(v) ? set.delete(v) : set.add(v);
-    STATE.kpiSel.type = null; renderTypeChips(); renderAll();
+    renderTypeChips(); renderAll();
   });
   $("#regionChips").addEventListener("click", (e) => {
     const b = e.target.closest(".chip"); if (!b) return;
@@ -1081,20 +995,10 @@ function wireGlobalEvents() {
     renderTrend();
   });
 
-  // KPI actions (click + keyboard)
-  $("#kpis").addEventListener("click", (e) => {
-    const k = e.target.closest(".kpi.is-action"); if (!k) return;
-    applyKpiAction(k.dataset.action);
-  });
-  $("#kpis").addEventListener("keydown", (e) => {
-    if (e.key !== "Enter" && e.key !== " ") return;
-    const k = e.target.closest(".kpi.is-action"); if (!k) return;
-    e.preventDefault(); applyKpiAction(k.dataset.action);
-  });
+  // KPI sidebar removed — filters handled by chips above
 
   $("#clearFilters").addEventListener("click", () => {
     STATE.filters = { severities: new Set(SEV_ORDER), types: new Set(), regions: new Set(), q: "" };
-    STATE.kpiSel = { sev: null, sort: null, type: null };
     STATE.sort = { key: "severity", dir: "asc" };
     $("#searchFilter").value = "";
     renderSevChips(); renderTypeChips(); renderRegionChips(); renderAll(); selectTab("watchlist");
@@ -1106,11 +1010,11 @@ function wireGlobalEvents() {
       const key = th.dataset.sort;
       if (STATE.sort.key === key) STATE.sort.dir = STATE.sort.dir === "asc" ? "desc" : "asc";
       else { STATE.sort.key = key; STATE.sort.dir = "asc"; }
-      STATE.kpiSel.sort = null; renderWatchlist(); renderKPIs();
+      renderWatchlist();
     }));
 
   // tabs
-  $$(".tab").forEach((t) => t.addEventListener("click", () => { STATE.kpiSel.type = null; selectTab(t.dataset.tab); renderKPIs(); }));
+  $$(".tab").forEach((t) => t.addEventListener("click", () => { selectTab(t.dataset.tab); }));
 
   // drawer close
   $("#drawerClose").addEventListener("click", closeDrawer);
