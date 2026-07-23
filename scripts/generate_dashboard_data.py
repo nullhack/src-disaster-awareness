@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import tomllib
 from collections import Counter
 from datetime import datetime, timedelta, timezone
@@ -856,18 +857,6 @@ def main() -> None:
     print("Done.")
 
 
-def _fmt_dt(iso_str: str) -> str:
-    if not iso_str:
-        return ""
-    if len(iso_str) == 10:
-        return iso_str
-    try:
-        dt = datetime.fromisoformat(iso_str.replace("Z", "+00:00"))
-        return dt.strftime("%Y-%m-%d %H:%M")
-    except (ValueError, AttributeError):
-        return iso_str[:16]
-
-
 def _join_summary_paragraphs(text: str) -> str:
     pieces = [p.strip() for p in text.split("\n") if p.strip()]
     out = []
@@ -878,10 +867,61 @@ def _join_summary_paragraphs(text: str) -> str:
     return " ".join(out)
 
 
+_DATE_SUFFIX_RE = re.compile(r"\s+\d{4}-\d{2}-\d{2}$")
+
+
+def _strip_date_suffix(name: str) -> str:
+    return _DATE_SUFFIX_RE.sub("", name)
+
+
+def _earliest_log_date(inc: dict) -> str:
+    dates = sorted(log["log_date"][:10] for log in inc.get("logs", []) if log.get("log_date"))
+    return dates[0] if dates else ""
+
+
+def _group_by_day(incidents: list[dict], target_str: str) -> dict[str, list[dict]]:
+    by_day: dict[str, list[dict]] = {}
+    for inc in incidents:
+        for log in inc.get("logs", []):
+            ldt = log.get("log_date", "")
+            day_str = ldt[:10]
+            if not day_str or day_str > target_str:
+                continue
+            by_day.setdefault(day_str, []).append({**inc, "_log": log})
+    return by_day
+
+
+def _render_day_section(lines: list[str], day_str: str, day_incidents: list[dict], is_first: bool) -> None:
+    lines.append(f"## {day_str}")
+    lines.append("")
+
+    by_region: dict[str, list[dict]] = {}
+    for inc in day_incidents:
+        region = inc.get("region", "Unknown")
+        by_region.setdefault(region, []).append(inc)
+
+    def _region_sort_key(item: tuple[str, list[dict]]) -> tuple[int, str]:
+        region_name, incs = item
+        max_rank = max(SEVERITY_RANK.get(i["severity"], 0) for i in incs)
+        return (-max_rank, region_name)
+
+    for region, incs in sorted(by_region.items(), key=_region_sort_key):
+        lines.append(f"### {region}")
+        lines.append("")
+        for inc in sorted(incs, key=lambda i: (-SEVERITY_RANK.get(i["severity"], 0), -i.get("news_total", 0))):
+            _md_day_incident(lines, inc, day_str)
+        lines.append("")
+
+    if not is_first:
+        lines.append("---")
+        lines.append("")
+
+
 def generate_md_report(digest: dict, target_date: datetime) -> str:
     s = digest["summary"]
+    target_str = target_date.strftime("%Y-%m-%d")
     lines: list[str] = []
-    lines.append(f"# Daily Disaster Digest — {target_date.strftime('%Y-%m-%d')}")
+    lines.append(f"# Daily Disaster Digest — {target_str}")
     lines.append("")
     lines.append(
         f"**{s['reportable_total']} active incidents** · "
@@ -896,69 +936,33 @@ def generate_md_report(digest: dict, target_date: datetime) -> str:
         )
     lines.append("")
 
-    high_plus = [
-        i for i in digest["incidents"]
-        if SEVERITY_RANK.get(i["severity"], 0) >= SEVERITY_RANK["HIGH"]
-    ]
-    high_plus.sort(key=lambda i: (-SEVERITY_RANK.get(i["severity"], 0), i.get("news_total", 0)), reverse=False)
-    high_plus.sort(key=lambda i: -SEVERITY_RANK.get(i["severity"], 0))
+    by_day = _group_by_day(digest["incidents"], target_str)
+    recent_days = sorted(by_day.keys(), reverse=True)[:3]
+    for i, day_str in enumerate(recent_days):
+        _render_day_section(lines, day_str, by_day[day_str], is_first=(i == 0))
 
-    diseases = [i for i in high_plus if i["is_disease"]]
-    geos = [i for i in high_plus if not i["is_disease"]]
-
-    if geos:
-        lines.append("## Geophysical")
-        lines.append("")
-        for inc in geos:
-            _md_incident(lines, inc)
-    if diseases:
-        lines.append("## Disease Outbreaks")
-        lines.append("")
-        for inc in diseases:
-            _md_incident(lines, inc)
-
-    medium = [
-        i for i in digest["incidents"]
-        if SEVERITY_RANK.get(i["severity"], 0) == SEVERITY_RANK["MEDIUM"]
-    ]
-    if medium:
-        lines.append("## Medium Severity")
-        lines.append("")
-        for inc in sorted(medium, key=lambda i: -i.get("news_total", 0)):
-            name = inc["canonical_name"] or inc.get("incident_id", "")
-            itype = inc["incident_type"] or "Unknown"
-            news_n = inc.get("news_total", 0)
-            lines.append(f"- **{name}** ({itype}) — {news_n} news · {inc.get('country', '')}")
-        lines.append("")
-
-    return "\n".join(lines) + "\n"
+    return "\n".join(lines).rstrip() + "\n"
 
 
-def _md_incident(lines: list[str], inc: dict) -> None:
-    name = inc["canonical_name"] or inc.get("incident_id", "")
-    itype = inc["incident_type"] or "Unknown"
+def _md_day_incident(lines: list[str], inc: dict, day_str: str) -> None:
+    name = _strip_date_suffix(inc["canonical_name"] or inc.get("incident_id", ""))
     sev = inc["severity"]
-    news_n = inc.get("news_total", 0)
-    logs = inc.get("logs", [])
+    log = inc["_log"]
+    n_articles = len(log.get("news", []))
     country = inc.get("country", "")
-    lines.append(f"### {name} — {itype}")
-    meta_parts = [f"{sev}", f"{news_n} news", f"{len(logs)} logs"]
+    is_new = _earliest_log_date(inc) == day_str
+    header = f"#### {name}"
+    if is_new:
+        header += " [NEW]"
+    lines.append(header)
+    meta_parts = [sev, f"{n_articles} article{'s' if n_articles != 1 else ''}"]
     if country:
         meta_parts.append(country)
     lines.append(f"*{' · '.join(meta_parts)}*")
     lines.append("")
-    if logs:
-        for log in logs:
-            ldt = _fmt_dt(log.get("log_date", ""))
-            n_linked = len(log.get("news", []))
-            lines.append(f"**{ldt}** ({n_linked} article{'s' if n_linked != 1 else ''})")
-            lines.append("")
-            summary = _join_summary_paragraphs(log.get("summary", ""))
-            if summary:
-                lines.append(f"> {summary}")
-                lines.append("")
-    elif inc.get("summary"):
-        lines.append(f"> {_join_summary_paragraphs(inc['summary'])}")
+    summary = _join_summary_paragraphs(log.get("summary", ""))
+    if summary:
+        lines.append(f"> {summary}")
         lines.append("")
     lines.append("")
 
