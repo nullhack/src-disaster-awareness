@@ -381,6 +381,7 @@ def build_incident_object(store: ContentStore, inc: dict, as_of_date: datetime) 
         group = country_group(iso2)
         region = ISO2_TO_REGION.get(iso2, "Unknown")
     else:
+        iso2 = "XX"
         country = ""
         group = "C"
         region = _resolve_region(inc["name"], latest_summary, is_disease)
