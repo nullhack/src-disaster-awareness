@@ -817,11 +817,11 @@ function openDrawer(id) {  const i = STATE.digest.incidents.find((x) => x.incide
         <h4 class="drawer__subhead">Original source records (${i.source_links.length})</h4>
         <ul class="src-links">
           ${i.source_links.map((L) => `
-            <li><a class="src-link" href="${esc(L.url)}" target="_blank" rel="noopener">
+            <li>${L.url ? `<a class="src-link" href="${esc(L.url)}" target="_blank" rel="noopener">` : `<span class="src-link src-link--no-url" aria-disabled="true">`}
               <span class="src-link__type src-link__type--${L.type}">${L.type}</span>
               <span class="src-link__label">${esc(L.label)}${L.meta ? ` <em>${esc(L.meta)}</em>` : ""}</span>
-              <span class="src-link__arrow" aria-hidden="true">↗</span>
-            </a></li>`).join("")}
+              <span class="src-link__arrow" aria-hidden="true">${L.url ? "↗" : "⊘"}</span>
+            ${L.url ? `</a>` : `</span>`}</li>`).join("")}
         </ul>` : `<p class="muted">No deep links available for this incident.</p>`}
     </div>
     ${(i.logs && i.logs.length) ? `<div class="drawer__section"><h3>Timeline · ${i.logs.length} log(s)</h3>
