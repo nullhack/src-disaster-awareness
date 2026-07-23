@@ -273,8 +273,8 @@ code { font-family: var(--mono); font-size: .9em; }
   display: flex; flex-direction: column; overflow: hidden;
 }
 .span-full { grid-column: span 12; }
-.card--map { grid-column: span 5; }
-.card--trend { grid-column: span 7; }
+.card--map { grid-column: span 6; }
+.card--trend { grid-column: span 6; }
 .card--table { grid-column: span 12; }
 .card__head {
   display: flex; align-items: baseline; justify-content: space-between;
@@ -283,7 +283,7 @@ code { font-family: var(--mono); font-size: .9em; }
 .card__head h2 { font-size: 14px; font-weight: 700; }
 .card__hint { font-size: 11px; color: var(--rc-muted); }
 .map-wrap { position: relative; padding: 8px; }
-.map-wrap svg { width: 100%; height: 320px; display: block; }
+.map-wrap svg { width: 100%; height: 420px; display: block; }
 .map-legend {
   position: absolute; left: 16px; bottom: 14px;
   background: rgba(255,255,255,.94); border: 1px solid var(--rc-line);
@@ -300,15 +300,15 @@ code { font-family: var(--mono); font-size: .9em; }
 
 /* ============ TREND PANELS ============ */
 .trend-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+  display: grid; grid-template-columns: 1fr; gap: 0;
   border-top: 1px solid var(--rc-line);
 }
 .trend-panel { position: relative; padding: 12px 18px 16px; min-width: 0; }
-.trend-panel + .trend-panel { border-left: 1px solid var(--rc-line); }
+.trend-panel + .trend-panel { border-left: none; border-top: 1px solid var(--rc-line); }
 .trend-panel__head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 4px; }
 .trend-panel__head h3 { font-size: 13px; font-weight: 700; color: var(--rc-ink); }
 .trend-panel__sub { font-size: 11px; font-weight: 500; color: var(--rc-muted); }
-.trend-panel svg { width: 100%; height: 200px; display: block; }
+.trend-panel svg { width: 100%; height: 240px; display: block; }
 
 /* ============ TREND TOOLTIP ============ */
 .trend-tooltip {
