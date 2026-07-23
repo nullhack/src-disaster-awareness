@@ -345,6 +345,41 @@ def _resolve_region(name: str, latest_summary: str | None, is_disease: bool) -> 
     return "Global" if is_disease else "Unknown"
 
 
+_GDACS_EVENTTYPE_CODES = {
+    "Tropical Cyclone": "TC",
+    "Earthquake": "EQ",
+    "Flood": "FL",
+    "Forest Fire": "WF",
+    "Drought": "DR",
+    "Tsunami": "TS",
+    "Volcano": "VO",
+}
+
+
+def _resolve_gdacs_link(
+    raw_fields: dict[str, object],
+    source_id: str,
+    incident_type: str,
+) -> str:
+    link = raw_fields.get("link", "")
+    if link:
+        return str(link)
+    url = raw_fields.get("url")
+    if isinstance(url, dict):
+        report = url.get("report", "")
+        if report:
+            return str(report)
+    eventid = str(raw_fields.get("eventid") or source_id or "")
+    episodeid = str(raw_fields.get("episodeid") or "")
+    eventtype = _GDACS_EVENTTYPE_CODES.get(incident_type, "")
+    if eventid and episodeid and eventtype:
+        return (
+            f"https://www.gdacs.org/report.aspx?eventid={eventid}"
+            f"&episodeid={episodeid}&eventtype={eventtype}"
+        )
+    return ""
+
+
 def build_incident_object(store: ContentStore, inc: dict, as_of_date: datetime) -> dict | None:
     incident_id = inc["incident_id"]
     reports = load_reports_for_incident(store, incident_id)
@@ -491,7 +526,7 @@ def build_incident_object(store: ContentStore, inc: dict, as_of_date: datetime) 
             source_links.append({
                 "type": "GDACS",
                 "label": f"{alert_label} · {rf.get('severitytext', r['name'])}" if alert_label else r["name"],
-                "url": rf.get("link", ""),
+                "url": _resolve_gdacs_link(rf, r["source_id"], r["incident_type"]),
                 "meta": " · ".join(meta_parts) if meta_parts else "",
             })
         elif r["source"] == "WHO":
