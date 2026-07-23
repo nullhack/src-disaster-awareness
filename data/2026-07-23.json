@@ -1,39 +1,39 @@
 {
   "schema_version": "1.4",
-  "report_date": "2026-07-22",
+  "report_date": "2026-07-23",
   "generated_at": "2026-07-23T02:06:12Z",
-  "as_of": "2026-07-22",
+  "as_of": "2026-07-23",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 28,
-    "new_today": 3,
+    "reportable_total": 26,
+    "new_today": 0,
     "critical": 5,
-    "high": 11,
+    "high": 9,
     "medium": 12,
     "low": 0,
     "disease_outbreaks": 6,
     "countries_affected": 16,
-    "news_total": 794,
-    "max_magnitude": 7.8,
+    "news_total": 783,
+    "max_magnitude": 7.5,
     "by_severity": {
       "CRITICAL": 5,
-      "HIGH": 11,
+      "HIGH": 9,
       "MEDIUM": 12,
       "LOW": 0
     },
     "by_type": {
       "Disease": 6,
       "Flood": 4,
-      "Volcano": 3,
+      "Volcano": 2,
       "Drought": 1,
-      "Earthquake": 10,
+      "Earthquake": 9,
       "Tropical Cyclone": 1,
       "Forest Fire": 3
     },
     "by_region": {
       "Global": 3,
-      "Asia": 13,
+      "Asia": 11,
       "Africa": 2,
       "Europe": 4,
       "Americas": 4,
@@ -43,7 +43,7 @@
   "by_country": [
     {
       "country": "Philippines",
-      "count": 4,
+      "count": 3,
       "max_sev_rank": 2,
       "iso2": "PH",
       "region": "Asia",
@@ -60,19 +60,19 @@
       "max_severity": "MEDIUM"
     },
     {
-      "country": "Indonesia",
-      "count": 2,
+      "country": "Nepal",
+      "count": 1,
       "max_sev_rank": 2,
-      "iso2": "ID",
+      "iso2": "NP",
       "region": "Asia",
       "country_group": "A",
       "max_severity": "MEDIUM"
     },
     {
-      "country": "Nepal",
+      "country": "Indonesia",
       "count": 1,
       "max_sev_rank": 2,
-      "iso2": "NP",
+      "iso2": "ID",
       "region": "Asia",
       "country_group": "A",
       "max_severity": "MEDIUM"
@@ -2448,128 +2448,6 @@
       ]
     },
     {
-      "incident_id": "20251119-ID-VO",
-      "tree_id": "654adac8344d5ae1ac56507599013603",
-      "canonical_name": "Volcano Semeru, Indonesia 2025-11-19",
-      "summary": "On November 19, 2025, Mount Semeru in Indonesia erupted, sending ash more than 6,500 feet into the sky and threatening air traffic. The eruption prompted the rescue of over 170 stranded climbers, with authorities evacuating more than 900 people in total.",
-      "country": "Indonesia",
-      "iso2": "ID",
-      "lat": -8.108,
-      "lon": 112.922,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Volcano",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "HIGH",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2025-11-19",
-      "first_reported_date": "2025-11-19",
-      "last_updated_date": "2026-07-15",
-      "days_since_event": 246,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 1,
-        "healthmap": 0,
-        "news": 5
-      },
-      "source_links": [
-        {
-          "type": "GDACS",
-          "label": "Red alert · ",
-          "url": "https://www.gdacs.org/report.aspx?eventid=1000125&episodeid=2&eventtype=VO",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": "Red",
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Volcano erupts, sending ash over 6,500 feet into the sky, threatening air traffic in Indonesia",
-          "url": "https://nypost.com/2025/11/19/world-news/volcanic-eruption-in-indonesia-sends-ash-over-6500-feet-into-the-sky-threatening-air-traffic/",
-          "outlet": "New York Post",
-          "published_date": "2025-11-19"
-        },
-        {
-          "headline": "Indonesia evacuates stranded climbers after Semeru volcano erupts | Honolulu Star-Advertiser",
-          "url": "https://www.staradvertiser.com/2025/11/20/breaking-news/indonesia-evacuates-stranded-climbers-after-semeru-volcano-erupts/",
-          "outlet": "Honolulu Star-Advertiser",
-          "published_date": "2025-11-20"
-        },
-        {
-          "headline": "Volcano eruption forces the rescue of more than 170 climbers on Indonesia's Mount Semeru",
-          "url": "https://www.newsday.com/news/nation/indonesia-mount-semeru-volcano-eruption-climbers-y41427",
-          "outlet": "Newsday",
-          "published_date": "2025-11-20"
-        },
-        {
-          "headline": "Mount Semeru Erupts Again This Afternoon, Ash Plume Reaches 800 Meters Above Peak | Pusat Data Ekonomi dan Bisnis Indonesia | Databoks",
-          "url": "https://databoks.katadata.co.id/en/demographics/statistics/42f08c57e8630d0/mount-semeru-erupts-again-this-afternoon-ash-plume-reaches-800-meters-above-peak",
-          "outlet": "Databoks",
-          "published_date": "2026-07-15"
-        },
-        {
-          "headline": "Mount Semeru Eruption Triggers Ash Rain in Lumajang",
-          "url": "https://en.tempo.co/read/2113750/mount-semeru-eruption-triggers-ash-rain-in-lumajang",
-          "outlet": "Tempo.co English",
-          "published_date": "2026-07-15"
-        }
-      ],
-      "news_total": 5,
-      "logs": [
-        {
-          "log_date": "2026-07-08",
-          "summary": "On November 19, 2025, Mount Semeru in Indonesia erupted, sending ash more than 6,500 feet into the sky and threatening air traffic. The eruption prompted the rescue of over 170 stranded climbers, with authorities evacuating more than 900 people in total.",
-          "news": [
-            {
-              "news_id": "c6b13929b35c5da78bab0dddac7844c9",
-              "url": "https://www.staradvertiser.com/2025/11/20/breaking-news/indonesia-evacuates-stranded-climbers-after-semeru-volcano-erupts/",
-              "headline": "Indonesia evacuates stranded climbers after Semeru volcano erupts | Honolulu Star-Advertiser",
-              "body": "JAKARTA >> Indonesian authorities evacuated more than 900 people and were facilitating the safe return on Thursday of 170 climbers stranded after the eruption of its Semeru volcano, one of the country’s tallest mountains.",
-              "published_date": "2025-11-20",
-              "outlet": "Honolulu Star-Advertiser",
-              "image": ""
-            },
-            {
-              "news_id": "acdfe4faa6fa5b4cbd41214828a47071",
-              "url": "https://www.newsday.com/news/nation/indonesia-mount-semeru-volcano-eruption-climbers-y41427",
-              "headline": "Volcano eruption forces the rescue of more than 170 climbers on Indonesia's Mount Semeru",
-              "body": "Indonesian authorities say they are helping more than 170 climbers caught by Mount Semeru's sudden eruption to return to safety.",
-              "published_date": "2025-11-20",
-              "outlet": "Newsday",
-              "image": ""
-            },
-            {
-              "news_id": "ab320526c8795359988d53c019968118",
-              "url": "https://nypost.com/2025/11/19/world-news/volcanic-eruption-in-indonesia-sends-ash-over-6500-feet-into-the-sky-threatening-air-traffic/",
-              "headline": "Volcano erupts, sending ash over 6,500 feet into the sky, threatening air traffic in Indonesia",
-              "body": "Indonesia’s Mount Semeru volcano erupted around 4:00 p.m. local time, sending ash more than 6,500 feet into the air, according to data from the country’s Center for Volcanology.",
-              "published_date": "2025-11-19",
-              "outlet": "New York Post",
-              "image": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
       "incident_id": "20251210-XX-DI",
       "tree_id": "4dfaaf246f45535fad87547af3e4d2e4",
       "canonical_name": "Seasonal influenza Global 2025-12-10",
@@ -4440,167 +4318,6 @@
               "published_date": "2026-07-21T18:59:46+00:00",
               "outlet": "National Catholic Register",
               "image": "https://s.yimg.com/fz/api/res/1.2/oBZ6OCLMDNDfIqiCpPKIYw--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7dz0xNjA-/https://s.yimg.com/am/60d/3dbe02ee606cabb06c43a61026078fdc"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "incident_id": "20260607-PH-EQ",
-      "tree_id": "af4e98f3babd5470886a02cfe2c2be0e",
-      "canonical_name": "Earthquake M7.8 Sarangani, Philippines 2026-06-07",
-      "summary": "A subsequent 6.2-magnitude earthquake struck 34 km WSW of Sarangani, Philippines on July 14, 2026. Separately, monsoon rains triggered landslides and floods across Mindanao, killing 12 people, while the region was still recovering from the earlier 7.8 magnitude earthquake.",
-      "country": "Philippines",
-      "iso2": "PH",
-      "lat": 5.5918,
-      "lon": 125.0469,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "HIGH",
-      "priority": "HIGH",
-      "priority_rank": 1,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-06-07",
-      "first_reported_date": "2026-06-07",
-      "last_updated_date": "2026-07-15",
-      "days_since_event": 46,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 1,
-        "healthmap": 0,
-        "news": 6
-      },
-      "source_links": [
-        {
-          "type": "GDACS",
-          "label": "Orange alert · Magnitude 7.8M, Depth:55.193km",
-          "url": "https://www.gdacs.org/report.aspx?eventid=1544720&episodeid=1710268&eventtype=EQ",
-          "meta": "Magnitude 7.8M, Depth:55.193km"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 7.8,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": "Orange",
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Massive earthquake strikes southern Philippines: What to know",
-          "url": "https://www.yahoo.com/news/world/articles/massive-earthquake-strikes-southern-philippines-153246576.html",
-          "outlet": "Deseret News · via Yahoo News",
-          "published_date": "2026-07-08T21:49:20+00:00"
-        },
-        {
-          "headline": "Deadly 7.8 Magnitude Earthquake Leads Officials to Cancel Classes on First Day...",
-          "url": "https://www.yahoo.com/news/world/articles/deadly-7-8-magnitude-earthquake-222135924.html",
-          "outlet": "People · via Yahoo News",
-          "published_date": "2026-07-08T21:49:20+00:00"
-        },
-        {
-          "headline": "Months-old Philippine earthquake video resurfaces after deadly tremor",
-          "url": "https://www.yahoo.com/news/world/articles/months-old-philippine-earthquake-video-031951967.html",
-          "outlet": "AFP · via Yahoo News",
-          "published_date": "2026-07-08T21:49:20+00:00"
-        },
-        {
-          "headline": "Nustar Online presents Bb Pilipinas 2026 NatCos competition, donates P1M to PRC for Sarangani earthquake relief",
-          "url": "https://www.manilatimes.net/2026/07/11/tmt-newswire/nustar-online-presents-bb-pilipinas-2026-natcos-competition-donates-p1m-to-prc-for-sarangani-earthquake-relief/2382701",
-          "outlet": "The Manila Times",
-          "published_date": "2026-07-11T00:00:00+00:00"
-        },
-        {
-          "headline": "12 dead as monsoon rains trigger landslides, flood across Mindanao",
-          "url": "https://davaotoday.com/headline/12-dead-as-monsoon-rains-trigger-landslides-flood-across-mindanao/",
-          "outlet": "Davao Today",
-          "published_date": "2026-07-11T02:41:07+00:00"
-        },
-        {
-          "headline": "6.2-magnitude quake hits 34 km WSW of Sarangani, Philippines: USGS",
-          "url": "https://thepeninsulaqatar.com/article/14/07/2026/62-magnitude-quake-hits-34-km-wsw-of-sarangani-philippines-usgs",
-          "outlet": "The Peninsula",
-          "published_date": "2026-07-15T06:54:07+00:00"
-        }
-      ],
-      "news_total": 6,
-      "logs": [
-        {
-          "log_date": "2026-07-08",
-          "summary": "A deadly 7.8 magnitude earthquake struck off the coast of the southern Philippines on June 8, 2026, killing several dozen people and collapsing structures, including in General Santos. Reports also note that an older earthquake video resurfaced online after the tremor. Schools cancelled classes as officials responded to the disaster.",
-          "news": [
-            {
-              "news_id": "451d6788578354e98e2cd583a3aa54ce",
-              "url": "https://www.yahoo.com/news/world/articles/massive-earthquake-strikes-southern-philippines-153246576.html",
-              "headline": "Massive earthquake strikes southern Philippines: What to know",
-              "body": "People on motorcycles pass by a collapsed structure after an earthquake in General Santos,...",
-              "published_date": "2026-07-08T21:49:20+00:00",
-              "outlet": "Deseret News · via Yahoo News",
-              "image": "https://media.zenfs.com/en/deseret_news_992/c16bef0a867a982422c9f41ad0f8fbeb"
-            },
-            {
-              "news_id": "cbdd6c8c9a2f53e79e11f262cd195644",
-              "url": "https://www.yahoo.com/news/world/articles/deadly-7-8-magnitude-earthquake-222135924.html",
-              "headline": "Deadly 7.8 Magnitude Earthquake Leads Officials to Cancel Classes on First Day...",
-              "body": "NEED TO KNOW A major earthquake off the coast of the Philippines on June 8 killed several dozen...",
-              "published_date": "2026-07-08T21:49:20+00:00",
-              "outlet": "People · via Yahoo News",
-              "image": "https://media.zenfs.com/en/people_218/d5dd7d7263644d7e8b9c46ab905b9ce2"
-            },
-            {
-              "news_id": "68664a9ba05853b0be86560791a41583",
-              "url": "https://www.yahoo.com/news/world/articles/months-old-philippine-earthquake-video-031951967.html",
-              "headline": "Months-old Philippine earthquake video resurfaces after deadly tremor",
-              "body": "Footage shared after a 7.8-magnitude earthquake struck the southern Philippines on June 8, 2026...",
-              "published_date": "2026-07-08T21:49:20+00:00",
-              "outlet": "AFP · via Yahoo News",
-              "image": "https://media.zenfs.com/en/afp_factcheck_us_713/6134ca06441b3f9201e342d19fb5d845"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-15",
-          "summary": "A subsequent 6.2-magnitude earthquake struck 34 km WSW of Sarangani, Philippines on July 14, 2026. Separately, monsoon rains triggered landslides and floods across Mindanao, killing 12 people, while the region was still recovering from the earlier 7.8 magnitude earthquake.",
-          "news": [
-            {
-              "news_id": "4e567df001295099bb9252c7875900e8",
-              "url": "https://www.manilatimes.net/2026/07/11/tmt-newswire/nustar-online-presents-bb-pilipinas-2026-natcos-competition-donates-p1m-to-prc-for-sarangani-earthquake-relief/2382701",
-              "headline": "Nustar Online presents Bb Pilipinas 2026 NatCos competition, donates P1M to PRC for Sarangani earthquake relief",
-              "body": "BEYOND showcasing the country’s rich culture and world-class creativity, this year’s Binibining Pilipinas (BBP) National Costume Competition carried a greater purpose.",
-              "published_date": "2026-07-11T00:00:00+00:00",
-              "outlet": "The Manila Times",
-              "image": ""
-            },
-            {
-              "news_id": "e1647f5fa5e95251a3462bcb34a4ddbe",
-              "url": "https://thepeninsulaqatar.com/article/14/07/2026/62-magnitude-quake-hits-34-km-wsw-of-sarangani-philippines-usgs",
-              "headline": "6.2-magnitude quake hits 34 km WSW of Sarangani, Philippines: USGS",
-              "body": "HONG KONG: An earthquake with a magnitude of 6.2 jolted 34 km WSW of Sarangani, Philippines at 1549:41 GMT on Tuesday, the U.S. Geological Survey said. The epicenter, with a depth of 67.9 km, was ...",
-              "published_date": "2026-07-15T06:54:07+00:00",
-              "outlet": "The Peninsula",
-              "image": ""
-            },
-            {
-              "news_id": "95c4c59ab857587792904bbf57f34a92",
-              "url": "https://davaotoday.com/headline/12-dead-as-monsoon-rains-trigger-landslides-flood-across-mindanao/",
-              "headline": "12 dead as monsoon rains trigger landslides, flood across Mindanao",
-              "body": "Just barely recovering a month after a magnitude 7.8 earthquake struck Sarangani province in Mindanao, the death toll from a ...",
-              "published_date": "2026-07-11T02:41:07+00:00",
-              "outlet": "Davao Today",
-              "image": "https://www.bing.com/th?id=ONUT.dkxaAb_RuiHW0KPz8M_x7A"
             }
           ]
         }

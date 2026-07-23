@@ -629,7 +629,7 @@ function renderWatchlist() {
         <div class="cell-name">${i.extended_monitoring ? '<span title="Extended monitoring" style="cursor:help">🔁</span> ' : ""}${esc(i.canonical_name)}</div>
         <div class="cell-sub">${i.incident_id}${i.disease_name ? " · " + esc(i.disease_name) : ""}</div>
       </td>
-      <td class="cell-country">${esc(i.country)}<small>${esc(i.region || "")}</small></td>
+      <td class="cell-country">${esc(i.iso2 === "XX" ? "Global" : i.country)}<small>${esc(i.region || "")}</small></td>
       <td>${typePill(i.incident_type)}</td>
       <td><div class="cell-name">${fmtDate(i.event_date)}</div><div class="cell-sub">${i.days_since_event ?? "?"}d ago</div></td>
       <td class="num"><b>${i.news_total}</b></td>
@@ -797,7 +797,7 @@ function openDrawer(id) {  const i = STATE.digest.incidents.find((x) => x.incide
     <div class="drawer__section">
       <h3>Key facts</h3>
       <div class="drawer__grid">
-        ${kv("Country", `${esc(i.country)} (${i.iso2})`)}
+        ${kv("Country", `${esc(i.iso2 === "XX" ? "Global" : i.country)} (${i.iso2})`)}
         ${kv("Region", esc(i.region || "—"))}
         ${kv("Country group", esc(i.country_group || "—"))}
         ${kv("Event date", `${fmtDate(i.event_date)} · ${i.days_since_event ?? "?"}d ago`)}
