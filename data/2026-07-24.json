@@ -1,33 +1,32 @@
 {
   "schema_version": "1.4",
-  "report_date": "2026-07-23",
+  "report_date": "2026-07-24",
   "generated_at": "2026-07-24T01:57:21Z",
-  "as_of": "2026-07-23",
+  "as_of": "2026-07-24",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 26,
-    "new_today": 9,
+    "reportable_total": 24,
+    "new_today": 0,
     "critical": 5,
     "high": 9,
-    "medium": 12,
+    "medium": 10,
     "low": 0,
     "disease_outbreaks": 6,
-    "countries_affected": 17,
-    "news_total": 917,
+    "countries_affected": 16,
+    "news_total": 904,
     "max_magnitude": 7.5,
     "by_severity": {
       "CRITICAL": 5,
       "HIGH": 9,
-      "MEDIUM": 12,
+      "MEDIUM": 10,
       "LOW": 0
     },
     "by_type": {
       "Disease": 6,
       "Flood": 4,
       "Volcano": 2,
-      "Drought": 1,
-      "Earthquake": 9,
+      "Earthquake": 8,
       "Tropical Cyclone": 1,
       "Forest Fire": 3
     },
@@ -35,15 +34,15 @@
       "Global": 3,
       "Asia": 11,
       "Africa": 2,
-      "Europe": 4,
       "Americas": 4,
-      "Oceania": 2
+      "Europe": 3,
+      "Oceania": 1
     }
   },
   "by_country": [
     {
       "country": "",
-      "count": 4,
+      "count": 3,
       "max_sev_rank": 2,
       "iso2": "XX",
       "region": "Global",
@@ -93,15 +92,6 @@
       "iso2": "BD",
       "region": "Asia",
       "country_group": "A",
-      "max_severity": "MEDIUM"
-    },
-    {
-      "country": "Fiji",
-      "count": 1,
-      "max_sev_rank": 2,
-      "iso2": "FJ",
-      "region": "Oceania",
-      "country_group": "B",
       "max_severity": "MEDIUM"
     },
     {
@@ -2906,236 +2896,6 @@
               "published_date": "2026-07-18",
               "outlet": "South China Morning Post on MSN",
               "image": "https://www.bing.com/th?id=ONUT.XwSsCJEjls5gqeWY6A2RtQ"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "incident_id": "20251221-XX-DR",
-      "tree_id": "d79b0595d2905f8da2fdc5beeadb875f",
-      "canonical_name": "Drought 2025-12-21",
-      "summary": "Severe drought and heat across Europe are shrinking harvests, notably French maize, and causing water shortages in the Netherlands. The Rhine River has hit its lowest July level for decades, threatening energy and logistics, while Greek islands face drought during the tourist season; economists warn this extreme heat could raise food prices next year.",
-      "country": "",
-      "iso2": "XX",
-      "lat": null,
-      "lon": null,
-      "country_group": "C",
-      "region": "Europe",
-      "incident_type": "Drought",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2025-12-21",
-      "first_reported_date": "2025-12-21",
-      "last_updated_date": "2026-07-16",
-      "days_since_event": 215,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 1,
-        "healthmap": 0,
-        "news": 11
-      },
-      "source_links": [
-        {
-          "type": "GDACS",
-          "label": "Green alert · Drought 2025-12-21",
-          "url": "https://www.gdacs.org/report.aspx?eventid=1018332&episodeid=14&eventtype=DR",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": "Green",
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Wilting French maize to shrink Europe's harvest as farmers fear repeat of 1976",
-          "url": "https://finance.yahoo.com/markets/commodities/articles/wilting-french-maize-shrink-europes-122259321.html",
-          "outlet": "Reuters · via Yahoo Finance",
-          "published_date": "2026-07-10T14:35:42+00:00"
-        },
-        {
-          "headline": "Why this summer's heatwaves could raise your supermarket bill next year",
-          "url": "https://www.msn.com/en-us/money/general/why-this-summer-s-heatwaves-could-raise-your-supermarket-bill-next-year/ar-AA280SPm?ocid=BingNewsVerp",
-          "outlet": "Euronews on MSN",
-          "published_date": "2026-07-11T14:35:42+00:00"
-        },
-        {
-          "headline": "Spain Wildfire Kills 12 as Extreme Heat Fuels Southern Europe Crisis",
-          "url": "https://www.nbcpalmsprings.com/2026/07/11/spain-wildfire-kills-12-as-extreme-heat-fuels-southern-europe-crisis",
-          "outlet": "NBC Palm Springs",
-          "published_date": "2026-07-11T14:35:42+00:00"
-        },
-        {
-          "headline": "Greek islands face drought as tourist season hits",
-          "url": "https://www.msn.com/en-us/news/world/greek-islands-face-drought-as-tourist-season-hits/ar-AA281T0k?ocid=BingNewsVerp",
-          "outlet": "Reuters on MSN",
-          "published_date": "2026-07-12T14:35:42+00:00"
-        },
-        {
-          "headline": "Firefighters battle Fontainebleau forest fire near Paris as two arrested",
-          "url": "https://www.yahoo.com/news/articles/firefighters-battle-fontainebleau-forest-fire-072213488.html",
-          "outlet": "Reuters · via Yahoo News",
-          "published_date": "2026-07-14T14:35:42+00:00"
-        },
-        {
-          "headline": "German logistics caught between drought and engineering works",
-          "url": "https://www.trasportoeuropa.it/english/german-logistics-caught-between-drought-and-engineering-works/",
-          "outlet": "TrasportoEuropa",
-          "published_date": "2026-07-14T14:50:10+00:00"
-        },
-        {
-          "headline": "Heat and drought cause water shortage in Netherlands, government says",
-          "url": "https://www.msn.com/en-us/weather/topstories/heat-and-drought-cause-water-shortage-in-netherlands-government-says/ar-AA282XDg?ocid=BingNewsVerp",
-          "outlet": "Reuters on MSN",
-          "published_date": "2026-07-15T14:35:42+00:00"
-        },
-        {
-          "headline": "Europe's next energy shock is drying up in plain sight",
-          "url": "https://www.reuters.com/commentary/reuters-open-interest/europes-next-energy-shock-is-drying-up-plain-sight-2026-07-16/",
-          "outlet": "Reuters",
-          "published_date": "2026-07-16T06:35:42+00:00"
-        },
-        {
-          "headline": "Greece pins hopes on heat-seeking satellites to predict forest fires",
-          "url": "https://www.aljazeera.com/news/2026/7/16/greece-pins-hopes-on-heat-seeking-satellites-to-predict-wildfires",
-          "outlet": "Al Jazeera",
-          "published_date": "2026-07-16T08:35:42+00:00"
-        },
-        {
-          "headline": "Why this summer's heatwaves could raise your supermarket bill next year",
-          "url": "https://finance.yahoo.com/economy/articles/food-inflation-finally-slowing-why-045658286.html",
-          "outlet": "Euronews · via Yahoo Finance",
-          "published_date": "2026-07-16T09:35:42+00:00"
-        },
-        {
-          "headline": "Can agri-PV save Bavaria's hop gardens? 'Solar hats' help fight climate crisis",
-          "url": "https://www.msn.com/en-nz/news/other/can-agri-pv-save-bavaria-s-hop-gardens-solar-hats-help-fight-climate-crisis/ar-AA27YOgs?ocid=BingNewsVerp",
-          "outlet": "Euronews on MSN",
-          "published_date": "2026-07-16T14:50:07+00:00"
-        }
-      ],
-      "news_total": 11,
-      "logs": [
-        {
-          "log_date": "2026-07-16",
-          "summary": "Severe drought and heat across Europe are shrinking harvests, notably French maize, and causing water shortages in the Netherlands. The Rhine River has hit its lowest July level for decades, threatening energy and logistics, while Greek islands face drought during the tourist season; economists warn this extreme heat could raise food prices next year.",
-          "news": [
-            {
-              "news_id": "42dabd2af9ca5a5c8a971c28031234da",
-              "url": "https://www.msn.com/en-us/news/world/greek-islands-face-drought-as-tourist-season-hits/ar-AA281T0k?ocid=BingNewsVerp",
-              "headline": "Greek islands face drought as tourist season hits",
-              "body": "(Corrects name of hotelier to Carolina, not Maria, in paragraph 20) By Angeliki Koutantou ASTYPALAIA, Greece, July 16 ...",
-              "published_date": "2026-07-12T14:35:42+00:00",
-              "outlet": "Reuters on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.J_nX7Y6gi4VWnw4NY0Z_hA"
-            },
-            {
-              "news_id": "137b608ea09f54938a4934eb77f3191c",
-              "url": "https://www.msn.com/en-us/weather/topstories/heat-and-drought-cause-water-shortage-in-netherlands-government-says/ar-AA282XDg?ocid=BingNewsVerp",
-              "headline": "Heat and drought cause water shortage in Netherlands, government says",
-              "body": "AMSTERDAM, July 16 (Reuters) - The continuing drought and heat have caused a water shortage in the Netherlands, the Dutch ...",
-              "published_date": "2026-07-15T14:35:42+00:00",
-              "outlet": "Reuters on MSN",
-              "image": "https://www.bing.com/th?id=ORMS.6274d3ed8251afc62e3dfbc72ea91354"
-            },
-            {
-              "news_id": "7811690915225a1097032659b8816074",
-              "url": "https://www.msn.com/en-us/money/general/why-this-summer-s-heatwaves-could-raise-your-supermarket-bill-next-year/ar-AA280SPm?ocid=BingNewsVerp",
-              "headline": "Why this summer's heatwaves could raise your supermarket bill next year",
-              "body": "While food inflation has eased across the eurozone, economists say this summer's extreme heat is now a bigger threat to next ...",
-              "published_date": "2026-07-11T14:35:42+00:00",
-              "outlet": "Euronews on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.aW49RtrLEFbZDAiK0PgbMQ"
-            },
-            {
-              "news_id": "19d278fe66745e0fadce54a046450f8f",
-              "url": "https://www.aljazeera.com/news/2026/7/16/greece-pins-hopes-on-heat-seeking-satellites-to-predict-wildfires",
-              "headline": "Greece pins hopes on heat-seeking satellites to predict forest fires",
-              "body": "Nine storeys off the surface of the Earth in a northern Athens suburb, half a dozen young engineers...",
-              "published_date": "2026-07-16T08:35:42+00:00",
-              "outlet": "Al Jazeera",
-              "image": "https://s.yimg.com/am/60d/49b7b87a2f6e341d5a84687577b484d7"
-            },
-            {
-              "news_id": "78f6707a77a05858b25008c350b04ad7",
-              "url": "https://finance.yahoo.com/economy/articles/food-inflation-finally-slowing-why-045658286.html",
-              "headline": "Why this summer's heatwaves could raise your supermarket bill next year",
-              "body": "While food inflation has eased across the eurozone, economists say this summer's extreme heat is now...",
-              "published_date": "2026-07-16T09:35:42+00:00",
-              "outlet": "Euronews · via Yahoo Finance",
-              "image": "https://media.zenfs.com/en/euronews_us_articles_576/f03f920e8b1e0f849e17616a9770abef"
-            },
-            {
-              "news_id": "1892a54c64375002bc64465a6f1af82c",
-              "url": "https://www.msn.com/en-nz/news/other/can-agri-pv-save-bavaria-s-hop-gardens-solar-hats-help-fight-climate-crisis/ar-AA27YOgs?ocid=BingNewsVerp",
-              "headline": "Can agri-PV save Bavaria's hop gardens? 'Solar hats' help fight climate crisis",
-              "body": "No hops, no beer. And without rain there are no hops. Climate change, rising heat and dry farmland are hitting Bavaria’s key ...",
-              "published_date": "2026-07-16T14:50:07+00:00",
-              "outlet": "Euronews on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.Y_FGUBmnBxjWE14Pqhqe0A"
-            },
-            {
-              "news_id": "ce9b351a3b105277a7c32e12ab4263ef",
-              "url": "https://finance.yahoo.com/markets/commodities/articles/wilting-french-maize-shrink-europes-122259321.html",
-              "headline": "Wilting French maize to shrink Europe's harvest as farmers fear repeat of 1976",
-              "body": "By Gus Trompiz and Luiza Ilie PARIS, July 10 (Reuters) - After weeks of sweltering heat and drought,...",
-              "published_date": "2026-07-10T14:35:42+00:00",
-              "outlet": "Reuters · via Yahoo Finance",
-              "image": "https://media.zenfs.com/en/reuters.com/db6cb90708f4287f8bd48bb19571324c"
-            },
-            {
-              "news_id": "06e04cfcf449507ea528a4a19e82ca7d",
-              "url": "https://www.yahoo.com/news/articles/firefighters-battle-fontainebleau-forest-fire-072213488.html",
-              "headline": "Firefighters battle Fontainebleau forest fire near Paris as two arrested",
-              "body": "PARIS, July 14 (Reuters) - One of the people arrested on suspicion of having started the fire in a...",
-              "published_date": "2026-07-14T14:35:42+00:00",
-              "outlet": "Reuters · via Yahoo News",
-              "image": "https://media.zenfs.com/en/reuters.com/9e3cc0072b2e18d8d4d74d44783328e5"
-            },
-            {
-              "news_id": "768ff2660a8652d796a96804d48373e2",
-              "url": "https://www.reuters.com/commentary/reuters-open-interest/europes-next-energy-shock-is-drying-up-plain-sight-2026-07-16/",
-              "headline": "Europe's next energy shock is drying up in plain sight",
-              "body": "Europe's energy traders have spent recent weeks glued to maps of the Gulf. They should also be watching the Rhine.",
-              "published_date": "2026-07-16T06:35:42+00:00",
-              "outlet": "Reuters",
-              "image": ""
-            },
-            {
-              "news_id": "16504eed99f65f508cfacc2a7dd4e235",
-              "url": "https://www.trasportoeuropa.it/english/german-logistics-caught-between-drought-and-engineering-works/",
-              "headline": "German logistics caught between drought and engineering works",
-              "body": "The Rhine has hit its lowest July level for decades at Kaub, while Germany’s rail network is facing delays and scheduled ...",
-              "published_date": "2026-07-14T14:50:10+00:00",
-              "outlet": "TrasportoEuropa",
-              "image": "https://www.bing.com/th?id=ONUT.wJS8a6JP1vIRdNEFWqHjQQ"
-            },
-            {
-              "news_id": "a820d8e707c95bd896ce92acb113827a",
-              "url": "https://www.nbcpalmsprings.com/2026/07/11/spain-wildfire-kills-12-as-extreme-heat-fuels-southern-europe-crisis",
-              "headline": "Spain Wildfire Kills 12 as Extreme Heat Fuels Southern Europe Crisis",
-              "body": "At least 12 people have died and nearly 20 remain missing after a fast-moving wildfire near Almeria,...",
-              "published_date": "2026-07-11T14:35:42+00:00",
-              "outlet": "NBC Palm Springs",
-              "image": "https://s.yimg.com/am/60d/ac4bb8b8eafc12b7a0b2ed252f91ad85"
             }
           ]
         }
@@ -11677,76 +11437,6 @@
           ]
         }
       ]
-    },
-    {
-      "incident_id": "20260714-FJ-EQ",
-      "tree_id": "06c9c020b3f85f05a26d27bd05728190",
-      "canonical_name": "Earthquake M5.5 Fiji region, Fiji 2026-07-14",
-      "summary": "",
-      "country": "Fiji",
-      "iso2": "FJ",
-      "lat": -20.748,
-      "lon": -178.5092,
-      "country_group": "B",
-      "region": "Oceania",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-07-14",
-      "first_reported_date": "2026-07-14",
-      "last_updated_date": "2026-07-16",
-      "days_since_event": 10,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 0,
-        "healthmap": 0,
-        "news": 2
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 5.5 - Fiji region",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t0hk",
-          "meta": "574.304 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 5.5,
-        "max_depth_km": 574.304,
-        "place": "Fiji region",
-        "felt": null,
-        "sig": 465,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "5.4-magnitude quake hits Fiji Islands region -- GFZ",
-          "url": "http://www.chinaview.cn/20260715/db86a556ee0a41caa0a876624a501ff2/c.html",
-          "outlet": "Xinhuanet",
-          "published_date": "2026-07-15"
-        },
-        {
-          "headline": "Urgent: 6.0-magnitude quake hits south of Fiji Islands -- GFZ",
-          "url": "http://www.chinaview.cn/20260716/f2ad15c21ca44935952e41c1c561036f/c.html",
-          "outlet": "Xinhuanet",
-          "published_date": "2026-07-16"
-        }
-      ],
-      "news_total": 2,
-      "logs": []
     },
     {
       "incident_id": "20260714-PH-EQ",

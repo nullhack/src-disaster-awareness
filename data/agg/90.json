@@ -2,32 +2,8 @@
   "schema_version": "1.4",
   "window": 90,
   "bucket": "day",
-  "as_of": "2026-07-23",
+  "as_of": "2026-07-24",
   "series": [
-    {
-      "date": "2026-04-25",
-      "sev": {
-        "CRITICAL": {
-          "e": 0,
-          "n": 0
-        },
-        "HIGH": {
-          "e": 0,
-          "n": 0
-        },
-        "MEDIUM": {
-          "e": 0,
-          "n": 0
-        },
-        "LOW": {
-          "e": 0,
-          "n": 0
-        }
-      },
-      "type": {},
-      "disease": {},
-      "region": {}
-    },
     {
       "date": "2026-04-26",
       "sev": {
@@ -3947,11 +3923,102 @@
       "sev": {
         "CRITICAL": {
           "e": 5,
-          "n": 469
+          "n": 468
         },
         "HIGH": {
           "e": 9,
-          "n": 313
+          "n": 314
+        },
+        "MEDIUM": {
+          "e": 10,
+          "n": 122
+        },
+        "LOW": {
+          "e": 0,
+          "n": 0
+        }
+      },
+      "type": {
+        "Disease": {
+          "e": 6,
+          "n": 229
+        },
+        "Flood": {
+          "e": 4,
+          "n": 59
+        },
+        "Volcano": {
+          "e": 2,
+          "n": 13
+        },
+        "Earthquake": {
+          "e": 8,
+          "n": 372
+        },
+        "Tropical Cyclone": {
+          "e": 1,
+          "n": 97
+        },
+        "Forest Fire": {
+          "e": 3,
+          "n": 134
+        }
+      },
+      "disease": {
+        "Covid-19": {
+          "e": 1,
+          "n": 19
+        },
+        "Ebola": {
+          "e": 2,
+          "n": 136
+        },
+        "Influenza": {
+          "e": 1,
+          "n": 5
+        },
+        "Measles": {
+          "e": 1,
+          "n": 39
+        }
+      },
+      "region": {
+        "Global": {
+          "e": 3,
+          "n": 54
+        },
+        "Asia": {
+          "e": 11,
+          "n": 248
+        },
+        "Africa": {
+          "e": 2,
+          "n": 136
+        },
+        "Americas": {
+          "e": 4,
+          "n": 281
+        },
+        "Europe": {
+          "e": 3,
+          "n": 134
+        },
+        "Oceania": {
+          "e": 1,
+          "n": 51
+        }
+      }
+    },
+    {
+      "date": "2026-07-24",
+      "sev": {
+        "CRITICAL": {
+          "e": 5,
+          "n": 468
+        },
+        "HIGH": {
+          "e": 9,
+          "n": 314
         },
         "MEDIUM": {
           "e": 10,
