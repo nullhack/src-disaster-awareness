@@ -22,6 +22,7 @@ from disaster_report.pipeline import (
 from disaster_report.reporting.markdown import MarkdownRenderer
 from disaster_report.reporting.report import build_report
 from disaster_report.sources.ddg_news import DuckDuckGoNewsAdapter
+from disaster_report.sources.ercc import ERCCAdapter
 from disaster_report.sources.gdacs import GDACSAdapter
 from disaster_report.sources.usgs import USGSAdapter
 from disaster_report.sources.who import WHODiseaseOutbreakAdapter
@@ -65,11 +66,12 @@ def _build_adapters(source: str | None) -> list[object]:
         USGSAdapter(),
         GDACSAdapter(),
         WHODiseaseOutbreakAdapter(),
+        ERCCAdapter(),
     ]
     if source is None:
         return all_adapters
     needle = source.upper()
-    names = ["USGS", "GDACS", "WHO"]
+    names = ["USGS", "GDACS", "WHO", "ERCC"]
     return [
         adapter
         for name, adapter in zip(names, all_adapters, strict=True)

@@ -499,7 +499,7 @@ def build_incident_object(store: ContentStore, inc: dict, as_of_date: datetime) 
 
     days_since = (as_of_date.date() - datetime.fromisoformat(event_date_short).date()).days if event_date_short else 0
 
-    source_counts = {"who_don": 0, "usgs": 0, "gdacs": 0, "healthmap": 0, "news": news_count}
+    source_counts = {"who_don": 0, "usgs": 0, "gdacs": 0, "ercc": 0, "healthmap": 0, "news": news_count}
     for r in reports:
         if r["source"] == "WHO":
             source_counts["who_don"] += 1
@@ -507,6 +507,8 @@ def build_incident_object(store: ContentStore, inc: dict, as_of_date: datetime) 
             source_counts["usgs"] += 1
         elif r["source"] == "GDACS":
             source_counts["gdacs"] += 1
+        elif r["source"] == "ERCC":
+            source_counts["ercc"] += 1
 
     source_links = []
     for r in reports:
@@ -539,6 +541,14 @@ def build_incident_object(store: ContentStore, inc: dict, as_of_date: datetime) 
                 "url": who_url,
                 "meta": "",
             })
+        elif r["source"] == "ERCC":
+            ercc_url = str(rf.get("link", ""))
+            source_links.append({
+                "type": "ERCC",
+                "label": str(rf.get("title", r["name"])),
+                "url": ercc_url,
+                "meta": "",
+            })
 
     type_code = "EQ" if inc_type == "Earthquake" else \
                 "FL" if inc_type == "Flood" else \
@@ -547,6 +557,8 @@ def build_incident_object(store: ContentStore, inc: dict, as_of_date: datetime) 
                 "VO" if inc_type == "Volcano" else \
                 "DR" if inc_type == "Drought" else \
                 "TS" if inc_type == "Tsunami" else \
+                "SW" if inc_type == "Severe Weather" else \
+                "CF" if inc_type == "Conflict" else \
                 "DI" if is_disease else "OT"
 
     date_part = event_date_short.replace("-", "") if event_date_short else "00000000"

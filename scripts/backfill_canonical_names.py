@@ -21,6 +21,7 @@ if str(_REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT))
 
 from disaster_report.models import ReportPlace
+from disaster_report.sources.ercc import _extract_canonical_name as _ercc_name
 from disaster_report.sources.gdacs import _extract_canonical_name as _gdacs_name
 from disaster_report.sources.usgs import _extract_canonical_name as _usgs_name
 from disaster_report.sources.who import _extract_canonical_name as _who_name
@@ -55,6 +56,8 @@ def _new_name(source: str, raw: dict[str, Any]) -> str:
         return _gdacs_name(raw_fields, places, report_date, incident_type)
     if source == "WHO":
         return _who_name(raw_fields, places, report_date, incident_type)
+    if source == "ERCC":
+        return _ercc_name(raw_fields, places, report_date, incident_type)
     return old_name
 
 
