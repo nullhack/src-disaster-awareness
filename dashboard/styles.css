@@ -583,6 +583,7 @@ code { font-family: var(--mono); font-size: .9em; }
 .log-entry__date { color: var(--rc-ink); white-space: nowrap; }
 .log-entry__count { color: var(--rc-muted); font-weight: 400; font-size: 11px; white-space: nowrap; }
 .log-entry__summary { font-size: 13px; line-height: 1.55; color: var(--rc-slate); padding: 4px 0 0 18px; }
+.log-entry--gap { text-align: center; color: var(--rc-muted); font-size: 16px; letter-spacing: 2px; padding: 6px 0; list-style: none; cursor: default; border-bottom: 1px solid var(--rc-line); }
 .keys { display: flex; flex-wrap: wrap; gap: 5px; }
 .keys code {
   font-size: 11px; background: var(--rc-bg); padding: 2px 7px; border-radius: 4px; color: var(--rc-slate);
