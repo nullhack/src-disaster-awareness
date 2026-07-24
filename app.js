@@ -315,7 +315,7 @@ async function renderMap() {
   const world = await ensureWorld();
   const countries = topojson.feature(world, world.objects.countries);
   const width = $("#worldMap").clientWidth || 800;
-  const height = 420;
+  const height = 320;
   svg.attr("viewBox", `0 0 ${width} ${height}`);
 
   _proj = d3.geoEqualEarth().fitExtent([[8, 8], [width - 8, height - 8]], countries);
@@ -425,7 +425,7 @@ function renderTrendPanel(svgSel, tooltipSel, tdata, series, bucket) {
   const t = STATE.trend;
   const perLbl = bucket === "week" ? "wk" : "d";
   const width = (document.querySelector(svgSel).clientWidth) || 520;
-  const height = 240, m = { t: 14, r: 16, b: 40, l: 40 };
+  const height = 200, m = { t: 14, r: 16, b: 40, l: 40 };
 
   const totals = series.map((s) => ({ key: s.key, color: s.color, total: d3.sum(s.values, (v) => v.count), peak: d3.max(s.values, (v) => v.count) || 0 }));
   totals.sort((a, b) => b.total - a.total);
@@ -734,14 +734,14 @@ function renderRecentActivity() {
       <span class="recent-stats__total"><b>${events.length}</b> events</span>
       <span class="recent-stats__since">since ${cutoffLbl}</span>
       <span class="recent-stats__breakdown">
-        <span class="recent-stats__chip recent-badge--new">NEW ${newCt}</span>
+        <span class="recent-stats__chip recent-badge--new">OPENED ${newCt}</span>
         <span class="recent-stats__chip recent-badge--log">LOG ${logCt}</span>
-        <span class="recent-stats__chip recent-badge--news">NEWS ${newsCt}</span>
+        <span class="recent-stats__chip recent-badge--news">ARTICLES ${newsCt}</span>
       </span>
     </div>`;
 
   const BADGE = { NEW: "recent-badge--new", LOG: "recent-badge--log", NEWS: "recent-badge--news" };
-  const LABEL = { NEW: "NEW", LOG: "LOG", NEWS: "NEWS" };
+  const LABEL = { NEW: "OPENED", LOG: "LOG", NEWS: "ARTICLES" };
   $("#recentFeed").innerHTML = events.map((e) => {
     const tsLbl = (e.ts || "").slice(0, 16).replace("T", " ") || "—";
     const name = e.incident_name || e.detail;
