@@ -1,24 +1,24 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-07-20",
-  "generated_at": "2026-07-24T15:13:28Z",
+  "generated_at": "2026-07-24T20:47:05Z",
   "as_of": "2026-07-20",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 16,
+    "reportable_total": 15,
     "new_today": 3,
     "critical": 3,
-    "high": 5,
+    "high": 4,
     "medium": 8,
     "low": 0,
     "disease_outbreaks": 0,
     "countries_affected": 12,
-    "news_total": 327,
+    "news_total": 313,
     "max_magnitude": 7.8,
     "by_severity": {
       "CRITICAL": 3,
-      "HIGH": 5,
+      "HIGH": 4,
       "MEDIUM": 8,
       "LOW": 0
     },
@@ -26,12 +26,12 @@
       "Flood": 3,
       "Volcano": 2,
       "Drought": 1,
-      "Earthquake": 8,
+      "Earthquake": 7,
       "Tropical Cyclone": 1,
       "Forest Fire": 1
     },
     "by_region": {
-      "Asia": 10,
+      "Asia": 9,
       "Europe": 2,
       "Oceania": 2,
       "Americas": 2
@@ -40,7 +40,7 @@
   "by_country": [
     {
       "country": "Philippines",
-      "count": 4,
+      "count": 3,
       "max_sev_rank": 2,
       "iso2": "PH",
       "region": "Asia",
@@ -2547,261 +2547,6 @@
       "news_total": 2,
       "logs": [],
       "logs_total": 0
-    },
-    {
-      "incident_id": "20260714-PH-EQ",
-      "tree_id": "6b641167ea035850822c4c571885d00d",
-      "canonical_name": "Earthquake M6.2 Sarangani, Philippines 2026-07-14",
-      "summary": "Following the M6.2 earthquake near Sarangani, the Eastern Mindanao Command placed its disaster response units on standby to assist local governments. Suzuki Philippines extended assistance to employees of two dealerships in General Santos City to support their recovery.",
-      "country": "Philippines",
-      "iso2": "PH",
-      "lat": 5.3269,
-      "lon": 125.1655,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "HIGH",
-      "priority": "HIGH",
-      "priority_rank": 1,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-07-14",
-      "first_reported_date": "2026-07-14",
-      "last_updated_date": "2026-07-19",
-      "days_since_event": 10,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 14
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 6.2 - 34 km WSW of Sarangani, Philippines",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t0d0",
-          "meta": "67.854 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 6.2,
-        "max_depth_km": 67.854,
-        "place": "34 km WSW of Sarangani, Philippines",
-        "felt": 62,
-        "sig": 628,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Suzuki extends assistance to earthquake-affected dealership employees in GenSan",
-          "published_date": "2026-07-01"
-        },
-        {
-          "headline": "BMKG: M6.2 Earthquake Strikes Mindanao, No Tsunami Threat",
-          "published_date": "2026-07-09T07:18:32+00:00"
-        },
-        {
-          "headline": "Seismic Activity Shakes Mindanao: A Closer Look",
-          "published_date": "2026-07-11T07:18:32+00:00"
-        },
-        {
-          "headline": "Magnitude 6.3 earthquake strikes off the coast of Balut Island, Sarangani, Davao Occidental",
-          "published_date": "2026-07-14T16:15:00+00:00"
-        },
-        {
-          "headline": "Earthquake of magnitude 6.05 strikes Philippines' Mindanao",
-          "published_date": "2026-07-14T16:16:00+00:00"
-        },
-        {
-          "headline": "No unusual sea-level changes observed following strong earthquake off Balut Island, says PHIVOLCS",
-          "published_date": "2026-07-14T22:01:29+00:00"
-        },
-        {
-          "headline": "Phivolcs: Tremors observed in Masbate, Davao Occidental",
-          "published_date": "2026-07-15T02:02:00+00:00"
-        },
-        {
-          "headline": "Magnitude 6.3 earthquake strikes off the coast of Balut Island, Sarangani, Davao Occidental",
-          "published_date": "2026-07-15T06:42:11+00:00"
-        },
-        {
-          "headline": "Magnitude 6.2 earthquake strikes off southern Philippines following series of Ring of Fire quakes",
-          "published_date": "2026-07-15T06:42:11+00:00"
-        },
-        {
-          "headline": "No unusual sea-level changes observed following strong earthquake off Balut Island, says PHIVOLCS",
-          "published_date": "2026-07-15T06:42:11+00:00"
-        },
-        {
-          "headline": "Minor sea level disturbance may occur after strong earthquake off the coast of Balut Island, Davao Occidental — PHIVOLCS",
-          "published_date": "2026-07-15T06:42:11+00:00"
-        },
-        {
-          "headline": "6.2-magnitude earthquake strikes Pacific Ring of Fire: Normal activity or warning of a megaquake? Explained",
-          "published_date": "2026-07-15T07:18:33+00:00"
-        },
-        {
-          "headline": "Eastmincom’s disaster response units on standby for rescue ops",
-          "published_date": "2026-07-18T08:29:31+00:00"
-        },
-        {
-          "headline": "Suzuki Philippines sends relief to General Santos dealership workers",
-          "published_date": "2026-07-19"
-        }
-      ],
-      "news_total": 14,
-      "logs": [
-        {
-          "log_date": "2026-07-15",
-          "summary": "A magnitude 6.2 earthquake struck 34 km southwest of Sarangani, Philippines on July 14, 2026, at 11:49 pm local time, with a depth of approximately 10 km. The Philippine Institute of Volcanology and Seismology (PHIVOLCS) initially recommended caution for minor sea-level disturbances but later cancelled the advisory, confirming no unusual sea-level changes and no tsunami threat from the event.",
-          "news": [
-            {
-              "news_id": "edc72b9c57aa57b29ee619241ab57e65",
-              "url": "https://newsinfo.inquirer.net/2263979/phivolcs-tremors-observed-in-masbate-davao-occidental",
-              "headline": "Phivolcs: Tremors observed in Masbate, Davao Occidental",
-              "body": "Maps released by the state seismology bureau indicate the epicenters of tremors in Masbate (left) and Davao Occidental, which occurred on July 14 and 15, respectively. — Photos from",
-              "published_date": "2026-07-15T02:02:00+00:00",
-              "outlet": "Inquirer.net",
-              "image": "https://newsinfo.inquirer.net/files/2026/07/earthquake.png"
-            },
-            {
-              "news_id": "33b294c86fcc55e2a27f5480872ef320",
-              "url": "https://www.msn.com/en-ph/news/national/magnitude-63-earthquake-struck-off-the-coast-of-balut-island-sarangani-davao-occidental/ar-AA27Uikr?ocid=BingNewsVerp",
-              "headline": "Magnitude 6.3 earthquake strikes off the coast of Balut Island, Sarangani, Davao Occidental",
-              "body": "A magnitude 6.3 earthquake struck southwest of Balut Island, Sarangani, Davao Occidental late Tuesday evening, the Philippine ...",
-              "published_date": "2026-07-15T06:42:11+00:00",
-              "outlet": "GMA News Online on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.9riz-CdojH7gvRmBpssKpw"
-            },
-            {
-              "news_id": "c98b8387615d50559c743c85f500edd2",
-              "url": "https://www.msn.com/en-in/lifestyle/whats-hot/62-magnitude-earthquake-strikes-pacific-ring-of-fire-normal-activity-or-warning-of-a-megaquake-explained/ar-AA27UAMb?ocid=BingNewsVerp",
-              "headline": "6.2-magnitude earthquake strikes Pacific Ring of Fire: Normal activity or warning of a megaquake? Explained",
-              "body": "A magnitude 6.2 earthquake struck off the southern Philippines near Mindanao, recorded at a depth of 42.2 miles.",
-              "published_date": "2026-07-15T07:18:33+00:00",
-              "outlet": "Hindustan Times on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.w5q7kHWQnLq2cc6pYDwp5w"
-            },
-            {
-              "news_id": "2d2b74738d9c53eca61f01c95d86b9bd",
-              "url": "https://www.msn.com/en-us/news/world/magnitude-62-earthquake-strikes-off-southern-philippines-following-series-of-ring-of-fire-quakes/ar-AA27TNHy?ocid=BingNewsVerp",
-              "headline": "Magnitude 6.2 earthquake strikes off southern Philippines following series of Ring of Fire quakes",
-              "body": "A magnitude 6.2 earthquake struck off the coast of the southern Philippines late Tuesday night.",
-              "published_date": "2026-07-15T06:42:11+00:00",
-              "outlet": "FOX Weather on MSN",
-              "image": "https://www.bing.com/th?id=ORMS.7ab5578986001a44cbe3cd82397dba50"
-            },
-            {
-              "news_id": "994254a4148b5d7bbc21964ea15e15f0",
-              "url": "https://www.khaleejtimes.com/world/asia/earthquake-of-magnitude-605-strikes-philippines-mindanao",
-              "headline": "Earthquake of magnitude 6.05 strikes Philippines' Mindanao",
-              "body": "A magnitude 6.05 earthquake struck Mindanao in the Philippines on Tuesday, according to a Institute of Volcanology and Seismology (Phivolcs) bulletin. The quake was at a depth of 10 km (6.21 miles), and it struck on July 14 at 11:49pm local time.",
-              "published_date": "2026-07-14T16:16:00+00:00",
-              "outlet": "Khaleej Times",
-              "image": "https://imgengine.khaleejtimes.com/khaleejtimes-english/2026-07-14/erh22y30/earthquake.jpeg?width=1200&height=630&q=60&format=auto&ogImage=true&mode=crop&rect=34,0,486,324"
-            },
-            {
-              "news_id": "f4153ef680425ede83436c8be8afb082",
-              "url": "https://www.msn.com/en-ph/news/other/no-unusual-sea-level-changes-observed-following-strong-earthquake-says-phivolcs/ar-AA27UAFk",
-              "headline": "No unusual sea-level changes observed following strong earthquake off Balut Island, says PHIVOLCS",
-              "body": "The recommendation for minor sea-level disturbances for the strong earthquake that occurred on Tuesday, July 14, 2026 has been cancelled, the Philippine Institute of Volcanology and Seismology (PHIVOLCS) reported.",
-              "published_date": "2026-07-14T22:01:29+00:00",
-              "outlet": "GMA News Online",
-              "image": "https://images.gmanews.tv/webpics/2022/07/phivolcs_building_2022_07_27_19_42_29.jpg"
-            },
-            {
-              "news_id": "aa7dc684c246561ca6d2214cb701cf27",
-              "url": "https://en.tempo.co/read/2113729/bmkg-m6-2-earthquake-strikes-mindanao-no-tsunami-threat",
-              "headline": "BMKG: M6.2 Earthquake Strikes Mindanao, No Tsunami Threat",
-              "body": "Indonesian Meteorology, Climatology, and Geophysics Agency (BMKG) reported a tectonic earthquake shaking the Mindanao region, ...",
-              "published_date": "2026-07-09T07:18:32+00:00",
-              "outlet": "Tempo.co English",
-              "image": "https://www.bing.com/th?id=ONUT.sVjmfenuQdX0-eWZFiP8PQ"
-            },
-            {
-              "news_id": "3a6275ff56a75d3a925b065a921df41b",
-              "url": "https://www.msn.com/en-ph/news/national/no-unusual-sea-level-changes-observed-following-strong-earthquake-off-balut-island-says-phivolcs/ar-AA27UAFk?ocid=BingNewsVerp",
-              "headline": "No unusual sea-level changes observed following strong earthquake off Balut Island, says PHIVOLCS",
-              "body": "The recommendation for minor sea-level disturbances for the strong earthquake that occurred on Tuesday, July 14, 2026 has been cancelled, the Philippine Institute of Volcanology and Seismology ...",
-              "published_date": "2026-07-15T06:42:11+00:00",
-              "outlet": "GMA Network on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "0085f738b2d359cfb9cfee2601997439",
-              "url": "https://www.msn.com/en-ph/news/national/minor-sea-level-disturbance-reported-after-strong-earthquake-off-the-coast-of-balut-island-davao-occidental/ar-AA27UC12?ocid=BingNewsVerp",
-              "headline": "Minor sea level disturbance may occur after strong earthquake off the coast of Balut Island, Davao Occidental — PHIVOLCS",
-              "body": "A minor sea level disturbance may be expected following the magnitude 6.5 earthquake that struck off the coast of Balut ...",
-              "published_date": "2026-07-15T06:42:11+00:00",
-              "outlet": "GMA News Online on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.f8_KuGs538bvv2nZt09lQg"
-            },
-            {
-              "news_id": "3b1b86fc5b125506aa54c07181e7eba3",
-              "url": "https://www.devdiscourse.com/article/science-environment/3950243-seismic-activity-shakes-mindanao-a-closer-look",
-              "headline": "Seismic Activity Shakes Mindanao: A Closer Look",
-              "body": "A 6.05 magnitude earthquake struck Mindanao, Philippines, on Tuesday. The German Research Centre for Geosciences reported the quake, which had a depth of 10 km. The event highlights the region's ...",
-              "published_date": "2026-07-11T07:18:32+00:00",
-              "outlet": "devdiscourse",
-              "image": ""
-            },
-            {
-              "news_id": "e9ade98d8edf5dfb98c2805ca7700fdf",
-              "url": "https://www.msn.com/en-ph/news/national/magnitude-63-earthquake-struck-off-the-coast-of-balut-island-sarangani-davao-occidental/ar-AA27Uikr",
-              "headline": "Magnitude 6.3 earthquake strikes off the coast of Balut Island, Sarangani, Davao Occidental",
-              "body": "A magnitude 6.3 earthquake struck southwest of Balut Island, Sarangani, Davao Occidental late Tuesday evening, the Philippine Institute of Volcanology and Seismology (PHIVOLCS) reported. PHIVOLCS earlier reported that a magnitude 6.",
-              "published_date": "2026-07-14T16:15:00+00:00",
-              "outlet": "GMA News Online",
-              "image": "https://images.gmanews.tv/webpics/2026/07/Magnitude_6_2026_07_15_00_14_43.jpg"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-20",
-          "summary": "Following the M6.2 earthquake near Sarangani, the Eastern Mindanao Command placed its disaster response units on standby to assist local governments. Suzuki Philippines extended assistance to employees of two dealerships in General Santos City to support their recovery.",
-          "news": [
-            {
-              "news_id": "b3d3bc8750b451fea0bd73918612493c",
-              "url": "https://www.manilatimes.net/2026/07/21/tmt-newswire/suzuki-extends-assistance-to-earthquake-affected-dealership-employees-in-gensan/2387454",
-              "headline": "Suzuki extends assistance to earthquake-affected dealership employees in GenSan",
-              "body": "FOLLOWING the recent earthquake that affected parts of Mindanao, Suzuki Philippines immediately extended assistance to employees of Suzuki Auto General Santos and Suzuki Auto SM City General Santos to help support them during the initial stages of recovery.",
-              "published_date": "2026-07-01",
-              "outlet": "The Manila Times",
-              "image": ""
-            },
-            {
-              "news_id": "cd432add4d7a5e76a8f7631c551e2aca",
-              "url": "https://www.sunstar.com.ph/davao/eastmincoms-disaster-response-units-on-standby-for-rescue-ops",
-              "headline": "Eastmincom’s disaster response units on standby for rescue ops",
-              "body": "THE Eastern Mindanao Command (Eastmincom) has placed its disaster response units on standby to augment local government ...",
-              "published_date": "2026-07-18T08:29:31+00:00",
-              "outlet": "SunStar",
-              "image": "https://www.bing.com/th?id=ONUT.6ZtYTRRviXbquogtSoFDQw"
-            },
-            {
-              "news_id": "6838979dca81521e9dadad7608db8d14",
-              "url": "https://mb.com.ph/2026/07/19/suzuki-philippines-sends-relief-to-general-santos-dealership-workers",
-              "headline": "Suzuki Philippines sends relief to General Santos dealership workers",
-              "body": "Suzuki Philippines provided assistance to employees of two dealerships in General Santos City following the major earthquake that struck the waters off...",
-              "published_date": "2026-07-19",
-              "outlet": "Manila Bulletin",
-              "image": "https://www.bing.com/th?id=ONUT.6aoDKxLKHsGc6E428A9lDg"
-            }
-          ]
-        }
-      ],
-      "logs_total": 2
     },
     {
       "incident_id": "20260716-NZ-EQ",

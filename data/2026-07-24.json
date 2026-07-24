@@ -1,32 +1,32 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-07-24",
-  "generated_at": "2026-07-24T15:13:28Z",
+  "generated_at": "2026-07-24T20:47:05Z",
   "as_of": "2026-07-24",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 27,
-    "new_today": 8,
-    "critical": 5,
-    "high": 11,
-    "medium": 11,
+    "reportable_total": 28,
+    "new_today": 11,
+    "critical": 6,
+    "high": 10,
+    "medium": 12,
     "low": 0,
     "disease_outbreaks": 5,
     "countries_affected": 17,
-    "news_total": 1040,
+    "news_total": 1100,
     "max_magnitude": 7.5,
     "by_severity": {
-      "CRITICAL": 5,
-      "HIGH": 11,
-      "MEDIUM": 11,
+      "CRITICAL": 6,
+      "HIGH": 10,
+      "MEDIUM": 12,
       "LOW": 0
     },
     "by_type": {
       "Disease": 5,
       "Flood": 4,
       "Volcano": 2,
-      "Earthquake": 9,
+      "Earthquake": 10,
       "Tropical Cyclone": 1,
       "Forest Fire": 4,
       "Severe Weather": 1,
@@ -39,7 +39,7 @@
       "Americas": 5,
       "Europe": 5,
       "Unknown": 1,
-      "Oceania": 1
+      "Oceania": 2
     }
   },
   "by_country": [
@@ -77,6 +77,15 @@
       "iso2": "VE",
       "region": "Americas",
       "country_group": "C",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "New Zealand",
+      "count": 2,
+      "max_sev_rank": 2,
+      "iso2": "NZ",
+      "region": "Oceania",
+      "country_group": "B",
       "max_severity": "MEDIUM"
     },
     {
@@ -179,15 +188,6 @@
       "max_severity": "HIGH"
     },
     {
-      "country": "New Zealand",
-      "count": 1,
-      "max_sev_rank": 4,
-      "iso2": "NZ",
-      "region": "Oceania",
-      "country_group": "B",
-      "max_severity": "LOW"
-    },
-    {
       "country": "Guatemala",
       "count": 1,
       "max_sev_rank": 4,
@@ -202,7 +202,7 @@
       "incident_id": "20240530-XX-DI",
       "tree_id": "f4579a0976695da8abd83ef84f8e0fb1",
       "canonical_name": "Dengue Global 2024-05-30",
-      "summary": "Two native dengue fever outbreaks were recorded in southern France for the first time in 2026. In Malaysia, Subang Jaya City Council reported a 25% increase in dengue cases compared to the same period last year.",
+      "summary": "A study from Universitas Gadjah Mada estimates the economic burden of dengue in Indonesia reached nearly Rp9 trillion in 2024, with over 2 million recorded inpatient cases. Separately, Earth (Thailand) celebrated five years of dengue-fighting initiatives as a title sponsor of the Mae Hong Son Cross Country 2026.",
       "country": "",
       "iso2": "XX",
       "lat": null,
@@ -221,7 +221,7 @@
       "disease_name": null,
       "event_date": "2024-05-30",
       "first_reported_date": "2024-05-30",
-      "last_updated_date": "2026-07-23",
+      "last_updated_date": "2026-07-24",
       "days_since_event": 785,
       "source_count": 1,
       "should_report": false,
@@ -232,7 +232,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 31
+        "news": 32
       },
       "source_links": [
         {
@@ -376,9 +376,13 @@
         {
           "headline": "MBSJ sees 25% rise in dengue cases",
           "published_date": "2026-07-23"
+        },
+        {
+          "headline": "Fantastis! Beban Ekonomi akibat DBD di Indonesia Nyaris Rp9 Triliun pada 2024",
+          "published_date": "2026-07-24"
         }
       ],
-      "news_total": 31,
+      "news_total": 32,
       "logs": [
         {
           "log_date": "2026-07-08",
@@ -410,48 +414,6 @@
               "published_date": "2026-07-08T14:57:06+00:00",
               "outlet": "Medscape",
               "image": ""
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-19",
-          "summary": "Sri Lanka is intensifying a military-backed anti-dengue drive as the death toll from the disease has climbed to 49 since the start of the year, according to a senior official.",
-          "news": [
-            {
-              "news_id": "d7b8b1d10cf4561cb3b32b0c01737f7b",
-              "url": "https://medicalxpress.com/news/2026-07-sri-lanka-anti-dengue-deaths.html",
-              "headline": "Sri Lanka expands anti-dengue drive as deaths mount",
-              "body": "Sri Lanka is intensifying a military-backed drive to contain the spread of mosquito-borne dengue fever, a senior official said Wednesday, as the death toll climbed to 49 since the start of the year.",
-              "published_date": "2026-07-15",
-              "outlet": "Medical Xpress",
-              "image": "https://scx2.b-cdn.net/gfx/news/hires/2025/dengue.jpg"
-            },
-            {
-              "news_id": "a55e117003c0552f8fa83fda4decaa1d",
-              "url": "https://www.mirror.co.uk/news/health/ukhsa-travel-illness-warning-more-37444934",
-              "headline": "UKHSA travel illness warning as more than 1,000 cases so far this year",
-              "body": "Brits have been urged to stay safe while abroad as new data shows more than 1,000 travel-associated illnesses have been ...",
-              "published_date": "2026-07-18T03:46:52+00:00",
-              "outlet": "The Mirror",
-              "image": "https://www.bing.com/th?id=ONUT.vxIK5hRIM0VoZ61OmpzMMA"
-            },
-            {
-              "news_id": "87f3d75595e25a02b6687e2f0e75c76c",
-              "url": "https://www.moneycontrol.com/news/trends/this-tiny-drone-doesn-t-deliver-packages-it-kills-mosquitoes-13976724.html",
-              "headline": "This tiny drone doesn't deliver packages. It kills mosquitoes- Moneycontrol.com",
-              "body": "A French startup's autonomous microdrone can detect, track and strike mosquitoes in flight, offering a potential new approach to chemical-free mosquito control.",
-              "published_date": "2026-07-17",
-              "outlet": "Moneycontrol",
-              "image": "https://images.moneycontrol.com/static-mcnews/2026/07/20260717085946_mosq.png"
-            },
-            {
-              "news_id": "4065b800af575da69d733a4176e2a211",
-              "url": "https://www.msn.com/en-in/entertainment/news/mosquito-killer-drone-this-40-gram-palm-sized-ai-micro-drone-kills-flying-insects-and-could-one-day-help-eradicate-mosquitoes/ar-AA2822KE",
-              "headline": "Mosquito Killer Drone This 40 Gram Palm Sized Ai Micro Drone Kills Flying Insects And Could One Day Help Eradicate Mosquitoes",
-              "body": "Mosquito killer drone: A palm-sized AI micro-drone has autonomously detected, tracked and intercepted a flying moth in mid-air, marking a significant engineering milestone. The technology could one day help target disease-carrying mosquitoes without relying on chemical insecticides.",
-              "published_date": "2026-07-19",
-              "outlet": "The Economic Times",
-              "image": "https://img.etimg.com/thumb/msid-132435453,width-1200,height-630,imgsize-1068444,overlay-economictimes/articleshow.jpg"
             }
           ]
         },
@@ -610,9 +572,42 @@
               "image": "https://scpr.brightspotcdn.com/dims4/default/62ea32f/2147483647/strip/true/crop/5712x2999+0+654/resize/1200x630!/quality/90/?url=http://scpr-brightspot.s3.us-west-2.amazonaws.com/3d/a5/7a726f3941c2a83c9d74a87f05bf/img-7940.jpeg"
             }
           ]
+        },
+        {
+          "log_date": "2026-07-24",
+          "summary": "A study from Universitas Gadjah Mada estimates the economic burden of dengue in Indonesia reached nearly Rp9 trillion in 2024, with over 2 million recorded inpatient cases. Separately, Earth (Thailand) celebrated five years of dengue-fighting initiatives as a title sponsor of the Mae Hong Son Cross Country 2026.",
+          "news": [
+            {
+              "news_id": "27710ad0edbd5cbd9fb85ad9915376d5",
+              "url": "https://www.inews.id/news/nasional/fantastis-beban-ekonomi-akibat-dbd-di-indonesia-nyaris-rp9-triliun-pada-2024",
+              "headline": "Fantastis! Beban Ekonomi akibat DBD di Indonesia Nyaris Rp9 Triliun pada 2024",
+              "body": "Studi UGM mengungkap beban ekonomi DBD di Indonesia mencapai hampir Rp9 triliun pada 2024 dengan lebih dari 2 juta kasus rawat inap.",
+              "published_date": "2026-07-24",
+              "outlet": "iNews ID",
+              "image": "https://www.bing.com/th?id=ONUT.TY-2KnM0HvseN5BCHfVfIw"
+            },
+            {
+              "news_id": "98ca38f991d254f089dee2364b24b7df",
+              "url": "https://www.newswit.com/en/ier4auweyjcxkqarb7dqidecfsdidocq",
+              "headline": "Earth (Thailand) Celebrates 5 Years of Fighting Dengue as Title Sponsor of 'Mae Hong Son Cross Country 2026'",
+              "body": "Earth (Thailand) Celebrates 5 Years of Fighting Dengue as Title Sponsor of 'Mae Hong Son Cross Country 2026'",
+              "published_date": "2015-11-12",
+              "outlet": "newswit",
+              "image": "https://www.bing.com/th?id=ONUT.9gCFWXg8Vgf4pOEclANAzw"
+            },
+            {
+              "news_id": "a980376094b55195852f94bfff8466dd",
+              "url": "https://www.news18.com/india/india-first-dengue-vaccine-dcgi-approves-takeda-qdenga-takeda-biopharmaceuticals-ws-l-10222733.html",
+              "headline": "India Approves First Dengue Vaccine QDENGA For Ages 4-60, No Pre-Vaccination Tests Required",
+              "body": "India has approved its first dengue vaccine after DCGI granted market authorisation to Takeda's QDENGA. The vaccine is approved for people aged 4-60 years.",
+              "published_date": "2026-07-20",
+              "outlet": "News18",
+              "image": ""
+            }
+          ]
         }
       ],
-      "logs_total": 6
+      "logs_total": 7
     },
     {
       "incident_id": "20250528-XX-DI",
@@ -648,7 +643,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 22
+        "news": 23
       },
       "source_links": [
         {
@@ -750,6 +745,10 @@
           "published_date": "2026-07-24"
         },
         {
+          "headline": "COVID-19 is on the upswing in California. How bad will it get this summer?",
+          "published_date": "2026-07-24"
+        },
+        {
           "headline": "How well did Ireland deal with Covid? Patterns emerge ahead of final report",
           "published_date": "2026-07-24"
         },
@@ -758,7 +757,7 @@
           "published_date": "2026-07-24T14:22:10+00:00"
         }
       ],
-      "news_total": 22,
+      "news_total": 23,
       "logs": [
         {
           "log_date": "2026-07-08",
@@ -1228,7 +1227,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 139
+        "news": 140
       },
       "source_links": [
         {
@@ -1852,6 +1851,10 @@
           "published_date": "2026-07-23T08:58:44+00:00"
         },
         {
+          "headline": "What experts are saying as Ebola outbreak in Congo and Uganda kills more than 1,000 people",
+          "published_date": "2026-07-24"
+        },
+        {
           "headline": "What experts are saying as Ebola outbreak in Congo and Uganda kills more that 1,000 people",
           "published_date": "2026-07-24"
         },
@@ -1860,7 +1863,7 @@
           "published_date": "2026-07-24T14:23:26+00:00"
         }
       ],
-      "news_total": 139,
+      "news_total": 140,
       "logs": [
         {
           "log_date": "2026-07-10",
@@ -2984,7 +2987,7 @@
         "gdacs": 1,
         "ercc": 0,
         "healthmap": 0,
-        "news": 7
+        "news": 8
       },
       "source_links": [
         {
@@ -3005,6 +3008,10 @@
         "gdacs_population": null
       },
       "news": [
+        {
+          "headline": "Mount Lewotobi Laki-laki Erupts Again Tonight (Saturday, 25 July 2026) | Pusat Data Ekonomi dan Bisnis Indonesia | Databoks",
+          "published_date": "2026-07-01"
+        },
         {
           "headline": "60 cm of snow in June? How a volcano half a world away stole Canada's summer",
           "published_date": "2026-07-08T19:01:18+00:00"
@@ -3034,7 +3041,7 @@
           "published_date": "2026-07-23"
         }
       ],
-      "news_total": 7,
+      "news_total": 8,
       "logs": [
         {
           "log_date": "2026-07-08",
@@ -4454,7 +4461,7 @@
       "incident_id": "20260624-VE-EQ",
       "tree_id": "387baafc1c6b5a0391293c7f917b5333",
       "canonical_name": "Earthquake M7.2 San Felipe, Venezuela 2026-06-24",
-      "summary": "Spanish insurer Mapfre estimated losses from the June 24 earthquakes at €25 million, as reported in a new financial update. Meanwhile, a local story highlights false hope from fake news about survivors, and a grandfather continues searching for his missing grandson.\nAs of July 24, one month after the twin earthquakes, the death toll tops 5,300 with tens of thousands still missing and residents conducting their own searches as government clearance threatens to proceed before families recover loved ones. Reports highlight how poverty divides even in death, with the poor disproportionately affected, and Venezuela's inability to access $4 billion in gold reserves hampers recovery efforts.",
+      "summary": "Spanish insurer Mapfre estimated losses from the June 24 earthquakes at €25 million, as reported in a new financial update. Meanwhile, a local story highlights false hope from fake news about survivors, and a grandfather continues searching for his missing grandson.\nAs of July 24, one month after the twin earthquakes, the death toll tops 5,300 with tens of thousands still missing and residents conducting their own searches as government clearance threatens to proceed before families recover loved ones. Reports highlight how poverty divides even in death, with the poor disproportionately affected, and Venezuela's inability to access $4 billion in gold reserves hampers recovery efforts.\nOne month after the twin earthquakes, family members and volunteers continue desperate searches through rubble, with the confirmed death toll reported at over 5,300. Relief efforts from organizations like GEM in South Florida persist, while local and international media highlight the ongoing challenges of rebuilding and recovery.",
       "country": "Venezuela",
       "iso2": "VE",
       "lat": 10.4085,
@@ -4484,7 +4491,7 @@
         "gdacs": 1,
         "ercc": 0,
         "healthmap": 0,
-        "news": 180
+        "news": 185
       },
       "source_links": [
         {
@@ -5098,6 +5105,10 @@
           "published_date": "2026-07-19T14:26:04+00:00"
         },
         {
+          "headline": "Venezuela’s Official Death Toll From Twin Quakes Rises to 5,208",
+          "published_date": "2026-07-19T20:02:45+00:00"
+        },
+        {
           "headline": "Cat rescued from Venezuela earthquake rubble as death toll tops 5,200",
           "published_date": "2026-07-20"
         },
@@ -5222,6 +5233,10 @@
           "published_date": "2026-07-24"
         },
         {
+          "headline": "A month on from devastating double earthquakes, Venezuelans are barely able to rebuild their lives",
+          "published_date": "2026-07-24"
+        },
+        {
           "headline": "World Bank estimates Venezuela quakes caused $19.6 bn in damage",
           "published_date": "2026-07-24"
         },
@@ -5234,11 +5249,23 @@
           "published_date": "2026-07-24"
         },
         {
+          "headline": "GEM relief efforts in Doral continue for Venezuela one month after deadly earthquakes - WSVN 7News | Miami News, Weather, Sports | Fort Lauderdale",
+          "published_date": "2026-07-24"
+        },
+        {
           "headline": "1 month since Venezuela earthquakes; tens of thousands remain missing",
           "published_date": "2026-07-24"
+        },
+        {
+          "headline": "BBC Audio | Outside Source | Venezuela twin earthquakes one month on",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "The aftermath of devastation to Venezuela",
+          "published_date": "2026-07-24T18:02:45+00:00"
         }
       ],
-      "news_total": 180,
+      "news_total": 185,
       "logs": [
         {
           "log_date": "2026-06-28",
@@ -5683,7 +5710,7 @@
         },
         {
           "log_date": "2026-07-24",
-          "summary": "Spanish insurer Mapfre estimated losses from the June 24 earthquakes at €25 million, as reported in a new financial update. Meanwhile, a local story highlights false hope from fake news about survivors, and a grandfather continues searching for his missing grandson.\nAs of July 24, one month after the twin earthquakes, the death toll tops 5,300 with tens of thousands still missing and residents conducting their own searches as government clearance threatens to proceed before families recover loved ones. Reports highlight how poverty divides even in death, with the poor disproportionately affected, and Venezuela's inability to access $4 billion in gold reserves hampers recovery efforts.",
+          "summary": "Spanish insurer Mapfre estimated losses from the June 24 earthquakes at €25 million, as reported in a new financial update. Meanwhile, a local story highlights false hope from fake news about survivors, and a grandfather continues searching for his missing grandson.\nAs of July 24, one month after the twin earthquakes, the death toll tops 5,300 with tens of thousands still missing and residents conducting their own searches as government clearance threatens to proceed before families recover loved ones. Reports highlight how poverty divides even in death, with the poor disproportionately affected, and Venezuela's inability to access $4 billion in gold reserves hampers recovery efforts.\nOne month after the twin earthquakes, family members and volunteers continue desperate searches through rubble, with the confirmed death toll reported at over 5,300. Relief efforts from organizations like GEM in South Florida persist, while local and international media highlight the ongoing challenges of rebuilding and recovery.",
           "news": [
             {
               "news_id": "c3337488b9035753b72d73bf9fae8bcc",
@@ -5702,6 +5729,15 @@
               "published_date": "2026-07-24",
               "outlet": "The Manila Times on MSN",
               "image": "https://www.bing.com/th?id=ONUT.py9yv_EaRA-VrrU5Ym-kjA"
+            },
+            {
+              "news_id": "a32c7253dc085c229a1ae03fa4e8c11c",
+              "url": "https://apnews.com/video/a-month-on-from-devastating-double-earthquakes-venezuelans-are-barely-able-to-rebuild-their-lives-0b2cbc61e3be419aa54856c721640f48",
+              "headline": "A month on from devastating double earthquakes, Venezuelans are barely able to rebuild their lives",
+              "body": "One month after devastating twin earthquake that struck Venezuela on June 24, family members and volunteers continue their desperate search for victims amid the ruins of collapsed buildings.",
+              "published_date": "2026-07-24",
+              "outlet": "Associated Press News",
+              "image": "https://www.bing.com/th?id=ONUT.onzdRJDJ2Ytek7zm80SsUw"
             },
             {
               "news_id": "3bc77257e76d51c890e90d0e984fcafc",
@@ -5731,6 +5767,15 @@
               "image": "https://www.bing.com/th?id=ONUT.vVgm63Xn6WzSv7YN80LKNg"
             },
             {
+              "news_id": "761473fe61985d73b16a7ad799d1ac57",
+              "url": "https://wsvn.com/news/us-world/gem-relief-efforts-in-doral-continue-for-venezuela-one-month-after-deadly-earthquakes/",
+              "headline": "GEM relief efforts in Doral continue for Venezuela one month after deadly earthquakes - WSVN 7News | Miami News, Weather, Sports | Fort Lauderdale",
+              "body": "DORAL, FLA. (WSVN) - Volunteers in South Florida continue working on their mission to help victims of the devastating earthquakes in Venezuela.Inside of the Global<a class=\"excerpt-read-more\" href=\"https://wsvn.com/news/us-world/gem-relief-efforts-in-doral-continue-for-venezuela-one-month-after-deadly-earthquakes/\">Read More</a>",
+              "published_date": "2026-07-24",
+              "outlet": "WSVN 7News",
+              "image": "https://www.bing.com/th?id=ONUT.nNMx9nUZzzIMqr9sSzyfxA"
+            },
+            {
               "news_id": "d808c8f3d8c85cf0a73e59720614e54b",
               "url": "https://www.local10.com/video/news/2026/07/24/1-month-since-venezuela-earthquakes-tens-of-thousands-remain-missing/",
               "headline": "1 month since Venezuela earthquakes; tens of thousands remain missing",
@@ -5747,6 +5792,33 @@
               "published_date": "2026-07-18",
               "outlet": "Miami Herald · via AOL",
               "image": "https://media.zenfs.com/en/aol_miami_herald_mcclatchy_670/58095d878d2cae6222b975f291401a49"
+            },
+            {
+              "news_id": "3986a6dba290505c9a3121d02a46279a",
+              "url": "https://www.bbc.com/audio/play/w1730c6gp4f3v47",
+              "headline": "BBC Audio | Outside Source | Venezuela twin earthquakes one month on",
+              "body": "More than 5,300 people are confirmed to have died in the quakes",
+              "published_date": "2026-07-24",
+              "outlet": "BBC",
+              "image": "https://www.bing.com/th?id=ONUT.kxf7IdP8jQRhZH77DrHflw"
+            },
+            {
+              "news_id": "9d8fa61cabc35d3d9fa9363fcd2cbfcd",
+              "url": "https://www.wfla.com/bloom-tampa-bay/bloom-tv/the-aftermath-of-devastation-to-venezuela/",
+              "headline": "The aftermath of devastation to Venezuela",
+              "body": "Amber Freeman, host of Bloom, sat down with Bilingual Anchor and Reporter with Noticias Tampa Hoy, Vladimir Kislinger, to discuss the devastating earthqu...",
+              "published_date": "2026-07-24T18:02:45+00:00",
+              "outlet": "WFLA Tampa Bay",
+              "image": "https://s.yimg.com/bo/4dc69c06-3b32-59f5-8b34-ee3e82873e1f_1784917045235.jpg"
+            },
+            {
+              "news_id": "8722b40c4e995937a74ac88b5be4b71d",
+              "url": "https://www.bloomberg.com/news/articles/2026-07-20/venezuela-s-official-death-toll-from-twin-quakes-rises-to-5-208",
+              "headline": "Venezuela’s Official Death Toll From Twin Quakes Rises to 5,208",
+              "body": "Venezuela’s official death toll from the twin earthquakes that struck the country on June 24 rose to...",
+              "published_date": "2026-07-19T20:02:45+00:00",
+              "outlet": "Bloomberg",
+              "image": "https://s.yimg.com/am/60d/65a4d6e39e84fc88ac584b8e08d58e73"
             },
             {
               "news_id": "aeeba4136fee5b5ebf1a9fcc7716cd68",
@@ -7252,7 +7324,7 @@
         "gdacs": 0,
         "ercc": 3,
         "healthmap": 0,
-        "news": 27
+        "news": 35
       },
       "source_links": [
         {
@@ -7358,6 +7430,12 @@
           "published_date": "2026-07-23"
         },
         {
+          "headline": "2 dead in flash floods caused by heavy rain in West Virginia, governor’s office says",
+          "url": "https://www.courant.com/2026/07/23/severe-weather/",
+          "outlet": "Hartford Courant",
+          "published_date": "2026-07-23"
+        },
+        {
           "headline": "Tornadoes rip through Kentucky as severe storms devastate region",
           "url": "https://www.usatoday.com/picture-gallery/news/nation/2026/07/23/kentucky-tornado-storm-damage/91024820007/",
           "outlet": "USA Today",
@@ -7400,9 +7478,27 @@
           "published_date": "2026-07-24"
         },
         {
+          "headline": "6 confirmed tornadoes and their tracks",
+          "url": "https://www.wbko.com/2026/07/24/six-confirmed-tornadoes-their-tracks/",
+          "outlet": "WBKO",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "Iowa's heat index could hit 110 as extreme heat arrives for weekend",
+          "url": "https://www.desmoinesregister.com/story/weather/iowa/2026/07/24/extreme-heat-iowa-national-weather-service-heat-index/91035052007/",
+          "outlet": "The Des Moines Register",
+          "published_date": "2026-07-24"
+        },
+        {
           "headline": "First Alert Weather Day: Scattered showers, few storms for today",
           "url": "https://www.wbrc.com/2026/07/24/first-alert-weather-day-scattered-showers-few-storms-today/",
           "outlet": "WBRC",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "Kiyapo intensifies into tropical storm as it nears extreme Northern Luzon",
+          "url": "https://www.rappler.com/philippines/weather/tropical-storm-kiyapo-southwest-monsoon-update-pagasa-forecast-july-24-2026-8am/",
+          "outlet": "Rappler",
           "published_date": "2026-07-24"
         },
         {
@@ -7424,9 +7520,27 @@
           "published_date": "2026-07-24"
         },
         {
+          "headline": "High heat and severe thunderstorms will return to Wisconsin this weekend",
+          "url": "https://www.jsonline.com/story/weather/2026/07/24/high-heat-and-severe-thunderstorms-to-return-in-wisconsin-this-weekend/91033831007/",
+          "outlet": "Milwaukee Journal Sentinel",
+          "published_date": "2026-07-24"
+        },
+        {
           "headline": "Where are severe heatwaves hitting Europe’s tourist destinations?",
           "url": "https://www.msn.com/en-us/weather/topstories/where-are-severe-heatwaves-hitting-europe-s-tourist-destinations/ar-AA26ZpAQ?ocid=BingNewsVerp",
           "outlet": "The Independent on MSN",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "First Alert Day: Severe weather risk returns Sunday night",
+          "url": "https://www.msn.com/en-us/weather/topstories/first-alert-day-severe-weather-risk-returns-sunday-night/ar-AA28y2rG?ocid=BingNewsVerp",
+          "outlet": "KCRG on MSN",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "Tornado threat looms as severe storms target Manitoba, northwest Ontario",
+          "url": "https://www.yahoo.com/news/articles/tornado-threat-looms-severe-storms-161454760.html",
+          "outlet": "Yahoo",
           "published_date": "2026-07-24"
         },
         {
@@ -7442,13 +7556,19 @@
           "published_date": "2026-07-24"
         },
         {
+          "headline": "SAWS issues yellow level 2 wind warning for KwaZulu-Natal on 24 July",
+          "url": "https://www.msn.com/en-za/weather/general/saws-issues-yellow-level-2-wind-warning-for-kwazulu-natal-on-24-july/ar-AA28CV4i?ocid=BingNewsVerp",
+          "outlet": "Briefly on MSN",
+          "published_date": "2026-07-24"
+        },
+        {
           "headline": "Michigan Forecast: Now we warm up, and storms dive south from Canada. Watch Torr...",
           "url": "https://www.mlive.com/weather/2026/07/michigan-forecast-now-we-warm-up-and-storms-dive-south-from-canada-watch-torregrossas-live-weather-update.html",
           "outlet": "MLive.com",
           "published_date": "2026-07-24T13:48:53+00:00"
         }
       ],
-      "news_total": 27,
+      "news_total": 35,
       "logs": [],
       "logs_total": 0
     },
@@ -8020,7 +8140,7 @@
       "incident_id": "20260710-ES-WF",
       "tree_id": "28f54c30b5e044128836161b42d57643",
       "canonical_name": "Forest Fire Spain 2026-07-10",
-      "summary": "A massive wildfire in central Spain has burned over 32,000 hectares (79,000 acres), becoming one of the country's largest on record, forcing thousands to evacuate. The Spanish government declared a national emergency on July 24 as the blaze continued to rage. Three firefighters died in associated wildfires across Europe, with two in France and one in Italy, while Spain's annual wildfire average was crossed before August.\nSpain declared its first-ever national emergency as wildfires near Madrid and Avila forced 20,000 evacuations, while in southwestern France over 60,000 people, including tourists, were evacuated from the Cap Ferret peninsula by boat. Both countries requested assistance from the European Union as the fires, fueled by a marine heatwave and extreme temperatures, burned over 100 square kilometers in France.",
+      "summary": "A massive wildfire in central Spain has burned over 32,000 hectares (79,000 acres), becoming one of the country's largest on record, forcing thousands to evacuate. The Spanish government declared a national emergency on July 24 as the blaze continued to rage. Three firefighters died in associated wildfires across Europe, with two in France and one in Italy, while Spain's annual wildfire average was crossed before August.\nSpain declared its first-ever national emergency as wildfires near Madrid and Avila forced 20,000 evacuations, while in southwestern France over 60,000 people, including tourists, were evacuated from the Cap Ferret peninsula by boat. Both countries requested assistance from the European Union as the fires, fueled by a marine heatwave and extreme temperatures, burned over 100 square kilometers in France.\nThe total number of evacuees from wildfires in Spain and France has risen to over 90,000, with 40,000 people ordered to evacuate or shelter in the Madrid region alone. A major wildfire in southern France near Cap Ferret is now reported to be under control, though blazes continue to rage in central Spain. Authorities are deploying novel firefighting methods, including using donkeys to graze flammable vegetation.",
       "country": "Spain",
       "iso2": "ES",
       "lat": null,
@@ -8030,7 +8150,7 @@
       "incident_type": "Forest Fire",
       "incident_category": "Natural",
       "is_disease": false,
-      "severity": "HIGH",
+      "severity": "CRITICAL",
       "priority": "MEDIUM",
       "priority_rank": 2,
       "pandemic_potential": null,
@@ -8041,16 +8161,16 @@
       "first_reported_date": "2026-07-10",
       "last_updated_date": "2026-07-24",
       "days_since_event": 14,
-      "source_count": 3,
+      "source_count": 4,
       "should_report": true,
       "search_keys": [],
       "sources": {
         "who_don": 0,
         "usgs": 0,
         "gdacs": 0,
-        "ercc": 3,
+        "ercc": 4,
         "healthmap": 0,
-        "news": 35
+        "news": 70
       },
       "source_links": [
         {
@@ -8070,6 +8190,12 @@
           "label": "ECHO Daily Map of 22 July 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5734",
           "meta": ""
+        },
+        {
+          "type": "ERCC",
+          "label": "ECHO Daily Map of 24 July 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5737",
+          "meta": ""
         }
       ],
       "physical": {
@@ -8083,6 +8209,10 @@
         "gdacs_population": null
       },
       "news": [
+        {
+          "headline": "Meet Spain's unique set of firefighters: The donkeys battling the country's wildfires",
+          "published_date": "2026-07-20T20:08:15+00:00"
+        },
         {
           "headline": "Deadly wildfires in Europe force thousands to flee",
           "published_date": "2026-07-21T09:20:05+00:00"
@@ -8104,7 +8234,19 @@
           "published_date": "2026-07-22T09:05:06+00:00"
         },
         {
+          "headline": "Ninety thousand people flee raging wildfires in France and Spain, some escaping by boat",
+          "published_date": "2026-07-22T19:57:09+00:00"
+        },
+        {
+          "headline": "Firefighters battle one of Spain's biggest-ever wildfires during heat wave...",
+          "published_date": "2026-07-22T20:08:15+00:00"
+        },
+        {
           "headline": "Southern Europe wildfires kill 3 firefighters, force thousands to flee",
+          "published_date": "2026-07-23"
+        },
+        {
+          "headline": "Deadly wildfires force thousands from homes in parts of Europe",
           "published_date": "2026-07-23"
         },
         {
@@ -8120,6 +8262,14 @@
           "published_date": "2026-07-23"
         },
         {
+          "headline": "Wildfires ravage Spain, France and Italy, killing three firefighters",
+          "published_date": "2026-07-23"
+        },
+        {
+          "headline": "Spanish firefighters fight wildfire amid heat wave | Arkansas Democrat Gazette",
+          "published_date": "2026-07-23"
+        },
+        {
           "headline": "In wildfire-ravaged Spain, farmers revive native sheep and cows to graze on flammable plants",
           "published_date": "2026-07-23"
         },
@@ -8128,7 +8278,15 @@
           "published_date": "2026-07-23"
         },
         {
+          "headline": "In wildfire-ravaged Spain, farmers revive native sheep and cows to graze on flammable plants",
+          "published_date": "2026-07-23"
+        },
+        {
           "headline": "Wildfire in southern France under control, blaze rages on in Spain",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "Tens of thousands flee raging wildfires in France and Spain, some escaping by boat",
           "published_date": "2026-07-24"
         },
         {
@@ -8136,11 +8294,47 @@
           "published_date": "2026-07-24"
         },
         {
+          "headline": "Ninety thousand people flee raging wildfires in France and Spain, some escaping by boat - The Boston Globe",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "France sends boats to evacuate tourist hotspot Cap Ferret as wildfires rage",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "Europe's fires reveal deadly mix of record heat, human error, arson and land mismanagement",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "Tens Of Thousands Flee Fires In France, Blazes Merge Outside Madrid",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "Tens of thousands flee wildfires in France and Spain",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "Southern Europe still battling wildfires as Spain declares national emergency in Madrid region",
+          "published_date": "2026-07-24"
+        },
+        {
           "headline": "Southern Europe wildfires kill 3 firefighters, force thousands to flee",
           "published_date": "2026-07-24"
         },
         {
+          "headline": "Tens of thousands flee fires in France, blazes merge outside Madrid",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "150,000 evacuated as wildfires rage in France and Spain",
+          "published_date": "2026-07-24"
+        },
+        {
           "headline": "Spain declares national emergency as wildfires near Madrid, Avila force thousands to evacuate",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "Europe wildfires prompt evacuations in France, Spain, Italy",
           "published_date": "2026-07-24"
         },
         {
@@ -8152,7 +8346,31 @@
           "published_date": "2026-07-24"
         },
         {
+          "headline": "More than 80,000 flee forest infernos in France and Spain",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "Tens of thousands evacuated from French tourist spot and near Madrid as wildfires spread",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "France wildfires force evacuation of over 20,000 people from tourist town",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "More than 100,000 people flee or lock down as wildfires sweep France and Spain",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "Three firefighters die as Spain crosses annual wildfire average before August peak",
+          "published_date": "2026-07-24"
+        },
+        {
           "headline": "Europe wildfires prompt evacuations in France, Spain, Italy",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "Thousands flee wildfires in France and Spain as temperatures reach extreme levels in southern Europe",
           "published_date": "2026-07-24"
         },
         {
@@ -8164,7 +8382,15 @@
           "published_date": "2026-07-24"
         },
         {
+          "headline": "France wildfire forces thousands to flee as tinder box conditions persist in warming Europe",
+          "published_date": "2026-07-24"
+        },
+        {
           "headline": "Tens of thousands of people flee raging wildfires in France and Spain, some escaping by boat",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "France sends boats to evacuate tourist hotspot Cap Ferret as wildfires rage",
           "published_date": "2026-07-24"
         },
         {
@@ -8188,6 +8414,10 @@
           "published_date": "2026-07-24"
         },
         {
+          "headline": "Thousands flee wildfires in southern Europe",
+          "published_date": "2026-07-24"
+        },
+        {
           "headline": "Spain, France battle wildfires as intense heat grips Southern Europe",
           "published_date": "2026-07-24"
         },
@@ -8200,7 +8430,43 @@
           "published_date": "2026-07-24"
         },
         {
+          "headline": "France wildfires force evacuation of over 20,000 people from tourist town",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "Ninety thousand people flee raging wildfires in France and Spain, some escaping by boat",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "Deadly wildfires sweep across southern EuropePublished on: July 24, 2026 11:48 AM",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "Spanish firefighters use helicopter to douse smouldering wildfire",
+          "published_date": "2026-07-24"
+        },
+        {
           "headline": "Wildfire in France forces 40,000 people to evacuate as crews battle record blazes across Western Europe",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "Tens of thousands of people flee raging wildfires in France and Spain",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "Wildfires force 80,000 to flee in France and Spain as Cap Ferret evacuated",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "Wildfire in southern France under control, blaze rages on in Spain",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "More than 20,000 evacuated after intense wildfire in France",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "Southern Europe wildfires kill 3 firefighters, force thousands to flee",
           "published_date": "2026-07-24"
         },
         {
@@ -8224,11 +8490,11 @@
           "published_date": "2026-07-24T09:31:10+00:00"
         }
       ],
-      "news_total": 35,
+      "news_total": 70,
       "logs": [
         {
           "log_date": "2026-07-24",
-          "summary": "A massive wildfire in central Spain has burned over 32,000 hectares (79,000 acres), becoming one of the country's largest on record, forcing thousands to evacuate. The Spanish government declared a national emergency on July 24 as the blaze continued to rage. Three firefighters died in associated wildfires across Europe, with two in France and one in Italy, while Spain's annual wildfire average was crossed before August.\nSpain declared its first-ever national emergency as wildfires near Madrid and Avila forced 20,000 evacuations, while in southwestern France over 60,000 people, including tourists, were evacuated from the Cap Ferret peninsula by boat. Both countries requested assistance from the European Union as the fires, fueled by a marine heatwave and extreme temperatures, burned over 100 square kilometers in France.",
+          "summary": "A massive wildfire in central Spain has burned over 32,000 hectares (79,000 acres), becoming one of the country's largest on record, forcing thousands to evacuate. The Spanish government declared a national emergency on July 24 as the blaze continued to rage. Three firefighters died in associated wildfires across Europe, with two in France and one in Italy, while Spain's annual wildfire average was crossed before August.\nSpain declared its first-ever national emergency as wildfires near Madrid and Avila forced 20,000 evacuations, while in southwestern France over 60,000 people, including tourists, were evacuated from the Cap Ferret peninsula by boat. Both countries requested assistance from the European Union as the fires, fueled by a marine heatwave and extreme temperatures, burned over 100 square kilometers in France.\nThe total number of evacuees from wildfires in Spain and France has risen to over 90,000, with 40,000 people ordered to evacuate or shelter in the Madrid region alone. A major wildfire in southern France near Cap Ferret is now reported to be under control, though blazes continue to rage in central Spain. Authorities are deploying novel firefighting methods, including using donkeys to graze flammable vegetation.",
           "news": [
             {
               "news_id": "3aacc4d021ea5799a2333449d4034041",
@@ -8237,6 +8503,15 @@
               "body": "Much of Europe has seen back-to-back heatwaves this summer. Scientists warn that human-driven climate change will increase the intensity and frequency of heatwaves. View on euronews ...",
               "published_date": "2026-07-24",
               "outlet": "Euronews on MSN",
+              "image": ""
+            },
+            {
+              "news_id": "1c93ad3c731c54c0ab3a8f1401018dcb",
+              "url": "https://www.adn.com/nation-world/2026/07/24/tens-of-thousands-flee-raging-wildfires-in-france-and-spain-some-escaping-by-boat/",
+              "headline": "Tens of thousands flee raging wildfires in France and Spain, some escaping by boat",
+              "body": "In France, more than 60,000 residents have fled the Cap Ferret peninsula, and in Spain, the government declared a national emergency due to the blazes near Madrid.",
+              "published_date": "2026-07-24",
+              "outlet": "Anchorage Daily News",
               "image": ""
             },
             {
@@ -8249,6 +8524,15 @@
               "image": "https://www.bing.com/th?id=ORMS.3892f7f1ffe403f7af20c84e3245ca65"
             },
             {
+              "news_id": "81f7a7e366cc50a393c4c1bca92caae4",
+              "url": "https://www.bostonglobe.com/2026/07/24/world/wildfires-france-spain-europe-flee/",
+              "headline": "Ninety thousand people flee raging wildfires in France and Spain, some escaping by boat - The Boston Globe",
+              "body": "Some 48 square miles have been consumed by the blaze that has raged since Wednesday near Cap Ferret.",
+              "published_date": "2026-07-24",
+              "outlet": "The Boston Globe",
+              "image": "https://bostonglobe-prod.cdn.arcpublishing.com/resizer/v2/ZENMJ5LMUWKOKXBDZ3ZZAMQUJ4.jpg?auth=42af76efb1f1a1030040101ab7b7629c71707e46d802f8109211891fb480ccec&width=1440"
+            },
+            {
               "news_id": "7aaec319308c5e6baf8cea3ea95d7fd7",
               "url": "https://www.yahoo.com/news/weather-news/articles/southern-europe-wildfires-kill-3-131659776.html",
               "headline": "Southern Europe wildfires kill 3 firefighters, force thousands to flee",
@@ -8256,6 +8540,60 @@
               "published_date": "2026-07-23",
               "outlet": "United Press International · via Yahoo News",
               "image": "https://media.zenfs.com/en/united_press_international_articles_356/1a17f33f71cbf3e9af779a7c07eb5d36"
+            },
+            {
+              "news_id": "97ceeec55a4350d79398f8805cfc9728",
+              "url": "https://www.washingtonpost.com/world/2026/07/24/spain-wildfires-emergency/a44de990-8732-11f1-9cec-0fb26676f07e_story.html",
+              "headline": "Ninety thousand people flee raging wildfires in France and Spain, some escaping by boat",
+              "body": "Spain’s government has declared a national emergency Friday after multiple wildfires forced the evacuation of some 10,000 ...",
+              "published_date": "2026-07-22T19:57:09+00:00",
+              "outlet": "The Washington Post",
+              "image": "https://www.bing.com/th?id=ONUT.DAUcQZFWHpi3WIVkM4SJHw"
+            },
+            {
+              "news_id": "b6176315322559768625474e3f79cc7d",
+              "url": "https://www.msn.com/en-us/news/world/france-sends-boats-to-evacuate-tourist-hotspot-cap-ferret-as-wildfires-rage/ar-AA28APrn?ocid=BingNewsVerp",
+              "headline": "France sends boats to evacuate tourist hotspot Cap Ferret as wildfires rage",
+              "body": "French authorities ordered the complete evacuation of the Cap Ferret peninsula on Friday, launching boats to help rescue ...",
+              "published_date": "2026-07-24",
+              "outlet": "CNN on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.0V4Oy9Em1mVXH2sciiR3dw"
+            },
+            {
+              "news_id": "1035554452155151910a0d948e9555b9",
+              "url": "https://www.msn.com/en-us/news/world/europes-fires-reveal-deadly-mix-of-record-heat-human-error-arson-and-land-mismanagement/ar-AA28eu2d",
+              "headline": "Europe's fires reveal deadly mix of record heat, human error, arson and land mismanagement",
+              "body": "Record heat has fueled Europe's devastating wildfires, but experts say human error, suspected arson and land management have also played a major role in this summer's destruction.",
+              "published_date": "2026-07-24",
+              "outlet": "Fox News",
+              "image": "https://static.foxnews.com/foxnews.com/content/uploads/2026/07/almeria-wildfires-spain.jpg"
+            },
+            {
+              "news_id": "79803a9f18be515983e878591e420456",
+              "url": "https://www.huffpost.com/entry/france-orders-cap-ferret-evacuation_n_6a6324bce4b077d95ae9bcca",
+              "headline": "Tens Of Thousands Flee Fires In France, Blazes Merge Outside Madrid",
+              "body": "“I’ve lived here for 36 years and I’ve never seen anything like it,” a resident of Navaluenga told Reuters.",
+              "published_date": "2026-07-24",
+              "outlet": "The Huffington Post",
+              "image": "https://s.yimg.com/bo/a5e59115-5100-5543-b767-8b6cce2e2050_1784884343553.jpg"
+            },
+            {
+              "news_id": "0d1968e4603a5353b4411588bb5b0f32",
+              "url": "https://www.newindianexpress.com/world/2026/Jul/23/deadly-wildfires-force-thousands-from-homes-in-parts-of-europe",
+              "headline": "Deadly wildfires force thousands from homes in parts of Europe",
+              "body": "ROME: Wildfires swept across parts of Italy, France and Spain on Wednesday, killing three firefighters and forcing thousands to flee as scorching temperatures a",
+              "published_date": "2026-07-23",
+              "outlet": "The New Indian Express",
+              "image": "https://cf-images.assettype.com/newindianexpress/2026-07-23/8u6sxvjv/Wildfire-Europe.jpg?w=1200&ar=40:21&auto=format,compress&ogImage=true&mode=crop&enlarge=true&overlay=false&overlay_position=bottom&overlay_width=100"
+            },
+            {
+              "news_id": "8520e5b44b745b08986cf74bd16439f3",
+              "url": "https://www.latimes.com/world-nation/story/2026-07-24/tens-of-thousands-flee-wildfires-in-france-spain",
+              "headline": "Tens of thousands flee wildfires in France and Spain",
+              "body": "Large forest fires are burning out of control in southwestern France and central Spain, prompting authorities to evacuate an estimated 92,000 people.",
+              "published_date": "2026-07-24",
+              "outlet": "Los Angeles Times",
+              "image": "https://ca-times.brightspotcdn.com/dims4/default/e513fcf/2147483647/strip/true/crop/6000x3150+0+425/resize/1200x630!/quality/75/?url=https://california-times-brightspot.s3.amazonaws.com/39/69/cfb83f6941318d06d74673f8c847/6e438fa047914b849ee7d3ea9999d2d8.jpg"
             },
             {
               "news_id": "89dcbbe9c3ba57f49b126374fd77102c",
@@ -8276,6 +8614,15 @@
               "image": "https://s.yimg.com/am/60d/02a450abcd8d7e03ef983e65709fc419"
             },
             {
+              "news_id": "6c5f7eb30280516d85b5455bea46dd98",
+              "url": "https://www.msn.com/en-sg/news/other/southern-europe-still-battling-wildfires-as-spain-declares-national-emergency-in-madrid-region/vi-AA28Av2C",
+              "headline": "Southern Europe still battling wildfires as Spain declares national emergency in Madrid region",
+              "body": "Wildfires advance near Le Proge region, western France, Thursday, July 23, 2026.",
+              "published_date": "2026-07-24",
+              "outlet": "Euronews",
+              "image": "https://images.euronews.com/articles/stories/09/84/90/70/1200x675_cmsv2_72360ce6-65e8-5ad8-a35f-7e56992309af-9849070.jpg"
+            },
+            {
               "news_id": "52f18a4c12f7524f9e28d38a3fc78587",
               "url": "https://www.msn.com/en-us/news/world/southern-europe-wildfires-kill-3-firefighters-force-thousands-to-flee/ar-AA28wY0u?ocid=BingNewsVerp",
               "headline": "Southern Europe wildfires kill 3 firefighters, force thousands to flee",
@@ -8283,6 +8630,24 @@
               "published_date": "2026-07-24",
               "outlet": "UPI on MSN",
               "image": "https://www.bing.com/th?id=ORMS.50b6b8bb1560d877c2c393c294101b27"
+            },
+            {
+              "news_id": "4f011d05faf95245ac2e46799ba77d75",
+              "url": "https://www.msn.com/en-us/news/world/tens-of-thousands-flee-fires-in-france-blazes-merge-outside-madrid/ar-AA28CljX?ocid=BingNewsVerp",
+              "headline": "Tens of thousands flee fires in France, blazes merge outside Madrid",
+              "body": "By Michael Francis Gore and Stephane Mahe NAVALUENGA, Spain/LEGE-CAP-FERRET, France, July 24 (Reuters) - Tens of thousands of ...",
+              "published_date": "2026-07-24",
+              "outlet": "Reuters on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.7498091ad480af1a32318831f99f22f7"
+            },
+            {
+              "news_id": "9a6867bd5d2b5652a5eeb585b9378e4c",
+              "url": "https://www.rte.ie/news/europe/2026/0724/1584875-madrid-wildfires/",
+              "headline": "150,000 evacuated as wildfires rage in France and Spain",
+              "body": "French authorities ordered the total evacuation of the Cap Ferret peninsula on the Atlantic Coast, sending boats to remove people from an area threatened by a major wildfire, while 40,000 people have been told to evacuate or shelter in the Madrid region.",
+              "published_date": "2026-07-24",
+              "outlet": "RTÉ Ireland",
+              "image": "https://www.rte.ie/images/0024bfdf-1600.jpg"
             },
             {
               "news_id": "f5c16f2f88d55b88be8528e233b8b287",
@@ -8301,6 +8666,15 @@
               "published_date": "2026-07-22",
               "outlet": "CNN · via Yahoo News",
               "image": "https://media.zenfs.com/en/cnn_articles_875/81bbea5bb1194c9475be571f357fb951"
+            },
+            {
+              "news_id": "2ef9cbb558bb55b98950f8caa5a3f9c3",
+              "url": "https://www.msn.com/en-ph/news/other/europe-wildfires-prompt-evacuations-in-france-spain-italy/ar-AA28vvPi",
+              "headline": "Europe wildfires prompt evacuations in France, Spain, Italy",
+              "body": "Fires are blazing across several European countries as the continent braces for another heat wave. In 2026, wildfires have already burnt more land in Europe than the annual average over the past two decades.",
+              "published_date": "2026-07-24",
+              "outlet": "DW",
+              "image": "https://static.dw.com/image/78080040_6.jpg"
             },
             {
               "news_id": "3db4da924cde5065b4de63d36fe16795",
@@ -8328,6 +8702,51 @@
               "published_date": "2026-07-23",
               "outlet": "Detroit News",
               "image": "https://s.yimg.com/bo/ae4ee240-d378-5480-b6c6-234ba638d9d4_1784822370442.jpg"
+            },
+            {
+              "news_id": "ad1a805c3cd55bfc89d4ff72045e8005",
+              "url": "https://phys.org/news/2026-07-forest-infernos-france-spain.html",
+              "headline": "More than 80,000 flee forest infernos in France and Spain",
+              "body": "Europe's wildfire crisis forced more than 80,000 people to flee for safety Friday, as vacationers boarded boats to escape fires on a French peninsula and Spanish officials ordered mass evacuations in towns near Madrid.",
+              "published_date": "2026-07-24",
+              "outlet": "Phys.org",
+              "image": ""
+            },
+            {
+              "news_id": "1946a8ab21615ebd896108af8efd5d66",
+              "url": "https://www.the-star.co.ke/news/world/2026-07-24-thousands-evacuated-from-french-tourist-spot-as-wildfires-spread",
+              "headline": "Tens of thousands evacuated from French tourist spot and near Madrid as wildfires spread",
+              "body": "The fire has raged for several days with officials now ordering the evacuation of the entire Cap Ferret peninsula.",
+              "published_date": "2026-07-24",
+              "outlet": "The Star",
+              "image": "https://cdn.radioafrica.digital/image/2026/07/2d666631-5341-47c7-8b53-657c5f6f4e28.webp?1784907443087"
+            },
+            {
+              "news_id": "2c7cc274de55599882ccb85016e46bd4",
+              "url": "https://www.msn.com/en-us/news/world/france-wildfires-force-evacuation-of-over-20000-people-from-tourist-town/ar-AA28y6YR",
+              "headline": "France wildfires force evacuation of over 20,000 people from tourist town",
+              "body": "About 800 firefighters and hundreds of gendarmes and soldiers deployed to battle the flames west of Bordeaux.",
+              "published_date": "2026-07-24",
+              "outlet": "Al Jazeera",
+              "image": "https://www.aljazeera.com/wp-content/uploads/2026/07/AP26204493334001-1784836315.jpg?resize=1920,1440"
+            },
+            {
+              "news_id": "9450015266fd524682ff84dccbf26d86",
+              "url": "https://www.theguardian.com/world/2026/jul/24/france-evacuation-cap-ferret-peninsula-wildfire",
+              "headline": "More than 100,000 people flee or lock down as wildfires sweep France and Spain",
+              "body": "‘Highly unpredictable’ blaze forces evacuation of Cap Ferret on French coast and Spain declares national emergency",
+              "published_date": "2026-07-24",
+              "outlet": "The Guardian",
+              "image": ""
+            },
+            {
+              "news_id": "51c4d6d329e357b993f43eb564b36a91",
+              "url": "https://www.msn.com/en-us/weather/topstories/three-firefighters-die-as-spain-crosses-annual-wildfire-average-before-august-peak/ar-AA28z3Dz?ocid=BingNewsVerp",
+              "headline": "Three firefighters die as Spain crosses annual wildfire average before August peak",
+              "body": "Europe wildfires 2026 have killed three firefighters in 48 hours — two in France, one in Sicily — as Spain burned through its ...",
+              "published_date": "2026-07-24",
+              "outlet": "Tech Times on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.5Xd_UEsMMaKRjFDgnv7hHw"
             },
             {
               "news_id": "6bf7567d306a5e78a3182afc314826ea",
@@ -8366,6 +8785,15 @@
               "image": "https://www.bing.com/th?id=ONUT.yj_Bj_iPFwTSX9PP2dOxig"
             },
             {
+              "news_id": "62a0b31256f458989a536976bc594366",
+              "url": "https://www.theguardian.com/world/2026/jul/23/people-evacuated-intense-wildfire-saumos-france?amp;CMP=soc_567",
+              "headline": "Thousands flee wildfires in France and Spain as temperatures reach extreme levels in southern Europe",
+              "body": "France asks EU for help while Spain declares national emergency around Madrid, as marine heatwave sees parts of Mediterranean Sea 5C hotter than normal",
+              "published_date": "2026-07-24",
+              "outlet": "The Guardian",
+              "image": ""
+            },
+            {
               "news_id": "7d84b6b6aad95c30adc23397df48280d",
               "url": "https://www.arkansasonline.com/news/2026/jul/24/20000-evacuated-from-french-tourist-town-as/",
               "headline": "20,000 evacuated from French tourist town as wildfires spread | Arkansas Democrat Gazette",
@@ -8382,6 +8810,33 @@
               "published_date": "2026-07-24",
               "outlet": "Malay Mail",
               "image": "https://www.bing.com/th?id=ONUT.I-6GfvrkVVEKh3OiKgdBRw"
+            },
+            {
+              "news_id": "a6bf3c20baa455caa79e461448fafde8",
+              "url": "https://www.chron.com/news/world/article/firefighters-in-central-spain-battle-huge-22355293.php",
+              "headline": "Firefighters battle one of Spain's biggest-ever wildfires during heat wave...",
+              "body": "The fire in rural Guadalajara comes less than two weeks after a deadly blaze devastated a small...",
+              "published_date": "2026-07-22T20:08:15+00:00",
+              "outlet": "Houston Chronicle",
+              "image": "https://s.yimg.com/am/60d/b13fc6252156ad34ca30adcf531413b0"
+            },
+            {
+              "news_id": "39c627547e545a8f98e0460fc922e4d1",
+              "url": "https://www.msn.com/en-us/news/world/france-wildfire-forces-thousands-to-flee-as-tinder-box-conditions-persist-in-warming-europe/ar-AA28xGtg",
+              "headline": "France wildfire forces thousands to flee as tinder box conditions persist in warming Europe",
+              "body": "By Stephane Mahe LEGE-CAP FERRET, France, July 23 (Reuters) - A fast-moving wildfire has forced more than 10,000 people from homes and campsites near France's Atlantic coast, as extreme heat and deepening drought fuelled fires across Europe and scientists warned that climate change was worsening the continent's water shortages.",
+              "published_date": "2026-07-24",
+              "outlet": "Reuters",
+              "image": "https://www.reuters.com/resizer/v2/SDEYSOKAMZLYPAM7C25KB3WRW4.jpg?auth=79795ba3d568e25b47efaf02625c15f63d2214db77aa6b998c77f1b98fc425b2&height=1005&width=1920&quality=80&smart=true"
+            },
+            {
+              "news_id": "f91df3c69c4c521f9d057bb25e296560",
+              "url": "https://www.firstpost.com/explainers/meet-spains-unique-set-of-firefighters-the-donkeys-battling-the-countrys-wildfires-14033702.html",
+              "headline": "Meet Spain's unique set of firefighters: The donkeys battling the country's wildfires",
+              "body": "A herd of rescued donkeys is quietly working as firefighters across the mountains in the hills of Catalonia, Spain. Rather ...",
+              "published_date": "2026-07-20T20:08:15+00:00",
+              "outlet": "Firstpost",
+              "image": "https://www.bing.com/th?id=ONUT.AlMXxgvDjQESnoaiamAZ8g"
             },
             {
               "news_id": "05d4256055d5540f8c03bd99da990805",
@@ -8402,6 +8857,15 @@
               "image": "https://s.yimg.com/bo/9757afe2-3bd2-55f9-a8bc-dbe02d5fe854_1784901028977.jpg"
             },
             {
+              "news_id": "d5feb743f4445ab791cda57d072812e1",
+              "url": "https://www.msn.com/en-us/news/world/france-sends-boats-to-evacuate-tourist-hotspot-cap-ferret-as-wildfires-rage/ar-AA28APrn",
+              "headline": "France sends boats to evacuate tourist hotspot Cap Ferret as wildfires rage",
+              "body": "French authorities ordered the complete evacuation of the Cap Ferret peninsula on Friday, launching boats to help rescue people from the popular tourist destination as wildfires tear across western Europe.",
+              "published_date": "2026-07-24",
+              "outlet": "CNN",
+              "image": "https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2286772051.jpg?c=16x9&q=w_800,c_fill"
+            },
+            {
               "news_id": "c9bc0df1a2715e92804aa9e6c5b19ebe",
               "url": "https://www.msn.com/en-us/news/world/spain-declares-national-emergency-over-wildfires-near-madrid-and-in-avila/ar-AA28Aa3Q?ocid=BingNewsVerp",
               "headline": "Spain declares national emergency over wildfires near Madrid and in Avila",
@@ -8418,6 +8882,24 @@
               "published_date": "2026-07-24",
               "outlet": "NBC News",
               "image": "https://www.bing.com/th?id=ONUT.ggsVQZ58WqEdLC1M7GQZWg"
+            },
+            {
+              "news_id": "2b463c450e3352d09d1fb36c2f521686",
+              "url": "https://www.france24.com/en/europe/20260723-wildfires-ravage-spain-france-and-italy-killing-three-firefighters",
+              "headline": "Wildfires ravage Spain, France and Italy, killing three firefighters",
+              "body": "Wildfires swept across southern Europe on Wednesday, killing three firefighters and forcing thousands of people to evacuate as extreme heat and dry conditions fuelled blazes in Sicily, southwestern France…",
+              "published_date": "2026-07-23",
+              "outlet": "France 24",
+              "image": "https://s.france24.com/media/display/d97f54b2-8621-11f1-be8f-005056bf30b7/w:1280/p:16x9/AP26203610291495-1.jpg"
+            },
+            {
+              "news_id": "4dad1a2f839454908a50437d80a7ab39",
+              "url": "https://www.arkansasonline.com/news/2026/jul/23/spanish-firefighters-fight-wildfire-amid-heat-wave/",
+              "headline": "Spanish firefighters fight wildfire amid heat wave | Arkansas Democrat Gazette",
+              "body": "BARCELONA, Spain -- Firefighters in central Spain battled a wildfire on Wednesday that has burned over 79,000 acres in one of the country's largest blazes on record.",
+              "published_date": "2026-07-23",
+              "outlet": "Arkansas Democrat-Gazette",
+              "image": "https://s.yimg.com/bo/92aa0d8c-5409-5395-9e51-73b492abdaf9_1784796835886.jpg"
             },
             {
               "news_id": "883cda8c14fb5253b21fab521c0f882a",
@@ -8445,6 +8927,15 @@
               "published_date": "2026-07-24",
               "outlet": "Tech Times on MSN",
               "image": "https://www.bing.com/th?id=ONUT.m6Arekeh3Y3SZIrVSJTAqQ"
+            },
+            {
+              "news_id": "d2a68d2679c85433bd80cae889e0aa43",
+              "url": "https://phys.org/news/2026-07-thousands-wildfires-southern-europe.html",
+              "headline": "Thousands flee wildfires in southern Europe",
+              "body": "Luggage-clad residents and tourists fled a French peninsula by boat, and the smell of smoke drifted into parts of Madrid on Friday as wildfires swept through parts of Western Europe, triggering states of emergency and calls for EU help.",
+              "published_date": "2026-07-24",
+              "outlet": "Phys.org",
+              "image": "https://scx2.b-cdn.net/gfx/news/2026/fires-rage-near-le-por.jpg"
             },
             {
               "news_id": "e8b9a32406ae582b9c411c5411921761",
@@ -8483,6 +8974,24 @@
               "image": "https://media.zenfs.com/en/reuters.com/8f163633b1a2c44c4b66ca83b5b66e71"
             },
             {
+              "news_id": "df365ba92e145a22a2b6fb6995168799",
+              "url": "https://www.msn.com/en-us/news/world/france-wildfires-force-evacuation-of-over-20000-people-from-tourist-town/ar-AA28y6YR?ocid=BingNewsVerp",
+              "headline": "France wildfires force evacuation of over 20,000 people from tourist town",
+              "body": "About 800 firefighters and hundreds of gendarmes and soldiers deployed to battle the flames west of Bordeaux.",
+              "published_date": "2026-07-24",
+              "outlet": "Al Jazeera on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.8ee8ff26773c3b4b2d0e6e05fb2153d9"
+            },
+            {
+              "news_id": "314f912c508853a1978015233e7ebed2",
+              "url": "https://lasvegassun.com/news/2026/jul/24/ninety-thousand-people-flee-raging-wildfires-in-fr/",
+              "headline": "Ninety thousand people flee raging wildfires in France and Spain, some escaping by boat",
+              "body": "Large forest fires are burning out of control in southwestern France and central Spain, prompting authorities to evacuate an estimated 92,000 people",
+              "published_date": "2026-07-24",
+              "outlet": "Las Vegas Sun",
+              "image": "https://s.yimg.com/bo/615ad34d-2c7d-5ec4-ab0f-e885f3d0fb55_1784259293348.png.cf.jpg"
+            },
+            {
               "news_id": "cceda05d4f775a7c908ce8fc8260de08",
               "url": "https://www.reuters.com/business/environment/spain-declares-emergency-wildfires-force-thousands-evacuations-2026-07-24/",
               "headline": "Spain declares emergency as wildfires force thousands of evacuations",
@@ -8501,6 +9010,33 @@
               "image": "https://s.yimg.com/bo/03363c6f-ee2b-53b9-a158-83f0ee2406f1_1784836161536.jpg"
             },
             {
+              "news_id": "1543f142927a534d85c3abcf010b5cec",
+              "url": "https://whtc.com/2026/07/23/in-wildfire-ravaged-spain-farmers-revive-native-sheep-and-cows-to-graze-on-flammable-plants/",
+              "headline": "In wildfire-ravaged Spain, farmers revive native sheep and cows to graze on flammable plants",
+              "body": "(Corrects Celsius to Fahrenheit conversion in paragraph 13) By Victoria Waldersee and Miguel Vidal VINCIOS, Spain, July 23 (Reuters) - A goat-like cow is making a comeback in Spain's northwestern Galicia region, as communities reintroduce native livest...",
+              "published_date": "2026-07-23",
+              "outlet": "WHTC 1450 Holland",
+              "image": "https://s.yimg.com/bo/83e459a3-5ffc-562f-95e9-bb4bd7210841_1784801779034.jpg"
+            },
+            {
+              "news_id": "41a41381952559f1b0cec0b680907bf6",
+              "url": "https://www.msn.com/en-xl/asia/pakistan/deadly-wildfires-sweep-across-southern-europepublished-on-july-24-2026-1148-am/ar-AA28AerM?ocid=BingNewsVerp",
+              "headline": "Deadly wildfires sweep across southern EuropePublished on: July 24, 2026 11:48 AM",
+              "body": "Pakistan, July 24 -- Deadly wildfires continued to spread across parts of southern Europe on Thursday, forcing thousands of ...",
+              "published_date": "2026-07-24",
+              "outlet": "Daily Times on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.So5WnrJbip5E0dNavDhRYA"
+            },
+            {
+              "news_id": "8fea89ae7a3e540da7211e1685969422",
+              "url": "https://www.bbc.com/news/videos/cy45lkl3xg1o",
+              "headline": "Spanish firefighters use helicopter to douse smouldering wildfire",
+              "body": "In Avila province around 1,500 people were evacuated due to the fire that broke out Wednesday.",
+              "published_date": "2026-07-24",
+              "outlet": "BBC",
+              "image": ""
+            },
+            {
               "news_id": "514070a00b875580b98d39ab1f6397e7",
               "url": "https://www.cbsnews.com/news/france-europe-wildfires-evacuations-record-heat-spain-italy-deaths/",
               "headline": "Wildfire in France forces 40,000 people to evacuate as crews battle record blazes across Western Europe",
@@ -8517,6 +9053,51 @@
               "published_date": "2026-07-24T09:06:40+00:00",
               "outlet": "ITV",
               "image": ""
+            },
+            {
+              "news_id": "dd07da03aa2754a187c794b0d91b1cda",
+              "url": "https://www.msn.com/en-gb/public-safety-and-emergencies/natural-disasters/thousands-evacuated-as-wildfires-hit-spain-and-southern-france/ar-AA28ATRM?ocid=BingNewsVerp",
+              "headline": "Tens of thousands of people flee raging wildfires in France and Spain",
+              "body": "Multiple blazes have broken out during a heatwave.",
+              "published_date": "2026-07-24",
+              "outlet": "PA Media on MSN",
+              "image": ""
+            },
+            {
+              "news_id": "09fbce45ec895e7e9a7b497089daf2b1",
+              "url": "https://www.independent.co.uk/news/world/europe/fire-wildfires-france-spain-cap-ferret-map-evacuations-b3021095.html",
+              "headline": "Wildfires force 80,000 to flee in France and Spain as Cap Ferret evacuated",
+              "body": "Devastating wildfires are raging across Europe as tens of thousands have been forced to evacuate their homes",
+              "published_date": "2026-07-24",
+              "outlet": "The Independent",
+              "image": ""
+            },
+            {
+              "news_id": "a3695355bcd85f8d96c7e98d28b83af4",
+              "url": "https://www.msn.com/en-nz/news/other/wildfire-in-southern-france-under-control-blaze-rages-on-in-spain/ar-AA28qhWi",
+              "headline": "Wildfire in southern France under control, blaze rages on in Spain",
+              "body": "Much of Europe has seen back-to-back heatwaves this summer. Scientists warn that human-driven climate change will increase the intensity and frequency of heatwaves. View on euronews",
+              "published_date": "2026-07-24",
+              "outlet": "Euronews",
+              "image": ""
+            },
+            {
+              "news_id": "1802bb6ba4595f55afd759fad664adc1",
+              "url": "https://www.msn.com/en-ie/news/national/more-than-20000-evacuated-after-intense-wildfire-in-france/ar-AA28wEqI",
+              "headline": "More than 20,000 evacuated after intense wildfire in France",
+              "body": "Reception centres open to thousands of evacuees after blaze begins in pine forest 45km west of Bordeaux",
+              "published_date": "2026-07-24",
+              "outlet": "Irish Examiner",
+              "image": "https://www.irishtimes.com/resizer/v2/EBKANBHBC7NEFWAZB6LMY456VM.jpg?auth=c9f7af5a894e5b82a7268bc9fad7976dab53083c31dd5f8a569e95164f1a6901&width=800&height=533"
+            },
+            {
+              "news_id": "9a45868f0fbb5943966ee20d80d143f8",
+              "url": "https://www.msn.com/en-us/news/world/southern-europe-wildfires-kill-3-firefighters-force-thousands-to-flee/ar-AA28wY0u",
+              "headline": "Southern Europe wildfires kill 3 firefighters, force thousands to flee",
+              "body": "Three firefighters were killed and 12,000 people were forced to evacuate as wildfires continued to ravage areas of southern France, Italy and Spain.",
+              "published_date": "2026-07-24",
+              "outlet": "UPI",
+              "image": "https://cdnph.upi.com/sv/ph/og/upi_com/9241784804027/2026/1/0189ade26c7f6af9ae363d7d63454851/v1.5/Southern-Europe-wildfires-kill-3-firefighters-force-thousands-to-flee.jpg"
             },
             {
               "news_id": "f4a9c1139d3d56bd90071fc3b45850c5",
@@ -9501,7 +10082,7 @@
       "disease_name": null,
       "event_date": "2026-07-14",
       "first_reported_date": "2026-07-14",
-      "last_updated_date": "2026-07-19",
+      "last_updated_date": "2026-07-24",
       "days_since_event": 10,
       "source_count": 1,
       "should_report": true,
@@ -9512,7 +10093,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 14
+        "news": 16
       },
       "source_links": [
         {
@@ -9533,6 +10114,10 @@
         "gdacs_population": null
       },
       "news": [
+        {
+          "headline": "Jackery answers PDRF’s call for emergency power in Sarangani",
+          "published_date": "2026-07-01"
+        },
         {
           "headline": "Suzuki extends assistance to earthquake-affected dealership employees in GenSan",
           "published_date": "2026-07-01"
@@ -9588,9 +10173,13 @@
         {
           "headline": "Suzuki Philippines sends relief to General Santos dealership workers",
           "published_date": "2026-07-19"
+        },
+        {
+          "headline": "Technology stack powers PH disaster readiness",
+          "published_date": "2026-07-24"
         }
       ],
-      "news_total": 14,
+      "news_total": 16,
       "logs": [
         {
           "log_date": "2026-07-15",
@@ -9737,7 +10326,7 @@
       "incident_id": "20260715-UA-CF",
       "tree_id": "f22292f8c3ff448a920c3b1fe41d3aa0",
       "canonical_name": "Conflict Ukraine 2026-07-15",
-      "summary": "Ukraine struck additional warehouses of Russia's top online retailer Wildberries and intensified attacks on Ozon, causing economic disruption. In leadership moves, President Zelensky replaced the commander-in-chief with Mykhailo Drapatyi and fired Defense Minister Mykhailo Fedorov, sparking protests. Meanwhile, U.S. Secretary of State Marco Rubio met with Russia's Lavrov in Manila, expressing readiness to help end the war but noting no quick deal is imminent.\nUkrainian strikes on Russia's Wildberries warehouses produced massive pillars of black smoke as fires raged at the facilities. Russia, stretched by Ukraine's drone attacks on its Black Sea Fleet, has pulled all warships from the Mediterranean Sea. Both sides have increased bridge strikes to disrupt resupply networks, indicating expectations of a prolonged stalemate, while the Kremlin warned against optimism on peace following the Rubio-Lavrov meeting.",
+      "summary": "Ukraine struck additional warehouses of Russia's top online retailer Wildberries and intensified attacks on Ozon, causing economic disruption. In leadership moves, President Zelensky replaced the commander-in-chief with Mykhailo Drapatyi and fired Defense Minister Mykhailo Fedorov, sparking protests. Meanwhile, U.S. Secretary of State Marco Rubio met with Russia's Lavrov in Manila, expressing readiness to help end the war but noting no quick deal is imminent.\nUkrainian strikes on Russia's Wildberries warehouses produced massive pillars of black smoke as fires raged at the facilities. Russia, stretched by Ukraine's drone attacks on its Black Sea Fleet, has pulled all warships from the Mediterranean Sea. Both sides have increased bridge strikes to disrupt resupply networks, indicating expectations of a prolonged stalemate, while the Kremlin warned against optimism on peace following the Rubio-Lavrov meeting.\nThe EU passed its 21st sanctions package with 218 new designations targeting Russia, including vessels that refuel shadow fleet tankers. Ukrainian strikes continued to hit Russian Wildberries warehouses, while new airstrikes caused deaths in both Ukraine and Russia, and a drone was shot down over NATO airspace.",
       "country": "Ukraine",
       "iso2": "UA",
       "lat": 48.9,
@@ -9767,7 +10356,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 34
+        "news": 37
       },
       "source_links": [
         {
@@ -9799,6 +10388,10 @@
         {
           "headline": "Ukraine claims $400 FPV drone destroyed Russia's $19 million 'Apache rival' attack helicopter",
           "published_date": "2026-07-20"
+        },
+        {
+          "headline": "Ukraine war latest: Deaths in Ukraine and Russia after airstrikes - as drone shot down over NATO airspace",
+          "published_date": "2026-07-20T20:11:05+00:00"
         },
         {
           "headline": "Is The Rally in Wheat ETF Overdone?",
@@ -9881,11 +10474,19 @@
           "published_date": "2026-07-24"
         },
         {
+          "headline": "EU passes 218 Russia sanctions, targets vessels that refuel shadow fleet tankers",
+          "published_date": "2026-07-24"
+        },
+        {
           "headline": "US is ready to help end the 'senseless war' in Ukraine but no quick deal ahead, Rubio says",
           "published_date": "2026-07-24"
         },
         {
           "headline": "Ukraine war: ‘Russia’s Amazon’ hit by Ukrainian strikes",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "Ukraine hits Russia’s largest online marketplace, hurting small businesses and bringing the war home",
           "published_date": "2026-07-24"
         },
         {
@@ -9925,11 +10526,11 @@
           "published_date": "2026-07-24"
         }
       ],
-      "news_total": 34,
+      "news_total": 37,
       "logs": [
         {
           "log_date": "2026-07-24",
-          "summary": "Ukraine struck additional warehouses of Russia's top online retailer Wildberries and intensified attacks on Ozon, causing economic disruption. In leadership moves, President Zelensky replaced the commander-in-chief with Mykhailo Drapatyi and fired Defense Minister Mykhailo Fedorov, sparking protests. Meanwhile, U.S. Secretary of State Marco Rubio met with Russia's Lavrov in Manila, expressing readiness to help end the war but noting no quick deal is imminent.\nUkrainian strikes on Russia's Wildberries warehouses produced massive pillars of black smoke as fires raged at the facilities. Russia, stretched by Ukraine's drone attacks on its Black Sea Fleet, has pulled all warships from the Mediterranean Sea. Both sides have increased bridge strikes to disrupt resupply networks, indicating expectations of a prolonged stalemate, while the Kremlin warned against optimism on peace following the Rubio-Lavrov meeting.",
+          "summary": "Ukraine struck additional warehouses of Russia's top online retailer Wildberries and intensified attacks on Ozon, causing economic disruption. In leadership moves, President Zelensky replaced the commander-in-chief with Mykhailo Drapatyi and fired Defense Minister Mykhailo Fedorov, sparking protests. Meanwhile, U.S. Secretary of State Marco Rubio met with Russia's Lavrov in Manila, expressing readiness to help end the war but noting no quick deal is imminent.\nUkrainian strikes on Russia's Wildberries warehouses produced massive pillars of black smoke as fires raged at the facilities. Russia, stretched by Ukraine's drone attacks on its Black Sea Fleet, has pulled all warships from the Mediterranean Sea. Both sides have increased bridge strikes to disrupt resupply networks, indicating expectations of a prolonged stalemate, while the Kremlin warned against optimism on peace following the Rubio-Lavrov meeting.\nThe EU passed its 21st sanctions package with 218 new designations targeting Russia, including vessels that refuel shadow fleet tankers. Ukrainian strikes continued to hit Russian Wildberries warehouses, while new airstrikes caused deaths in both Ukraine and Russia, and a drone was shot down over NATO airspace.",
           "news": [
             {
               "news_id": "e84ff602f88c5982b0e9986bb27e300a",
@@ -9984,6 +10585,15 @@
               "published_date": "2026-07-24",
               "outlet": "India Today on MSN",
               "image": ""
+            },
+            {
+              "news_id": "3093de111b5b5f9cb44f11f4c609f134",
+              "url": "https://www.msn.com/en-us/money/general/eu-passes-218-russia-sanctions-targets-vessels-that-refuel-shadow-fleet-tankers/ar-AA28yDvy?ocid=BingNewsVerp",
+              "headline": "EU passes 218 Russia sanctions, targets vessels that refuel shadow fleet tankers",
+              "body": "EU Russia sanctions 2026 reached a new milestone Thursday as the bloc's 21st package — 218 new designations — for the first ...",
+              "published_date": "2026-07-24",
+              "outlet": "Tech Times on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.qtT5jniiOfz96F5pyDk2_w"
             },
             {
               "news_id": "3aefef159fca5f0ea9ac32dc91fbf345",
@@ -10049,6 +10659,15 @@
               "image": "https://media.zenfs.com/en/oilprice.com/15beaa86d7cd4e8fb45393624e0a9be0"
             },
             {
+              "news_id": "0cd732e4d82d53749c7e294779169be3",
+              "url": "https://www.timesleader.com/business/1749927/ukraine-hits-russias-largest-online-marketplace-hurting-small-businesses-and-bringing-the-war-home",
+              "headline": "Ukraine hits Russia’s largest online marketplace, hurting small businesses and bringing the war home",
+              "body": "<p>The Ukrainian attacks on the sprawling Russian warehouses produced stark images, with massive pillars of black smoke rising above fires that raged at facilities of Wildberries, the country’s biggest online retailer and its equivalent of Amazon.</p>",
+              "published_date": "2026-07-24",
+              "outlet": "Times Leader",
+              "image": "https://s.yimg.com/bo/9b8d8209-900e-5fd8-b349-0c7b6afc4dab_1784911336608.webp"
+            },
+            {
               "news_id": "83d0b2cf648c59ed95451ead36ce0a71",
               "url": "https://www.msn.com/en-us/news/world/russia-says-it-will-wait-for-new-trump-proposals-on-ending-ukraine-war/ar-AA28Bovi?ocid=BingNewsVerp",
               "headline": "Russia says it will wait for new Trump proposals on ending Ukraine war",
@@ -10083,6 +10702,15 @@
               "published_date": "2026-07-22",
               "outlet": "Defense News · via Yahoo News",
               "image": "https://media.zenfs.com/en/defense_news_499/f18447e0854d34e20159129b8abd1885"
+            },
+            {
+              "news_id": "f36551b7d82156bdb8c369155017524f",
+              "url": "https://news.sky.com/story/ukraine-war-latest-updates-putin-ally-says-west-is-playing-chess-game-with-death-as-eu-says-gas-deliveries-used-as-a-weapon-12541713",
+              "headline": "Ukraine war latest: Deaths in Ukraine and Russia after airstrikes - as drone shot down over NATO airspace",
+              "body": "Another warehouse of Russian online retailer Wildberries caught fire after Ukrainian strikes. Moscow hit back with attacks on ...",
+              "published_date": "2026-07-20T20:11:05+00:00",
+              "outlet": "Sky News",
+              "image": "https://www.bing.com/th?id=ONUT.GCc-DZVfAAKZ_BaC-ZvtNA"
             },
             {
               "news_id": "e00494f263da55f69403e45a563e9aa1",
@@ -12787,6 +13415,112 @@
               "published_date": "2026-07-20",
               "outlet": "Winnipeg Free Press",
               "image": "https://www.bing.com/th?id=ONUT.kH_cNpOZ-aPgpsgPut7WwA"
+            }
+          ]
+        }
+      ],
+      "logs_total": 1
+    },
+    {
+      "incident_id": "20260724-NZ-EQ",
+      "tree_id": "ca9e14bca97145a68844bad3b7ac3b2d",
+      "canonical_name": "Earthquake M5.7 Turangi, New Zealand 2026-07-24",
+      "summary": "A magnitude 5.8 earthquake struck the North Island of New Zealand region near Turangi on July 24, 2026, according to the European-Mediterranean Seismological Centre (EMSC). The quake occurred at a depth of approximately 10 km, with no immediate reports of damage or casualties.",
+      "country": "New Zealand",
+      "iso2": "NZ",
+      "lat": -38.9621,
+      "lon": 175.2332,
+      "country_group": "B",
+      "region": "Oceania",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": null,
+      "event_status": null,
+      "extended_monitoring": false,
+      "disease_name": null,
+      "event_date": "2026-07-24",
+      "first_reported_date": "2026-07-24",
+      "last_updated_date": "2026-07-24",
+      "days_since_event": 0,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "ercc": 0,
+        "healthmap": 0,
+        "news": 3
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 5.7 - 49 km W of Turangi, New Zealand",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t34g",
+          "meta": "10 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 5.7,
+        "max_depth_km": 10.0,
+        "place": "49 km W of Turangi, New Zealand",
+        "felt": 62,
+        "sig": 535,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Magnitude 5.8 earthquake strikes North Island of New Zealand region, EMSC says",
+          "published_date": "2026-07-22T19:57:02+00:00"
+        },
+        {
+          "headline": "Magnitude 5.8 earthquake strikes North Island of New Zealand region: EMSC",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "Magnitude 5.8 Earthquake Strikes North Island of New Zealand Region, EMSC Says",
+          "published_date": "2026-07-24T20:14:19+00:00"
+        }
+      ],
+      "news_total": 3,
+      "logs": [
+        {
+          "log_date": "2026-07-24",
+          "summary": "A magnitude 5.8 earthquake struck the North Island of New Zealand region near Turangi on July 24, 2026, according to the European-Mediterranean Seismological Centre (EMSC). The quake occurred at a depth of approximately 10 km, with no immediate reports of damage or casualties.",
+          "news": [
+            {
+              "news_id": "beed35347a1b584aa8e9cd277e4cb102",
+              "url": "https://www.lbcgroup.tv/news/world-news/948753/magnitude-58-earthquake-strikes-north-island-of-new-zealand-region-ems/en",
+              "headline": "Magnitude 5.8 earthquake strikes North Island of New Zealand region: EMSC",
+              "body": "| Lebanon News",
+              "published_date": "2026-07-24",
+              "outlet": "LBCI Lebanon",
+              "image": "https://www.bing.com/th?id=ONUT.-N81XCoEpvAbw5FMk_sctg"
+            },
+            {
+              "news_id": "f6c66ba113695c939b21f6b0d53a845a",
+              "url": "https://www.usnews.com/news/world/articles/2026-07-24/magnitude-5-8-earthquake-strikes-north-island-of-new-zealand-region-emsc-says",
+              "headline": "Magnitude 5.8 Earthquake Strikes North Island of New Zealand Region, EMSC Says",
+              "body": "July 25 (Reuters) - A magnitude 5.8 earthquake struck the North Island of New Zealand region on Saturday, the European-Mediterranean Seismological Centre said. The quake was at a depth of ...",
+              "published_date": "2026-07-24T20:14:19+00:00",
+              "outlet": "U.S. News & World Report",
+              "image": ""
+            },
+            {
+              "news_id": "e8cf9731a0cd5f4fa45b98f0651f4467",
+              "url": "https://www.reuters.com/business/environment/magnitude-58-earthquake-strikes-north-island-new-zealand-region-emsc-says-2026-07-24/",
+              "headline": "Magnitude 5.8 earthquake strikes North Island of New Zealand region, EMSC says",
+              "body": "A magnitude 5.8 earthquake struck the North Island of New Zealand region on Friday, the European-Mediterranean Seismological Centre said.",
+              "published_date": "2026-07-22T19:57:02+00:00",
+              "outlet": "Reuters",
+              "image": ""
             }
           ]
         }

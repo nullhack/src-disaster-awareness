@@ -1,39 +1,39 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-07-23",
-  "generated_at": "2026-07-24T15:13:28Z",
+  "generated_at": "2026-07-24T20:47:05Z",
   "as_of": "2026-07-23",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 21,
-    "new_today": 5,
+    "reportable_total": 19,
+    "new_today": 4,
     "critical": 4,
-    "high": 7,
-    "medium": 10,
+    "high": 6,
+    "medium": 9,
     "low": 0,
-    "disease_outbreaks": 2,
+    "disease_outbreaks": 1,
     "countries_affected": 14,
-    "news_total": 564,
+    "news_total": 520,
     "max_magnitude": 7.3,
     "by_severity": {
       "CRITICAL": 4,
-      "HIGH": 7,
-      "MEDIUM": 10,
+      "HIGH": 6,
+      "MEDIUM": 9,
       "LOW": 0
     },
     "by_type": {
-      "Disease": 2,
       "Flood": 4,
       "Volcano": 2,
+      "Disease": 1,
       "Drought": 1,
-      "Earthquake": 8,
+      "Earthquake": 7,
       "Tropical Cyclone": 1,
       "Forest Fire": 3
     },
     "by_region": {
-      "Global": 2,
-      "Asia": 10,
+      "Asia": 9,
+      "Global": 1,
       "Europe": 4,
       "Oceania": 2,
       "Americas": 3
@@ -41,8 +41,17 @@
   },
   "by_country": [
     {
+      "country": "Pakistan",
+      "count": 2,
+      "max_sev_rank": 2,
+      "iso2": "PK",
+      "region": "Asia",
+      "country_group": "A",
+      "max_severity": "MEDIUM"
+    },
+    {
       "country": "",
-      "count": 3,
+      "count": 2,
       "max_sev_rank": 2,
       "iso2": "XX",
       "region": "Global",
@@ -51,18 +60,9 @@
     },
     {
       "country": "Philippines",
-      "count": 3,
-      "max_sev_rank": 2,
-      "iso2": "PH",
-      "region": "Asia",
-      "country_group": "A",
-      "max_severity": "MEDIUM"
-    },
-    {
-      "country": "Pakistan",
       "count": 2,
       "max_sev_rank": 2,
-      "iso2": "PK",
+      "iso2": "PH",
       "region": "Asia",
       "country_group": "A",
       "max_severity": "MEDIUM"
@@ -168,422 +168,6 @@
     }
   ],
   "incidents": [
-    {
-      "incident_id": "20240530-XX-DI",
-      "tree_id": "f4579a0976695da8abd83ef84f8e0fb1",
-      "canonical_name": "Dengue Global 2024-05-30",
-      "summary": "Two native dengue fever outbreaks were recorded in southern France for the first time in 2026. In Malaysia, Subang Jaya City Council reported a 25% increase in dengue cases compared to the same period last year.",
-      "country": "",
-      "iso2": "XX",
-      "lat": null,
-      "lon": null,
-      "country_group": "C",
-      "region": "Global",
-      "incident_type": "Disease",
-      "incident_category": "Biological",
-      "is_disease": true,
-      "severity": "MEDIUM",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2024-05-30",
-      "first_reported_date": "2024-05-30",
-      "last_updated_date": "2026-07-23",
-      "days_since_event": 785,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 1,
-        "usgs": 0,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 31
-      },
-      "source_links": [
-        {
-          "type": "WHO",
-          "label": "Dengue Global 2024-05-30",
-          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2024-DON518",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Earth (Thailand) Celebrates 5 Years of Fighting Dengue as Title Sponsor of 'Mae Hong Son Cross Country 2026'",
-          "published_date": "2015-11-12"
-        },
-        {
-          "headline": "Dengue fever is — unfortunately — having a banner year. Can it be quelled?",
-          "published_date": "2024-07-23T00:00:00+00:00"
-        },
-        {
-          "headline": "UN agency authorizes second vaccine against dengue amid outbreaks in the Americas",
-          "published_date": "2026-07-08T14:57:06+00:00"
-        },
-        {
-          "headline": "Dengue: Surge in US Cases This Year",
-          "published_date": "2026-07-08T14:57:06+00:00"
-        },
-        {
-          "headline": "Two more die of dengue, 306 hospitalised in 24hrs",
-          "published_date": "2026-07-11T03:56:07+00:00"
-        },
-        {
-          "headline": "Two more die of dengue, 391 hospitalised in 24hrs",
-          "published_date": "2026-07-13T03:58:16+00:00"
-        },
-        {
-          "headline": "Sri Lanka expands anti-dengue drive as deaths mount",
-          "published_date": "2026-07-15"
-        },
-        {
-          "headline": "Remote health monitoring: A practical digital solution for dengue burden",
-          "published_date": "2026-07-15T01:15:18+00:00"
-        },
-        {
-          "headline": "Bangladesh floods heighten dengue, cholera risks, says IFRC",
-          "published_date": "2026-07-15T07:15:18+00:00"
-        },
-        {
-          "headline": "Two more die of dengue, 391 hospitalised in 24hrs",
-          "published_date": "2026-07-16T14:45:52+00:00"
-        },
-        {
-          "headline": "Two more die of dengue, 306 hospitalised in 24hrs",
-          "published_date": "2026-07-16T19:53:01+00:00"
-        },
-        {
-          "headline": "This tiny drone doesn't deliver packages. It kills mosquitoes- Moneycontrol.com",
-          "published_date": "2026-07-17"
-        },
-        {
-          "headline": "UKHSA travel illness warning as more than 1,000 cases so far this year",
-          "published_date": "2026-07-18T03:46:52+00:00"
-        },
-        {
-          "headline": "Mosquito Killer Drone This 40 Gram Palm Sized Ai Micro Drone Kills Flying Insects And Could One Day Help Eradicate Mosquitoes",
-          "published_date": "2026-07-19"
-        },
-        {
-          "headline": "India Approves First Dengue Vaccine QDENGA For Ages 4-60, No Pre-Vaccination Tests Required",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "India Approves Its First Dengue Vaccine Qdenga How It Works Who Is Eligible And Why It Isnt A Silver Bullet",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "Qdenga India Approves First Dengue Vaccine For People Aged 4 60 Years",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "India approves first dengue vaccine Qdenga: Which age group can get the shot that targets all 4 virus sub-types?",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "Mosquitos galore",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "Three more die of dengue, 372 hospitalised in 24hrs",
-          "published_date": "2026-07-20T17:07:00+00:00"
-        },
-        {
-          "headline": "QDENGA: India’s first approved dengue vaccine",
-          "published_date": "2026-07-21"
-        },
-        {
-          "headline": "550 Dengue Cases In State; AI, Drone Mapping To Aid Prevention",
-          "published_date": "2026-07-21"
-        },
-        {
-          "headline": "Breaking News Live Updates: Delhi records 205 dengue, 58 malaria cases so far this year - The Times of India",
-          "published_date": "2026-07-21"
-        },
-        {
-          "headline": "India approves first dengue vaccine",
-          "published_date": "2026-07-21"
-        },
-        {
-          "headline": "Malaria, dengue, leptospirosis killed 99 people in Mumbai between 2023 and 2025: RTI",
-          "published_date": "2026-07-21"
-        },
-        {
-          "headline": "India Gets Its First Dengue Vaccine Who Can Take It Price Effectiveness And Everything You Need To Know",
-          "published_date": "2026-07-22"
-        },
-        {
-          "headline": "Japanese Drugmaker Takedas Qdenga Becomes First Dengue Vaccine Approved In India",
-          "published_date": "2026-07-22"
-        },
-        {
-          "headline": "India Approves Its First Dengue Vaccine Qdenga How It Works Who Is Eligible And Why It Isnt A Silver Bullet",
-          "published_date": "2026-07-22"
-        },
-        {
-          "headline": "First native Dengue fever cases recorded in France in 2026",
-          "published_date": "2026-07-22"
-        },
-        {
-          "headline": "Uk Holidaymakers Told To Check This Before Flying",
-          "published_date": "2026-07-23"
-        },
-        {
-          "headline": "MBSJ sees 25% rise in dengue cases",
-          "published_date": "2026-07-23"
-        }
-      ],
-      "news_total": 31,
-      "logs": [
-        {
-          "log_date": "2026-07-08",
-          "summary": "The World Health Organization authorized a second dengue vaccine as outbreaks continue in the Americas. The US CDC issued an alert about increased dengue risk in the United States. In the Americas, nearly 10.4 million suspected dengue cases were reported to WHO by early July 2024.",
-          "news": [
-            {
-              "news_id": "7e19082e3a5f5ef599ebac390d6edf7c",
-              "url": "https://medicalxpress.com/news/2024-05-agency-authorizes-vaccine-dengue-outbreaks.html",
-              "headline": "UN agency authorizes second vaccine against dengue amid outbreaks in the Americas",
-              "body": "A health worker fumigates for mosquitoes inside a home to help mitigate the spread of dengue in the Las Penitas area of Talara, Peru, Friday, March 1, 2024.The World Health Organization on Wednesday, ...",
-              "published_date": "2026-07-08T14:57:06+00:00",
-              "outlet": "Medical Xpress",
-              "image": ""
-            },
-            {
-              "news_id": "e3557f7e1358509cbde59ef9f9b948eb",
-              "url": "https://www.npr.org/sections/goats-and-soda/2024/07/23/g-s1-12674/dengue-mosquitoes-climate-virus-americas",
-              "headline": "Dengue fever is — unfortunately — having a banner year. Can it be quelled?",
-              "body": "In the Americas alone, almost 10.4 million suspected cases of dengue, a mosquito-borne viral disease, were reported to the World Health Organization in 2024 as of the first week of July, an increase ...",
-              "published_date": "2024-07-23T00:00:00+00:00",
-              "outlet": "NPR",
-              "image": ""
-            },
-            {
-              "news_id": "e503ebb6fcdb5c678fa3cc7dcb115da8",
-              "url": "https://www.medscape.com/viewarticle/dengue-surge-us-cases-this-year-2024a1000bzw",
-              "headline": "Dengue: Surge in US Cases This Year",
-              "body": "Federal health officials with the US Centers for Disease Control and Prevention (CDC) have issued an alert, warning health professionals and the public about an increased risk for dengue virus ...",
-              "published_date": "2026-07-08T14:57:06+00:00",
-              "outlet": "Medscape",
-              "image": ""
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-19",
-          "summary": "Sri Lanka is intensifying a military-backed anti-dengue drive as the death toll from the disease has climbed to 49 since the start of the year, according to a senior official.",
-          "news": [
-            {
-              "news_id": "d7b8b1d10cf4561cb3b32b0c01737f7b",
-              "url": "https://medicalxpress.com/news/2026-07-sri-lanka-anti-dengue-deaths.html",
-              "headline": "Sri Lanka expands anti-dengue drive as deaths mount",
-              "body": "Sri Lanka is intensifying a military-backed drive to contain the spread of mosquito-borne dengue fever, a senior official said Wednesday, as the death toll climbed to 49 since the start of the year.",
-              "published_date": "2026-07-15",
-              "outlet": "Medical Xpress",
-              "image": "https://scx2.b-cdn.net/gfx/news/hires/2025/dengue.jpg"
-            },
-            {
-              "news_id": "a55e117003c0552f8fa83fda4decaa1d",
-              "url": "https://www.mirror.co.uk/news/health/ukhsa-travel-illness-warning-more-37444934",
-              "headline": "UKHSA travel illness warning as more than 1,000 cases so far this year",
-              "body": "Brits have been urged to stay safe while abroad as new data shows more than 1,000 travel-associated illnesses have been ...",
-              "published_date": "2026-07-18T03:46:52+00:00",
-              "outlet": "The Mirror",
-              "image": "https://www.bing.com/th?id=ONUT.vxIK5hRIM0VoZ61OmpzMMA"
-            },
-            {
-              "news_id": "87f3d75595e25a02b6687e2f0e75c76c",
-              "url": "https://www.moneycontrol.com/news/trends/this-tiny-drone-doesn-t-deliver-packages-it-kills-mosquitoes-13976724.html",
-              "headline": "This tiny drone doesn't deliver packages. It kills mosquitoes- Moneycontrol.com",
-              "body": "A French startup's autonomous microdrone can detect, track and strike mosquitoes in flight, offering a potential new approach to chemical-free mosquito control.",
-              "published_date": "2026-07-17",
-              "outlet": "Moneycontrol",
-              "image": "https://images.moneycontrol.com/static-mcnews/2026/07/20260717085946_mosq.png"
-            },
-            {
-              "news_id": "4065b800af575da69d733a4176e2a211",
-              "url": "https://www.msn.com/en-in/entertainment/news/mosquito-killer-drone-this-40-gram-palm-sized-ai-micro-drone-kills-flying-insects-and-could-one-day-help-eradicate-mosquitoes/ar-AA2822KE",
-              "headline": "Mosquito Killer Drone This 40 Gram Palm Sized Ai Micro Drone Kills Flying Insects And Could One Day Help Eradicate Mosquitoes",
-              "body": "Mosquito killer drone: A palm-sized AI micro-drone has autonomously detected, tracked and intercepted a flying moth in mid-air, marking a significant engineering milestone. The technology could one day help target disease-carrying mosquitoes without relying on chemical insecticides.",
-              "published_date": "2026-07-19",
-              "outlet": "The Economic Times",
-              "image": "https://img.etimg.com/thumb/msid-132435453,width-1200,height-630,imgsize-1068444,overlay-economictimes/articleshow.jpg"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-22",
-          "summary": "India approved its first dengue vaccine, QDENGA, for individuals aged 4 to 60 years. In India, Mumbai reported 99 deaths from vector-borne diseases including dengue between 2023 and 2025, while Delhi recorded 205 dengue cases so far this year. Madhya Pradesh reported 550 dengue cases and introduced an AI-based prediction system with drone mapping to identify outbreak hotspots.\nIndia approved its first dengue vaccine, Qdenga developed by Takeda, for individuals aged 4 to 60 years; the vaccine protects against all four dengue virus subtypes. In Bangladesh, three more dengue-related deaths were reported in the past 24 hours, with 372 new hospitalizations, raising the year's death toll to 37.",
-          "news": [
-            {
-              "news_id": "8d7a856335d555199e285bcf01adf78e",
-              "url": "https://www.thehindu.com/sci-tech/health/qdenga-indias-first-approved-dengue-vaccine/article71248324.ece",
-              "headline": "QDENGA: India’s first approved dengue vaccine",
-              "body": "QDENGA, India's first dengue vaccine, receives approval for use, marking a significant milestone in dengue prevention efforts.",
-              "published_date": "2026-07-21",
-              "outlet": "The Hindu",
-              "image": "https://www.bing.com/th?id=ONUT.XScKWqcootJJrM4awebDvQ"
-            },
-            {
-              "news_id": "aba99d4ebd4d51a0968de856cee5041f",
-              "url": "https://www.msn.com/en-in/health/other/india-approves-its-first-dengue-vaccine-qdenga-how-it-works-who-is-eligible-and-why-it-isnt-a-silver-bullet/ar-AA28mE6f?ocid=BingNewsVerp",
-              "headline": "India Approves Its First Dengue Vaccine Qdenga How It Works Who Is Eligible And Why It Isnt A Silver Bullet",
-              "body": "Qdenga, cleared this week for ages 4 to 60, is one of only a few dengue vaccines in the world. It is to be injected in two ...",
-              "published_date": "2026-07-20",
-              "outlet": "Hindustan Times on MSN",
-              "image": "https://www.bing.com/th?id=ORMS.a3112a3d0738cfcc57fb70abb3c17271"
-            },
-            {
-              "news_id": "537877da16e7563d813fc20fc5613c9e",
-              "url": "https://www.daily-sun.com/health/887531/three-more-die-of-dengue-372-hospitalised-in-24hrs",
-              "headline": "Three more die of dengue, 372 hospitalised in 24hrs",
-              "body": "Three more deaths were reported from dengue in the past 24 hours till Monday morning, raising the number of fatalities from the Aedes mosquito-borne disease in Bangladesh to 37 this year. In the 24-hour span,",
-              "published_date": "2026-07-20T17:07:00+00:00",
-              "outlet": "Daily Sun",
-              "image": "https://dscdn.daily-sun.com/english/uploads/news_photos/2026/07/20/Dengue-collected-2-6a5dfef1b8f3a.jpg"
-            },
-            {
-              "news_id": "37a022118c01561cb7bcf173aabb6bde",
-              "url": "https://www.msn.com/en-in/health/health-news/india-gets-its-first-dengue-vaccine-who-can-take-it-price-effectiveness-and-everything-you-need-to-know/ar-AA28hlge",
-              "headline": "India Gets Its First Dengue Vaccine Who Can Take It Price Effectiveness And Everything You Need To Know",
-              "body": "India accounts for nearly one-third of the global dengue burden, with lakhs of people infected every year and hundreds losing their lives to the mosquito-borne disease.According to the National Centre for Vector Borne Disease Control (NCVBDC),",
-              "published_date": "2026-07-22",
-              "outlet": "News18",
-              "image": ""
-            },
-            {
-              "news_id": "57fe55e72086544cafc0446e41d09a5b",
-              "url": "https://www.freepressjournal.in/bhopal/550-dengue-cases-in-state-ai-drone-mapping-to-aid-prevention",
-              "headline": "550 Dengue Cases In State; AI, Drone Mapping To Aid Prevention",
-              "body": "Madhya Pradesh has introduced an AI-based dengue prediction system integrated with drone mapping to identify potential outbreak hotspots before cases surge. The technology analyses weather, historical case data and population trends. The state has also provided free dengue testing at 64 sentinel laboratories to strengthen early detection and treatment.",
-              "published_date": "2026-07-21",
-              "outlet": "Free Press Journal",
-              "image": "https://www.bing.com/th?id=ONUT.IQjO0JK9chjn-6_53AVjOg"
-            },
-            {
-              "news_id": "63e8cc9967da593b9a1a0f356fd4234a",
-              "url": "https://www.msn.com/en-in/science/biology/qdenga-india-approves-first-dengue-vaccine-for-people-aged-4-60-years/ar-AA28ierR?ocid=BingNewsVerp",
-              "headline": "Qdenga India Approves First Dengue Vaccine For People Aged 4 60 Years",
-              "body": "The vaccine was approved for individuals aged between 4 and 60 years. It can be administered irrespective of whether a person ...",
-              "published_date": "2026-07-20",
-              "outlet": "The Statesman on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.ulkt5EHVqBMgDwBFTLk47w"
-            },
-            {
-              "news_id": "acb6d8c3ca335943825540959aac2fc3",
-              "url": "https://news24online.com/india/india-approves-first-ever-dengue-vaccine-japan-drugmaker-qdenga-to-offer-protection-against-all-four-virus-sub-types/888973/",
-              "headline": "India approves first dengue vaccine Qdenga: Which age group can get the shot that targets all 4 virus sub-types?",
-              "body": "India has approved its first dengue vaccine, for people aged 4-60 years. The vaccine protects against all four dengue virus serotypes and has shown strong long-term safety and effectiveness.",
-              "published_date": "2026-07-20",
-              "outlet": "news24online",
-              "image": ""
-            },
-            {
-              "news_id": "83935ad05b5d5dbcb0eb1375c3c27212",
-              "url": "https://timesofindia.indiatimes.com/india/breaking-news-live-updates-july-21/liveblog/132526255.cms",
-              "headline": "Breaking News Live Updates: Delhi records 205 dengue, 58 malaria cases so far this year - The Times of India",
-              "body": "Breaking news live updates, July 21",
-              "published_date": "2026-07-21",
-              "outlet": "The Times of India",
-              "image": "https://www.bing.com/th?id=ONUT.dLsg1eTyODlJaj_OmhOBwg"
-            },
-            {
-              "news_id": "5cbfcc2c2289543281bf26daef90a8a0",
-              "url": "https://www.msn.com/en-us/health/other/japanese-drugmaker-takedas-qdenga-becomes-first-dengue-vaccine-approved-in-india/ar-AA28hncz",
-              "headline": "Japanese Drugmaker Takedas Qdenga Becomes First Dengue Vaccine Approved In India",
-              "body": "July 20 (Reuters) - Japan's Takeda Pharmaceutical's dengue vaccine QDENGA has been approved by India's drug regulator, making it the first dengue vaccine to be approved in the country, the company's unit said on Monday.",
-              "published_date": "2026-07-22",
-              "outlet": "Reuters",
-              "image": "https://www.reuters.com/resizer/v2/BOIDCH5HOJJBJPVPWXFFG5QSL4.jpg?auth=aee9a2f0a4bb7e9a0d23c6efd8cd2eee1b235b1840e76583d37dbe8eee4233ab&height=1005&width=1920&quality=80&smart=true"
-            },
-            {
-              "news_id": "c55fe09fa4f156a98cedc2b88b45beeb",
-              "url": "https://medicalxpress.com/news/2026-07-india-dengue-vaccine.html",
-              "headline": "India approves first dengue vaccine",
-              "body": "India has approved its first dengue vaccine, authorizing the use of Japanese drugmaker Takeda's Qdenga jab, the Health Ministry said Tuesday.",
-              "published_date": "2026-07-21",
-              "outlet": "Medical Xpress",
-              "image": "https://scx2.b-cdn.net/gfx/news/hires/2021/dengue.jpg"
-            },
-            {
-              "news_id": "0878c9a44e41567794538e4f77f9ee0b",
-              "url": "https://www.msn.com/en-in/health/other/india-approves-its-first-dengue-vaccine-qdenga-how-it-works-who-is-eligible-and-why-it-isnt-a-silver-bullet/ar-AA28mE6f",
-              "headline": "India Approves Its First Dengue Vaccine Qdenga How It Works Who Is Eligible And Why It Isnt A Silver Bullet",
-              "body": "Qdenga, cleared this week for ages 4 to 60, is one of only a few dengue vaccines in the world. It is to be injected in two doses three months apart.",
-              "published_date": "2026-07-22",
-              "outlet": "Hindustan Times",
-              "image": "https://www.hindustantimes.com/ht-img/img/2026/07/21/400x225/SRI-LANKA-HEALTH-EPIDEMIC-DENGUE-0_1784623109897_1784623136906_1a30f73c-601d-4759-a3e6-f00e49085c57.jpg"
-            },
-            {
-              "news_id": "88357f82e2ab5046b2ebb3908c157690",
-              "url": "https://timesofindia.indiatimes.com/city/mumbai/malaria-dengue-leptospirosis-killed-99-people-in-mumbai-between-2023-and-2025-rti/articleshow/132542557.cms",
-              "headline": "Malaria, dengue, leptospirosis killed 99 people in Mumbai between 2023 and 2025: RTI",
-              "body": "Mumbai: Between 2023 and 2025, 99 people died of leptospirosis, malaria and dengue out of 236 suspected fatalities reviewed by the BMC’s death audit committee, according to the latest RTI data.",
-              "published_date": "2026-07-21",
-              "outlet": "The Times of India",
-              "image": "https://www.bing.com/th?id=ONUT.YaXNgWXQspXw6w2KV7oAiA"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-23",
-          "summary": "Two native dengue fever outbreaks were recorded in southern France for the first time in 2026. In Malaysia, Subang Jaya City Council reported a 25% increase in dengue cases compared to the same period last year.",
-          "news": [
-            {
-              "news_id": "ee91a17f169a5ee09102827a676cf007",
-              "url": "https://www.msn.com/en-gb/health/other/uk-holidaymakers-told-to-check-this-before-flying/ar-AA2880mK",
-              "headline": "Uk Holidaymakers Told To Check This Before Flying",
-              "body": "UKHSA has issued a warning to anyone travelling abroad",
-              "published_date": "2026-07-23",
-              "outlet": "Liverpool Echo",
-              "image": "https://i2-prod.liverpoolecho.co.uk/incoming/article34308835.ece/ALTERNATES/s1200/0_GettyImages-821829016.jpg"
-            },
-            {
-              "news_id": "d922e672f6d954cf8d944b6c1437470f",
-              "url": "https://www.connexionfrance.com/news/first-native-dengue-fever-cases-recorded-in-france-in-2026/803099",
-              "headline": "First native Dengue fever cases recorded in France in 2026",
-              "body": "Two separate outbreaks in southern France",
-              "published_date": "2026-07-22",
-              "outlet": "The Connexion",
-              "image": ""
-            },
-            {
-              "news_id": "02c58732ea5f550baab1b41efef83489",
-              "url": "https://www.thestar.com.my/metro/metro-news/2026/07/23/mbsj-sees-25-rise-in-dengue-cases",
-              "headline": "MBSJ sees 25% rise in dengue cases",
-              "body": "Subang Jaya City Council (MBSJ) recorded a 25.15% increase in dengue cases up to Epidemiological Week 27 this year compared with the corresponding period last year.",
-              "published_date": "2026-07-23",
-              "outlet": "The Star",
-              "image": "https://apicms.thestar.com.my/uploads/images/2026/07/23/4023696.jpg"
-            },
-            {
-              "news_id": "c1c83dda83785b2b8f5bd8d17567d79a",
-              "url": "https://laist.com/brief/news/climate-environment/mosquito-season-how-humans-are-fighting-back",
-              "headline": "Mosquitos galore",
-              "body": "How SoCal is fighting back against the pests",
-              "published_date": "2026-07-20",
-              "outlet": "LAist",
-              "image": "https://scpr.brightspotcdn.com/dims4/default/62ea32f/2147483647/strip/true/crop/5712x2999+0+654/resize/1200x630!/quality/90/?url=http://scpr-brightspot.s3.us-west-2.amazonaws.com/3d/a5/7a726f3941c2a83c9d74a87f05bf/img-7940.jpeg"
-            }
-          ]
-        }
-      ],
-      "logs_total": 6
-    },
     {
       "incident_id": "20250714-PK-FL",
       "tree_id": "ae82b9a819c65193aacc2879508d191e",
@@ -1006,7 +590,7 @@
         "gdacs": 1,
         "ercc": 0,
         "healthmap": 0,
-        "news": 7
+        "news": 8
       },
       "source_links": [
         {
@@ -1027,6 +611,10 @@
         "gdacs_population": null
       },
       "news": [
+        {
+          "headline": "Mount Lewotobi Laki-laki Erupts Again Tonight (Saturday, 25 July 2026) | Pusat Data Ekonomi dan Bisnis Indonesia | Databoks",
+          "published_date": "2026-07-01"
+        },
         {
           "headline": "60 cm of snow in June? How a volcano half a world away stole Canada's summer",
           "published_date": "2026-07-08T19:01:18+00:00"
@@ -1056,7 +644,7 @@
           "published_date": "2026-07-23"
         }
       ],
-      "news_total": 7,
+      "news_total": 8,
       "logs": [
         {
           "log_date": "2026-07-08",
@@ -5236,261 +4824,6 @@
       "news_total": 2,
       "logs": [],
       "logs_total": 0
-    },
-    {
-      "incident_id": "20260714-PH-EQ",
-      "tree_id": "6b641167ea035850822c4c571885d00d",
-      "canonical_name": "Earthquake M6.2 Sarangani, Philippines 2026-07-14",
-      "summary": "Following the M6.2 earthquake near Sarangani, the Eastern Mindanao Command placed its disaster response units on standby to assist local governments. Suzuki Philippines extended assistance to employees of two dealerships in General Santos City to support their recovery.",
-      "country": "Philippines",
-      "iso2": "PH",
-      "lat": 5.3269,
-      "lon": 125.1655,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "HIGH",
-      "priority": "HIGH",
-      "priority_rank": 1,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-07-14",
-      "first_reported_date": "2026-07-14",
-      "last_updated_date": "2026-07-19",
-      "days_since_event": 10,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 14
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 6.2 - 34 km WSW of Sarangani, Philippines",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t0d0",
-          "meta": "67.854 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 6.2,
-        "max_depth_km": 67.854,
-        "place": "34 km WSW of Sarangani, Philippines",
-        "felt": 62,
-        "sig": 628,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Suzuki extends assistance to earthquake-affected dealership employees in GenSan",
-          "published_date": "2026-07-01"
-        },
-        {
-          "headline": "BMKG: M6.2 Earthquake Strikes Mindanao, No Tsunami Threat",
-          "published_date": "2026-07-09T07:18:32+00:00"
-        },
-        {
-          "headline": "Seismic Activity Shakes Mindanao: A Closer Look",
-          "published_date": "2026-07-11T07:18:32+00:00"
-        },
-        {
-          "headline": "Magnitude 6.3 earthquake strikes off the coast of Balut Island, Sarangani, Davao Occidental",
-          "published_date": "2026-07-14T16:15:00+00:00"
-        },
-        {
-          "headline": "Earthquake of magnitude 6.05 strikes Philippines' Mindanao",
-          "published_date": "2026-07-14T16:16:00+00:00"
-        },
-        {
-          "headline": "No unusual sea-level changes observed following strong earthquake off Balut Island, says PHIVOLCS",
-          "published_date": "2026-07-14T22:01:29+00:00"
-        },
-        {
-          "headline": "Phivolcs: Tremors observed in Masbate, Davao Occidental",
-          "published_date": "2026-07-15T02:02:00+00:00"
-        },
-        {
-          "headline": "Magnitude 6.3 earthquake strikes off the coast of Balut Island, Sarangani, Davao Occidental",
-          "published_date": "2026-07-15T06:42:11+00:00"
-        },
-        {
-          "headline": "Magnitude 6.2 earthquake strikes off southern Philippines following series of Ring of Fire quakes",
-          "published_date": "2026-07-15T06:42:11+00:00"
-        },
-        {
-          "headline": "No unusual sea-level changes observed following strong earthquake off Balut Island, says PHIVOLCS",
-          "published_date": "2026-07-15T06:42:11+00:00"
-        },
-        {
-          "headline": "Minor sea level disturbance may occur after strong earthquake off the coast of Balut Island, Davao Occidental — PHIVOLCS",
-          "published_date": "2026-07-15T06:42:11+00:00"
-        },
-        {
-          "headline": "6.2-magnitude earthquake strikes Pacific Ring of Fire: Normal activity or warning of a megaquake? Explained",
-          "published_date": "2026-07-15T07:18:33+00:00"
-        },
-        {
-          "headline": "Eastmincom’s disaster response units on standby for rescue ops",
-          "published_date": "2026-07-18T08:29:31+00:00"
-        },
-        {
-          "headline": "Suzuki Philippines sends relief to General Santos dealership workers",
-          "published_date": "2026-07-19"
-        }
-      ],
-      "news_total": 14,
-      "logs": [
-        {
-          "log_date": "2026-07-15",
-          "summary": "A magnitude 6.2 earthquake struck 34 km southwest of Sarangani, Philippines on July 14, 2026, at 11:49 pm local time, with a depth of approximately 10 km. The Philippine Institute of Volcanology and Seismology (PHIVOLCS) initially recommended caution for minor sea-level disturbances but later cancelled the advisory, confirming no unusual sea-level changes and no tsunami threat from the event.",
-          "news": [
-            {
-              "news_id": "edc72b9c57aa57b29ee619241ab57e65",
-              "url": "https://newsinfo.inquirer.net/2263979/phivolcs-tremors-observed-in-masbate-davao-occidental",
-              "headline": "Phivolcs: Tremors observed in Masbate, Davao Occidental",
-              "body": "Maps released by the state seismology bureau indicate the epicenters of tremors in Masbate (left) and Davao Occidental, which occurred on July 14 and 15, respectively. — Photos from",
-              "published_date": "2026-07-15T02:02:00+00:00",
-              "outlet": "Inquirer.net",
-              "image": "https://newsinfo.inquirer.net/files/2026/07/earthquake.png"
-            },
-            {
-              "news_id": "33b294c86fcc55e2a27f5480872ef320",
-              "url": "https://www.msn.com/en-ph/news/national/magnitude-63-earthquake-struck-off-the-coast-of-balut-island-sarangani-davao-occidental/ar-AA27Uikr?ocid=BingNewsVerp",
-              "headline": "Magnitude 6.3 earthquake strikes off the coast of Balut Island, Sarangani, Davao Occidental",
-              "body": "A magnitude 6.3 earthquake struck southwest of Balut Island, Sarangani, Davao Occidental late Tuesday evening, the Philippine ...",
-              "published_date": "2026-07-15T06:42:11+00:00",
-              "outlet": "GMA News Online on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.9riz-CdojH7gvRmBpssKpw"
-            },
-            {
-              "news_id": "c98b8387615d50559c743c85f500edd2",
-              "url": "https://www.msn.com/en-in/lifestyle/whats-hot/62-magnitude-earthquake-strikes-pacific-ring-of-fire-normal-activity-or-warning-of-a-megaquake-explained/ar-AA27UAMb?ocid=BingNewsVerp",
-              "headline": "6.2-magnitude earthquake strikes Pacific Ring of Fire: Normal activity or warning of a megaquake? Explained",
-              "body": "A magnitude 6.2 earthquake struck off the southern Philippines near Mindanao, recorded at a depth of 42.2 miles.",
-              "published_date": "2026-07-15T07:18:33+00:00",
-              "outlet": "Hindustan Times on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.w5q7kHWQnLq2cc6pYDwp5w"
-            },
-            {
-              "news_id": "2d2b74738d9c53eca61f01c95d86b9bd",
-              "url": "https://www.msn.com/en-us/news/world/magnitude-62-earthquake-strikes-off-southern-philippines-following-series-of-ring-of-fire-quakes/ar-AA27TNHy?ocid=BingNewsVerp",
-              "headline": "Magnitude 6.2 earthquake strikes off southern Philippines following series of Ring of Fire quakes",
-              "body": "A magnitude 6.2 earthquake struck off the coast of the southern Philippines late Tuesday night.",
-              "published_date": "2026-07-15T06:42:11+00:00",
-              "outlet": "FOX Weather on MSN",
-              "image": "https://www.bing.com/th?id=ORMS.7ab5578986001a44cbe3cd82397dba50"
-            },
-            {
-              "news_id": "994254a4148b5d7bbc21964ea15e15f0",
-              "url": "https://www.khaleejtimes.com/world/asia/earthquake-of-magnitude-605-strikes-philippines-mindanao",
-              "headline": "Earthquake of magnitude 6.05 strikes Philippines' Mindanao",
-              "body": "A magnitude 6.05 earthquake struck Mindanao in the Philippines on Tuesday, according to a Institute of Volcanology and Seismology (Phivolcs) bulletin. The quake was at a depth of 10 km (6.21 miles), and it struck on July 14 at 11:49pm local time.",
-              "published_date": "2026-07-14T16:16:00+00:00",
-              "outlet": "Khaleej Times",
-              "image": "https://imgengine.khaleejtimes.com/khaleejtimes-english/2026-07-14/erh22y30/earthquake.jpeg?width=1200&height=630&q=60&format=auto&ogImage=true&mode=crop&rect=34,0,486,324"
-            },
-            {
-              "news_id": "f4153ef680425ede83436c8be8afb082",
-              "url": "https://www.msn.com/en-ph/news/other/no-unusual-sea-level-changes-observed-following-strong-earthquake-says-phivolcs/ar-AA27UAFk",
-              "headline": "No unusual sea-level changes observed following strong earthquake off Balut Island, says PHIVOLCS",
-              "body": "The recommendation for minor sea-level disturbances for the strong earthquake that occurred on Tuesday, July 14, 2026 has been cancelled, the Philippine Institute of Volcanology and Seismology (PHIVOLCS) reported.",
-              "published_date": "2026-07-14T22:01:29+00:00",
-              "outlet": "GMA News Online",
-              "image": "https://images.gmanews.tv/webpics/2022/07/phivolcs_building_2022_07_27_19_42_29.jpg"
-            },
-            {
-              "news_id": "aa7dc684c246561ca6d2214cb701cf27",
-              "url": "https://en.tempo.co/read/2113729/bmkg-m6-2-earthquake-strikes-mindanao-no-tsunami-threat",
-              "headline": "BMKG: M6.2 Earthquake Strikes Mindanao, No Tsunami Threat",
-              "body": "Indonesian Meteorology, Climatology, and Geophysics Agency (BMKG) reported a tectonic earthquake shaking the Mindanao region, ...",
-              "published_date": "2026-07-09T07:18:32+00:00",
-              "outlet": "Tempo.co English",
-              "image": "https://www.bing.com/th?id=ONUT.sVjmfenuQdX0-eWZFiP8PQ"
-            },
-            {
-              "news_id": "3a6275ff56a75d3a925b065a921df41b",
-              "url": "https://www.msn.com/en-ph/news/national/no-unusual-sea-level-changes-observed-following-strong-earthquake-off-balut-island-says-phivolcs/ar-AA27UAFk?ocid=BingNewsVerp",
-              "headline": "No unusual sea-level changes observed following strong earthquake off Balut Island, says PHIVOLCS",
-              "body": "The recommendation for minor sea-level disturbances for the strong earthquake that occurred on Tuesday, July 14, 2026 has been cancelled, the Philippine Institute of Volcanology and Seismology ...",
-              "published_date": "2026-07-15T06:42:11+00:00",
-              "outlet": "GMA Network on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "0085f738b2d359cfb9cfee2601997439",
-              "url": "https://www.msn.com/en-ph/news/national/minor-sea-level-disturbance-reported-after-strong-earthquake-off-the-coast-of-balut-island-davao-occidental/ar-AA27UC12?ocid=BingNewsVerp",
-              "headline": "Minor sea level disturbance may occur after strong earthquake off the coast of Balut Island, Davao Occidental — PHIVOLCS",
-              "body": "A minor sea level disturbance may be expected following the magnitude 6.5 earthquake that struck off the coast of Balut ...",
-              "published_date": "2026-07-15T06:42:11+00:00",
-              "outlet": "GMA News Online on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.f8_KuGs538bvv2nZt09lQg"
-            },
-            {
-              "news_id": "3b1b86fc5b125506aa54c07181e7eba3",
-              "url": "https://www.devdiscourse.com/article/science-environment/3950243-seismic-activity-shakes-mindanao-a-closer-look",
-              "headline": "Seismic Activity Shakes Mindanao: A Closer Look",
-              "body": "A 6.05 magnitude earthquake struck Mindanao, Philippines, on Tuesday. The German Research Centre for Geosciences reported the quake, which had a depth of 10 km. The event highlights the region's ...",
-              "published_date": "2026-07-11T07:18:32+00:00",
-              "outlet": "devdiscourse",
-              "image": ""
-            },
-            {
-              "news_id": "e9ade98d8edf5dfb98c2805ca7700fdf",
-              "url": "https://www.msn.com/en-ph/news/national/magnitude-63-earthquake-struck-off-the-coast-of-balut-island-sarangani-davao-occidental/ar-AA27Uikr",
-              "headline": "Magnitude 6.3 earthquake strikes off the coast of Balut Island, Sarangani, Davao Occidental",
-              "body": "A magnitude 6.3 earthquake struck southwest of Balut Island, Sarangani, Davao Occidental late Tuesday evening, the Philippine Institute of Volcanology and Seismology (PHIVOLCS) reported. PHIVOLCS earlier reported that a magnitude 6.",
-              "published_date": "2026-07-14T16:15:00+00:00",
-              "outlet": "GMA News Online",
-              "image": "https://images.gmanews.tv/webpics/2026/07/Magnitude_6_2026_07_15_00_14_43.jpg"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-20",
-          "summary": "Following the M6.2 earthquake near Sarangani, the Eastern Mindanao Command placed its disaster response units on standby to assist local governments. Suzuki Philippines extended assistance to employees of two dealerships in General Santos City to support their recovery.",
-          "news": [
-            {
-              "news_id": "b3d3bc8750b451fea0bd73918612493c",
-              "url": "https://www.manilatimes.net/2026/07/21/tmt-newswire/suzuki-extends-assistance-to-earthquake-affected-dealership-employees-in-gensan/2387454",
-              "headline": "Suzuki extends assistance to earthquake-affected dealership employees in GenSan",
-              "body": "FOLLOWING the recent earthquake that affected parts of Mindanao, Suzuki Philippines immediately extended assistance to employees of Suzuki Auto General Santos and Suzuki Auto SM City General Santos to help support them during the initial stages of recovery.",
-              "published_date": "2026-07-01",
-              "outlet": "The Manila Times",
-              "image": ""
-            },
-            {
-              "news_id": "cd432add4d7a5e76a8f7631c551e2aca",
-              "url": "https://www.sunstar.com.ph/davao/eastmincoms-disaster-response-units-on-standby-for-rescue-ops",
-              "headline": "Eastmincom’s disaster response units on standby for rescue ops",
-              "body": "THE Eastern Mindanao Command (Eastmincom) has placed its disaster response units on standby to augment local government ...",
-              "published_date": "2026-07-18T08:29:31+00:00",
-              "outlet": "SunStar",
-              "image": "https://www.bing.com/th?id=ONUT.6ZtYTRRviXbquogtSoFDQw"
-            },
-            {
-              "news_id": "6838979dca81521e9dadad7608db8d14",
-              "url": "https://mb.com.ph/2026/07/19/suzuki-philippines-sends-relief-to-general-santos-dealership-workers",
-              "headline": "Suzuki Philippines sends relief to General Santos dealership workers",
-              "body": "Suzuki Philippines provided assistance to employees of two dealerships in General Santos City following the major earthquake that struck the waters off...",
-              "published_date": "2026-07-19",
-              "outlet": "Manila Bulletin",
-              "image": "https://www.bing.com/th?id=ONUT.6aoDKxLKHsGc6E428A9lDg"
-            }
-          ]
-        }
-      ],
-      "logs_total": 2
     },
     {
       "incident_id": "20260716-NZ-EQ",
