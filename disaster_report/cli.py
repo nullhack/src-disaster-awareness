@@ -184,7 +184,7 @@ def _search_news(
 ) -> None:
 
     settings, warehouse = _bootstrap(config_path, secrets_path)
-    adapters: list[object] = [] if repoll else _build_adapters(source)
+    adapters: list[object] = _build_adapters(source)
     ddg = DuckDuckGoNewsAdapter()
     digester = OpenRouterDigester(
         settings.openrouter_model, settings.openrouter_api_key
@@ -198,6 +198,7 @@ def _search_news(
         news_timelimit=news_timelimit,
         source_id=source_id,
         active_window_days=settings.active_window_days,
+        repoll=repoll,
     )
     click.echo("search-news: done")
 

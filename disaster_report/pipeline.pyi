@@ -21,6 +21,7 @@ def _match_usgs_event_family(wh: ContentStore, report: SourceReport) -> str | No
 def _find_existing_incident(wh: ContentStore, report: SourceReport) -> str | None: ...
 def _commit_news_for_report(
     wh: ContentStore,
+    adapter: object,
     report: SourceReport,
     report_id: str,
     selected_news: list[NewsItem],
@@ -35,6 +36,7 @@ def search_news(
     news_timelimit: str = "w",
     source_id: str | None = None,
     active_window_days: int = 7,
+    repoll: bool = False,
 ) -> None: ...
 def generate_logs(
     warehouse: object, digester: object, min_news_threshold: int = 3

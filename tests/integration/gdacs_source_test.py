@@ -354,3 +354,33 @@ class TestGDACSExtractCanonicalName:
             "Flood",
         )
         assert result == "Flood Sichuan, China 2026-07-15"
+
+
+class TestGDACSDeriveRepollKeys:
+    def test_with_places_delegates_to_shared_derive_repoll_keys(self) -> None:
+        from disaster_report.sources.gdacs import GDACSAdapter
+
+        report = build_gdacs_report(
+            incident_type="Earthquake",
+            name="Earthquake in Venezuela",
+            places=[ReportPlace("VE", "Yaracuy", "Yumare")],
+            report_date="2026-06-24",
+        )
+        keys = GDACSAdapter().derive_repoll_keys(report)
+        assert keys == [
+            "Venezuela Earthquake latest 2026",
+            "Venezuela Earthquake 2026",
+        ], keys
+
+    def test_empty_places_does_not_fabricate_country(self) -> None:
+        from disaster_report.sources.gdacs import GDACSAdapter
+
+        # Degenerate drought with no geo — must not invent a country
+        report = build_gdacs_report(
+            incident_type="Drought",
+            name="Drought Green",
+            places=[],
+            report_date="2025-12-21",
+        )
+        keys = GDACSAdapter().derive_repoll_keys(report)
+        assert keys == ["Drought latest 2025", "Drought 2025"], keys

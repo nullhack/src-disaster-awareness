@@ -324,3 +324,60 @@ class TestWHOExtractCanonicalName:
             "Ebola",
         )
         assert result == "Ebola Uganda 2025-09-05"
+
+
+class TestWHODeriveRepollKeys:
+    def test_title_suffix_country_overrides_body_scan_places(self) -> None:
+        from disaster_report.sources.who import WHODiseaseOutbreakAdapter
+
+        # Marburg in Rwanda — body scan yields 12 countries (Angola first alphabetically)
+        report = build_who_report(
+            name="Marburg virus disease - Rwanda",
+            incident_type="Marburg",
+            places=[ReportPlace("AO", "", ""), ReportPlace("RW", "", "")],
+            report_date="2024-10-11",
+            raw_fields={"title": "Marburg virus disease - Rwanda"},
+        )
+        keys = WHODiseaseOutbreakAdapter().derive_repoll_keys(report)
+        assert keys == ["Marburg Rwanda update 2024", "Marburg Rwanda 2024"], keys
+
+    def test_global_title_suffix_yields_countryless_keys(self) -> None:
+        from disaster_report.sources.who import WHODiseaseOutbreakAdapter
+
+        report = build_who_report(
+            name="Dengue - Global situation",
+            incident_type="Dengue",
+            places=[],
+            report_date="2024-05-30",
+            raw_fields={"title": "Dengue - Global situation"},
+        )
+        keys = WHODiseaseOutbreakAdapter().derive_repoll_keys(report)
+        assert keys == ["Dengue update 2024"], keys
+
+    def test_title_without_suffix_falls_back_to_scan_countries(self) -> None:
+        from disaster_report.sources.who import WHODiseaseOutbreakAdapter
+
+        # Title has no dash suffix — _resolve_disease_country falls back to scanning whole title
+        report = build_who_report(
+            name="Ebola disease caused by Bundibugyo virus, DRC & Uganda",
+            incident_type="Ebola",
+            places=[ReportPlace("UG", "", "")],
+            report_date="2025-09-05",
+            raw_fields={"title": "Ebola disease caused by Bundibugyo virus, DRC & Uganda"},
+        )
+        keys = WHODiseaseOutbreakAdapter().derive_repoll_keys(report)
+        # scan_countries on the title finds DR Congo (first country mention)
+        assert any("DR Congo" in k for k in keys), keys
+
+    def test_no_title_no_country_yields_countryless_keys(self) -> None:
+        from disaster_report.sources.who import WHODiseaseOutbreakAdapter
+
+        report = build_who_report(
+            name="Mysterious outbreak",
+            incident_type="Mysterious",
+            places=[],
+            report_date="2025-01-01",
+            raw_fields={},
+        )
+        keys = WHODiseaseOutbreakAdapter().derive_repoll_keys(report)
+        assert keys == ["Mysterious update 2025"], keys

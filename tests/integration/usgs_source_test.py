@@ -252,3 +252,19 @@ class TestUSGSExtractCanonicalName:
             "Earthquake",
         )
         assert result == "Earthquake M6.0 Sarangani, Philippines 2026-06-07"
+
+
+class TestUSGSDeriveRepollKeys:
+    def test_delegates_to_shared_derive_repoll_keys(self) -> None:
+        from disaster_report.sources.usgs import USGSAdapter
+
+        report = build_kept_report(
+            name="M 5.6 - 10 km S of Town",
+            places=[ReportPlace("US", "", "10 km S of Town")],
+            report_date="2026-07-04",
+        )
+        keys = USGSAdapter().derive_repoll_keys(report)
+        assert keys == [
+            "United States Earthquake latest 2026",
+            "United States Earthquake 2026",
+        ], keys

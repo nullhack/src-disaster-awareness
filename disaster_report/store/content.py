@@ -7,7 +7,6 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
-from disaster_report._search_keys import derive_repoll_keys
 from disaster_report.models import (
     Incident,
     IncidentLog,
@@ -185,6 +184,12 @@ class ContentStore:
         self._incidents[incident_id] = inc
         dump_yaml(incident_manifest_path(self._root, incident_id), inc)
         return inc
+
+    def read_incident_search_keys(self, incident_id: str) -> list[str]:
+        inc = self._incidents.get(incident_id)
+        if inc is None:
+            return []
+        return list(inc.get("search_keys") or [])
 
     def _linked_reports(self, iuuid: str) -> list[str]:
         return [ruuid for ruuid, inc in self._report_incident.items() if inc == iuuid]
@@ -415,7 +420,7 @@ class ContentStore:
         report = self._reports.get(report_id)
         if report is None:
             return
-        inc = self._ensure_incident(incident_id)
+        self._ensure_incident(incident_id)
         if self._report_incident.get(report_id) == incident_id:
             return
         source = report.get("source", "")
@@ -423,11 +428,6 @@ class ContentStore:
         self._move(self._report_path[report_id], new_path)
         self._report_incident[report_id] = incident_id
         self._report_path[report_id] = new_path
-        if not inc.get("search_keys"):
-            keys = derive_repoll_keys(self._report_full(report_id))
-            if keys:
-                inc["search_keys"] = keys
-                dump_yaml(incident_manifest_path(self._root, incident_id), inc)
 
     def read_report_ids_for_incident(self, incident_id: str) -> list[str]:
         return self._linked_reports(incident_id)

@@ -17,6 +17,15 @@ from disaster_report.store.content import ContentStore
 logger = logging.getLogger(__name__)
 
 
+def _adapter_by_source(adapters: object) -> dict[str, Any]:
+    out: dict[str, Any] = {}
+    for adapter in cast(Any, adapters):
+        src = getattr(adapter, "source", "")
+        if src:
+            out[src] = adapter
+    return out
+
+
 def _mint_id() -> str:
 
     return uuid.uuid4().hex
@@ -129,6 +138,7 @@ def _find_existing_incident(wh: ContentStore, report: SourceReport) -> str | Non
 
 def _commit_news_for_report(
     wh: ContentStore,
+    adapter: Any,
     report: SourceReport,
     report_id: str,
     selected_news: list[NewsItem],
@@ -154,6 +164,11 @@ def _commit_news_for_report(
         elif birthed_incident_id is None:
             birthed_incident_id = incident_id
         wh.add_report_incident(report_id, incident_id)
+    if birthed_incident_id is not None:
+        if not wh.read_incident_search_keys(birthed_incident_id):
+            keys = adapter.derive_repoll_keys(report)
+            if keys:
+                wh.set_search_keys(birthed_incident_id, keys)
 
 
 def _commit_news_for_incident(
@@ -250,7 +265,7 @@ def _search_one_report(
         logger.info("search: %s:%s — %d relevant after filter", report.source, report.source_id, len(result.selected_news))
         if result.selected_news:
             enriched = _enrich_news_items(result.selected_news)
-            _commit_news_for_report(wh, report, report_id, enriched)
+            _commit_news_for_report(wh, adapter, report, report_id, enriched)
     wh.mark_report_searched(report.source, report.source_id, iso_now)
     searched_keys.add(key)
 
@@ -261,15 +276,19 @@ def _repoll_one_incident(
     ddg_adapter: Any,
     digest_fn: Any,
     news_timelimit: str,
+    adapter_by_src: dict[str, Any],
 ) -> None:
 
     genesis = wh.read_source_report_by_id(incident.genesis_report_id)
     if genesis is None:
         return
     logger.info("repoll: incident %s — %s", incident.incident_id, incident.name)
+    adapter = adapter_by_src.get(genesis.source)
+    repoll_keys_fn = getattr(adapter, "derive_repoll_keys", None) if adapter else None
+    keys = repoll_keys_fn(genesis) if repoll_keys_fn else derive_repoll_keys(genesis)
     seen_urls: set[str] = set()
     all_candidates: list[NewsItem] = []
-    for repoll_key in derive_repoll_keys(genesis):
+    for repoll_key in keys:
         for item in ddg_adapter.search(query=repoll_key, timelimit=news_timelimit):
             if item.url not in seen_urls:
                 seen_urls.add(item.url)
@@ -304,6 +323,7 @@ def search_news(
     news_timelimit: str = "w",
     source_id: str | None = None,
     active_window_days: int = 7,
+    repoll: bool = False,
 ) -> None:
 
     wh = cast(ContentStore, warehouse)
@@ -313,7 +333,8 @@ def search_news(
     iso_now = clock_fn().replace(microsecond=0).isoformat()
     cast(Any, wh)._clock = clock_fn
     adapter_list = list(cast(Any, adapters))
-    if adapter_list:
+    adapter_map = _adapter_by_source(adapter_list)
+    if adapter_list and not repoll:
         searched_keys = wh.read_searched_report_keys()
         all_reports = []
         for adapter in adapter_list:
@@ -337,14 +358,14 @@ def search_news(
         return
     active_n = len(wh.active_incidents(active_window_days))
     extended_n = len(wh.extended_monitoring_incidents())
-    repoll = wh.repolllable_incidents(active_window_days)
+    repoll_incidents = wh.repolllable_incidents(active_window_days)
     logger.info(
         "search: repoll mode, active=%d extended_monitoring=%d repolllable=%d (window=%d days)",
-        active_n, extended_n, len(repoll), active_window_days,
+        active_n, extended_n, len(repoll_incidents), active_window_days,
     )
-    for i, incident in enumerate(repoll, 1):
-        logger.info("search: [%d/%d] incident %s — %s", i, len(repoll), incident.incident_id, incident.name)
-        _repoll_one_incident(wh, incident, ddg_adapter, digest_fn, news_timelimit)
+    for i, incident in enumerate(repoll_incidents, 1):
+        logger.info("search: [%d/%d] incident %s — %s", i, len(repoll_incidents), incident.incident_id, incident.name)
+        _repoll_one_incident(wh, incident, ddg_adapter, digest_fn, news_timelimit, adapter_map)
     logger.info("search: repoll mode done")
 
 
@@ -454,7 +475,7 @@ def run_pipeline(
     logger.info("pipeline: phase 2a — search news (per-report)")
     search_news(warehouse, adapters, ddg_counter, digester_counter, clock)
     logger.info("pipeline: phase 2b — search news (repoll active)")
-    search_news(warehouse, [], ddg_counter, digester_counter, clock)
+    search_news(warehouse, adapters, ddg_counter, digester_counter, clock, repoll=True)
     logger.info("pipeline: phase 3 — generate logs")
     generate_logs(warehouse, digester_counter, min_news_threshold)
     logger.info(

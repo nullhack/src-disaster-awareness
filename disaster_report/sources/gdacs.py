@@ -12,6 +12,7 @@ import country_converter as coco
 from iso3166_2 import Subdivisions
 
 from disaster_report._country_names import country_name
+from disaster_report._search_keys import derive_repoll_keys as _derive_repoll_keys
 from disaster_report._search_keys import derive_search_keys
 from disaster_report._title_format import format_place, format_title, smallest_place
 from disaster_report.models import ReportPlace, SourceReport
@@ -50,6 +51,8 @@ logger = logging.getLogger(__name__)
 
 class GDACSAdapter:
 
+    source = "GDACS"
+
     def __init__(
         self,
         path: str = _DEFAULT_PATH,
@@ -84,6 +87,19 @@ class GDACSAdapter:
     def derive_keys(self, report: SourceReport) -> tuple[str, str]:
 
         return derive_search_keys(report)
+
+    def derive_repoll_keys(self, report: SourceReport) -> list[str]:
+
+        if report.places:
+            return _derive_repoll_keys(report)
+        year = report.report_date[:4] if report.report_date else ""
+        incident_type = report.incident_type
+        if not incident_type:
+            return []
+        return [
+            f"{incident_type} latest {year}",
+            f"{incident_type} {year}",
+        ]
 
 
 def _item_to_report(item: Any) -> SourceReport:

@@ -63,6 +63,8 @@ _DISEASE_PREFIX_MAP: tuple[tuple[str, str], ...] = (
 
 class WHODiseaseOutbreakAdapter:
 
+    source = "WHO"
+
     def __init__(self, orderby: str = _DEFAULT_ORDERBY) -> None:
         self._orderby = orderby
 
@@ -86,6 +88,20 @@ class WHODiseaseOutbreakAdapter:
     def derive_keys(self, report: SourceReport) -> tuple[str, str]:
 
         return derive_search_keys(report)
+
+    def derive_repoll_keys(self, report: SourceReport) -> list[str]:
+
+        disease = _short_disease_name(report.incident_type)
+        year = report.report_date[:4] if report.report_date else ""
+        country = _resolve_disease_country(
+            report.raw_fields.get("title", ""), report.places
+        )
+        if not country:
+            return [f"{disease} update {year}"] if disease else []
+        return [
+            f"{disease} {country} update {year}",
+            f"{disease} {country} {year}",
+        ]
 
 
 def _record_to_report(record: Any) -> SourceReport:
@@ -151,6 +167,18 @@ def _resolve_disease_place(title: object, places: list[ReportPlace]) -> str:
     if not smallest and not country:
         return "Global"
     return format_place(smallest, country)
+
+
+def _resolve_disease_country(title: object, places: list[ReportPlace]) -> str:
+    if isinstance(title, str) and title:
+        suffix = _title_suffix(title)
+        if suffix and "global" in suffix.lower():
+            return ""
+        scan_text = suffix or title
+        matches = scan_countries(scan_text)
+        if matches:
+            return country_name(matches[0][1])
+    return ""
 
 
 def _title_suffix(title: object) -> str:

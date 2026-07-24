@@ -12,7 +12,7 @@ from iso3166_2 import Subdivisions
 
 from disaster_report._country_names import country_name
 from disaster_report._regions import subregion_for_country
-from disaster_report._search_keys import derive_search_keys
+from disaster_report._search_keys import derive_repoll_keys, derive_search_keys
 from disaster_report._title_format import format_place, format_title, smallest_place
 from disaster_report.models import ReportPlace, SourceReport
 from disaster_report.sources.errors import SourceFetchError
@@ -30,6 +30,8 @@ logger = logging.getLogger(__name__)
 
 
 class USGSAdapter:
+
+    source = "USGS"
 
     def __init__(
         self,
@@ -63,6 +65,10 @@ class USGSAdapter:
     def derive_keys(self, report: SourceReport) -> tuple[str, str]:
 
         return derive_search_keys(report)
+
+    def derive_repoll_keys(self, report: SourceReport) -> list[str]:
+
+        return derive_repoll_keys(report)
 
 
 def _feature_to_report(
