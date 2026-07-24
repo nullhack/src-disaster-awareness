@@ -1,29 +1,29 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-07-23",
-  "generated_at": "2026-07-24T09:56:02Z",
+  "generated_at": "2026-07-24T15:13:28Z",
   "as_of": "2026-07-23",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 22,
-    "new_today": 6,
+    "reportable_total": 21,
+    "new_today": 5,
     "critical": 4,
     "high": 7,
-    "medium": 11,
+    "medium": 10,
     "low": 0,
-    "disease_outbreaks": 3,
+    "disease_outbreaks": 2,
     "countries_affected": 14,
-    "news_total": 582,
+    "news_total": 564,
     "max_magnitude": 7.3,
     "by_severity": {
       "CRITICAL": 4,
       "HIGH": 7,
-      "MEDIUM": 11,
+      "MEDIUM": 10,
       "LOW": 0
     },
     "by_type": {
-      "Disease": 3,
+      "Disease": 2,
       "Flood": 4,
       "Volcano": 2,
       "Drought": 1,
@@ -32,7 +32,7 @@
       "Forest Fire": 3
     },
     "by_region": {
-      "Global": 3,
+      "Global": 2,
       "Asia": 10,
       "Europe": 4,
       "Oceania": 2,
@@ -42,7 +42,7 @@
   "by_country": [
     {
       "country": "",
-      "count": 4,
+      "count": 3,
       "max_sev_rank": 2,
       "iso2": "XX",
       "region": "Global",
@@ -202,7 +202,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 30
+        "news": 31
       },
       "source_links": [
         {
@@ -280,6 +280,10 @@
           "published_date": "2026-07-19"
         },
         {
+          "headline": "India Approves First Dengue Vaccine QDENGA For Ages 4-60, No Pre-Vaccination Tests Required",
+          "published_date": "2026-07-20"
+        },
+        {
           "headline": "India Approves Its First Dengue Vaccine Qdenga How It Works Who Is Eligible And Why It Isnt A Silver Bullet",
           "published_date": "2026-07-20"
         },
@@ -344,7 +348,7 @@
           "published_date": "2026-07-23"
         }
       ],
-      "news_total": 30,
+      "news_total": 31,
       "logs": [
         {
           "log_date": "2026-07-08",
@@ -579,320 +583,6 @@
         }
       ],
       "logs_total": 6
-    },
-    {
-      "incident_id": "20250528-XX-DI",
-      "tree_id": "2988d8638e0956a89029b6059b7c5f7f",
-      "canonical_name": "COVID-19 Global 2025-05-28",
-      "summary": "Updated 2025-2026 formulations of mRNA-1283 and BNT162b2 COVID-19 vaccines have been shown to reduce hospitalization risk in older adults, providing new evidence of protection against severe outcomes. A separate article details an FBI matter involving EcoHealth Alliance, and another reports a $5 million settlement over a vaccine policy lawsuit at Idaho National Lab, but these are less central to the global situation.\nNewly released federal documents have revived questions about COVID-19 origins, showing top scientists privately doubted the bat origin theory despite public statements. Separately, COVID-19 levels in Bay Area wastewaters are increasing, signaling a possible summer surge.",
-      "country": "",
-      "iso2": "XX",
-      "lat": null,
-      "lon": null,
-      "country_group": "C",
-      "region": "Global",
-      "incident_type": "Disease",
-      "incident_category": "Biological",
-      "is_disease": true,
-      "severity": "MEDIUM",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": "LOW",
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": "Covid-19",
-      "event_date": "2025-05-28",
-      "first_reported_date": "2025-05-28",
-      "last_updated_date": "2026-07-23",
-      "days_since_event": 422,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 1,
-        "usgs": 0,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 19
-      },
-      "source_links": [
-        {
-          "type": "WHO",
-          "label": "COVID-19 Global 2025-05-28",
-          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2025-DON572",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "CDC blocked a COVID vaccine study’s release–now you can read the whole thing",
-          "published_date": "2026-07-08T15:12:31+00:00"
-        },
-        {
-          "headline": "Are the New COVID Vaccines Available, and Should You Get One? Experts Explain",
-          "published_date": "2026-07-08T15:12:31+00:00"
-        },
-        {
-          "headline": "IMF forecasts dramatic global economic slowdown",
-          "published_date": "2026-07-09T03:32:11+00:00"
-        },
-        {
-          "headline": "Jersey Mike’s IPO reflects growing investor appetite for restaurants",
-          "published_date": "2026-07-09T03:32:11+00:00"
-        },
-        {
-          "headline": "The Meridian, a $24M mixed-use development, breaks ground in Thiensville",
-          "published_date": "2026-07-10T03:32:11+00:00"
-        },
-        {
-          "headline": "Linda Noskova holds off Karolina Muchova to win Wimbledon women's final",
-          "published_date": "2026-07-11T03:32:11+00:00"
-        },
-        {
-          "headline": "TV host Lee Teng opens up about wife's miscarriage during pandemic: ‘I felt like an empty shell'",
-          "published_date": "2026-07-11T07:14:19+00:00"
-        },
-        {
-          "headline": "Andhra Covid Deaths Trigger Southern Alert",
-          "published_date": "2026-07-14T07:14:19+00:00"
-        },
-        {
-          "headline": "Updated 2025-2026 COVID-19 Vaccines Effective Against Medically Attended Disease",
-          "published_date": "2026-07-15T09:25:38+00:00"
-        },
-        {
-          "headline": "Dr. Erica Schwartz faces vaccines questions at CDC director confirmation hearing",
-          "published_date": "2026-07-15T18:45:32+00:00"
-        },
-        {
-          "headline": "Panel to study Pentagon’s COVID vaccine mandate, troops dismissal",
-          "published_date": "2026-07-15T19:45:32+00:00"
-        },
-        {
-          "headline": "COVID Is Rising Again in the Bay Area For Summer 2026 — But Don’t Panic | KQED",
-          "published_date": "2026-07-16"
-        },
-        {
-          "headline": "Pittsfield Council Sees Last ARPA Update",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "Fbi Allowed Ecohealth Alliance Boss Through Border Controls In Return From Covid Hit China In 2021 Explosive Emails",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "Lawsuit Over Covid Vaccine Policy At Idaho National Lab Leads To 5m Settlement",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "COVID origins questions resurface with new federal documents",
-          "published_date": "2026-07-21"
-        },
-        {
-          "headline": "Updated 2025-2026 COVID-19 Vaccines Reduce Hospitalization Risk in Older Adults",
-          "published_date": "2026-07-21"
-        },
-        {
-          "headline": "Philips wins FDA clearance for new pulse oximeter",
-          "published_date": "2026-07-21"
-        },
-        {
-          "headline": "121 Covid-19 cases reported in Bengaluru this year",
-          "published_date": "2026-07-23"
-        }
-      ],
-      "news_total": 19,
-      "logs": [
-        {
-          "log_date": "2026-07-08",
-          "summary": "A study on COVID-19 vaccine effectiveness that was previously blocked by the CDC has now been released in full, detailing its findings. Meanwhile, new COVID-19 vaccines for the 2025-2026 season are becoming available, though access may be limited for some individuals.",
-          "news": [
-            {
-              "news_id": "ff7d04e04b6157d59fbfeda0f4cd5118",
-              "url": "https://www.msn.com/en-us/health/general/cdc-blocked-a-covid-vaccine-study-s-release-now-you-can-read-the-whole-thing/ar-AA26Q57n?ocid=BingNewsVerp",
-              "headline": "CDC blocked a COVID vaccine study’s release–now you can read the whole thing",
-              "body": "The CDC blocked the release of a study about COVID-19 vaccine effectiveness. Here's what it contains.",
-              "published_date": "2026-07-08T15:12:31+00:00",
-              "outlet": "Newsweek on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.UkYafoaYVW2mm2fZDxb3Pw"
-            },
-            {
-              "news_id": "f52126221c25577babbbb623df4cf035",
-              "url": "https://www.today.com/health/coronavirus/covid-vaccine-2025-2026-rcna228529",
-              "headline": "Are the New COVID Vaccines Available, and Should You Get One? Experts Explain",
-              "body": "As respiratory virus season approaches, you may be wondering if you should get the new COVID-19 vaccine to protect yourself. However, it may be more difficult for some people to find the shot this ...",
-              "published_date": "2026-07-08T15:12:31+00:00",
-              "outlet": "Today",
-              "image": ""
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-14",
-          "summary": "New COVID-19 deaths in Andhra Pradesh have triggered a health alert in southern India. Officials note that widespread immune memory from vaccination and prior infection means there is no need for panic.",
-          "news": [
-            {
-              "news_id": "47399e4cbb18504286bb3c3f8fbf586f",
-              "url": "https://sports.yahoo.com/articles/wimbledon-womens-final-watch-linda-001901956.html",
-              "headline": "Linda Noskova holds off Karolina Muchova to win Wimbledon women's final",
-              "body": "Serena Williams, 6–3, 6–3 2019: Simona Halep def. Serena Williams, 6–2, 6–2 2020: No tournament (COV...",
-              "published_date": "2026-07-11T03:32:11+00:00",
-              "outlet": "USA TODAY Sports · via Yahoo Sports",
-              "image": "https://media.zenfs.com/en/usa_today_sports_articles_558/9ceb32ed8bced038c2a33a6f2f0ac8bb"
-            },
-            {
-              "news_id": "ba1626c0b3795d8f8e1c433ac5e17d42",
-              "url": "https://cnalifestyle.channelnewsasia.com/entertainment/lee-teng-gina-lin-miscarriage-pandemic-585986",
-              "headline": "TV host Lee Teng opens up about wife's miscarriage during pandemic: ‘I felt like an empty shell'",
-              "body": "The Taiwan-born Singaporean host flew to Taiwan immediately after receiving the devastating news to be with his wife, but had ...",
-              "published_date": "2026-07-11T07:14:19+00:00",
-              "outlet": "CNA Lifestyle",
-              "image": "https://www.bing.com/th?id=ONUT.VBIrDzWAg9wDbCNXrdm7KQ"
-            },
-            {
-              "news_id": "5c50b336f3435df3acddba55bc9fdb07",
-              "url": "https://finance.yahoo.com/economy/articles/imf-forecasts-dramatic-global-economic-230448061.html",
-              "headline": "IMF forecasts dramatic global economic slowdown",
-              "body": "Updated IMF Growth Forecasts for 2026: US: 2.3% Germany...the fastest growth since 2021, when the economy saw a significant rebound from the COVID-19...",
-              "published_date": "2026-07-09T03:32:11+00:00",
-              "outlet": "Deseret News · via Yahoo Finance",
-              "image": "https://media.zenfs.com/en/deseret_news_992/bc1cdfd83f71311a156b3d2e72e2cce7"
-            },
-            {
-              "news_id": "297b4b6edc445e8b914e2776665044d1",
-              "url": "https://finance.yahoo.com/markets/stocks/articles/jersey-mike-inspire-brands-ipos-083900287.html",
-              "headline": "Jersey Mike’s IPO reflects growing investor appetite for restaurants",
-              "body": "The last time the IPO market was hot for restaurant chains was in 2021 when sales and profits were o...",
-              "published_date": "2026-07-09T03:32:11+00:00",
-              "outlet": "Restaurant Dive · via Yahoo Finance",
-              "image": "https://media.zenfs.com/en/restaurant_dive_404/d009dfa48eae776ccd1ef8c5a62894ad"
-            },
-            {
-              "news_id": "add2047f970d5e889931605f6cd22650",
-              "url": "https://www.rediff.com/news/report/andhra-covid-deaths-trigger-southern-alert/20260715.htm",
-              "headline": "Andhra Covid Deaths Trigger Southern Alert",
-              "body": "There is no need for panic as there is widespread protective immune memory in the population from vaccination as well as ...",
-              "published_date": "2026-07-14T07:14:19+00:00",
-              "outlet": "Rediff.com",
-              "image": "https://www.bing.com/th?id=ONUT.O4IIi5N_lrXB0ZlH8G-CGA"
-            },
-            {
-              "news_id": "e5943ee954605253b41ba39e21388307",
-              "url": "https://www.yahoo.com/news/us/articles/meridian-24m-mixed-development-breaks-100404828.html",
-              "headline": "The Meridian, a $24M mixed-use development, breaks ground in Thiensville",
-              "body": "But it had a slow start due to the COVID-19 pandemic, Rosing said. In 2025, the village updated its...",
-              "published_date": "2026-07-10T03:32:11+00:00",
-              "outlet": "Milwaukee Journal Sentinel · via Yahoo News",
-              "image": "https://media.zenfs.com/en/milwaukee_journal_sentinel_natl_articles_362/5b24c7733f3299a0e44e93584f1eaa56"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-15",
-          "summary": "A study confirms that the 2025-2026 COVID-19 vaccines are effective at preventing emergency department/urgent care visits and hospitalizations among immunocompetent adults, providing updated evidence of protection against severe outcomes.",
-          "news": [
-            {
-              "news_id": "8fafcf361d225d0a8d70d4d9f18b34ee",
-              "url": "https://www.yahoo.com/news/politics/articles/dr-erica-schwartz-appear-senate-090953431.html",
-              "headline": "Dr. Erica Schwartz faces vaccines questions at CDC director confirmation hearing",
-              "body": "Kaufman has claimed without evidence that the COVID-19 vaccine caused \"excessive death and injury...",
-              "published_date": "2026-07-15T18:45:32+00:00",
-              "outlet": "Good Morning America · via Yahoo News",
-              "image": "https://media.zenfs.com/en/us.abcnews.gma.com/b2052f0c41bfc34561c6b542ee1d233a"
-            },
-            {
-              "news_id": "58bbc5d315ce50628dab6b9310dc2e76",
-              "url": "https://www.infectiousdiseaseadvisor.com/news/effectiveness-2025-2026-covid19-vaccines-severe-outcomes/",
-              "headline": "Updated 2025-2026 COVID-19 Vaccines Effective Against Medically Attended Disease",
-              "body": "The 2025-2026 SARS-CoV-2 vaccines provided protection against ED/UC visits and hospitalizations among immunocompetent adults.",
-              "published_date": "2026-07-15T09:25:38+00:00",
-              "outlet": "Infectious Disease Advisor",
-              "image": ""
-            },
-            {
-              "news_id": "62b567c8a75454dfa7bbc2391b4ab469",
-              "url": "https://www.yahoo.com/news/politics/articles/panel-study-pentagon-covid-vaccine-200701635.html",
-              "headline": "Panel to study Pentagon’s COVID vaccine mandate, troops dismissal",
-              "body": "The Department of Defense plans to convene a panel to study its mid-2021 decision to require the...",
-              "published_date": "2026-07-15T19:45:32+00:00",
-              "outlet": "Military Times · via Yahoo News",
-              "image": "https://media.zenfs.com/en/military_times_968/ba746566ab92d5d0b7427d5d78ca8595"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-22",
-          "summary": "Updated 2025-2026 formulations of mRNA-1283 and BNT162b2 COVID-19 vaccines have been shown to reduce hospitalization risk in older adults, providing new evidence of protection against severe outcomes. A separate article details an FBI matter involving EcoHealth Alliance, and another reports a $5 million settlement over a vaccine policy lawsuit at Idaho National Lab, but these are less central to the global situation.\nNewly released federal documents have revived questions about COVID-19 origins, showing top scientists privately doubted the bat origin theory despite public statements. Separately, COVID-19 levels in Bay Area wastewaters are increasing, signaling a possible summer surge.",
-          "news": [
-            {
-              "news_id": "02a422bbdd14578fbd56fa843ee2084a",
-              "url": "https://ca.news.yahoo.com/covid-origins-questions-resurface-federal-233430831.html",
-              "headline": "COVID origins questions resurface with new federal documents",
-              "body": "Newly released documents raise questions about COVID-19 origins, showing top scientists privately doubted the bat origin theory, despite public statements. Sen. Rand Paul’s records reveal this interna...",
-              "published_date": "2026-07-21",
-              "outlet": "Yahoo News Canada",
-              "image": "https://www.bing.com/th?id=ONUT.Y-SuBuajl5Qs08mbjOLv0w"
-            },
-            {
-              "news_id": "d76c1285abf9552db61c3e1c937028c7",
-              "url": "https://www.kqed.org/news/12091325/summer-covid-test-2026-wastewater-variants-isolation-contagious-xfg-san-francisco-bay-area-california",
-              "headline": "COVID Is Rising Again in the Bay Area For Summer 2026 — But Don’t Panic | KQED",
-              "body": "COVID levels in Bay Area wastewaters are starting to increase, signaling a possible summer swell — as if you needed another thing to worry about. Here’s what to know about your risk.",
-              "published_date": "2026-07-16",
-              "outlet": "KQED",
-              "image": "https://s.yimg.com/am/60d/f6766a513c4794d85405a1a0b4f02708"
-            },
-            {
-              "news_id": "f43881cb6e9d58ac86e57c37148d20d3",
-              "url": "https://www.infectiousdiseaseadvisor.com/news/mrna1283-bnt162b2-covid19-effectiveness-older-adults/",
-              "headline": "Updated 2025-2026 COVID-19 Vaccines Reduce Hospitalization Risk in Older Adults",
-              "body": "Updated 2025-2026 formulations of mRNA-1283 and BNT162b2 protect older adults against severe COVID-19 outcomes and medically attended illness.",
-              "published_date": "2026-07-21",
-              "outlet": "Infectious Disease Advisor",
-              "image": ""
-            },
-            {
-              "news_id": "f04f22c48efc574b92be1779885bdf2c",
-              "url": "https://www.msn.com/en-us/news/politics/fbi-allowed-ecohealth-alliance-boss-through-border-controls-in-return-from-covid-hit-china-in-2021-explosive-emails/ar-AA28nRva?ocid=BingNewsVerp",
-              "headline": "Fbi Allowed Ecohealth Alliance Boss Through Border Controls In Return From Covid Hit China In 2021 Explosive Emails",
-              "body": "WASHINGTON — The FBI instructed US Customs and Border Protection to “not stop” the president of Manhattan nonprofit EcoHealth ...",
-              "published_date": "2026-07-20",
-              "outlet": "New York Post on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.zRjtQ8ZrIGg5CEykx1vWZQ"
-            },
-            {
-              "news_id": "3bd77fec1ae55ed9bc9a0476c00ef066",
-              "url": "https://www.msn.com/en-us/public-safety-and-emergencies/health-and-safety-alerts/lawsuit-over-covid-vaccine-policy-at-idaho-national-lab-leads-to-5m-settlement/ar-AA28nU1l?ocid=BingNewsVerp",
-              "headline": "Lawsuit Over Covid Vaccine Policy At Idaho National Lab Leads To 5m Settlement",
-              "body": "The U.S. Equal Employment Opportunity Commission alleged the company violated religious and disability rights.",
-              "published_date": "2026-07-20",
-              "outlet": "Idaho Statesman on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.VMO_ynSoxvADzhlYoiZJ8A"
-            },
-            {
-              "news_id": "9ccbb5cd0998566a9c1e5f0e401d9373",
-              "url": "https://www.yahoo.com/news/science/articles/philips-wins-fda-clearance-pulse-163057321.html",
-              "headline": "Philips wins FDA clearance for new pulse oximeter",
-              "body": "Philips said its updated device provides accurate readings across a range of skin tones, following concerns that pulse oximeters can be less accurate in people with darker skin pigmentation.",
-              "published_date": "2026-07-21",
-              "outlet": "MedTech Dive · via Yahoo News",
-              "image": "https://media.zenfs.com/en/medtech_dive_335/594392954d5ffe01065aa3f682ad5afe"
-            }
-          ]
-        }
-      ],
-      "logs_total": 4
     },
     {
       "incident_id": "20250714-PK-FL",
