@@ -781,6 +781,45 @@ function dataBranchUrl(i) {
   return `https://github.com/nullhack/src-disaster-awareness/tree/data/incidents/${treeId}`;
 }
 
+function _logEntryHtml(log) {
+  return `
+        <li class="log-entry">
+          <details>
+            <summary>
+              <span class="log-entry__head">
+                <span class="log-entry__date">${fmtDateTime(log.log_date) || ""}</span>
+                <span class="log-entry__count">${log.news.length} article(s)</span>
+              </span>
+              <div class="log-entry__summary">${esc(log.summary)}</div>
+            </summary>
+            ${log.news.length ? `<ul class="drawer__news">${log.news.map((n) => `
+              <li><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.headline)}</a>
+              <div class="meta">${fmtDate(n.published_date) || ""} · ${esc(n.outlet || "")}</div></li>`).join("")}</ul>` : `<p class="muted">No linked news.</p>`}
+          </details>
+        </li>`;
+}
+
+function _timelineHtml(logs, logsTotal) {
+  if (!logs || !logs.length) return "";
+  const total = logsTotal || logs.length;
+  const trimmed = total > logs.length;
+  const reversed = logs.slice().reverse();
+  let entries;
+  if (trimmed && reversed.length > 1) {
+    const recent = reversed.slice(0, -1);
+    const genesis = reversed[reversed.length - 1];
+    entries = recent.map(_logEntryHtml).join("")
+      + `<li class="log-entry--gap" title="${total - logs.length} log(s) hidden">⋮</li>`
+      + _logEntryHtml(genesis);
+  } else {
+    entries = reversed.map(_logEntryHtml).join("");
+  }
+  const header = trimmed
+    ? `Timeline · ${logs.length} of ${total} log(s)`
+    : `Timeline · ${logs.length} log(s)`;
+  return `<div class="drawer__section"><h3>${header}</h3><ul class="drawer__logs">${entries}</ul></div>`;
+}
+
 function openDrawer(id) {  const i = STATE.digest.incidents.find((x) => x.incident_id === id);
   if (!i) return;
   $("#drawerTitle").textContent = i.canonical_name;
@@ -841,22 +880,7 @@ function openDrawer(id) {  const i = STATE.digest.incidents.find((x) => x.incide
             ${L.url ? `</a>` : `</span>`}</li>`).join("")}
         </ul>` : `<p class="muted">No deep links available for this incident.</p>`}
     </div>
-    ${(i.logs && i.logs.length) ? `<div class="drawer__section"><h3>Timeline · ${i.logs.length} log(s)</h3>
-      <ul class="drawer__logs">${i.logs.slice().reverse().map((log, idx) => `
-        <li class="log-entry">
-          <details>
-            <summary>
-              <span class="log-entry__head">
-                <span class="log-entry__date">${fmtDateTime(log.log_date) || ""}</span>
-                <span class="log-entry__count">${log.news.length} article(s)</span>
-              </span>
-              <div class="log-entry__summary">${esc(log.summary)}</div>
-            </summary>
-            ${log.news.length ? `<ul class="drawer__news">${log.news.map((n) => `
-              <li><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.headline)}</a>
-              <div class="meta">${fmtDate(n.published_date) || ""} · ${esc(n.outlet || "")}</div></li>`).join("")}</ul>` : `<p class="muted">No linked news.</p>`}
-          </details>
-        </li>`).join("")}</ul></div>` : ""}
+    ${_timelineHtml(i.logs, i.logs_total)}
     ${(i.news && i.news.length && !(i.logs && i.logs.length)) ? `<div class="drawer__section"><h3>News · ${i.news_total} linked (${i.news.length} shown)</h3>
       <ul class="drawer__news">${i.news.map((n) => `
         <li><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.headline)}</a>
