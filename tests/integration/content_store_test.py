@@ -220,7 +220,7 @@ class TestReportIncidentLink:
         assert incident_report_path(tmp_path, inc, "USGS", rid).exists()
         assert not report_staging_path(tmp_path, "USGS", rid).exists()
 
-    def test_link_auto_fills_search_keys_from_birthing_report(self, tmp_path: Path) -> None:
+    def test_link_does_not_auto_fill_search_keys(self, tmp_path: Path) -> None:
         store = ContentStore(tmp_path)
         report = _build_report(
             places=[ReportPlace(country_code="VE", subdivision="", locality="")]
@@ -229,11 +229,7 @@ class TestReportIncidentLink:
         store.ingest_report_places(rid, report.places)
         inc = _new_incident_id()
         store.add_report_incident(rid, inc)
-        manifest_path = incident_dir(tmp_path, inc) / "incident.yaml"
-        import yaml
-        manifest = yaml.safe_load(manifest_path.read_text())
-        assert manifest["id"] == inc
-        assert len(manifest["search_keys"]) > 0
+        assert store.read_incident_search_keys(inc) == []
 
     def test_second_link_does_not_overwrite_search_keys(self, tmp_path: Path) -> None:
         store = ContentStore(tmp_path)
@@ -245,11 +241,10 @@ class TestReportIncidentLink:
         )
         inc = _new_incident_id()
         store.add_report_incident(rid1, inc)
-        import yaml
-        manifest_path = incident_dir(tmp_path, inc) / "incident.yaml"
-        first_keys = yaml.safe_load(manifest_path.read_text())["search_keys"]
+        store.set_search_keys(inc, ["Venezuela Earthquake 2026"])
+        first_keys = store.read_incident_search_keys(inc)
         store.add_report_incident(rid2, inc)
-        second_keys = yaml.safe_load(manifest_path.read_text())["search_keys"]
+        second_keys = store.read_incident_search_keys(inc)
         assert first_keys == second_keys
 
     def test_read_report_ids_for_incident(self, tmp_path: Path) -> None:
