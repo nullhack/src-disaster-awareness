@@ -11,6 +11,7 @@ from typing import Any, cast
 from disaster_report._search_keys import derive_repoll_keys
 from disaster_report.fetchers import fetch_article
 from disaster_report.models import IncidentLog, NewsItem, SourceReport
+from disaster_report.sources.ddg_news import derive_title_from_slug, is_generic_title
 from disaster_report.sources.errors import SourceFetchError
 from disaster_report.store.content import ContentStore
 
@@ -34,10 +35,21 @@ def _mint_id() -> str:
 def _enrich_one(news: NewsItem) -> NewsItem:
     fetched = fetch_article(news.url)
     if fetched is None:
+        if is_generic_title(news.title):
+            derived = derive_title_from_slug(news.url)
+            if derived:
+                return dataclasses.replace(news, title=derived)
         return news
+    fetched_title = fetched.title or ""
+    if not is_generic_title(fetched_title):
+        final_title = fetched_title
+    elif not is_generic_title(news.title):
+        final_title = news.title
+    else:
+        final_title = derive_title_from_slug(news.url) or news.title
     return dataclasses.replace(
         news,
-        title=fetched.title or news.title,
+        title=final_title,
         body=fetched.description or news.body,
         published_date=fetched.published_date or news.published_date,
         author=fetched.author,
