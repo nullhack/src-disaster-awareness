@@ -20,10 +20,11 @@ from disaster_report._countries import scan_countries
 from disaster_report._country_names import country_name
 from disaster_report.store.content import ContentStore
 
-SCHEMA_VERSION = "1.4"
+SCHEMA_VERSION = "1.5"
 TRACKING_WINDOW_DAYS = 7
 DEFAULT_TRACKING_WINDOW_DAYS = 7
 MIN_SEVERITY = "LOW"
+MAX_RECENT_LOGS = 3
 
 SEVERITY_RANK = {"LOW": 1, "MEDIUM": 2, "HIGH": 3, "CRITICAL": 4}
 SEVERITY_NAMES = {v: k for k, v in SEVERITY_RANK.items()}
@@ -390,6 +391,9 @@ def build_incident_object(store: ContentStore, inc: dict, as_of_date: datetime) 
     news_count = len(news)
     latest_summary = load_latest_log(store, incident_id)
     logs = load_logs_for_incident(store, incident_id)
+    logs_total = len(logs)
+    if logs_total > MAX_RECENT_LOGS + 1:
+        logs = [logs[0]] + logs[-MAX_RECENT_LOGS:]
 
     genesis = None
     for r in reports:
@@ -577,15 +581,21 @@ def build_incident_object(store: ContentStore, inc: dict, as_of_date: datetime) 
         "gdacs_population": gdacs_pop if gdacs_pop else None,
     }
 
-    news_items = [
-        {
-            "headline": n["headline"] or "",
-            "url": n["url"],
-            "outlet": n["outlet"] or "",
-            "published_date": n["published_date"],
-        }
-        for n in news
-    ]
+    if logs:
+        news_items = [
+            {"headline": n["headline"] or "", "published_date": n["published_date"]}
+            for n in news
+        ]
+    else:
+        news_items = [
+            {
+                "headline": n["headline"] or "",
+                "url": n["url"],
+                "outlet": n["outlet"] or "",
+                "published_date": n["published_date"],
+            }
+            for n in news
+        ]
 
     if lat is None and iso2 and iso2 in ISO2_CENTROIDS:
         lat, lon = ISO2_CENTROIDS[iso2]
@@ -626,6 +636,7 @@ def build_incident_object(store: ContentStore, inc: dict, as_of_date: datetime) 
         "news": news_items,
         "news_total": news_count,
         "logs": logs,
+        "logs_total": logs_total,
     }
 
 
