@@ -203,6 +203,57 @@ def first_news_item(items: list[NewsItem]) -> NewsItem:
     return items[0]
 
 
+class TestDeriveTitleFromSlug:
+    def test_msn_article_url_extracts_slug(self) -> None:
+        from disaster_report.sources.ddg_news import derive_title_from_slug
+
+        url = (
+            "https://www.msn.com/en-us/news/world/"
+            "venezuela-quakes-caused-196-billion-in-damage-world-bank-report-shows"
+            "/ar-AA28x1CA?ocid=BingNewsVerp"
+        )
+        result = derive_title_from_slug(url)
+        assert result == "Venezuela Quakes Caused 196 Billion In Damage World Bank Report Shows"
+
+    def test_msn_vi_suffix_url_extracts_slug(self) -> None:
+        from disaster_report.sources.ddg_news import derive_title_from_slug
+
+        url = (
+            "https://www.msn.com/en-us/news/world/"
+            "series-of-earthquakes-strike-coast-of-mexico-guatemala"
+            "/vi-AA289xHF"
+        )
+        result = derive_title_from_slug(url)
+        assert result == "Series Of Earthquakes Strike Coast Of Mexico Guatemala"
+
+    def test_non_msn_url_returns_empty(self) -> None:
+        from disaster_report.sources.ddg_news import derive_title_from_slug
+
+        assert derive_title_from_slug("https://www.reuters.com/world/americas/some-article-2026/") == ""
+
+
+class TestIsGenericTitle:
+    def test_msn_is_generic(self) -> None:
+        from disaster_report.sources.ddg_news import is_generic_title
+
+        assert is_generic_title("MSN") is True
+
+    def test_client_challenge_is_generic(self) -> None:
+        from disaster_report.sources.ddg_news import is_generic_title
+
+        assert is_generic_title("Client Challenge") is True
+
+    def test_empty_is_generic(self) -> None:
+        from disaster_report.sources.ddg_news import is_generic_title
+
+        assert is_generic_title("") is True
+
+    def test_real_title_is_not_generic(self) -> None:
+        from disaster_report.sources.ddg_news import is_generic_title
+
+        assert is_generic_title("Venezuela quakes caused $19.6 billion in damage") is False
+
+
 def _load_fixture() -> list[dict[str, object]]:
     import json
 

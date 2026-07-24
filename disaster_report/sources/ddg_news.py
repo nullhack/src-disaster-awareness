@@ -28,6 +28,16 @@ _CRAWL_WINDOW_SECONDS = 120
 _URL_DATE_RE_1 = re.compile(r"/(\d{4})/(\d{2})/(\d{2})/")
 _URL_DATE_RE_2 = re.compile(r"/(\d{8})/")
 
+_MSN_SLUG_RE = re.compile(r"/([a-z0-9][a-z0-9-]*?)/(?:ar|vi)-[A-Za-z0-9]+", re.IGNORECASE)
+
+_GENERIC_TITLES = frozenset({
+    "msn",
+    "client challenge",
+    "just a moment...",
+    "just a moment",
+    "attention required! | cloudflare",
+})
+
 _RELATIVE_RE = re.compile(
     r"(\d+)\s*(minute|hour|day|week|month|year)s?\s*ago", re.IGNORECASE
 )
@@ -209,3 +219,19 @@ def _to_news_item(result: Any, timelimit: str | None = None) -> NewsItem | None:
 def _domain_of(url: str) -> str:
     hostname = urlparse(url).hostname
     return hostname or ""
+
+
+def is_generic_title(title: str) -> bool:
+    cleaned = title.strip().strip("'\"").lower()
+    if not cleaned:
+        return True
+    return cleaned in _GENERIC_TITLES
+
+
+def derive_title_from_slug(url: str) -> str:
+    m = _MSN_SLUG_RE.search(url)
+    if not m:
+        return ""
+    slug = m.group(1)
+    words = [w for w in slug.split("-") if w]
+    return " ".join(w.capitalize() for w in words)
