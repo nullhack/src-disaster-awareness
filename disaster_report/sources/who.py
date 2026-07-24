@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import re
+from dataclasses import replace
 from typing import Any
 
 import httpx
@@ -87,14 +88,21 @@ class WHODiseaseOutbreakAdapter:
 
     def derive_keys(self, report: SourceReport) -> tuple[str, str]:
 
-        return derive_search_keys(report)
+        code = _resolve_disease_country_code(report.raw_fields, report.places)
+        if code:
+            single = replace(
+                report,
+                places=[ReportPlace(country_code=code, subdivision="", locality="")],
+            )
+            return derive_search_keys(single)
+        return derive_search_keys(replace(report, places=[]))
 
     def derive_repoll_keys(self, report: SourceReport) -> list[str]:
 
         disease = _short_disease_name(report.incident_type)
         year = report.report_date[:4] if report.report_date else ""
         country = _resolve_disease_country(
-            report.raw_fields.get("title", ""), report.places
+            report.raw_fields, report.places
         )
         if not country:
             return [f"{disease} update {year}"] if disease else []
@@ -145,11 +153,14 @@ def _extract_canonical_name(
     incident_type: str,
 ) -> str:
     disease = _short_disease_name(incident_type)
-    place = _resolve_disease_place(raw_fields.get("title", ""), places)
+    place = _resolve_disease_place(raw_fields, places)
     return format_title(disease, place, report_date)
 
 
-def _resolve_disease_place(title: object, places: list[ReportPlace]) -> str:
+def _resolve_disease_place(
+    raw_fields: dict[str, object], places: list[ReportPlace]
+) -> str:
+    title = _report_title(raw_fields)
     suffix = _title_suffix(title)
     if suffix:
         lowered = suffix.lower()
@@ -169,16 +180,35 @@ def _resolve_disease_place(title: object, places: list[ReportPlace]) -> str:
     return format_place(smallest, country)
 
 
-def _resolve_disease_country(title: object, places: list[ReportPlace]) -> str:
-    if isinstance(title, str) and title:
+def _resolve_disease_country(
+    raw_fields: dict[str, object], places: list[ReportPlace]
+) -> str:
+
+    code = _resolve_disease_country_code(raw_fields, places)
+    return country_name(code) if code else ""
+
+
+def _resolve_disease_country_code(
+    raw_fields: dict[str, object], places: list[ReportPlace]
+) -> str:
+
+    title = _report_title(raw_fields)
+    if title:
         suffix = _title_suffix(title)
         if suffix and "global" in suffix.lower():
             return ""
         scan_text = suffix or title
         matches = scan_countries(scan_text)
         if matches:
-            return country_name(matches[0][1])
+            return matches[0][1]
+    if len(places) == 1 and places[0].country_code:
+        return places[0].country_code
     return ""
+
+
+def _report_title(raw_fields: dict[str, object]) -> str:
+
+    return str(raw_fields.get("title") or raw_fields.get("Title") or "")
 
 
 def _title_suffix(title: object) -> str:

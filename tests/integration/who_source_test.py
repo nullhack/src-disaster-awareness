@@ -130,7 +130,7 @@ class TestWHODiseaseOutbreakAdapter:
         )
         strict, loose = WHODiseaseOutbreakAdapter().derive_keys(report)
         assert strict == "", strict
-        assert loose == "Ebola africa 2026", loose
+        assert loose == "Ebola 2026", loose
 
     def test_derive_keys_global_zero_places_skips_strict(self) -> None:
         from disaster_report.sources.who import WHODiseaseOutbreakAdapter
@@ -167,6 +167,94 @@ class TestWHODiseaseOutbreakAdapter:
         assert "Ebola" in loose
 
 
+class TestWHODeriveKeys:
+    def test_title_suffix_country_overrides_body_scan_places(self) -> None:
+        from disaster_report.sources.who import WHODiseaseOutbreakAdapter
+
+        report = build_who_report(
+            name="Ebola disease caused by Bundibugyo virus, DRC & Uganda",
+            incident_type="Ebola",
+            places=[
+                ReportPlace(country_code="CD", subdivision="", locality=""),
+                ReportPlace(country_code="US", subdivision="", locality=""),
+                ReportPlace(country_code="DE", subdivision="", locality=""),
+                ReportPlace(country_code="UG", subdivision="", locality=""),
+                ReportPlace(country_code="FR", subdivision="", locality=""),
+                ReportPlace(country_code="BE", subdivision="", locality=""),
+                ReportPlace(country_code="NL", subdivision="", locality=""),
+                ReportPlace(country_code="SD", subdivision="", locality=""),
+            ],
+            report_date="2026-07-17",
+            raw_fields={
+                "Title": "Ebola disease caused by Bundibugyo virus, "
+                "Democratic Republic of the Congo & Uganda"
+            },
+        )
+        strict, loose = WHODiseaseOutbreakAdapter().derive_keys(report)
+        assert "DR Congo" in strict, strict
+        assert "DR Congo" in loose, loose
+
+    def test_global_title_yields_countryless_keys(self) -> None:
+        from disaster_report.sources.who import WHODiseaseOutbreakAdapter
+
+        report = build_who_report(
+            name="Dengue - Global situation",
+            incident_type="Dengue",
+            places=[ReportPlace("BR", "", ""), ReportPlace("CO", "", "")],
+            report_date="2024-05-30",
+            raw_fields={"title": "Dengue - Global situation"},
+        )
+        strict, loose = WHODiseaseOutbreakAdapter().derive_keys(report)
+        assert strict == "", strict
+        assert loose == "Dengue 2024", loose
+
+    def test_single_place_fallback_when_title_has_no_country(self) -> None:
+        from disaster_report.sources.who import WHODiseaseOutbreakAdapter
+
+        report = build_who_report(
+            name="Ebola disease caused by Bundibugyo virus",
+            incident_type="Ebola",
+            places=[ReportPlace(country_code="UG", subdivision="", locality="")],
+            report_date="2026-07-03",
+        )
+        strict, loose = WHODiseaseOutbreakAdapter().derive_keys(report)
+        assert strict == "Ebola Uganda July 2026", strict
+        assert loose == "Ebola Uganda 2026", loose
+
+    def test_multi_place_no_title_country_yields_disease_year_only(self) -> None:
+        from disaster_report.sources.who import WHODiseaseOutbreakAdapter
+
+        report = build_who_report(
+            name="Ebola disease caused by Bundibugyo virus",
+            incident_type="Ebola",
+            places=[
+                ReportPlace(country_code="CD", subdivision="", locality=""),
+                ReportPlace(country_code="UG", subdivision="", locality=""),
+            ],
+            report_date="2026-07-03",
+        )
+        strict, loose = WHODiseaseOutbreakAdapter().derive_keys(report)
+        assert strict == "", strict
+        assert loose == "Ebola 2026", loose
+
+    def test_capital_title_field_used_when_lowercase_absent(self) -> None:
+        from disaster_report.sources.who import WHODiseaseOutbreakAdapter
+
+        report = build_who_report(
+            name="Ebola Ituri, DR Congo 2026-07-17",
+            incident_type="Ebola",
+            places=[ReportPlace(country_code="CD", subdivision="", locality="")],
+            report_date="2026-07-17",
+            raw_fields={
+                "Title": "Ebola disease caused by Bundibugyo virus, "
+                "Democratic Republic of the Congo & Uganda"
+            },
+        )
+        strict, loose = WHODiseaseOutbreakAdapter().derive_keys(report)
+        assert "DR Congo" in strict, strict
+        assert "DR Congo" in loose, loose
+
+
 def first_source_report(reports: list[SourceReport]) -> SourceReport:
     return reports[0]
 
@@ -189,6 +277,7 @@ def build_who_report(
     defaults: dict[str, object] = {
         "Id": "608d728d-b078-4614-9ccf-682229ebfee8",
         "disease": "Ebola",
+        "title": name,
     }
     return SourceReport(
         source=source,
