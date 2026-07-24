@@ -1,0 +1,210 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      host:
+      - erccportal.jrc.ec.europa.eu
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://erccportal.jrc.ec.europa.eu/API/ERCC/Maps/GetLatestDailyMapRss
+  response:
+    body:
+      string: "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?><rss xmlns:ercc=\"http://erccportal.jrc.ec.europa.eu/\"
+        xmlns:content=\"http://purl.org/rss/1.0/modules/content/\" version=\"2.0\">\r\n
+        \ <channel>\r\n    <title>ERCC - Emergency Response Coordination Centre -
+        DG ECHO Daily Maps</title>\r\n    <link>https://erccportal.jrc.ec.europa.eu</link>\r\n
+        \   <description>This feed contains the latest maps published by the Emergency
+        Response Coordination Centre (ERCC). The maps are produced by the Joint Research
+        Centre of the European Commission and by ERCC. The daily map provides an overview
+        of a significant event or situation on a daily basis. The maps are related
+        to DG ECHO humanitarian and civil protection interventions or depict events
+        that are expected to have humanitarian consequences.</description>\r\n    <language>en-us</language>\r\n
+        \   <lastBuildDate>Fri, 24 Jul 2026 03:27:37 GMT</lastBuildDate>\r\n    <item>\r\n
+        \     <title>ECHO Daily Map of 23 July 2026</title>\r\n      <description><![CDATA[<p>El
+        Ni&ntilde;o | Seasonal temperature and rainfall forecast (August-October 2026)</p>]]></description>\r\n
+        \     <ercc:pubDate>Thu, 23 Jul 2026 18:20:59 GMT</ercc:pubDate>\r\n      <link>https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5735</link>\r\n
+        \     <guid>ERCC_Map_5735</guid>\r\n      <image>\r\n        <url>https://erccportal.jrc.ec.europa.eu/API/ERCC/Maps/DownloadPublicMap?contentItemID=5735&amp;fileN=ImageFile&amp;forceDownload=False</url>\r\n
+        \       <title>ECHO Daily Map of 23 July 2026</title>\r\n        <link>https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5735</link>\r\n
+        \     </image>\r\n      <ercc:eventTypes>Heat Wave, Severe Weather</ercc:eventTypes>\r\n
+        \   </item>\r\n    <item>\r\n      <title>ECHO Daily Map of 22 July 2026</title>\r\n
+        \     <description><![CDATA[<p>Europe| Wildfires overview and EU response
+        since 1 July</p>]]></description>\r\n      <ercc:pubDate>Wed, 22 Jul 2026
+        17:59:25 GMT</ercc:pubDate>\r\n      <link>https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5734</link>\r\n
+        \     <guid>ERCC_Map_5734</guid>\r\n      <image>\r\n        <url>https://erccportal.jrc.ec.europa.eu/API/ERCC/Maps/DownloadPublicMap?contentItemID=5734&amp;fileN=ImageFile&amp;forceDownload=False</url>\r\n
+        \       <title>ECHO Daily Map of 22 July 2026</title>\r\n        <link>https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5734</link>\r\n
+        \     </image>\r\n      <ercc:countries>ESP, FRA, GRC, HRV, ITA, PRT</ercc:countries>\r\n
+        \     <ercc:eventTypes>Wild fire</ercc:eventTypes>\r\n    </item>\r\n    <item>\r\n
+        \     <title>ECHO Daily Map of 20 July 2026</title>\r\n      <description><![CDATA[<p>Peru
+        | 5.5 M Earthquake of 19 July &nbsp;</p>]]></description>\r\n      <ercc:pubDate>Mon,
+        20 Jul 2026 17:07:32 GMT</ercc:pubDate>\r\n      <link>https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5732</link>\r\n
+        \     <guid>ERCC_Map_5732</guid>\r\n      <image>\r\n        <url>https://erccportal.jrc.ec.europa.eu/API/ERCC/Maps/DownloadPublicMap?contentItemID=5732&amp;fileN=ImageFile&amp;forceDownload=False</url>\r\n
+        \       <title>ECHO Daily Map of 20 July 2026</title>\r\n        <link>https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5732</link>\r\n
+        \     </image>\r\n      <ercc:mainCountry>Peru</ercc:mainCountry>\r\n      <ercc:eventTypes>Earthquake</ercc:eventTypes>\r\n
+        \   </item>\r\n    <item>\r\n      <title>ECHO Daily Map of 17 July 2026</title>\r\n
+        \     <description><![CDATA[<p>World | Temperature anomalies in June 2026</p>]]></description>\r\n
+        \     <ercc:pubDate>Fri, 17 Jul 2026 14:52:49 GMT</ercc:pubDate>\r\n      <link>https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5731</link>\r\n
+        \     <guid>ERCC_Map_5731</guid>\r\n      <image>\r\n        <url>https://erccportal.jrc.ec.europa.eu/API/ERCC/Maps/DownloadPublicMap?contentItemID=5731&amp;fileN=ImageFile&amp;forceDownload=False</url>\r\n
+        \       <title>ECHO Daily Map of 17 July 2026</title>\r\n        <link>https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5731</link>\r\n
+        \     </image>\r\n      <ercc:eventTypes>Heat Wave</ercc:eventTypes>\r\n    </item>\r\n
+        \   <item>\r\n      <title>ECHO Daily Map of 16 July 2026</title>\r\n      <description><![CDATA[<p>Venezuela
+        | 7.5 M and 7.2 M earthquakes and EU response update</p>]]></description>\r\n
+        \     <ercc:pubDate>Thu, 16 Jul 2026 16:54:05 GMT</ercc:pubDate>\r\n      <link>https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5730</link>\r\n
+        \     <guid>ERCC_Map_5730</guid>\r\n      <image>\r\n        <url>https://erccportal.jrc.ec.europa.eu/API/ERCC/Maps/DownloadPublicMap?contentItemID=5730&amp;fileN=ImageFile&amp;forceDownload=False</url>\r\n
+        \       <title>ECHO Daily Map of 16 July 2026</title>\r\n        <link>https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5730</link>\r\n
+        \     </image>\r\n      <ercc:mainCountry>Venezuela</ercc:mainCountry>\r\n
+        \     <ercc:eventTypes>Earthquake</ercc:eventTypes>\r\n    </item>\r\n    <item>\r\n
+        \     <title>ECHO Daily Map of 15 July 2026</title>\r\n      <description><![CDATA[<p>Russia&rsquo;s
+        War on Ukraine | Generators and transformers offered to Ukraine</p>]]></description>\r\n
+        \     <ercc:pubDate>Wed, 15 Jul 2026 16:43:27 GMT</ercc:pubDate>\r\n      <link>https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5727</link>\r\n
+        \     <guid>ERCC_Map_5727</guid>\r\n      <image>\r\n        <url>https://erccportal.jrc.ec.europa.eu/API/ERCC/Maps/DownloadPublicMap?contentItemID=5727&amp;fileN=ImageFile&amp;forceDownload=False</url>\r\n
+        \       <title>ECHO Daily Map of 15 July 2026</title>\r\n        <link>https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5727</link>\r\n
+        \     </image>\r\n      <ercc:mainCountry>Ukraine</ercc:mainCountry>\r\n      <ercc:eventTypes>Conflict</ercc:eventTypes>\r\n
+        \   </item>\r\n    <item>\r\n      <title>ECHO Daily Map of 14 July 2026</title>\r\n
+        \     <description><![CDATA[<p>Europe | Wildfires overview and EU response
+        since 1 July</p>]]></description>\r\n      <ercc:pubDate>Tue, 14 Jul 2026
+        18:19:10 GMT</ercc:pubDate>\r\n      <link>https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5726</link>\r\n
+        \     <guid>ERCC_Map_5726</guid>\r\n      <image>\r\n        <url>https://erccportal.jrc.ec.europa.eu/API/ERCC/Maps/DownloadPublicMap?contentItemID=5726&amp;fileN=ImageFile&amp;forceDownload=False</url>\r\n
+        \       <title>ECHO Daily Map of 14 July 2026</title>\r\n        <link>https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5726</link>\r\n
+        \     </image>\r\n      <ercc:countries>ESP, FRA, HRV, PRT</ercc:countries>\r\n
+        \     <ercc:eventTypes>Wild fire</ercc:eventTypes>\r\n    </item>\r\n    <item>\r\n
+        \     <title>ECHO Daily Map of 13 July 2026</title>\r\n      <description><![CDATA[<p>Philippines,
+        China, Taiwan, Japan | Tropical cyclone BAVI</p>]]></description>\r\n      <ercc:pubDate>Mon,
+        13 Jul 2026 18:03:13 GMT</ercc:pubDate>\r\n      <link>https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5723</link>\r\n
+        \     <guid>ERCC_Map_5723</guid>\r\n      <image>\r\n        <url>https://erccportal.jrc.ec.europa.eu/API/ERCC/Maps/DownloadPublicMap?contentItemID=5723&amp;fileN=ImageFile&amp;forceDownload=False</url>\r\n
+        \       <title>ECHO Daily Map of 13 July 2026</title>\r\n        <link>https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5723</link>\r\n
+        \     </image>\r\n      <ercc:countries>CHN, GUM, JPN, MNP, PHL, TWN</ercc:countries>\r\n
+        \     <ercc:eventTypes>Flood, Tropical Cyclone</ercc:eventTypes>\r\n    </item>\r\n
+        \   <item>\r\n      <title>ECHO Daily Map of 10 July 2026</title>\r\n      <description><![CDATA[<p>Spain,
+        France | Wildfires and UCPM response</p>]]></description>\r\n      <ercc:pubDate>Fri,
+        10 Jul 2026 18:02:14 GMT</ercc:pubDate>\r\n      <link>https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5722</link>\r\n
+        \     <guid>ERCC_Map_5722</guid>\r\n      <image>\r\n        <url>https://erccportal.jrc.ec.europa.eu/API/ERCC/Maps/DownloadPublicMap?contentItemID=5722&amp;fileN=ImageFile&amp;forceDownload=False</url>\r\n
+        \       <title>ECHO Daily Map of 10 July 2026</title>\r\n        <link>https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5722</link>\r\n
+        \     </image>\r\n      <ercc:countries>ESP, FRA</ercc:countries>\r\n      <ercc:eventTypes>Wild
+        fire</ercc:eventTypes>\r\n    </item>\r\n    <item>\r\n      <title>ECHO Daily
+        Map of 09 July 2026</title>\r\n      <description><![CDATA[<p>Europe | Ongoing
+        heatwave</p>]]></description>\r\n      <ercc:pubDate>Thu, 09 Jul 2026 17:57:24
+        GMT</ercc:pubDate>\r\n      <link>https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5720</link>\r\n
+        \     <guid>ERCC_Map_5720</guid>\r\n      <image>\r\n        <url>https://erccportal.jrc.ec.europa.eu/API/ERCC/Maps/DownloadPublicMap?contentItemID=5720&amp;fileN=ImageFile&amp;forceDownload=False</url>\r\n
+        \       <title>ECHO Daily Map of 09 July 2026</title>\r\n        <link>https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5720</link>\r\n
+        \     </image>\r\n      <ercc:eventTypes>Heat Wave</ercc:eventTypes>\r\n    </item>\r\n
+        \ </channel>\r\n</rss>"
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Content-Type, Authorization
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-origin:
+      - https://erccportal.jrc.ec.europa.eu
+      cache-control:
+      - no-cache
+      content-length:
+      - '8837'
+      content-type:
+      - application/atom+xml; charset=utf-8
+      date:
+      - Fri, 24 Jul 2026 03:27:37 GMT
+      expires:
+      - '-1'
+      permissions-policy:
+      - geolocation=(), microphone=(), camera=()
+      pragma:
+      - no-cache
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      set-cookie:
+      - dnn_IsMobile=False; domain=europa.eu; path=/; secure; HttpOnly
+      - dnn_IsMobile=False; domain=europa.eu; path=/; secure; HttpOnly
+      - language=en-US; domain=europa.eu; path=/; secure; HttpOnly
+      - jrc_cookie=!XrGstdY0r30zmALnnAGwigb9Cq2s1eQZaiq/PFtlLjlQ5Sl1i/n4v/CPxjzQq0arQTfjZj8XYiUzKds=;
+        path=/; Httponly; Secure
+      - TS01612751=01f4fc03dd6312b12cf4890f3703d9fa9609f8c48915c8750308f19a9c27c5bd7c13076e945b8be16bfc8c8c9e71b1dea4b5d3ba5e;
+        Path=/
+      - TS014dc577=01f4fc03dd6312b12cf4890f3703d9fa9609f8c48915c8750308f19a9c27c5bd7c13076e945b8be16bfc8c8c9e71b1dea4b5d3ba5e;
+        path=/; domain=europa.eu
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      host:
+      - erccportal.jrc.ec.europa.eu
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://erccportal.jrc.ec.europa.eu/API/ERCC/Maps/does-not-exist
+  response:
+    body:
+      string: '{"Message":"No HTTP resource was found that matches the request URI
+        ''http://erccportal.jrc.ec.europa.eu/API/ERCC/Maps/does-not-exist''.","MessageDetail":"No
+        action was found on the controller ''Maps'' that matches the name ''does-not-exist''."}'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Content-Type, Authorization
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-origin:
+      - https://erccportal.jrc.ec.europa.eu
+      cache-control:
+      - no-cache
+      content-length:
+      - '239'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Fri, 24 Jul 2026 03:50:22 GMT
+      expires:
+      - '-1'
+      permissions-policy:
+      - geolocation=(), microphone=(), camera=()
+      pragma:
+      - no-cache
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      set-cookie:
+      - dnn_IsMobile=False; domain=europa.eu; path=/; secure; HttpOnly
+      - dnn_IsMobile=False; domain=europa.eu; path=/; secure; HttpOnly
+      - language=en-US; domain=europa.eu; path=/; secure; HttpOnly
+      - jrc_cookie=!aQqDOjKS77g6BSPnnAGwigb9Cq2s1WC6MQW8r2+RX1K1KJHCiWynbbYPtoBFll0trjBe7E3uRw3Cabg=;
+        path=/; Httponly; Secure
+      - TS01612751=01f4fc03dd57216df3c8a71eccc3c4e9f046270043b8a7ee3e54a5d873a9f3e71a7563ad394c5c518356df095924787aa68b191982;
+        Path=/
+      - TS014dc577=01f4fc03dd57216df3c8a71eccc3c4e9f046270043b8a7ee3e54a5d873a9f3e71a7563ad394c5c518356df095924787aa68b191982;
+        path=/; domain=europa.eu
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+    status:
+      code: 404
+      message: Not Found
+version: 1
