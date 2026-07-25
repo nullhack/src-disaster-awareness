@@ -1,29 +1,29 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-07-23",
-  "generated_at": "2026-07-25T04:44:15Z",
+  "generated_at": "2026-07-25T09:18:11Z",
   "as_of": "2026-07-23",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 18,
-    "new_today": 3,
+    "reportable_total": 17,
+    "new_today": 2,
     "critical": 3,
-    "high": 6,
+    "high": 5,
     "medium": 9,
     "low": 0,
     "disease_outbreaks": 1,
     "countries_affected": 14,
-    "news_total": 452,
+    "news_total": 405,
     "max_magnitude": 7.3,
     "by_severity": {
       "CRITICAL": 3,
-      "HIGH": 6,
+      "HIGH": 5,
       "MEDIUM": 9,
       "LOW": 0
     },
     "by_type": {
-      "Flood": 4,
+      "Flood": 3,
       "Volcano": 2,
       "Disease": 1,
       "Drought": 1,
@@ -32,7 +32,7 @@
       "Forest Fire": 2
     },
     "by_region": {
-      "Asia": 9,
+      "Asia": 8,
       "Global": 1,
       "Europe": 3,
       "Oceania": 2,
@@ -104,15 +104,6 @@
       "max_severity": "MEDIUM"
     },
     {
-      "country": "China",
-      "count": 2,
-      "max_sev_rank": 3,
-      "iso2": "CN",
-      "region": "Asia",
-      "country_group": "A",
-      "max_severity": "HIGH"
-    },
-    {
       "country": "Japan",
       "count": 1,
       "max_sev_rank": 3,
@@ -147,6 +138,15 @@
       "region": "Americas",
       "country_group": "C",
       "max_severity": "HIGH"
+    },
+    {
+      "country": "China",
+      "count": 1,
+      "max_sev_rank": 4,
+      "iso2": "CN",
+      "region": "Asia",
+      "country_group": "A",
+      "max_severity": "LOW"
     },
     {
       "country": "New Zealand",
@@ -1201,513 +1201,6 @@
         }
       ],
       "logs_total": 3
-    },
-    {
-      "incident_id": "20260606-CN-FL",
-      "tree_id": "942158e18da35420a79e4a17fefb8013",
-      "canonical_name": "Flood Hunan, China 2026-06-06",
-      "summary": "China's Ministry of Water Resources warned on Tuesday that water levels in 10 rivers across Guangxi, Yunnan, Jiangsu and Xinjiang have exceeded warning thresholds, posing flood risks. Additionally, Catholic relief organizations, including Jinde Charities in China, are mobilizing to provide aid to communities affected by the severe flooding.",
-      "country": "China",
-      "iso2": "CN",
-      "lat": 27.1175905,
-      "lon": 111.0271777,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Flood",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "HIGH",
-      "priority": "HIGH",
-      "priority_rank": 1,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-06-06",
-      "first_reported_date": "2026-06-06",
-      "last_updated_date": "2026-07-23",
-      "days_since_event": 49,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 1,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 47
-      },
-      "source_links": [
-        {
-          "type": "GDACS",
-          "label": "Orange alert · Flood Hunan, China 2026-06-06",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=FL&eventid=1103933",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": "Orange",
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Typhoon Bavi takes aim at China as Taiwan’s capital shuts schools",
-          "published_date": "2026-01-01"
-        },
-        {
-          "headline": "Horror moment 900 snakes escape breeding facility and swim through village",
-          "published_date": "2026-07-08"
-        },
-        {
-          "headline": "'The water just came so fast': Typhoon triggers floods and rare tornadoes in China",
-          "published_date": "2026-07-08"
-        },
-        {
-          "headline": "Catastrophic storms to test China's resilience in 2026, scientists warn",
-          "published_date": "2026-07-08"
-        },
-        {
-          "headline": "Hundreds of snakes escape after floodwaters inundate breeding farm in China",
-          "published_date": "2026-07-08"
-        },
-        {
-          "headline": "Heavy rains in southern China force relocations, disrupt transport",
-          "published_date": "2026-07-08T11:27:24+00:00"
-        },
-        {
-          "headline": "China, Taiwan brace for Typhoon Bavi, possibly the most powerful storm in years - BusinessWorld Online",
-          "published_date": "2026-07-09"
-        },
-        {
-          "headline": "Typhoon Bavi takes aim at China as Taiwan's capital shuts schools",
-          "published_date": "2026-07-10"
-        },
-        {
-          "headline": "Typhoon Bavi takes aim at China as Taiwan's capital shuts schools",
-          "published_date": "2026-07-10"
-        },
-        {
-          "headline": "Torrential rains bring devastating floods to a Chinese city and a snake invasion",
-          "published_date": "2026-07-10T17:32:37+00:00"
-        },
-        {
-          "headline": "Orange alert for rainstorms! A total of 169 tailings ponds are affected by the rainfall, including 33 \"head-impoundment\" ponds.",
-          "published_date": "2026-07-11T06:50:37+00:00"
-        },
-        {
-          "headline": "Typhoon Bavi weakens but still brings strong winds and rain to China",
-          "published_date": "2026-07-12"
-        },
-        {
-          "headline": "China to See Unusually Active Typhoon Season After Bavi Passes",
-          "published_date": "2026-07-13"
-        },
-        {
-          "headline": "Heavy floods submerge roads, vehicles in northern China - BusinessWorld Online",
-          "published_date": "2026-07-13"
-        },
-        {
-          "headline": "Apocalyptic Videos Show Snakes Roaming in Floodwaters in China",
-          "published_date": "2026-07-13"
-        },
-        {
-          "headline": "Heavy floods submerge roads, vehicles in northern China - BusinessWorld Online",
-          "published_date": "2026-07-13"
-        },
-        {
-          "headline": "China to See Unusually Active Typhoon Season After Bavi Passes",
-          "published_date": "2026-07-13"
-        },
-        {
-          "headline": "Snake invasion in China: Chilling video of 900 snakes escaping in floodwaters leaves internet horrified",
-          "published_date": "2026-07-13"
-        },
-        {
-          "headline": "China to See Unusually Active Typhoon Season After Bavi Passes",
-          "published_date": "2026-07-13"
-        },
-        {
-          "headline": "Snake invasion in China: Chilling video of 900 snakes escaping in floodwaters...",
-          "published_date": "2026-07-13T08:25:51+00:00"
-        },
-        {
-          "headline": "Snake invasion in China: Chilling video of 900 snakes escaping in floodwaters...",
-          "published_date": "2026-07-13T08:50:37+00:00"
-        },
-        {
-          "headline": "Heavy floods submerge roads, vehicles in northern China - BusinessWorld Online",
-          "published_date": "2026-07-13T08:50:40+00:00"
-        },
-        {
-          "headline": "Apocalyptic Videos Show Snakes Roaming in Floodwaters in China",
-          "published_date": "2026-07-13T08:50:40+00:00"
-        },
-        {
-          "headline": "Apocalyptic Videos Show Snakes Roaming in Floodwaters in China",
-          "published_date": "2026-07-13T19:46:35+00:00"
-        },
-        {
-          "headline": "Snake invasion in China: Chilling video of 900 snakes escaping in floodwaters...",
-          "published_date": "2026-07-13T19:47:05+00:00"
-        },
-        {
-          "headline": "Snake invasion in China: Chilling video of 900 snakes escaping in floodwaters...",
-          "published_date": "2026-07-13T19:47:08+00:00"
-        },
-        {
-          "headline": "Over 260,000 evacuated ahead of Bavi",
-          "published_date": "2026-07-15"
-        },
-        {
-          "headline": "Emergency workers transport supplies to reinforce dikes in Shenyang against flood risks",
-          "published_date": "2026-07-15"
-        },
-        {
-          "headline": "Old video misrepresented as rescue footage from deadly 2026 floods in China",
-          "published_date": "2026-07-15T19:46:35+00:00"
-        },
-        {
-          "headline": "Old video misrepresented as rescue footage from deadly 2026 floods in China",
-          "published_date": "2026-07-16"
-        },
-        {
-          "headline": "Old Video Misrepresented As Rescue Footage From Deadly 2026 Floods In China",
-          "published_date": "2026-07-18"
-        },
-        {
-          "headline": "Old Video Misrepresented As Rescue Footage From Deadly 2026 Floods In China",
-          "published_date": "2026-07-18"
-        },
-        {
-          "headline": "Rescuer Carries Newborn To Safety During Hospital Flood In China",
-          "published_date": "2026-07-18"
-        },
-        {
-          "headline": "Torrential Rains And Floods Disrupt Life Across Eastern Chinapublished On July 14 2026 439 Pm",
-          "published_date": "2026-07-18"
-        },
-        {
-          "headline": "Residents Paddleboard And Swim Through Flooded Streets After Record Rainfall In China",
-          "published_date": "2026-07-18"
-        },
-        {
-          "headline": "Floodwaters Sweep Away Vehicles In China S Chengde",
-          "published_date": "2026-07-18"
-        },
-        {
-          "headline": "More Than 260000 Evacuated As Typhoon Bavi Hits China",
-          "published_date": "2026-07-18"
-        },
-        {
-          "headline": "Catastrophic Storms To Test China S Resilience In 2026 Scientists Warn",
-          "published_date": "2026-07-18"
-        },
-        {
-          "headline": "Powerful Waves Flood Seaside Shop On Weizhou Island In Guangxi China",
-          "published_date": "2026-07-18"
-        },
-        {
-          "headline": "Rescuers Search For Survivors Of China Storms As Super Typhoon Nears",
-          "published_date": "2026-07-18"
-        },
-        {
-          "headline": "Severe flooding traps people inside building in Yunnan, China",
-          "published_date": "2026-07-18T08:50:37+00:00"
-        },
-        {
-          "headline": "At Least 12 Dead In Heavy Rains Across Southern China And Vietnam",
-          "published_date": "2026-07-19"
-        },
-        {
-          "headline": "At Least 12 Dead In Heavy Rains Across Southern China And Vietnam",
-          "published_date": "2026-07-19"
-        },
-        {
-          "headline": "China warns of flood risks in four regions",
-          "published_date": "2026-07-21"
-        },
-        {
-          "headline": "Catholic Relief Agencies Mobilize Across Asia as Storms Trigger Widespread Humanitarian Need",
-          "published_date": "2026-07-21"
-        },
-        {
-          "headline": "Catholic Relief Agencies Mobilize Across Asia as Storms Trigger Widespread...",
-          "published_date": "2026-07-21T18:59:46+00:00"
-        },
-        {
-          "headline": "Extreme rainfall threatens north as China enters peak flood season",
-          "published_date": "2026-07-23"
-        }
-      ],
-      "news_total": 47,
-      "logs": [
-        {
-          "log_date": "2026-07-08",
-          "summary": "Heavy rainfall since mid-June triggered flooding in southern China's Guangxi region and Guangdong province, forcing relocations and disrupting transport. On June 18, powerful waves flooded a seaside shop on Weizhou Island. Rescuers are searching for survivors, and scientists warn that catastrophic storms will test China's resilience in 2026.",
-          "news": [
-            {
-              "news_id": "0b8657ccfbec54ea82ff6726b3eb4618",
-              "url": "https://www.msn.com/en-us/weather/general/catastrophic-storms-to-test-china-s-resilience-in-2026-scientists-warn/ar-AA27sQ6s?ocid=BingNewsVerp",
-              "headline": "Catastrophic Storms To Test China S Resilience In 2026 Scientists Warn",
-              "body": "By Nicoco Chan, Ethan Wang and Xiuhao Chen SHANGHAI/BEIJING, July 8 (Reuters) - The floodwaters that ravaged southern China ...",
-              "published_date": "2026-07-18",
-              "outlet": "Reuters on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.XA_a2hMZXTSuPVzzhvlp7w"
-            },
-            {
-              "news_id": "be722527163157b2b1f84ec3dd1a59df",
-              "url": "https://www.reuters.com/business/environment/heavy-rains-southern-china-force-relocations-disrupt-transport-2026-06-15/",
-              "headline": "Heavy rains in southern China force relocations, disrupt transport",
-              "body": "BEIJING, June 15 (Reuters) - Heavy rainfall battered parts of southern China since the weekend, including the Guangxi region and Guangdong province, triggering flooding in cities, disrupting transport ...",
-              "published_date": "2026-07-08T11:27:24+00:00",
-              "outlet": "Reuters",
-              "image": ""
-            },
-            {
-              "news_id": "51c8950cd6cf50af8b08ec4fca80c130",
-              "url": "https://www.msn.com/en-gb/weather/extreme-weather-events/powerful-waves-flood-seaside-shop-on-weizhou-island-in-guangxi-china/vi-AA26Oge7?ocid=BingNewsVerp",
-              "headline": "Powerful Waves Flood Seaside Shop On Weizhou Island In Guangxi China",
-              "body": "On June 18, 2026, in Guangxi, China, security video captured powerful southwest waves unexpectedly surging ashore on Weizhou ...",
-              "published_date": "2026-07-18",
-              "outlet": "Newsflare on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.WOf_iTQ1XmUyZtap-wSVFQ"
-            },
-            {
-              "news_id": "8e8b7bd188e25852843cfa8d62a09b2f",
-              "url": "https://www.msn.com/en-us/news/world/rescuers-search-for-survivors-of-china-storms-as-super-typhoon-nears/ar-AA27rquT?ocid=BingNewsVerp",
-              "headline": "Rescuers Search For Survivors Of China Storms As Super Typhoon Nears",
-              "body": "Rescuers scoured flooded parts of China for survivors on Wednesday as residents began cleaning up their devastated homes, ...",
-              "published_date": "2026-07-18",
-              "outlet": "AFP on MSN",
-              "image": "https://www.bing.com/th?id=ONUT._1HUsEpsC2sszLOgNwU7sg"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-18",
-          "summary": "On July 17, 2026, severe flooding from heavy rainfall trapped people inside a building in Yunnan, China, as captured in video footage. This adds a new location to the ongoing flood crisis affecting multiple Chinese provinces.",
-          "news": [
-            {
-              "news_id": "a3c7bd87b77456df90d9686bffd89d0b",
-              "url": "https://r.search.yahoo.com/_ylt=A2RRQJZgPltqtwIAZcfQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzkEdnRpZAMEc2VjA3Ny/RV=2/RE=1785574240/RO=10/RU=https://bworldonline.com/world/2026/07/13/762918/heavy-floods-submerge-roads-vehicles-in-northern-china//RK=2/RS=VE9x02X6l6aLpTdn8ahL4tz8mI4-",
-              "headline": "Heavy floods submerge roads, vehicles in northern China - BusinessWorld Online",
-              "body": "Severe flooding in China’s northern Hebei province and northeastern Liaoning province submerged road...",
-              "published_date": "2026-07-13T08:50:40+00:00",
-              "outlet": "BusinessWorld",
-              "image": "https://s.yimg.com/fz/api/res/1.2/zW75jU3poQC8ZmmZmZK8eQ--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7dz0xNjA-/https://s.yimg.com/am/60d/ab60b48ed69aaf7d2cf1a2360cd4f443"
-            },
-            {
-              "news_id": "e6201cea3e75592e8049179dcfc6543f",
-              "url": "https://r.search.yahoo.com/_ylt=A2RRgHk7NVlqywIAruLQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzQEdnRpZAMEc2VjA3Ny/RV=2/RE=1785440828/RO=10/RU=https://me.mashable.com/culture/73748/snake-invasion-in-china-chilling-video-of-900-snakes-escaping-in-floodwaters-leaves-internet-horrifi/RK=2/RS=MNgl.sqK5sj29DBVnmlvA1XZ_Es-",
-              "headline": "Snake invasion in China: Chilling video of 900 snakes escaping in floodwaters...",
-              "body": "Terrifying videos show hundreds of snakes flooding Chinese streets after Typhoon Maysak, sparking...",
-              "published_date": "2026-07-13T19:47:08+00:00",
-              "outlet": "Mashable",
-              "image": "https://s.yimg.com/fz/api/res/1.2/jfqBNTDAUtG59J2wuFrIMw--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7dz0xNjA-/https://s.yimg.com/am/60d/ff26740ec672020a04d8c382c45c16fa"
-            },
-            {
-              "news_id": "df029183873e5e8bb7c8637f04e5603d",
-              "url": "https://www.msn.com/en-gb/weather/general/severe-flooding-traps-people-inside-building-in-yunnan-china/vi-AA289jiI?ocid=BingNewsVerp",
-              "headline": "Severe flooding traps people inside building in Yunnan, China",
-              "body": "On July 17, 2026, in Yunnan, China, a video captured severe flooding during heavy rainfall. In the video, people are stranded ...",
-              "published_date": "2026-07-18T08:50:37+00:00",
-              "outlet": "Newsflare on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.x6kwugWModtL82GKgYsztg"
-            },
-            {
-              "news_id": "f8716570bbbe54dda2843bfaae7d8c10",
-              "url": "https://www.msn.com/en-us/weather/general/old-video-misrepresented-as-rescue-footage-from-deadly-2026-floods-in-china/ar-AA280qkP?ocid=BingNewsVerp",
-              "headline": "Old Video Misrepresented As Rescue Footage From Deadly 2026 Floods In China",
-              "body": "After heavy rai ns in China's southern Guangxi region left at least 39 people dead in early July 2026, social media posts recirculated an old video falsely claiming it showed a man pulling a few ...",
-              "published_date": "2026-07-18",
-              "outlet": "AFP on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "4bed72aac57c5b77a34b2eff0c8ad5e2",
-              "url": "https://r.search.yahoo.com/_ylt=A2RRgKk4NVlqdQIA3bPQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzkEdnRpZAMEc2VjA3Ny/RV=2/RE=1785440825/RO=10/RU=https://www.insurancejournal.com/news/international/2026/07/13/877292.htm/RK=2/RS=1OG968Thujk4WzzaO7TnzqCmNdc-",
-              "headline": "China to See Unusually Active Typhoon Season After Bavi Passes",
-              "body": "China may encounter stronger and more frequent tropical cyclones over the summer months, according...",
-              "published_date": "2026-07-13",
-              "outlet": "Insurance Journal",
-              "image": "https://s.yimg.com/fz/api/res/1.2/6lMLYQpU3cwg2_BIE9qBig--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7dz0xNjA-/https://s.yimg.com/am/60d/eb55586a6335b9861db270ebb0fa1234"
-            },
-            {
-              "news_id": "716f4f5fe7105efdad09f7d52d254096",
-              "url": "https://r.search.yahoo.com/_ylt=A2RRgHk7NVlqywIAwOLQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzEwBHZ0aWQDBHNlYwNzcg--/RV=2/RE=1785440828/RO=10/RU=https://bworldonline.com/world/2026/07/13/762918/heavy-floods-submerge-roads-vehicles-in-northern-china//RK=2/RS=M7Uv6m_E.5nmOQWg09SLDu_hRb8-",
-              "headline": "Heavy floods submerge roads, vehicles in northern China - BusinessWorld Online",
-              "body": "Severe flooding in China’s northern Hebei province and northeastern Liaoning province submerged road...",
-              "published_date": "2026-07-13",
-              "outlet": "BusinessWorld",
-              "image": "https://s.yimg.com/fz/api/res/1.2/zW75jU3poQC8ZmmZmZK8eQ--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7dz0xNjA-/https://s.yimg.com/am/60d/ab60b48ed69aaf7d2cf1a2360cd4f443"
-            },
-            {
-              "news_id": "8284b55b111e5528a687cd4ed6e73006",
-              "url": "https://r.search.yahoo.com/_ylt=A2RRgHk7NVlqywIAveLQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzkEdnRpZAMEc2VjA3Ny/RV=2/RE=1785440828/RO=10/RU=https://petapixel.com/2026/07/13/apocalyptic-videos-show-snakes-roaming-in-floodwaters-in-china//RK=2/RS=eiv7nB2GZsI.KZGf1Sxoz1DphQQ-",
-              "headline": "Apocalyptic Videos Show Snakes Roaming in Floodwaters in China",
-              "body": "Snakes on a flood plain.",
-              "published_date": "2026-07-13",
-              "outlet": "PetaPixel",
-              "image": "https://s.yimg.com/fz/api/res/1.2/49V8cJdoCrTJxwzERAtfgw--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7dz0xNjA-/https://s.yimg.com/am/60d/5d0b61b498a39096b0882fa8bdbace98"
-            },
-            {
-              "news_id": "c93432e063a75a4894867868a51d19d7",
-              "url": "https://r.search.yahoo.com/_ylt=A2RRItxdPltqjQIABgTQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzQEdnRpZAMEc2VjA3Ny/RV=2/RE=1785574237/RO=10/RU=https://me.mashable.com/culture/73748/snake-invasion-in-china-chilling-video-of-900-snakes-escaping-in-floodwaters-leaves-internet-horrifi/RK=2/RS=4ujr3nKAPsAalYAT4pWiIM8bRIk-",
-              "headline": "Snake invasion in China: Chilling video of 900 snakes escaping in floodwaters...",
-              "body": "Terrifying videos show hundreds of snakes flooding Chinese streets after Typhoon Maysak, sparking...",
-              "published_date": "2026-07-13T08:50:37+00:00",
-              "outlet": "Mashable",
-              "image": "https://s.yimg.com/fz/api/res/1.2/jfqBNTDAUtG59J2wuFrIMw--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7dz0xNjA-/https://s.yimg.com/am/60d/ff26740ec672020a04d8c382c45c16fa"
-            },
-            {
-              "news_id": "2931819ab00b5ade81ba223814a7eb24",
-              "url": "https://r.search.yahoo.com/_ylt=A2RRQJZgPltqtwIAYsfQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzgEdnRpZAMEc2VjA3Ny/RV=2/RE=1785574240/RO=10/RU=https://petapixel.com/2026/07/13/apocalyptic-videos-show-snakes-roaming-in-floodwaters-in-china//RK=2/RS=UQrgOJOi6ue_ny2PHnbYUPHYIEA-",
-              "headline": "Apocalyptic Videos Show Snakes Roaming in Floodwaters in China",
-              "body": "Snakes on a flood plain.",
-              "published_date": "2026-07-13T08:50:40+00:00",
-              "outlet": "PetaPixel",
-              "image": "https://s.yimg.com/fz/api/res/1.2/49V8cJdoCrTJxwzERAtfgw--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7dz0xNjA-/https://s.yimg.com/am/60d/5d0b61b498a39096b0882fa8bdbace98"
-            },
-            {
-              "news_id": "daa66b16a5f55507bd19a0c06dd3b7fb",
-              "url": "https://r.search.yahoo.com/_ylt=A2RRgKk4NVlqdQIA2rPQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzgEdnRpZAMEc2VjA3Ny/RV=2/RE=1785440825/RO=10/RU=https://www.columbian.com/news/2026/jul/10/typhoon-bavi-takes-aim-at-china-as-taiwans-capital-shuts-schools//RK=2/RS=TSXiJCEq2FQ1X60lLbDGzEih4Cw-",
-              "headline": "Typhoon Bavi takes aim at China as Taiwan’s capital shuts schools",
-              "body": "A powerful typhoon was heading toward China’s east coast Friday, the latest in a series of deadly st...",
-              "published_date": "2026-01-01",
-              "outlet": "The Columbian",
-              "image": "https://s.yimg.com/fz/api/res/1.2/454r0YooIQ9..uoQu75O2A--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7dz0xNjA-/https://s.yimg.com/am/60d/a9aa989a3cef2e5355b4c05a5b917f40"
-            },
-            {
-              "news_id": "c4c4dae72cd95821b386bf84b79fea77",
-              "url": "https://r.search.yahoo.com/_ylt=A2RRgKk4NVlqdQIAy7PQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzMEdnRpZAMEc2VjA3Ny/RV=2/RE=1785440825/RO=10/RU=https://me.mashable.com/culture/73748/snake-invasion-in-china-chilling-video-of-900-snakes-escaping-in-floodwaters-leaves-internet-horrifi/RK=2/RS=JBYltojunsC0Dk5yS0PkZeWZVLU-",
-              "headline": "Snake invasion in China: Chilling video of 900 snakes escaping in floodwaters...",
-              "body": "Terrifying videos show hundreds of snakes flooding Chinese streets after Typhoon Maysak, sparking...",
-              "published_date": "2026-07-13T19:47:05+00:00",
-              "outlet": "Mashable",
-              "image": "https://s.yimg.com/fz/api/res/1.2/jfqBNTDAUtG59J2wuFrIMw--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7dz0xNjA-/https://s.yimg.com/am/60d/ff26740ec672020a04d8c382c45c16fa"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-19",
-          "summary": "Heavy rains in southern China and Vietnam have resulted in at least 12 deaths, with authorities warning of further downpours. In northern China, severe flooding in Hebei and Liaoning provinces submerged roads and swept away vehicles.",
-          "news": [
-            {
-              "news_id": "4044622b9f12522e9ba27fdff3b4aca0",
-              "url": "https://www.msn.com/en-us/weather/general/at-least-12-dead-in-heavy-rains-across-southern-china-and-vietnam/ar-AA28aRG4?ocid=BingNewsVerp",
-              "headline": "At Least 12 Dead In Heavy Rains Across Southern China And Vietnam",
-              "body": "At least 12 dead in heavy rains across southern China and Vietnam - Authorities warn further downpours could trigger more ...",
-              "published_date": "2026-07-19",
-              "outlet": "The Independent on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.PPx0MDWXCXGeOlzIRbzIZg"
-            },
-            {
-              "news_id": "8841d7d71f6f54a090f32de490119a77",
-              "url": "https://bworldonline.com/world/2026/07/13/762918/heavy-floods-submerge-roads-vehicles-in-northern-china/",
-              "headline": "Heavy floods submerge roads, vehicles in northern China - BusinessWorld Online",
-              "body": "HONG KONG — Severe flooding in China’s northern Hebei province and northeastern Liaoning province submerged roads and swept away cars, while people swam, paddle-boarded and wake surfed along neighborhood streets, videos on social media showed. Water levels rose to more than two metres on roads in Kuancheng, a county in Hebei, according to a resident’s […]",
-              "published_date": "2026-07-13",
-              "outlet": "BusinessWorld",
-              "image": "https://s.yimg.com/am/60d/ab60b48ed69aaf7d2cf1a2360cd4f443"
-            },
-            {
-              "news_id": "67e8273ba42b503da4fd8ef3ff788843",
-              "url": "https://www.clickorlando.com/news/2026/07/12/typhoon-bavi-weakens-but-still-brings-strong-winds-and-rain-to-china/",
-              "headline": "Typhoon Bavi weakens but still brings strong winds and rain to China",
-              "body": "Typhoon Bavi has weakened to a tropical storm but it's still bringing strong winds and heavy rain to parts of China.",
-              "published_date": "2026-07-12",
-              "outlet": "WKMG ClickOrlando",
-              "image": "https://s.yimg.com/am/60d/6556059894eb6319614a0669404e70e7"
-            },
-            {
-              "news_id": "952cfa0255b759d3b6731270b70b2331",
-              "url": "https://r.search.yahoo.com/_ylt=A2RQYzWPOFtqpAIAppDQtDMD;_ylu=Y29sbwN1cy13ZXN0LTIEcG9zAzQEdnRpZAMEc2VjA3Ny/RV=2/RE=1785572751/RO=10/RU=https://me.mashable.com/culture/73748/snake-invasion-in-china-chilling-video-of-900-snakes-escaping-in-floodwaters-leaves-internet-horrifi/RK=2/RS=G4NZEJ8kYaJPkmOMFAxJ94lJdeU-",
-              "headline": "Snake invasion in China: Chilling video of 900 snakes escaping in floodwaters...",
-              "body": "Terrifying videos show hundreds of snakes flooding Chinese streets after Typhoon Maysak, sparking...",
-              "published_date": "2026-07-13T08:25:51+00:00",
-              "outlet": "Mashable",
-              "image": "https://s.yimg.com/fz/api/res/1.2/jfqBNTDAUtG59J2wuFrIMw--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7dz0xNjA-/https://s.yimg.com/am/60d/ff26740ec672020a04d8c382c45c16fa"
-            },
-            {
-              "news_id": "529d006b36e5560b92dede1e7dad5144",
-              "url": "https://r.search.yahoo.com/_ylt=A2RRgHlrTVxqmgIAjr_QtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzcEdnRpZAMEc2VjA3Ny/RV=2/RE=1785643628/RO=10/RU=https://www.insurancejournal.com/news/international/2026/07/13/877292.htm/RK=2/RS=noIguX7t17sLd4APpSGav4OIJLs-",
-              "headline": "China to See Unusually Active Typhoon Season After Bavi Passes",
-              "body": "China may encounter stronger and more frequent tropical cyclones over the summer months, according...",
-              "published_date": "2026-07-13",
-              "outlet": "Insurance Journal",
-              "image": "https://s.yimg.com/fz/api/res/1.2/6lMLYQpU3cwg2_BIE9qBig--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7dz0xNjA-/https://s.yimg.com/am/60d/eb55586a6335b9861db270ebb0fa1234"
-            },
-            {
-              "news_id": "e36bcec657da5f81871eea28e2709d26",
-              "url": "https://www.msn.com/en-us/news/world/at-least-12-dead-in-heavy-rains-across-southern-china-and-vietnam/ar-AA28aRG4?ocid=BingNewsVerp",
-              "headline": "At Least 12 Dead In Heavy Rains Across Southern China And Vietnam",
-              "body": "At least 12 dead in heavy rains across southern China and Vietnam - Authorities warn further downpours could trigger more ...",
-              "published_date": "2026-07-19",
-              "outlet": "The Independent on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.PPx0MDWXCXGeOlzIRbzIZg"
-            },
-            {
-              "news_id": "c417b98a6000553a9971e2156020313c",
-              "url": "https://r.search.yahoo.com/_ylt=A2RRItyahlpqewIAcnHQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzgEdnRpZAMEc2VjA3Ny/RV=2/RE=1785527195/RO=10/RU=https://petapixel.com/2026/07/13/apocalyptic-videos-show-snakes-roaming-in-floodwaters-in-china//RK=2/RS=InOZlJMZr1QBMwJW_y9tYhaSgPY-",
-              "headline": "Apocalyptic Videos Show Snakes Roaming in Floodwaters in China",
-              "body": "Snakes on a flood plain.",
-              "published_date": "2026-07-13T19:46:35+00:00",
-              "outlet": "PetaPixel",
-              "image": "https://s.yimg.com/fz/api/res/1.2/49V8cJdoCrTJxwzERAtfgw--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7dz0xNjA-/https://s.yimg.com/am/60d/5d0b61b498a39096b0882fa8bdbace98"
-            },
-            {
-              "news_id": "6e54b6563eee52c68d6aac6b594b1794",
-              "url": "https://r.search.yahoo.com/_ylt=A2RRItyahlpqewIAbHHQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzYEdnRpZAMEc2VjA3Ny/RV=2/RE=1785527195/RO=10/RU=https://www.yahoo.com/news/world/articles/old-video-misrepresented-rescue-footage-035737176.html?fr=sycsrp_catchall/RK=2/RS=DkAGL2o7sjUrxbXOWSoWMLYQ.EI-",
-              "headline": "Old video misrepresented as rescue footage from deadly 2026 floods in China",
-              "body": "After heavy rai ns in China's southern Guangxi region left at least 39 people dead in early July...",
-              "published_date": "2026-07-15T19:46:35+00:00",
-              "outlet": "AFP · via Yahoo News",
-              "image": "https://s.yimg.com/fz/api/res/1.2/gBeEdUG1GH8Lt_KpQryZHQ--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7c209MTt3PTE2MA--/https://media.zenfs.com/en/afp_factcheck_us_713/b3276919fe7274cd1c0b27f26f20e1e4"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-22",
-          "summary": "China's Ministry of Water Resources warned on Tuesday that water levels in 10 rivers across Guangxi, Yunnan, Jiangsu and Xinjiang have exceeded warning thresholds, posing flood risks. Additionally, Catholic relief organizations, including Jinde Charities in China, are mobilizing to provide aid to communities affected by the severe flooding.",
-          "news": [
-            {
-              "news_id": "565c1bbd9a6b54df86b8319630dd9d3b",
-              "url": "https://r.search.yahoo.com/_ylt=A2RRBpAyQGBqqgIAobvQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzUEdnRpZAMEc2VjA3Ny/RV=2/RE=1785902386/RO=10/RU=https://www.ncregister.com/cna/catholic-relief-asia-humanitarian/RK=2/RS=t2qzI8DmLAllGCkQGZhdWmnF3zs-",
-              "headline": "Catholic Relief Agencies Mobilize Across Asia as Storms Trigger Widespread...",
-              "body": "Catholic aid groups in Bangladesh and China are responding to severe midsummer storms, with Caritas ...",
-              "published_date": "2026-07-21T18:59:46+00:00",
-              "outlet": "National Catholic Register",
-              "image": "https://s.yimg.com/fz/api/res/1.2/oBZ6OCLMDNDfIqiCpPKIYw--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7dz0xNjA-/https://s.yimg.com/am/60d/3dbe02ee606cabb06c43a61026078fdc"
-            },
-            {
-              "news_id": "02f53d5d00df571fb1cddfb1e6d1a433",
-              "url": "https://thepeninsulaqatar.com/article/21/07/2026/china-warns-of-flood-risks-in-four-regions",
-              "headline": "China warns of flood risks in four regions",
-              "body": "Beijing: China s Ministry of Water Resources said on Tuesday that water levels in 10 rivers across Guangxi, Yunnan, Jiangsu and Xinjiang have exceeded...",
-              "published_date": "2026-07-21",
-              "outlet": "The Peninsula Qatar",
-              "image": "https://www.bing.com/th?id=ONUT.uRaq6Tf4PNLyg_YIutlr_g"
-            },
-            {
-              "news_id": "476454506e9f5e90bd0bc453161a89ee",
-              "url": "https://www.ncregister.com/cna/catholic-relief-asia-humanitarian",
-              "headline": "Catholic Relief Agencies Mobilize Across Asia as Storms Trigger Widespread Humanitarian Need",
-              "body": "Caritas Bangladesh and Jinde Charities in China are providing aid after devastating flooding.",
-              "published_date": "2026-07-21",
-              "outlet": "National Catholic Register",
-              "image": "https://s.yimg.com/am/60d/3dbe02ee606cabb06c43a61026078fdc"
-            }
-          ]
-        }
-      ],
-      "logs_total": 7
     },
     {
       "incident_id": "20260624-JP-EQ",
