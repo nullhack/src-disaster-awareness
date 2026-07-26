@@ -1,24 +1,24 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-07-22",
-  "generated_at": "2026-07-26T14:48:51Z",
+  "generated_at": "2026-07-26T20:29:39Z",
   "as_of": "2026-07-22",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 15,
-    "new_today": 2,
+    "reportable_total": 14,
+    "new_today": 1,
     "critical": 3,
-    "high": 4,
+    "high": 3,
     "medium": 8,
     "low": 0,
     "disease_outbreaks": 1,
-    "countries_affected": 12,
-    "news_total": 323,
+    "countries_affected": 11,
+    "news_total": 292,
     "max_magnitude": 7.8,
     "by_severity": {
       "CRITICAL": 3,
-      "HIGH": 4,
+      "HIGH": 3,
       "MEDIUM": 8,
       "LOW": 0
     },
@@ -27,7 +27,7 @@
       "Volcano": 2,
       "Disease": 1,
       "Drought": 1,
-      "Earthquake": 7,
+      "Earthquake": 6,
       "Tropical Cyclone": 1
     },
     "by_region": {
@@ -35,7 +35,7 @@
       "Global": 1,
       "Europe": 1,
       "Oceania": 2,
-      "Americas": 3
+      "Americas": 2
     }
   },
   "by_country": [
@@ -109,15 +109,6 @@
       "iso2": "JP",
       "region": "Asia",
       "country_group": "A",
-      "max_severity": "HIGH"
-    },
-    {
-      "country": "Peru",
-      "count": 1,
-      "max_sev_rank": 3,
-      "iso2": "PE",
-      "region": "Americas",
-      "country_group": "C",
       "max_severity": "HIGH"
     },
     {
@@ -4030,443 +4021,6 @@
               "published_date": "2026-07-18",
               "outlet": "Morning Overview on MSN",
               "image": "https://www.bing.com/th?id=ONUT.Sqii2ueXMf7pg4QeTWUGUg"
-            }
-          ]
-        }
-      ],
-      "logs_total": 2
-    },
-    {
-      "incident_id": "20260719-PE-EQ",
-      "tree_id": "dec05f2e1d5e46a2ba27d2105b2d29bb",
-      "canonical_name": "Earthquake M5.5 Junin, Peru 2026-07-19",
-      "summary": "The Peruvian government declared a state of emergency in two districts of Junín on July 23 following a 5.1-magnitude earthquake. Reports now confirm that two distinct earthquakes struck the region, severely damaging historic churches and leaving at least six dead and hundreds homeless.",
-      "country": "Peru",
-      "iso2": "PE",
-      "lat": -12.0429,
-      "lon": -75.3013,
-      "country_group": "C",
-      "region": "Americas",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "HIGH",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-07-19",
-      "first_reported_date": "2026-07-19",
-      "last_updated_date": "2026-07-22",
-      "days_since_event": 7,
-      "source_count": 2,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 1,
-        "ercc": 1,
-        "healthmap": 0,
-        "news": 31
-      },
-      "source_links": [
-        {
-          "type": "GDACS",
-          "label": "Orange alert · Earthquake M5.5 Junin, Peru 2026-07-19",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1552752",
-          "meta": ""
-        },
-        {
-          "type": "ERCC",
-          "label": "ECHO Daily Map of 20 July 2026",
-          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5732",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": "Orange",
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Peru declares emergency in 2 districts after 5.1-magnitude quake",
-          "published_date": "2026-07-01"
-        },
-        {
-          "headline": "Earthquake of Magnitude 5.6 Strikes Central Peru, EMSC Says",
-          "published_date": "2026-07-14T04:05:12+00:00"
-        },
-        {
-          "headline": "Earthquake of 5.1 magnitude kills six in Peru",
-          "published_date": "2026-07-16T09:46:01+00:00"
-        },
-        {
-          "headline": "At least six dead and 21 injured after 2 earthquakes in Peru",
-          "published_date": "2026-07-18T20:07:35+00:00"
-        },
-        {
-          "headline": "Earthquake shakes Peru's Andes region, killing at least 5, displacing hundreds",
-          "published_date": "2026-07-19"
-        },
-        {
-          "headline": "Magnitude 5.5 earthquake hits Peru's Andes region, killing at least 6",
-          "published_date": "2026-07-19"
-        },
-        {
-          "headline": "5.5 Magnitude Earthquake Strikes Peru's Andes Region, Kills At Least 5",
-          "published_date": "2026-07-19"
-        },
-        {
-          "headline": "5.5 magnitude earthquake hits Peru's Andes region, killing at least 5 people",
-          "published_date": "2026-07-19"
-        },
-        {
-          "headline": "At least 6 dead and 21 injured after 2 earthquakes in Peru | Honolulu Star-Advertiser",
-          "published_date": "2026-07-19"
-        },
-        {
-          "headline": "Atleast five killed as 5.5 magnitude earthquake hits Peru's Andes region",
-          "published_date": "2026-07-19"
-        },
-        {
-          "headline": "Map: 5.5-Magnitude Earthquake Shakes Peru",
-          "published_date": "2026-07-19"
-        },
-        {
-          "headline": "Earthquake shakes Peru's Andes region, killing at least 5, displacing hundreds",
-          "published_date": "2026-07-19"
-        },
-        {
-          "headline": "5.5 magnitude earthquake hits Peru's Andes region and kills at least 6 people",
-          "published_date": "2026-07-19"
-        },
-        {
-          "headline": "Magnitude 5.5 earthquake rattles Peru, killing at least 5 and leaving hundreds without homes",
-          "published_date": "2026-07-19"
-        },
-        {
-          "headline": "5.5 magnitude earthquake hits Peru's Andes region and kills at least 6 people",
-          "published_date": "2026-07-19"
-        },
-        {
-          "headline": "5.5 magnitude earthquake hits Peru's Andes region and kills at least 6 people",
-          "published_date": "2026-07-19"
-        },
-        {
-          "headline": "5.5 magnitude earthquake in Peru leaves at least five dead and dozens injured",
-          "published_date": "2026-07-19"
-        },
-        {
-          "headline": "5.5 magnitude earthquake hits Peru's Andes region and kills at least 6 people",
-          "published_date": "2026-07-19T09:25:23+00:00"
-        },
-        {
-          "headline": "5.5 magnitude earthquake hits Peru's Andes region and kills at least 6 people",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "Major search, rescue operations launched in Peru after deadly quake",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "Rescuers Search Rubble After 5 5 Magnitude Earthquake Hits Peru S Andes Region Killing At Least 5",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "6 killed, over 30 injured in Peru quake",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "Peru’s central region hit by 5.1 quake weeks after Venezuela",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "Rescuers Race To Save Person Trapped After Peru Earthquake",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "Magnitude 5 5 Earthquake Hits Peru S Andes Region Killing At Least 5",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "55 Magnitude Earthquake In Peru Leaves At Least Five Dead",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "5.1 magnitude quake strikes Peru after Venezuela: 5 killed, 32 injured so far",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "Peru Earthquake At Least Five People Lose Their Lives More Than 20 Sustain Injuries",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "At Least 5 Dead In Peru Earthquake As Aftershocks Continue In Mexico",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "Peru’s Central Region Hit by 5.1 Quake, Killing at Least Four",
-          "published_date": "2026-07-20T09:46:03+00:00"
-        },
-        {
-          "headline": "Peru: Historic churches severely damaged following earthquakes",
-          "published_date": "2026-07-22"
-        }
-      ],
-      "news_total": 31,
-      "logs": [
-        {
-          "log_date": "2026-07-20",
-          "summary": "A 5.5-magnitude earthquake struck Peru's central Junín region on July 19, 2026, killing at least five people and injuring more than 20, with around 300 displaced. Rescue crews searched rubble for a trapped person and continued to assess damage as aftershocks occurred. Reports varied on the exact death toll, with some sources citing up to six deaths and 32 injuries.",
-          "news": [
-            {
-              "news_id": "d18428b9835a5e979b896790a5d678a7",
-              "url": "https://www.msn.com/en-us/news/other/rescuers-search-rubble-after-5-5-magnitude-earthquake-hits-peru-s-andes-region-killing-at-least-5/vi-AA28ewQf?ocid=BingNewsVerp",
-              "headline": "Rescuers Search Rubble After 5 5 Magnitude Earthquake Hits Peru S Andes Region Killing At Least 5",
-              "body": "Rescuers search rubble after 5.5 magnitude earthquake hits Peru's Andes region, killing at least 5 ...",
-              "published_date": "2026-07-20",
-              "outlet": "AP Newsroom on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.5SvLZIfbR9ZE0cX7iPiEdg"
-            },
-            {
-              "news_id": "5287bae898f6567c91547a556f394aff",
-              "url": "https://pajhwok.com/2026/07/20/6-killed-over-30-injured-in-peru-quake/",
-              "headline": "6 killed, over 30 injured in Peru quake",
-              "body": "At least six people have been killed, more than 30 others injured and around 300 displaced after a 5.5-magnitude earthquake struck Peru's Andean region, authorities said.",
-              "published_date": "2026-07-20",
-              "outlet": "Pajhwok Afghan News",
-              "image": "https://www.bing.com/th?id=ONUT.3bc5RMSTmfBNpQ-sAHo4fQ"
-            },
-            {
-              "news_id": "455551777f575fe082b69fe6b4112a43",
-              "url": "https://www.japantimes.co.jp/news/2026/07/20/world/peru-51-earthquake-venezuela/",
-              "headline": "Peru’s central region hit by 5.1 quake weeks after Venezuela",
-              "body": "The earthquake that struck Peru’s central Junin region late Saturday killed five people, injured 32 and affected about 200 more, according to authorities.",
-              "published_date": "2026-07-20",
-              "outlet": "The Japan Times",
-              "image": "https://www.bing.com/th?id=ONUT.ZdcAVH_s-8zOJL137zMVcA"
-            },
-            {
-              "news_id": "f3cf494a7aca5d14b8f05aac6613b96d",
-              "url": "https://www.usnews.com/news/world/articles/2026-07-18/earthquake-of-magnitude-5-6-strikes-central-peru-emsc-says",
-              "headline": "Earthquake of Magnitude 5.6 Strikes Central Peru, EMSC Says",
-              "body": "July 18 (Reuters) - An earthquake of magnitude 5.6 struck Central Peru on Saturday, the European Mediterranean Seismological Centre said. The depth of the quake was 22 km (13.67 miles ...",
-              "published_date": "2026-07-14T04:05:12+00:00",
-              "outlet": "U.S. News & World Report",
-              "image": ""
-            },
-            {
-              "news_id": "735f6309629f5abdb9c1b5d9f72a89c7",
-              "url": "https://www.daily-sun.com/world/887405/earthquake-of-5-1-magnitude-kills-six-in-peru",
-              "headline": "Earthquake of 5.1 magnitude kills six in Peru",
-              "body": "A 5.1 magnitude earthquake in Peru's Andes killed six and injured 32. Prime Minister Luis Enrique Aroyo reports significant ...",
-              "published_date": "2026-07-16T09:46:01+00:00",
-              "outlet": "Daily Sun",
-              "image": "https://www.bing.com/th?id=ONUT.tE8Ef_kTXoeUvbdcKhrkYg"
-            },
-            {
-              "news_id": "03d903a982575360a5a5044273a2db33",
-              "url": "https://www.bloomberg.com/news/articles/2026-07-19/peru-s-central-region-hit-by-5-1-quake-killing-at-least-four",
-              "headline": "Peru’s Central Region Hit by 5.1 Quake, Killing at Least Four",
-              "body": "A 5.1-magnitude earthquake that struck Peru’s central Junín region late Saturday killed at least four people, injured more than 20 and affected about 300 more, according to Peruvian authorities. The ...",
-              "published_date": "2026-07-20T09:46:03+00:00",
-              "outlet": "Bloomberg L.P.",
-              "image": ""
-            },
-            {
-              "news_id": "83d9b78918b25b8c8d7f594b495d0b7e",
-              "url": "https://www.msn.com/en-us/news/other/rescuers-race-to-save-person-trapped-after-peru-earthquake/vi-AA28f2NX?ocid=BingNewsVerp",
-              "headline": "Rescuers Race To Save Person Trapped After Peru Earthquake",
-              "body": "Firefighters were searching amongst rubble of a collapsed building for a trapped person on July 19 following an earthquake in ...",
-              "published_date": "2026-07-20",
-              "outlet": "New York Post on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.PNoizj7cL7wO5i_Ov16S4w"
-            },
-            {
-              "news_id": "d9ad1df478a55071a723973f271aa628",
-              "url": "https://www.timesnownews.com/world/5-5-magnitude-earthquake-strikes-perus-andes-region-kills-at-least-5-article-155134581",
-              "headline": "5.5 Magnitude Earthquake Strikes Peru's Andes Region, Kills At Least 5",
-              "body": "A 5.5 magnitude earthquake struck the Andes region of Peru, resulting in five fatalities and over 20 injuries, with 300 individuals displaced. , World News, Times Now",
-              "published_date": "2026-07-19",
-              "outlet": "Times Now",
-              "image": "https://www.bing.com/th?id=ONUT.VQRp5ybBgyfJzmD3ilTI8w"
-            },
-            {
-              "news_id": "f26e6fa9c4155d5389155d951a82e7b6",
-              "url": "https://www.msn.com/en-us/news/other/magnitude-5-5-earthquake-hits-peru-s-andes-region-killing-at-least-5/ar-AA28eNmn?ocid=BingNewsVerp",
-              "headline": "Magnitude 5 5 Earthquake Hits Peru S Andes Region Killing At Least 5",
-              "body": "A magnitude 5.5 earthquake has shaken a region in Peru, killing at least five people.",
-              "published_date": "2026-07-20",
-              "outlet": "Los Angeles Times on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "ae2ae84182d15601bd79b6e501d7038a",
-              "url": "https://www.msn.com/en-nz/news/other/55-magnitude-earthquake-in-peru-leaves-at-least-five-dead/ar-AA28f0hJ?ocid=BingNewsVerp",
-              "headline": "55 Magnitude Earthquake In Peru Leaves At Least Five Dead",
-              "body": "5.5 magnitude earthquake in Peru leaves at least five dead and dozens injured - ...",
-              "published_date": "2026-07-20",
-              "outlet": "The Independent on MSN",
-              "image": "https://www.bing.com/th?id=ORMS.fd0b7d0e487cbdbb100605e043d4bf20"
-            },
-            {
-              "news_id": "44ccf4a5873659098c8841db41887731",
-              "url": "https://lasvegassun.com/news/2026/jul/19/55-magnitude-earthquake-hits-perus-andes-region-ki/",
-              "headline": "5.5 magnitude earthquake hits Peru's Andes region, killing at least 5 people",
-              "body": "A 5.5 magnitude earthquake has shaken a region in Peru, killing at least five people",
-              "published_date": "2026-07-19",
-              "outlet": "Las Vegas Sun",
-              "image": ""
-            },
-            {
-              "news_id": "0dce194b900452d48f4dc8655efa7668",
-              "url": "https://www.staradvertiser.com/2026/07/19/breaking-news/at-least-6-dead-and-21-injured-after-2-earthquakes-in-peru/",
-              "headline": "At least 6 dead and 21 injured after 2 earthquakes in Peru | Honolulu Star-Advertiser",
-              "body": "LIMA >> At least six people were killed and 21 injured after two earthquakes struck a mountainous region of Peru, the country’s civil defense chief said on Sunday.",
-              "published_date": "2026-07-19",
-              "outlet": "Honolulu Star-Advertiser",
-              "image": "https://www.bing.com/th?id=ONUT.zAAFOHrNslrNQzZAM2lrkA"
-            },
-            {
-              "news_id": "88e01dadf8135147b4e005a70df0b6eb",
-              "url": "https://www.newindianexpress.com/world/2026/Jul/19/atleast-five-killed-as-55-magnitude-earthquake-hits-perus-andes-region",
-              "headline": "Atleast five killed as 5.5 magnitude earthquake hits Peru's Andes region",
-              "body": "LIMA: A 5.5 magnitude earthquake shook the Andes region of Peru, killing at least five people, authorities said Sunday. More than 20 people were injured and 300",
-              "published_date": "2026-07-19",
-              "outlet": "The New Indian Express",
-              "image": "https://www.bing.com/th?id=ONUT.oy_E0AIoHNKt2ycFn9OBgA"
-            },
-            {
-              "news_id": "7f1d90d378b655f0a53ab11a0cf492ce",
-              "url": "https://www.nytimes.com/interactive/2026/07/19/world/americas/quake-tracker-peru.html",
-              "headline": "Map: 5.5-Magnitude Earthquake Shakes Peru",
-              "body": "View the location of the quake’s epicenter and shake area.",
-              "published_date": "2026-07-19",
-              "outlet": "The New York Times",
-              "image": "https://www.bing.com/th?id=ONUT.3anAhUrQBRfxdgg1Ik_czA"
-            },
-            {
-              "news_id": "ef9c0025d6dc5074ae9328bfdc5e4901",
-              "url": "https://www.hindustantimes.com/world-news/51-magnitude-quake-strikes-peru-after-venezuela-5-killed-32-injured-so-far-101784520585021.html",
-              "headline": "5.1 magnitude quake strikes Peru after Venezuela: 5 killed, 32 injured so far",
-              "body": "A 5.1-magnitude earthquake that struck Peru’s central Junín region late Saturday killed five people, injured 32 and affected about 200 more. | World News",
-              "published_date": "2026-07-20",
-              "outlet": "Hindustan Times",
-              "image": ""
-            },
-            {
-              "news_id": "d2952f3fc3e351c49da18ea7802a1819",
-              "url": "https://www.msn.com/en-in/news/world/peru-earthquake-at-least-five-people-lose-their-lives-more-than-20-sustain-injuries/vi-AA28fgyU?ocid=BingNewsVerp",
-              "headline": "Peru Earthquake At Least Five People Lose Their Lives More Than 20 Sustain Injuries",
-              "body": "A 5.5-magnitude earthquake struck central Peru's Junín region late Saturday night, killing at least five people and injuring ...",
-              "published_date": "2026-07-20",
-              "outlet": "WION on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.Rc4dpBN7n4Y5il8tJuErWA"
-            },
-            {
-              "news_id": "291737b49681540683652b599b46a2de",
-              "url": "https://www.msn.com/en-us/news/world/at-least-5-dead-in-peru-earthquake-as-aftershocks-continue-in-mexico/ar-AA28eVHM?ocid=BingNewsVerp",
-              "headline": "At Least 5 Dead In Peru Earthquake As Aftershocks Continue In Mexico",
-              "body": "Rescue crews were deployed to search affected communities as reports of injuries and damage continued to emerge.",
-              "published_date": "2026-07-20",
-              "outlet": "Newsweek on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.sMM-7DT-JLLvzcrNYGsNzQ"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-23",
-          "summary": "The Peruvian government declared a state of emergency in two districts of Junín on July 23 following a 5.1-magnitude earthquake. Reports now confirm that two distinct earthquakes struck the region, severely damaging historic churches and leaving at least six dead and hundreds homeless.",
-          "news": [
-            {
-              "news_id": "672efffb6cce56e3ab7da73c373ef925",
-              "url": "https://www.yahoo.com/news/world/articles/earthquake-shakes-perus-andes-region-175037685.html",
-              "headline": "Earthquake shakes Peru's Andes region, killing at least 5, displacing hundreds",
-              "body": "A magnitude 5.5 earthquake near Sicaya killed at least five people and left hundreds homeless as adobe buildings collapsed across Peru's Andes region.",
-              "published_date": "2026-07-19",
-              "outlet": "Fox News · via Yahoo News",
-              "image": "https://media.zenfs.com/en/fox_news_text_979/c551ff6349f7a00142bcace7cbcb0b1a"
-            },
-            {
-              "news_id": "bd583ad0d56a56a28477674691642104",
-              "url": "https://www.thestar.com.my/news/world/2026/07/24/peru-declares-emergency-in-2-districts-after-51-magnitude-quake",
-              "headline": "Peru declares emergency in 2 districts after 5.1-magnitude quake",
-              "body": "LIMA, July 23 (Xinhua) -- The Peruvian government on Thursday declared a state of emergency in two districts of the central Junin department after a recent 5.1-magnitude earthquake killed six people.",
-              "published_date": "2026-07-01",
-              "outlet": "The Star",
-              "image": ""
-            },
-            {
-              "news_id": "4d5c9f53dbe25b7fb093ac5d4681c2ab",
-              "url": "https://www.clickorlando.com/news/world/2026/07/19/55-magnitude-earthquake-hits-perus-andes-region-and-kills-at-least-5-people/",
-              "headline": "5.5 magnitude earthquake hits Peru's Andes region and kills at least 6 people",
-              "body": "A 5.5 magnitude earthquake has shaken the Andes region of Peru, killing at least six people.",
-              "published_date": "2026-07-19",
-              "outlet": "WKMG ClickOrlando",
-              "image": "https://s.yimg.com/am/60d/594e031d6f45fc612986e2d28a8ee553"
-            },
-            {
-              "news_id": "0d962c3e34935011b950ab10338a56de",
-              "url": "https://www.yahoo.com/news/weather-news/articles/magnitude-5-5-earthquake-rattles-192953828.html",
-              "headline": "Magnitude 5.5 earthquake rattles Peru, killing at least 5 and leaving hundreds without homes",
-              "body": "A powerful earthquake rattled Peru's Andes region overnight, killing at least five people and leaving hundreds displaced. FOX News Digital reports that homes and a church collapsed due to the magnitud...",
-              "published_date": "2026-07-19",
-              "outlet": "Fox Weather · via Yahoo News",
-              "image": "https://media.zenfs.com/en/fox_weather_articles_483/9812bdec0e2f1fb9c495ded5e5de5114"
-            },
-            {
-              "news_id": "1406be0a0d485ca2a74433fb22fabb99",
-              "url": "https://www.reuters.com/business/environment/earthquake-magnitude-56-strikes-central-peru-emsc-says-2026-07-19/",
-              "headline": "At least six dead and 21 injured after 2 earthquakes in Peru",
-              "body": "At least six people were killed and 21 injured after two earthquakes struck a mountainous region of...",
-              "published_date": "2026-07-18T20:07:35+00:00",
-              "outlet": "Reuters",
-              "image": "https://s.yimg.com/am/60d/e80a30553ecb3cb43cb1d66e7a235a46"
-            },
-            {
-              "news_id": "e0073748c40e5032978258869aa70968",
-              "url": "https://www.osvnews.com/peru-historic-churches-severely-damaged-following-earthquakes/",
-              "headline": "Peru: Historic churches severely damaged following earthquakes",
-              "body": "Dozens of homes were destroyed or declared uninhabitable following the earthquake, as well as several public buildings.",
-              "published_date": "2026-07-22",
-              "outlet": "OSV News",
-              "image": "https://www.bing.com/th?id=ONUT.6HMzAAyIjXK_S2vMK2MRaQ"
-            },
-            {
-              "news_id": "89307e328efe5efbade484f29738748f",
-              "url": "https://www.clickondetroit.com/news/world/2026/07/19/55-magnitude-earthquake-hits-perus-andes-region-and-kills-at-least-5-people/",
-              "headline": "5.5 magnitude earthquake hits Peru's Andes region and kills at least 6 people",
-              "body": "A 5.5 magnitude earthquake has shaken the Andes region of Peru, killing at least six people.",
-              "published_date": "2026-07-19",
-              "outlet": "ClickOnDetroit",
-              "image": "https://s.yimg.com/am/60d/594e031d6f45fc612986e2d28a8ee553"
-            },
-            {
-              "news_id": "000200eb21295a398cbbdb63fcd96bb4",
-              "url": "https://www.brandonsun.com/sci-tech/2026/07/19/5-5-magnitude-earthquake-hits-perus-andes-region-killing-at-least-5-people",
-              "headline": "5.5 magnitude earthquake hits Peru's Andes region and kills at least 6 people",
-              "body": "LIMA, Peru (AP) — A 5.5 magnitude earthquake shook the Andes region of Peru, killing at least six people, authorities said Sunday. More than 30 people were injured and 300 displaced.",
-              "published_date": "2026-07-19",
-              "outlet": "Brandon Sun",
-              "image": "https://www.bing.com/th?id=ONUT.n6DfSJZOyxpbRlxrFADLng"
-            },
-            {
-              "news_id": "a7ef737277b75484926cbfc73b160511",
-              "url": "https://www.yahoo.com/news/world/articles/5-5-magnitude-earthquake-peru-155202464.html",
-              "headline": "5.5 magnitude earthquake in Peru leaves at least five dead and dozens injured",
-              "body": "Several buildings have collapsed or suffered structural damage, including the local church and convent",
-              "published_date": "2026-07-19",
-              "outlet": "The Independent · via Yahoo News",
-              "image": "https://media.zenfs.com/en/the_independent_635/0d8128659465ea8cd5c6de112eab5462"
             }
           ]
         }
