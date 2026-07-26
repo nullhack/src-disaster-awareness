@@ -1,38 +1,38 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-07-24",
-  "generated_at": "2026-07-25T20:27:28Z",
+  "generated_at": "2026-07-26T04:58:52Z",
   "as_of": "2026-07-24",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 18,
-    "new_today": 4,
+    "reportable_total": 17,
+    "new_today": 3,
     "critical": 3,
     "high": 5,
-    "medium": 10,
+    "medium": 9,
     "low": 0,
-    "disease_outbreaks": 3,
+    "disease_outbreaks": 2,
     "countries_affected": 14,
-    "news_total": 461,
+    "news_total": 437,
     "max_magnitude": 7.3,
     "by_severity": {
       "CRITICAL": 3,
       "HIGH": 5,
-      "MEDIUM": 10,
+      "MEDIUM": 9,
       "LOW": 0
     },
     "by_type": {
-      "Disease": 3,
       "Flood": 3,
       "Volcano": 2,
+      "Disease": 2,
       "Earthquake": 8,
       "Tropical Cyclone": 1,
       "Forest Fire": 1
     },
     "by_region": {
-      "Global": 2,
       "Asia": 10,
+      "Global": 1,
       "Europe": 1,
       "Americas": 4,
       "Oceania": 1
@@ -46,15 +46,6 @@
       "iso2": "PH",
       "region": "Asia",
       "country_group": "A",
-      "max_severity": "MEDIUM"
-    },
-    {
-      "country": "",
-      "count": 2,
-      "max_sev_rank": 2,
-      "iso2": "XX",
-      "region": "Global",
-      "country_group": "C",
       "max_severity": "MEDIUM"
     },
     {
@@ -82,6 +73,15 @@
       "iso2": "ID",
       "region": "Asia",
       "country_group": "A",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "",
+      "count": 1,
+      "max_sev_rank": 2,
+      "iso2": "XX",
+      "region": "Global",
+      "country_group": "C",
       "max_severity": "MEDIUM"
     },
     {
@@ -168,331 +168,6 @@
   ],
   "incidents": [
     {
-      "incident_id": "20250528-XX-DI",
-      "tree_id": "2988d8638e0956a89029b6059b7c5f7f",
-      "canonical_name": "COVID-19 Global 2025-05-28",
-      "summary": "COVID-19 is showing a seasonal summer uptick in California, with experts noting many people haven't been recently infected. Bengaluru, India has recorded 121 cases this year, with medical experts warning that periodic rises are expected as immunity wanes and new variants emerge, urging vigilance without panic. Meanwhile, Ireland's evaluation panel on its pandemic response is due to report in six months.",
-      "country": "",
-      "iso2": "XX",
-      "lat": null,
-      "lon": null,
-      "country_group": "C",
-      "region": "Global",
-      "incident_type": "Disease",
-      "incident_category": "Biological",
-      "is_disease": true,
-      "severity": "MEDIUM",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": "LOW",
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": "Covid-19",
-      "event_date": "2025-05-28",
-      "first_reported_date": "2025-05-28",
-      "last_updated_date": "2026-07-24",
-      "days_since_event": 423,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 1,
-        "usgs": 0,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 24
-      },
-      "source_links": [
-        {
-          "type": "WHO",
-          "label": "COVID-19 Global 2025-05-28",
-          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2025-DON572",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "CDC blocked a COVID vaccine study’s release–now you can read the whole thing",
-          "published_date": "2026-07-08T15:12:31+00:00"
-        },
-        {
-          "headline": "Are the New COVID Vaccines Available, and Should You Get One? Experts Explain",
-          "published_date": "2026-07-08T15:12:31+00:00"
-        },
-        {
-          "headline": "IMF forecasts dramatic global economic slowdown",
-          "published_date": "2026-07-09T03:32:11+00:00"
-        },
-        {
-          "headline": "Jersey Mike’s IPO reflects growing investor appetite for restaurants",
-          "published_date": "2026-07-09T03:32:11+00:00"
-        },
-        {
-          "headline": "The Meridian, a $24M mixed-use development, breaks ground in Thiensville",
-          "published_date": "2026-07-10T03:32:11+00:00"
-        },
-        {
-          "headline": "Linda Noskova holds off Karolina Muchova to win Wimbledon women's final",
-          "published_date": "2026-07-11T03:32:11+00:00"
-        },
-        {
-          "headline": "TV host Lee Teng opens up about wife's miscarriage during pandemic: ‘I felt like an empty shell'",
-          "published_date": "2026-07-11T07:14:19+00:00"
-        },
-        {
-          "headline": "Andhra Covid Deaths Trigger Southern Alert",
-          "published_date": "2026-07-14T07:14:19+00:00"
-        },
-        {
-          "headline": "Updated 2025-2026 COVID-19 Vaccines Effective Against Medically Attended Disease",
-          "published_date": "2026-07-15T09:25:38+00:00"
-        },
-        {
-          "headline": "Dr. Erica Schwartz faces vaccines questions at CDC director confirmation hearing",
-          "published_date": "2026-07-15T18:45:32+00:00"
-        },
-        {
-          "headline": "Panel to study Pentagon’s COVID vaccine mandate, troops dismissal",
-          "published_date": "2026-07-15T19:45:32+00:00"
-        },
-        {
-          "headline": "COVID Is Rising Again in the Bay Area For Summer 2026 — But Don’t Panic | KQED",
-          "published_date": "2026-07-16"
-        },
-        {
-          "headline": "Pittsfield Council Sees Last ARPA Update",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "Fbi Allowed Ecohealth Alliance Boss Through Border Controls In Return From Covid Hit China In 2021 Explosive Emails",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "Lawsuit Over Covid Vaccine Policy At Idaho National Lab Leads To 5m Settlement",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "COVID origins questions resurface with new federal documents",
-          "published_date": "2026-07-21"
-        },
-        {
-          "headline": "Updated 2025-2026 COVID-19 Vaccines Reduce Hospitalization Risk in Older Adults",
-          "published_date": "2026-07-21"
-        },
-        {
-          "headline": "Philips wins FDA clearance for new pulse oximeter",
-          "published_date": "2026-07-21"
-        },
-        {
-          "headline": "121 Covid-19 cases reported in Bengaluru this year",
-          "published_date": "2026-07-23"
-        },
-        {
-          "headline": "Early Summer COVID-19 Uptick in California as Test Positivity and Sewage Levels Rise",
-          "published_date": "2026-07-24"
-        },
-        {
-          "headline": "COVID-19 is on the upswing in California. How bad will it get this summer?",
-          "published_date": "2026-07-24"
-        },
-        {
-          "headline": "COVID-19 is on the upswing in California. How bad will it get this summer?",
-          "published_date": "2026-07-24"
-        },
-        {
-          "headline": "How well did Ireland deal with Covid? Patterns emerge ahead of final report",
-          "published_date": "2026-07-24"
-        },
-        {
-          "headline": "Delhi CM hands over Rs 1 crore each to kin of workers who died during Covid-19 duty",
-          "published_date": "2026-07-24T14:22:10+00:00"
-        }
-      ],
-      "news_total": 24,
-      "logs": [
-        {
-          "log_date": "2026-07-08",
-          "summary": "A study on COVID-19 vaccine effectiveness that was previously blocked by the CDC has now been released in full, detailing its findings. Meanwhile, new COVID-19 vaccines for the 2025-2026 season are becoming available, though access may be limited for some individuals.",
-          "news": [
-            {
-              "news_id": "ff7d04e04b6157d59fbfeda0f4cd5118",
-              "url": "https://www.msn.com/en-us/health/general/cdc-blocked-a-covid-vaccine-study-s-release-now-you-can-read-the-whole-thing/ar-AA26Q57n?ocid=BingNewsVerp",
-              "headline": "CDC blocked a COVID vaccine study’s release–now you can read the whole thing",
-              "body": "The CDC blocked the release of a study about COVID-19 vaccine effectiveness. Here's what it contains.",
-              "published_date": "2026-07-08T15:12:31+00:00",
-              "outlet": "Newsweek on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.UkYafoaYVW2mm2fZDxb3Pw"
-            },
-            {
-              "news_id": "f52126221c25577babbbb623df4cf035",
-              "url": "https://www.today.com/health/coronavirus/covid-vaccine-2025-2026-rcna228529",
-              "headline": "Are the New COVID Vaccines Available, and Should You Get One? Experts Explain",
-              "body": "As respiratory virus season approaches, you may be wondering if you should get the new COVID-19 vaccine to protect yourself. However, it may be more difficult for some people to find the shot this ...",
-              "published_date": "2026-07-08T15:12:31+00:00",
-              "outlet": "Today",
-              "image": ""
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-15",
-          "summary": "A study confirms that the 2025-2026 COVID-19 vaccines are effective at preventing emergency department/urgent care visits and hospitalizations among immunocompetent adults, providing updated evidence of protection against severe outcomes.",
-          "news": [
-            {
-              "news_id": "8fafcf361d225d0a8d70d4d9f18b34ee",
-              "url": "https://www.yahoo.com/news/politics/articles/dr-erica-schwartz-appear-senate-090953431.html",
-              "headline": "Dr. Erica Schwartz faces vaccines questions at CDC director confirmation hearing",
-              "body": "Kaufman has claimed without evidence that the COVID-19 vaccine caused \"excessive death and injury...",
-              "published_date": "2026-07-15T18:45:32+00:00",
-              "outlet": "Good Morning America · via Yahoo News",
-              "image": "https://media.zenfs.com/en/us.abcnews.gma.com/b2052f0c41bfc34561c6b542ee1d233a"
-            },
-            {
-              "news_id": "58bbc5d315ce50628dab6b9310dc2e76",
-              "url": "https://www.infectiousdiseaseadvisor.com/news/effectiveness-2025-2026-covid19-vaccines-severe-outcomes/",
-              "headline": "Updated 2025-2026 COVID-19 Vaccines Effective Against Medically Attended Disease",
-              "body": "The 2025-2026 SARS-CoV-2 vaccines provided protection against ED/UC visits and hospitalizations among immunocompetent adults.",
-              "published_date": "2026-07-15T09:25:38+00:00",
-              "outlet": "Infectious Disease Advisor",
-              "image": ""
-            },
-            {
-              "news_id": "62b567c8a75454dfa7bbc2391b4ab469",
-              "url": "https://www.yahoo.com/news/politics/articles/panel-study-pentagon-covid-vaccine-200701635.html",
-              "headline": "Panel to study Pentagon’s COVID vaccine mandate, troops dismissal",
-              "body": "The Department of Defense plans to convene a panel to study its mid-2021 decision to require the...",
-              "published_date": "2026-07-15T19:45:32+00:00",
-              "outlet": "Military Times · via Yahoo News",
-              "image": "https://media.zenfs.com/en/military_times_968/ba746566ab92d5d0b7427d5d78ca8595"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-22",
-          "summary": "Updated 2025-2026 formulations of mRNA-1283 and BNT162b2 COVID-19 vaccines have been shown to reduce hospitalization risk in older adults, providing new evidence of protection against severe outcomes. A separate article details an FBI matter involving EcoHealth Alliance, and another reports a $5 million settlement over a vaccine policy lawsuit at Idaho National Lab, but these are less central to the global situation.\nNewly released federal documents have revived questions about COVID-19 origins, showing top scientists privately doubted the bat origin theory despite public statements. Separately, COVID-19 levels in Bay Area wastewaters are increasing, signaling a possible summer surge.",
-          "news": [
-            {
-              "news_id": "02a422bbdd14578fbd56fa843ee2084a",
-              "url": "https://ca.news.yahoo.com/covid-origins-questions-resurface-federal-233430831.html",
-              "headline": "COVID origins questions resurface with new federal documents",
-              "body": "Newly released documents raise questions about COVID-19 origins, showing top scientists privately doubted the bat origin theory, despite public statements. Sen. Rand Paul’s records reveal this interna...",
-              "published_date": "2026-07-21",
-              "outlet": "Yahoo News Canada",
-              "image": "https://www.bing.com/th?id=ONUT.Y-SuBuajl5Qs08mbjOLv0w"
-            },
-            {
-              "news_id": "d76c1285abf9552db61c3e1c937028c7",
-              "url": "https://www.kqed.org/news/12091325/summer-covid-test-2026-wastewater-variants-isolation-contagious-xfg-san-francisco-bay-area-california",
-              "headline": "COVID Is Rising Again in the Bay Area For Summer 2026 — But Don’t Panic | KQED",
-              "body": "COVID levels in Bay Area wastewaters are starting to increase, signaling a possible summer swell — as if you needed another thing to worry about. Here’s what to know about your risk.",
-              "published_date": "2026-07-16",
-              "outlet": "KQED",
-              "image": "https://s.yimg.com/am/60d/f6766a513c4794d85405a1a0b4f02708"
-            },
-            {
-              "news_id": "f43881cb6e9d58ac86e57c37148d20d3",
-              "url": "https://www.infectiousdiseaseadvisor.com/news/mrna1283-bnt162b2-covid19-effectiveness-older-adults/",
-              "headline": "Updated 2025-2026 COVID-19 Vaccines Reduce Hospitalization Risk in Older Adults",
-              "body": "Updated 2025-2026 formulations of mRNA-1283 and BNT162b2 protect older adults against severe COVID-19 outcomes and medically attended illness.",
-              "published_date": "2026-07-21",
-              "outlet": "Infectious Disease Advisor",
-              "image": ""
-            },
-            {
-              "news_id": "f04f22c48efc574b92be1779885bdf2c",
-              "url": "https://www.msn.com/en-us/news/politics/fbi-allowed-ecohealth-alliance-boss-through-border-controls-in-return-from-covid-hit-china-in-2021-explosive-emails/ar-AA28nRva?ocid=BingNewsVerp",
-              "headline": "Fbi Allowed Ecohealth Alliance Boss Through Border Controls In Return From Covid Hit China In 2021 Explosive Emails",
-              "body": "WASHINGTON — The FBI instructed US Customs and Border Protection to “not stop” the president of Manhattan nonprofit EcoHealth ...",
-              "published_date": "2026-07-20",
-              "outlet": "New York Post on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.zRjtQ8ZrIGg5CEykx1vWZQ"
-            },
-            {
-              "news_id": "3bd77fec1ae55ed9bc9a0476c00ef066",
-              "url": "https://www.msn.com/en-us/public-safety-and-emergencies/health-and-safety-alerts/lawsuit-over-covid-vaccine-policy-at-idaho-national-lab-leads-to-5m-settlement/ar-AA28nU1l?ocid=BingNewsVerp",
-              "headline": "Lawsuit Over Covid Vaccine Policy At Idaho National Lab Leads To 5m Settlement",
-              "body": "The U.S. Equal Employment Opportunity Commission alleged the company violated religious and disability rights.",
-              "published_date": "2026-07-20",
-              "outlet": "Idaho Statesman on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.VMO_ynSoxvADzhlYoiZJ8A"
-            },
-            {
-              "news_id": "9ccbb5cd0998566a9c1e5f0e401d9373",
-              "url": "https://www.yahoo.com/news/science/articles/philips-wins-fda-clearance-pulse-163057321.html",
-              "headline": "Philips wins FDA clearance for new pulse oximeter",
-              "body": "Philips said its updated device provides accurate readings across a range of skin tones, following concerns that pulse oximeters can be less accurate in people with darker skin pigmentation.",
-              "published_date": "2026-07-21",
-              "outlet": "MedTech Dive · via Yahoo News",
-              "image": "https://media.zenfs.com/en/medtech_dive_335/594392954d5ffe01065aa3f682ad5afe"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-24",
-          "summary": "COVID-19 is showing a seasonal summer uptick in California, with experts noting many people haven't been recently infected. Bengaluru, India has recorded 121 cases this year, with medical experts warning that periodic rises are expected as immunity wanes and new variants emerge, urging vigilance without panic. Meanwhile, Ireland's evaluation panel on its pandemic response is due to report in six months.",
-          "news": [
-            {
-              "news_id": "917d19828aca5542b5d432fc4d2bd5de",
-              "url": "https://www.latimes.com/california/story/2026-07-24/covid-19-seasonal-summer-uptick-california",
-              "headline": "COVID-19 is on the upswing in California. How bad will it get this summer?",
-              "body": "It wouldn't be surprising for a summer increase in COVID to begin now. Large numbers of people haven't fallen ill with COVID for quite a while.",
-              "published_date": "2026-07-24",
-              "outlet": "Los Angeles Times",
-              "image": "https://s.yimg.com/bo/d214d710-9e4d-5429-bb03-615a42a65ecb_1784888365238.jpg"
-            },
-            {
-              "news_id": "9692fe5af75b5fc48d26a125b305fe7c",
-              "url": "https://bangaloremirror.indiatimes.com/bangalore/others/121-covid-19-cases-reported-in-bengaluru-this-year/articleshow/132521370.cms",
-              "headline": "121 Covid-19 cases reported in Bengaluru this year",
-              "body": "Medical experts caution that reported Covid-19 infections may understate reality, noting patterns of periodic rises as immunity wanes and variants emerge, stressing vigilance without panic to curb spread",
-              "published_date": "2026-07-23",
-              "outlet": "Bangalore Mirror",
-              "image": "https://static.toiimg.com/photo/imgsize-3246121,msid-132521373/132521373.jpg"
-            },
-            {
-              "news_id": "48e483ba8a4d580ebe6c508b63703b86",
-              "url": "https://www.irishtimes.com/ireland/2026/07/25/how-well-did-ireland-deal-with-covid-patterns-emerge-ahead-of-final-report/",
-              "headline": "How well did Ireland deal with Covid? Patterns emerge ahead of final report",
-              "body": "Evaluation panel established in 2025 to examine Ireland’s response to pandemic is due to report in six months’ time",
-              "published_date": "2026-07-24",
-              "outlet": "The Irish Times",
-              "image": "https://www.bing.com/th?id=ONUT.DPxevOkokDz28Vo4qUkelQ"
-            },
-            {
-              "news_id": "41331c7ca5b759fd97125aa279193553",
-              "url": "https://www.iberkshires.com/story/83335/Pittsfield-Council-Sees-Last-ARPA-Update.html",
-              "headline": "Pittsfield Council Sees Last ARPA Update",
-              "body": "PITTSFIELD, Mass. — It has been five years since Pittsfield received more than $40 million in federal American Rescue Plan Act funds to offset the COVID-19 pandemic. In 2021, with...",
-              "published_date": "2026-07-20",
-              "outlet": "iBerkshires.com",
-              "image": ""
-            },
-            {
-              "news_id": "b78498bb2043507f866d897c7356ccfc",
-              "url": "https://health.medicaldialogues.in/latest-news/delhi-cm-hands-over-rs-1-crore-each-to-kin-of-workers-who-died-during-covid-19-duty-175663",
-              "headline": "Delhi CM hands over Rs 1 crore each to kin of workers who died during Covid-19 duty",
-              "body": "Delhi Chief Minister Rekha Gupta handed over the pending financial assistance of Rs 1 crore each to the families of frontline ...",
-              "published_date": "2026-07-24T14:22:10+00:00",
-              "outlet": "Health Dialogues",
-              "image": "https://www.bing.com/th?id=ONUT.O4MBZqPqCOHhb2H_uqW07Q"
-            }
-          ]
-        }
-      ],
-      "logs_total": 5
-    },
-    {
       "incident_id": "20250714-PK-FL",
       "tree_id": "ae82b9a819c65193aacc2879508d191e",
       "canonical_name": "Flood Khyber Pakhtunkhwa, Pakistan 2025-07-14",
@@ -516,7 +191,7 @@
       "event_date": "2025-07-14",
       "first_reported_date": "2025-07-14",
       "last_updated_date": "2026-07-18",
-      "days_since_event": 376,
+      "days_since_event": 377,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -641,7 +316,7 @@
       "event_date": "2025-08-14",
       "first_reported_date": "2025-08-14",
       "last_updated_date": "2026-07-18",
-      "days_since_event": 345,
+      "days_since_event": 346,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -779,7 +454,7 @@
       "event_date": "2025-10-03",
       "first_reported_date": "2025-10-03",
       "last_updated_date": "2026-07-20",
-      "days_since_event": 295,
+      "days_since_event": 296,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -904,7 +579,7 @@
       "event_date": "2025-10-14",
       "first_reported_date": "2025-10-14",
       "last_updated_date": "2026-07-23",
-      "days_since_event": 284,
+      "days_since_event": 285,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -1078,7 +753,7 @@
       "event_date": "2025-12-10",
       "first_reported_date": "2025-12-10",
       "last_updated_date": "2026-07-22",
-      "days_since_event": 227,
+      "days_since_event": 228,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -1192,7 +867,7 @@
       "event_date": "2026-03-15",
       "first_reported_date": "2026-03-15",
       "last_updated_date": "2026-07-18",
-      "days_since_event": 132,
+      "days_since_event": 133,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -1340,7 +1015,7 @@
       "event_date": "2026-04-23",
       "first_reported_date": "2026-04-23",
       "last_updated_date": "2026-07-24",
-      "days_since_event": 93,
+      "days_since_event": 94,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -1787,7 +1462,7 @@
       "event_date": "2026-06-24",
       "first_reported_date": "2026-06-24",
       "last_updated_date": "2026-07-18",
-      "days_since_event": 31,
+      "days_since_event": 32,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -1901,7 +1576,7 @@
       "event_date": "2026-06-26",
       "first_reported_date": "2026-06-26",
       "last_updated_date": "2026-07-20",
-      "days_since_event": 29,
+      "days_since_event": 30,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -2196,7 +1871,7 @@
       "event_date": "2026-07-01",
       "first_reported_date": "2026-07-01",
       "last_updated_date": "2026-07-18",
-      "days_since_event": 24,
+      "days_since_event": 25,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -2966,7 +2641,7 @@
       "event_date": "2026-07-09",
       "first_reported_date": "2026-07-09",
       "last_updated_date": "2026-07-23",
-      "days_since_event": 16,
+      "days_since_event": 17,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -3530,7 +3205,7 @@
       "event_date": "2026-07-14",
       "first_reported_date": "2026-07-14",
       "last_updated_date": "2026-07-24",
-      "days_since_event": 11,
+      "days_since_event": 12,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -3793,7 +3468,7 @@
       "event_date": "2026-07-16",
       "first_reported_date": "2026-07-16",
       "last_updated_date": "2026-07-24",
-      "days_since_event": 9,
+      "days_since_event": 10,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -4003,7 +3678,7 @@
       "event_date": "2026-07-16",
       "first_reported_date": "2026-07-16",
       "last_updated_date": "2026-07-18",
-      "days_since_event": 9,
+      "days_since_event": 10,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -4643,7 +4318,7 @@
       "event_date": "2026-07-17",
       "first_reported_date": "2026-07-17",
       "last_updated_date": "2026-07-18",
-      "days_since_event": 8,
+      "days_since_event": 9,
       "source_count": 3,
       "should_report": true,
       "search_keys": [],
@@ -5809,7 +5484,7 @@
       "event_date": "2026-07-19",
       "first_reported_date": "2026-07-19",
       "last_updated_date": "2026-07-22",
-      "days_since_event": 6,
+      "days_since_event": 7,
       "source_count": 2,
       "should_report": true,
       "search_keys": [],
@@ -6246,7 +5921,7 @@
       "event_date": "2026-07-20",
       "first_reported_date": "2026-07-20",
       "last_updated_date": "2026-07-20",
-      "days_since_event": 5,
+      "days_since_event": 6,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
