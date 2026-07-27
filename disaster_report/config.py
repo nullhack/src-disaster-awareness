@@ -71,6 +71,6 @@ class Settings:
             tree_root=tree_root,
             openrouter_api_key=openrouter_api_key,
             openrouter_model=openrouter_model,
-            active_window_days=int(active_window_days),
-            min_log_news_threshold=int(min_log_news_threshold),
+            active_window_days=active_window_days,
+            min_log_news_threshold=min_log_news_threshold,
         )

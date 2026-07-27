@@ -54,10 +54,6 @@ def _new_name(source: str, raw: dict[str, Any]) -> str:
     report_date = str(raw.get("report_date") or "")
     incident_type = str(raw.get("incident_type") or "")
     old_name = str(raw.get("name") or "")
-    if source == "WHO" and "title" not in raw_fields:
-        if report_date and old_name.endswith(report_date):
-            return old_name
-        raw_fields["title"] = old_name
     default_type = "Earthquake" if source == "USGS" else incident_type
     extractor = _NAME_EXTRACTORS.get(source)
     if not extractor:
@@ -88,7 +84,7 @@ def _process_report(
     old_name = str(raw.get("name") or "")
     try:
         new_name = _new_name(source, raw)
-    except Exception as exc:  # noqa: BLE001
+    except (KeyError, ValueError, TypeError, AttributeError) as exc:
         return (source, old_name, None, str(exc))
     if new_name == old_name:
         return (source, old_name, None, None)

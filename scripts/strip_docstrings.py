@@ -55,7 +55,7 @@ def main(argv: list[str]) -> int:
         if n:
             print(f"stripped {n} docstring(s) from {arg}")
             stripped += n
-    return 0 if stripped >= 0 else 1
+    return 0
 
 
 if __name__ == "__main__":

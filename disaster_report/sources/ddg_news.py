@@ -101,7 +101,7 @@ class DuckDuckGoNewsAdapter:
                     return []
             except DDGSException:
                 return []
-            except Exception as exc:
+            except (KeyError, ValueError, TypeError, AttributeError) as exc:
                 logger.warning(
                     "ddg unexpected error (query=%s): %r", query[:60], exc
                 )

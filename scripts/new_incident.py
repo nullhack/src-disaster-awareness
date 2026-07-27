@@ -106,7 +106,7 @@ def main() -> int:
     store.add_report_incident(report_id, incident_id)
     store.set_search_keys(incident_id, derive_repoll_keys(report))
 
-    news_ids: set[str] = set()
+    news_id: str | None = None
     if args.news_url:
         news = NewsItem(
             url=args.news_url,
@@ -117,29 +117,23 @@ def main() -> int:
             domain="",
             image="",
         )
-        nuuid = store.ingest_news_item(news)
-        store.assign_news_to_incident(nuuid, incident_id)
-        news_ids.add(nuuid)
+        news_id = store.ingest_news_item(news)
+        store.assign_news_to_incident(news_id, incident_id)
 
-    if args.summary and news_ids:
+    if args.summary:
         log_date = args.log_date or args.date
-        store.append_timeline_with_provenance(
-            IncidentLog(incident_id=incident_id, log_date=log_date, summary=args.summary),
-            news_ids,
-        )
-    elif args.summary:
-        log_date = args.log_date or args.date
-        store.append_timeline(
-            IncidentLog(incident_id=incident_id, log_date=log_date, summary=args.summary)
-        )
+        log = IncidentLog(incident_id=incident_id, log_date=log_date, summary=args.summary)
+        if news_id:
+            store.append_timeline_with_provenance(log, [news_id])
+        else:
+            store.append_timeline(log)
 
     print(f"incident: {incident_manifest_path(Path(args.tree_root), incident_id)}")
     print(f"  report: {incident_report_path(Path(args.tree_root), incident_id, args.source, report_id)}")
-    if args.news_url:
-        nuuid = next(iter(news_ids))
+    if news_id:
         print(
             "    news: "
-            f"{incident_news_path(Path(args.tree_root), incident_id, nuuid)}"
+            f"{incident_news_path(Path(args.tree_root), incident_id, news_id)}"
         )
     return 0
 

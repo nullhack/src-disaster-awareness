@@ -55,10 +55,6 @@ def _load_genesis(incident_dir: Path) -> tuple[SourceReport | None, str | None]:
     _, path, raw = reports[0]
     source = str(raw.pop("_source"))
     raw_fields = dict(raw.get("raw_fields") or {})
-    # Old WHO reports (pre-PR #50) don't have raw_fields["title"]; inject the
-    # stored name so _resolve_disease_country can scan_countries on it.
-    if source == "WHO" and "title" not in raw_fields:
-        raw_fields["title"] = str(raw.get("name") or "")
     report = SourceReport(
         source=source,
         source_id=str(raw.get("source_id") or ""),
@@ -123,7 +119,7 @@ def main() -> int:
             continue
         try:
             new_keys = _derive_keys(report, source or "")
-        except Exception as exc:  # noqa: BLE001
+        except (KeyError, ValueError, TypeError, AttributeError) as exc:
             skipped["error"] += 1
             print(f"  ERR {incident_dir.name}: {exc}", file=sys.stderr)
             continue

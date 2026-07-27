@@ -39,12 +39,13 @@ if str(_REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT))
 
 from disaster_report.fetchers import fetch_article
+from disaster_report.models import NewsItem
 from disaster_report.store._tree import dump_yaml, load_yaml
 from disaster_report.store.content import ContentStore
 
 
-def _is_enriched(news: Any) -> bool:
-    return bool(getattr(news, "author", "")) and bool(getattr(news, "sitename", ""))
+def _is_enriched(news: NewsItem) -> bool:
+    return bool(news.author) and bool(news.sitename)
 
 
 def _collect_targets(store: ContentStore, window: int) -> list[tuple[str, Any, Any]]:
