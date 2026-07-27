@@ -1,26 +1,26 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-07-27",
-  "generated_at": "2026-07-27T13:48:25Z",
+  "generated_at": "2026-07-27T14:57:22Z",
   "as_of": "2026-07-27",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 20,
-    "new_today": 5,
+    "reportable_total": 21,
+    "new_today": 7,
     "critical": 6,
     "high": 5,
     "medium": 9,
-    "low": 0,
+    "low": 1,
     "disease_outbreaks": 5,
-    "countries_affected": 14,
-    "news_total": 1082,
+    "countries_affected": 15,
+    "news_total": 1090,
     "max_magnitude": 7.5,
     "by_severity": {
       "CRITICAL": 6,
       "HIGH": 5,
       "MEDIUM": 9,
-      "LOW": 0
+      "LOW": 1
     },
     "by_type": {
       "Disease": 5,
@@ -29,19 +29,28 @@
       "Earthquake": 6,
       "Forest Fire": 3,
       "Severe Weather": 1,
-      "Conflict": 1,
+      "Conflict": 2,
       "Tropical Cyclone": 1
     },
     "by_region": {
       "Global": 3,
       "Africa": 1,
-      "Asia": 7,
+      "Asia": 8,
       "Americas": 3,
       "Europe": 5,
       "Oceania": 1
     }
   },
   "by_country": [
+    {
+      "country": "Iran",
+      "count": 1,
+      "max_sev_rank": 1,
+      "iso2": "IR",
+      "region": "Asia",
+      "country_group": "B",
+      "max_severity": "LOW"
+    },
     {
       "country": "",
       "count": 4,
@@ -2578,7 +2587,7 @@
       "disease_name": "Measles",
       "event_date": "2026-04-23",
       "first_reported_date": "2026-04-23",
-      "last_updated_date": "2026-07-24",
+      "last_updated_date": "2026-07-27",
       "days_since_event": 95,
       "source_count": 1,
       "should_report": true,
@@ -2589,7 +2598,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 41
+        "news": 43
       },
       "source_links": [
         {
@@ -2773,9 +2782,17 @@
         {
           "headline": "848 more suspected measles cases, two deaths recorded in 24hrs",
           "published_date": "2026-07-24T03:58:28+00:00"
+        },
+        {
+          "headline": "Measles outbreak in Bangladesh claims four more lives; death toll rises to 820",
+          "published_date": "2026-07-26T14:49:19+00:00"
+        },
+        {
+          "headline": "Five die with measles symptoms, 992 suspected cases recorded in 24hrs",
+          "published_date": "2026-07-27T14:49:19+00:00"
         }
       ],
-      "news_total": 41,
+      "news_total": 43,
       "logs": [
         {
           "log_date": "2026-07-09",
@@ -3006,7 +3023,7 @@
       "incident_id": "20260606-CN-FL",
       "tree_id": "942158e18da35420a79e4a17fefb8013",
       "canonical_name": "Flood Hunan, China 2026-06-06",
-      "summary": "As China enters its peak flood season, Tropical Storm Noul (Typhoon Kiyapo) is approaching, prompting warnings of heavy rain and severe flood risks. Extreme rainfall is expected to increase in frequency and intensity from late July to early August, particularly in northern China.",
+      "summary": "Flooding from Typhoon Noul has caused mass evacuations in Guangdong Province, with over 715,000 relocated and at least 10 deaths reported. In southern China, floodwaters decimated a private zoo, leaving dozens of animals missing and surviving animals facing critical food shortages. Additionally, a flash flood at a camping site in northwest China killed 10 people and injured 23.",
       "country": "China",
       "iso2": "CN",
       "lat": 27.1175905,
@@ -3025,7 +3042,7 @@
       "disease_name": null,
       "event_date": "2026-06-06",
       "first_reported_date": "2026-06-06",
-      "last_updated_date": "2026-07-25",
+      "last_updated_date": "2026-07-27",
       "days_since_event": 51,
       "source_count": 1,
       "should_report": true,
@@ -3036,7 +3053,7 @@
         "gdacs": 1,
         "ercc": 0,
         "healthmap": 0,
-        "news": 50
+        "news": 55
       },
       "source_links": [
         {
@@ -3057,6 +3074,10 @@
         "gdacs_population": null
       },
       "news": [
+        {
+          "headline": "This website is unavailable in your location. – WHIO TV 7 and WHIO Radio",
+          "published_date": "2016-01-01"
+        },
         {
           "headline": "Typhoon Bavi takes aim at China as Taiwan’s capital shuts schools",
           "published_date": "2026-01-01"
@@ -3256,9 +3277,25 @@
         {
           "headline": "Warnings lifted as Typhoon Kiyapo moves away, but monsoon rain persists",
           "published_date": "2026-07-25"
+        },
+        {
+          "headline": "Typhoon Noul batters Southeast China",
+          "published_date": "2026-07-26"
+        },
+        {
+          "headline": "Flood Decimates Private Zoo in Southern China, Leaving Dozens of Animals Missing",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Flash flood at northwest China camping site kills 10, injures 23 | South China Morning Post",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Mass evacuations, 10 dead from Typhoon Noul in China",
+          "published_date": "2026-07-27"
         }
       ],
-      "news_total": 50,
+      "news_total": 55,
       "logs": [
         {
           "log_date": "2026-07-08",
@@ -3299,84 +3336,6 @@
               "published_date": "2026-07-08T11:27:24+00:00",
               "outlet": "Reuters",
               "image": ""
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-19",
-          "summary": "Heavy rains in southern China and Vietnam have resulted in at least 12 deaths, with authorities warning of further downpours. In northern China, severe flooding in Hebei and Liaoning provinces submerged roads and swept away vehicles.",
-          "news": [
-            {
-              "news_id": "67e8273ba42b503da4fd8ef3ff788843",
-              "url": "https://www.clickorlando.com/news/2026/07/12/typhoon-bavi-weakens-but-still-brings-strong-winds-and-rain-to-china/",
-              "headline": "Typhoon Bavi weakens but still brings strong winds and rain to China",
-              "body": "Typhoon Bavi has weakened to a tropical storm but it's still bringing strong winds and heavy rain to parts of China.",
-              "published_date": "2026-07-12",
-              "outlet": "WKMG ClickOrlando",
-              "image": "https://s.yimg.com/am/60d/6556059894eb6319614a0669404e70e7"
-            },
-            {
-              "news_id": "8841d7d71f6f54a090f32de490119a77",
-              "url": "https://bworldonline.com/world/2026/07/13/762918/heavy-floods-submerge-roads-vehicles-in-northern-china/",
-              "headline": "Heavy floods submerge roads, vehicles in northern China - BusinessWorld Online",
-              "body": "HONG KONG — Severe flooding in China’s northern Hebei province and northeastern Liaoning province submerged roads and swept away cars, while people swam, paddle-boarded and wake surfed along neighborhood streets, videos on social media showed. Water levels rose to more than two metres on roads in Kuancheng, a county in Hebei, according to a resident’s […]",
-              "published_date": "2026-07-13",
-              "outlet": "BusinessWorld",
-              "image": "https://s.yimg.com/am/60d/ab60b48ed69aaf7d2cf1a2360cd4f443"
-            },
-            {
-              "news_id": "529d006b36e5560b92dede1e7dad5144",
-              "url": "https://r.search.yahoo.com/_ylt=A2RRgHlrTVxqmgIAjr_QtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzcEdnRpZAMEc2VjA3Ny/RV=2/RE=1785643628/RO=10/RU=https://www.insurancejournal.com/news/international/2026/07/13/877292.htm/RK=2/RS=noIguX7t17sLd4APpSGav4OIJLs-",
-              "headline": "China to See Unusually Active Typhoon Season After Bavi Passes",
-              "body": "China may encounter stronger and more frequent tropical cyclones over the summer months, according...",
-              "published_date": "2026-07-13",
-              "outlet": "Insurance Journal",
-              "image": "https://s.yimg.com/fz/api/res/1.2/6lMLYQpU3cwg2_BIE9qBig--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7dz0xNjA-/https://s.yimg.com/am/60d/eb55586a6335b9861db270ebb0fa1234"
-            },
-            {
-              "news_id": "952cfa0255b759d3b6731270b70b2331",
-              "url": "https://r.search.yahoo.com/_ylt=A2RQYzWPOFtqpAIAppDQtDMD;_ylu=Y29sbwN1cy13ZXN0LTIEcG9zAzQEdnRpZAMEc2VjA3Ny/RV=2/RE=1785572751/RO=10/RU=https://me.mashable.com/culture/73748/snake-invasion-in-china-chilling-video-of-900-snakes-escaping-in-floodwaters-leaves-internet-horrifi/RK=2/RS=G4NZEJ8kYaJPkmOMFAxJ94lJdeU-",
-              "headline": "Snake invasion in China: Chilling video of 900 snakes escaping in floodwaters...",
-              "body": "Terrifying videos show hundreds of snakes flooding Chinese streets after Typhoon Maysak, sparking...",
-              "published_date": "2026-07-13T08:25:51+00:00",
-              "outlet": "Mashable",
-              "image": "https://s.yimg.com/fz/api/res/1.2/jfqBNTDAUtG59J2wuFrIMw--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7dz0xNjA-/https://s.yimg.com/am/60d/ff26740ec672020a04d8c382c45c16fa"
-            },
-            {
-              "news_id": "e36bcec657da5f81871eea28e2709d26",
-              "url": "https://www.msn.com/en-us/news/world/at-least-12-dead-in-heavy-rains-across-southern-china-and-vietnam/ar-AA28aRG4?ocid=BingNewsVerp",
-              "headline": "At Least 12 Dead In Heavy Rains Across Southern China And Vietnam",
-              "body": "At least 12 dead in heavy rains across southern China and Vietnam - Authorities warn further downpours could trigger more ...",
-              "published_date": "2026-07-19",
-              "outlet": "The Independent on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.PPx0MDWXCXGeOlzIRbzIZg"
-            },
-            {
-              "news_id": "4044622b9f12522e9ba27fdff3b4aca0",
-              "url": "https://www.msn.com/en-us/weather/general/at-least-12-dead-in-heavy-rains-across-southern-china-and-vietnam/ar-AA28aRG4?ocid=BingNewsVerp",
-              "headline": "At Least 12 Dead In Heavy Rains Across Southern China And Vietnam",
-              "body": "At least 12 dead in heavy rains across southern China and Vietnam - Authorities warn further downpours could trigger more ...",
-              "published_date": "2026-07-19",
-              "outlet": "The Independent on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.PPx0MDWXCXGeOlzIRbzIZg"
-            },
-            {
-              "news_id": "c417b98a6000553a9971e2156020313c",
-              "url": "https://r.search.yahoo.com/_ylt=A2RRItyahlpqewIAcnHQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzgEdnRpZAMEc2VjA3Ny/RV=2/RE=1785527195/RO=10/RU=https://petapixel.com/2026/07/13/apocalyptic-videos-show-snakes-roaming-in-floodwaters-in-china//RK=2/RS=InOZlJMZr1QBMwJW_y9tYhaSgPY-",
-              "headline": "Apocalyptic Videos Show Snakes Roaming in Floodwaters in China",
-              "body": "Snakes on a flood plain.",
-              "published_date": "2026-07-13T19:46:35+00:00",
-              "outlet": "PetaPixel",
-              "image": "https://s.yimg.com/fz/api/res/1.2/49V8cJdoCrTJxwzERAtfgw--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7dz0xNjA-/https://s.yimg.com/am/60d/5d0b61b498a39096b0882fa8bdbace98"
-            },
-            {
-              "news_id": "6e54b6563eee52c68d6aac6b594b1794",
-              "url": "https://r.search.yahoo.com/_ylt=A2RRItyahlpqewIAbHHQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzYEdnRpZAMEc2VjA3Ny/RV=2/RE=1785527195/RO=10/RU=https://www.yahoo.com/news/world/articles/old-video-misrepresented-rescue-footage-035737176.html?fr=sycsrp_catchall/RK=2/RS=DkAGL2o7sjUrxbXOWSoWMLYQ.EI-",
-              "headline": "Old video misrepresented as rescue footage from deadly 2026 floods in China",
-              "body": "After heavy rai ns in China's southern Guangxi region left at least 39 people dead in early July...",
-              "published_date": "2026-07-15T19:46:35+00:00",
-              "outlet": "AFP · via Yahoo News",
-              "image": "https://s.yimg.com/fz/api/res/1.2/gBeEdUG1GH8Lt_KpQryZHQ--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7c209MTt3PTE2MA--/https://media.zenfs.com/en/afp_factcheck_us_713/b3276919fe7274cd1c0b27f26f20e1e4"
             }
           ]
         },
@@ -3454,9 +3413,60 @@
               "image": "https://www.bing.com/th?id=ONUT.yCI6BiSoZtwcOlgaihfSRg"
             }
           ]
+        },
+        {
+          "log_date": "2026-07-27",
+          "summary": "Flooding from Typhoon Noul has caused mass evacuations in Guangdong Province, with over 715,000 relocated and at least 10 deaths reported. In southern China, floodwaters decimated a private zoo, leaving dozens of animals missing and surviving animals facing critical food shortages. Additionally, a flash flood at a camping site in northwest China killed 10 people and injured 23.",
+          "news": [
+            {
+              "news_id": "d28f18e1a30654fd8b3bd8273098d08d",
+              "url": "https://www.caixinglobal.com/2026-07-27/flood-decimates-private-zoo-in-southern-china-leaving-dozens-of-animals-missing-102468355.html",
+              "headline": "Flood Decimates Private Zoo in Southern China, Leaving Dozens of Animals Missing",
+              "body": "Owners locked lion cages to protect the public before waters surged; surviving animals face critical food shortages",
+              "published_date": "2026-07-27",
+              "outlet": "Caixin Global",
+              "image": ""
+            },
+            {
+              "news_id": "650da9f4b9e453b1a4daa05473f0750b",
+              "url": "https://www.whio.com/news/typhoon-noul-weakens/ZB2WSCKJXE6BBKOK4H6LHG6V6U/",
+              "headline": "This website is unavailable in your location. – WHIO TV 7 and WHIO Radio",
+              "body": "Typhoon Noul has weakened to a tropical storm as it moves inland after making landfall in southern...",
+              "published_date": "2016-01-01",
+              "outlet": "WHIO-TV 7 Dayton",
+              "image": "https://s.yimg.com/bo/e24490ad-6b14-5b86-91ec-25ebd1966134_1785068368704.jpg"
+            },
+            {
+              "news_id": "be70447c7ac95840a68f08b08acc08f4",
+              "url": "https://www.scmp.com/video/china/3362004/flash-flood-northwest-china-camping-site-kills-10-injures-23",
+              "headline": "Flash flood at northwest China camping site kills 10, injures 23 | South China Morning Post",
+              "body": "News, opinions, infographics and videos on China issues: geopolitics, diplomacy, economy, technology and lifestyle.",
+              "published_date": "2026-07-27",
+              "outlet": "South China Morning Post",
+              "image": "https://www.bing.com/th?id=ONUT.SNubBdvDP54php7kebMJtw"
+            },
+            {
+              "news_id": "16249c7cc5825921bae2e42c23dc83d8",
+              "url": "https://theshillongtimes.com/2026/07/27/mass-evacuations-10-dead-from-typhoon-noul-in-china/",
+              "headline": "Mass evacuations, 10 dead from Typhoon Noul in China",
+              "body": "China, July 26: According to reporting by The Guardian, more than 715,000 people were relocated to safer areas across Guangdong Province as authorities prepared for dangerous flooding, strong winds, and potential landslides. Emergency services remained on high alert throughout the region while officials closely monitored rivers, mountain communities, construction sites, valleys, and bridges vulnerable to…",
+              "published_date": "2026-07-27",
+              "outlet": "The Shillong Times",
+              "image": ""
+            },
+            {
+              "news_id": "21b6a2a4a77a5b13b370395798d55abe",
+              "url": "https://www.aljazeera.com/video/newsfeed/2026/7/26/typhoon-noul-batters-southeast-china",
+              "headline": "Typhoon Noul batters Southeast China",
+              "body": "Footage shows the aftermath of Typhoon Noul after it battered southern China's coastal regions.",
+              "published_date": "2026-07-26",
+              "outlet": "Al Jazeera",
+              "image": "https://www.bing.com/th?id=ONUT.usntRytdj-Q-JN8D8ehkXg"
+            }
+          ]
         }
       ],
-      "logs_total": 8
+      "logs_total": 9
     },
     {
       "incident_id": "20260624-VE-EQ",
@@ -11996,6 +12006,65 @@
         }
       ],
       "logs_total": 2
+    },
+    {
+      "incident_id": "20260726-IR-CF",
+      "tree_id": "13763def03ab448898154124734fe728",
+      "canonical_name": "The Pentagon reported over 600 war casualties in an updated database, highlighting ongoing troop deaths and injuries related to the Iran war.",
+      "summary": "",
+      "country": "Iran",
+      "iso2": "IR",
+      "lat": 32.4,
+      "lon": 53.7,
+      "country_group": "B",
+      "region": "Asia",
+      "incident_type": "Conflict",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "LOW",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": null,
+      "event_status": null,
+      "extended_monitoring": true,
+      "disease_name": null,
+      "event_date": "2026-07-26",
+      "first_reported_date": "2026-07-26",
+      "last_updated_date": "2026-07-26",
+      "days_since_event": 1,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 0,
+        "gdacs": 0,
+        "ercc": 0,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [],
+      "physical": {
+        "max_magnitude": null,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Pentagon reports more than 600 Iran war casualties in quiet database update",
+          "url": "https://www.theguardian.com/us-news/2026/jul/26/pentagon-iran-war-troop-deaths-casualty-report",
+          "outlet": "manual",
+          "published_date": "2026-07-26"
+        }
+      ],
+      "news_total": 1,
+      "logs": [],
+      "logs_total": 0
     }
   ]
 }

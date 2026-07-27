@@ -1,39 +1,40 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-07-26",
-  "generated_at": "2026-07-27T13:48:25Z",
+  "generated_at": "2026-07-27T14:57:22Z",
   "as_of": "2026-07-26",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 15,
-    "new_today": 4,
-    "critical": 3,
+    "reportable_total": 14,
+    "new_today": 5,
+    "critical": 2,
     "high": 3,
-    "medium": 9,
-    "low": 0,
-    "disease_outbreaks": 4,
+    "medium": 8,
+    "low": 1,
+    "disease_outbreaks": 3,
     "countries_affected": 9,
-    "news_total": 387,
+    "news_total": 297,
     "max_magnitude": 6.5,
     "by_severity": {
-      "CRITICAL": 3,
+      "CRITICAL": 2,
       "HIGH": 3,
-      "MEDIUM": 9,
-      "LOW": 0
+      "MEDIUM": 8,
+      "LOW": 1
     },
     "by_type": {
-      "Disease": 4,
-      "Flood": 2,
+      "Disease": 3,
+      "Flood": 1,
       "Volcano": 1,
       "Earthquake": 4,
       "Forest Fire": 2,
       "Severe Weather": 1,
-      "Tropical Cyclone": 1
+      "Tropical Cyclone": 1,
+      "Conflict": 1
     },
     "by_region": {
       "Global": 3,
-      "Asia": 7,
+      "Asia": 6,
       "Europe": 3,
       "Americas": 1,
       "Oceania": 1
@@ -41,21 +42,21 @@
   },
   "by_country": [
     {
+      "country": "Iran",
+      "count": 1,
+      "max_sev_rank": 1,
+      "iso2": "IR",
+      "region": "Asia",
+      "country_group": "B",
+      "max_severity": "LOW"
+    },
+    {
       "country": "",
       "count": 4,
       "max_sev_rank": 2,
       "iso2": "XX",
       "region": "Global",
       "country_group": "C",
-      "max_severity": "MEDIUM"
-    },
-    {
-      "country": "China",
-      "count": 2,
-      "max_sev_rank": 2,
-      "iso2": "CN",
-      "region": "Asia",
-      "country_group": "A",
       "max_severity": "MEDIUM"
     },
     {
@@ -77,21 +78,21 @@
       "max_severity": "MEDIUM"
     },
     {
-      "country": "Bangladesh",
-      "count": 1,
-      "max_sev_rank": 2,
-      "iso2": "BD",
-      "region": "Asia",
-      "country_group": "A",
-      "max_severity": "MEDIUM"
-    },
-    {
       "country": "Canada",
       "count": 1,
       "max_sev_rank": 2,
       "iso2": "CA",
       "region": "Americas",
       "country_group": "C",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "China",
+      "count": 1,
+      "max_sev_rank": 2,
+      "iso2": "CN",
+      "region": "Asia",
+      "country_group": "A",
       "max_severity": "MEDIUM"
     },
     {
@@ -1218,909 +1219,6 @@
         }
       ],
       "logs_total": 1
-    },
-    {
-      "incident_id": "20260423-BD-DI",
-      "tree_id": "5ea0df2320b350ab8c9470cf5484696c",
-      "canonical_name": "Measles Chattogram, Bangladesh 2026-04-23",
-      "summary": "Two more children died from measles in the last 24 hours, raising the death toll since March 15 to over 800. During the same period, 848 new suspected cases were reported, bringing total confirmed cases to 15,007 and suspected cases to 121,200.",
-      "country": "Bangladesh",
-      "iso2": "BD",
-      "lat": 23.7,
-      "lon": 90.4,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Disease",
-      "incident_category": "Biological",
-      "is_disease": true,
-      "severity": "MEDIUM",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": "MEDIUM",
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": "Measles",
-      "event_date": "2026-04-23",
-      "first_reported_date": "2026-04-23",
-      "last_updated_date": "2026-07-24",
-      "days_since_event": 95,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 1,
-        "usgs": 0,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 41
-      },
-      "source_links": [
-        {
-          "type": "WHO",
-          "label": "Measles Chattogram, Bangladesh 2026-04-23",
-          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON598",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Measles outbreak: Death toll 753 as three die in 24 hours",
-          "published_date": "2026-07-05T18:01:37+00:00"
-        },
-        {
-          "headline": "Three die with measles symptoms, 702 suspected cases recorded in",
-          "published_date": "2026-07-05T18:01:37+00:00"
-        },
-        {
-          "headline": "Measles outbreak in Bangladesh claims five more lives; death toll rises to 758",
-          "published_date": "2026-07-07T03:33:42+00:00"
-        },
-        {
-          "headline": "Possible measles exposures on two flights at Pearson Airport, Peel Public Health warns",
-          "published_date": "2026-07-07T18:01:40+00:00"
-        },
-        {
-          "headline": "5 more die with measles, symptoms in 24 hours",
-          "published_date": "2026-07-08T03:33:42+00:00"
-        },
-        {
-          "headline": "Measles Cases Rise Among Children in Bangladesh: Report",
-          "published_date": "2026-07-11T18:01:40+00:00"
-        },
-        {
-          "headline": "Bangladesh measles death toll rises to 758 amid growing dengue threat",
-          "published_date": "2026-07-12"
-        },
-        {
-          "headline": "Five die with measles symptoms, 920 suspected cases recorded in 24hrs",
-          "published_date": "2026-07-12T03:58:21+00:00"
-        },
-        {
-          "headline": "Measles outbreak: Death toll reaches 758 as five die in 24 hours",
-          "published_date": "2026-07-13T03:33:39+00:00"
-        },
-        {
-          "headline": "Complaint against Yunus, 3 others over measles death dismissed",
-          "published_date": "2026-07-13T03:33:42+00:00"
-        },
-        {
-          "headline": "Measles death toll reaches 771 as five more children die",
-          "published_date": "2026-07-15"
-        },
-        {
-          "headline": "Seven more children die from measles, symptoms",
-          "published_date": "2026-07-15T07:15:52+00:00"
-        },
-        {
-          "headline": "8 more Bangladeshi children die of measles-like symptoms",
-          "published_date": "2026-07-16"
-        },
-        {
-          "headline": "Measles death toll rises to 779 as 8 more children die in 24hrs",
-          "published_date": "2026-07-16"
-        },
-        {
-          "headline": "Dengue outbreak complicates Bangladesh measles crisis response",
-          "published_date": "2026-07-16T03:58:24+00:00"
-        },
-        {
-          "headline": "Bangladesh reports five more suspected measles deaths, 172 new confirmed infections",
-          "published_date": "2026-07-16T03:58:24+00:00"
-        },
-        {
-          "headline": "What's behind a severe measles outbreak in Bangladesh?",
-          "published_date": "2026-07-16T08:50:06+00:00"
-        },
-        {
-          "headline": "Eight die with measles symptoms, 974 suspected cases recorded in 24hrs",
-          "published_date": "2026-07-16T14:46:05+00:00"
-        },
-        {
-          "headline": "One more dies with suspected measles, combined toll reaches 780",
-          "published_date": "2026-07-17T08:50:02+00:00"
-        },
-        {
-          "headline": "Bangladesh measles cases cross 14,000 mark",
-          "published_date": "2026-07-17T14:23:06+00:00"
-        },
-        {
-          "headline": "8 more Bangladeshi children die of measles-like symptoms",
-          "published_date": "2026-07-17T14:23:06+00:00"
-        },
-        {
-          "headline": "8 More Children Die With Measles Like Symptoms",
-          "published_date": "2026-07-18"
-        },
-        {
-          "headline": "India Sees Sharp Rise In Measles Cases As Silent Surge Raises Questions On Elimination Drive",
-          "published_date": "2026-07-18"
-        },
-        {
-          "headline": "Children Keep Dying In A Country That Made Huge Progress On Measles",
-          "published_date": "2026-07-18"
-        },
-        {
-          "headline": "Measles: Death toll reaches 780 as one more dies in 24hrs",
-          "published_date": "2026-07-18T08:50:02+00:00"
-        },
-        {
-          "headline": "Measles outbreak: Death toll reaches 780 as one dies in 24 hours",
-          "published_date": "2026-07-18T08:50:02+00:00"
-        },
-        {
-          "headline": "Experts urge closing vaccine gaps as measles deaths continue despite nationwide campaign",
-          "published_date": "2026-07-18T08:50:02+00:00"
-        },
-        {
-          "headline": "Measles outbreak: India reporting over 26,000 cases",
-          "published_date": "2026-07-18T08:50:02+00:00"
-        },
-        {
-          "headline": "Death toll from measles, symptoms reaches 780 with one more casualty",
-          "published_date": "2026-07-18T08:50:06+00:00"
-        },
-        {
-          "headline": "Measles outbreak in Bangladesh claims four more lives; death toll rises to 788",
-          "published_date": "2026-07-20T03:07:32+00:00"
-        },
-        {
-          "headline": "Measles death toll reaches 797 as 4 more children die in 24 hours",
-          "published_date": "2026-07-21"
-        },
-        {
-          "headline": "Bangladesh's measles crisis deepens as daily deaths, hospitalisations remain high",
-          "published_date": "2026-07-22"
-        },
-        {
-          "headline": "Measles related child deaths cross 800 in Bangladesh",
-          "published_date": "2026-07-22"
-        },
-        {
-          "headline": "Measles Death Toll Tops 800 With 6 New Suspected Fatalities",
-          "published_date": "2026-07-22"
-        },
-        {
-          "headline": "Measles: Death toll reaches 803 as 6 more children die",
-          "published_date": "2026-07-22"
-        },
-        {
-          "headline": "Death toll from measles, symptoms reaches nearly 800",
-          "published_date": "2026-07-22T03:07:32+00:00"
-        },
-        {
-          "headline": "Measles deaths cross 800 as 6 more die in 24hrs",
-          "published_date": "2026-07-22T14:38:19+00:00"
-        },
-        {
-          "headline": "Measles death toll crosses 800, experts blame vaccination gaps, weak response",
-          "published_date": "2026-07-23"
-        },
-        {
-          "headline": "Over 800 children dead: How Bangladesh lost ground against measles",
-          "published_date": "2026-07-23T03:58:27+00:00"
-        },
-        {
-          "headline": "848 more suspected measles cases, two deaths recorded in 24hrs",
-          "published_date": "2026-07-23T14:45:36+00:00"
-        },
-        {
-          "headline": "848 more suspected measles cases, two deaths recorded in 24hrs",
-          "published_date": "2026-07-24T03:58:28+00:00"
-        }
-      ],
-      "news_total": 41,
-      "logs": [
-        {
-          "log_date": "2026-07-09",
-          "summary": "Over 120,000 suspected and confirmed measles cases have been reported in Bangladesh, overwhelming hospitals across the country. This outbreak marks a significant setback for a nation that had previously achieved substantial progress in controlling the disease.",
-          "news": [
-            {
-              "news_id": "675adb00f97d54eba4ce0762141d58ba",
-              "url": "https://www.msn.com/en-us/health/other/children-keep-dying-in-a-country-that-made-huge-progress-on-measles/ar-AA27vaIa?ocid=BingNewsVerp",
-              "headline": "Children Keep Dying In A Country That Made Huge Progress On Measles",
-              "body": "More than 120,000 suspected and confirmed measles cases have been reported in Bangladesh, where hospitals are overwhelmed.",
-              "published_date": "2026-07-18",
-              "outlet": "BBC on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.cTiIMKY_vPvWKhXfbiwRqg"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-18",
-          "summary": "One more child died from measles in Bangladesh, raising the death toll to 780, with 873 new suspected cases reported in 24 hours. Experts urge closing vaccination gaps to control the outbreak. Meanwhile, India reports 26,627 measles cases in the first half of 2026, making it the second-highest globally after Bangladesh.",
-          "news": [
-            {
-              "news_id": "d2ab2a551d275d9c8508e2a4fd6c880c",
-              "url": "https://www.daily-sun.com/health/886893/death-toll-from-measles-symptoms-reaches-780-with-one-more-casualty",
-              "headline": "Death toll from measles, symptoms reaches 780 with one more casualty",
-              "body": "Bangladesh faces a public health crisis as measles deaths rise to 780 this year, with 140 new cases reported. DGHS raises ...",
-              "published_date": "2026-07-18T08:50:06+00:00",
-              "outlet": "Daily Sun",
-              "image": "https://www.bing.com/th?id=ONUT.ndI_uFXoHGESHC5QipRdEQ"
-            },
-            {
-              "news_id": "d817c03548f75eb8ac1147c5cf812370",
-              "url": "https://www.thedailystar.net/health/disease/news/one-more-dies-suspected-measles-combined-toll-reaches-780-4226171",
-              "headline": "One more dies with suspected measles, combined toll reaches 780",
-              "body": "One patient died with symptoms consistent with measles in 24 hours until 8:00am today, bringing Bangladesh's combined tally ...",
-              "published_date": "2026-07-17T08:50:02+00:00",
-              "outlet": "The Daily Star",
-              "image": "https://www.bing.com/th?id=ONUT.VqQ88ntrmLt9sjIPvlqN4A"
-            },
-            {
-              "news_id": "b56a230ead9c529887cf77d4c57b9372",
-              "url": "https://www.msn.com/en-xl/asia/bangladesh/8-more-children-die-with-measles-like-symptoms/ar-AA281Yg0?ocid=BingNewsVerp",
-              "headline": "8 More Children Die With Measles Like Symptoms",
-              "body": ", July 16 -- like symptoms in the 24 hours until 8:00am on Thursday, bringing Bangladesh's combined tally of confirmed and ...",
-              "published_date": "2026-07-18",
-              "outlet": "United News of Bangladesh (UNB) on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.s9Rjcg1shI5-l7qQgXYIbA"
-            },
-            {
-              "news_id": "9fc47d31a6ab54dbb98e72634c386d7f",
-              "url": "https://www.tbsnews.net/bangladesh/health/measles-death-toll-reaches-780-one-more-dies-24hrs-1490791",
-              "headline": "Measles: Death toll reaches 780 as one more dies in 24hrs",
-              "body": "A total of 873 new suspected measles cases were reported during the 24-hour period, bringing the cumulative number of ...",
-              "published_date": "2026-07-18T08:50:02+00:00",
-              "outlet": "The Business Standard",
-              "image": "https://www.bing.com/th?id=ONUT.zdvTGmDfd1o8-2qT-viyGg"
-            },
-            {
-              "news_id": "4b0e83a474355d10909f9d1c0a2da761",
-              "url": "https://www.dhakatribune.com/bangladesh/health/415373/measles-outbreak-death-toll-reaches-780-as-one",
-              "headline": "Measles outbreak: Death toll reaches 780 as one dies in 24 hours",
-              "body": "One more child has died from measles-like symptoms in the 24 hours leading up to 8:00am on Friday, raising the overall death ...",
-              "published_date": "2026-07-18T08:50:02+00:00",
-              "outlet": "Dhaka Tribune",
-              "image": "https://www.bing.com/th?id=ONUT.HQYsCKKYVKLbsiUBeoACHQ"
-            },
-            {
-              "news_id": "9b5483add51d5294b6423042550932ea",
-              "url": "https://www.msn.com/en-us/health/other/india-sees-sharp-rise-in-measles-cases-as-silent-surge-raises-questions-on-elimination-drive/ar-AA285OdP?ocid=BingNewsVerp",
-              "headline": "India Sees Sharp Rise In Measles Cases As Silent Surge Raises Questions On Elimination Drive",
-              "body": "India has reported 26,627 measles cases in the first half of 2026, the world's second-highest tally after Bangladesh. The rise has sharpened questions over surveillance transparency and the pace of ...",
-              "published_date": "2026-07-18",
-              "outlet": "India Today on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "fde96f5c8a35583d8f5a0d3110916f34",
-              "url": "https://www.bbc.co.uk/programmes/p0nzf9d8",
-              "headline": "What's behind a severe measles outbreak in Bangladesh?",
-              "body": "Azadeh Moshiri sent this dispatch from a hospital north of the capital, Dhaka.",
-              "published_date": "2026-07-16T08:50:06+00:00",
-              "outlet": "BBC",
-              "image": "https://www.bing.com/th?id=ONUT.IMAzu5HAluTLE1fEXDocUg"
-            },
-            {
-              "news_id": "9c4fc87bb04e5194a8ceea6a93cbf546",
-              "url": "https://www.tbsnews.net/bangladesh/health/experts-urge-closing-vaccine-gaps-measles-deaths-continue-despite-nationwide",
-              "headline": "Experts urge closing vaccine gaps as measles deaths continue despite nationwide campaign",
-              "body": "Experts warn that the disease cannot be brought under control without closing vaccination gaps and strengthening treatment at the community level ...",
-              "published_date": "2026-07-18T08:50:02+00:00",
-              "outlet": "The Business Standard",
-              "image": ""
-            },
-            {
-              "news_id": "471f82ba0d6553c790b5cff4f77130cf",
-              "url": "https://www.firstpost.com/health/global-measles-outbreaks-india-second-highest-cases-2026-14032107.html",
-              "headline": "Measles outbreak: India reporting over 26,000 cases",
-              "body": "Measles is making a worrying comeback across the globe, with outbreaks now reported in every WHO region. New surveillance ...",
-              "published_date": "2026-07-18T08:50:02+00:00",
-              "outlet": "Firstpost",
-              "image": "https://www.bing.com/th?id=ONUT.zYgqsaNr7YwbT9ucgnV3zw"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-22",
-          "summary": "Four more children died from measles in Bangladesh, raising the death toll to 797. Since March 15, over 102,000 suspected cases have been hospitalized nationwide, and confirmed cases have reached 14,708.\nAs of July 22, six more children died from measles or suspected measles symptoms in Bangladesh within the last 24 hours, raising the total death toll to 803. Over 1,030 new suspected cases were reported, bringing total hospitalizations since March 15 to more than 103,000.",
-          "news": [
-            {
-              "news_id": "274cd56e2e7f5390a81f7527ebbd81e9",
-              "url": "https://www.daijiworld.com/news/newsDisplay?newsID=1320660",
-              "headline": "Bangladesh's measles crisis deepens as daily deaths, hospitalisations remain high",
-              "body": "Daijiworld Media Network - Dhaka Dhaka, Jul 22: Bangladesh continues to battle a worsening measles outbreak, with health authorities recording an average of nearly four child deaths and more than 800 hospital admissions every day, even as concerns grow over inadequate vaccination coverage and a weakening public health.....",
-              "published_date": "2026-07-22",
-              "outlet": "Daijiworld",
-              "image": "https://www.bing.com/th?id=ONUT.YMwYQi3CzP6vnTc90H1GjQ"
-            },
-            {
-              "news_id": "8349bfca0cd75aa9919a1d565503da96",
-              "url": "https://www.aa.com.tr/en/asia-pacific/measles-related-child-deaths-cross-800-in-bangladesh/4005861",
-              "headline": "Measles related child deaths cross 800 in Bangladesh",
-              "body": "The number of child deaths linked to confirmed measles and suspected infections in Bangladesh rose to 803 over the past four ...",
-              "published_date": "2026-07-22",
-              "outlet": "Anadolu Agency",
-              "image": "https://www.bing.com/th?id=ONUT.muyrXQP0zuvUnb0HOtk0-Q"
-            },
-            {
-              "news_id": "7bef46675ad151e187499c36ea3c2774",
-              "url": "https://www.msn.com/en-xl/health/diseases-and-conditions/measles-death-toll-tops-800-with-6-new-suspected-fatalities/ar-AA28rB1g?ocid=BingNewsVerp",
-              "headline": "Measles Death Toll Tops 800 With 6 New Suspected Fatalities",
-              "body": "Dhaka, July 22 -- Six more children died with symptoms consistent with measles in 24 hours until 8:00 am on Wednesday, ...",
-              "published_date": "2026-07-22",
-              "outlet": "United News of Bangladesh on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.nCxMg7jh3sjQzPWMz9KrTA"
-            },
-            {
-              "news_id": "db306c050f7e547381a2cc281eb0f8cf",
-              "url": "https://www.thehansindia.com/news/international/measles-outbreak-in-bangladesh-claims-four-more-lives-death-toll-rises-to-788-1099171",
-              "headline": "Measles outbreak in Bangladesh claims four more lives; death toll rises to 788",
-              "body": "Bangladesh's measles death toll hits 788 with over 117,000 cases. Health experts warn an impending monsoon dengue surge will ...",
-              "published_date": "2026-07-20T03:07:32+00:00",
-              "outlet": "The Hans India",
-              "image": "https://www.bing.com/th?id=ONUT.UtCDfJuEnmYeECTM3FEpjQ"
-            },
-            {
-              "news_id": "4e7625a38d4753d79999a911c618bf0a",
-              "url": "https://www.tbsnews.net/bangladesh/health/measles-death-toll-reaches-803-6-more-children-die-1494761",
-              "headline": "Measles: Death toll reaches 803 as 6 more children die",
-              "body": "Since 15 March, a total of 1,03,078 patients with suspected measles have been hospitalised nationwide, of whom 99,294 have recovered, according to DGHS.",
-              "published_date": "2026-07-22",
-              "outlet": "The Business Standard",
-              "image": "https://www.bing.com/th?id=ONUT.G6RauNngonsW8Ob6EDB5iw"
-            },
-            {
-              "news_id": "c098f0c68e49566a9eda1e62955b1c5c",
-              "url": "https://www.daily-sun.com/bangladesh/887936/measles-deaths-cross-800-as-6-more-die-in-24hrs",
-              "headline": "Measles deaths cross 800 as 6 more die in 24hrs",
-              "body": "Six children died with measles symptoms across the country in the past 24 hours, while 1,037 others were diagnosed with ...",
-              "published_date": "2026-07-22T14:38:19+00:00",
-              "outlet": "Daily Sun",
-              "image": "https://www.bing.com/th?id=ONUT.0m_XxZmZoLmf-c7HINlvgw"
-            },
-            {
-              "news_id": "602c47b80a2c5f5d826d220a7409ba02",
-              "url": "https://www.tbsnews.net/bangladesh/measles-deaths-near-800-bangladesh-reports-4-more-fatalities-1493956",
-              "headline": "Measles death toll reaches 797 as 4 more children die in 24 hours",
-              "body": "Since 15 March, a total of 1,02,244 patients with suspected measles have been hospitalised nationwide.",
-              "published_date": "2026-07-21",
-              "outlet": "The Business Standard",
-              "image": "https://www.bing.com/th?id=ONUT.vxkytqUovK8JCPIFH8HmHg"
-            },
-            {
-              "news_id": "367eda6e9b4d5da6918c133815d73c0e",
-              "url": "https://www.daily-sun.com/bangladesh/887708/death-toll-from-measles-symptoms-reaches-nearly-800",
-              "headline": "Death toll from measles, symptoms reaches nearly 800",
-              "body": "Since 15 March, the total number of confirmed measles cases has stood at 14,708, while suspected cases have reached ...",
-              "published_date": "2026-07-22T03:07:32+00:00",
-              "outlet": "Daily Sun",
-              "image": "https://www.bing.com/th?id=ONUT.CNSwy7QbtgUCOvXL4GfHFA"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-24",
-          "summary": "Two more children died from measles in the last 24 hours, raising the death toll since March 15 to over 800. During the same period, 848 new suspected cases were reported, bringing total confirmed cases to 15,007 and suspected cases to 121,200.",
-          "news": [
-            {
-              "news_id": "204e7545f4da5dba8b93e4951925ee3b",
-              "url": "https://www.daily-sun.com/bangladesh/888176",
-              "headline": "848 more suspected measles cases, two deaths recorded in 24hrs",
-              "body": "Since 15 March, the total number of confirmed measles cases has stood at 15,007, while suspected cases have reached 121,200.",
-              "published_date": "2026-07-24T03:58:28+00:00",
-              "outlet": "Daily Sun",
-              "image": ""
-            },
-            {
-              "news_id": "73e50fb31cc054f8b79045d0b66409c2",
-              "url": "https://www.dhakatribune.com/bangladesh/health/415758/bangladesh’s measles death toll exceeds 800 as",
-              "headline": "Over 800 children dead: How Bangladesh lost ground against measles",
-              "body": "Bangladesh is among the countries reporting the largest measles outbreaks globally this year, with the death toll surpassing ...",
-              "published_date": "2026-07-23T03:58:27+00:00",
-              "outlet": "Dhaka Tribune",
-              "image": "https://www.bing.com/th?id=ONUT.JEuDzL_2fO9WwHYJMeFJdQ"
-            },
-            {
-              "news_id": "6fdee3deaeb55c5ba7fae3111a12a84b",
-              "url": "https://www.tbsnews.net/bangladesh/health/measles-death-toll-crosses-800-experts-blame-vaccination-gaps-weak-response",
-              "headline": "Measles death toll crosses 800, experts blame vaccination gaps, weak response",
-              "body": "Herd immunity not achieved as more than 40 lakh children remained unvaccinated.",
-              "published_date": "2026-07-23",
-              "outlet": "The Business Standard",
-              "image": "https://www.bing.com/th?id=ONUT.zdvTGmDfd1o8-2qT-viyGg"
-            },
-            {
-              "news_id": "e63e1d9d5bf0518e832fa59b57e6d2be",
-              "url": "https://www.daily-sun.com/bangladesh/888176/848-more-suspected-measles-cases-two-deaths-recorded-in-24hrs",
-              "headline": "848 more suspected measles cases, two deaths recorded in 24hrs",
-              "body": "Since 15 March, the total number of confirmed measles cases has stood at 15,007, while suspected cases have reached 121,200.",
-              "published_date": "2026-07-23T14:45:36+00:00",
-              "outlet": "Daily Sun",
-              "image": "https://www.bing.com/th?id=ONUT.rAHfvinIZjMj5imLbzK7_w"
-            }
-          ]
-        }
-      ],
-      "logs_total": 8
-    },
-    {
-      "incident_id": "20260606-CN-FL",
-      "tree_id": "942158e18da35420a79e4a17fefb8013",
-      "canonical_name": "Flood Hunan, China 2026-06-06",
-      "summary": "As China enters its peak flood season, Tropical Storm Noul (Typhoon Kiyapo) is approaching, prompting warnings of heavy rain and severe flood risks. Extreme rainfall is expected to increase in frequency and intensity from late July to early August, particularly in northern China.",
-      "country": "China",
-      "iso2": "CN",
-      "lat": 27.1175905,
-      "lon": 111.0271777,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Flood",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "CRITICAL",
-      "priority": "HIGH",
-      "priority_rank": 1,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-06-06",
-      "first_reported_date": "2026-06-06",
-      "last_updated_date": "2026-07-25",
-      "days_since_event": 51,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 1,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 50
-      },
-      "source_links": [
-        {
-          "type": "GDACS",
-          "label": "Orange alert · Flood Hunan, China 2026-06-06",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=FL&eventid=1103933",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "China",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": "Orange",
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Typhoon Bavi takes aim at China as Taiwan’s capital shuts schools",
-          "published_date": "2026-01-01"
-        },
-        {
-          "headline": "'The water just came so fast': Typhoon triggers floods and rare tornadoes in China",
-          "published_date": "2026-07-08"
-        },
-        {
-          "headline": "Hundreds of snakes escape after floodwaters inundate breeding farm in China",
-          "published_date": "2026-07-08"
-        },
-        {
-          "headline": "Horror moment 900 snakes escape breeding facility and swim through village",
-          "published_date": "2026-07-08"
-        },
-        {
-          "headline": "Catastrophic storms to test China's resilience in 2026, scientists warn",
-          "published_date": "2026-07-08"
-        },
-        {
-          "headline": "Heavy rains in southern China force relocations, disrupt transport",
-          "published_date": "2026-07-08T11:27:24+00:00"
-        },
-        {
-          "headline": "China, Taiwan brace for Typhoon Bavi, possibly the most powerful storm in years - BusinessWorld Online",
-          "published_date": "2026-07-09"
-        },
-        {
-          "headline": "Typhoon Bavi takes aim at China as Taiwan's capital shuts schools",
-          "published_date": "2026-07-10"
-        },
-        {
-          "headline": "Typhoon Bavi takes aim at China as Taiwan's capital shuts schools",
-          "published_date": "2026-07-10"
-        },
-        {
-          "headline": "Torrential rains bring devastating floods to a Chinese city and a snake invasion",
-          "published_date": "2026-07-10T17:32:37+00:00"
-        },
-        {
-          "headline": "Orange alert for rainstorms! A total of 169 tailings ponds are affected by the rainfall, including 33 \"head-impoundment\" ponds.",
-          "published_date": "2026-07-11T06:50:37+00:00"
-        },
-        {
-          "headline": "Typhoon Bavi weakens but still brings strong winds and rain to China",
-          "published_date": "2026-07-12"
-        },
-        {
-          "headline": "China to See Unusually Active Typhoon Season After Bavi Passes",
-          "published_date": "2026-07-13"
-        },
-        {
-          "headline": "Heavy floods submerge roads, vehicles in northern China - BusinessWorld Online",
-          "published_date": "2026-07-13"
-        },
-        {
-          "headline": "Apocalyptic Videos Show Snakes Roaming in Floodwaters in China",
-          "published_date": "2026-07-13"
-        },
-        {
-          "headline": "Heavy floods submerge roads, vehicles in northern China - BusinessWorld Online",
-          "published_date": "2026-07-13"
-        },
-        {
-          "headline": "China to See Unusually Active Typhoon Season After Bavi Passes",
-          "published_date": "2026-07-13"
-        },
-        {
-          "headline": "Snake invasion in China: Chilling video of 900 snakes escaping in floodwaters leaves internet horrified",
-          "published_date": "2026-07-13"
-        },
-        {
-          "headline": "China to See Unusually Active Typhoon Season After Bavi Passes",
-          "published_date": "2026-07-13"
-        },
-        {
-          "headline": "Snake invasion in China: Chilling video of 900 snakes escaping in floodwaters...",
-          "published_date": "2026-07-13T08:25:51+00:00"
-        },
-        {
-          "headline": "Snake invasion in China: Chilling video of 900 snakes escaping in floodwaters...",
-          "published_date": "2026-07-13T08:50:37+00:00"
-        },
-        {
-          "headline": "Heavy floods submerge roads, vehicles in northern China - BusinessWorld Online",
-          "published_date": "2026-07-13T08:50:40+00:00"
-        },
-        {
-          "headline": "Apocalyptic Videos Show Snakes Roaming in Floodwaters in China",
-          "published_date": "2026-07-13T08:50:40+00:00"
-        },
-        {
-          "headline": "Apocalyptic Videos Show Snakes Roaming in Floodwaters in China",
-          "published_date": "2026-07-13T19:46:35+00:00"
-        },
-        {
-          "headline": "Snake invasion in China: Chilling video of 900 snakes escaping in floodwaters...",
-          "published_date": "2026-07-13T19:47:05+00:00"
-        },
-        {
-          "headline": "Snake invasion in China: Chilling video of 900 snakes escaping in floodwaters...",
-          "published_date": "2026-07-13T19:47:08+00:00"
-        },
-        {
-          "headline": "Emergency workers transport supplies to reinforce dikes in Shenyang against flood risks",
-          "published_date": "2026-07-15"
-        },
-        {
-          "headline": "Over 260,000 evacuated ahead of Bavi",
-          "published_date": "2026-07-15"
-        },
-        {
-          "headline": "Old video misrepresented as rescue footage from deadly 2026 floods in China",
-          "published_date": "2026-07-15T19:46:35+00:00"
-        },
-        {
-          "headline": "Old video misrepresented as rescue footage from deadly 2026 floods in China",
-          "published_date": "2026-07-16"
-        },
-        {
-          "headline": "Old Video Misrepresented As Rescue Footage From Deadly 2026 Floods In China",
-          "published_date": "2026-07-18"
-        },
-        {
-          "headline": "More Than 260000 Evacuated As Typhoon Bavi Hits China",
-          "published_date": "2026-07-18"
-        },
-        {
-          "headline": "Floodwaters Sweep Away Vehicles In China S Chengde",
-          "published_date": "2026-07-18"
-        },
-        {
-          "headline": "Residents Paddleboard And Swim Through Flooded Streets After Record Rainfall In China",
-          "published_date": "2026-07-18"
-        },
-        {
-          "headline": "Torrential Rains And Floods Disrupt Life Across Eastern Chinapublished On July 14 2026 439 Pm",
-          "published_date": "2026-07-18"
-        },
-        {
-          "headline": "Rescuer Carries Newborn To Safety During Hospital Flood In China",
-          "published_date": "2026-07-18"
-        },
-        {
-          "headline": "Old Video Misrepresented As Rescue Footage From Deadly 2026 Floods In China",
-          "published_date": "2026-07-18"
-        },
-        {
-          "headline": "Catastrophic Storms To Test China S Resilience In 2026 Scientists Warn",
-          "published_date": "2026-07-18"
-        },
-        {
-          "headline": "Rescuers Search For Survivors Of China Storms As Super Typhoon Nears",
-          "published_date": "2026-07-18"
-        },
-        {
-          "headline": "Powerful Waves Flood Seaside Shop On Weizhou Island In Guangxi China",
-          "published_date": "2026-07-18"
-        },
-        {
-          "headline": "Severe flooding traps people inside building in Yunnan, China",
-          "published_date": "2026-07-18T08:50:37+00:00"
-        },
-        {
-          "headline": "At Least 12 Dead In Heavy Rains Across Southern China And Vietnam",
-          "published_date": "2026-07-19"
-        },
-        {
-          "headline": "At Least 12 Dead In Heavy Rains Across Southern China And Vietnam",
-          "published_date": "2026-07-19"
-        },
-        {
-          "headline": "Catholic Relief Agencies Mobilize Across Asia as Storms Trigger Widespread Humanitarian Need",
-          "published_date": "2026-07-21"
-        },
-        {
-          "headline": "China warns of flood risks in four regions",
-          "published_date": "2026-07-21"
-        },
-        {
-          "headline": "Catholic Relief Agencies Mobilize Across Asia as Storms Trigger Widespread...",
-          "published_date": "2026-07-21T18:59:46+00:00"
-        },
-        {
-          "headline": "Extreme rainfall threatens north as China enters peak flood season",
-          "published_date": "2026-07-23"
-        },
-        {
-          "headline": "China Braces for Heavy Rain as Tropical Storm Noul Edges Closer",
-          "published_date": "2026-07-24T08:34:04+00:00"
-        },
-        {
-          "headline": "China braces for heavy rain as tropical storm Noul edges closer",
-          "published_date": "2026-07-24T08:34:04+00:00"
-        },
-        {
-          "headline": "Warnings lifted as Typhoon Kiyapo moves away, but monsoon rain persists",
-          "published_date": "2026-07-25"
-        }
-      ],
-      "news_total": 50,
-      "logs": [
-        {
-          "log_date": "2026-07-08",
-          "summary": "Heavy rainfall since mid-June triggered flooding in southern China's Guangxi region and Guangdong province, forcing relocations and disrupting transport. On June 18, powerful waves flooded a seaside shop on Weizhou Island. Rescuers are searching for survivors, and scientists warn that catastrophic storms will test China's resilience in 2026.",
-          "news": [
-            {
-              "news_id": "0b8657ccfbec54ea82ff6726b3eb4618",
-              "url": "https://www.msn.com/en-us/weather/general/catastrophic-storms-to-test-china-s-resilience-in-2026-scientists-warn/ar-AA27sQ6s?ocid=BingNewsVerp",
-              "headline": "Catastrophic Storms To Test China S Resilience In 2026 Scientists Warn",
-              "body": "By Nicoco Chan, Ethan Wang and Xiuhao Chen SHANGHAI/BEIJING, July 8 (Reuters) - The floodwaters that ravaged southern China ...",
-              "published_date": "2026-07-18",
-              "outlet": "Reuters on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.XA_a2hMZXTSuPVzzhvlp7w"
-            },
-            {
-              "news_id": "8e8b7bd188e25852843cfa8d62a09b2f",
-              "url": "https://www.msn.com/en-us/news/world/rescuers-search-for-survivors-of-china-storms-as-super-typhoon-nears/ar-AA27rquT?ocid=BingNewsVerp",
-              "headline": "Rescuers Search For Survivors Of China Storms As Super Typhoon Nears",
-              "body": "Rescuers scoured flooded parts of China for survivors on Wednesday as residents began cleaning up their devastated homes, ...",
-              "published_date": "2026-07-18",
-              "outlet": "AFP on MSN",
-              "image": "https://www.bing.com/th?id=ONUT._1HUsEpsC2sszLOgNwU7sg"
-            },
-            {
-              "news_id": "51c8950cd6cf50af8b08ec4fca80c130",
-              "url": "https://www.msn.com/en-gb/weather/extreme-weather-events/powerful-waves-flood-seaside-shop-on-weizhou-island-in-guangxi-china/vi-AA26Oge7?ocid=BingNewsVerp",
-              "headline": "Powerful Waves Flood Seaside Shop On Weizhou Island In Guangxi China",
-              "body": "On June 18, 2026, in Guangxi, China, security video captured powerful southwest waves unexpectedly surging ashore on Weizhou ...",
-              "published_date": "2026-07-18",
-              "outlet": "Newsflare on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.WOf_iTQ1XmUyZtap-wSVFQ"
-            },
-            {
-              "news_id": "be722527163157b2b1f84ec3dd1a59df",
-              "url": "https://www.reuters.com/business/environment/heavy-rains-southern-china-force-relocations-disrupt-transport-2026-06-15/",
-              "headline": "Heavy rains in southern China force relocations, disrupt transport",
-              "body": "BEIJING, June 15 (Reuters) - Heavy rainfall battered parts of southern China since the weekend, including the Guangxi region and Guangdong province, triggering flooding in cities, disrupting transport ...",
-              "published_date": "2026-07-08T11:27:24+00:00",
-              "outlet": "Reuters",
-              "image": ""
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-19",
-          "summary": "Heavy rains in southern China and Vietnam have resulted in at least 12 deaths, with authorities warning of further downpours. In northern China, severe flooding in Hebei and Liaoning provinces submerged roads and swept away vehicles.",
-          "news": [
-            {
-              "news_id": "67e8273ba42b503da4fd8ef3ff788843",
-              "url": "https://www.clickorlando.com/news/2026/07/12/typhoon-bavi-weakens-but-still-brings-strong-winds-and-rain-to-china/",
-              "headline": "Typhoon Bavi weakens but still brings strong winds and rain to China",
-              "body": "Typhoon Bavi has weakened to a tropical storm but it's still bringing strong winds and heavy rain to parts of China.",
-              "published_date": "2026-07-12",
-              "outlet": "WKMG ClickOrlando",
-              "image": "https://s.yimg.com/am/60d/6556059894eb6319614a0669404e70e7"
-            },
-            {
-              "news_id": "8841d7d71f6f54a090f32de490119a77",
-              "url": "https://bworldonline.com/world/2026/07/13/762918/heavy-floods-submerge-roads-vehicles-in-northern-china/",
-              "headline": "Heavy floods submerge roads, vehicles in northern China - BusinessWorld Online",
-              "body": "HONG KONG — Severe flooding in China’s northern Hebei province and northeastern Liaoning province submerged roads and swept away cars, while people swam, paddle-boarded and wake surfed along neighborhood streets, videos on social media showed. Water levels rose to more than two metres on roads in Kuancheng, a county in Hebei, according to a resident’s […]",
-              "published_date": "2026-07-13",
-              "outlet": "BusinessWorld",
-              "image": "https://s.yimg.com/am/60d/ab60b48ed69aaf7d2cf1a2360cd4f443"
-            },
-            {
-              "news_id": "529d006b36e5560b92dede1e7dad5144",
-              "url": "https://r.search.yahoo.com/_ylt=A2RRgHlrTVxqmgIAjr_QtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzcEdnRpZAMEc2VjA3Ny/RV=2/RE=1785643628/RO=10/RU=https://www.insurancejournal.com/news/international/2026/07/13/877292.htm/RK=2/RS=noIguX7t17sLd4APpSGav4OIJLs-",
-              "headline": "China to See Unusually Active Typhoon Season After Bavi Passes",
-              "body": "China may encounter stronger and more frequent tropical cyclones over the summer months, according...",
-              "published_date": "2026-07-13",
-              "outlet": "Insurance Journal",
-              "image": "https://s.yimg.com/fz/api/res/1.2/6lMLYQpU3cwg2_BIE9qBig--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7dz0xNjA-/https://s.yimg.com/am/60d/eb55586a6335b9861db270ebb0fa1234"
-            },
-            {
-              "news_id": "952cfa0255b759d3b6731270b70b2331",
-              "url": "https://r.search.yahoo.com/_ylt=A2RQYzWPOFtqpAIAppDQtDMD;_ylu=Y29sbwN1cy13ZXN0LTIEcG9zAzQEdnRpZAMEc2VjA3Ny/RV=2/RE=1785572751/RO=10/RU=https://me.mashable.com/culture/73748/snake-invasion-in-china-chilling-video-of-900-snakes-escaping-in-floodwaters-leaves-internet-horrifi/RK=2/RS=G4NZEJ8kYaJPkmOMFAxJ94lJdeU-",
-              "headline": "Snake invasion in China: Chilling video of 900 snakes escaping in floodwaters...",
-              "body": "Terrifying videos show hundreds of snakes flooding Chinese streets after Typhoon Maysak, sparking...",
-              "published_date": "2026-07-13T08:25:51+00:00",
-              "outlet": "Mashable",
-              "image": "https://s.yimg.com/fz/api/res/1.2/jfqBNTDAUtG59J2wuFrIMw--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7dz0xNjA-/https://s.yimg.com/am/60d/ff26740ec672020a04d8c382c45c16fa"
-            },
-            {
-              "news_id": "e36bcec657da5f81871eea28e2709d26",
-              "url": "https://www.msn.com/en-us/news/world/at-least-12-dead-in-heavy-rains-across-southern-china-and-vietnam/ar-AA28aRG4?ocid=BingNewsVerp",
-              "headline": "At Least 12 Dead In Heavy Rains Across Southern China And Vietnam",
-              "body": "At least 12 dead in heavy rains across southern China and Vietnam - Authorities warn further downpours could trigger more ...",
-              "published_date": "2026-07-19",
-              "outlet": "The Independent on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.PPx0MDWXCXGeOlzIRbzIZg"
-            },
-            {
-              "news_id": "4044622b9f12522e9ba27fdff3b4aca0",
-              "url": "https://www.msn.com/en-us/weather/general/at-least-12-dead-in-heavy-rains-across-southern-china-and-vietnam/ar-AA28aRG4?ocid=BingNewsVerp",
-              "headline": "At Least 12 Dead In Heavy Rains Across Southern China And Vietnam",
-              "body": "At least 12 dead in heavy rains across southern China and Vietnam - Authorities warn further downpours could trigger more ...",
-              "published_date": "2026-07-19",
-              "outlet": "The Independent on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.PPx0MDWXCXGeOlzIRbzIZg"
-            },
-            {
-              "news_id": "c417b98a6000553a9971e2156020313c",
-              "url": "https://r.search.yahoo.com/_ylt=A2RRItyahlpqewIAcnHQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzgEdnRpZAMEc2VjA3Ny/RV=2/RE=1785527195/RO=10/RU=https://petapixel.com/2026/07/13/apocalyptic-videos-show-snakes-roaming-in-floodwaters-in-china//RK=2/RS=InOZlJMZr1QBMwJW_y9tYhaSgPY-",
-              "headline": "Apocalyptic Videos Show Snakes Roaming in Floodwaters in China",
-              "body": "Snakes on a flood plain.",
-              "published_date": "2026-07-13T19:46:35+00:00",
-              "outlet": "PetaPixel",
-              "image": "https://s.yimg.com/fz/api/res/1.2/49V8cJdoCrTJxwzERAtfgw--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7dz0xNjA-/https://s.yimg.com/am/60d/5d0b61b498a39096b0882fa8bdbace98"
-            },
-            {
-              "news_id": "6e54b6563eee52c68d6aac6b594b1794",
-              "url": "https://r.search.yahoo.com/_ylt=A2RRItyahlpqewIAbHHQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzYEdnRpZAMEc2VjA3Ny/RV=2/RE=1785527195/RO=10/RU=https://www.yahoo.com/news/world/articles/old-video-misrepresented-rescue-footage-035737176.html?fr=sycsrp_catchall/RK=2/RS=DkAGL2o7sjUrxbXOWSoWMLYQ.EI-",
-              "headline": "Old video misrepresented as rescue footage from deadly 2026 floods in China",
-              "body": "After heavy rai ns in China's southern Guangxi region left at least 39 people dead in early July...",
-              "published_date": "2026-07-15T19:46:35+00:00",
-              "outlet": "AFP · via Yahoo News",
-              "image": "https://s.yimg.com/fz/api/res/1.2/gBeEdUG1GH8Lt_KpQryZHQ--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7c209MTt3PTE2MA--/https://media.zenfs.com/en/afp_factcheck_us_713/b3276919fe7274cd1c0b27f26f20e1e4"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-22",
-          "summary": "China's Ministry of Water Resources warned on Tuesday that water levels in 10 rivers across Guangxi, Yunnan, Jiangsu and Xinjiang have exceeded warning thresholds, posing flood risks. Additionally, Catholic relief organizations, including Jinde Charities in China, are mobilizing to provide aid to communities affected by the severe flooding.",
-          "news": [
-            {
-              "news_id": "476454506e9f5e90bd0bc453161a89ee",
-              "url": "https://www.ncregister.com/cna/catholic-relief-asia-humanitarian",
-              "headline": "Catholic Relief Agencies Mobilize Across Asia as Storms Trigger Widespread Humanitarian Need",
-              "body": "Caritas Bangladesh and Jinde Charities in China are providing aid after devastating flooding.",
-              "published_date": "2026-07-21",
-              "outlet": "National Catholic Register",
-              "image": "https://s.yimg.com/am/60d/3dbe02ee606cabb06c43a61026078fdc"
-            },
-            {
-              "news_id": "02f53d5d00df571fb1cddfb1e6d1a433",
-              "url": "https://thepeninsulaqatar.com/article/21/07/2026/china-warns-of-flood-risks-in-four-regions",
-              "headline": "China warns of flood risks in four regions",
-              "body": "Beijing: China s Ministry of Water Resources said on Tuesday that water levels in 10 rivers across Guangxi, Yunnan, Jiangsu and Xinjiang have exceeded...",
-              "published_date": "2026-07-21",
-              "outlet": "The Peninsula Qatar",
-              "image": "https://www.bing.com/th?id=ONUT.uRaq6Tf4PNLyg_YIutlr_g"
-            },
-            {
-              "news_id": "565c1bbd9a6b54df86b8319630dd9d3b",
-              "url": "https://r.search.yahoo.com/_ylt=A2RRBpAyQGBqqgIAobvQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzUEdnRpZAMEc2VjA3Ny/RV=2/RE=1785902386/RO=10/RU=https://www.ncregister.com/cna/catholic-relief-asia-humanitarian/RK=2/RS=t2qzI8DmLAllGCkQGZhdWmnF3zs-",
-              "headline": "Catholic Relief Agencies Mobilize Across Asia as Storms Trigger Widespread...",
-              "body": "Catholic aid groups in Bangladesh and China are responding to severe midsummer storms, with Caritas ...",
-              "published_date": "2026-07-21T18:59:46+00:00",
-              "outlet": "National Catholic Register",
-              "image": "https://s.yimg.com/fz/api/res/1.2/oBZ6OCLMDNDfIqiCpPKIYw--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7dz0xNjA-/https://s.yimg.com/am/60d/3dbe02ee606cabb06c43a61026078fdc"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-25",
-          "summary": "As China enters its peak flood season, Tropical Storm Noul (Typhoon Kiyapo) is approaching, prompting warnings of heavy rain and severe flood risks. Extreme rainfall is expected to increase in frequency and intensity from late July to early August, particularly in northern China.",
-          "news": [
-            {
-              "news_id": "5c60447c56905285b911146a6bc57f31",
-              "url": "https://www.asiaone.com/china/extreme-rainfall-threatens-north-china-enters-peak-flood-season",
-              "headline": "Extreme rainfall threatens north as China enters peak flood season",
-              "body": "HONG KONG, July 22 (Reuters) - China has entered its peak flood control period, weather experts said, with extreme rainfall set to increase in frequency and intensity from late July to early August, with much of northern China set to experience 20 per cent to 50 per cent more rainfall than usual.Rising temperatures are shifting the rain belt westward and...",
-              "published_date": "2026-07-23",
-              "outlet": "AsiaOne",
-              "image": "https://www.bing.com/th?id=ONUT.i22zKOJQ9TYi_xRsGQeKzw"
-            },
-            {
-              "news_id": "0e30b541e7e357e7a4edd7c61046e001",
-              "url": "https://www.rappler.com/philippines/weather/typhoon-kiyapo-southwest-monsoon-update-pagasa-forecast-july-25-2026-11am/",
-              "headline": "Warnings lifted as Typhoon Kiyapo moves away, but monsoon rain persists",
-              "body": "Typhoon Kiyapo (Noul) is heading for China, while the southwest monsoon is still affecting parts of the Philippines on Saturday, July 25",
-              "published_date": "2026-07-25",
-              "outlet": "Rappler",
-              "image": ""
-            },
-            {
-              "news_id": "14d10665414c59d9a8b2647c7c21256c",
-              "url": "https://www.usnews.com/news/world/articles/2026-07-24/china-braces-for-heavy-rain-as-tropical-storm-noul-edges-closer",
-              "headline": "China Braces for Heavy Rain as Tropical Storm Noul Edges Closer",
-              "body": "US News is a recognized leader in college, grad school, hospital, mutual fund, and car rankings....",
-              "published_date": "2026-07-24T08:34:04+00:00",
-              "outlet": "US News & World Report",
-              "image": "https://s.yimg.com/bo/20be5525-ea76-5ae9-9997-acb367c8092d_1784867130380.jpg"
-            },
-            {
-              "news_id": "9f0fa315c33853828a04fe046566787e",
-              "url": "https://www.reuters.com/business/environment/china-braces-heavy-rain-tropical-storm-noul-edges-closer-2026-07-24/",
-              "headline": "China braces for heavy rain as tropical storm Noul edges closer",
-              "body": "China on Friday warned of heavy rain and severe flood risks as the third tropical cyclone this month tracked closer to the ...",
-              "published_date": "2026-07-24T08:34:04+00:00",
-              "outlet": "Reuters",
-              "image": "https://www.bing.com/th?id=ONUT.yCI6BiSoZtwcOlgaihfSRg"
-            }
-          ]
-        }
-      ],
-      "logs_total": 8
     },
     {
       "incident_id": "20260626-PH-EQ",
@@ -5201,6 +4299,65 @@
         }
       ],
       "logs_total": 2
+    },
+    {
+      "incident_id": "20260726-IR-CF",
+      "tree_id": "13763def03ab448898154124734fe728",
+      "canonical_name": "The Pentagon reported over 600 war casualties in an updated database, highlighting ongoing troop deaths and injuries related to the Iran war.",
+      "summary": "",
+      "country": "Iran",
+      "iso2": "IR",
+      "lat": 32.4,
+      "lon": 53.7,
+      "country_group": "B",
+      "region": "Asia",
+      "incident_type": "Conflict",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "LOW",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": null,
+      "event_status": null,
+      "extended_monitoring": true,
+      "disease_name": null,
+      "event_date": "2026-07-26",
+      "first_reported_date": "2026-07-26",
+      "last_updated_date": "2026-07-26",
+      "days_since_event": 1,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 0,
+        "gdacs": 0,
+        "ercc": 0,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [],
+      "physical": {
+        "max_magnitude": null,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Pentagon reports more than 600 Iran war casualties in quiet database update",
+          "url": "https://www.theguardian.com/us-news/2026/jul/26/pentagon-iran-war-troop-deaths-casualty-report",
+          "outlet": "manual",
+          "published_date": "2026-07-26"
+        }
+      ],
+      "news_total": 1,
+      "logs": [],
+      "logs_total": 0
     }
   ]
 }
