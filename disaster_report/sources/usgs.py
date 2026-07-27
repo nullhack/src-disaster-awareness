@@ -70,6 +70,70 @@ class USGSAdapter:
 
         return derive_repoll_keys(report)
 
+    def build_source_link(
+        self, raw_fields: dict[str, object], name: str
+    ) -> dict[str, str]:
+
+        depth = raw_fields.get("depth")
+        meta = f"{depth} km depth" if depth else ""
+        return {
+            "type": "USGS",
+            "label": str(raw_fields.get("title") or name),
+            "url": str(raw_fields.get("url") or ""),
+            "meta": meta,
+        }
+
+    def extract_physical(self, raw_fields: dict[str, object]) -> dict[str, object]:
+
+        result: dict[str, object] = {}
+        mag = _safe_float(raw_fields.get("mag"))
+        if mag is not None:
+            result["mag"] = mag
+        sig = _safe_int(raw_fields.get("sig"))
+        if sig is not None:
+            result["sig"] = sig
+        if raw_fields.get("tsunami"):
+            result["tsunami"] = True
+        coords = raw_fields.get("geometry", {})
+        if isinstance(coords, dict):
+            c = coords.get("coordinates")
+            if isinstance(c, list) and len(c) >= 2:
+                result["lon"] = float(c[0])
+                result["lat"] = float(c[1])
+        depth = _safe_float(raw_fields.get("depth"))
+        if depth is not None:
+            result["depth"] = depth
+        felt = _safe_int(raw_fields.get("felt"))
+        if felt is not None:
+            result["felt"] = felt
+        place = str(raw_fields.get("place") or "")
+        if place:
+            result["place"] = place
+        return result
+
+    def find_existing_incident(
+        self,
+        wh: Any,
+        report: SourceReport,
+        active_window_days: int = 7,
+    ) -> str | None:
+
+        my_ids = _parse_usgs_ids(report.raw_fields.get("ids"))
+        if not my_ids:
+            return None
+        store = wh
+        for ruuid, existing in store._reports.items():
+            if existing.get("source") != "USGS":
+                continue
+            existing_ids = _parse_usgs_ids(
+                existing.get("raw_fields", {}).get("ids")
+            )
+            if my_ids & existing_ids:
+                inc = store._report_incident.get(ruuid)
+                if inc:
+                    return inc
+        return None
+
 
 def _feature_to_report(
     feature: Any,
@@ -216,3 +280,40 @@ def _to_iso_date(epoch_ms: object) -> str:
         )
     except (OverflowError, OSError, ValueError):
         return ""
+
+
+def _parse_usgs_ids(value: object) -> set[str]:
+
+    if not isinstance(value, str) or not value:
+        return set()
+    return {x.strip() for x in value.split(",") if x.strip()}
+
+
+def _safe_float(value: object) -> float | None:
+
+    if value is None or isinstance(value, bool):
+        return None
+    if isinstance(value, int | float):
+        return float(value)
+    if isinstance(value, str):
+        try:
+            return float(value)
+        except ValueError:
+            return None
+    return None
+
+
+def _safe_int(value: object) -> int | None:
+
+    if value is None or isinstance(value, bool):
+        return None
+    if isinstance(value, int):
+        return value
+    if isinstance(value, float):
+        return int(value)
+    if isinstance(value, str):
+        try:
+            return int(value)
+        except ValueError:
+            return None
+    return None

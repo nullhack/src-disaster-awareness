@@ -43,6 +43,15 @@ _SIGNIFICANT_ALERTLEVELS = {"Orange", "Red"}
 _LOOKUP_RADIUS_KM = 200
 _OCEAN_FALLBACK_RADIUS_KM = 200
 _NOT_FOUND = "not found"
+_GDACS_EVENTTYPE_CODES = {
+    "Tropical Cyclone": "TC",
+    "Earthquake": "EQ",
+    "Flood": "FL",
+    "Forest Fire": "WF",
+    "Drought": "DR",
+    "Tsunami": "TS",
+    "Volcano": "VO",
+}
 
 _iso = Subdivisions()
 _cc = coco.CountryConverter()
@@ -100,6 +109,57 @@ class GDACSAdapter:
             f"{incident_type} latest {year}",
             f"{incident_type} {year}",
         ]
+
+    def build_source_link(
+        self, raw_fields: dict[str, object], name: str
+    ) -> dict[str, str]:
+
+        alertlevel = str(raw_fields.get("alertlevel") or "")
+        alert_label = f"{alertlevel} alert" if alertlevel else ""
+        severitytext = str(raw_fields.get("severitytext") or "")
+        label = (
+            f"{alert_label} · {severitytext or name}" if alert_label else name
+        )
+        return {
+            "type": "GDACS",
+            "label": label,
+            "url": _resolve_gdacs_link(raw_fields),
+            "meta": severitytext,
+        }
+
+    def extract_physical(self, raw_fields: dict[str, object]) -> dict[str, object]:
+
+        result: dict[str, object] = {}
+        alertlevel = str(raw_fields.get("alertlevel") or "")
+        if alertlevel:
+            result["alertlevel"] = alertlevel.capitalize()
+        lat = _maybe_float(raw_fields.get("geo_lat"))
+        if lat is not None:
+            result["lat"] = lat
+        lon = _maybe_float(raw_fields.get("geo_long"))
+        if lon is not None:
+            result["lon"] = lon
+        mag = _maybe_float(raw_fields.get("severity"))
+        if mag is not None:
+            result["mag"] = mag
+        place = str(raw_fields.get("country") or raw_fields.get("title") or "")
+        if place:
+            result["place"] = place
+        return result
+
+    def find_existing_incident(
+        self,
+        wh: Any,
+        report: SourceReport,
+        active_window_days: int = 7,
+    ) -> str | None:
+
+        country_codes = {p.country_code for p in report.places if p.country_code}
+        if not country_codes:
+            return None
+        return wh.find_active_incident_by_type_country(
+            report.incident_type, country_codes, active_window_days
+        )
 
 
 def _item_to_report(item: Any) -> SourceReport:
@@ -325,3 +385,41 @@ def _to_float(value: object) -> object:
         except ValueError:
             return value
     return value
+
+
+def _resolve_gdacs_link(raw_fields: dict[str, object]) -> str:
+
+    link = raw_fields.get("link", "")
+    if link:
+        return str(link)
+    url = raw_fields.get("url")
+    if isinstance(url, dict):
+        report = url.get("report", "")
+        if report:
+            return str(report)
+    link = str(raw_fields.get("link") or "")
+    eventid = str(raw_fields.get("eventid") or _extract_event_id(link) or "")
+    episodeid = str(raw_fields.get("episodeid") or "")
+    eventtype_raw = str(raw_fields.get("eventtype") or "")
+    incident_type = _TYPES.get(eventtype_raw, eventtype_raw)
+    eventtype_code = _GDACS_EVENTTYPE_CODES.get(incident_type, "")
+    if eventid and episodeid and eventtype_code:
+        return (
+            f"https://www.gdacs.org/report.aspx?eventid={eventid}"
+            f"&episodeid={episodeid}&eventtype={eventtype_code}"
+        )
+    return ""
+
+
+def _maybe_float(value: object) -> float | None:
+
+    if value is None or isinstance(value, bool):
+        return None
+    if isinstance(value, int | float):
+        return float(value)
+    if isinstance(value, str) and value.strip():
+        try:
+            return float(value)
+        except ValueError:
+            return None
+    return None
