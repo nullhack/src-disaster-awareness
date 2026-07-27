@@ -440,6 +440,105 @@ class TestActiveIncidents:
         assert store.active_incidents(WINDOW) == []
 
 
+class TestFindActiveIncidentByTypeCountry:
+    def test_matches_active_incident_by_type_and_country(self, tmp_path: Path) -> None:
+        store = ContentStore(tmp_path, clock=_clock)
+        rid = store.ingest_source_report(
+            _build_report(incident_type="Earthquake")
+        )
+        store.ingest_report_places(
+            rid, [ReportPlace(country_code="VE", subdivision="", locality="")]
+        )
+        nid = store.ingest_news_item(_build_news(published_date="2026-07-02T10:00:00Z"))
+        inc = _new_incident_id()
+        store.add_report_incident(rid, inc)
+        store.assign_news_to_incident(nid, inc)
+        found = store.find_active_incident_by_type_country(
+            "Earthquake", {"VE"}, WINDOW
+        )
+        assert found == inc
+
+    def test_returns_none_when_type_does_not_match(self, tmp_path: Path) -> None:
+        store = ContentStore(tmp_path, clock=_clock)
+        rid = store.ingest_source_report(
+            _build_report(incident_type="Earthquake")
+        )
+        store.ingest_report_places(
+            rid, [ReportPlace(country_code="VE", subdivision="", locality="")]
+        )
+        nid = store.ingest_news_item(_build_news(published_date="2026-07-02T10:00:00Z"))
+        inc = _new_incident_id()
+        store.add_report_incident(rid, inc)
+        store.assign_news_to_incident(nid, inc)
+        found = store.find_active_incident_by_type_country(
+            "Flood", {"VE"}, WINDOW
+        )
+        assert found is None
+
+    def test_returns_none_when_country_does_not_overlap(self, tmp_path: Path) -> None:
+        store = ContentStore(tmp_path, clock=_clock)
+        rid = store.ingest_source_report(
+            _build_report(incident_type="Earthquake")
+        )
+        store.ingest_report_places(
+            rid, [ReportPlace(country_code="VE", subdivision="", locality="")]
+        )
+        nid = store.ingest_news_item(_build_news(published_date="2026-07-02T10:00:00Z"))
+        inc = _new_incident_id()
+        store.add_report_incident(rid, inc)
+        store.assign_news_to_incident(nid, inc)
+        found = store.find_active_incident_by_type_country(
+            "Earthquake", {"JP"}, WINDOW
+        )
+        assert found is None
+
+    def test_returns_none_when_no_active_incidents(self, tmp_path: Path) -> None:
+        store = ContentStore(tmp_path, clock=_clock)
+        rid = store.ingest_source_report(
+            _build_report(incident_type="Earthquake")
+        )
+        store.ingest_report_places(
+            rid, [ReportPlace(country_code="VE", subdivision="", locality="")]
+        )
+        nid = store.ingest_news_item(_build_news(published_date="2025-01-01T00:00:00Z"))
+        inc = _new_incident_id()
+        store.add_report_incident(rid, inc)
+        store.assign_news_to_incident(nid, inc)
+        found = store.find_active_incident_by_type_country(
+            "Earthquake", {"VE"}, WINDOW
+        )
+        assert found is None
+
+    def test_returns_none_when_country_codes_empty(self, tmp_path: Path) -> None:
+        store = ContentStore(tmp_path, clock=_clock)
+        found = store.find_active_incident_by_type_country(
+            "Earthquake", set(), WINDOW
+        )
+        assert found is None
+
+    def test_matches_cross_source_via_country_overlap(self, tmp_path: Path) -> None:
+        store = ContentStore(tmp_path, clock=_clock)
+        rid_usgs = store.ingest_source_report(
+            _build_report(
+                source="USGS",
+                source_id="us6000ve",
+                incident_type="Earthquake",
+            )
+        )
+        store.ingest_report_places(
+            rid_usgs,
+            [ReportPlace(country_code="VE", subdivision="Yaracuy", locality="Yumare")],
+        )
+        nid = store.ingest_news_item(_build_news(published_date="2026-07-02T10:00:00Z"))
+        inc = _new_incident_id()
+        store.add_report_incident(rid_usgs, inc)
+        store.assign_news_to_incident(nid, inc)
+        found = store.find_active_incident_by_type_country(
+            "Earthquake", {"VE"}, WINDOW
+        )
+        assert found == inc
+
+
 class TestMergeIncidents:
     def test_merge_moves_reports(self, tmp_path: Path) -> None:
         store = ContentStore(tmp_path)
