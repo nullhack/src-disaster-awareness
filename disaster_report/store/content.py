@@ -562,6 +562,21 @@ class ContentStore:
         union.sort(key=lambda i: i.first_seen_at)
         return union
 
+    def find_active_incident_by_type_country(
+        self, incident_type: str, country_codes: set[str], window_days: int
+    ) -> str | None:
+
+        if not country_codes or not incident_type:
+            return None
+        for inc in self.active_incidents(window_days):
+            if inc.incident_type != incident_type:
+                continue
+            for ruuid in self._linked_reports(inc.incident_id):
+                for place in self.read_report_places(ruuid):
+                    if place.country_code in country_codes:
+                        return inc.incident_id
+        return None
+
     def read_logs_with_news(
         self, incident_id: str
     ) -> list[tuple[IncidentLog, list[NewsItem]]]:

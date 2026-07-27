@@ -141,11 +141,18 @@ def _match_usgs_event_family(wh: ContentStore, report: SourceReport) -> str | No
     return None
 
 
-def _find_existing_incident(wh: ContentStore, report: SourceReport) -> str | None:
+def _find_existing_incident(
+    wh: ContentStore, report: SourceReport, active_window_days: int = 7
+) -> str | None:
 
     if report.source == "USGS":
         return _match_usgs_event_family(wh, report)
-    return None
+    country_codes = {p.country_code for p in report.places if p.country_code}
+    if not country_codes:
+        return None
+    return cast(Any, wh).find_active_incident_by_type_country(
+        report.incident_type, country_codes, active_window_days
+    )
 
 
 def _commit_news_for_report(
@@ -154,11 +161,12 @@ def _commit_news_for_report(
     report: SourceReport,
     report_id: str,
     selected_news: list[NewsItem],
+    active_window_days: int = 7,
 ) -> None:
 
     existing_report_incidents = wh.read_incident_ids_for_report(report_id)
     pre_birth = (
-        _find_existing_incident(wh, report)
+        _find_existing_incident(wh, report, active_window_days)
         if not existing_report_incidents
         else None
     )
@@ -248,6 +256,7 @@ def _search_one_report(
     source_id: str | None,
     news_timelimit: str,
     iso_now: str,
+    active_window_days: int = 7,
 ) -> None:
 
     key = f"{report.source}:{report.source_id}"
@@ -277,7 +286,7 @@ def _search_one_report(
         logger.info("search: %s:%s — %d relevant after filter", report.source, report.source_id, len(result.selected_news))
         if result.selected_news:
             enriched = _enrich_news_items(result.selected_news)
-            _commit_news_for_report(wh, adapter, report, report_id, enriched)
+            _commit_news_for_report(wh, adapter, report, report_id, enriched, active_window_days)
     wh.mark_report_searched(report.source, report.source_id, iso_now)
     searched_keys.add(key)
 
@@ -365,6 +374,7 @@ def search_news(
                 source_id,
                 news_timelimit,
                 iso_now,
+                active_window_days,
             )
         logger.info("search: per-report mode done")
         return
