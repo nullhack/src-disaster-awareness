@@ -766,7 +766,7 @@ function monitoringRequestUrl(i) {
     title: `[Monitoring]: ${treeId.slice(0, 8)} — ${i.canonical_name || ""}`.slice(0, 80),
   });
   params.set("incident-id", treeId);
-  return `${repo}/issues/new?${params.toString()}`;
+  return `${REPO_URL}/issues/new?${params.toString()}`;
 }
 
 function dataBranchUrl(i) {
