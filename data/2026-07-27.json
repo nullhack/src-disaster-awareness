@@ -1,26 +1,26 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-07-27",
-  "generated_at": "2026-07-27T14:57:22Z",
+  "generated_at": "2026-07-27T15:46:32Z",
   "as_of": "2026-07-27",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
     "reportable_total": 21,
-    "new_today": 7,
+    "new_today": 9,
     "critical": 6,
-    "high": 5,
+    "high": 6,
     "medium": 9,
-    "low": 1,
+    "low": 0,
     "disease_outbreaks": 5,
     "countries_affected": 15,
-    "news_total": 1090,
+    "news_total": 1128,
     "max_magnitude": 7.5,
     "by_severity": {
       "CRITICAL": 6,
-      "HIGH": 5,
+      "HIGH": 6,
       "MEDIUM": 9,
-      "LOW": 1
+      "LOW": 0
     },
     "by_type": {
       "Disease": 5,
@@ -42,15 +42,6 @@
     }
   },
   "by_country": [
-    {
-      "country": "Iran",
-      "count": 1,
-      "max_sev_rank": 1,
-      "iso2": "IR",
-      "region": "Asia",
-      "country_group": "B",
-      "max_severity": "LOW"
-    },
     {
       "country": "",
       "count": 4,
@@ -148,6 +139,15 @@
       "iso2": "PE",
       "region": "Americas",
       "country_group": "C",
+      "max_severity": "HIGH"
+    },
+    {
+      "country": "Iran",
+      "count": 1,
+      "max_sev_rank": 3,
+      "iso2": "IR",
+      "region": "Asia",
+      "country_group": "B",
       "max_severity": "HIGH"
     },
     {
@@ -2568,7 +2568,7 @@
       "incident_id": "20260423-BD-DI",
       "tree_id": "5ea0df2320b350ab8c9470cf5484696c",
       "canonical_name": "Measles Chattogram, Bangladesh 2026-04-23",
-      "summary": "Two more children died from measles in the last 24 hours, raising the death toll since March 15 to over 800. During the same period, 848 new suspected cases were reported, bringing total confirmed cases to 15,007 and suspected cases to 121,200.",
+      "summary": "In the past 24 hours, four to five more children have died from measles in Bangladesh, raising the death toll since March 15 to 820. Nearly 1,000 new suspected cases were reported, pushing total suspected cases to over 123,700 and confirmed cases to 15,555. Hospitals continue to be overwhelmed as the outbreak persists, with many unvaccinated patients seeking care.",
       "country": "Bangladesh",
       "iso2": "BD",
       "lat": 23.7,
@@ -2598,7 +2598,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 43
+        "news": 44
       },
       "source_links": [
         {
@@ -2788,11 +2788,15 @@
           "published_date": "2026-07-26T14:49:19+00:00"
         },
         {
+          "headline": "बांग्लादेश में खसरे का प्रकोप जारी, चार और बच्चों की मौत; मृतकों की संख्या बढ़कर 820 हुई",
+          "published_date": "2026-07-27"
+        },
+        {
           "headline": "Five die with measles symptoms, 992 suspected cases recorded in 24hrs",
           "published_date": "2026-07-27T14:49:19+00:00"
         }
       ],
-      "news_total": 43,
+      "news_total": 44,
       "logs": [
         {
           "log_date": "2026-07-09",
@@ -2806,93 +2810,6 @@
               "published_date": "2026-07-18",
               "outlet": "BBC on MSN",
               "image": "https://www.bing.com/th?id=ONUT.cTiIMKY_vPvWKhXfbiwRqg"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-18",
-          "summary": "One more child died from measles in Bangladesh, raising the death toll to 780, with 873 new suspected cases reported in 24 hours. Experts urge closing vaccination gaps to control the outbreak. Meanwhile, India reports 26,627 measles cases in the first half of 2026, making it the second-highest globally after Bangladesh.",
-          "news": [
-            {
-              "news_id": "d2ab2a551d275d9c8508e2a4fd6c880c",
-              "url": "https://www.daily-sun.com/health/886893/death-toll-from-measles-symptoms-reaches-780-with-one-more-casualty",
-              "headline": "Death toll from measles, symptoms reaches 780 with one more casualty",
-              "body": "Bangladesh faces a public health crisis as measles deaths rise to 780 this year, with 140 new cases reported. DGHS raises ...",
-              "published_date": "2026-07-18T08:50:06+00:00",
-              "outlet": "Daily Sun",
-              "image": "https://www.bing.com/th?id=ONUT.ndI_uFXoHGESHC5QipRdEQ"
-            },
-            {
-              "news_id": "d817c03548f75eb8ac1147c5cf812370",
-              "url": "https://www.thedailystar.net/health/disease/news/one-more-dies-suspected-measles-combined-toll-reaches-780-4226171",
-              "headline": "One more dies with suspected measles, combined toll reaches 780",
-              "body": "One patient died with symptoms consistent with measles in 24 hours until 8:00am today, bringing Bangladesh's combined tally ...",
-              "published_date": "2026-07-17T08:50:02+00:00",
-              "outlet": "The Daily Star",
-              "image": "https://www.bing.com/th?id=ONUT.VqQ88ntrmLt9sjIPvlqN4A"
-            },
-            {
-              "news_id": "b56a230ead9c529887cf77d4c57b9372",
-              "url": "https://www.msn.com/en-xl/asia/bangladesh/8-more-children-die-with-measles-like-symptoms/ar-AA281Yg0?ocid=BingNewsVerp",
-              "headline": "8 More Children Die With Measles Like Symptoms",
-              "body": ", July 16 -- like symptoms in the 24 hours until 8:00am on Thursday, bringing Bangladesh's combined tally of confirmed and ...",
-              "published_date": "2026-07-18",
-              "outlet": "United News of Bangladesh (UNB) on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.s9Rjcg1shI5-l7qQgXYIbA"
-            },
-            {
-              "news_id": "9fc47d31a6ab54dbb98e72634c386d7f",
-              "url": "https://www.tbsnews.net/bangladesh/health/measles-death-toll-reaches-780-one-more-dies-24hrs-1490791",
-              "headline": "Measles: Death toll reaches 780 as one more dies in 24hrs",
-              "body": "A total of 873 new suspected measles cases were reported during the 24-hour period, bringing the cumulative number of ...",
-              "published_date": "2026-07-18T08:50:02+00:00",
-              "outlet": "The Business Standard",
-              "image": "https://www.bing.com/th?id=ONUT.zdvTGmDfd1o8-2qT-viyGg"
-            },
-            {
-              "news_id": "4b0e83a474355d10909f9d1c0a2da761",
-              "url": "https://www.dhakatribune.com/bangladesh/health/415373/measles-outbreak-death-toll-reaches-780-as-one",
-              "headline": "Measles outbreak: Death toll reaches 780 as one dies in 24 hours",
-              "body": "One more child has died from measles-like symptoms in the 24 hours leading up to 8:00am on Friday, raising the overall death ...",
-              "published_date": "2026-07-18T08:50:02+00:00",
-              "outlet": "Dhaka Tribune",
-              "image": "https://www.bing.com/th?id=ONUT.HQYsCKKYVKLbsiUBeoACHQ"
-            },
-            {
-              "news_id": "9b5483add51d5294b6423042550932ea",
-              "url": "https://www.msn.com/en-us/health/other/india-sees-sharp-rise-in-measles-cases-as-silent-surge-raises-questions-on-elimination-drive/ar-AA285OdP?ocid=BingNewsVerp",
-              "headline": "India Sees Sharp Rise In Measles Cases As Silent Surge Raises Questions On Elimination Drive",
-              "body": "India has reported 26,627 measles cases in the first half of 2026, the world's second-highest tally after Bangladesh. The rise has sharpened questions over surveillance transparency and the pace of ...",
-              "published_date": "2026-07-18",
-              "outlet": "India Today on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "fde96f5c8a35583d8f5a0d3110916f34",
-              "url": "https://www.bbc.co.uk/programmes/p0nzf9d8",
-              "headline": "What's behind a severe measles outbreak in Bangladesh?",
-              "body": "Azadeh Moshiri sent this dispatch from a hospital north of the capital, Dhaka.",
-              "published_date": "2026-07-16T08:50:06+00:00",
-              "outlet": "BBC",
-              "image": "https://www.bing.com/th?id=ONUT.IMAzu5HAluTLE1fEXDocUg"
-            },
-            {
-              "news_id": "9c4fc87bb04e5194a8ceea6a93cbf546",
-              "url": "https://www.tbsnews.net/bangladesh/health/experts-urge-closing-vaccine-gaps-measles-deaths-continue-despite-nationwide",
-              "headline": "Experts urge closing vaccine gaps as measles deaths continue despite nationwide campaign",
-              "body": "Experts warn that the disease cannot be brought under control without closing vaccination gaps and strengthening treatment at the community level ...",
-              "published_date": "2026-07-18T08:50:02+00:00",
-              "outlet": "The Business Standard",
-              "image": ""
-            },
-            {
-              "news_id": "471f82ba0d6553c790b5cff4f77130cf",
-              "url": "https://www.firstpost.com/health/global-measles-outbreaks-india-second-highest-cases-2026-14032107.html",
-              "headline": "Measles outbreak: India reporting over 26,000 cases",
-              "body": "Measles is making a worrying comeback across the globe, with outbreaks now reported in every WHO region. New surveillance ...",
-              "published_date": "2026-07-18T08:50:02+00:00",
-              "outlet": "Firstpost",
-              "image": "https://www.bing.com/th?id=ONUT.zYgqsaNr7YwbT9ucgnV3zw"
             }
           ]
         },
@@ -3015,9 +2932,42 @@
               "image": "https://www.bing.com/th?id=ONUT.rAHfvinIZjMj5imLbzK7_w"
             }
           ]
+        },
+        {
+          "log_date": "2026-07-27",
+          "summary": "In the past 24 hours, four to five more children have died from measles in Bangladesh, raising the death toll since March 15 to 820. Nearly 1,000 new suspected cases were reported, pushing total suspected cases to over 123,700 and confirmed cases to 15,555. Hospitals continue to be overwhelmed as the outbreak persists, with many unvaccinated patients seeking care.",
+          "news": [
+            {
+              "news_id": "b75659f11e345d9aa0328833a9f7b077",
+              "url": "https://www.msn.com/hi-in/news/other/ब-ंग्ल-देश-में-खसरे-क-प्रक-प-ज-र-च-र-और-बच्च-ं-क-म-त-मृतक-ं-क-संख्य-बढ़कर-820-हुई/ar-AA28J0OH?ocid=BingNewsVerp",
+              "headline": "बांग्लादेश में खसरे का प्रकोप जारी, चार और बच्चों की मौत; मृतकों की संख्या बढ़कर 820 हुई",
+              "body": "पिछले 24 घंटों में देशभर में 990 नए संदिग्ध खसरे के मामले सामने आए हैं, जिससे कुल संदिग्ध मामलों की संख्या बढ़कर 1,23,753 हो ...",
+              "published_date": "2026-07-27",
+              "outlet": "India.com on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.b8e5765d7e8fa591a706e4c714a6a105"
+            },
+            {
+              "news_id": "da386ece1fba5d8aa5931688c71037d8",
+              "url": "https://www.daily-sun.com/bangladesh/889000/five-die-with-measles-symptoms-992-suspected-cases-recorded-in-24hrs",
+              "headline": "Five die with measles symptoms, 992 suspected cases recorded in 24hrs",
+              "body": "Since 15 March, the total number of confirmed measles cases has stood at 15,555, while suspected cases have reached ...",
+              "published_date": "2026-07-27T14:49:19+00:00",
+              "outlet": "Daily Sun",
+              "image": "https://www.bing.com/th?id=ONUT.IrniBTjXCqzieY_I_ROGEA"
+            },
+            {
+              "news_id": "e2a4bf2aea4c569787a8cb8390a38112",
+              "url": "https://www.thehansindia.com/news/international/measles-outbreak-in-bangladesh-claims-four-more-lives-death-toll-rises-to-820-1101632",
+              "headline": "Measles outbreak in Bangladesh claims four more lives; death toll rises to 820",
+              "body": "As Bangladesh’s measles outbreak reaches a critical toll of 820 deaths, hospitals face an influx of unvaccinated patients.",
+              "published_date": "2026-07-26T14:49:19+00:00",
+              "outlet": "The Hans India",
+              "image": "https://www.bing.com/th?id=ONUT.-posJAkPkbk892Q5h96r7Q"
+            }
+          ]
         }
       ],
-      "logs_total": 8
+      "logs_total": 9
     },
     {
       "incident_id": "20260606-CN-FL",
@@ -3472,7 +3422,7 @@
       "incident_id": "20260624-VE-EQ",
       "tree_id": "387baafc1c6b5a0391293c7f917b5333",
       "canonical_name": "Earthquake M7.2 San Felipe, Venezuela 2026-06-24",
-      "summary": "As of July 26-27, new reporting highlights a deepening crisis of confidence in Venezuela's Misión Vivienda housing program, which collapsed in the quakes despite promises of safe homes for the poor. Relief efforts continue across South Florida and locally in La Guaira, where search and debris removal operations persist one month after the disaster. NASA-ISRO satellite data reaffirms that the ground shifted up to 60 cm in affected areas.",
+      "summary": "As of July 26-27, new reporting highlights a deepening crisis of confidence in Venezuela's Misión Vivienda housing program, which collapsed in the quakes despite promises of safe homes for the poor. Relief efforts continue across South Florida and locally in La Guaira, where search and debris removal operations persist one month after the disaster. NASA-ISRO satellite data reaffirms that the ground shifted up to 60 cm in affected areas.\nA poodle was pulled alive from the rubble 29 days after the twin earthquakes, heralded as a miracle. In other developments, opinion pieces highlight Israel's humanitarian response, and a Venezuelan expatriate traveled from Maine to Caracas to assist with earthquake relief.",
       "country": "Venezuela",
       "iso2": "VE",
       "lat": 10.453,
@@ -3502,7 +3452,7 @@
         "gdacs": 1,
         "ercc": 1,
         "healthmap": 0,
-        "news": 225
+        "news": 229
       },
       "source_links": [
         {
@@ -4358,6 +4308,10 @@
           "published_date": "2026-07-24"
         },
         {
+          "headline": "Midcoast man from Venezuela travels to Caracas to assist with earthquake relief",
+          "published_date": "2026-07-24T15:11:07+00:00"
+        },
+        {
           "headline": "The aftermath of devastation to Venezuela",
           "published_date": "2026-07-24T18:02:45+00:00"
         },
@@ -4434,6 +4388,18 @@
           "published_date": "2026-07-26"
         },
         {
+          "headline": "Israel has exported its humanity to help Venezuela | Opinion",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Israel has exported its humanity to help Venezuela | Opinion",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Dog pulled alive from rubble of Venezuela earthquakes after being trapped for 29 days: ‘A miracle’",
+          "published_date": "2026-07-27"
+        },
+        {
           "headline": "In Venezuela, trust crumbled with the buildings",
           "published_date": "2026-07-27"
         },
@@ -4442,7 +4408,7 @@
           "published_date": "2026-07-27"
         }
       ],
-      "news_total": 225,
+      "news_total": 229,
       "logs": [
         {
           "log_date": "2026-06-28",
@@ -4779,8 +4745,26 @@
         },
         {
           "log_date": "2026-07-27",
-          "summary": "As of July 26-27, new reporting highlights a deepening crisis of confidence in Venezuela's Misión Vivienda housing program, which collapsed in the quakes despite promises of safe homes for the poor. Relief efforts continue across South Florida and locally in La Guaira, where search and debris removal operations persist one month after the disaster. NASA-ISRO satellite data reaffirms that the ground shifted up to 60 cm in affected areas.",
+          "summary": "As of July 26-27, new reporting highlights a deepening crisis of confidence in Venezuela's Misión Vivienda housing program, which collapsed in the quakes despite promises of safe homes for the poor. Relief efforts continue across South Florida and locally in La Guaira, where search and debris removal operations persist one month after the disaster. NASA-ISRO satellite data reaffirms that the ground shifted up to 60 cm in affected areas.\nA poodle was pulled alive from the rubble 29 days after the twin earthquakes, heralded as a miracle. In other developments, opinion pieces highlight Israel's humanitarian response, and a Venezuelan expatriate traveled from Maine to Caracas to assist with earthquake relief.",
           "news": [
+            {
+              "news_id": "28d62a86934b598db57d4b987d84e451",
+              "url": "https://www.msn.com/en-us/news/world/israel-has-exported-its-humanity-to-help-venezuela-opinion/ar-AA28N6Yy?ocid=BingNewsVerp",
+              "headline": "Israel has exported its humanity to help Venezuela | Opinion",
+              "body": "As we have seen in its response to a deadly earthquake in Venezuela, Israel can still share its greatest export — its ...",
+              "published_date": "2026-07-27",
+              "outlet": "The Record Bergen County on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.wnPGJWbcruFJSBRT56m9hg"
+            },
+            {
+              "news_id": "d06d81931cb653c1ad45f013ee9d4735",
+              "url": "https://www.mainepublic.org/world/2026-07-27/midcoast-man-from-venezuela-travels-to-caracas-to-assist-with-earthquake-relief",
+              "headline": "Midcoast man from Venezuela travels to Caracas to assist with earthquake relief",
+              "body": "Danny Lobo Leon said he was able to raise and distribute thousands of dollars for direct food and medical needs after deadly ...",
+              "published_date": "2026-07-24T15:11:07+00:00",
+              "outlet": "Maine Public",
+              "image": "https://www.bing.com/th?id=ONUT.XBlv1TSCxMA0jwW5VVMpew"
+            },
             {
               "news_id": "138ff1cc30695cb1bd306c1c499e8af1",
               "url": "https://www.hjnews.com/world/venezuela-earthquake/image_3d21810f-36a6-58cf-bba7-239d395d090a.html",
@@ -4789,6 +4773,24 @@
               "published_date": "2026-07-26",
               "outlet": "The Herald Journal",
               "image": "https://s.yimg.com/bo/4e3f47df-1dbc-53f3-b7dd-94e90313af7c_1785126564660.jpg"
+            },
+            {
+              "news_id": "d01004b059f65e908b2217eb90ae2738",
+              "url": "https://www.northjersey.com/story/opinion/2026/07/27/venezuela-earthquake-israeli-aid/90930583007/",
+              "headline": "Israel has exported its humanity to help Venezuela | Opinion",
+              "body": "As we have seen in its response to a deadly earthquake in Venezuela, Israel can still share its greatest export — its humanity.",
+              "published_date": "2026-07-27",
+              "outlet": "The Record",
+              "image": "https://s.yimg.com/bo/5609aa9e-f446-5d5b-a3a6-cb7540cd20f8_1785160336442.jpg"
+            },
+            {
+              "news_id": "0e4db606dc6e5132aca1464626f1c203",
+              "url": "https://nypost.com/2026/07/27/world-news/miracle-as-dog-pulled-alive-after-29-days-in-rubble-of-building-that-collapsed-in-venezuela-earthquake/",
+              "headline": "Dog pulled alive from rubble of Venezuela earthquakes after being trapped for 29 days: ‘A miracle’",
+              "body": "A poodle trapped for 29 days in rubble after two earthquakes with a magnitude of more than 7.0 hit Venezuela just 39 seconds apart has remarkably been rescued.",
+              "published_date": "2026-07-27",
+              "outlet": "New York Post",
+              "image": "https://www.bing.com/th?id=ONUT.qGRqE_ScUUqQp3z9G7zreQ"
             },
             {
               "news_id": "11c46fbb7b4a57a1a26fb79c74b5aac8",
@@ -4874,7 +4876,7 @@
         "gdacs": 1,
         "ercc": 0,
         "healthmap": 0,
-        "news": 22
+        "news": 23
       },
       "source_links": [
         {
@@ -4982,9 +4984,13 @@
         {
           "headline": "Nissan extends support to Mindanao earthquake-affected communities - BusinessWorld Online",
           "published_date": "2026-07-25"
+        },
+        {
+          "headline": "Nissan extends support to Mindanao earthquake-affected communities - BusinessWorld Online",
+          "published_date": "2026-07-25"
         }
       ],
-      "news_total": 22,
+      "news_total": 23,
       "logs": [
         {
           "log_date": "2026-07-08",
@@ -6398,16 +6404,16 @@
       "first_reported_date": "2026-07-09",
       "last_updated_date": "2026-07-27",
       "days_since_event": 18,
-      "source_count": 6,
+      "source_count": 7,
       "should_report": true,
       "search_keys": [],
       "sources": {
         "who_don": 0,
         "usgs": 0,
-        "gdacs": 2,
+        "gdacs": 3,
         "ercc": 4,
         "healthmap": 0,
-        "news": 199
+        "news": 201
       },
       "source_links": [
         {
@@ -6426,6 +6432,12 @@
           "type": "ERCC",
           "label": "ECHO Daily Map of 14 July 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5726",
+          "meta": ""
+        },
+        {
+          "type": "GDACS",
+          "label": "Green alert · Forest Fire Le Kef, Tunisia 2026-07-21",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=WF&eventid=1029649",
           "meta": ""
         },
         {
@@ -7223,6 +7235,10 @@
           "published_date": "2026-07-27"
         },
         {
+          "headline": "Rescue operations continue to combat two forest fires in Kef",
+          "published_date": "2026-07-27"
+        },
+        {
           "headline": "Europe wildfire in pictures: Gigantic fire cloud engulfing France, Spain regions",
           "published_date": "2026-07-27"
         },
@@ -7243,6 +7259,10 @@
           "published_date": "2026-07-27"
         },
         {
+          "headline": "Firefighters continue to combat two major wildfires in Kef",
+          "published_date": "2026-07-27"
+        },
+        {
           "headline": "Spain and France wildfires force more than 300,000 to flee as Macron calls crisis meeting",
           "published_date": "2026-07-27"
         },
@@ -7255,7 +7275,7 @@
           "published_date": "2026-07-27T13:22:54+00:00"
         }
       ],
-      "news_total": 199,
+      "news_total": 201,
       "logs": [
         {
           "log_date": "2026-07-15",
@@ -9974,7 +9994,7 @@
       "incident_id": "20260715-UA-CF",
       "tree_id": "f22292f8c3ff448a920c3b1fe41d3aa0",
       "canonical_name": "Conflict Ukraine 2026-07-15",
-      "summary": "Iran formally warned Ukraine of retaliation after a deadly Ukrainian strike on an Iranian commercial vessel in the Caspian Sea. India issued a travel advisory following a vessel strike at Odesa port that affected Indian nationals. In Russia, reports indicate Putin may be preparing to mobilize up to 500,000 additional troops amid falling public opinion, while Ukraine's drone strikes continued targeting Russia's Wildberries online marketplace to disrupt the economy. President Zelenskyy is scheduled to visit Britain for talks with Prime Minister Andy Burnham.",
+      "summary": "Iran formally warned Ukraine of retaliation after a deadly Ukrainian strike on an Iranian commercial vessel in the Caspian Sea. India issued a travel advisory following a vessel strike at Odesa port that affected Indian nationals. In Russia, reports indicate Putin may be preparing to mobilize up to 500,000 additional troops amid falling public opinion, while Ukraine's drone strikes continued targeting Russia's Wildberries online marketplace to disrupt the economy. President Zelenskyy is scheduled to visit Britain for talks with Prime Minister Andy Burnham.\nA missile strike in Kharkiv killed 1 and injured 16. President Zelenskyy visited Britain to meet with new Prime Minister Andy Burnham, who signaled continued support for Ukraine.",
       "country": "Ukraine",
       "iso2": "UA",
       "lat": 48.9,
@@ -10004,7 +10024,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 90
+        "news": 100
       },
       "source_links": [
         {
@@ -10354,6 +10374,10 @@
           "published_date": "2026-07-26"
         },
         {
+          "headline": "Putin Melts Down in Front of Stunned Sailors After Canceling Parade",
+          "published_date": "2026-07-26"
+        },
+        {
           "headline": "Ukraine war latest: Deaths in Ukraine and Russia after airstrikes - as drone shot down over NATO airspace",
           "published_date": "2026-07-26T09:06:30+00:00"
         },
@@ -10366,6 +10390,34 @@
           "published_date": "2026-07-26T13:51:56+00:00"
         },
         {
+          "headline": "Missile strike in Kharkiv kills 1, injures 16 ahead of Zelenskyy-Trump meeting",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Zelenskyy visits Britain as new PM signals more support for Kyiv",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "The new shape of Ukraine’s war",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "India summons Ukraine's envoy over death of seafarer in Black Sea",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Why is Russia attacking ships in Odessa? | Explained",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "How Russia-Ukraine war spreading to Caspian Sea threatens key India-linked corridor",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "India issues Black Sea advisory after deadly strikes off Ukraine",
+          "published_date": "2026-07-27"
+        },
+        {
           "headline": "How Zelensky made a rival",
           "published_date": "2026-07-27"
         },
@@ -10374,7 +10426,15 @@
           "published_date": "2026-07-27"
         },
         {
+          "headline": "Japan rethinks defense strategy as Ukraine drone war redefines deterrence - The Mainichi",
+          "published_date": "2026-07-27"
+        },
+        {
           "headline": "Putin preparing to mobilize 500,000 Russians as public opinion plummets",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "India Summons Ukrainian Ambassador After Attacks on Merchant Vessels Carrying Indian Crew | Outlook India",
           "published_date": "2026-07-27"
         },
         {
@@ -10386,7 +10446,7 @@
           "published_date": "2026-07-27T08:35:19+00:00"
         }
       ],
-      "news_total": 90,
+      "news_total": 100,
       "logs": [
         {
           "log_date": "2026-07-24",
@@ -11164,8 +11224,17 @@
         },
         {
           "log_date": "2026-07-27",
-          "summary": "Iran formally warned Ukraine of retaliation after a deadly Ukrainian strike on an Iranian commercial vessel in the Caspian Sea. India issued a travel advisory following a vessel strike at Odesa port that affected Indian nationals. In Russia, reports indicate Putin may be preparing to mobilize up to 500,000 additional troops amid falling public opinion, while Ukraine's drone strikes continued targeting Russia's Wildberries online marketplace to disrupt the economy. President Zelenskyy is scheduled to visit Britain for talks with Prime Minister Andy Burnham.",
+          "summary": "Iran formally warned Ukraine of retaliation after a deadly Ukrainian strike on an Iranian commercial vessel in the Caspian Sea. India issued a travel advisory following a vessel strike at Odesa port that affected Indian nationals. In Russia, reports indicate Putin may be preparing to mobilize up to 500,000 additional troops amid falling public opinion, while Ukraine's drone strikes continued targeting Russia's Wildberries online marketplace to disrupt the economy. President Zelenskyy is scheduled to visit Britain for talks with Prime Minister Andy Burnham.\nA missile strike in Kharkiv killed 1 and injured 16. President Zelenskyy visited Britain to meet with new Prime Minister Andy Burnham, who signaled continued support for Ukraine.",
           "news": [
+            {
+              "news_id": "9930170d66b651eba8e7e1a537b3484d",
+              "url": "https://cryptobriefing.com/missile-strike-in-kharkiv-kills-1-injures-16-ahead-of-zelenskyy-trump-meeting/",
+              "headline": "Missile strike in Kharkiv kills 1, injures 16 ahead of Zelenskyy-Trump meeting",
+              "body": "Missile strike in Kharkiv kills 1 and injures 16. Ceasefire by December 31, 2026 at 35.5% YES.",
+              "published_date": "2026-07-27",
+              "outlet": "Crypto Briefing",
+              "image": "https://www.bing.com/th?id=ONUT.dAO6f_aBcioOVwt1WYLkdA"
+            },
             {
               "news_id": "f8c7cdb8f7f05f0d84821382a5af4ee3",
               "url": "https://businessmirror.com.ph/2026/07/27/collateral-commerce-ukraine-brings-the-war-to-russias-online-economy/",
@@ -11176,6 +11245,33 @@
               "image": "https://www.bing.com/th?id=ONUT.t4L-2erIrb0PuNtcLfxBUA"
             },
             {
+              "news_id": "baa26ae6f92f5d01af7798c7e84c29db",
+              "url": "https://www.bostonherald.com/2026/07/27/britain-andy-burnham-volodymyr-zelenskyy/",
+              "headline": "Zelenskyy visits Britain as new PM signals more support for Kyiv",
+              "body": "Zelenskyy’s trip is the first by a foreign leader since Burnham took office a week ago.",
+              "published_date": "2026-07-27",
+              "outlet": "Boston Herald",
+              "image": "https://www.bing.com/th?id=ONUT.grKEvWMGx1HRqFkefsTAsA"
+            },
+            {
+              "news_id": "b2ce7173a66f566fa225cf34a62ce283",
+              "url": "https://www.irishtimes.com/world/europe/2026/07/27/the-new-shape-of-ukraines-war/",
+              "headline": "The new shape of Ukraine’s war",
+              "body": "The conflict with Russia has entered a new phase, one defined less by territorial gains than by intense technological competition",
+              "published_date": "2026-07-27",
+              "outlet": "The Irish Times",
+              "image": "https://www.bing.com/th?id=ONUT.Z4Y9h3PP2EI92ZTtCHXP1w"
+            },
+            {
+              "news_id": "96e9a893374c5c0e8e2746e458a07810",
+              "url": "https://www.msn.com/en-in/news/India/india-summons-ukraines-envoy-over-death-of-seafarer-in-black-sea/ar-AA28MBJq?ocid=BingNewsVerp",
+              "headline": "India summons Ukraine's envoy over death of seafarer in Black Sea",
+              "body": "India's MEA summoned Ukraine's Ambassador over attacks on commercial vessels in the Black Sea that killed Indian seafarers.",
+              "published_date": "2026-07-27",
+              "outlet": "Newsable Asianet News on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.mxXYSDM19f9jZN2RmBjKBg"
+            },
+            {
               "news_id": "7ea35e6e9e40581b868f89993bf5fba7",
               "url": "https://www.thequint.com/news/breaking-news/india-issues-advisory-after-odesa-vessel-attack",
               "headline": "India Issues Advisory After Vessel With Indians Hit At Odesa Port In Ukraine",
@@ -11183,6 +11279,33 @@
               "published_date": "2026-07-26",
               "outlet": "The Quint",
               "image": ""
+            },
+            {
+              "news_id": "81e93a03e5605f9ca037ef183a8f9d5f",
+              "url": "https://www.thehindu.com/news/international/why-is-russia-attacking-ships-in-odessa-explained/article71271599.ece",
+              "headline": "Why is Russia attacking ships in Odessa? | Explained",
+              "body": "Explore the escalating attacks on merchant ships in Ukraine by Russia and the implications for Indian seafarers amidst the conflict.",
+              "published_date": "2026-07-27",
+              "outlet": "The Hindu",
+              "image": "https://www.bing.com/th?id=ONUT.x-SlUaSXnUbBcSKGw2vs2A"
+            },
+            {
+              "news_id": "8586c6178a9f573e8bba96a7db718e70",
+              "url": "https://www.indiatoday.in/world/story/russia-ukraine-war-spreading-to-caspian-sea-threatens-key-india-linked-corridor-2957184-2026-07-27",
+              "headline": "How Russia-Ukraine war spreading to Caspian Sea threatens key India-linked corridor",
+              "body": "The Caspian Sea is the maritime link of the Mumbai-Moscow North-South Corridor.",
+              "published_date": "2026-07-27",
+              "outlet": "India Today",
+              "image": ""
+            },
+            {
+              "news_id": "ba9832295cfe5f859f187375dee0ecae",
+              "url": "https://www.msn.com/en-us/news/other/india-issues-black-sea-advisory-after-deadly-strikes-off-ukraine/ar-AA28LUpl?ocid=BingNewsVerp",
+              "headline": "India issues Black Sea advisory after deadly strikes off Ukraine",
+              "body": "India issues Black Sea advisory after deadly strikes off Ukraine, calling maritime corridor ‘highly volatile’ - Five Indians ...",
+              "published_date": "2026-07-27",
+              "outlet": "The Independent on MSN",
+              "image": "https://www.bing.com/th?id=ONUT._qUO6PDvWhYO0rbPw21-Ug"
             },
             {
               "news_id": "90dcff9950e357aab016bb0f63eeaf5a",
@@ -11212,6 +11335,24 @@
               "image": "https://media.zenfs.com/en/al_jazeera_289/92c17074851d354245ed5e6b585f7185"
             },
             {
+              "news_id": "2160c56572875e4d9be8117f4906f774",
+              "url": "https://www.thedailybeast.com/putin-melts-down-in-front-of-stunned-sailors-after-canceling-parade/",
+              "headline": "Putin Melts Down in Front of Stunned Sailors After Canceling Parade",
+              "body": "The Russian leader’s show of strength comes as his carefully managed image increasingly crumbles.",
+              "published_date": "2026-07-26",
+              "outlet": "The Daily Beast",
+              "image": "https://s.yimg.com/bo/e70e7bd5-7dd5-53fb-b868-e78194e7c791_1785099870800.jpg"
+            },
+            {
+              "news_id": "8dae252d404f575d8d9e19e4f20c4ec9",
+              "url": "https://mainichi.jp/english/articles/20260723/p2g/00m/0na/016000c",
+              "headline": "Japan rethinks defense strategy as Ukraine drone war redefines deterrence - The Mainichi",
+              "body": "TOKYO (Kyodo) -- The Russia-Ukraine war has transformed drones into defining weapons of modern warfare, prompting Japan to rethink defense procurement",
+              "published_date": "2026-07-27",
+              "outlet": "The Mainichi",
+              "image": "https://www.bing.com/th?id=ONUT.hYsGxA_C4DD8XHp_G17TZg"
+            },
+            {
               "news_id": "6c49a605d60b5753a64a55f0c43657a8",
               "url": "https://www.newsweek.com/putin-preparing-to-mobilize-500000-russians-as-public-opinion-plummets-12247474",
               "headline": "Putin preparing to mobilize 500,000 Russians as public opinion plummets",
@@ -11219,6 +11360,15 @@
               "published_date": "2026-07-27",
               "outlet": "Newsweek",
               "image": "https://s.yimg.com/bo/63dc35da-3f3d-5599-ab63-a3349f743d21_1785142639259.jpg"
+            },
+            {
+              "news_id": "d5f54bf885005fd7a8452f7e2ed20434",
+              "url": "https://www.outlookindia.com/international/india-summons-ukrainian-ambassador-after-attacks-on-merchant-vessels-carrying-indian-crew",
+              "headline": "India Summons Ukrainian Ambassador After Attacks on Merchant Vessels Carrying Indian Crew | Outlook India",
+              "body": "India summoned the Ukrainian ambassador after attacks on merchant vessels carrying Indian crew, while issuing a security advisory for seafarers in the Black Sea.",
+              "published_date": "2026-07-27",
+              "outlet": "Outlook India",
+              "image": "https://www.bing.com/th?id=ONUT.cN4818ZBsbO7esp8X2dlng"
             }
           ]
         }
@@ -11259,7 +11409,7 @@
         "gdacs": 1,
         "ercc": 1,
         "healthmap": 0,
-        "news": 33
+        "news": 34
       },
       "source_links": [
         {
@@ -11417,9 +11567,13 @@
         {
           "headline": "Earthquake damages 16th-century church in Peru",
           "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Peru: Historic churches severely damaged following earthquakes",
+          "published_date": "2026-07-27"
         }
       ],
-      "news_total": 33,
+      "news_total": 34,
       "logs": [
         {
           "log_date": "2026-07-20",
@@ -11780,7 +11934,7 @@
       "incident_id": "20260723-CN-TC",
       "tree_id": "ff934a7b352f4f5683a1f1bac820b659",
       "canonical_name": "Tropical Cyclone ELEVEN-26 China 2026-07-23",
-      "summary": "",
+      "summary": "Typhoon Noul, the strongest storm to hit China this year, made landfall in southern China on July 26, 2026, bringing strong winds and heavy rain. The storm triggered the relocation of over 700,000 people in Guangdong and prompted emergency relief efforts. Authorities warned of flash floods across several provinces including Jiangxi, Hunan, and Sichuan.",
       "country": "China",
       "iso2": "CN",
       "lat": 17.4,
@@ -11799,7 +11953,7 @@
       "disease_name": null,
       "event_date": "2026-07-23",
       "first_reported_date": "2026-07-23",
-      "last_updated_date": "2026-07-26",
+      "last_updated_date": "2026-07-27",
       "days_since_event": 4,
       "source_count": 1,
       "should_report": true,
@@ -11810,7 +11964,7 @@
         "gdacs": 1,
         "ercc": 0,
         "healthmap": 0,
-        "news": 2
+        "news": 3
       },
       "source_links": [
         {
@@ -11833,20 +11987,54 @@
       "news": [
         {
           "headline": "Southern China faces torrential rain, flood risk after Typhoon Noul hits land",
-          "url": "https://www.straitstimes.com/asia/east-asia/southern-china-drenched-as-typhoon-noul-makes-landfall",
-          "outlet": "The Straits Times",
           "published_date": "2026-07-26"
         },
         {
           "headline": "Southern China faces torrential rain, floods after Typhoon Noul makes landfall",
-          "url": "https://www.channelnewsasia.com/east-asia/southern-china-typhoon-noul-torrential-rain-flood-6278926",
-          "outlet": "CNA",
           "published_date": "2026-07-26"
+        },
+        {
+          "headline": "Typhoon Noul weakens as it lashes southern China - Taipei Times",
+          "published_date": "2026-07-27"
         }
       ],
-      "news_total": 2,
-      "logs": [],
-      "logs_total": 0
+      "news_total": 3,
+      "logs": [
+        {
+          "log_date": "2026-07-27",
+          "summary": "Typhoon Noul, the strongest storm to hit China this year, made landfall in southern China on July 26, 2026, bringing strong winds and heavy rain. The storm triggered the relocation of over 700,000 people in Guangdong and prompted emergency relief efforts. Authorities warned of flash floods across several provinces including Jiangxi, Hunan, and Sichuan.",
+          "news": [
+            {
+              "news_id": "bb554b69eb2b51998fe522bca4857c74",
+              "url": "https://www.straitstimes.com/asia/east-asia/southern-china-drenched-as-typhoon-noul-makes-landfall",
+              "headline": "Southern China faces torrential rain, flood risk after Typhoon Noul hits land",
+              "body": "The typhoon has forced the relocation of more than 700,000 people in Guangdong. Read more at straitstimes.com. Read more at straitstimes.com.",
+              "published_date": "2026-07-26",
+              "outlet": "The Straits Times",
+              "image": "https://www.bing.com/th?id=ONUT.dVwflzOMhR70pzjE0fPMOA"
+            },
+            {
+              "news_id": "fe8d168a0250539ca298d6c68a53afbb",
+              "url": "https://www.channelnewsasia.com/east-asia/southern-china-typhoon-noul-torrential-rain-flood-6278926",
+              "headline": "Southern China faces torrential rain, floods after Typhoon Noul makes landfall",
+              "body": "Flash floods are expected in parts of Jiangxi, Hunan, Guangdong, Sichuan, Shaanxi, Gansu and southeastern Xinjiang from Sunday evening through Monday evening.",
+              "published_date": "2026-07-26",
+              "outlet": "CNA",
+              "image": "https://www.bing.com/th?id=ONUT.sq9BtQWUrmV1nUNjPSZm5g"
+            },
+            {
+              "news_id": "73beb6bafc6c5d9fae2bcc347618f1d2",
+              "url": "https://www.taipeitimes.com/News/front/archives/2026/07/27/2003861439",
+              "headline": "Typhoon Noul weakens as it lashes southern China - Taipei Times",
+              "body": "Typhoon Noul yesterday weakened to a tropical storm on Sunday, as it moved inland after lashing a stretch of southern China with strong winds and rain, prompting emergency relief in the fiercest storm to hit the country this year, state media reported. Chinese weather authorities expected parts of s",
+              "published_date": "2026-07-27",
+              "outlet": "Taipei Times",
+              "image": "https://www.bing.com/th?id=ONUT.rEwBdJwPe6dC-oyjKu7o6g"
+            }
+          ]
+        }
+      ],
+      "logs_total": 1
     },
     {
       "incident_id": "20260724-NZ-EQ",
@@ -12010,8 +12198,8 @@
     {
       "incident_id": "20260726-IR-CF",
       "tree_id": "13763def03ab448898154124734fe728",
-      "canonical_name": "The Pentagon reported over 600 war casualties in an updated database, highlighting ongoing troop deaths and injuries related to the Iran war.",
-      "summary": "",
+      "canonical_name": "Iran/US war",
+      "summary": "The U.S. and Iran have paused attacks and resumed diplomatic efforts to end the conflict, with mediators reporting progress and talks focused on reopening the Strait of Hormuz. Meanwhile, the Pentagon quietly removed four recent troop deaths from its official Iran war death toll, reclassifying them in a new category, sparking controversy. Additional concerns include the U.S.'s dangerously low weaponry supply and growing public skepticism over the war’s costs and duration.",
       "country": "Iran",
       "iso2": "IR",
       "lat": 32.4,
@@ -12021,19 +12209,19 @@
       "incident_type": "Conflict",
       "incident_category": "Natural",
       "is_disease": false,
-      "severity": "LOW",
-      "priority": "LOW",
-      "priority_rank": 3,
+      "severity": "HIGH",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
       "pandemic_potential": null,
       "event_status": null,
       "extended_monitoring": true,
       "disease_name": null,
       "event_date": "2026-07-26",
       "first_reported_date": "2026-07-26",
-      "last_updated_date": "2026-07-26",
+      "last_updated_date": "2026-07-27",
       "days_since_event": 1,
       "source_count": 1,
-      "should_report": false,
+      "should_report": true,
       "search_keys": [],
       "sources": {
         "who_don": 0,
@@ -12041,7 +12229,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 1
+        "news": 19
       },
       "source_links": [],
       "physical": {
@@ -12056,15 +12244,263 @@
       },
       "news": [
         {
-          "headline": "Pentagon reports more than 600 Iran war casualties in quiet database update",
-          "url": "https://www.theguardian.com/us-news/2026/jul/26/pentagon-iran-war-troop-deaths-casualty-report",
-          "outlet": "manual",
+          "headline": "Hegseth Faces Lawmakers Over Iran War Costs as Conflict Widens",
+          "published_date": "2026-07-21"
+        },
+        {
+          "headline": "Official Iran war death toll drops by 4 most recent casualties",
           "published_date": "2026-07-26"
+        },
+        {
+          "headline": "Poll: Most say Iran conflict more difficult than Trump had expected",
+          "published_date": "2026-07-26"
+        },
+        {
+          "headline": "Pentagon reports more than 600 Iran war casualties in quiet database update",
+          "published_date": "2026-07-26"
+        },
+        {
+          "headline": "Pentagon’s official Iran war death toll no longer lists 4 troops killed in recent weeks",
+          "published_date": "2026-07-26"
+        },
+        {
+          "headline": "Trump’s UN Ambassador Won’t Commit to Iran War Ending in 2026 — When Pressed By NBC’s Welker: Not Going to Put a ‘Timeline’ On it - AOL",
+          "published_date": "2026-07-26"
+        },
+        {
+          "headline": "Pentagon's official Iran war death toll no longer lists 4 troops killed during renewed fighting",
+          "published_date": "2026-07-26T00:00:00+00:00"
+        },
+        {
+          "headline": "Pentagon Changes How It Reports Casualties in Iran War",
+          "published_date": "2026-07-26T15:31:41+00:00"
+        },
+        {
+          "headline": "Stocks waver on Wall Street and crude oil prices drop 5% as Mideast tensions cool",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Pentagon’s official Iran war death toll no longer lists 4 troops killed during renewed fighting",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Iran war casualty count surpasses 600 amid Pentagon’s quiet data shift",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "John Kennedy says 'the world's on a hair trigger' discussing Iran conflict",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Mediators see progress in efforts to halt Iran war as drone attacks rattle region",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "U.S. ‘dangerously low supply of weaponry’ main factor in pause of conflict with Iran: Ham",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "3 dead in mass shooting in Seattle. And, U.S. and Iran pause fighting",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "West Asia War LIVE: Iran says it still controls strait, not seeking talks with U.S.",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Mediators see progress in efforts to halt Iran war as drone attacks rattle region",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Live Updates: U.S.-Iran war appears to pause as Trump gives space for talks to end Strait of Hormuz standoff",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Strait of Hormuz ambiguity triggered collapse of US-Iran truce - Analysts",
+          "published_date": "2026-07-27"
         }
       ],
-      "news_total": 1,
-      "logs": [],
-      "logs_total": 0
+      "news_total": 19,
+      "logs": [
+        {
+          "log_date": "2026-07-27",
+          "summary": "The U.S. and Iran have paused attacks and resumed diplomatic efforts to end the conflict, with mediators reporting progress and talks focused on reopening the Strait of Hormuz. Meanwhile, the Pentagon quietly removed four recent troop deaths from its official Iran war death toll, reclassifying them in a new category, sparking controversy. Additional concerns include the U.S.'s dangerously low weaponry supply and growing public skepticism over the war’s costs and duration.",
+          "news": [
+            {
+              "news_id": "8e0befe4569e5bcc8c924528af0bdd33",
+              "url": "https://apnews.com/article/stocks-oil-rates-markets-cxmt-2b81f0e01bb318ae8d4281964f89f2f1",
+              "headline": "Stocks waver on Wall Street and crude oil prices drop 5% as Mideast tensions cool",
+              "body": "Stocks are wavering on Wall Street and oil prices are down 5% after the U.S. and Iran paused their attacks while work resumed on restarting negotiations to end the war.",
+              "published_date": "2026-07-27",
+              "outlet": "Associated Press News",
+              "image": "https://www.bing.com/th?id=ONUT.tJyXn5Nbc7oHVnhnnGpnIg"
+            },
+            {
+              "news_id": "eab08870d14e5a4fb5ad9f2beb8a28f9",
+              "url": "https://www.adn.com/nation-world/2026/07/27/pentagons-official-iran-war-death-toll-no-longer-lists-4-troops-killed-during-renewed-fighting/",
+              "headline": "Pentagon’s official Iran war death toll no longer lists 4 troops killed during renewed fighting",
+              "body": "On Sunday, a new category called “Overseas Operations” emerged on the system’s website, listing the four Army deaths by name as well as 207 wounded.",
+              "published_date": "2026-07-27",
+              "outlet": "Anchorage Daily News",
+              "image": "https://s.yimg.com/bo/896b4b1a-8de5-5d49-9316-d4c64761dc8e_1785159545411.jpg"
+            },
+            {
+              "news_id": "7227922d4fc2534cba43780b921b2d37",
+              "url": "https://www.baltimoresun.com/2026/07/26/official-iran-war-death-toll-drops-by-4-most-recent-casualties/",
+              "headline": "Official Iran war death toll drops by 4 most recent casualties",
+              "body": "The four American troops killed during renewed fighting between the U.S. and Iran in recent weeks are no longer listed as part of the Iran war death toll in the Pentagon’s official casualty count and instead have been placed in a new, s…",
+              "published_date": "2026-07-26",
+              "outlet": "The Baltimore Sun",
+              "image": "https://www.bing.com/th?id=ONUT.4cui0dOVYSquW_TGqTUClA"
+            },
+            {
+              "news_id": "e1a89a1b91de55dd81aecb62f0fae817",
+              "url": "https://www.msn.com/en-us/news/other/iran-war-casualty-count-surpasses-600-amid-pentagon-s-quiet-data-shift/ar-AA28McZn?ocid=BingNewsVerp",
+              "headline": "Iran war casualty count surpasses 600 amid Pentagon’s quiet data shift",
+              "body": "The Pentagon quietly raised the US casualty count in the Iran conflict beyond 600 amid scrutiny over data transparency.",
+              "published_date": "2026-07-27",
+              "outlet": "Mount Olive Chronicle on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.0e5II-ywjgJPN5T8d3NL2g"
+            },
+            {
+              "news_id": "6d3ea71a31505bdcbbc36eeec534aca4",
+              "url": "https://www.shreveporttimes.com/story/news/politics/2026/07/27/what-has-john-kennedy-said-about-war-in-iran-trump-ceasefire-end-resolution-continuing-strikes/91060007007/",
+              "headline": "John Kennedy says 'the world's on a hair trigger' discussing Iran conflict",
+              "body": "John Kennedy says the world's on a 'hair trigger' regarding ongoing conflict in Iran, yet expresses support for continuing military operations.",
+              "published_date": "2026-07-27",
+              "outlet": "The Shreveport Times",
+              "image": "https://s.yimg.com/bo/7f630f88-1ebc-51d9-ae2c-3e5d69241ce9_1785163462008.jpg"
+            },
+            {
+              "news_id": "67f840fe7c5556c88cf2caa6518b3ea5",
+              "url": "https://finance.yahoo.com/economy/policy/articles/hegseth-faces-lawmakers-over-iran-war-costs-as-conflict-widens-040003754.html",
+              "headline": "Hegseth Faces Lawmakers Over Iran War Costs as Conflict Widens",
+              "body": "(Bloomberg) -- Defense Secretary Pete Hegseth is set to testify before lawmakers for the first time in more than two months to defend the Trump administration's request for billions of dollars in additional money for the Iran war and address growing public skepticism about the course of the conflict.Most Read from BloombergSaudi-Led Coalition in Yemen Vows to Protect Ships From HouthisUS Strikes Iran in Escalating Campaign After Troops KilledIran Says Mediators Stepping In After Days of US Clash",
+              "published_date": "2026-07-21",
+              "outlet": "Bloomberg · via Yahoo Finance",
+              "image": "https://media.zenfs.com/en/bloomberg_markets_video_2/cffc2bfa6e96699579028e30ef26c7bc"
+            },
+            {
+              "news_id": "56809af3b3495cd29a9972ecc60d2354",
+              "url": "https://www.mysanantonio.com/news/world/article/mediators-see-progress-in-diplomatic-efforts-to-22361403.php",
+              "headline": "Mediators see progress in efforts to halt Iran war as drone attacks rattle region",
+              "body": "Mediators have made progress in efforts to bring the United States and Iran back to negotiations and prevent an all-out war in the Middle East. That's according to two regional officials who spoke to...",
+              "published_date": "2026-07-27",
+              "outlet": "San Antonio Express-News",
+              "image": "https://s.yimg.com/bo/7079a168-542e-52f6-91de-c8643295fad7_1785163330412.jpg"
+            },
+            {
+              "news_id": "35127983a471566199b6a3bdaec8f36b",
+              "url": "https://www.ctvnews.ca/video/2026/07/27/us-dangerously-low-supply-of-weaponry-main-factor-in-pause-of-conflict-with-iran-ham/",
+              "headline": "U.S. ‘dangerously low supply of weaponry’ main factor in pause of conflict with Iran: Ham",
+              "body": "U.S. Political Analyst Eric Ham on why there’s ‘growing concerns’ surrounding the U.S. and Iran war despite a pause in conflict.",
+              "published_date": "2026-07-27",
+              "outlet": "CTV News",
+              "image": "https://www.bing.com/th?id=ONUT.hTMqt3TRcsCvbKoMONft4w"
+            },
+            {
+              "news_id": "a26d22e3c4f25c97818b7792f95937d1",
+              "url": "https://www.npr.org/2026/07/27/g-s1-135621/up-first-newsletter-mass-shooting-seattle-iran-us-war-democrats-senate-midterms",
+              "headline": "3 dead in mass shooting in Seattle. And, U.S. and Iran pause fighting",
+              "body": "A mass shooting at a Seattle festival has left three people dead. And, the U.S. and Iran have been exchanging diplomatic messages after nearly tw weeks of intense fighting.",
+              "published_date": "2026-07-27",
+              "outlet": "NPR",
+              "image": "https://s.yimg.com/bo/d3e559c5-08f6-5054-9ee2-8ee4fd65852e_1785154245969.jpg"
+            },
+            {
+              "news_id": "f39e5486787753f6898245e2e4167dd3",
+              "url": "https://www.yahoo.com/news/politics/articles/poll-most-say-iran-conflict-more-difficult-than-trump-had-expected-163814782.html",
+              "headline": "Poll: Most say Iran conflict more difficult than Trump had expected",
+              "body": "Most see conflict lasting months or years longer now; Republicans say U.S. should continue to press until it wins more concessions.",
+              "published_date": "2026-07-26",
+              "outlet": "Yahoo",
+              "image": "https://www.bing.com/th?id=ONUT.4_YUWKfJy710L3l7S-OoNQ"
+            },
+            {
+              "news_id": "1370a5ae76dc5b448187e613a7b29945",
+              "url": "https://www.thehindu.com/news/international/iran-israel-us-war-july-27-2026-latest-updates-strait-of-hormuz-donald-trump-oil-prices-today/article71271253.ece",
+              "headline": "West Asia War LIVE: Iran says it still controls strait, not seeking talks with U.S.",
+              "body": "Iran Israel war July 27 2026 LIVE updates:US President Donald Trump gives space to West Asia talks",
+              "published_date": "2026-07-27",
+              "outlet": "The Hindu",
+              "image": "https://www.bing.com/th?id=ONUT.4bFNqSComZ57_mm4HozLSg"
+            },
+            {
+              "news_id": "1a4245ea989e52f988eedcf3644df7a3",
+              "url": "https://www.theguardian.com/us-news/2026/jul/26/pentagon-iran-war-troop-deaths-casualty-report",
+              "headline": "Pentagon reports more than 600 Iran war casualties in quiet database update",
+              "body": "Figures are source of dispute as US defense department days ago reduced record of troops killed and wounded",
+              "published_date": "2026-07-26",
+              "outlet": "manual",
+              "image": ""
+            },
+            {
+              "news_id": "39147b70aada563f8b82c6a60f2071af",
+              "url": "https://www.nydailynews.com/2026/07/26/pentagon-iran-death-toll-4-us-troops-left-off/",
+              "headline": "Pentagon’s official Iran war death toll no longer lists 4 troops killed in recent weeks",
+              "body": "The four American troops killed during renewed fighting between the U.S. and Iran in recent weeks are no longer listed as part of the Iran war death toll in the Pentagon’s official casualty count but have been placed in a new, separate c…",
+              "published_date": "2026-07-26",
+              "outlet": "New York Daily News",
+              "image": ""
+            },
+            {
+              "news_id": "c71467fb8d6555a9ad9ac5db8248c4df",
+              "url": "https://apnews.com/article/iran-us-hormuz-strait-war-qatar-pakistan-d57e675a7be6dbdd34561909ced240d0",
+              "headline": "Mediators see progress in efforts to halt Iran war as drone attacks rattle region",
+              "body": "Mediators have made progress in efforts to bring the United States and Iran back to negotiations and prevent an all-out war in the Middle East.",
+              "published_date": "2026-07-27",
+              "outlet": "Associated Press News",
+              "image": "https://www.bing.com/th?id=ONUT.YhTbamvp7kqyxCl0UUvIXg"
+            },
+            {
+              "news_id": "f923a4ad64cd5b1d880f3e818f99ae80",
+              "url": "https://www.cbsnews.com/live-updates/us-iran-war-trump-strait-of-hormuz-talks-oman/",
+              "headline": "Live Updates: U.S.-Iran war appears to pause as Trump gives space for talks to end Strait of Hormuz standoff",
+              "body": "The U.S. and Iran hold fire amid work on a deal to reopen the Strait of Hormuz, but the Trump administration says a military buildup continues.",
+              "published_date": "2026-07-27",
+              "outlet": "CBS News",
+              "image": "https://www.bing.com/th?id=ONUT.ihsUFiTWdHZqrjManofQNg"
+            },
+            {
+              "news_id": "1ff1cea8f6885ffcaa421a856dc4efde",
+              "url": "https://www.nytimes.com/2026/07/26/us/politics/pentagon-casualties-iran-war.html",
+              "headline": "Pentagon Changes How It Reports Casualties in Iran War",
+              "body": "The changes separated the casualty numbers into two separate web pages, potentially making it more difficult to tally the war ...",
+              "published_date": "2026-07-26T15:31:41+00:00",
+              "outlet": "The New York Times",
+              "image": "https://www.bing.com/th?id=ONUT.NPqgkOWkwaaeT-TR96TPnw"
+            },
+            {
+              "news_id": "b3bb8b0ea4545efebd443490af546bff",
+              "url": "https://www.washingtonpost.com/politics/2026/07/26/iran-war-casualty-count-pentagon-us-troops/49399f9a-8926-11f1-8912-d71e69d679d7_story.html",
+              "headline": "Pentagon's official Iran war death toll no longer lists 4 troops killed during renewed fighting",
+              "body": "The four American troops killed during renewed fighting between the U.S. and Iran in recent weeks are no longer listed as ...",
+              "published_date": "2026-07-26T00:00:00+00:00",
+              "outlet": "The Washington Post",
+              "image": "https://www.bing.com/th?id=ONUT.plwuM0Sec91rKbAf4bvrGA"
+            },
+            {
+              "news_id": "40c39b0a15d95733a32a1ff74207936d",
+              "url": "https://www.aol.com/articles/trump-un-ambassador-won-t-142717000.html",
+              "headline": "Trump’s UN Ambassador Won’t Commit to Iran War Ending in 2026 — When Pressed By NBC’s Welker: Not Going to Put a ‘Timeline’ On it - AOL",
+              "body": "UN Ambassador MIke Waltz said he would not put a \"timeline\" on the Iran War ending — as he was pressed by NBC's Kristen Welker in a tense MTP showdown.",
+              "published_date": "2026-07-26",
+              "outlet": "AOL",
+              "image": ""
+            },
+            {
+              "news_id": "4263bd0c583253d680f3fb57923b57c2",
+              "url": "https://nairametrics.com/2026/07/27/strait-of-hormuz-ambiguity-triggered-collapse-of-us-iran-truce-analysts/",
+              "headline": "Strait of Hormuz ambiguity triggered collapse of US-Iran truce - Analysts",
+              "body": "Uncertainty over control of the Strait of Hormuz was a major factor behind the breakdown of the fragile truce between the United States and Iran, a development that contributed to a sharp rise in global oil prices, according to analysts.",
+              "published_date": "2026-07-27",
+              "outlet": "Nairametrics",
+              "image": "https://www.bing.com/th?id=ONUT.fW89UQyvMyKVfowQUldDqA"
+            }
+          ]
+        }
+      ],
+      "logs_total": 1
     }
   ]
 }

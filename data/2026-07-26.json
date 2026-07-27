@@ -1,26 +1,26 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-07-26",
-  "generated_at": "2026-07-27T14:57:22Z",
+  "generated_at": "2026-07-27T15:46:32Z",
   "as_of": "2026-07-26",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 14,
-    "new_today": 5,
+    "reportable_total": 12,
+    "new_today": 3,
     "critical": 2,
     "high": 3,
-    "medium": 8,
-    "low": 1,
+    "medium": 7,
+    "low": 0,
     "disease_outbreaks": 3,
-    "countries_affected": 9,
-    "news_total": 297,
+    "countries_affected": 7,
+    "news_total": 295,
     "max_magnitude": 6.5,
     "by_severity": {
       "CRITICAL": 2,
       "HIGH": 3,
-      "MEDIUM": 8,
-      "LOW": 1
+      "MEDIUM": 7,
+      "LOW": 0
     },
     "by_type": {
       "Disease": 3,
@@ -28,28 +28,17 @@
       "Volcano": 1,
       "Earthquake": 4,
       "Forest Fire": 2,
-      "Severe Weather": 1,
-      "Tropical Cyclone": 1,
-      "Conflict": 1
+      "Severe Weather": 1
     },
     "by_region": {
       "Global": 3,
-      "Asia": 6,
+      "Asia": 4,
       "Europe": 3,
       "Americas": 1,
       "Oceania": 1
     }
   },
   "by_country": [
-    {
-      "country": "Iran",
-      "count": 1,
-      "max_sev_rank": 1,
-      "iso2": "IR",
-      "region": "Asia",
-      "country_group": "B",
-      "max_severity": "LOW"
-    },
     {
       "country": "",
       "count": 4,
@@ -84,15 +73,6 @@
       "iso2": "CA",
       "region": "Americas",
       "country_group": "C",
-      "max_severity": "MEDIUM"
-    },
-    {
-      "country": "China",
-      "count": 1,
-      "max_sev_rank": 2,
-      "iso2": "CN",
-      "region": "Asia",
-      "country_group": "A",
       "max_severity": "MEDIUM"
     },
     {
@@ -1254,7 +1234,7 @@
         "gdacs": 1,
         "ercc": 0,
         "healthmap": 0,
-        "news": 22
+        "news": 23
       },
       "source_links": [
         {
@@ -1362,9 +1342,13 @@
         {
           "headline": "Nissan extends support to Mindanao earthquake-affected communities - BusinessWorld Online",
           "published_date": "2026-07-25"
+        },
+        {
+          "headline": "Nissan extends support to Mindanao earthquake-affected communities - BusinessWorld Online",
+          "published_date": "2026-07-25"
         }
       ],
-      "news_total": 22,
+      "news_total": 23,
       "logs": [
         {
           "log_date": "2026-07-08",
@@ -4070,78 +4054,6 @@
       "logs_total": 1
     },
     {
-      "incident_id": "20260723-CN-TC",
-      "tree_id": "ff934a7b352f4f5683a1f1bac820b659",
-      "canonical_name": "Tropical Cyclone ELEVEN-26 China 2026-07-23",
-      "summary": "",
-      "country": "China",
-      "iso2": "CN",
-      "lat": 17.4,
-      "lon": 128.4,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Tropical Cyclone",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-07-23",
-      "first_reported_date": "2026-07-23",
-      "last_updated_date": "2026-07-26",
-      "days_since_event": 4,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 1,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 2
-      },
-      "source_links": [
-        {
-          "type": "GDACS",
-          "label": "Orange alert · Tropical Cyclone ELEVEN-26 China 2026-07-23",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=TC&eventid=1001294",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "China",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": "Orange",
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Southern China faces torrential rain, flood risk after Typhoon Noul hits land",
-          "url": "https://www.straitstimes.com/asia/east-asia/southern-china-drenched-as-typhoon-noul-makes-landfall",
-          "outlet": "The Straits Times",
-          "published_date": "2026-07-26"
-        },
-        {
-          "headline": "Southern China faces torrential rain, floods after Typhoon Noul makes landfall",
-          "url": "https://www.channelnewsasia.com/east-asia/southern-china-typhoon-noul-torrential-rain-flood-6278926",
-          "outlet": "CNA",
-          "published_date": "2026-07-26"
-        }
-      ],
-      "news_total": 2,
-      "logs": [],
-      "logs_total": 0
-    },
-    {
       "incident_id": "20260724-NZ-EQ",
       "tree_id": "ca9e14bca97145a68844bad3b7ac3b2d",
       "canonical_name": "Earthquake M5.7 Turangi, New Zealand 2026-07-24",
@@ -4299,65 +4211,6 @@
         }
       ],
       "logs_total": 2
-    },
-    {
-      "incident_id": "20260726-IR-CF",
-      "tree_id": "13763def03ab448898154124734fe728",
-      "canonical_name": "The Pentagon reported over 600 war casualties in an updated database, highlighting ongoing troop deaths and injuries related to the Iran war.",
-      "summary": "",
-      "country": "Iran",
-      "iso2": "IR",
-      "lat": 32.4,
-      "lon": 53.7,
-      "country_group": "B",
-      "region": "Asia",
-      "incident_type": "Conflict",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "LOW",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": true,
-      "disease_name": null,
-      "event_date": "2026-07-26",
-      "first_reported_date": "2026-07-26",
-      "last_updated_date": "2026-07-26",
-      "days_since_event": 1,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 1
-      },
-      "source_links": [],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Pentagon reports more than 600 Iran war casualties in quiet database update",
-          "url": "https://www.theguardian.com/us-news/2026/jul/26/pentagon-iran-war-troop-deaths-casualty-report",
-          "outlet": "manual",
-          "published_date": "2026-07-26"
-        }
-      ],
-      "news_total": 1,
-      "logs": [],
-      "logs_total": 0
     }
   ]
 }
