@@ -55,6 +55,10 @@ PENDING_LABEL = "submission-pending"
 IMPORTED_LABEL = "submission-imported"
 REJECTED_LABEL = "submission-rejected"
 
+_INCIDENT_TYPE_MAP: dict[str, str] = {
+    "War": "Conflict",
+}
+
 _MONITORING_LABELS = (
     "monitoring-request",
     "monitoring-applied",
@@ -192,7 +196,7 @@ def _process_issue(
     report = SourceReport(
         source="MANUAL",
         source_id=sid,
-        incident_type=cls.incident_type or "Unknown",
+        incident_type=_INCIDENT_TYPE_MAP.get(cls.incident_type, cls.incident_type) or "Unknown",
         name=cls.summary or fetched.title or issue.get("title", "")[:120],
         places=places,
         report_date=cls.event_date or fetched.published_date or issue.get("createdAt", "")[:10],
