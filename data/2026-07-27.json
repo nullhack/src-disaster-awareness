@@ -1,25 +1,25 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-07-27",
-  "generated_at": "2026-07-27T11:40:05Z",
+  "generated_at": "2026-07-27T13:48:25Z",
   "as_of": "2026-07-27",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 19,
-    "new_today": 0,
+    "reportable_total": 20,
+    "new_today": 5,
     "critical": 6,
     "high": 5,
-    "medium": 8,
+    "medium": 9,
     "low": 0,
     "disease_outbreaks": 5,
     "countries_affected": 14,
-    "news_total": 1054,
+    "news_total": 1082,
     "max_magnitude": 7.5,
     "by_severity": {
       "CRITICAL": 6,
       "HIGH": 5,
-      "MEDIUM": 8,
+      "MEDIUM": 9,
       "LOW": 0
     },
     "by_type": {
@@ -29,12 +29,13 @@
       "Earthquake": 6,
       "Forest Fire": 3,
       "Severe Weather": 1,
-      "Conflict": 1
+      "Conflict": 1,
+      "Tropical Cyclone": 1
     },
     "by_region": {
       "Global": 3,
       "Africa": 1,
-      "Asia": 6,
+      "Asia": 7,
       "Americas": 3,
       "Europe": 5,
       "Oceania": 1
@@ -48,6 +49,15 @@
       "iso2": "XX",
       "region": "Global",
       "country_group": "C",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "China",
+      "count": 2,
+      "max_sev_rank": 2,
+      "iso2": "CN",
+      "region": "Asia",
+      "country_group": "A",
       "max_severity": "MEDIUM"
     },
     {
@@ -130,15 +140,6 @@
       "region": "Americas",
       "country_group": "C",
       "max_severity": "HIGH"
-    },
-    {
-      "country": "China",
-      "count": 1,
-      "max_sev_rank": 4,
-      "iso2": "CN",
-      "region": "Asia",
-      "country_group": "A",
-      "max_severity": "LOW"
     },
     {
       "country": "Venezuela",
@@ -856,7 +857,7 @@
       "incident_id": "20250905-CD-DI",
       "tree_id": "5c179437a46a56aca2f8b70aeceda07a",
       "canonical_name": "Ebola Kinshasa, DR Congo 2025-09-05",
-      "summary": "More health workers have gone on strike over payment issues, disrupting care, as confirmed cases approach 3,000 with over 1,300 deaths after a provincial data review. The virus is spreading in cramped displacement camps in Ituri province, and researchers have begun the first trials of an Ebola vaccine. Experts warn that the chaos in DR Congo poses risks beyond the country's borders.",
+      "summary": "As of late July 2026, the Ebola outbreak in the Democratic Republic of the Congo has intensified, with confirmed cases surging to 3,075 and deaths exceeding 1,354, marking a 27% increase in just five days. Subsequent reports indicate that infections have reached 3,200 and the death toll has climbed to 1,405, as the outbreak continues to spread across five provinces.",
       "country": "DR Congo",
       "iso2": "CD",
       "lat": -4.0,
@@ -875,7 +876,7 @@
       "disease_name": "Ebola",
       "event_date": "2025-09-05",
       "first_reported_date": "2025-09-05",
-      "last_updated_date": "2026-07-26",
+      "last_updated_date": "2026-07-27",
       "days_since_event": 325,
       "source_count": 10,
       "should_report": true,
@@ -886,7 +887,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 147
+        "news": 148
       },
       "source_links": [
         {
@@ -1538,6 +1539,10 @@
           "published_date": "2026-07-25"
         },
         {
+          "headline": "More health workers strike as Ebola cases in Congo near 3,000, including over 1,300 deaths",
+          "published_date": "2026-07-26"
+        },
+        {
           "headline": "DR Congo Ebola cases surpass 3,000, death toll reaches 1,354",
           "published_date": "2026-07-26"
         },
@@ -1546,11 +1551,11 @@
           "published_date": "2026-07-26"
         },
         {
-          "headline": "More health workers strike as Ebola cases in Congo near 3,000, including over 1,300 deaths",
-          "published_date": "2026-07-26"
+          "headline": "Ebola infections in DR Congo surge to 3,200, with 1,405 deaths",
+          "published_date": "2026-07-27"
         }
       ],
-      "news_total": 147,
+      "news_total": 148,
       "logs": [
         {
           "log_date": "2026-07-10",
@@ -1928,228 +1933,6 @@
           ]
         },
         {
-          "log_date": "2026-07-23",
-          "summary": "Official data now reports 999 deaths from the Ebola outbreak in DR Congo, up from 754 deaths previously reported. The outbreak remains the fastest in history, with conflict and community resistance fueling its spread.",
-          "news": [
-            {
-              "news_id": "f48645e48eac5260ab1745c4e252407f",
-              "url": "https://www.npr.org/2026/07/23/nx-s1-5902980/over-1-000-people-have-died-in-congos-ebola-outbreak",
-              "headline": "Over 1,000 people have died in Congo's Ebola outbreak",
-              "body": "Congo's Ebola outbreak has crossed the grim 1,000-death threshold, marking the fastest fatal surge in recorded history of the virus and raising fears the outbreak is entering a dangerous new phase.",
-              "published_date": "2026-07-23",
-              "outlet": "NPR",
-              "image": ""
-            },
-            {
-              "news_id": "3c578b10de6a580ea4aefa3034c619c7",
-              "url": "https://icap.columbia.edu/news-events/from-one-deadly-ebola-outbreak-to-the-next-icap-works-to-improve-health-system-preparedness-in-the-democratic-republic-of-congo/",
-              "headline": "From One Deadly Ebola Outbreak to the Next, ICAP Works to Improve Health System Preparedness in the Democratic Republic of Congo",
-              "body": "ICAP’s news and events highlight the latest innovations and learnings shaping the future of global public health.",
-              "published_date": "2026-07-17",
-              "outlet": "Columbia University News",
-              "image": "https://s.yimg.com/am/60d/334d594766d9030a8e0dafaf90139022"
-            },
-            {
-              "news_id": "737a1c8639a35464b2e5f0541fc54094",
-              "url": "https://www.chron.com/news/world/article/congo-s-ebola-outbreak-has-killed-nearly-1-000-22355193.php",
-              "headline": "Client Challenge",
-              "body": "The latest update from Congo’s Ministry of Health showed that as of Monday, 2,473 cases had been recorded in the latest outbreak. The outbreak, which was...",
-              "published_date": "2026-07-22T21:04:34+00:00",
-              "outlet": "Houston Chronicle",
-              "image": "https://s.yimg.com/am/60d/b603b479e446d38c0a7cf21f6d1cb993"
-            },
-            {
-              "news_id": "c85d6d5b30925ac79ad929cc72ecc58f",
-              "url": "https://www.arkansasonline.com/news/2026/jul/23/ebola-death-toll-passes-1000-in-congo/",
-              "headline": "Ebola death toll passes 1,000 in Congo | Arkansas Democrat Gazette",
-              "body": "BUNIA, Congo -- More than 1,000 people have died in the Ebola outbreak in Congo, according to Africa's top health body, a grim toll in the fastest Ebola outbreak in history, as conflict, community resistance and an uneven response fuel its spread.",
-              "published_date": "2026-07-23",
-              "outlet": "Arkansas Democrat-Gazette",
-              "image": ""
-            },
-            {
-              "news_id": "8f2bdd60444559188e2b1d94100836a5",
-              "url": "https://www.bloomberg.com/news/articles/2026-07-17/congo-ebola-outbreak-scientists-say-bundibugyo-virus-may-be-easier-to-treat",
-              "headline": "‘Walking Ebola’ Helps Explain Why Congo’s Outbreak Is So Hard to Stop — and How to Treat It",
-              "body": "Some doctors call it “walking Ebola” — symptoms of the rare Bundibugyo strain appear to worsen slowly, leaving patients sick enough to spread the virus but not so unwell to stop them moving through their communities.",
-              "published_date": "2026-07-17",
-              "outlet": "Bloomberg",
-              "image": "https://s.yimg.com/am/60d/c91bb2593760cb2fdfbba57f74d2ee8d"
-            },
-            {
-              "news_id": "f4c331ff73505f1ca520f0f5e89b2e9f",
-              "url": "https://www.statnews.com/2026/07/22/new-study-supports-testing-of-mercks-ebola-vaccine-in-drc-outbreak/",
-              "headline": "New study supports testing of Merck’s Ebola vaccine in DRC outbreak",
-              "body": "New data supports the idea that Merck’s Ebola vaccine Ervebo, licensed to target the Zaire species of ebolaviruses, could also offer some protection against another.",
-              "published_date": "2026-07-22",
-              "outlet": "STAT",
-              "image": "https://www.bing.com/th?id=ONUT.wW_aKG6c_Sbd-Xu2selYlw"
-            },
-            {
-              "news_id": "34927616c7165218806baa1f59b9efd0",
-              "url": "https://medicalxpress.com/news/2026-07-congo-ebola-outbreak-people.html",
-              "headline": "Congo's Ebola outbreak has killed nearly 1,000 people",
-              "body": "At least 999 people have died from the Ebola outbreak in Congo, according to official data published overnight into Wednesday, a grim toll in what's already been declared the fastest Ebola outbreak in history, as conflict, community resistance and an uneven response fuel its spread.",
-              "published_date": "2026-07-22",
-              "outlet": "Medical Xpress",
-              "image": "https://www.bing.com/th?id=ONUT.vswc-nECIWWnjUScFivfrg"
-            },
-            {
-              "news_id": "55fa3729a7465c95a375085e3255fcc4",
-              "url": "https://www.mirror.co.uk/news/world-news/ebola-virus-democratic-republic-congo-37466833",
-              "headline": "Ebola deaths hit 1,000 in world's fastest-growing outbreak of killer virus",
-              "body": "The director general of the Africa Centres for Disease Control and Prevention has confirmed that 1,031 deaths have been reported in the fastest Ebola outbreak in history",
-              "published_date": "2026-07-23",
-              "outlet": "The Mirror",
-              "image": "https://www.bing.com/th?id=ONUT.em7jn9OTo4aOdqeL85gQ4w"
-            },
-            {
-              "news_id": "d2b7c339f61850a79751d43cf2e632e5",
-              "url": "https://thehill.com/homenews/ap/ap-international/ap-congos-ebola-outbreak-has-killed-nearly-1000-people-2/",
-              "headline": "Congo’s Ebola outbreak has killed over 1,000 people",
-              "body": "BUNIA, Congo (AP) — More than 1,000 people have died in the Ebola outbreak in Congo, according to Africa’s top health body, a grim toll in the fastest Eb...",
-              "published_date": "2026-07-23T07:18:26+00:00",
-              "outlet": "The Hill",
-              "image": "https://s.yimg.com/bo/2596db03-3e22-5473-b5d6-71510a7909f1_1784795347096.jpg"
-            },
-            {
-              "news_id": "47e59b04e511501f9c5c52ccac1b1364",
-              "url": "https://globalnews.ca/news/11976110/ebola-outbreak-congo-1000-deaths/",
-              "headline": "Ebola outbreak in Congo has killed over 1,000 at a record rate: officials - National | Globalnews.ca",
-              "body": "The head of the Africa Centres for Disease Control and Prevention said 1,031 deaths have been confirmed from the fast-spreading and incurable Bundibugyo virus behind the outbreak.",
-              "published_date": "2026-07-22",
-              "outlet": "Global News",
-              "image": "https://www.bing.com/th?id=ONUT.SI2Sf_Dlh8_0ZrT2wZizJw"
-            },
-            {
-              "news_id": "d1f5ac5dc46553d69d0b85abf63ec01a",
-              "url": "https://www.msn.com/en-xl/africa/top-stories/congos-ebola-outbreak-kills-more-than-1000-people/ar-AA28tx6L?ocid=BingNewsVerp",
-              "headline": "Congos Ebola Outbreak Kills More Than 1000 People",
-              "body": "The World Health Organization has said that the true scale of the outbreak could be two to four times larger than official ...",
-              "published_date": "2026-07-23",
-              "outlet": "Euronews on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.4SEHI0sHgOfTplBu4jC1iQ"
-            },
-            {
-              "news_id": "f79028628e2f5c8686fe58a6c4fa2e89",
-              "url": "https://www.msn.com/en-ae/news/other/congos-ebola-outbreak-kills-more-than-1000-people/ar-AA28tabn?ocid=BingNewsVerp",
-              "headline": "Congos Ebola Outbreak Kills More Than 1000 People",
-              "body": "The World Health Organization has said that the true scale of the outbreak could be two to four times larger than official ...",
-              "published_date": "2026-07-23",
-              "outlet": "Euronews on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.IZJPPYxfOCC4p0VzTv6Kuw"
-            },
-            {
-              "news_id": "ced7b84448ea5ad8b8d6440ef853305d",
-              "url": "https://www.nbcnews.com/world/africa/congos-ebola-outbreak-killed-1000-people-rcna588770",
-              "headline": "DR Congo’s Ebola outbreak has killed more than 1,000 people",
-              "body": "The outbreak, which was declared May 15, is unlike most previous Ebola outbreaks because the Bundibugyo virus responsible for it has no approved vaccines or treatments.",
-              "published_date": "2026-07-22",
-              "outlet": "NBC News",
-              "image": "https://www.bing.com/th?id=ONUT.sKFMufduNU1AKNGW5AdQeQ"
-            },
-            {
-              "news_id": "01d687a0d96e5e0c866005c7b10ee5a2",
-              "url": "https://www.msn.com/en-us/health/other/congos-ebola-outbreak-has-now-killed-more-than-1000-people/ar-AA28u6Lr?ocid=BingNewsVerp",
-              "headline": "Congos Ebola Outbreak Has Now Killed More Than 1000 People",
-              "body": "More than 1,000 people have died in the Ebola outbreak in Congo, according to Africa's top health body, a grim toll in the ...",
-              "published_date": "2026-07-23",
-              "outlet": "WISN 12 News on MSN",
-              "image": "https://www.bing.com/th?id=ORMS.18cf5f2e6e22f8e89f08000e38bc6aae"
-            },
-            {
-              "news_id": "a6e755b5b1625b6694bc131227bf4de7",
-              "url": "https://www.npr.org/2026/07/23/g-s1-134959/ebola-outbreak-democratic-republic-congo",
-              "headline": "Why health officials do not have a good handle on the current Ebola outbreak",
-              "body": "To get slightly ahead of the virus, health officials need to quickly identify people at risk of infection, a practice known as contact tracing. That's a challenge in the Democratic Republic of Congo.",
-              "published_date": "2026-07-23",
-              "outlet": "NPR",
-              "image": "https://www.bing.com/th?id=ONUT.ttecfN6A7gGSzmH7__McSA"
-            },
-            {
-              "news_id": "2978315a9083515ab2b95b100077b032",
-              "url": "https://www.bloomberg.com/news/articles/2026-07-23/ebola-deaths-top-1-000-in-congo-as-response-trails-fastest-spreading-outbreak",
-              "headline": "Ebola Deaths Top 1,000 in Congo as Response Trails Fastest-Spreading Outbreak",
-              "body": "Confirmed Ebola deaths in Democratic Republic of Congo have surpassed 1,000, prompting Africa’s top public health official to warn the outbreak could become one of the worst on record unless transmission is rapidly brought under control.",
-              "published_date": "2026-07-23",
-              "outlet": "Bloomberg",
-              "image": "https://www.bing.com/th?id=ONUT.2j2PtFQOk7lmzee9Mg_LYw"
-            },
-            {
-              "news_id": "1614198b3e13579e9b3f890c6cdec853",
-              "url": "https://www.moneycontrol.com/world/congo-s-ebola-outbreak-killed-over-1-000-people-article-13981189.html",
-              "headline": "Congo's Ebola outbreak killed over 1,000 people- Moneycontrol.com",
-              "body": "Congo’s Bundibugyo Ebola outbreak has killed 1,031 people at a record pace as conflict, community resistance and the absence of approved vaccines hamper containment.",
-              "published_date": "2026-07-23",
-              "outlet": "Moneycontrol",
-              "image": ""
-            },
-            {
-              "news_id": "e1a22daebf7a5cf38eb7556cdb467895",
-              "url": "https://www.msn.com/en-xl/news/other/congo-s-ebola-outbreak-kills-more-than-1-000-people/ar-AA28tx6L?ocid=BingNewsVerp",
-              "headline": "Congo S Ebola Outbreak Kills More Than 1 000 People",
-              "body": "The World Health Organization has said that the true scale of the outbreak could be two to four times larger than official ...",
-              "published_date": "2026-07-23",
-              "outlet": "Africanews on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.z7EMfxAbaQrOt3DaPfgeag"
-            },
-            {
-              "news_id": "f4e2436d7baa512082b787efc3e05084",
-              "url": "https://www.ibtimes.co.uk/ebola-outbreak-congo-fastest-spreading-strain-1810152",
-              "headline": "Ebola Virus Outbreak: Fastest-Spreading Strain in History Kills Over 1,000 as WHO Warns No Treatment Exists",
-              "body": "The Ebola outbreak in the Democratic Republic of Congo has claimed over 1,000 lives, with the Bundibugyo strain spreading rapidly. Health officials struggle to contain the crisis amid logistical challenges.",
-              "published_date": "2026-07-23",
-              "outlet": "International Business Times UK",
-              "image": "https://www.bing.com/th?id=ONUT.buuhRzeHOwLV9CVE_-z9zA"
-            },
-            {
-              "news_id": "14d03613840859b18f8daeceb823f691",
-              "url": "https://www.washingtonpost.com/world/2026/07/23/ebola-outbreak-congo-uganda-who-cdc/8df02f28-868d-11f1-9cec-0fb26676f07e_story.html",
-              "headline": "What experts are saying as Ebola outbreak in Congo and Uganda kills more than 1,000 people",
-              "body": "The fastest-growing Ebola outbreak in history has killed more than 1,000 people in eastern Congo as health officials race to contain a virus with no approved vaccine or treatment. An update from Congo ...",
-              "published_date": "2026-07-23T00:00:00+00:00",
-              "outlet": "The Washington Post",
-              "image": ""
-            },
-            {
-              "news_id": "d768e506837554f0ab1b06c01cd3be5d",
-              "url": "https://www.msn.com/en-us/health/other/congo-says-more-than-1-000-die-of-ebola-confirmed-cases-rise-to-2-536/ar-AA28v1kC?ocid=BingNewsVerp",
-              "headline": "Congo Says More Than 1 000 Die Of Ebola Confirmed Cases Rise To 2 536",
-              "body": "NAIROBI, July 23 (Reuters) - The number of confirmed Ebola cases in the Democratic Republic of Congo has increased to 2,536, including 1,033 deaths, government data showed late on Wednesday. The ...",
-              "published_date": "2026-07-23",
-              "outlet": "Reuters on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "404cf21b8f9950b8871e4306edb558ec",
-              "url": "https://www.yahoo.com/news/world/articles/congos-ebola-outbreak-kills-more-195347476.html",
-              "headline": "Congo's Ebola outbreak kills more than 1,000 people",
-              "body": "The World Health Organization has said that the true scale of the outbreak could be two to four times larger than official figures indicate.",
-              "published_date": "2026-07-22",
-              "outlet": "Yahoo",
-              "image": "https://www.bing.com/th?id=ONUT.vQjxnodj1V60q1wEVVTXCA"
-            },
-            {
-              "news_id": "8c97bfe4e44f5812809240b2c1e257da",
-              "url": "https://www.pennlive.com/health/2026/07/almost-1000-people-killed-by-ebola-outbreak-in-eastern-congo.html",
-              "headline": "Almost 1,000 people killed by Ebola outbreak in eastern Congo",
-              "body": "At least 999 people have died from the Ebola outbreak in Congo, according to official data published overnight into Wednesday ...",
-              "published_date": "2026-07-23T04:04:34+00:00",
-              "outlet": "PennLive",
-              "image": "https://www.bing.com/th?id=ONUT.XhnUZXViX6DNJdGKeI7Svw"
-            },
-            {
-              "news_id": "c341fb04a1f25525ac4553d04be516fb",
-              "url": "https://www.msn.com/en-ca/health/general/i-m-an-ebola-expert-it-is-out-of-control-and-worse-is-to-come/ar-AA24HriY?ocid=BingNewsVerp",
-              "headline": "I M An Ebola Expert It Is Out Of Control And Worse Is To Come",
-              "body": "Congo’s Ebola outbreak has spiralled out of control – this expert says a ‘nightmare scenario’ is coming - INSIDE STORY: As ...",
-              "published_date": "2026-07-23",
-              "outlet": "The Independent on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.zo9cVaryemkDDMMy771-Dg"
-            }
-          ]
-        },
-        {
           "log_date": "2026-07-24",
           "summary": "The Ebola death toll in DR Congo has surpassed 1,000, with the outbreak now the fastest fatal surge in recorded history. New reports document over a dozen attacks on health facilities and workers, and highlight that a million displaced people in the epicenter face dangerous, crowded conditions that are fueling the virus's spread.\nAs of July 24, 2026, a provincial data review has pushed confirmed Ebola cases in the DR Congo outbreak to nearly 3,000, with over 1,250 deaths. Other reports put the death toll at 1,033 and confirmed cases above 2,500, reflecting continued escalation of the fastest-growing Ebola outbreak on record.",
           "news": [
@@ -2322,9 +2105,42 @@
               "image": "https://www.bing.com/th?id=ORMS.0d6f1e0025d980b91cc0364287267248"
             }
           ]
+        },
+        {
+          "log_date": "2026-07-27",
+          "summary": "As of late July 2026, the Ebola outbreak in the Democratic Republic of the Congo has intensified, with confirmed cases surging to 3,075 and deaths exceeding 1,354, marking a 27% increase in just five days. Subsequent reports indicate that infections have reached 3,200 and the death toll has climbed to 1,405, as the outbreak continues to spread across five provinces.",
+          "news": [
+            {
+              "news_id": "71e55ebf4d575858a6310ab80c85170f",
+              "url": "https://www.msn.com/en-us/health/medical/ebola-infections-in-dr-congo-surge-to-3200-with-1405-deaths/ar-AA28KDjA?ocid=BingNewsVerp",
+              "headline": "Ebola infections in DR Congo surge to 3,200, with 1,405 deaths",
+              "body": "Cases surged by 1,000 in just just 10 days as outbreak continues to spread across five provinces.",
+              "published_date": "2026-07-27",
+              "outlet": "Al Jazeera on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.GSInOPCzgIka3PgG8riIIw"
+            },
+            {
+              "news_id": "c861e77e70fa5f92a3e4c4b778cc210a",
+              "url": "https://sana.sy/en/health/2332284/",
+              "headline": "DR Congo Ebola cases surpass 3,000, death toll reaches 1,354",
+              "body": "Kinshasa, July 26 (SANA) Confirmed Ebola cases in the Democratic Republic of the Congo have risen to 3,075, with 1,354 deaths recorded, according to the",
+              "published_date": "2026-07-26",
+              "outlet": "Syrian Arab News Agency",
+              "image": ""
+            },
+            {
+              "news_id": "13f5cde39c0c5b2d8858ef9d328ee3a0",
+              "url": "https://www.msn.com/en-xl/africa/nigeria/drc-ebola-outbreak-kills-over-1354-as-cases-surge-27-in-5-days/ar-AA28Ict5?ocid=BingNewsVerp",
+              "headline": "DRC Ebola outbreak kills over 1,354 as cases surge 27% in 5 days",
+              "body": "The Ebola outbreak in DRC had surged past 1,354 deaths, with cases rising 27% to 3,075 in five days, marking an unprecedented ...",
+              "published_date": "2026-07-26",
+              "outlet": "Legit.ng on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.283f1e92a072d335ebfffb7a508ae9fd"
+            }
+          ]
         }
       ],
-      "logs_total": 11
+      "logs_total": 12
     },
     {
       "incident_id": "20251003-NP-FL",
@@ -3646,7 +3462,7 @@
       "incident_id": "20260624-VE-EQ",
       "tree_id": "387baafc1c6b5a0391293c7f917b5333",
       "canonical_name": "Earthquake M7.2 San Felipe, Venezuela 2026-06-24",
-      "summary": "One month after the twin earthquakes, the official death toll remains over 5,500 with 16,700 injured and damage estimated at $19.6 billion. New reports highlight ongoing relief efforts, including a $2.8 million combined church aid contribution and a Cleveland Guardians fundraiser, while analyses focus on the daunting path to reconstruction.",
+      "summary": "As of July 26-27, new reporting highlights a deepening crisis of confidence in Venezuela's Misión Vivienda housing program, which collapsed in the quakes despite promises of safe homes for the poor. Relief efforts continue across South Florida and locally in La Guaira, where search and debris removal operations persist one month after the disaster. NASA-ISRO satellite data reaffirms that the ground shifted up to 60 cm in affected areas.",
       "country": "Venezuela",
       "iso2": "VE",
       "lat": 10.453,
@@ -3665,7 +3481,7 @@
       "disease_name": null,
       "event_date": "2026-06-24",
       "first_reported_date": "2026-06-24",
-      "last_updated_date": "2026-07-26",
+      "last_updated_date": "2026-07-27",
       "days_since_event": 33,
       "source_count": 4,
       "should_report": true,
@@ -3676,7 +3492,7 @@
         "gdacs": 1,
         "ercc": 1,
         "healthmap": 0,
-        "news": 222
+        "news": 225
       },
       "source_links": [
         {
@@ -4584,6 +4400,18 @@
           "published_date": "2026-07-25T14:13:50+00:00"
         },
         {
+          "headline": "Venezuela picking up the pieces one month on from earthquake disaster",
+          "published_date": "2026-07-26"
+        },
+        {
+          "headline": "What’s next for Venezuela’s path to recovery from devastating earthquakes?",
+          "published_date": "2026-07-26"
+        },
+        {
+          "headline": "Venezuela Earthquake",
+          "published_date": "2026-07-26"
+        },
+        {
           "headline": "Venezuelan relief efforts continue across South Florida",
           "published_date": "2026-07-26"
         },
@@ -4596,15 +4424,15 @@
           "published_date": "2026-07-26"
         },
         {
-          "headline": "Venezuela picking up the pieces one month on from earthquake disaster",
-          "published_date": "2026-07-26"
+          "headline": "In Venezuela, trust crumbled with the buildings",
+          "published_date": "2026-07-27"
         },
         {
-          "headline": "What’s next for Venezuela’s path to recovery from devastating earthquakes?",
-          "published_date": "2026-07-26"
+          "headline": "Satellite shows 60 cm ground shift in Venezuela earthquake",
+          "published_date": "2026-07-27"
         }
       ],
-      "news_total": 222,
+      "news_total": 225,
       "logs": [
         {
           "log_date": "2026-06-28",
@@ -4717,246 +4545,6 @@
               "published_date": "2026-06-25T00:00:00+00:00",
               "outlet": "WMNF",
               "image": ""
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-24",
-          "summary": "Spanish insurer Mapfre estimated losses from the June 24 earthquakes at €25 million, as reported in a new financial update. Meanwhile, a local story highlights false hope from fake news about survivors, and a grandfather continues searching for his missing grandson.\nAs of July 24, one month after the twin earthquakes, the death toll tops 5,300 with tens of thousands still missing and residents conducting their own searches as government clearance threatens to proceed before families recover loved ones. Reports highlight how poverty divides even in death, with the poor disproportionately affected, and Venezuela's inability to access $4 billion in gold reserves hampers recovery efforts.\nOne month after the twin earthquakes, family members and volunteers continue desperate searches through rubble, with the confirmed death toll reported at over 5,300. Relief efforts from organizations like GEM in South Florida persist, while local and international media highlight the ongoing challenges of rebuilding and recovery.\nTwin earthquakes in Venezuela caused at least $19.6 billion in direct physical damage, according to World Bank estimates. The country's healthcare system is facing unprecedented strain as thousands are injured and displaced, with international aid organizations struggling to cope. An AP photo captured a mother's anguish as families searched through collapsed buildings for survivors.\nA new report criticizes Venezuela's emergency response, suggesting many of the over 5,000 deaths could have been avoided with professional efforts in the first 72 hours. Global Empowerment Mission is expanding into a second phase of earthquake relief. Additionally, insurer Mapfre estimated losses at €25 million, and CNN reported on hundreds of rescued pets seeking reunification with their families.",
-          "news": [
-            {
-              "news_id": "3bc77257e76d51c890e90d0e984fcafc",
-              "url": "https://www.msn.com/en-us/money/economy/world-bank-estimates-venezuela-quakes-caused-19-6-bn-in-damage/ar-AA28x3sU?ocid=BingNewsVerp",
-              "headline": "World Bank estimates Venezuela quakes caused $19.6 bn in damage",
-              "body": "Twin earthquakes that devastated Venezuela last month caused at least $19.6 billion in direct physical damage, the World Bank ...",
-              "published_date": "2026-07-24",
-              "outlet": "AFP on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.gtLlr-3-Dx19DEMYmW2iAg"
-            },
-            {
-              "news_id": "c3337488b9035753b72d73bf9fae8bcc",
-              "url": "https://www.msn.com/en-us/news/world/why-venezuela-can-t-access-4-billion-in-gold-that-could-help-with-earthquake-recovery/ar-AA28B02s?ocid=BingNewsVerp",
-              "headline": "Why Venezuela can’t access $4 billion in gold that could help with earthquake recovery",
-              "body": "It’s a fight for control over a stash of gold locked away in one of the world’s largest and most secure vaults, but this is ...",
-              "published_date": "2026-07-24",
-              "outlet": "CNN on MSN",
-              "image": "https://www.bing.com/th?id=ORMS.f6a18ce3b7fa46c7d6b60fe9feedbea2"
-            },
-            {
-              "news_id": "e4b6c65caa9c5a1e85d62fb5212e42e6",
-              "url": "https://www.msn.com/ar-ae/news/other/البنك-الدولي-أضرار-زلزال-فنزويلا-تقارب-20-مليار-دولار/ar-AA28xl6G?ocid=BingNewsVerp",
-              "headline": "البنك الدولي: أضرار زلزال فنزويلا تقارب 20 مليار دولار",
-              "body": "بعد نحو شهر واحد على الزلازل المدمرة، تواجه فنزويلا مهمة هائلة لإعادة الإعمار والتأهيل والحد من الأضرار الاجتماعية ...",
-              "published_date": "2026-07-24",
-              "outlet": "يورونيوز on MSN",
-              "image": "https://www.bing.com/th?id=ORMS.9f0976259a03c9fc93253c7379829b6f"
-            },
-            {
-              "news_id": "7c23e02375eb5a7c8b4e122785fba702",
-              "url": "https://www.cnn.com/2026/07/19/americas/venezuela-pets-earthquake-intl-latam",
-              "headline": "Hundreds of pets were rescued following Venezuela’s earthquakes. Now they’re looking for their families | CNN",
-              "body": "Catira Alejandra couldn’t contain her excitement when she was reunited with her family. Tail wagging, frenzied leaping, and loving licks to the face marked the moment the small dog finally saw the familiar faces she didn’t know if she would see again.",
-              "published_date": "2026-07-19",
-              "outlet": "CNN.com",
-              "image": "https://s.yimg.com/am/365d/65f1edf4eda8b76fb4b173471eaef555"
-            },
-            {
-              "news_id": "6d86c0f5728b5a99ac83eb4409921178",
-              "url": "https://www.msn.com/en-ph/public-safety-and-emergencies/natural-disasters/fake-news-about-quake-victims-gives-venezuelans-false-hope/ar-AA28z22I?ocid=BingNewsVerp",
-              "headline": "MSN",
-              "body": "CARABALLEDA, Venezuela — Fake news that people in Venezuela's quake zone have been discovered alive a month after the ...",
-              "published_date": "2026-07-24",
-              "outlet": "The Manila Times on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.py9yv_EaRA-VrrU5Ym-kjA"
-            },
-            {
-              "news_id": "fbcc24c9504c58b7be40c1b1d7299037",
-              "url": "https://english.elpais.com/international/2026-07-24/one-month-after-the-earthquakes-in-venezuela-people-arent-going-to-leave-their-dead-there.html",
-              "headline": "One month after the earthquakes in Venezuela: ‘People aren’t going to leave their dead there’",
-              "body": "With the death toll topping 5,300 and no official count of the missing, residents have taken the search for victims into their own hands as government machinery threatens to clear the ruins before many families have recovered their loved ones",
-              "published_date": "2026-07-24",
-              "outlet": "EL PAÍS English",
-              "image": "https://www.bing.com/th?id=ONUT.vVgm63Xn6WzSv7YN80LKNg"
-            },
-            {
-              "news_id": "6801c13532dc5042bec4f0f92d6bbe9d",
-              "url": "https://www.newstribune.com/news/2026/jul/24/report-many-venezuela-quake-deaths-may-have-been/",
-              "headline": "Report: Many Venezuela quake deaths may have been avoidable | Jefferson City News-Tribune",
-              "body": "Many of the more than 5,000 people killed in Venezuela's devastating twin earthquakes might have survived had authorities mounted a professional emergency response during the critical first 72 hours after the disaster, according to a new report that sharply criticizes the government's handling of the crisis.",
-              "published_date": "2026-07-24",
-              "outlet": "Jefferson City News Tribune",
-              "image": "https://s.yimg.com/bo/193d39f8-11c8-5117-a5e3-be329de86acc_1784886322127.jpg"
-            },
-            {
-              "news_id": "a32c7253dc085c229a1ae03fa4e8c11c",
-              "url": "https://apnews.com/video/a-month-on-from-devastating-double-earthquakes-venezuelans-are-barely-able-to-rebuild-their-lives-0b2cbc61e3be419aa54856c721640f48",
-              "headline": "A month on from devastating double earthquakes, Venezuelans are barely able to rebuild their lives",
-              "body": "One month after devastating twin earthquake that struck Venezuela on June 24, family members and volunteers continue their desperate search for victims amid the ruins of collapsed buildings.",
-              "published_date": "2026-07-24",
-              "outlet": "Associated Press News",
-              "image": "https://www.bing.com/th?id=ONUT.onzdRJDJ2Ytek7zm80SsUw"
-            },
-            {
-              "news_id": "dbd75c91818f5472a682e89135427f42",
-              "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01496-0/fulltext",
-              "headline": "Health in the aftermath of Venezuela's earthquakes",
-              "body": "Health and humanitarian systems are struggling to cope with the thousands of people injured and displaced. Joe Parkin Daniels reports.",
-              "published_date": "2026-07-19T09:06:05+00:00",
-              "outlet": "The Lancet",
-              "image": ""
-            },
-            {
-              "news_id": "c03fa7ba04a85d84abbb258011109dac",
-              "url": "https://www.msn.com/en-ae/news/other/venezuela-quakes-caused-19-6-billion-in-damage-world-bank/ar-AA28zdgM?ocid=BingNewsVerp",
-              "headline": "Venezuela quakes caused $19.6 billion in damage: World Bank",
-              "body": "CARACAS, 24th July, 2026 (WAM) -- Twin earthquakes that devastated Venezuela last month caused at least US$19.6 billion in direct physical damage, the World Bank said in an estimate Thursday, ...",
-              "published_date": "2026-07-24",
-              "outlet": "Emirates News Agency on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "b57831657b6b5c07a2aa611b7f182931",
-              "url": "https://www.msn.com/en-us/health/other/in-aftermath-of-quakes-venezuela-s-hurting-health-system-faces-greatest-crisis-yet/ar-AA28yvwA?ocid=BingNewsVerp",
-              "headline": "In aftermath of quakes, Venezuela's hurting health system faces greatest crisis yet",
-              "body": "The casualties have caused an unprecedented strain, with international organizations on the ground in Venezuela warning the country's healthcare system is struggling to cope with the disaster.",
-              "published_date": "2026-07-24",
-              "outlet": "Miami Herald on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "a83bfe43a627569297d025ad8718db9c",
-              "url": "https://www.msn.com/en-gb/money/other/insurer-mapfre-estimates-venezuela-quake-losses-at-25-million-as-half-year-profit-grows/ar-AA28A7du?ocid=BingNewsVerp",
-              "headline": "Insurer Mapfre estimates Venezuela quake losses at €25 million as half-year profit grows",
-              "body": "By Marta Serafinko and Mireia Merino July 24 (Reuters) - Spanish insurer Mapfre said on Thursday that losses from the June 24 ...",
-              "published_date": "2026-07-24",
-              "outlet": "Reuters on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.HzNCA8UXdTY-yU2jRKnAkA"
-            },
-            {
-              "news_id": "db75cccec64e5ab58be80241b72769f4",
-              "url": "https://www.cbsnews.com/miami/news/venezuela-earthquakes-relief-stats-global-empowerment-mission-south-florida/",
-              "headline": "Global Empowerment Mission's historic Venezuela earthquake relief efforts continue one month after deadly disaster",
-              "body": "Global Empowerment Mission (GEM) says it is expanding into the second phase of its earthquake response in Venezuela.",
-              "published_date": "2026-07-24",
-              "outlet": "CBS News",
-              "image": "https://s.yimg.com/bo/7046aef8-5fec-5733-baa5-f17d025ec5ad_1784899635671.jpg"
-            },
-            {
-              "news_id": "aeeba4136fee5b5ebf1a9fcc7716cd68",
-              "url": "https://www.nytimes.com/2026/07/24/world/americas/venezuela-earthquake-dead-costs-la-guaira.html",
-              "headline": "Divided by Poverty Even in Death",
-              "body": "Latin America’s deep-seated inequalities prevailed over the grimly equalizing force of the Venezuela earthquakes, and set ...",
-              "published_date": "2026-07-19T14:26:04+00:00",
-              "outlet": "The New York Times",
-              "image": "https://www.bing.com/th?id=ONUT.UYMstXHx-oyvDkwrXBRjxg"
-            },
-            {
-              "news_id": "2298ead9218656718a00d45b5b4fc6f1",
-              "url": "https://www.insurancejournal.com/news/international/2026/07/24/878911.htm",
-              "headline": "World Bank Estimates Quakes Cost Venezuela $20 Billion in Damage",
-              "body": "The twin earthquakes that hit Venezuela last month may have caused $19.6 billion in physical damage to buildings and infrastructure, or about 18% of gross",
-              "published_date": "2026-07-24",
-              "outlet": "Insurance Journal",
-              "image": "https://s.yimg.com/bo/5ceaefb3-3e9a-5f4e-b69d-1a84f3547353_1784895669748.jpg"
-            },
-            {
-              "news_id": "761473fe61985d73b16a7ad799d1ac57",
-              "url": "https://wsvn.com/news/us-world/gem-relief-efforts-in-doral-continue-for-venezuela-one-month-after-deadly-earthquakes/",
-              "headline": "GEM relief efforts in Doral continue for Venezuela one month after deadly earthquakes - WSVN 7News | Miami News, Weather, Sports | Fort Lauderdale",
-              "body": "DORAL, FLA. (WSVN) - Volunteers in South Florida continue working on their mission to help victims of the devastating earthquakes in Venezuela.Inside of the Global<a class=\"excerpt-read-more\" href=\"https://wsvn.com/news/us-world/gem-relief-efforts-in-doral-continue-for-venezuela-one-month-after-deadly-earthquakes/\">Read More</a>",
-              "published_date": "2026-07-24",
-              "outlet": "WSVN 7News",
-              "image": "https://www.bing.com/th?id=ONUT.nNMx9nUZzzIMqr9sSzyfxA"
-            },
-            {
-              "news_id": "d2c69d84d18152ee93d9725c9a295b9c",
-              "url": "https://www.insurancejournal.com/news/international/2026/07/24/878940.htm",
-              "headline": "Insurer Mapfre Estimates Venezuela Quake Losses at €25 Million",
-              "body": "Spanish insurer Mapfre said on Thursday that losses from the June 24 earthquakes in Venezuela would be up to €25 million ($28.5 million), after its",
-              "published_date": "2026-07-24",
-              "outlet": "Insurance Journal",
-              "image": "https://s.yimg.com/bo/8ee43010-c788-57ca-b2b3-6c1407a4e1db_1784901925866.jpg"
-            },
-            {
-              "news_id": "8722b40c4e995937a74ac88b5be4b71d",
-              "url": "https://www.bloomberg.com/news/articles/2026-07-20/venezuela-s-official-death-toll-from-twin-quakes-rises-to-5-208",
-              "headline": "Venezuela’s Official Death Toll From Twin Quakes Rises to 5,208",
-              "body": "Venezuela’s official death toll from the twin earthquakes that struck the country on June 24 rose to...",
-              "published_date": "2026-07-19T20:02:45+00:00",
-              "outlet": "Bloomberg",
-              "image": "https://s.yimg.com/am/60d/65a4d6e39e84fc88ac584b8e08d58e73"
-            },
-            {
-              "news_id": "9d8fa61cabc35d3d9fa9363fcd2cbfcd",
-              "url": "https://www.wfla.com/bloom-tampa-bay/bloom-tv/the-aftermath-of-devastation-to-venezuela/",
-              "headline": "The aftermath of devastation to Venezuela",
-              "body": "Amber Freeman, host of Bloom, sat down with Bilingual Anchor and Reporter with Noticias Tampa Hoy, Vladimir Kislinger, to discuss the devastating earthqu...",
-              "published_date": "2026-07-24T18:02:45+00:00",
-              "outlet": "WFLA Tampa Bay",
-              "image": "https://s.yimg.com/bo/4dc69c06-3b32-59f5-8b34-ee3e82873e1f_1784917045235.jpg"
-            },
-            {
-              "news_id": "65aaf7e8b3d75e1cb7d01d25c7bafea8",
-              "url": "https://apnews.com/article/one-photo-0000019f91bcd867a5df9bbe35ff0000",
-              "headline": "One frame captures a mother’s anguish during a search through a collapsed building in Venezuela",
-              "body": "AP photographer Ariana Cubillos photographed a woman praying while families searched the rubble of a collapsed apartment tower in Caraballeda, Venezuela. Cubillos used a telephoto lens to frame the brief moment through cables and other debris.",
-              "published_date": "2026-07-24",
-              "outlet": "Associated Press News",
-              "image": "https://www.bing.com/th?id=ONUT.HSb6bzaeVpY2TC8scXVxXg"
-            },
-            {
-              "news_id": "42b9b2c69f415b978dafa286c03f0234",
-              "url": "https://www.euronews.com/video/2026/07/23/venezuela-earthquake-damages-add-up-to-almost-20-billion-world-bank-says",
-              "headline": "Video. Venezuela earthquake damages cost almost $20 billion, World Bank says",
-              "body": "Video. Almost a month after the devastating earthquakes, Venezuela has a mammoth task ahead in terms of rebuilding, rehabilitating and mitigating the social and economic damage of the biggest natural disaster in decades.",
-              "published_date": "2026-07-23",
-              "outlet": "Euronews",
-              "image": ""
-            },
-            {
-              "news_id": "477e3a2462da58bd8114371ed51b48c7",
-              "url": "https://en.mercopress.com/2026/07/23/world-bank-estimates-19.6-billion-in-earthquake-damage-in-venezuela",
-              "headline": "World Bank estimates $19.6 billion in earthquake damage in Venezuela",
-              "body": "The twin earthquakes that struck northern Venezuela on June 24 caused an estimated $19.6 billion in direct physical damage, according to a preliminary assessment published on Thursday by the World Bank. The figure is equivalent to about 18% of the country's gross domestic product, based on International Monetary Fund data.",
-              "published_date": "2026-07-23",
-              "outlet": "MercoPress",
-              "image": ""
-            },
-            {
-              "news_id": "d808c8f3d8c85cf0a73e59720614e54b",
-              "url": "https://www.local10.com/video/news/2026/07/24/1-month-since-venezuela-earthquakes-tens-of-thousands-remain-missing/",
-              "headline": "1 month since Venezuela earthquakes; tens of thousands remain missing",
-              "body": "Friday marks one month since the back-to-back earthquakes hit Venezuela as search and rescue efforts continue for tens of thousands of people still unaccounted for.",
-              "published_date": "2026-07-24",
-              "outlet": "WPLG Local 10",
-              "image": "https://www.bing.com/th?id=ONUT.rECcA47AQhLhrItUnQrJJg"
-            },
-            {
-              "news_id": "3986a6dba290505c9a3121d02a46279a",
-              "url": "https://www.bbc.com/audio/play/w1730c6gp4f3v47",
-              "headline": "BBC Audio | Outside Source | Venezuela twin earthquakes one month on",
-              "body": "More than 5,300 people are confirmed to have died in the quakes",
-              "published_date": "2026-07-24",
-              "outlet": "BBC",
-              "image": "https://www.bing.com/th?id=ONUT.kxf7IdP8jQRhZH77DrHflw"
-            },
-            {
-              "news_id": "6763ab4f451e5cee88ca6e1d23e24765",
-              "url": "https://www.aol.com/articles/nearly-month-later-grandfather-still-185736585.html",
-              "headline": "Nearly a month later, grandfather still searching for grandson missing after Venezuela earthquakes",
-              "body": "Xavier Lovera Santander, 9, went out with his grandmother to take out the trash when two powerful earthquakes struck Venezuela, causing the building where he lived to collapse. Nearly a month later, his relatives continue searching for him. The boy was with his maternal grandmother, Trina Romelia Ávila Porra, 78,...",
-              "published_date": "2026-07-18",
-              "outlet": "Miami Herald · via AOL",
-              "image": "https://media.zenfs.com/en/aol_miami_herald_mcclatchy_670/58095d878d2cae6222b975f291401a49"
-            },
-            {
-              "news_id": "6c3f862d859e55c580b21324757ac29c",
-              "url": "https://www.yahoo.com/news/world/articles/trump-rubio-zombie-state-venezuela-100000093.html",
-              "headline": "Trump, Rubio and a Zombie State In Venezuela",
-              "body": "The Venezuelan government's failure to respond to the earthquakes is a reminder that it is incapable of producing the economic transformation Trump and Rubio have promised.",
-              "published_date": "2026-07-20",
-              "outlet": "Time · via Yahoo News",
-              "image": "https://media.zenfs.com/en/time_72/69c380a9abb05e2bb012d52281ba65b0"
             }
           ]
         },
@@ -5178,9 +4766,69 @@
               "image": "https://media.zenfs.com/en/al_jazeera_289/c403995bb2bf9ee35218e304988e8969"
             }
           ]
+        },
+        {
+          "log_date": "2026-07-27",
+          "summary": "As of July 26-27, new reporting highlights a deepening crisis of confidence in Venezuela's Misión Vivienda housing program, which collapsed in the quakes despite promises of safe homes for the poor. Relief efforts continue across South Florida and locally in La Guaira, where search and debris removal operations persist one month after the disaster. NASA-ISRO satellite data reaffirms that the ground shifted up to 60 cm in affected areas.",
+          "news": [
+            {
+              "news_id": "138ff1cc30695cb1bd306c1c499e8af1",
+              "url": "https://www.hjnews.com/world/venezuela-earthquake/image_3d21810f-36a6-58cf-bba7-239d395d090a.html",
+              "headline": "Venezuela Earthquake",
+              "body": "People and rescue workers contine a serach operation and remove debris of a OPPE buidling collapsed by the earthquakes in La Guaira, Venezuela, Sunday, July 26, 2026. (AP Photo/Ariana Cubillos)",
+              "published_date": "2026-07-26",
+              "outlet": "The Herald Journal",
+              "image": "https://s.yimg.com/bo/4e3f47df-1dbc-53f3-b7dd-94e90313af7c_1785126564660.jpg"
+            },
+            {
+              "news_id": "11c46fbb7b4a57a1a26fb79c74b5aac8",
+              "url": "https://www.csmonitor.com/World/Americas/2026/0727/venezuela-housing-earthquakes-chavismo-la-guaira",
+              "headline": "In Venezuela, trust crumbled with the buildings",
+              "body": "The Misión Vivienda housing program pledged safe, dignified homes for the poor. Then they fell.",
+              "published_date": "2026-07-27",
+              "outlet": "The Christian Science Monitor",
+              "image": "https://s.yimg.com/bo/ee8eaeec-87e1-5eb9-ac3d-0b9e4df157db_1785143729078.jpg"
+            },
+            {
+              "news_id": "ee921b7b6c755aa08b1c3ed3dd76b945",
+              "url": "https://www.local10.com/news/local/2026/07/26/venezuelan-relief-efforts-continue-across-south-florida/",
+              "headline": "Venezuelan relief efforts continue across South Florida",
+              "body": "This week marks one month since Venezuela’s deadliest disaster in decades.",
+              "published_date": "2026-07-26",
+              "outlet": "WPLG Local 10",
+              "image": "https://www.bing.com/th?id=ONUT.0PWx1CBGw1uUHgAhjvGQ-g"
+            },
+            {
+              "news_id": "527857377cb95f23bbd6cc0cbdd319a6",
+              "url": "https://www.msn.com/en-in/news/techandscience/nisar-finds-twin-venezuela-quakes-shifted-ground-by-nearly-two-feet/ar-AA28J5Yj?ocid=BingNewsVerp",
+              "headline": "NISAR finds twin Venezuela quakes shifted ground by nearly two feet",
+              "body": "NISAR satellite data showed the June 24 Venezuela earthquakes displaced the ground by nearly two feet in places. The findings ...",
+              "published_date": "2026-07-26",
+              "outlet": "India Today on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.67f3111ad4e56bcc57e4d9b7d64a73a0"
+            },
+            {
+              "news_id": "c6f22640b03b592589f9f370cd73fa77",
+              "url": "https://www.msn.com/en-us/news/other/venezuela-honors-thousands-of-victims-one-month-since-earthquakes/vi-AA28ENps?ocid=BingNewsVerp",
+              "headline": "Venezuela honors thousands of victims one month since earthquakes",
+              "body": "Venezuelans across the quake zone and in the capital Caracas held a minute of silence Friday to honor victims of the tremors ...",
+              "published_date": "2026-07-26",
+              "outlet": "Amazon S3 on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.7kzyRNu25N4Ng841BjvaNQ"
+            },
+            {
+              "news_id": "1dda58150cd9545184f0d1a0662e29d3",
+              "url": "https://theshillongtimes.com/2026/07/27/satellite-shows-60-cm-ground-shift-in-venezuela-earthquake/",
+              "headline": "Satellite shows 60 cm ground shift in Venezuela earthquake",
+              "body": "Washington, July 26: The twin earthquakes that struck Venezuela last month caused massive devastation in Caracas and La Guaira as the earth shifted as much as 60 centimetres (two feet), data from the NASA-ISRO satellite NISAR has revealed. Researchers studied the images of the Earth taken by the NASA-ISRO Synthetic Aperture Radar (NISAR) satellite on…",
+              "published_date": "2026-07-27",
+              "outlet": "The Shillong Times",
+              "image": ""
+            }
+          ]
         }
       ],
-      "logs_total": 14
+      "logs_total": 15
     },
     {
       "incident_id": "20260626-PH-EQ",
@@ -6738,18 +6386,18 @@
       "disease_name": null,
       "event_date": "2026-07-09",
       "first_reported_date": "2026-07-09",
-      "last_updated_date": "2026-07-26",
+      "last_updated_date": "2026-07-27",
       "days_since_event": 18,
-      "source_count": 5,
+      "source_count": 6,
       "should_report": true,
       "search_keys": [],
       "sources": {
         "who_don": 0,
         "usgs": 0,
-        "gdacs": 1,
+        "gdacs": 2,
         "ercc": 4,
         "healthmap": 0,
-        "news": 184
+        "news": 199
       },
       "source_links": [
         {
@@ -6768,6 +6416,12 @@
           "type": "ERCC",
           "label": "ECHO Daily Map of 14 July 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5726",
+          "meta": ""
+        },
+        {
+          "type": "GDACS",
+          "label": "Green alert · Forest Fire Gironde, France 2026-07-22",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=WF&eventid=1029628",
           "meta": ""
         },
         {
@@ -7055,6 +6709,10 @@
           "published_date": "2026-07-24"
         },
         {
+          "headline": "More than 200,000 people flee raging wildfires in France and Spain, some escaping by boat",
+          "published_date": "2026-07-24"
+        },
+        {
           "headline": "Southern Europe still battling wildfires as Spain declares national emergency in Madrid region",
           "published_date": "2026-07-24"
         },
@@ -7299,6 +6957,10 @@
           "published_date": "2026-07-24T19:51:00+00:00"
         },
         {
+          "headline": "July 25, 2026 — Europe wildfires force over 250,000 evacuations in France and Spain | CNN",
+          "published_date": "2026-07-25"
+        },
+        {
           "headline": "France and Spain fires force more than 200,000 to flee homes",
           "published_date": "2026-07-25"
         },
@@ -7451,6 +7113,14 @@
           "published_date": "2026-07-25T14:51:03+00:00"
         },
         {
+          "headline": "Europe wildfires: ‘Difficult hours lie ahead’ in battle to contain fires, says Pedro Sánchez as more than 300,000 flee homes in France and Spain – as it happened",
+          "published_date": "2026-07-26"
+        },
+        {
+          "headline": "France, Spain Battle 'Unpredictable' Wildfires As 300,000 Evacuated",
+          "published_date": "2026-07-26"
+        },
+        {
           "headline": "Wildfires threaten Bordeaux as France and Spain battle blazes",
           "published_date": "2026-07-26"
         },
@@ -7529,9 +7199,53 @@
         {
           "headline": "Wildfires Threaten Bordeaux as France, Spain Battle Blazes",
           "published_date": "2026-07-26T12:50:22+00:00"
+        },
+        {
+          "headline": "Raging wildfires across Spain and France force 300,000 people to flee homes",
+          "published_date": "2026-07-26T13:42:54+00:00"
+        },
+        {
+          "headline": "Pedro Sánchez says Spain is suffering effects of climate crisis as firefighters battle wildfires in France",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "One map to visualize the fires in southwestern France",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Europe wildfire in pictures: Gigantic fire cloud engulfing France, Spain regions",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "On the front lines with firefighters and volunteers defending Bordeaux from a monster fire",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "French Fire Burns Near Bordeaux as Spain Fights Blazes",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Bordeaux Airport evacuates hotel zone as fires move close - Live",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Spain and France wildfires force more than 300,000 to flee as Macron calls crisis meeting",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Spain and France wildfires force more than 300,000 to flee as Macron calls crisis meeting",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "France continues to fight devastating wildfires, while progress is made in Spain",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "France says monster fire that forced 220,000 people to flee has stopped growing",
+          "published_date": "2026-07-27T13:22:54+00:00"
         }
       ],
-      "news_total": 184,
+      "news_total": 199,
       "logs": [
         {
           "log_date": "2026-07-15",
@@ -10250,7 +9964,7 @@
       "incident_id": "20260715-UA-CF",
       "tree_id": "f22292f8c3ff448a920c3b1fe41d3aa0",
       "canonical_name": "Conflict Ukraine 2026-07-15",
-      "summary": "President Zelenskiy stated Russia aims to bring 30,000 North Korean troops into the conflict, as Kazakhstan's president called for a freeze of the war alongside Putin. Airstrikes continue, with a baby killed by a drone in the Moscow region and a Russian satellite site reportedly hit, while Ukraine's strikes on Wildberries warehouses persist. Separately, Zelensky and Netanyahu are set for back-to-back Trump meetings in Washington following a funeral, signaling potential diplomatic moves.\nUkrainian attacks continued to target Wildberries warehouses, causing further disruptions to Russia's largest online retailer. Russia launched a major attack on Kyiv, sparking fires in multiple districts, while Iran blamed Ukraine for an attack on a vessel. Additionally, President Zelenskyy reiterated that Russia plans to bring 30,000 more North Korean troops into the conflict, and Kazakhstan's president urged Putin to freeze the war.\nUkraine faces a political crisis as a tech-savvy defense minister without military experience is under scrutiny, highlighting internal tensions. Russia launched kamikaze drone strikes on Ukrainian ships in the Black Sea, while a search continues for two missing Indian nationals after a vessel was struck at Odesa port.\nUkraine continued striking Russia's Wildberries warehouses, exacerbating economic disruption for small businesses. A Russian drone was shot down over Romania for the third time in days, and Iran formally warned Ukraine after an attack on an Iranian commercial vessel in the Caspian Sea. Meanwhile, two Indian nationals remain untraced following a port strike on the MV AGN Ragnar at Odesa, as Black Sea shipping risks escalate.",
+      "summary": "Iran formally warned Ukraine of retaliation after a deadly Ukrainian strike on an Iranian commercial vessel in the Caspian Sea. India issued a travel advisory following a vessel strike at Odesa port that affected Indian nationals. In Russia, reports indicate Putin may be preparing to mobilize up to 500,000 additional troops amid falling public opinion, while Ukraine's drone strikes continued targeting Russia's Wildberries online marketplace to disrupt the economy. President Zelenskyy is scheduled to visit Britain for talks with Prime Minister Andy Burnham.",
       "country": "Ukraine",
       "iso2": "UA",
       "lat": 48.9,
@@ -10269,7 +9983,7 @@
       "disease_name": null,
       "event_date": "2026-07-15",
       "first_reported_date": "2026-07-15",
-      "last_updated_date": "2026-07-26",
+      "last_updated_date": "2026-07-27",
       "days_since_event": 12,
       "source_count": 1,
       "should_report": true,
@@ -10280,7 +9994,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 84
+        "news": 90
       },
       "source_links": [
         {
@@ -10626,6 +10340,10 @@
           "published_date": "2026-07-26"
         },
         {
+          "headline": "India Issues Advisory After Vessel With Indians Hit At Odesa Port In Ukraine",
+          "published_date": "2026-07-26"
+        },
+        {
           "headline": "Ukraine war latest: Deaths in Ukraine and Russia after airstrikes - as drone shot down over NATO airspace",
           "published_date": "2026-07-26T09:06:30+00:00"
         },
@@ -10636,9 +10354,29 @@
         {
           "headline": "Kremlin Says Too Early to Comment on Reported US-Ukraine Air Ceasefire Talks",
           "published_date": "2026-07-26T13:51:56+00:00"
+        },
+        {
+          "headline": "How Zelensky made a rival",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Iran warns Ukraine of retaliation after deadly Caspian Sea strike",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Putin preparing to mobilize 500,000 Russians as public opinion plummets",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "COLLATERAL COMMERCE: Ukraine brings the war to Russia’s online economy",
+          "published_date": "2026-07-27T00:00:00+00:00"
+        },
+        {
+          "headline": "Zelenskyy to visit Britain in first visit by a foreign leader since Burnham took...",
+          "published_date": "2026-07-27T08:35:19+00:00"
         }
       ],
-      "news_total": 84,
+      "news_total": 90,
       "logs": [
         {
           "log_date": "2026-07-24",
@@ -11413,9 +11151,69 @@
               "image": "https://www.bing.com/th?id=ONUT.IJWI5h5HqCwZVcmfGXui2Q"
             }
           ]
+        },
+        {
+          "log_date": "2026-07-27",
+          "summary": "Iran formally warned Ukraine of retaliation after a deadly Ukrainian strike on an Iranian commercial vessel in the Caspian Sea. India issued a travel advisory following a vessel strike at Odesa port that affected Indian nationals. In Russia, reports indicate Putin may be preparing to mobilize up to 500,000 additional troops amid falling public opinion, while Ukraine's drone strikes continued targeting Russia's Wildberries online marketplace to disrupt the economy. President Zelenskyy is scheduled to visit Britain for talks with Prime Minister Andy Burnham.",
+          "news": [
+            {
+              "news_id": "f8c7cdb8f7f05f0d84821382a5af4ee3",
+              "url": "https://businessmirror.com.ph/2026/07/27/collateral-commerce-ukraine-brings-the-war-to-russias-online-economy/",
+              "headline": "COLLATERAL COMMERCE: Ukraine brings the war to Russia’s online economy",
+              "body": "Drone strikes on Wildberries aim to disrupt logistics, pressure Russia’s economy, and make ordinary Russians feel the costs ...",
+              "published_date": "2026-07-27T00:00:00+00:00",
+              "outlet": "BusinessMirror",
+              "image": "https://www.bing.com/th?id=ONUT.t4L-2erIrb0PuNtcLfxBUA"
+            },
+            {
+              "news_id": "7ea35e6e9e40581b868f89993bf5fba7",
+              "url": "https://www.thequint.com/news/breaking-news/india-issues-advisory-after-odesa-vessel-attack",
+              "headline": "India Issues Advisory After Vessel With Indians Hit At Odesa Port In Ukraine",
+              "body": "India’s MEA issues urgent advisory after a vessel carrying Indian nationals was struck at Odesa port, Ukraine, amid rising Black Sea attacks.",
+              "published_date": "2026-07-26",
+              "outlet": "The Quint",
+              "image": ""
+            },
+            {
+              "news_id": "90dcff9950e357aab016bb0f63eeaf5a",
+              "url": "https://www.yahoo.com/news/politics/articles/zelensky-made-rival-083257105.html",
+              "headline": "How Zelensky made a rival",
+              "body": "President Volodymyr Zelensky appears to have miscalculated. By dismissing the widely popular Defense Minister Mykhailo Fedorov, he created two problems at once: he triggered a political crisis that co...",
+              "published_date": "2026-07-27",
+              "outlet": "Yahoo",
+              "image": ""
+            },
+            {
+              "news_id": "3c413993246c5cd7ad730bdffb03a297",
+              "url": "https://www.sfgate.com/news/world/article/zelenskyy-to-visit-britain-in-first-visit-by-a-22361391.php",
+              "headline": "Zelenskyy to visit Britain in first visit by a foreign leader since Burnham took...",
+              "body": "Ukrainian President Volodymyr Zelenskyy is set to meet with British Prime Minister Andy Burnham at a...",
+              "published_date": "2026-07-27T08:35:19+00:00",
+              "outlet": "San Francisco Chronicle",
+              "image": "https://s.yimg.com/bo/2e7376b7-5dc7-56e9-8f8b-75e8335d19ab_1785144865991.jpg"
+            },
+            {
+              "news_id": "284b13dba7f552e38405fe128e754172",
+              "url": "https://www.yahoo.com/news/world/articles/iran-warns-ukraine-retaliation-deadly-061501204.html",
+              "headline": "Iran warns Ukraine of retaliation after deadly Caspian Sea strike",
+              "body": "Abbas Araghchi says the Ukrainian attack on the Iranian vessel in the Caspian Sea ‘cannot go unanswered’.",
+              "published_date": "2026-07-27",
+              "outlet": "Al Jazeera · via Yahoo News",
+              "image": "https://media.zenfs.com/en/al_jazeera_289/92c17074851d354245ed5e6b585f7185"
+            },
+            {
+              "news_id": "6c49a605d60b5753a64a55f0c43657a8",
+              "url": "https://www.newsweek.com/putin-preparing-to-mobilize-500000-russians-as-public-opinion-plummets-12247474",
+              "headline": "Putin preparing to mobilize 500,000 Russians as public opinion plummets",
+              "body": "Russia last mobilized hundreds of thousands of soldiers for the war in Ukraine nearly four years ago, triggering rare protests.",
+              "published_date": "2026-07-27",
+              "outlet": "Newsweek",
+              "image": "https://s.yimg.com/bo/63dc35da-3f3d-5599-ab63-a3349f743d21_1785142639259.jpg"
+            }
+          ]
         }
       ],
-      "logs_total": 3
+      "logs_total": 4
     },
     {
       "incident_id": "20260719-PE-EQ",
@@ -11440,7 +11238,7 @@
       "disease_name": null,
       "event_date": "2026-07-19",
       "first_reported_date": "2026-07-19",
-      "last_updated_date": "2026-07-26",
+      "last_updated_date": "2026-07-27",
       "days_since_event": 8,
       "source_count": 2,
       "should_report": true,
@@ -11451,7 +11249,7 @@
         "gdacs": 1,
         "ercc": 1,
         "healthmap": 0,
-        "news": 32
+        "news": 33
       },
       "source_links": [
         {
@@ -11605,9 +11403,13 @@
         {
           "headline": "5.5 magnitude earthquake hits Peru's Andes region and kills at least 6 people",
           "published_date": "2026-07-26T19:53:11+00:00"
+        },
+        {
+          "headline": "Earthquake damages 16th-century church in Peru",
+          "published_date": "2026-07-27"
         }
       ],
-      "news_total": 32,
+      "news_total": 33,
       "logs": [
         {
           "log_date": "2026-07-20",
@@ -11963,6 +11765,78 @@
         }
       ],
       "logs_total": 1
+    },
+    {
+      "incident_id": "20260723-CN-TC",
+      "tree_id": "ff934a7b352f4f5683a1f1bac820b659",
+      "canonical_name": "Tropical Cyclone ELEVEN-26 China 2026-07-23",
+      "summary": "",
+      "country": "China",
+      "iso2": "CN",
+      "lat": 17.4,
+      "lon": 128.4,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Tropical Cyclone",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": null,
+      "event_status": null,
+      "extended_monitoring": false,
+      "disease_name": null,
+      "event_date": "2026-07-23",
+      "first_reported_date": "2026-07-23",
+      "last_updated_date": "2026-07-26",
+      "days_since_event": 4,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 0,
+        "gdacs": 1,
+        "ercc": 0,
+        "healthmap": 0,
+        "news": 2
+      },
+      "source_links": [
+        {
+          "type": "GDACS",
+          "label": "Orange alert · Tropical Cyclone ELEVEN-26 China 2026-07-23",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=TC&eventid=1001294",
+          "meta": ""
+        }
+      ],
+      "physical": {
+        "max_magnitude": null,
+        "max_depth_km": null,
+        "place": "China",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": "Orange",
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Southern China faces torrential rain, flood risk after Typhoon Noul hits land",
+          "url": "https://www.straitstimes.com/asia/east-asia/southern-china-drenched-as-typhoon-noul-makes-landfall",
+          "outlet": "The Straits Times",
+          "published_date": "2026-07-26"
+        },
+        {
+          "headline": "Southern China faces torrential rain, floods after Typhoon Noul makes landfall",
+          "url": "https://www.channelnewsasia.com/east-asia/southern-china-typhoon-noul-torrential-rain-flood-6278926",
+          "outlet": "CNA",
+          "published_date": "2026-07-26"
+        }
+      ],
+      "news_total": 2,
+      "logs": [],
+      "logs_total": 0
     },
     {
       "incident_id": "20260724-NZ-EQ",
