@@ -22,17 +22,9 @@ if str(_REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT))
 
 from disaster_report.models import ReportPlace, SourceReport
-from disaster_report.sources.ercc import ERCCAdapter
-from disaster_report.sources.gdacs import GDACSAdapter
-from disaster_report.sources.usgs import USGSAdapter
-from disaster_report.sources.who import WHODiseaseOutbreakAdapter
+from disaster_report.sources import adapter_registry
 
-_ADAPTERS: dict[str, Any] = {
-    "USGS": USGSAdapter(),
-    "GDACS": GDACSAdapter(),
-    "WHO": WHODiseaseOutbreakAdapter(),
-    "ERCC": ERCCAdapter(),
-}
+_ADAPTERS: dict[str, Any] = adapter_registry()
 
 
 def _to_report_places(raw_places: list[dict[str, Any]]) -> list[ReportPlace]:

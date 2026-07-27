@@ -62,7 +62,7 @@ def _enrich_one(store: ContentStore, news: Any) -> bool:
     url: str = news.url
     if not nuuid or not url:
         return False
-    path = store._news_path.get(nuuid)  # type: ignore[attr-defined]
+    path = store.news_path(nuuid)
     if path is None or not path.exists():
         print(f"    no path on disk for news={nuuid[:8]}")
         return False

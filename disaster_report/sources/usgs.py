@@ -11,17 +11,16 @@ import country_converter as coco
 from iso3166_2 import Subdivisions
 
 from disaster_report._country_names import country_name
-from disaster_report._regions import subregion_for_country
 from disaster_report._search_keys import derive_repoll_keys, derive_search_keys
 from disaster_report._title_format import format_place, format_title, smallest_place
 from disaster_report.models import ReportPlace, SourceReport
+from disaster_report.sources._util import as_dict, safe_float
 from disaster_report.sources.errors import SourceFetchError
 
 _BASE_URL = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/"
 _DEFAULT_SLUG = "4.5_month.geojson"
 _SIGNIFICANT_MAGNITUDE = 5.5
 _LOOKUP_RADIUS_KM = 500
-_OCEAN_LOOKUP_RADIUS_KM = 2000
 _NOT_FOUND = "not found"
 
 _iso = Subdivisions()
@@ -49,7 +48,7 @@ class USGSAdapter:
             raise SourceFetchError(
                 f"USGS feed returned a non-JSON response for slug {self._slug!r}"
             )
-        payload = _as_dict(json.loads(body))
+        payload = as_dict(json.loads(body))
         features = payload.get("features")
         if not isinstance(features, list):
             return []
@@ -86,7 +85,7 @@ class USGSAdapter:
     def extract_physical(self, raw_fields: dict[str, object]) -> dict[str, object]:
 
         result: dict[str, object] = {}
-        mag = _safe_float(raw_fields.get("mag"))
+        mag = safe_float(raw_fields.get("mag"))
         if mag is not None:
             result["mag"] = mag
         sig = _safe_int(raw_fields.get("sig"))
@@ -100,7 +99,7 @@ class USGSAdapter:
             if isinstance(c, list) and len(c) >= 2:
                 result["lon"] = float(c[0])
                 result["lat"] = float(c[1])
-        depth = _safe_float(raw_fields.get("depth"))
+        depth = safe_float(raw_fields.get("depth"))
         if depth is not None:
             result["depth"] = depth
         felt = _safe_int(raw_fields.get("felt"))
@@ -138,9 +137,9 @@ class USGSAdapter:
 def _feature_to_report(
     feature: Any,
 ) -> SourceReport:
-    feature_dict = _as_dict(feature)
-    properties = _as_dict(feature_dict.get("properties"))
-    geometry = _as_dict(feature_dict.get("geometry"))
+    feature_dict = as_dict(feature)
+    properties = as_dict(feature_dict.get("properties"))
+    geometry = as_dict(feature_dict.get("geometry"))
     coordinates = geometry.get("coordinates")
     if not isinstance(coordinates, list):
         coordinates = []
@@ -226,22 +225,6 @@ def _extract_places(
     ]
 
 
-def _nearest_subregion(lat: Any, lon: Any) -> str:
-
-    if not (isinstance(lat, int | float) and isinstance(lon, int | float)):
-        return ""
-    matches = _iso.reverse_lookup(
-        latitude=float(lat),
-        longitude=float(lon),
-        radius_km=_OCEAN_LOOKUP_RADIUS_KM,
-        max_results=1,
-    )
-    if not matches:
-        return ""
-    country_code = str(matches[0].get("countryCode") or "")
-    return subregion_for_country(country_code)
-
-
 def _clean_locality(place: str) -> str:
 
     if not place:
@@ -265,10 +248,6 @@ def _country_from_place_text(place: str) -> tuple[str, str]:
     return country_name(code), code
 
 
-def _as_dict(value: Any) -> dict:
-    return value if isinstance(value, dict) else {}
-
-
 def _to_iso_date(epoch_ms: object) -> str:
     if isinstance(epoch_ms, bool) or not isinstance(epoch_ms, int | float):
         return ""
@@ -287,20 +266,6 @@ def _parse_usgs_ids(value: object) -> set[str]:
     if not isinstance(value, str) or not value:
         return set()
     return {x.strip() for x in value.split(",") if x.strip()}
-
-
-def _safe_float(value: object) -> float | None:
-
-    if value is None or isinstance(value, bool):
-        return None
-    if isinstance(value, int | float):
-        return float(value)
-    if isinstance(value, str):
-        try:
-            return float(value)
-        except ValueError:
-            return None
-    return None
 
 
 def _safe_int(value: object) -> int | None:

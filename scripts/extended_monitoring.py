@@ -25,7 +25,6 @@ from __future__ import annotations
 import argparse
 import sys
 from pathlib import Path
-from typing import Any, cast
 
 _REPO_ROOT = Path(__file__).resolve().parent.parent
 if str(_REPO_ROOT) not in sys.path:
@@ -71,9 +70,7 @@ def main() -> int:
     elif args.disable:
         target = False
     else:
-        current = cast(Any, store)._incidents.get(args.incident_id, {}).get(
-            "extended_monitoring", False
-        )
+        current = store.is_extended_monitoring(args.incident_id)
         target = not current
 
     store.set_extended_monitoring(args.incident_id, target)
