@@ -48,7 +48,7 @@ const CENTROIDS = {
   MU:[-20.3,57.6],MX:[23.6,-102.6],MD:[47.4,28.4],MN:[46.9,103.8],ME:[42.7,19.4],
   MA:[31.8,-7.1],MZ:[-18.7,35.5],MM:[21.9,95.9],NA:[-22.6,18.5],NP:[28.4,84.1],
   NL:[52.1,5.3],NZ:[-40.9,174.9],NI:[12.9,-85.2],NE:[17.6,8.1],NG:[9.1,8.7],
-  MK:[41.6,21.7],NO:[60.5,8.5],OM:[21.5,55.9],PK:[30.4,69.3],PS:[31.9,35.2],
+  NO:[60.5,8.5],OM:[21.5,55.9],PK:[30.4,69.3],PS:[31.9,35.2],
   PA:[8.5,-80.8],PG:[-6.3,143.9],PY:[-23.4,-58.4],PE:[-9.2,-75.0],PH:[12.9,121.8],
   PL:[51.9,19.1],PT:[39.4,-8.2],PR:[18.2,-66.6],QA:[25.4,51.2],RO:[45.9,24.97],
   RU:[61.5,105.3],RW:[-1.9,29.9],SA:[23.9,45.1],SN:[14.5,-14.5],RS:[44.0,21.0],
@@ -60,7 +60,7 @@ const CENTROIDS = {
   TR:[38.9,35.2],TM:[38.97,59.6],UG:[1.4,32.3],UA:[48.4,31.2],AE:[23.4,53.8],
   GB:[55.4,-3.4],US:[37.1,-95.7],UY:[-32.5,-55.8],UZ:[41.4,64.6],VU:[-16.4,167.9],
   VE:[6.4,-66.6],VN:[14.1,108.3],YE:[15.6,48.5],ZM:[-13.1,27.8],ZW:[-19.0,29.2],
-  GS:[-54.4,-36.6],GR:[39.1,21.8],EH:[24.2,-12.9],
+  GS:[-54.4,-36.6],EH:[24.2,-12.9],
 };
 
 /* ---------- state ---------- */
@@ -391,8 +391,7 @@ function buildSeries(data, groupField, keys, colorFn) {
       if (count > 0) {
         if (groupField === "type" && f.types.size > 0 && !f.types.has(k)) count = 0;
         if (groupField === "disease" && f.types.size > 0) {
-          const incType = diseaseToIncidentType(k);
-          if (incType && !f.types.has(incType)) count = 0;
+          if (k && !f.types.has("Disease")) count = 0;
         }
         if (f.severities.size > 0) {
           const sevCount = Object.entries(day.sev || {})
@@ -412,11 +411,6 @@ function buildSeries(data, groupField, keys, colorFn) {
       return { date: day.date, count };
     }),
   }));
-}
-
-function diseaseToIncidentType(disease) {
-  if (!disease) return null;
-  return "Disease";
 }
 
 function renderTrendPanel(svgSel, tooltipSel, tdata, series, bucket) {
@@ -745,7 +739,7 @@ function renderRecentActivity() {
   $("#recentFeed").innerHTML = events.map((e) => {
     const tsLbl = (e.ts || "").slice(0, 16).replace("T", " ") || "—";
     const name = e.incident_name || e.detail;
-    const detailLine = e.kind === "NEW" ? e.detail : e.detail;
+    const detailLine = e.detail;
     return `
       <div class="recent-row" data-id="${esc(e.incident_id)}">
         <span class="recent-ts">${esc(tsLbl)}</span>

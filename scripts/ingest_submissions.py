@@ -27,12 +27,10 @@ import argparse
 import hashlib
 import json
 import logging
-import subprocess
 import sys
 import uuid
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any, cast
 from urllib.parse import urlparse
 
 _REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -43,6 +41,12 @@ from disaster_report.ai.openrouter import OpenRouterDigester
 from disaster_report.fetchers import fetch_article
 from disaster_report.models import NewsItem, ReportPlace, SourceReport
 from disaster_report.store.content import ContentStore
+
+from scripts._gh_issues import add_label as _add_label
+from scripts._gh_issues import close as _close
+from scripts._gh_issues import comment as _comment
+from scripts._gh_issues import gh as _gh
+from scripts._gh_issues import remove_label as _remove_label
 
 logger = logging.getLogger(__name__)
 
@@ -59,20 +63,6 @@ _MONITORING_LABELS = (
 
 def _now_iso() -> str:
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
-
-
-def _gh(args: list[str]) -> str:
-    proc = subprocess.run(
-        ["gh", *args],
-        check=False,
-        capture_output=True,
-        text=True,
-    )
-    if proc.returncode != 0:
-        raise RuntimeError(
-            f"gh {' '.join(args)} failed: {proc.stderr.strip() or proc.stdout.strip()}"
-        )
-    return proc.stdout
 
 
 def _list_pending_issues() -> list[dict]:
@@ -121,25 +111,6 @@ def _existing_manual_keys(store: ContentStore) -> set[str]:
     }
 
 
-def _add_label(number: int, label: str) -> None:
-    _gh(["issue", "edit", str(number), "--add-label", label])
-
-
-def _remove_label(number: int, label: str) -> None:
-    try:
-        _gh(["issue", "edit", str(number), "--remove-label", label])
-    except RuntimeError as exc:
-        logger.warning("issue %s: remove-label %s failed: %s", number, label, exc)
-
-
-def _close(number: int, reason: str) -> None:
-    _gh(["issue", "close", str(number), "--reason", "not planned", "--comment", reason])
-
-
-def _comment(number: int, body: str) -> None:
-    _gh(["issue", "comment", str(number), "--body", body])
-
-
 def _reject(number: int, reason: str) -> None:
     _remove_label(number, PENDING_LABEL)
     _add_label(number, REJECTED_LABEL)
@@ -147,7 +118,7 @@ def _reject(number: int, reason: str) -> None:
 
 
 def _url_already_tracked(number: int, store: ContentStore, url: str) -> str | None:
-    nuuid = cast(Any, store)._news_by_url.get(url)
+    nuuid = store.find_news_id_by_url(url)
     if not nuuid:
         return None
     existing_inc = store.read_incident_for_news(nuuid)

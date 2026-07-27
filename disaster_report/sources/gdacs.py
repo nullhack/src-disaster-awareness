@@ -3,7 +3,6 @@ from __future__ import annotations
 
 import logging
 import re
-from email.utils import parsedate_to_datetime
 from typing import Any
 from xml.etree import ElementTree as ET
 
@@ -16,6 +15,7 @@ from disaster_report._search_keys import derive_repoll_keys as _derive_repoll_ke
 from disaster_report._search_keys import derive_search_keys
 from disaster_report._title_format import format_place, format_title, smallest_place
 from disaster_report.models import ReportPlace, SourceReport
+from disaster_report.sources._util import local_tag, safe_float, to_iso_date
 from disaster_report.sources.errors import SourceFetchError
 
 _BASE_URL = "https://www.gdacs.org/xml/"
@@ -133,13 +133,13 @@ class GDACSAdapter:
         alertlevel = str(raw_fields.get("alertlevel") or "")
         if alertlevel:
             result["alertlevel"] = alertlevel.capitalize()
-        lat = _maybe_float(raw_fields.get("geo_lat"))
+        lat = safe_float(raw_fields.get("geo_lat"))
         if lat is not None:
             result["lat"] = lat
-        lon = _maybe_float(raw_fields.get("geo_long"))
+        lon = safe_float(raw_fields.get("geo_long"))
         if lon is not None:
             result["lon"] = lon
-        mag = _maybe_float(raw_fields.get("severity"))
+        mag = safe_float(raw_fields.get("severity"))
         if mag is not None:
             result["mag"] = mag
         place = str(raw_fields.get("country") or raw_fields.get("title") or "")
@@ -173,7 +173,7 @@ def _item_to_report(item: Any) -> SourceReport:
     lon = raw_fields.get("geo_long")
     places = _extract_places(iso3, country_text, lat, lon)
     incident_type = _TYPES.get(eventtype, eventtype)
-    report_date = _to_iso_date(fromdate)
+    report_date = to_iso_date(fromdate)
     return SourceReport(
         source="GDACS",
         source_id=_extract_event_id(link),
@@ -203,17 +203,21 @@ def _extract_canonical_name(
     )
 
 
+_IDENTIFIER_EXTRACTORS: dict[str, Any] = {
+    "Earthquake": "_extract_magnitude",
+    "Tropical Cyclone": "_extract_storm_name",
+    "Volcano": "_extract_volcano_name",
+}
+
+
 def _extract_gdacs_identifier(
     incident_type: str,
     raw_fields: dict[str, object],
 ) -> str:
-    if incident_type == "Earthquake":
-        return _extract_magnitude(raw_fields)
-    if incident_type == "Tropical Cyclone":
-        return _extract_storm_name(raw_fields)
-    if incident_type == "Volcano":
-        return _extract_volcano_name(raw_fields)
-    return ""
+    fn_name = _IDENTIFIER_EXTRACTORS.get(incident_type)
+    if not fn_name:
+        return ""
+    return globals()[fn_name](raw_fields)
 
 
 def _extract_magnitude(raw_fields: dict[str, object]) -> str:
@@ -252,7 +256,7 @@ def _build_raw_fields(item: Any) -> dict[str, object]:
     raw: dict[str, object] = {}
     resources: list[dict[str, object]] = []
     for child in item:
-        tag = _local_tag(child.tag)
+        tag = local_tag(child.tag)
         if tag == "resource":
             resources.append(_resource_dict(child))
             continue
@@ -279,7 +283,7 @@ def _resource_dict(elem: Any) -> dict[str, object]:
     for attr_key, attr_val in elem.attrib.items():
         out[attr_key] = attr_val
     for child in elem:
-        out[_local_tag(child.tag)] = (child.text or "").strip()
+        out[local_tag(child.tag)] = (child.text or "").strip()
     return out
 
 
@@ -357,25 +361,9 @@ def _country_names_and_alpha2_from_text(
     return out
 
 
-def _local_tag(tag: str) -> str:
-    return tag.rsplit("}", 1)[-1] if "}" in tag else tag
-
-
 def _extract_event_id(link: str) -> str:
     match = _EVENTID_RE.search(link)
     return match.group(1) if match else ""
-
-
-def _to_iso_date(rfc822: str) -> str:
-    if not rfc822:
-        return ""
-    try:
-        dt = parsedate_to_datetime(rfc822)
-    except (TypeError, ValueError):
-        return ""
-    if dt is None:
-        return ""
-    return dt.date().isoformat()
 
 
 def _to_float(value: object) -> object:
@@ -411,15 +399,3 @@ def _resolve_gdacs_link(raw_fields: dict[str, object]) -> str:
     return ""
 
 
-def _maybe_float(value: object) -> float | None:
-
-    if value is None or isinstance(value, bool):
-        return None
-    if isinstance(value, int | float):
-        return float(value)
-    if isinstance(value, str) and value.strip():
-        try:
-            return float(value)
-        except ValueError:
-            return None
-    return None

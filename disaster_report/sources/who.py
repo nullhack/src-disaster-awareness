@@ -17,6 +17,7 @@ from disaster_report._title_format import (
     smallest_place,
 )
 from disaster_report.models import ReportPlace, SourceReport
+from disaster_report.sources._util import as_dict
 from disaster_report.sources.errors import SourceFetchError
 
 _BASE_URL = "https://www.who.int/api/news/diseaseoutbreaknews"
@@ -80,7 +81,7 @@ class WHODiseaseOutbreakAdapter:
                 f"WHO DON feed returned HTTP {response.status_code}"
                 f" for orderby {self._orderby!r}"
             ) from exc
-        payload = _as_dict(response.json())
+        payload = as_dict(response.json())
         records = payload.get("value")
         if not isinstance(records, list):
             return []
@@ -148,7 +149,7 @@ class WHODiseaseOutbreakAdapter:
 
 
 def _record_to_report(record: Any) -> SourceReport:
-    record_dict = _as_dict(record)
+    record_dict = as_dict(record)
     use_override = bool(record_dict.get("UseOverrideTitle"))
     title_key = "OverrideTitle" if use_override else "Title"
     name = str(record_dict.get(title_key) or "")
@@ -264,10 +265,6 @@ def _short_disease_name(incident_type: str) -> str:
             return short
     first = incident_type.split()[0].strip()
     return first or "Disease"
-
-
-def _as_dict(value: Any) -> dict:
-    return value if isinstance(value, dict) else {}
 
 
 def _to_iso_date(value: object) -> str:

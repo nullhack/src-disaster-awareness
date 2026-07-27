@@ -21,11 +21,8 @@ from disaster_report.pipeline import (
 )
 from disaster_report.reporting.markdown import MarkdownRenderer
 from disaster_report.reporting.report import build_report
+from disaster_report.sources import adapter_registry
 from disaster_report.sources.ddg_news import DuckDuckGoNewsAdapter
-from disaster_report.sources.ercc import ERCCAdapter
-from disaster_report.sources.gdacs import GDACSAdapter
-from disaster_report.sources.usgs import USGSAdapter
-from disaster_report.sources.who import WHODiseaseOutbreakAdapter
 from disaster_report.store.content import ContentStore
 
 _DEFAULT_CONFIG_PATH = "config.toml"
@@ -62,21 +59,11 @@ def _bootstrap(config_path: str, secrets_path: str) -> tuple[Settings, ContentSt
 
 
 def _build_adapters(source: str | None) -> list[object]:
-    all_adapters: list[object] = [
-        USGSAdapter(),
-        GDACSAdapter(),
-        WHODiseaseOutbreakAdapter(),
-        ERCCAdapter(),
-    ]
+    adapters = adapter_registry()
     if source is None:
-        return all_adapters
+        return list(adapters.values())
     needle = source.upper()
-    names = ["USGS", "GDACS", "WHO", "ERCC"]
-    return [
-        adapter
-        for name, adapter in zip(names, all_adapters, strict=True)
-        if name == needle
-    ]
+    return [a for a in adapters.values() if getattr(type(a), "source", "") == needle]
 
 
 def _handle_errors(fn: Callable[..., None]) -> Callable[..., None]:

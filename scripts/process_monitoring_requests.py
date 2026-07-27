@@ -19,7 +19,6 @@ import argparse
 import json
 import logging
 import re
-import subprocess
 import sys
 from pathlib import Path
 
@@ -28,6 +27,12 @@ if str(_REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT))
 
 from disaster_report.store.content import ContentStore
+
+from scripts._gh_issues import add_label as _add_label
+from scripts._gh_issues import close as _close
+from scripts._gh_issues import comment as _comment
+from scripts._gh_issues import gh as _gh
+from scripts._gh_issues import remove_label as _remove_label
 
 logger = logging.getLogger(__name__)
 
@@ -42,20 +47,6 @@ _SUBMISSION_LABELS = (
 )
 
 _HEX_RE = re.compile(r"^[0-9a-fA-F]+$")
-
-
-def _gh(args: list[str]) -> str:
-    proc = subprocess.run(
-        ["gh", *args],
-        check=False,
-        capture_output=True,
-        text=True,
-    )
-    if proc.returncode != 0:
-        raise RuntimeError(
-            f"gh {' '.join(args)} failed: {proc.stderr.strip() or proc.stdout.strip()}"
-        )
-    return proc.stdout
 
 
 def _list_request_issues() -> list[dict]:
@@ -130,25 +121,6 @@ def _resolve_incident(store: ContentStore, identifier: str) -> str | None:
     if len(matches) == 1:
         return matches[0]
     return None
-
-
-def _add_label(number: int, label: str) -> None:
-    _gh(["issue", "edit", str(number), "--add-label", label])
-
-
-def _remove_label(number: int, label: str) -> None:
-    try:
-        _gh(["issue", "edit", str(number), "--remove-label", label])
-    except RuntimeError as exc:
-        logger.warning("issue %s: remove-label %s failed: %s", number, label, exc)
-
-
-def _close(number: int, reason: str) -> None:
-    _gh(["issue", "close", str(number), "--reason", "not planned", "--comment", reason])
-
-
-def _comment(number: int, body: str) -> None:
-    _gh(["issue", "comment", str(number), "--body", body])
 
 
 def _reject(number: int, reason: str) -> None:

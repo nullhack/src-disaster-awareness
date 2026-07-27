@@ -78,6 +78,11 @@ def _load_yaml_files(
     return result
 
 
+_SOURCE_CATEGORIES: dict[str, str] = {
+    "WHO": "disease",
+}
+
+
 class ContentStore:
     def __init__(
         self,
@@ -212,7 +217,7 @@ class ContentStore:
                 continue
             greport = self._reports.get(genesis, {})
             source = greport.get("source", "")
-            category = "disease" if source == "WHO" else "geophysical"
+            category = _SOURCE_CATEGORIES.get(source, "geophysical")
             result.append(
                 Incident(
                     incident_id=iuuid,
@@ -403,17 +408,6 @@ class ContentStore:
             return None
         return self._news_incident.get(news_id)
 
-    def read_incidents_for_news(
-        self, news_ids: set[str]
-    ) -> dict[str, set[str]]:
-        out: dict[str, set[str]] = {}
-        for nuuid in news_ids:
-            out[nuuid] = set()
-            inc = self.read_incident_for_news(nuuid)
-            if inc is not None:
-                out[nuuid].add(inc)
-        return out
-
     # ----------------------------------------------- report <-> incident link
 
     def add_report_incident(self, report_id: str, incident_id: str) -> None:
@@ -435,18 +429,6 @@ class ContentStore:
     def read_incident_ids_for_report(self, report_id: str) -> list[str]:
         inc = self._report_incident.get(report_id)
         return [inc] if inc is not None else []
-
-    def read_incident_ids_for_source_id(self, source_id: str) -> list[str]:
-        seen: set[str] = set()
-        out: list[str] = []
-        for ruuid, r in self._reports.items():
-            if r.get("source_id") != source_id:
-                continue
-            inc = self._report_incident.get(ruuid)
-            if inc is not None and inc not in seen:
-                seen.add(inc)
-                out.append(inc)
-        return out
 
     # ------------------------------------------------------------- timeline
 
@@ -596,6 +578,36 @@ class ContentStore:
             ]
             out.append((log, linked))
         return out
+
+    # ----------------------------------------------------------- public queries
+
+    def set_clock(self, clock: Callable[[], datetime]) -> None:
+        self._clock = clock
+
+    def today_date(self) -> str:
+        return self._clock().date().isoformat()
+
+    def is_extended_monitoring(self, incident_id: str) -> bool:
+        inc = self._incidents.get(incident_id)
+        return bool(inc and inc.get("extended_monitoring", False))
+
+    def has_news(self, news_id: str) -> bool:
+        return news_id in self._news
+
+    def has_incident(self, incident_id: str) -> bool:
+        return incident_id in self._incidents
+
+    def has_log(self, incident_id: str, log_date: str) -> bool:
+        return log_date in self._logs.get(incident_id, {})
+
+    def find_news_id_by_url(self, url: str) -> str | None:
+        return self._news_by_url.get(url)
+
+    def incident_id_for_report(self, report_id: str) -> str | None:
+        return self._report_incident.get(report_id)
+
+    def news_path(self, news_id: str) -> Path | None:
+        return self._news_path.get(news_id)
 
     # ---------------------------------------------------------- incident merge
 

@@ -325,7 +325,7 @@ def search_news(
     digest_fn = cast(Any, digester)
     clock_fn = cast(Any, clock)
     iso_now = clock_fn().replace(microsecond=0).isoformat()
-    cast(Any, wh)._clock = clock_fn
+    wh.set_clock(clock_fn)
     adapter_list = list(cast(Any, adapters))
     adapter_map = _adapter_by_source(adapter_list)
     if adapter_list and not repoll:
@@ -392,7 +392,7 @@ def _generate_logs_for_incident(
     if not summary_result.has_relevant_updates:
         logger.info("logs: incident %s — no relevant updates, skip", incident.incident_id)
         return
-    log_date = cast(Any, wh)._clock().date().isoformat()
+    log_date = wh.today_date()
     wh.append_timeline_with_provenance(
         IncidentLog(
             incident_id=incident.incident_id,

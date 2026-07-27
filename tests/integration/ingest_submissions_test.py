@@ -113,7 +113,7 @@ class TestProcessIssue:
         store = MagicMock()
         store.read_source_report_keys.return_value = []
         store.read_incident_ids_for_report.return_value = []
-        store._news_by_url = {}
+        store.find_news_id_by_url.return_value = None
         store.ingest_source_report.return_value = "rid-1"
         return store
 
@@ -172,7 +172,7 @@ class TestProcessIssue:
         monkeypatch.setattr(mod, "_reject", lambda n, r: rejected.append((n, r)))
         monkeypatch.setattr(mod, "fetch_article", lambda url: None)
         store = MagicMock()
-        store._news_by_url = {}
+        store.find_news_id_by_url.return_value = None
         digester = MagicMock()
         outcome = mod._process_issue(_make_issue(), store, digester, set())
         assert outcome == "rejected:fetch-failed"
@@ -189,7 +189,7 @@ class TestProcessIssue:
         monkeypatch.setattr(mod, "_reject", lambda n, r: rejected.append((n, r)))
         monkeypatch.setattr(mod, "fetch_article", lambda url: _make_fetched())
         store = MagicMock()
-        store._news_by_url = {}
+        store.find_news_id_by_url.return_value = None
         digester = MagicMock()
         digester.classify_submission.return_value = _make_classification(is_disaster=False)
         outcome = mod._process_issue(_make_issue(), store, digester, set())
@@ -207,7 +207,7 @@ class TestProcessIssue:
         monkeypatch.setattr(mod, "_reject", lambda n, r: rejected.append((n, r)))
         monkeypatch.setattr(mod, "fetch_article", lambda url: _make_fetched())
         store = MagicMock()
-        store._news_by_url = {}
+        store.find_news_id_by_url.return_value = None
         digester = MagicMock()
         digester.classify_submission.return_value = _make_classification(country_code="")
         outcome = mod._process_issue(_make_issue(), store, digester, set())
@@ -253,7 +253,7 @@ class TestProcessIssue:
         fetch_calls: list[str] = []
         monkeypatch.setattr(mod, "fetch_article", lambda url: fetch_calls.append(url))
         store = MagicMock()
-        store._news_by_url = {"https://cnn.com/article": "nuuid-existing"}
+        store.find_news_id_by_url.return_value = "nuuid-existing"
         store.read_incident_for_news.return_value = "incident-abcdef1234"
         digester = MagicMock()
         outcome = mod._process_issue(_make_issue(), store, digester, set())
@@ -277,7 +277,7 @@ class TestProcessIssue:
         monkeypatch.setattr(mod, "_comment", lambda n, body: comments.append(body))
         monkeypatch.setattr(mod, "fetch_article", lambda url: pytest.fail("should not fetch"))
         store = MagicMock()
-        store._news_by_url = {"https://cnn.com/article": "nuuid-staging"}
+        store.find_news_id_by_url.return_value = "nuuid-staging"
         store.read_incident_for_news.return_value = None
         digester = MagicMock()
         outcome = mod._process_issue(_make_issue(), store, digester, set())

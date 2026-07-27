@@ -1,10 +1,8 @@
 
 from __future__ import annotations
 
-import html
 import logging
 import re
-from email.utils import parsedate_to_datetime
 from typing import Any
 from xml.etree import ElementTree as ET
 
@@ -15,6 +13,7 @@ from disaster_report._search_keys import derive_repoll_keys as _derive_repoll_ke
 from disaster_report._search_keys import derive_search_keys
 from disaster_report._title_format import format_place, format_title, smallest_place
 from disaster_report.models import ReportPlace, SourceReport
+from disaster_report.sources._util import clean_html, local_tag, to_iso_date
 from disaster_report.sources.errors import SourceFetchError
 
 _BASE_URL = "https://erccportal.jrc.ec.europa.eu/API/ERCC/Maps/"
@@ -52,7 +51,6 @@ _TYPE_PRIORITY: tuple[str, ...] = (
 )
 
 _GUID_PREFIX = "ERCC_Map_"
-_TAG_RE = re.compile(r"<[^>]+>")
 _MAGNITUDE_RE = re.compile(r"(\d+\.?\d*)\s*M\b", re.IGNORECASE)
 _STORM_NAME_RE = re.compile(
     r"(?:Tropical cyclone|Typhoon|Hurricane|Cyclone)\s+([A-Z][A-Z]*-?\d*)",
@@ -141,7 +139,7 @@ def _item_to_report(item: Any) -> SourceReport:
     event_types_raw = str(raw_fields.get("eventTypes") or "")
     incident_type = _resolve_incident_type(event_types_raw)
     pub_date = str(raw_fields.get("pubDate") or "")
-    report_date = _to_iso_date(pub_date)
+    report_date = to_iso_date(pub_date)
     main_country = str(raw_fields.get("mainCountry") or "")
     countries_iso3 = str(raw_fields.get("countries") or "")
     places = _extract_places(main_country, countries_iso3)
@@ -174,12 +172,17 @@ def _extract_canonical_name(
     )
 
 
+_IDENTIFIER_EXTRACTORS: dict[str, str] = {
+    "Earthquake": "_extract_magnitude",
+    "Tropical Cyclone": "_extract_storm_name",
+}
+
+
 def _extract_identifier(incident_type: str, description: str) -> str:
-    if incident_type == "Earthquake":
-        return _extract_magnitude(description)
-    if incident_type == "Tropical Cyclone":
-        return _extract_storm_name(description)
-    return ""
+    fn_name = _IDENTIFIER_EXTRACTORS.get(incident_type)
+    if not fn_name:
+        return ""
+    return globals()[fn_name](description)
 
 
 def _extract_magnitude(description: str) -> str:
@@ -217,7 +220,7 @@ def _resolve_incident_type(event_types_raw: str) -> str:
 def _build_raw_fields(item: Any) -> dict[str, object]:
     raw: dict[str, object] = {}
     for child in item:
-        tag = _local_tag(child.tag)
+        tag = local_tag(child.tag)
         if tag == "image":
             url_elem = child.findtext(_local_url_tag(child))
             if url_elem:
@@ -225,7 +228,7 @@ def _build_raw_fields(item: Any) -> dict[str, object]:
             continue
         text = (child.text or "").strip()
         if tag == "description":
-            raw["description"] = _clean_html(text)
+            raw["description"] = clean_html(text)
         else:
             raw[tag] = text
     return raw
@@ -233,14 +236,9 @@ def _build_raw_fields(item: Any) -> dict[str, object]:
 
 def _local_url_tag(image_elem: Any) -> str:
     for child in image_elem:
-        if _local_tag(child.tag) == "url":
+        if local_tag(child.tag) == "url":
             return child.tag
     return "url"
-
-
-def _clean_html(raw: str) -> str:
-    text = _TAG_RE.sub("", raw)
-    return html.unescape(text).strip()
 
 
 def _extract_places(
@@ -277,19 +275,3 @@ def _iso3_to_iso2(iso3: str) -> str:
     if not code or code == _NOT_FOUND:
         return ""
     return code
-
-
-def _local_tag(tag: str) -> str:
-    return tag.rsplit("}", 1)[-1] if "}" in tag else tag
-
-
-def _to_iso_date(rfc822: str) -> str:
-    if not rfc822:
-        return ""
-    try:
-        dt = parsedate_to_datetime(rfc822)
-    except (TypeError, ValueError):
-        return ""
-    if dt is None:
-        return ""
-    return dt.date().isoformat()

@@ -14,28 +14,32 @@ import tomllib
 from collections import Counter
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from typing import Any, cast
 
 from disaster_report._countries import scan_countries
 from disaster_report._country_names import country_name
-from disaster_report.sources.ercc import ERCCAdapter
-from disaster_report.sources.gdacs import GDACSAdapter
-from disaster_report.sources.usgs import USGSAdapter
-from disaster_report.sources.who import WHODiseaseOutbreakAdapter
+from disaster_report.sources import adapter_registry
 from disaster_report.store.content import ContentStore
 
-_ADAPTERS = {
-    "USGS": USGSAdapter(),
-    "GDACS": GDACSAdapter(),
-    "WHO": WHODiseaseOutbreakAdapter(),
-    "ERCC": ERCCAdapter(),
-}
+_ADAPTERS = adapter_registry()
 
 SCHEMA_VERSION = "1.5"
 TRACKING_WINDOW_DAYS = 7
 DEFAULT_TRACKING_WINDOW_DAYS = 7
 MIN_SEVERITY = "LOW"
 MAX_RECENT_LOGS = 3
+
+TYPE_CODE_MAP: dict[str, str] = {
+    "Earthquake": "EQ",
+    "Flood": "FL",
+    "Forest Fire": "WF",
+    "Wildfire": "WF",
+    "Tropical Cyclone": "TC",
+    "Volcano": "VO",
+    "Drought": "DR",
+    "Tsunami": "TS",
+    "Severe Weather": "SW",
+    "Conflict": "CF",
+}
 
 SEVERITY_RANK = {"LOW": 1, "MEDIUM": 2, "HIGH": 3, "CRITICAL": 4}
 SEVERITY_NAMES = {v: k for k, v in SEVERITY_RANK.items()}
@@ -483,16 +487,7 @@ def build_incident_object(store: ContentStore, inc: dict, as_of_date: datetime) 
         if r["source"] in _ADAPTERS
     ]
 
-    type_code = "EQ" if inc_type == "Earthquake" else \
-                "FL" if inc_type == "Flood" else \
-                "WF" if inc_type in ("Forest Fire", "Wildfire") else \
-                "TC" if inc_type == "Tropical Cyclone" else \
-                "VO" if inc_type == "Volcano" else \
-                "DR" if inc_type == "Drought" else \
-                "TS" if inc_type == "Tsunami" else \
-                "SW" if inc_type == "Severe Weather" else \
-                "CF" if inc_type == "Conflict" else \
-                "DI" if is_disease else "OT"
+    type_code = TYPE_CODE_MAP.get(inc_type, "DI" if is_disease else "OT")
 
     date_part = event_date_short.replace("-", "") if event_date_short else "00000000"
     dashboard_id = f"{date_part}-{iso2 or 'XX'}-{type_code}"
@@ -549,7 +544,7 @@ def build_incident_object(store: ContentStore, inc: dict, as_of_date: datetime) 
         "pandemic_potential": pandemic_pot,
         "event_status": None,
         "extended_monitoring": bool(
-            cast(Any, store)._incidents.get(incident_id, {}).get("extended_monitoring", False)
+            store.is_extended_monitoring(incident_id)
         ),
         "disease_name": disease_name,
         "event_date": event_date_short,
@@ -585,8 +580,8 @@ def is_active_on_date(inc_obj: dict, target_date: datetime, window_days: int) ->
     return last_dt >= window_start
 
 
-def generate_daily_digest(incidents: list[dict], target_date: datetime, as_of: datetime) -> dict:
-    active = [i for i in incidents if is_active_on_date(i, target_date, TRACKING_WINDOW_DAYS)]
+def generate_daily_digest(incidents: list[dict], target_date: datetime, as_of: datetime, tracking_window_days: int = TRACKING_WINDOW_DAYS) -> dict:
+    active = [i for i in incidents if is_active_on_date(i, target_date, tracking_window_days)]
     reportable = list(active)
 
     sev_counts = Counter(i["severity"] for i in reportable)
@@ -619,7 +614,7 @@ def generate_daily_digest(incidents: list[dict], target_date: datetime, as_of: d
     countries_affected = len(set(i["iso2"] for i in reportable if i["iso2"]))
 
     yesterday = target_date - timedelta(days=1)
-    prev_active_ids = {i["incident_id"] for i in incidents if is_active_on_date(i, yesterday, TRACKING_WINDOW_DAYS)}
+    prev_active_ids = {i["incident_id"] for i in incidents if is_active_on_date(i, yesterday, tracking_window_days)}
     new_today = sum(1 for i in reportable if i["incident_id"] not in prev_active_ids)
 
     return {
@@ -627,7 +622,7 @@ def generate_daily_digest(incidents: list[dict], target_date: datetime, as_of: d
         "report_date": target_date.strftime("%Y-%m-%d"),
         "generated_at": as_of.strftime("%Y-%m-%dT%H:%M:%SZ"),
         "as_of": target_date.strftime("%Y-%m-%d"),
-        "tracking_window_days": TRACKING_WINDOW_DAYS,
+        "tracking_window_days": tracking_window_days,
         "min_severity": MIN_SEVERITY,
         "summary": {
             "reportable_total": len(reportable),
@@ -649,11 +644,11 @@ def generate_daily_digest(incidents: list[dict], target_date: datetime, as_of: d
     }
 
 
-def generate_agg_series(incidents: list[dict], window: int, as_of: datetime) -> list[dict]:
+def generate_agg_series(incidents: list[dict], window: int, as_of: datetime, tracking_window_days: int = TRACKING_WINDOW_DAYS) -> list[dict]:
     series = []
     for i in range(window - 1, -1, -1):
         d = as_of - timedelta(days=i)
-        active = [inc for inc in incidents if is_active_on_date(inc, d, TRACKING_WINDOW_DAYS)]
+        active = [inc for inc in incidents if is_active_on_date(inc, d, tracking_window_days)]
         reportable = list(active)
 
         sev_data = {}
@@ -716,9 +711,8 @@ def main() -> None:
                         help="Override tracking window in days (default: ingest.active_window_days from config.toml)")
     args = parser.parse_args()
 
-    global TRACKING_WINDOW_DAYS
-    TRACKING_WINDOW_DAYS = args.tracking_window if args.tracking_window is not None else _resolve_tracking_window()
-    print(f"  tracking window: {TRACKING_WINDOW_DAYS} days")
+    tracking_window = args.tracking_window if args.tracking_window is not None else _resolve_tracking_window()
+    print(f"  tracking window: {tracking_window} days")
 
     if args.as_of:
         as_of = datetime.fromisoformat(args.as_of).replace(tzinfo=timezone.utc)
@@ -758,7 +752,7 @@ def main() -> None:
     if earliest_event is None:
         earliest_event = as_of.replace(tzinfo=None) - timedelta(days=30)
 
-    earliest_digest = earliest_event - timedelta(days=TRACKING_WINDOW_DAYS)
+    earliest_digest = earliest_event - timedelta(days=tracking_window)
     as_of_naive = as_of.replace(tzinfo=None)
     total_days = (as_of_naive - earliest_digest).days + 1
     print(f"  Generating {total_days} daily digests from {earliest_digest.strftime('%Y-%m-%d')} to {as_of_naive.strftime('%Y-%m-%d')}")
@@ -769,7 +763,7 @@ def main() -> None:
         d = earliest_digest + timedelta(days=i)
         if d > as_of_naive:
             break
-        digest = generate_daily_digest(all_incidents, d, as_of)
+        digest = generate_daily_digest(all_incidents, d, as_of, tracking_window)
         if digest["summary"]["reportable_total"] > 0:
             filename = f"{d.strftime('%Y-%m-%d')}.json"
             with open(output_dir / filename, "w") as f:
@@ -808,7 +802,7 @@ def main() -> None:
         json.dump(agg_index, f, indent=2, ensure_ascii=False)
 
     for window in agg_windows:
-        series = generate_agg_series(all_incidents, window, as_of)
+        series = generate_agg_series(all_incidents, window, as_of, tracking_window)
         agg = {
             "schema_version": SCHEMA_VERSION,
             "window": window,
@@ -828,7 +822,7 @@ def main() -> None:
         d = earliest_digest + timedelta(days=i)
         if d > as_of_naive:
             break
-        digest = generate_daily_digest(all_incidents, d, as_of)
+        digest = generate_daily_digest(all_incidents, d, as_of, tracking_window)
         if digest["summary"]["reportable_total"] > 0:
             md = generate_md_report(digest, d)
             year = d.strftime("%Y")

@@ -31,7 +31,6 @@ import sys
 import tempfile
 import uuid
 from pathlib import Path
-from typing import Any, cast
 
 from disaster_report.models import IncidentLog, NewsItem
 from disaster_report.store import _tree
@@ -71,7 +70,7 @@ def _build_v4_to_v5_incident_map(conn: sqlite3.Connection, store: ContentStore) 
         if rep is None:
             continue
         ruuid = _tree.report_uuid(rep["source"], rep["source_id"])
-        current = cast("Any", store)._report_incident.get(ruuid)
+        current = store.incident_id_for_report(ruuid)
         mapping[v4_inc] = current if current else _incident_uuid_v5(v4_inc)
     # Fallback: incidents that have news but no report link
     for row in conn.execute("SELECT DISTINCT incident_id FROM news_incidents"):
@@ -85,7 +84,7 @@ def _phase_a_backfill_news(conn, store, v4_news_to_uuid, *, dry_run) -> set[str]
     backfilled: set[str] = set()
     for row in conn.execute("SELECT * FROM news_items"):
         nuuid = v4_news_to_uuid[row["news_id"]]
-        if nuuid in store._news:
+        if store.has_news(nuuid):
             continue
         if not dry_run:
             item = NewsItem(
@@ -123,9 +122,9 @@ def _phase_c_logs(conn, store, v4_to_v5, v4_news_to_uuid, *, dry_run) -> tuple[i
     for row in conn.execute("SELECT * FROM incident_logs"):
         v4_inc = row["incident_id"]
         iuuid = v4_to_v5.get(v4_inc) or _incident_uuid_v5(v4_inc)
-        if iuuid not in store._incidents:
+        if not store.has_incident(iuuid):
             continue
-        if row["log_date"] in store._logs.get(iuuid, {}):
+        if store.has_log(iuuid, row["log_date"]):
             continue
         prov_uuids = {
             v4_news_to_uuid[n["news_id"]]
@@ -134,7 +133,7 @@ def _phase_c_logs(conn, store, v4_to_v5, v4_news_to_uuid, *, dry_run) -> tuple[i
                 (v4_inc, row["log_date"]),
             )
             if n["news_id"] in v4_news_to_uuid
-            and v4_news_to_uuid[n["news_id"]] in store._news
+            and store.has_news(v4_news_to_uuid[n["news_id"]])
         }
         if not dry_run:
             store.append_timeline_with_provenance(

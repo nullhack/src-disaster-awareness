@@ -76,7 +76,6 @@ class OpenRouterDigester:
 
     def __init__(self, model: str, api_key: str) -> None:
         self._lm = dspy.LM(model=model, api_key=api_key)
-        dspy.configure(lm=self._lm)
         self._filter_cot = dspy.ChainOfThought(FilterDigest)
         self._summary_cot = dspy.ChainOfThought(SummaryDigest)
         self._submission_cot = dspy.ChainOfThought(SubmissionClassifier)
@@ -96,6 +95,7 @@ class OpenRouterDigester:
             incident_places=incident_places,
             incident_date=incident_date,
             candidate_news=_to_news_payload(candidate_news),
+            lm=self._lm,
         )
         kept_urls: set[str] = set()
         for judgement in result.judgements or []:
@@ -128,6 +128,7 @@ class OpenRouterDigester:
             incident_date=incident_date,
             prior_summaries=prior_payload,
             selected_news=_to_news_payload(selected_news),
+            lm=self._lm,
         )
         return SummaryResult(
             summary=str(result.summary or ""),
@@ -137,7 +138,7 @@ class OpenRouterDigester:
     def classify_submission(
         self, *, url: str, title: str, body: str
     ) -> SubmissionClassification:
-        result = self._submission_cot(url=url, title=title, body=body)
+        result = self._submission_cot(url=url, title=title, body=body, lm=self._lm)
         return SubmissionClassification(
             is_disaster=bool(result.is_disaster),
             incident_type=str(getattr(result, "incident_type", "") or ""),

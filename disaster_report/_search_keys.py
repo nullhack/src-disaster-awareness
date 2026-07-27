@@ -69,19 +69,6 @@ def derive_repoll_keys(report: SourceReport) -> list[str]:
     year_label = _year(report.report_date)
     places = report.places or []
     place_name = country_name(places[0].country_code) if places else ""
-    is_disease = report.source == "WHO"
-
-    if is_disease:
-        disease = report.incident_type
-        if disease and disease != "Disease" and place_name:
-            return [
-                f"{disease} {place_name} update {year_label}",
-                f"{disease} {place_name} {year_label}",
-            ]
-        if disease and disease != "Disease":
-            return [f"{disease} update {year_label}"]
-        return [f"disease {place_name} update {year_label}"] if place_name else []
-
     incident_type = report.incident_type
     if place_name and incident_type:
         return [
