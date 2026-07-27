@@ -259,7 +259,7 @@ class ContentStore:
             "name": report.name,
             "report_date": report.report_date,
             "news_searched_at": report.news_searched_at or "",
-            "places": [],
+            "places": [_place_dict(p) for p in report.places],
             "raw_fields": _coerce_raw(report.raw_fields),
         }
         path = report_staging_path(self._root, report.source, ruuid)
