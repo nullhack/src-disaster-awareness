@@ -18,7 +18,18 @@ from typing import Any, cast
 
 from disaster_report._countries import scan_countries
 from disaster_report._country_names import country_name
+from disaster_report.sources.ercc import ERCCAdapter
+from disaster_report.sources.gdacs import GDACSAdapter
+from disaster_report.sources.usgs import USGSAdapter
+from disaster_report.sources.who import WHODiseaseOutbreakAdapter
 from disaster_report.store.content import ContentStore
+
+_ADAPTERS = {
+    "USGS": USGSAdapter(),
+    "GDACS": GDACSAdapter(),
+    "WHO": WHODiseaseOutbreakAdapter(),
+    "ERCC": ERCCAdapter(),
+}
 
 SCHEMA_VERSION = "1.5"
 TRACKING_WINDOW_DAYS = 7
@@ -346,41 +357,6 @@ def _resolve_region(name: str, latest_summary: str | None, is_disease: bool) -> 
     return "Global" if is_disease else "Unknown"
 
 
-_GDACS_EVENTTYPE_CODES = {
-    "Tropical Cyclone": "TC",
-    "Earthquake": "EQ",
-    "Flood": "FL",
-    "Forest Fire": "WF",
-    "Drought": "DR",
-    "Tsunami": "TS",
-    "Volcano": "VO",
-}
-
-
-def _resolve_gdacs_link(
-    raw_fields: dict[str, object],
-    source_id: str,
-    incident_type: str,
-) -> str:
-    link = raw_fields.get("link", "")
-    if link:
-        return str(link)
-    url = raw_fields.get("url")
-    if isinstance(url, dict):
-        report = url.get("report", "")
-        if report:
-            return str(report)
-    eventid = str(raw_fields.get("eventid") or source_id or "")
-    episodeid = str(raw_fields.get("episodeid") or "")
-    eventtype = _GDACS_EVENTTYPE_CODES.get(incident_type, "")
-    if eventid and episodeid and eventtype:
-        return (
-            f"https://www.gdacs.org/report.aspx?eventid={eventid}"
-            f"&episodeid={episodeid}&eventtype={eventtype}"
-        )
-    return ""
-
-
 def build_incident_object(store: ContentStore, inc: dict, as_of_date: datetime) -> dict | None:
     incident_id = inc["incident_id"]
     reports = load_reports_for_incident(store, incident_id)
@@ -441,42 +417,33 @@ def build_incident_object(store: ContentStore, inc: dict, as_of_date: datetime) 
     place_str = ""
 
     for r in reports:
-        rf = r["raw_fields"]
-        if r["source"] == "USGS":
-            mag = rf.get("mag")
-            if mag is not None:
-                max_mag = max(max_mag or 0, float(mag))
-            sig = rf.get("sig") or 0
+        adapter = _ADAPTERS.get(r["source"])
+        if not adapter:
+            continue
+        phys = adapter.extract_physical(r["raw_fields"])
+        mag = phys.get("mag")
+        if mag is not None:
+            max_mag = max(max_mag or 0, float(mag))
+        sig = phys.get("sig")
+        if sig is not None:
             max_sig = max(max_sig, int(sig))
-            if rf.get("tsunami"):
-                tsunami = True
-            coords = rf.get("geometry", {}).get("coordinates")
-            if coords and len(coords) >= 2:
-                lon = lon or coords[0]
-                lat = lat or coords[1]
-            if rf.get("depth") is not None:
-                d = float(rf["depth"])
-                max_depth = min(max_depth or d, d) if max_depth else d
-            if rf.get("felt") is not None:
-                felt = felt or int(rf["felt"])
-            if rf.get("place"):
-                place_str = place_str or rf["place"]
-        elif r["source"] == "GDACS":
-            alert = rf.get("alertlevel", "")
-            if alert:
-                if not gdacs_alert or SEVERITY_RANK.get(alert.capitalize(), 0) > SEVERITY_RANK.get(gdacs_alert.capitalize(), 0):
-                    gdacs_alert = alert.capitalize()
-            if rf.get("geo_lat") and lat is None:
-                lat = float(rf["geo_lat"])
-            if rf.get("geo_long") and lon is None:
-                lon = float(rf["geo_long"])
-            if rf.get("severity") and max_mag is None:
-                try:
-                    max_mag = float(rf["severity"])
-                except (ValueError, TypeError):
-                    pass
-            if rf.get("place") and not place_str:
-                place_str = rf.get("country", "") or rf.get("title", "")
+        if phys.get("tsunami"):
+            tsunami = True
+        if phys.get("lat") is not None and lat is None:
+            lat = float(phys["lat"])
+        if phys.get("lon") is not None and lon is None:
+            lon = float(phys["lon"])
+        depth = phys.get("depth")
+        if depth is not None:
+            max_depth = min(max_depth or depth, depth) if max_depth else depth
+        if phys.get("felt") is not None and felt is None:
+            felt = int(phys["felt"])
+        if phys.get("place") and not place_str:
+            place_str = str(phys["place"])
+        alert = phys.get("alertlevel")
+        if alert:
+            if not gdacs_alert or SEVERITY_RANK.get(alert, 0) > SEVERITY_RANK.get(gdacs_alert, 0):
+                gdacs_alert = alert
 
     if is_disease:
         severity_level = derive_disease_severity(disease_name, pandemic_pot)
@@ -503,56 +470,18 @@ def build_incident_object(store: ContentStore, inc: dict, as_of_date: datetime) 
 
     days_since = (as_of_date.date() - datetime.fromisoformat(event_date_short).date()).days if event_date_short else 0
 
+    _SOURCE_COUNT_KEYS = {"WHO": "who_don", "USGS": "usgs", "GDACS": "gdacs", "ERCC": "ercc"}
     source_counts = {"who_don": 0, "usgs": 0, "gdacs": 0, "ercc": 0, "healthmap": 0, "news": news_count}
     for r in reports:
-        if r["source"] == "WHO":
-            source_counts["who_don"] += 1
-        elif r["source"] == "USGS":
-            source_counts["usgs"] += 1
-        elif r["source"] == "GDACS":
-            source_counts["gdacs"] += 1
-        elif r["source"] == "ERCC":
-            source_counts["ercc"] += 1
+        key = _SOURCE_COUNT_KEYS.get(r["source"])
+        if key:
+            source_counts[key] += 1
 
-    source_links = []
-    for r in reports:
-        rf = r["raw_fields"]
-        if r["source"] == "USGS":
-            source_links.append({
-                "type": "USGS",
-                "label": rf.get("title", r["name"]),
-                "url": rf.get("url", ""),
-                "meta": f"{rf.get('depth', '?')} km depth" if rf.get("depth") else "",
-            })
-        elif r["source"] == "GDACS":
-            alert_label = f"{rf.get('alertlevel', '')} alert" if rf.get("alertlevel") else ""
-            meta_parts = []
-            if rf.get("severitytext"):
-                meta_parts.append(rf["severitytext"])
-            source_links.append({
-                "type": "GDACS",
-                "label": f"{alert_label} · {rf.get('severitytext', r['name'])}" if alert_label else r["name"],
-                "url": _resolve_gdacs_link(rf, r["source_id"], r["incident_type"]),
-                "meta": " · ".join(meta_parts) if meta_parts else "",
-            })
-        elif r["source"] == "WHO":
-            who_url = rf.get("ItemDefaultUrl", "")
-            if who_url and not who_url.startswith("http"):
-                who_url = "https://www.who.int/emergencies/disease-outbreak-news/item/" + who_url.lstrip("/")
-            source_links.append({
-                "type": "WHO",
-                "label": r["name"],
-                "url": who_url,
-                "meta": "",
-            })
-        elif r["source"] == "ERCC":
-            ercc_url = str(rf.get("link", ""))
-            source_links.append({
-                "type": "ERCC",
-                "label": str(rf.get("title", r["name"])),
-                "url": ercc_url,
-                "meta": "",
-            })
+    source_links = [
+        _ADAPTERS[r["source"]].build_source_link(r["raw_fields"], r["name"])
+        for r in reports
+        if r["source"] in _ADAPTERS
+    ]
 
     type_code = "EQ" if inc_type == "Earthquake" else \
                 "FL" if inc_type == "Flood" else \

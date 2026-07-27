@@ -115,44 +115,17 @@ def _passes_gate(adapter: Any, report: SourceReport) -> bool:
     return adapter.should_monitor(report)
 
 
-def _parse_usgs_ids(value: object) -> set[str]:
-
-    if not isinstance(value, str) or not value:
-        return set()
-    return {x.strip() for x in value.split(",") if x.strip()}
-
-
-def _match_usgs_event_family(wh: ContentStore, report: SourceReport) -> str | None:
-
-    my_ids = _parse_usgs_ids(report.raw_fields.get("ids"))
-    if not my_ids:
-        return None
-    store = cast(Any, wh)
-    for ruuid, existing in store._reports.items():
-        if existing.get("source") != "USGS":
-            continue
-        existing_ids = _parse_usgs_ids(
-            existing.get("raw_fields", {}).get("ids")
-        )
-        if my_ids & existing_ids:
-            inc = store._report_incident.get(ruuid)
-            if inc:
-                return inc
-    return None
-
-
 def _find_existing_incident(
-    wh: ContentStore, report: SourceReport, active_window_days: int = 7
+    wh: ContentStore,
+    adapter: Any,
+    report: SourceReport,
+    active_window_days: int = 7,
 ) -> str | None:
 
-    if report.source == "USGS":
-        return _match_usgs_event_family(wh, report)
-    country_codes = {p.country_code for p in report.places if p.country_code}
-    if not country_codes:
+    finder = getattr(adapter, "find_existing_incident", None)
+    if finder is None:
         return None
-    return cast(Any, wh).find_active_incident_by_type_country(
-        report.incident_type, country_codes, active_window_days
-    )
+    return finder(wh, report, active_window_days)
 
 
 def _commit_news_for_report(
@@ -166,7 +139,7 @@ def _commit_news_for_report(
 
     existing_report_incidents = wh.read_incident_ids_for_report(report_id)
     pre_birth = (
-        _find_existing_incident(wh, report, active_window_days)
+        _find_existing_incident(wh, adapter, report, active_window_days)
         if not existing_report_incidents
         else None
     )

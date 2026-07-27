@@ -7,9 +7,11 @@ from disaster_report.models import ReportPlace, SourceReport
 from disaster_report.pipeline import (
     _find_existing_incident,
     _normalize_incident_name,
-    _parse_usgs_ids,
 )
+from disaster_report.sources.usgs import USGSAdapter, _parse_usgs_ids
 from disaster_report.store.content import ContentStore
+
+_ADAPTER = USGSAdapter()
 
 
 def _build_report(
@@ -86,11 +88,11 @@ class TestFindExistingIncidentUsgsFamily:
             name="M 6.0 - 90 km SW of Puerto Madero",
             raw_fields={"ids": "us7000t1cc,us7000t1bu"},
         )
-        match = _find_existing_incident(store, new_report)
+        match = _find_existing_incident(store, _ADAPTER, new_report)
         assert match == inc_id
 
     def test_no_usgs_ids_returns_none_quickly(self, tmp_path: Path) -> None:
         store = ContentStore(tmp_path)
         new_report = _build_report(raw_fields={})
-        assert _find_existing_incident(store, new_report) is None
+        assert _find_existing_incident(store, _ADAPTER, new_report) is None
 

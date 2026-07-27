@@ -111,6 +111,41 @@ class WHODiseaseOutbreakAdapter:
             f"{disease} {country} {year}",
         ]
 
+    def build_source_link(
+        self, raw_fields: dict[str, object], name: str
+    ) -> dict[str, str]:
+
+        who_url = str(raw_fields.get("ItemDefaultUrl") or "")
+        if who_url and not who_url.startswith("http"):
+            who_url = (
+                "https://www.who.int/emergencies/disease-outbreak-news/item/"
+                + who_url.lstrip("/")
+            )
+        return {
+            "type": "WHO",
+            "label": name,
+            "url": who_url,
+            "meta": "",
+        }
+
+    def extract_physical(self, raw_fields: dict[str, object]) -> dict[str, object]:
+
+        return {}
+
+    def find_existing_incident(
+        self,
+        wh: Any,
+        report: SourceReport,
+        active_window_days: int = 7,
+    ) -> str | None:
+
+        country_codes = {p.country_code for p in report.places if p.country_code}
+        if not country_codes:
+            return None
+        return wh.find_active_incident_by_type_country(
+            report.incident_type, country_codes, active_window_days
+        )
+
 
 def _record_to_report(record: Any) -> SourceReport:
     record_dict = _as_dict(record)

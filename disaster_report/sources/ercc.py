@@ -104,6 +104,35 @@ class ERCCAdapter:
             f"{incident_type} {year}",
         ]
 
+    def build_source_link(
+        self, raw_fields: dict[str, object], name: str
+    ) -> dict[str, str]:
+
+        return {
+            "type": "ERCC",
+            "label": str(raw_fields.get("title") or name),
+            "url": str(raw_fields.get("link") or ""),
+            "meta": "",
+        }
+
+    def extract_physical(self, raw_fields: dict[str, object]) -> dict[str, object]:
+
+        return {}
+
+    def find_existing_incident(
+        self,
+        wh: Any,
+        report: SourceReport,
+        active_window_days: int = 7,
+    ) -> str | None:
+
+        country_codes = {p.country_code for p in report.places if p.country_code}
+        if not country_codes:
+            return None
+        return wh.find_active_incident_by_type_country(
+            report.incident_type, country_codes, active_window_days
+        )
+
 
 def _item_to_report(item: Any) -> SourceReport:
     raw_fields = _build_raw_fields(item)

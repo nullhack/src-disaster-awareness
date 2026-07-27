@@ -40,6 +40,14 @@ def _to_report_places(raw_places: list[dict[str, Any]]) -> list[ReportPlace]:
     ]
 
 
+_NAME_EXTRACTORS = {
+    "USGS": _usgs_name,
+    "GDACS": _gdacs_name,
+    "WHO": _who_name,
+    "ERCC": _ercc_name,
+}
+
+
 def _new_name(source: str, raw: dict[str, Any]) -> str:
     raw_fields = dict(raw.get("raw_fields") or {})
     places = _to_report_places(raw.get("places") or [])
@@ -50,15 +58,11 @@ def _new_name(source: str, raw: dict[str, Any]) -> str:
         if report_date and old_name.endswith(report_date):
             return old_name
         raw_fields["title"] = old_name
-    if source == "USGS":
-        return _usgs_name(raw_fields, places, report_date, incident_type or "Earthquake")
-    if source == "GDACS":
-        return _gdacs_name(raw_fields, places, report_date, incident_type)
-    if source == "WHO":
-        return _who_name(raw_fields, places, report_date, incident_type)
-    if source == "ERCC":
-        return _ercc_name(raw_fields, places, report_date, incident_type)
-    return old_name
+    default_type = "Earthquake" if source == "USGS" else incident_type
+    extractor = _NAME_EXTRACTORS.get(source)
+    if not extractor:
+        return old_name
+    return extractor(raw_fields, places, report_date, default_type)
 
 
 def _replace_name_line(text: str, new_value: str) -> str:
