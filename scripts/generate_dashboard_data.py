@@ -841,10 +841,10 @@ def main() -> None:
 def _join_summary_paragraphs(text: str) -> str:
     pieces = [p.strip() for p in text.split("\n") if p.strip()]
     out = []
-    for p in pieces:
-        if p[-1] not in ".!?":
-            p += "."
-        out.append(p)
+    for piece in pieces:
+        if piece[-1] not in ".!?":
+            piece += "."
+        out.append(piece)
     return " ".join(out)
 
 

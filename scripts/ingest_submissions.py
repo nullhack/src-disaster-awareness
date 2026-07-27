@@ -27,6 +27,7 @@ import argparse
 import hashlib
 import json
 import logging
+import os
 import sys
 import uuid
 from datetime import datetime, timezone
@@ -258,9 +259,7 @@ def main() -> int:
         format="%(asctime)s %(levelname)s %(name)s: %(message)s",
     )
 
-    api_key = args.api_key or (
-        __import__("os").environ.get(args.api_key_env, "")
-    )
+    api_key = args.api_key or os.environ.get(args.api_key_env, "")
     if not api_key:
         print(f"error: api key missing (set ${args.api_key_env} or pass --api-key)", file=sys.stderr)
         return 2

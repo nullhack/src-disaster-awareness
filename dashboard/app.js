@@ -13,6 +13,7 @@ const TYPE_COLOR = {
   Wildfire: "#E8741E", "Tropical Cyclone": "#0E9594", Other: "#6E6E6E",
 };
 const typeColor = (t) => TYPE_COLOR[t] || TYPE_COLOR.Other;
+const REPO_URL = "https://github.com/nullhack/src-disaster-awareness";
 // distinct palette for disease pathogens (disease trend panel)
 const DISEASE_COLOR = {
   Ebola: "#7A0019", Nipah: "#B4009E", Cholera: "#0E7C7B",
@@ -78,7 +79,6 @@ const STATE = {
   tab: "watchlist",
   trend: { window: "30", metric: "n" }, // metric: n(news)|e(events); two panels: disease(by pathogen) + geo(by kind)
 };
-if (typeof window !== "undefined") window.STATE = STATE; // debug hook
 
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
@@ -207,7 +207,7 @@ function refreshDateControls() {
   const reportLink = $("#dpReport");
   if (STATE.digestDate) {
     const [y, m] = STATE.digestDate.split("-");
-    reportLink.href = `https://github.com/nullhack/src-disaster-awareness/blob/gh-pages/reports/${y}/${m}/${y}${m}${STATE.digestDate.slice(8)}.md`;
+    reportLink.href = `${REPO_URL}/blob/gh-pages/reports/${y}/${m}/${y}${m}${STATE.digestDate.slice(8)}.md`;
     reportLink.hidden = false;
   } else {
     reportLink.hidden = true;
@@ -471,7 +471,7 @@ function renderTrendPanel(svgSel, tooltipSel, tdata, series, bucket) {
   svg.append("g").attr("transform", `translate(0,${height - m.b})`)
     .call(d3.axisBottom(x).tickSize(0)
       .tickValues(tdata.map((d) => d.date).filter((_, i) => i % step === 0))
-      .tickFormat((d) => (bucket === "week" ? fmtDateYear(d) : fmtDate(d))))
+      .tickFormat((d) => (bucket === "week" ? fmtDate(d) : fmtDate(d))))
     .call((g) => g.select(".domain").remove())
     .selectAll("text").classed("trend-axis-label", true)
     .attr("transform", "rotate(-30)").style("text-anchor", "end");
@@ -563,9 +563,9 @@ function renderTrend() {
 
   const endIso = (agg && agg.as_of) || (tdata.length ? tdata[tdata.length - 1].date : "");
   const startIso = tdata.length ? tdata[0].date : endIso;
-  const startLbl = startIso.slice(0, 4) === endIso.slice(0, 4) ? fmtDate(startIso) : fmtDateYear(startIso);
+  const startLbl = startIso.slice(0, 4) === endIso.slice(0, 4) ? fmtDate(startIso) : fmtDate(startIso);
   $("#trendHint").textContent = tdata.length
-    ? `${bucket === "week" ? "Weekly" : "Daily"} · ${METRIC_LABEL[t.metric]} · log scale · ${startLbl} → ${fmtDateYear(endIso)}${agg && agg.synthetic ? " · sample data" : ""}`
+    ? `${bucket === "week" ? "Weekly" : "Daily"} · ${METRIC_LABEL[t.metric]} · log scale · ${startLbl} → ${fmtDate(endIso)}${agg && agg.synthetic ? " · sample data" : ""}`
     : "Aggregation unavailable for this window.";
   $("#trendTitle").textContent = `${t.window}-day trend`;
 }
@@ -760,7 +760,6 @@ function renderRecentActivity() {
 
 /* ---------- DRAWER ---------- */
 function monitoringRequestUrl(i) {
-  const repo = "https://github.com/nullhack/src-disaster-awareness";
   const treeId = i.tree_id || i.incident_id;
   const params = new URLSearchParams({
     template: "monitoring_request.yml",
@@ -772,7 +771,7 @@ function monitoringRequestUrl(i) {
 
 function dataBranchUrl(i) {
   const treeId = i.tree_id || i.incident_id;
-  return `https://github.com/nullhack/src-disaster-awareness/tree/data/incidents/${treeId}`;
+  return `${REPO_URL}/tree/data/incidents/${treeId}`;
 }
 
 function _logEntryHtml(log) {
@@ -862,7 +861,7 @@ function openDrawer(id) {  const i = STATE.digest.incidents.find((x) => x.incide
     ${phys.place ? `<div class="drawer__section"><h3>Locality</h3><div style="font-size:13px;color:#4A4A4A">${esc(phys.place)}</div></div>` : ""}
     <div class="drawer__section">
       <h3>Source coverage · ${i.source_count} record(s)</h3>
-      <div class="cell-src">${sourceTagsDetailed(i.sources)}</div>
+      <div class="cell-src">${sourceTags(i.sources, true)}</div>
       ${(i.source_links && i.source_links.length) ? `
         <h4 class="drawer__subhead">Original source records (${i.source_links.length})</h4>
         <ul class="src-links">
@@ -901,22 +900,19 @@ function closeDrawer() {
 function kv(k, v) { return `<div class="drawer__kv"><b>${esc(k)}</b><span>${v}</span></div>`; }
 function esc(s) { return String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c])); }
 function typePill(t) { return `<span style="color:${typeColor(t)};font-weight:600">${esc(t)}</span>`; }
-function sourceTags(s) {
-  const parts = [];
-  if (s.who_don) parts.push(`WHO×${s.who_don}`);
-  if (s.usgs) parts.push(`USGS×${s.usgs}`);
-  if (s.gdacs) parts.push(`GDACS×${s.gdacs}`);
-  if (s.healthmap) parts.push(`HM×${s.healthmap}`);
-  return parts.map((p) => `<span class="src-tag">${p}</span>`).join("");
-}
-function sourceTagsDetailed(s) {
-  return [
-    s.who_don && `<span class="src-tag">WHO DON ×${s.who_don}</span>`,
-    s.usgs && `<span class="src-tag">USGS ×${s.usgs}</span>`,
-    s.gdacs && `<span class="src-tag">GDACS ×${s.gdacs}</span>`,
-    s.healthmap && `<span class="src-tag">HealthMap ×${s.healthmap}</span>`,
-    `<span class="src-tag">News ×${s.news}</span>`,
-  ].filter(Boolean).join("");
+function sourceTags(s, detailed = false) {
+  const specs = [
+    ["who_don", "WHO"],
+    ["usgs", "USGS"],
+    ["gdacs", "GDACS"],
+    ["healthmap", detailed ? "HealthMap" : "HM"],
+  ];
+  const parts = specs.filter(([k]) => s[k]).map(([k, label]) => {
+    const name = detailed && k === "who_don" ? "WHO DON" : label;
+    return `<span class="src-tag">${name} ×${s[k]}</span>`;
+  });
+  if (detailed) parts.push(`<span class="src-tag">News ×${s.news}</span>`);
+  return parts.join("");
 }
 function fmtTime(iso) {
   if (!iso) return "";
@@ -947,7 +943,6 @@ function fmtDateTime(iso) {
   const mi = String(d.getUTCMinutes()).padStart(2, "0");
   return `${dd}/${mm}/${d.getUTCFullYear()} ${hh}:${mi}`;
 }
-const fmtDateYear = fmtDate;
 function showError(msg) {
   const t = $("#toast"); t.textContent = msg; t.hidden = false;
   setTimeout(() => { t.hidden = true; }, 5000);
