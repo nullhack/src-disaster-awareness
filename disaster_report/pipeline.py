@@ -351,6 +351,15 @@ def search_news(
             )
         logger.info("search: per-report mode done")
         return
+    if source_id and not adapter_list and not repoll:
+        for inc in wh.read_incidents():
+            genesis = wh.read_source_report_by_id(inc.genesis_report_id)
+            if genesis and genesis.source_id == source_id:
+                logger.info("search: targeted incident %s for source-id %s", inc.incident_id, source_id)
+                _repoll_one_incident(wh, inc, ddg_adapter, digest_fn, news_timelimit, adapter_map)
+                return
+        logger.warning("search: no incident found for source-id %s", source_id)
+        return
     active_n = len(wh.active_incidents(active_window_days))
     extended_n = len(wh.extended_monitoring_incidents())
     repoll_incidents = wh.repolllable_incidents(active_window_days)
