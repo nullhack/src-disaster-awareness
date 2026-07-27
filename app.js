@@ -905,6 +905,7 @@ function sourceTags(s, detailed = false) {
     ["who_don", "WHO"],
     ["usgs", "USGS"],
     ["gdacs", "GDACS"],
+    ["ercc", "ERCC"],
     ["healthmap", detailed ? "HealthMap" : "HM"],
   ];
   const parts = specs.filter(([k]) => s[k]).map(([k, label]) => {
