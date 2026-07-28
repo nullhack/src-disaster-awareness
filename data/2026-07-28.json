@@ -1,49 +1,50 @@
 {
   "schema_version": "1.5",
-  "report_date": "2026-07-27",
+  "report_date": "2026-07-28",
   "generated_at": "2026-07-28T04:43:06Z",
-  "as_of": "2026-07-27",
+  "as_of": "2026-07-28",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 19,
-    "new_today": 8,
-    "critical": 5,
-    "high": 5,
-    "medium": 9,
+    "reportable_total": 20,
+    "new_today": 3,
+    "critical": 7,
+    "high": 6,
+    "medium": 7,
     "low": 0,
     "disease_outbreaks": 5,
     "countries_affected": 13,
-    "news_total": 1013,
+    "news_total": 1200,
     "max_magnitude": 7.5,
     "by_severity": {
-      "CRITICAL": 5,
-      "HIGH": 5,
-      "MEDIUM": 9,
+      "CRITICAL": 7,
+      "HIGH": 6,
+      "MEDIUM": 7,
       "LOW": 0
     },
     "by_type": {
       "Disease": 5,
-      "Flood": 2,
       "Volcano": 1,
-      "Earthquake": 6,
-      "Forest Fire": 3,
+      "Flood": 1,
+      "Earthquake": 5,
+      "Forest Fire": 4,
       "Severe Weather": 1,
+      "Conflict": 2,
       "Tropical Cyclone": 1
     },
     "by_region": {
       "Global": 3,
       "Africa": 1,
       "Asia": 7,
-      "Americas": 3,
-      "Europe": 4,
+      "Americas": 2,
+      "Europe": 6,
       "Oceania": 1
     }
   },
   "by_country": [
     {
       "country": "",
-      "count": 4,
+      "count": 5,
       "max_sev_rank": 2,
       "iso2": "XX",
       "region": "Global",
@@ -55,15 +56,6 @@
       "count": 2,
       "max_sev_rank": 2,
       "iso2": "CN",
-      "region": "Asia",
-      "country_group": "A",
-      "max_severity": "MEDIUM"
-    },
-    {
-      "country": "Nepal",
-      "count": 1,
-      "max_sev_rank": 2,
-      "iso2": "NP",
       "region": "Asia",
       "country_group": "A",
       "max_severity": "MEDIUM"
@@ -84,15 +76,6 @@
       "iso2": "BD",
       "region": "Asia",
       "country_group": "A",
-      "max_severity": "MEDIUM"
-    },
-    {
-      "country": "Canada",
-      "count": 1,
-      "max_sev_rank": 2,
-      "iso2": "CA",
-      "region": "Americas",
-      "country_group": "C",
       "max_severity": "MEDIUM"
     },
     {
@@ -156,6 +139,24 @@
       "iso2": "ES",
       "region": "Europe",
       "country_group": "C",
+      "max_severity": "LOW"
+    },
+    {
+      "country": "Ukraine",
+      "count": 1,
+      "max_sev_rank": 4,
+      "iso2": "UA",
+      "region": "Europe",
+      "country_group": "C",
+      "max_severity": "LOW"
+    },
+    {
+      "country": "Iran",
+      "count": 1,
+      "max_sev_rank": 4,
+      "iso2": "IR",
+      "region": "Asia",
+      "country_group": "B",
       "max_severity": "LOW"
     }
   ],
@@ -2126,131 +2127,6 @@
         }
       ],
       "logs_total": 12
-    },
-    {
-      "incident_id": "20251003-NP-FL",
-      "tree_id": "a680568bc49a5f5b8d9cc30beb0c7476",
-      "canonical_name": "Flood Koshi, Nepal 2025-10-03",
-      "summary": "Heavy rainfall in Nepal has caused water levels in the Kosi and Gandak rivers to rise sharply, triggering flood fears and inundation in parts of North Bihar, India. The swelling rivers pose a renewed flood risk for downstream areas.",
-      "country": "Nepal",
-      "iso2": "NP",
-      "lat": 26.94,
-      "lon": 87.9248,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Flood",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2025-10-03",
-      "first_reported_date": "2025-10-03",
-      "last_updated_date": "2026-07-20",
-      "days_since_event": 298,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 1,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 4
-      },
-      "source_links": [
-        {
-          "type": "GDACS",
-          "label": "Orange alert · Magnitude 0 ",
-          "url": "https://www.gdacs.org/report.aspx?eventid=1103540&episodeid=2&eventtype=FL",
-          "meta": "Magnitude 0 "
-        }
-      ],
-      "physical": {
-        "max_magnitude": 0,
-        "max_depth_km": null,
-        "place": "Nepal",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": "Orange",
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "What caused Nepal’s devastating flood damage and how was it contained?",
-          "published_date": "2025-10-07"
-        },
-        {
-          "headline": "Nepal Rainfall Swells Kosi And Gandak Triggers Flood Fears In North Bihar Dists",
-          "published_date": "2026-07-18"
-        },
-        {
-          "headline": "Nepal Rainfall Swells Kosi And Gandak Triggers Flood Fears In North Bihar Dists",
-          "published_date": "2026-07-18"
-        },
-        {
-          "headline": "Heavy Rainfall In Nepal Swells Kosi Inundates Parts Of N Bihar",
-          "published_date": "2026-07-20"
-        }
-      ],
-      "news_total": 4,
-      "logs": [
-        {
-          "log_date": "2026-07-08",
-          "summary": "Heavy rains caused severe flooding and landslides in Nepal and India’s eastern Himalayan region, resulting in devastating damage. The article examines the causes of the flood damage and how it was contained.",
-          "news": [
-            {
-              "news_id": "bfb8bcd0f741591e881c7c5e046919b1",
-              "url": "https://www.yahoo.com/news/articles/caused-nepal-devastating-flood-damage-120816471.html",
-              "headline": "What caused Nepal’s devastating flood damage and how was it contained?",
-              "body": "Karki government has been praised for issuing early warnings and imposing road closures in response to flood forecasts.",
-              "published_date": "2025-10-07",
-              "outlet": "Al Jazeera · via Yahoo News",
-              "image": "https://media.zenfs.com/en/al_jazeera_289/0ffc84b0d6703d7dc6da10a5675717ee"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-20",
-          "summary": "Heavy rainfall in Nepal has caused water levels in the Kosi and Gandak rivers to rise sharply, triggering flood fears and inundation in parts of North Bihar, India. The swelling rivers pose a renewed flood risk for downstream areas.",
-          "news": [
-            {
-              "news_id": "6edf04eaaa2553deb6d6513fa44f8725",
-              "url": "https://www.msn.com/en-in/weather/general/nepal-rainfall-swells-kosi-and-gandak-triggers-flood-fears-in-north-bihar-dists/ar-AA27UyLz?ocid=BingNewsVerp",
-              "headline": "Nepal Rainfall Swells Kosi And Gandak Triggers Flood Fears In North Bihar Dists",
-              "body": "Patna/Bettiah: Heavy rainfall in Nepal pushed up the water levels of the Kosi and Gandak rivers on Tuesday, prompting ...",
-              "published_date": "2026-07-18",
-              "outlet": "The Times of India on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.f5v3HLPZ1FEhw9JaH__ofQ"
-            },
-            {
-              "news_id": "34c70aa39a9053c18d962cc94bcc1e97",
-              "url": "https://www.msn.com/en-in/weather/extreme-weather-events/nepal-rainfall-swells-kosi-and-gandak-triggers-flood-fears-in-north-bihar-dists/ar-AA27UyLz?ocid=BingNewsVerp",
-              "headline": "Nepal Rainfall Swells Kosi And Gandak Triggers Flood Fears In North Bihar Dists",
-              "body": "Patna/Bettiah: Heavy rainfall in Nepal pushed up the water levels of the Kosi and Gandak rivers on Tuesday, prompting ...",
-              "published_date": "2026-07-18",
-              "outlet": "The Times of India on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.f5v3HLPZ1FEhw9JaH__ofQ"
-            },
-            {
-              "news_id": "69448e8f05b05d4e8860905eb4d8f905",
-              "url": "https://www.msn.com/en-in/weather/extreme-weather-events/heavy-rainfall-in-nepal-swells-kosi-inundates-parts-of-n-bihar/ar-AA28eIfW?ocid=BingNewsVerp",
-              "headline": "Heavy Rainfall In Nepal Swells Kosi Inundates Parts Of N Bihar",
-              "body": "Patna: Heavy rain in Nepal and several parts of Bihar over the past 24 hours led to a sharp rise in the water levels of the ...",
-              "published_date": "2026-07-20",
-              "outlet": "The Times of India on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.gOYA9Rz9hS583pWeGQhkVQ"
-            }
-          ]
-        }
-      ],
-      "logs_total": 2
     },
     {
       "incident_id": "20251014-ID-VO",
@@ -9988,6 +9864,1502 @@
       "logs_total": 2
     },
     {
+      "incident_id": "20260715-UA-CF",
+      "tree_id": "f22292f8c3ff448a920c3b1fe41d3aa0",
+      "canonical_name": "Conflict Ukraine 2026-07-15",
+      "summary": "Iran formally warned Ukraine of retaliation after a deadly Ukrainian strike on an Iranian commercial vessel in the Caspian Sea. India issued a travel advisory following a vessel strike at Odesa port that affected Indian nationals. In Russia, reports indicate Putin may be preparing to mobilize up to 500,000 additional troops amid falling public opinion, while Ukraine's drone strikes continued targeting Russia's Wildberries online marketplace to disrupt the economy. President Zelenskyy is scheduled to visit Britain for talks with Prime Minister Andy Burnham.\nA missile strike in Kharkiv killed 1 and injured 16. President Zelenskyy visited Britain to meet with new Prime Minister Andy Burnham, who signaled continued support for Ukraine.\nUkraine achieved its first confirmed air-to-air kill with an F-16, destroying a Russian aircraft. Meanwhile, the Pentagon acknowledged that US industry is years behind matching Ukraine's wartime drone production output. Ukraine's Foreign Minister also extended condolences to India over the loss of seafarers in a Black Sea vessel strike.",
+      "country": "Ukraine",
+      "iso2": "UA",
+      "lat": 48.9,
+      "lon": 31.2,
+      "country_group": "C",
+      "region": "Europe",
+      "incident_type": "Conflict",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "CRITICAL",
+      "priority": "HIGH",
+      "priority_rank": 1,
+      "pandemic_potential": null,
+      "event_status": null,
+      "extended_monitoring": false,
+      "disease_name": null,
+      "event_date": "2026-07-15",
+      "first_reported_date": "2026-07-15",
+      "last_updated_date": "2026-07-28",
+      "days_since_event": 13,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 0,
+        "gdacs": 0,
+        "ercc": 1,
+        "healthmap": 0,
+        "news": 112
+      },
+      "source_links": [
+        {
+          "type": "ERCC",
+          "label": "ECHO Daily Map of 15 July 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5727",
+          "meta": ""
+        }
+      ],
+      "physical": {
+        "max_magnitude": null,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Putin’s false claim of the capture of one Ukrainian town exposes the slow pace of Russia’s bloody advance | CNN",
+          "published_date": "2026-07-16"
+        },
+        {
+          "headline": "Russia unleashes one of the biggest ballistic missile attacks of Ukraine war, Kyiv says",
+          "published_date": "2026-07-19"
+        },
+        {
+          "headline": "Ukraine wants to dominate drone manufacturing after battlefield successes",
+          "published_date": "2026-07-19"
+        },
+        {
+          "headline": "Ukraine claims $400 FPV drone destroyed Russia's $19 million 'Apache rival' attack helicopter",
+          "published_date": "2026-07-20"
+        },
+        {
+          "headline": "Zelensky Sacks Defense Minister, Delays Demise Of Putin",
+          "published_date": "2026-07-20"
+        },
+        {
+          "headline": "Ukraine claims $400 FPV drone destroyed Russia's $19 million 'Apache rival' attack helicopter",
+          "published_date": "2026-07-20"
+        },
+        {
+          "headline": "Ukraine war latest: Deaths in Ukraine and Russia after airstrikes - as drone shot down over NATO airspace",
+          "published_date": "2026-07-20T04:13:14+00:00"
+        },
+        {
+          "headline": "Ukraine war latest: Deaths in Ukraine and Russia after airstrikes - as drone shot down over NATO airspace",
+          "published_date": "2026-07-20T20:11:05+00:00"
+        },
+        {
+          "headline": "Laura Loomer Makes Rare Admission Of Guilt: 'I Feel Like Such An A**hole'",
+          "published_date": "2026-07-21"
+        },
+        {
+          "headline": "Is The Rally in Wheat ETF Overdone?",
+          "published_date": "2026-07-21"
+        },
+        {
+          "headline": "Rubio says Trump team poised to help end Ukraine's 'senseless war' but no quick deal",
+          "published_date": "2026-07-22"
+        },
+        {
+          "headline": "Who is Mykhailo Drapatyi? ‘The Flying BMP’ who now leads Ukraine’s military",
+          "published_date": "2026-07-22"
+        },
+        {
+          "headline": "Ukraine hits more warehouses of Russia's top online retailer Wildberries",
+          "published_date": "2026-07-22T09:22:23+00:00"
+        },
+        {
+          "headline": "US is ready to help end the 'senseless war' in Ukraine but no quick deal ahead, Rubio says",
+          "published_date": "2026-07-23"
+        },
+        {
+          "headline": "Ukraine hits Russia's largest online marketplace, hurting small businesses and bringing the war home",
+          "published_date": "2026-07-23"
+        },
+        {
+          "headline": "Ukraine hits Russia's largest online marketplace, hurting small businesses and bringing the war home",
+          "published_date": "2026-07-23"
+        },
+        {
+          "headline": "US is ready to help end the 'senseless war' in Ukraine but no quick deal ahead, Rubio says",
+          "published_date": "2026-07-23"
+        },
+        {
+          "headline": "Ukraine’s Drone War Is Choking Kazakhstan’s Oil Exports",
+          "published_date": "2026-07-23"
+        },
+        {
+          "headline": "Kremlin warns against optimism on peace after Rubio, lavrov meet in manila",
+          "published_date": "2026-07-23"
+        },
+        {
+          "headline": "This is only until autumn: the expert named the reason why Russia is not hitting Europe: EADaily",
+          "published_date": "2026-07-23"
+        },
+        {
+          "headline": "U.S. Army Is Buying Older PAC-2 Patriot Missiles For The First Time In Decades",
+          "published_date": "2026-07-23"
+        },
+        {
+          "headline": "US is ready to help end the 'senseless war' in Ukraine but no quick deal ahead — Rubio",
+          "published_date": "2026-07-23"
+        },
+        {
+          "headline": "Asian allies fed up with Washington’s war",
+          "published_date": "2026-07-23T00:00:00+00:00"
+        },
+        {
+          "headline": "Wildberries Faces Drone Attacks Amid Ukraine Conflict, Ozon (OZO",
+          "published_date": "2026-07-23T04:13:14+00:00"
+        },
+        {
+          "headline": "Ukraine hits Russia's largest online marketplace, hurting small businesses and...",
+          "published_date": "2026-07-23T09:06:30+00:00"
+        },
+        {
+          "headline": "Ukraine Intensifies Strikes on Russian Retail Giant Ozon, Impact",
+          "published_date": "2026-07-23T11:06:17+00:00"
+        },
+        {
+          "headline": "Ukraine may already be winning World War III for an oblivious West",
+          "published_date": "2026-07-23T11:06:17+00:00"
+        },
+        {
+          "headline": "To end the wars in Ukraine and Iran, starve Russia’s gas pumps",
+          "published_date": "2026-07-23T12:06:17+00:00"
+        },
+        {
+          "headline": "China is gaining troubling military know-how from Russia",
+          "published_date": "2026-07-23T14:34:46+00:00"
+        },
+        {
+          "headline": "Russia Considers Extending Diesel Export Ban Amid Ukraine Attack",
+          "published_date": "2026-07-23T17:06:17+00:00"
+        },
+        {
+          "headline": "Ukraine has gone from accepting just about any old weapon to showing Western militaries how modern war is fought",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "Russia reveals footage of Ukrainian drones carrying ground robots",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "Russia launches largest aerial attacks of the war as crypto markets watch geopolitical risk signals",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "Ukraine hits Russia's largest online marketplace, hurting small businesses and bringing the war home | Chattanooga Times Free Press",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "Rubio says U.S. is ready to help end war in Ukraine but no quick deal ahead",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "Rubio says US ready to help end Ukraine war, but no quick deal in sight",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "EU passes 218 Russia sanctions, targets vessels that refuel shadow fleet tankers",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "US is ready to help end the 'senseless war' in Ukraine but no quick deal ahead, Rubio says",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "Ukraine war: ‘Russia’s Amazon’ hit by Ukrainian strikes",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "Ukraine hits Russia’s largest online marketplace, hurting small businesses and bringing the war home",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "Russia says it will wait for new Trump proposals on ending Ukraine war",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "More Canadian Troops, for Longer in Latvia Not Reassuring",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "Ukraine war: 'Russia's Amazon' hit by Ukrainian strikes",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "Ukraine overhauls its military top brass for the fight against Russia",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "Russia, stretched by Ukraine, pulls all warships from Mediterranean Sea",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "Russia, stretched by Ukraine, pulls all warships from Mediterranean Sea",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "Rubio, Russia’s Lavrov meet in Manila - Taipei Times",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "Ousted Ukrainian defence chief digs in against Zelenskiy",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "Latest Bridge Strikes Show Russia And Ukraine Expect A Long Stalemate",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "India issues advisory for nationals working on ships in Black Sea amid rising missile, drone attacks",
+          "published_date": "2026-07-24T09:06:33+00:00"
+        },
+        {
+          "headline": "Russian entrepreneurs see stock go up in flames as Ukraine targets Wildberries",
+          "published_date": "2026-07-24T14:18:11+00:00"
+        },
+        {
+          "headline": "Ukraine hits Russia's largest online marketplace, hurting small businesses and...",
+          "published_date": "2026-07-24T19:52:52+00:00"
+        },
+        {
+          "headline": "Zelenskiy says US, Ukraine moving forward on joint drone production",
+          "published_date": "2026-07-24T22:18:11+00:00"
+        },
+        {
+          "headline": "Russia launches kamikaze drone strikes on Ukrainian ships in Black Sea",
+          "published_date": "2026-07-25"
+        },
+        {
+          "headline": "Ukraine war live: At least 10 killed after Putin’s strike on Kyiv",
+          "published_date": "2026-07-25"
+        },
+        {
+          "headline": "Ukraine war live: Two children killed in attack on holiday camps",
+          "published_date": "2026-07-25"
+        },
+        {
+          "headline": "Oil shipments are under attack on multiple fronts as fighting escalates in Red Sea, Hormuz and Black Sea",
+          "published_date": "2026-07-25"
+        },
+        {
+          "headline": "Ukraine war: 'Russia's Amazon' hit by Ukrainian strikes",
+          "published_date": "2026-07-25"
+        },
+        {
+          "headline": "Russian and Ukrainian strikes kill 14, Romania downs drone near border",
+          "published_date": "2026-07-25"
+        },
+        {
+          "headline": "At least 11 killed in Ukraine as Moscow and Kyiv continue to trade attacks",
+          "published_date": "2026-07-25"
+        },
+        {
+          "headline": "Russia, stretched by Ukraine, pulls all warships from Mediterranean Sea",
+          "published_date": "2026-07-25"
+        },
+        {
+          "headline": "Why Maga changed its mind about the Ukraine war",
+          "published_date": "2026-07-25"
+        },
+        {
+          "headline": "Trump and Zelenskyy to meet in Washington next week",
+          "published_date": "2026-07-25"
+        },
+        {
+          "headline": "China Protests European Union Sanctions on 14 Chinese Companies Over Russia Links",
+          "published_date": "2026-07-25"
+        },
+        {
+          "headline": "Chevron Faces Challenges Amid Ukraine Conflict Impacting Oil Ope",
+          "published_date": "2026-07-25T00:38:54+00:00"
+        },
+        {
+          "headline": "Ukraine war latest: Deaths in Ukraine and Russia after airstrikes - as drone shot down over NATO airspace",
+          "published_date": "2026-07-25T14:18:08+00:00"
+        },
+        {
+          "headline": "Speaking Alongside Putin, Kazakh President Calls for Freeze of Ukraine War",
+          "published_date": "2026-07-25T15:52:55+00:00"
+        },
+        {
+          "headline": "Ukraine's Zelenskiy: Russia Wants to Bring in 30,000 North Korean Troops to...",
+          "published_date": "2026-07-25T17:52:55+00:00"
+        },
+        {
+          "headline": "We asked Ukrainians what they think of Trump – more view him as an enemy than a friend",
+          "published_date": "2026-07-26"
+        },
+        {
+          "headline": "Ukraine's Zelenskiy: Russia wants to bring in 30,000 North Korean troops to conflict",
+          "published_date": "2026-07-26"
+        },
+        {
+          "headline": "In rare move, Kazakh president urges Putin to freeze Ukraine war",
+          "published_date": "2026-07-26"
+        },
+        {
+          "headline": "Speaking alongside Putin, Kazakh president calls for freeze of Ukraine war",
+          "published_date": "2026-07-26"
+        },
+        {
+          "headline": "Odesa port strike hits vessel with four Indians, two safe and two untraced",
+          "published_date": "2026-07-26"
+        },
+        {
+          "headline": "A tech innovator and an old guard general are the focus of Ukraine’s political crisis | Texarkana Gazette",
+          "published_date": "2026-07-26"
+        },
+        {
+          "headline": "Graham funeral brings Zelensky and Netanyahu to Washington for back-to-back Trump talks",
+          "published_date": "2026-07-26"
+        },
+        {
+          "headline": "Ukraine live: Romania shoots down third Russian drone in Nato airspace",
+          "published_date": "2026-07-26"
+        },
+        {
+          "headline": "Ukraine war live: Putin 'to bring' 30,000 North Korean troops",
+          "published_date": "2026-07-26"
+        },
+        {
+          "headline": "Russia wants 30,000 more North Korean troops for Ukraine war: Zelenskyy",
+          "published_date": "2026-07-26"
+        },
+        {
+          "headline": "Ukraine's new plan to deliver devastating blow that could be end for Putin",
+          "published_date": "2026-07-26"
+        },
+        {
+          "headline": "Ukraine war live: Putin 'to bring' 30,000 North Korean troops",
+          "published_date": "2026-07-26"
+        },
+        {
+          "headline": "Indian vessel struck at Ukraine's Odesa port; two nationals missing",
+          "published_date": "2026-07-26"
+        },
+        {
+          "headline": "Iran war expands beyond Red Sea? Tehran warns Ukraine after vessel strike in Caspian Sea",
+          "published_date": "2026-07-26"
+        },
+        {
+          "headline": "India Issues Advisory After Vessel With Indians Hit At Odesa Port In Ukraine",
+          "published_date": "2026-07-26"
+        },
+        {
+          "headline": "Putin Melts Down in Front of Stunned Sailors After Canceling Parade",
+          "published_date": "2026-07-26"
+        },
+        {
+          "headline": "Ukraine war latest: Russian attack on Kyiv triggers fires - as Iran blames Ukraine for attack on vessel",
+          "published_date": "2026-07-26T09:06:30+00:00"
+        },
+        {
+          "headline": "Ukraine war latest: Deaths in Ukraine and Russia after airstrikes - as drone shot down over NATO airspace",
+          "published_date": "2026-07-26T09:06:30+00:00"
+        },
+        {
+          "headline": "Kremlin Says Too Early to Comment on Reported US-Ukraine Air Ceasefire Talks",
+          "published_date": "2026-07-26T13:51:56+00:00"
+        },
+        {
+          "headline": "The Iran and Ukraine wars are colliding on the world’s biggest lake. Here’s what to know",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Zelenskyy and Britain’s new leader discuss drone projects and missile defense for Kyiv",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Why is Russia attacking ships in Odessa? | Explained",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Iran warns Ukraine of retaliation after deadly Caspian Sea strike",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Democrats ‘undermining US support for Ukraine’",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Putin preparing to mobilize 500,000 Russians as public opinion plummets",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Zelenskyy visits Britain as new PM signals more support for Kyiv",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Missile strike in Kharkiv kills 1, injures 16 ahead of Zelenskyy-Trump meeting",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "F-16’s first air-to-air kill: Ukraine’s new air superiority",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "How Russia-Ukraine war spreading to Caspian Sea threatens key India-linked corridor",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "India Summons Ukrainian Ambassador After Attacks on Merchant Vessels Carrying Indian Crew | Outlook India",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "The new shape of Ukraine’s war",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Ukraine, Iran and How Regional Wars Go Global",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Japan rethinks defense strategy as Ukraine drone war redefines deterrence - The Mainichi",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "How Zelensky made a rival",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Putin preparing to mobilize 500,000 Russians as public opinion plummets",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "India summons Ukraine's envoy over death of seafarer in Black Sea",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Ukraine's Foreign Minister condoles loss of lives of Indian seafarers in Black Sea amid volatile security situation",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "India issues Black Sea advisory after deadly strikes off Ukraine",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "COLLATERAL COMMERCE: Ukraine brings the war to Russia’s online economy",
+          "published_date": "2026-07-27T00:00:00+00:00"
+        },
+        {
+          "headline": "Zelenskyy to visit Britain in first visit by a foreign leader since Burnham took...",
+          "published_date": "2026-07-27T08:35:19+00:00"
+        },
+        {
+          "headline": "Loomer explains war shift from Ukraine bunker",
+          "published_date": "2026-07-27T16:20:23+00:00"
+        },
+        {
+          "headline": "Pentagon says US industry still years from matching Ukraine's wartime output",
+          "published_date": "2026-07-27T19:20:23+00:00"
+        },
+        {
+          "headline": "Pentagon Says It Will Not Finish Spending Ukraine Funds Until Year Trump Leaves...",
+          "published_date": "2026-07-27T21:56:40+00:00"
+        },
+        {
+          "headline": "Ukraine dismisses Iranian threats as Caspian Sea strike directly links wars",
+          "published_date": "2026-07-28"
+        }
+      ],
+      "news_total": 112,
+      "logs": [
+        {
+          "log_date": "2026-07-24",
+          "summary": "Ukraine struck additional warehouses of Russia's top online retailer Wildberries and intensified attacks on Ozon, causing economic disruption. In leadership moves, President Zelensky replaced the commander-in-chief with Mykhailo Drapatyi and fired Defense Minister Mykhailo Fedorov, sparking protests. Meanwhile, U.S. Secretary of State Marco Rubio met with Russia's Lavrov in Manila, expressing readiness to help end the war but noting no quick deal is imminent.\nUkrainian strikes on Russia's Wildberries warehouses produced massive pillars of black smoke as fires raged at the facilities. Russia, stretched by Ukraine's drone attacks on its Black Sea Fleet, has pulled all warships from the Mediterranean Sea. Both sides have increased bridge strikes to disrupt resupply networks, indicating expectations of a prolonged stalemate, while the Kremlin warned against optimism on peace following the Rubio-Lavrov meeting.\nThe EU passed its 21st sanctions package with 218 new designations targeting Russia, including vessels that refuel shadow fleet tankers. Ukrainian strikes continued to hit Russian Wildberries warehouses, while new airstrikes caused deaths in both Ukraine and Russia, and a drone was shot down over NATO airspace.",
+          "news": [
+            {
+              "news_id": "e84ff602f88c5982b0e9986bb27e300a",
+              "url": "https://www.thepilotnews.com/business/ukraine-hits-russias-largest-online-marketplace-hurting-small-businesses-and-bringing-the-war-home/article_09bca962-300b-4df6-8110-497f25c75061.html",
+              "headline": "Ukraine hits Russia's largest online marketplace, hurting small businesses and bringing the war home",
+              "body": "The Ukrainian attacks on the sprawling Russian warehouses produced stark images, with massive pillars of black smoke rising above fires that raged at facilities for Wildberries, the country’s biggest online",
+              "published_date": "2026-07-23",
+              "outlet": "The Pilot News",
+              "image": "https://s.yimg.com/bo/805c448c-f1a4-5f92-8c2e-bb1951bb00c3_1783696190573.jpg"
+            },
+            {
+              "news_id": "e0641e3f3774532d80324a47bececd57",
+              "url": "https://www.timesfreepress.com/news/2026/jul/24/ukraine-hits-russias-largest-online-marketplace-hurting-small-businesses-and-bringing-the-war-home/",
+              "headline": "Ukraine hits Russia's largest online marketplace, hurting small businesses and bringing the war home | Chattanooga Times Free Press",
+              "body": "The Ukrainian attacks on the sprawling Russian warehouses produced stark images, with massive pillars of black smoke rising above fires that raged at facilities for Wildberries, the country's biggest online retailer and its equivalent of Amazon.",
+              "published_date": "2026-07-24",
+              "outlet": "Chattanooga Times Free Press",
+              "image": "https://s.yimg.com/bo/901c74ab-2486-5ba8-9491-69fe04633487_1784900123788.jpg"
+            },
+            {
+              "news_id": "e38c60fd514456a39a14899d991361f3",
+              "url": "https://www.ualrpublicradio.org/npr-news/2026-07-24/rubio-says-u-s-is-ready-to-help-end-war-in-ukraine-but-no-quick-deal-ahead",
+              "headline": "Rubio says U.S. is ready to help end war in Ukraine but no quick deal ahead",
+              "body": "Secretary of State Marco Rubio, who met with his Russian counterpart Sergey Lavrov, said that President Trump was committed to the work \"if conditions and factors have changed to make that possible.\"",
+              "published_date": "2026-07-24",
+              "outlet": "Little Rock Public Radio",
+              "image": "https://www.bing.com/th?id=ONUT.5GBhMI1aUmzhczBvQtJwNg"
+            },
+            {
+              "news_id": "8d704464ea0c56dabf4417fb7d77f94d",
+              "url": "https://www.gurufocus.com/news/8974103/ukraine-intensifies-strikes-on-russian-retail-giant-ozon-impacting-economy",
+              "headline": "Ukraine Intensifies Strikes on Russian Retail Giant Ozon, Impact",
+              "body": "On July 23, 2026, Ukraine has escalated its attacks on Ozon, Russia's largest online retailer,...",
+              "published_date": "2026-07-23T11:06:17+00:00",
+              "outlet": "Guru Focus",
+              "image": "https://s.yimg.com/bo/53877d82-2062-53ef-9b9a-a34f50eb9af0_1784782106095.png.cf.jpg"
+            },
+            {
+              "news_id": "5b1a4f9898555541badaa582e47c3aca",
+              "url": "https://www.techradar.com/pro/ukraine-claims-usd400-fpv-drone-destroyed-russias-usd19-million-apache-rival-attack-helicopter",
+              "headline": "Ukraine claims $400 FPV drone destroyed Russia's $19 million 'Apache rival' attack helicopter",
+              "body": "An aerial David vs. Goliath story",
+              "published_date": "2026-07-20",
+              "outlet": "TechRadar",
+              "image": "https://s.yimg.com/am/60d/d890fa3eaca01ed00a0e9f9bd415abb8"
+            },
+            {
+              "news_id": "cbd90f1468175386a584b15a7d19babd",
+              "url": "https://www.msn.com/en-us/news/world/rubio-says-us-ready-to-help-end-ukraine-war-but-no-quick-deal-in-sight/ar-AA28xvTC?ocid=BingNewsVerp",
+              "headline": "Rubio says US ready to help end Ukraine war, but no quick deal in sight",
+              "body": "Marco Rubio met Sergey Lavrov in Manila and said Washington is ready to help end the Ukraine war. His remarks underscored that any deal will need sustained diplomacy, new ideas and terms both sides ...",
+              "published_date": "2026-07-24",
+              "outlet": "India Today on MSN",
+              "image": ""
+            },
+            {
+              "news_id": "3093de111b5b5f9cb44f11f4c609f134",
+              "url": "https://www.msn.com/en-us/money/general/eu-passes-218-russia-sanctions-targets-vessels-that-refuel-shadow-fleet-tankers/ar-AA28yDvy?ocid=BingNewsVerp",
+              "headline": "EU passes 218 Russia sanctions, targets vessels that refuel shadow fleet tankers",
+              "body": "EU Russia sanctions 2026 reached a new milestone Thursday as the bloc's 21st package — 218 new designations — for the first ...",
+              "published_date": "2026-07-24",
+              "outlet": "Tech Times on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.qtT5jniiOfz96F5pyDk2_w"
+            },
+            {
+              "news_id": "3aefef159fca5f0ea9ac32dc91fbf345",
+              "url": "https://www.politico.com/newsletters/national-security-daily/2026/07/23/asian-allies-fed-up-with-washingtons-war-01010390",
+              "headline": "Asian allies fed up with Washington’s war",
+              "body": "Asian diplomats were all smiles when they greeted Secretary of State Marco Rubio at a summit of South and East Asian leaders in Manila this week.",
+              "published_date": "2026-07-23T00:00:00+00:00",
+              "outlet": "Politico",
+              "image": ""
+            },
+            {
+              "news_id": "396cdb3ce0cf56ccb5e10382c4aed835",
+              "url": "https://www.ajc.com/news/2026/07/rubio-meets-russias-lavrov-in-manila-to-try-to-revive-prospect-of-us-helping-end-war-in-ukraine/",
+              "headline": "US is ready to help end the 'senseless war' in Ukraine but no quick deal ahead, Rubio says",
+              "body": "U.S. Secretary of State Marco Rubio says the Trump administration is ready to help end the war in Ukraine but acknowledges there's no quick path to a deal. Rubio met Thursday with Russian Foreign Minister Sergey Lavrov, who said he emphasized Moscow's readiness for a political resolution. The meeting took place during an ASEAN gathering in Manila, focusing on international conflicts. U.S. efforts to broker peace between Russia and Ukraine have stalled and have been overshadowed by other global tensions. Rubio has warned that Iran would keep facing strikes and said its leaders aren't ready to make a deal. Rubio also discussed maritime disputes with China, highlighting the need for careful management to avoid conflict.",
+              "published_date": "2026-07-24",
+              "outlet": "Atlanta Journal-Constitution",
+              "image": "https://s.yimg.com/bo/7a832540-c951-5a02-8f6e-3025adc1444c_1784788666912.jpg"
+            },
+            {
+              "news_id": "b7240e1dd46f53728537e1da6555b14f",
+              "url": "https://www.msn.com/en-gb/news/world/ukraine-war-russias-amazon-hit-by-ukrainian-strikes/ar-AA28yPhV?ocid=BingNewsVerp",
+              "headline": "Ukraine war: ‘Russia’s Amazon’ hit by Ukrainian strikes",
+              "body": "Ukraine-Russia war latest: ‘Russia’s Amazon’ hit by strikes as Trump aide says Putin losing 5,000 troops a week - Nato nation ...",
+              "published_date": "2026-07-24",
+              "outlet": "The Independent on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.313c548f1969b51feaaaa71a46dbde2f"
+            },
+            {
+              "news_id": "d4e345ac16985d6aaa1b3ea9aa0a2e1a",
+              "url": "https://finance.yahoo.com/markets/commodities/articles/rally-wheat-etf-overdone-160000764.html",
+              "headline": "Is The Rally in Wheat ETF Overdone?",
+              "body": "WEAT has rallied sharply on tightening global supplies and weather risks. Can the Wheat ETF extend gains, or is the rally becoming overdone?",
+              "published_date": "2026-07-21",
+              "outlet": "Zacks · via Yahoo Finance",
+              "image": "https://media.zenfs.com/en/zacks.com/e4e48761fb452c3b9bf16be840e27638"
+            },
+            {
+              "news_id": "0d37af05992f5e2e86b0aa89968c5fb1",
+              "url": "https://lasvegassun.com/news/2026/jul/22/rubio-says-trump-team-poised-to-help-end-ukraines-/",
+              "headline": "Rubio says Trump team poised to help end Ukraine's 'senseless war' but no quick deal",
+              "body": "U.S. Secretary of State Marco Rubio says the Trump administration is ready to help end the war in Ukraine",
+              "published_date": "2026-07-22",
+              "outlet": "Las Vegas Sun",
+              "image": ""
+            },
+            {
+              "news_id": "9f1256e77698582fbd1e4aa163a36e56",
+              "url": "https://apnews.com/article/asean-rubio-lavrov-russia-ukraine-502b5eb2dc21caf13fab7928acdc5b1e",
+              "headline": "US is ready to help end the 'senseless war' in Ukraine but no quick deal ahead, Rubio says",
+              "body": "U.S. Secretary of State Marco Rubio says the Trump administration is ready to help end the war in Ukraine but acknowledges there's no quick path to a deal.",
+              "published_date": "2026-07-23",
+              "outlet": "Associated Press News",
+              "image": "https://www.bing.com/th?id=ONUT.FE8qOMyJGXcz1nzFgHDgZg"
+            },
+            {
+              "news_id": "144a09b1827b5b0b95af4c8328d5291b",
+              "url": "https://finance.yahoo.com/energy/articles/ukraine-drone-war-choking-kazakhstan-180000609.html",
+              "headline": "Ukraine’s Drone War Is Choking Kazakhstan’s Oil Exports",
+              "body": "Kazakhstan has emerged as one of the Russia-Ukraine war’s silent victims: its oil is unsanctioned, but the infrastructure carrying it to market is increasingly trapped inside the conflict.",
+              "published_date": "2026-07-23",
+              "outlet": "Oilprice.com · via Yahoo Finance",
+              "image": "https://media.zenfs.com/en/oilprice.com/15beaa86d7cd4e8fb45393624e0a9be0"
+            },
+            {
+              "news_id": "0cd732e4d82d53749c7e294779169be3",
+              "url": "https://www.timesleader.com/business/1749927/ukraine-hits-russias-largest-online-marketplace-hurting-small-businesses-and-bringing-the-war-home",
+              "headline": "Ukraine hits Russia’s largest online marketplace, hurting small businesses and bringing the war home",
+              "body": "<p>The Ukrainian attacks on the sprawling Russian warehouses produced stark images, with massive pillars of black smoke rising above fires that raged at facilities of Wildberries, the country’s biggest online retailer and its equivalent of Amazon.</p>",
+              "published_date": "2026-07-24",
+              "outlet": "Times Leader",
+              "image": "https://s.yimg.com/bo/9b8d8209-900e-5fd8-b349-0c7b6afc4dab_1784911336608.webp"
+            },
+            {
+              "news_id": "83d0b2cf648c59ed95451ead36ce0a71",
+              "url": "https://www.msn.com/en-us/news/world/russia-says-it-will-wait-for-new-trump-proposals-on-ending-ukraine-war/ar-AA28Bovi?ocid=BingNewsVerp",
+              "headline": "Russia says it will wait for new Trump proposals on ending Ukraine war",
+              "body": "MOSCOW, July 24 (Reuters) - Russia believes U.S. President Donald Trump is sincere in his efforts to end the Ukraine war and ...",
+              "published_date": "2026-07-24",
+              "outlet": "Reuters on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.Sc0Opyhb-H1zXkSMB5XwDQ"
+            },
+            {
+              "news_id": "e2faaab3a80c51a9bd1fa054285a19ef",
+              "url": "https://www.counterpunch.org/2026/07/24/more-canadian-troops-for-longer-in-latvia-not-reassuring/",
+              "headline": "More Canadian Troops, for Longer in Latvia Not Reassuring",
+              "body": "Extending and expanding Canada’s military presence on Russia’s border is apparently not newsworthy to the dominant media. Quadrupling down on a policy",
+              "published_date": "2026-07-24",
+              "outlet": "CounterPunch",
+              "image": ""
+            },
+            {
+              "news_id": "a00e7489c048593cb6a0a3e493414cc2",
+              "url": "https://www.economist.com/briefing/2026/07/23/china-is-gaining-troubling-military-know-how-from-russia",
+              "headline": "China is gaining troubling military know-how from Russia",
+              "body": "It is learning how to improve its drones, nuclear subs and air defence",
+              "published_date": "2026-07-23T14:34:46+00:00",
+              "outlet": "The Economist",
+              "image": "https://s.yimg.com/bo/e024283c-010f-5eb1-ba38-c28a06d11f61_1784814049580.jpg"
+            },
+            {
+              "news_id": "c37693ac653c5debb29e5df59b260257",
+              "url": "https://www.yahoo.com/news/politics/articles/mykhailo-drapatyi-flying-bmp-now-173554387.html",
+              "headline": "Who is Mykhailo Drapatyi? ‘The Flying BMP’ who now leads Ukraine’s military",
+              "body": "Zelenskyy names reform-minded Drapatyi as new commander-in-chief, replacing Syrsyki to bend to the largest protests of the war over the firing of Fedorov.",
+              "published_date": "2026-07-22",
+              "outlet": "Defense News · via Yahoo News",
+              "image": "https://media.zenfs.com/en/defense_news_499/f18447e0854d34e20159129b8abd1885"
+            },
+            {
+              "news_id": "f36551b7d82156bdb8c369155017524f",
+              "url": "https://news.sky.com/story/ukraine-war-latest-updates-putin-ally-says-west-is-playing-chess-game-with-death-as-eu-says-gas-deliveries-used-as-a-weapon-12541713",
+              "headline": "Ukraine war latest: Deaths in Ukraine and Russia after airstrikes - as drone shot down over NATO airspace",
+              "body": "Another warehouse of Russian online retailer Wildberries caught fire after Ukrainian strikes. Moscow hit back with attacks on ...",
+              "published_date": "2026-07-20T20:11:05+00:00",
+              "outlet": "Sky News",
+              "image": "https://www.bing.com/th?id=ONUT.GCc-DZVfAAKZ_BaC-ZvtNA"
+            },
+            {
+              "news_id": "e00494f263da55f69403e45a563e9aa1",
+              "url": "https://www.msn.com/en-us/news/world/ukraine-war-russias-amazon-hit-by-ukrainian-strikes/ar-AA28zGhv?ocid=BingNewsVerp",
+              "headline": "Ukraine war: 'Russia's Amazon' hit by Ukrainian strikes",
+              "body": "Ukraine-Russia war latest: ‘Russia’s Amazon’ hit by strikes as Trump aide says Putin losing 5,000 troops a week - Nato nation ...",
+              "published_date": "2026-07-24",
+              "outlet": "The Independent on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.rLMxH9IkDE1dpsRe9j8itA"
+            },
+            {
+              "news_id": "1293ffe10db15669bcdcf976b74d03bc",
+              "url": "https://www.msn.com/en-us/news/world/ukraine-overhauls-its-military-top-brass-for-the-fight-against-russia/ar-AA28sMr1?ocid=BingNewsVerp",
+              "headline": "Ukraine overhauls its military top brass for the fight against Russia",
+              "body": "Ukraine has made significant progress in the war this year, and a rift between the country's outgoing army chief and its ...",
+              "published_date": "2026-07-24",
+              "outlet": "Los Angeles Times on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.HbZ2riEffEmU8RMZV6Ssyg"
+            },
+            {
+              "news_id": "7bb2f537836756838524decb4873e665",
+              "url": "https://www.yahoo.com/news/politics/articles/zelensky-sacks-defense-minister-delays-030922095.html",
+              "headline": "Zelensky Sacks Defense Minister, Delays Demise Of Putin",
+              "body": "Zelendsky sparks public outrage by firing popular young defense minister credited with breakthroughs in drone warfare.",
+              "published_date": "2026-07-20",
+              "outlet": "Forbes · via Yahoo News",
+              "image": "https://media.zenfs.com/en/forbes_contributor_845/56f6592ac4847601decf962a7bdca4bc"
+            },
+            {
+              "news_id": "13fd8243e2d75d9d9a509a3d5da3871c",
+              "url": "https://www.yahoo.com/news/world/articles/ukraine-claims-400-fpv-drone-204000458.html",
+              "headline": "Ukraine claims $400 FPV drone destroyed Russia's $19 million 'Apache rival' attack helicopter",
+              "body": "A $400 Ukrainian FPV drone chased down and allegedly 'destroyed' Russia's Mi-28 \"Night Hunter\" attack helicopter.",
+              "published_date": "2026-07-20",
+              "outlet": "TechRadar · via Yahoo News",
+              "image": "https://media.zenfs.com/en/techradar_949/2b9edac970512417a238da8363dcd80c"
+            },
+            {
+              "news_id": "10525e45bd87545b8d607a153c565e8b",
+              "url": "https://cryptobriefing.com/kremlin-warns-against-optimism-on-peace-after-rubio-lavrov-meet-in-manila/",
+              "headline": "Kremlin warns against optimism on peace after Rubio, lavrov meet in manila",
+              "body": "Kremlin warns against optimism on peace talks with Ukraine. Ceasefire by December 31, 2026 at 35.5% YES.",
+              "published_date": "2026-07-23",
+              "outlet": "Crypto Briefing",
+              "image": ""
+            },
+            {
+              "news_id": "671cdb3a1ca354bc9a764303484f8fc9",
+              "url": "https://eadaily.com/en/news/2026/07/23/this-is-only-until-autumn-the-expert-named-the-reason-why-russia-is-not-hitting-europe",
+              "headline": "This is only until autumn: the expert named the reason why Russia is not hitting Europe: EADaily",
+              "body": "EADaily, July 23rd, 2026. Infrastructure war can cause significant damage to Russia, but not at all critical for its economy, political analyst Alexei Pilko is sure.",
+              "published_date": "2026-07-23",
+              "outlet": "EADaily",
+              "image": "https://www.bing.com/th?id=ONUT.a8vG7YyEbvebwYtNh9lLig"
+            },
+            {
+              "news_id": "db7774de2d2b505ea486e15c5ff4846e",
+              "url": "https://thehill.com/opinion/national-security/5983182-ukraine-wins-wwiii/",
+              "headline": "Ukraine may already be winning World War III for an oblivious West",
+              "body": "Ukraine is now dealing the decisive blow that may win the global war that much of the Western world...",
+              "published_date": "2026-07-23T11:06:17+00:00",
+              "outlet": "The Hill",
+              "image": "https://s.yimg.com/bo/c2bfc6f6-c67d-5ec8-82b1-c5059aaebe09_1784805512955.jpg"
+            },
+            {
+              "news_id": "23051a24df5653fbbe2cce16f2d1962d",
+              "url": "https://www.gurufocus.com/news/8975241/russia-considers-extending-diesel-export-ban-amid-ukraine-attacks",
+              "headline": "Russia Considers Extending Diesel Export Ban Amid Ukraine Attack",
+              "body": "On July 23, 2026, as Ukraine intensifies its attacks on Russia's oil sector, Russia is contemplating...",
+              "published_date": "2026-07-23T17:06:17+00:00",
+              "outlet": "Guru Focus",
+              "image": "https://s.yimg.com/bo/a57e4fe3-18a6-50bb-b26b-1db17929e324_1783375312503.png.cf.jpg"
+            },
+            {
+              "news_id": "e7a2e0d8599a5808a2286e4f427ef6c4",
+              "url": "https://www.yahoo.com/news/politics/articles/u-army-buying-older-pac-181705363.html",
+              "headline": "U.S. Army Is Buying Older PAC-2 Patriot Missiles For The First Time In Decades",
+              "body": "PAC-2 GEM-T missiles are not generally as capable as their PAC-3 counterparts, but the Army needs all the Patriots it can get.",
+              "published_date": "2026-07-23",
+              "outlet": "THE WARZONE · via Yahoo News",
+              "image": "https://media.zenfs.com/en/the_warzone_735/c25068db447b8dcd28efd5d408c296a0"
+            },
+            {
+              "news_id": "7dc80ad7a88d5c52986e37391396cdfb",
+              "url": "https://www.msn.com/en-us/news/other/russia-stretched-by-ukraine-pulls-all-warships-from-mediterranean-sea/ar-AA28AIXB?ocid=BingNewsVerp",
+              "headline": "Russia, stretched by Ukraine, pulls all warships from Mediterranean Sea",
+              "body": "Ukraine has battered Russia's warships with drone strikes, exerting painful pressure on Moscow's Black Sea Fleet.",
+              "published_date": "2026-07-24",
+              "outlet": "Newsweek on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.KxVgVNAISQVty4sV_d6sBQ"
+            },
+            {
+              "news_id": "682a5c6873ac59f09f520501130596d9",
+              "url": "https://www.newsweek.com/russia-stretched-ukraine-pulls-all-warships-mediterranean-sea-12232412",
+              "headline": "Russia, stretched by Ukraine, pulls all warships from Mediterranean Sea",
+              "body": "Ukraine has battered Russia's warships with drone strikes, exerting painful pressure on Moscow's Black Sea Fleet.",
+              "published_date": "2026-07-24",
+              "outlet": "Newsweek",
+              "image": "https://s.yimg.com/bo/3b0db1e6-bb90-589d-95ff-e3a90bef1ccd_1784893408175.jpg"
+            },
+            {
+              "news_id": "0fa9ca9905a359a68b51f4cbded8a657",
+              "url": "https://www.reuters.com/world/europe/russias-largest-online-retailer-says-warehouses-attacked-again-several-injured-2026-07-22/",
+              "headline": "Ukraine hits more warehouses of Russia's top online retailer Wildberries",
+              "body": "Ukraine has attacked two more warehouses of Russian online retailer Wildberries, its boss said on We...",
+              "published_date": "2026-07-22T09:22:23+00:00",
+              "outlet": "Reuters",
+              "image": "https://s.yimg.com/am/60d/9994ff5246a4ab0701b1aa08e2b583ed"
+            },
+            {
+              "news_id": "22b81d7d0fc25be99c0418f0a63a4ae2",
+              "url": "https://www.taipeitimes.com/News/world/archives/2026/07/24/2003861307",
+              "headline": "Rubio, Russia’s Lavrov meet in Manila - Taipei Times",
+              "body": "US Secretary of State Marco Rubio yesterday met with Russian Minister of Foreign Affairs Sergey Lavrov in the Philippines for talks at which he was expected to renew the prospect of the US brokering an end to the war in Ukraine.The US Department of State offered few details about the meeting on the",
+              "published_date": "2026-07-24",
+              "outlet": "Taipei Times",
+              "image": ""
+            },
+            {
+              "news_id": "085c4c4ac3e7594d84359945643e86f1",
+              "url": "https://thehill.com/opinion/international/5983456-sanction-russia-energy-imports/",
+              "headline": "To end the wars in Ukraine and Iran, starve Russia’s gas pumps",
+              "body": "Sanctioning Russia’s gasoline imports could lead to peace in Ukraine — and Iran.",
+              "published_date": "2026-07-23T12:06:17+00:00",
+              "outlet": "The Hill",
+              "image": "https://s.yimg.com/bo/939a67ab-cf61-53ec-bf53-c63d1c2e4e34_1784811023031.jpg"
+            },
+            {
+              "news_id": "0e61a7310dbf547093c1670a03b4c20e",
+              "url": "https://www.manilatimes.net/2026/07/23/news/us-is-ready-to-help-end-the-senseless-war-in-ukraine-but-no-quick-deal-ahead-rubio/2390320",
+              "headline": "US is ready to help end the 'senseless war' in Ukraine but no quick deal ahead — Rubio",
+              "body": "MANILA, Philippines — US Secretary of State Marco Rubio said Thursday that the Trump administration is poised to help end the “senseless war” in Ukraine but acknowledged there is no quick path to a deal, saying diplomacy will require sustained effort and new ideas.",
+              "published_date": "2026-07-23",
+              "outlet": "The Manila Times",
+              "image": "https://www.bing.com/th?id=ONUT.dYLxS4QwOfqHugepfm1bFA"
+            },
+            {
+              "news_id": "90e2e7a4174c53e6818e2cb02d85fa54",
+              "url": "https://www.msn.com/en-us/news/world/ousted-ukrainian-defence-chief-digs-in-against-zelenskiy/ar-AA28xTkl?ocid=BingNewsVerp",
+              "headline": "Ousted Ukrainian defence chief digs in against Zelenskiy",
+              "body": "By Max Hunder and Dan Peleschuk KYIV, July 23 (Reuters) - Ousted Ukrainian defence minister Mykhailo Fedorov said on Thursday ...",
+              "published_date": "2026-07-24",
+              "outlet": "Reuters on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.92429e8b007ee17be43b0aef47588b83"
+            },
+            {
+              "news_id": "2551bbfe27fd5175ba4d766328bd5fe0",
+              "url": "https://www.yahoo.com/news/world/articles/latest-bridge-strikes-show-russia-101624615.html",
+              "headline": "Latest Bridge Strikes Show Russia And Ukraine Expect A Long Stalemate",
+              "body": "Russia and Ukraine have increased strikes on bridges to disrupt their enemy's resupply networks, despite these bridges brequired for future offensive maneuvers.",
+              "published_date": "2026-07-24",
+              "outlet": "Forbes · via Yahoo News",
+              "image": "https://media.zenfs.com/en/forbes_contributor_845/5489ed7544877ff2cdac79806f2cb33d"
+            }
+          ]
+        },
+        {
+          "log_date": "2026-07-25",
+          "summary": "Ukraine's large drones are now dropping mine-carrying ground robots behind Russian lines, marking a new battlefield experiment. Russia, stretched by Ukrainian drone strikes on its Black Sea Fleet, has withdrawn all warships from the Mediterranean Sea. Ukrainian strikes continued hitting Wildberries warehouses, while a Trump aide stated Putin is losing 5,000 troops per week.\nOn July 24, 2026, Russia launched a ballistic missile strike on Kyiv that killed at least 10 people, targeting a drone exhibition. Meanwhile, Ukraine has secured a billion-dollar European deal to massively increase drone production, aiming to dominate modern drone warfare after battlefield successes. China formally protested the European Union's latest sanctions on 14 Chinese companies for their alleged links to Russia.\nAt least 11 people were killed in Ukraine as Russia launched its largest aerial attack of the war with 948 drones, while Ukrainian strikes hit Russian Wildberries warehouses again. President Trump and President Zelenskyy are reportedly set to meet in Washington next week to discuss the conflict.\nUkrainian strikes continued targeting Russia's Wildberries online marketplace, while fresh Russian and Ukrainian attacks killed at least 14 civilians in Zaporizhzhia and Sumy, with Romania downing a drone near its border. Kazakhstan's president called alongside Putin for a freeze of the war, and President Zelenskiy reported that Russia is planning to bring in 30,000 North Korean troops.",
+          "news": [
+            {
+              "news_id": "59b55def3046521fa3accaad28cc9df3",
+              "url": "https://www.msn.com/en-us/news/other/ukraine-war-live-at-least-10-killed-after-putin-s-strike-on-kyiv/ar-AA28EwAe?ocid=BingNewsVerp",
+              "headline": "Ukraine war live: At least 10 killed after Putin’s strike on Kyiv",
+              "body": "Ukraine-Russia war latest: At least 10 killed as Putin launches ballistic missile attack on Kyiv’s drone exhibition - At ...",
+              "published_date": "2026-07-25",
+              "outlet": "The Independent on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.rLMxH9IkDE1dpsRe9j8itA"
+            },
+            {
+              "news_id": "ac83984d27f656f198a238eae32e4782",
+              "url": "https://www.msn.com/en-gb/news/news/ukraine-war-live-at-least-10-killed-after-putin-s-strike-on-kyiv/ar-AA28DPpS?ocid=BingNewsVerp",
+              "headline": "Ukraine war live: Two children killed in attack on holiday camps",
+              "body": "Ukraine-Russia war latest: At least 10 killed as Putin launches ballistic missile attack on Kyiv’s drone exhibition - At ...",
+              "published_date": "2026-07-25",
+              "outlet": "The Independent on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.Lp9xXVWTTDPLvwdvBGrSiQ"
+            },
+            {
+              "news_id": "0a4e7283c95b516cb57f666344ec1392",
+              "url": "https://news.sky.com/story/ukraine-war-latest-putin-zelenskyy-live-russia-trump-moscow-belarus-12541713",
+              "headline": "Ukraine war latest: Deaths in Ukraine and Russia after airstrikes - as drone shot down over NATO airspace",
+              "body": "Another warehouse of Russian online retailer Wildberries caught fire after Ukrainian strikes. Moscow hit back with attacks on Kyiv and Romania shot down a drone over its airspace. Send us your ...",
+              "published_date": "2026-07-25T14:18:08+00:00",
+              "outlet": "Sky",
+              "image": ""
+            },
+            {
+              "news_id": "e384b0659d495b849759db74062e6e9b",
+              "url": "https://www.mysanantonio.com/business/article/russia-s-biggest-online-retailer-is-the-latest-22356811.php",
+              "headline": "Ukraine hits Russia's largest online marketplace, hurting small businesses and...",
+              "body": "Ukrainian attacks have targeted Wildberries, Russia's largest online retailer. Kyiv’s drones first h...",
+              "published_date": "2026-07-24T19:52:52+00:00",
+              "outlet": "San Antonio Express-News",
+              "image": "https://s.yimg.com/bo/9f06d0ce-c7fd-50ba-b790-f8d75ddf315b_1784996422191.jpg"
+            },
+            {
+              "news_id": "c448db9a29e75af0ad61fd57fde62760",
+              "url": "https://www.yahoo.com/news/world/articles/ukraine-gone-accepting-just-old-113301521.html",
+              "headline": "Ukraine has gone from accepting just about any old weapon to showing Western militaries how modern war is fought",
+              "body": "Ukraine started Russia's full-scale invasion accepting any help it could get, and now it's helping allies prepare for new ways of war.",
+              "published_date": "2026-07-24",
+              "outlet": "Business Insider · via Yahoo News",
+              "image": "https://media.zenfs.com/en/business_insider_consolidated_articles_886/be62700142fd10a3991a3eedd44a98c4"
+            },
+            {
+              "news_id": "9076b8e4e0c55fc18247e8821324e19f",
+              "url": "https://www.yahoo.com/news/world/articles/russia-reveals-footage-ukrainian-drones-190500102.html",
+              "headline": "Russia reveals footage of Ukrainian drones carrying ground robots",
+              "body": "Ukraine’s giant drones are now dropping mine-carrying robots behind Russian lines in a new battlefield experiment",
+              "published_date": "2026-07-24",
+              "outlet": "Yahoo",
+              "image": "https://www.bing.com/th?id=ONUT.KU0GdO3br1M3d_ER6BZz8g"
+            },
+            {
+              "news_id": "995c8b98f92e5f66b528ac435647a5b9",
+              "url": "https://www.msn.com/en-us/money/markets/oil-shipments-are-under-attack-on-multiple-fronts-as-fighting-escalates-in-red-sea-hormuz-and-black-sea/ar-AA28CT1z?ocid=BingNewsVerp",
+              "headline": "Oil shipments are under attack on multiple fronts as fighting escalates in Red Sea, Hormuz and Black Sea",
+              "body": "More than 60 commercial ships have been attacked in the Persian Gulf, Strait of Hormuz and Gulf of Oman since March 1.",
+              "published_date": "2026-07-25",
+              "outlet": "CNBC on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.5b2128c503715a447052d3d54002f235"
+            },
+            {
+              "news_id": "ccc699e9f968572193e05c53703a659c",
+              "url": "https://www.reuters.com/business/retail-consumer/russian-entrepreneurs-see-stock-go-up-flames-ukraine-targets-wildberries-2026-07-24/",
+              "headline": "Russian entrepreneurs see stock go up in flames as Ukraine targets Wildberries",
+              "body": "Russian fashion designer Viktoria Terekhova shipped virtually her entire summer collection of childr...",
+              "published_date": "2026-07-24T14:18:11+00:00",
+              "outlet": "Reuters",
+              "image": "https://s.yimg.com/bo/4ebb9fbb-3179-580c-ae59-4c1f55b68b58_1784902409578.jpg"
+            },
+            {
+              "news_id": "8c96c615618c53ee926c882290d6bf9b",
+              "url": "https://www.msn.com/en-us/news/world/ukraine-war-trump-aide-says-putin-losing-5000-troops-a-week/ar-AA28zGhv?ocid=BingNewsVerp",
+              "headline": "Ukraine war: 'Russia's Amazon' hit by Ukrainian strikes",
+              "body": "Ukraine-Russia war latest: ‘Russia’s Amazon’ hit by strikes as Trump aide says Putin losing 5,000 troops a week - Nato nation ...",
+              "published_date": "2026-07-25",
+              "outlet": "The Independent on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.na27B2RzoZEom0V7-vBZdg"
+            },
+            {
+              "news_id": "6a9c11c552fa55bc9f981ebb8ace192b",
+              "url": "https://www.msn.com/en-in/news/world/russian-and-ukrainian-strikes-kill-14-romania-downs-drone-near-border/ar-AA28FQTO?ocid=BingNewsVerp",
+              "headline": "Russian and Ukrainian strikes kill 14, Romania downs drone near border",
+              "body": "Fresh Russian and Ukrainian strikes killed civilians in Zaporizhzhia and Sumy, while Romania downed a drone near its border. The latest attacks highlighted intensifying cross-border risks and further ...",
+              "published_date": "2026-07-25",
+              "outlet": "India Today on MSN",
+              "image": ""
+            },
+            {
+              "news_id": "3bc383277a9950ec82b3d0ed07ea7151",
+              "url": "https://www.huffpost.com/entry/laura-loomer-regret-ukraine-war_n_6a5fbe01e4b0fb869f7ce008",
+              "headline": "Laura Loomer Makes Rare Admission Of Guilt: 'I Feel Like Such An A**hole'",
+              "body": "The noted Trump ally did something rare for a MAGA member on Tuesday.",
+              "published_date": "2026-07-21",
+              "outlet": "The Huffington Post",
+              "image": "https://s.yimg.com/am/60d/635029bc473f64f4695fe6b233e04073"
+            },
+            {
+              "news_id": "e035f629a158562eba72f6ed8b9f9a8e",
+              "url": "https://www.msn.com/en-us/news/world/at-least-11-killed-in-ukraine-as-moscow-and-kyiv-continue-to-trade-attacks/ar-AA28B0UB?ocid=BingNewsVerp",
+              "headline": "At least 11 killed in Ukraine as Moscow and Kyiv continue to trade attacks",
+              "body": "Six people also killed in Ukrainian attack on Russia’s Kirov, and Wildberries warehouses hit again.",
+              "published_date": "2026-07-25",
+              "outlet": "Al Jazeera on MSN",
+              "image": ""
+            },
+            {
+              "news_id": "3ef8232c76e055d996c86a5b433a6cec",
+              "url": "https://cryptobriefing.com/russia-largest-aerial-attacks-ukraine-crypto-risk/",
+              "headline": "Russia launches largest aerial attacks of the war as crypto markets watch geopolitical risk signals",
+              "body": "Russia launched 948 drones in its largest aerial attack on Ukraine. Here's why crypto investors should care about escalating geopolitical risk",
+              "published_date": "2026-07-24",
+              "outlet": "Crypto Briefing",
+              "image": "https://www.bing.com/th?id=ONUT.BKxFbT4i4PmcMSQaE_j2_g"
+            },
+            {
+              "news_id": "d8cb90e01e205609b4be29ebf54b534f",
+              "url": "https://www.reuters.com/business/aerospace-defense/zelenskiy-says-us-ukraine-moving-forward-joint-drone-production-2026-07-24/",
+              "headline": "Zelenskiy says US, Ukraine moving forward on joint drone production",
+              "body": "President Volodymyr Zelenskiy said in an interview broadcast on Friday that cooperation between Kyiv...",
+              "published_date": "2026-07-24T22:18:11+00:00",
+              "outlet": "Reuters",
+              "image": "https://s.yimg.com/bo/67fc9efe-9a69-5d2c-b316-52c4dd9ce662_1784932879692.jpg"
+            },
+            {
+              "news_id": "de4cba86165d514da89a62aef9f90a25",
+              "url": "https://www.msn.com/en-us/news/world/russia-stretched-by-ukraine-pulls-all-warships-from-mediterranean-sea/ar-AA28AIXB?ocid=BingNewsVerp",
+              "headline": "Russia, stretched by Ukraine, pulls all warships from Mediterranean Sea",
+              "body": "Ukraine has battered Russia's warships with drone strikes, exerting painful pressure on Moscow's Black Sea Fleet.",
+              "published_date": "2026-07-25",
+              "outlet": "Newsweek on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.KxVgVNAISQVty4sV_d6sBQ"
+            },
+            {
+              "news_id": "f05b34f5bfa750c7a4cae4fb31a0abe2",
+              "url": "https://www.yahoo.com/news/politics/articles/why-maga-changed-mind-ukraine-080000147.html",
+              "headline": "Why Maga changed its mind about the Ukraine war",
+              "body": "It takes courage to admit when you are wrong. For Laura Loomer, a Maga influencer, it took a night in a Ukrainian bomb shelter and a trip to a firebombed McDonald’s.",
+              "published_date": "2026-07-25",
+              "outlet": "The Telegraph · via Yahoo News",
+              "image": "https://media.zenfs.com/en/the_telegraph_258/fceb2f20c7231238b976addf6dd3aea2"
+            },
+            {
+              "news_id": "133bc29797da5a82be5ad069775477da",
+              "url": "https://www.usnews.com/news/world/articles/2026-07-25/speaking-alongside-putin-kazakh-president-calls-for-freeze-of-ukraine-war",
+              "headline": "Speaking Alongside Putin, Kazakh President Calls for Freeze of Ukraine War",
+              "body": "US News is a recognized leader in college, grad school, hospital, mutual fund, and car rankings....",
+              "published_date": "2026-07-25T15:52:55+00:00",
+              "outlet": "US News & World Report",
+              "image": "https://s.yimg.com/bo/1200ccf5-a899-5c72-9a0e-f06a958ff94e_1784998993311.jpg"
+            },
+            {
+              "news_id": "b1ff31a21aaf51fdb167ac68c44c4c88",
+              "url": "https://www.gurufocus.com/news/8979016/chevron-faces-challenges-amid-ukraine-conflict-impacting-oil-operations-cvx",
+              "headline": "Chevron Faces Challenges Amid Ukraine Conflict Impacting Oil Ope",
+              "body": "On July 24, 2026, Chevron Corp (CVX) faced significant challenges as CEO Mike Wirth met with Trump...",
+              "published_date": "2026-07-25T00:38:54+00:00",
+              "outlet": "Guru Focus",
+              "image": "https://s.yimg.com/bo/7bda38b2-2c10-538a-ada7-43327125a0f7_1780994650062.png.cf.jpg"
+            },
+            {
+              "news_id": "61864825e7e254068953333977a62abd",
+              "url": "https://www.yahoo.com/news/world/articles/ukraine-wants-dominate-drone-manufacturing-110500764.html",
+              "headline": "Ukraine wants to dominate drone manufacturing after battlefield successes",
+              "body": "Ukraine reveals massive drone production leap after securing a billion-dollar European deal to reshape modern warfare capabilities worldwide",
+              "published_date": "2026-07-19",
+              "outlet": "TechRadar · via Yahoo News",
+              "image": "https://media.zenfs.com/en/techradar_949/79d3223224bb445240073c3124ceb724"
+            },
+            {
+              "news_id": "71a19be8a86e5a66b153f566c4b6e58f",
+              "url": "https://www.usnews.com/news/world/articles/2026-07-25/ukraines-zelenskiy-russia-wants-to-bring-in-30-000-north-korean-troops-to-conflict",
+              "headline": "Ukraine's Zelenskiy: Russia Wants to Bring in 30,000 North Korean Troops to...",
+              "body": "US News is a recognized leader in college, grad school, hospital, mutual fund, and car rankings....",
+              "published_date": "2026-07-25T17:52:55+00:00",
+              "outlet": "US News & World Report",
+              "image": "https://s.yimg.com/bo/deea7d5d-7daf-5dd1-94e7-c498a6c4914f_1785004585078.jpg"
+            },
+            {
+              "news_id": "88b762a445b35a4e9c9481ed68828fab",
+              "url": "https://www.msn.com/en-sg/news/other/trump-and-zelenskyy-to-meet-in-washington-next-week/ar-AA28COb8?ocid=BingNewsVerp",
+              "headline": "Trump and Zelenskyy to meet in Washington next week",
+              "body": "Kyiv did not immediately confirm whether President Volodymyr Zelenskyy will meet President Donald Trump in Washington next ...",
+              "published_date": "2026-07-25",
+              "outlet": "Euronews on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.30ddbaa2efbf5fdcacb4ad59f8885f0b"
+            },
+            {
+              "news_id": "9da38a84b55f5ac39934fc6cb9830cfe",
+              "url": "https://www.arabtimesonline.com/news/china-protests-european-union-sanctions-on-14-chinese-companies-over-russia-links/",
+              "headline": "China Protests European Union Sanctions on 14 Chinese Companies Over Russia Links",
+              "body": "SHANGHAI, Jul 25: China has lodged a formal protest with the European Union after Brussels imposed sanctions on additional Chinese companies as part of its late...",
+              "published_date": "2026-07-25",
+              "outlet": "Arab Times",
+              "image": ""
+            }
+          ]
+        },
+        {
+          "log_date": "2026-07-26",
+          "summary": "President Zelenskiy stated Russia aims to bring 30,000 North Korean troops into the conflict, as Kazakhstan's president called for a freeze of the war alongside Putin. Airstrikes continue, with a baby killed by a drone in the Moscow region and a Russian satellite site reportedly hit, while Ukraine's strikes on Wildberries warehouses persist. Separately, Zelensky and Netanyahu are set for back-to-back Trump meetings in Washington following a funeral, signaling potential diplomatic moves.\nUkrainian attacks continued to target Wildberries warehouses, causing further disruptions to Russia's largest online retailer. Russia launched a major attack on Kyiv, sparking fires in multiple districts, while Iran blamed Ukraine for an attack on a vessel. Additionally, President Zelenskyy reiterated that Russia plans to bring 30,000 more North Korean troops into the conflict, and Kazakhstan's president urged Putin to freeze the war.\nUkraine faces a political crisis as a tech-savvy defense minister without military experience is under scrutiny, highlighting internal tensions. Russia launched kamikaze drone strikes on Ukrainian ships in the Black Sea, while a search continues for two missing Indian nationals after a vessel was struck at Odesa port.\nUkraine continued striking Russia's Wildberries warehouses, exacerbating economic disruption for small businesses. A Russian drone was shot down over Romania for the third time in days, and Iran formally warned Ukraine after an attack on an Iranian commercial vessel in the Caspian Sea. Meanwhile, two Indian nationals remain untraced following a port strike on the MV AGN Ragnar at Odesa, as Black Sea shipping risks escalate.",
+          "news": [
+            {
+              "news_id": "ccbeaf7e728b59a2ba275161bab95256",
+              "url": "https://www.stamfordadvocate.com/business/article/russia-s-biggest-online-retailer-is-the-latest-22356811.php",
+              "headline": "Ukraine hits Russia's largest online marketplace, hurting small businesses and...",
+              "body": "Ukrainian attacks on Russian warehouses have targeted Wildberries, Russia's largest online retailer....",
+              "published_date": "2026-07-23T09:06:30+00:00",
+              "outlet": "Stamford Advocate",
+              "image": "https://s.yimg.com/bo/c4f746f8-b42e-51f1-bfdb-98cc7a8d3a6c_1784807782377.jpg"
+            },
+            {
+              "news_id": "28cce22c40215667b800d6e9edb350fc",
+              "url": "https://www.yahoo.com/news/politics/articles/asked-ukrainians-think-trump-more-130406010.html",
+              "headline": "We asked Ukrainians what they think of Trump – more view him as an enemy than a friend",
+              "body": "Despite holding a low opinion of the US president and his negotiators, most Ukrainians have favorable views toward Americans more generally.",
+              "published_date": "2026-07-26",
+              "outlet": "The Conversation · via Yahoo News",
+              "image": "https://media.zenfs.com/en/the_conversation_us_articles_815/e761b9bfaa6ac2871975d333202c28fa"
+            },
+            {
+              "news_id": "6794359c48ce59cea3edbb6799a59048",
+              "url": "https://www.msn.com/en-gb/news/world/ukraines-zelenskiy-russia-wants-to-bring-in-30000-north-korean-troops-to-conflict/ar-AA28FIBW?ocid=BingNewsVerp",
+              "headline": "Ukraine's Zelenskiy: Russia wants to bring in 30,000 North Korean troops to conflict",
+              "body": "July 25 (Reuters) - Ukrainian President Volodymyr Zelenskiy said on Saturday that Russia wanted to bring in 30,000 North ...",
+              "published_date": "2026-07-26",
+              "outlet": "Reuters on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.d0ad2108157cbf86c558e2d7afa46d84"
+            },
+            {
+              "news_id": "5be09d70d820501b8bc1a2a9e2433fa3",
+              "url": "https://www.yahoo.com/news/world/articles/russias-biggest-online-retailer-latest-072655734.html",
+              "headline": "Ukraine hits Russia's largest online marketplace, hurting small businesses and bringing the war home",
+              "body": "The Ukrainian attacks on the sprawling Russian warehouses produced stark images, with massive pillars of black smoke rising above fires that raged at facilities of Wildberries, the country’s biggest o...",
+              "published_date": "2026-07-23",
+              "outlet": "Associated Press · via Yahoo News",
+              "image": "https://media.zenfs.com/en/ap.org/11d601efa2b925025ae12a0382f45282"
+            },
+            {
+              "news_id": "eb3818a586d45837bbb38930e1169d3e",
+              "url": "https://news.sky.com/story/ukraine-war-latest-us-russian-talks-in-full-swing-and-focused-on-black-sea-ceasefire-as-kremlin-confirms-putins-gift-to-trump-12541713",
+              "headline": "Ukraine war latest: Russian attack on Kyiv triggers fires - as Iran blames Ukraine for attack on vessel",
+              "body": "Russian forces attacked Ukraine's capital Kyiv, sparking fires in at least three districts. Iran has blamed Kyiv for an ...",
+              "published_date": "2026-07-26T09:06:30+00:00",
+              "outlet": "Sky News",
+              "image": "https://www.bing.com/th?id=ONUT.xUk-lPUwhhwByd_NUhf1Bw"
+            },
+            {
+              "news_id": "4510b8407a235c80ab6dea70fd492301",
+              "url": "https://www.japantimes.co.jp/news/2026/07/26/world/politics/kazakh-president-putin-ukraine-war/",
+              "headline": "In rare move, Kazakh president urges Putin to freeze Ukraine war",
+              "body": "The Kazakh leader stopped short of offering to help broker a deal, saying he declined to serve as a mediator between the two countries.",
+              "published_date": "2026-07-26",
+              "outlet": "The Japan Times",
+              "image": "https://www.bing.com/th?id=ONUT.l73l2BWkrDR_DI9XKSI8Dg"
+            },
+            {
+              "news_id": "eaee7d50aca35c6d8a335c4ad2762ede",
+              "url": "https://www.msn.com/en-us/news/world/speaking-alongside-putin-kazakh-president-calls-for-freeze-of-ukraine-war/ar-AA28GinA?ocid=BingNewsVerp",
+              "headline": "Speaking alongside Putin, Kazakh president calls for freeze of Ukraine war",
+              "body": "OMSK, Russia July 25 (Reuters) - Kazakhstan's President Kassym-Jomart Tokayev said on Saturday that a peace deal between Russia and Ukraine might be reached if the sides froze the conflict and resumed ...",
+              "published_date": "2026-07-26",
+              "outlet": "Reuters on MSN",
+              "image": ""
+            },
+            {
+              "news_id": "f92962fb9bd35cd787da830d1ffe6c96",
+              "url": "https://www.indiatoday.in/world/story/odesa-port-attack-mv-agn-ragnar-two-indians-safe-two-untraced-ptag-2956656-2026-07-26",
+              "headline": "Odesa port strike hits vessel with four Indians, two safe and two untraced",
+              "body": "MV AGN Ragnar was struck at Ukraine's Odesa port with four Indians on board. Two are safe, while rescue efforts continue amid rising Black Sea shipping risks.",
+              "published_date": "2026-07-26",
+              "outlet": "India Today",
+              "image": "https://www.bing.com/th?id=ONUT.i6EnJywvzMtCotiGm91Psg"
+            },
+            {
+              "news_id": "b1fb3079e852597593fa9e7de8a9aa01",
+              "url": "https://www.texarkanagazette.com/news/2026/jul/26/a-tech-innovator-and-an-old-guard-general-are-the/",
+              "headline": "A tech innovator and an old guard general are the focus of Ukraine’s political crisis | Texarkana Gazette",
+              "body": "KYIV, Ukraine -- One is a tech-savvy drone innovator with no military experience who became Ukraine's youngest defense minister six months ago and was credited with contributing to successes in defending against Russia's 4-year-old invasion.",
+              "published_date": "2026-07-26",
+              "outlet": "Texarkana Gazette",
+              "image": "https://www.bing.com/th?id=ONUT.FMx6i9kLJFiT06uisNVqSw"
+            },
+            {
+              "news_id": "c9e3868352d85839a22b4856cd7293c0",
+              "url": "https://www.msn.com/en-us/news/other/graham-funeral-brings-zelensky-and-netanyahu-to-washington-for-back-to-back-trump-talks/ar-AA28Ga7R?ocid=BingNewsVerp",
+              "headline": "Graham funeral brings Zelensky and Netanyahu to Washington for back-to-back Trump talks",
+              "body": "Graham funeral in Washington on July 28 brings Zelensky and Netanyahu for back-to-back Trump meetings, as the Russia ...",
+              "published_date": "2026-07-26",
+              "outlet": "Tech Times on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.5Ah7Zwcxa5Rc7XiACeDqgA"
+            },
+            {
+              "news_id": "d7b975312bf95465af94bbb7ebf635b6",
+              "url": "https://news.sky.com/story/ukraine-war-latest-russian-satellite-site-hit-by-strike-zelenskyy-says-as-baby-killed-by-drone-in-moscow-region-12541713",
+              "headline": "Ukraine war latest: Deaths in Ukraine and Russia after airstrikes - as drone shot down over NATO airspace",
+              "body": "Another warehouse of Russian online retailer Wildberries caught fire after Ukrainian strikes. Moscow hit back with attacks on ...",
+              "published_date": "2026-07-20T04:13:14+00:00",
+              "outlet": "Sky News",
+              "image": "https://www.bing.com/th?id=ONUT.GCc-DZVfAAKZ_BaC-ZvtNA"
+            },
+            {
+              "news_id": "ac1bf4bf198351d6babbb45117111c4f",
+              "url": "https://www.indiatvnews.com/news/india/india-issues-security-advisory-for-nationals-working-on-ships-in-black-sea-amid-rising-missile-drone-attacks-2026-07-26-1049444",
+              "headline": "India issues advisory for nationals working on ships in Black Sea amid rising missile, drone attacks",
+              "body": "The advisory comes after five Indian nationals were killed in an attack on commercial vessels while they were reportedly ...",
+              "published_date": "2026-07-24T09:06:33+00:00",
+              "outlet": "India TV News",
+              "image": "https://www.bing.com/th?id=ONUT.CYfYiZ-DHUZE3rGUNo3fxg"
+            },
+            {
+              "news_id": "39c7009dcb7b5929901861d25b177a0a",
+              "url": "https://www.msn.com/en-us/news/world/ukraine-live-romania-shoots-down-third-russian-drone-in-nato-airspace/ar-AA28HiBY?ocid=BingNewsVerp",
+              "headline": "Ukraine live: Romania shoots down third Russian drone in Nato airspace",
+              "body": "Ukraine-Russia war latest: Romania shoots down third Russian drone in Nato airspace as Moscow steps up port attacks - Romania’s president Nicusor Dan has called the third breach in as many days ‘intol ...",
+              "published_date": "2026-07-26",
+              "outlet": "The Independent on MSN",
+              "image": ""
+            },
+            {
+              "news_id": "9963b5d029d451a790811e3b9496114c",
+              "url": "https://www.usnews.com/news/world/articles/2026-07-26/kremlin-says-too-early-to-comment-on-reported-us-ukraine-air-ceasefire-talks",
+              "headline": "Kremlin Says Too Early to Comment on Reported US-Ukraine Air Ceasefire Talks",
+              "body": "US News is a recognized leader in college, grad school, hospital, mutual fund, and car rankings....",
+              "published_date": "2026-07-26T13:51:56+00:00",
+              "outlet": "US News & World Report",
+              "image": "https://s.yimg.com/bo/40b4cae2-71af-587a-90d2-283d391218e2_1785076104511.jpg"
+            },
+            {
+              "news_id": "f0f62c4436a850a0b66f58a29076aa15",
+              "url": "https://www.msn.com/en-us/news/world/ukraine-war-live-at-least-10-killed-after-putin-s-strike-on-kyiv/ar-AA28EwAe?ocid=BingNewsVerp",
+              "headline": "Ukraine war live: Putin 'to bring' 30,000 North Korean troops",
+              "body": "Ukraine-Russia war latest: Two children among eight killed in attack on holiday camps, Russian authorities claim - A Russian ...",
+              "published_date": "2026-07-26",
+              "outlet": "The Independent on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.rLMxH9IkDE1dpsRe9j8itA"
+            },
+            {
+              "news_id": "23321ac6587d5bab88e87a751f746596",
+              "url": "https://www.japantimes.co.jp/news/2026/07/26/asia-pacific/politics/north-korea-30000-troops-russia/",
+              "headline": "Russia wants 30,000 more North Korean troops for Ukraine war: Zelenskyy",
+              "body": "The Ukrainian leader said North Korea is also preparing to transfer additional ballistic missile launchers to Russia.",
+              "published_date": "2026-07-26",
+              "outlet": "The Japan Times",
+              "image": "https://www.bing.com/th?id=ONUT.3oHfCevRtAIf8sDCee9PWw"
+            },
+            {
+              "news_id": "5ab6ccbfaa0e541d894b59fd78697cb8",
+              "url": "https://www.msn.com/en-gb/news/other/ukraine-s-new-plan-to-deliver-devastating-blow-that-could-be-end-for-putin/ar-AA28G9ol?ocid=BingNewsVerp",
+              "headline": "Ukraine's new plan to deliver devastating blow that could be end for Putin",
+              "body": "The full-scale invasion of Ukraine has lasted for over four years, but now it is making huge tactical hits to Russia.",
+              "published_date": "2026-07-26",
+              "outlet": "Daily Express on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.IJWI5h5HqCwZVcmfGXui2Q"
+            },
+            {
+              "news_id": "4a60aa51ed2a50ca94af9625f6cf606c",
+              "url": "https://abc17news.com/news/national-world/cnn-world/2026/07/19/russia-unleashes-one-of-biggest-ballistic-missile-attacks-of-the-ukraine-war-kyiv-says/",
+              "headline": "Russia unleashes one of the biggest ballistic missile attacks of Ukraine war, Kyiv says",
+              "body": "By Daria Tarasova-Markina, Victoria Butenko and Tim Lister CNN Kyiv (CNN) — Russia has launched one of its largest ballistic missile attacks against Ukraine since launching its full-scale invasion more than four years ago. Ukraine’s air force said Moscow had launched “a massive combined strike against Ukraine using attack UAVs and various types of air-",
+              "published_date": "2026-07-19",
+              "outlet": "ABC17 NEWS",
+              "image": "https://s.yimg.com/am/60d/ed342f6e2417e40a8aaea7a017ff90cc"
+            },
+            {
+              "news_id": "d5b6d2f361c45bbc8bb9f33bfff39321",
+              "url": "https://cryptobriefing.com/russia-launches-kamikaze-drone-strikes-on-ukrainian-ships-in-black-sea/",
+              "headline": "Russia launches kamikaze drone strikes on Ukrainian ships in Black Sea",
+              "body": "Russia strikes Ukrainian ships with kamikaze drones. Ukraine recapturing Crimea by December 31, 2026 at 9.5% YES.",
+              "published_date": "2026-07-25",
+              "outlet": "Crypto Briefing",
+              "image": "https://www.bing.com/th?id=ONUT.SE9PP7roIa-2Qsvyf577qQ"
+            },
+            {
+              "news_id": "2565ffb2e9b75eeca93fe597ec7c7640",
+              "url": "https://www.gurufocus.com/news/8973275/wildberries-faces-drone-attacks-amid-ukraine-conflict-ozon-ozon-stock-drops",
+              "headline": "Wildberries Faces Drone Attacks Amid Ukraine Conflict, Ozon (OZO",
+              "body": "On July 22, 2026, Wildberries, a leading Russian e-commerce platform, reported drone attacks on two...",
+              "published_date": "2026-07-23T04:13:14+00:00",
+              "outlet": "Guru Focus",
+              "image": "https://s.yimg.com/bo/53877d82-2062-53ef-9b9a-a34f50eb9af0_1784782106095.png.cf.jpg"
+            },
+            {
+              "news_id": "4ee6d15341305c4b991dce4a10b54f97",
+              "url": "https://www.msn.com/en-gb/news/news/ukraine-war-live-four-children-killed-in-attack-on-holiday-camps/ar-AA28DPpS?ocid=BingNewsVerp",
+              "headline": "Ukraine war live: Putin 'to bring' 30,000 North Korean troops",
+              "body": "Ukraine-Russia war latest: Four children among 11 killed in attack on holiday camps, Russian authorities claim - A Russian ...",
+              "published_date": "2026-07-26",
+              "outlet": "The Independent on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.Lp9xXVWTTDPLvwdvBGrSiQ"
+            },
+            {
+              "news_id": "52d9073964bb56d8b7128443883ab9e1",
+              "url": "https://news.sky.com/story/ukraine-war-latest-russian-forces-intercept-british-supplied-missiles-moscow-issues-message-to-us-over-nuclear-weapons-12541713",
+              "headline": "Ukraine war latest: Deaths in Ukraine and Russia after airstrikes - as drone shot down over NATO airspace",
+              "body": "Another warehouse of Russian online retailer Wildberries caught fire after Ukrainian strikes. Moscow hit back with attacks on ...",
+              "published_date": "2026-07-26T09:06:30+00:00",
+              "outlet": "Sky News",
+              "image": "https://www.bing.com/th?id=ONUT.1NoskK1RPiFDFiEDijtIFw"
+            },
+            {
+              "news_id": "fd6c32cba95d58238270467693fb4ca0",
+              "url": "https://www.cnn.com/2026/07/16/europe/russia-ukraine-kostyantynivka-capture-claim-intl",
+              "headline": "Putin’s false claim of the capture of one Ukrainian town exposes the slow pace of Russia’s bloody advance | CNN",
+              "body": "It is the fate of just one town, over a year, but provides a rare insight into Russia’s ill-fated war of choice.",
+              "published_date": "2026-07-16",
+              "outlet": "CNN.com",
+              "image": "https://s.yimg.com/am/60d/10a4ebeddff446db092469b1e280305a"
+            },
+            {
+              "news_id": "48bc29082ade581596e0b4085d85f736",
+              "url": "https://www.msn.com/en-in/public-safety-and-emergencies/health-and-safety-alerts/search-on-for-two-missing-indians-after-vessel-struck-at-odesa-port-in-ukraine/ar-AA28I1VH?ocid=BingNewsVerp",
+              "headline": "Indian vessel struck at Ukraine's Odesa port; two nationals missing",
+              "body": "Four Indians were aboard MV AGN Ragnar when it was struck at Odesa port. Two are safe as search operations continue for ...",
+              "published_date": "2026-07-26",
+              "outlet": "Zee News on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.7KuxuCLg2f7WWl0zNQTXyQ"
+            },
+            {
+              "news_id": "9a67a836ab945988ba93497810244a4a",
+              "url": "https://www.msn.com/en-in/video/news/iran-war-expands-beyond-red-sea-tehran-warns-ukraine-after-vessel-strike-in-caspian-sea/vi-AA28I3dt?ocid=BingNewsVerp",
+              "headline": "Iran war expands beyond Red Sea? Tehran warns Ukraine after vessel strike in Caspian Sea",
+              "body": "The Iran conflict risks expanding beyond West Asia after Tehran accused Ukraine of attacking an Iranian commercial vessel in the Caspian Sea. Iran’s foreign ministry condemned the incident as an act ...",
+              "published_date": "2026-07-26",
+              "outlet": "WION on MSN",
+              "image": ""
+            }
+          ]
+        },
+        {
+          "log_date": "2026-07-27",
+          "summary": "Iran formally warned Ukraine of retaliation after a deadly Ukrainian strike on an Iranian commercial vessel in the Caspian Sea. India issued a travel advisory following a vessel strike at Odesa port that affected Indian nationals. In Russia, reports indicate Putin may be preparing to mobilize up to 500,000 additional troops amid falling public opinion, while Ukraine's drone strikes continued targeting Russia's Wildberries online marketplace to disrupt the economy. President Zelenskyy is scheduled to visit Britain for talks with Prime Minister Andy Burnham.\nA missile strike in Kharkiv killed 1 and injured 16. President Zelenskyy visited Britain to meet with new Prime Minister Andy Burnham, who signaled continued support for Ukraine.\nUkraine achieved its first confirmed air-to-air kill with an F-16, destroying a Russian aircraft. Meanwhile, the Pentagon acknowledged that US industry is years behind matching Ukraine's wartime drone production output. Ukraine's Foreign Minister also extended condolences to India over the loss of seafarers in a Black Sea vessel strike.",
+          "news": [
+            {
+              "news_id": "cfa47e80fa6e57048929d94e5642cef5",
+              "url": "https://thehill.com/policy/international/5991996-laura-loomer-ukraine-war-russia-propaganda/",
+              "headline": "Loomer explains war shift from Ukraine bunker",
+              "body": "Far-right influencer Laura Loomer explained her changing views toward Russia’s war in Ukraine in an interview with The Associated Press while in a bunker...",
+              "published_date": "2026-07-27T16:20:23+00:00",
+              "outlet": "The Hill",
+              "image": "https://s.yimg.com/bo/2f2787c4-7b0f-5602-bac3-61edd53ea080_1784361078151.jpg"
+            },
+            {
+              "news_id": "7ea35e6e9e40581b868f89993bf5fba7",
+              "url": "https://www.thequint.com/news/breaking-news/india-issues-advisory-after-odesa-vessel-attack",
+              "headline": "India Issues Advisory After Vessel With Indians Hit At Odesa Port In Ukraine",
+              "body": "India’s MEA issues urgent advisory after a vessel carrying Indian nationals was struck at Odesa port, Ukraine, amid rising Black Sea attacks.",
+              "published_date": "2026-07-26",
+              "outlet": "The Quint",
+              "image": ""
+            },
+            {
+              "news_id": "81e93a03e5605f9ca037ef183a8f9d5f",
+              "url": "https://www.thehindu.com/news/international/why-is-russia-attacking-ships-in-odessa-explained/article71271599.ece",
+              "headline": "Why is Russia attacking ships in Odessa? | Explained",
+              "body": "Explore the escalating attacks on merchant ships in Ukraine by Russia and the implications for Indian seafarers amidst the conflict.",
+              "published_date": "2026-07-27",
+              "outlet": "The Hindu",
+              "image": "https://www.bing.com/th?id=ONUT.x-SlUaSXnUbBcSKGw2vs2A"
+            },
+            {
+              "news_id": "284b13dba7f552e38405fe128e754172",
+              "url": "https://www.yahoo.com/news/world/articles/iran-warns-ukraine-retaliation-deadly-061501204.html",
+              "headline": "Iran warns Ukraine of retaliation after deadly Caspian Sea strike",
+              "body": "Abbas Araghchi says the Ukrainian attack on the Iranian vessel in the Caspian Sea ‘cannot go unanswered’.",
+              "published_date": "2026-07-27",
+              "outlet": "Al Jazeera · via Yahoo News",
+              "image": "https://media.zenfs.com/en/al_jazeera_289/92c17074851d354245ed5e6b585f7185"
+            },
+            {
+              "news_id": "f8c7cdb8f7f05f0d84821382a5af4ee3",
+              "url": "https://businessmirror.com.ph/2026/07/27/collateral-commerce-ukraine-brings-the-war-to-russias-online-economy/",
+              "headline": "COLLATERAL COMMERCE: Ukraine brings the war to Russia’s online economy",
+              "body": "Drone strikes on Wildberries aim to disrupt logistics, pressure Russia’s economy, and make ordinary Russians feel the costs ...",
+              "published_date": "2026-07-27T00:00:00+00:00",
+              "outlet": "BusinessMirror",
+              "image": "https://www.bing.com/th?id=ONUT.t4L-2erIrb0PuNtcLfxBUA"
+            },
+            {
+              "news_id": "825ffdb89f515cbb80f15724e1a12a8e",
+              "url": "https://www.yahoo.com/news/politics/articles/democrats-undermining-us-support-ukraine-170825682.html",
+              "headline": "Democrats ‘undermining US support for Ukraine’",
+              "body": "Democrats risk undermining American support for Ukraine by objecting to proposed sanctions on countries that buy oil from Russia, it has been claimed.",
+              "published_date": "2026-07-27",
+              "outlet": "The Telegraph · via Yahoo News",
+              "image": "https://media.zenfs.com/en/the_telegraph_258/76c4a01a1f34fb195171d31781d797f3"
+            },
+            {
+              "news_id": "e82efb3a3bb75d3a9da1493b8f98bb70",
+              "url": "https://www.msn.com/en-us/news/other/putin-preparing-to-mobilize-500-000-russians-as-public-opinion-plummets/ar-AA28L3av?ocid=BingNewsVerp",
+              "headline": "Putin preparing to mobilize 500,000 Russians as public opinion plummets",
+              "body": "Russia last mobilized hundreds of thousands of soldiers for the war in Ukraine nearly four years ago, triggering rare ...",
+              "published_date": "2026-07-27",
+              "outlet": "Newsweek on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.cdp83wVm5FIsZ4cHR1cRBw"
+            },
+            {
+              "news_id": "baa26ae6f92f5d01af7798c7e84c29db",
+              "url": "https://www.bostonherald.com/2026/07/27/britain-andy-burnham-volodymyr-zelenskyy/",
+              "headline": "Zelenskyy visits Britain as new PM signals more support for Kyiv",
+              "body": "Zelenskyy’s trip is the first by a foreign leader since Burnham took office a week ago.",
+              "published_date": "2026-07-27",
+              "outlet": "Boston Herald",
+              "image": "https://www.bing.com/th?id=ONUT.grKEvWMGx1HRqFkefsTAsA"
+            },
+            {
+              "news_id": "9930170d66b651eba8e7e1a537b3484d",
+              "url": "https://cryptobriefing.com/missile-strike-in-kharkiv-kills-1-injures-16-ahead-of-zelenskyy-trump-meeting/",
+              "headline": "Missile strike in Kharkiv kills 1, injures 16 ahead of Zelenskyy-Trump meeting",
+              "body": "Missile strike in Kharkiv kills 1 and injures 16. Ceasefire by December 31, 2026 at 35.5% YES.",
+              "published_date": "2026-07-27",
+              "outlet": "Crypto Briefing",
+              "image": "https://www.bing.com/th?id=ONUT.dAO6f_aBcioOVwt1WYLkdA"
+            },
+            {
+              "news_id": "d9893acafab6558fb49a5e16c645b7b9",
+              "url": "https://www.msn.com/en-us/news/other/f-16-s-first-air-to-air-kill-ukraine-s-new-air-superiority/ar-AA28NbfV?ocid=BingNewsVerp",
+              "headline": "F-16’s first air-to-air kill: Ukraine’s new air superiority",
+              "body": "A Ukrainian F-16 has done something no one in the Western alliance could say with certainty would happen — it destroyed a ...",
+              "published_date": "2026-07-27",
+              "outlet": "Combat Aviator on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.qXH77VreZ146ZamAyfoX5Q"
+            },
+            {
+              "news_id": "8586c6178a9f573e8bba96a7db718e70",
+              "url": "https://www.indiatoday.in/world/story/russia-ukraine-war-spreading-to-caspian-sea-threatens-key-india-linked-corridor-2957184-2026-07-27",
+              "headline": "How Russia-Ukraine war spreading to Caspian Sea threatens key India-linked corridor",
+              "body": "The Caspian Sea is the maritime link of the Mumbai-Moscow North-South Corridor.",
+              "published_date": "2026-07-27",
+              "outlet": "India Today",
+              "image": ""
+            },
+            {
+              "news_id": "3e5ebddca7bc591f8f0ce9483f6857c4",
+              "url": "https://www.reuters.com/business/aerospace-defense/pentagon-says-us-industry-still-years-matching-ukraines-wartime-output-2026-07-27/",
+              "headline": "Pentagon says US industry still years from matching Ukraine's wartime output",
+              "body": "The Pentagon official tasked with building a domestic drone industry said on Monday the United Stat...",
+              "published_date": "2026-07-27T19:20:23+00:00",
+              "outlet": "Reuters",
+              "image": "https://s.yimg.com/bo/6ea4b5d4-b706-5380-b245-9bc1cb2a37cb_1785180197283.jpg"
+            },
+            {
+              "news_id": "d5f54bf885005fd7a8452f7e2ed20434",
+              "url": "https://www.outlookindia.com/international/india-summons-ukrainian-ambassador-after-attacks-on-merchant-vessels-carrying-indian-crew",
+              "headline": "India Summons Ukrainian Ambassador After Attacks on Merchant Vessels Carrying Indian Crew | Outlook India",
+              "body": "India summoned the Ukrainian ambassador after attacks on merchant vessels carrying Indian crew, while issuing a security advisory for seafarers in the Black Sea.",
+              "published_date": "2026-07-27",
+              "outlet": "Outlook India",
+              "image": "https://www.bing.com/th?id=ONUT.cN4818ZBsbO7esp8X2dlng"
+            },
+            {
+              "news_id": "b2ce7173a66f566fa225cf34a62ce283",
+              "url": "https://www.irishtimes.com/world/europe/2026/07/27/the-new-shape-of-ukraines-war/",
+              "headline": "The new shape of Ukraine’s war",
+              "body": "The conflict with Russia has entered a new phase, one defined less by territorial gains than by intense technological competition",
+              "published_date": "2026-07-27",
+              "outlet": "The Irish Times",
+              "image": "https://www.bing.com/th?id=ONUT.Z4Y9h3PP2EI92ZTtCHXP1w"
+            },
+            {
+              "news_id": "b208727ac8ab5b17bdcc145fd3cddc6f",
+              "url": "https://politicalwire.com/2026/07/27/ukraine-iran-and-how-regional-wars-go-global/",
+              "headline": "Ukraine, Iran and How Regional Wars Go Global",
+              "body": "Gideon Rachman: \"Russia’s invasion of Ukraine has led to the bloodiest war in Europe since 1945. The conflict between Iran, the U.S. and Israel has seen 12 countries in the Middle East directly involved in fighting — making it the most widespread war in the region for decades. In east Asia, Nort",
+              "published_date": "2026-07-27",
+              "outlet": "Taegan Goddard's Political Wire",
+              "image": "https://s.yimg.com/bo/b2566383-b4fd-5e15-865d-506b2cd0605f_1783680883943.jpg"
+            },
+            {
+              "news_id": "8dae252d404f575d8d9e19e4f20c4ec9",
+              "url": "https://mainichi.jp/english/articles/20260723/p2g/00m/0na/016000c",
+              "headline": "Japan rethinks defense strategy as Ukraine drone war redefines deterrence - The Mainichi",
+              "body": "TOKYO (Kyodo) -- The Russia-Ukraine war has transformed drones into defining weapons of modern warfare, prompting Japan to rethink defense procurement",
+              "published_date": "2026-07-27",
+              "outlet": "The Mainichi",
+              "image": "https://www.bing.com/th?id=ONUT.hYsGxA_C4DD8XHp_G17TZg"
+            },
+            {
+              "news_id": "90dcff9950e357aab016bb0f63eeaf5a",
+              "url": "https://www.yahoo.com/news/politics/articles/zelensky-made-rival-083257105.html",
+              "headline": "How Zelensky made a rival",
+              "body": "President Volodymyr Zelensky appears to have miscalculated. By dismissing the widely popular Defense Minister Mykhailo Fedorov, he created two problems at once: he triggered a political crisis that co...",
+              "published_date": "2026-07-27",
+              "outlet": "Yahoo",
+              "image": ""
+            },
+            {
+              "news_id": "6c49a605d60b5753a64a55f0c43657a8",
+              "url": "https://www.newsweek.com/putin-preparing-to-mobilize-500000-russians-as-public-opinion-plummets-12247474",
+              "headline": "Putin preparing to mobilize 500,000 Russians as public opinion plummets",
+              "body": "Russia last mobilized hundreds of thousands of soldiers for the war in Ukraine nearly four years ago, triggering rare protests.",
+              "published_date": "2026-07-27",
+              "outlet": "Newsweek",
+              "image": "https://s.yimg.com/bo/63dc35da-3f3d-5599-ab63-a3349f743d21_1785142639259.jpg"
+            },
+            {
+              "news_id": "96e9a893374c5c0e8e2746e458a07810",
+              "url": "https://www.msn.com/en-in/news/India/india-summons-ukraines-envoy-over-death-of-seafarer-in-black-sea/ar-AA28MBJq?ocid=BingNewsVerp",
+              "headline": "India summons Ukraine's envoy over death of seafarer in Black Sea",
+              "body": "India's MEA summoned Ukraine's Ambassador over attacks on commercial vessels in the Black Sea that killed Indian seafarers.",
+              "published_date": "2026-07-27",
+              "outlet": "Newsable Asianet News on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.mxXYSDM19f9jZN2RmBjKBg"
+            },
+            {
+              "news_id": "3c413993246c5cd7ad730bdffb03a297",
+              "url": "https://www.sfgate.com/news/world/article/zelenskyy-to-visit-britain-in-first-visit-by-a-22361391.php",
+              "headline": "Zelenskyy to visit Britain in first visit by a foreign leader since Burnham took...",
+              "body": "Ukrainian President Volodymyr Zelenskyy is set to meet with British Prime Minister Andy Burnham at a...",
+              "published_date": "2026-07-27T08:35:19+00:00",
+              "outlet": "San Francisco Chronicle",
+              "image": "https://s.yimg.com/bo/2e7376b7-5dc7-56e9-8f8b-75e8335d19ab_1785144865991.jpg"
+            },
+            {
+              "news_id": "2160c56572875e4d9be8117f4906f774",
+              "url": "https://www.thedailybeast.com/putin-melts-down-in-front-of-stunned-sailors-after-canceling-parade/",
+              "headline": "Putin Melts Down in Front of Stunned Sailors After Canceling Parade",
+              "body": "The Russian leader’s show of strength comes as his carefully managed image increasingly crumbles.",
+              "published_date": "2026-07-26",
+              "outlet": "The Daily Beast",
+              "image": "https://s.yimg.com/bo/e70e7bd5-7dd5-53fb-b868-e78194e7c791_1785099870800.jpg"
+            },
+            {
+              "news_id": "fdf5e11b39a85090b336d59d267100c3",
+              "url": "https://www.newindianexpress.com/world/2026/Jul/27/ukraines-foreign-minister-condoles-loss-of-lives-of-indian-seafarers-in-black-sea-amid-volatile-security-situation",
+              "headline": "Ukraine's Foreign Minister condoles loss of lives of Indian seafarers in Black Sea amid volatile security situation",
+              "body": "Amid prevailing security concerns in the Black Sea, the Embassy of Ukraine in India noted that Foreign Minister Andrii Sybiha has extended condolences to Extern",
+              "published_date": "2026-07-27",
+              "outlet": "The New Indian Express",
+              "image": ""
+            },
+            {
+              "news_id": "ba9832295cfe5f859f187375dee0ecae",
+              "url": "https://www.msn.com/en-us/news/other/india-issues-black-sea-advisory-after-deadly-strikes-off-ukraine/ar-AA28LUpl?ocid=BingNewsVerp",
+              "headline": "India issues Black Sea advisory after deadly strikes off Ukraine",
+              "body": "India issues Black Sea advisory after deadly strikes off Ukraine, calling maritime corridor ‘highly volatile’ - Five Indians ...",
+              "published_date": "2026-07-27",
+              "outlet": "The Independent on MSN",
+              "image": "https://www.bing.com/th?id=ONUT._qUO6PDvWhYO0rbPw21-Ug"
+            }
+          ]
+        }
+      ],
+      "logs_total": 4
+    },
+    {
       "incident_id": "20260719-PE-EQ",
       "tree_id": "dec05f2e1d5e46a2ba27d2105b2d29bb",
       "canonical_name": "Earthquake M5.5 Junin, Peru 2026-07-19",
@@ -10515,112 +11887,6 @@
       "logs_total": 3
     },
     {
-      "incident_id": "20260720-CA-EQ",
-      "tree_id": "5638775cbc294f78a74ce0b2ef66c0c4",
-      "canonical_name": "Earthquake M5.6 Port McNeill, Canada 2026-07-20",
-      "summary": "A magnitude 5.6 earthquake struck off the coast of Vancouver Island near Port McNeill, Canada. No tsunami advisories were issued and no damage was reported. The quake was felt as far as the Seattle area.",
-      "country": "Canada",
-      "iso2": "CA",
-      "lat": 49.4076,
-      "lon": -129.342,
-      "country_group": "C",
-      "region": "Americas",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-07-20",
-      "first_reported_date": "2026-07-20",
-      "last_updated_date": "2026-07-20",
-      "days_since_event": 8,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 3
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 5.6 - 208 km SW of Port McNeill, Canada",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t1w2",
-          "meta": "10 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 5.6,
-        "max_depth_km": 10.0,
-        "place": "208 km SW of Port McNeill, Canada",
-        "felt": 4,
-        "sig": 484,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Late-Night Quake Off Vancouver Island Jars Puget Sound, Leaves No Damage",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "Magnitude 40 Earthquake Reported Off The Coast Of Vancouver Island Near Port Mcneill",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "Magnitude 5.6 earthquake rumbles off B.C. coast west of Vancouver Island",
-          "published_date": "2026-07-20"
-        }
-      ],
-      "news_total": 3,
-      "logs": [
-        {
-          "log_date": "2026-07-20",
-          "summary": "A magnitude 5.6 earthquake struck off the coast of Vancouver Island near Port McNeill, Canada. No tsunami advisories were issued and no damage was reported. The quake was felt as far as the Seattle area.",
-          "news": [
-            {
-              "news_id": "0fd3d289aa8a557e883ff5054b520e6b",
-              "url": "https://hoodline.com/2026/07/late-night-quake-off-vancouver-island-jars-puget-sound-leaves-no-damage/",
-              "headline": "Late-Night Quake Off Vancouver Island Jars Puget Sound, Leaves No Damage",
-              "body": "Magnitude 5.6 quake off Vancouver Island shook the Seattle area; no damage or tsunami warnings reported.",
-              "published_date": "2026-07-20",
-              "outlet": "Hoodline",
-              "image": "https://www.bing.com/th?id=ONUT.mBe_vkE_clCdgOvjU6s2eg"
-            },
-            {
-              "news_id": "edbb3a7d7aec5574aa7a7fcd02b920b4",
-              "url": "https://www.msn.com/en-us/weather/topstories/magnitude-40-earthquake-reported-off-the-coast-of-vancouver-island-near-port-mcneill/ar-AA27TMSb",
-              "headline": "Magnitude 40 Earthquake Reported Off The Coast Of Vancouver Island Near Port Mcneill",
-              "body": "No tsunami advisories have been issued, and no threat to life is expected.",
-              "published_date": "2026-07-20",
-              "outlet": "KGW-TV Portland",
-              "image": "https://s.yimg.com/lo/mysterio/api/44f59c10f2df47c39541fe3154a367ecd2e2a8188f516c0a9d8e560695a5513b/lightyear_networkapi/resizefill_w750_h422;quality_80;format_webp/https://media.zenfs.com/en/kgw_tegna_articles_366/59ad6d7d6443ae4432c8e8ad67b69929"
-            },
-            {
-              "news_id": "287162d0e902529f89a34a101300ef49",
-              "url": "https://www.winnipegfreepress.com/canada/2026/07/20/magnitude-5-6-earthquake-rumbles-off-b-c-coast-west-of-vancouver-island",
-              "headline": "Magnitude 5.6 earthquake rumbles off B.C. coast west of Vancouver Island",
-              "body": "PORT HARDY - A magnitude 5.6 earthquake has struck under the ocean off Vancouver Island.",
-              "published_date": "2026-07-20",
-              "outlet": "Winnipeg Free Press",
-              "image": "https://www.bing.com/th?id=ONUT.kH_cNpOZ-aPgpsgPut7WwA"
-            }
-          ]
-        }
-      ],
-      "logs_total": 1
-    },
-    {
       "incident_id": "20260723-CN-TC",
       "tree_id": "ff934a7b352f4f5683a1f1bac820b659",
       "canonical_name": "Tropical Cyclone ELEVEN-26 China 2026-07-23",
@@ -10884,6 +12150,938 @@
         }
       ],
       "logs_total": 2
+    },
+    {
+      "incident_id": "20260726-IR-CF",
+      "tree_id": "13763def03ab448898154124734fe728",
+      "canonical_name": "Iran/US war",
+      "summary": "The U.S. and Iran have paused attacks and resumed diplomatic efforts to end the conflict, with mediators reporting progress and talks focused on reopening the Strait of Hormuz. Meanwhile, the Pentagon quietly removed four recent troop deaths from its official Iran war death toll, reclassifying them in a new category, sparking controversy. Additional concerns include the U.S.'s dangerously low weaponry supply and growing public skepticism over the war’s costs and duration.\nMediators reported that neither the U.S. nor Iran conducted any attacks for three consecutive days, signaling progress in ceasefire efforts. New polls indicate that only one in three Americans now support the war, the lowest reading since the conflict began, and a majority view it as going \"very badly.\" The Pentagon continued to face scrutiny over its reclassification of four troop deaths from the conflict.",
+      "country": "Iran",
+      "iso2": "IR",
+      "lat": 32.4,
+      "lon": 53.7,
+      "country_group": "B",
+      "region": "Asia",
+      "incident_type": "Conflict",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "CRITICAL",
+      "priority": "HIGH",
+      "priority_rank": 1,
+      "pandemic_potential": null,
+      "event_status": null,
+      "extended_monitoring": true,
+      "disease_name": null,
+      "event_date": "2026-07-26",
+      "first_reported_date": "2026-07-26",
+      "last_updated_date": "2026-07-28",
+      "days_since_event": 2,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 0,
+        "gdacs": 0,
+        "ercc": 0,
+        "healthmap": 0,
+        "news": 50
+      },
+      "source_links": [],
+      "physical": {
+        "max_magnitude": null,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "This website is unavailable in your location. – WSB-TV Channel 2 - Atlanta",
+          "published_date": "2016-01-01"
+        },
+        {
+          "headline": "Hegseth Faces Lawmakers Over Iran War Costs as Conflict Widens",
+          "published_date": "2026-07-21"
+        },
+        {
+          "headline": "Is Trump popular? See polls amid escalating Iran conflict",
+          "published_date": "2026-07-22"
+        },
+        {
+          "headline": "The Cost of the Iran War in Lives, Dollars and Public Opinion",
+          "published_date": "2026-07-22T20:22:26+00:00"
+        },
+        {
+          "headline": "House votes to restrict Trump’s Iran war powers in latest rebuke over the confli...",
+          "published_date": "2026-07-23T04:00:30+00:00"
+        },
+        {
+          "headline": "Official Iran war death toll drops by 4 most recent casualties",
+          "published_date": "2026-07-26"
+        },
+        {
+          "headline": "Poll: Most say Iran conflict more difficult than Trump had expected",
+          "published_date": "2026-07-26"
+        },
+        {
+          "headline": "Trump’s UN Ambassador Won’t Commit to Iran War Ending in 2026 — When Pressed By NBC’s Welker: Not Going to Put a ‘Timeline’ On it - AOL",
+          "published_date": "2026-07-26"
+        },
+        {
+          "headline": "Pentagon’s official Iran war death toll no longer lists 4 troops killed in recent weeks",
+          "published_date": "2026-07-26"
+        },
+        {
+          "headline": "Pentagon reports more than 600 Iran war casualties in quiet database update",
+          "published_date": "2026-07-26"
+        },
+        {
+          "headline": "Pentagon's official Iran war death toll no longer lists 4 troops killed during renewed fighting",
+          "published_date": "2026-07-26T00:00:00+00:00"
+        },
+        {
+          "headline": "Pentagon Changes How It Reports Casualties in Iran War",
+          "published_date": "2026-07-26T15:31:41+00:00"
+        },
+        {
+          "headline": "How the Houthis Cornered Saudi Arabia Into a New Conflict",
+          "published_date": "2026-07-26T20:22:26+00:00"
+        },
+        {
+          "headline": "The War That Shall Not Be Named",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Pentagon’s official Iran war death toll no longer lists 4 troops killed during renewed fighting",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Iran says it controls Strait of Hormuz after weekend pause in strikes",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Airstrikes have paused and talks are pressing forward. But can the US and Iran take the off-ramp?",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "The Trade Routes Iran Cannot Afford to Lose",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "US-Iran conflict: What UAE residents need to know this evening (July 27)",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Pentagon changes how it releases casualty data as Iran conflict continues",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Live updates: US signals pause in Iran strikes will allow talks to progress | CNN",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "US pauses Iran attacks after Trump advised to halt bombing",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "US ‘runs out of missiles’ as Trump halts Iran strikes",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Pentagon reclassifies casualties in Iran conflict | Arkansas Democrat Gazette",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Stocks waver on Wall Street and crude oil prices drop 5% as Mideast tensions cool",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Trump’s Iran War US Oil Shortage Deception",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "John Kennedy says 'the world's on a hair trigger' discussing Iran conflict",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "3 dead in mass shooting in Seattle. And, U.S. and Iran pause fighting",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Mediators see progress in efforts to halt Iran war as drone attacks rattle region",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "U.S. ‘dangerously low supply of weaponry’ main factor in pause of conflict with Iran: Ham",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Live Updates: U.S.-Iran war appears to pause as Trump gives space for talks to end Strait of Hormuz standoff",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Pete Buttigieg rips GOP's Iran War justification apart in just one sentence - LGBTQ Nation",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Why four troop deaths disappeared from Pentagon’s Iran war casualty count",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Days disrupted: 7 people around the world share how the Iran war has reshaped their lives",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Mediators see progress in efforts to halt Iran war as drone attacks rattle region",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Iran war casualty count surpasses 600 amid Pentagon’s quiet data shift",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Pentagon’s official Iran war death toll no longer lists 4 troops killed during renewed fighting",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Mediators see progress in efforts to halt Iran war as drone attacks rattle region",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Strait of Hormuz ambiguity triggered collapse of US-Iran truce - Analysts",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "West Asia War LIVE: Iran says it still controls strait, not seeking talks with U.S.",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Japanese Stocks May Rise Amid Easing Iran Conflict Concerns",
+          "published_date": "2026-07-27T04:00:32+00:00"
+        },
+        {
+          "headline": "Most Americans say Trump’s Iran war is going ‘very badly’ in stunning new poll",
+          "published_date": "2026-07-27T20:22:26+00:00"
+        },
+        {
+          "headline": "Just one in three Americans back Iran war, most unsure of Trump's goals, Reuters/Ipsos poll finds",
+          "published_date": "2026-07-27T20:22:26+00:00"
+        },
+        {
+          "headline": "The Trade Routes Iran Cannot Afford to Lose",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Here we go again. Why oil keeps tumbling even when the Iran war drags on",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Why has the US halted its bombing of Iran?",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Oil prices drop more than 2% as a pause in U.S.-Iran hostilities raises de-escalation hopes",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Republican Congressman Thomas Massie says Iran war has weakened USPublished on: July 27, 2026 3:50 PM",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "US-Iran War Live: Iran is pleading US to stop its naval blockade, Trump says",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Trump says US, Iran in ‘friendly’ talks as Netanyahu arrives in Washington",
+          "published_date": "2026-07-28"
+        }
+      ],
+      "news_total": 50,
+      "logs": [
+        {
+          "log_date": "2026-07-27",
+          "summary": "The U.S. and Iran have paused attacks and resumed diplomatic efforts to end the conflict, with mediators reporting progress and talks focused on reopening the Strait of Hormuz. Meanwhile, the Pentagon quietly removed four recent troop deaths from its official Iran war death toll, reclassifying them in a new category, sparking controversy. Additional concerns include the U.S.'s dangerously low weaponry supply and growing public skepticism over the war’s costs and duration.\nMediators reported that neither the U.S. nor Iran conducted any attacks for three consecutive days, signaling progress in ceasefire efforts. New polls indicate that only one in three Americans now support the war, the lowest reading since the conflict began, and a majority view it as going \"very badly.\" The Pentagon continued to face scrutiny over its reclassification of four troop deaths from the conflict.",
+          "news": [
+            {
+              "news_id": "8e0befe4569e5bcc8c924528af0bdd33",
+              "url": "https://apnews.com/article/stocks-oil-rates-markets-cxmt-2b81f0e01bb318ae8d4281964f89f2f1",
+              "headline": "Stocks waver on Wall Street and crude oil prices drop 5% as Mideast tensions cool",
+              "body": "Stocks are wavering on Wall Street and oil prices are down 5% after the U.S. and Iran paused their attacks while work resumed on restarting negotiations to end the war.",
+              "published_date": "2026-07-27",
+              "outlet": "Associated Press News",
+              "image": "https://www.bing.com/th?id=ONUT.tJyXn5Nbc7oHVnhnnGpnIg"
+            },
+            {
+              "news_id": "67f840fe7c5556c88cf2caa6518b3ea5",
+              "url": "https://finance.yahoo.com/economy/policy/articles/hegseth-faces-lawmakers-over-iran-war-costs-as-conflict-widens-040003754.html",
+              "headline": "Hegseth Faces Lawmakers Over Iran War Costs as Conflict Widens",
+              "body": "(Bloomberg) -- Defense Secretary Pete Hegseth is set to testify before lawmakers for the first time in more than two months to defend the Trump administration's request for billions of dollars in additional money for the Iran war and address growing public skepticism about the course of the conflict.Most Read from BloombergSaudi-Led Coalition in Yemen Vows to Protect Ships From HouthisUS Strikes Iran in Escalating Campaign After Troops KilledIran Says Mediators Stepping In After Days of US Clash",
+              "published_date": "2026-07-21",
+              "outlet": "Bloomberg · via Yahoo Finance",
+              "image": "https://media.zenfs.com/en/bloomberg_markets_video_2/cffc2bfa6e96699579028e30ef26c7bc"
+            },
+            {
+              "news_id": "190b0a6b80dd556b91cba4a435af9bc8",
+              "url": "https://www.counterpunch.org/2026/07/27/trumps-iran-war-us-oil-shortage-deception/",
+              "headline": "Trump’s Iran War US Oil Shortage Deception",
+              "body": "Last June 17, 2026 Trump announced the US and Iran had agreed to a Memorandum of Agreement (MOU) and a ceasefire in the war. The global price of crude oil",
+              "published_date": "2026-07-27",
+              "outlet": "CounterPunch",
+              "image": "https://www.bing.com/th?id=ONUT.59mRwQ5Q6dqbQ4BvaiZpEw"
+            },
+            {
+              "news_id": "7227922d4fc2534cba43780b921b2d37",
+              "url": "https://www.baltimoresun.com/2026/07/26/official-iran-war-death-toll-drops-by-4-most-recent-casualties/",
+              "headline": "Official Iran war death toll drops by 4 most recent casualties",
+              "body": "The four American troops killed during renewed fighting between the U.S. and Iran in recent weeks are no longer listed as part of the Iran war death toll in the Pentagon’s official casualty count and instead have been placed in a new, s…",
+              "published_date": "2026-07-26",
+              "outlet": "The Baltimore Sun",
+              "image": "https://www.bing.com/th?id=ONUT.4cui0dOVYSquW_TGqTUClA"
+            },
+            {
+              "news_id": "6d3ea71a31505bdcbbc36eeec534aca4",
+              "url": "https://www.shreveporttimes.com/story/news/politics/2026/07/27/what-has-john-kennedy-said-about-war-in-iran-trump-ceasefire-end-resolution-continuing-strikes/91060007007/",
+              "headline": "John Kennedy says 'the world's on a hair trigger' discussing Iran conflict",
+              "body": "John Kennedy says the world's on a 'hair trigger' regarding ongoing conflict in Iran, yet expresses support for continuing military operations.",
+              "published_date": "2026-07-27",
+              "outlet": "The Shreveport Times",
+              "image": "https://s.yimg.com/bo/7f630f88-1ebc-51d9-ae2c-3e5d69241ce9_1785163462008.jpg"
+            },
+            {
+              "news_id": "a26d22e3c4f25c97818b7792f95937d1",
+              "url": "https://www.npr.org/2026/07/27/g-s1-135621/up-first-newsletter-mass-shooting-seattle-iran-us-war-democrats-senate-midterms",
+              "headline": "3 dead in mass shooting in Seattle. And, U.S. and Iran pause fighting",
+              "body": "A mass shooting at a Seattle festival has left three people dead. And, the U.S. and Iran have been exchanging diplomatic messages after nearly tw weeks of intense fighting.",
+              "published_date": "2026-07-27",
+              "outlet": "NPR",
+              "image": "https://s.yimg.com/bo/d3e559c5-08f6-5054-9ee2-8ee4fd65852e_1785154245969.jpg"
+            },
+            {
+              "news_id": "f39e5486787753f6898245e2e4167dd3",
+              "url": "https://www.yahoo.com/news/politics/articles/poll-most-say-iran-conflict-more-difficult-than-trump-had-expected-163814782.html",
+              "headline": "Poll: Most say Iran conflict more difficult than Trump had expected",
+              "body": "Most see conflict lasting months or years longer now; Republicans say U.S. should continue to press until it wins more concessions.",
+              "published_date": "2026-07-26",
+              "outlet": "Yahoo",
+              "image": "https://www.bing.com/th?id=ONUT.4_YUWKfJy710L3l7S-OoNQ"
+            },
+            {
+              "news_id": "388a0c62b4a5507ea59818e28e39cf75",
+              "url": "https://www.nj.com/politics/2026/07/most-americans-say-trumps-iran-war-is-going-very-badly-in-stunning-new-poll.html",
+              "headline": "Most Americans say Trump’s Iran war is going ‘very badly’ in stunning new poll",
+              "body": "A majority of Americans are feeling “very badly” and frustrated as the war with Iran continues to escalate and persist beyond ...",
+              "published_date": "2026-07-27T20:22:26+00:00",
+              "outlet": "NJ.com",
+              "image": "https://www.bing.com/th?id=ONUT.reIbgSBHfryli5Xo6w7crQ"
+            },
+            {
+              "news_id": "b3bb8b0ea4545efebd443490af546bff",
+              "url": "https://www.washingtonpost.com/politics/2026/07/26/iran-war-casualty-count-pentagon-us-troops/49399f9a-8926-11f1-8912-d71e69d679d7_story.html",
+              "headline": "Pentagon's official Iran war death toll no longer lists 4 troops killed during renewed fighting",
+              "body": "The four American troops killed during renewed fighting between the U.S. and Iran in recent weeks are no longer listed as ...",
+              "published_date": "2026-07-26T00:00:00+00:00",
+              "outlet": "The Washington Post",
+              "image": "https://www.bing.com/th?id=ONUT.plwuM0Sec91rKbAf4bvrGA"
+            },
+            {
+              "news_id": "40c39b0a15d95733a32a1ff74207936d",
+              "url": "https://www.aol.com/articles/trump-un-ambassador-won-t-142717000.html",
+              "headline": "Trump’s UN Ambassador Won’t Commit to Iran War Ending in 2026 — When Pressed By NBC’s Welker: Not Going to Put a ‘Timeline’ On it - AOL",
+              "body": "UN Ambassador MIke Waltz said he would not put a \"timeline\" on the Iran War ending — as he was pressed by NBC's Kristen Welker in a tense MTP showdown.",
+              "published_date": "2026-07-26",
+              "outlet": "AOL",
+              "image": ""
+            },
+            {
+              "news_id": "173f55001d1e503ca6e3bc63f308f92f",
+              "url": "https://www.thenewsherald.com/2026/07/27/mediators-us-iran-war/",
+              "headline": "Mediators see progress in efforts to halt Iran war as drone attacks rattle region",
+              "body": "Neither the U.S. nor Iran reported carrying out any attacks for three straight days.",
+              "published_date": "2026-07-27",
+              "outlet": "The News-Herald",
+              "image": "https://www.bing.com/th?id=ONUT.CLP-uXz4SfvqThuuRTyZ4A"
+            },
+            {
+              "news_id": "35127983a471566199b6a3bdaec8f36b",
+              "url": "https://www.ctvnews.ca/video/2026/07/27/us-dangerously-low-supply-of-weaponry-main-factor-in-pause-of-conflict-with-iran-ham/",
+              "headline": "U.S. ‘dangerously low supply of weaponry’ main factor in pause of conflict with Iran: Ham",
+              "body": "U.S. Political Analyst Eric Ham on why there’s ‘growing concerns’ surrounding the U.S. and Iran war despite a pause in conflict.",
+              "published_date": "2026-07-27",
+              "outlet": "CTV News",
+              "image": "https://www.bing.com/th?id=ONUT.hTMqt3TRcsCvbKoMONft4w"
+            },
+            {
+              "news_id": "f923a4ad64cd5b1d880f3e818f99ae80",
+              "url": "https://www.cbsnews.com/live-updates/us-iran-war-trump-strait-of-hormuz-talks-oman/",
+              "headline": "Live Updates: U.S.-Iran war appears to pause as Trump gives space for talks to end Strait of Hormuz standoff",
+              "body": "The U.S. and Iran hold fire amid work on a deal to reopen the Strait of Hormuz, but the Trump administration says a military buildup continues.",
+              "published_date": "2026-07-27",
+              "outlet": "CBS News",
+              "image": "https://www.bing.com/th?id=ONUT.ihsUFiTWdHZqrjManofQNg"
+            },
+            {
+              "news_id": "b5e3fdc40fb755baa42a11fced7c3cd2",
+              "url": "https://www.lgbtqnation.com/2026/07/quick-hit-pete-buttigieg-rips-gops-justification-apart-in-just-one-sentence/",
+              "headline": "Pete Buttigieg rips GOP's Iran War justification apart in just one sentence - LGBTQ Nation",
+              "body": "\"Remember 2003?\" Buttigieg fired back.",
+              "published_date": "2026-07-27",
+              "outlet": "LGBTQ Nation",
+              "image": "https://www.bing.com/th?id=ONUT.fkqPuIaQeTbYsLVncWbPQA"
+            },
+            {
+              "news_id": "1ff1cea8f6885ffcaa421a856dc4efde",
+              "url": "https://www.nytimes.com/2026/07/26/us/politics/pentagon-casualties-iran-war.html",
+              "headline": "Pentagon Changes How It Reports Casualties in Iran War",
+              "body": "The changes separated the casualty numbers into two separate web pages, potentially making it more difficult to tally the war ...",
+              "published_date": "2026-07-26T15:31:41+00:00",
+              "outlet": "The New York Times",
+              "image": "https://www.bing.com/th?id=ONUT.NPqgkOWkwaaeT-TR96TPnw"
+            },
+            {
+              "news_id": "eef5685c8bab539bac370ea94829f993",
+              "url": "https://www.baltimoresun.com/2026/07/27/why-four-troop-deaths-disappeared-from-pentagons-iran-war-casualty-count/",
+              "headline": "Why four troop deaths disappeared from Pentagon’s Iran war casualty count",
+              "body": "The Pentagon has created a new category for tracking casualties from the Iran war, defending the change after questions were raised about whether U.S. service members were being properly counted. The Defense Casualty Analysis System, the…",
+              "published_date": "2026-07-27",
+              "outlet": "The Baltimore Sun",
+              "image": "https://www.bing.com/th?id=ONUT.yerjqs1S_TOdD9kDkr0wlw"
+            },
+            {
+              "news_id": "425dea42559e5d2aa0b9b62402e68447",
+              "url": "https://www.nytimes.com/2026/07/27/world/middleeast/houthis-saudi-arabia-iran-war.html",
+              "headline": "How the Houthis Cornered Saudi Arabia Into a New Conflict",
+              "body": "The Iran-backed Houthis have seized on a vulnerable moment for Saudi Arabia, which is reluctant to enter another war, to try ...",
+              "published_date": "2026-07-26T20:22:26+00:00",
+              "outlet": "The New York Times",
+              "image": "https://www.bing.com/th?id=ONUT.Zrdm-pKhjUCOAghhfGvusA"
+            },
+            {
+              "news_id": "d5a6d598ab6c508ab7dfc13e82798cc5",
+              "url": "https://www.bostonherald.com/2026/07/27/days-disrupted-iran-war/",
+              "headline": "Days disrupted: 7 people around the world share how the Iran war has reshaped their lives",
+              "body": "War effects quickly ricocheted across the world — into the fabric of life.",
+              "published_date": "2026-07-27",
+              "outlet": "Boston Herald",
+              "image": "https://www.bing.com/th?id=ONUT.wvOn0vnLkZ7wvhHPFw82Jg"
+            },
+            {
+              "news_id": "39147b70aada563f8b82c6a60f2071af",
+              "url": "https://www.nydailynews.com/2026/07/26/pentagon-iran-death-toll-4-us-troops-left-off/",
+              "headline": "Pentagon’s official Iran war death toll no longer lists 4 troops killed in recent weeks",
+              "body": "The four American troops killed during renewed fighting between the U.S. and Iran in recent weeks are no longer listed as part of the Iran war death toll in the Pentagon’s official casualty count but have been placed in a new, separate c…",
+              "published_date": "2026-07-26",
+              "outlet": "New York Daily News",
+              "image": ""
+            },
+            {
+              "news_id": "56809af3b3495cd29a9972ecc60d2354",
+              "url": "https://www.mysanantonio.com/news/world/article/mediators-see-progress-in-diplomatic-efforts-to-22361403.php",
+              "headline": "Mediators see progress in efforts to halt Iran war as drone attacks rattle region",
+              "body": "Mediators have made progress in efforts to bring the United States and Iran back to negotiations and prevent an all-out war in the Middle East. That's according to two regional officials who spoke to...",
+              "published_date": "2026-07-27",
+              "outlet": "San Antonio Express-News",
+              "image": "https://s.yimg.com/bo/7079a168-542e-52f6-91de-c8643295fad7_1785163330412.jpg"
+            },
+            {
+              "news_id": "e1a89a1b91de55dd81aecb62f0fae817",
+              "url": "https://www.msn.com/en-us/news/other/iran-war-casualty-count-surpasses-600-amid-pentagon-s-quiet-data-shift/ar-AA28McZn?ocid=BingNewsVerp",
+              "headline": "Iran war casualty count surpasses 600 amid Pentagon’s quiet data shift",
+              "body": "The Pentagon quietly raised the US casualty count in the Iran conflict beyond 600 amid scrutiny over data transparency.",
+              "published_date": "2026-07-27",
+              "outlet": "Mount Olive Chronicle on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.0e5II-ywjgJPN5T8d3NL2g"
+            },
+            {
+              "news_id": "eab08870d14e5a4fb5ad9f2beb8a28f9",
+              "url": "https://www.adn.com/nation-world/2026/07/27/pentagons-official-iran-war-death-toll-no-longer-lists-4-troops-killed-during-renewed-fighting/",
+              "headline": "Pentagon’s official Iran war death toll no longer lists 4 troops killed during renewed fighting",
+              "body": "On Sunday, a new category called “Overseas Operations” emerged on the system’s website, listing the four Army deaths by name as well as 207 wounded.",
+              "published_date": "2026-07-27",
+              "outlet": "Anchorage Daily News",
+              "image": "https://s.yimg.com/bo/896b4b1a-8de5-5d49-9316-d4c64761dc8e_1785159545411.jpg"
+            },
+            {
+              "news_id": "ded226b6f6e35aea885aaccbbde77ad1",
+              "url": "https://www.reuters.com/world/us/just-one-three-americans-back-iran-war-most-unsure-trumps-goals-reutersipsos-2026-07-27/",
+              "headline": "Just one in three Americans back Iran war, most unsure of Trump's goals, Reuters/Ipsos poll finds",
+              "body": "WASHINGTON, July 27 (Reuters) - Just one in three Americans support the war on Iran, the lowest reading in a Reuters/Ipsos poll since the five-month-old conflict's early days, with most respondents ...",
+              "published_date": "2026-07-27T20:22:26+00:00",
+              "outlet": "Reuters",
+              "image": ""
+            },
+            {
+              "news_id": "c71467fb8d6555a9ad9ac5db8248c4df",
+              "url": "https://apnews.com/article/iran-us-hormuz-strait-war-qatar-pakistan-d57e675a7be6dbdd34561909ced240d0",
+              "headline": "Mediators see progress in efforts to halt Iran war as drone attacks rattle region",
+              "body": "Mediators have made progress in efforts to bring the United States and Iran back to negotiations and prevent an all-out war in the Middle East.",
+              "published_date": "2026-07-27",
+              "outlet": "Associated Press News",
+              "image": "https://www.bing.com/th?id=ONUT.YhTbamvp7kqyxCl0UUvIXg"
+            },
+            {
+              "news_id": "1a4245ea989e52f988eedcf3644df7a3",
+              "url": "https://www.theguardian.com/us-news/2026/jul/26/pentagon-iran-war-troop-deaths-casualty-report",
+              "headline": "Pentagon reports more than 600 Iran war casualties in quiet database update",
+              "body": "Figures are source of dispute as US defense department days ago reduced record of troops killed and wounded",
+              "published_date": "2026-07-26",
+              "outlet": "manual",
+              "image": ""
+            },
+            {
+              "news_id": "4263bd0c583253d680f3fb57923b57c2",
+              "url": "https://nairametrics.com/2026/07/27/strait-of-hormuz-ambiguity-triggered-collapse-of-us-iran-truce-analysts/",
+              "headline": "Strait of Hormuz ambiguity triggered collapse of US-Iran truce - Analysts",
+              "body": "Uncertainty over control of the Strait of Hormuz was a major factor behind the breakdown of the fragile truce between the United States and Iran, a development that contributed to a sharp rise in global oil prices, according to analysts.",
+              "published_date": "2026-07-27",
+              "outlet": "Nairametrics",
+              "image": "https://www.bing.com/th?id=ONUT.fW89UQyvMyKVfowQUldDqA"
+            },
+            {
+              "news_id": "1370a5ae76dc5b448187e613a7b29945",
+              "url": "https://www.thehindu.com/news/international/iran-israel-us-war-july-27-2026-latest-updates-strait-of-hormuz-donald-trump-oil-prices-today/article71271253.ece",
+              "headline": "West Asia War LIVE: Iran says it still controls strait, not seeking talks with U.S.",
+              "body": "Iran Israel war July 27 2026 LIVE updates:US President Donald Trump gives space to West Asia talks",
+              "published_date": "2026-07-27",
+              "outlet": "The Hindu",
+              "image": "https://www.bing.com/th?id=ONUT.4bFNqSComZ57_mm4HozLSg"
+            },
+            {
+              "news_id": "31162498cc995e5085b37e1bc9fa53e9",
+              "url": "https://www.usnews.com/news/national-news/articles/2026-07-27/iran-war-death-toll-cost-public-opinion",
+              "headline": "The Cost of the Iran War in Lives, Dollars and Public Opinion",
+              "body": "The Iran war has dragged on for six months as talks of a ceasefire come and go. Here’s a look at the cost of the war in lives ...",
+              "published_date": "2026-07-22T20:22:26+00:00",
+              "outlet": "U.S. News & World Report",
+              "image": "https://www.bing.com/th?id=ONUT.ha54jLxjJf961Z7gzqHJhg"
+            }
+          ]
+        }
+      ],
+      "logs_total": 1
+    },
+    {
+      "incident_id": "20260727-XX-WF",
+      "tree_id": "2f3c72555a054e87be304baaeb83af7c",
+      "canonical_name": "Forest Fire 2026-07-27",
+      "summary": "Massive wildfires in southwest France and Spain have forced hundreds of thousands of evacuations, with the blaze near Bordeaux growing so intense it generated lightning that ignited new fires. French President Macron pledged support on a visit to the fire zone, while officials reported that the fire has stabilized but is not yet contained. Two firefighters died battling the flames in a Bordeaux suburb.",
+      "country": "",
+      "iso2": "XX",
+      "lat": null,
+      "lon": null,
+      "country_group": "C",
+      "region": "Europe",
+      "incident_type": "Forest Fire",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "HIGH",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": null,
+      "event_status": null,
+      "extended_monitoring": false,
+      "disease_name": null,
+      "event_date": "2026-07-27",
+      "first_reported_date": "2026-07-27",
+      "last_updated_date": "2026-07-28",
+      "days_since_event": 1,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 0,
+        "gdacs": 0,
+        "ercc": 1,
+        "healthmap": 0,
+        "news": 32
+      },
+      "source_links": [
+        {
+          "type": "ERCC",
+          "label": "ECHO Daily Map of 27 July 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5738",
+          "meta": ""
+        }
+      ],
+      "physical": {
+        "max_magnitude": null,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Two firefighters dead battling forest fire as it leaps onto buildings near international airport - AOL",
+          "published_date": "2026-07-21"
+        },
+        {
+          "headline": "Lightning strikes spur fire crews into action in NW Montana, Idaho",
+          "published_date": "2026-07-21"
+        },
+        {
+          "headline": "France battling wildfires as blaze closes in on historic city of Bordeaux",
+          "published_date": "2026-07-21T20:23:47+00:00"
+        },
+        {
+          "headline": "Wildfires Live Updates: New Heat Wave Could Worsen France and Spain’s ‘Unprecedented’ Fire Season",
+          "published_date": "2026-07-23T20:06:52+00:00"
+        },
+        {
+          "headline": "Man found guilty of starting Park Fire, California’s fourth-largest wildfire",
+          "published_date": "2026-07-24"
+        },
+        {
+          "headline": "Displaced from wildfires in Spain share their stories of uncertainty and narrow escapes",
+          "published_date": "2026-07-26"
+        },
+        {
+          "headline": "Wildfires in France drive 250,000 people from their homes and creep toward wine city of Bordeaux",
+          "published_date": "2026-07-26"
+        },
+        {
+          "headline": "Live updates: European wildfires may not be out for months, authorities warn, as flames rage near Bordeaux and Madrid | CNN",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Before-and-after satellite images show the staggering toll of France's worst wildfire season on record",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "French president pledges support on visit to fire zone, vows: 'We will win this battle together'",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "What to know about the historic wildfires in France and Spain",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Map: Cinder Complex ignites near Rock Fire in Eastern Sierra",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Macron warns of 'tough' weeks ahead as fire rages on",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Wildfires in southwest Europe: What we know so far",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Lightning-sparked wildfire near Malad quickly contained as extreme fire danger persists - East Idaho News",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Fire breaks out at hilly forest area in Bandar Puncak Alam",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Major wildfire in France 'stabilized' but not contained: Interior minister",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "French president pledges support on visit to fire zone, vows: ‘We will win this battle together’ - WSVN 7News | Miami News, Weather, Sports | Fort Lauderdale",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "What to know about the historic wildfires in France and Spain",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "French wildfire created a monster cloud, unleashing lightning that ignited more fires",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Wyoming, South Dakota air tankers drop 20,000 gallons of retardant on wildfires Sunday",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Wildfire burns more than 19,000 acres in rural Palm Beach County",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Fires in Europe — latest developments - Jamaica Observer",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "What to know about the historic wildfires in France and Spain",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Castle Fire closure order to stay in place until Umpqua National Forest can reopen safely",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Forest fire west of Sedalia prompts mandatory evacuations",
+          "published_date": "2026-07-27T15:06:52+00:00"
+        },
+        {
+          "headline": "French president pledges support on visit to fire zone, vows: 'We will win this...",
+          "published_date": "2026-07-27T18:06:52+00:00"
+        },
+        {
+          "headline": "Oso Canyon Fire burns west of Espanola",
+          "published_date": "2026-07-27T19:18:52+00:00"
+        },
+        {
+          "headline": "Here's the latest on northwestern Ontario's forest fires: Monday, July 27",
+          "published_date": "2026-07-27T20:23:47+00:00"
+        },
+        {
+          "headline": "Tracking the wildfires in Europe, in maps and charts",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "'Many Brits' caught up in wildfire disasters in France and Spain",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "What to Know About the Deadly Wildfires in Western Europe",
+          "published_date": "2026-07-28"
+        }
+      ],
+      "news_total": 32,
+      "logs": [
+        {
+          "log_date": "2026-07-27",
+          "summary": "Massive wildfires in southwest France and Spain have forced hundreds of thousands of evacuations, with the blaze near Bordeaux growing so intense it generated lightning that ignited new fires. French President Macron pledged support on a visit to the fire zone, while officials reported that the fire has stabilized but is not yet contained. Two firefighters died battling the flames in a Bordeaux suburb.",
+          "news": [
+            {
+              "news_id": "4801c8062f875f95a7324f4521587b44",
+              "url": "https://www.news.com.au/travel/travel-updates/france-battling-wildfires-as-blaze-closes-in-on-historic-city-of-bordeaux/news-story/52d2a4dc41d4a295ea78cbd7326ddd43",
+              "headline": "France battling wildfires as blaze closes in on historic city of Bordeaux",
+              "body": "Farmers and firefighters are battling to contain a huge wildfire that has forced 220,000 people to flee and destroyed dozens ...",
+              "published_date": "2026-07-21T20:23:47+00:00",
+              "outlet": "news.com.au",
+              "image": "https://www.bing.com/th?id=ONUT.if3NNWJxqLBAn3Mi54QoNg"
+            },
+            {
+              "news_id": "fb5e03273efc58c4be62c903fd233779",
+              "url": "https://www.mercurynews.com/2026/07/27/map-cinder-complex-rock-fire-evacuation/",
+              "headline": "Map: Cinder Complex ignites near Rock Fire in Eastern Sierra",
+              "body": "The map shows the evacuation area in red and the approximate perimeters of Rock, 5-3 and 5-4 as black lines.",
+              "published_date": "2026-07-27",
+              "outlet": "The Mercury News",
+              "image": "https://www.bing.com/th?id=ONUT.9kM0ujr7luNc3Q9n9t1pfQ"
+            },
+            {
+              "news_id": "380c98be1b5458229372c3d328d2e94f",
+              "url": "https://www.ourmidland.com/news/world/article/macron-calls-crisis-meeting-as-monster-wildfires-22361299.php",
+              "headline": "French president pledges support on visit to fire zone, vows: 'We will win this...",
+              "body": "French President Emmanuel Macron has urged fire crews to “stay strong” as they battle to bring a mon...",
+              "published_date": "2026-07-27T18:06:52+00:00",
+              "outlet": "Midland Daily News",
+              "image": "https://s.yimg.com/bo/4b255f59-8bce-5375-b73b-5729351fdaa9_1785176301060.jpg"
+            },
+            {
+              "news_id": "d56dd2b6b99455a5b10d265e545474c0",
+              "url": "https://www.rte.ie/news/world/2026/0727/1585226-france-spain-wildfires/",
+              "headline": "Macron warns of 'tough' weeks ahead as fire rages on",
+              "body": "President Emmanuel Macron has urged firefighters battling a huge blaze in southwest France to keep up their strength for some gruelling weeks ahead.",
+              "published_date": "2026-07-27",
+              "outlet": "RTÉ Ireland",
+              "image": "https://www.bing.com/th?id=ONUT.M__hOo6_kR2pmpN5HiMYDg"
+            },
+            {
+              "news_id": "1ac0973595725105964257e8334de504",
+              "url": "https://www.cbc.ca/news/canada/thunder-bay/northwestern-ontario-wildfires-9.7285328",
+              "headline": "Here's the latest on northwestern Ontario's forest fires: Monday, July 27",
+              "body": "There are 122 active wildfires across northwestern Ontario, according to the latest update from Ontario's Aviation, Forest ...",
+              "published_date": "2026-07-27T20:23:47+00:00",
+              "outlet": "CBC.ca",
+              "image": "https://www.bing.com/th?id=ONUT.QjeTHXYA2HSUvz5lHL-WZg"
+            },
+            {
+              "news_id": "02cff2e1f04c516da7f07ace0d2b63c3",
+              "url": "https://www.msn.com/en-us/news/world/wildfires-in-southwest-europe-what-we-know-so-far/ar-AA28Mdps?ocid=BingNewsVerp",
+              "headline": "Wildfires in southwest Europe: What we know so far",
+              "body": "More than 300,000 people have been evacuated from their homes to safety in France and Spain.",
+              "published_date": "2026-07-27",
+              "outlet": "Al Jazeera on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.wTiB465u9FC39645-W6lZQ"
+            },
+            {
+              "news_id": "2e8e5f0abf105d03a6fd325b10680e6a",
+              "url": "https://kdvr.com/news/local/forest-fire-west-of-sedalia-prompts-mandatory-evacuations/",
+              "headline": "Forest fire west of Sedalia prompts mandatory evacuations",
+              "body": "A forest fire burning west of Sedalia has prompted mandatory evacuations for residents Sunday...",
+              "published_date": "2026-07-27T15:06:52+00:00",
+              "outlet": "FOX 31 Denver",
+              "image": "https://s.yimg.com/bo/a3d6dab4-0453-5a92-8bb4-171a16ccec09_1785168146213.png.cf.jpg"
+            },
+            {
+              "news_id": "7b63c71d794a53c8a4c76d13b6487d76",
+              "url": "https://www.aol.com/articles/two-firefighters-dead-battling-forest-163034421.html",
+              "headline": "Two firefighters dead battling forest fire as it leaps onto buildings near international airport - AOL",
+              "body": "The firefighters had been battling a building fire in Mérignac, a suburb of Bordeaux in France, when the situation became fatal",
+              "published_date": "2026-07-21",
+              "outlet": "The Mirror · via AOL",
+              "image": "https://media.zenfs.com/en/aol_the_mirror_191/c22709fa63b524e0d7c7615281a7777d"
+            },
+            {
+              "news_id": "cb521e4c9f325a999f8b8f3da9c7201b",
+              "url": "https://www.eastidahonews.com/2026/07/lightning-sparked-wildfire-near-malad-quickly-contained-as-extreme-fire-danger-persists/",
+              "headline": "Lightning-sparked wildfire near Malad quickly contained as extreme fire danger persists - East Idaho News",
+              "body": "MALAD – A lightning-caused fire in Caribou-Targhee National Forest is fully contained. The 2-Mile Fire started Sunday around noon about one mile east of Malad near 2-Mile Canyon, according to a news release from Caribou-Targhee National Forest. A lightning strike to a juniper tree spread to other trees, as well as grass and bush. The […]",
+              "published_date": "2026-07-27",
+              "outlet": "East Idaho News",
+              "image": "https://www.bing.com/th?id=ONUT.oQZsZ87zNqfQbjr1ja0KzA"
+            },
+            {
+              "news_id": "7f1e6679a70f542a91aec481d370a011",
+              "url": "https://thewesternnews.com/news/2026/jul/21/lightning-strikes-spur-fire-crews-into-action-in-nw-montana-idaho/",
+              "headline": "Lightning strikes spur fire crews into action in NW Montana, Idaho",
+              "body": "Kootenai National Forest officials announced a trail closure for the Williams Creek Trail and Scenery Mountain Trail network west of Libby.",
+              "published_date": "2026-07-21",
+              "outlet": "The Western News",
+              "image": "https://s.yimg.com/am/60d/066ffa2fff60e71253357b8c49805a51"
+            },
+            {
+              "news_id": "275448dc80ab570ea7ce656db4361085",
+              "url": "https://www.krqe.com/news/wildfires/oso-canyon-fire-burns-west-of-espanola/",
+              "headline": "Oso Canyon Fire burns west of Espanola",
+              "body": "RIO ARRIBA COUNTY, N.M. (KRQE) – Fire crews are battling a wildfire burning in the Santa Fe National Forest, west of Espanola. Oso Canyon Fire details: S...",
+              "published_date": "2026-07-27T19:18:52+00:00",
+              "outlet": "KRQE & KASA FOX 2 Albuquerque",
+              "image": "https://s.yimg.com/bo/555db78f-4c8d-5277-a9f9-c850f7b42530_1783224625498.jpg"
+            },
+            {
+              "news_id": "0a749e8ae10052a2862e50a2bcee9501",
+              "url": "https://www.malaymail.com/news/malaysia/2026/07/27/fire-breaks-out-at-hilly-forest-area-in-bandar-puncak-alam/229141",
+              "headline": "Fire breaks out at hilly forest area in Bandar Puncak Alam",
+              "body": "SHAH ALAM, July 27 — A fire involving an estimated two-acre hilly forest area in Bandar Puncak Alam broke out this morning, with firefighting operations currently...",
+              "published_date": "2026-07-27",
+              "outlet": "Malay Mail",
+              "image": "https://www.bing.com/th?id=ONUT.IMONw0VhPeKQ0y9NR2rmtA"
+            },
+            {
+              "news_id": "bee3dfd54148596d968a4561b70e347c",
+              "url": "https://www.yahoo.com/news/weather-news/articles/major-wildfire-france-stabilized-not-190800433.html",
+              "headline": "Major wildfire in France 'stabilized' but not contained: Interior minister",
+              "body": "Wildfires raging near Spain's capital, Madrid, could force more evacuations.",
+              "published_date": "2026-07-27",
+              "outlet": "Yahoo",
+              "image": "https://www.bing.com/th?id=ONUT.xAsdateiPJBSfq-LK6t_qQ"
+            },
+            {
+              "news_id": "e82566db0c255f1e818184610787643a",
+              "url": "https://krcrtv.com/news/local/ronnie-dean-stout-ii-found-guilty-in-park-fire-arson-case-faces-25-years-to-life",
+              "headline": "Man found guilty of starting Park Fire, California’s fourth-largest wildfire",
+              "body": "Ronnie Dean Stout II has been found guilty of arson of an inhabited structure following a three-day trial in Butte County Superior Court in the 2024 Park Fire a",
+              "published_date": "2026-07-24",
+              "outlet": "KRCR TV Redding",
+              "image": "https://s.yimg.com/bo/0a8417ff-c468-51bb-8d02-a04ac280d69f_1784952676041.png.cf.jpg"
+            },
+            {
+              "news_id": "13b5e80e097254268026522cc8f11af2",
+              "url": "https://www.nytimes.com/live/2026/07/27/world/france-spain-wildfires-evacutions/heres-the-latest",
+              "headline": "Wildfires Live Updates: New Heat Wave Could Worsen France and Spain’s ‘Unprecedented’ Fire Season",
+              "body": "Prime Minister Pedro Sánchez of Spain is traveling today to Vall d’Uixó, in the eastern province of Castellón, where ...",
+              "published_date": "2026-07-23T20:06:52+00:00",
+              "outlet": "The New York Times",
+              "image": "https://www.bing.com/th?id=ONUT.Ovb1LxxeFp7_Vj_uS4VwjA"
+            },
+            {
+              "news_id": "2b78d48062e95914851854e46128b058",
+              "url": "https://wsvn.com/news/us-world/france-says-monster-fire-that-forced-220000-people-to-flee-has-stopped-growing/",
+              "headline": "French president pledges support on visit to fire zone, vows: ‘We will win this battle together’ - WSVN 7News | Miami News, Weather, Sports | Fort Lauderdale",
+              "body": "LEGE-CAP FERRET, France (AP) — French President Emmanuel Macron urged fire crews to “stay strong” as they battled Monday to bring a monster wildfire under<a class=\"excerpt-read-more\" href=\"https://wsvn.com/news/us-world/french-president-pledges-support-on-visit-to-fire-zone-vows-we-will-win-this-battle-together/\">Read More</a>",
+              "published_date": "2026-07-27",
+              "outlet": "7 News Miami",
+              "image": "https://s.yimg.com/bo/1f6c7c6a-ebee-5d96-99e4-5d13e4252b5d_1785162064252.jpg"
+            },
+            {
+              "news_id": "2dbb422208a15ba6afee22d837219775",
+              "url": "https://www.adn.com/nation-world/2026/07/27/what-to-know-about-the-historic-wildfires-in-france-and-spain/",
+              "headline": "What to know about the historic wildfires in France and Spain",
+              "body": "Over 300,000 people have been displaced from their homes in France and Spain in what the EU on Monday called “one of the biggest evacuation operations in Europe.”",
+              "published_date": "2026-07-27",
+              "outlet": "Anchorage Daily News",
+              "image": "https://s.yimg.com/bo/fc8f3e7f-93ba-5f90-89b4-fe4019e1aa8a_1785177699301.jpg"
+            },
+            {
+              "news_id": "e684dc533886538ca747dc5dd130deba",
+              "url": "https://apnews.com/article/fire-monster-lightning-france-gironde-bordeaux-thundercloud-42d441bfbe8291b7e585b2e570dc51b0",
+              "headline": "French wildfire created a monster cloud, unleashing lightning that ignited more fires",
+              "body": "A wildfire in southwest France grew so powerful that its towering smoke column became a thunderstorm, generating lightning that struck the ground and ignited new fires beyond the original blaze, French officials said.",
+              "published_date": "2026-07-27",
+              "outlet": "Associated Press News",
+              "image": "https://www.bing.com/th?id=ONUT.DittHWjPMAfNnibrsLeF5g"
+            },
+            {
+              "news_id": "28aa25d5c9b85b8fa46fa9478b1da995",
+              "url": "https://www.msn.com/en-us/news/other/wyoming-south-dakota-air-tankers-drop-20-000-gallons-of-retardant-on-wildfires-sunday/ar-AA28NbbA?ocid=BingNewsVerp",
+              "headline": "Wyoming, South Dakota air tankers drop 20,000 gallons of retardant on wildfires Sunday",
+              "body": "Air tanker crews from Wyoming and South Dakota dropped about 20,000 gallons of fire retardant Sunday, making 29 drops to ...",
+              "published_date": "2026-07-27",
+              "outlet": "Minot-Bsmrck-Dcknsn(Wlstn) KFYR-TV on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.ZsG61JNkJX37BR9hvwNU3Q"
+            },
+            {
+              "news_id": "be6c59f13ea0567d90b2ee9c02c03f50",
+              "url": "https://www.yahoo.com/news/articles/wildfire-burns-more-19-000-181950864.html",
+              "headline": "Wildfire burns more than 19,000 acres in rural Palm Beach County",
+              "body": "The Florida Forest Service confirmed fire crews contained the Berger Wildfire after it scorned 19,700 acres near the Rotenberger Wildlife Management Area.",
+              "published_date": "2026-07-27",
+              "outlet": "Palm Beach Post · via Yahoo News",
+              "image": "https://media.zenfs.com/en/aol_palm_beach_post_771/20eccfb7ccf46597f7d35a01a614d928"
+            },
+            {
+              "news_id": "1668e12a2aaa5f60b0f2b086155bca68",
+              "url": "https://apnews.com/article/europe-wildfires-france-spain-evacuees-8406b18eaf0fa6400a1c5377c7f50fd9",
+              "headline": "Displaced from wildfires in Spain share their stories of uncertainty and narrow escapes",
+              "body": "Elvira Menéndez knows how lucky she is that her house is not a charred ruin like so many others in Spain and France, devastated by raging wildfires.",
+              "published_date": "2026-07-26",
+              "outlet": "Associated Press News",
+              "image": "https://www.bing.com/th?id=ONUT.G70M7YhSCX8qaOv2Rx25Xg"
+            },
+            {
+              "news_id": "d36cd5fa6b1c592fbfd33881881e5454",
+              "url": "https://www.jamaicaobserver.com/2026/07/27/fires-europe-latest-developments/",
+              "headline": "Fires in Europe — latest developments - Jamaica Observer",
+              "body": "PARIS, F rance (AFP) — Here are the main developments related to the wildfires raging in Spain and France on Monday: New Spain heatwave Meteorological agency AEMET officially declared a new heatwave would begin on Tuesday, lasting until the end of the week. It earlier said temperatures would soar and humidity levels drop across Spain, causing the fire risk to &quot;surge to very high or extreme levels across almost the...",
+              "published_date": "2026-07-27",
+              "outlet": "Jamaica Observer",
+              "image": "https://www.bing.com/th?id=ONUT.u0kHqJbN-Ny4OsEjw9eCOA"
+            },
+            {
+              "news_id": "ca3e82e1461e540d8a07eff02a95b86a",
+              "url": "https://apnews.com/article/what-to-know-wildfires-france-spain-cb1e5877e1c7e4acbb80a8d9c2049f03",
+              "headline": "What to know about the historic wildfires in France and Spain",
+              "body": "Historic wildfires in France and Spain have forced hundreds of thousands to flee their homes. Heat waves and scant rainfall have fueled these blazes, with record temperatures in June contributing to the crisis.",
+              "published_date": "2026-07-27",
+              "outlet": "Associated Press News",
+              "image": "https://www.bing.com/th?id=ONUT.JBMa2EkG77mPrgzHka-IWQ"
+            },
+            {
+              "news_id": "b8fa5ed81ec250378681b8a7ae52e5b3",
+              "url": "https://kpic.com/news/local/castle-fire-closure-order-to-stay-in-place-until-umpqua-national-forest-can-reopen-safely-douglas-county-oregon",
+              "headline": "Castle Fire closure order to stay in place until Umpqua National Forest can reopen safely",
+              "body": "Umpqua National Forest Issues Closure Order for Castle FireRoseburg, Ore. — July 27, 2026 — Umpqua National Forest has implemented Closure Order #06-15-02-26-01",
+              "published_date": "2026-07-27",
+              "outlet": "KPIC CBS 4",
+              "image": "https://s.yimg.com/bo/98a88cb8-9786-5360-bd78-154aa52d062b_1785183623786.png.cf.jpg"
+            },
+            {
+              "news_id": "a514237ae8f653c4adaa58acc9b264e7",
+              "url": "https://apnews.com/article/europe-wildfires-france-spain-bordeaux-5b9b063bdcf9b69867fa71ba31be8aa5",
+              "headline": "Wildfires in France drive 250,000 people from their homes and creep toward wine city of Bordeaux",
+              "body": "A raging wildfire in southwest France has forced the evacuation of 55,000 more people overnight. This brings the total to 220,000 in one region alone, as flames have crept closer to the wine region city of Bordeaux.",
+              "published_date": "2026-07-26",
+              "outlet": "Associated Press News",
+              "image": "https://www.bing.com/th?id=ONUT.3PdBXIDBySrz4I-hOGkOdw"
+            }
+          ]
+        }
+      ],
+      "logs_total": 1
     }
   ]
 }
