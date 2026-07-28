@@ -1,32 +1,32 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-07-28",
-  "generated_at": "2026-07-28T10:07:21Z",
+  "generated_at": "2026-07-28T15:42:38Z",
   "as_of": "2026-07-28",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 20,
-    "new_today": 3,
-    "critical": 7,
-    "high": 6,
-    "medium": 7,
+    "reportable_total": 23,
+    "new_today": 7,
+    "critical": 8,
+    "high": 7,
+    "medium": 8,
     "low": 0,
     "disease_outbreaks": 5,
-    "countries_affected": 13,
-    "news_total": 1200,
+    "countries_affected": 14,
+    "news_total": 1315,
     "max_magnitude": 7.5,
     "by_severity": {
-      "CRITICAL": 7,
-      "HIGH": 6,
-      "MEDIUM": 7,
+      "CRITICAL": 8,
+      "HIGH": 7,
+      "MEDIUM": 8,
       "LOW": 0
     },
     "by_type": {
       "Disease": 5,
       "Volcano": 1,
       "Flood": 1,
-      "Earthquake": 5,
+      "Earthquake": 8,
       "Forest Fire": 4,
       "Severe Weather": 1,
       "Conflict": 2,
@@ -35,7 +35,7 @@
     "by_region": {
       "Global": 3,
       "Africa": 1,
-      "Asia": 7,
+      "Asia": 10,
       "Americas": 2,
       "Europe": 6,
       "Oceania": 1
@@ -53,9 +53,18 @@
     },
     {
       "country": "China",
-      "count": 2,
+      "count": 3,
       "max_sev_rank": 2,
       "iso2": "CN",
+      "region": "Asia",
+      "country_group": "A",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "Japan",
+      "count": 2,
+      "max_sev_rank": 2,
+      "iso2": "JP",
       "region": "Asia",
       "country_group": "A",
       "max_severity": "MEDIUM"
@@ -195,7 +204,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 38
+        "news": 39
       },
       "source_links": [
         {
@@ -365,11 +374,15 @@
           "published_date": "2026-07-26T19:45:30+00:00"
         },
         {
+          "headline": "Dengue virus can infect immune cells meant to fight disease",
+          "published_date": "2026-07-27"
+        },
+        {
           "headline": "Three more die of dengue, 458 hospitalised in 24hrs",
           "published_date": "2026-07-27T01:07:00+00:00"
         }
       ],
-      "news_total": 38,
+      "news_total": 39,
       "logs": [
         {
           "log_date": "2026-07-08",
@@ -3274,7 +3287,7 @@
       "incident_id": "20260624-VE-EQ",
       "tree_id": "387baafc1c6b5a0391293c7f917b5333",
       "canonical_name": "Earthquake M7.2 San Felipe, Venezuela 2026-06-24",
-      "summary": "As of July 26-27, new reporting highlights a deepening crisis of confidence in Venezuela's Misión Vivienda housing program, which collapsed in the quakes despite promises of safe homes for the poor. Relief efforts continue across South Florida and locally in La Guaira, where search and debris removal operations persist one month after the disaster. NASA-ISRO satellite data reaffirms that the ground shifted up to 60 cm in affected areas.\nA poodle was pulled alive from the rubble 29 days after the twin earthquakes, heralded as a miracle. In other developments, opinion pieces highlight Israel's humanitarian response, and a Venezuelan expatriate traveled from Maine to Caracas to assist with earthquake relief.",
+      "summary": "A poodle named Beyli was rescued alive after surviving 29 days trapped beneath earthquake rubble in Venezuela. The focus is shifting from rescue to rebuilding, with the costs described as staggering, and multiple nonprofits including Project CURE, Catholic Relief Services, and the Church of Jesus Christ are expanding aid efforts.",
       "country": "Venezuela",
       "iso2": "VE",
       "lat": 10.4085,
@@ -3293,7 +3306,7 @@
       "disease_name": null,
       "event_date": "2026-06-24",
       "first_reported_date": "2026-06-24",
-      "last_updated_date": "2026-07-27",
+      "last_updated_date": "2026-07-28",
       "days_since_event": 34,
       "source_count": 4,
       "should_report": true,
@@ -3304,7 +3317,7 @@
         "gdacs": 1,
         "ercc": 1,
         "healthmap": 0,
-        "news": 232
+        "news": 236
       },
       "source_links": [
         {
@@ -4244,18 +4257,6 @@
           "published_date": "2026-07-27"
         },
         {
-          "headline": "Special Collection Will Aid Earthquake Victims in Venezuela",
-          "published_date": "2026-07-27"
-        },
-        {
-          "headline": "Church of Jesus Christ expands million-dollar earthquake response in Venezuela",
-          "published_date": "2026-07-27"
-        },
-        {
-          "headline": "The latest from Venezuela",
-          "published_date": "2026-07-27"
-        },
-        {
           "headline": "Satellite shows 60 cm ground shift in Venezuela earthquake",
           "published_date": "2026-07-27"
         },
@@ -4270,9 +4271,37 @@
         {
           "headline": "Dog pulled alive from rubble of Venezuela earthquakes after being trapped for 29 days: ‘A miracle’",
           "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Special Collection Will Aid Earthquake Victims in Venezuela",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Church of Jesus Christ expands million-dollar earthquake response in Venezuela",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "The latest from Venezuela",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "A nonprofit in Colorado is supporting communities in Venezuela after earthquakes",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Beyli the poodle rescued alive after surviving 29 days beneath earthquake rubble in Venezuela",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Dog pulled alive from rubble of Venezuela earthquakes after being trapped for 29 days: ‘A miracle’",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Venezuela faces staggering cost to rebuild after devastating earthquakes",
+          "published_date": "2026-07-28"
         }
       ],
-      "news_total": 232,
+      "news_total": 236,
       "logs": [
         {
           "log_date": "2026-06-28",
@@ -4385,156 +4414,6 @@
               "published_date": "2026-06-26T00:00:00+00:00",
               "outlet": "The Huffington Post",
               "image": "https://s.yimg.com/am/60d/33c28f8dd904a096e05756b3255b4bf3"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-25",
-          "summary": "New reports detail the use of snake robots from Carnegie Mellon to navigate earthquake rubble and aid rescue efforts in Venezuela. AP photos show families in La Guaira still searching for loved ones a month after the twin earthquakes, as crews continue rubble removal and search for bodies. An insurer's loss estimate of €25 million and an opinion piece on rebuilding capacity are also noted.\nOne month after the twin earthquakes, more than 21,000 people remain displaced and living as refugees, while families continue holding vigils and searching collapsed buildings for missing loved ones. Coverage highlights the ongoing humanitarian crisis and Venezuela's inability to access $4 billion in gold reserves to aid recovery efforts.\nOne month after the twin earthquakes, the official death toll has surpassed 5,500, with 16,700 injured, and the Red Cross states recovery will take years. A 42-year-old American man and his wife, who had recently self-deported from the U.S. to Venezuela, were among the victims. Venezuelans held a minute of silence, while aid continues to flow from groups like In Flight Missions and CSRA, and an opinion piece highlights the role of Venezuelans themselves, rather than the state, in rebuilding.",
-          "news": [
-            {
-              "news_id": "bbadfbaf68ca575ea80dc2d4b1378231",
-              "url": "https://www.msn.com/en-us/news/other/a-month-after-venezuela-s-twin-earthquakes-more-than-21-000-people-are-still-living-as-refugees-while-families-search-the-rubble/ar-AA28C41A?ocid=BingNewsVerp",
-              "headline": "A month after Venezuela's twin earthquakes, more than 21,000 people are still living as refugees while families search the rubble",
-              "body": "One month after twin earthquakes devastated northern Venezuela, more than 21,000 people remain displaced and living in ...",
-              "published_date": "2026-07-25",
-              "outlet": "Latin Times on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.JYWfDjvr7Y2rE6gxuIAmZw"
-            },
-            {
-              "news_id": "3b7ced7436355684957fe8147424d566",
-              "url": "https://www.msn.com/en-us/travel/news/csra-donations-to-be-flown-to-venezuela-earthquake-survivors/ar-AA28CVKQ?ocid=BingNewsVerp",
-              "headline": "CSRA donations to be flown to Venezuela earthquake survivors",
-              "body": "In Flight Missions, a nonprofit organization in Thomson, is collecting donations for earthquake victims in Venezuela and ...",
-              "published_date": "2026-07-25",
-              "outlet": "WRDW on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.HU2ZLnX5FCZwqv4qw0Gepw"
-            },
-            {
-              "news_id": "ae5bd32461945a18a388a724b92b3e42",
-              "url": "https://tech.yahoo.com/science/articles/snake-robots-slither-venezuela-earthquake-175651986.html",
-              "headline": "Snake Robots Slither Through Venezuela’s Earthquake Rubble to Find Survivors",
-              "body": "Snake robots from Carnegie Mellon are threading through Venezuela earthquake rubble, helping rescue teams map voids and prioritize searches faster.",
-              "published_date": "2026-07-24",
-              "outlet": "Gadget Review · via Yahoo Tech",
-              "image": "https://media.zenfs.com/en/gadget_review_articles_822/de1591ca37c519749e8e89f7ac99b2a0"
-            },
-            {
-              "news_id": "39386cb3bec75aab929c38394d071cb7",
-              "url": "https://apnews.com/article/families-still-searching-loved-ones-month-after-venezuela-earthquakes-photos-0fdffd85be734f03b624563c1970e04b",
-              "headline": "Families still searching for loved ones a month after Venezuela earthquakes, in photos",
-              "body": "LA GUAIRA, Venezuela (AP) — A month after twin earthquakes struck Venezuela, families are still seeking closure as crews remove rubble from collapsed buildings in La Guaira and the search continues for the bodies of loved ones.",
-              "published_date": "2026-07-24",
-              "outlet": "Associated Press",
-              "image": "https://s.yimg.com/bo/43fc88e7-fac7-55ae-a72e-6cb5eb433c6a_1784931723440.jpg"
-            },
-            {
-              "news_id": "df3ec104815850c9bdc69280e974b58f",
-              "url": "https://www.msn.com/en-ae/public-safety-and-emergencies/natural-disasters/venezuela-quake-recovery-to-take-years-red-cross/ar-AA28FxcY?ocid=BingNewsVerp",
-              "headline": "Venezuela quake recovery to take years: Red Cross",
-              "body": "CARACAS, 25th July, 2026 (WAM) -- Recovering from the earthquakes in Venezuela will take years, the Red Cross said yesterday, one month on from the June 24 disaster that killed more than 5,000 people.",
-              "published_date": "2026-07-25",
-              "outlet": "Emirates News Agency on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "6ed7cf0a61e45e1497ce15da4654e791",
-              "url": "https://www.aljazeera.com/video/newsfeed/2026/7/25/venezuelans-hold-vigil-one-month-after-devastating-earthquakes",
-              "headline": "Venezuelans hold vigil one month after devastating earthquakes",
-              "body": "One month after Venezuela’s earthquakes, families are still searching collapsed buildings for missing loved ones.",
-              "published_date": "2026-07-25",
-              "outlet": "Al Jazeera",
-              "image": "https://www.bing.com/th?id=ONUT.B4K89qpgl48-2qUj4GPutA"
-            },
-            {
-              "news_id": "eecad52fd6d351709f3fd715350f1320",
-              "url": "https://lasvegassun.com/news/2026/jul/24/families-still-searching-for-loved-ones-a-month-af/",
-              "headline": "Families still searching for loved ones a month after Venezuela earthquakes, in photos",
-              "body": "None",
-              "published_date": "2026-07-24",
-              "outlet": "Las Vegas Sun",
-              "image": ""
-            },
-            {
-              "news_id": "b003cfc773795e42b549bd2e3af5fd2a",
-              "url": "https://www.aol.com/articles/insurer-mapfre-estimates-venezuela-quake-061143000.html",
-              "headline": "Insurer Mapfre estimates Venezuela quake losses at €25 million - AOL",
-              "body": "By Marta Serafinko and Mireia Merino July 24 (Reuters) - Spanish insurer Mapfre said on Thursday that losses from the June 24 earthquakes in Venezuela would be up to €25 million ($28.5 million), after",
-              "published_date": "2026-07-24",
-              "outlet": "AOL",
-              "image": "https://www.bing.com/th?id=ONUT.GPCZMkbMQH2u1SBOLlkI9w"
-            },
-            {
-              "news_id": "f2f6fee98d68515ebe6b427853ce2978",
-              "url": "https://www.wcnc.com/article/news/nation-world/venezuela-earthquakes-death-toll-5000/507-86701c87-9ffd-4bba-b5fd-0c44f7cb0d52",
-              "headline": "Venezuela earthquakes death toll surpasses 5,000",
-              "body": "The death toll from two powerful earthquakes that shook Venezuela last month rose to 5,069 late on Friday, local authorities said. (AP Photo)",
-              "published_date": "2026-07-25T14:13:50+00:00",
-              "outlet": "WCNC Charlotte",
-              "image": "https://s.yimg.com/am/60d/06ae51c8d66d51a8bfe3c5d3eb3a187c"
-            },
-            {
-              "news_id": "56174ccc771356a2b782798de5a731c1",
-              "url": "https://www.yahoo.com/news/world/articles/venezuela-earthquakes-revealed-rebuild-country-172830266.html",
-              "headline": "What Venezuela’s earthquakes revealed about who can rebuild the country | Opinion",
-              "body": "Venezuela’s capacity to rebuild no longer lives mainly inside the state. It lives in the hands of Venezuelans themselves, at home and abroad. | Opinion",
-              "published_date": "2026-07-24",
-              "outlet": "Yahoo",
-              "image": ""
-            },
-            {
-              "news_id": "8433ae1b44a95509ba42099a6f086665",
-              "url": "https://keyt.com/news/national-world/cnn-world/2026/07/24/why-venezuela-cant-access-4-billion-in-gold-that-could-help-with-earthquake-recovery/",
-              "headline": "Why Venezuela can’t access $4 billion in gold that could help with earthquake recovery",
-              "body": "By German Padinger, CNN (CNN) — It’s a fight for control over a stash of gold locked away in one of the world’s largest and most secure vaults, but",
-              "published_date": "2026-07-24",
-              "outlet": "KEYT 3 Santa Barbara",
-              "image": "https://s.yimg.com/bo/695d205d-4926-5c02-ae11-d29ab95b300f_1783677515774.jpg"
-            },
-            {
-              "news_id": "b72dd4499bed57b999f9ef2edd8bca9e",
-              "url": "https://www.msn.com/en-ie/news/uknews/the-toll-of-the-tragedy-one-month-after-venezuelas-double-earthquake/ar-AA28G97m?ocid=BingNewsVerp",
-              "headline": "The toll of the tragedy one month after Venezuela's double earthquake",
-              "body": "One month after twin earthquakes struck Venezuela, the official death toll has surpassed 5,500, with 16,700 injured. Damage ...",
-              "published_date": "2026-07-25",
-              "outlet": "Euronews on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.AfQMIB0fuDLn89__aAn6Qw"
-            },
-            {
-              "news_id": "b8b97a32bd7155c6a70a8f548abed5be",
-              "url": "https://nypost.com/2026/07/25/world-news/body-of-american-whose-wife-self-deported-to-venezuela-found-in-rubble/",
-              "headline": "American and wife who recently ‘self-deported’ from US killed by Venezuela earthquake",
-              "body": "Andrew Widme, a 42-year-old native of North Dakota and who grew up in Minnesota, had moved to Venezuela in February a week after his wife was deported from the United States, according to her mothe…",
-              "published_date": "2026-07-25",
-              "outlet": "New York Post",
-              "image": "https://www.bing.com/th?id=ONUT.IdTlqH37T1VfrOCwRLTY4Q"
-            },
-            {
-              "news_id": "9a4fd19aa0745402ad284a9d1dcff7b5",
-              "url": "https://www.yahoo.com/news/articles/venezuela-earthquakes-revealed-rebuild-country-172830393.html",
-              "headline": "What Venezuela’s earthquakes revealed about who can rebuild the country | Opinion",
-              "body": "Venezuela’s capacity to rebuild no longer lives mainly inside the state. It lives in the hands of Venezuelans themselves, at home and abroad. | Opinion",
-              "published_date": "2026-07-24",
-              "outlet": "Miami Herald · via Yahoo News",
-              "image": "https://media.zenfs.com/en/aol_miami_herald_mcclatchy_670/227c04a86b1de8583172893c72932ab9"
-            },
-            {
-              "news_id": "ba67794eacd45b3290e900e5147b756e",
-              "url": "https://www.texarkanagazette.com/news/2026/jul/19/earthquake-aid-keeps-flowing-from-florida-to/",
-              "headline": "Earthquake aid keeps flowing from Florida to Venezuela, as volunteers unite to help recovery | Texarkana Gazette",
-              "body": "After her grandmother's house in Caracas narrowly survived last month's devastating back-to-back earthquakes, Alessandra Izaguirre was desperate to help Venezuela.",
-              "published_date": "2026-07-19",
-              "outlet": "Texarkana Gazette",
-              "image": "https://s.yimg.com/am/60d/783a3228169414dcb9fc363ea7b99437"
-            },
-            {
-              "news_id": "01482d1a5bfa5ebba48bc1cf1903baab",
-              "url": "https://www.msn.com/en-us/news/world/venezuelans-hold-minute-of-silence-one-month-after-devastating-earthquakes/ar-AA28FEhB?ocid=BingNewsVerp",
-              "headline": "Venezuelans hold minute of silence one month after devastating earthquakes",
-              "body": "Venezuelans across the quake zone and in the capital Caracas held a minute of silence Friday to honor victims of the tremors ...",
-              "published_date": "2026-07-25",
-              "outlet": "TAG24 NEWS on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.bUX7InHyXA15kHqVM3JiUA"
             }
           ]
         },
@@ -4702,9 +4581,78 @@
               "image": "https://www.bing.com/th?id=ONUT.qGRqE_ScUUqQp3z9G7zreQ"
             }
           ]
+        },
+        {
+          "log_date": "2026-07-28",
+          "summary": "A poodle named Beyli was rescued alive after surviving 29 days trapped beneath earthquake rubble in Venezuela. The focus is shifting from rescue to rebuilding, with the costs described as staggering, and multiple nonprofits including Project CURE, Catholic Relief Services, and the Church of Jesus Christ are expanding aid efforts.",
+          "news": [
+            {
+              "news_id": "dd0612a7123959208d6689fd55605399",
+              "url": "https://www.msn.com/en-us/news/us/a-nonprofit-in-colorado-is-supporting-communities-in-venezuela-after-earthquakes/vi-AA28O1iV?ocid=BingNewsVerp",
+              "headline": "A nonprofit in Colorado is supporting communities in Venezuela after earthquakes",
+              "body": "Project CURE is a non-profit group that sends donated medical supplies to areas that need it most ...",
+              "published_date": "2026-07-28",
+              "outlet": "9news.com on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.TJuLpOa_A2XG9w1SEN9X8Q"
+            },
+            {
+              "news_id": "7abdca20052f5b508fb80f263e964310",
+              "url": "https://www.msn.com/en-za/news/other/beyli-the-poodle-rescued-alive-after-surviving-29-days-beneath-earthquake-rubble-in-venezuela/ar-AA28Sr6j?ocid=BingNewsVerp",
+              "headline": "Beyli the poodle rescued alive after surviving 29 days beneath earthquake rubble in Venezuela",
+              "body": "Beyli the poodle survived 29 days trapped beneath earthquake rubble in Venezuela before rescuers pulled the dog out alive, ...",
+              "published_date": "2026-07-28",
+              "outlet": "Briefly on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.-yXqWTBPJMXhDF-bmPyOew"
+            },
+            {
+              "news_id": "62cbb35493b7539095d712ff3425b42c",
+              "url": "https://www.msn.com/en-us/news/world/dog-pulled-alive-from-rubble-of-venezuela-earthquakes-after-being-trapped-for-29-days-a-miracle/ar-AA28MSBE?ocid=BingNewsVerp",
+              "headline": "Dog pulled alive from rubble of Venezuela earthquakes after being trapped for 29 days: ‘A miracle’",
+              "body": "Astonishing video shows a poodle being rescued alive despite being trapped for 29 days in the rubble of a building that ...",
+              "published_date": "2026-07-28",
+              "outlet": "New York Post on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.b651c6e7462ee13f8099e78f659f9549"
+            },
+            {
+              "news_id": "23835a6d719d58c0b2c383d89f8098d4",
+              "url": "https://catholicphilly.com/2026/07/news/local-news/special-collection-will-aid-earthquake-victims-in-venezuela/",
+              "headline": "Special Collection Will Aid Earthquake Victims in Venezuela",
+              "body": "Archbishop Nelson J. Pérez is asking parishes throughout the Archdiocese of Philadelphia to take up a special second collection Aug. 15-16 to support Catholic Relief Services' humanitarian response to last month's devastating earthquakes in Venezuela.",
+              "published_date": "2026-07-27",
+              "outlet": "Catholic Philly",
+              "image": "https://www.bing.com/th?id=ONUT.Dn8OhoUDPgweMc-O6j2Ryg"
+            },
+            {
+              "news_id": "b3048a25236d5e6abc72682fc25f3055",
+              "url": "https://www.boisestatepublicradio.org/2026-07-28/venezuela-faces-staggering-cost-to-rebuild-after-devastating-earthquakes",
+              "headline": "Venezuela faces staggering cost to rebuild after devastating earthquakes",
+              "body": "A month after Venezuela's deadly earthquakes, the focus is shifting from rescue to rebuilding -- and the costs are staggering.",
+              "published_date": "2026-07-28",
+              "outlet": "Boise State Public Radio",
+              "image": ""
+            },
+            {
+              "news_id": "b47993c29c0f5f70a2e023bd1b37fe74",
+              "url": "https://www.deseret.com/faith/2026/07/27/church-of-jesus-christ-expands-humanitarian-response-following-venezuela-earthquakes/",
+              "headline": "Church of Jesus Christ expands million-dollar earthquake response in Venezuela",
+              "body": "The twin quakes that struck Venezuela in late June killed more than 5,000 people. Here’s how the Church of Jesus Christ is expanding its relief efforts",
+              "published_date": "2026-07-27",
+              "outlet": "Deseret News",
+              "image": "https://www.bing.com/th?id=ONUT.-Mi6gC0HrFHE3ZD1dhSApQ"
+            },
+            {
+              "news_id": "faba9cfc456f5d4c800f31b873404f59",
+              "url": "https://www.kunm.org/npr-news/2026-07-27/the-latest-from-venezuela",
+              "headline": "The latest from Venezuela",
+              "body": "It’s been just over a month since devastating double earthquakes struck Venezuela.",
+              "published_date": "2026-07-27",
+              "outlet": "KUNM",
+              "image": ""
+            }
+          ]
         }
       ],
-      "logs_total": 15
+      "logs_total": 16
     },
     {
       "incident_id": "20260626-PH-EQ",
@@ -9867,7 +9815,7 @@
       "incident_id": "20260715-UA-CF",
       "tree_id": "f22292f8c3ff448a920c3b1fe41d3aa0",
       "canonical_name": "Conflict Ukraine 2026-07-15",
-      "summary": "President Zelenskyy met with Britain's new Prime Minister Andy Burnham, discussing drone projects and missile defense for Kyiv, marking the first foreign leader visit since Burnham took office. Ukraine dismissed Iranian threats after a strike in the Caspian Sea, as the Pentagon indicated it will not finish spending Ukraine funds until the year Trump leaves office.",
+      "summary": "President Zelenskyy met with Britain's new Prime Minister Andy Burnham, discussing drone projects and missile defense for Kyiv, marking the first foreign leader visit since Burnham took office. Ukraine dismissed Iranian threats after a strike in the Caspian Sea, as the Pentagon indicated it will not finish spending Ukraine funds until the year Trump leaves office.\nZelensky arrived in Washington for a meeting with Trump, as the Ukraine and Iran wars threaten to overlap. Ukraine rejected Iran's threats and leveled its own accusations, while reporting strikes on 14 energy facilities in occupied Crimea. New reports emerged that Russia ran a North Korean ballistic missile lab in Ukraine and may be preparing to mobilize 500,000 additional troops.",
       "country": "Ukraine",
       "iso2": "UA",
       "lat": 48.9,
@@ -9897,7 +9845,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 112
+        "news": 126
       },
       "source_links": [
         {
@@ -10335,6 +10283,10 @@
           "published_date": "2026-07-27"
         },
         {
+          "headline": "Netanyahu and Zelenskyy to arrive in Washington for Lindsey Graham funeral",
+          "published_date": "2026-07-27"
+        },
+        {
           "headline": "The Iran and Ukraine wars are colliding on the world’s biggest lake. Here’s what to know",
           "published_date": "2026-07-27"
         },
@@ -10351,6 +10303,10 @@
           "published_date": "2026-07-27T08:35:19+00:00"
         },
         {
+          "headline": "Litmus test for justice",
+          "published_date": "2026-07-27T16:10:08+00:00"
+        },
+        {
           "headline": "Loomer explains war shift from Ukraine bunker",
           "published_date": "2026-07-27T16:20:23+00:00"
         },
@@ -10363,11 +10319,59 @@
           "published_date": "2026-07-27T21:56:40+00:00"
         },
         {
+          "headline": "Iran warns Ukraine of retaliation after alleged Caspian Sea attackPublished on: July 27, 2026 3:40 PM",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Putin preparing to mobilize 500,000 new soldiers as losses pile up and public turns on him - AOL",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Blurred front lines: Trump to meet Zelenskyy as Ukraine, Iran wars collide",
+          "published_date": "2026-07-28"
+        },
+        {
           "headline": "Ukraine dismisses Iranian threats as Caspian Sea strike directly links wars",
           "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Ukraine war latest: Ukraine reports hitting 14 energy facilities in occupied Crimea over 3 days amid widespread power outages",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Russia Ran North Korea's Ballistic Missile Lab in Ukraine, Is Sending Results Home",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Ukraine rejects Iran's threats, levels accusationsPublished on: July 27, 2026 8:44 PM",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Ukraine war live: Zelensky arrives for Trump meeting at White House",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Trump to host Netanyahu, Zelensky as Ukraine, Iran wars reach critical stages",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Kremlin cites overseas attacks to accuse Ukraine of terrorism",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Blurred front lines: Trump meets Zelenskyy as Ukraine, Iran wars collide",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Zelensky arrives in US for Trump meeting, Graham funeral",
+          "published_date": "2026-07-28T14:10:05+00:00"
+        },
+        {
+          "headline": "Trump to Host Netanyahu, Zelenskiy as Ukraine, Iran Wars Reach Critical Stages",
+          "published_date": "2026-07-28T15:10:05+00:00"
         }
       ],
-      "news_total": 112,
+      "news_total": 126,
       "logs": [
         {
           "log_date": "2026-07-24",
@@ -11154,8 +11158,53 @@
         },
         {
           "log_date": "2026-07-28",
-          "summary": "President Zelenskyy met with Britain's new Prime Minister Andy Burnham, discussing drone projects and missile defense for Kyiv, marking the first foreign leader visit since Burnham took office. Ukraine dismissed Iranian threats after a strike in the Caspian Sea, as the Pentagon indicated it will not finish spending Ukraine funds until the year Trump leaves office.",
+          "summary": "President Zelenskyy met with Britain's new Prime Minister Andy Burnham, discussing drone projects and missile defense for Kyiv, marking the first foreign leader visit since Burnham took office. Ukraine dismissed Iranian threats after a strike in the Caspian Sea, as the Pentagon indicated it will not finish spending Ukraine funds until the year Trump leaves office.\nZelensky arrived in Washington for a meeting with Trump, as the Ukraine and Iran wars threaten to overlap. Ukraine rejected Iran's threats and leveled its own accusations, while reporting strikes on 14 energy facilities in occupied Crimea. New reports emerged that Russia ran a North Korean ballistic missile lab in Ukraine and may be preparing to mobilize 500,000 additional troops.",
           "news": [
+            {
+              "news_id": "ecd13dfacbcc5b25a8dc3596bd0f2e9c",
+              "url": "https://www.upi.com/Voices/2026/07/27/perspective-north-korea-soldiers-ukraine-war/3371785179626/",
+              "headline": "Litmus test for justice",
+              "body": "The fate of these north Korean soldiers in Ukraine is the ultimate litmus test for international law, human rights and our ...",
+              "published_date": "2026-07-27T16:10:08+00:00",
+              "outlet": "UPI",
+              "image": "https://www.bing.com/th?id=ONUT.w9F7nxM2zf0itkwPgS-k9g"
+            },
+            {
+              "news_id": "a5a9eb226a28570180bb32b027e97c26",
+              "url": "https://www.msn.com/en-xl/news/other/iran-warns-ukraine-of-retaliation-after-alleged-caspian-sea-attackpublished-on-july-27-2026-3-40-pm/ar-AA28Mz9x?ocid=BingNewsVerp",
+              "headline": "Iran warns Ukraine of retaliation after alleged Caspian Sea attackPublished on: July 27, 2026 3:40 PM",
+              "body": "Pakistan, July 27 -- Tensions between Iran and Ukraine have escalated after Tehran accused Kyiv of carrying out an attack on ...",
+              "published_date": "2026-07-28",
+              "outlet": "Daily Times on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.JXEy6uOhtqkERyv4sJID9w"
+            },
+            {
+              "news_id": "0ef41d50a48a5836a92ac69b66c4ac5e",
+              "url": "https://www.aol.com/articles/putin-preparing-mobilize-500-000-100000967.html",
+              "headline": "Putin preparing to mobilize 500,000 new soldiers as losses pile up and public turns on him - AOL",
+              "body": "Putin is struggling between waning popularity in the war and massive casualty losses that the Kremlin can't seem to recover from.",
+              "published_date": "2026-07-28",
+              "outlet": "The Express · via AOL",
+              "image": "https://media.zenfs.com/en/aol_the_express_111/d0eafb50a15d3cab3513115038c60cbb"
+            },
+            {
+              "news_id": "c58465fa0c2f5543b5ede68f1647c55d",
+              "url": "https://www.theguardian.com/us-news/2026/jul/27/netanyahu-zelenskyy-trump-lindsey-graham-funeral",
+              "headline": "Netanyahu and Zelenskyy to arrive in Washington for Lindsey Graham funeral",
+              "body": "Both men scheduled to meet Trump at time where US policy towards wars in Iran and Ukraine in state of flux",
+              "published_date": "2026-07-27",
+              "outlet": "The Guardian",
+              "image": ""
+            },
+            {
+              "news_id": "75983b697e8c511ca26ebdc27dd7f868",
+              "url": "https://www.msn.com/en-us/news/world/blurred-front-lines-trump-to-meet-zelenskyy-as-ukraine-iran-wars-collide/ar-AA28Rec3?ocid=BingNewsVerp",
+              "headline": "Blurred front lines: Trump to meet Zelenskyy as Ukraine, Iran wars collide",
+              "body": "Trump and Zelenskyy's meeting comes as the U.S war against Iran and Russia's full-scale invasion of Ukraine have threatened ...",
+              "published_date": "2026-07-28",
+              "outlet": "CNBC on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.9f26b25c6559893f9ce420e3189c5103"
+            },
             {
               "news_id": "ee8c1cdd2ac754e88d0f1786078a4c71",
               "url": "https://www.msn.com/en-xl/news/other/ukraine-dismisses-iranian-threats-as-caspian-sea-strike-directly-links-wars/ar-AA28NqFv?ocid=BingNewsVerp",
@@ -11173,6 +11222,24 @@
               "published_date": "2026-07-27",
               "outlet": "KEYT 3 Santa Barbara",
               "image": "https://s.yimg.com/bo/fa48fe91-9c76-528e-986c-d366c21dacda_1785186666343.jpg"
+            },
+            {
+              "news_id": "06976c0e078957a1a9f51a02ece3ec7b",
+              "url": "https://www.msn.com/en-ca/news/other/ukraine-war-latest-ukraine-reports-hitting-14-energy-facilities-in-occupied-crimea-over-3-days-amid-widespread-power-outages/ar-AA28NFK8?ocid=BingNewsVerp",
+              "headline": "Ukraine war latest: Ukraine reports hitting 14 energy facilities in occupied Crimea over 3 days amid widespread power outages",
+              "body": "Ukraine reports hitting 14 energy facilities in occupied Crimea over 3 days amid widespread power outages ・Last gas station ...",
+              "published_date": "2026-07-28",
+              "outlet": "The Kyiv Independent on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.V3GHdibTR4_9W7lGVG0yHA"
+            },
+            {
+              "news_id": "f6c8debea52e55999ce7495d35959741",
+              "url": "https://thehill.com/homenews/5993647-zelensky-trump-meeting-washington/",
+              "headline": "Zelensky arrives in US for Trump meeting, Graham funeral",
+              "body": "Ukrainian President Volodymyr Zelensky arrived in Washington, D.C. early Tuesday morning for a meeti...",
+              "published_date": "2026-07-28T14:10:05+00:00",
+              "outlet": "The Hill",
+              "image": "https://s.yimg.com/bo/734dbfad-706e-5ee1-b506-90debd0fd5b8_1785247625151.jpg"
             },
             {
               "news_id": "164671ff27ec50c8a62566fbd55b7edd",
@@ -11193,6 +11260,42 @@
               "image": "https://www.bing.com/th?id=ONUT.ckLo_jvSM9ELyS45xzJe5A"
             },
             {
+              "news_id": "595754bb5c3d52f0ae90ce24f5694fc4",
+              "url": "https://www.msn.com/en-us/news/world/russia-ran-north-koreas-ballistic-missile-lab-in-ukraine-is-sending-results-home/ar-AA28MzJD?ocid=BingNewsVerp",
+              "headline": "Russia Ran North Korea's Ballistic Missile Lab in Ukraine, Is Sending Results Home",
+              "body": "Russia North Korea missile cooperation in Ukraine war: Zelensky's July 2026 intelligence disclosure reveals Russia ran a live ...",
+              "published_date": "2026-07-28",
+              "outlet": "Tech Times on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.e68ff3038286180a475a495e2b6beff8"
+            },
+            {
+              "news_id": "78db2d394fa45121850506932a99d49f",
+              "url": "https://www.msn.com/en-xl/asia/pakistan/ukraine-rejects-irans-threats-levels-accusationspublished-on-july-27-2026-844-pm/ar-AA28N8sX?ocid=BingNewsVerp",
+              "headline": "Ukraine rejects Iran's threats, levels accusationsPublished on: July 27, 2026 8:44 PM",
+              "body": "Pakistan, July 27 -- Ukraine has rejected what it described as Iran's threats, calling them baseless and unjustified. Kyiv ...",
+              "published_date": "2026-07-28",
+              "outlet": "Daily Times on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.b9hhrCIF7T7Ps0NiCAdo8w"
+            },
+            {
+              "news_id": "9fc9085228d65f36987297750c234ae1",
+              "url": "https://www.msn.com/en-gb/news/other/ukraine-war-live-zelensky-arrives-for-trump-meeting-at-white-house/ar-AA28PksZ?ocid=BingNewsVerp",
+              "headline": "Ukraine war live: Zelensky arrives for Trump meeting at White House",
+              "body": "Ukraine-Russia war latest: Zelensky arrives for crucial Trump meeting at White House to shore up support - Zelensky is ...",
+              "published_date": "2026-07-28",
+              "outlet": "The Independent on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.fpi33at8R12MLL9WtmwBuA"
+            },
+            {
+              "news_id": "286c7cf02e4c543c93e3575ad9b4fb56",
+              "url": "https://www.gulftoday.ae/news/2026/07/28/trump-to-host-netanyahu-zelensky-as-ukraine-iran-wars-reach-critical-stages",
+              "headline": "Trump to host Netanyahu, Zelensky as Ukraine, Iran wars reach critical stages",
+              "body": "US President Donald Trump hosts Israeli Prime Minister Benjamin Netanyahu and Ukrainian President Volodymyr Zelensky on Tuesday, with wars in Iran and Ukraine...",
+              "published_date": "2026-07-28",
+              "outlet": "Gulf Today",
+              "image": "https://www.bing.com/th?id=ONUT.BadlBAOaLSWZp7K9Bzki3w"
+            },
+            {
               "news_id": "2ec67650a24259528aea25d5a91b8dda",
               "url": "https://www.clickondetroit.com/news/world/2026/07/23/rubio-to-revive-prospect-of-us-helping-end-war-in-ukraine-in-meeting-with-russian-counterpart/",
               "headline": "US is ready to help end the 'senseless war' in Ukraine but no quick deal ahead, Rubio says",
@@ -11200,6 +11303,33 @@
               "published_date": "2026-07-23",
               "outlet": "ClickOnDetroit",
               "image": "https://s.yimg.com/bo/3cc113de-e97b-5984-a89d-8b6710063104_1784770761209.jpg"
+            },
+            {
+              "news_id": "982623545ae65a5ab9942db5461a2efc",
+              "url": "https://www.dailysabah.com/world/europe/kremlin-cites-overseas-attacks-to-accuse-ukraine-of-terrorism",
+              "headline": "Kremlin cites overseas attacks to accuse Ukraine of terrorism",
+              "body": "Kremlin spokesman Dmitry Peskov accused Ukraine Tuesday of carrying out attacks in Germany, Kazakhstan, and Iran, saying Kyiv is escalating operations...",
+              "published_date": "2026-07-28",
+              "outlet": "Daily Sabah",
+              "image": ""
+            },
+            {
+              "news_id": "7f7e4c30473c51518a162a1ff86e2f0e",
+              "url": "https://www.usnews.com/news/world/articles/2026-07-28/trump-to-host-netanyahu-zelenskiy-as-ukraine-iran-wars-reach-critical-stages",
+              "headline": "Trump to Host Netanyahu, Zelenskiy as Ukraine, Iran Wars Reach Critical Stages",
+              "body": "Both the Ukraine war and widening Middle East conflict are at critical junctures. After the collapse of a ceasefire in the ...",
+              "published_date": "2026-07-28T15:10:05+00:00",
+              "outlet": "U.S. News & World Report",
+              "image": "https://www.bing.com/th?id=ONUT.wxuRc9JB5_F-vRfWsdt04w"
+            },
+            {
+              "news_id": "8c594db9d8515cd2bccc1bbc049edefe",
+              "url": "https://www.cnbc.com/2026/07/28/trump-zelenskyy-ukraine-russia-iran-war.html",
+              "headline": "Blurred front lines: Trump meets Zelenskyy as Ukraine, Iran wars collide",
+              "body": "Trump and Zelenskyy meet as the U.S war against Iran and Russia's full-scale invasion of Ukraine have threatened to overlap in recent days.",
+              "published_date": "2026-07-28",
+              "outlet": "CNBC",
+              "image": "https://s.yimg.com/bo/0b3a3ad6-60c5-5620-b63c-5b33121662ad_1785234245875.jpg"
             }
           ]
         }
@@ -12002,7 +12132,7 @@
       "incident_id": "20260726-IR-CF",
       "tree_id": "13763def03ab448898154124734fe728",
       "canonical_name": "Iran/US war",
-      "summary": "Diplomatic talks between the U.S. and Iran have progressed, with Trump claiming \"friendly\" negotiations and Iran stating it controls the Strait of Hormuz. The House voted to restrict Trump's war powers amid growing opposition, and oil prices dropped over 2% on de-escalation hopes, while concerns persist over U.S. weapons stockpiles and the Pentagon's reclassification of casualty data.",
+      "summary": "Diplomatic talks between the U.S. and Iran have progressed, with Trump claiming \"friendly\" negotiations and Iran stating it controls the Strait of Hormuz. The House voted to restrict Trump's war powers amid growing opposition, and oil prices dropped over 2% on de-escalation hopes, while concerns persist over U.S. weapons stockpiles and the Pentagon's reclassification of casualty data.\nTrump and Netanyahu held their first face-to-face meeting since launching the war, with Trump expressing frustrations with the Israeli leader beforehand. New polling shows support for the war has dropped to just one in three Americans, the lowest since the conflict began, while consumer confidence fell as gas prices resumed their climb. Iran stated it controls the Strait of Hormuz and is not seeking renewed talks, even as Trump claimed \"good talks\" were underway and threatened \"very strong military action\" if diplomacy fails.",
       "country": "Iran",
       "iso2": "IR",
       "lat": 32.4,
@@ -12032,7 +12162,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 50
+        "news": 69
       },
       "source_links": [],
       "physical": {
@@ -12067,6 +12197,10 @@
           "published_date": "2026-07-23T04:00:30+00:00"
         },
         {
+          "headline": "Trump and Netanyahu to discuss Iran war in first face-to-face meeting since conflict began",
+          "published_date": "2026-07-23T15:11:52+00:00"
+        },
+        {
           "headline": "Official Iran war death toll drops by 4 most recent casualties",
           "published_date": "2026-07-26"
         },
@@ -12089,6 +12223,10 @@
         {
           "headline": "Pentagon's official Iran war death toll no longer lists 4 troops killed during renewed fighting",
           "published_date": "2026-07-26T00:00:00+00:00"
+        },
+        {
+          "headline": "Iran-US war LIVE updates: Trump says US in ‘very deep talks’ with Iran, warns of ‘very strong military action’ if diplomacy fails",
+          "published_date": "2026-07-26T15:11:49+00:00"
         },
         {
           "headline": "Pentagon Changes How It Reports Casualties in Iran War",
@@ -12163,6 +12301,10 @@
           "published_date": "2026-07-27"
         },
         {
+          "headline": "Just one in three Americans back Iran war, most unsure of Trump's goals, new poll finds",
+          "published_date": "2026-07-27"
+        },
+        {
           "headline": "The War That Shall Not Be Named",
           "published_date": "2026-07-27"
         },
@@ -12184,6 +12326,14 @@
         },
         {
           "headline": "US-Iran conflict: What UAE residents need to know this evening (July 27)",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Mediators see progress in efforts to halt Iran war as drone attacks rattle region",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Pentagon's Iran war death count moves 4 troops to new category",
           "published_date": "2026-07-27"
         },
         {
@@ -12211,12 +12361,32 @@
           "published_date": "2026-07-27T04:00:32+00:00"
         },
         {
+          "headline": "Trump Backs New Iran Talks but It’s Unclear What He Hopes to Achieve This Time",
+          "published_date": "2026-07-27T15:11:49+00:00"
+        },
+        {
+          "headline": "Trump says US and Tehran having 'good talks' as drones hit Iran's neighbours",
+          "published_date": "2026-07-27T15:11:49+00:00"
+        },
+        {
+          "headline": "Trump expresses frustrations with Netanyahu before their first meeting since launching the Iran war",
+          "published_date": "2026-07-27T15:11:52+00:00"
+        },
+        {
           "headline": "Most Americans say Trump’s Iran war is going ‘very badly’ in stunning new poll",
           "published_date": "2026-07-27T20:22:26+00:00"
         },
         {
           "headline": "Just one in three Americans back Iran war, most unsure of Trump's goals, Reuters/Ipsos poll finds",
           "published_date": "2026-07-27T20:22:26+00:00"
+        },
+        {
+          "headline": "US-Iran war news LIVE: Iran halts strikes, Mike Waltz says Trump 'giving talks some space'",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Trump ‘to make decision’ on ceasefire after Netanyahu meeting: Live",
+          "published_date": "2026-07-28"
         },
         {
           "headline": "The Trade Routes Iran Cannot Afford to Lose",
@@ -12231,7 +12401,27 @@
           "published_date": "2026-07-28"
         },
         {
+          "headline": "The Iran and Ukraine wars are colliding on the world’s biggest lake. Here’s what to know",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "West Asia war LIVE: Trump says 'good talks' with Iran, threatens to strike if deal not made",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "The Iran War Exposed Africa’s Biggest Energy Weakness",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Americans’ confidence in US economy fell this month as Iran conflict sent gas prices back up",
+          "published_date": "2026-07-28"
+        },
+        {
           "headline": "Oil prices drop more than 2% as a pause in U.S.-Iran hostilities raises de-escalation hopes",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Trump says ‘good chance’ of progress in Iran talks. What we know",
           "published_date": "2026-07-28"
         },
         {
@@ -12245,9 +12435,25 @@
         {
           "headline": "Trump says US, Iran in ‘friendly’ talks as Netanyahu arrives in Washington",
           "published_date": "2026-07-28"
+        },
+        {
+          "headline": "The Latest: Netanyahu will meet with Trump for first time since the Iran war began",
+          "published_date": "2026-07-28T00:00:00+00:00"
+        },
+        {
+          "headline": "Just 1 in 3 support Iran war: Survey",
+          "published_date": "2026-07-28T13:11:49+00:00"
+        },
+        {
+          "headline": "Americans' Confidence in US Economy Fell This Month as Iran Conflict Sent Gas...",
+          "published_date": "2026-07-28T14:11:49+00:00"
+        },
+        {
+          "headline": "America is at war with Iran. Trump should ask Congress to declare it formally.",
+          "published_date": "2026-07-28T14:11:49+00:00"
         }
       ],
-      "news_total": 50,
+      "news_total": 69,
       "logs": [
         {
           "log_date": "2026-07-27",
@@ -12509,8 +12715,26 @@
         },
         {
           "log_date": "2026-07-28",
-          "summary": "Diplomatic talks between the U.S. and Iran have progressed, with Trump claiming \"friendly\" negotiations and Iran stating it controls the Strait of Hormuz. The House voted to restrict Trump's war powers amid growing opposition, and oil prices dropped over 2% on de-escalation hopes, while concerns persist over U.S. weapons stockpiles and the Pentagon's reclassification of casualty data.",
+          "summary": "Diplomatic talks between the U.S. and Iran have progressed, with Trump claiming \"friendly\" negotiations and Iran stating it controls the Strait of Hormuz. The House voted to restrict Trump's war powers amid growing opposition, and oil prices dropped over 2% on de-escalation hopes, while concerns persist over U.S. weapons stockpiles and the Pentagon's reclassification of casualty data.\nTrump and Netanyahu held their first face-to-face meeting since launching the war, with Trump expressing frustrations with the Israeli leader beforehand. New polling shows support for the war has dropped to just one in three Americans, the lowest since the conflict began, while consumer confidence fell as gas prices resumed their climb. Iran stated it controls the Strait of Hormuz and is not seeking renewed talks, even as Trump claimed \"good talks\" were underway and threatened \"very strong military action\" if diplomacy fails.",
           "news": [
+            {
+              "news_id": "d4e4263d8b555b69b4b3cf6c74488dc5",
+              "url": "https://www.usatoday.com/story/news/politics/2026/07/27/iran-war-trump-reuters-ipsos-poll/91068977007/",
+              "headline": "Just one in three Americans back Iran war, most unsure of Trump's goals, new poll finds",
+              "body": "Just one in three Americans support the war on Iran, the lowest reading in a Reuters/Ipsos poll since the five-month-old conflict's early days.",
+              "published_date": "2026-07-27",
+              "outlet": "USA TODAY",
+              "image": "https://www.bing.com/th?id=ONUT.FcO3n9r0Xew8dZrcXMGRjg"
+            },
+            {
+              "news_id": "d5d98c7c006f525eba1b19c6b5c35ac1",
+              "url": "https://www.msn.com/en-in/news/world/us-iran-war-news-live-iran-halts-strikes-mike-waltz-says-trump-giving-talks-some-space/ar-AA28JCh6?ocid=BingNewsVerp",
+              "headline": "US-Iran war news LIVE: Iran halts strikes, Mike Waltz says Trump 'giving talks some space'",
+              "body": "US-Iran war news LIVE: Iran and the US halted their fire exchange on 26 July, bringing the Gulf shipping and oil industry a ...",
+              "published_date": "2026-07-28",
+              "outlet": "Live Mint on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.t1XN0vjumQyw-aetntBHzQ"
+            },
             {
               "news_id": "11d1c2f787c9547db51b31484aa44c4d",
               "url": "https://www.theatlantic.com/newsletters/2026/07/iran-war-trump-hiding-american-soldiers-death/688085/",
@@ -12519,6 +12743,33 @@
               "published_date": "2026-07-27",
               "outlet": "The Atlantic",
               "image": "https://www.bing.com/th?id=ONUT.yjqZCImYQf3nGbITXHgqiA"
+            },
+            {
+              "news_id": "ffe257e712ec50ada31f8bdc9fd7af1b",
+              "url": "https://thehill.com/policy/international/5993530-reuters-iran-war-support-survey/",
+              "headline": "Just 1 in 3 support Iran war: Survey",
+              "body": "The latest polling on the Iran war shows that only 1 in 3 Americans support the ongoing U.S. military operation in the Middle East. The Reuters/Ipsos sur...",
+              "published_date": "2026-07-28T13:11:49+00:00",
+              "outlet": "The Hill",
+              "image": "https://s.yimg.com/bo/47c4e766-7e2a-5584-9142-7f9264a984a0_1785245910642.jpg"
+            },
+            {
+              "news_id": "ee0d82749bae5029b80b7835d0865cd6",
+              "url": "https://www.msn.com/en-us/news/world/trump-to-make-decision-on-ceasefire-after-netanyahu-meeting-live/ar-AA28PO7u?ocid=BingNewsVerp",
+              "headline": "Trump ‘to make decision’ on ceasefire after Netanyahu meeting: Live",
+              "body": "Iran-US war latest: Trump ‘to make final decision’ on ceasefire after high-stakes meeting with Netanyahu - Trump warns the US ...",
+              "published_date": "2026-07-28",
+              "outlet": "The Independent on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.mqd7cKE2GIzw6GCyeywV6g"
+            },
+            {
+              "news_id": "dfbcbd1e5e1758eeb83dda6ee632b3e7",
+              "url": "https://www.nytimes.com/2026/07/27/us/politics/trump-iran-talks-negotiations.html",
+              "headline": "Trump Backs New Iran Talks but It’s Unclear What He Hopes to Achieve This Time",
+              "body": "Iran denied President Trump’s claim that it wants to talk, and gave no sign that it would make concessions or speak directly ...",
+              "published_date": "2026-07-27T15:11:49+00:00",
+              "outlet": "The New York Times",
+              "image": "https://www.bing.com/th?id=ONUT.IurCCkCzaBVT2n7bebwfjA"
             },
             {
               "news_id": "0ffde4e853f453d8afe9b3bcab7a66e6",
@@ -12566,6 +12817,15 @@
               "image": "https://s.yimg.com/bo/c1142ca7-9b1c-5b85-9ab1-ec4ad27644e8_1784820256917.jpg"
             },
             {
+              "news_id": "f2aa6232ce675f59a72e70950619f19a",
+              "url": "https://www.itv.com/news/2026-07-28/trump-and-netanyahu-to-discuss-iran-war-in-first-meeting-since-conflict-began",
+              "headline": "Trump and Netanyahu to discuss Iran war in first face-to-face meeting since conflict began",
+              "body": "The meeting in Washington is seen by both leaders as a chance to put on a united front to the world amid rumours of strains in their relationship. | ITV National News ...",
+              "published_date": "2026-07-23T15:11:52+00:00",
+              "outlet": "ITV",
+              "image": ""
+            },
+            {
               "news_id": "fef3c6241fba5d1a90fb5e7b2dba1328",
               "url": "https://www.msn.com/en-us/news/world/why-has-the-us-halted-its-bombing-of-iran/ar-AA28Mac6?ocid=BingNewsVerp",
               "headline": "Why has the US halted its bombing of Iran?",
@@ -12573,6 +12833,51 @@
               "published_date": "2026-07-28",
               "outlet": "Al Jazeera on MSN",
               "image": "https://www.bing.com/th?id=ORMS.ba13c38f5e81a91bae205d9160a270a0"
+            },
+            {
+              "news_id": "47c8304f371a5f9b8d40a31bdbd95bcf",
+              "url": "https://www.msn.com/en-us/news/world/the-iran-and-ukraine-wars-are-colliding-on-the-world-s-biggest-lake-here-s-what-to-know/ar-AA28MTi5?ocid=BingNewsVerp",
+              "headline": "The Iran and Ukraine wars are colliding on the world’s biggest lake. Here’s what to know",
+              "body": "The Caspian Sea has become the latest region to be sucked into the growing conflict between Iran and its adversaries – not ...",
+              "published_date": "2026-07-28",
+              "outlet": "CNN on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.3982d959abe5bff3aa8567208ec4ffb9"
+            },
+            {
+              "news_id": "e19ffa78ea185a34b94bc2fd81b3dacd",
+              "url": "https://www.usnews.com/news/business/articles/2026-07-28/americans-confidence-in-us-economy-fell-this-month-as-iran-conflict-sent-gas-prices-back-up",
+              "headline": "Americans' Confidence in US Economy Fell This Month as Iran Conflict Sent Gas...",
+              "body": "Americans’ confidence in the economy fell this month as gas prices resumed their climb after the U.S...",
+              "published_date": "2026-07-28T14:11:49+00:00",
+              "outlet": "US News & World Report",
+              "image": "https://s.yimg.com/bo/d75758d5-e21d-533f-a887-70a17c0ad797_1785250225664.jpg"
+            },
+            {
+              "news_id": "a1a43257f4b75bee911dc67644e7d34d",
+              "url": "https://www.mcall.com/2026/07/28/netanyahu-meeting-trump-iran-war/",
+              "headline": "Trump expresses frustrations with Netanyahu before their first meeting since launching the Iran war",
+              "body": "JERUSALEM (AP) — Israeli Prime Minister Benjamin Netanyahu’s meeting with President Donald Trump on Tuesday is the first since the two leaders launched a joint war against Iran and a chance for ...",
+              "published_date": "2026-07-27T15:11:52+00:00",
+              "outlet": "The Morning Call",
+              "image": ""
+            },
+            {
+              "news_id": "5f518fb6869b5205ad94bb4bad6fe062",
+              "url": "https://www.washingtonpost.com/politics/2026/07/28/president-donald-trump-iran-benjamin-netanyahu/e5c7555c-8a7d-11f1-8912-d71e69d679d7_story.html",
+              "headline": "The Latest: Netanyahu will meet with Trump for first time since the Iran war began",
+              "body": "Israeli Prime Minister Benjamin Netanyahu’s meeting with President Donald Trump is the first since the two leaders launched a ...",
+              "published_date": "2026-07-28T00:00:00+00:00",
+              "outlet": "The Washington Post",
+              "image": "https://www.bing.com/th?id=ONUT.l65rA65ZS-fI5oXo0haUrQ"
+            },
+            {
+              "news_id": "8aa5edf72d2c521ba901025ff5cc1de3",
+              "url": "https://thehill.com/opinion/white-house/5992826-formal-declaration-war-iran/",
+              "headline": "America is at war with Iran. Trump should ask Congress to declare it formally.",
+              "body": "The Trump administration, in deliberation with the Congress, should consider the legal and political...",
+              "published_date": "2026-07-28T14:11:49+00:00",
+              "outlet": "The Hill",
+              "image": "https://s.yimg.com/bo/cac2c870-abac-5b54-98a0-63a45e5d862a_1785247952691.jpg"
             },
             {
               "news_id": "352c0561e8755faa93263166cf2811d2",
@@ -12584,6 +12889,24 @@
               "image": "https://s.yimg.com/bo/a08994f5-995b-5e5a-ad68-b361060c30ce_1785141093098.webp"
             },
             {
+              "news_id": "7fb5d5804adf55398522ad4c735dfe7a",
+              "url": "https://www.thehindu.com/news/international/iran-israel-us-war-july-28-2026-latest-updates-strait-of-hormuz-donald-trump-oil-prices-today/article71275308.ece",
+              "headline": "West Asia war LIVE: Trump says 'good talks' with Iran, threatens to strike if deal not made",
+              "body": "Iran Israel war July 28 2026 LIVE updates: US President Donald Trump remains positve over progress in Iran talks",
+              "published_date": "2026-07-28",
+              "outlet": "The Hindu",
+              "image": ""
+            },
+            {
+              "news_id": "e40aa7ccc42f5db1ad63e8971c397e1e",
+              "url": "https://www.reuters.com/world/middle-east/iran-says-it-still-controls-strait-not-seeking-talks-after-trump-halts-bombing-2026-07-27/",
+              "headline": "Trump says US and Tehran having 'good talks' as drones hit Iran's neighbours",
+              "body": "Iran has said it is not seeking to resume peace talks with the U.S., although it would pause its own attacks for as long as Trump's self-imposed ceasefire continues.",
+              "published_date": "2026-07-27T15:11:49+00:00",
+              "outlet": "Reuters",
+              "image": ""
+            },
+            {
               "news_id": "77120756215c5dd1a24d2699b69a97da",
               "url": "https://www.yahoo.com/news/world/articles/trade-routes-iran-cannot-afford-190000956.html",
               "headline": "The Trade Routes Iran Cannot Afford to Lose",
@@ -12591,6 +12914,24 @@
               "published_date": "2026-07-27",
               "outlet": "Oilprice.com · via Yahoo News",
               "image": "https://media.zenfs.com/en/oilprice.com/ccc7a06e1076eaabb42dcc1cbb3d3ff1"
+            },
+            {
+              "news_id": "77982b02d21d5281bb4adf9821b940b8",
+              "url": "https://time.com/article/2026/07/28/the-iran-war-exposed-africa-s-biggest-energy-weakness/",
+              "headline": "The Iran War Exposed Africa’s Biggest Energy Weakness",
+              "body": "The conflict will eventually subside. But without action, the vulnerabilities it has exposed will not, write Michael Adu Okyere, Brian Mukhaya, and David W. Yellen.",
+              "published_date": "2026-07-28",
+              "outlet": "TIME",
+              "image": "https://www.bing.com/th?id=ONUT.PKv9YQZLe9SRfuzACfhoqQ"
+            },
+            {
+              "news_id": "bf8fffcc416759f48deda57fecd5d2fc",
+              "url": "https://www.orlandosentinel.com/2026/07/28/consumer-confidence-index-july/",
+              "headline": "Americans’ confidence in US economy fell this month as Iran conflict sent gas prices back up",
+              "body": "Consumer attitudes had improved modestly in June as gas prices came down.",
+              "published_date": "2026-07-28",
+              "outlet": "Orlando Sentinel",
+              "image": "https://www.bing.com/th?id=ONUT.VtEx-oC6OBh1Xit368oH5Q"
             },
             {
               "news_id": "7558d59855755c379b181d7c36e9c573",
@@ -12602,6 +12943,15 @@
               "image": "https://www.bing.com/th?id=ONUT.ZtdjVFzehB38lr7Gd26lQg"
             },
             {
+              "news_id": "0a68f8f316875fb1b361479969dd0b05",
+              "url": "https://www.sun-sentinel.com/2026/07/27/mediators-us-iran-war/",
+              "headline": "Mediators see progress in efforts to halt Iran war as drone attacks rattle region",
+              "body": "Neither the U.S. nor Iran reported carrying out any attacks for three straight days.",
+              "published_date": "2026-07-27",
+              "outlet": "Sun Sentinel",
+              "image": "https://www.bing.com/th?id=ONUT.pAtThXacuJPl_OBqkkp0zw"
+            },
+            {
               "news_id": "56d5aece9d415610919a75334b5087ad",
               "url": "https://www.cnbc.com/2026/07/28/oil-price-today-wti-brent-us-iran-hormuz.html",
               "headline": "Oil prices drop more than 2% as a pause in U.S.-Iran hostilities raises de-escalation hopes",
@@ -12609,6 +12959,15 @@
               "published_date": "2026-07-28",
               "outlet": "CNBC",
               "image": "https://s.yimg.com/bo/8052d101-ad1a-533e-9704-dc368afcc366_1785111267009.jpg"
+            },
+            {
+              "news_id": "40cf551f02f55baa8a502dcbd54c73cc",
+              "url": "https://www.usatoday.com/story/news/politics/2026/07/27/pentagon-iran-war-soldiers-death-tally-overseas-operations/91061022007/",
+              "headline": "Pentagon's Iran war death count moves 4 troops to new category",
+              "body": "Four troops killed in the Iran war have been listed under a different category on the Pentagon's list of military conflict casualties.",
+              "published_date": "2026-07-27",
+              "outlet": "USA TODAY",
+              "image": "https://www.bing.com/th?id=ONUT.XM4peB4ym39-Cf7QVCGNRQ"
             },
             {
               "news_id": "f0b30eab9876581ba9f2d12c0ec33a17",
@@ -12627,6 +12986,15 @@
               "published_date": "2026-07-22",
               "outlet": "Detroit Free Press · via Yahoo News",
               "image": "https://media.zenfs.com/en/detroit-free-press/54f7d759ff5bf21e7b5a7d7f7ad208aa"
+            },
+            {
+              "news_id": "e16ac0e207d855569e20264fb91ee903",
+              "url": "https://www.msn.com/en-us/news/world/trump-says-good-chance-of-progress-in-iran-talks-what-we-know/ar-AA28RiBP?ocid=BingNewsVerp",
+              "headline": "Trump says ‘good chance’ of progress in Iran talks. What we know",
+              "body": "Negotiators are trying to break the deadlock over transit fees and management of the Strait of Hormuz.",
+              "published_date": "2026-07-28",
+              "outlet": "Al Jazeera on MSN",
+              "image": ""
             },
             {
               "news_id": "73b1f5c0e2db50a0ad93b4a324243c1f",
@@ -12692,6 +13060,15 @@
               "image": ""
             },
             {
+              "news_id": "7f1a7c7b96cb5e1a98892e6d99f40977",
+              "url": "https://www.financialexpress.com/world-news/iran-us-war-live-updates-trump-netanyahu-hormuz-oil-prices-today-red-sea-attack/4302644/",
+              "headline": "Iran-US war LIVE updates: Trump says US in ‘very deep talks’ with Iran, warns of ‘very strong military action’ if diplomacy fails",
+              "body": "Latest updates on US-Iran tensions reveal no overnight strikes, diplomatic talks ongoing, and rising oil prices amid regional ...",
+              "published_date": "2026-07-26T15:11:49+00:00",
+              "outlet": "The Financial Express",
+              "image": "https://www.bing.com/th?id=ONUT.7WECi6VGgqoCKvbFNlBaaw"
+            },
+            {
               "news_id": "acbccbb7e6725380b21cec0432ec2eb4",
               "url": "https://www.telegraph.co.uk/world-news/2026/07/27/us-runs-out-of-missiles-as-trump-halts-iran-strikes/",
               "headline": "US ‘runs out of missiles’ as Trump halts Iran strikes",
@@ -12718,7 +13095,7 @@
       "incident_id": "20260727-XX-WF",
       "tree_id": "2f3c72555a054e87be304baaeb83af7c",
       "canonical_name": "Forest Fire 2026-07-27",
-      "summary": "Massive wildfires in southwest France and Spain have forced hundreds of thousands of evacuations, with the blaze near Bordeaux growing so intense it generated lightning that ignited new fires. French President Macron pledged support on a visit to the fire zone, while officials reported that the fire has stabilized but is not yet contained. Two firefighters died battling the flames in a Bordeaux suburb.",
+      "summary": "France ordered nearly 4,000 more evacuations from the Atlantic coast as a fresh heatwave threatens firefighters' progress on the massive blaze near Bordeaux, which has burned an area four times the size of Paris and displaced roughly 330,000 people across France and Spain. President Macron warned the country faces its \"most difficult situation since WW2\" and urged fire crews to stay strong, while officials noted that fire clouds (pyrocumulonimbus) were observed in France for the first time and warned the fires may burn for months.",
       "country": "",
       "iso2": "XX",
       "lat": null,
@@ -12728,9 +13105,9 @@
       "incident_type": "Forest Fire",
       "incident_category": "Natural",
       "is_disease": false,
-      "severity": "HIGH",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
+      "severity": "CRITICAL",
+      "priority": "HIGH",
+      "priority_rank": 1,
       "pandemic_potential": null,
       "event_status": null,
       "extended_monitoring": false,
@@ -12748,7 +13125,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 32
+        "news": 59
       },
       "source_links": [
         {
@@ -12798,20 +13175,8 @@
           "published_date": "2026-07-26"
         },
         {
-          "headline": "Live updates: European wildfires may not be out for months, authorities warn, as flames rage near Bordeaux and Madrid | CNN",
-          "published_date": "2026-07-27"
-        },
-        {
-          "headline": "Before-and-after satellite images show the staggering toll of France's worst wildfire season on record",
-          "published_date": "2026-07-27"
-        },
-        {
-          "headline": "French president pledges support on visit to fire zone, vows: 'We will win this battle together'",
-          "published_date": "2026-07-27"
-        },
-        {
-          "headline": "What to know about the historic wildfires in France and Spain",
-          "published_date": "2026-07-27"
+          "headline": "Minnesota wildfires: Progress continues in containing flames, protecting local properties",
+          "published_date": "2026-07-26"
         },
         {
           "headline": "Map: Cinder Complex ignites near Rock Fire in Eastern Sierra",
@@ -12870,8 +13235,84 @@
           "published_date": "2026-07-27"
         },
         {
+          "headline": "France faces its ‘most difficult situation since WW2’ amid ferocious wildfires",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Live updates: European wildfires may not be out for months, authorities warn, as flames rage near Bordeaux and Madrid | CNN",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "What to know about the historic wildfires in France and Spain",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Forest Service to partially reopen the Boundary Waters amid ongoing wildfires",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Why Soil Carbon Is The Real Fuel Behind Canada’s Wildfires",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Parts of Umpqua National Forest closed due to fires",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "‘We’re losing our ability to manage forest fires’ as West becomes hotter and drier, researcher says",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Wildfire burns more than 19,000 acres in rural Palm Beach County",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Wildfires: The ominous 'fire clouds' or 'pyrocumulonimbus' seen in France for the first time",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Before-and-after satellite images show the staggering toll of France's worst wildfire season on record",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Dixie National Forest returns to stage 1 fire restrictions",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Elder fires burn through 300 acres of forest west of Missoula",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Oso Canyon Fire burns west of Espanola",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Oregon wildfires burn 1.3M acres destroying homes, closing highways",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "French president pledges support on visit to fire zone, vows: 'We will win this battle together'",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Wildfire burns more than 19,000 acres in rural Palm Beach County",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "Delaware Forest Service sends crews to assist with Minnesota wildfires",
+          "published_date": "2026-07-27"
+        },
+        {
+          "headline": "What to know about the historic wildfires in France and Spain",
+          "published_date": "2026-07-27"
+        },
+        {
           "headline": "Forest fire west of Sedalia prompts mandatory evacuations",
           "published_date": "2026-07-27T15:06:52+00:00"
+        },
+        {
+          "headline": "As Fires Menace Bordeaux, Winemakers See Another Blow to Their Livelihood",
+          "published_date": "2026-07-27T15:13:19+00:00"
         },
         {
           "headline": "French president pledges support on visit to fire zone, vows: 'We will win this...",
@@ -12886,7 +13327,35 @@
           "published_date": "2026-07-27T20:23:47+00:00"
         },
         {
+          "headline": "Spain Wildfires",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Storms born of flame: What ‘fire clouds’ are, and why Europe's worst wildfires in decades may burn for weeks",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Macron says France facing ‘most difficult time since WW2’ - latest",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "France orders 4,000 more evacuated as fires displace a third of a million across southwest Europe",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Heatwave to hit France today as firefighters race against time: Live",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "France and Spain race to contain huge wildfires before fresh heatwave begins",
+          "published_date": "2026-07-28"
+        },
+        {
           "headline": "Tracking the wildfires in Europe, in maps and charts",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Wildfire in southwest France highlights Seveso sites' vulnerability to forest fires",
           "published_date": "2026-07-28"
         },
         {
@@ -12896,9 +13365,25 @@
         {
           "headline": "What to Know About the Deadly Wildfires in Western Europe",
           "published_date": "2026-07-28"
+        },
+        {
+          "headline": "France and Spain race to curb wildfires before new heatwave arrives",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Macron, in Bordeaux, calls for unity 'to win the battle' against wildfire",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "2 firefighters injured while battling brush fire in San Bernardino National Forest near Yucaipa",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "‘A Wake-Up Call’: Massive Wildfires Pierce Madrid’s Bubble",
+          "published_date": "2026-07-28T00:00:00+00:00"
         }
       ],
-      "news_total": 32,
+      "news_total": 59,
       "logs": [
         {
           "log_date": "2026-07-27",
@@ -13128,6 +13613,1169 @@
               "published_date": "2026-07-26",
               "outlet": "Associated Press News",
               "image": "https://www.bing.com/th?id=ONUT.3PdBXIDBySrz4I-hOGkOdw"
+            }
+          ]
+        },
+        {
+          "log_date": "2026-07-28",
+          "summary": "France ordered nearly 4,000 more evacuations from the Atlantic coast as a fresh heatwave threatens firefighters' progress on the massive blaze near Bordeaux, which has burned an area four times the size of Paris and displaced roughly 330,000 people across France and Spain. President Macron warned the country faces its \"most difficult situation since WW2\" and urged fire crews to stay strong, while officials noted that fire clouds (pyrocumulonimbus) were observed in France for the first time and warned the fires may burn for months.",
+          "news": [
+            {
+              "news_id": "c29b3e4e5f315433bbf36dc02e3a743b",
+              "url": "https://www.hjnews.com/world/spain-wildfires/image_75bc53d7-2aab-5c06-a346-d6c77c257e86.html",
+              "headline": "Spain Wildfires",
+              "body": "Technicians from Spain's Forest Fire Reinforcement Brigades (BRIF) and forest rangers meet to assess the wildfire situation near Sotillo de Adrada, Ávila province, Spain, as the fire continues to spread,",
+              "published_date": "2026-07-28",
+              "outlet": "The Herald Journal",
+              "image": "https://s.yimg.com/bo/d77335a1-b8fa-5566-ad25-7ede3884af6e_1785249740332.jpg"
+            },
+            {
+              "news_id": "b322d2b12cf952d7adb3e27292063efc",
+              "url": "https://www.irishtimes.com/world/europe/2026/07/27/french-wildfires-present-most-difficult-situation-since-ww2/",
+              "headline": "France faces its ‘most difficult situation since WW2’ amid ferocious wildfires",
+              "body": "French president Emmanuel Macron warns of worsening conditions as fresh heatwave closes in",
+              "published_date": "2026-07-27",
+              "outlet": "The Irish Times",
+              "image": "https://www.bing.com/th?id=ONUT.gYRm3l3p3aCo3zNFHn9PGg"
+            },
+            {
+              "news_id": "c521f174703b541a9fdd7e1eae87d700",
+              "url": "https://edition.cnn.com/2026/07/27/world/live-news/france-spain-wildfires-evacuations?Date=20260727&Profile=CNN",
+              "headline": "Live updates: European wildfires may not be out for months, authorities warn, as flames rage near Bordeaux and Madrid | CNN",
+              "body": "Firefighters are battling wildfires close to the cities of Bordeaux, France, and Madrid, Spain. Follow for live updates.",
+              "published_date": "2026-07-27",
+              "outlet": "CNN International",
+              "image": "https://www.bing.com/th?id=ONUT.isMRbVwE7TQh_XtbPImh4w"
+            },
+            {
+              "news_id": "c5d6fcad763f53dc92fcc0401ab1699b",
+              "url": "https://www.msn.com/en-in/news/world/storms-born-of-flame-what-fire-clouds-are-and-why-europes-worst-wildfires-in-decades-may-burn-for-weeks/ar-AA28Q6rT?ocid=BingNewsVerp",
+              "headline": "Storms born of flame: What ‘fire clouds’ are, and why Europe's worst wildfires in decades may burn for weeks",
+              "body": "A fire-born thunderstorm is driving Europe's worst wildfires in decades, and a heatwave is still to come.",
+              "published_date": "2026-07-28",
+              "outlet": "Hindustan Times on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.LWtM0o6kk6P7ZBthhbh4Lw"
+            },
+            {
+              "news_id": "a79d971772165c8285044ccdd10bf753",
+              "url": "https://www.orlandosentinel.com/2026/07/27/what-to-know-wildfires-france-spain/",
+              "headline": "What to know about the historic wildfires in France and Spain",
+              "body": "Climate data shows Europe is heating faster than anywhere else on earth.",
+              "published_date": "2026-07-27",
+              "outlet": "Orlando Sentinel",
+              "image": "https://www.bing.com/th?id=ONUT.Mlegf12HvT795SeYQlrLZg"
+            },
+            {
+              "news_id": "e8aee9d82cfc55ba99d4945f108b63e9",
+              "url": "https://www.fox21online.com/news/local/forest-service-to-partially-reopen-the-boundary-waters-amid-ongoing-wildfires/article_5c19bef2-06d2-4927-91dc-cb0d7f4a8fb9.html",
+              "headline": "Forest Service to partially reopen the Boundary Waters amid ongoing wildfires",
+              "body": "(KQDS-TV) -- The Superior National Forest announced late Monday that it will partially reopen the BWCAW starting Thursday, July 30.",
+              "published_date": "2026-07-27",
+              "outlet": "FOX21",
+              "image": "https://s.yimg.com/bo/656991fd-2fe7-5e42-bf01-dbd5384f8b0c_1785205100342.jpg"
+            },
+            {
+              "news_id": "12e187af551f5ea3acabec52a96a60d5",
+              "url": "https://www.msn.com/en-us/news/other/macron-says-france-facing-most-difficult-time-since-ww2-latest/ar-AA28KX8m?ocid=BingNewsVerp",
+              "headline": "Macron says France facing ‘most difficult time since WW2’ - latest",
+              "body": "Europe wildfires latest: Macron says France facing ‘most difficult time since WW2’ as 40C heatwave looms - Wildfires in ...",
+              "published_date": "2026-07-28",
+              "outlet": "The Independent on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.p2KkG130QSyPI9emc1IWwQ"
+            },
+            {
+              "news_id": "1c6155d293ae5767aab5b9904502687a",
+              "url": "https://www.forbes.com/sites/phildeluna/2026/07/27/why-soil-carbon-is-the-real-fuel-behind-canadas-wildfires/",
+              "headline": "Why Soil Carbon Is The Real Fuel Behind Canada’s Wildfires",
+              "body": "New research reveals that 76% of Canada's wildfire emissions come from soil carbon, reshaping how we think about wildfire smoke, climate change, and forest management.",
+              "published_date": "2026-07-27",
+              "outlet": "Forbes",
+              "image": "https://www.bing.com/th?id=ONUT.z0ZENHn4vJ0fJ_wMt-lsKQ"
+            },
+            {
+              "news_id": "deaae6e972ac50b09757e5bb8973538d",
+              "url": "https://www.ajc.com/news/2026/07/france-orders-4000-more-evacuated-as-fires-displace-a-third-of-a-million-across-southwest-europe/",
+              "headline": "France orders 4,000 more evacuated as fires displace a third of a million across southwest Europe",
+              "body": "French authorities have ordered nearly 4,000 more people to evacuate from tourist sites on the Atlantic coast. The returning heat threatens firefighters' fragile hold on a vast wildfire west of Bordeaux. The blaze in the Gironde region has burned an area four times the size of Paris. It has forced 220,000 people to evacuate. Across France and Spain, roughly 330,000 people have been driven from homes and vacation sites by fires of exceptional scale. Spain is bracing for its fourth heat wave of the summer, with several blazes still out of control, including the largest in its recorded history.",
+              "published_date": "2026-07-28",
+              "outlet": "Atlanta Journal-Constitution",
+              "image": "https://s.yimg.com/bo/b5d1c545-563c-5f06-9c3c-60f2819d1488_1785224664469.jpg"
+            },
+            {
+              "news_id": "6fb9ff3b54cd5fac81b2ba242fb25a02",
+              "url": "https://www.msn.com/en-us/news/world/heatwave-to-hit-france-today-as-firefighters-race-against-time-live/ar-AA28PwAw?ocid=BingNewsVerp",
+              "headline": "Heatwave to hit France today as firefighters race against time: Live",
+              "body": "Europe wildfires latest: Heatwave to hit France today as firefighters race to control blazes near Madrid and Bordeaux - ...",
+              "published_date": "2026-07-28",
+              "outlet": "The Independent on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.8-w1eHCNUGde_AE_NYuLzg"
+            },
+            {
+              "news_id": "7084d1885a54559796a2a0ff3ccd8036",
+              "url": "https://www.theguardian.com/world/2026/jul/27/france-and-spain-race-to-contain-huge-wildfires-before-fresh-heatwave-begins",
+              "headline": "France and Spain race to contain huge wildfires before fresh heatwave begins",
+              "body": "Coming days are ‘absolutely critical’ for firefighters before temperatures rise again this week, officials say",
+              "published_date": "2026-07-28",
+              "outlet": "The Guardian",
+              "image": ""
+            },
+            {
+              "news_id": "ce0424687f135ef887ef57fa7a6fbe57",
+              "url": "https://www.kdrv.com/news/local/parts-of-umpqua-national-forest-closed-due-to-fires/article_5b319ec3-a898-401c-a6e9-769421634dcb.html",
+              "headline": "Parts of Umpqua National Forest closed due to fires",
+              "body": "Umpqua National Forest closed parts of the forest because of the Castle Fire.",
+              "published_date": "2026-07-27",
+              "outlet": "NewsWatch 12 Medford - Klamath Falls",
+              "image": "https://s.yimg.com/bo/1b85c464-7ecc-5aaf-ba0a-5e5b0f82ccb6_1785190398593.jpg"
+            },
+            {
+              "news_id": "99f4b9f59ec25c9fa2d188919b0a3085",
+              "url": "https://www.msn.com/en-us/weather/topstories/tracking-the-wildfires-in-europe-in-maps-and-charts/ar-AA28Oqdq?ocid=BingNewsVerp",
+              "headline": "Tracking the wildfires in Europe, in maps and charts",
+              "body": "CNN is monitoring Europe’s largest active wildfires. During the past 20 years, Europe has seen an increase in the area of ...",
+              "published_date": "2026-07-28",
+              "outlet": "CNN International on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.ok6W_hA78ks3JCEXjyJcdw"
+            },
+            {
+              "news_id": "5fb1c517c0f05856a77d557012be228a",
+              "url": "https://www.lemonde.fr/en/economy/article/2026/07/28/wildfire-in-southwest-france-highlights-seveso-sites-vulnerability-to-forest-fires_6755920_19.html",
+              "headline": "Wildfire in southwest France highlights Seveso sites' vulnerability to forest fires",
+              "body": "Protective measures had to be deployed around industrial facilities that use or store flammable or explosive materials. Of ...",
+              "published_date": "2026-07-28",
+              "outlet": "Le Monde",
+              "image": "https://www.bing.com/th?id=ONUT.TjfYDi-MKe7tYhTglmCzUg"
+            },
+            {
+              "news_id": "1ff7b2fe99fe5030ba9ab84bbeb78013",
+              "url": "https://www.sltrib.com/news/environment/2026/07/27/era-megafires-do-forest-thinning/",
+              "headline": "‘We’re losing our ability to manage forest fires’ as West becomes hotter and drier, researcher says",
+              "body": "Today's fast-moving megafires can jump highways and race past fire breaks hundreds of yards wide, a researcher points out, warning that calls to thin America's forests and other prevention tactics may not work as well in the future.",
+              "published_date": "2026-07-27",
+              "outlet": "The Salt Lake Tribune",
+              "image": "https://s.yimg.com/bo/b689e882-ef1a-5179-bead-346e705a5cf0_1785241225242.jpg"
+            },
+            {
+              "news_id": "2f5df7b356b1599c8580e88c36729abc",
+              "url": "https://www.palmbeachpost.com/story/news/environment/2026/07/27/florida-wildfire-burns-over-19000-acres-rural-palm-beach-county/91061516007/",
+              "headline": "Wildfire burns more than 19,000 acres in rural Palm Beach County",
+              "body": "The Florida Forest Service confirmed fire crews contained the Berger Wildfire after it scorned 19,700 acres near the Rotenberger Wildlife Management Area.",
+              "published_date": "2026-07-27",
+              "outlet": "The Palm Beach Post",
+              "image": "https://s.yimg.com/bo/da7912fc-9979-5bbd-978f-b96e1862d8c0_1784654710419.jpg"
+            },
+            {
+              "news_id": "544311e1df2d523c9eadad3cdb0f1d59",
+              "url": "https://www.france24.com/en/france/20260727-what-are-fire-clouds-pyrocumulonimbus-observed-france-for-the-first-time",
+              "headline": "Wildfires: The ominous 'fire clouds' or 'pyrocumulonimbus' seen in France for the first time",
+              "body": "French firefighters are grappling for the first time with immense fire clouds, known as pyrocumulonimbus clouds, created by extreme wildfires, as they struggle to bring a forest inferno in southwest…",
+              "published_date": "2026-07-27",
+              "outlet": "France 24",
+              "image": "https://www.bing.com/th?id=ONUT.-hcqourwJMJwaNiH3J76oA"
+            },
+            {
+              "news_id": "f1e11ae331dd58d2988c095edda9178c",
+              "url": "https://www.yahoo.com/news/weather-news/articles/satellite-images-show-staggering-toll-204654093.html",
+              "headline": "Before-and-after satellite images show the staggering toll of France's worst wildfire season on record",
+              "body": "Weeks of record-breaking heat and fast-moving wildfires have scorched large swaths of France. Satellite images show the extent of the destruction.",
+              "published_date": "2026-07-27",
+              "outlet": "Yahoo",
+              "image": "https://www.bing.com/th?id=ONUT.gBlwJgljFd4bRXxES0A_jw"
+            },
+            {
+              "news_id": "74b47616af405988842775ebf1a7644a",
+              "url": "https://www.msn.com/en-us/news/world/many-brits-caught-up-in-wildfire-disasters-in-france-and-spain/ar-AA28Lr0k?ocid=BingNewsVerp",
+              "headline": "'Many Brits' caught up in wildfire disasters in France and Spain",
+              "body": "'Many Brits' caught up in wildfire disasters in France and Spain, says minister - Hotels near the airport in Bordeaux have ...",
+              "published_date": "2026-07-28",
+              "outlet": "London Evening Standard on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.837fc7fb0525dee6818c28adef7f7860"
+            },
+            {
+              "news_id": "6c1518332e8c5914a8d3a67b8cf052f6",
+              "url": "https://www.msn.com/en-us/news/world/what-to-know-about-the-deadly-wildfires-in-western-europe/ar-AA28MHW6?ocid=BingNewsVerp",
+              "headline": "What to Know About the Deadly Wildfires in Western Europe",
+              "body": "More than 300,000 people were evacuated because of wildfires in France and Spain, with fire crews battling the blazes for ...",
+              "published_date": "2026-07-28",
+              "outlet": "TIME on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.8c66abf672d2e7988877452a77ce97ab"
+            },
+            {
+              "news_id": "76cbe5a987405703a16443c3cb56fb01",
+              "url": "https://www.nytimes.com/2026/07/28/world/europe/bordeaux-wine-fires-smoke.html",
+              "headline": "As Fires Menace Bordeaux, Winemakers See Another Blow to Their Livelihood",
+              "body": "One of the largest fires in modern French history is raging near the vineyards of Bordeaux. That is just the latest problem ...",
+              "published_date": "2026-07-27T15:13:19+00:00",
+              "outlet": "The New York Times",
+              "image": "https://www.bing.com/th?id=ONUT.BYphlIBnXX-Fh2YhilmtZA"
+            },
+            {
+              "news_id": "4c4d8ebdc46352cea1542885f0c47b19",
+              "url": "https://www.nytimes.com/2026/07/28/world/europe/spain-wildfires-madrid.html",
+              "headline": "‘A Wake-Up Call’: Massive Wildfires Pierce Madrid’s Bubble",
+              "body": "Madrid is booming, culturally and economically, but the wildfires raging within a short drive of the capital have provided a ...",
+              "published_date": "2026-07-28T00:00:00+00:00",
+              "outlet": "The New York Times",
+              "image": "https://www.bing.com/th?id=ONUT.pRTgX68WNpo4N2qIs3zH6w"
+            },
+            {
+              "news_id": "7a70d1fabfed5805802800dff6626ff3",
+              "url": "https://www.abc4.com/utah-weather/wildfire/dixie-national-forest-stage-1-fire/",
+              "headline": "Dixie National Forest returns to stage 1 fire restrictions",
+              "body": "Dixie National Forest has lowered its fire restrictions from Stage 2 back to Stage 1.",
+              "published_date": "2026-07-27",
+              "outlet": "ABC4 Utah",
+              "image": "https://s.yimg.com/bo/5c48e16a-5970-5a4b-9a90-5e5a7bee15a4_1785165803293.jpg"
+            },
+            {
+              "news_id": "1bc99ac170c850198d96602dd20b8904",
+              "url": "https://www.msn.com/en-us/news/world/france-and-spain-race-to-curb-wildfires-before-new-heatwave-arrives/ar-AA28MSwz?ocid=BingNewsVerp",
+              "headline": "France and Spain race to curb wildfires before new heatwave arrives",
+              "body": "By Janis Laizans and Emma Pinedo BORDEAUX/MADRID, July 27 (Reuters) - Firefighters sought on Monday to take advantage of more ...",
+              "published_date": "2026-07-28",
+              "outlet": "Reuters on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.a2ff794cdb6bd88637e82dd770b1e303"
+            },
+            {
+              "news_id": "f14f6d1ae57b5840adbefe3eb7dbc23f",
+              "url": "https://www.lemonde.fr/en/politics/article/2026/07/28/macron-in-bordeaux-calls-for-unity-to-win-the-battle-against-wildfire_6755912_5.html",
+              "headline": "Macron, in Bordeaux, calls for unity 'to win the battle' against wildfire",
+              "body": "The French president traveled to the Gironde department on Monday to 'thank' the personnel mobilized against the blaze and ...",
+              "published_date": "2026-07-28",
+              "outlet": "Le Monde",
+              "image": "https://www.bing.com/th?id=ONUT.b_-qIjQGW_Xwt81q_4ucOA"
+            },
+            {
+              "news_id": "ef611c3c57df55e8a707e3f0a7969c2a",
+              "url": "https://missoulian.com/news/local/weather/article_d78b55e5-899d-4f3c-9481-4756becb6de8.html",
+              "headline": "Elder fires burn through 300 acres of forest west of Missoula",
+              "body": "A pair of wildfires have burned through 318 acres in the mountains west of Missoula, one of several detected after a powerful thunderstorm swept through the area last week.",
+              "published_date": "2026-07-27",
+              "outlet": "Missoulian",
+              "image": "https://s.yimg.com/bo/ea329fb9-7451-5810-9377-c3e3787bafd2_1785230598857.jpg"
+            },
+            {
+              "news_id": "202f5c3e3e3d5fe8a8c61094369a82e3",
+              "url": "https://www.yahoo.com/news/weather-news/articles/oso-canyon-fire-burns-west-191918084.html",
+              "headline": "Oso Canyon Fire burns west of Espanola",
+              "body": "RIO ARRIBA COUNTY, N.M. (KRQE) – Fire crews are battling a wildfire burning in the Santa Fe National Forest, west of Espanola. Oso Canyon Fire details: Smoke is visible from Espanola, Pojoaque, Ohkay ...",
+              "published_date": "2026-07-27",
+              "outlet": "KRQE Albuquerque · via Yahoo News",
+              "image": "https://media.zenfs.com/en/krqe_albuquerque_articles_976/1226c2af9c72b121fab2f1415e8060ea"
+            },
+            {
+              "news_id": "15ee20440ba55e198684b552d4d8164a",
+              "url": "https://abc7.com/post/green-fire-burns-33-acres-yucaipa-evacuation-warning-issued/19588885/",
+              "headline": "2 firefighters injured while battling brush fire in San Bernardino National Forest near Yucaipa",
+              "body": "Two firefighters were hurt while battling a brush fire in the San Bernardino National Forest near Yucaipa, which prompted an evacuation warning.",
+              "published_date": "2026-07-28",
+              "outlet": "KABC 7 Los Angeles",
+              "image": "https://s.yimg.com/bo/7e090c8f-286b-5492-90fe-e349dea2899e_1785219496941.jpg"
+            },
+            {
+              "news_id": "a7cf372704d95830b1a684cfc48c1735",
+              "url": "https://www.usatoday.com/story/news/wildfires/2026/07/27/oregon-wildfire-updates-bench-beachcomb/91064283007/",
+              "headline": "Oregon wildfires burn 1.3M acres destroying homes, closing highways",
+              "body": "More than 1.3 million acres of active wildfire is burning across Oregon in 34 major blazes that are taking an increasing toll on the state.",
+              "published_date": "2026-07-27",
+              "outlet": "USA TODAY",
+              "image": "https://www.bing.com/th?id=ONUT.xH37a3-3pbpS37MfqpPMSg"
+            },
+            {
+              "news_id": "278512ba4de65f7585bcff382d7269f8",
+              "url": "https://apnews.com/article/europe-wildfires-france-spain-bordeaux-01d41aae7a3c835b270306288023f8e3",
+              "headline": "French president pledges support on visit to fire zone, vows: 'We will win this battle together'",
+              "body": "French President Emmanuel Macron has urged fire crews to “stay strong” as they battle to bring a monster wildfire under control, warning that the fight will take time.",
+              "published_date": "2026-07-27",
+              "outlet": "Associated Press News",
+              "image": "https://www.bing.com/th?id=ONUT.reV5e_OJZWk9Jwfzaq90DA"
+            },
+            {
+              "news_id": "274a6deaa3685c0cb181a0ee869fa8c7",
+              "url": "https://www.usatoday.com/story/news/environment/2026/07/27/florida-wildfire-burns-over-19000-acres-rural-palm-beach-county/91061516007/",
+              "headline": "Wildfire burns more than 19,000 acres in rural Palm Beach County",
+              "body": "The Florida Forest Service confirmed fire crews contained the Berger Wildfire after it scorned 19,700 acres near the Rotenberger Wildlife Management Area.",
+              "published_date": "2026-07-27",
+              "outlet": "USA TODAY",
+              "image": "https://www.bing.com/th?id=ONUT.XhH5SDMfyDEzjKSNkX8O5g"
+            },
+            {
+              "news_id": "bcfdf2c0d7d854599deb59e52c4f35b3",
+              "url": "https://www.cbsnews.com/philadelphia/news/minnesota-wildfires-delaware-forest-service-crews/",
+              "headline": "Delaware Forest Service sends crews to assist with Minnesota wildfires",
+              "body": "Two crews from the Delaware Forest Service traveled to assist fire crews in Minnesota working to contain wildfires sparked by lightning.",
+              "published_date": "2026-07-27",
+              "outlet": "CBS News",
+              "image": "https://s.yimg.com/bo/8cad30f9-2de3-5ab8-bc3c-a6fd2e23b58e_1785185721175.jpg"
+            },
+            {
+              "news_id": "7d16cacb3ba459149457f0699ac2a31a",
+              "url": "https://www.mercurynews.com/2026/07/27/what-to-know-about-the-historic-wildfires-in-france-and-spain/",
+              "headline": "What to know about the historic wildfires in France and Spain",
+              "body": "Heat waves and scant rainfall in Europe have contributed to historic wildfires in France and Spain that have forced hundreds of thousands of people to flee their homes in one of the continent’s biggest evacuation efforts since World…",
+              "published_date": "2026-07-27",
+              "outlet": "The Mercury News",
+              "image": "https://www.bing.com/th?id=ONUT.GsZz3BhOE_sAG9YPkpCwHg"
+            },
+            {
+              "news_id": "ae429684f18851078c27ddbe891ee180",
+              "url": "https://www.yahoo.com/news/weather-news/articles/minnesota-wildfires-progress-continues-containing-195555444.html",
+              "headline": "Minnesota wildfires: Progress continues in containing flames, protecting local properties",
+              "body": "Firefighting crews report continued progress in the fight against Minnesota wildfires as they mop up hot spots and strengthen containment lines to protect infrastructure in the area.",
+              "published_date": "2026-07-26",
+              "outlet": "KMSP · via Yahoo News",
+              "image": "https://media.zenfs.com/en/kmsp_fox_local_articles_990/36b531dd622e8dd5e32a75321069c1d7"
+            }
+          ]
+        }
+      ],
+      "logs_total": 2
+    },
+    {
+      "incident_id": "20260728-CN-EQ",
+      "tree_id": "903c9dac42a9444b8b8f14e85003b697",
+      "canonical_name": "Earthquake M5.8 Oula Xiuma, China 2026-07-28",
+      "summary": "On July 28, 2026, a remote area of Qinghai province in China was struck by two earthquakes 18 minutes apart, with magnitudes of 5.7 and 5.8 according to the USGS.",
+      "country": "China",
+      "iso2": "CN",
+      "lat": 35.3866,
+      "lon": 99.5513,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "HIGH",
+      "priority": "HIGH",
+      "priority_rank": 1,
+      "pandemic_potential": null,
+      "event_status": null,
+      "extended_monitoring": false,
+      "disease_name": null,
+      "event_date": "2026-07-28",
+      "first_reported_date": "2026-07-28",
+      "last_updated_date": "2026-07-28",
+      "days_since_event": 0,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "ercc": 0,
+        "healthmap": 0,
+        "news": 4
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 5.8 - 191 km NW of Oula Xiuma, China",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tga9",
+          "meta": "10 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 5.8,
+        "max_depth_km": 10.0,
+        "place": "191 km NW of Oula Xiuma, China",
+        "felt": null,
+        "sig": 650,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Remote Chinese province struck by 2 earthquakes in 20 minutes",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Two earthquakes strike China's Qinghai province",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Remote Chinese province struck by 2 earthquakes in 20 minutes - WTOP News",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Remote Chinese province struck by 2 earthquakes in 20 minutes",
+          "published_date": "2026-07-28T00:00:00+00:00"
+        }
+      ],
+      "news_total": 4,
+      "logs": [
+        {
+          "log_date": "2026-07-28",
+          "summary": "On July 28, 2026, a remote area of Qinghai province in China was struck by two earthquakes 18 minutes apart, with magnitudes of 5.7 and 5.8 according to the USGS.",
+          "news": [
+            {
+              "news_id": "00692e5258995c9486b6254afacb21d6",
+              "url": "https://apnews.com/article/china-earthquakes-qinghai-province-lanzhou-947dc26f34102ef81b6d73e78914a8bc",
+              "headline": "Remote Chinese province struck by 2 earthquakes in 20 minutes",
+              "body": "China's remote Qinghai province has been struck by two earthquakes minutes apart. The United States Geological Survey says the earthquakes with magnitudes of 5.7 and 5.8 occurred at 11:16 a.m. and 11:34 a.m.",
+              "published_date": "2026-07-28",
+              "outlet": "Associated Press News",
+              "image": ""
+            },
+            {
+              "news_id": "d1a28d2fc9db55768f89c7781d3d4366",
+              "url": "https://www.msn.com/en-us/news/world/two-earthquakes-strike-chinas-qinghai-province/ar-AA28Pwjp?ocid=BingNewsVerp",
+              "headline": "Two earthquakes strike China's Qinghai province",
+              "body": "BEIJING, July 28 (Reuters) - A magnitude 5.7 earthquake struck Xinghai county in the northwestern Chinese province of Qinghai on Tuesday at 11:16 a.m. (0316 UTC), the China Earthquake Networks Centre ...",
+              "published_date": "2026-07-28",
+              "outlet": "Reuters on MSN",
+              "image": ""
+            },
+            {
+              "news_id": "556b9cbde76154eea2431194e474cd97",
+              "url": "https://www.washingtonpost.com/world/2026/07/28/china-earthquakes-qinghai-province-lanzhou/61984238-8a4a-11f1-8912-d71e69d679d7_story.html",
+              "headline": "Remote Chinese province struck by 2 earthquakes in 20 minutes",
+              "body": "A remote province in China was struck by two earthquakes just 18 minutes apart late Tuesday morning, according to the United States Geological Survey. The earthquakes in Qinghai province at 11:16 a.m.",
+              "published_date": "2026-07-28T00:00:00+00:00",
+              "outlet": "The Washington Post",
+              "image": ""
+            },
+            {
+              "news_id": "8e25fc2a3c9d5f03b5a37f1440730c02",
+              "url": "https://wtop.com/world/2026/07/remote-chinese-province-struck-by-2-earthquakes-in-20-minutes/",
+              "headline": "Remote Chinese province struck by 2 earthquakes in 20 minutes - WTOP News",
+              "body": "BEIJING (AP) — A remote province in China was struck by two earthquakes just 18 minutes apart late Tuesday morning, according to the United States Geological Survey. The earthquakes in Qinghai…",
+              "published_date": "2026-07-28",
+              "outlet": "WTOP Washington",
+              "image": "https://s.yimg.com/bo/6a31fb01-5770-5344-a7f8-e1ee8e9e4042_1783677946294.png.cf.jpg"
+            }
+          ]
+        }
+      ],
+      "logs_total": 1
+    },
+    {
+      "incident_id": "20260728-JP-EQ",
+      "tree_id": "8b9a0fd7d7d84dcf9915f43fd81312cd",
+      "canonical_name": "Earthquake M6.8 Uto, Japan 2026-07-28",
+      "summary": "A powerful earthquake, initially measured at magnitude 7.1 (later revised to 6.8), struck Kumamoto Prefecture in southern Japan on July 28, 2026, at 4:27 p.m. local time. The quake caused the partial collapse of the Aeon Mall in Kashima, trapping many people and leaving an unknown number dead, while injuring at least 50 others and causing widespread damage including fires, power outages, and damage to historic Kumamoto Castle.",
+      "country": "Japan",
+      "iso2": "JP",
+      "lat": 32.6817,
+      "lon": 130.7217,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "HIGH",
+      "priority": "HIGH",
+      "priority_rank": 1,
+      "pandemic_potential": null,
+      "event_status": null,
+      "extended_monitoring": false,
+      "disease_name": null,
+      "event_date": "2026-07-28",
+      "first_reported_date": "2026-07-28",
+      "last_updated_date": "2026-07-28",
+      "days_since_event": 0,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "ercc": 0,
+        "healthmap": 0,
+        "news": 37
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 6.8 - 5 km E of Uto, Japan",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tgb9",
+          "meta": "10 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 6.8,
+        "max_depth_km": 10.0,
+        "place": "5 km E of Uto, Japan",
+        "felt": 23,
+        "sig": 723,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Japan earthquake LIVE updates: Several deaths confirmed at Aeon mall in Kumamoto",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Historic Kumamoto Castle Is Damaged in the Japan Earthquake - AOL",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Japan earthquake leaves shoppers trapped in collapsed mall as 7.1 tremor strikes - AOL",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Map: 6.8-Magnitude Earthquake Shakes Japan",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Magnitude 7.1 earthquake shakes southern Japan, tsunami warning issued",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Magnitude 7.1 earthquake shakes part of southern Japan but no tsunami detected",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Powerful earthquake rocks Japan, damaging buildings and mall in south",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "'Considerable number' of people dead, many trapped in shopping mall after magnitude 7.1 quake hits Japan's Kyushu",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "7.1 magnitude quake shakes Japan's Kyushu and people are missing after a shopping center collapses",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "6.8 magnitude earthquake rocks Japan",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "People trapped and injured after powerful earthquake strikes Japan",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "People trapped and injured after powerful earthquake strikes Japan",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "7.1 magnitude quake shakes Japan’s Kyushu and people are missing after a shopping center collapses",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Japan Rocked By Major 7.1 Magnitude Earthquake",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Magnitude 7.1 earthquake strikes southern Japan, causing injuries and damage",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Powerful earthquake strikes southern Japan, causing destruction",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "7.1 magnitude quake leads to casualties, fires in Kumamoto | The Asahi Shimbun: Breaking News, Japan News and Analysis",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "7.1 magnitude quake shakes Japan’s Kyushu and people are missing after a shopping center collapses",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Japan earthquake: Several feared trapped in collapsed shopping mall",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Japan earthquake: Several feared trapped in collapsed shopping mall",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "7.1 magnitude earthquake strikes Japan — See the damaging impact",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Destroyed Aeon mall had just reopened for 'fresh start' a decade on from deadly quake",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Japan quake injures at least 50, disrupts power and travel",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Japan quake injures at least 50, disrupts power and travel",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "7.1 earthquake hits Japan; people trapped inside collapsed mall",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "7.1 magnitude earthquake hits southern Japan",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Mall collapses after powerful quake rocks Kumamoto",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "7.1 earthquake hits Japan; people trapped inside collapsed mall",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Japan Earthquake 2026 vs 2016 Kumamoto Crisis: What makes the two earthquakes so similar?- Moneycontrol.com",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Japan rocked by major earthquake; buildings collapsed, people trapped",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Earthquakes hit Japan, Mexico and China within hours",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Japan Earthquake 2026: Devastating videos show destruction as considerable death toll feared in Kumamoto Mall",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Live Updates: Many Feared Trapped in Mall Collapse After Japan Earthquake, Officials Say",
+          "published_date": "2026-07-28T00:00:00+00:00"
+        },
+        {
+          "headline": "Magnitude 6.8 earthquake hits Japan; no tsunami detected",
+          "published_date": "2026-07-28T07:06:00+00:00"
+        },
+        {
+          "headline": "Live Updates: Many Feared Trapped in Mall Collapse After Japan Earthquake, Officials Say",
+          "published_date": "2026-07-28T09:57:00+00:00"
+        },
+        {
+          "headline": "Japan's major earthquakes in the past 15 years",
+          "published_date": "2026-07-28T12:45:00+00:00"
+        },
+        {
+          "headline": "Magnitude 6.8 earthquake hits Japan; no tsunami detected",
+          "published_date": "2026-07-28T15:14:24+00:00"
+        }
+      ],
+      "news_total": 37,
+      "logs": [
+        {
+          "log_date": "2026-07-28",
+          "summary": "A powerful earthquake, initially measured at magnitude 7.1 (later revised to 6.8), struck Kumamoto Prefecture in southern Japan on July 28, 2026, at 4:27 p.m. local time. The quake caused the partial collapse of the Aeon Mall in Kashima, trapping many people and leaving an unknown number dead, while injuring at least 50 others and causing widespread damage including fires, power outages, and damage to historic Kumamoto Castle.",
+          "news": [
+            {
+              "news_id": "a00d1dc392aa5f49884884ed32682697",
+              "url": "https://www.thehindu.com/news/international/japan-earthquake-today-live-updates-seismic-activity-tsunami-warnings-on-july-28-2026-several-dead-injured/article71276753.ece",
+              "headline": "Japan earthquake LIVE updates: Several deaths confirmed at Aeon mall in Kumamoto",
+              "body": "Japan Earthquake LIVE: Several people who were trapped inside a mall are feared to have died after an earthquake in Japan on July 28, 2026.",
+              "published_date": "2026-07-28",
+              "outlet": "The Hindu",
+              "image": ""
+            },
+            {
+              "news_id": "a16aab8e76055efd9e5f0432f783f302",
+              "url": "https://www.aol.com/articles/historic-kumamoto-castle-damaged-japan-140038036.html",
+              "headline": "Historic Kumamoto Castle Is Damaged in the Japan Earthquake - AOL",
+              "body": "A 7.1 magnitude earthquake hit southern Japan, injuring dozens and collapsing buildings.",
+              "published_date": "2026-07-28",
+              "outlet": "Town & Country · via AOL",
+              "image": "https://media.zenfs.com/en/aol_towncountry_108/b2bfb1f8b6af7c2ca5c8168db6370947"
+            },
+            {
+              "news_id": "464e883fe4a3505b8a9db4d88ab27f2b",
+              "url": "https://www.aol.com/articles/japan-earthquake-panic-7-1-113121076.html",
+              "headline": "Japan earthquake leaves shoppers trapped in collapsed mall as 7.1 tremor strikes - AOL",
+              "body": "Panic has ensued in Japan after a powerful 7.1 magnitude earthquake hit Kumamoto on Tuesday afternoon, causing injuries and damages.",
+              "published_date": "2026-07-28",
+              "outlet": "The Mirror · via AOL",
+              "image": "https://media.zenfs.com/en/aol_the_mirror_191/a06d61c4e85a19ccafc1d9edd8a32d7b"
+            },
+            {
+              "news_id": "7b07b90f87265489a5fe555b56c5bbf8",
+              "url": "https://www.nytimes.com/interactive/2026/07/28/world/quake-tracker-japan.html",
+              "headline": "Map: 6.8-Magnitude Earthquake Shakes Japan",
+              "body": "View the location of the quake’s epicenter and shake area.",
+              "published_date": "2026-07-28",
+              "outlet": "The New York Times",
+              "image": "https://static01.nyt.com/images/2026/07/28/world/quake-tracker-japan-index/quake-tracker-japan-index-facebookJumbo.jpg"
+            },
+            {
+              "news_id": "a0a07b420ef45377be99187f77860f0f",
+              "url": "https://www.msn.com/en-us/news/world/magnitude-71-earthquake-shakes-southern-japan-tsunami-warning-issued/ar-AA28QXmb?ocid=BingNewsVerp",
+              "headline": "Magnitude 7.1 earthquake shakes southern Japan, tsunami warning issued",
+              "body": "PM Sanae Takaichi urges people ‘to remain vigilant for the possibility of another earthquake of similar magnitude’.",
+              "published_date": "2026-07-28",
+              "outlet": "Al Jazeera on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.cd99240040d4acc36a990692eba66734"
+            },
+            {
+              "news_id": "8ef4831e99815dae878d9e0954808c51",
+              "url": "https://www.nytimes.com/live/2026/07/28/world/japan-earthquake-kumamoto-tsunami",
+              "headline": "Live Updates: Many Feared Trapped in Mall Collapse After Japan Earthquake, Officials Say",
+              "body": "Emergency workers were racing to find people and extinguish fires after the 6.8 magnitude quake struck the southwestern prefecture of Kumamoto.",
+              "published_date": "2026-07-28T09:57:00+00:00",
+              "outlet": "The New York Times",
+              "image": ""
+            },
+            {
+              "news_id": "942f1ae4f04e5ba2bd77c2ea41e705df",
+              "url": "https://www.msn.com/en-us/news/world/magnitude-71-earthquake-shakes-part-of-southern-japan-but-no-tsunami-detected/ar-AA28R5bg?ocid=BingNewsVerp",
+              "headline": "Magnitude 7.1 earthquake shakes part of southern Japan but no tsunami detected",
+              "body": "An earthquake registering a magnitude of 7.1 shook Kumamoto on Japan’s southern main island of Kyushu late Tuesday afternoon ...",
+              "published_date": "2026-07-28",
+              "outlet": "New York Post on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.0JAx-WCAQva1ygctYv9a0w"
+            },
+            {
+              "news_id": "59b72426107d5e68b819e595e6e085a2",
+              "url": "https://www.yahoo.com/news/weather-news/articles/magnitude-7-1-earthquake-rocks-080300323.html",
+              "headline": "Powerful earthquake rocks Japan, damaging buildings and mall in south",
+              "body": "Japanese media reported that a shopping mall in Kumamoto partially collapsed.",
+              "published_date": "2026-07-28",
+              "outlet": "Yahoo",
+              "image": "https://s.yimg.com/lo/mysterio/api/610790006c24d734a7a122d74e32ec133baa204a845e2e36152f926d873b1af7/lightyear_networkapi/resizefill_w960;quality_80;format_webp/https://media.zenfs.com/en/us.abcnews.gma.com/11459db1c3ddc110cca1a0549aa93d52"
+            },
+            {
+              "news_id": "bdb20cf8c4fd50e49202d4d4d244d6fd",
+              "url": "https://www.channelnewsasia.com/east-asia/japan-kyushu-earthquake-71-tsunami-6282661",
+              "headline": "'Considerable number' of people dead, many trapped in shopping mall after magnitude 7.1 quake hits Japan's Kyushu",
+              "body": "The authorities said the second floor of the Aeon Mall in Kashima, Kumamoto collapsed, with reports of what sounded like an explosion.",
+              "published_date": "2026-07-28",
+              "outlet": "CNA",
+              "image": "https://www.bing.com/th?id=ONUT.i96GoMVE76ij5dMu7F3zPQ"
+            },
+            {
+              "news_id": "1c00df7dddb75e0eb353b1aa28314fca",
+              "url": "https://apnews.com/article/japan-earthquake-tsunami-09e6f40acbcc96053946c9c104e7a242",
+              "headline": "7.1 magnitude quake shakes Japan's Kyushu and people are missing after a shopping center collapses",
+              "body": "An earthquake with a magnitude of 7.1 has shaken Japan’s southern main island of Kyushu. It caused part of a shopping center in Kashima Town to collapse on Tuesday, leaving dozens of people missing or injured.",
+              "published_date": "2026-07-28",
+              "outlet": "Associated Press News",
+              "image": "https://dims.apnews.com/dims4/default/817a46c/2147483647/strip/true/crop/3824x2548+72+0/resize/980x653!/quality/90/?url=https://assets.apnews.com/af/46/480c09c62a5d7440b58eae5eb7fb/1d22a76269b04343b4b5983df4a461b2"
+            },
+            {
+              "news_id": "8ae55b0244615614ba6cb3bfa1b072f4",
+              "url": "https://www.wftv.com/news/trending/68-magnitude-earthquake-rocks-japan/UFNUUSNJD5HU3FVM6XWVOWVUWM/",
+              "headline": "6.8 magnitude earthquake rocks Japan",
+              "body": "Kumamoto, Japan hit by 6.8 magnitude earthquake causing widespread damage, injuries, and trapping people.",
+              "published_date": "2026-07-28",
+              "outlet": "WFTV 9 Orlando",
+              "image": "https://s.yimg.com/bo/8944029a-baea-5233-a2ed-9124c2cf9024_1785247151930.jpg"
+            },
+            {
+              "news_id": "dccd0b94de0f594fa97e539bd3dca855",
+              "url": "https://www.msn.com/en-us/news/world/people-trapped-and-injured-after-powerful-earthquake-strikes-japan/ar-AA28QDQ2?ocid=BingNewsVerp",
+              "headline": "People trapped and injured after powerful earthquake strikes Japan",
+              "body": "A powerful earthquake hit southern Japan, seriously damaging a shopping mall where there are reportedly many people trapped ...",
+              "published_date": "2026-07-28",
+              "outlet": "CBS News on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.laZ-OmCN3Pk9rEMEkZS3NA"
+            },
+            {
+              "news_id": "430b4dfe3a095c1c865706039573a0ec",
+              "url": "https://www.msn.com/en-us/news/world/strong-71-magnitude-earthquake-strikes-southern-japan/ar-AA28QDQ2",
+              "headline": "People trapped and injured after powerful earthquake strikes Japan",
+              "body": "A powerful earthquake hit southern Japan, seriously damaging a shopping mall where there are reportedly many people trapped and some dead.",
+              "published_date": "2026-07-28",
+              "outlet": "CBS News",
+              "image": "https://s.yimg.com/lo/mysterio/api/7312542c9ace0df4bdc9fd07af64e10a4b92bf68ef110dcca88502c58391cebe/lightyear_networkapi/resizefill_w1200;quality_80;format_webp/https://media.zenfs.com/en/cbs_news_897/fea7f5da3495fa787d1b99fe6952be87"
+            },
+            {
+              "news_id": "ab3c5f8ab90d5aa89c9bd8f59806eb31",
+              "url": "https://www.baltimoresun.com/2026/07/28/japan-earthquake-shopping-center/",
+              "headline": "7.1 magnitude quake shakes Japan’s Kyushu and people are missing after a shopping center collapses",
+              "body": "Around 20 to 30 employees were missing while several others were dug out.",
+              "published_date": "2026-07-28",
+              "outlet": "The Baltimore Sun",
+              "image": "https://www.bing.com/th?id=ONUT.0K8OSHhsglpwKT1FfnqHAQ"
+            },
+            {
+              "news_id": "63a7fa6c15a95420a9b3858e19d723db",
+              "url": "https://www.tmz.com/2026/07/28/japan-suffers-massive-earthquake/",
+              "headline": "Japan Rocked By Major 7.1 Magnitude Earthquake",
+              "body": "Japan was rocked by a massive earthquake Tuesday, creating a path of destruction that trapped multiple people inside a mall.",
+              "published_date": "2026-07-28",
+              "outlet": "TMZ",
+              "image": "https://s.yimg.com/bo/c8bf8df5-d435-5410-b83d-96235a2322f1_1785247637880.png.cf.jpg"
+            },
+            {
+              "news_id": "db696906821050e9bb44733a6086d549",
+              "url": "https://www.fox29.com/news/magnitude-7-1-earthquake-strikes-southern-japan-causing-injuries-damage",
+              "headline": "Magnitude 7.1 earthquake strikes southern Japan, causing injuries and damage",
+              "body": "A powerful earthquake struck southern Japan, damaging buildings, derailing a train and trapping an unknown number of people inside a shopping mall.",
+              "published_date": "2026-07-28",
+              "outlet": "FOX 29 Philadelphia",
+              "image": "https://s.yimg.com/bo/19238e44-7a03-5dac-ae68-7b0f27b4ed4d_1785246870431.jpg"
+            },
+            {
+              "news_id": "9330423971c35fd3a342dff0364bc1dd",
+              "url": "https://www.msn.com/en-us/news/world/powerful-earthquake-strikes-southern-japan-causing-destruction/ar-AA28RkoH?ocid=BingNewsVerp",
+              "headline": "Powerful earthquake strikes southern Japan, causing destruction",
+              "body": "There are reports of at least 50 people injured along with collapsed buildings and damaged roads following the powerful 7.1-magnitude quake on the southwestern island of Kyushu.",
+              "published_date": "2026-07-28",
+              "outlet": "The Washington Post on MSN",
+              "image": ""
+            },
+            {
+              "news_id": "9220e84784aa59e289cd8d5f54e6ed8f",
+              "url": "https://www.asahi.com/ajw/articles/16762650",
+              "headline": "7.1 magnitude quake leads to casualties, fires in Kumamoto | The Asahi Shimbun: Breaking News, Japan News and Analysis",
+              "body": "A major earthquake that registered a maximum seismic intensity of 7 rocked Kumamoto Prefecture at 4:27 p.m. on July 28, causing casualties, damaging or destroying infrastructure and disrupting transportation.",
+              "published_date": "2026-07-28",
+              "outlet": "The Asahi Shimbun",
+              "image": "https://p.potaufeu.asahi.com/9c3d-p/picture/31137429/f9dbf2aab89d7395f377a517c3b220d6.jpg"
+            },
+            {
+              "news_id": "7ebd16c88940590b9dd6497cc5865397",
+              "url": "https://www.bostonherald.com/2026/07/28/japan-earthquake-shopping-center/",
+              "headline": "7.1 magnitude quake shakes Japan’s Kyushu and people are missing after a shopping center collapses",
+              "body": "Around 20 to 30 employees were missing while several others were dug out.",
+              "published_date": "2026-07-28",
+              "outlet": "Boston Herald",
+              "image": "https://s.yimg.com/bo/993adfd6-4222-5c35-b6a9-10cf09375acf_1785251427573.jpg"
+            },
+            {
+              "news_id": "e1bd976f63c4502bb1f8f5f583f19f37",
+              "url": "https://www.wxii12.com/article/earthquake-japan-july-28/73282028",
+              "headline": "Japan earthquake: Several feared trapped in collapsed shopping mall",
+              "body": "An earthquake registering a magnitude of 7.1 shook part of southern Japan late Tuesday.",
+              "published_date": "2026-07-28",
+              "outlet": "WXII-TV Winston-Salem",
+              "image": "https://s.yimg.com/bo/e3ee17cf-3b92-5bab-8936-0d5e7c3e68f4_1785235264758.jpg"
+            },
+            {
+              "news_id": "6d31ca2a85445b18a470d65b03a5da7f",
+              "url": "https://www.reuters.com/business/environment/japans-major-earthquakes-past-15-years-2026-07-28/",
+              "headline": "Japan's major earthquakes in the past 15 years",
+              "body": "A powerful earthquake struck southern Japan on Tuesday, leaving many presumed dead inside a partially collapsed shopping mall, thousands of houses without power and factories suspended.",
+              "published_date": "2026-07-28T12:45:00+00:00",
+              "outlet": "Reuters",
+              "image": "https://www.reuters.com/resizer/v2/OKSCVDCDCJNRPINXP3DVT5CMSY.jpg?auth=e0853130142cd6d64dc45998e860ded9ce5d5abb013f9e71211a2f0d0c2bf4e7&height=1005&width=1920&quality=80&smart=true"
+            },
+            {
+              "news_id": "88e7930812e65917b383c76b8c5e2642",
+              "url": "https://www.wisn.com/article/earthquake-japan-july-28/73282028",
+              "headline": "Japan earthquake: Several feared trapped in collapsed shopping mall",
+              "body": "An earthquake registering a magnitude of 7.1 shook part of southern Japan late Tuesday.",
+              "published_date": "2026-07-28",
+              "outlet": "WISN 12 News",
+              "image": "https://kubrick.htvapps.com/htv-prod/images/75cf97ff-a51a-43ba-a6af-8ab78f536f35.jpg?resize=1200:*&crop=1.00xw:0.752xh;0,0"
+            },
+            {
+              "news_id": "e88520a5edb15470a93e1412fb2d3fc3",
+              "url": "https://www.usatoday.com/picture-gallery/news/world/2026/07/28/japan-major-earthquake-photo/91073883007/",
+              "headline": "7.1 magnitude earthquake strikes Japan — See the damaging impact",
+              "body": "A major earthquake struck Japan on July 28, causing injuries, collapsing buildings and damaging roads. See the damaging impact in photos.",
+              "published_date": "2026-07-28",
+              "outlet": "USA Today",
+              "image": "https://s.yimg.com/bo/70931b73-36e9-59d7-8094-3f0d024216da_1785242305838.jpg"
+            },
+            {
+              "news_id": "4598963407dd52ec80461e317b2c5def",
+              "url": "https://www.msn.com/en-us/travel/malls-and-shopping-centers/destroyed-aeon-mall-had-just-reopened-for-fresh-start-a-decade-on-from-deadly-quake/ar-AA28RWZM",
+              "headline": "Destroyed Aeon mall had just reopened for 'fresh start' a decade on from deadly quake",
+              "body": "By Satoshi Sugiyama, Chang-Ran Kim and Kentaro Okasaka TOKYO, July 28 (Reuters) - The Aeon mall destroyed in a post-quake explosion in southern Japan on Tuesday had just reopened last month as a new and improved shopping and entertainment complex to commemorate its recovery from a deadly tremor a decade ago.",
+              "published_date": "2026-07-28",
+              "outlet": "Reuters",
+              "image": "https://apicms.thestar.com.my/uploads/images/2026/07/28/4032380.jpg"
+            },
+            {
+              "news_id": "b2873e87cdba50328cd9faa45221d90a",
+              "url": "https://www.msn.com/en-us/news/world/japan-quake-injures-at-least-50-disrupts-power-and-travel/ar-AA28QPeI?ocid=BingNewsVerp",
+              "headline": "Japan quake injures at least 50, disrupts power and travel",
+              "body": "TOKYO, July 28 (Reuters) - A major earthquake rocked Japan's southern Kumamoto prefecture on Tuesday, knocking out power to thousands of homes, rupturing roads and injuring at least 50 people.",
+              "published_date": "2026-07-28",
+              "outlet": "Reuters on MSN",
+              "image": ""
+            },
+            {
+              "news_id": "78a56d40b4825a3da9f107dc9e33e575",
+              "url": "https://www.msn.com/en-us/news/world/japan-quake-injures-at-least-50-disrupts-power-and-travel/ar-AA28QPeI",
+              "headline": "Japan quake injures at least 50, disrupts power and travel",
+              "body": "TOKYO, July 28 (Reuters) - A major earthquake rocked Japan's southern Kumamoto prefecture on Tuesday, knocking out power to thousands of homes, rupturing roads and injuring at least 50 people. Speaking to reporters at her office in Tokyo,",
+              "published_date": "2026-07-28",
+              "outlet": "Reuters",
+              "image": ""
+            },
+            {
+              "news_id": "51eff61efc4c5867b4298d2870eff2cc",
+              "url": "https://www.msn.com/en-us/news/world/71-earthquake-hits-japan-people-trapped-inside-collapsed-mall/ar-AA28RFo6?ocid=BingNewsVerp",
+              "headline": "7.1 earthquake hits Japan; people trapped inside collapsed mall",
+              "body": "A magnitude 7.1 earthquake hit southwestern Japan on Kyushu Island Tuesday, trapping people inside a shopping mall and ...",
+              "published_date": "2026-07-28",
+              "outlet": "UPI News on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.Kvd48gPafGAKHOoKmb2aHg"
+            },
+            {
+              "news_id": "ac9ebc330e6e50959c66f6462c233d62",
+              "url": "https://www.mlive.com/news/2026/07/magnitude-68-earthquake-hits-japan-no-tsunami-detected.html",
+              "headline": "Magnitude 6.8 earthquake hits Japan; no tsunami detected",
+              "body": "A magnitude 6.8 earthquake hit Japan on Tuesday, according to the U.S. Geological survey and the Japan Meteorological Agency. The quake, initially measured at a magnitude of 7.1, shook Kumamoto on Japan's southern main island of Kyushu late Tuesday afternoon,",
+              "published_date": "2026-07-28T07:06:00+00:00",
+              "outlet": "mlive",
+              "image": "https://www.mlive.com/resizer/v2/YF534FH3MNHIHHCHWGJPBYSWWQ.jpg?auth=e792f2fec070509cc73be92191168431aca663663504476cba1094db37e24aaf&width=1280&smart=true&quality=90"
+            },
+            {
+              "news_id": "2162f08811b45e908c930549be2a998d",
+              "url": "https://www.straitstimes.com/asia/east-asia/extremely-strong-earthquake-hits-japans-kyushu-island",
+              "headline": "7.1 magnitude earthquake hits southern Japan",
+              "body": "A powerful 7.1-magnitude earthquake struck southern Japan's Kumamoto prefecture, causing widespread damage, power outages, and injuries. Read more at straitstimes.com. Read more at straitstimes.com.",
+              "published_date": "2026-07-28",
+              "outlet": "The Straits Times",
+              "image": "https://cassette.sphdigital.com.sg/image/straitstimes/41f80b0beb71bf2c123e94cd6cb9c13e926a6300c47b352c497fc621464f78fb"
+            },
+            {
+              "news_id": "3ea1f77d8add577493dfffdad92717b6",
+              "url": "https://www.syracuse.com/us-news/2026/07/magnitude-68-earthquake-hits-japan-no-tsunami-detected.html",
+              "headline": "Magnitude 6.8 earthquake hits Japan; no tsunami detected",
+              "body": "A magnitude 6.8 earthquake hit Japan on Tuesday, according to the U.S. Geological survey and the Japan Meteorological Agency. The quake, initially measured at a magnitude of 7.1, shook Kumamoto on ...",
+              "published_date": "2026-07-28T15:14:24+00:00",
+              "outlet": "Syracuse.com",
+              "image": ""
+            },
+            {
+              "news_id": "91f3666f684556c79be64231c19ae006",
+              "url": "https://www.japantimes.co.jp/news/2026/07/28/japan/strong-earthquake-kyushu/",
+              "headline": "Mall collapses after powerful quake rocks Kumamoto",
+              "body": "The quake registered up to shindo 7, the highest level on the Japanese seismic intensity scale.",
+              "published_date": "2026-07-28",
+              "outlet": "The Japan Times",
+              "image": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/07/28/554146.jpg?v=3.1"
+            },
+            {
+              "news_id": "5d99a44c0ec458349c38e70ff1167877",
+              "url": "https://www.msn.com/en-us/news/world/71-earthquake-hits-japan-people-trapped-inside-collapsed-mall/ar-AA28RFo6",
+              "headline": "7.1 earthquake hits Japan; people trapped inside collapsed mall",
+              "body": "A magnitude 7.1 earthquake hit southwestern Japan on Kyushu Island Tuesday, trapping people inside a shopping mall and injuring dozens.",
+              "published_date": "2026-07-28",
+              "outlet": " UPI News",
+              "image": "https://cdnph.upi.com/sv/ph/og/upi_com/6701785244891/2026/1/83a545086162d5b3a62eff7f7bdcd7bd/v1.5/71-earthquake-hits-Japan-people-trapped-inside-collapsed-mall.jpg"
+            },
+            {
+              "news_id": "2822cf4914905cbdb5b2e8bef9155873",
+              "url": "https://www.moneycontrol.com/science/japan-earthquake-2026-vs-2016-kumamoto-crisis-what-makes-the-two-earthquakes-so-similar-article-13986031.html",
+              "headline": "Japan Earthquake 2026 vs 2016 Kumamoto Crisis: What makes the two earthquakes so similar?- Moneycontrol.com",
+              "body": "Japan's 7.1-magnitude earthquake has revived memories of the 2016 Kumamoto disaster. Here's how the two earthquakes compare and what has changed in 10 years.",
+              "published_date": "2026-07-28",
+              "outlet": "Moneycontrol",
+              "image": ""
+            },
+            {
+              "news_id": "a880a8454d44542c998d41ff810c8411",
+              "url": "https://www.msn.com/en-us/news/world/japan-rocked-by-major-earthquake-buildings-collapsed-people-trapped/ar-AA28Rkb7",
+              "headline": "Japan rocked by major earthquake; buildings collapsed, people trapped",
+              "body": "The earthquake caused dozens of injuries, according to Japanese media. At a shopping mall, people were trapped after an explosion.",
+              "published_date": "2026-07-28",
+              "outlet": "USA TODAY",
+              "image": ""
+            },
+            {
+              "news_id": "f6a1e696381c50ea9fbbba9cbe7e3192",
+              "url": "https://www.msn.com/en-us/news/world/earthquakes-hit-japan-mexico-and-china-within-hours/ar-AA28R998?ocid=BingNewsVerp",
+              "headline": "Earthquakes hit Japan, Mexico and China within hours",
+              "body": "Powerful earthquakes struck Japan, Mexico and China within hours of one another on Tuesday, prompting a tsunami warning in ...",
+              "published_date": "2026-07-28",
+              "outlet": "Cyprus Mail on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.8NDmyNXsQ7cPZxUZ5yFcSQ"
+            },
+            {
+              "news_id": "6861d0427f93512788091ccd373303e9",
+              "url": "https://www.nytimes.com/live/2026/07/28/world/japan-earthquake-kumamoto-tsunami/japan-earthquake-kumamoto-tsunami",
+              "headline": "Live Updates: Many Feared Trapped in Mall Collapse After Japan Earthquake, Officials Say",
+              "body": "Fires and injuries were reported after the quake in Kumamoto Prefecture, according to Japan’s state broadcaster. A tsunami warning was lifted. Francesca Regalado River Akira Davis and Leo Sands River ...",
+              "published_date": "2026-07-28T00:00:00+00:00",
+              "outlet": "The New York Times",
+              "image": ""
+            },
+            {
+              "news_id": "2c5284d53cb65b7f92a819fa643ca1fb",
+              "url": "https://me.mashable.com/culture/74337/japan-earthquake-2026-devastating-videos-show-destruction-as-considerable-death-toll-feared-in-kumam",
+              "headline": "Japan Earthquake 2026: Devastating videos show destruction as considerable death toll feared in Kumamoto Mall",
+              "body": "A powerful quake rocks southwestern Japan, trapping people, cutting power, and unleashing chaos, while shocking visuals flood social media and rescue efforts race against time.",
+              "published_date": "2026-07-28",
+              "outlet": "Mashable",
+              "image": "https://s.yimg.com/bo/a8d934d0-7dd9-5687-9d33-c415c5b8b4d7_1785246253742.jpg"
+            }
+          ]
+        }
+      ],
+      "logs_total": 1
+    },
+    {
+      "incident_id": "20260728-JP-EQ",
+      "tree_id": "a20cbed2a23344df936c962d5f3267ef",
+      "canonical_name": "Earthquake M5.6 Tsunagi, Japan 2026-07-28",
+      "summary": "A 7.1-magnitude earthquake struck southern Japan's Kyushu island near Kumamoto on July 28, 2026, causing a shopping mall to partially collapse with multiple people trapped and feared dead. The quake knocked out power to thousands of homes, ruptured roads, triggered a temporary tsunami advisory, and left dozens injured, with up to 30 mall employees missing after an explosion.",
+      "country": "Japan",
+      "iso2": "JP",
+      "lat": 32.3529,
+      "lon": 130.5868,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": null,
+      "event_status": null,
+      "extended_monitoring": false,
+      "disease_name": null,
+      "event_date": "2026-07-28",
+      "first_reported_date": "2026-07-28",
+      "last_updated_date": "2026-07-28",
+      "days_since_event": 0,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "ercc": 0,
+        "healthmap": 0,
+        "news": 9
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 5.6 - 16 km NE of Tsunagi, Japan",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tgbm",
+          "meta": "10 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 5.6,
+        "max_depth_km": 10.0,
+        "place": "16 km NE of Tsunagi, Japan",
+        "felt": null,
+        "sig": 482,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Southern Japan rocked by major earthquake, people trapped in mall",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "People trapped and injured after powerful earthquake strikes Japan",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Multiple People Feared Dead in Collapsed Mall After 7.1-Magnitude Earthquake Hits Japan",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Japan rocked by major earthquake; buildings collapsed, people trapped",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Major quake hits southern Japan, workers missing after mall blast",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "A magnitude 7.1 earthquake shakes part of southern Japan and a tsunami advisory is issued",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Magnitude 7.1 earthquake damages Japanese shopping center, trapping unknown number of people",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Japan earthquake live updates: Up to 30 mall employees missing after explosion; several trapped at paper factory",
+          "published_date": "2026-07-28"
+        },
+        {
+          "headline": "Deaths feared in Japan shopping mall blast after 7.1-magnitude earthquake hits Kyushu, tsunami warning lifted",
+          "published_date": "2026-07-28"
+        }
+      ],
+      "news_total": 9,
+      "logs": [
+        {
+          "log_date": "2026-07-28",
+          "summary": "A 7.1-magnitude earthquake struck southern Japan's Kyushu island near Kumamoto on July 28, 2026, causing a shopping mall to partially collapse with multiple people trapped and feared dead. The quake knocked out power to thousands of homes, ruptured roads, triggered a temporary tsunami advisory, and left dozens injured, with up to 30 mall employees missing after an explosion.",
+          "news": [
+            {
+              "news_id": "cf2a776883a955158d6e677aacea06a5",
+              "url": "https://www.rappler.com/world/asia-pacific/kyushu-japan-earthquake-july-28-2026/",
+              "headline": "Southern Japan rocked by major earthquake, people trapped in mall",
+              "body": "(2nd UPDATE) Residents in the areas that felt the biggest tremors must beware of further strong quakes for about a week, as well as the risk of landslides, an official for the Japan Meteorological Agency says",
+              "published_date": "2026-07-28",
+              "outlet": "Rappler",
+              "image": ""
+            },
+            {
+              "news_id": "7012a8e70a605e71bda542417382f194",
+              "url": "https://www.msn.com/en-us/news/world/strong-71-magnitude-earthquake-strikes-southern-japan/ar-AA28QDQ2?ocid=BingNewsVerp",
+              "headline": "People trapped and injured after powerful earthquake strikes Japan",
+              "body": "A powerful earthquake hit southern Japan, seriously damaging a shopping mall where there are reportedly many people trapped ...",
+              "published_date": "2026-07-28",
+              "outlet": "CBS News on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.JtHC8R8oSmNIG_rbAuxoWg"
+            },
+            {
+              "news_id": "16a2b3a8fe41514c8b1bcdcd3f25739f",
+              "url": "https://www.msn.com/en-us/news/world/multiple-people-feared-dead-in-collapsed-mall-after-71-magnitude-earthquake-hits-japan/ar-AA28Rzc4?ocid=BingNewsVerp",
+              "headline": "Multiple People Feared Dead in Collapsed Mall After 7.1-Magnitude Earthquake Hits Japan",
+              "body": "The earthquake triggered tsunami warnings after it hit Japan’s Kyushu island on Tuesday, July 28 ...",
+              "published_date": "2026-07-28",
+              "outlet": "People on MSN",
+              "image": ""
+            },
+            {
+              "news_id": "430547a91eb95e90a9ee72da857cd680",
+              "url": "https://www.msn.com/en-us/news/world/japan-rocked-by-major-earthquake-buildings-collapsed-people-trapped/ar-AA28Rkb7?ocid=BingNewsVerp",
+              "headline": "Japan rocked by major earthquake; buildings collapsed, people trapped",
+              "body": "The earthquake caused dozens of injuries, according to Japanese media. At a shopping mall, people were trapped after an explosion.",
+              "published_date": "2026-07-28",
+              "outlet": "USA TODAY on MSN",
+              "image": ""
+            },
+            {
+              "news_id": "4db80219a6215b6281589b31b2c9f3d5",
+              "url": "https://www.msn.com/en-us/news/world/major-quake-hits-southern-japan-workers-missing-after-mall-blast/ar-AA28RN4e?ocid=BingNewsVerp",
+              "headline": "Major quake hits southern Japan, workers missing after mall blast",
+              "body": "By Anton Bridge, Satoshi Sugiyama and Kantaro Komiya TOKYO, July 28 (Reuters) - A 7.1-magnitude earthquake hit Japan's ...",
+              "published_date": "2026-07-28",
+              "outlet": "Reuters on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.7WZKbGv_12YxcDp0ujejlw"
+            },
+            {
+              "news_id": "13316a05726458858d463940e043a1cc",
+              "url": "https://phys.org/news/2026-07-magnitude-earthquake-southern-japan-tsunami.html",
+              "headline": "A magnitude 7.1 earthquake shakes part of southern Japan and a tsunami advisory is issued",
+              "body": "An earthquake registering a preliminary magnitude of 7.1 shook Kumamoto on Japan's southern main island of Kyushu late Tuesday afternoon and a tsunami advisory was issued, the Japan Meteorological Agency said.",
+              "published_date": "2026-07-28",
+              "outlet": "Phys.org",
+              "image": ""
+            },
+            {
+              "news_id": "fccc2aa7de155711a0a9bab19ac9633b",
+              "url": "https://nypost.com/2026/07/28/world-news/a-magnitude-7-1-earthquake-shakes-part-of-southern-japan-but-no-tsunami-detected/",
+              "headline": "Magnitude 7.1 earthquake damages Japanese shopping center, trapping unknown number of people",
+              "body": "An earthquake registering a magnitude of 7.1 shook Kumamoto on Japan’s southern main island of Kyushu late Tuesday afternoon and a tsunami advisory was temporarily issued.",
+              "published_date": "2026-07-28",
+              "outlet": "New York Post",
+              "image": "https://www.bing.com/th?id=ONUT.TVRKEz_VLxBRE5Fmgt1HHw"
+            },
+            {
+              "news_id": "6f323c41ebc35cc68d57a6350d2a5d45",
+              "url": "https://nypost.com/2026/07/28/world-news/japan-earthquake-live-updates-reactions-photos-more/",
+              "headline": "Japan earthquake live updates: Up to 30 mall employees missing after explosion; several trapped at paper factory",
+              "body": "Follow The Post’s live updates on the 7.1 magnitude earthquake that rocked Japan on Tuesday, for the latest news, photos and videos.",
+              "published_date": "2026-07-28",
+              "outlet": "New York Post",
+              "image": "https://www.bing.com/th?id=ONUT.Uon-qnF2JrIzhqBi1-YqCQ"
+            },
+            {
+              "news_id": "3cd8601f438e5eafa3869ac394cc71f4",
+              "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/07/28/deaths-feared-in-japan-shopping-mall-blast-after-71-magnitude-earthquake-hits-kyushu-tsunami-warning-lifted",
+              "headline": "Deaths feared in Japan shopping mall blast after 7.1-magnitude earthquake hits Kyushu, tsunami warning lifted",
+              "body": "A 7.1-magnitude earthquake hit southern Japan's Kumamoto prefecture on July 28, knocking out power to thousands of homes, rupturing roads and leaving some trapped and others presumed dead inside a partially collapsed shopping mall.",
+              "published_date": "2026-07-28",
+              "outlet": "The Star",
+              "image": "https://www.bing.com/th?id=ONUT.mXBoMm9Tjuz4CplmoKeiig"
             }
           ]
         }
