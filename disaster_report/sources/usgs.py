@@ -118,19 +118,23 @@ class USGSAdapter:
     ) -> str | None:
 
         my_ids = _parse_usgs_ids(report.raw_fields.get("ids"))
-        if not my_ids:
-            return None
-        store = wh
-        for ruuid, existing in store._reports.items():
-            if existing.get("source") != "USGS":
-                continue
-            existing_ids = _parse_usgs_ids(
-                existing.get("raw_fields", {}).get("ids")
+        if my_ids:
+            store = wh
+            for ruuid, existing in store._reports.items():
+                if existing.get("source") != "USGS":
+                    continue
+                existing_ids = _parse_usgs_ids(
+                    existing.get("raw_fields", {}).get("ids")
+                )
+                if my_ids & existing_ids:
+                    inc = store._report_incident.get(ruuid)
+                    if inc:
+                        return inc
+        country_codes = {p.country_code for p in report.places if p.country_code}
+        if country_codes:
+            return wh.find_active_incident_by_type_country(
+                report.incident_type, country_codes, active_window_days
             )
-            if my_ids & existing_ids:
-                inc = store._report_incident.get(ruuid)
-                if inc:
-                    return inc
         return None
 
 

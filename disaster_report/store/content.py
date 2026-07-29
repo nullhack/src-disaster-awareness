@@ -553,8 +553,8 @@ class ContentStore:
         for inc in self.active_incidents(window_days):
             if inc.incident_type != incident_type:
                 continue
-            for ruuid in self._linked_reports(inc.incident_id):
-                for place in self.read_report_places(ruuid):
+            if inc.genesis_report_id:
+                for place in self.read_report_places(inc.genesis_report_id):
                     if place.country_code in country_codes:
                         return inc.incident_id
         return None
