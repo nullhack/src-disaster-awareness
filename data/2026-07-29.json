@@ -1,24 +1,24 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-07-29",
-  "generated_at": "2026-07-31T10:05:52Z",
+  "generated_at": "2026-07-31T15:37:53Z",
   "as_of": "2026-07-29",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 9,
+    "reportable_total": 8,
     "new_today": 1,
     "critical": 2,
-    "high": 2,
+    "high": 1,
     "medium": 5,
     "low": 0,
     "disease_outbreaks": 2,
-    "countries_affected": 9,
-    "news_total": 415,
+    "countries_affected": 8,
+    "news_total": 409,
     "max_magnitude": 6.2,
     "by_severity": {
       "CRITICAL": 2,
-      "HIGH": 2,
+      "HIGH": 1,
       "MEDIUM": 5,
       "LOW": 0
     },
@@ -26,10 +26,10 @@
       "Volcano": 1,
       "Disease": 2,
       "Forest Fire": 2,
-      "Earthquake": 4
+      "Earthquake": 3
     },
     "by_region": {
-      "Asia": 4,
+      "Asia": 3,
       "Global": 1,
       "Europe": 2,
       "Americas": 1,
@@ -87,15 +87,6 @@
       "count": 1,
       "max_sev_rank": 3,
       "iso2": "PH",
-      "region": "Asia",
-      "country_group": "A",
-      "max_severity": "HIGH"
-    },
-    {
-      "country": "China",
-      "count": 1,
-      "max_sev_rank": 3,
-      "iso2": "CN",
       "region": "Asia",
       "country_group": "A",
       "max_severity": "HIGH"
@@ -5225,133 +5216,6 @@
         }
       ],
       "logs_total": 2
-    },
-    {
-      "incident_id": "20260728-CN-EQ",
-      "tree_id": "903c9dac42a9444b8b8f14e85003b697",
-      "canonical_name": "Earthquake M5.8 Oula Xiuma, China 2026-07-28",
-      "summary": "On July 28, 2026, a remote area of Qinghai province in China was struck by two earthquakes 18 minutes apart, with magnitudes of 5.7 and 5.8 according to the USGS.",
-      "country": "China",
-      "iso2": "CN",
-      "lat": 35.3866,
-      "lon": 99.5513,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "HIGH",
-      "priority": "HIGH",
-      "priority_rank": 1,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-07-28",
-      "first_reported_date": "2026-07-28",
-      "last_updated_date": "2026-07-28",
-      "days_since_event": 3,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 6
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 5.8 - 191 km NW of Oula Xiuma, China",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tga9",
-          "meta": "10 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 5.8,
-        "max_depth_km": 10.0,
-        "place": "191 km NW of Oula Xiuma, China",
-        "felt": null,
-        "sig": 650,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Remote Chinese province struck by 2 earthquakes in 20 minutes - WTOP News",
-          "published_date": "2026-07-01"
-        },
-        {
-          "headline": "Remote Chinese province struck by 2 earthquakes in 20 minutes - WTOP News",
-          "published_date": "2026-07-01"
-        },
-        {
-          "headline": "Remote Chinese province struck by 2 earthquakes in 20 minutes",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Two earthquakes strike China's Qinghai province",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Remote Chinese province struck by 2 earthquakes in 20 minutes - WTOP News",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Remote Chinese province struck by 2 earthquakes in 20 minutes",
-          "published_date": "2026-07-28T00:00:00+00:00"
-        }
-      ],
-      "news_total": 6,
-      "logs": [
-        {
-          "log_date": "2026-07-28",
-          "summary": "On July 28, 2026, a remote area of Qinghai province in China was struck by two earthquakes 18 minutes apart, with magnitudes of 5.7 and 5.8 according to the USGS.",
-          "news": [
-            {
-              "news_id": "00692e5258995c9486b6254afacb21d6",
-              "url": "https://apnews.com/article/china-earthquakes-qinghai-province-lanzhou-947dc26f34102ef81b6d73e78914a8bc",
-              "headline": "Remote Chinese province struck by 2 earthquakes in 20 minutes",
-              "body": "China's remote Qinghai province has been struck by two earthquakes minutes apart. The United States Geological Survey says the earthquakes with magnitudes of 5.7 and 5.8 occurred at 11:16 a.m. and 11:34 a.m.",
-              "published_date": "2026-07-28",
-              "outlet": "Associated Press News",
-              "image": ""
-            },
-            {
-              "news_id": "d1a28d2fc9db55768f89c7781d3d4366",
-              "url": "https://www.msn.com/en-us/news/world/two-earthquakes-strike-chinas-qinghai-province/ar-AA28Pwjp?ocid=BingNewsVerp",
-              "headline": "Two earthquakes strike China's Qinghai province",
-              "body": "BEIJING, July 28 (Reuters) - A magnitude 5.7 earthquake struck Xinghai county in the northwestern Chinese province of Qinghai on Tuesday at 11:16 a.m. (0316 UTC), the China Earthquake Networks Centre ...",
-              "published_date": "2026-07-28",
-              "outlet": "Reuters on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "556b9cbde76154eea2431194e474cd97",
-              "url": "https://www.washingtonpost.com/world/2026/07/28/china-earthquakes-qinghai-province-lanzhou/61984238-8a4a-11f1-8912-d71e69d679d7_story.html",
-              "headline": "Remote Chinese province struck by 2 earthquakes in 20 minutes",
-              "body": "A remote province in China was struck by two earthquakes just 18 minutes apart late Tuesday morning, according to the United States Geological Survey. The earthquakes in Qinghai province at 11:16 a.m.",
-              "published_date": "2026-07-28T00:00:00+00:00",
-              "outlet": "The Washington Post",
-              "image": ""
-            },
-            {
-              "news_id": "8e25fc2a3c9d5f03b5a37f1440730c02",
-              "url": "https://wtop.com/world/2026/07/remote-chinese-province-struck-by-2-earthquakes-in-20-minutes/",
-              "headline": "Remote Chinese province struck by 2 earthquakes in 20 minutes - WTOP News",
-              "body": "BEIJING (AP) — A remote province in China was struck by two earthquakes just 18 minutes apart late Tuesday morning, according to the United States Geological Survey. The earthquakes in Qinghai…",
-              "published_date": "2026-07-28",
-              "outlet": "WTOP Washington",
-              "image": "https://s.yimg.com/bo/6a31fb01-5770-5344-a7f8-e1ee8e9e4042_1783677946294.png.cf.jpg"
-            }
-          ]
-        }
-      ],
-      "logs_total": 1
     }
   ]
 }
