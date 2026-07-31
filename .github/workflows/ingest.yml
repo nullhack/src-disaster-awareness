@@ -2,7 +2,7 @@ name: Ingest records
 
 on:
   schedule:
-    - cron: "0 */6 * * *"
+    - cron: "1 0,12 * * *"
   workflow_dispatch:
 
 concurrency:

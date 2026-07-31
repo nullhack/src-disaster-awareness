@@ -2,7 +2,7 @@ name: Generate logs
 
 on:
   schedule:
-    - cron: "0 1-23/6 * * *"
+    - cron: "0 1,13 * * *"
   workflow_dispatch:
 
 concurrency:
