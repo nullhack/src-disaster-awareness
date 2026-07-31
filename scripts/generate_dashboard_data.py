@@ -190,7 +190,7 @@ def parse_pandemic_potential(disease_name: str | None) -> str | None:
     return "MEDIUM"
 
 
-def derive_geophysical_severity(mag: float | None, sig: int, tsunami: bool, gdacs_alert: str | None, news_count: int) -> int:
+def derive_geophysical_severity(mag: float | None, sig: int, tsunami: bool, gdacs_alert: str | None, news_peak: int) -> int:
     candidates = [1]
     if mag is not None:
         if mag >= 7.0:
@@ -206,11 +206,11 @@ def derive_geophysical_severity(mag: float | None, sig: int, tsunami: bool, gdac
         candidates.append(3)
     elif alert == "orange":
         candidates.append(2)
-    if news_count >= 50:
+    if news_peak >= 20:
         candidates.append(4)
-    elif news_count >= 15:
+    elif news_peak >= 15:
         candidates.append(3)
-    elif news_count >= 5:
+    elif news_peak >= 10:
         candidates.append(2)
     return max(candidates)
 
@@ -369,6 +369,14 @@ def build_incident_object(store: ContentStore, inc: dict, as_of_date: datetime) 
 
     news = load_news_for_incident(store, incident_id)
     news_count = len(news)
+    news_peak = max(
+        Counter(
+            datetime.fromisoformat(n["published_date"]).date()
+            for n in news
+            if n.get("published_date")
+        ).values(),
+        default=0,
+    ) if news else 0
     latest_summary = load_latest_log(store, incident_id)
     logs = load_logs_for_incident(store, incident_id)
     logs_total = len(logs)
@@ -452,7 +460,7 @@ def build_incident_object(store: ContentStore, inc: dict, as_of_date: datetime) 
     if is_disease:
         severity_level = derive_disease_severity(disease_name, pandemic_pot)
     else:
-        severity_level = derive_geophysical_severity(max_mag, max_sig, tsunami, gdacs_alert, news_count)
+        severity_level = derive_geophysical_severity(max_mag, max_sig, tsunami, gdacs_alert, news_peak)
 
     priority, should_report = classify(
         severity_level, group, disease_name,
