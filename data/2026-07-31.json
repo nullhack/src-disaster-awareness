@@ -1,29 +1,29 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-07-31",
-  "generated_at": "2026-08-02T04:46:12Z",
+  "generated_at": "2026-08-02T14:45:21Z",
   "as_of": "2026-07-31",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 12,
-    "new_today": 3,
+    "reportable_total": 11,
+    "new_today": 2,
     "critical": 3,
     "high": 2,
-    "medium": 7,
+    "medium": 6,
     "low": 0,
-    "disease_outbreaks": 2,
+    "disease_outbreaks": 1,
     "countries_affected": 8,
-    "news_total": 669,
+    "news_total": 617,
     "max_magnitude": 6.2,
     "by_severity": {
       "CRITICAL": 3,
       "HIGH": 2,
-      "MEDIUM": 7,
+      "MEDIUM": 6,
       "LOW": 0
     },
     "by_type": {
-      "Disease": 2,
+      "Disease": 1,
       "Flood": 1,
       "Forest Fire": 3,
       "Severe Weather": 1,
@@ -31,7 +31,6 @@
       "Tropical Cyclone": 1
     },
     "by_region": {
-      "Global": 1,
       "Asia": 5,
       "Europe": 4,
       "Americas": 1,
@@ -46,15 +45,6 @@
       "iso2": "CN",
       "region": "Asia",
       "country_group": "A",
-      "max_severity": "MEDIUM"
-    },
-    {
-      "country": "",
-      "count": 2,
-      "max_sev_rank": 2,
-      "iso2": "XX",
-      "region": "Global",
-      "country_group": "C",
       "max_severity": "MEDIUM"
     },
     {
@@ -103,6 +93,15 @@
       "max_severity": "HIGH"
     },
     {
+      "country": "",
+      "count": 1,
+      "max_sev_rank": 4,
+      "iso2": "XX",
+      "region": "Europe",
+      "country_group": "C",
+      "max_severity": "LOW"
+    },
+    {
       "country": "Spain",
       "count": 1,
       "max_sev_rank": 4,
@@ -113,443 +112,6 @@
     }
   ],
   "incidents": [
-    {
-      "incident_id": "20240530-XX-DI",
-      "tree_id": "f4579a0976695da8abd83ef84f8e0fb1",
-      "canonical_name": "Dengue Global 2024-05-30",
-      "summary": "In Bangladesh, three more dengue-related deaths were reported in the past 24 hours, along with 467 new hospitalizations, continuing the pattern of ongoing outbreaks documented in prior summaries.",
-      "country": "",
-      "iso2": "XX",
-      "lat": null,
-      "lon": null,
-      "country_group": "C",
-      "region": "Global",
-      "incident_type": "Disease",
-      "incident_category": "Biological",
-      "is_disease": true,
-      "severity": "MEDIUM",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2024-05-30",
-      "first_reported_date": "2024-05-30",
-      "last_updated_date": "2026-07-31",
-      "days_since_event": 794,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 1,
-        "usgs": 0,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 52
-      },
-      "source_links": [
-        {
-          "type": "WHO",
-          "label": "Dengue Global 2024-05-30",
-          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2024-DON518",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Earth (Thailand) Celebrates 5 Years of Fighting Dengue as Title Sponsor of 'Mae Hong Son Cross Country 2026'",
-          "published_date": "2015-11-12"
-        },
-        {
-          "headline": "Dengue fever is — unfortunately — having a banner year. Can it be quelled?",
-          "published_date": "2024-07-23T00:00:00+00:00"
-        },
-        {
-          "headline": "UN agency authorizes second vaccine against dengue amid outbreaks in the Americas",
-          "published_date": "2026-07-08T14:57:06+00:00"
-        },
-        {
-          "headline": "Dengue: Surge in US Cases This Year",
-          "published_date": "2026-07-08T14:57:06+00:00"
-        },
-        {
-          "headline": "Two more die of dengue, 306 hospitalised in 24hrs",
-          "published_date": "2026-07-11T03:56:07+00:00"
-        },
-        {
-          "headline": "Two more die of dengue, 391 hospitalised in 24hrs",
-          "published_date": "2026-07-13T03:58:16+00:00"
-        },
-        {
-          "headline": "Sri Lanka expands anti-dengue drive as deaths mount",
-          "published_date": "2026-07-15"
-        },
-        {
-          "headline": "Remote health monitoring: A practical digital solution for dengue burden",
-          "published_date": "2026-07-15T01:15:18+00:00"
-        },
-        {
-          "headline": "Bangladesh floods heighten dengue, cholera risks, says IFRC",
-          "published_date": "2026-07-15T07:15:18+00:00"
-        },
-        {
-          "headline": "Two more die of dengue, 391 hospitalised in 24hrs",
-          "published_date": "2026-07-16T14:45:52+00:00"
-        },
-        {
-          "headline": "Two more die of dengue, 306 hospitalised in 24hrs",
-          "published_date": "2026-07-16T19:53:01+00:00"
-        },
-        {
-          "headline": "This tiny drone doesn't deliver packages. It kills mosquitoes- Moneycontrol.com",
-          "published_date": "2026-07-17"
-        },
-        {
-          "headline": "UKHSA travel illness warning as more than 1,000 cases so far this year",
-          "published_date": "2026-07-18T03:46:52+00:00"
-        },
-        {
-          "headline": "Mosquito Killer Drone This 40 Gram Palm Sized Ai Micro Drone Kills Flying Insects And Could One Day Help Eradicate Mosquitoes",
-          "published_date": "2026-07-19"
-        },
-        {
-          "headline": "India Approves First Dengue Vaccine QDENGA For Ages 4-60, No Pre-Vaccination Tests Required",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "India Approves Its First Dengue Vaccine Qdenga How It Works Who Is Eligible And Why It Isnt A Silver Bullet",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "Qdenga India Approves First Dengue Vaccine For People Aged 4 60 Years",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "India approves first dengue vaccine Qdenga: Which age group can get the shot that targets all 4 virus sub-types?",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "Mosquitos galore",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "Three more die of dengue, 372 hospitalised in 24hrs",
-          "published_date": "2026-07-20T17:07:00+00:00"
-        },
-        {
-          "headline": "QDENGA: India’s first approved dengue vaccine",
-          "published_date": "2026-07-21"
-        },
-        {
-          "headline": "550 Dengue Cases In State; AI, Drone Mapping To Aid Prevention",
-          "published_date": "2026-07-21"
-        },
-        {
-          "headline": "Breaking News Live Updates: Delhi records 205 dengue, 58 malaria cases so far this year - The Times of India",
-          "published_date": "2026-07-21"
-        },
-        {
-          "headline": "India approves first dengue vaccine",
-          "published_date": "2026-07-21"
-        },
-        {
-          "headline": "Malaria, dengue, leptospirosis killed 99 people in Mumbai between 2023 and 2025: RTI",
-          "published_date": "2026-07-21"
-        },
-        {
-          "headline": "India Gets Its First Dengue Vaccine Who Can Take It Price Effectiveness And Everything You Need To Know",
-          "published_date": "2026-07-22"
-        },
-        {
-          "headline": "Japanese Drugmaker Takedas Qdenga Becomes First Dengue Vaccine Approved In India",
-          "published_date": "2026-07-22"
-        },
-        {
-          "headline": "India Approves Its First Dengue Vaccine Qdenga How It Works Who Is Eligible And Why It Isnt A Silver Bullet",
-          "published_date": "2026-07-22"
-        },
-        {
-          "headline": "First native Dengue fever cases recorded in France in 2026",
-          "published_date": "2026-07-22"
-        },
-        {
-          "headline": "Shamli News: मलेरिया-डेंगू के लिए 19 गांव और आठ कॉलोनियां संवेदनशील",
-          "published_date": "2026-07-23"
-        },
-        {
-          "headline": "Uk Holidaymakers Told To Check This Before Flying",
-          "published_date": "2026-07-23"
-        },
-        {
-          "headline": "MBSJ sees 25% rise in dengue cases",
-          "published_date": "2026-07-23"
-        },
-        {
-          "headline": "Fantastis! Beban Ekonomi akibat DBD di Indonesia Nyaris Rp9 Triliun pada 2024",
-          "published_date": "2026-07-24"
-        },
-        {
-          "headline": "Doctors are tracking a jump in dengue as the mosquito that carries it pushes north",
-          "published_date": "2026-07-25"
-        },
-        {
-          "headline": "Doctors are tracking a jump in dengue as the mosquito that carries it pushes north",
-          "published_date": "2026-07-25"
-        },
-        {
-          "headline": "Three more die of dengue, 512 hospitalised in 24hrs",
-          "published_date": "2026-07-25T03:53:13+00:00"
-        },
-        {
-          "headline": "Doctors are tracking a jump in dengue as the mosquito that carries it pushes north",
-          "published_date": "2026-07-26"
-        },
-        {
-          "headline": "Three more die of dengue, 458 hospitalised in 24hrs",
-          "published_date": "2026-07-26T14:11:01+00:00"
-        },
-        {
-          "headline": "US, Sri Lanka partner on dengue control initiative",
-          "published_date": "2026-07-26T19:45:30+00:00"
-        },
-        {
-          "headline": "Dengue virus can infect immune cells meant to fight disease",
-          "published_date": "2026-07-27"
-        },
-        {
-          "headline": "Three more die of dengue, 458 hospitalised in 24hrs",
-          "published_date": "2026-07-27T01:07:00+00:00"
-        },
-        {
-          "headline": "Dengue death toll rises to 50 this year",
-          "published_date": "2026-07-27T19:55:11+00:00"
-        },
-        {
-          "headline": "How mosquitoes are conquering the world — in four charts",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Tropical Diseases Like Dengue Fever and Chikungunya Are on the Rise in Europe",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Confirmed case of dengue fever in Hillsborough County prompts response by mosquito control",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Dengue virus can infect immune cells meant to fight disease",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Dengue death toll rises to 50 this year",
-          "published_date": "2026-07-29T03:17:00+00:00"
-        },
-        {
-          "headline": "One more dies of dengue, 153 hospitalised in 24hrs",
-          "published_date": "2026-07-29T04:00:26+00:00"
-        },
-        {
-          "headline": "Three more die of dengue, 512 hospitalised in 24hrs",
-          "published_date": "2026-07-29T09:24:01+00:00"
-        },
-        {
-          "headline": "Three more die of dengue, 467 hospitalised in 24hrs",
-          "published_date": "2026-07-30T14:43:43+00:00"
-        },
-        {
-          "headline": "Google wants to release millions of mosquitoes across the US. Here’s why | Discover Wildlife",
-          "published_date": "2026-07-31"
-        },
-        {
-          "headline": "Three more die of dengue, 467 hospitalised in 24hrs",
-          "published_date": "2026-07-31T09:28:13+00:00"
-        }
-      ],
-      "news_total": 52,
-      "logs": [
-        {
-          "log_date": "2026-07-08",
-          "summary": "The World Health Organization authorized a second dengue vaccine as outbreaks continue in the Americas. The US CDC issued an alert about increased dengue risk in the United States. In the Americas, nearly 10.4 million suspected dengue cases were reported to WHO by early July 2024.",
-          "news": [
-            {
-              "news_id": "7e19082e3a5f5ef599ebac390d6edf7c",
-              "url": "https://medicalxpress.com/news/2024-05-agency-authorizes-vaccine-dengue-outbreaks.html",
-              "headline": "UN agency authorizes second vaccine against dengue amid outbreaks in the Americas",
-              "body": "A health worker fumigates for mosquitoes inside a home to help mitigate the spread of dengue in the Las Penitas area of Talara, Peru, Friday, March 1, 2024.The World Health Organization on Wednesday, ...",
-              "published_date": "2026-07-08T14:57:06+00:00",
-              "outlet": "Medical Xpress",
-              "image": ""
-            },
-            {
-              "news_id": "e3557f7e1358509cbde59ef9f9b948eb",
-              "url": "https://www.npr.org/sections/goats-and-soda/2024/07/23/g-s1-12674/dengue-mosquitoes-climate-virus-americas",
-              "headline": "Dengue fever is — unfortunately — having a banner year. Can it be quelled?",
-              "body": "In the Americas alone, almost 10.4 million suspected cases of dengue, a mosquito-borne viral disease, were reported to the World Health Organization in 2024 as of the first week of July, an increase ...",
-              "published_date": "2024-07-23T00:00:00+00:00",
-              "outlet": "NPR",
-              "image": ""
-            },
-            {
-              "news_id": "e503ebb6fcdb5c678fa3cc7dcb115da8",
-              "url": "https://www.medscape.com/viewarticle/dengue-surge-us-cases-this-year-2024a1000bzw",
-              "headline": "Dengue: Surge in US Cases This Year",
-              "body": "Federal health officials with the US Centers for Disease Control and Prevention (CDC) have issued an alert, warning health professionals and the public about an increased risk for dengue virus ...",
-              "published_date": "2026-07-08T14:57:06+00:00",
-              "outlet": "Medscape",
-              "image": ""
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-29",
-          "summary": "In Bangladesh, three more dengue-related deaths were reported in the past 24 hours, with 512 new hospitalizations. Meanwhile, researchers discovered that the dengue virus can infect and replicate inside memory B cells, immune cells traditionally thought to help fight infection, revealing a novel mechanism by which the virus may evade immune defenses.\nIn Bangladesh, the dengue death toll rose to 50 this year with 534 new hospitalizations, bringing the total caseload to 14,690. In India, Shamli district in Uttar Pradesh identified 19 villages and eight colonies as vulnerable to malaria and dengue due to the onset of monsoon.",
-          "news": [
-            {
-              "news_id": "7773900698fa5f7cbe31e83c9f96783d",
-              "url": "https://www.daily-sun.com/health/889396/dengue-death-toll-rises-to-50-this-year",
-              "headline": "Dengue death toll rises to 50 this year",
-              "body": "The death count from dengue has reached 50 in 2026, with three more fatalities reported in the past 24 hours till Wednesday morning. In the 24-hour span, 534 more patients were hospitalised with viral fever, raising the total caseload to 14,690 this year.",
-              "published_date": "2026-07-29T03:17:00+00:00",
-              "outlet": "Daily Sun",
-              "image": "https://dscdn.daily-sun.com/english/uploads/news_photos/2026/07/29/Dengue-patients-receive-treatment-in-the-capital’s-Shaheed-Suhrawardy-Medical-College-Hospital-on-10-October-2024-6a69e1307fa52.jpg"
-            },
-            {
-              "news_id": "42d5eaec73a15bc4bcea914d0fb96104",
-              "url": "https://www.daily-sun.com/health/889270/three-more-die-of-dengue-512-hospitalised-in-24hrs",
-              "headline": "Three more die of dengue, 512 hospitalised in 24hrs",
-              "body": "Three more deaths were reported from dengue in the past 24 hours till Tuesday morning, raising the number of fatalities from ...",
-              "published_date": "2026-07-25T03:53:13+00:00",
-              "outlet": "Daily Sun",
-              "image": "https://www.bing.com/th?id=ONUT.bqXWNw5Ndh6nBM5inEcRMg"
-            },
-            {
-              "news_id": "47e53692ebaa5334888a40ea35615f84",
-              "url": "https://www.amarujala.com/uttar-pradesh/shamli/19-villages-and-eight-colonies-vulnerable-to-malaria-and-dengue-shamli-news-c-26-1-smrt1048-170217-2026-07-23",
-              "headline": "Shamli News: मलेरिया-डेंगू के लिए 19 गांव और आठ कॉलोनियां संवेदनशील",
-              "body": "बारिश का मौसम शुरू होने के साथ ही मच्छरों का पनपने के कारण मलेरिया व डेंगू बुखार का खतरा बढ़ गया है।",
-              "published_date": "2026-07-23",
-              "outlet": "अमर उजाला",
-              "image": "https://staticimg.amarujala.com/assets/images/2021/12/02/shamli_1638431905.jpeg?w=1200&dpr=1.0"
-            },
-            {
-              "news_id": "c087c83edc4452edbb3819d84fe3ae66",
-              "url": "https://www.daily-sun.com/bangladesh/889270/three-more-die-of-dengue-512-hospitalised-in-24hrs",
-              "headline": "Three more die of dengue, 512 hospitalised in 24hrs",
-              "body": "Three more deaths were reported from dengue in the past 24 hours till Tuesday morning, raising the number of fatalities from ...",
-              "published_date": "2026-07-29T09:24:01+00:00",
-              "outlet": "Daily Sun",
-              "image": "https://www.bing.com/th?id=ONUT.bqXWNw5Ndh6nBM5inEcRMg"
-            },
-            {
-              "news_id": "5af552e0ce8557148f13e4be632593fb",
-              "url": "https://medicalxpress.com/news/2026-07-dengue-virus-infect-immune-cells.html",
-              "headline": "Dengue virus can infect immune cells meant to fight disease",
-              "body": "Researchers at the University of Vermont's Robert Larner, M.D. College of Medicine and Upstate Medical University in Syracuse, New York, have discovered that dengue virus can infect and replicate inside memory B cells, immune cells traditionally understood to help protect the body from infection. The findings, published July 20 in the Journal of Virology, reveal a previously unrecognized way the virus may evade immune defenses and point toward new strategies for treating a disease that threatens 40% of the world's population, including parts of the southern United States.",
-              "published_date": "2026-07-27",
-              "outlet": "Medical Xpress",
-              "image": "https://www.bing.com/th?id=ONUT.J2CoSWYc09CwYxwXAnHwMA"
-            },
-            {
-              "news_id": "1b305a98a23a51c0879b69c0fd8d229c",
-              "url": "https://www.msn.com/en-us/health/other/dengue-virus-can-infect-immune-cells-meant-to-fight-disease/ar-AA28NNOS",
-              "headline": "Dengue virus can infect immune cells meant to fight disease",
-              "body": "Researchers at the University of Vermont's Robert Larner, M.D. College of Medicine and Upstate Medical University in Syracuse, New York, have discovered that dengue virus can infect and replicate inside memory B cells,",
-              "published_date": "2026-07-29",
-              "outlet": "Medical Xpress",
-              "image": "https://scx1.b-cdn.net/gfx/profiles/782dcfc6701d278c.jpg"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-30",
-          "summary": "A confirmed case of locally acquired dengue fever was reported in Hillsborough County, Florida, prompting a mosquito control response. Separately, Bangladesh's dengue death toll remained at 50 for the year, with three additional fatalities reported in the past 24 hours.",
-          "news": [
-            {
-              "news_id": "a64981ae875e5b8496a6fb1badc1978e",
-              "url": "https://www.daily-sun.com/bangladesh/889396/dengue-death-toll-rises-to-50-this-year",
-              "headline": "Dengue death toll rises to 50 this year",
-              "body": "The death count from dengue has reached 50 in 2026, with three more fatalities reported in the past 24 hours till Wednesday ...",
-              "published_date": "2026-07-27T19:55:11+00:00",
-              "outlet": "Daily Sun",
-              "image": "https://www.bing.com/th?id=ONUT.jmcUTafyDdJ24WH-4l-mNg"
-            },
-            {
-              "news_id": "3b11d4ef45f05cbda3934d12f0d1a126",
-              "url": "https://www.nature.com/articles/d41586-025-03966-w",
-              "headline": "How mosquitoes are conquering the world — in four charts",
-              "body": "Mosquito-borne diseases are breaking records as climate change and other human influences allow the insects to expand their range.",
-              "published_date": "2026-07-29",
-              "outlet": "Nature",
-              "image": ""
-            },
-            {
-              "news_id": "43147fb13a6657e8a9ce2d8085f4ef05",
-              "url": "https://www.wired.com/story/tropical-diseases-dengue-fever-and-chikungunya-on-the-rise-in-europe/",
-              "headline": "Tropical Diseases Like Dengue Fever and Chikungunya Are on the Rise in Europe",
-              "body": "Climate change is helping invasive species to not only establish themselves across the continent but to stay alive for longer. Scientists suggest we get used to it.",
-              "published_date": "2026-07-29",
-              "outlet": "Wired",
-              "image": "https://www.bing.com/th?id=ONUT.VOSd_dS4u3bk7GUh4uNQ5A"
-            },
-            {
-              "news_id": "0d343c4aaa395c97aa31f935617f951b",
-              "url": "https://www.yahoo.com/news/videos/confirmed-case-dengue-fever-hillsborough-213405713.html",
-              "headline": "Confirmed case of dengue fever in Hillsborough County prompts response by mosquito control",
-              "body": "Health officials have not released the exact location of the case, but say the person likely contracted the virus from a mosquito bite in the Tampa Bay area.",
-              "published_date": "2026-07-29",
-              "outlet": "Yahoo",
-              "image": ""
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-31",
-          "summary": "In Bangladesh, three more dengue-related deaths were reported in the past 24 hours, along with 467 new hospitalizations, continuing the pattern of ongoing outbreaks documented in prior summaries.",
-          "news": [
-            {
-              "news_id": "8aec6e5022995af693c6022d9bb5bc64",
-              "url": "https://www.daily-sun.com/health/889592/three-more-die-of-dengue-467-hospitalised-in-24hrs",
-              "headline": "Three more die of dengue, 467 hospitalised in 24hrs",
-              "body": "Three more deaths were reported from dengue in the past 24 hours till Thursday morning, raising the number of fatalities from ...",
-              "published_date": "2026-07-30T14:43:43+00:00",
-              "outlet": "Daily Sun",
-              "image": "https://www.bing.com/th?id=ONUT.FEF843KNTdEBsDpZV2p7aw"
-            },
-            {
-              "news_id": "24458f5781615d49b0dc5a84a70608b1",
-              "url": "https://www.discoverwildlife.com/animal-facts/insects-invertebrates/google-debug-mosquito-us-release",
-              "headline": "Google wants to release millions of mosquitoes across the US. Here’s why | Discover Wildlife",
-              "body": "Google’s parent company, Alphabet, has applied for a permit from the US Environmental Protection Agency",
-              "published_date": "2026-07-31",
-              "outlet": "Discover Wildlife",
-              "image": ""
-            },
-            {
-              "news_id": "240594df3ea35c89a2a95b2300e5fa45",
-              "url": "https://www.daily-sun.com/bangladesh/889592/three-more-die-of-dengue-467-hospitalised-in-24hrs",
-              "headline": "Three more die of dengue, 467 hospitalised in 24hrs",
-              "body": "Three more deaths were reported from dengue in the past 24 hours till Thursday morning, raising the number of fatalities from ...",
-              "published_date": "2026-07-31T09:28:13+00:00",
-              "outlet": "Daily Sun",
-              "image": "https://www.bing.com/th?id=ONUT.FEF843KNTdEBsDpZV2p7aw"
-            }
-          ]
-        }
-      ],
-      "logs_total": 12
-    },
     {
       "incident_id": "20260423-BD-DI",
       "tree_id": "5ea0df2320b350ab8c9470cf5484696c",

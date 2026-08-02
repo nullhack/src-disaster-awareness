@@ -1,39 +1,39 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-08-01",
-  "generated_at": "2026-08-02T04:46:12Z",
+  "generated_at": "2026-08-02T14:45:21Z",
   "as_of": "2026-08-01",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 16,
-    "new_today": 4,
-    "critical": 5,
+    "reportable_total": 14,
+    "new_today": 3,
+    "critical": 4,
     "high": 3,
-    "medium": 8,
+    "medium": 7,
     "low": 0,
-    "disease_outbreaks": 4,
-    "countries_affected": 11,
-    "news_total": 1370,
+    "disease_outbreaks": 3,
+    "countries_affected": 10,
+    "news_total": 1135,
     "max_magnitude": 7.5,
     "by_severity": {
-      "CRITICAL": 5,
+      "CRITICAL": 4,
       "HIGH": 3,
-      "MEDIUM": 8,
+      "MEDIUM": 7,
       "LOW": 0
     },
     "by_type": {
-      "Disease": 4,
+      "Disease": 3,
       "Flood": 1,
-      "Earthquake": 6,
+      "Earthquake": 5,
       "Forest Fire": 3,
       "Severe Weather": 1,
       "Tropical Cyclone": 1
     },
     "by_region": {
-      "Global": 2,
+      "Global": 1,
       "Africa": 1,
-      "Asia": 6,
+      "Asia": 5,
       "Americas": 2,
       "Europe": 4,
       "Oceania": 1
@@ -41,21 +41,21 @@
   },
   "by_country": [
     {
-      "country": "",
-      "count": 3,
-      "max_sev_rank": 2,
-      "iso2": "XX",
-      "region": "Global",
-      "country_group": "C",
-      "max_severity": "MEDIUM"
-    },
-    {
       "country": "China",
       "count": 3,
       "max_sev_rank": 2,
       "iso2": "CN",
       "region": "Asia",
       "country_group": "A",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "",
+      "count": 2,
+      "max_sev_rank": 2,
+      "iso2": "XX",
+      "region": "Global",
+      "country_group": "C",
       "max_severity": "MEDIUM"
     },
     {
@@ -129,455 +129,9 @@
       "region": "Europe",
       "country_group": "C",
       "max_severity": "LOW"
-    },
-    {
-      "country": "Japan",
-      "count": 1,
-      "max_sev_rank": 4,
-      "iso2": "JP",
-      "region": "Asia",
-      "country_group": "A",
-      "max_severity": "LOW"
     }
   ],
   "incidents": [
-    {
-      "incident_id": "20240530-XX-DI",
-      "tree_id": "f4579a0976695da8abd83ef84f8e0fb1",
-      "canonical_name": "Dengue Global 2024-05-30",
-      "summary": "In Bangladesh, three more dengue-related deaths were reported in the past 24 hours, along with 467 new hospitalizations, continuing the pattern of ongoing outbreaks documented in prior summaries.",
-      "country": "",
-      "iso2": "XX",
-      "lat": null,
-      "lon": null,
-      "country_group": "C",
-      "region": "Global",
-      "incident_type": "Disease",
-      "incident_category": "Biological",
-      "is_disease": true,
-      "severity": "MEDIUM",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2024-05-30",
-      "first_reported_date": "2024-05-30",
-      "last_updated_date": "2026-07-31",
-      "days_since_event": 794,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 1,
-        "usgs": 0,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 52
-      },
-      "source_links": [
-        {
-          "type": "WHO",
-          "label": "Dengue Global 2024-05-30",
-          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2024-DON518",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Earth (Thailand) Celebrates 5 Years of Fighting Dengue as Title Sponsor of 'Mae Hong Son Cross Country 2026'",
-          "published_date": "2015-11-12"
-        },
-        {
-          "headline": "Dengue fever is — unfortunately — having a banner year. Can it be quelled?",
-          "published_date": "2024-07-23T00:00:00+00:00"
-        },
-        {
-          "headline": "UN agency authorizes second vaccine against dengue amid outbreaks in the Americas",
-          "published_date": "2026-07-08T14:57:06+00:00"
-        },
-        {
-          "headline": "Dengue: Surge in US Cases This Year",
-          "published_date": "2026-07-08T14:57:06+00:00"
-        },
-        {
-          "headline": "Two more die of dengue, 306 hospitalised in 24hrs",
-          "published_date": "2026-07-11T03:56:07+00:00"
-        },
-        {
-          "headline": "Two more die of dengue, 391 hospitalised in 24hrs",
-          "published_date": "2026-07-13T03:58:16+00:00"
-        },
-        {
-          "headline": "Sri Lanka expands anti-dengue drive as deaths mount",
-          "published_date": "2026-07-15"
-        },
-        {
-          "headline": "Remote health monitoring: A practical digital solution for dengue burden",
-          "published_date": "2026-07-15T01:15:18+00:00"
-        },
-        {
-          "headline": "Bangladesh floods heighten dengue, cholera risks, says IFRC",
-          "published_date": "2026-07-15T07:15:18+00:00"
-        },
-        {
-          "headline": "Two more die of dengue, 391 hospitalised in 24hrs",
-          "published_date": "2026-07-16T14:45:52+00:00"
-        },
-        {
-          "headline": "Two more die of dengue, 306 hospitalised in 24hrs",
-          "published_date": "2026-07-16T19:53:01+00:00"
-        },
-        {
-          "headline": "This tiny drone doesn't deliver packages. It kills mosquitoes- Moneycontrol.com",
-          "published_date": "2026-07-17"
-        },
-        {
-          "headline": "UKHSA travel illness warning as more than 1,000 cases so far this year",
-          "published_date": "2026-07-18T03:46:52+00:00"
-        },
-        {
-          "headline": "Mosquito Killer Drone This 40 Gram Palm Sized Ai Micro Drone Kills Flying Insects And Could One Day Help Eradicate Mosquitoes",
-          "published_date": "2026-07-19"
-        },
-        {
-          "headline": "India Approves First Dengue Vaccine QDENGA For Ages 4-60, No Pre-Vaccination Tests Required",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "India Approves Its First Dengue Vaccine Qdenga How It Works Who Is Eligible And Why It Isnt A Silver Bullet",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "Qdenga India Approves First Dengue Vaccine For People Aged 4 60 Years",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "India approves first dengue vaccine Qdenga: Which age group can get the shot that targets all 4 virus sub-types?",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "Mosquitos galore",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "Three more die of dengue, 372 hospitalised in 24hrs",
-          "published_date": "2026-07-20T17:07:00+00:00"
-        },
-        {
-          "headline": "QDENGA: India’s first approved dengue vaccine",
-          "published_date": "2026-07-21"
-        },
-        {
-          "headline": "550 Dengue Cases In State; AI, Drone Mapping To Aid Prevention",
-          "published_date": "2026-07-21"
-        },
-        {
-          "headline": "Breaking News Live Updates: Delhi records 205 dengue, 58 malaria cases so far this year - The Times of India",
-          "published_date": "2026-07-21"
-        },
-        {
-          "headline": "India approves first dengue vaccine",
-          "published_date": "2026-07-21"
-        },
-        {
-          "headline": "Malaria, dengue, leptospirosis killed 99 people in Mumbai between 2023 and 2025: RTI",
-          "published_date": "2026-07-21"
-        },
-        {
-          "headline": "India Gets Its First Dengue Vaccine Who Can Take It Price Effectiveness And Everything You Need To Know",
-          "published_date": "2026-07-22"
-        },
-        {
-          "headline": "Japanese Drugmaker Takedas Qdenga Becomes First Dengue Vaccine Approved In India",
-          "published_date": "2026-07-22"
-        },
-        {
-          "headline": "India Approves Its First Dengue Vaccine Qdenga How It Works Who Is Eligible And Why It Isnt A Silver Bullet",
-          "published_date": "2026-07-22"
-        },
-        {
-          "headline": "First native Dengue fever cases recorded in France in 2026",
-          "published_date": "2026-07-22"
-        },
-        {
-          "headline": "Shamli News: मलेरिया-डेंगू के लिए 19 गांव और आठ कॉलोनियां संवेदनशील",
-          "published_date": "2026-07-23"
-        },
-        {
-          "headline": "Uk Holidaymakers Told To Check This Before Flying",
-          "published_date": "2026-07-23"
-        },
-        {
-          "headline": "MBSJ sees 25% rise in dengue cases",
-          "published_date": "2026-07-23"
-        },
-        {
-          "headline": "Fantastis! Beban Ekonomi akibat DBD di Indonesia Nyaris Rp9 Triliun pada 2024",
-          "published_date": "2026-07-24"
-        },
-        {
-          "headline": "Doctors are tracking a jump in dengue as the mosquito that carries it pushes north",
-          "published_date": "2026-07-25"
-        },
-        {
-          "headline": "Doctors are tracking a jump in dengue as the mosquito that carries it pushes north",
-          "published_date": "2026-07-25"
-        },
-        {
-          "headline": "Three more die of dengue, 512 hospitalised in 24hrs",
-          "published_date": "2026-07-25T03:53:13+00:00"
-        },
-        {
-          "headline": "Doctors are tracking a jump in dengue as the mosquito that carries it pushes north",
-          "published_date": "2026-07-26"
-        },
-        {
-          "headline": "Three more die of dengue, 458 hospitalised in 24hrs",
-          "published_date": "2026-07-26T14:11:01+00:00"
-        },
-        {
-          "headline": "US, Sri Lanka partner on dengue control initiative",
-          "published_date": "2026-07-26T19:45:30+00:00"
-        },
-        {
-          "headline": "Dengue virus can infect immune cells meant to fight disease",
-          "published_date": "2026-07-27"
-        },
-        {
-          "headline": "Three more die of dengue, 458 hospitalised in 24hrs",
-          "published_date": "2026-07-27T01:07:00+00:00"
-        },
-        {
-          "headline": "Dengue death toll rises to 50 this year",
-          "published_date": "2026-07-27T19:55:11+00:00"
-        },
-        {
-          "headline": "How mosquitoes are conquering the world — in four charts",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Tropical Diseases Like Dengue Fever and Chikungunya Are on the Rise in Europe",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Confirmed case of dengue fever in Hillsborough County prompts response by mosquito control",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Dengue virus can infect immune cells meant to fight disease",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Dengue death toll rises to 50 this year",
-          "published_date": "2026-07-29T03:17:00+00:00"
-        },
-        {
-          "headline": "One more dies of dengue, 153 hospitalised in 24hrs",
-          "published_date": "2026-07-29T04:00:26+00:00"
-        },
-        {
-          "headline": "Three more die of dengue, 512 hospitalised in 24hrs",
-          "published_date": "2026-07-29T09:24:01+00:00"
-        },
-        {
-          "headline": "Three more die of dengue, 467 hospitalised in 24hrs",
-          "published_date": "2026-07-30T14:43:43+00:00"
-        },
-        {
-          "headline": "Google wants to release millions of mosquitoes across the US. Here’s why | Discover Wildlife",
-          "published_date": "2026-07-31"
-        },
-        {
-          "headline": "Three more die of dengue, 467 hospitalised in 24hrs",
-          "published_date": "2026-07-31T09:28:13+00:00"
-        }
-      ],
-      "news_total": 52,
-      "logs": [
-        {
-          "log_date": "2026-07-08",
-          "summary": "The World Health Organization authorized a second dengue vaccine as outbreaks continue in the Americas. The US CDC issued an alert about increased dengue risk in the United States. In the Americas, nearly 10.4 million suspected dengue cases were reported to WHO by early July 2024.",
-          "news": [
-            {
-              "news_id": "7e19082e3a5f5ef599ebac390d6edf7c",
-              "url": "https://medicalxpress.com/news/2024-05-agency-authorizes-vaccine-dengue-outbreaks.html",
-              "headline": "UN agency authorizes second vaccine against dengue amid outbreaks in the Americas",
-              "body": "A health worker fumigates for mosquitoes inside a home to help mitigate the spread of dengue in the Las Penitas area of Talara, Peru, Friday, March 1, 2024.The World Health Organization on Wednesday, ...",
-              "published_date": "2026-07-08T14:57:06+00:00",
-              "outlet": "Medical Xpress",
-              "image": ""
-            },
-            {
-              "news_id": "e3557f7e1358509cbde59ef9f9b948eb",
-              "url": "https://www.npr.org/sections/goats-and-soda/2024/07/23/g-s1-12674/dengue-mosquitoes-climate-virus-americas",
-              "headline": "Dengue fever is — unfortunately — having a banner year. Can it be quelled?",
-              "body": "In the Americas alone, almost 10.4 million suspected cases of dengue, a mosquito-borne viral disease, were reported to the World Health Organization in 2024 as of the first week of July, an increase ...",
-              "published_date": "2024-07-23T00:00:00+00:00",
-              "outlet": "NPR",
-              "image": ""
-            },
-            {
-              "news_id": "e503ebb6fcdb5c678fa3cc7dcb115da8",
-              "url": "https://www.medscape.com/viewarticle/dengue-surge-us-cases-this-year-2024a1000bzw",
-              "headline": "Dengue: Surge in US Cases This Year",
-              "body": "Federal health officials with the US Centers for Disease Control and Prevention (CDC) have issued an alert, warning health professionals and the public about an increased risk for dengue virus ...",
-              "published_date": "2026-07-08T14:57:06+00:00",
-              "outlet": "Medscape",
-              "image": ""
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-29",
-          "summary": "In Bangladesh, three more dengue-related deaths were reported in the past 24 hours, with 512 new hospitalizations. Meanwhile, researchers discovered that the dengue virus can infect and replicate inside memory B cells, immune cells traditionally thought to help fight infection, revealing a novel mechanism by which the virus may evade immune defenses.\nIn Bangladesh, the dengue death toll rose to 50 this year with 534 new hospitalizations, bringing the total caseload to 14,690. In India, Shamli district in Uttar Pradesh identified 19 villages and eight colonies as vulnerable to malaria and dengue due to the onset of monsoon.",
-          "news": [
-            {
-              "news_id": "7773900698fa5f7cbe31e83c9f96783d",
-              "url": "https://www.daily-sun.com/health/889396/dengue-death-toll-rises-to-50-this-year",
-              "headline": "Dengue death toll rises to 50 this year",
-              "body": "The death count from dengue has reached 50 in 2026, with three more fatalities reported in the past 24 hours till Wednesday morning. In the 24-hour span, 534 more patients were hospitalised with viral fever, raising the total caseload to 14,690 this year.",
-              "published_date": "2026-07-29T03:17:00+00:00",
-              "outlet": "Daily Sun",
-              "image": "https://dscdn.daily-sun.com/english/uploads/news_photos/2026/07/29/Dengue-patients-receive-treatment-in-the-capital’s-Shaheed-Suhrawardy-Medical-College-Hospital-on-10-October-2024-6a69e1307fa52.jpg"
-            },
-            {
-              "news_id": "42d5eaec73a15bc4bcea914d0fb96104",
-              "url": "https://www.daily-sun.com/health/889270/three-more-die-of-dengue-512-hospitalised-in-24hrs",
-              "headline": "Three more die of dengue, 512 hospitalised in 24hrs",
-              "body": "Three more deaths were reported from dengue in the past 24 hours till Tuesday morning, raising the number of fatalities from ...",
-              "published_date": "2026-07-25T03:53:13+00:00",
-              "outlet": "Daily Sun",
-              "image": "https://www.bing.com/th?id=ONUT.bqXWNw5Ndh6nBM5inEcRMg"
-            },
-            {
-              "news_id": "47e53692ebaa5334888a40ea35615f84",
-              "url": "https://www.amarujala.com/uttar-pradesh/shamli/19-villages-and-eight-colonies-vulnerable-to-malaria-and-dengue-shamli-news-c-26-1-smrt1048-170217-2026-07-23",
-              "headline": "Shamli News: मलेरिया-डेंगू के लिए 19 गांव और आठ कॉलोनियां संवेदनशील",
-              "body": "बारिश का मौसम शुरू होने के साथ ही मच्छरों का पनपने के कारण मलेरिया व डेंगू बुखार का खतरा बढ़ गया है।",
-              "published_date": "2026-07-23",
-              "outlet": "अमर उजाला",
-              "image": "https://staticimg.amarujala.com/assets/images/2021/12/02/shamli_1638431905.jpeg?w=1200&dpr=1.0"
-            },
-            {
-              "news_id": "c087c83edc4452edbb3819d84fe3ae66",
-              "url": "https://www.daily-sun.com/bangladesh/889270/three-more-die-of-dengue-512-hospitalised-in-24hrs",
-              "headline": "Three more die of dengue, 512 hospitalised in 24hrs",
-              "body": "Three more deaths were reported from dengue in the past 24 hours till Tuesday morning, raising the number of fatalities from ...",
-              "published_date": "2026-07-29T09:24:01+00:00",
-              "outlet": "Daily Sun",
-              "image": "https://www.bing.com/th?id=ONUT.bqXWNw5Ndh6nBM5inEcRMg"
-            },
-            {
-              "news_id": "5af552e0ce8557148f13e4be632593fb",
-              "url": "https://medicalxpress.com/news/2026-07-dengue-virus-infect-immune-cells.html",
-              "headline": "Dengue virus can infect immune cells meant to fight disease",
-              "body": "Researchers at the University of Vermont's Robert Larner, M.D. College of Medicine and Upstate Medical University in Syracuse, New York, have discovered that dengue virus can infect and replicate inside memory B cells, immune cells traditionally understood to help protect the body from infection. The findings, published July 20 in the Journal of Virology, reveal a previously unrecognized way the virus may evade immune defenses and point toward new strategies for treating a disease that threatens 40% of the world's population, including parts of the southern United States.",
-              "published_date": "2026-07-27",
-              "outlet": "Medical Xpress",
-              "image": "https://www.bing.com/th?id=ONUT.J2CoSWYc09CwYxwXAnHwMA"
-            },
-            {
-              "news_id": "1b305a98a23a51c0879b69c0fd8d229c",
-              "url": "https://www.msn.com/en-us/health/other/dengue-virus-can-infect-immune-cells-meant-to-fight-disease/ar-AA28NNOS",
-              "headline": "Dengue virus can infect immune cells meant to fight disease",
-              "body": "Researchers at the University of Vermont's Robert Larner, M.D. College of Medicine and Upstate Medical University in Syracuse, New York, have discovered that dengue virus can infect and replicate inside memory B cells,",
-              "published_date": "2026-07-29",
-              "outlet": "Medical Xpress",
-              "image": "https://scx1.b-cdn.net/gfx/profiles/782dcfc6701d278c.jpg"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-30",
-          "summary": "A confirmed case of locally acquired dengue fever was reported in Hillsborough County, Florida, prompting a mosquito control response. Separately, Bangladesh's dengue death toll remained at 50 for the year, with three additional fatalities reported in the past 24 hours.",
-          "news": [
-            {
-              "news_id": "a64981ae875e5b8496a6fb1badc1978e",
-              "url": "https://www.daily-sun.com/bangladesh/889396/dengue-death-toll-rises-to-50-this-year",
-              "headline": "Dengue death toll rises to 50 this year",
-              "body": "The death count from dengue has reached 50 in 2026, with three more fatalities reported in the past 24 hours till Wednesday ...",
-              "published_date": "2026-07-27T19:55:11+00:00",
-              "outlet": "Daily Sun",
-              "image": "https://www.bing.com/th?id=ONUT.jmcUTafyDdJ24WH-4l-mNg"
-            },
-            {
-              "news_id": "3b11d4ef45f05cbda3934d12f0d1a126",
-              "url": "https://www.nature.com/articles/d41586-025-03966-w",
-              "headline": "How mosquitoes are conquering the world — in four charts",
-              "body": "Mosquito-borne diseases are breaking records as climate change and other human influences allow the insects to expand their range.",
-              "published_date": "2026-07-29",
-              "outlet": "Nature",
-              "image": ""
-            },
-            {
-              "news_id": "43147fb13a6657e8a9ce2d8085f4ef05",
-              "url": "https://www.wired.com/story/tropical-diseases-dengue-fever-and-chikungunya-on-the-rise-in-europe/",
-              "headline": "Tropical Diseases Like Dengue Fever and Chikungunya Are on the Rise in Europe",
-              "body": "Climate change is helping invasive species to not only establish themselves across the continent but to stay alive for longer. Scientists suggest we get used to it.",
-              "published_date": "2026-07-29",
-              "outlet": "Wired",
-              "image": "https://www.bing.com/th?id=ONUT.VOSd_dS4u3bk7GUh4uNQ5A"
-            },
-            {
-              "news_id": "0d343c4aaa395c97aa31f935617f951b",
-              "url": "https://www.yahoo.com/news/videos/confirmed-case-dengue-fever-hillsborough-213405713.html",
-              "headline": "Confirmed case of dengue fever in Hillsborough County prompts response by mosquito control",
-              "body": "Health officials have not released the exact location of the case, but say the person likely contracted the virus from a mosquito bite in the Tampa Bay area.",
-              "published_date": "2026-07-29",
-              "outlet": "Yahoo",
-              "image": ""
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-31",
-          "summary": "In Bangladesh, three more dengue-related deaths were reported in the past 24 hours, along with 467 new hospitalizations, continuing the pattern of ongoing outbreaks documented in prior summaries.",
-          "news": [
-            {
-              "news_id": "8aec6e5022995af693c6022d9bb5bc64",
-              "url": "https://www.daily-sun.com/health/889592/three-more-die-of-dengue-467-hospitalised-in-24hrs",
-              "headline": "Three more die of dengue, 467 hospitalised in 24hrs",
-              "body": "Three more deaths were reported from dengue in the past 24 hours till Thursday morning, raising the number of fatalities from ...",
-              "published_date": "2026-07-30T14:43:43+00:00",
-              "outlet": "Daily Sun",
-              "image": "https://www.bing.com/th?id=ONUT.FEF843KNTdEBsDpZV2p7aw"
-            },
-            {
-              "news_id": "24458f5781615d49b0dc5a84a70608b1",
-              "url": "https://www.discoverwildlife.com/animal-facts/insects-invertebrates/google-debug-mosquito-us-release",
-              "headline": "Google wants to release millions of mosquitoes across the US. Here’s why | Discover Wildlife",
-              "body": "Google’s parent company, Alphabet, has applied for a permit from the US Environmental Protection Agency",
-              "published_date": "2026-07-31",
-              "outlet": "Discover Wildlife",
-              "image": ""
-            },
-            {
-              "news_id": "240594df3ea35c89a2a95b2300e5fa45",
-              "url": "https://www.daily-sun.com/bangladesh/889592/three-more-die-of-dengue-467-hospitalised-in-24hrs",
-              "headline": "Three more die of dengue, 467 hospitalised in 24hrs",
-              "body": "Three more deaths were reported from dengue in the past 24 hours till Thursday morning, raising the number of fatalities from ...",
-              "published_date": "2026-07-31T09:28:13+00:00",
-              "outlet": "Daily Sun",
-              "image": "https://www.bing.com/th?id=ONUT.FEF843KNTdEBsDpZV2p7aw"
-            }
-          ]
-        }
-      ],
-      "logs_total": 12
-    },
     {
       "incident_id": "20250528-XX-DI",
       "tree_id": "2988d8638e0956a89029b6059b7c5f7f",
@@ -612,7 +166,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 57
+        "news": 58
       },
       "source_links": [
         {
@@ -742,6 +296,10 @@
           "published_date": "2026-07-26"
         },
         {
+          "headline": "Is COVID returning in the US? Tests show summer uptick of virus",
+          "published_date": "2026-07-27"
+        },
+        {
           "headline": "GOP Congressman Slams JD Vance's Silence Over CDC's $1.24 Billion Pfizer COVID Vaccine Contracts: 'Why Isn’t He Speaking Out'",
           "published_date": "2026-07-28"
         },
@@ -862,7 +420,7 @@
           "published_date": "2026-08-01"
         }
       ],
-      "news_total": 57,
+      "news_total": 58,
       "logs": [
         {
           "log_date": "2026-07-08",
@@ -1231,7 +789,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 182
+        "news": 183
       },
       "source_links": [
         {
@@ -2001,6 +1559,10 @@
           "published_date": "2026-07-31"
         },
         {
+          "headline": "WHO: Ebolaudbrud i DR Congo er landets største nogensinde | Nyheder | DR",
+          "published_date": "2026-08-01"
+        },
+        {
           "headline": "DR Congo Ebola epidemic becomes world's second largest outbreak",
           "published_date": "2026-08-01"
         },
@@ -2041,7 +1603,7 @@
           "published_date": "2026-08-01T08:37:00+00:00"
         }
       ],
-      "news_total": 182,
+      "news_total": 183,
       "logs": [
         {
           "log_date": "2026-07-10",
@@ -3600,7 +3162,7 @@
       "incident_id": "20260624-VE-EQ",
       "tree_id": "387baafc1c6b5a0391293c7f917b5333",
       "canonical_name": "Earthquake M7.2 San Felipe, Venezuela 2026-06-24",
-      "summary": "A new report highlights a family displaced by the earthquakes seeking a fresh start in Maracaibo, far from the devastated coastal areas. An islander from Jersey has raised thousands for Venezuelan earthquake recovery, motivated by losing family members in the disaster. Meanwhile, Episcopal Relief & Development continues its support for humanitarian efforts through church partners.\nVenezuelan authorities have begun controlled demolitions of damaged buildings in the worst-hit state of La Guaira, as part of post-earthquake recovery. A turtle was rescued alive from the rubble more than a month after the disaster, and the United Nations, alongside the World Bank and other institutions, is preparing a reconstruction plan for the affected region. Experts continue to warn of mounting environmental and health risks for survivors and aid workers.",
+      "summary": "Tampa firefighters were honored for a dangerous rescue mission that brought a survivor out alive. Venezuela and the United Nations launched a joint plan to assess earthquake damages and coordinate recovery, with Acting President Rodríguez meeting IMF officials and announcing state subsidies for housing purchases. Surfers in La Guaira held a paddle-out memorial for victims, while feature reports detailed the ongoing devastation and political fallout.",
       "country": "Venezuela",
       "iso2": "VE",
       "lat": 10.4085,
@@ -3630,7 +3192,7 @@
         "gdacs": 1,
         "ercc": 1,
         "healthmap": 0,
-        "news": 271
+        "news": 277
       },
       "source_links": [
         {
@@ -4698,6 +4260,10 @@
           "published_date": "2026-07-29"
         },
         {
+          "headline": "Deported by Trump, detained in Venezuela — then lost in the earthquakes",
+          "published_date": "2026-07-29T14:08:38+00:00"
+        },
+        {
           "headline": "‘My Mom’s Trapped in There’: Quakes Shake Confidence in Venezuela's Trump-Backed Regime",
           "published_date": "2026-07-29T14:08:46+00:00"
         },
@@ -4742,7 +4308,27 @@
           "published_date": "2026-07-31"
         },
         {
+          "headline": "On Venezuela’s Coast, Life Is Reduced to Survival and Burial",
+          "published_date": "2026-07-31T14:08:38+00:00"
+        },
+        {
+          "headline": "Tampa Firefighters Honored After Dangerous Venezuela Earthquake Rescue Mission",
+          "published_date": "2026-08-01"
+        },
+        {
+          "headline": "Venezuela Launches Joint UN Plan to Assess Earthquake Damages, Recovery - Venezuelanalysis",
+          "published_date": "2026-08-01"
+        },
+        {
           "headline": "Shaken By Tragedy: The Heartbreak of Venezuelan Football In The Wake of Disaster",
+          "published_date": "2026-08-01"
+        },
+        {
+          "headline": "Venezuela Earthquake Paddle Out",
+          "published_date": "2026-08-01"
+        },
+        {
+          "headline": "Venezuela surfers hold paddle-out memorial for victims of devastating earthquakes",
           "published_date": "2026-08-01"
         },
         {
@@ -4754,7 +4340,7 @@
           "published_date": "2026-08-01T04:03:44+00:00"
         }
       ],
-      "news_total": 271,
+      "news_total": 277,
       "logs": [
         {
           "log_date": "2026-06-28",
@@ -4867,75 +4453,6 @@
               "published_date": "2026-06-26T00:00:00+00:00",
               "outlet": "The Huffington Post",
               "image": "https://s.yimg.com/am/60d/33c28f8dd904a096e05756b3255b4bf3"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-28",
-          "summary": "A poodle named Beyli was rescued alive after surviving 29 days trapped beneath earthquake rubble in Venezuela. The focus is shifting from rescue to rebuilding, with the costs described as staggering, and multiple nonprofits including Project CURE, Catholic Relief Services, and the Church of Jesus Christ are expanding aid efforts.",
-          "news": [
-            {
-              "news_id": "dd0612a7123959208d6689fd55605399",
-              "url": "https://www.msn.com/en-us/news/us/a-nonprofit-in-colorado-is-supporting-communities-in-venezuela-after-earthquakes/vi-AA28O1iV?ocid=BingNewsVerp",
-              "headline": "A nonprofit in Colorado is supporting communities in Venezuela after earthquakes",
-              "body": "Project CURE is a non-profit group that sends donated medical supplies to areas that need it most ...",
-              "published_date": "2026-07-28",
-              "outlet": "9news.com on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.TJuLpOa_A2XG9w1SEN9X8Q"
-            },
-            {
-              "news_id": "7abdca20052f5b508fb80f263e964310",
-              "url": "https://www.msn.com/en-za/news/other/beyli-the-poodle-rescued-alive-after-surviving-29-days-beneath-earthquake-rubble-in-venezuela/ar-AA28Sr6j?ocid=BingNewsVerp",
-              "headline": "Beyli the poodle rescued alive after surviving 29 days beneath earthquake rubble in Venezuela",
-              "body": "Beyli the poodle survived 29 days trapped beneath earthquake rubble in Venezuela before rescuers pulled the dog out alive, ...",
-              "published_date": "2026-07-28",
-              "outlet": "Briefly on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.-yXqWTBPJMXhDF-bmPyOew"
-            },
-            {
-              "news_id": "62cbb35493b7539095d712ff3425b42c",
-              "url": "https://www.msn.com/en-us/news/world/dog-pulled-alive-from-rubble-of-venezuela-earthquakes-after-being-trapped-for-29-days-a-miracle/ar-AA28MSBE?ocid=BingNewsVerp",
-              "headline": "Dog pulled alive from rubble of Venezuela earthquakes after being trapped for 29 days: ‘A miracle’",
-              "body": "Astonishing video shows a poodle being rescued alive despite being trapped for 29 days in the rubble of a building that ...",
-              "published_date": "2026-07-28",
-              "outlet": "New York Post on MSN",
-              "image": "https://www.bing.com/th?id=ORMS.b651c6e7462ee13f8099e78f659f9549"
-            },
-            {
-              "news_id": "23835a6d719d58c0b2c383d89f8098d4",
-              "url": "https://catholicphilly.com/2026/07/news/local-news/special-collection-will-aid-earthquake-victims-in-venezuela/",
-              "headline": "Special Collection Will Aid Earthquake Victims in Venezuela",
-              "body": "Archbishop Nelson J. Pérez is asking parishes throughout the Archdiocese of Philadelphia to take up a special second collection Aug. 15-16 to support Catholic Relief Services' humanitarian response to last month's devastating earthquakes in Venezuela.",
-              "published_date": "2026-07-27",
-              "outlet": "Catholic Philly",
-              "image": "https://www.bing.com/th?id=ONUT.Dn8OhoUDPgweMc-O6j2Ryg"
-            },
-            {
-              "news_id": "b3048a25236d5e6abc72682fc25f3055",
-              "url": "https://www.boisestatepublicradio.org/2026-07-28/venezuela-faces-staggering-cost-to-rebuild-after-devastating-earthquakes",
-              "headline": "Venezuela faces staggering cost to rebuild after devastating earthquakes",
-              "body": "A month after Venezuela's deadly earthquakes, the focus is shifting from rescue to rebuilding -- and the costs are staggering.",
-              "published_date": "2026-07-28",
-              "outlet": "Boise State Public Radio",
-              "image": ""
-            },
-            {
-              "news_id": "b47993c29c0f5f70a2e023bd1b37fe74",
-              "url": "https://www.deseret.com/faith/2026/07/27/church-of-jesus-christ-expands-humanitarian-response-following-venezuela-earthquakes/",
-              "headline": "Church of Jesus Christ expands million-dollar earthquake response in Venezuela",
-              "body": "The twin quakes that struck Venezuela in late June killed more than 5,000 people. Here’s how the Church of Jesus Christ is expanding its relief efforts",
-              "published_date": "2026-07-27",
-              "outlet": "Deseret News",
-              "image": "https://www.bing.com/th?id=ONUT.-Mi6gC0HrFHE3ZD1dhSApQ"
-            },
-            {
-              "news_id": "faba9cfc456f5d4c800f31b873404f59",
-              "url": "https://www.kunm.org/npr-news/2026-07-27/the-latest-from-venezuela",
-              "headline": "The latest from Venezuela",
-              "body": "It’s been just over a month since devastating double earthquakes struck Venezuela.",
-              "published_date": "2026-07-27",
-              "outlet": "KUNM",
-              "image": ""
             }
           ]
         },
@@ -5229,9 +4746,105 @@
               "image": ""
             }
           ]
+        },
+        {
+          "log_date": "2026-08-02",
+          "summary": "Tampa firefighters were honored for a dangerous rescue mission that brought a survivor out alive. Venezuela and the United Nations launched a joint plan to assess earthquake damages and coordinate recovery, with Acting President Rodríguez meeting IMF officials and announcing state subsidies for housing purchases. Surfers in La Guaira held a paddle-out memorial for victims, while feature reports detailed the ongoing devastation and political fallout.",
+          "news": [
+            {
+              "news_id": "ce56cdc94dd554ba95728612157a18b3",
+              "url": "https://www.washingtonpost.com/immigration/interactive/2026/08/02/deported-by-trump-detained-venezuela-then-lost-earthquakes/",
+              "headline": "Deported by Trump, detained in Venezuela — then lost in the earthquakes",
+              "body": "Their lives in America were disrupted by President Donald Trump’s crackdown. Deported to Venezuela, they were taken into ...",
+              "published_date": "2026-07-29T14:08:38+00:00",
+              "outlet": "The Washington Post",
+              "image": "https://www.bing.com/th?id=ONUT.fNSBknvcpR3vtHP1P-q8Iw"
+            },
+            {
+              "news_id": "30093a9c86035a8182af97b04764f464",
+              "url": "https://hoodline.com/2026/08/tampa-firefighters-honored-after-dangerous-venezuela-earthquake-rescue-mission/",
+              "headline": "Tampa Firefighters Honored After Dangerous Venezuela Earthquake Rescue Mission",
+              "body": "Tampa firefighters are being honored for a dangerous Venezuela rescue mission that brought one survivor out alive.",
+              "published_date": "2026-08-01",
+              "outlet": "Hoodline",
+              "image": "https://www.bing.com/th?id=ONUT.rm_iPsOxkfwZC9civnS5uw"
+            },
+            {
+              "news_id": "15bc2fa354ac5f439e2c9beb6bf11ece",
+              "url": "https://venezuelanalysis.com/news/venezuela-launches-joint-un-plan-to-assess-earthquake-damages-recovery/",
+              "headline": "Venezuela Launches Joint UN Plan to Assess Earthquake Damages, Recovery - Venezuelanalysis",
+              "body": "Acting President Rodríguez also held a meeting with IMF officials and announced state subsidies for housing purchases.",
+              "published_date": "2026-08-01",
+              "outlet": "Venezuelanalysis",
+              "image": "https://www.bing.com/th?id=ONUT.jf13ZHa0_LPGCqjyUTvs9w"
+            },
+            {
+              "news_id": "cb33a6cb42c454d79b749fd1db6a25a5",
+              "url": "https://sports.yahoo.com/articles/shaken-tragedy-heartbreak-venezuelan-football-104500063.html",
+              "headline": "Shaken By Tragedy: The Heartbreak of Venezuelan Football In The Wake of Disaster",
+              "body": "While the majority of the world was watching the World Cup, Venezuela was struck by two devastating earthquakes measuring 7.2 and 7.5 in magnitude.The quakes caused several deaths and multiple injurie...",
+              "published_date": "2026-08-01",
+              "outlet": "World Football Index · via Yahoo Sports",
+              "image": "https://media.zenfs.com/en/world_football_index_articles_315/279f43f71f17b41c59225171f2934346"
+            },
+            {
+              "news_id": "488869205e655bc7b600ec5e85ce2d47",
+              "url": "https://www.reuters.com/video/watch/idRW246231072026RP1/",
+              "headline": "Pictures of July | Reuters",
+              "body": "Wildfires in Europe, earthquake aftermath in Venezuela, America's 250th anniversary, Spain wins the World Cup and more of our ...",
+              "published_date": "2026-08-01T04:03:44+00:00",
+              "outlet": "Reuters",
+              "image": "https://www.bing.com/th?id=ONUT.Lz6e9-CmXyfqBXp35VRdaA"
+            },
+            {
+              "news_id": "19b3f6ca039e5a33b22c29e9d014133c",
+              "url": "https://www.nytimes.com/2026/08/02/world/americas/venezuela-earthquakes-la-guaira.html",
+              "headline": "On Venezuela’s Coast, Life Is Reduced to Survival and Burial",
+              "body": "More than a month after the earthquakes, the coastal region of La Guaira — once Venezuela’s main gateway — is completely ...",
+              "published_date": "2026-07-31T14:08:38+00:00",
+              "outlet": "The New York Times",
+              "image": "https://www.bing.com/th?id=ONUT.c723A9V91nbhIpkNujAfvQ"
+            },
+            {
+              "news_id": "f81af1ef27d855ce97750d7e991a50ca",
+              "url": "https://www.hjnews.com/world/venezuela-earthquake-paddle-out/image_d84247ec-04f5-5269-ba4f-efc580e0b5a3.html",
+              "headline": "Venezuela Earthquake Paddle Out",
+              "body": "Surfers takes part in a traditional \"Paddle Out\" ceremony to pay tribute to earthquake victims, in La Guaira, Venezuela, Saturday, Aug. 1, 2026. (AP Photo/Ariana Cubillos)",
+              "published_date": "2026-08-01",
+              "outlet": "The Herald Journal",
+              "image": "https://s.yimg.com/bo/dc907031-29b5-5c20-b441-14ebf8bb1438_1785626171896.jpg"
+            },
+            {
+              "news_id": "1c2110e239485f83aa919f52f856fae6",
+              "url": "https://apnews.com/video/venezuela-surfers-hold-paddle-out-memorial-for-victims-of-devastating-earthquakes-d8124a0803c34f78a576069fa5b4de04",
+              "headline": "Venezuela surfers hold paddle-out memorial for victims of devastating earthquakes",
+              "body": "Members of Venezuela's surfing community returned to the water Saturday for the first time in more than a month after devastating earthquakes struck the country's northern coast.",
+              "published_date": "2026-08-01",
+              "outlet": "Associated Press News",
+              "image": ""
+            },
+            {
+              "news_id": "2032553b2cf45ff0b442ef5fec5f10e2",
+              "url": "https://www.goshennews.com/news/national_news/venezuela-earthquake-paddle-out/image_04ee9987-56bd-5da6-8363-628208af77b2.html",
+              "headline": "Venezuela Earthquake Paddle Out",
+              "body": "Surfers gather to take part in a traditional \"Paddle Out\" ceremony to pay tribute to earthquake victims, in La Guaira, Venezuela, Saturday, Aug. 1, 2026. (AP Photo/Ariana Cubillos)",
+              "published_date": "2026-08-01",
+              "outlet": "Goshen News",
+              "image": "https://s.yimg.com/bo/0d2485a3-8e5e-52a8-b98b-42065bb23a72_1785632125918.jpg"
+            },
+            {
+              "news_id": "a18acd99f06053e9995f414e291d1851",
+              "url": "https://www.politico.com/news/magazine/2026/08/01/venezuela-earthquake-trump-politics-01020490",
+              "headline": "‘My Mom’s Trapped in There’: Quakes Shake Confidence in Venezuela's Trump-Backed Regime",
+              "body": "Five weeks after the twin quakes, the coastal area still resembles, in the words of one resident, “a warzone.” The dust of ...",
+              "published_date": "2026-07-29T14:08:46+00:00",
+              "outlet": "Politico",
+              "image": "https://www.bing.com/th?id=ONUT.X6YMUywlclpGuwwbp5oBqg"
+            }
+          ]
         }
       ],
-      "logs_total": 18
+      "logs_total": 19
     },
     {
       "incident_id": "20260704-FR-WF",
@@ -11651,1971 +11264,6 @@
         }
       ],
       "logs_total": 1
-    },
-    {
-      "incident_id": "20260728-JP-EQ",
-      "tree_id": "8b9a0fd7d7d84dcf9915f43fd81312cd",
-      "canonical_name": "Earthquake M6.8 Uto, Japan 2026-07-28",
-      "summary": "As of July 31, the death toll from the Kumamoto earthquake has risen to 35, with one additional fatality confirmed. Shinkansen bullet train service between Hakata and Kumamoto has resumed, offering some relief for transportation. Survivors continue to endure heat and shortages, while auto and chip factories remain suspended.\nThe death toll from the Kumamoto earthquake has risen to 36 as survivors endure scorching heat and thousands remain in shelters. An animal hospital in the region has opened its doors to evacuees, allowing them to stay with their pets. Meanwhile, a 10-kilometer trail of ground cracks has been confirmed along the Hinagu fault zone, the earthquake's epicenter.",
-      "country": "Japan",
-      "iso2": "JP",
-      "lat": 32.3529,
-      "lon": 130.5868,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "CRITICAL",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-07-28",
-      "first_reported_date": "2026-07-28",
-      "last_updated_date": "2026-08-01",
-      "days_since_event": 5,
-      "source_count": 4,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 2,
-        "gdacs": 1,
-        "ercc": 1,
-        "healthmap": 0,
-        "news": 191
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 5.6 - 16 km NE of Tsunagi, Japan",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tgbm",
-          "meta": "10 km depth"
-        },
-        {
-          "type": "USGS",
-          "label": "M 6.8 - 5 km E of Uto, Japan",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tgb9",
-          "meta": "10 km depth"
-        },
-        {
-          "type": "GDACS",
-          "label": "Green alert · Earthquake M6.8 Kumamoto, Japan 2026-07-28",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1554552",
-          "meta": ""
-        },
-        {
-          "type": "ERCC",
-          "label": "ECHO Daily Map of 29 July 2026",
-          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5740",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": 6.8,
-        "max_depth_km": 10.0,
-        "place": "16 km NE of Tsunagi, Japan",
-        "felt": 23,
-        "sig": 723,
-        "tsunami": false,
-        "gdacs_alertlevel": "Green",
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Japan earthquake: People missing in collapsed shopping mall",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Japan earthquake: People missing in collapsed shopping mall",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Three mall workers dead after Japanese earthquake, with at least 13 killed across country",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Tracking the impact of the Japan earthquake in maps and charts | CNN",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Japan earthquake: People missing in collapsed shopping mall",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Japan earthquake: People missing in collapsed shopping mall",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Earthquake in Japan triggers mall collapse in Kumamoto",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "6.8 magnitude earthquake rocks Japan",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Japan earthquake: People missing in collapsed shopping mall",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Japan Earthquake 2026: What happens after a 7.1 earthquake? Japan's latest disaster explained- Moneycontrol.com",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Magnitude 6.8 Earthquake Rattles Southern Japan",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Japan earthquake injures at least 100 and kills two inside shopping mall",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Magnitude 6.8 earthquake traps shoppers as mall collapses in Japan — here's why the seismic event was unusual",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "An earthquake of maximum strength occurred in Japan — many dead, dozens injured: EADaily",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Japan earthquake: People missing in collapsed shopping mall",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Strong 7.1-Magnitude Earthquake Hits Japan’s Kyushu, Tsunami Alert Issued",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Japan mall rebuilt after deadly 2016 earthquake destroyed in major temblor weeks after 'fresh start' reopening",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "A 7.1 quake hits Japan's Kyushu, trapping people in a collapsed shopping mall",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Kumamoto Earthquake, Japan 2026: Videos capture the exact moment",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Powerful earthquake shakes part of southern Japan, causing damage and injuries",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "A 7.1 magnitude quake hits Japan’s southern Kyushu island and dozens are injured or missing - WSVN 7News | Miami News, Weather, Sports | Fort Lauderdale",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Powerful 7.1 Earthquake Strikes Southern Japan, Tsunami Advisory Issued for Kyushu - Southwest Journal",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Magnitude 7.1 earthquake strikes southern Japan, causing injuries and damage",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Southern Japan rocked by major earthquake, people trapped in mall - BusinessWorld Online",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Japan earthquake LIVE updates: Several deaths confirmed at Aeon mall in Kumamoto",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Southern Japan rocked by major earthquake, people trapped in mall",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Historic Kumamoto Castle Is Damaged in the Japan Earthquake - AOL",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Japan earthquake leaves shoppers trapped in collapsed mall as 7.1 tremor strikes - AOL",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Map: 6.8-Magnitude Earthquake Shakes Japan",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Magnitude 7.1 earthquake shakes southern Japan, tsunami warning issued",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "People trapped and injured after powerful earthquake strikes Japan",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Magnitude 7.1 earthquake shakes part of southern Japan but no tsunami detected",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Powerful earthquake rocks Japan, damaging buildings and mall in south",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "'Considerable number' of people dead, many trapped in shopping mall after magnitude 7.1 quake hits Japan's Kyushu",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "7.1 magnitude quake shakes Japan's Kyushu and people are missing after a shopping center collapses",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "6.8 magnitude earthquake rocks Japan",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "People trapped and injured after powerful earthquake strikes Japan",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "People trapped and injured after powerful earthquake strikes Japan",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "7.1 magnitude quake shakes Japan’s Kyushu and people are missing after a shopping center collapses",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Multiple People Feared Dead in Collapsed Mall After 7.1-Magnitude Earthquake Hits Japan",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Japan Rocked By Major 7.1 Magnitude Earthquake",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Magnitude 7.1 earthquake strikes southern Japan, causing injuries and damage",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Powerful earthquake strikes southern Japan, causing destruction",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "7.1 magnitude quake leads to casualties, fires in Kumamoto | The Asahi Shimbun: Breaking News, Japan News and Analysis",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Japan rocked by major earthquake; buildings collapsed, people trapped",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "7.1 magnitude quake shakes Japan’s Kyushu and people are missing after a shopping center collapses",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Japan earthquake: Several feared trapped in collapsed shopping mall",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Major quake hits southern Japan, workers missing after mall blast",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "A magnitude 7.1 earthquake shakes part of southern Japan and a tsunami advisory is issued",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Japan earthquake: Several feared trapped in collapsed shopping mall",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "7.1 magnitude earthquake strikes Japan — See the damaging impact",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Destroyed Aeon mall had just reopened for 'fresh start' a decade on from deadly quake",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Japan quake injures at least 50, disrupts power and travel",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Japan quake injures at least 50, disrupts power and travel",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "7.1 earthquake hits Japan; people trapped inside collapsed mall",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Magnitude 7.1 earthquake damages Japanese shopping center, trapping unknown number of people",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "7.1 magnitude earthquake hits southern Japan",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Japan earthquake live updates: Up to 30 mall employees missing after explosion; several trapped at paper factory",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Mall collapses after powerful quake rocks Kumamoto",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "7.1 earthquake hits Japan; people trapped inside collapsed mall",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Japan Earthquake 2026 vs 2016 Kumamoto Crisis: What makes the two earthquakes so similar?- Moneycontrol.com",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Japan rocked by major earthquake; buildings collapsed, people trapped",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Deaths feared in Japan shopping mall blast after 7.1-magnitude earthquake hits Kyushu, tsunami warning lifted",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Earthquakes hit Japan, Mexico and China within hours",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Japan Earthquake 2026: Devastating videos show destruction as considerable death toll feared in Kumamoto Mall",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "What to Know About the Kumamoto Earthquake in Japan",
-          "published_date": "2026-07-28T00:00:00+00:00"
-        },
-        {
-          "headline": "Kumamoto Castle, a Famed Landmark, Is Damaged in the Japan Earthquake",
-          "published_date": "2026-07-28T00:00:00+00:00"
-        },
-        {
-          "headline": "Live Updates: Many Feared Trapped in Mall Collapse After Japan Earthquake, Officials Say",
-          "published_date": "2026-07-28T00:00:00+00:00"
-        },
-        {
-          "headline": "Magnitude 6.8 earthquake hits Japan; no tsunami detected",
-          "published_date": "2026-07-28T07:06:00+00:00"
-        },
-        {
-          "headline": "Live Updates: Many Feared Trapped in Mall Collapse After Japan Earthquake, Officials Say",
-          "published_date": "2026-07-28T09:57:00+00:00"
-        },
-        {
-          "headline": "Magnitude 6.8 earthquake in Japan injures dozens, collapses buildings; tsunami...",
-          "published_date": "2026-07-28T12:04:16+00:00"
-        },
-        {
-          "headline": "Japan's major earthquakes in the past 15 years",
-          "published_date": "2026-07-28T12:45:00+00:00"
-        },
-        {
-          "headline": "Japan Quake Kills at Least Two After Blast at Kumamoto Mall, One in Building Collapse",
-          "published_date": "2026-07-28T14:56:29+00:00"
-        },
-        {
-          "headline": "Two homes, different traumas: Japan quake leaves scars seen and unseen",
-          "published_date": "2026-07-28T14:56:32+00:00"
-        },
-        {
-          "headline": "A 7.1 Magnitude Quake Hits Japan's Southern Kyushu Island Killing at Least 3",
-          "published_date": "2026-07-28T15:09:17+00:00"
-        },
-        {
-          "headline": "Magnitude 6.8 earthquake hits Japan; no tsunami detected",
-          "published_date": "2026-07-28T15:14:24+00:00"
-        },
-        {
-          "headline": "Buildings collapse, people rattled: Inside the deadly earthquake in Japan",
-          "published_date": "2026-07-28T15:29:00+00:00"
-        },
-        {
-          "headline": "Japan quake kills at least two after blast at Kumamoto mall, one in building collapse",
-          "published_date": "2026-07-28T20:07:04+00:00"
-        },
-        {
-          "headline": "Japan earthquake death toll hits 18 as teams race to find people missing in damaged mall and paper factory",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Japan earthquake: At least 13 dead, death toll expected to rise",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "At least 13 killed in Japan earthquake as rescuers search for survivors in a ‘race against time’",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Outdated footage circulates after Kumamoto earthquake in Japan",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Japan Earthquake",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "CORRECTION Japan Earthquake",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Japan Earthquake",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Japan Earthquake",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Photos show the aftermath of a damaging earthquake in southwestern Japan",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "7.1 magnitude earthquake hits Japan's Kyushu island; mall collapses in Kumamoto",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Magnitude 7.1 earthquake shakes part of southern Japan but no tsunami detected",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Japan Earthquake",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Magnitude 7.1 earthquake strikes southwestern Japan, killing at least 13",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Japan earthquake LIVE: Massive 7.1-magnitude tremor hits Kumamoto as tsunami alert issued",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Japan races to find survivors as Kumamoto earthquake toll climbs to 18",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Several feared trapped in collapsed shopping mall after Japan quake",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Japan earthquake shakes Kumamoto newsroom as staff shelter under desks",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Photos show the aftermath of a damaging earthquake in southwestern Japan",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Prime Minister TAKAICHI Spoke to the Press Regarding the Earthquake Centered in the Kumamoto Region, Kumamoto Prefecture (2) | Speeches | Prime Minister's Office of Japan",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Visuals reveal aftermath of deadly earthquake in Japan",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "‘Race against time’: Japan earthquake death toll rises as rescue teams search for missing",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Rescuers search for the missing after Japan earthquake as death toll rises to 13",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "‘Race against time’: Japan earthquake death toll rises as rescue teams search for missing",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Search For Survivors After Powerful Japan Quake Kills 13",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Fault zone in Kumamoto responsible for a 2016 quake likely triggered latest temblor",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Rescue teams face ‘race against time’ in search for trapped survivors as death toll in Japan rises to at least 13 – as it happened",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Watch : Overview of damage after deadly 7 1 magnitude earthquake in Japan",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "July 28: Storms, Earthquake",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "13 dead in Japan earthquake amid search at collapsed mall",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "World in brief: July 29, 2026",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Japan earthquake: What we know so far",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Rescuers search for the missing after Japan earthquake as death toll rises to 13",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Rescuers search for survivors after a 7.1 quake kills 18 in southwestern Japan",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Kumamoto earthquake death toll climbs to 13; rescue efforts continue",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Kumamoto earthquake death toll climbs to 13; rescue efforts continue",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Fact check: Is this Japan Costco earthquake video from 2016 or 2026?",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Is it safe to travel to Japan? Latest advice after earthquake",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Japan earthquake: Rescuers race to find people trapped in mall as death toll rises",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Death toll rises to 18 as rescuers comb through quake rubble in southwestern Japan",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Japan earthquake death toll rises to 18 as rescuers race to find survivors",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Japan earthquake: 13 dead as rescuers race to free trapped survivors",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Death toll rises to 18 as rescuers comb through quake rubble in southwestern Japan",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Japan earthquake: Five dead after, others missing",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Death toll rises to 18 as rescuers comb through quake rubble in southwestern Japan",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Japan’s earthquake death toll could have been far higher. Here is why it was not",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Kumamoto earthquake death toll climbs to 14",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Japan earthquake: Death toll rises to 18 as rescue efforts continue",
-          "published_date": "2026-07-29T00:00:00+00:00"
-        },
-        {
-          "headline": "Death toll rises to 13 as rescuers search for the missing after Japan earthquake",
-          "published_date": "2026-07-29T02:01:32+00:00"
-        },
-        {
-          "headline": "Death toll rises to 13 as rescuers search for the missing after Japan earthquake",
-          "published_date": "2026-07-29T03:54:07+00:00"
-        },
-        {
-          "headline": "Japan earthquake rocks auto and chip manufacturing supply chain in Kyushu",
-          "published_date": "2026-07-29T04:31:00+00:00"
-        },
-        {
-          "headline": "Death toll climbs to 18 after Japan earthquake and explosion at shopping mall",
-          "published_date": "2026-07-29T07:39:00+00:00"
-        },
-        {
-          "headline": "Death toll rises in Japan. Why does the country experience so many large...",
-          "published_date": "2026-07-29T14:15:15+00:00"
-        },
-        {
-          "headline": "Rescue efforts underway after large, deadly earthquake in Japan collapses mall and homes",
-          "published_date": "2026-07-29T15:01:35+00:00"
-        },
-        {
-          "headline": "Kyushu Quake: 13 dead, rescue efforts continue amid the rubble",
-          "published_date": "2026-07-29T20:07:04+00:00"
-        },
-        {
-          "headline": "Japan earthquake toll rises to 13 as rescuers haul people from collapsed mall",
-          "published_date": "2026-07-29T20:07:07+00:00"
-        },
-        {
-          "headline": "Outdated footage circulates after Kumamoto earthquake in Japan",
-          "published_date": "2026-07-30"
-        },
-        {
-          "headline": "After the quake came the blast: Inside Japan's shopping mall disaster",
-          "published_date": "2026-07-30"
-        },
-        {
-          "headline": "Kumamoto quake death toll rises to 34 as rescuers race against clock",
-          "published_date": "2026-07-30"
-        },
-        {
-          "headline": "Japan Earthquake Death Toll Climbs To 34 As Survivors Endure Sweltering Heat | Latest Updates",
-          "published_date": "2026-07-30"
-        },
-        {
-          "headline": "Aerial video shows extensive damage two days after earthquake hit southern Japan",
-          "published_date": "2026-07-30"
-        },
-        {
-          "headline": "More than 100 aftershocks detected in Japan as rescuers work to free trapped people",
-          "published_date": "2026-07-30"
-        },
-        {
-          "headline": "Up to 23 feared dead in Japan quake",
-          "published_date": "2026-07-30"
-        },
-        {
-          "headline": "Death toll in Japan quake rises to 28, reveals the government",
-          "published_date": "2026-07-30"
-        },
-        {
-          "headline": "Japan earthquake rocks auto and chip manufacturing supply chain in Kyushu",
-          "published_date": "2026-07-30"
-        },
-        {
-          "headline": "13 dead in Japan earthquake amid search at collapsed mall",
-          "published_date": "2026-07-30"
-        },
-        {
-          "headline": "After the quake came the blast: Inside Japan’s shopping mall disaster | Jefferson City News-Tribune",
-          "published_date": "2026-07-30"
-        },
-        {
-          "headline": "Japan quake kills at least 13; more trapped in collapsed mall, factory",
-          "published_date": "2026-07-30"
-        },
-        {
-          "headline": "Search for survivors after powerful Japan quake kills 13",
-          "published_date": "2026-07-30"
-        },
-        {
-          "headline": "Twenty-five cats escape Japan mall damaged by quake",
-          "published_date": "2026-07-30"
-        },
-        {
-          "headline": "Hope dwindles for rescue in southwestern Japan quake as death toll climbs to 25",
-          "published_date": "2026-07-30"
-        },
-        {
-          "headline": "Hope dwindles for rescue in southwestern Japan quake as death toll climbs to 23",
-          "published_date": "2026-07-30"
-        },
-        {
-          "headline": "Hope dwindles for rescue in southwestern Japan quake as death toll climbs to 23",
-          "published_date": "2026-07-30"
-        },
-        {
-          "headline": "Kumamoto earthquake death toll climbs to 14",
-          "published_date": "2026-07-30"
-        },
-        {
-          "headline": "Race against heat after Japan quake leaves 30 dead and thousands without utilities",
-          "published_date": "2026-07-30"
-        },
-        {
-          "headline": "Japan quake toll hits 34 as survivors struggle in heat",
-          "published_date": "2026-07-30"
-        },
-        {
-          "headline": "Japan earthquake death toll climbs to 34 as hopes wane for more rescues",
-          "published_date": "2026-07-30"
-        },
-        {
-          "headline": "Death toll in Japan quake rises to 28",
-          "published_date": "2026-07-30"
-        },
-        {
-          "headline": "Quake survivors in southwestern Japan sleep in cars in sweltering heat as death toll rises to 34",
-          "published_date": "2026-07-30"
-        },
-        {
-          "headline": "Hope for rescue in southwestern Japan quake dwindles as death toll climbs to 25",
-          "published_date": "2026-07-30"
-        },
-        {
-          "headline": "Death Toll From Japan Quake Rises to 34 as Rescue Efforts Continue",
-          "published_date": "2026-07-30T00:00:00+00:00"
-        },
-        {
-          "headline": "Japan's Earthquake Leaves Communities Thirsting for Water and Relief From Heat",
-          "published_date": "2026-07-30T02:54:07+00:00"
-        },
-        {
-          "headline": "Japan's earthquake leaves communities thirsting for water and relief from heat",
-          "published_date": "2026-07-30T02:56:29+00:00"
-        },
-        {
-          "headline": "Hope Dwindles for Rescue in Southwestern Japan Quake as Death Toll Climbs to 25",
-          "published_date": "2026-07-30T04:12:47+00:00"
-        },
-        {
-          "headline": "Quake survivors in southwestern Japan sleep in cars in sweltering heat as death toll rises to 34",
-          "published_date": "2026-07-31"
-        },
-        {
-          "headline": "Japan earthquake toll rises to 34 as Kumamoto mall collapse search goes on",
-          "published_date": "2026-07-31"
-        },
-        {
-          "headline": "Japan quake survivors battle thirst, heat as death toll rises to 25",
-          "published_date": "2026-07-31"
-        },
-        {
-          "headline": "Two homes, different traumas: Japan quake leaves scars seen and unseen",
-          "published_date": "2026-07-31"
-        },
-        {
-          "headline": "Rescue wrapping up in southwestern Japan as quake death toll climbs to 34",
-          "published_date": "2026-07-31"
-        },
-        {
-          "headline": "Japan quake snarls auto and chip supply chains as toll hits 34",
-          "published_date": "2026-07-31"
-        },
-        {
-          "headline": "MOFA to donate NT$5 million for Japan quake relief - Taipei Times",
-          "published_date": "2026-07-31"
-        },
-        {
-          "headline": "Death toll from southwestern Japan quake climbs to 34",
-          "published_date": "2026-07-31"
-        },
-        {
-          "headline": "Death toll in Japan earthquake rises to 28; search for survivors continues",
-          "published_date": "2026-07-31"
-        },
-        {
-          "headline": "Japan Earthquake Death Toll Rises to 34",
-          "published_date": "2026-07-31"
-        },
-        {
-          "headline": "Kumamoto quake search continues as 72-hour window passes in Japan; Shinkansen service between Hakata, Kumamoto resumes",
-          "published_date": "2026-07-31"
-        },
-        {
-          "headline": "Japan's Sony sees profit grow on demand for games, but quake damage still unclear",
-          "published_date": "2026-07-31"
-        },
-        {
-          "headline": "Japan quake death toll hits 35 as auto and chip factories suspend productions",
-          "published_date": "2026-07-31"
-        },
-        {
-          "headline": "Twenty-five cats rescued from Japan mall damaged by earthquake and explosion",
-          "published_date": "2026-07-31"
-        },
-        {
-          "headline": "Japan quake toll hits 34 as survivors struggle amid heat - Taipei Times",
-          "published_date": "2026-07-31"
-        },
-        {
-          "headline": "Earthquake survivors battle sweltering heat in shelters as death toll rises",
-          "published_date": "2026-07-31"
-        },
-        {
-          "headline": "Japan’s 400-year-old Kumamoto Castle damaged by 7.1 magnitude earthquake",
-          "published_date": "2026-07-31"
-        },
-        {
-          "headline": "Japan Earthquake",
-          "published_date": "2026-07-31"
-        },
-        {
-          "headline": "Death toll from Japan earthquake rises to 34",
-          "published_date": "2026-07-31T01:45:02+00:00"
-        },
-        {
-          "headline": "Death toll from southwestern Japan quake climbs to 34 as rescuers search damaged...",
-          "published_date": "2026-07-31T02:45:05+00:00"
-        },
-        {
-          "headline": "A woman with apparent heat stroke found dead while taking shelter in a car in quake-hit Japan",
-          "published_date": "2026-08-01"
-        },
-        {
-          "headline": "A woman with apparent heat stroke found dead while taking shelter in a car in quake-hit Japan",
-          "published_date": "2026-08-01"
-        },
-        {
-          "headline": "Dogs allowed! Animal hospital opens doors to Japan quake survivors and their pets",
-          "published_date": "2026-08-01"
-        },
-        {
-          "headline": "Kumamoto quake survivors battle intense heat as death toll rises to 36",
-          "published_date": "2026-08-01"
-        },
-        {
-          "headline": "Century-old Japanese inn faces uncertain future after it was damaged in earthquake",
-          "published_date": "2026-08-01"
-        },
-        {
-          "headline": "Japan earthquake: Number of dead rises as thousands remain in shelters",
-          "published_date": "2026-08-01"
-        },
-        {
-          "headline": "Japan earthquake death toll rises to 36 as survivors sleep in cars",
-          "published_date": "2026-08-01"
-        },
-        {
-          "headline": "Days after Japan's quake, a family shelters in their car in sweltering heat",
-          "published_date": "2026-08-01"
-        },
-        {
-          "headline": "Earthquake leaves 10km trail of ground cracks along Kumamoto's Hinagu fault zone",
-          "published_date": "2026-08-01"
-        },
-        {
-          "headline": "Japan’s Rescuers Battle ‘Cruel Heat’ After Major Earthquake",
-          "published_date": "2026-08-01T00:00:00+00:00"
-        }
-      ],
-      "news_total": 191,
-      "logs": [
-        {
-          "log_date": "2026-07-28",
-          "summary": "A powerful earthquake, initially measured at magnitude 7.1 (later revised to 6.8), struck Kumamoto Prefecture in southern Japan on July 28, 2026, at 4:27 p.m. local time. The quake caused the partial collapse of the Aeon Mall in Kashima, trapping many people and leaving an unknown number dead, while injuring at least 50 others and causing widespread damage including fires, power outages, and damage to historic Kumamoto Castle.\nA 7.1-magnitude earthquake struck southern Japan's Kyushu island near Kumamoto on July 28, 2026, causing a shopping mall to partially collapse with multiple people trapped and feared dead. The quake knocked out power to thousands of homes, ruptured roads, triggered a temporary tsunami advisory, and left dozens injured, with up to 30 mall employees missing after an explosion.",
-          "news": [
-            {
-              "news_id": "a00d1dc392aa5f49884884ed32682697",
-              "url": "https://www.thehindu.com/news/international/japan-earthquake-today-live-updates-seismic-activity-tsunami-warnings-on-july-28-2026-several-dead-injured/article71276753.ece",
-              "headline": "Japan earthquake LIVE updates: Several deaths confirmed at Aeon mall in Kumamoto",
-              "body": "Japan Earthquake LIVE: Several people who were trapped inside a mall are feared to have died after an earthquake in Japan on July 28, 2026.",
-              "published_date": "2026-07-28",
-              "outlet": "The Hindu",
-              "image": ""
-            },
-            {
-              "news_id": "cf2a776883a955158d6e677aacea06a5",
-              "url": "https://www.rappler.com/world/asia-pacific/kyushu-japan-earthquake-july-28-2026/",
-              "headline": "Southern Japan rocked by major earthquake, people trapped in mall",
-              "body": "(2nd UPDATE) Residents in the areas that felt the biggest tremors must beware of further strong quakes for about a week, as well as the risk of landslides, an official for the Japan Meteorological Agency says",
-              "published_date": "2026-07-28",
-              "outlet": "Rappler",
-              "image": ""
-            },
-            {
-              "news_id": "a16aab8e76055efd9e5f0432f783f302",
-              "url": "https://www.aol.com/articles/historic-kumamoto-castle-damaged-japan-140038036.html",
-              "headline": "Historic Kumamoto Castle Is Damaged in the Japan Earthquake - AOL",
-              "body": "A 7.1 magnitude earthquake hit southern Japan, injuring dozens and collapsing buildings.",
-              "published_date": "2026-07-28",
-              "outlet": "Town & Country · via AOL",
-              "image": "https://media.zenfs.com/en/aol_towncountry_108/b2bfb1f8b6af7c2ca5c8168db6370947"
-            },
-            {
-              "news_id": "464e883fe4a3505b8a9db4d88ab27f2b",
-              "url": "https://www.aol.com/articles/japan-earthquake-panic-7-1-113121076.html",
-              "headline": "Japan earthquake leaves shoppers trapped in collapsed mall as 7.1 tremor strikes - AOL",
-              "body": "Panic has ensued in Japan after a powerful 7.1 magnitude earthquake hit Kumamoto on Tuesday afternoon, causing injuries and damages.",
-              "published_date": "2026-07-28",
-              "outlet": "The Mirror · via AOL",
-              "image": "https://media.zenfs.com/en/aol_the_mirror_191/a06d61c4e85a19ccafc1d9edd8a32d7b"
-            },
-            {
-              "news_id": "7b07b90f87265489a5fe555b56c5bbf8",
-              "url": "https://www.nytimes.com/interactive/2026/07/28/world/quake-tracker-japan.html",
-              "headline": "Map: 6.8-Magnitude Earthquake Shakes Japan",
-              "body": "View the location of the quake’s epicenter and shake area.",
-              "published_date": "2026-07-28",
-              "outlet": "The New York Times",
-              "image": "https://static01.nyt.com/images/2026/07/28/world/quake-tracker-japan-index/quake-tracker-japan-index-facebookJumbo.jpg"
-            },
-            {
-              "news_id": "a0a07b420ef45377be99187f77860f0f",
-              "url": "https://www.msn.com/en-us/news/world/magnitude-71-earthquake-shakes-southern-japan-tsunami-warning-issued/ar-AA28QXmb?ocid=BingNewsVerp",
-              "headline": "Magnitude 7.1 earthquake shakes southern Japan, tsunami warning issued",
-              "body": "PM Sanae Takaichi urges people ‘to remain vigilant for the possibility of another earthquake of similar magnitude’.",
-              "published_date": "2026-07-28",
-              "outlet": "Al Jazeera on MSN",
-              "image": "https://www.bing.com/th?id=ORMS.cd99240040d4acc36a990692eba66734"
-            },
-            {
-              "news_id": "8ef4831e99815dae878d9e0954808c51",
-              "url": "https://www.nytimes.com/live/2026/07/28/world/japan-earthquake-kumamoto-tsunami",
-              "headline": "Live Updates: Many Feared Trapped in Mall Collapse After Japan Earthquake, Officials Say",
-              "body": "Emergency workers were racing to find people and extinguish fires after the 6.8 magnitude quake struck the southwestern prefecture of Kumamoto.",
-              "published_date": "2026-07-28T09:57:00+00:00",
-              "outlet": "The New York Times",
-              "image": ""
-            },
-            {
-              "news_id": "7012a8e70a605e71bda542417382f194",
-              "url": "https://www.msn.com/en-us/news/world/strong-71-magnitude-earthquake-strikes-southern-japan/ar-AA28QDQ2?ocid=BingNewsVerp",
-              "headline": "People trapped and injured after powerful earthquake strikes Japan",
-              "body": "A powerful earthquake hit southern Japan, seriously damaging a shopping mall where there are reportedly many people trapped ...",
-              "published_date": "2026-07-28",
-              "outlet": "CBS News on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.JtHC8R8oSmNIG_rbAuxoWg"
-            },
-            {
-              "news_id": "942f1ae4f04e5ba2bd77c2ea41e705df",
-              "url": "https://www.msn.com/en-us/news/world/magnitude-71-earthquake-shakes-part-of-southern-japan-but-no-tsunami-detected/ar-AA28R5bg?ocid=BingNewsVerp",
-              "headline": "Magnitude 7.1 earthquake shakes part of southern Japan but no tsunami detected",
-              "body": "An earthquake registering a magnitude of 7.1 shook Kumamoto on Japan’s southern main island of Kyushu late Tuesday afternoon ...",
-              "published_date": "2026-07-28",
-              "outlet": "New York Post on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.0JAx-WCAQva1ygctYv9a0w"
-            },
-            {
-              "news_id": "59b72426107d5e68b819e595e6e085a2",
-              "url": "https://www.yahoo.com/news/weather-news/articles/magnitude-7-1-earthquake-rocks-080300323.html",
-              "headline": "Powerful earthquake rocks Japan, damaging buildings and mall in south",
-              "body": "Japanese media reported that a shopping mall in Kumamoto partially collapsed.",
-              "published_date": "2026-07-28",
-              "outlet": "Yahoo",
-              "image": "https://s.yimg.com/lo/mysterio/api/610790006c24d734a7a122d74e32ec133baa204a845e2e36152f926d873b1af7/lightyear_networkapi/resizefill_w960;quality_80;format_webp/https://media.zenfs.com/en/us.abcnews.gma.com/11459db1c3ddc110cca1a0549aa93d52"
-            },
-            {
-              "news_id": "bdb20cf8c4fd50e49202d4d4d244d6fd",
-              "url": "https://www.channelnewsasia.com/east-asia/japan-kyushu-earthquake-71-tsunami-6282661",
-              "headline": "'Considerable number' of people dead, many trapped in shopping mall after magnitude 7.1 quake hits Japan's Kyushu",
-              "body": "The authorities said the second floor of the Aeon Mall in Kashima, Kumamoto collapsed, with reports of what sounded like an explosion.",
-              "published_date": "2026-07-28",
-              "outlet": "CNA",
-              "image": "https://www.bing.com/th?id=ONUT.i96GoMVE76ij5dMu7F3zPQ"
-            },
-            {
-              "news_id": "1c00df7dddb75e0eb353b1aa28314fca",
-              "url": "https://apnews.com/article/japan-earthquake-tsunami-09e6f40acbcc96053946c9c104e7a242",
-              "headline": "7.1 magnitude quake shakes Japan's Kyushu and people are missing after a shopping center collapses",
-              "body": "An earthquake with a magnitude of 7.1 has shaken Japan’s southern main island of Kyushu. It caused part of a shopping center in Kashima Town to collapse on Tuesday, leaving dozens of people missing or injured.",
-              "published_date": "2026-07-28",
-              "outlet": "Associated Press News",
-              "image": "https://dims.apnews.com/dims4/default/817a46c/2147483647/strip/true/crop/3824x2548+72+0/resize/980x653!/quality/90/?url=https://assets.apnews.com/af/46/480c09c62a5d7440b58eae5eb7fb/1d22a76269b04343b4b5983df4a461b2"
-            },
-            {
-              "news_id": "8ae55b0244615614ba6cb3bfa1b072f4",
-              "url": "https://www.wftv.com/news/trending/68-magnitude-earthquake-rocks-japan/UFNUUSNJD5HU3FVM6XWVOWVUWM/",
-              "headline": "6.8 magnitude earthquake rocks Japan",
-              "body": "Kumamoto, Japan hit by 6.8 magnitude earthquake causing widespread damage, injuries, and trapping people.",
-              "published_date": "2026-07-28",
-              "outlet": "WFTV 9 Orlando",
-              "image": "https://s.yimg.com/bo/8944029a-baea-5233-a2ed-9124c2cf9024_1785247151930.jpg"
-            },
-            {
-              "news_id": "dccd0b94de0f594fa97e539bd3dca855",
-              "url": "https://www.msn.com/en-us/news/world/people-trapped-and-injured-after-powerful-earthquake-strikes-japan/ar-AA28QDQ2?ocid=BingNewsVerp",
-              "headline": "People trapped and injured after powerful earthquake strikes Japan",
-              "body": "A powerful earthquake hit southern Japan, seriously damaging a shopping mall where there are reportedly many people trapped ...",
-              "published_date": "2026-07-28",
-              "outlet": "CBS News on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.laZ-OmCN3Pk9rEMEkZS3NA"
-            },
-            {
-              "news_id": "430b4dfe3a095c1c865706039573a0ec",
-              "url": "https://www.msn.com/en-us/news/world/strong-71-magnitude-earthquake-strikes-southern-japan/ar-AA28QDQ2",
-              "headline": "People trapped and injured after powerful earthquake strikes Japan",
-              "body": "A powerful earthquake hit southern Japan, seriously damaging a shopping mall where there are reportedly many people trapped and some dead.",
-              "published_date": "2026-07-28",
-              "outlet": "CBS News",
-              "image": "https://s.yimg.com/lo/mysterio/api/7312542c9ace0df4bdc9fd07af64e10a4b92bf68ef110dcca88502c58391cebe/lightyear_networkapi/resizefill_w1200;quality_80;format_webp/https://media.zenfs.com/en/cbs_news_897/fea7f5da3495fa787d1b99fe6952be87"
-            },
-            {
-              "news_id": "ab3c5f8ab90d5aa89c9bd8f59806eb31",
-              "url": "https://www.baltimoresun.com/2026/07/28/japan-earthquake-shopping-center/",
-              "headline": "7.1 magnitude quake shakes Japan’s Kyushu and people are missing after a shopping center collapses",
-              "body": "Around 20 to 30 employees were missing while several others were dug out.",
-              "published_date": "2026-07-28",
-              "outlet": "The Baltimore Sun",
-              "image": "https://www.bing.com/th?id=ONUT.0K8OSHhsglpwKT1FfnqHAQ"
-            },
-            {
-              "news_id": "16a2b3a8fe41514c8b1bcdcd3f25739f",
-              "url": "https://www.msn.com/en-us/news/world/multiple-people-feared-dead-in-collapsed-mall-after-71-magnitude-earthquake-hits-japan/ar-AA28Rzc4?ocid=BingNewsVerp",
-              "headline": "Multiple People Feared Dead in Collapsed Mall After 7.1-Magnitude Earthquake Hits Japan",
-              "body": "The earthquake triggered tsunami warnings after it hit Japan’s Kyushu island on Tuesday, July 28 ...",
-              "published_date": "2026-07-28",
-              "outlet": "People on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "63a7fa6c15a95420a9b3858e19d723db",
-              "url": "https://www.tmz.com/2026/07/28/japan-suffers-massive-earthquake/",
-              "headline": "Japan Rocked By Major 7.1 Magnitude Earthquake",
-              "body": "Japan was rocked by a massive earthquake Tuesday, creating a path of destruction that trapped multiple people inside a mall.",
-              "published_date": "2026-07-28",
-              "outlet": "TMZ",
-              "image": "https://s.yimg.com/bo/c8bf8df5-d435-5410-b83d-96235a2322f1_1785247637880.png.cf.jpg"
-            },
-            {
-              "news_id": "db696906821050e9bb44733a6086d549",
-              "url": "https://www.fox29.com/news/magnitude-7-1-earthquake-strikes-southern-japan-causing-injuries-damage",
-              "headline": "Magnitude 7.1 earthquake strikes southern Japan, causing injuries and damage",
-              "body": "A powerful earthquake struck southern Japan, damaging buildings, derailing a train and trapping an unknown number of people inside a shopping mall.",
-              "published_date": "2026-07-28",
-              "outlet": "FOX 29 Philadelphia",
-              "image": "https://s.yimg.com/bo/19238e44-7a03-5dac-ae68-7b0f27b4ed4d_1785246870431.jpg"
-            },
-            {
-              "news_id": "9330423971c35fd3a342dff0364bc1dd",
-              "url": "https://www.msn.com/en-us/news/world/powerful-earthquake-strikes-southern-japan-causing-destruction/ar-AA28RkoH?ocid=BingNewsVerp",
-              "headline": "Powerful earthquake strikes southern Japan, causing destruction",
-              "body": "There are reports of at least 50 people injured along with collapsed buildings and damaged roads following the powerful 7.1-magnitude quake on the southwestern island of Kyushu.",
-              "published_date": "2026-07-28",
-              "outlet": "The Washington Post on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "9220e84784aa59e289cd8d5f54e6ed8f",
-              "url": "https://www.asahi.com/ajw/articles/16762650",
-              "headline": "7.1 magnitude quake leads to casualties, fires in Kumamoto | The Asahi Shimbun: Breaking News, Japan News and Analysis",
-              "body": "A major earthquake that registered a maximum seismic intensity of 7 rocked Kumamoto Prefecture at 4:27 p.m. on July 28, causing casualties, damaging or destroying infrastructure and disrupting transportation.",
-              "published_date": "2026-07-28",
-              "outlet": "The Asahi Shimbun",
-              "image": "https://p.potaufeu.asahi.com/9c3d-p/picture/31137429/f9dbf2aab89d7395f377a517c3b220d6.jpg"
-            },
-            {
-              "news_id": "430547a91eb95e90a9ee72da857cd680",
-              "url": "https://www.msn.com/en-us/news/world/japan-rocked-by-major-earthquake-buildings-collapsed-people-trapped/ar-AA28Rkb7?ocid=BingNewsVerp",
-              "headline": "Japan rocked by major earthquake; buildings collapsed, people trapped",
-              "body": "The earthquake caused dozens of injuries, according to Japanese media. At a shopping mall, people were trapped after an explosion.",
-              "published_date": "2026-07-28",
-              "outlet": "USA TODAY on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "7ebd16c88940590b9dd6497cc5865397",
-              "url": "https://www.bostonherald.com/2026/07/28/japan-earthquake-shopping-center/",
-              "headline": "7.1 magnitude quake shakes Japan’s Kyushu and people are missing after a shopping center collapses",
-              "body": "Around 20 to 30 employees were missing while several others were dug out.",
-              "published_date": "2026-07-28",
-              "outlet": "Boston Herald",
-              "image": "https://s.yimg.com/bo/993adfd6-4222-5c35-b6a9-10cf09375acf_1785251427573.jpg"
-            },
-            {
-              "news_id": "e1bd976f63c4502bb1f8f5f583f19f37",
-              "url": "https://www.wxii12.com/article/earthquake-japan-july-28/73282028",
-              "headline": "Japan earthquake: Several feared trapped in collapsed shopping mall",
-              "body": "An earthquake registering a magnitude of 7.1 shook part of southern Japan late Tuesday.",
-              "published_date": "2026-07-28",
-              "outlet": "WXII-TV Winston-Salem",
-              "image": "https://s.yimg.com/bo/e3ee17cf-3b92-5bab-8936-0d5e7c3e68f4_1785235264758.jpg"
-            },
-            {
-              "news_id": "6d31ca2a85445b18a470d65b03a5da7f",
-              "url": "https://www.reuters.com/business/environment/japans-major-earthquakes-past-15-years-2026-07-28/",
-              "headline": "Japan's major earthquakes in the past 15 years",
-              "body": "A powerful earthquake struck southern Japan on Tuesday, leaving many presumed dead inside a partially collapsed shopping mall, thousands of houses without power and factories suspended.",
-              "published_date": "2026-07-28T12:45:00+00:00",
-              "outlet": "Reuters",
-              "image": "https://www.reuters.com/resizer/v2/OKSCVDCDCJNRPINXP3DVT5CMSY.jpg?auth=e0853130142cd6d64dc45998e860ded9ce5d5abb013f9e71211a2f0d0c2bf4e7&height=1005&width=1920&quality=80&smart=true"
-            },
-            {
-              "news_id": "4db80219a6215b6281589b31b2c9f3d5",
-              "url": "https://www.msn.com/en-us/news/world/major-quake-hits-southern-japan-workers-missing-after-mall-blast/ar-AA28RN4e?ocid=BingNewsVerp",
-              "headline": "Major quake hits southern Japan, workers missing after mall blast",
-              "body": "By Anton Bridge, Satoshi Sugiyama and Kantaro Komiya TOKYO, July 28 (Reuters) - A 7.1-magnitude earthquake hit Japan's ...",
-              "published_date": "2026-07-28",
-              "outlet": "Reuters on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.7WZKbGv_12YxcDp0ujejlw"
-            },
-            {
-              "news_id": "13316a05726458858d463940e043a1cc",
-              "url": "https://phys.org/news/2026-07-magnitude-earthquake-southern-japan-tsunami.html",
-              "headline": "A magnitude 7.1 earthquake shakes part of southern Japan and a tsunami advisory is issued",
-              "body": "An earthquake registering a preliminary magnitude of 7.1 shook Kumamoto on Japan's southern main island of Kyushu late Tuesday afternoon and a tsunami advisory was issued, the Japan Meteorological Agency said.",
-              "published_date": "2026-07-28",
-              "outlet": "Phys.org",
-              "image": ""
-            },
-            {
-              "news_id": "88e7930812e65917b383c76b8c5e2642",
-              "url": "https://www.wisn.com/article/earthquake-japan-july-28/73282028",
-              "headline": "Japan earthquake: Several feared trapped in collapsed shopping mall",
-              "body": "An earthquake registering a magnitude of 7.1 shook part of southern Japan late Tuesday.",
-              "published_date": "2026-07-28",
-              "outlet": "WISN 12 News",
-              "image": "https://kubrick.htvapps.com/htv-prod/images/75cf97ff-a51a-43ba-a6af-8ab78f536f35.jpg?resize=1200:*&crop=1.00xw:0.752xh;0,0"
-            },
-            {
-              "news_id": "e88520a5edb15470a93e1412fb2d3fc3",
-              "url": "https://www.usatoday.com/picture-gallery/news/world/2026/07/28/japan-major-earthquake-photo/91073883007/",
-              "headline": "7.1 magnitude earthquake strikes Japan — See the damaging impact",
-              "body": "A major earthquake struck Japan on July 28, causing injuries, collapsing buildings and damaging roads. See the damaging impact in photos.",
-              "published_date": "2026-07-28",
-              "outlet": "USA Today",
-              "image": "https://s.yimg.com/bo/70931b73-36e9-59d7-8094-3f0d024216da_1785242305838.jpg"
-            },
-            {
-              "news_id": "4598963407dd52ec80461e317b2c5def",
-              "url": "https://www.msn.com/en-us/travel/malls-and-shopping-centers/destroyed-aeon-mall-had-just-reopened-for-fresh-start-a-decade-on-from-deadly-quake/ar-AA28RWZM",
-              "headline": "Destroyed Aeon mall had just reopened for 'fresh start' a decade on from deadly quake",
-              "body": "By Satoshi Sugiyama, Chang-Ran Kim and Kentaro Okasaka TOKYO, July 28 (Reuters) - The Aeon mall destroyed in a post-quake explosion in southern Japan on Tuesday had just reopened last month as a new and improved shopping and entertainment complex to commemorate its recovery from a deadly tremor a decade ago.",
-              "published_date": "2026-07-28",
-              "outlet": "Reuters",
-              "image": "https://apicms.thestar.com.my/uploads/images/2026/07/28/4032380.jpg"
-            },
-            {
-              "news_id": "b2873e87cdba50328cd9faa45221d90a",
-              "url": "https://www.msn.com/en-us/news/world/japan-quake-injures-at-least-50-disrupts-power-and-travel/ar-AA28QPeI?ocid=BingNewsVerp",
-              "headline": "Japan quake injures at least 50, disrupts power and travel",
-              "body": "TOKYO, July 28 (Reuters) - A major earthquake rocked Japan's southern Kumamoto prefecture on Tuesday, knocking out power to thousands of homes, rupturing roads and injuring at least 50 people.",
-              "published_date": "2026-07-28",
-              "outlet": "Reuters on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "78a56d40b4825a3da9f107dc9e33e575",
-              "url": "https://www.msn.com/en-us/news/world/japan-quake-injures-at-least-50-disrupts-power-and-travel/ar-AA28QPeI",
-              "headline": "Japan quake injures at least 50, disrupts power and travel",
-              "body": "TOKYO, July 28 (Reuters) - A major earthquake rocked Japan's southern Kumamoto prefecture on Tuesday, knocking out power to thousands of homes, rupturing roads and injuring at least 50 people. Speaking to reporters at her office in Tokyo,",
-              "published_date": "2026-07-28",
-              "outlet": "Reuters",
-              "image": ""
-            },
-            {
-              "news_id": "51eff61efc4c5867b4298d2870eff2cc",
-              "url": "https://www.msn.com/en-us/news/world/71-earthquake-hits-japan-people-trapped-inside-collapsed-mall/ar-AA28RFo6?ocid=BingNewsVerp",
-              "headline": "7.1 earthquake hits Japan; people trapped inside collapsed mall",
-              "body": "A magnitude 7.1 earthquake hit southwestern Japan on Kyushu Island Tuesday, trapping people inside a shopping mall and ...",
-              "published_date": "2026-07-28",
-              "outlet": "UPI News on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.Kvd48gPafGAKHOoKmb2aHg"
-            },
-            {
-              "news_id": "ac9ebc330e6e50959c66f6462c233d62",
-              "url": "https://www.mlive.com/news/2026/07/magnitude-68-earthquake-hits-japan-no-tsunami-detected.html",
-              "headline": "Magnitude 6.8 earthquake hits Japan; no tsunami detected",
-              "body": "A magnitude 6.8 earthquake hit Japan on Tuesday, according to the U.S. Geological survey and the Japan Meteorological Agency. The quake, initially measured at a magnitude of 7.1, shook Kumamoto on Japan's southern main island of Kyushu late Tuesday afternoon,",
-              "published_date": "2026-07-28T07:06:00+00:00",
-              "outlet": "mlive",
-              "image": "https://www.mlive.com/resizer/v2/YF534FH3MNHIHHCHWGJPBYSWWQ.jpg?auth=e792f2fec070509cc73be92191168431aca663663504476cba1094db37e24aaf&width=1280&smart=true&quality=90"
-            },
-            {
-              "news_id": "fccc2aa7de155711a0a9bab19ac9633b",
-              "url": "https://nypost.com/2026/07/28/world-news/a-magnitude-7-1-earthquake-shakes-part-of-southern-japan-but-no-tsunami-detected/",
-              "headline": "Magnitude 7.1 earthquake damages Japanese shopping center, trapping unknown number of people",
-              "body": "An earthquake registering a magnitude of 7.1 shook Kumamoto on Japan’s southern main island of Kyushu late Tuesday afternoon and a tsunami advisory was temporarily issued.",
-              "published_date": "2026-07-28",
-              "outlet": "New York Post",
-              "image": "https://www.bing.com/th?id=ONUT.TVRKEz_VLxBRE5Fmgt1HHw"
-            },
-            {
-              "news_id": "2162f08811b45e908c930549be2a998d",
-              "url": "https://www.straitstimes.com/asia/east-asia/extremely-strong-earthquake-hits-japans-kyushu-island",
-              "headline": "7.1 magnitude earthquake hits southern Japan",
-              "body": "A powerful 7.1-magnitude earthquake struck southern Japan's Kumamoto prefecture, causing widespread damage, power outages, and injuries. Read more at straitstimes.com. Read more at straitstimes.com.",
-              "published_date": "2026-07-28",
-              "outlet": "The Straits Times",
-              "image": "https://cassette.sphdigital.com.sg/image/straitstimes/41f80b0beb71bf2c123e94cd6cb9c13e926a6300c47b352c497fc621464f78fb"
-            },
-            {
-              "news_id": "3ea1f77d8add577493dfffdad92717b6",
-              "url": "https://www.syracuse.com/us-news/2026/07/magnitude-68-earthquake-hits-japan-no-tsunami-detected.html",
-              "headline": "Magnitude 6.8 earthquake hits Japan; no tsunami detected",
-              "body": "A magnitude 6.8 earthquake hit Japan on Tuesday, according to the U.S. Geological survey and the Japan Meteorological Agency. The quake, initially measured at a magnitude of 7.1, shook Kumamoto on ...",
-              "published_date": "2026-07-28T15:14:24+00:00",
-              "outlet": "Syracuse.com",
-              "image": ""
-            },
-            {
-              "news_id": "6f323c41ebc35cc68d57a6350d2a5d45",
-              "url": "https://nypost.com/2026/07/28/world-news/japan-earthquake-live-updates-reactions-photos-more/",
-              "headline": "Japan earthquake live updates: Up to 30 mall employees missing after explosion; several trapped at paper factory",
-              "body": "Follow The Post’s live updates on the 7.1 magnitude earthquake that rocked Japan on Tuesday, for the latest news, photos and videos.",
-              "published_date": "2026-07-28",
-              "outlet": "New York Post",
-              "image": "https://www.bing.com/th?id=ONUT.Uon-qnF2JrIzhqBi1-YqCQ"
-            },
-            {
-              "news_id": "91f3666f684556c79be64231c19ae006",
-              "url": "https://www.japantimes.co.jp/news/2026/07/28/japan/strong-earthquake-kyushu/",
-              "headline": "Mall collapses after powerful quake rocks Kumamoto",
-              "body": "The quake registered up to shindo 7, the highest level on the Japanese seismic intensity scale.",
-              "published_date": "2026-07-28",
-              "outlet": "The Japan Times",
-              "image": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/07/28/554146.jpg?v=3.1"
-            },
-            {
-              "news_id": "5d99a44c0ec458349c38e70ff1167877",
-              "url": "https://www.msn.com/en-us/news/world/71-earthquake-hits-japan-people-trapped-inside-collapsed-mall/ar-AA28RFo6",
-              "headline": "7.1 earthquake hits Japan; people trapped inside collapsed mall",
-              "body": "A magnitude 7.1 earthquake hit southwestern Japan on Kyushu Island Tuesday, trapping people inside a shopping mall and injuring dozens.",
-              "published_date": "2026-07-28",
-              "outlet": " UPI News",
-              "image": "https://cdnph.upi.com/sv/ph/og/upi_com/6701785244891/2026/1/83a545086162d5b3a62eff7f7bdcd7bd/v1.5/71-earthquake-hits-Japan-people-trapped-inside-collapsed-mall.jpg"
-            },
-            {
-              "news_id": "2822cf4914905cbdb5b2e8bef9155873",
-              "url": "https://www.moneycontrol.com/science/japan-earthquake-2026-vs-2016-kumamoto-crisis-what-makes-the-two-earthquakes-so-similar-article-13986031.html",
-              "headline": "Japan Earthquake 2026 vs 2016 Kumamoto Crisis: What makes the two earthquakes so similar?- Moneycontrol.com",
-              "body": "Japan's 7.1-magnitude earthquake has revived memories of the 2016 Kumamoto disaster. Here's how the two earthquakes compare and what has changed in 10 years.",
-              "published_date": "2026-07-28",
-              "outlet": "Moneycontrol",
-              "image": ""
-            },
-            {
-              "news_id": "a880a8454d44542c998d41ff810c8411",
-              "url": "https://www.msn.com/en-us/news/world/japan-rocked-by-major-earthquake-buildings-collapsed-people-trapped/ar-AA28Rkb7",
-              "headline": "Japan rocked by major earthquake; buildings collapsed, people trapped",
-              "body": "The earthquake caused dozens of injuries, according to Japanese media. At a shopping mall, people were trapped after an explosion.",
-              "published_date": "2026-07-28",
-              "outlet": "USA TODAY",
-              "image": ""
-            },
-            {
-              "news_id": "3cd8601f438e5eafa3869ac394cc71f4",
-              "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/07/28/deaths-feared-in-japan-shopping-mall-blast-after-71-magnitude-earthquake-hits-kyushu-tsunami-warning-lifted",
-              "headline": "Deaths feared in Japan shopping mall blast after 7.1-magnitude earthquake hits Kyushu, tsunami warning lifted",
-              "body": "A 7.1-magnitude earthquake hit southern Japan's Kumamoto prefecture on July 28, knocking out power to thousands of homes, rupturing roads and leaving some trapped and others presumed dead inside a partially collapsed shopping mall.",
-              "published_date": "2026-07-28",
-              "outlet": "The Star",
-              "image": "https://www.bing.com/th?id=ONUT.mXBoMm9Tjuz4CplmoKeiig"
-            },
-            {
-              "news_id": "f6a1e696381c50ea9fbbba9cbe7e3192",
-              "url": "https://www.msn.com/en-us/news/world/earthquakes-hit-japan-mexico-and-china-within-hours/ar-AA28R998?ocid=BingNewsVerp",
-              "headline": "Earthquakes hit Japan, Mexico and China within hours",
-              "body": "Powerful earthquakes struck Japan, Mexico and China within hours of one another on Tuesday, prompting a tsunami warning in ...",
-              "published_date": "2026-07-28",
-              "outlet": "Cyprus Mail on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.8NDmyNXsQ7cPZxUZ5yFcSQ"
-            },
-            {
-              "news_id": "6861d0427f93512788091ccd373303e9",
-              "url": "https://www.nytimes.com/live/2026/07/28/world/japan-earthquake-kumamoto-tsunami/japan-earthquake-kumamoto-tsunami",
-              "headline": "Live Updates: Many Feared Trapped in Mall Collapse After Japan Earthquake, Officials Say",
-              "body": "Fires and injuries were reported after the quake in Kumamoto Prefecture, according to Japan’s state broadcaster. A tsunami warning was lifted. Francesca Regalado River Akira Davis and Leo Sands River ...",
-              "published_date": "2026-07-28T00:00:00+00:00",
-              "outlet": "The New York Times",
-              "image": ""
-            },
-            {
-              "news_id": "2c5284d53cb65b7f92a819fa643ca1fb",
-              "url": "https://me.mashable.com/culture/74337/japan-earthquake-2026-devastating-videos-show-destruction-as-considerable-death-toll-feared-in-kumam",
-              "headline": "Japan Earthquake 2026: Devastating videos show destruction as considerable death toll feared in Kumamoto Mall",
-              "body": "A powerful quake rocks southwestern Japan, trapping people, cutting power, and unleashing chaos, while shocking visuals flood social media and rescue efforts race against time.",
-              "published_date": "2026-07-28",
-              "outlet": "Mashable",
-              "image": "https://s.yimg.com/bo/a8d934d0-7dd9-5687-9d33-c415c5b8b4d7_1785246253742.jpg"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-30",
-          "summary": "By July 30, the death toll from the July 28 Kumamoto earthquake has risen to at least 34 as rescuers race against time to find survivors in the collapsed Aeon Mall, where an explosion occurred an hour after the initial quake. Over 100 aftershocks have been detected, including a 5.8-magnitude quake, and devastated communities are facing water shortages and extreme heat, with long lines for fuel and food supplies.\nAs of July 30, the death toll from the Kumamoto earthquake has reached 34, with hundreds of aftershocks including a 5.8-magnitude tremor. Survivors continue to face severe water shortages and extreme heat, with long queues for fuel and supplies. In a small bright spot, 25 cats trapped inside the collapsed Aeon Mall were successfully rescued.",
-          "news": [
-            {
-              "news_id": "acd4ff16465750219989416c246157ab",
-              "url": "https://www.wlwt.com/article/earthquake-japan-july-28/73282028",
-              "headline": "Japan earthquake: People missing in collapsed shopping mall",
-              "body": "The second floor of a shopping mall in Japan collapsed after a 7.1-magnitude earthquake, trapping several people.",
-              "published_date": "2026-07-28",
-              "outlet": "WLWT-TV Cincinnati",
-              "image": "https://s.yimg.com/bo/e3ee17cf-3b92-5bab-8936-0d5e7c3e68f4_1785235264758.jpg"
-            },
-            {
-              "news_id": "041158e84da05ce496e4f02c2bf262d3",
-              "url": "https://www.cbsnews.com/news/japan-earthquake-deaths-aeon-mall-paper-factory-missing/",
-              "headline": "Japan earthquake death toll hits 18 as teams race to find people missing in damaged mall and paper factory",
-              "body": "The powerful earthquake that rocked southern Japan has killed at least 18 people and more remain missing in a damaged shopping mall and a paper factory.",
-              "published_date": "2026-07-29",
-              "outlet": "CBS News",
-              "image": ""
-            },
-            {
-              "news_id": "76cafe4f41425dbc946df2e053d0c234",
-              "url": "https://www.msn.com/en-us/news/other/outdated-footage-circulates-after-kumamoto-earthquake-in-japan/ar-AA290uRS?ocid=BingNewsVerp",
-              "headline": "Outdated footage circulates after Kumamoto earthquake in Japan",
-              "body": "A 7.1-magnitude earthquake rattled Kumamoto prefecture on Japan's Kyushu island on July 28, 2026, cracking roads, flattening ...",
-              "published_date": "2026-07-30",
-              "outlet": "AFP Fact Check on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.b6R9d9mGoOgHtwpFySYDdg"
-            },
-            {
-              "news_id": "fa88f732da4b527d8d80050f406293fe",
-              "url": "https://www.msn.com/en-us/news/world/after-the-quake-came-the-blast-inside-japans-shopping-mall-disaster/ar-AA28ZJn9?ocid=BingNewsVerp",
-              "headline": "After the quake came the blast: Inside Japan's shopping mall disaster",
-              "body": "By Anton Bridge, Yuka Obayashi and Joseph Campbell KUMAMOTO, Japan, July 29 (Reuters) - Workers in a mall in southern Japan ...",
-              "published_date": "2026-07-30",
-              "outlet": "Reuters on MSN",
-              "image": "https://www.bing.com/th?id=ORMS.0afcad28ad59a715115768ca38d59351"
-            },
-            {
-              "news_id": "61ac068304d65c2b95e82cdee2d18bfe",
-              "url": "https://www.japantimes.co.jp/news/2026/07/30/japan/earthquake-kumamoto-death-toll/",
-              "headline": "Kumamoto quake death toll rises to 34 as rescuers race against clock",
-              "body": "The Kumamoto Prefectural Government on Thursday said five other people sustained serious injuries as a result of the disaster.",
-              "published_date": "2026-07-30",
-              "outlet": "The Japan Times",
-              "image": "https://www.bing.com/th?id=ONUT.ZSJpS336jT72_nxWN1In9Q"
-            },
-            {
-              "news_id": "b7ad4e3c98dc5fdfb6cf9244007b1069",
-              "url": "https://www.news18.com/world/japan-earthquake-death-toll-climbs-to-34-as-survivors-endure-sweltering-heat-latest-updates-ws-l-10243129.html",
-              "headline": "Japan Earthquake Death Toll Climbs To 34 As Survivors Endure Sweltering Heat | Latest Updates",
-              "body": "Rescue teams continue searching for survivors after the 6.8-magnitude quake in Kumamoto, while thousands of evacuees face soaring temperatures and prolonged power outages.",
-              "published_date": "2026-07-30",
-              "outlet": "News18",
-              "image": ""
-            },
-            {
-              "news_id": "ddb801d1914153849e4fb41bddfcffda",
-              "url": "https://www.wowktv.com/news/u-s-world/ap-death-toll-rises-to-13-as-rescuers-search-for-the-missing-after-japan-earthquake/",
-              "headline": "Death toll rises to 13 as rescuers search for the missing after Japan earthquake",
-              "body": "YAME, Japan (AP) — Japanese Prime Minister Sanae Takaichi said 13 people have been found dead after ...",
-              "published_date": "2026-07-29T03:54:07+00:00",
-              "outlet": "WOWK 13 News",
-              "image": "https://s.yimg.com/bo/aa05603c-2ed6-52a8-a2ec-0a271061a5f2_1785289223849.jpg"
-            },
-            {
-              "news_id": "e0c1a7a29e975efc8f2ea34c7c278e1d",
-              "url": "https://www.usnews.com/news/world/articles/2026-07-28/magnitude-7-1-earthquake-hits-japans-kyushu-region-jma-says",
-              "headline": "Japan Quake Kills at Least Two After Blast at Kumamoto Mall, One in Building Collapse",
-              "body": "An aerial view shows a collapsed chimney at Nippon Paper Industries' Yatsushiro Mill after an earthquake with a preliminary magnitude of 7.1 struck Japan's southern Kumamoto prefecture, in Yatsushiro, ...",
-              "published_date": "2026-07-28T14:56:29+00:00",
-              "outlet": "U.S. News & World Report",
-              "image": ""
-            },
-            {
-              "news_id": "d4e0f520ac20503c8e71e172b3d68b41",
-              "url": "https://apnews.com/video/aerial-video-shows-extensive-damage-two-days-after-earthquake-hit-southern-japan-da6748348a2b4257921551b1e9205b2c",
-              "headline": "Aerial video shows extensive damage two days after earthquake hit southern Japan",
-              "body": "Rural communities in southwestern Japan were struggling to get their lives back to normal Thursday, two days after a powerful earthquake set off an explosion at a mall, toppled a factory chimney and flattened homes, killing at least 23 people.",
-              "published_date": "2026-07-30",
-              "outlet": "Associated Press News",
-              "image": "https://www.bing.com/th?id=ONUT.DQ4lTmvxXmJwPPpcmo3r6Q"
-            },
-            {
-              "news_id": "32b2555a6a355c37a52553f34972c9e2",
-              "url": "https://www.yahoo.com/news/world/articles/least-13-dead-japanese-earthquake-102725875.html",
-              "headline": "Japan earthquake: At least 13 dead, death toll expected to rise",
-              "body": "At least eight people have been pulled out alive so far, officials said.",
-              "published_date": "2026-07-29",
-              "outlet": "Yahoo",
-              "image": "https://www.bing.com/th?id=ONUT.DRE3vlvlZMYWlkIhnSUN7g"
-            },
-            {
-              "news_id": "d7cc8366110c5c94a69b28dfe14d5659",
-              "url": "https://www.msn.com/en-au/news/australia/more-than-100-aftershocks-detected-in-japan-as-rescuers-work-to-free-trapped-people/ar-AA28ZFAR?ocid=BingNewsVerp",
-              "headline": "More than 100 aftershocks detected in Japan as rescuers work to free trapped people",
-              "body": "Earthquake warning alarms sounded on phones in the Kumamoto region again on Wednesday night when a 5.8-magnitude quake hit.",
-              "published_date": "2026-07-30",
-              "outlet": "ABC (Australian Broadcasting Corporation) on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.hVnaJcLDUbfOt0y11JeoNQ"
-            },
-            {
-              "news_id": "f157419f2cd75a7faae2063a11655839",
-              "url": "https://www.usnews.com/news/world/articles/2026-07-29/japans-earthquake-leaves-communities-thirsting-for-water-and-relief-from-heat",
-              "headline": "Japan's Earthquake Leaves Communities Thirsting for Water and Relief From Heat",
-              "body": "US News is a recognized leader in college, grad school, hospital, mutual fund, and car rankings....",
-              "published_date": "2026-07-30T02:54:07+00:00",
-              "outlet": "US News & World Report",
-              "image": "https://s.yimg.com/bo/dd9bdf92-4552-5641-ba46-33780c1ae70e_1785381370980.jpg"
-            },
-            {
-              "news_id": "4f019b8f99aa5e3d8b756a22cafaf5b9",
-              "url": "https://www.msn.com/en-my/news/other/up-to-23-feared-dead-in-japan-quake/ar-AA2916lt?ocid=BingNewsVerp",
-              "headline": "Up to 23 feared dead in Japan quake",
-              "body": "The Kumamoto disaster management office's latest tally put fatalities at 17 and those without vital signs at six, with five ...",
-              "published_date": "2026-07-30",
-              "outlet": "Free Malaysia Today on MSN",
-              "image": "https://www.bing.com/th?id=ORMS.559b973a7e91e4c17ccf570b58769a5f"
-            },
-            {
-              "news_id": "0d1057c03dc352ab91af16f3e982e90a",
-              "url": "https://www.ewn.co.za/2026/07/30/death-toll-in-japan-quake-rises-to-28-reveals-the-government",
-              "headline": "Death toll in Japan quake rises to 28, reveals the government",
-              "body": "'The death toll currently stands at 28, including those whose deaths are under investigation in relation to the quake,' said government spokesman Minoru Kihara.",
-              "published_date": "2026-07-30",
-              "outlet": "EWN",
-              "image": "https://www.bing.com/th?id=ONUT.hA9OLxRQ7TxfKrTFR5PIog"
-            },
-            {
-              "news_id": "900aaa8a95f3526093033d3cc9789d62",
-              "url": "https://www.msn.com/en-us/money/companies/japan-earthquake-rocks-auto-and-chip-manufacturing-supply-chain-in-kyushu/ar-AA28XSvw?ocid=BingNewsVerp",
-              "headline": "Japan earthquake rocks auto and chip manufacturing supply chain in Kyushu",
-              "body": "By Daniel Leussink and Anton Bridge TOKYO, July 29 (Reuters) - Japan's auto and chip manufacturers halted production on ...",
-              "published_date": "2026-07-30",
-              "outlet": "Reuters on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.vCRsCCrcAlYCapvRv70ACg"
-            },
-            {
-              "news_id": "df96917520dc52759771b3a65106f651",
-              "url": "https://www.msn.com/en-us/news/world/13-dead-in-japan-earthquake-amid-search-at-collapsed-mall/ar-AA28Ygtl?ocid=BingNewsVerp",
-              "headline": "13 dead in Japan earthquake amid search at collapsed mall",
-              "body": "The earthquake struck the afternoon of July 28, toppling homes and roads and prompting an explosion in a shopping mall.",
-              "published_date": "2026-07-30",
-              "outlet": "USA TODAY on MSN",
-              "image": "https://www.bing.com/th?id=ORMS.b76fc81c3fe45b35ff61b8428fd7545c"
-            },
-            {
-              "news_id": "df8ba823d24a5f74954b4102e6f38520",
-              "url": "https://www.nbcnews.com/world/asia/least-13-killed-japan-earthquake-others-trapped-rubble-rcna589771",
-              "headline": "At least 13 killed in Japan earthquake as rescuers search for survivors in a ‘race against time’",
-              "body": "Multiple people were missing a day after a magnitude-7.1 quake struck Kumamoto prefecture, partially collapsing buildings, including a shopping mall and a paper mill.",
-              "published_date": "2026-07-29",
-              "outlet": "NBC News",
-              "image": "https://www.bing.com/th?id=ONUT.S2c5xAuBqaY_gZL83HfW8A"
-            },
-            {
-              "news_id": "86a15efabf2f581e9a63baf050b762ef",
-              "url": "https://www.newstribune.com/news/2026/jul/30/after-the-quake-came-the-blast-inside-japans/",
-              "headline": "After the quake came the blast: Inside Japan’s shopping mall disaster | Jefferson City News-Tribune",
-              "body": "KUMAMOTO, Japan -- Workers in a mall in southern Japan described being thrown to the floor or enveloped in a cloud of dust by a massive 7.1-magnitude quake that rattled the building on Tuesday. They were the lucky ones. An hour later, the real disaster struck.",
-              "published_date": "2026-07-30",
-              "outlet": "News Tribune",
-              "image": "https://www.bing.com/th?id=ONUT.X1rZiedlCLr42k9C5qC0Zw"
-            },
-            {
-              "news_id": "181d06655d585c588a9209a6791b829d",
-              "url": "https://www.msn.com/en-us/news/world/japan-quake-kills-at-least-13-more-trapped-in-collapsed-mall-factory/ar-AA28QDQ2?ocid=BingNewsVerp",
-              "headline": "Japan quake kills at least 13; more trapped in collapsed mall, factory",
-              "body": "A major earthquake in Japan's southwest killed at least 13 people and left several injured or missing after a shopping center ...",
-              "published_date": "2026-07-30",
-              "outlet": "CBS News on MSN",
-              "image": "https://www.bing.com/th?id=ORMS.41b9e0676923e47e4514079489679b9b"
-            },
-            {
-              "news_id": "03ec60a89ee156d19b982b4985b72391",
-              "url": "https://www.msn.com/en-us/news/world/search-for-survivors-after-powerful-japan-quake-kills-13/ar-AA28Vde4?ocid=BingNewsVerp",
-              "headline": "Search for survivors after powerful Japan quake kills 13",
-              "body": "Rescuers battled through the tangled wreckage of a Japanese shopping mall Wednesday searching for any trapped survivors after ...",
-              "published_date": "2026-07-30",
-              "outlet": "AFP on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.OSACA4gJa7wC9XI3Ld311w"
-            },
-            {
-              "news_id": "3d8d20db027e57dcb179d1fb52bd38df",
-              "url": "https://www.reuters.com/business/environment/japans-earthquake-leaves-communities-thirsting-water-relief-heat-2026-07-30/",
-              "headline": "Japan's earthquake leaves communities thirsting for water and relief from heat",
-              "body": "The 7.1-magnitude earthquake that struck southern Japan toppled houses and split open streets in th...",
-              "published_date": "2026-07-30T02:56:29+00:00",
-              "outlet": "Reuters",
-              "image": "https://s.yimg.com/bo/ae87433f-013d-5986-bddb-94784df505e8_1785380062660.jpg"
-            },
-            {
-              "news_id": "d25462a2a546580a9c238b943604e615",
-              "url": "https://www.msn.com/en-ph/news/other/twenty-five-cats-escape-japan-mall-damaged-by-quake/ar-AA293jSl?ocid=BingNewsVerp",
-              "headline": "Twenty-five cats escape Japan mall damaged by quake",
-              "body": "KUMAMOTO — Twenty-five cats stuck inside a shopping mall in Japan gutted in an explosion after a major earthquake have been ...",
-              "published_date": "2026-07-30",
-              "outlet": "The Manila Times on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.zJVmbk34gjtG8xp8QX8dZQ"
-            },
-            {
-              "news_id": "0ba1fd9763b85cfbb12f752b415a4931",
-              "url": "https://www.yahoo.com/news/world/articles/outdated-footage-circulates-kumamoto-earthquake-205513755.html",
-              "headline": "Outdated footage circulates after Kumamoto earthquake in Japan",
-              "body": "A 7.1-magnitude earthquake rattled Kumamoto prefecture on Japan's Kyushu island on July 28, 2026, cracking roads, flattening homes and triggering an explosion at a shopping mall. But one video widely ...",
-              "published_date": "2026-07-29",
-              "outlet": "AFP · via Yahoo News",
-              "image": "https://media.zenfs.com/en/afp_factcheck_us_713/d59632172307a1e6a9932a04f393a6f2"
-            },
-            {
-              "news_id": "896ae482943a578e877c40183e6f2b81",
-              "url": "https://www.goshennews.com/news/national_news/japan-earthquake/image_f50531f5-6ed4-5ee7-98e7-ea09a758a6bc.html",
-              "headline": "Japan Earthquake",
-              "body": "Residents receive food supply following an earthquake in Hikawa, Kumamoto Prefecture, southern Japan, Thursday, July 30, 2026. (AP Photo/Hiro Komae)",
-              "published_date": "2026-07-29",
-              "outlet": "Goshen News",
-              "image": "https://s.yimg.com/bo/a43a60d2-53e1-539d-a4d1-b2687f44bbff_1785399440533.jpg"
-            },
-            {
-              "news_id": "3ae4bb8bb86653f9a63a9b62fb374aa7",
-              "url": "https://www.hjnews.com/world/correction-japan-earthquake/image_b1013e30-6e2f-5118-8df0-804c6d6cdf1d.html",
-              "headline": "CORRECTION Japan Earthquake",
-              "body": "A long line of vehicles forms at a gas station as people seek fuel following an earthquake in Uki, Kumamoto Prefecture, southern Japan, Thursday, July 30, 2026. (AP Photo/Hiro Komae)",
-              "published_date": "2026-07-29",
-              "outlet": "The Herald Journal",
-              "image": "https://s.yimg.com/bo/944008e1-100d-512f-ad4f-1da91a49bb32_1785388096423.jpg"
-            },
-            {
-              "news_id": "5250c3ecbada544a9ad66007ce1feb8e",
-              "url": "https://www.wral.com/news/ap/80b52-hope-dwindles-for-rescue-in-southwestern-japan-quake-as-death-toll-climbs-to-23/",
-              "headline": "Hope dwindles for rescue in southwestern Japan quake as death toll climbs to 25",
-              "body": "The Kumamoto prefectural government says the powerful earthquake that hit southwestern Japan earlier this week has now killed at least 25 people. The magnitude 7.1 earthquake on Tuesday set off an explosion at a mall, toppled a factory chimney and flattened homes in the Kumamoto area on Japan’s s...",
-              "published_date": "2026-07-30",
-              "outlet": "WRAL.com Raleigh",
-              "image": "https://s.yimg.com/bo/024d07d6-bcc0-5358-9bd8-6bce5b5dbf0e_1785380491336.jpg"
-            },
-            {
-              "news_id": "cb37ce4fa98e529ab4be4173459de832",
-              "url": "https://www.4029tv.com/article/earthquake-japan-july-28/73282028",
-              "headline": "Japan earthquake: People missing in collapsed shopping mall",
-              "body": "The second floor of a shopping mall in Japan collapsed after a 7.1-magnitude earthquake, trapping several people.",
-              "published_date": "2026-07-28",
-              "outlet": "KHBS - KHOG Fort Smith - Fayetteville",
-              "image": "https://s.yimg.com/bo/e3ee17cf-3b92-5bab-8936-0d5e7c3e68f4_1785235264758.jpg"
-            },
-            {
-              "news_id": "dc43f64c550b5cf8ac00adf6ba8c31b1",
-              "url": "https://www.wsbradio.com/news/world/hope-dwindles-rescue/FZFNIWXXKM7EHE53DX64MUHBKM/",
-              "headline": "Hope dwindles for rescue in southwestern Japan quake as death toll climbs to 23",
-              "body": "The Kumamoto prefectural government says the powerful earthquake that hit southwestern Japan earlier this week has now killed at least 23 people",
-              "published_date": "2026-07-30",
-              "outlet": "WSB Radio",
-              "image": "https://s.yimg.com/bo/0a897c3c-0fd1-5940-af67-6dac15b9d19c_1785381855733.jpg"
-            },
-            {
-              "news_id": "c23bdb13e89c57e5bc70feb5836f2861",
-              "url": "https://apnews.com/article/japan-earthquake-kumamoto-mall-factory-80b525f6a271a0b3aecd708342b09294",
-              "headline": "Hope dwindles for rescue in southwestern Japan quake as death toll climbs to 23",
-              "body": "The Kumamoto prefectural government says the powerful earthquake that hit southwestern Japan earlier this week has now killed at least 23 people.",
-              "published_date": "2026-07-30",
-              "outlet": "Associated Press News",
-              "image": "https://www.bing.com/th?id=ONUT.5Ju6x6bhcLSbeJQ6Ez0BTQ"
-            },
-            {
-              "news_id": "34dec43e831756fb83a38996354b43ee",
-              "url": "https://www.reuters.com/world/asia-pacific/two-homes-different-traumas-japan-quake-leaves-scars-seen-unseen-2026-07-30/",
-              "headline": "Two homes, different traumas: Japan quake leaves scars seen and unseen",
-              "body": "Sawatari says repair bill could exceed 10 million yen after Tuesday's quake Most homes in Yatsushiro lack running water and some remain without power Shimada family sleeps in front-yard tent because ...",
-              "published_date": "2026-07-28T14:56:32+00:00",
-              "outlet": "Reuters",
-              "image": ""
-            },
-            {
-              "news_id": "ce389b961d7e5e5f9342764e6cf77ae1",
-              "url": "https://www.nytimes.com/2026/07/30/world/asia/japan-earthquake-kumamoto-death-toll.html",
-              "headline": "Death Toll From Japan Quake Rises to 34 as Rescue Efforts Continue",
-              "body": "Rescue crews were working to find people who might still be trapped in a collapsed shopping mall, as the region faced ...",
-              "published_date": "2026-07-30T00:00:00+00:00",
-              "outlet": "The New York Times",
-              "image": "https://www.bing.com/th?id=ONUT.M2Xza0hfJmuEXgRMCr2maQ"
-            },
-            {
-              "news_id": "8eaf0662b8365c77a32cb74af99128fe",
-              "url": "https://www.msn.com/en-us/news/world/kumamoto-earthquake-death-toll-climbs-to-14/ar-AA28WVJa?ocid=BingNewsVerp",
-              "headline": "Kumamoto earthquake death toll climbs to 14",
-              "body": "The death toll from a strong earthquake that struck southwestern Japan climbed to 14 on Wednesday.",
-              "published_date": "2026-07-30",
-              "outlet": "UPI on MSN",
-              "image": "https://www.bing.com/th?id=ORMS.468c90cbfd68c38f9187db76104fb219"
-            },
-            {
-              "news_id": "9414cd9a390955b2a47c55767fa40db5",
-              "url": "https://www.malaymail.com/news/world/2026/07/30/race-against-heat-after-japan-quake-leaves-30-dead-and-thousands-without-utilities/229545",
-              "headline": "Race against heat after Japan quake leaves 30 dead and thousands without utilities",
-              "body": "KUMAMOTO, July 30 — Japanese emergency workers battled today to rescue any remaining survivors from a devastated shopping mall, as the death toll from a major earthquake hit 30...",
-              "published_date": "2026-07-30",
-              "outlet": "Malay Mail",
-              "image": "https://www.bing.com/th?id=ONUT.b6ta8g3Ag8EcC23FVNWiQA"
-            },
-            {
-              "news_id": "d6c184c11d9f54508a9b086cbcad1d34",
-              "url": "https://www.msn.com/en-ph/news/world/japan-quake-toll-hits-34-as-survivors-struggle-in-heat/ar-AA29394G?ocid=BingNewsVerp",
-              "headline": "Japan quake toll hits 34 as survivors struggle in heat",
-              "body": "KUMAMOTO — Japanese emergency workers searched tirelessly for survivors at a wrecked shopping mall on Thursday, as the death toll from a major earthquake hit 34 and tens of thousands were left without ...",
-              "published_date": "2026-07-30",
-              "outlet": "The Manila Times on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "f6e64e9e6703563d8f6543b5bff5b8d7",
-              "url": "https://www.cbsnews.com/news/japan-earthquake-death-toll-climbs-hopes-wane-rescues/",
-              "headline": "Japan earthquake death toll climbs to 34 as hopes wane for more rescues",
-              "body": "The Kumamoto prefectural government said at least 34 people were killed in the powerful earthquake that hit southwestern Japan earlier this week.",
-              "published_date": "2026-07-30",
-              "outlet": "CBS News",
-              "image": "https://www.bing.com/th?id=ONUT.79-3d0ebasd6tOBksAnn6A"
-            },
-            {
-              "news_id": "6ca822d77cbb515a9cf1cf3c17c7dd16",
-              "url": "https://www.channelnewsasia.com/east-asia/japan-earthquake-kyushu-kumamoto-aeon-mall-death-toll-6287326",
-              "headline": "Death toll in Japan quake rises to 28",
-              "body": "Hundreds of rescue workers are battling for another day to reach possible survivors in the remains of the Aeon shopping mall in Kashima in the Kumamoto region.",
-              "published_date": "2026-07-30",
-              "outlet": "CNA",
-              "image": "https://www.bing.com/th?id=ONUT.juN8Ur0C-SDMNfq74j7rfQ"
-            },
-            {
-              "news_id": "e6a0ed0f5c685c249e59825470c006f9",
-              "url": "https://www.hjnews.com/world/japan-earthquake/image_58bf5e5e-8f4d-596c-8b3b-147cc1ca3389.html",
-              "headline": "Japan Earthquake",
-              "body": "Residents receive food supply following an earthquake in Hikawa, Kumamoto Prefecture, southern Japan, Thursday, July 30, 2026. (AP Photo/Hiro Komae)",
-              "published_date": "2026-07-29",
-              "outlet": "The Herald Journal",
-              "image": "https://s.yimg.com/bo/ad63d414-36df-5dfe-8018-9ac0ba31fd53_1785422406543.jpg"
-            },
-            {
-              "news_id": "643b3a2a79db5f329c6afb7d270f8034",
-              "url": "https://www.bbc.com/news/live/c9q2481v855t",
-              "headline": "Three mall workers dead after Japanese earthquake, with at least 13 killed across country",
-              "body": "Aeon Mall's president tells a news conference a further three people are missing while rescue workers sift through the rubble.",
-              "published_date": "2026-07-28",
-              "outlet": "BBC",
-              "image": "https://www.bing.com/th?id=ONUT.Owuu7oripP2nj6trzOCa4g"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-31",
-          "summary": "The death toll from the Kumamoto earthquake has been confirmed at 34, with rescue operations at the collapsed Aeon Mall reportedly wrapping up. Thousands of survivors are enduring sweltering heat, water and fuel shortages, and many are sleeping in cars. The quake has also disrupted auto and chip supply chains, while Taiwan has pledged NT$5 million for relief efforts.",
-          "news": [
-            {
-              "news_id": "7268d131cccf5a4f8ca4a614f422c24b",
-              "url": "https://apnews.com/article/japan-earthquake-kumamoto-mall-factory-b0d6e9cd8f27b09590bbe49f4a701eb6",
-              "headline": "Quake survivors in southwestern Japan sleep in cars in sweltering heat as death toll rises to 34",
-              "body": "Thousands of survivors of a powerful earthquake in southwestern Japan have spent Friday in crowded shelters or sleeping in cars as they face shortages of water and fuel and punishing summer temperatures that have stoked fears of heat-related illness.",
-              "published_date": "2026-07-31",
-              "outlet": "Associated Press News",
-              "image": "https://www.bing.com/th?id=ONUT.T7RURda4IedwZEitl09Wyg"
-            },
-            {
-              "news_id": "6829401101bb5fe49c96a1621da6c481",
-              "url": "https://www.reuters.com/world/asia-pacific/death-toll-japan-earthquake-rises-34-2026-07-31/",
-              "headline": "Death toll from Japan earthquake rises to 34",
-              "body": "The death toll from a powerful earthquake that hit southwestern Japan earlier this week rose to 34 on Friday from 25 previously, the Kumamoto prefect...",
-              "published_date": "2026-07-31T01:45:02+00:00",
-              "outlet": "Reuters",
-              "image": "https://s.yimg.com/bo/92ce6440-982d-5678-b118-683728c53a75_1785462510070.jpg"
-            },
-            {
-              "news_id": "7c1965555f565482bda9d82cd7a23d06",
-              "url": "https://www.goshennews.com/news/national_news/japan-earthquake/image_6261e9cc-58a0-5296-b83d-f7b08cf3f147.html",
-              "headline": "Japan Earthquake",
-              "body": "A utility worker repairs power lines near AEON Mall, which was damaged in an explosion following an earthquake in Kashima, Kumamoto Prefecture, southern Japan, Wednesday, July 29, 2026. (AP Photo/Hiro",
-              "published_date": "2026-07-29",
-              "outlet": "Goshen News",
-              "image": "https://s.yimg.com/bo/edd022be-b288-579d-80bd-d85fa78ca78b_1785342979114.jpg"
-            },
-            {
-              "news_id": "2e049eb51b3658acbc0f2509af12f7b3",
-              "url": "https://www.msn.com/en-us/news/world/japan-earthquake-toll-rises-to-34-as-kumamoto-mall-collapse-search-goes-on/ar-AA2966sg?ocid=BingNewsVerp",
-              "headline": "Japan earthquake toll rises to 34 as Kumamoto mall collapse search goes on",
-              "body": "A powerful earthquake in Kumamoto killed 34 people and trapped victims in a collapsed mall and factory site. The disaster has ...",
-              "published_date": "2026-07-31",
-              "outlet": "India Today on MSN",
-              "image": "https://www.bing.com/th?id=ORMS.67f3111ad4e56bcc57e4d9b7d64a73a0"
-            },
-            {
-              "news_id": "74d87276a4115463bcd679b31e8595dd",
-              "url": "https://lasvegassun.com/news/2026/jul/30/quake-survivors-in-southwestern-japan-sleep-in-car/",
-              "headline": "Quake survivors in southwestern Japan sleep in cars in sweltering heat as death toll rises to 34",
-              "body": "Thousands of survivors of a powerful earthquake in southwestern Japan have spent Friday in crowded shelters or sleeping in cars as they face shortages of water and fuel and punishing summer temperatures that have stoked fears of heat-related illness",
-              "published_date": "2026-07-30",
-              "outlet": "Las Vegas Sun",
-              "image": "https://s.yimg.com/bo/98dc72cb-5d8b-59d3-882e-b0443e09c937_1783680935085.png.cf.jpg"
-            },
-            {
-              "news_id": "be7f2d897bfe520d8f016b437b20d3b0",
-              "url": "https://www.nbcnews.com/world/asia/hope-dwindles-rescue-southwestern-japan-quake-death-toll-climbs-23-rcna589959",
-              "headline": "Hope for rescue in southwestern Japan quake dwindles as death toll climbs to 25",
-              "body": "Time was running out to find survivors as rescuers continued to work in the Kumamoto area on Japan’s southern main island of Kyushu, where the magnitude-7.1 earthquake hit Tuesday.",
-              "published_date": "2026-07-30",
-              "outlet": "NBC News",
-              "image": ""
-            },
-            {
-              "news_id": "7c18fd215e52599bb875fc964421ecda",
-              "url": "https://www.msn.com/en-us/news/world/japan-quake-survivors-battle-thirst-heat-as-death-toll-rises-to-25/ar-AA293EwJ?ocid=BingNewsVerp",
-              "headline": "Japan quake survivors battle thirst, heat as death toll rises to 25",
-              "body": "By Tim Kelly, Tom Bateman and Satoshi Sugiyama YATSUSHIRO, Japan, July 30 (Reuters) - The 7.1-magnitude earthquake that ...",
-              "published_date": "2026-07-31",
-              "outlet": "Reuters on MSN",
-              "image": "https://www.bing.com/th?id=ORMS.9651707601cd09a759dfd36891a88a16"
-            },
-            {
-              "news_id": "f28f1be928465c58ae194c634d495729",
-              "url": "https://www.msn.com/en-us/news/news/two-homes-different-traumas-japan-quake-leaves-scars-seen-and-unseen/ar-AA293pC5?ocid=BingNewsVerp",
-              "headline": "Two homes, different traumas: Japan quake leaves scars seen and unseen",
-              "body": "By Tim Kelly, Tom Bateman and Issei Kato YATSUSHIRO, Japan, July 30 (Reuters) - Hirosuke Shimada's home emerged largely unscathed from this week's earthquake in southwestern Japan, but the violent ...",
-              "published_date": "2026-07-31",
-              "outlet": "Reuters on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "4f23c9e7c9ab54d3b9e66629045803ce",
-              "url": "https://apnews.com/video/rescue-wrapping-up-in-southwestern-japan-as-quake-death-toll-climbs-to-34-1f256ddcd81240b387b0330f10f3e9f7",
-              "headline": "Rescue wrapping up in southwestern Japan as quake death toll climbs to 34",
-              "body": "The death toll climbed to 34 from a powerful magnitude 7.1 earthquake that hit Japan’s southern main island of Kyushu on Tuesday, setting off an explosion at a mall, toppling a factory chimney and flattening homes, the Kumamoto prefectural government said Friday.",
-              "published_date": "2026-07-31",
-              "outlet": "Associated Press News",
-              "image": "https://www.bing.com/th?id=ONUT.cj1qUnpTUOjHdhPICW7vRw"
-            },
-            {
-              "news_id": "6252fc0525fd55e9838d1d1a1ffda46b",
-              "url": "https://www.msn.com/en-us/news/world/japan-quake-snarls-auto-and-chip-supply-chains-as-toll-hits-34/ar-AA296tUc?ocid=BingNewsVerp",
-              "headline": "Japan quake snarls auto and chip supply chains as toll hits 34",
-              "body": "By Tim Kelly, Maki Shiraki, Daniel Leussink and Sam Nussey KUMAMOTO, Japan, July 31 (Reuters) - A powerful earthquake that ...",
-              "published_date": "2026-07-31",
-              "outlet": "Reuters on MSN",
-              "image": "https://www.bing.com/th?id=ORMS.c94e14e38bb8078abd3701f95566a72d"
-            },
-            {
-              "news_id": "68f01e12ad3256f1b0da0456ba52dee1",
-              "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/07/31/2003861717",
-              "headline": "MOFA to donate NT$5 million for Japan quake relief - Taipei Times",
-              "body": "The Ministry of Foreign Affairs (MOFA) plans to donate NT$5 million (US$153,979) to support relief and reconstruction efforts after a magnitude 7.1 earthquake struck Japan\\'s Kumamoto Prefecture on Tuesday.The funding would be used for reconstruction efforts and to help affected residents return to n",
-              "published_date": "2026-07-31",
-              "outlet": "Taipei Times",
-              "image": ""
-            },
-            {
-              "news_id": "53e705f19c605cdb9180a5d8eae85b1b",
-              "url": "https://www.npr.org/2026/07/31/g-s1-136503/japan-quake-death-toll",
-              "headline": "Death toll from southwestern Japan quake climbs to 34",
-              "body": "Searchers continued to work in the Kumamoto area, including at the site of the collapsed mall, where some of the most serious damage was recorded.",
-              "published_date": "2026-07-31",
-              "outlet": "NPR",
-              "image": "https://www.bing.com/th?id=ONUT.M_820botJa6Lrrr3XhXUBg"
-            },
-            {
-              "news_id": "0daa3685ff3658e9a80b4050e7cb3ba8",
-              "url": "https://www.msn.com/en-ae/news/world/death-toll-in-japan-earthquake-rises-to-28-search-for-survivors-continues/ar-AA291V1X?ocid=BingNewsVerp",
-              "headline": "Death toll in Japan earthquake rises to 28; search for survivors continues",
-              "body": "Death toll in Japan quake rises to 28: government ...",
-              "published_date": "2026-07-31",
-              "outlet": "Khaleej Times on MSN",
-              "image": "https://www.bing.com/th?id=ORMS.626f5de4a264dbed224e6e89c119f8c3"
-            },
-            {
-              "news_id": "4d6cd61f299f5d19b1733a5098cffa5c",
-              "url": "https://www.wric.com/news/u-s-world/ap-death-toll-from-southwestern-japan-quake-climbs-to-34-as-rescuers-search-damaged-mall/",
-              "headline": "Death toll from southwestern Japan quake climbs to 34 as rescuers search damaged...",
-              "body": "KUMAMOTO, Japan (AP) — The death toll climbed to 34 from a powerful earthquake in southwestern Japan...",
-              "published_date": "2026-07-31T02:45:05+00:00",
-              "outlet": "WRIC 8 News Richmond",
-              "image": "https://s.yimg.com/bo/5c8cc11b-aa87-55e8-9e49-8c2c4ec967d0_1785466759865.jpg"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-08-01",
-          "summary": "As of July 31, the death toll from the Kumamoto earthquake has risen to 35, with one additional fatality confirmed. Shinkansen bullet train service between Hakata and Kumamoto has resumed, offering some relief for transportation. Survivors continue to endure heat and shortages, while auto and chip factories remain suspended.\nThe death toll from the Kumamoto earthquake has risen to 36 as survivors endure scorching heat and thousands remain in shelters. An animal hospital in the region has opened its doors to evacuees, allowing them to stay with their pets. Meanwhile, a 10-kilometer trail of ground cracks has been confirmed along the Hinagu fault zone, the earthquake's epicenter.",
-          "news": [
-            {
-              "news_id": "b5de163c558352fc8e1d4744a4db700c",
-              "url": "https://www.japantimes.co.jp/news/2026/08/01/japan/animal-hospital-kumamoto-quake/",
-              "headline": "Dogs allowed! Animal hospital opens doors to Japan quake survivors and their pets",
-              "body": "Shelters often do not allow pets and their owners to stay together, being mindful of other evacuees who may view the animals negatively.",
-              "published_date": "2026-08-01",
-              "outlet": "The Japan Times",
-              "image": ""
-            },
-            {
-              "news_id": "fa8b402bd9af51059bcb10d3997289ae",
-              "url": "https://www.chosun.com/english/world-en/2026/07/31/7BNTCLEKPRA5JOOJUTOTUSDPIQ/",
-              "headline": "Japan Earthquake Death Toll Rises to 34",
-              "body": "Japan Earthquake Death Toll Rises to 34 Aeon Mall explosion kills 7; semiconductor factories halt, disrupting supply chains",
-              "published_date": "2026-07-31",
-              "outlet": "The Chosun Ilbo",
-              "image": "https://www.bing.com/th?id=ONUT.ETlUMFQIr6tp4M0kzhYUew"
-            },
-            {
-              "news_id": "a7e3ff176a215abca9ca50baed86dcb1",
-              "url": "https://www.nytimes.com/2026/08/01/world/asia/japan-earthquake-recovery-heat.html",
-              "headline": "Japan’s Rescuers Battle ‘Cruel Heat’ After Major Earthquake",
-              "body": "Kumamoto faces a “double disaster,” as rescuers work in 100 degree heat, and shelters with limited air-conditioning put ...",
-              "published_date": "2026-08-01T00:00:00+00:00",
-              "outlet": "The New York Times",
-              "image": "https://www.bing.com/th?id=ONUT.uRoNXHCzh8mVUkOjrK6JfA"
-            },
-            {
-              "news_id": "8bb235975494594882599ba1427b2b84",
-              "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/07/31/kumamoto-quake-search-continues-as-72-hour-window-passes-in-japan-shinkansen-service-between-hakata-kumamoto-resumes",
-              "headline": "Kumamoto quake search continues as 72-hour window passes in Japan; Shinkansen service between Hakata, Kumamoto resumes",
-              "body": "KUMAMOTO: The Kumamoto prefectural disaster response headquarters said Friday one more death had been confirmed following Tuesday's powerful earthquake, bringing the death toll to 35, including one whose connection to the disaster is under investigation.",
-              "published_date": "2026-07-31",
-              "outlet": "The Star",
-              "image": "https://www.bing.com/th?id=ONUT.RbUM5mxD2xKSGXML8uhzIA"
-            },
-            {
-              "news_id": "6e254f26c9b95af18e5b38eebaef53b5",
-              "url": "https://www.usnews.com/news/world/articles/2026-07-28/a-magnitude-7-1-earthquake-shakes-part-of-southern-japan-but-no-tsunami-detected",
-              "headline": "A 7.1 Magnitude Quake Hits Japan's Southern Kyushu Island Killing at Least 3",
-              "body": "An earthquake with a magnitude of 7.1 has shaken Japan’s southern main island of Kyushu, killing at least three people and ...",
-              "published_date": "2026-07-28T15:09:17+00:00",
-              "outlet": "U.S. News & World Report",
-              "image": "https://www.bing.com/th?id=ONUT.Jct9YSt6q25N26ie8XO_oQ"
-            },
-            {
-              "news_id": "605e8346c7a151bfb88e3f3185cb609a",
-              "url": "https://apnews.com/article/japan-earnings-sony-entertainment-electronics-playstation-1bef3a59cdc32d0bc09dfb3058fd665b",
-              "headline": "Japan's Sony sees profit grow on demand for games, but quake damage still unclear",
-              "body": "Sony reported a 32% profit growth in the fiscal first quarter, even as the Japanese entertainment company warned of a negative impact from the earthquake that hit southwestern Kumamoto earlier this week.",
-              "published_date": "2026-07-31",
-              "outlet": "Associated Press News",
-              "image": ""
-            },
-            {
-              "news_id": "a9a71d77a57b52b39e8be74abbefb4c5",
-              "url": "https://apnews.com/article/japan-earthquake-kumamoto-photos-81625ab0eef536cd1da4e3d53cc2ba32",
-              "headline": "Photos show the aftermath of a damaging earthquake in southwestern Japan",
-              "body": "KUMAMOTO, Japan (AP) — A powerful earthquake struck the Kumamoto area on Japan’s southern main island of Kyushu on Tuesday.",
-              "published_date": "2026-07-29",
-              "outlet": "Associated Press",
-              "image": "https://s.yimg.com/bo/8d0671d5-cdef-54f9-a247-b2e54fb23b62_1785363745225.jpg"
-            },
-            {
-              "news_id": "95568ea1ea5d5f48865da6c053083705",
-              "url": "https://www.cnn.com/2026/07/28/world/japan-earthquake-maps-charts-vis",
-              "headline": "Tracking the impact of the Japan earthquake in maps and charts | CNN",
-              "body": "A powerful 6.8 magnitude earthquake struck Japan’s southern Kumamoto prefecture on Tuesday morning, causing damage to buildings and numerous injuries and deaths.",
-              "published_date": "2026-07-28",
-              "outlet": "CNN.com",
-              "image": "https://s.yimg.com/bo/eb095a44-f7bc-5239-81f2-54e2715ba0ac_1785265352430.png.cf.jpg"
-            },
-            {
-              "news_id": "090c55e5bd7756ba886b2cfb2d542dd5",
-              "url": "https://www.japantimes.co.jp/news/2026/08/01/japan/kumamoto-quake-survivors-heat/",
-              "headline": "Kumamoto quake survivors battle intense heat as death toll rises to 36",
-              "body": "Maximum temperatures are expected to reach 35 degrees Celsius or higher Saturday and into next week, with Monday forecast to hit 40 C.",
-              "published_date": "2026-08-01",
-              "outlet": "The Japan Times",
-              "image": ""
-            },
-            {
-              "news_id": "32c742f8fb59540097777d698527c99d",
-              "url": "https://www.channelnewsasia.com/east-asia/japan-kumamoto-earthquake-death-toll-auto-chip-factories-6290541",
-              "headline": "Japan quake death toll hits 35 as auto and chip factories suspend productions",
-              "body": "Tens of thousands of residents are without power and water in temperatures forecast to approach 40°C this weekend.",
-              "published_date": "2026-07-31",
-              "outlet": "CNA",
-              "image": ""
-            },
-            {
-              "news_id": "e9c00b489e63545f8f8792798b59c8a6",
-              "url": "https://www.accuweather.com/en/weather-news/death-toll-rises-in-japan-why-does-the-country-experience-so-many-large-earthquakes/1917072",
-              "headline": "Death toll rises in Japan. Why does the country experience so many large...",
-              "body": "Almost no other country in the world is rocked by such frequent and damaging earthquakes as Japan – ...",
-              "published_date": "2026-07-29T14:15:15+00:00",
-              "outlet": "AccuWeather",
-              "image": "https://s.yimg.com/bo/4be4cd60-595d-506b-b1ef-470b21787c3b_1785353209218.jpg"
-            },
-            {
-              "news_id": "9303d48585a05661aa1881de0fbb564d",
-              "url": "https://www.wesh.com/article/earthquake-japan-july-28/73282028",
-              "headline": "Japan earthquake: People missing in collapsed shopping mall",
-              "body": "The second floor of a shopping mall in Japan collapsed after a 7.1-magnitude earthquake, trapping several people.",
-              "published_date": "2026-07-28",
-              "outlet": "WESH 2 Orlando",
-              "image": "https://s.yimg.com/bo/e3ee17cf-3b92-5bab-8936-0d5e7c3e68f4_1785235264758.jpg"
-            },
-            {
-              "news_id": "611400d0695851e1bf4e8ae8a2fc46ee",
-              "url": "https://apnews.com/video/century-old-japanese-inn-faces-uncertain-future-after-it-was-damaged-in-earthquake-7189a38b79ca4f119ebba4b38c77d597",
-              "headline": "Century-old Japanese inn faces uncertain future after it was damaged in earthquake",
-              "body": "In southern Yatsushiro City, another hard-hit area by the recent earthquake in southern Kumamoto, Kinparo, a 116-year old Japanese inn, was severely damaged.",
-              "published_date": "2026-08-01",
-              "outlet": "Associated Press News",
-              "image": ""
-            },
-            {
-              "news_id": "bb1b836bf07f56db8fc89b4d167e5feb",
-              "url": "https://www.usnews.com/news/world/articles/2026-07-29/hope-dwindles-for-rescue-in-southwestern-japan-quake-as-death-toll-climbs-to-23",
-              "headline": "Hope Dwindles for Rescue in Southwestern Japan Quake as Death Toll Climbs to 25",
-              "body": "The Kumamoto prefectural government says the powerful earthquake that hit southwestern Japan earlier this week has now killed ...",
-              "published_date": "2026-07-30T04:12:47+00:00",
-              "outlet": "U.S. News & World Report",
-              "image": "https://www.bing.com/th?id=ONUT.JAJu2t2WvyM57iSmhgwndA"
-            },
-            {
-              "news_id": "f59d16f5962a51d5aa0cd9b941df1d1b",
-              "url": "https://www.msn.com/en-gb/news/world/japan-earthquake-number-of-dead-rises-as-thousands-remain-in-shelters/ar-AA298n0X?ocid=BingNewsVerp",
-              "headline": "Japan earthquake: Number of dead rises as thousands remain in shelters",
-              "body": "The number of people killed in Japan's earthquake has risen to 34 - as 9,000 remain in temporary shelters in searing heat.",
-              "published_date": "2026-08-01",
-              "outlet": "Sky News on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "2f859f78e103537eb4521e2ef1709763",
-              "url": "https://www.msn.com/en-gb/news/world/japan-earthquake-death-toll-rises-to-36-as-survivors-sleep-in-cars/ar-AA29c0Do?ocid=BingNewsVerp",
-              "headline": "Japan earthquake death toll rises to 36 as survivors sleep in cars",
-              "body": "Japan earthquake death toll rises to 36 as survivors sleep in cars amid scorching heat - Nearly 9,000 displaced struggling ...",
-              "published_date": "2026-08-01",
-              "outlet": "The Independent on MSN",
-              "image": "https://www.bing.com/th?id=ORMS.aa79f3715c0340239c830dbbd8c98ffa"
-            },
-            {
-              "news_id": "693fb224311152fc87d3b56e9d311761",
-              "url": "https://www.japantimes.co.jp/news/2026/07/31/japan/society/kumamoto-earthquake-aeon-mall-cats-rescue/",
-              "headline": "Twenty-five cats rescued from Japan mall damaged by earthquake and explosion",
-              "body": "Momo, Kohaku, Tango, Shandy and the others were on the ground floor of Aeon Mall in Kumamoto Prefecture when the deadly 7.1 magnitude quake hit on Tuesday.",
-              "published_date": "2026-07-31",
-              "outlet": "The Japan Times",
-              "image": "https://www.bing.com/th?id=ONUT.ypNPBKsfvqvzhI49FUkpHQ"
-            },
-            {
-              "news_id": "1d73f3e9b07953c8b17e603da3923080",
-              "url": "https://www.taipeitimes.com/News/front/archives/2026/07/31/2003861688",
-              "headline": "Japan quake toll hits 34 as survivors struggle amid heat - Taipei Times",
-              "body": "Japanese emergency workers yesterday searched tirelessly for survivors at a wrecked shopping mall, as the death toll from a major earthquake hit 34 and tens of thousands were left without power in punishing heat. The Kumamoto disaster management office issued the new tally for Tuesday’s quake, with",
-              "published_date": "2026-07-31",
-              "outlet": "Taipei Times",
-              "image": ""
-            },
-            {
-              "news_id": "c8e3d6cf62335c438bff9d2001192bb5",
-              "url": "https://www.ketv.com/article/earthquake-japan-july-28/73282028",
-              "headline": "Japan earthquake: People missing in collapsed shopping mall",
-              "body": "The second floor of a shopping mall in Japan collapsed after a 7.1-magnitude earthquake, trapping several people.",
-              "published_date": "2026-07-28",
-              "outlet": "KETV 7 Omaha",
-              "image": "https://s.yimg.com/bo/e3ee17cf-3b92-5bab-8936-0d5e7c3e68f4_1785235264758.jpg"
-            },
-            {
-              "news_id": "ba1587be1af45bbfbe2ebfee040fa328",
-              "url": "https://www.msn.com/en-us/news/world/days-after-japan-s-quake-a-family-shelters-in-their-car-in-sweltering-heat/vi-AA29arFN?ocid=BingNewsVerp",
-              "headline": "Days after Japan's quake, a family shelters in their car in sweltering heat",
-              "body": "Haruto Kubo says he was resting at home when a magnitude 7.1 earthquake struck Kumamoto Prefecture on Tuesday (July 28) and ...",
-              "published_date": "2026-08-01",
-              "outlet": "Reuters on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.KA_Sk139n3hk0TSqcmnUkA"
-            },
-            {
-              "news_id": "8bd0023ac9435f6882d1dda699a65e52",
-              "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/08/01/earthquake-leaves-10km-trail-of-ground-cracks-along-kumamoto039s-hinagu-fault-zone",
-              "headline": "Earthquake leaves 10km trail of ground cracks along Kumamoto's Hinagu fault zone",
-              "body": "KUMAMOTO: Numerous cracks stretching more than 10km along the Hinagu fault zone, the epicentre of Tuesday's massive earthquake that struck Kumamoto Prefecture, have been confirmed by The Yomiuri Shimbun.",
-              "published_date": "2026-08-01",
-              "outlet": "The Star",
-              "image": ""
-            },
-            {
-              "news_id": "e88d486795855e04ac4493f7789f2875",
-              "url": "https://www.abc.net.au/news/2026-07-31/japan-earthquake-death-toll-rises-as-survivors-battle-heat/106979558",
-              "headline": "Earthquake survivors battle sweltering heat in shelters as death toll rises",
-              "body": "At least 34 people have been killed after a 7.1-magnitude earthquake struck Japan, with 9,000 others displaced across the affected region.",
-              "published_date": "2026-07-31",
-              "outlet": "ABC (Australian Broadcasting Corporation)",
-              "image": "https://www.bing.com/th?id=ONUT.43JL9yyKV6CWrgT3Zh9TdA"
-            },
-            {
-              "news_id": "bb5712bfd6795caa93124a5398148f85",
-              "url": "https://www.theartnewspaper.com/2026/07/31/japans-400-year-old-kumamoto-castle-damaged-by-71-magnitude-earthquake",
-              "headline": "Japan’s 400-year-old Kumamoto Castle damaged by 7.1 magnitude earthquake",
-              "body": "The quake has caused damage and disruption to more than a dozen other cultural sites in the Kumamoto Prefecture",
-              "published_date": "2026-07-31",
-              "outlet": "The Art Newspaper",
-              "image": ""
-            },
-            {
-              "news_id": "93a69dcf87f15a73ab5a7a8f5d58e66b",
-              "url": "https://www.hjnews.com/world/japan-earthquake/image_e84da8bf-4ed3-5a38-bf90-1086aef11be4.html",
-              "headline": "Japan Earthquake",
-              "body": "A street shows cracks in Uki, southern Japan, Friday, July 31, 2026, three days after an earthquake hit the area. (AP Photo/Hiro Komae)",
-              "published_date": "2026-07-31",
-              "outlet": "The Herald Journal",
-              "image": "https://s.yimg.com/bo/04849af0-9d5e-5c9f-b288-b94277de879e_1785550469541.jpg"
-            }
-          ]
-        }
-      ],
-      "logs_total": 5
     }
   ]
 }
