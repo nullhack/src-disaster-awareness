@@ -1,38 +1,38 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-07-31",
-  "generated_at": "2026-08-01T14:42:51Z",
+  "generated_at": "2026-08-02T04:46:12Z",
   "as_of": "2026-07-31",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 13,
-    "new_today": 4,
+    "reportable_total": 12,
+    "new_today": 3,
     "critical": 3,
     "high": 2,
-    "medium": 8,
+    "medium": 7,
     "low": 0,
     "disease_outbreaks": 2,
     "countries_affected": 8,
-    "news_total": 696,
-    "max_magnitude": 6.5,
+    "news_total": 669,
+    "max_magnitude": 6.2,
     "by_severity": {
       "CRITICAL": 3,
       "HIGH": 2,
-      "MEDIUM": 8,
+      "MEDIUM": 7,
       "LOW": 0
     },
     "by_type": {
       "Disease": 2,
       "Flood": 1,
-      "Earthquake": 5,
       "Forest Fire": 3,
       "Severe Weather": 1,
+      "Earthquake": 4,
       "Tropical Cyclone": 1
     },
     "by_region": {
       "Global": 1,
-      "Asia": 6,
+      "Asia": 5,
       "Europe": 4,
       "Americas": 1,
       "Oceania": 1
@@ -55,15 +55,6 @@
       "iso2": "XX",
       "region": "Global",
       "country_group": "C",
-      "max_severity": "MEDIUM"
-    },
-    {
-      "country": "Philippines",
-      "count": 2,
-      "max_sev_rank": 2,
-      "iso2": "PH",
-      "region": "Asia",
-      "country_group": "A",
       "max_severity": "MEDIUM"
     },
     {
@@ -103,6 +94,15 @@
       "max_severity": "MEDIUM"
     },
     {
+      "country": "Philippines",
+      "count": 1,
+      "max_sev_rank": 3,
+      "iso2": "PH",
+      "region": "Asia",
+      "country_group": "A",
+      "max_severity": "HIGH"
+    },
+    {
       "country": "Spain",
       "count": 1,
       "max_sev_rank": 4,
@@ -137,7 +137,7 @@
       "event_date": "2024-05-30",
       "first_reported_date": "2024-05-30",
       "last_updated_date": "2026-07-31",
-      "days_since_event": 793,
+      "days_since_event": 794,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -574,7 +574,7 @@
       "event_date": "2026-04-23",
       "first_reported_date": "2026-04-23",
       "last_updated_date": "2026-07-27",
-      "days_since_event": 100,
+      "days_since_event": 101,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -979,7 +979,7 @@
       "event_date": "2026-06-06",
       "first_reported_date": "2026-06-06",
       "last_updated_date": "2026-07-30",
-      "days_since_event": 56,
+      "days_since_event": 57,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -1447,325 +1447,6 @@
       "logs_total": 10
     },
     {
-      "incident_id": "20260626-PH-EQ",
-      "tree_id": "97104f9b52cd5e6ebc506ce2ee60dac5",
-      "canonical_name": "Earthquake M6.5 Sarangani, Philippines 2026-06-26",
-      "summary": "Two strong aftershocks hit off the coast of Sarangani in Davao Occidental on Wednesday evening, as reported by PHIVOLCS, continuing the seismic activity in the region.",
-      "country": "Philippines",
-      "iso2": "PH",
-      "lat": 5.2392,
-      "lon": 125.1965,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-06-26",
-      "first_reported_date": "2026-06-26",
-      "last_updated_date": "2026-07-31",
-      "days_since_event": 36,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 1,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 27
-      },
-      "source_links": [
-        {
-          "type": "GDACS",
-          "label": "Orange alert · Magnitude 6.5M, Depth:42km",
-          "url": "https://www.gdacs.org/report.aspx?eventid=1548668&episodeid=1714645&eventtype=EQ",
-          "meta": "Magnitude 6.5M, Depth:42km"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 6.5,
-        "max_depth_km": null,
-        "place": "Philippines",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": "Orange",
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Magnitude 6.6 earthquake rocks Davao Occidental",
-          "published_date": "2026-06-26"
-        },
-        {
-          "headline": "6.6-magnitude earthquake strikes southern Philippines; aftershocks expected",
-          "published_date": "2026-07-08T22:10:39+00:00"
-        },
-        {
-          "headline": "Philippines devastated by massive 6.9 magnitude earthquake, 69 feared dead",
-          "published_date": "2026-07-12T19:48:26+00:00"
-        },
-        {
-          "headline": "Reckitt Philippines Inc. donates P283k to PRC for Mindanao earthquake response",
-          "published_date": "2026-07-14"
-        },
-        {
-          "headline": "Magnitude 5.2 earthquake rocks Philippines' Masbate",
-          "published_date": "2026-07-14"
-        },
-        {
-          "headline": "Earthquake of magnitude 6.05 strikes Mindanao, Philippines, GFZ says",
-          "published_date": "2026-07-14T00:00:00+00:00"
-        },
-        {
-          "headline": "DILG-Davao seeks strengthening of infrastructure audit program for death, damage prevention",
-          "published_date": "2026-07-15"
-        },
-        {
-          "headline": "6.5-magnitude offshore earthquake strikes S. Philippines",
-          "published_date": "2026-07-15"
-        },
-        {
-          "headline": "Earthquake of magnitude 6.05 strikes Mindanao, Philippines, GFZ says",
-          "published_date": "2026-07-15T09:07:40+00:00"
-        },
-        {
-          "headline": "EARTHQUAKE: 4.5 Magnitude Quake Hits Cagayan (July 15, 2026) | PhilNews",
-          "published_date": "2026-07-16"
-        },
-        {
-          "headline": "Suzuki Philippines extends assistance to earthquake-affected dealership employees in General Santos",
-          "published_date": "2026-07-16T00:00:00+00:00"
-        },
-        {
-          "headline": "Earthquake in Philippines disrupts school’s morning flag ceremony",
-          "published_date": "2026-07-17T08:51:29+00:00"
-        },
-        {
-          "headline": "Magnitude 6 2 Earthquake Strikes Off Southern Philippines Following Series Of Ring Of Fire Quakes",
-          "published_date": "2026-07-18"
-        },
-        {
-          "headline": "Minor Sea Level Disturbance Reported After Strong Earthquake Off The Coast Of Balut Island Davao Occidental",
-          "published_date": "2026-07-18"
-        },
-        {
-          "headline": "Magnitude 65 Earthquake Struck Off The Coast Of Balut Island Sarangani Davao Occidental",
-          "published_date": "2026-07-18"
-        },
-        {
-          "headline": "Philippine Senate President Praises Uae Aid For Mindanao Earthquake Victims",
-          "published_date": "2026-07-18"
-        },
-        {
-          "headline": "Magnitude 5 2 Aftershock Struck Masbate Phivolcs",
-          "published_date": "2026-07-18"
-        },
-        {
-          "headline": "Thai students send messages of support to Filipino children after Mindanao earthquake",
-          "published_date": "2026-07-18T00:00:00+00:00"
-        },
-        {
-          "headline": "5.0-magnitude aftershock hits Davao Occidental",
-          "published_date": "2026-07-19"
-        },
-        {
-          "headline": "MSN",
-          "published_date": "2026-07-19"
-        },
-        {
-          "headline": "‘Taiwan-ihan’ answers call on relief, recovery efforts for Mindanao quake",
-          "published_date": "2026-07-20T14:40:13+00:00"
-        },
-        {
-          "headline": "Nissan extends support to Mindanao earthquake-affected communities - BusinessWorld Online",
-          "published_date": "2026-07-25"
-        },
-        {
-          "headline": "Nissan extends support to Mindanao earthquake-affected communities - BusinessWorld Online",
-          "published_date": "2026-07-25"
-        },
-        {
-          "headline": "Two strong aftershocks jolt Sarangani in Davao Occidental",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Saudi Arabia pledges aid to 120K Mindanao quake victims",
-          "published_date": "2026-07-29T03:55:27+00:00"
-        },
-        {
-          "headline": "B2Gold anaffiliate donate nearly P4 million in relief and rebuilding support to earthquake- and typhoon-affected Mindanao communities",
-          "published_date": "2026-07-30T09:30:49+00:00"
-        },
-        {
-          "headline": "‘Art for Everyone’ aims to help quake victims, cancer patients",
-          "published_date": "2026-07-31"
-        }
-      ],
-      "news_total": 27,
-      "logs": [
-        {
-          "log_date": "2026-07-08",
-          "summary": "A magnitude 6.6 earthquake struck off the coast of Sarangani, Davao Occidental, Philippines on June 26, 2026, at around 7:34 PM according to Phivolcs. The quake generated reports of strong shaking in nearby areas, and aftershocks are expected. No immediate damage or casualties have been reported in the available excerpts.",
-          "news": [
-            {
-              "news_id": "c98d83be00545152847e4ce690142b43",
-              "url": "https://www.gmanetwork.com/regionaltv/news/114592/magnitude-66-earthquake-rocks-davao-occidental/story/",
-              "headline": "Magnitude 6.6 earthquake rocks Davao Occidental",
-              "body": "A magnitude 6.6 earthquake struck off the coast of Sarangani, Davao Occidental around 7:34 p.m. on Friday, June 26, 2026, according to the Philippine Institute of Volcanology and Seismology (PHIVOLCS).",
-              "published_date": "2026-06-26",
-              "outlet": "GMA Network",
-              "image": "https://www.bing.com/th?id=ONUT.XYQ-sSuMS-uYfx20Da573Q"
-            },
-            {
-              "news_id": "abe25c7f62c058c1bfb39549906eafe6",
-              "url": "https://www.khaleejtimes.com/world/asia/66-magnitude-earthquake-davao-philippines-aftershocks-june-26-2026",
-              "headline": "6.6-magnitude earthquake strikes southern Philippines; aftershocks expected",
-              "body": "A magnitude 6.6 earthquake struck off the coast of southern Philippines on Friday, June 26, according to the country's Institute of Volcanology and Seismology (Phivolcs). The quake struck at 7.34pm ...",
-              "published_date": "2026-07-08T22:10:39+00:00",
-              "outlet": "Khaleej Times",
-              "image": ""
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-18",
-          "summary": "A video shows the earthquake disrupting a school's morning flag ceremony in the Philippines. Suzuki Philippines extends assistance to employees affected by the earthquake in General Santos, Mindanao. Thai students from Roong Aroon School sent letters of support to Filipino children after the Mindanao earthquake.",
-          "news": [
-            {
-              "news_id": "e9a49ef6517356e583ea4f2718de9ac0",
-              "url": "https://businessmirror.com.ph/2026/07/18/thai-students-send-messages-of-support-to-filipino-children-after-mindanao-earthquake/",
-              "headline": "Thai students send messages of support to Filipino children after Mindanao earthquake",
-              "body": "THE Philippine Embassy received a collection of moving letters from Grade 8 students of Roong Aroon School in Bangkok expressing solidarity, hope, and encouragement for Filipino children and ...",
-              "published_date": "2026-07-18T00:00:00+00:00",
-              "outlet": "BusinessMirror",
-              "image": ""
-            },
-            {
-              "news_id": "f4fa59eac2bf5d488a9e4ec0acdb5eb8",
-              "url": "https://apnews.com/video/earthquake-in-philippines-disrupts-schools-morning-flag-ceremony-065b1e5b8489421384f7da67e068733b",
-              "headline": "Earthquake in Philippines disrupts school’s morning flag ceremony",
-              "body": "In a video shared by Mahayahay Elementary School in the Philippines on social media, schoolchildren were seen screaming and ...",
-              "published_date": "2026-07-17T08:51:29+00:00",
-              "outlet": "Associated Press News",
-              "image": "https://www.bing.com/th?id=ONUT.MnMHAerjo0Vb8M9cUSzRDg"
-            },
-            {
-              "news_id": "97b583f938345c41acd9d1d8b9bf7ecd",
-              "url": "https://businessmirror.com.ph/2026/07/16/suzuki-philippines-extends-assistance-to-earthquake-affected-dealership-employees-in-general-santos/",
-              "headline": "Suzuki Philippines extends assistance to earthquake-affected dealership employees in General Santos",
-              "body": "Following the recent earthquake that affected parts of Mindanao, Suzuki Philippines immediately extended assistance to ...",
-              "published_date": "2026-07-16T00:00:00+00:00",
-              "outlet": "BusinessMirror",
-              "image": "https://www.bing.com/th?id=ONUT.m6ASRjzk1FaZ6mJCXf2gNg"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-19",
-          "summary": "A new 6.9 magnitude earthquake struck the central Philippines, with 69 feared dead. A 5.0-magnitude aftershock hit Davao Occidental on July 19. The government also committed an additional P20 million in financial aid for earthquake victims in South Cotabato.",
-          "news": [
-            {
-              "news_id": "5d8b76280618586caa31e9ed618616b8",
-              "url": "https://www.msn.com/en-gb/public-safety-and-emergencies/natural-disasters/philippines-devastated-by-massive-6-9-magnitude-earthquake-69-feared-dead/vi-AA288g2R?ocid=BingNewsVerp",
-              "headline": "Philippines devastated by massive 6.9 magnitude earthquake, 69 feared dead",
-              "body": "A powerful magnitude-6.9 earthquake struck the central Philippines, causing widespread destruction and claiming at least 69 ...",
-              "published_date": "2026-07-12T19:48:26+00:00",
-              "outlet": "YouTube on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.bZIBXviK6k7HRL4fYxIWaQ"
-            },
-            {
-              "news_id": "21d042364e0c53548316ef7420169a63",
-              "url": "https://mb.com.ph/2026/07/19/50-magnitude-aftershock-hits-davao-occidental",
-              "headline": "5.0-magnitude aftershock hits Davao Occidental",
-              "body": "A magnitude 5.0 earthquake struck offshore Davao Occidental on Sunday afternoon, July 19, as an aftershock of the powerful earthquakes that shook the area in...",
-              "published_date": "2026-07-19",
-              "outlet": "Manila Bulletin",
-              "image": ""
-            },
-            {
-              "news_id": "89ccfdff133c5499ad860a972047e0dc",
-              "url": "https://www.msn.com/en-ph/news/national/malacañang-pours-in-additional-p20m-aid-to-earthquake-victims-in-south-cotabato/ar-AA28dwna?ocid=BingNewsVerp",
-              "headline": "MSN",
-              "body": "MANILA, Philippines — The government has committed an additional P20 million in financial assistance to support the rehabilitation of communities in South Cotabato affected by recent earthquakes, ...",
-              "published_date": "2026-07-19",
-              "outlet": "The Manila Times on MSN",
-              "image": ""
-            }
-          ]
-        },
-        {
-          "log_date": "2026-07-30",
-          "summary": "Two strong aftershocks hit off the coast of Sarangani in Davao Occidental on Wednesday evening, as reported by PHIVOLCS, continuing the seismic activity in the region.",
-          "news": [
-            {
-              "news_id": "5ebacf7afcad5d5b87293612e1556dbf",
-              "url": "https://www.gmanetwork.com/news/topstories/regions/996665/two-strong-aftershocks-jolt-sarangani-in-davao-occidental/story/",
-              "headline": "Two strong aftershocks jolt Sarangani in Davao Occidental",
-              "body": "Two strong aftershocks hit off the coast of Sarangani in Davao Occidental on Wednesday evening, the Philippine Institute of Volcanology and Seismology (PHIVOLCS) reported.",
-              "published_date": "2026-07-29",
-              "outlet": "GMA Network",
-              "image": "https://www.bing.com/th?id=ONUT.8wEf2KuwnnWG2HO51vKSLQ"
-            },
-            {
-              "news_id": "58fec708de8e544bbfe244f790dffbcb",
-              "url": "https://www.manilatimes.net/2026/07/14/tmt-newswire/reckitt-philippines-inc-donates-p283k-to-prc-for-mindanao-earthquake-response/2389142",
-              "headline": "Reckitt Philippines Inc. donates P283k to PRC for Mindanao earthquake response",
-              "body": "RECKITT Philippines Inc. has once again demonstrated its steadfast commitment to humanitarian service by donating P283,421 worth of essential hygiene and health products to the Philippine Red Cross (PRC) in support of relief operations for families affected by the magnitude 7.8 earthquake in Mindanao.",
-              "published_date": "2026-07-14",
-              "outlet": "The Manila Times",
-              "image": ""
-            },
-            {
-              "news_id": "579cb35e66ca5b50ae70d59c74d7c3b0",
-              "url": "https://www.pna.gov.ph/articles/1280456",
-              "headline": "Saudi Arabia pledges aid to 120K Mindanao quake victims",
-              "body": "Saudi Arabia is set to provide humanitarian relief assistance to the victims affected by the earthquake that rocked Mindanao ...",
-              "published_date": "2026-07-29T03:55:27+00:00",
-              "outlet": "Philippine News Agency",
-              "image": "https://www.bing.com/th?id=ONUT.x46_z1YX77k5ZIpXJHFWFg"
-            },
-            {
-              "news_id": "65471dae8b7a55bd82887e06bd17dbfe",
-              "url": "https://bworldonline.com/spotlight/2026/07/24/765760/nissan-extends-support-to-mindanao-earthquake-affected-communities/",
-              "headline": "Nissan extends support to Mindanao earthquake-affected communities - BusinessWorld Online",
-              "body": "Nissan Philippines, Inc. expresses its solidarity with the Filipino people by extending its support to the Philippine Red Cross and the Angat Buhay Foundation, aiding families as they recover from the disaster.",
-              "published_date": "2026-07-25",
-              "outlet": "BusinessWorld",
-              "image": "https://s.yimg.com/bo/ffa30b5a-fce3-59f9-978c-e11f79a40a8f_1784879803625.jpg"
-            },
-            {
-              "news_id": "471a196c1b125d7c91abea110d613ed1",
-              "url": "https://bworldonline.com/spotlight/2026/07/25/765760/nissan-extends-support-to-mindanao-earthquake-affected-communities/",
-              "headline": "Nissan extends support to Mindanao earthquake-affected communities - BusinessWorld Online",
-              "body": "Nissan Philippines, Inc. expresses its solidarity with the Filipino people by extending its support to the Philippine Red Cross and the Angat Buhay Foundation, aiding families as they recover from the disaster.",
-              "published_date": "2026-07-25",
-              "outlet": "BusinessWorld",
-              "image": "https://s.yimg.com/bo/ffa30b5a-fce3-59f9-978c-e11f79a40a8f_1784879803625.jpg"
-            },
-            {
-              "news_id": "25cd144c97b85f6c810aceea9d464248",
-              "url": "https://businessmirror.com.ph/2026/07/22/taiwan-ihan-answers-call-on-relief-recovery-efforts-for-mindanao-quake/",
-              "headline": "‘Taiwan-ihan’ answers call on relief, recovery efforts for Mindanao quake",
-              "body": "REPRESENTATIVE Wallace Chow of the Taipei Economic and Cultural Office (TECO) in the Philippines, on behalf of the Government ...",
-              "published_date": "2026-07-20T14:40:13+00:00",
-              "outlet": "BusinessMirror",
-              "image": "https://www.bing.com/th?id=ONUT.2Atqwa5J9TWbqoQZcteGdg"
-            }
-          ]
-        }
-      ],
-      "logs_total": 6
-    },
-    {
       "incident_id": "20260704-FR-WF",
       "tree_id": "5a76e343c6b4508a84a06d78d51e87ed",
       "canonical_name": "Forest Fire Pyrenees-Orientales, France 2026-07-04",
@@ -1789,7 +1470,7 @@
       "event_date": "2026-07-04",
       "first_reported_date": "2026-07-04",
       "last_updated_date": "2026-07-31",
-      "days_since_event": 28,
+      "days_since_event": 29,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -2302,7 +1983,7 @@
       "event_date": "2026-07-09",
       "first_reported_date": "2026-07-09",
       "last_updated_date": "2026-07-30",
-      "days_since_event": 23,
+      "days_since_event": 24,
       "source_count": 3,
       "should_report": true,
       "search_keys": [],
@@ -3550,7 +3231,7 @@
       "event_date": "2026-07-09",
       "first_reported_date": "2026-07-09",
       "last_updated_date": "2026-07-29",
-      "days_since_event": 23,
+      "days_since_event": 24,
       "source_count": 8,
       "should_report": true,
       "search_keys": [],
@@ -6021,7 +5702,7 @@
       "event_date": "2026-07-12",
       "first_reported_date": "2026-07-12",
       "last_updated_date": "2026-07-25",
-      "days_since_event": 20,
+      "days_since_event": 21,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -6977,7 +6658,7 @@
       "event_date": "2026-07-14",
       "first_reported_date": "2026-07-14",
       "last_updated_date": "2026-07-26",
-      "days_since_event": 18,
+      "days_since_event": 19,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -7277,7 +6958,7 @@
       "event_date": "2026-07-19",
       "first_reported_date": "2026-07-19",
       "last_updated_date": "2026-07-27",
-      "days_since_event": 13,
+      "days_since_event": 14,
       "source_count": 2,
       "should_report": true,
       "search_keys": [],
@@ -7804,7 +7485,7 @@
       "event_date": "2026-07-23",
       "first_reported_date": "2026-07-23",
       "last_updated_date": "2026-07-30",
-      "days_since_event": 9,
+      "days_since_event": 10,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -7918,7 +7599,7 @@
       "event_date": "2026-07-24",
       "first_reported_date": "2026-07-24",
       "last_updated_date": "2026-07-25",
-      "days_since_event": 8,
+      "days_since_event": 9,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -8077,7 +7758,7 @@
       "event_date": "2026-07-28",
       "first_reported_date": "2026-07-28",
       "last_updated_date": "2026-07-31",
-      "days_since_event": 4,
+      "days_since_event": 5,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
