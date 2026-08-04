@@ -326,12 +326,30 @@ class ContentStore:
             return []
         return [_place_from_dict(p) for p in report.get("places", [])]
 
-    def read_searched_report_keys(self) -> set[str]:
-        return {
-            _natural_key(d)
-            for d in self._reports.values()
-            if d.get("news_searched_at")
-        }
+    def read_searched_report_keys(self, research_window_days: int = 0) -> set[str]:
+        if not research_window_days:
+            return {
+                _natural_key(d)
+                for d in self._reports.values()
+                if d.get("news_searched_at")
+            }
+        cutoff = _as_utc(self._clock()) - timedelta(days=research_window_days)
+        result: set[str] = set()
+        for d in self._reports.values():
+            if not d.get("news_searched_at"):
+                continue
+            rdate = str(d.get("report_date", ""))
+            if rdate:
+                try:
+                    dt = datetime.fromisoformat(rdate)
+                    if dt.tzinfo is None:
+                        dt = dt.replace(tzinfo=timezone.utc)
+                    if dt >= cutoff:
+                        continue
+                except ValueError:
+                    pass
+            result.add(_natural_key(d))
+        return result
 
     def read_source_report_keys(self) -> set[str]:
         return {_natural_key(d) for d in self._reports.values()}

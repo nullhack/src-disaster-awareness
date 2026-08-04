@@ -329,7 +329,7 @@ def search_news(
     adapter_list = list(cast(Any, adapters))
     adapter_map = _adapter_by_source(adapter_list)
     if adapter_list and not repoll:
-        searched_keys = wh.read_searched_report_keys()
+        searched_keys = wh.read_searched_report_keys(research_window_days=3)
         all_reports = []
         for adapter in adapter_list:
             all_reports.extend((adapter, r) for r in _fetch_reports(adapter))
