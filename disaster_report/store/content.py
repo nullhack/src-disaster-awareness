@@ -336,18 +336,18 @@ class ContentStore:
         cutoff = _as_utc(self._clock()) - timedelta(days=research_window_days)
         result: set[str] = set()
         for d in self._reports.values():
-            if not d.get("news_searched_at"):
+            searched_at = str(d.get("news_searched_at") or "")
+            if not searched_at:
                 continue
-            rdate = str(d.get("report_date", ""))
-            if rdate:
-                try:
-                    dt = datetime.fromisoformat(rdate)
-                    if dt.tzinfo is None:
-                        dt = dt.replace(tzinfo=timezone.utc)
-                    if dt >= cutoff:
-                        continue
-                except ValueError:
-                    pass
+            try:
+                dt = datetime.fromisoformat(searched_at)
+                if dt.tzinfo is None:
+                    dt = dt.replace(tzinfo=timezone.utc)
+            except ValueError:
+                result.add(_natural_key(d))
+                continue
+            if dt >= cutoff:
+                continue
             result.add(_natural_key(d))
         return result
 
