@@ -1,25 +1,25 @@
 {
   "schema_version": "1.5",
-  "report_date": "2026-08-06",
+  "report_date": "2026-08-07",
   "generated_at": "2026-08-07T04:05:56Z",
-  "as_of": "2026-08-06",
+  "as_of": "2026-08-07",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 22,
-    "new_today": 15,
+    "reportable_total": 21,
+    "new_today": 0,
     "critical": 11,
     "high": 3,
-    "medium": 5,
+    "medium": 4,
     "low": 3,
     "disease_outbreaks": 3,
     "countries_affected": 14,
-    "news_total": 2708,
+    "news_total": 2703,
     "max_magnitude": 7.5,
     "by_severity": {
       "CRITICAL": 11,
       "HIGH": 3,
-      "MEDIUM": 5,
+      "MEDIUM": 4,
       "LOW": 3
     },
     "by_type": {
@@ -30,13 +30,13 @@
       "Forest Fire": 5,
       "Severe Weather": 1,
       "Conflict": 2,
-      "Tropical Cyclone": 2,
+      "Tropical Cyclone": 1,
       "": 1
     },
     "by_region": {
       "Global": 2,
       "Africa": 3,
-      "Asia": 6,
+      "Asia": 5,
       "Americas": 1,
       "Europe": 7,
       "Oceania": 2,
@@ -82,7 +82,7 @@
     },
     {
       "country": "China",
-      "count": 3,
+      "count": 2,
       "max_sev_rank": 2,
       "iso2": "CN",
       "region": "Asia",
@@ -12304,120 +12304,6 @@
         }
       ],
       "logs_total": 14
-    },
-    {
-      "incident_id": "20260723-CN-TC",
-      "tree_id": "ff934a7b352f4f5683a1f1bac820b659",
-      "canonical_name": "Tropical Cyclone ELEVEN-26 China 2026-07-23",
-      "summary": "Typhoon Noul, the strongest storm to hit China this year, made landfall in southern China on July 26, 2026, bringing strong winds and heavy rain. The storm triggered the relocation of over 700,000 people in Guangdong and prompted emergency relief efforts. Authorities warned of flash floods across several provinces including Jiangxi, Hunan, and Sichuan.",
-      "country": "China",
-      "iso2": "CN",
-      "lat": 17.4,
-      "lon": 128.4,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Tropical Cyclone",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-07-23",
-      "first_reported_date": "2026-07-23",
-      "last_updated_date": "2026-07-30",
-      "days_since_event": 15,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 1,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 5
-      },
-      "source_links": [
-        {
-          "type": "GDACS",
-          "label": "Orange alert · Tropical Cyclone ELEVEN-26 China 2026-07-23",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=TC&eventid=1001294",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "China",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": "Orange",
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Southern China faces torrential rain, floods after Typhoon Noul makes landfall",
-          "published_date": "2026-07-26"
-        },
-        {
-          "headline": "Southern China faces torrential rain, flood risk after Typhoon Noul hits land",
-          "published_date": "2026-07-26"
-        },
-        {
-          "headline": "Typhoon Noul weakens as it lashes southern China - Taipei Times",
-          "published_date": "2026-07-27"
-        },
-        {
-          "headline": "Southern, central China brace for flood risk after typhoon",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Independent surf media only survives with your support",
-          "published_date": "2026-07-30"
-        }
-      ],
-      "news_total": 5,
-      "logs": [
-        {
-          "log_date": "2026-07-27",
-          "summary": "Typhoon Noul, the strongest storm to hit China this year, made landfall in southern China on July 26, 2026, bringing strong winds and heavy rain. The storm triggered the relocation of over 700,000 people in Guangdong and prompted emergency relief efforts. Authorities warned of flash floods across several provinces including Jiangxi, Hunan, and Sichuan.",
-          "news": [
-            {
-              "news_id": "fe8d168a0250539ca298d6c68a53afbb",
-              "url": "https://www.channelnewsasia.com/east-asia/southern-china-typhoon-noul-torrential-rain-flood-6278926",
-              "headline": "Southern China faces torrential rain, floods after Typhoon Noul makes landfall",
-              "body": "Flash floods are expected in parts of Jiangxi, Hunan, Guangdong, Sichuan, Shaanxi, Gansu and southeastern Xinjiang from Sunday evening through Monday evening.",
-              "published_date": "2026-07-26",
-              "outlet": "CNA",
-              "image": "https://www.bing.com/th?id=ONUT.sq9BtQWUrmV1nUNjPSZm5g"
-            },
-            {
-              "news_id": "73beb6bafc6c5d9fae2bcc347618f1d2",
-              "url": "https://www.taipeitimes.com/News/front/archives/2026/07/27/2003861439",
-              "headline": "Typhoon Noul weakens as it lashes southern China - Taipei Times",
-              "body": "Typhoon Noul yesterday weakened to a tropical storm on Sunday, as it moved inland after lashing a stretch of southern China with strong winds and rain, prompting emergency relief in the fiercest storm to hit the country this year, state media reported. Chinese weather authorities expected parts of s",
-              "published_date": "2026-07-27",
-              "outlet": "Taipei Times",
-              "image": "https://www.bing.com/th?id=ONUT.rEwBdJwPe6dC-oyjKu7o6g"
-            },
-            {
-              "news_id": "bb554b69eb2b51998fe522bca4857c74",
-              "url": "https://www.straitstimes.com/asia/east-asia/southern-china-drenched-as-typhoon-noul-makes-landfall",
-              "headline": "Southern China faces torrential rain, flood risk after Typhoon Noul hits land",
-              "body": "The typhoon has forced the relocation of more than 700,000 people in Guangdong. Read more at straitstimes.com. Read more at straitstimes.com.",
-              "published_date": "2026-07-26",
-              "outlet": "The Straits Times",
-              "image": "https://www.bing.com/th?id=ONUT.dVwflzOMhR70pzjE0fPMOA"
-            }
-          ]
-        }
-      ],
-      "logs_total": 1
     },
     {
       "incident_id": "20260726-IR-CF",
