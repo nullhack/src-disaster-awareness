@@ -1,26 +1,26 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-08-06",
-  "generated_at": "2026-08-08T14:03:10Z",
+  "generated_at": "2026-08-09T03:10:58Z",
   "as_of": "2026-08-06",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 10,
+    "reportable_total": 9,
     "new_today": 4,
     "critical": 2,
     "high": 2,
     "medium": 4,
-    "low": 2,
+    "low": 1,
     "disease_outbreaks": 1,
-    "countries_affected": 8,
+    "countries_affected": 7,
     "news_total": 510,
     "max_magnitude": 6.3,
     "by_severity": {
       "CRITICAL": 2,
       "HIGH": 2,
       "MEDIUM": 4,
-      "LOW": 2
+      "LOW": 1
     },
     "by_type": {
       "Disease": 1,
@@ -28,12 +28,11 @@
       "Flood": 1,
       "Forest Fire": 3,
       "Tropical Cyclone": 1,
-      "Earthquake": 2,
-      "": 1
+      "Earthquake": 2
     },
     "by_region": {
       "Global": 1,
-      "Africa": 2,
+      "Africa": 1,
       "Asia": 3,
       "Europe": 3,
       "Oceania": 1
@@ -45,15 +44,6 @@
       "count": 1,
       "max_sev_rank": 1,
       "iso2": "CD",
-      "region": "Africa",
-      "country_group": "C",
-      "max_severity": "LOW"
-    },
-    {
-      "country": "Sudan",
-      "count": 1,
-      "max_sev_rank": 1,
-      "iso2": "SD",
       "region": "Africa",
       "country_group": "C",
       "max_severity": "LOW"
@@ -138,7 +128,7 @@
       "event_date": "2024-05-30",
       "first_reported_date": "2024-05-30",
       "last_updated_date": "2026-08-06",
-      "days_since_event": 800,
+      "days_since_event": 801,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -593,7 +583,7 @@
       "event_date": "2026-05-21",
       "first_reported_date": "2026-05-21",
       "last_updated_date": "2026-08-04",
-      "days_since_event": 79,
+      "days_since_event": 80,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -665,7 +655,7 @@
       "event_date": "2026-06-06",
       "first_reported_date": "2026-06-06",
       "last_updated_date": "2026-08-06",
-      "days_since_event": 63,
+      "days_since_event": 64,
       "source_count": 2,
       "should_report": true,
       "search_keys": [],
@@ -1187,7 +1177,7 @@
       "event_date": "2026-07-04",
       "first_reported_date": "2026-07-04",
       "last_updated_date": "2026-08-05",
-      "days_since_event": 35,
+      "days_since_event": 36,
       "source_count": 3,
       "should_report": true,
       "search_keys": [],
@@ -2120,7 +2110,7 @@
       "event_date": "2026-07-09",
       "first_reported_date": "2026-07-09",
       "last_updated_date": "2026-07-31",
-      "days_since_event": 30,
+      "days_since_event": 31,
       "source_count": 6,
       "should_report": true,
       "search_keys": [],
@@ -4599,7 +4589,7 @@
       "event_date": "2026-07-23",
       "first_reported_date": "2026-07-23",
       "last_updated_date": "2026-07-30",
-      "days_since_event": 16,
+      "days_since_event": 17,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -4713,7 +4703,7 @@
       "event_date": "2026-07-28",
       "first_reported_date": "2026-07-28",
       "last_updated_date": "2026-07-31",
-      "days_since_event": 11,
+      "days_since_event": 12,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -4844,7 +4834,7 @@
       "event_date": "2026-07-31",
       "first_reported_date": "2026-07-31",
       "last_updated_date": "2026-08-06",
-      "days_since_event": 8,
+      "days_since_event": 9,
       "source_count": 2,
       "should_report": true,
       "search_keys": [],
@@ -4854,7 +4844,7 @@
         "gdacs": 1,
         "ercc": 1,
         "healthmap": 0,
-        "news": 76
+        "news": 77
       },
       "source_links": [
         {
@@ -5026,6 +5016,10 @@
           "published_date": "2026-08-03T00:00:00+00:00"
         },
         {
+          "headline": "Water-dropping aircraft take off to tackle major Greek wildfire, after 2 killed...",
+          "published_date": "2026-08-03T02:57:00+00:00"
+        },
+        {
           "headline": "Greek crews fight wildfire northwest of Athens for fourth day",
           "published_date": "2026-08-03T03:57:37+00:00"
         },
@@ -5186,7 +5180,7 @@
           "published_date": "2026-08-06"
         }
       ],
-      "news_total": 76,
+      "news_total": 77,
       "logs": [
         {
           "log_date": "2026-08-04",
@@ -5863,7 +5857,7 @@
       "event_date": "2026-08-02",
       "first_reported_date": "2026-08-02",
       "last_updated_date": "2026-08-06",
-      "days_since_event": 6,
+      "days_since_event": 7,
       "source_count": 2,
       "should_report": true,
       "search_keys": [],
@@ -5962,72 +5956,6 @@
         }
       ],
       "logs_total": 1
-    },
-    {
-      "incident_id": "20260805-SD-OT",
-      "tree_id": "6962b9b75f6244ffb17cc04e8f8e1fee",
-      "canonical_name": "Sudan 2026-08-05",
-      "summary": "",
-      "country": "Sudan",
-      "iso2": "SD",
-      "lat": 12.9,
-      "lon": 30.2,
-      "country_group": "C",
-      "region": "Africa",
-      "incident_type": "",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "LOW",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-08-05",
-      "first_reported_date": "2026-08-05",
-      "last_updated_date": "2026-08-04",
-      "days_since_event": 3,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 0,
-        "ercc": 1,
-        "healthmap": 0,
-        "news": 1
-      },
-      "source_links": [
-        {
-          "type": "ERCC",
-          "label": "ECHO Daily Map of 05 August 2026",
-          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5745",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Red Cross urges international aid as Sudan crisis deepens",
-          "url": "https://www.yahoo.com/news/world/articles/red-cross-urges-international-aid-193958923.html",
-          "outlet": "Al Jazeera · via Yahoo News",
-          "published_date": "2026-08-04"
-        }
-      ],
-      "news_total": 1,
-      "logs": [],
-      "logs_total": 0
     }
   ]
 }
