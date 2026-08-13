@@ -1,42 +1,42 @@
 {
   "schema_version": "1.5",
-  "report_date": "2026-08-12",
+  "report_date": "2026-08-13",
   "generated_at": "2026-08-13T03:35:32Z",
-  "as_of": "2026-08-12",
+  "as_of": "2026-08-13",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 25,
-    "new_today": 11,
+    "reportable_total": 24,
+    "new_today": 0,
     "critical": 11,
     "high": 4,
     "medium": 4,
-    "low": 6,
+    "low": 5,
     "disease_outbreaks": 3,
     "countries_affected": 18,
-    "news_total": 3375,
+    "news_total": 3372,
     "max_magnitude": 7.5,
     "by_severity": {
       "CRITICAL": 11,
       "HIGH": 4,
       "MEDIUM": 4,
-      "LOW": 6
+      "LOW": 5
     },
     "by_type": {
       "Disease": 3,
-      "Drought": 2,
       "Flood": 1,
       "Earthquake": 6,
       "Forest Fire": 6,
       "Severe Weather": 2,
       "Conflict": 2,
       "Tropical Cyclone": 1,
+      "Drought": 1,
       "": 1,
       "Volcano": 1
     },
     "by_region": {
       "Global": 2,
-      "Africa": 3,
+      "Africa": 2,
       "Asia": 4,
       "Americas": 6,
       "Europe": 6,
@@ -45,15 +45,6 @@
     }
   },
   "by_country": [
-    {
-      "country": "DR Congo",
-      "count": 2,
-      "max_sev_rank": 1,
-      "iso2": "CD",
-      "region": "Africa",
-      "country_group": "C",
-      "max_severity": "LOW"
-    },
     {
       "country": "Marshall Islands",
       "count": 1,
@@ -125,6 +116,15 @@
       "region": "Europe",
       "country_group": "C",
       "max_severity": "MEDIUM"
+    },
+    {
+      "country": "DR Congo",
+      "count": 1,
+      "max_sev_rank": 3,
+      "iso2": "CD",
+      "region": "Africa",
+      "country_group": "C",
+      "max_severity": "HIGH"
     },
     {
       "country": "New Zealand",
@@ -2857,112 +2857,6 @@
         }
       ],
       "logs_total": 19
-    },
-    {
-      "incident_id": "20260521-CD-DR",
-      "tree_id": "d250f47c64bb40ce8843fadf6b74f707",
-      "canonical_name": "Drought Buyende, DR Congo 2026-05-21",
-      "summary": "A food crisis in Uganda has resulted in at least 19 deaths from starvation, with 1.5 million people at risk of malnutrition, according to expert warnings. Additionally, a separate report highlights that a strong El Niño event could push nearly 49 million more people globally into acute hunger, exacerbating drought conditions in the region.",
-      "country": "DR Congo",
-      "iso2": "CD",
-      "lat": 1.3,
-      "lon": 33.167,
-      "country_group": "C",
-      "region": "Africa",
-      "incident_type": "Drought",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "LOW",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-05-21",
-      "first_reported_date": "2026-05-21",
-      "last_updated_date": "2026-08-05",
-      "days_since_event": 84,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 1,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 3
-      },
-      "source_links": [
-        {
-          "type": "GDACS",
-          "label": "Green alert · Drought Buyende, DR Congo 2026-05-21",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=DR&eventid=1027465",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "Democratic Republic of Congo, Kenya, Tanzania, Uganda",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": "Green",
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Why is Uganda experiencing a food crisis?",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Why is Uganda experiencing a food crisis?",
-          "published_date": "2026-08-04"
-        },
-        {
-          "headline": "Strong El Niño could push 49 million more people into acute hunger, UN agency...",
-          "published_date": "2026-08-05T02:44:59+00:00"
-        }
-      ],
-      "news_total": 3,
-      "logs": [
-        {
-          "log_date": "2026-08-10",
-          "summary": "A food crisis in Uganda has resulted in at least 19 deaths from starvation, with 1.5 million people at risk of malnutrition, according to expert warnings. Additionally, a separate report highlights that a strong El Niño event could push nearly 49 million more people globally into acute hunger, exacerbating drought conditions in the region.",
-          "news": [
-            {
-              "news_id": "7862eea4d4d45783ace612a4e9faacf9",
-              "url": "https://www.yahoo.com/news/world/articles/why-uganda-experiencing-food-crisis-080425306.html",
-              "headline": "Why is Uganda experiencing a food crisis?",
-              "body": "At least 19 people have died of starvation in the country and 1.5 million are at risk of malnutrition, experts warn.",
-              "published_date": "2026-07-29",
-              "outlet": "Al Jazeera · via Yahoo News",
-              "image": "https://media.zenfs.com/en/al_jazeera_289/f8a014e2d14a96c53862dbe615bf8e34"
-            },
-            {
-              "news_id": "70073bcda1b75d6d9303672411972a16",
-              "url": "https://www.msn.com/en-us/news/world/why-is-uganda-experiencing-a-food-crisis/ar-AA28XnJ2",
-              "headline": "Why is Uganda experiencing a food crisis?",
-              "body": "At least 19 people have died of starvation in the country and 1.5 million are at risk of malnutrition, experts warn.",
-              "published_date": "2026-08-04",
-              "outlet": "Al Jazeera",
-              "image": "https://www.aljazeera.com/wp-content/uploads/2022/06/000_32C226X.jpg?resize=1920,1440"
-            },
-            {
-              "news_id": "359b77bef7e154b7b81415e662ee3c35",
-              "url": "https://www.reuters.com/business/environment/strong-el-nio-could-push-49-million-more-people-into-acute-hunger-un-agency-says-2026-08-05/",
-              "headline": "Strong El Niño could push 49 million more people into acute hunger, UN agency...",
-              "body": "A powerful El Niño weather event could push an additional nearly 49 million people into acute food i...",
-              "published_date": "2026-08-05T02:44:59+00:00",
-              "outlet": "Reuters",
-              "image": "https://s.yimg.com/bo/817996e7-5814-5b70-8ec7-d42cdcbb73e7_1785918146865.jpg"
-            }
-          ]
-        }
-      ],
-      "logs_total": 1
     },
     {
       "incident_id": "20260606-CN-FL",
