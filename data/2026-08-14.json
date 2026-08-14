@@ -1,24 +1,24 @@
 {
   "schema_version": "1.5",
-  "report_date": "2026-08-13",
+  "report_date": "2026-08-14",
   "generated_at": "2026-08-14T03:32:45Z",
-  "as_of": "2026-08-13",
+  "as_of": "2026-08-14",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 26,
-    "new_today": 17,
+    "reportable_total": 25,
+    "new_today": 0,
     "critical": 12,
-    "high": 3,
+    "high": 2,
     "medium": 5,
     "low": 6,
     "disease_outbreaks": 3,
-    "countries_affected": 19,
-    "news_total": 3612,
+    "countries_affected": 18,
+    "news_total": 3605,
     "max_magnitude": 7.5,
     "by_severity": {
       "CRITICAL": 12,
-      "HIGH": 3,
+      "HIGH": 2,
       "MEDIUM": 5,
       "LOW": 6
     },
@@ -26,7 +26,7 @@
       "Disease": 3,
       "Drought": 2,
       "Flood": 1,
-      "Earthquake": 7,
+      "Earthquake": 6,
       "Forest Fire": 6,
       "Severe Weather": 2,
       "Conflict": 2,
@@ -40,7 +40,7 @@
       "Asia": 4,
       "Americas": 6,
       "Europe": 6,
-      "Oceania": 2,
+      "Oceania": 1,
       "Unknown": 2
     }
   },
@@ -134,15 +134,6 @@
       "region": "Americas",
       "country_group": "C",
       "max_severity": "MEDIUM"
-    },
-    {
-      "country": "New Zealand",
-      "count": 1,
-      "max_sev_rank": 3,
-      "iso2": "NZ",
-      "region": "Oceania",
-      "country_group": "B",
-      "max_severity": "HIGH"
     },
     {
       "country": "United States",
@@ -22483,134 +22474,6 @@
         }
       ],
       "logs_total": 4
-    },
-    {
-      "incident_id": "20260802-NZ-EQ",
-      "tree_id": "b643f56bcbdd4754a25ac8a920c19823",
-      "canonical_name": "Earthquake M5.6 Hicks Bay, New Zealand 2026-08-02",
-      "summary": "On August 2, 2026, a magnitude 5.9 earthquake struck off the east coast of New Zealand's North Island, according to the German Research Centre for Geosciences (GFZ). The earthquake was located near the Hicks Bay area, consistent with the reported incident. No additional details about damage or tsunami warnings were provided in the news excerpts.",
-      "country": "New Zealand",
-      "iso2": "NZ",
-      "lat": -37.73,
-      "lon": 178.3287,
-      "country_group": "B",
-      "region": "Oceania",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "HIGH",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-08-02",
-      "first_reported_date": "2026-08-02",
-      "last_updated_date": "2026-08-06",
-      "days_since_event": 12,
-      "source_count": 2,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 2,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 7
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 5.6 - 14 km S of Hicks Bay, New Zealand",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000thl3",
-          "meta": "52.806 km depth"
-        },
-        {
-          "type": "USGS",
-          "label": "M 6.3 - south of the Kermadec Islands",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ti8i",
-          "meta": "226.084 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 6.3,
-        "max_depth_km": 52.806,
-        "place": "14 km S of Hicks Bay, New Zealand",
-        "felt": 24,
-        "sig": 615,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Magnitude 5.9 earthquake hits east coast of North Island in New Zealand, GFZ says",
-          "published_date": "2026-08-02T08:51:00+00:00"
-        },
-        {
-          "headline": "'Bit of a shaky weekend': NZ hit by three quakes three days in a row",
-          "published_date": "2026-08-03"
-        },
-        {
-          "headline": "Magnitude 5.9 earthquake hits east coast of North Island in New Zealand",
-          "published_date": "2026-08-04"
-        },
-        {
-          "headline": "Deep offshore earthquake rattles much of North Island",
-          "published_date": "2026-08-05"
-        },
-        {
-          "headline": "Magnitude 6.3 quake hits remote New Zealand area as cluster shakes Philippines in latest Ring of Fire activity",
-          "published_date": "2026-08-05"
-        },
-        {
-          "headline": "Earthquake strikes Pacific Ocean near New Zealand",
-          "published_date": "2026-08-05T00:00:00+00:00"
-        },
-        {
-          "headline": "Earthquakes News | Latest Headlines and Stories | Reuters",
-          "published_date": "2026-08-06T15:12:58+00:00"
-        }
-      ],
-      "news_total": 7,
-      "logs": [
-        {
-          "log_date": "2026-08-05",
-          "summary": "On August 2, 2026, a magnitude 5.9 earthquake struck off the east coast of New Zealand's North Island, according to the German Research Centre for Geosciences (GFZ). The earthquake was located near the Hicks Bay area, consistent with the reported incident. No additional details about damage or tsunami warnings were provided in the news excerpts.",
-          "news": [
-            {
-              "news_id": "d953e58811535a02b1ea62555ee6d788",
-              "url": "https://www.hirunews.lk/goldfmnews/481020/magnitude-5-9-earthquake-hits-east-coast-of-north-island-in-new-zealand",
-              "headline": "Magnitude 5.9 earthquake hits east coast of North Island in New Zealand",
-              "body": "Magnitude 5.9 earthquake hits east coast of North Island in New Zealand. Most visited website in Sri Lanka.",
-              "published_date": "2026-08-04",
-              "outlet": "Hiru News",
-              "image": "https://www.bing.com/th?id=ONUT.YtVShGKRjMuUhNyFxTdJIQ"
-            },
-            {
-              "news_id": "24ad5ff611755205aab19f519c1c7b77",
-              "url": "https://www.yahoo.com/news/weather-news/articles/magnitude-6-3-quake-hits-100929192.html",
-              "headline": "Magnitude 6.3 quake hits remote New Zealand area as cluster shakes Philippines in latest Ring of Fire activity",
-              "body": "At least eight earthquakes struck off the coast of the southern Philippines on Wednesday afternoon, which the Philippine Institute of Volcanology and Seismology are calling aftershocks of the deadly m...",
-              "published_date": "2026-08-05",
-              "outlet": "Yahoo",
-              "image": "https://www.bing.com/th?id=ONUT.ZyRz5OUUgHqbWG44t_zikQ"
-            },
-            {
-              "news_id": "4aa5c268330d54698d872a16925809bd",
-              "url": "https://www.reuters.com/business/environment/magnitude-59-earthquake-hits-east-coast-north-island-new-zealand-gfz-says-2026-08-02/",
-              "headline": "Magnitude 5.9 earthquake hits east coast of North Island in New Zealand, GFZ says",
-              "body": "An earthquake measuring magnitude 5.9 struck off the east coast of New Zealand's North Island on Sunday, the German Research Centre for Geosciences (GFZ) said.",
-              "published_date": "2026-08-02T08:51:00+00:00",
-              "outlet": "Reuters",
-              "image": "https://www.reuters.com/resizer/v2/2O6VCO6X75N2RIT732Q22VXBR4.jpg?auth=d291e4d9fcae2d49604049395816a3a9b93b07fa91e51778eddca8f92b1893df&width=960&quality=80"
-            }
-          ]
-        }
-      ],
-      "logs_total": 1
     },
     {
       "incident_id": "20260804-XX-WF",

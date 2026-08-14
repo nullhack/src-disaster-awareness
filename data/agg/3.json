@@ -2,48 +2,52 @@
   "schema_version": "1.5",
   "window": 3,
   "bucket": "day",
-  "as_of": "2026-08-13",
+  "as_of": "2026-08-14",
   "series": [
     {
-      "date": "2026-08-11",
+      "date": "2026-08-12",
       "sev": {
         "CRITICAL": {
-          "e": 5,
-          "n": 871
+          "e": 1,
+          "n": 126
         },
         "HIGH": {
           "e": 2,
           "n": 10
         },
         "MEDIUM": {
-          "e": 1,
-          "n": 66
+          "e": 2,
+          "n": 135
         },
         "LOW": {
-          "e": 3,
-          "n": 24
+          "e": 4,
+          "n": 51
         }
       },
       "type": {
         "Drought": {
           "e": 1,
-          "n": 3
+          "n": 4
         },
         "Flood": {
           "e": 1,
           "n": 66
         },
-        "Earthquake": {
-          "e": 5,
-          "n": 663
+        "Forest Fire": {
+          "e": 2,
+          "n": 73
         },
         "Severe Weather": {
           "e": 1,
           "n": 126
         },
-        "Forest Fire": {
+        "Tropical Cyclone": {
+          "e": 1,
+          "n": 26
+        },
+        "Earthquake": {
           "e": 2,
-          "n": 96
+          "n": 10
         },
         "Volcano": {
           "e": 1,
@@ -54,102 +58,23 @@
       "region": {
         "Africa": {
           "e": 1,
-          "n": 3
+          "n": 4
         },
         "Asia": {
-          "e": 3,
-          "n": 414
-        },
-        "Americas": {
-          "e": 3,
-          "n": 325
-        },
-        "Europe": {
-          "e": 3,
-          "n": 222
-        },
-        "Oceania": {
-          "e": 1,
-          "n": 7
-        }
-      }
-    },
-    {
-      "date": "2026-08-12",
-      "sev": {
-        "CRITICAL": {
-          "e": 6,
-          "n": 1207
-        },
-        "HIGH": {
-          "e": 2,
-          "n": 10
-        },
-        "MEDIUM": {
-          "e": 3,
-          "n": 229
-        },
-        "LOW": {
-          "e": 3,
-          "n": 47
-        }
-      },
-      "type": {
-        "Disease": {
-          "e": 1,
-          "n": 94
-        },
-        "Flood": {
           "e": 1,
           "n": 66
         },
-        "Earthquake": {
-          "e": 5,
-          "n": 663
-        },
-        "Forest Fire": {
-          "e": 4,
-          "n": 501
-        },
-        "Severe Weather": {
-          "e": 1,
-          "n": 126
-        },
-        "Tropical Cyclone": {
-          "e": 1,
-          "n": 26
-        },
-        "Volcano": {
-          "e": 1,
-          "n": 17
-        }
-      },
-      "disease": {
-        "Covid-19": {
-          "e": 1,
-          "n": 94
-        }
-      },
-      "region": {
-        "Global": {
-          "e": 1,
-          "n": 94
-        },
-        "Asia": {
-          "e": 3,
-          "n": 414
-        },
-        "Americas": {
-          "e": 3,
-          "n": 325
-        },
         "Europe": {
-          "e": 5,
-          "n": 627
+          "e": 3,
+          "n": 199
         },
         "Oceania": {
           "e": 2,
           "n": 33
+        },
+        "Americas": {
+          "e": 2,
+          "n": 20
         }
       }
     },
@@ -158,25 +83,29 @@
       "sev": {
         "CRITICAL": {
           "e": 12,
-          "n": 2903
+          "n": 3003
         },
         "HIGH": {
           "e": 2,
-          "n": 205
+          "n": 209
         },
         "MEDIUM": {
           "e": 5,
-          "n": 293
+          "n": 300
         },
         "LOW": {
-          "e": 5,
-          "n": 85
+          "e": 6,
+          "n": 93
         }
       },
       "type": {
         "Disease": {
           "e": 3,
-          "n": 359
+          "n": 369
+        },
+        "Drought": {
+          "e": 2,
+          "n": 276
         },
         "Flood": {
           "e": 1,
@@ -184,27 +113,23 @@
         },
         "Earthquake": {
           "e": 6,
-          "n": 828
+          "n": 858
         },
         "Forest Fire": {
           "e": 6,
-          "n": 727
+          "n": 748
         },
         "Severe Weather": {
           "e": 2,
-          "n": 175
+          "n": 190
         },
         "Conflict": {
           "e": 2,
-          "n": 1022
+          "n": 1050
         },
         "Tropical Cyclone": {
           "e": 1,
           "n": 26
-        },
-        "Drought": {
-          "e": 1,
-          "n": 261
         },
         "": {
           "e": 1,
@@ -218,33 +143,33 @@
       "disease": {
         "Covid-19": {
           "e": 1,
-          "n": 94
+          "n": 99
         },
         "Ebola": {
           "e": 1,
-          "n": 202
+          "n": 206
         }
       },
       "region": {
         "Global": {
           "e": 2,
-          "n": 157
+          "n": 163
         },
         "Africa": {
-          "e": 3,
-          "n": 468
+          "e": 4,
+          "n": 487
         },
         "Asia": {
           "e": 4,
-          "n": 1075
+          "n": 1099
         },
         "Americas": {
           "e": 6,
-          "n": 530
+          "n": 558
         },
         "Europe": {
           "e": 6,
-          "n": 988
+          "n": 1002
         },
         "Oceania": {
           "e": 1,
@@ -252,7 +177,110 @@
         },
         "Unknown": {
           "e": 2,
-          "n": 242
+          "n": 270
+        }
+      }
+    },
+    {
+      "date": "2026-08-14",
+      "sev": {
+        "CRITICAL": {
+          "e": 12,
+          "n": 3003
+        },
+        "HIGH": {
+          "e": 2,
+          "n": 209
+        },
+        "MEDIUM": {
+          "e": 5,
+          "n": 300
+        },
+        "LOW": {
+          "e": 6,
+          "n": 93
+        }
+      },
+      "type": {
+        "Disease": {
+          "e": 3,
+          "n": 369
+        },
+        "Drought": {
+          "e": 2,
+          "n": 276
+        },
+        "Flood": {
+          "e": 1,
+          "n": 66
+        },
+        "Earthquake": {
+          "e": 6,
+          "n": 858
+        },
+        "Forest Fire": {
+          "e": 6,
+          "n": 748
+        },
+        "Severe Weather": {
+          "e": 2,
+          "n": 190
+        },
+        "Conflict": {
+          "e": 2,
+          "n": 1050
+        },
+        "Tropical Cyclone": {
+          "e": 1,
+          "n": 26
+        },
+        "": {
+          "e": 1,
+          "n": 5
+        },
+        "Volcano": {
+          "e": 1,
+          "n": 17
+        }
+      },
+      "disease": {
+        "Covid-19": {
+          "e": 1,
+          "n": 99
+        },
+        "Ebola": {
+          "e": 1,
+          "n": 206
+        }
+      },
+      "region": {
+        "Global": {
+          "e": 2,
+          "n": 163
+        },
+        "Africa": {
+          "e": 4,
+          "n": 487
+        },
+        "Asia": {
+          "e": 4,
+          "n": 1099
+        },
+        "Americas": {
+          "e": 6,
+          "n": 558
+        },
+        "Europe": {
+          "e": 6,
+          "n": 1002
+        },
+        "Oceania": {
+          "e": 1,
+          "n": 26
+        },
+        "Unknown": {
+          "e": 2,
+          "n": 270
         }
       }
     }
