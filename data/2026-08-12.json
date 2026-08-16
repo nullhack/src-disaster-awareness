@@ -1,49 +1,38 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-08-12",
-  "generated_at": "2026-08-16T02:37:24Z",
+  "generated_at": "2026-08-16T13:49:25Z",
   "as_of": "2026-08-12",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 5,
-    "new_today": 2,
+    "reportable_total": 4,
+    "new_today": 1,
     "critical": 0,
     "high": 2,
     "medium": 1,
-    "low": 2,
+    "low": 1,
     "disease_outbreaks": 0,
-    "countries_affected": 5,
-    "news_total": 87,
+    "countries_affected": 4,
+    "news_total": 83,
     "max_magnitude": 6.3,
     "by_severity": {
       "CRITICAL": 0,
       "HIGH": 2,
       "MEDIUM": 1,
-      "LOW": 2
+      "LOW": 1
     },
     "by_type": {
-      "Drought": 1,
       "Forest Fire": 2,
       "Earthquake": 2
     },
     "by_region": {
-      "Africa": 1,
       "Europe": 2,
       "Oceania": 1,
       "Americas": 1
     }
   },
   "by_country": [
-    {
-      "country": "DR Congo",
-      "count": 1,
-      "max_sev_rank": 1,
-      "iso2": "CD",
-      "region": "Africa",
-      "country_group": "C",
-      "max_severity": "LOW"
-    },
     {
       "country": "Spain",
       "count": 1,
@@ -82,116 +71,6 @@
     }
   ],
   "incidents": [
-    {
-      "incident_id": "20260521-CD-DR",
-      "tree_id": "d250f47c64bb40ce8843fadf6b74f707",
-      "canonical_name": "Drought Buyende, DR Congo 2026-05-21",
-      "summary": "A food crisis in Uganda has resulted in at least 19 deaths from starvation, with 1.5 million people at risk of malnutrition, according to expert warnings. Additionally, a separate report highlights that a strong El Niño event could push nearly 49 million more people globally into acute hunger, exacerbating drought conditions in the region.",
-      "country": "DR Congo",
-      "iso2": "CD",
-      "lat": 1.3,
-      "lon": 33.167,
-      "country_group": "C",
-      "region": "Africa",
-      "incident_type": "Drought",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "LOW",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-05-21",
-      "first_reported_date": "2026-05-21",
-      "last_updated_date": "2026-08-12",
-      "days_since_event": 87,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 1,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 4
-      },
-      "source_links": [
-        {
-          "type": "GDACS",
-          "label": "Green alert · Drought Buyende, DR Congo 2026-05-21",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=DR&eventid=1027465",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "Democratic Republic of Congo, Kenya, Tanzania, Uganda",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": "Green",
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Why is Uganda experiencing a food crisis?",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Why is Uganda experiencing a food crisis?",
-          "published_date": "2026-08-04"
-        },
-        {
-          "headline": "Strong El Niño could push 49 million more people into acute hunger, UN agency...",
-          "published_date": "2026-08-05T02:44:59+00:00"
-        },
-        {
-          "headline": "Thousands flee yearslong drought in Somalia as hunger deepens and aid shrinks",
-          "published_date": "2026-08-12"
-        }
-      ],
-      "news_total": 4,
-      "logs": [
-        {
-          "log_date": "2026-08-10",
-          "summary": "A food crisis in Uganda has resulted in at least 19 deaths from starvation, with 1.5 million people at risk of malnutrition, according to expert warnings. Additionally, a separate report highlights that a strong El Niño event could push nearly 49 million more people globally into acute hunger, exacerbating drought conditions in the region.",
-          "news": [
-            {
-              "news_id": "7862eea4d4d45783ace612a4e9faacf9",
-              "url": "https://www.yahoo.com/news/world/articles/why-uganda-experiencing-food-crisis-080425306.html",
-              "headline": "Why is Uganda experiencing a food crisis?",
-              "body": "At least 19 people have died of starvation in the country and 1.5 million are at risk of malnutrition, experts warn.",
-              "published_date": "2026-07-29",
-              "outlet": "Al Jazeera · via Yahoo News",
-              "image": "https://media.zenfs.com/en/al_jazeera_289/f8a014e2d14a96c53862dbe615bf8e34"
-            },
-            {
-              "news_id": "70073bcda1b75d6d9303672411972a16",
-              "url": "https://www.msn.com/en-us/news/world/why-is-uganda-experiencing-a-food-crisis/ar-AA28XnJ2",
-              "headline": "Why is Uganda experiencing a food crisis?",
-              "body": "At least 19 people have died of starvation in the country and 1.5 million are at risk of malnutrition, experts warn.",
-              "published_date": "2026-08-04",
-              "outlet": "Al Jazeera",
-              "image": "https://www.aljazeera.com/wp-content/uploads/2022/06/000_32C226X.jpg?resize=1920,1440"
-            },
-            {
-              "news_id": "359b77bef7e154b7b81415e662ee3c35",
-              "url": "https://www.reuters.com/business/environment/strong-el-nio-could-push-49-million-more-people-into-acute-hunger-un-agency-says-2026-08-05/",
-              "headline": "Strong El Niño could push 49 million more people into acute hunger, UN agency...",
-              "body": "A powerful El Niño weather event could push an additional nearly 49 million people into acute food i...",
-              "published_date": "2026-08-05T02:44:59+00:00",
-              "outlet": "Reuters",
-              "image": "https://s.yimg.com/bo/817996e7-5814-5b70-8ec7-d42cdcbb73e7_1785918146865.jpg"
-            }
-          ]
-        }
-      ],
-      "logs_total": 1
-    },
     {
       "incident_id": "20260704-FR-WF",
       "tree_id": "5a76e343c6b4508a84a06d78d51e87ed",
