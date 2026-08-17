@@ -1,24 +1,24 @@
 {
   "schema_version": "1.5",
-  "report_date": "2026-08-16",
+  "report_date": "2026-08-17",
   "generated_at": "2026-08-17T02:36:38Z",
-  "as_of": "2026-08-16",
+  "as_of": "2026-08-17",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 27,
-    "new_today": 13,
+    "reportable_total": 26,
+    "new_today": 0,
     "critical": 12,
-    "high": 3,
+    "high": 2,
     "medium": 6,
     "low": 6,
     "disease_outbreaks": 3,
-    "countries_affected": 20,
-    "news_total": 4206,
+    "countries_affected": 19,
+    "news_total": 4203,
     "max_magnitude": 7.7,
     "by_severity": {
       "CRITICAL": 12,
-      "HIGH": 3,
+      "HIGH": 2,
       "MEDIUM": 6,
       "LOW": 6
     },
@@ -26,7 +26,7 @@
       "Disease": 3,
       "Drought": 2,
       "Flood": 1,
-      "Earthquake": 8,
+      "Earthquake": 7,
       "Forest Fire": 6,
       "Severe Weather": 2,
       "Conflict": 2,
@@ -38,7 +38,7 @@
       "Global": 2,
       "Africa": 3,
       "Asia": 5,
-      "Americas": 7,
+      "Americas": 6,
       "Europe": 5,
       "Unknown": 3,
       "Oceania": 2
@@ -143,15 +143,6 @@
       "region": "Oceania",
       "country_group": "B",
       "max_severity": "MEDIUM"
-    },
-    {
-      "country": "United States",
-      "count": 1,
-      "max_sev_rank": 3,
-      "iso2": "US",
-      "region": "Americas",
-      "country_group": "C",
-      "max_severity": "HIGH"
     },
     {
       "country": "Greece",
@@ -26556,112 +26547,6 @@
               "published_date": "2026-08-10",
               "outlet": "DPA International on MSN",
               "image": "https://www.bing.com/th?id=ONUT.TUccU6-lgIZeEzYHaxapmQ"
-            }
-          ]
-        }
-      ],
-      "logs_total": 1
-    },
-    {
-      "incident_id": "20260808-US-EQ",
-      "tree_id": "fc0e1c92c682456b9c3e66ad18def29f",
-      "canonical_name": "Earthquake M5.6 Skwentna, United States 2026-08-08",
-      "summary": "On August 8, 2026, a magnitude 5.6 earthquake struck the remote Skwentna region of Southcentral Alaska, with the epicenter located 107 miles northwest of Anchorage at a depth of 200 meters. The United States Geological Survey reported the event, and no immediate damage or casualties were reported.",
-      "country": "United States",
-      "iso2": "US",
-      "lat": 62.269,
-      "lon": -152.314,
-      "country_group": "C",
-      "region": "Americas",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "HIGH",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-08-08",
-      "first_reported_date": "2026-08-08",
-      "last_updated_date": "2026-08-09",
-      "days_since_event": 9,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 3
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 5.6 - 57 km WNW of Skwentna, Alaska",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026powmkf",
-          "meta": "10 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 5.6,
-        "max_depth_km": 10.0,
-        "place": "57 km WNW of Skwentna, Alaska",
-        "felt": 1095,
-        "sig": 1022,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Magnitude 5.6 earthquake strikes remote Southcentral Alaska",
-          "published_date": "2026-08-08"
-        },
-        {
-          "headline": "Tremor in Alaska: 5.5 Magnitude Earthquake Rattles Skwentna | Science-Environment",
-          "published_date": "2026-08-08"
-        },
-        {
-          "headline": "Magnitude 5.6 earthquake jolts Alaska in latest seismic activity along Pacific Ring of Fire",
-          "published_date": "2026-08-09"
-        }
-      ],
-      "news_total": 3,
-      "logs": [
-        {
-          "log_date": "2026-08-09",
-          "summary": "On August 8, 2026, a magnitude 5.6 earthquake struck the remote Skwentna region of Southcentral Alaska, with the epicenter located 107 miles northwest of Anchorage at a depth of 200 meters. The United States Geological Survey reported the event, and no immediate damage or casualties were reported.",
-          "news": [
-            {
-              "news_id": "c19e66733d1e521eb5a1ab9197b91c01",
-              "url": "https://www.alaskasnewssource.com/2026/08/08/magnitude-56-earthquake-strikes-remote-southcentral-alaska/",
-              "headline": "Magnitude 5.6 earthquake strikes remote Southcentral Alaska",
-              "body": "Epicenter recorded 107 miles northwest of Anchorage.",
-              "published_date": "2026-08-08",
-              "outlet": "Alaska's News Source",
-              "image": "https://www.bing.com/th?id=ONUT.oODS1XNWZqInxOYjIT0Lrg"
-            },
-            {
-              "news_id": "5917e3bce7755543aaf5aa81d5a0ef17",
-              "url": "https://www.msn.com/en-us/travel/tripideas/magnitude-56-earthquake-jolts-alaska-in-latest-seismic-activity-along-pacific-ring-of-fire/ar-AA29Ew17?ocid=BingNewsVerp",
-              "headline": "Magnitude 5.6 earthquake jolts Alaska in latest seismic activity along Pacific Ring of Fire",
-              "body": "Residents across Alaska were rattled by a magnitude 5.6 earthquake on Friday.",
-              "published_date": "2026-08-09",
-              "outlet": "FOX Weather on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.PHLSbWFQuMcuKpNyBQvAbA"
-            },
-            {
-              "news_id": "759728953595505bbf761c86562cf460",
-              "url": "https://www.devdiscourse.com/article/science-environment/3961390-tremor-in-alaska-55-magnitude-earthquake-rattles-skwentna",
-              "headline": "Tremor in Alaska: 5.5 Magnitude Earthquake Rattles Skwentna | Science-Environment",
-              "body": "A magnitude 5.5 earthquake shook the Skwentna region of Alaska on Friday. The United States Geological Survey reported that the quake occurred 200 meters (700 feet) below the surface. No immediate reports of damage or casualties have been released.",
-              "published_date": "2026-08-08",
-              "outlet": "Devdiscourse",
-              "image": "https://www.bing.com/th?id=ONUT.tEDuYy-NG0KtzlpYJxdZdw"
             }
           ]
         }
