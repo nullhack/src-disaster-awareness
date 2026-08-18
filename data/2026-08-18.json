@@ -1,33 +1,33 @@
 {
   "schema_version": "1.5",
-  "report_date": "2026-08-17",
+  "report_date": "2026-08-18",
   "generated_at": "2026-08-18T02:31:50Z",
-  "as_of": "2026-08-17",
+  "as_of": "2026-08-18",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 28,
-    "new_today": 20,
+    "reportable_total": 27,
+    "new_today": 0,
     "critical": 11,
     "high": 2,
     "medium": 8,
-    "low": 7,
+    "low": 6,
     "disease_outbreaks": 3,
     "countries_affected": 20,
-    "news_total": 4301,
+    "news_total": 4297,
     "max_magnitude": 7.7,
     "by_severity": {
       "CRITICAL": 11,
       "HIGH": 2,
       "MEDIUM": 8,
-      "LOW": 7
+      "LOW": 6
     },
     "by_type": {
       "Disease": 3,
       "Drought": 3,
       "Flood": 1,
       "Earthquake": 7,
-      "Forest Fire": 7,
+      "Forest Fire": 6,
       "Severe Weather": 2,
       "Conflict": 2,
       "Tropical Cyclone": 1,
@@ -40,7 +40,7 @@
       "Unknown": 3,
       "Asia": 5,
       "Americas": 5,
-      "Europe": 8,
+      "Europe": 7,
       "Oceania": 2
     }
   },
@@ -51,15 +51,6 @@
       "max_sev_rank": 1,
       "iso2": "CD",
       "region": "Africa",
-      "country_group": "C",
-      "max_severity": "LOW"
-    },
-    {
-      "country": "Spain",
-      "count": 2,
-      "max_sev_rank": 1,
-      "iso2": "ES",
-      "region": "Europe",
       "country_group": "C",
       "max_severity": "LOW"
     },
@@ -96,6 +87,15 @@
       "max_sev_rank": 1,
       "iso2": "CA",
       "region": "Americas",
+      "country_group": "C",
+      "max_severity": "LOW"
+    },
+    {
+      "country": "Spain",
+      "count": 1,
+      "max_sev_rank": 1,
+      "iso2": "ES",
+      "region": "Europe",
       "country_group": "C",
       "max_severity": "LOW"
     },
@@ -24821,116 +24821,6 @@
         }
       ],
       "logs_total": 2
-    },
-    {
-      "incident_id": "20260807-ES-WF",
-      "tree_id": "9b0105791e7f453080ea31ae63f598e9",
-      "canonical_name": "Forest Fire Huelva, Spain 2026-08-07",
-      "summary": "A forest fire in southwestern Spain, which broke out on Thursday, has led to the evacuation of nearly 500 people. As of Monday, the fire was burning beyond firefighters' ability to extinguish it, with hot and windy conditions hampering firefighting efforts.",
-      "country": "Spain",
-      "iso2": "ES",
-      "lat": 37.48785030105437,
-      "lon": -6.665243301540226,
-      "country_group": "C",
-      "region": "Europe",
-      "incident_type": "Forest Fire",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "LOW",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-08-07",
-      "first_reported_date": "2026-08-07",
-      "last_updated_date": "2026-08-10",
-      "days_since_event": 11,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 1,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 4
-      },
-      "source_links": [
-        {
-          "type": "GDACS",
-          "label": "Green alert · Forest Fire Huelva, Spain 2026-08-07",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=WF&eventid=1030237",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "Spain",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": "Green",
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Major forest fire spreading in Andalusia",
-          "published_date": "2026-08-10"
-        },
-        {
-          "headline": "Southern Spain wildfire worsens as wind gusts hamper firefighting efforts",
-          "published_date": "2026-08-10"
-        },
-        {
-          "headline": "Hundreds evacuated as another wildfire hits south-western Spain",
-          "published_date": "2026-08-10"
-        },
-        {
-          "headline": "Southern Spain wildfire worsens as wind gusts hamper firefighting efforts",
-          "published_date": "2026-08-10T14:03:25+00:00"
-        }
-      ],
-      "news_total": 4,
-      "logs": [
-        {
-          "log_date": "2026-08-10",
-          "summary": "A forest fire in southwestern Spain, which broke out on Thursday, has led to the evacuation of nearly 500 people. As of Monday, the fire was burning beyond firefighters' ability to extinguish it, with hot and windy conditions hampering firefighting efforts.",
-          "news": [
-            {
-              "news_id": "5e7e2a7ea9dd522a8350ee0bc25f31f9",
-              "url": "https://www.msn.com/en-us/weather/extreme-weather-events/southern-spain-wildfire-worsens-as-wind-gusts-hamper-firefighting-efforts/ar-AA29M2wY?ocid=BingNewsVerp",
-              "headline": "Southern Spain wildfire worsens as wind gusts hamper firefighting efforts",
-              "body": "MADRID, Aug 10 (Reuters) - A large wildfire in southwestern Spain was burning beyond firefighters' ability to extinguish it on Monday, regional authorities said, as hot and windy weather fuelled other ...",
-              "published_date": "2026-08-10",
-              "outlet": "Reuters on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "c1698fd1920b59febd570a8fc2ef941c",
-              "url": "https://www.reuters.com/business/environment/southern-spain-wildfire-worsens-wind-gusts-hamper-firefighting-efforts-2026-08-10/",
-              "headline": "Southern Spain wildfire worsens as wind gusts hamper firefighting efforts",
-              "body": "MADRID, Aug 10 (Reuters) - A large wildfire in southwestern Spain was burning beyond firefighters' ability to extinguish it on Monday, regional authorities said, as hot and windy weather fuelled other ...",
-              "published_date": "2026-08-10T14:03:25+00:00",
-              "outlet": "Reuters",
-              "image": ""
-            },
-            {
-              "news_id": "6cbf4bea6ecd5243b78d070d854b701b",
-              "url": "https://www.msn.com/en-ca/weather/general/hundreds-evacuated-as-another-wildfire-hits-south-western-spain/ar-AA29IxD3?ocid=BingNewsVerp",
-              "headline": "Hundreds evacuated as another wildfire hits south-western Spain",
-              "body": "Just under 500 people have been evacuated due to a forest fire in south-western Spain. The fire, which broke out on Thursday, ...",
-              "published_date": "2026-08-10",
-              "outlet": "DPA International on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.TUccU6-lgIZeEzYHaxapmQ"
-            }
-          ]
-        }
-      ],
-      "logs_total": 1
     },
     {
       "incident_id": "20260808-CA-WF",
