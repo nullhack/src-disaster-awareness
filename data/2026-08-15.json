@@ -1,29 +1,28 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-08-15",
-  "generated_at": "2026-08-18T02:31:50Z",
+  "generated_at": "2026-08-18T14:02:10Z",
   "as_of": "2026-08-15",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 9,
-    "new_today": 4,
+    "reportable_total": 8,
+    "new_today": 3,
     "critical": 2,
     "high": 1,
-    "medium": 4,
+    "medium": 3,
     "low": 2,
-    "disease_outbreaks": 1,
+    "disease_outbreaks": 0,
     "countries_affected": 8,
-    "news_total": 512,
+    "news_total": 400,
     "max_magnitude": 6.5,
     "by_severity": {
       "CRITICAL": 2,
       "HIGH": 1,
-      "MEDIUM": 4,
+      "MEDIUM": 3,
       "LOW": 2
     },
     "by_type": {
-      "Disease": 1,
       "Flood": 1,
       "Earthquake": 3,
       "Forest Fire": 2,
@@ -31,7 +30,6 @@
       "Tropical Cyclone": 1
     },
     "by_region": {
-      "Global": 1,
       "Asia": 2,
       "Europe": 2,
       "Unknown": 1,
@@ -57,15 +55,6 @@
       "region": "Europe",
       "country_group": "C",
       "max_severity": "LOW"
-    },
-    {
-      "country": "",
-      "count": 2,
-      "max_sev_rank": 2,
-      "iso2": "XX",
-      "region": "Global",
-      "country_group": "C",
-      "max_severity": "MEDIUM"
     },
     {
       "country": "China",
@@ -111,754 +100,23 @@
       "region": "Asia",
       "country_group": "A",
       "max_severity": "LOW"
+    },
+    {
+      "country": "",
+      "count": 1,
+      "max_sev_rank": 4,
+      "iso2": "XX",
+      "region": "Unknown",
+      "country_group": "C",
+      "max_severity": "LOW"
     }
   ],
   "incidents": [
     {
-      "incident_id": "20250528-XX-DI",
-      "tree_id": "2988d8638e0956a89029b6059b7c5f7f",
-      "canonical_name": "COVID-19 Global 2025-05-28",
-      "summary": "A report notes that COVID-19 is increasingly becoming a summer phenomenon in California, with winter outbreaks fading, marking a shift in seasonal patterns six years into the pandemic.",
-      "country": "",
-      "iso2": "XX",
-      "lat": null,
-      "lon": null,
-      "country_group": "C",
-      "region": "Global",
-      "incident_type": "Disease",
-      "incident_category": "Biological",
-      "is_disease": true,
-      "severity": "MEDIUM",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": "LOW",
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": "Covid-19",
-      "event_date": "2025-05-28",
-      "first_reported_date": "2025-05-28",
-      "last_updated_date": "2026-08-15",
-      "days_since_event": 447,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 1,
-        "usgs": 0,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 112
-      },
-      "source_links": [
-        {
-          "type": "WHO",
-          "label": "COVID-19 Global 2025-05-28",
-          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2025-DON572",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "COVID Basics: Essential Tips for Older Adults and Caregivers - AOL",
-          "published_date": "2025-10-16"
-        },
-        {
-          "headline": "Are the New COVID Vaccines Available, and Should You Get One? Experts Explain",
-          "published_date": "2026-07-08T15:12:31+00:00"
-        },
-        {
-          "headline": "CDC blocked a COVID vaccine study’s release–now you can read the whole thing",
-          "published_date": "2026-07-08T15:12:31+00:00"
-        },
-        {
-          "headline": "IMF forecasts dramatic global economic slowdown",
-          "published_date": "2026-07-09T03:32:11+00:00"
-        },
-        {
-          "headline": "Jersey Mike’s IPO reflects growing investor appetite for restaurants",
-          "published_date": "2026-07-09T03:32:11+00:00"
-        },
-        {
-          "headline": "The Meridian, a $24M mixed-use development, breaks ground in Thiensville",
-          "published_date": "2026-07-10T03:32:11+00:00"
-        },
-        {
-          "headline": "Linda Noskova holds off Karolina Muchova to win Wimbledon women's final",
-          "published_date": "2026-07-11T03:32:11+00:00"
-        },
-        {
-          "headline": "TV host Lee Teng opens up about wife's miscarriage during pandemic: ‘I felt like an empty shell'",
-          "published_date": "2026-07-11T07:14:19+00:00"
-        },
-        {
-          "headline": "Andhra Covid Deaths Trigger Southern Alert",
-          "published_date": "2026-07-14T07:14:19+00:00"
-        },
-        {
-          "headline": "Updated 2025-2026 COVID-19 Vaccines Effective Against Medically Attended Disease",
-          "published_date": "2026-07-15T09:25:38+00:00"
-        },
-        {
-          "headline": "Dr. Erica Schwartz faces vaccines questions at CDC director confirmation hearing",
-          "published_date": "2026-07-15T18:45:32+00:00"
-        },
-        {
-          "headline": "Panel to study Pentagon’s COVID vaccine mandate, troops dismissal",
-          "published_date": "2026-07-15T19:45:32+00:00"
-        },
-        {
-          "headline": "COVID Is Rising Again in the Bay Area For Summer 2026 — But Don’t Panic | KQED",
-          "published_date": "2026-07-16"
-        },
-        {
-          "headline": "Fbi Allowed Ecohealth Alliance Boss Through Border Controls In Return From Covid Hit China In 2021 Explosive Emails",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "Lawsuit Over Covid Vaccine Policy At Idaho National Lab Leads To 5m Settlement",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "Pittsfield Council Sees Last ARPA Update",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "Philips wins FDA clearance for new pulse oximeter",
-          "published_date": "2026-07-21"
-        },
-        {
-          "headline": "COVID origins questions resurface with new federal documents",
-          "published_date": "2026-07-21"
-        },
-        {
-          "headline": "Updated 2025-2026 COVID-19 Vaccines Reduce Hospitalization Risk in Older Adults",
-          "published_date": "2026-07-21"
-        },
-        {
-          "headline": "121 Covid-19 cases reported in Bengaluru this year",
-          "published_date": "2026-07-23"
-        },
-        {
-          "headline": "Early Summer COVID-19 Uptick in California as Test Positivity and Sewage Levels Rise",
-          "published_date": "2026-07-24"
-        },
-        {
-          "headline": "COVID-19 is on the upswing in California. How bad will it get this summer?",
-          "published_date": "2026-07-24"
-        },
-        {
-          "headline": "How well did Ireland deal with Covid? Patterns emerge ahead of final report",
-          "published_date": "2026-07-24"
-        },
-        {
-          "headline": "COVID-19 is on the upswing in California. How bad will it get this summer?",
-          "published_date": "2026-07-24"
-        },
-        {
-          "headline": "COVID-19 is on the upswing in California. How bad will it get this summer?",
-          "published_date": "2026-07-24T03:44:18+00:00"
-        },
-        {
-          "headline": "Delhi CM hands over Rs 1 crore each to kin of workers who died during Covid-19 duty",
-          "published_date": "2026-07-24T14:22:10+00:00"
-        },
-        {
-          "headline": "Is COVID returning? Summer uptick of virus may have begun in California | Honolulu Star-Advertiser",
-          "published_date": "2026-07-25"
-        },
-        {
-          "headline": "EXCLUSIVE: Alleged $32M COVID-19 fraud fugitive captured in Jamaica and returned to US, FBI says",
-          "published_date": "2026-07-26"
-        },
-        {
-          "headline": "Is COVID returning in the US? Tests show summer uptick of virus",
-          "published_date": "2026-07-27"
-        },
-        {
-          "headline": "American Lung Association Highlights Therapeutic Options Available to Prevent and Treat COVID-19",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "GOP Congressman Slams JD Vance's Silence Over CDC's $1.24 Billion Pfizer COVID Vaccine Contracts: 'Why Isn’t He Speaking Out'",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Fauci diaries, released by Sen. Rand Paul, touch on COVID origins and tense relationship with Trump",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "American Lung Association Highlights Therapeutic Options Available to Prevent and Treat COVID-19",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Musk and Trump Continue to Bash Reporters for Doing Their Jobs; the Local Devastation Caused by ICE Enforcement-Coachella Valley Independent's Indy Digest: July 27, 2026 - Coachella Valley Independent",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "American Lung Association Highlights Therapeutic Options Available to Prevent...",
-          "published_date": "2026-07-28T10:24:09+00:00"
-        },
-        {
-          "headline": "4 things Fauci's diary reveals about COVID, Trump and fame",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "European Commission Authorizes Pfizer and BioNTech XFG-adapted COVID-19 Vaccine in the European Union",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Animal spillover? Lab leak? What the science says about the origins of COVID-19",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "European Commission Authorizes Pfizer and BioNTech XFG-adapted COVID-19 Vaccine in the European Union",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Moderna Q2 Earnings Loom: Buy or Sell the Stock Ahead of Results?",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "BioNTech SE: European Commission Authorizes Pfizer and BioNTech XFG-adapted COVID-19 Vaccine in the European Union",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "4 things Fauci's diary reveals about COVID, Trump and fame",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Fauci invokes the Fifth Amendment, declines to testify in GOP-led Senate panel's COVID-19 hearing",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Fauci pleads the Fifth; Rand Paul threatens charges: Live hearing updates",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Anthony Fauci pleads 5th, refuses to answer questions about COVID-19",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Fauci pleads the Fifth; Rand Paul threatens charges: Live hearing updates",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Fauci pleads the Fifth; Rand Paul threatens charges: Live hearing updates",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Fauci Invokes the Fifth, Refuses to Answer Questions About COVID-19 Origins After Senator Publishes Diary: ‘Unhinged Obsession’",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Fauci repeatedly invokes the Fifth Amendment in a contentious Senate committee hearing",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "The FTC is mailing 9,419 refund checks to consumers misled by Trend Deploy",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Fauci Invokes the Fifth, Refuses to Answer Questions About COVID-19 Origins Afte...",
-          "published_date": "2026-07-29T15:44:18+00:00"
-        },
-        {
-          "headline": "4 things Fauci's diary reveals about COVID, Trump and fame",
-          "published_date": "2026-07-30"
-        },
-        {
-          "headline": "Anthony Fauci Update: Former NIH Official Overheard Venting After Invoking Fifth Amendment at Senate Hearing",
-          "published_date": "2026-07-30"
-        },
-        {
-          "headline": "EU regulatory roundup: AbbVie, Pfizer & BioNTech and Incyte net approvals - Pharmaceutical Technology",
-          "published_date": "2026-07-30"
-        },
-        {
-          "headline": "Moderna Q2 Earnings Loom: Buy or Sell the Stock Ahead of Results?",
-          "published_date": "2026-07-30"
-        },
-        {
-          "headline": "Dr. Anthony Fauci Unleashes Expletive-Laced Rant on Walk With Wife Hours After Senate Grilling: Report",
-          "published_date": "2026-07-30"
-        },
-        {
-          "headline": "Rock star after Fauci hearing: ‘Biggest regret during COVID was getting the shot’",
-          "published_date": "2026-07-31"
-        },
-        {
-          "headline": "NFL coach jabs at Fauci while taking questions from reporters",
-          "published_date": "2026-07-31"
-        },
-        {
-          "headline": "Soulja Boy says COVID-19 was “fake,” but more than 7 million reported deaths tell a different story",
-          "published_date": "2026-07-31"
-        },
-        {
-          "headline": "A Portrait of MAGA Psychodrama",
-          "published_date": "2026-07-31"
-        },
-        {
-          "headline": "Rock star after Fauci hearing: ‘Biggest regret during COVID was getting the shot’",
-          "published_date": "2026-07-31"
-        },
-        {
-          "headline": "Onsite rapid testing leads to decrease in ER visits among long-term care residents",
-          "published_date": "2026-08-01"
-        },
-        {
-          "headline": "Robert F. Kennedy Jr. and CNN’s Dana Bash trade barbs during heated on-air argument over vaccines: ‘You’re talking nonsense’ - AOL",
-          "published_date": "2026-08-02"
-        },
-        {
-          "headline": "If You Live In These Areas, Experts Want You To Know COVID Cases Are Rising",
-          "published_date": "2026-08-03"
-        },
-        {
-          "headline": "RFK Jr. targets Fauci and pushes medical misinformation in fiery CNN interview",
-          "published_date": "2026-08-03"
-        },
-        {
-          "headline": "Robert F. Kennedy Jr. and CNN’s Dana Bash trade barbs during heated on-air argument over vaccines: ‘You’re talking nonsense’",
-          "published_date": "2026-08-03"
-        },
-        {
-          "headline": "COVID Cases Are Increasing In These Areas. Here’s What Experts Want You To Know.",
-          "published_date": "2026-08-03"
-        },
-        {
-          "headline": "NVAX Stock Rises Ahead Of Q2 Earnings As Focus Shifts To Licensing Deals",
-          "published_date": "2026-08-03"
-        },
-        {
-          "headline": "CDC didn't say COVID-19 vaccines are 'largest carcinogenic exposure in history'",
-          "published_date": "2026-08-03"
-        },
-        {
-          "headline": "Epidemiology of Kawasaki Disease After the COVID-19 Pandemic in Japan 2023-2024",
-          "published_date": "2026-08-03T14:53:03+00:00"
-        },
-        {
-          "headline": "What we’ve learned about COVID-19 since the pandemic",
-          "published_date": "2026-08-04"
-        },
-        {
-          "headline": "What we’ve learned about COVID-19 since the pandemic",
-          "published_date": "2026-08-04"
-        },
-        {
-          "headline": "Rand Paul introduces resolution to hold Fauci in contempt of Congress",
-          "published_date": "2026-08-04"
-        },
-        {
-          "headline": "What we’ve learned about COVID-19 since the pandemic",
-          "published_date": "2026-08-04"
-        },
-        {
-          "headline": "What we’ve learned about COVID-19 since the pandemic",
-          "published_date": "2026-08-04"
-        },
-        {
-          "headline": "American Lung Association Highlights Therapeutic Options Available to Prevent...",
-          "published_date": "2026-08-04T03:48:28+00:00"
-        },
-        {
-          "headline": "Decision of the Week: Second Circuit Clarifies Standard for Title VII Religious Accommodation Claims",
-          "published_date": "2026-08-05T00:00:00+00:00"
-        },
-        {
-          "headline": "Vaxart Provides Business Update and Reports Second Quarter 2026 Financial Results",
-          "published_date": "2026-08-06"
-        },
-        {
-          "headline": "Senate committee votes to hold Fauci in contempt for refusing to answer COVID questions",
-          "published_date": "2026-08-06"
-        },
-        {
-          "headline": "Senate Committee Passes Fauci Contempt Resolution Along Party Lines",
-          "published_date": "2026-08-06"
-        },
-        {
-          "headline": "Live updates: Senate committee to vote on whether to hold Dr. Anthony Fauci in contempt of Congress | CNN Politics",
-          "published_date": "2026-08-06"
-        },
-        {
-          "headline": "Severe COVID-19 reactivates dormant viruses, study finds",
-          "published_date": "2026-08-06"
-        },
-        {
-          "headline": "MRNA Stock Pares Gains Despite FDA Green Light For First mRNA Flu Vaccine — But Retail Cheers Pivot Beyond COVID",
-          "published_date": "2026-08-06"
-        },
-        {
-          "headline": "FDA approves 1st flu shot using same technology as COVID vaccines - AOL",
-          "published_date": "2026-08-06"
-        },
-        {
-          "headline": "Senate committee votes to hold Fauci in contempt",
-          "published_date": "2026-08-06T14:36:03+00:00"
-        },
-        {
-          "headline": "RFK Jr. criticizes US COVID-19 response at CDC shooting memorial",
-          "published_date": "2026-08-07"
-        },
-        {
-          "headline": "How Fauci went from 'icon' during AIDS crisis to COVID lightning rod",
-          "published_date": "2026-08-07"
-        },
-        {
-          "headline": "The Real Reason Rand Paul Put a DOJ Target on Anthony Fauci’s Back",
-          "published_date": "2026-08-07"
-        },
-        {
-          "headline": "Dr. Anthony Fauci Questioned About the Federal Response to the COVID-19 Pandemic During Hearing",
-          "published_date": "2026-08-08"
-        },
-        {
-          "headline": "COVID awakens dormant viruses, and inflammation may be the trigger",
-          "published_date": "2026-08-08"
-        },
-        {
-          "headline": "Bill Maher has a message for Sen. Rand Paul after senator releases Fauci’s private diary",
-          "published_date": "2026-08-08"
-        },
-        {
-          "headline": "COVID Cases Are Increasing In These Areas. Here’s What Experts Want You To Know.",
-          "published_date": "2026-08-08"
-        },
-        {
-          "headline": "Vaxart Q2 Earnings Call Highlights",
-          "published_date": "2026-08-09"
-        },
-        {
-          "headline": "Pfizer grapples with ‘a world of hurt’ after Covid triumph",
-          "published_date": "2026-08-09T02:46:15+00:00"
-        },
-        {
-          "headline": "Massive and deadly flu mistaken for COVID-19 hits Zimbabwe and kills 5 people in Bulawayo",
-          "published_date": "2026-08-11"
-        },
-        {
-          "headline": "British journal retracts study on excess mortality after COVID-19 pandemic",
-          "published_date": "2026-08-12"
-        },
-        {
-          "headline": "Air Force expedites COVID reinstatement process for separated airmen, guardians",
-          "published_date": "2026-08-12"
-        },
-        {
-          "headline": "Temporal trends in alcohol-related liver disease mortality and prior inpatient care in England before, during and after the COVID-19 pandemic (2004-2024): a population-based ...",
-          "published_date": "2026-08-12T00:00:00+00:00"
-        },
-        {
-          "headline": "Severe COVID-19 infection linked to reactivation of 11 dormant viruses, study finds",
-          "published_date": "2026-08-13"
-        },
-        {
-          "headline": "Fauci texts release revives false claims linking Covid-19 vaccination, miscarriages",
-          "published_date": "2026-08-13"
-        },
-        {
-          "headline": "COVID is surging in California. Should you get vaccinated now or wait until fall?",
-          "published_date": "2026-08-13"
-        },
-        {
-          "headline": "Marin County Pharmacist Loses Vaccine Bias Case, Court Says Body Isn't a Shield",
-          "published_date": "2026-08-14"
-        },
-        {
-          "headline": "Summer is now California's COVID busy season as winter waves fade - AOL",
-          "published_date": "2026-08-14"
-        },
-        {
-          "headline": "Is Your Cold Actually COVID? What to Know as the Summer Surge Begins",
-          "published_date": "2026-08-14"
-        },
-        {
-          "headline": "False claims about miscarriage risk from Covid-19 vaccines are spreading online. They use a faulty interpretation of data",
-          "published_date": "2026-08-14"
-        },
-        {
-          "headline": "Pfizer and Valneva’s Lyme Disease Vaccine Candidate Marketing Authorization Application Validated by European Medicines Agency | Taiwan News | Aug. 14, 2026 13:00",
-          "published_date": "2026-08-14"
-        },
-        {
-          "headline": "COVID becoming a California summer staple as winter outbreaks fade | Honolulu Star-Advertiser",
-          "published_date": "2026-08-15"
-        },
-        {
-          "headline": "Letter to the Editor | Keep up with vaccines",
-          "published_date": "2026-08-15"
-        },
-        {
-          "headline": "Letter to the Editor | Fauci's lies now revealed",
-          "published_date": "2026-08-15"
-        },
-        {
-          "headline": "ICE detains grandma with green card due to COVID delaying return to US",
-          "published_date": "2026-08-15"
-        },
-        {
-          "headline": "Wisconsin measles outbreak may be spreading, no source found",
-          "published_date": "2026-08-15"
-        },
-        {
-          "headline": "Letter to the Editor | Fauci hearing was a trap",
-          "published_date": "2026-08-15T14:35:25+00:00"
-        }
-      ],
-      "news_total": 112,
-      "logs": [
-        {
-          "log_date": "2026-07-08",
-          "summary": "A study on COVID-19 vaccine effectiveness that was previously blocked by the CDC has now been released in full, detailing its findings. Meanwhile, new COVID-19 vaccines for the 2025-2026 season are becoming available, though access may be limited for some individuals.",
-          "news": [
-            {
-              "news_id": "f52126221c25577babbbb623df4cf035",
-              "url": "https://www.today.com/health/coronavirus/covid-vaccine-2025-2026-rcna228529",
-              "headline": "Are the New COVID Vaccines Available, and Should You Get One? Experts Explain",
-              "body": "As respiratory virus season approaches, you may be wondering if you should get the new COVID-19 vaccine to protect yourself. However, it may be more difficult for some people to find the shot this ...",
-              "published_date": "2026-07-08T15:12:31+00:00",
-              "outlet": "Today",
-              "image": ""
-            },
-            {
-              "news_id": "ff7d04e04b6157d59fbfeda0f4cd5118",
-              "url": "https://www.msn.com/en-us/health/general/cdc-blocked-a-covid-vaccine-study-s-release-now-you-can-read-the-whole-thing/ar-AA26Q57n?ocid=BingNewsVerp",
-              "headline": "CDC blocked a COVID vaccine study’s release–now you can read the whole thing",
-              "body": "The CDC blocked the release of a study about COVID-19 vaccine effectiveness. Here's what it contains.",
-              "published_date": "2026-07-08T15:12:31+00:00",
-              "outlet": "Newsweek on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.UkYafoaYVW2mm2fZDxb3Pw"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-08-13",
-          "summary": "The U.S. Air Force has expedited the reinstatement process for service members separated due to COVID-19 vaccine mandates, removing delays for those seeking to return. Meanwhile, a severe flu outbreak in Zimbabwe was initially mistaken for a resurgence of COVID-19, but was later identified as influenza, resulting in five deaths in Bulawayo.\nA new study indicates that severe COVID-19 may reactivate up to 11 dormant viruses, including Anelloviridae, which is linked to long-term disability. Additionally, Vaxart reported topline data from a 400-person sentinel cohort in its Phase 2b COVID-19 vaccine trial.",
-          "news": [
-            {
-              "news_id": "a463d5999b1a5948bb371fb4eae5d05f",
-              "url": "https://markets.businessinsider.com/news/stocks/vaxart-provides-business-update-and-reports-second-quarter-2026-financial-results-1036422626",
-              "headline": "Vaxart Provides Business Update and Reports Second Quarter 2026 Financial Results",
-              "body": "Reported topline data from 400-person sentinel cohort of the Phase 2b COVID-19 trial; Topline data from 400-person sentinel safety cohort and appr...",
-              "published_date": "2026-08-06",
-              "outlet": "Markets Insider",
-              "image": ""
-            },
-            {
-              "news_id": "3574f6a15e4d533da5e247b352c72df9",
-              "url": "https://www.aa.com.tr/en/europe/british-journal-retracts-study-on-excess-mortality-after-covid-19-pandemic/4025285",
-              "headline": "British journal retracts study on excess mortality after COVID-19 pandemic",
-              "body": "Article withdrawn by journal due to misinformation in discussion about possible causes of excess mortality | Anadolu",
-              "published_date": "2026-08-12",
-              "outlet": "Anadolu Agency",
-              "image": ""
-            },
-            {
-              "news_id": "8e8f1863fe125541b7d511328a555ddc",
-              "url": "https://www.msn.com/en-in/news/other/severe-covid-19-infection-linked-to-reactivation-of-11-dormant-viruses-study-finds/ar-AA29OvQD",
-              "headline": "Severe COVID-19 infection linked to reactivation of 11 dormant viruses, study finds",
-              "body": "A recent study revealed that severe COVID-19 infection may reactivate some of the dormant viruses in the body. Researchers have linked Anelloviridae reactivation to long-term physical disability and long COVID but also called for more research for definite results.",
-              "published_date": "2026-08-13",
-              "outlet": "Mint",
-              "image": ""
-            },
-            {
-              "news_id": "0e2a4bbd2a375744b4ccadaa74f0cd62",
-              "url": "https://www.myzimbabwe.co.zw/news/189254-massive-and-deadly-flu-mistaken-for-covid-19-hits-zimbabwe-and-kills-5-people-in-bulawayo.html",
-              "headline": "Massive and deadly flu mistaken for COVID-19 hits Zimbabwe and kills 5 people in Bulawayo",
-              "body": "VIRULENT FLU MISTAKEN FOR COVID-19 LASHES ZIMBABWE: FIVE DEAD IN BULAWAYO AS RESPIRATORY INFECTIONS SURGE NATIONWIDE BULAWAYO — A lethal and fast-spreading respiratory illness, initially feared to be a resurgence of the COVID-19 pandemic, has claimed the lives of five individuals at Mpilo Central H",
-              "published_date": "2026-08-11",
-              "outlet": "My Zimbabwe News",
-              "image": "https://www.bing.com/th?id=ONUT.eV-hTe-LXbqh9eC177H1jg"
-            },
-            {
-              "news_id": "d9771661541e5694a31eee2f8be1fcd3",
-              "url": "https://www.yahoo.com/news/politics/articles/air-force-expedites-covid-reinstatement-181247345.html",
-              "headline": "Air Force expedites COVID reinstatement process for separated airmen, guardians",
-              "body": "The Air Force changed its COVID-19 reinstatement process to remove delays for service members seeking to return after vaccine-related separation.",
-              "published_date": "2026-08-12",
-              "outlet": "Military Times · via Yahoo News",
-              "image": "https://media.zenfs.com/en/military_times_968/40767911ff6fe2363241eec392a4edd6.jpg"
-            },
-            {
-              "news_id": "bf5d73f4f05d5cadb1b8222ef97ffd44",
-              "url": "https://www.thederrick.com/news/entertainment/rfk-jr-criticizes-us-covid-19-response-at-cdc-shooting-memorial/article_e9afa700-73b2-536f-a592-0ed2d8d9d73f.html",
-              "headline": "RFK Jr. criticizes US COVID-19 response at CDC shooting memorial",
-              "body": "Health and Human Services Secretary Robert F. Kennedy Jr. told staff members at the Centers for Disease Control and Prevention that the U.S. would have done better in the COVID-19",
-              "published_date": "2026-08-07",
-              "outlet": "thederrick.com",
-              "image": "https://bloximages.newyork1.vip.townnews.com/thederrick.com/content/tncms/assets/v3/editorial/d/b6/db6e132f-6050-5c74-86be-5e7a387b4743/6a768f829bf3b.image.jpg?crop=1763,926,0,124&resize=1200,630&order=crop,resize"
-            },
-            {
-              "news_id": "f6eac677abdb50478201740d560489ab",
-              "url": "https://www.aol.com/articles/covid-basics-essential-tips-older-000000955.html",
-              "headline": "COVID Basics: Essential Tips for Older Adults and Caregivers - AOL",
-              "body": "According to CDC, more than 81% of COVID-related deaths happen among people age 65+. This is because as we age, our immune systems change, making it harder for us to fight off viruses. Find out what’s changed—and what hasn’t—about COVID prevention for older adults.",
-              "published_date": "2025-10-16",
-              "outlet": "NCOA · via AOL",
-              "image": "https://media.zenfs.com/en/aol_ncoa_591/cb33ca4ae19099fbd84e2cfd9091dc1d"
-            },
-            {
-              "news_id": "927662f01803584984858e2d80c64a0d",
-              "url": "https://jech.bmj.com/content/early/2026/08/12/jech-2025-225179",
-              "headline": "Temporal trends in alcohol-related liver disease mortality and prior inpatient care in England before, during and after the COVID-19 pandemic (2004-2024): a population-based ...",
-              "body": "Background Mortality from alcohol-related liver disease (ARLD) in England rose after the COVID-19 pandemic. Existing reports lack data on prior healthcare use, which is key to understanding care pathways before death.",
-              "published_date": "2026-08-12T00:00:00+00:00",
-              "outlet": "Journal of Epidemiology and Community Health (JECH)",
-              "image": "https://jech.bmj.com/content/jech/early/2026/08/12/jech-2025-225179/F1.medium.gif"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-08-15",
-          "summary": "COVID-19 continues to surge across the U.S., with the CDC reporting the virus is growing or likely growing in 43 states, and California seeing a second year where summer cases peak higher than winter. Health officials urge some people not to wait for the updated fall vaccine and to get vaccinated now, while also noting overlapping symptoms with the common cold. Separately, false claims about COVID-19 vaccines and miscarriage risk are spreading online, fueled by Republican senators, despite numerous large-scale studies showing no evidence of increased risk.",
-          "news": [
-            {
-              "news_id": "aa98d7394fec5c59859dd9b3d75790a7",
-              "url": "https://hoodline.com/2026/08/marin-county-pharmacist-loses-vaccine-bias-case-court-says-body-isn-t-a-shield/",
-              "headline": "Marin County Pharmacist Loses Vaccine Bias Case, Court Says Body Isn't a Shield",
-              "body": "Her body is a temple, she argued. A federal appeals court says that's not enough to beat a vaccine mandate.",
-              "published_date": "2026-08-14",
-              "outlet": "Hoodline",
-              "image": "https://s.yimg.com/bo/4564bcec-edf8-5e9f-a1e5-d605add9c032_1786750611280.jpg"
-            },
-            {
-              "news_id": "a346a445930d50e28cc3470b7ce90b5b",
-              "url": "https://www.msn.com/en-us/news/us/ice-detains-grandma-with-green-card-due-to-covid-delaying-return-to-us/ar-AA2a8yes?ocid=BingNewsVerp",
-              "headline": "ICE detains grandma with green card due to COVID delaying return to US",
-              "body": "ICE detained a green-card holder despite earlier dismissal of her deportation case, according to her attorney and family ...",
-              "published_date": "2026-08-15",
-              "outlet": "Newsweek on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.I158uVTYbcbaNZIDPCGZmw"
-            },
-            {
-              "news_id": "744e026c375d56269c9b5b1ef67c52b5",
-              "url": "https://www.aol.com/articles/covid-becoming-california-summer-staple-100000789.html",
-              "headline": "Summer is now California's COVID busy season as winter waves fade - AOL",
-              "body": "The shift was noted for the past couple of years and has become even clearer in 2026, prompting health officials to refocus their prevention efforts. The CDC says COVID-19 is growing or likely growing in 43 states, including California.",
-              "published_date": "2026-08-14",
-              "outlet": "LA Times · via AOL",
-              "image": "https://media.zenfs.com/en/aol_la_times_articles_830/bcb4a743b7c3a56701ee11d52d23b246.jpg"
-            },
-            {
-              "news_id": "3d4bf7d0a8df568db6060242df0359a8",
-              "url": "https://www.yahoo.com/news/politics/articles/fauci-texts-release-revives-false-203115109.html",
-              "headline": "Fauci texts release revives false claims linking Covid-19 vaccination, miscarriages",
-              "body": "Numerous large scale studies have found Covid-19 vaccines to be beneficial during pregnancy, with no evidence they increase the rate of miscarriages. But conservative US politicians and influencers ha...",
-              "published_date": "2026-08-13",
-              "outlet": "AFP · via Yahoo News",
-              "image": "https://media.zenfs.com/en/afp_factcheck_us_713/eac4fcae230cd01c062c7f818f453ec2.jpg"
-            },
-            {
-              "news_id": "82fbc72fa891513e9cd8c1ad12fbeb7b",
-              "url": "https://health.yahoo.com/conditions/infectious/coronavirus/articles/cold-actually-covid-know-summer-205201690.html",
-              "headline": "Is Your Cold Actually COVID? What to Know as the Summer Surge Begins",
-              "body": "Symptoms of COVID and the common cold overlap, but there are steps you can take to get the right diagnosis and, if appropriate, treatment. Here’s the latest.",
-              "published_date": "2026-08-14",
-              "outlet": "Everyday Health · via Yahoo News",
-              "image": "https://media.zenfs.com/en/everyday_health_747/cd05605be59816da1c35b9731ac58e46.jpg"
-            },
-            {
-              "news_id": "8f67f88189f55c04b381eb774cf0ae7e",
-              "url": "https://www.news8000.com/lifestyle/health/false-claims-about-miscarriage-risk-from-covid-19-vaccines-are-spreading-online-they-use-a/article_31de6b97-479f-51ac-99bb-2cf8de64180d.html",
-              "headline": "False claims about miscarriage risk from Covid-19 vaccines are spreading online. They use a faulty interpretation of data",
-              "body": "(CNN) — Numerous studies have shown that Covid-19 vaccines are safe during pregnancy, but Republican senators have recently stirred up false and misleading claims that are now spreading on social",
-              "published_date": "2026-08-14",
-              "outlet": "News8000",
-              "image": "https://www.bing.com/th?id=ONUT.7sCblJ5IouaC0QQyawpI1A"
-            },
-            {
-              "news_id": "5fd71c83f0385282a1e8eef26c76d662",
-              "url": "https://www.msn.com/en-us/health/medical/wisconsin-measles-outbreak-may-be-spreading-no-source-found/ar-AA2a91Bp?ocid=BingNewsVerp",
-              "headline": "Wisconsin measles outbreak may be spreading, no source found",
-              "body": "Wisconsin health officials have not identified a source of the measles outbreak in Iowa County and say it may still be ...",
-              "published_date": "2026-08-15",
-              "outlet": "Milwaukee Journal Sentinel on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.00LAd9tIsnvq8iORMrR7MQ"
-            },
-            {
-              "news_id": "eb2f1aae05c650a5a13661653a159a85",
-              "url": "https://www.taiwannews.com.tw/en/news/6421454",
-              "headline": "Pfizer and Valneva’s Lyme Disease Vaccine Candidate Marketing Authorization Application Validated by European Medicines Agency | Taiwan News | Aug. 14, 2026 13:00",
-              "body": "| Aug. 14, 2026 13:00",
-              "published_date": "2026-08-14",
-              "outlet": "Taiwan News",
-              "image": ""
-            },
-            {
-              "news_id": "0eb7178c9c185683a66b09b0012ad8d4",
-              "url": "https://health.yahoo.com/treatments/vaccines/articles/californias-covid-pattern-flipped-means-161217603.html",
-              "headline": "COVID is surging in California. Should you get vaccinated now or wait until fall?",
-              "body": "For a second year, California's COVID-19 activity is peaking higher in summer than winter, prompting state health officials to urge some people not to wait for the updated fall vaccine.",
-              "published_date": "2026-08-13",
-              "outlet": "San Francisco Chronicle · via Yahoo News",
-              "image": "https://media.zenfs.com/en/san_francisco_chronicle_hearst_178/f7573d674442fd11a6367b18c813950b.jpg"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-08-17",
-          "summary": "A report notes that COVID-19 is increasingly becoming a summer phenomenon in California, with winter outbreaks fading, marking a shift in seasonal patterns six years into the pandemic.",
-          "news": [
-            {
-              "news_id": "350f171e72e55bb4a48727ed77c0621c",
-              "url": "https://www.staradvertiser.com/2026/08/15/breaking-news/covid-becoming-a-california-summer-staple-as-winter-outbreaks-fade/",
-              "headline": "COVID becoming a California summer staple as winter outbreaks fade | Honolulu Star-Advertiser",
-              "body": "LOS ANGELES >> Six years after the COVID-19 pandemic upended the world, experts in California say the disease appears to be becoming more of a summer rather than a winter phenomenon.",
-              "published_date": "2026-08-15",
-              "outlet": "Honolulu Star-Advertiser",
-              "image": "https://s.yimg.com/bo/7d673750-6e22-5af2-b934-d5cc11a65f1b_1786822587526.jpg"
-            },
-            {
-              "news_id": "d340f32cc7395c24be850dc8f4bbc8a2",
-              "url": "https://www.news-gazette.com/opinion/letters-editor/letter-to-the-editor-keep-up-with-vaccines/article_543299ce-4beb-485b-93bc-3ec2eead130b.html",
-              "headline": "Letter to the Editor | Keep up with vaccines",
-              "body": "Keep up with vaccines",
-              "published_date": "2026-08-15",
-              "outlet": "News-Gazette",
-              "image": ""
-            },
-            {
-              "news_id": "547e51db79df50028cb80c4adefd077f",
-              "url": "https://www.news-gazette.com/opinion/letters-editor/letter-to-the-editor-faucis-lies-now-revealed/article_b1d7c9e8-fe17-42cb-af1e-a1cb231bb4b8.html",
-              "headline": "Letter to the Editor | Fauci's lies now revealed",
-              "body": "Fauci’s lies now revealed",
-              "published_date": "2026-08-15",
-              "outlet": "News-Gazette",
-              "image": ""
-            },
-            {
-              "news_id": "7894c56612e4557985fcf0c1a04edb4e",
-              "url": "https://www.news-gazette.com/opinion/letters-editor/letter-to-the-editor-fauci-hearing-was-a-trap/article_b4eedf53-bafb-4bc5-a2e9-7d807c26c215.html",
-              "headline": "Letter to the Editor | Fauci hearing was a trap",
-              "body": "Fauci hearing was a trap ...",
-              "published_date": "2026-08-15T14:35:25+00:00",
-              "outlet": "News-Gazette",
-              "image": ""
-            }
-          ]
-        }
-      ],
-      "logs_total": 16
-    },
-    {
       "incident_id": "20260606-CN-FL",
       "tree_id": "942158e18da35420a79e4a17fefb8013",
       "canonical_name": "Flood Hunan, China 2026-06-06",
-      "summary": "On August 5, 2026, flash floods in Zhangjiajie, Hunan, submerged cars and collapsed a house, as captured in video footage. This event adds to the ongoing flood crisis in Hunan province, which has been affected by heavy rains throughout the summer.",
+      "summary": "As of August 14, a mudslide in eastern China killed one person amid continued heavy rain, with authorities warning of more downpours. Typhoon Dolphin caused flooding in Wenzhou, with rescue crews searching flooded homes in Yueqing. Chinese President Xi Jinping ordered strengthened disaster prevention and emergency response systems as floods, landslides, and typhoon-related weather continued to batter several parts of China.",
       "country": "China",
       "iso2": "CN",
       "lat": 27.1175905,
@@ -1243,57 +501,6 @@
           ]
         },
         {
-          "log_date": "2026-07-27",
-          "summary": "Flooding from Typhoon Noul has caused mass evacuations in Guangdong Province, with over 715,000 relocated and at least 10 deaths reported. In southern China, floodwaters decimated a private zoo, leaving dozens of animals missing and surviving animals facing critical food shortages. Additionally, a flash flood at a camping site in northwest China killed 10 people and injured 23.",
-          "news": [
-            {
-              "news_id": "be70447c7ac95840a68f08b08acc08f4",
-              "url": "https://www.scmp.com/video/china/3362004/flash-flood-northwest-china-camping-site-kills-10-injures-23",
-              "headline": "Flash flood at northwest China camping site kills 10, injures 23 | South China Morning Post",
-              "body": "News, opinions, infographics and videos on China issues: geopolitics, diplomacy, economy, technology and lifestyle.",
-              "published_date": "2026-07-27",
-              "outlet": "South China Morning Post",
-              "image": "https://www.bing.com/th?id=ONUT.SNubBdvDP54php7kebMJtw"
-            },
-            {
-              "news_id": "16249c7cc5825921bae2e42c23dc83d8",
-              "url": "https://theshillongtimes.com/2026/07/27/mass-evacuations-10-dead-from-typhoon-noul-in-china/",
-              "headline": "Mass evacuations, 10 dead from Typhoon Noul in China",
-              "body": "China, July 26: According to reporting by The Guardian, more than 715,000 people were relocated to safer areas across Guangdong Province as authorities prepared for dangerous flooding, strong winds, and potential landslides. Emergency services remained on high alert throughout the region while officials closely monitored rivers, mountain communities, construction sites, valleys, and bridges vulnerable to…",
-              "published_date": "2026-07-27",
-              "outlet": "The Shillong Times",
-              "image": ""
-            },
-            {
-              "news_id": "21b6a2a4a77a5b13b370395798d55abe",
-              "url": "https://www.aljazeera.com/video/newsfeed/2026/7/26/typhoon-noul-batters-southeast-china",
-              "headline": "Typhoon Noul batters Southeast China",
-              "body": "Footage shows the aftermath of Typhoon Noul after it battered southern China's coastal regions.",
-              "published_date": "2026-07-26",
-              "outlet": "Al Jazeera",
-              "image": "https://www.bing.com/th?id=ONUT.usntRytdj-Q-JN8D8ehkXg"
-            },
-            {
-              "news_id": "650da9f4b9e453b1a4daa05473f0750b",
-              "url": "https://www.whio.com/news/typhoon-noul-weakens/ZB2WSCKJXE6BBKOK4H6LHG6V6U/",
-              "headline": "This website is unavailable in your location. – WHIO TV 7 and WHIO Radio",
-              "body": "Typhoon Noul has weakened to a tropical storm as it moves inland after making landfall in southern...",
-              "published_date": "2016-01-01",
-              "outlet": "WHIO-TV 7 Dayton",
-              "image": "https://s.yimg.com/bo/e24490ad-6b14-5b86-91ec-25ebd1966134_1785068368704.jpg"
-            },
-            {
-              "news_id": "d28f18e1a30654fd8b3bd8273098d08d",
-              "url": "https://www.caixinglobal.com/2026-07-27/flood-decimates-private-zoo-in-southern-china-leaving-dozens-of-animals-missing-102468355.html",
-              "headline": "Flood Decimates Private Zoo in Southern China, Leaving Dozens of Animals Missing",
-              "body": "Owners locked lion cages to protect the public before waters surged; surviving animals face critical food shortages",
-              "published_date": "2026-07-27",
-              "outlet": "Caixin Global",
-              "image": ""
-            }
-          ]
-        },
-        {
           "log_date": "2026-07-29",
           "summary": "The remnants of Typhoon Noul pushed deeper into southern and central China, threatening heavy flooding. Chinese Premier Li Qiang stressed stronger disaster prevention and emergency response. Additionally, tourists were evacuated from the Jiuzhaigou UNESCO World Heritage site after mudslides triggered by heavy rain.",
           "news": [
@@ -1394,9 +601,51 @@
               "image": ""
             }
           ]
+        },
+        {
+          "log_date": "2026-08-18",
+          "summary": "As of August 14, a mudslide in eastern China killed one person amid continued heavy rain, with authorities warning of more downpours. Typhoon Dolphin caused flooding in Wenzhou, with rescue crews searching flooded homes in Yueqing. Chinese President Xi Jinping ordered strengthened disaster prevention and emergency response systems as floods, landslides, and typhoon-related weather continued to batter several parts of China.",
+          "news": [
+            {
+              "news_id": "ef2a62b60258550b83d4df4f38aadc79",
+              "url": "https://dailytimes.com/2025flood/churches-unite-for-convoy-of-hope/article_ff43e4a9-7baa-4919-9e5d-4943ae14ed89.html",
+              "headline": "Churches unite for Convoy of Hope",
+              "body": "A food distribution planned for one year after the July 4, 2025, flood, came none too soon for 2026 flood survivors on Saturday, Aug. 8.",
+              "published_date": "2026-08-09",
+              "outlet": "Kerrville Daily Times",
+              "image": "https://s.yimg.com/bo/31e0426d-bd22-510b-b820-6bea923e24f5_1786336357960.jpg"
+            },
+            {
+              "news_id": "4737c448c9715cbbbc5d6aff6d96b723",
+              "url": "https://www.msn.com/en-us/public-safety-and-emergencies/natural-disasters/post-landfall-dolphin-floods-wenzhou-as-four-chinese-rivers-face-major-surge/ar-AA29LJhU?ocid=BingNewsVerp",
+              "headline": "Post-landfall dolphin floods Wenzhou as four Chinese rivers face major surge",
+              "body": "Typhoon Dolphin China flooding continues Monday after landfall, with rescue crews searching flooded homes in Yueqing as China ...",
+              "published_date": "2026-08-11",
+              "outlet": "Tech Times on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.jGXW4qvd1E-ASEy6QdCFOQ"
+            },
+            {
+              "news_id": "ad39571b11c4504686277f4e91401578",
+              "url": "https://www.outlookindia.com/international/xi-jinping-calls-for-stronger-disaster-preparedness-as-floods-landslides-batter-china",
+              "headline": "Xi Jinping Calls For Stronger Disaster Preparedness As Floods, Landslides Batter China | Outlook India",
+              "body": "Chinese President Xi Jinping has ordered authorities to strengthen disaster prevention, early-warning systems and emergency response as deadly floods, landslides and typhoon-related weather batter several parts of China",
+              "published_date": "2026-08-15",
+              "outlet": "Outlook India",
+              "image": ""
+            },
+            {
+              "news_id": "fd3b37ac08bf51f3bb5684aad21e2010",
+              "url": "https://www.usnews.com/news/world/articles/2026-08-14/mudslide-in-eastern-china-kills-one-more-heavy-rain-expected",
+              "headline": "Mudslide in Eastern China Kills One, More Heavy Rain Expected",
+              "body": "Natural disasters in China in July, when the country was affected by Typhoons Maysak, Bavi and Noul, left 318 people dead ...",
+              "published_date": "2026-08-14T14:00:43+00:00",
+              "outlet": "U.S. News & World Report",
+              "image": "https://www.bing.com/th?id=ONUT.cbiPIME8D3gvUC4BPJ0q0g"
+            }
+          ]
         }
       ],
-      "logs_total": 11
+      "logs_total": 12
     },
     {
       "incident_id": "20260626-PH-EQ",
