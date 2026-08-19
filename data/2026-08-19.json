@@ -1,32 +1,32 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-08-19",
-  "generated_at": "2026-08-19T02:34:20Z",
+  "generated_at": "2026-08-19T14:03:05Z",
   "as_of": "2026-08-19",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 28,
-    "new_today": 0,
+    "reportable_total": 29,
+    "new_today": 15,
     "critical": 12,
-    "high": 2,
-    "medium": 7,
+    "high": 4,
+    "medium": 6,
     "low": 7,
     "disease_outbreaks": 3,
     "countries_affected": 20,
-    "news_total": 4577,
+    "news_total": 4733,
     "max_magnitude": 7.7,
     "by_severity": {
       "CRITICAL": 12,
-      "HIGH": 2,
-      "MEDIUM": 7,
+      "HIGH": 4,
+      "MEDIUM": 6,
       "LOW": 7
     },
     "by_type": {
       "Flood": 2,
       "Disease": 3,
       "Drought": 3,
-      "Earthquake": 7,
+      "Earthquake": 8,
       "Forest Fire": 6,
       "Severe Weather": 2,
       "Conflict": 2,
@@ -35,7 +35,7 @@
       "Volcano": 1
     },
     "by_region": {
-      "Asia": 7,
+      "Asia": 8,
       "Global": 2,
       "Africa": 3,
       "Europe": 7,
@@ -119,7 +119,7 @@
     },
     {
       "country": "China",
-      "count": 1,
+      "count": 2,
       "max_sev_rank": 2,
       "iso2": "CN",
       "region": "Asia",
@@ -145,15 +145,6 @@
       "max_severity": "MEDIUM"
     },
     {
-      "country": "Belgium",
-      "count": 1,
-      "max_sev_rank": 2,
-      "iso2": "BE",
-      "region": "Europe",
-      "country_group": "C",
-      "max_severity": "MEDIUM"
-    },
-    {
       "country": "Vanuatu",
       "count": 1,
       "max_sev_rank": 2,
@@ -161,6 +152,15 @@
       "region": "Oceania",
       "country_group": "B",
       "max_severity": "MEDIUM"
+    },
+    {
+      "country": "Belgium",
+      "count": 1,
+      "max_sev_rank": 3,
+      "iso2": "BE",
+      "region": "Europe",
+      "country_group": "C",
+      "max_severity": "HIGH"
     },
     {
       "country": "Greece",
@@ -774,7 +774,7 @@
       "disease_name": "Covid-19",
       "event_date": "2025-05-28",
       "first_reported_date": "2025-05-28",
-      "last_updated_date": "2026-08-18",
+      "last_updated_date": "2026-08-19",
       "days_since_event": 448,
       "source_count": 1,
       "should_report": false,
@@ -785,7 +785,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 115
+        "news": 118
       },
       "source_links": [
         {
@@ -1211,6 +1211,10 @@
           "published_date": "2026-08-13"
         },
         {
+          "headline": "PM announces drive to get thousands of rough sleepers off streets for Christmas",
+          "published_date": "2026-08-13T04:44:11+00:00"
+        },
+        {
           "headline": "ICE detains grandma with green card due to COVID delaying return to US",
           "published_date": "2026-08-14"
         },
@@ -1263,11 +1267,19 @@
           "published_date": "2026-08-17"
         },
         {
+          "headline": "US kindergarten vaccine exemptions hit record high as immunization rates slip",
+          "published_date": "2026-08-18"
+        },
+        {
           "headline": "Kids’ vax rates dip, exemptions rise",
           "published_date": "2026-08-18T00:00:00+00:00"
+        },
+        {
+          "headline": "County vaccination data may mask school-level measles risk",
+          "published_date": "2026-08-19"
         }
       ],
-      "news_total": 115,
+      "news_total": 118,
       "logs": [
         {
           "log_date": "2026-07-08",
@@ -1481,7 +1493,7 @@
       "disease_name": "Ebola",
       "event_date": "2025-09-05",
       "first_reported_date": "2025-09-05",
-      "last_updated_date": "2026-08-18",
+      "last_updated_date": "2026-08-19",
       "days_since_event": 348,
       "source_count": 12,
       "should_report": true,
@@ -1492,7 +1504,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 239
+        "news": 245
       },
       "source_links": [
         {
@@ -2468,6 +2480,10 @@
           "published_date": "2026-08-15"
         },
         {
+          "headline": "Congo’s fast-moving Ebola outbreak becomes the country's worst with over 2,300 dead",
+          "published_date": "2026-08-17"
+        },
+        {
           "headline": "Democratic Republic of Congo's Ebola outbreak becomes deadliest in country's history",
           "published_date": "2026-08-17"
         },
@@ -2532,11 +2548,31 @@
           "published_date": "2026-08-18"
         },
         {
+          "headline": "DR Congo Ebola outbreak 'far from being under control': WHO chief",
+          "published_date": "2026-08-18"
+        },
+        {
+          "headline": "DR Congo’s Ebola outbreak ‘global emergency’ as infections pass 5,000: WHO",
+          "published_date": "2026-08-18"
+        },
+        {
           "headline": "Ebola outbreak in Congo becomes deadliest in country's history",
           "published_date": "2026-08-18"
+        },
+        {
+          "headline": "DR Congo Ebola outbreak can be contained in three months: WHO",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "How Ebola became the deadliest outbreak in DR Congo’s history",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "WHO says Congo Ebola outbreak can still be brought under control within three months",
+          "published_date": "2026-08-19"
         }
       ],
-      "news_total": 239,
+      "news_total": 245,
       "logs": [
         {
           "log_date": "2026-07-10",
@@ -3245,7 +3281,7 @@
       "disease_name": null,
       "event_date": "2026-05-11",
       "first_reported_date": "2026-05-11",
-      "last_updated_date": "2026-08-18",
+      "last_updated_date": "2026-08-19",
       "days_since_event": 100,
       "source_count": 1,
       "should_report": true,
@@ -3256,7 +3292,7 @@
         "gdacs": 1,
         "ercc": 0,
         "healthmap": 0,
-        "news": 30
+        "news": 41
       },
       "source_links": [
         {
@@ -3358,6 +3394,30 @@
           "published_date": "2026-08-17T15:29:18+00:00"
         },
         {
+          "headline": "Colorado’s drought is causing another fishing spot to lose its fish",
+          "published_date": "2026-08-18"
+        },
+        {
+          "headline": "DROUGHT ALERTS",
+          "published_date": "2026-08-18"
+        },
+        {
+          "headline": "Governor makes firefighting help available statewide",
+          "published_date": "2026-08-18"
+        },
+        {
+          "headline": "Governor makes firefighting help available statewide - AOL",
+          "published_date": "2026-08-18"
+        },
+        {
+          "headline": "Satellite photos show shrinking Lake Mead, Powell as levels hit record lows",
+          "published_date": "2026-08-18"
+        },
+        {
+          "headline": "What impact does the drought have on Spring Hollow Reservoir?",
+          "published_date": "2026-08-18"
+        },
+        {
           "headline": "Panama Canal continues draft restrictions, ocean carriers up fees",
           "published_date": "2026-08-18"
         },
@@ -3394,11 +3454,31 @@
           "published_date": "2026-08-18"
         },
         {
+          "headline": "New heat dome to build in western US, further exacerbating drought this week",
+          "published_date": "2026-08-18T04:52:11+00:00"
+        },
+        {
+          "headline": "Drought drives record bear activity as CPW urges Coloradans to stay BearWise",
+          "published_date": "2026-08-18T05:52:08+00:00"
+        },
+        {
           "headline": "UK Braces for Water Restrictions as Drought Intensifies",
           "published_date": "2026-08-18T14:48:52+00:00"
+        },
+        {
+          "headline": "Expected rain will provide limited drought relief, but recovery could take months",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Drought reveals Emperor Nero's bridge beneath Rome's Tiber river",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Elephant Butte Reservoir Runs Low - NASA Science",
+          "published_date": "2026-08-19"
         }
       ],
-      "news_total": 30,
+      "news_total": 41,
       "logs": [
         {
           "log_date": "2026-08-18",
@@ -4367,7 +4447,7 @@
       "disease_name": null,
       "event_date": "2026-06-24",
       "first_reported_date": "2026-06-24",
-      "last_updated_date": "2026-08-18",
+      "last_updated_date": "2026-08-19",
       "days_since_event": 56,
       "source_count": 4,
       "should_report": true,
@@ -4378,7 +4458,7 @@
         "gdacs": 1,
         "ercc": 1,
         "healthmap": 0,
-        "news": 348
+        "news": 353
       },
       "source_links": [
         {
@@ -5802,15 +5882,35 @@
           "published_date": "2026-08-18"
         },
         {
+          "headline": "OFAC Reaffirms Recent Licenses Along With New License in Response to Venezuela Earthquakes",
+          "published_date": "2026-08-18"
+        },
+        {
+          "headline": "Venezuela Earthquake Death Toll Surges to 6,438",
+          "published_date": "2026-08-18"
+        },
+        {
           "headline": "Death toll from Venezuela earthquake rises to 6,438",
           "published_date": "2026-08-18"
         },
         {
           "headline": "Venezuela earthquake death toll rises to 6,438",
           "published_date": "2026-08-18"
+        },
+        {
+          "headline": "Venezuela earthquake death toll rises to 6,438",
+          "published_date": "2026-08-18T00:00:00+00:00"
+        },
+        {
+          "headline": "Venezuela, Colombia quakes raise seismic fears in Peru",
+          "published_date": "2026-08-18T15:12:42+00:00"
+        },
+        {
+          "headline": "Video of Venezuela earthquake aftermath falsely linked to August 2026 Colombia jolt",
+          "published_date": "2026-08-19"
         }
       ],
-      "news_total": 348,
+      "news_total": 353,
       "logs": [
         {
           "log_date": "2026-06-28",
@@ -9517,7 +9617,7 @@
       "disease_name": null,
       "event_date": "2026-07-15",
       "first_reported_date": "2026-07-15",
-      "last_updated_date": "2026-08-18",
+      "last_updated_date": "2026-08-19",
       "days_since_event": 35,
       "source_count": 1,
       "should_report": true,
@@ -9528,7 +9628,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 458
+        "news": 469
       },
       "source_links": [
         {
@@ -9556,6 +9656,10 @@
         {
           "headline": "Moscow warns Britain over UK-made drones used in RussiaPublished on: August 18, 2026 4:17 PM",
           "published_date": "2026-04-17"
+        },
+        {
+          "headline": "Russia warns UK over drones supplied to UkrainePublished on: August 18, 2026 7:16 PM",
+          "published_date": "2026-07-16"
         },
         {
           "headline": "Putin’s false claim of the capture of one Ukrainian town exposes the slow pace of Russia’s bloody advance | CNN",
@@ -11326,6 +11430,22 @@
           "published_date": "2026-08-17T16:59:46+00:00"
         },
         {
+          "headline": "Ukraine launches major drone attack on Moscow; Russian missiles hit Kharkiv",
+          "published_date": "2026-08-18"
+        },
+        {
+          "headline": "Hope For Ukraine Launches Donation Drive Campaign, Calls on Locals to Provide Hope During Humanitarian Crisis",
+          "published_date": "2026-08-18"
+        },
+        {
+          "headline": "Russia warns UK will ‘pay price’ for supplying drones to Ukraine",
+          "published_date": "2026-08-18"
+        },
+        {
+          "headline": "‘We Won’t Be Bullied’: U.K. Responds to Russian Threat Over Ukraine Drone Support",
+          "published_date": "2026-08-18"
+        },
+        {
           "headline": "Maritime tit-for-tat: New front of Russo-Ukrainian war | Opinion",
           "published_date": "2026-08-18"
         },
@@ -11380,9 +11500,33 @@
         {
           "headline": "Ukraine war latest: UK responds with message to Putin after Russia threatens 'consequences'",
           "published_date": "2026-08-18T15:18:53+00:00"
+        },
+        {
+          "headline": "Ukraine aces drone game, but may lose ballistic match",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Russia and Ukraine bleed as NATO’s war threatens to engulf Europe",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "UK will 'support Ukraine 100%' despite Russian threat of 'consequences,' PM says",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "'We won't be bullied,' UK tells Putin after threat over Ukraine war",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Ukraine war live: Russians 'withdraw billions' from banks",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Russia threatens consequences over ‘use of UK drones in Ukraine deep strikes’",
+          "published_date": "2026-08-19"
         }
       ],
-      "news_total": 458,
+      "news_total": 469,
       "logs": [
         {
           "log_date": "2026-07-24",
@@ -12280,7 +12424,7 @@
       "disease_name": null,
       "event_date": "2026-07-26",
       "first_reported_date": "2026-07-26",
-      "last_updated_date": "2026-08-18",
+      "last_updated_date": "2026-08-19",
       "days_since_event": 24,
       "source_count": 1,
       "should_report": true,
@@ -12291,7 +12435,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 870
+        "news": 903
       },
       "source_links": [],
       "physical": {
@@ -14954,6 +15098,14 @@
           "published_date": "2026-08-12T00:00:00+00:00"
         },
         {
+          "headline": "Iran-backed Houthis clash with Yemeni forces and other Mideast developments",
+          "published_date": "2026-08-13"
+        },
+        {
+          "headline": "UK economic growth slows down as Iran war pushes up energy prices",
+          "published_date": "2026-08-13"
+        },
+        {
           "headline": "Shippers see disruptions from Iran war, but cargo and freight rates are rising",
           "published_date": "2026-08-13"
         },
@@ -15246,6 +15398,10 @@
           "published_date": "2026-08-14T15:25:40+00:00"
         },
         {
+          "headline": "Iran claims Qatar is holding pilots, Israeli strikes kill 11 in Lebanon, and other Middle East news",
+          "published_date": "2026-08-15"
+        },
+        {
           "headline": "Iran calls on Qatar to release three downed pilots",
           "published_date": "2026-08-15"
         },
@@ -15402,6 +15558,10 @@
           "published_date": "2026-08-15T18:41:13+00:00"
         },
         {
+          "headline": "August 16, 2026 — Kushner meets regional leaders as multiple conflicts roil Middle East | CNN",
+          "published_date": "2026-08-16"
+        },
+        {
           "headline": "Canada sanctions five Iranian officials over efforts to block navigation through Strait of Hormuz",
           "published_date": "2026-08-16"
         },
@@ -15500,6 +15660,26 @@
         {
           "headline": "Iran Says Pilots Missing After a Brazen Bombing Run Are Prisoners in Qatar",
           "published_date": "2026-08-16T11:29:56+00:00"
+        },
+        {
+          "headline": "The 60-day deadline for an Iran peace deal is expiring. Here’s where things stand",
+          "published_date": "2026-08-17"
+        },
+        {
+          "headline": "Here's What \"Iran's Secret Plan To Escalate The War\" Means For Oil Stocks",
+          "published_date": "2026-08-17"
+        },
+        {
+          "headline": "Trump warns US will ‘bomb the s–t’ out of Oman if they interfere in Strait of Hormuz conflict - AOL",
+          "published_date": "2026-08-17"
+        },
+        {
+          "headline": "President Trump blasts allies as Iran war deadline passes with no deal",
+          "published_date": "2026-08-17"
+        },
+        {
+          "headline": "US-Iran War LIVE News: UAE Suspends All Trade With Iran After Missile Strike Incident",
+          "published_date": "2026-08-17"
         },
         {
           "headline": "Trump says US will reduce military exercises with South Korea, citing lack of help with Iran",
@@ -15710,6 +15890,50 @@
           "published_date": "2026-08-17T15:42:00+00:00"
         },
         {
+          "headline": "Iran has lost significant control of the Strait of Hormuz",
+          "published_date": "2026-08-18"
+        },
+        {
+          "headline": "War was supposed to crush Iran's 'Axis of Resistance.' Instead, it's bloodied but unbroken",
+          "published_date": "2026-08-18"
+        },
+        {
+          "headline": "Trump Escalates Hormuz Standoff; Map Calls Strait 'New US Territory'",
+          "published_date": "2026-08-18"
+        },
+        {
+          "headline": "Trump says US has no talks planned with Iran and other news from the Middle East",
+          "published_date": "2026-08-18"
+        },
+        {
+          "headline": "OPINION: How Trump’s Iran war continues Washington’s costliest tradition - Homer News",
+          "published_date": "2026-08-18"
+        },
+        {
+          "headline": "Republicans worry Trump’s warn in Iran could cost them in midterms | CNN Politics",
+          "published_date": "2026-08-18"
+        },
+        {
+          "headline": "Iran’s gutted ranks leave loyalists filling critical posts — with one glaring problem",
+          "published_date": "2026-08-18"
+        },
+        {
+          "headline": "Trump Takes Hard Line on Iran as Hormuz Standoff Drags On",
+          "published_date": "2026-08-18"
+        },
+        {
+          "headline": "Trump threatened to bomb Oman because he’s unhappy with country’s deal with Iran, officials say",
+          "published_date": "2026-08-18"
+        },
+        {
+          "headline": "Michael Goodwin: Voluntary regime change in Iran appears to be a pipe dream — despite Trump’s efforts",
+          "published_date": "2026-08-18"
+        },
+        {
+          "headline": "The options the US still has in Iran war | GUEST COMMENTARY",
+          "published_date": "2026-08-18"
+        },
+        {
           "headline": "Trump threatened to bomb Oman because he's unhappy with country's deal with Iran, officials say",
           "published_date": "2026-08-18"
         },
@@ -15774,6 +15998,10 @@
           "published_date": "2026-08-18"
         },
         {
+          "headline": "‘There is no breaking point’: The problem with Trump’s plan to economically strangle Iran",
+          "published_date": "2026-08-18T00:00:00+00:00"
+        },
+        {
           "headline": "Facing quagmire in Iran, Trump turns to a familiar face: North Korea’s Kim Jong ...",
           "published_date": "2026-08-18T02:27:08+00:00"
         },
@@ -15784,9 +16012,57 @@
         {
           "headline": "China's fuel exports edge back towards levels before Iran war as Beijing eases curbs",
           "published_date": "2026-08-18T15:25:43+00:00"
+        },
+        {
+          "headline": "Amos Hochstein on the Iran war's impact on energy: Oil prices are not reflecting reality",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "UK wage growth lags as Iran war weighs on cost of living",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Ghalibaf vows Iran will avenge war deathsPublished on: August 18, 2026 8:46 PM",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Dubai alert LIVE: Missile warning sent to UAE as Iran war sparks panic in Middle East",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "12 of Trump’s most bizarre moments on the Iran war",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "US-Israel-Iran war latest news: UAE condemns latest attack on commercial vessel ADNOC in Strait of Hormuz",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Dow Jones Top Energy Headlines at 12 AM ET: Oil Posts Modest Gains With Strait of Hormuz Situation Unclear | KKR ...",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Trump says no talks planned with Iran amid anger over Iran-Oman Hormuz deal",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "US-Iran talks in deadlock - what's the latest?",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "US-Israel-Iran War Latest Live Update: Shipping Attacks Escalate as Iran War Talks Hit Fresh Impasse; 6 Killed in Houthi Attack in Bab el-Mandeb",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Iran’s latest warning to the US signals the hardliners are just getting started | CNN",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Trump Says No Talks Planned With Iran, Tehran Says Strait of Hormuz Still Shut",
+          "published_date": "2026-08-19T05:35:26+00:00"
         }
       ],
-      "news_total": 870,
+      "news_total": 903,
       "logs": [
         {
           "log_date": "2026-07-27",
@@ -17624,18 +17900,18 @@
       "disease_name": null,
       "event_date": "2026-07-27",
       "first_reported_date": "2026-07-27",
-      "last_updated_date": "2026-08-18",
+      "last_updated_date": "2026-08-19",
       "days_since_event": 23,
-      "source_count": 5,
+      "source_count": 4,
       "should_report": true,
       "search_keys": [],
       "sources": {
         "who_don": 0,
         "usgs": 0,
         "gdacs": 1,
-        "ercc": 4,
+        "ercc": 3,
         "healthmap": 0,
-        "news": 427
+        "news": 436
       },
       "source_links": [
         {
@@ -17660,12 +17936,6 @@
           "type": "ERCC",
           "label": "ECHO Daily Map of 04 August 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5744",
-          "meta": ""
-        },
-        {
-          "type": "ERCC",
-          "label": "ECHO Daily Map of 07 August 2026",
-          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5747",
           "meta": ""
         }
       ],
@@ -19169,6 +19439,10 @@
           "published_date": "2026-08-15"
         },
         {
+          "headline": "What sparked Big Sur’s Timber Fire? Investigators ask for tips",
+          "published_date": "2026-08-15T04:27:25+00:00"
+        },
+        {
           "headline": "‘Super’ El Nino could doom the Amazon Rainforest",
           "published_date": "2026-08-15T13:40:14+00:00"
         },
@@ -19285,6 +19559,10 @@
           "published_date": "2026-08-17"
         },
         {
+          "headline": "Aspen Acres Fire: More monsoon-driven rain expected - AOL",
+          "published_date": "2026-08-17"
+        },
+        {
           "headline": "Belgian wildfire approaches Germany as Greece probes deadly blaze",
           "published_date": "2026-08-17"
         },
@@ -19337,6 +19615,10 @@
           "published_date": "2026-08-18"
         },
         {
+          "headline": "Rocky Canyon Fire crews come from around the world to help Henefer",
+          "published_date": "2026-08-18"
+        },
+        {
           "headline": "Belgium's biggest wildfire on record heads towards Germany",
           "published_date": "2026-08-18"
         },
@@ -19361,6 +19643,10 @@
           "published_date": "2026-08-18"
         },
         {
+          "headline": "Big Sur Timber Fire evacuation orders eased as crews gain ground",
+          "published_date": "2026-08-18"
+        },
+        {
           "headline": "Fast-moving wildfires may prevent western forests from recovering",
           "published_date": "2026-08-18"
         },
@@ -19381,15 +19667,35 @@
           "published_date": "2026-08-18"
         },
         {
+          "headline": "Umatilla National Forest fires update for Aug. 18 - La Grande Observer",
+          "published_date": "2026-08-18"
+        },
+        {
           "headline": "In record US wildfire season, firefighter entrapments hit 20-year high",
           "published_date": "2026-08-18"
         },
         {
           "headline": "Talbot Fire in Tahoe National Forest | Updates, Evacuations, and Maps",
           "published_date": "2026-08-18"
+        },
+        {
+          "headline": "New Mexico National Guard provides support to crews fighting Frijoles Fire",
+          "published_date": "2026-08-18T17:44:47+00:00"
+        },
+        {
+          "headline": "Crews battle vegetation fire near Reuben Road in Glendale, DFPA says",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Big Sur wildfire under investigation, Cal Poly move-in begins. Today’s top stories",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Wildfire burns more than 4,000 acres in Palm Beach County",
+          "published_date": "2026-08-19"
         }
       ],
-      "news_total": 427,
+      "news_total": 436,
       "logs": [
         {
           "log_date": "2026-07-27",
@@ -20242,7 +20548,7 @@
       "disease_name": null,
       "event_date": "2026-07-28",
       "first_reported_date": "2026-07-28",
-      "last_updated_date": "2026-08-18",
+      "last_updated_date": "2026-08-19",
       "days_since_event": 22,
       "source_count": 4,
       "should_report": true,
@@ -20253,7 +20559,7 @@
         "gdacs": 1,
         "ercc": 1,
         "healthmap": 0,
-        "news": 293
+        "news": 294
       },
       "source_links": [
         {
@@ -21463,9 +21769,13 @@
         {
           "headline": "Kumamoto struggling to assist those not at designated shelters who need help",
           "published_date": "2026-08-18"
+        },
+        {
+          "headline": "Kumamoto earthquake insurance claims and inquiries top 40,000",
+          "published_date": "2026-08-19"
         }
       ],
-      "news_total": 293,
+      "news_total": 294,
       "logs": [
         {
           "log_date": "2026-07-28",
@@ -22201,7 +22511,7 @@
       "disease_name": null,
       "event_date": "2026-07-30",
       "first_reported_date": "2026-07-30",
-      "last_updated_date": "2026-08-18",
+      "last_updated_date": "2026-08-19",
       "days_since_event": 20,
       "source_count": 1,
       "should_report": true,
@@ -22212,7 +22522,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 389
+        "news": 391
       },
       "source_links": [
         {
@@ -23788,9 +24098,17 @@
         {
           "headline": "A drought-tolerant grain could help Colorado farmers save water. First, they need customers.",
           "published_date": "2026-08-18T04:00:00+00:00"
+        },
+        {
+          "headline": "Gruesome find: More human remains discovered at shrinking Lake Mead",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "WATCH: A drought disaster has been declared in North Dakota, Meteorologist Russ Thomas explains",
+          "published_date": "2026-08-19"
         }
       ],
-      "news_total": 389,
+      "news_total": 391,
       "logs": [
         {
           "log_date": "2026-07-31",
@@ -24681,14 +24999,14 @@
       "first_reported_date": "2026-07-31",
       "last_updated_date": "2026-08-18",
       "days_since_event": 19,
-      "source_count": 2,
+      "source_count": 3,
       "should_report": true,
       "search_keys": [],
       "sources": {
         "who_don": 0,
         "usgs": 0,
         "gdacs": 1,
-        "ercc": 1,
+        "ercc": 2,
         "healthmap": 0,
         "news": 111
       },
@@ -24703,6 +25021,12 @@
           "type": "ERCC",
           "label": "ECHO Daily Map of 03 August 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5743",
+          "meta": ""
+        },
+        {
+          "type": "ERCC",
+          "label": "ECHO Daily Map of 07 August 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5747",
           "meta": ""
         }
       ],
@@ -26096,7 +26420,7 @@
       "disease_name": null,
       "event_date": "2026-08-05",
       "first_reported_date": "2026-08-05",
-      "last_updated_date": "2026-08-18",
+      "last_updated_date": "2026-08-19",
       "days_since_event": 14,
       "source_count": 1,
       "should_report": false,
@@ -26107,7 +26431,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 10
+        "news": 11
       },
       "source_links": [
         {
@@ -26167,9 +26491,13 @@
         {
           "headline": "TSC president meets African Peace and Security Council delegation",
           "published_date": "2026-08-18"
+        },
+        {
+          "headline": "Prime minister meets delegation of African Union ambassadors",
+          "published_date": "2026-08-19"
         }
       ],
-      "news_total": 10,
+      "news_total": 11,
       "logs": [
         {
           "log_date": "2026-08-10",
@@ -26316,7 +26644,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 22
+        "news": 23
       },
       "source_links": [
         {
@@ -26424,9 +26752,13 @@
         {
           "headline": "Guatemala's Fuego volcano hurled lava a thousand feet high and drove 1,700 people from their homes",
           "published_date": "2026-08-17"
+        },
+        {
+          "headline": "Fuego volcano spews more ash and mud as Guatemala shelters 1,700 who fled nearby villages",
+          "published_date": "2026-08-17T00:00:00+00:00"
         }
       ],
-      "news_total": 22,
+      "news_total": 23,
       "logs": [
         {
           "log_date": "2026-08-08",
@@ -26601,7 +26933,7 @@
       "disease_name": null,
       "event_date": "2026-08-08",
       "first_reported_date": "2026-08-08",
-      "last_updated_date": "2026-08-18",
+      "last_updated_date": "2026-08-19",
       "days_since_event": 11,
       "source_count": 1,
       "should_report": false,
@@ -26612,7 +26944,7 @@
         "gdacs": 1,
         "ercc": 0,
         "healthmap": 0,
-        "news": 50
+        "news": 56
       },
       "source_links": [
         {
@@ -26794,6 +27126,10 @@
           "published_date": "2026-08-13"
         },
         {
+          "headline": "Canadian wildfire that forced 20,000 to flee may signal ‘new normal’",
+          "published_date": "2026-08-13"
+        },
+        {
           "headline": "Western Canada fights growing wildfires as thousands more told to be ready to leave",
           "published_date": "2026-08-13"
         },
@@ -26830,11 +27166,31 @@
           "published_date": "2026-08-17T08:56:07+00:00"
         },
         {
+          "headline": "Alberta reports zero active wildfires in August for first time in 40 years",
+          "published_date": "2026-08-18"
+        },
+        {
+          "headline": "The Government of Canada provides an update regarding the 2026 wildfire season - August update",
+          "published_date": "2026-08-18"
+        },
+        {
+          "headline": "America’s Rural Lands Are Burning",
+          "published_date": "2026-08-18"
+        },
+        {
           "headline": "Fast-moving wildfires reshaping B.C.’s forests, new study finds",
           "published_date": "2026-08-18"
+        },
+        {
+          "headline": "What you need to know about B.C. wildfires on Aug. 18",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Wildfire season tracking to be 4th worst on record; fire risk remains elevated",
+          "published_date": "2026-08-19"
         }
       ],
-      "news_total": 50,
+      "news_total": 56,
       "logs": [
         {
           "log_date": "2026-08-10",
@@ -27228,7 +27584,7 @@
       "disease_name": null,
       "event_date": "2026-08-10",
       "first_reported_date": "2026-08-10",
-      "last_updated_date": "2026-08-18",
+      "last_updated_date": "2026-08-19",
       "days_since_event": 9,
       "source_count": 4,
       "should_report": true,
@@ -27239,7 +27595,7 @@
         "gdacs": 1,
         "ercc": 2,
         "healthmap": 0,
-        "news": 349
+        "news": 361
       },
       "source_links": [
         {
@@ -28591,6 +28947,10 @@
           "published_date": "2026-08-18"
         },
         {
+          "headline": "Shakira makes surprise visit in earthquake-damaged Colombia and commits to rebuilding schools",
+          "published_date": "2026-08-18"
+        },
+        {
           "headline": "FHP and GEM partnering with local agencies for Colombia earthquake relief efforts - WSVN 7News | Miami News, Weather, Sports | Fort Lauderdale",
           "published_date": "2026-08-18"
         },
@@ -28607,6 +28967,10 @@
           "published_date": "2026-08-18"
         },
         {
+          "headline": "Colombian nationals in North Texas unite to help with earthquake recovery efforts back home",
+          "published_date": "2026-08-18"
+        },
+        {
           "headline": "IDF rescue teams join search for survivors after deadly earthquake in Colombia",
           "published_date": "2026-08-18"
         },
@@ -28615,7 +28979,15 @@
           "published_date": "2026-08-18"
         },
         {
+          "headline": "Shakira makes surprise visit to Colombia after deadly earthquake, commits to rebuilding schools",
+          "published_date": "2026-08-18"
+        },
+        {
           "headline": "Video of Venezuela earthquake aftermath falsely linked to August 2026 Colombia jolt",
+          "published_date": "2026-08-18"
+        },
+        {
+          "headline": "Shakira, Warren Buffett's son join Colombia school rebuilding effort",
           "published_date": "2026-08-18"
         },
         {
@@ -28636,6 +29008,10 @@
         },
         {
           "headline": "Colombia earthquake claims 294 lives, injures nearly 3,935 as rescue efforts continue",
+          "published_date": "2026-08-18"
+        },
+        {
+          "headline": "San José del Palmar, the town at the epicenter of Colombia’s earthquake: ‘We thought it was the end of the world’",
           "published_date": "2026-08-18"
         },
         {
@@ -28667,15 +29043,43 @@
           "published_date": "2026-08-18"
         },
         {
+          "headline": "An Isolated Corner of Colombia Faces Deeper Hardship After a Quake",
+          "published_date": "2026-08-18T00:00:00+00:00"
+        },
+        {
           "headline": "Earthquake disaster brings sadness to those with connections to Colombia",
           "published_date": "2026-08-18T00:00:00+00:00"
         },
         {
           "headline": "Colombia's president pegs early quake losses at $9.6 billion",
           "published_date": "2026-08-18T00:50:11+00:00"
+        },
+        {
+          "headline": "Shakira Visits Chocó and Announces $1.25M Effort to Rebuild Schools After Destru...",
+          "published_date": "2026-08-18T21:21:06+00:00"
+        },
+        {
+          "headline": "Colombia quake death toll rises to 304",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Shakira, Warren Buffett's son join Colombia school rebuilding effort",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Shakira and Warren Buffett's son announce rebuilding of schools in Chocó",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Shakira makes surprise Colombia visit, helps raise $1M for earthquake relief",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "A 7.4-magnitude Earthquake Has Killed More Than 280 People in Colombia—Here’s How to Support Recovery Efforts",
+          "published_date": "2026-08-19T06:19:35+00:00"
         }
       ],
-      "news_total": 349,
+      "news_total": 361,
       "logs": [
         {
           "log_date": "2026-08-10",
@@ -29917,7 +30321,7 @@
         "gdacs": 0,
         "ercc": 2,
         "healthmap": 0,
-        "news": 107
+        "news": 113
       },
       "source_links": [
         {
@@ -29975,6 +30379,14 @@
         {
           "headline": "Severe storms, damaging winds likely in Central & Northern Indiana Tuesday | Aug. 11, 2026",
           "published_date": "2026-08-11"
+        },
+        {
+          "headline": "Flooding and severe weather strike Indiana. More storms expected in Indy on Aug. 13",
+          "published_date": "2026-08-12"
+        },
+        {
+          "headline": "Deaths and damage reported as severe weather in the Midwest spawns tornadoes and flash flooding",
+          "published_date": "2026-08-12"
         },
         {
           "headline": "Flooding and severe weather strike Indiana. More storms expected in Indy on Aug. 13",
@@ -30069,6 +30481,10 @@
           "published_date": "2026-08-13T17:14:35+00:00"
         },
         {
+          "headline": "What We Know About the Storms Battering the Midwest",
+          "published_date": "2026-08-13T19:55:00+00:00"
+        },
+        {
           "headline": "Flash flooding underway in Indiana and Illinois as storms slam the flood-ravaged Midwest for a 6th-straight day | CNN",
           "published_date": "2026-08-14"
         },
@@ -30145,6 +30561,10 @@
           "published_date": "2026-08-14T14:03:56+00:00"
         },
         {
+          "headline": "Indiana authorities say at least 5 people have died as severe weather crosses the state",
+          "published_date": "2026-08-15"
+        },
+        {
           "headline": "Live flood updates: President Trump approves emergency declaration",
           "published_date": "2026-08-15"
         },
@@ -30191,6 +30611,10 @@
         {
           "headline": "Update: Expect damaging winds with thunderstorms in Lewis County Friday — wind gusts up to 60 mph",
           "published_date": "2026-08-15T04:26:40+00:00"
+        },
+        {
+          "headline": "5 dead after severe weather sweeps across Indiana",
+          "published_date": "2026-08-15T19:25:00+00:00"
         },
         {
           "headline": "Indiana authorities say at least 5 people have died as severe weather crosses...",
@@ -30361,6 +30785,10 @@
           "published_date": "2026-08-18"
         },
         {
+          "headline": "Chicago weather: Severe storms encroaching this evening",
+          "published_date": "2026-08-18"
+        },
+        {
           "headline": "Over 4K in Catawba County without power after severe storms - AOL",
           "published_date": "2026-08-18"
         },
@@ -30373,7 +30801,7 @@
           "published_date": "2026-08-18T16:30:25+00:00"
         }
       ],
-      "news_total": 107,
+      "news_total": 113,
       "logs": [
         {
           "log_date": "2026-08-14",
@@ -31226,18 +31654,18 @@
       "disease_name": null,
       "event_date": "2026-08-14",
       "first_reported_date": "2026-08-14",
-      "last_updated_date": "2026-08-18",
+      "last_updated_date": "2026-08-19",
       "days_since_event": 5,
-      "source_count": 10,
+      "source_count": 12,
       "should_report": true,
       "search_keys": [],
       "sources": {
         "who_don": 0,
-        "usgs": 9,
+        "usgs": 10,
         "gdacs": 1,
-        "ercc": 0,
+        "ercc": 1,
         "healthmap": 0,
-        "news": 246
+        "news": 278
       },
       "source_links": [
         {
@@ -31299,6 +31727,18 @@
           "label": "M 5.7 - 42 km NNW of Ende, Indonesia",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/usd0015eay",
           "meta": "35.585 km depth"
+        },
+        {
+          "type": "USGS",
+          "label": "M 5.6 - 154 km SSE of Teluk Dalam, Indonesia",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tlkt",
+          "meta": "10 km depth"
+        },
+        {
+          "type": "ERCC",
+          "label": "ECHO Daily Map of 18 August 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5756",
+          "meta": ""
         }
       ],
       "physical": {
@@ -31339,6 +31779,14 @@
         {
           "headline": "TNI Mobilizes 1,267 Personnel for NTT Earthquake Response",
           "published_date": "2026-08-12T13:15:17+00:00"
+        },
+        {
+          "headline": "7.7 magnitude earthquake rocks Indonesia, killing at least 38 & hurting several others",
+          "published_date": "2026-08-14"
+        },
+        {
+          "headline": "Magnitude 7.7 earthquake strikes off coast of Indonesia and tsunami warning issued",
+          "published_date": "2026-08-14"
         },
         {
           "headline": "Magnitude 7.7 earthquake strikes off Indonesia's coast, killing at least 47 and toppling buildings",
@@ -31417,8 +31865,28 @@
           "published_date": "2026-08-14T00:00:00+00:00"
         },
         {
+          "headline": "Magnitude 7.7 Earthquake Strikes off Indonesia's Coast, Killing at Least 47 and Toppling Buildings",
+          "published_date": "2026-08-14T18:53:00+00:00"
+        },
+        {
           "headline": "Poweful Quake Off Indonesia Sparks Mass Evacuations",
           "published_date": "2026-08-14T23:34:31+00:00"
+        },
+        {
+          "headline": "6.5 magnitude earthquake strikes Indonesia hours after 7.7 quake kills 38",
+          "published_date": "2026-08-15"
+        },
+        {
+          "headline": "2nd earthquake hits Indonesia following powerful magnitude 7.7 quake",
+          "published_date": "2026-08-15"
+        },
+        {
+          "headline": "At least 5 dead after powerful 7.7 earthquake hits Indonesia's Flores island",
+          "published_date": "2026-08-15"
+        },
+        {
+          "headline": "Indonesia Earthquake: 20 killed as powerful 7.7-magnitude quake strikes Golo Lewe village, West Manggarai, East Nusa Tenggara; Tsunami waves hit coast",
+          "published_date": "2026-08-15"
         },
         {
           "headline": "Dozens dead and hundreds flee after powerful earthquake hits Indonesia",
@@ -31893,6 +32361,10 @@
           "published_date": "2026-08-16T00:58:02+00:00"
         },
         {
+          "headline": "Magnitude 6.1 earthquake strikes off Indonesia's Sumatra island",
+          "published_date": "2026-08-16T02:02:14+00:00"
+        },
+        {
           "headline": "6.9 magnitude earthquake strikes North Sumatra, Indonesia",
           "published_date": "2026-08-16T02:05:58+00:00"
         },
@@ -32133,6 +32605,22 @@
           "published_date": "2026-08-17T18:27:17+00:00"
         },
         {
+          "headline": "Fear grips children after deadly earthquake in eastern Indonesia leaves thousands displaced",
+          "published_date": "2026-08-18"
+        },
+        {
+          "headline": "Al Jazeera reports from Indonesia’s quake zone, desperate for help",
+          "published_date": "2026-08-18"
+        },
+        {
+          "headline": "People await aid after powerful earthquake in Indonesia, in photos",
+          "published_date": "2026-08-18"
+        },
+        {
+          "headline": "Fear grips children after deadly earthquake in eastern Indonesia leaves thousands displaced",
+          "published_date": "2026-08-18"
+        },
+        {
           "headline": "Indonesia earthquake rescue continues as death toll reaches 53Published on: August 17, 2026 11:47 AM",
           "published_date": "2026-08-18"
         },
@@ -32295,9 +32783,89 @@
         {
           "headline": "M7.7 Earthquake Struck Nagekeo, BMKG Issues Tsunami Early Warning",
           "published_date": "2026-08-18T16:44:30+00:00"
+        },
+        {
+          "headline": "Months-old video of Philippine storm surge misrepresented as tsunami waves in Indonesia",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Powerful 7.7 magnitude earthquake strikes Indonesia triggering tsunami warnings",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Woman gives birth under torchlight during Indonesia earthquake",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Lone doctor's plea for help in quake-struck Indonesia as 40,000 displaced",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Indonesia's magnitude 7.7 quake kills at least 51, displaces thousands",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Search for Indonesia earthquake victims underway on Independence Day",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Beyond aid: Rethinking disaster assistance to Indonesia - Academia - The Jakarta Post",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Twin quakes hit Indonesia",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Indonesia earthquake death toll rises to 68 as cut-off villages reached",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Indonesia issues tsunami warning following 7.7 magnitude earthquake",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Indonesia mobilizes full resources to fast-track NTT quake recovery",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Deadly Indonesia quake leaves children in fear",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Indonesia: Death toll from magnitude 7.7 earthquake rises to 70",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Children fall ill as survivors sleep outside after Indonesia earthquake",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "NTT quake survivors await aid as tremors continue - Archipelago - The Jakarta Post",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Businesses reopen after eastern Indonesia earthquake displaced thousands",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Search for Indonesia earthquake victims underway on Independence Day",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Indonesia Sets Up Seven Public Kitchens for 31,000 NTT Earthquake Evacuees",
+          "published_date": "2026-08-19T02:12:28+00:00"
+        },
+        {
+          "headline": "Thousands mourn on Independence Day as deadly earthquake toll climbs",
+          "published_date": "2026-08-19T02:43:24+00:00"
+        },
+        {
+          "headline": "Recurring tremors displace 40,000 people in Indonesia, death toll at 70",
+          "published_date": "2026-08-19T02:43:24+00:00"
         }
       ],
-      "news_total": 246,
+      "news_total": 278,
       "logs": [
         {
           "log_date": "2026-08-15",
@@ -34548,16 +35116,16 @@
       "incident_type": "Forest Fire",
       "incident_category": "Natural",
       "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "LOW",
-      "priority_rank": 3,
+      "severity": "HIGH",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
       "pandemic_potential": null,
       "event_status": null,
       "extended_monitoring": false,
       "disease_name": null,
       "event_date": "2026-08-14",
       "first_reported_date": "2026-08-14",
-      "last_updated_date": "2026-08-18",
+      "last_updated_date": "2026-08-19",
       "days_since_event": 5,
       "source_count": 2,
       "should_report": true,
@@ -34568,7 +35136,7 @@
         "gdacs": 1,
         "ercc": 1,
         "healthmap": 0,
-        "news": 35
+        "news": 50
       },
       "source_links": [
         {
@@ -34600,6 +35168,26 @@
           "published_date": "2026-08-14"
         },
         {
+          "headline": "Evacuations ordered as wildfire becomes Belgium's 'biggest fire'",
+          "published_date": "2026-08-15"
+        },
+        {
+          "headline": "Nearly 500 arrested over suspected arson in France as wildfires grip Europe",
+          "published_date": "2026-08-15"
+        },
+        {
+          "headline": "Wildfires Tear Across Europe as Blistering Heat Forces Thousands From Their Homes",
+          "published_date": "2026-08-15"
+        },
+        {
+          "headline": "EU Sends Aircraft, Villages Evacuated as Belgium Fights Record Wildfire",
+          "published_date": "2026-08-15T08:04:00+00:00"
+        },
+        {
+          "headline": "Firefighters battle a massive Belgian wildfire that forced hundreds to evacuate",
+          "published_date": "2026-08-16"
+        },
+        {
           "headline": "Belgium wildfire rages on as shifting winds hamper containment efforts",
           "published_date": "2026-08-16"
         },
@@ -34622,6 +35210,10 @@
         {
           "headline": "Belgium's biggest wildfire on record heads towards Germany",
           "published_date": "2026-08-16T18:30:16+00:00"
+        },
+        {
+          "headline": "Devastating Belgian wildfire moves toward Germany as blazes break out in Greece, France: ‘Will take decades to recover’",
+          "published_date": "2026-08-17"
         },
         {
           "headline": "Rainfall aids fight against Belgium's biggest wildfire, as blazes rip through Europe",
@@ -34716,6 +35308,10 @@
           "published_date": "2026-08-18"
         },
         {
+          "headline": "Largest wildfire in Belgium's history triggers explosions, burns over half of nation's oldest nature preserve",
+          "published_date": "2026-08-18T00:00:00+00:00"
+        },
+        {
           "headline": "Europe wildfires: latest developments",
           "published_date": "2026-08-18T13:58:05+00:00"
         },
@@ -34734,9 +35330,41 @@
         {
           "headline": "Europe wildfires: latest developments",
           "published_date": "2026-08-18T16:50:41+00:00"
+        },
+        {
+          "headline": "Belgium's largest wildfire on record spreads towards German border",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "German authorities order partial evacuation of border town due to fire",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Rain aids fight against Belgium's biggest wildfire, as blazes rip through Europe",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Europe continues to battle wildfires as Belgium sees biggest blaze in recorded history",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Belgium wildfire rages on despite rain as Greece swiftly contains airport blaze",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Wildfires: Belgium battles blaze, France's Lecornu jeered",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Firefighters battle massive wildfires in Belgium and Greece as 2 die on an island near Athens",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Rainfall offers new hope in fight against Belgium's biggest wildfire",
+          "published_date": "2026-08-19"
         }
       ],
-      "news_total": 35,
+      "news_total": 50,
       "logs": [
         {
           "log_date": "2026-08-18",
@@ -35076,6 +35704,78 @@
         }
       ],
       "logs_total": 1
+    },
+    {
+      "incident_id": "20260818-CN-EQ",
+      "tree_id": "e2da9b1e6db24d5f95d681f89979b312",
+      "canonical_name": "Earthquake M5.9 Dunhuang, China 2026-08-18",
+      "summary": "",
+      "country": "China",
+      "iso2": "CN",
+      "lat": 37.8349,
+      "lon": 95.538,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "HIGH",
+      "priority": "HIGH",
+      "priority_rank": 1,
+      "pandemic_potential": null,
+      "event_status": null,
+      "extended_monitoring": false,
+      "disease_name": null,
+      "event_date": "2026-08-18",
+      "first_reported_date": "2026-08-18",
+      "last_updated_date": "2026-08-19",
+      "days_since_event": 1,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "ercc": 0,
+        "healthmap": 0,
+        "news": 2
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 5.9 - 269 km SSE of Dunhuang, China",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tlrj",
+          "meta": "10 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 5.9,
+        "max_depth_km": 10.0,
+        "place": "269 km SSE of Dunhuang, China",
+        "felt": null,
+        "sig": 650,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "5.9-magnitude quake shakes China’s central Qinghai province - Jamaica Observer",
+          "url": "https://www.jamaicaobserver.com/2026/08/18/5-9-magnitude-quake-shakes-chinas-central-qinghai-province/",
+          "outlet": "Jamaica Observer",
+          "published_date": "2026-08-18"
+        },
+        {
+          "headline": "5.9-magnitude quake shakes China's central Qinghai province: USGS",
+          "url": "https://gulfnews.com/world/asia/59-magnitude-quake-shakes-chinas-central-qinghai-province-usgs-1.500645165",
+          "outlet": "Gulf News",
+          "published_date": "2026-08-19"
+        }
+      ],
+      "news_total": 2,
+      "logs": [],
+      "logs_total": 0
     }
   ]
 }
