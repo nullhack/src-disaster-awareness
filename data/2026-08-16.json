@@ -1,50 +1,41 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-08-16",
-  "generated_at": "2026-08-20T02:32:55Z",
+  "generated_at": "2026-08-20T14:05:21Z",
   "as_of": "2026-08-16",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 7,
-    "new_today": 1,
+    "reportable_total": 6,
+    "new_today": 0,
     "critical": 0,
     "high": 1,
     "medium": 3,
-    "low": 3,
+    "low": 2,
     "disease_outbreaks": 0,
-    "countries_affected": 7,
-    "news_total": 175,
+    "countries_affected": 6,
+    "news_total": 174,
     "max_magnitude": 5.6,
     "by_severity": {
       "CRITICAL": 0,
       "HIGH": 1,
       "MEDIUM": 3,
-      "LOW": 3
+      "LOW": 2
     },
     "by_type": {
-      "Flood": 2,
+      "Flood": 1,
       "Forest Fire": 2,
       "Tropical Cyclone": 1,
       "Earthquake": 2
     },
     "by_region": {
-      "Asia": 2,
+      "Asia": 1,
       "Europe": 2,
       "Oceania": 1,
       "Americas": 2
     }
   },
   "by_country": [
-    {
-      "country": "Japan",
-      "count": 1,
-      "max_sev_rank": 1,
-      "iso2": "JP",
-      "region": "Asia",
-      "country_group": "A",
-      "max_severity": "LOW"
-    },
     {
       "country": "Marshall Islands",
       "count": 1,
@@ -101,65 +92,6 @@
     }
   ],
   "incidents": [
-    {
-      "incident_id": "20230814-JP-FL",
-      "tree_id": "98f8ea684924412eacc0093c76daf1bb",
-      "canonical_name": "Torrential rain in eastern Japan starting late on August 13 has caused landslides, power outages, and claimed at least nine lives.",
-      "summary": "",
-      "country": "Japan",
-      "iso2": "JP",
-      "lat": 36.2,
-      "lon": 138.3,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Flood",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "LOW",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2023-08-14",
-      "first_reported_date": "2023-08-14",
-      "last_updated_date": "2026-08-16",
-      "days_since_event": 1102,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 1
-      },
-      "source_links": [],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Eastern Japan rain kills nine, local broadcaster reports",
-          "url": "https://www.straitstimes.com/asia/east-asia/eastern-japan-rain-kills-nine-local-media-reports",
-          "outlet": "manual",
-          "published_date": "2026-08-16"
-        }
-      ],
-      "news_total": 1,
-      "logs": [],
-      "logs_total": 0
-    },
     {
       "incident_id": "20260606-CN-FL",
       "tree_id": "942158e18da35420a79e4a17fefb8013",
