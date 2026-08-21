@@ -1,32 +1,32 @@
 {
   "schema_version": "1.5",
-  "report_date": "2026-08-20",
+  "report_date": "2026-08-21",
   "generated_at": "2026-08-21T02:39:04Z",
-  "as_of": "2026-08-20",
+  "as_of": "2026-08-21",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 30,
-    "new_today": 16,
+    "reportable_total": 29,
+    "new_today": 0,
     "critical": 13,
     "high": 4,
-    "medium": 5,
+    "medium": 4,
     "low": 8,
     "disease_outbreaks": 3,
-    "countries_affected": 20,
-    "news_total": 4990,
+    "countries_affected": 19,
+    "news_total": 4988,
     "max_magnitude": 7.7,
     "by_severity": {
       "CRITICAL": 13,
       "HIGH": 4,
-      "MEDIUM": 5,
+      "MEDIUM": 4,
       "LOW": 8
     },
     "by_type": {
       "Flood": 2,
       "Disease": 3,
       "Drought": 3,
-      "Earthquake": 9,
+      "Earthquake": 8,
       "Severe Weather": 2,
       "Conflict": 2,
       "Tropical Cyclone": 1,
@@ -39,7 +39,7 @@
       "Global": 2,
       "Africa": 3,
       "Europe": 7,
-      "Americas": 5,
+      "Americas": 4,
       "Unknown": 3,
       "Oceania": 3
     }
@@ -124,15 +124,6 @@
       "iso2": "CN",
       "region": "Asia",
       "country_group": "A",
-      "max_severity": "MEDIUM"
-    },
-    {
-      "country": "El Salvador",
-      "count": 1,
-      "max_sev_rank": 2,
-      "iso2": "SV",
-      "region": "Americas",
-      "country_group": "C",
       "max_severity": "MEDIUM"
     },
     {
@@ -32470,78 +32461,6 @@
         }
       ],
       "logs_total": 7
-    },
-    {
-      "incident_id": "20260813-SV-EQ",
-      "tree_id": "c19e1dfdbefe4fd58dc24e02cb748417",
-      "canonical_name": "Earthquake M5.5 Chirilagua, El Salvador 2026-08-13",
-      "summary": "",
-      "country": "El Salvador",
-      "iso2": "SV",
-      "lat": 12.6084,
-      "lon": -88.2864,
-      "country_group": "C",
-      "region": "Americas",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-08-13",
-      "first_reported_date": "2026-08-13",
-      "last_updated_date": "2026-08-13",
-      "days_since_event": 8,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 2
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 5.5 - 69 km SSW of Chirilagua, El Salvador",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkcb",
-          "meta": "56.794 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 5.5,
-        "max_depth_km": 56.794,
-        "place": "69 km SSW of Chirilagua, El Salvador",
-        "felt": 12,
-        "sig": 470,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Magnitude 5.5 earthquake strikes off coast of El Salvador",
-          "url": "https://www.aa.com.tr/en/americas/magnitude-55-earthquake-strikes-off-coast-of-el-salvador/4025846",
-          "outlet": "Anadolu Ajansi",
-          "published_date": "2026-08-13"
-        },
-        {
-          "headline": "Urgent: 5.5-magnitude quake hits 69 km SSW of Chirilagua, El Salvador -- USGS",
-          "url": "http://www.chinaview.cn/20260813/26927a02577e4cb581fcab8f20fd941b/c.html",
-          "outlet": "Xinhuanet",
-          "published_date": "2026-08-13"
-        }
-      ],
-      "news_total": 2,
-      "logs": [],
-      "logs_total": 0
     },
     {
       "incident_id": "20260814-ID-EQ",
