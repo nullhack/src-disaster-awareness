@@ -1,33 +1,32 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-08-18",
-  "generated_at": "2026-08-21T02:39:04Z",
+  "generated_at": "2026-08-21T14:03:47Z",
   "as_of": "2026-08-18",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 8,
+    "reportable_total": 7,
     "new_today": 1,
     "critical": 0,
     "high": 0,
     "medium": 4,
-    "low": 4,
+    "low": 3,
     "disease_outbreaks": 0,
-    "countries_affected": 8,
-    "news_total": 207,
+    "countries_affected": 7,
+    "news_total": 184,
     "max_magnitude": 6.1,
     "by_severity": {
       "CRITICAL": 0,
       "HIGH": 0,
       "MEDIUM": 4,
-      "LOW": 4
+      "LOW": 3
     },
     "by_type": {
       "Drought": 1,
       "Flood": 1,
       "Forest Fire": 2,
       "Tropical Cyclone": 1,
-      "Volcano": 1,
       "Earthquake": 2
     },
     "by_region": {
@@ -35,7 +34,7 @@
       "Asia": 1,
       "Europe": 2,
       "Oceania": 2,
-      "Americas": 2
+      "Americas": 1
     }
   },
   "by_country": [
@@ -55,15 +54,6 @@
       "iso2": "MH",
       "region": "Oceania",
       "country_group": "B",
-      "max_severity": "LOW"
-    },
-    {
-      "country": "Guatemala",
-      "count": 1,
-      "max_sev_rank": 1,
-      "iso2": "GT",
-      "region": "Americas",
-      "country_group": "C",
       "max_severity": "LOW"
     },
     {
@@ -117,7 +107,7 @@
       "incident_id": "20260521-CD-DR",
       "tree_id": "d250f47c64bb40ce8843fadf6b74f707",
       "canonical_name": "Drought Buyende, DR Congo 2026-05-21",
-      "summary": "A food crisis in Uganda has resulted in at least 19 deaths from starvation, with 1.5 million people at risk of malnutrition, according to expert warnings. Additionally, a separate report highlights that a strong El Niño event could push nearly 49 million more people globally into acute hunger, exacerbating drought conditions in the region.",
+      "summary": "New reports highlight deepening drought in Somalia, with thousands fleeing rural areas to displacement camps as hunger rises and aid funding shrinks. El Niño forecasts have been updated, indicating a greater than 90% chance of a very strong event during fall/winter 2026-27, with experts warning of crop failure and prolonged food crisis across East Africa.",
       "country": "DR Congo",
       "iso2": "CD",
       "lat": 1.3,
@@ -239,9 +229,69 @@
               "image": "https://s.yimg.com/bo/817996e7-5814-5b70-8ec7-d42cdcbb73e7_1785918146865.jpg"
             }
           ]
+        },
+        {
+          "log_date": "2026-08-21",
+          "summary": "New reports highlight deepening drought in Somalia, with thousands fleeing rural areas to displacement camps as hunger rises and aid funding shrinks. El Niño forecasts have been updated, indicating a greater than 90% chance of a very strong event during fall/winter 2026-27, with experts warning of crop failure and prolonged food crisis across East Africa.",
+          "news": [
+            {
+              "news_id": "f5d6f4178a6655abaaf98f4775528192",
+              "url": "https://www.wftv.com/news/world/thousands-flee/6WDF4SKH2Y4SLPLWIWU77RHJXI/",
+              "headline": "Thousands flee yearslong drought in Somalia as hunger deepens and aid shrinks",
+              "body": "One Somali family's long trek to escape drought conditions is an example of a deepening humanitarian emergency in Somalia, where years of drought, conflict and economic pressures are pushing more families from rural communities into displacement camps as hunger rises and humanitarian funding shrinks",
+              "published_date": "2026-08-12",
+              "outlet": "WFTV 9 Orlando",
+              "image": "https://s.yimg.com/bo/0cce5b7c-762e-5a22-abda-3613daf2b9fc_1786518610925.jpg"
+            },
+            {
+              "news_id": "fc8dff5ad2345c3e9b35ff101bfe990e",
+              "url": "https://www.yahoo.com/news/science/articles/updated-el-ni-o-forecast-130114419.html",
+              "headline": "Updated El Niño forecast warns of 'historic event'",
+              "body": "El Niño continues to strengthen, and it has a greater than 90% chance of becoming a \"very strong\" event during the fall and winter of 2026-27.",
+              "published_date": "2026-08-13",
+              "outlet": "USA TODAY · via Yahoo News",
+              "image": "https://media.zenfs.com/en/usa_today_news_641/3d2a38e0019e29fc5b6a77f2fa5eb921.png.cf.jpg"
+            },
+            {
+              "news_id": "d385d07511875b16a2a0ad4f5785910e",
+              "url": "https://www.theeastafrican.co.ke/tea/sustainability/climate/looming-el-niño-signals-bad-water-economy-for-east-africa-5561224",
+              "headline": "Looming El Niño signals bad water economy for East Africa",
+              "body": "As Africa faces an 81 percent chance of a very strong El Niño season between October and December, it is also raising the prospect of one of the continent’s most disruptive events that could directly ...",
+              "published_date": "2026-08-16T14:46:23+00:00",
+              "outlet": "The EastAfrican",
+              "image": ""
+            },
+            {
+              "news_id": "12e84a73abc45b33934c5d4317a70fdf",
+              "url": "https://www.msn.com/en-xl/africa/top-stories/east-africa-braces-for-prolonged-food-crisis-as-another-el-niño-season-looms/ar-AA2abrzD?ocid=BingNewsVerp",
+              "headline": "East Africa braces for prolonged food crisis as another El Niño season looms",
+              "body": "Experts warn of crop failure and effects that will worsen an already bad ...",
+              "published_date": "2026-08-16",
+              "outlet": "The EastAfrican on MSN",
+              "image": ""
+            },
+            {
+              "news_id": "1847ae2eb63951d98d801caf73eaca64",
+              "url": "https://www.yahoo.com/news/weather-news/articles/growing-weather-pattern-could-affect-182052331.html",
+              "headline": "A growing weather pattern could affect millions around the globe",
+              "body": "NOAA says El Niño has a 90% chance of becoming very strong and a 69% chance of reaching historic intensity, with global weather impacts possible.",
+              "published_date": "2026-08-13",
+              "outlet": "Cleveland.com · via Yahoo News",
+              "image": "https://media.zenfs.com/en/cleveland_com_articles_529/2a29603725d7f85a83631b49606db78e.jpg"
+            },
+            {
+              "news_id": "782b6875bb835d0c82d85ea489f68039",
+              "url": "https://www.zawya.com/en/economy/africa/east-africa-braces-for-prolonged-food-crisis-as-another-el-nino-season-looms-457396",
+              "headline": "East Africa braces for prolonged food crisis as another El Niño season looms",
+              "body": "Agra’s Food Security Monitor report suggested this surge reflected “exchange-rate pressures, tightening seasonal availability, and strong regional dem...",
+              "published_date": "2026-08-17",
+              "outlet": "ZAWYA",
+              "image": ""
+            }
+          ]
         }
       ],
-      "logs_total": 1
+      "logs_total": 2
     },
     {
       "incident_id": "20260606-CN-FL",
@@ -2049,306 +2099,6 @@
         }
       ],
       "logs_total": 5
-    },
-    {
-      "incident_id": "20260806-GT-VO",
-      "tree_id": "532c707559364a8fb7efbe9444131c59",
-      "canonical_name": "Volcano Guatemala 2026-08-06",
-      "summary": "As of August 11, activity at Fuego volcano was gradually decreasing, but risks from ash and mudflows persisted. Approximately 1,700 people remained in shelters after evacuations from nearby villages, with children among those displaced.",
-      "country": "Guatemala",
-      "iso2": "GT",
-      "lat": 15.8,
-      "lon": -90.2,
-      "country_group": "C",
-      "region": "Americas",
-      "incident_type": "Volcano",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "LOW",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-08-06",
-      "first_reported_date": "2026-08-06",
-      "last_updated_date": "2026-08-17",
-      "days_since_event": 15,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 0,
-        "ercc": 1,
-        "healthmap": 0,
-        "news": 23
-      },
-      "source_links": [
-        {
-          "type": "ERCC",
-          "label": "ECHO Daily Map of 06 August 2026",
-          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5746",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Fuego volcano spews more ash and mud as Guatemala shelters 1,700 who fled nearby villages",
-          "published_date": "2026-08-04"
-        },
-        {
-          "headline": "Guatemala evacuates communities after Fuego volcano erupts, in photos",
-          "published_date": "2026-08-04"
-        },
-        {
-          "headline": "Photos show lava spewing from Guatemala's Fuego volcano as evacuations are ordered",
-          "published_date": "2026-08-04"
-        },
-        {
-          "headline": "Fuego volcano spews more ash and mud as Guatemala shelters 1,700 who fled nearby villages",
-          "published_date": "2026-08-04"
-        },
-        {
-          "headline": "Guatemala orders evacuations after volcano erupts",
-          "published_date": "2026-08-04"
-        },
-        {
-          "headline": "Fuego volcano spews more ash and mud as Guatemala shelters 1,700 who fled nearby villages",
-          "published_date": "2026-08-04"
-        },
-        {
-          "headline": "Fuego volcano spews more ash and mud as Guatemala shelters 1,700 who fled nearby villages",
-          "published_date": "2026-08-04"
-        },
-        {
-          "headline": "Guatemala Volcano",
-          "published_date": "2026-08-04T03:09:21+00:00"
-        },
-        {
-          "headline": "Fuego volcano activity that triggered evacuations in Guatemala is decreasing, but risks remain - WTOP News",
-          "published_date": "2026-08-05"
-        },
-        {
-          "headline": "Dramatic images show Fuego volcano intense eruptions in Guatemala",
-          "published_date": "2026-08-05"
-        },
-        {
-          "headline": "Fuego volcano activity that triggered evacuations in Guatemala is decreasing, but risks remain",
-          "published_date": "2026-08-05"
-        },
-        {
-          "headline": "Guatemalan volcano reaches ‘critical explosive phase’ as hundreds evacuated",
-          "published_date": "2026-08-05T03:09:21+00:00"
-        },
-        {
-          "headline": "Fuego volcano activity that triggered evacuations in Guatemala is decreasing, but risks remain",
-          "published_date": "2026-08-06"
-        },
-        {
-          "headline": "Guatemala's Fuego volcano erupts and other top photos from Latin America and the Caribbean",
-          "published_date": "2026-08-07"
-        },
-        {
-          "headline": "Guatemala's Fuego volcano erupts and other top photos from Latin America and the Caribbean",
-          "published_date": "2026-08-07"
-        },
-        {
-          "headline": "Guatemala's Fuego volcano erupts and other top photos from Latin America and the Caribbean",
-          "published_date": "2026-08-07T14:35:21+00:00"
-        },
-        {
-          "headline": "Guatemala Volcano",
-          "published_date": "2026-08-11T14:32:43+00:00"
-        },
-        {
-          "headline": "Intense eruption continues at Fuego Volcano, Guatemala",
-          "published_date": "2026-08-15"
-        },
-        {
-          "headline": "Guatemala’s Fuego volcano hurled lava a thousand feet high and drove 1,700 people from their homes",
-          "published_date": "2026-08-15"
-        },
-        {
-          "headline": "A living volcano covered in black lava and tropical forest",
-          "published_date": "2026-08-16"
-        },
-        {
-          "headline": "Guatemala’s Fuego volcano hurled lava a thousand feet high and drove 1,700 people from their homes",
-          "published_date": "2026-08-16"
-        },
-        {
-          "headline": "Guatemala's Fuego volcano hurled lava a thousand feet high and drove 1,700 people from their homes",
-          "published_date": "2026-08-17"
-        },
-        {
-          "headline": "Fuego volcano spews more ash and mud as Guatemala shelters 1,700 who fled nearby villages",
-          "published_date": "2026-08-17T00:00:00+00:00"
-        }
-      ],
-      "news_total": 23,
-      "logs": [
-        {
-          "log_date": "2026-08-08",
-          "summary": "Guatemala raised a nationwide orange alert and ordered evacuations of nearby communities after Fuego volcano entered a new eruptive phase on Monday, August 4, 2026, spewing ash, gas, and lava. Hundreds of people were evacuated from two villages, and about 1,700 remained in shelters as authorities reported decreasing activity but persistent risks from ash and mudflows.",
-          "news": [
-            {
-              "news_id": "adba468b85665dadb61f053ff8b121b6",
-              "url": "https://www.kxan.com/top-stories/ap-top-headlines/ap-guatemala-evacuates-villages-due-to-an-eruption-of-the-fuego-volcano/",
-              "headline": "Fuego volcano spews more ash and mud as Guatemala shelters 1,700 who fled nearby villages",
-              "body": "GUATEMALA CITY (AP) — Guatemala remained on alert Tuesday after evacuating villages during an eruption of the Fuego volcano, one of Central America’s most active. About 1,700 people remained in she…",
-              "published_date": "2026-08-04",
-              "outlet": "KXAN 36 Austin",
-              "image": "https://s.yimg.com/bo/b8b51871-7724-55b2-8ade-63541b775464_1785893361748.jpg"
-            },
-            {
-              "news_id": "921d5af009be55e8bb34414048102aa4",
-              "url": "https://lasvegassun.com/news/2026/aug/04/guatemala-evacuates-communities-after-fuego-volcan/",
-              "headline": "Guatemala evacuates communities after Fuego volcano erupts, in photos",
-              "body": "None",
-              "published_date": "2026-08-04",
-              "outlet": "Las Vegas Sun",
-              "image": "https://s.yimg.com/bo/615ad34d-2c7d-5ec4-ab0f-e885f3d0fb55_1784259293348.png.cf.jpg"
-            },
-            {
-              "news_id": "723cf6b1d61750e0996ad7d9c0755ec9",
-              "url": "https://www.accuweather.com/en/weather-news/guatemalan-volcano-reaches-critical-explosive-phase-as-hundreds-evacuated/1919222",
-              "headline": "Guatemalan volcano reaches ‘critical explosive phase’ as hundreds evacuated",
-              "body": "The eruption of Guatemala’s Fuego volcano has forced the evacuation of hundreds of people from nearb...",
-              "published_date": "2026-08-05T03:09:21+00:00",
-              "outlet": "AccuWeather",
-              "image": "https://s.yimg.com/bo/1bcf8a11-2004-5de0-a4b6-ad9ba036e185_1785942980700.jpg"
-            },
-            {
-              "news_id": "ed7ba67d3815549a9c47ad03fa455983",
-              "url": "https://www.hjnews.com/world/guatemala-volcano/image_cd256bf0-8a0a-5878-9841-0c634da7dc4e.html",
-              "headline": "Guatemala Volcano",
-              "body": "Lava flows out of the crater of the Fuego Volcano, as seen from San Juan Alotenango, Guatemala, Tuesday, Aug. 4, 2026. (AP Photo/Moises Castillo)",
-              "published_date": "2026-08-04T03:09:21+00:00",
-              "outlet": "The Herald Journal",
-              "image": "https://s.yimg.com/bo/9d69040b-edc8-5355-b93e-0db42751a7e3_1785850036092.jpg"
-            },
-            {
-              "news_id": "4d952b6f765c58d3bf281a9cc7095bfb",
-              "url": "https://www.cbsnews.com/news/guatemala-fuego-volcano-eruption-photos-evacuations/",
-              "headline": "Photos show lava spewing from Guatemala's Fuego volcano as evacuations are ordered",
-              "body": "Guatemalan officials on Monday began evacuating two villages near the Fuego volcano due to the ongoing eruption.",
-              "published_date": "2026-08-04",
-              "outlet": "CBS News",
-              "image": "https://s.yimg.com/bo/4f935f0d-44a2-5fde-abef-e4350d6c18bc_1785858019681.jpg"
-            },
-            {
-              "news_id": "dbf5a82b6ebd50d8821b78e84e53bd72",
-              "url": "https://wtop.com/world/2026/08/fuego-volcano-activity-that-triggered-evacuations-in-guatemala-is-decreasing-but-risks-remain/",
-              "headline": "Fuego volcano activity that triggered evacuations in Guatemala is decreasing, but risks remain - WTOP News",
-              "body": "GUATEMALA CITY (AP) — Activity at Guatemala's Fuego volcano that began Monday morning and caused widespread evacuations is gradually decreasing, authorities said Wednesday. However…",
-              "published_date": "2026-08-05",
-              "outlet": "WTOP Washington",
-              "image": "https://s.yimg.com/bo/a5de6014-a275-52b0-a0f1-0c58b0b5267d_1785836442505.jpg"
-            },
-            {
-              "news_id": "f988517eccde5d8cb6efd6117310f971",
-              "url": "https://www.usatoday.com/picture-gallery/news/world/2026/08/05/guatemala-fuego-volcano-erupts-photos/91180101007/",
-              "headline": "Dramatic images show Fuego volcano intense eruptions in Guatemala",
-              "body": "Guatemala’s Fuego volcano enters a more intense eruptive phase, forcing evacuations and spewing ash with dangerous pyroclastic flows.",
-              "published_date": "2026-08-05",
-              "outlet": "USA Today",
-              "image": "https://s.yimg.com/bo/0dcaeb50-4228-5cbb-ac11-401bea234086_1785944496922.jpg"
-            },
-            {
-              "news_id": "87b6c51b0ee65cf68920a7be3207ec5d",
-              "url": "https://www.ctpost.com/news/article/guatemala-s-fuego-volcano-erupts-and-other-top-22378496.php",
-              "headline": "Guatemala's Fuego volcano erupts and other top photos from Latin America and the Caribbean",
-              "body": "Hundreds of people were evacuated after Guatemala’s Fuego volcano erupted, sending ash, gas and lava down its slopes. A plane ...",
-              "published_date": "2026-08-07T14:35:21+00:00",
-              "outlet": "Connecticut Post",
-              "image": "https://www.bing.com/th?id=ONUT.nJ2IO9sOxE5_AQhTwupn-A"
-            },
-            {
-              "news_id": "d6a075b55b1b5e2798e84fd974b6f9bf",
-              "url": "https://apnews.com/photo-gallery/photos-peru-plane-crash-guatemala-volcano-0501ef3abc10b2c30ed91713ed965b79",
-              "headline": "Guatemala's Fuego volcano erupts and other top photos from Latin America and the Caribbean",
-              "body": "July 31-Aug. 6, 2026 Hundreds of people were evacuated after Guatemala’s Fuego volcano erupted, sending ash, gas and lava down its slopes.",
-              "published_date": "2026-08-07",
-              "outlet": "Associated Press",
-              "image": "https://s.yimg.com/bo/8bf75bb9-e8dc-5f25-9580-a330bb5b37d8_1786078206438.jpg"
-            },
-            {
-              "news_id": "17878d2a94ac57a893060f53f00d4ed2",
-              "url": "https://www.wsoctv.com/news/guatemala-evacuates/25WMSTI4EI52PKHEBWKHZIVALA/",
-              "headline": "Fuego volcano spews more ash and mud as Guatemala shelters 1,700 who fled nearby villages",
-              "body": "Guatemala remained on alert after evacuating villages during an eruption of the Fuego volcano, one of Central America’s most active volcanoes",
-              "published_date": "2026-08-04",
-              "outlet": "WSOC 9",
-              "image": "https://s.yimg.com/bo/b87c11ea-f1bf-5e44-bc0c-f030bfb9fb40_1785887073934.jpg"
-            },
-            {
-              "news_id": "ca8e75a204da54f382904787a6fc160e",
-              "url": "https://www.yahoo.com/news/weather-news/articles/guatemala-orders-evacuations-volcano-erupts-150648335.html",
-              "headline": "Guatemala orders evacuations after volcano erupts",
-              "body": "Guatemala raised a nationwide orange alert and ordered evacuation of nearby communities after Volcán de Fuego entered a new eruptive phase,",
-              "published_date": "2026-08-04",
-              "outlet": "United Press International · via Yahoo News",
-              "image": "https://media.zenfs.com/en/united_press_international_articles_356/0cf12393de140b29886330b3f60a8b04"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-08-12",
-          "summary": "As of August 11, activity at Fuego volcano was gradually decreasing, but risks from ash and mudflows persisted. Approximately 1,700 people remained in shelters after evacuations from nearby villages, with children among those displaced.",
-          "news": [
-            {
-              "news_id": "c14bdd6e1a6854f98efa392453b8f923",
-              "url": "https://www.newsday.com/news/nation/guatemala-volcano-fuego-eruption-evacuations-lahars-mudslides-risks-x39692",
-              "headline": "Fuego volcano activity that triggered evacuations in Guatemala is decreasing, but risks remain",
-              "body": "Guatemalan authorities say activity at the Fuego volcano is gradually decreasing after it began two days ago.",
-              "published_date": "2026-08-05",
-              "outlet": "Newsday",
-              "image": "https://s.yimg.com/bo/b6c916be-a457-5026-9d05-adf1ea52da53_1785955232324.jpg"
-            },
-            {
-              "news_id": "a1b4d7376e07593eaadad94f8baa7058",
-              "url": "https://www.kiro7.com/news/guatemala-evacuates/25WMSTI4EI52PKHEBWKHZIVALA/",
-              "headline": "Fuego volcano spews more ash and mud as Guatemala shelters 1,700 who fled nearby villages",
-              "body": "Guatemala remained on alert after evacuating villages during an eruption of the Fuego volcano, one of Central America’s most active volcanoes",
-              "published_date": "2026-08-04",
-              "outlet": "KIRO 7 Seattle-Tacoma",
-              "image": "https://s.yimg.com/bo/26e780a2-2ee9-5a1d-b132-ec04106a722f_1785881365279.jpg"
-            },
-            {
-              "news_id": "d2fabcf22016500c8819ca688bc22451",
-              "url": "https://www.hjnews.com/world/guatemala-volcano/image_d2982e36-3faf-5bd9-a331-d301752f2bb9.html",
-              "headline": "Guatemala Volcano",
-              "body": "Children evacuated from El Porvenir, a village on the slopes of the Fuego volcano, play inside a temporary shelter in Escuintla, Guatemala, Tuesday, Aug....",
-              "published_date": "2026-08-11T14:32:43+00:00",
-              "outlet": "The Herald Journal",
-              "image": "https://s.yimg.com/bo/a3bf06b9-310a-5a98-9447-04e97dde08c6_1785894504263.jpg"
-            },
-            {
-              "news_id": "2bb68e7bcd815bf683eac4422464f71e",
-              "url": "https://fox40.com/news/ap-top-headlines/ap-guatemala-evacuates-villages-due-to-an-eruption-of-the-fuego-volcano/",
-              "headline": "Fuego volcano spews more ash and mud as Guatemala shelters 1,700 who fled nearby villages",
-              "body": "GUATEMALA CITY (AP) — Guatemala remained on alert Tuesday after evacuating villages during an eruption of the Fuego volcano, one of Central America’s most active. About 1,700 people remained in she…",
-              "published_date": "2026-08-04",
-              "outlet": "FOX40 Sacramento",
-              "image": "https://s.yimg.com/bo/5bf7fdaa-7d65-5c94-806f-ecc9c0847798_1785881067728.jpg"
-            }
-          ]
-        }
-      ],
-      "logs_total": 2
     },
     {
       "incident_id": "20260810-ES-WF",
