@@ -1,26 +1,26 @@
 {
   "schema_version": "1.5",
-  "report_date": "2026-08-21",
+  "report_date": "2026-08-22",
   "generated_at": "2026-08-22T02:30:49Z",
-  "as_of": "2026-08-21",
+  "as_of": "2026-08-22",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 30,
-    "new_today": 15,
+    "reportable_total": 29,
+    "new_today": 0,
     "critical": 13,
     "high": 5,
     "medium": 4,
-    "low": 8,
+    "low": 7,
     "disease_outbreaks": 3,
-    "countries_affected": 20,
-    "news_total": 5103,
+    "countries_affected": 19,
+    "news_total": 5076,
     "max_magnitude": 7.7,
     "by_severity": {
       "CRITICAL": 13,
       "HIGH": 5,
       "MEDIUM": 4,
-      "LOW": 8
+      "LOW": 7
     },
     "by_type": {
       "Flood": 2,
@@ -29,7 +29,6 @@
       "Earthquake": 9,
       "Severe Weather": 2,
       "Conflict": 2,
-      "Tropical Cyclone": 1,
       "Forest Fire": 5,
       "": 2,
       "Volcano": 1
@@ -40,7 +39,7 @@
       "Africa": 3,
       "Americas": 7,
       "Europe": 6,
-      "Oceania": 3,
+      "Oceania": 2,
       "Unknown": 2
     }
   },
@@ -70,15 +69,6 @@
       "iso2": "CD",
       "region": "Africa",
       "country_group": "C",
-      "max_severity": "LOW"
-    },
-    {
-      "country": "Marshall Islands",
-      "count": 1,
-      "max_sev_rank": 1,
-      "iso2": "MH",
-      "region": "Oceania",
-      "country_group": "B",
       "max_severity": "LOW"
     },
     {
@@ -18098,415 +18088,6 @@
         }
       ],
       "logs_total": 26
-    },
-    {
-      "incident_id": "20260727-MH-TC",
-      "tree_id": "4e19287a8ceb424f9f4dad0741710ab6",
-      "canonical_name": "Tropical Cyclone TWELVE-26 Marshall Islands 2026-07-27",
-      "summary": "Typhoon Dolphin's rain threat has moved inland to Beijing after making landfall on China's eastern coast on Aug. 9, with the storm recognized as one of three giant storms impacting millions across Asia that week. Climate change and El Niño have been cited as factors that supercharged the typhoon, contributing to its extreme rainfall.",
-      "country": "Marshall Islands",
-      "iso2": "MH",
-      "lat": 12.8,
-      "lon": 178.3,
-      "country_group": "B",
-      "region": "Oceania",
-      "incident_type": "Tropical Cyclone",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "LOW",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-07-27",
-      "first_reported_date": "2026-07-27",
-      "last_updated_date": "2026-08-14",
-      "days_since_event": 26,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 1,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 27
-      },
-      "source_links": [
-        {
-          "type": "GDACS",
-          "label": "Green alert · Tropical Cyclone TWELVE-26 Marshall Islands 2026-07-27",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=TC&eventid=1001297",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "Marshall Islands",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": "Green",
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "«دولفين» يهدد شرق آسيا بأمواج عالية وأمطار غزيرة وفيضانات خطرة",
-          "published_date": "2026-08-04"
-        },
-        {
-          "headline": "Typhoon signal unlikely in Hong Kong over weekend but at least 22 flights to Japan axed",
-          "published_date": "2026-08-05"
-        },
-        {
-          "headline": "Typhoon Dolphin threatens eastern China amid active cyclone season",
-          "published_date": "2026-08-05"
-        },
-        {
-          "headline": "12 killed, 8 missing in Philippines after floods, landslides",
-          "published_date": "2026-08-05T14:03:55+00:00"
-        },
-        {
-          "headline": "Typhoon Dolphin barrels towards China with damaging winds and flooding",
-          "published_date": "2026-08-06"
-        },
-        {
-          "headline": "Japan Orders Evacuations as Typhoon Dolphin Nears Okinawa, 500 Flights Canceled",
-          "published_date": "2026-08-07"
-        },
-        {
-          "headline": "Temperatures could hit 37 degrees Celsius in Hong Kong over extremely hot weekend",
-          "published_date": "2026-08-07"
-        },
-        {
-          "headline": "When and Where Typhoon Dolphin is Expected to Make Landfall in China",
-          "published_date": "2026-08-07"
-        },
-        {
-          "headline": "Temperatures could hit 37 degrees Celsius in Hong Kong over extremely hot weekend",
-          "published_date": "2026-08-08"
-        },
-        {
-          "headline": "Typhoon Dolphin mapped: Japan cancels 500 flights amid powerful storm",
-          "published_date": "2026-08-08"
-        },
-        {
-          "headline": "Eastern China braces for Typhoon Dolphin, shutting schools and tourist activities",
-          "published_date": "2026-08-08"
-        },
-        {
-          "headline": "Japan Counts Cost Of Typhoon Dolphin As China, Taiwan Prepare For Storm",
-          "published_date": "2026-08-08"
-        },
-        {
-          "headline": "China issues top typhoon alert as Dolphin hits Zhejiang coast",
-          "published_date": "2026-08-09"
-        },
-        {
-          "headline": "Why is Hong Kong experiencing its hottest day in 142 years?",
-          "published_date": "2026-08-09"
-        },
-        {
-          "headline": "Typhoon Dolphin Hits China’s East Coast; 3 Lakh Evacuated, Shanghai Airports Cancel 1300 Flights",
-          "published_date": "2026-08-09"
-        },
-        {
-          "headline": "Typhoon Dolphin hits Japan's Okinawa, China shuts ports ahead of landfall",
-          "published_date": "2026-08-09"
-        },
-        {
-          "headline": "Storms from Dolphin soak China's east, ground nearly 950 Shanghai flights",
-          "published_date": "2026-08-10"
-        },
-        {
-          "headline": "Typhoon Dolphin flips truck as 'monster storm' brings 93 mph winds and wreaks havoc in Asia",
-          "published_date": "2026-08-10"
-        },
-        {
-          "headline": "Rains from Dolphin flood Shanghai streets in China’s strongest storm this year",
-          "published_date": "2026-08-10"
-        },
-        {
-          "headline": "Typhoon Dolphin: more than a million people evacuated in China as record rainfall dumped on Shanghai",
-          "published_date": "2026-08-10"
-        },
-        {
-          "headline": "One million evacuated and transport hit as typhoon lashes China’s eastern coast",
-          "published_date": "2026-08-10"
-        },
-        {
-          "headline": "From China's Coast to Beijing: Typhoon Dolphin Takes Rain Threat Inland",
-          "published_date": "2026-08-12"
-        },
-        {
-          "headline": "Mapped: Three giant storms impacting millions of people across Asia",
-          "published_date": "2026-08-12"
-        },
-        {
-          "headline": "Three storms strike Asia in a week battering millions with heavy rain and strong winds",
-          "published_date": "2026-08-12"
-        },
-        {
-          "headline": "Typhoon Dolphin Deepens China Port Congestion, Stranding 2.4M TEUs",
-          "published_date": "2026-08-12"
-        },
-        {
-          "headline": "Typhoon Dolphin floods China: Roads, construction and tourism hit by extreme rain",
-          "published_date": "2026-08-12T03:20:12+00:00"
-        },
-        {
-          "headline": "Explainer-How climate change and El Niño supercharged Typhoon Dolphin",
-          "published_date": "2026-08-14"
-        }
-      ],
-      "news_total": 27,
-      "logs": [
-        {
-          "log_date": "2026-08-08",
-          "summary": "Typhoon Dolphin, the 13th named storm of 2026, is impacting East Asia with Japan ordering evacuations of 260,000 people and canceling 500 flights as it nears Okinawa. China issued a yellow alert as the typhoon approaches its eastern coast, while Hong Kong experiences extreme heat under its influence.",
-          "news": [
-            {
-              "news_id": "580d6e7408b1552db36c10382740c16a",
-              "url": "https://www.msn.com/en-us/weather/topstories/typhoon-dolphin-barrels-towards-china-with-damaging-winds-and-flooding/ar-AA29toJF?ocid=BingNewsVerp",
-              "headline": "Typhoon Dolphin barrels towards China with damaging winds and flooding",
-              "body": "Typhoon Dolphin continues to develop as it tracks across the West Pacific, approaching the mainland of China. This comes as ...",
-              "published_date": "2026-08-06",
-              "outlet": "FOX Weather on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.XdiXQByASBeAlpc5aGv1Sw"
-            },
-            {
-              "news_id": "54e40258aaba5769a8fefed4b4b2dcd6",
-              "url": "https://www.okaz.com.sa/variety/na/2259853",
-              "headline": "«دولفين» يهدد شرق آسيا بأمواج عالية وأمطار غزيرة وفيضانات خطرة",
-              "body": "يواصل الإعصار المداري الشديد (دولفين) تحركه فوق مياه المحيط الهادئ متجهًا نحو السواحل الشرقية لقارة آسيا، وسط حالة تأهب واسعة في الدول الواقعة ضمن مساره المتوقع.",
-              "published_date": "2026-08-04",
-              "outlet": "صحيفة عكاظ",
-              "image": "https://www.bing.com/th?id=ONUT.516iuQZzEZltT1EwqeCJcg"
-            },
-            {
-              "news_id": "ca559d3aef6c5d32bdaed3996b789ae9",
-              "url": "https://www.ibtimes.sg/japan-orders-evacuations-typhoon-dolphin-nears-okinawa-500-flights-canceled-91708",
-              "headline": "Japan Orders Evacuations as Typhoon Dolphin Nears Okinawa, 500 Flights Canceled",
-              "body": "Japan ordered nearly 260,000 people to evacuate as Typhoon Dolphin approached Okinawa, disrupting flights, factory operations and threatening earthquake-hit areas.",
-              "published_date": "2026-08-07",
-              "outlet": "International Business Times Singapore",
-              "image": "https://www.bing.com/th?id=ONUT.84BbsxsEtDO2HwPxcegP3w"
-            },
-            {
-              "news_id": "87a1195f0b7e5f23a0956787b8c09b65",
-              "url": "https://www.msn.com/en-xl/weather/extreme-weather-events/temperatures-could-hit-36-degrees-celsius-in-hong-kong-over-extremely-hot-weekend/ar-AA29znFn?ocid=BingNewsVerp",
-              "headline": "Temperatures could hit 37 degrees Celsius in Hong Kong over extremely hot weekend",
-              "body": "Observatory warns residents to take precautions against heatstroke as extremely hot weather to persist under influence of Tropical Cyclone Dolphin Temperatures in some parts of Hong Kong could hit 36 ...",
-              "published_date": "2026-08-07",
-              "outlet": "South China Morning Post on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "4fdf355168b757cfba999b6f7f454d00",
-              "url": "https://www.ibtimes.sg/when-where-typhoon-dolphin-expected-make-landfall-china-91749",
-              "headline": "When and Where Typhoon Dolphin is Expected to Make Landfall in China",
-              "body": "China's National Meteorological Center issued a yellow alert Aug. 6 as Typhoon Dolphin, the 13th typhoon of 2026, closes in on the eastern coast",
-              "published_date": "2026-08-07",
-              "outlet": "International Business Times Singapore",
-              "image": "https://www.bing.com/th?id=ONUT.ZamCa7sqWp4rvafUuJtCTg"
-            },
-            {
-              "news_id": "7a81e538e95d5d0fa691d15a9503c3dc",
-              "url": "https://www.msn.com/en-xl/weather/meteorology/temperatures-could-hit-36-degrees-celsius-in-hong-kong-over-extremely-hot-weekend/ar-AA29znFn?ocid=BingNewsVerp",
-              "headline": "Temperatures could hit 37 degrees Celsius in Hong Kong over extremely hot weekend",
-              "body": "Observatory warns residents to take precautions against heatstroke as extremely hot weather to persist under influence of Tropical Cyclone Dolphin Temperatures in some parts of Hong Kong could hit 36 ...",
-              "published_date": "2026-08-08",
-              "outlet": "South China Morning Post on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "4d4e3fc5186759ed834ff717b3f56f3e",
-              "url": "https://www.msn.com/en-xl/news/other/typhoon-signal-unlikely-in-hong-kong-over-weekend-but-at-least-22-flights-to-japan-axed/ar-AA29qtiD?ocid=BingNewsVerp",
-              "headline": "Typhoon signal unlikely in Hong Kong over weekend but at least 22 flights to Japan axed",
-              "body": "Tropical Cyclone Kujira set to weaken over weekend under countervailing influence of Dolphin, which has been downgraded to a ...",
-              "published_date": "2026-08-05",
-              "outlet": "South China Morning Post on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.QIqPanFgg8pYb70KwE42_g"
-            },
-            {
-              "news_id": "562c750a3c7750f9b8e0373694482045",
-              "url": "https://asianews.network/typhoon-dolphin-threatens-eastern-china-amid-active-cyclone-season/",
-              "headline": "Typhoon Dolphin threatens eastern China amid active cyclone season",
-              "body": "Typhoon Dolphin, the year's 13th named storm, is expected to move westward at 20 to 25 kilometers per hour and will not affect China's coastal waters before Thursday, according to the China Meteorological Administration.",
-              "published_date": "2026-08-05",
-              "outlet": "Asia News Network",
-              "image": ""
-            },
-            {
-              "news_id": "396c575d5a235ef9bcdc559c248a55de",
-              "url": "https://www.msn.com/en-gb/news/uknews/typhoon-dolphin-mapped-japan-cancels-500-flights-amid-powerful-storm/ar-AA29AcqC?ocid=BingNewsVerp",
-              "headline": "Typhoon Dolphin mapped: Japan cancels 500 flights amid powerful storm",
-              "body": "Typhoon Dolphin mapped: 500 flights cancelled as powerful storm impacts Japan region still reeling from earthquake - The storm's outer edge is sweeping Kyushu, including Kumamoto prefecture, where ...",
-              "published_date": "2026-08-08",
-              "outlet": "The Independent on MSN",
-              "image": ""
-            }
-          ]
-        },
-        {
-          "log_date": "2026-08-10",
-          "summary": "Typhoon Dolphin made landfall on China's Zhejiang coast with winds of 151 kph, triggering the evacuation of 300,000 to 1 million people and cancellation of 1,300 flights at Shanghai airports. China issued its highest typhoon warning as the storm brought torrential rain and dangerous conditions across the region, while Hong Kong recorded its highest temperature since 1884 under the storm's influence.",
-          "news": [
-            {
-              "news_id": "5560591f92225745979044fba3dc3bfb",
-              "url": "https://www.gdnonline.com/Details/1402993/One-million-evacuated-and-transport-hit-as-typhoon-lashes-China’s-eastern-coast",
-              "headline": "One million evacuated and transport hit as typhoon lashes China’s eastern coast",
-              "body": "Torrential rain is forecast through across Zhejiang, Shanghai, northern Fujian, northeastern Jiangxi, central and southern ...",
-              "published_date": "2026-08-10",
-              "outlet": "Gulf Digital News",
-              "image": "https://www.bing.com/th?id=ONUT.jdABH05sQg69DgxGetQ1jw"
-            },
-            {
-              "news_id": "4cd0f7adcac15af7a788ec43a81319c0",
-              "url": "https://www.msn.com/en-in/news/other/china-issues-top-typhoon-alert-as-dolphin-hits-zhejiang-coast/ar-AA29Hhnf?ocid=BingNewsVerp",
-              "headline": "China issues top typhoon alert as Dolphin hits Zhejiang coast",
-              "body": "China issued its highest typhoon warning as Dolphin made landfall on Zhejiang's coast. Authorities expect days of dangerous ...",
-              "published_date": "2026-08-09",
-              "outlet": "India Today on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.WqHD3IfFBdZ7oLThDtP-cg"
-            },
-            {
-              "news_id": "9a94c80c71d25e2bb267e7248a924ec8",
-              "url": "https://gulfnews.com/world/asia/china/hong-kong-records-highest-temperature-since-records-began-in-1884-1.500635305",
-              "headline": "Why is Hong Kong experiencing its hottest day in 142 years?",
-              "body": "Hong Kong hits record 36.8°C, its highest temperature since 1884, as extreme heat grips the city ahead of Typhoon Dolphin’s approach.",
-              "published_date": "2026-08-09",
-              "outlet": "Gulf News",
-              "image": "https://www.bing.com/th?id=ONUT.KRBxxKADKcc1nBnbOQ379A"
-            },
-            {
-              "news_id": "c8dca22a634151e09e6dc979024ac8c8",
-              "url": "https://www.republicworld.com/global-news/typhoon-dolphin-hits-chinas-east-coast-3-lakh-evacuated-shanghai-airports-cancel-1300-flights-2026-08-09-134384",
-              "headline": "Typhoon Dolphin Hits China’s East Coast; 3 Lakh Evacuated, Shanghai Airports Cancel 1300 Flights",
-              "body": "Typhoon Dolphin made landfall in China’s Zhejiang with 151 kph winds, forcing 3 lakh evacuations and 1300 flight cancellations, while intensified monsoon rains in the Philippines caused floods, landslides and left 7 missing.",
-              "published_date": "2026-08-09",
-              "outlet": "Republic World",
-              "image": "https://www.bing.com/th?id=ONUT.ylB9svt7MqTdIgD-jhbxrQ"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-08-12",
-          "summary": "Typhoon Dolphin's aftermath continues to disrupt China, with torrential rains grounding nearly 950 Shanghai flights and flooding streets, while port congestion at Shanghai and Ningbo has stranded 2.4 million TEUs of cargo, expected to take weeks to clear. The storm, now weakened to a tropical storm, has moved inland, causing floods that impact roads, construction, and tourism. Additionally, combined effects of the southwest monsoon and Typhoon Dolphin have resulted in 12 deaths and 8 missing in the Philippines.",
-          "news": [
-            {
-              "news_id": "088e3df1f6dd599eb238ee068f471ad4",
-              "url": "https://www.msn.com/en-us/weather/topstories/storms-from-dolphin-soak-chinas-east-ground-nearly-950-shanghai-flights/ar-AA29KZQY?ocid=BingNewsVerp",
-              "headline": "Storms from Dolphin soak China's east, ground nearly 950 Shanghai flights",
-              "body": "By Nicoco Chan and Liz Lee SHANGHAI/BEIJING, Aug 10 (Reuters) - Torrential rain and storms in Typhoon Dolphin's wake ...",
-              "published_date": "2026-08-10",
-              "outlet": "Reuters on MSN",
-              "image": "https://www.bing.com/th?id=ORMS.7f4b5b0a5612a395f30823357eb1d6ad"
-            },
-            {
-              "news_id": "c8c9662d426051f4b73ac8e7678d5ce7",
-              "url": "https://www.aa.com.tr/en/asia-pacific/12-killed-8-missing-in-philippines-after-floods-landslides/4022723",
-              "headline": "12 killed, 8 missing in Philippines after floods, landslides",
-              "body": "Nearly 586,000 individuals affected by combined effects of southwest monsoon, Tropical Cyclones Kujira, Dolphin across 9 regions, 33 provinces | Anadolu ...",
-              "published_date": "2026-08-05T14:03:55+00:00",
-              "outlet": "Anadolu Agency",
-              "image": ""
-            },
-            {
-              "news_id": "a98254135413559193f05b8410eb3a6d",
-              "url": "https://www.msn.com/en-gb/public-safety-and-emergencies/natural-disasters/typhoon-dolphin-flips-truck-as-monster-storm-brings-93-mph-winds-and-wreaks-havoc-in-asia/vi-AA29LaLv?ocid=BingNewsVerp",
-              "headline": "Typhoon Dolphin flips truck as 'monster storm' brings 93 mph winds and wreaks havoc in Asia",
-              "body": "Tourists SCRAMBLE to find shelter in 93mph winds as TYPHOON Dolphin WREAKS HAVOC in Asia More than one million people have ...",
-              "published_date": "2026-08-10",
-              "outlet": "YouTube on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.oHPdAyyEwqDLCI3W80psRg"
-            },
-            {
-              "news_id": "25b1f7d78e0252478801d086c572cfe0",
-              "url": "https://www.financialexpress.com/world-news/typhoon-dolphin-floods-china-roads-construction-and-tourism-hit-by-extreme-rain/4315653/",
-              "headline": "Typhoon Dolphin floods China: Roads, construction and tourism hit by extreme rain",
-              "body": "Typhoon Dolphin has moved into central China after making landfall in Zhejiang, causing floods, flight cancellations and widespread disruption.",
-              "published_date": "2026-08-12T03:20:12+00:00",
-              "outlet": "The Financial Express",
-              "image": ""
-            },
-            {
-              "news_id": "17060e4219aa5c2ea9df1bd43851d056",
-              "url": "https://www.nbcnews.com/world/asia/rains-dolphin-flood-shanghai-streets-chinas-strongest-storm-year-rcna591664",
-              "headline": "Rains from Dolphin flood Shanghai streets in China’s strongest storm this year",
-              "body": "Typhoon Dolphin packed maximum sustained winds of more than 90 mph near its center when it made landfall in the region on Sunday before weakening to a tropical storm.",
-              "published_date": "2026-08-10",
-              "outlet": "NBC News",
-              "image": "https://www.bing.com/th?id=ONUT.CklyvACIXNiaJ0ifSWsdTA"
-            },
-            {
-              "news_id": "0853360234825ae88a2cc47404d079c3",
-              "url": "https://www.theguardian.com/world/2026/aug/10/typhoon-dolphin-china-shanghai-flooding-evacuations",
-              "headline": "Typhoon Dolphin: more than a million people evacuated in China as record rainfall dumped on Shanghai",
-              "body": "Authorities warn that days of intense rain could trigger widespread flooding and landslides as storm moves north and further inland",
-              "published_date": "2026-08-10",
-              "outlet": "The Guardian",
-              "image": ""
-            },
-            {
-              "news_id": "06940382d4205c369b186ff47a7ccdca",
-              "url": "https://www.msn.com/en-us/news/world/typhoon-dolphin-deepens-china-port-congestion-stranding-24m-teus/ar-AA29S8R2?ocid=BingNewsVerp",
-              "headline": "Typhoon Dolphin Deepens China Port Congestion, Stranding 2.4M TEUs",
-              "body": "The storm forced three-day closures at China's Shanghai and Ningbo ports, with vessel backlogs expected to take weeks to clear and berthing times reaching as high as 12 days.",
-              "published_date": "2026-08-12",
-              "outlet": "Women's Wear Daily on MSN",
-              "image": ""
-            }
-          ]
-        },
-        {
-          "log_date": "2026-08-14",
-          "summary": "Typhoon Dolphin's rain threat has moved inland to Beijing after making landfall on China's eastern coast on Aug. 9, with the storm recognized as one of three giant storms impacting millions across Asia that week. Climate change and El Niño have been cited as factors that supercharged the typhoon, contributing to its extreme rainfall.",
-          "news": [
-            {
-              "news_id": "59396808724657f68551d07de14b2f14",
-              "url": "https://www.ibtimes.sg/chinas-coast-beijing-typhoon-dolphin-takes-rain-threat-inland-91972",
-              "headline": "From China's Coast to Beijing: Typhoon Dolphin Takes Rain Threat Inland",
-              "body": "Typhoon Dolphin made landfall on China's eastern coast on Aug. 9 as the country's strongest storm of the year, forcing more than one million evacuations.",
-              "published_date": "2026-08-12",
-              "outlet": "International Business Times Singapore",
-              "image": ""
-            },
-            {
-              "news_id": "f37dc54a205d580e8896788eaa31c90b",
-              "url": "https://www.msn.com/en-gb/news/world/mapped-three-giant-storms-impacting-millions-of-people-across-asia/ar-AA29VQOf?ocid=BingNewsVerp",
-              "headline": "Mapped: Three giant storms impacting millions of people across Asia",
-              "body": "Mapped: The three giant storms impacting millions of people across Asia - Chan-hom makes landfall in Japan and Dolphin triggers rainstorm warning in Beijing ...",
-              "published_date": "2026-08-12",
-              "outlet": "The Independent on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "590cfeb3efa253cf9d99bcaa086f16e3",
-              "url": "https://www.msn.com/en-us/weather/topstories/explainer-how-climate-change-and-el-niño-supercharged-typhoon-dolphin/ar-AA2a09ai?ocid=BingNewsVerp",
-              "headline": "Explainer-How climate change and El Niño supercharged Typhoon Dolphin",
-              "body": "By Ethan Wang and Ryan Woo BEIJING, Aug 13 (Reuters) - Typhoon Dolphin unleashed extreme rain across eastern, central and northern China, far from the coast where it made landfall on Sunday following ...",
-              "published_date": "2026-08-14",
-              "outlet": "Reuters on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "c99c10bfc8e050359c6036d54a7b2b14",
-              "url": "https://www.msn.com/en-xl/news/other/three-storms-strike-asia-in-a-week-battering-millions-with-heavy-rain-and-strong-winds/ar-AA29SUrB?ocid=BingNewsVerp",
-              "headline": "Three storms strike Asia in a week battering millions with heavy rain and strong winds",
-              "body": "Three storms - Dolphin, Chan-hom and Peilou - had struck different parts of Asia.",
-              "published_date": "2026-08-12",
-              "outlet": "BBC on MSN",
-              "image": ""
-            }
-          ]
-        }
-      ],
-      "logs_total": 5
     },
     {
       "incident_id": "20260727-GR-WF",
