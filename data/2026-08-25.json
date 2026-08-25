@@ -1,32 +1,32 @@
 {
   "schema_version": "1.5",
-  "report_date": "2026-08-24",
+  "report_date": "2026-08-25",
   "generated_at": "2026-08-25T02:34:03Z",
-  "as_of": "2026-08-24",
+  "as_of": "2026-08-25",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 33,
-    "new_today": 17,
+    "reportable_total": 32,
+    "new_today": 0,
     "critical": 13,
     "high": 6,
-    "medium": 5,
+    "medium": 4,
     "low": 9,
     "disease_outbreaks": 3,
-    "countries_affected": 22,
-    "news_total": 5498,
+    "countries_affected": 21,
+    "news_total": 5493,
     "max_magnitude": 7.7,
     "by_severity": {
       "CRITICAL": 13,
       "HIGH": 6,
-      "MEDIUM": 5,
+      "MEDIUM": 4,
       "LOW": 9
     },
     "by_type": {
       "Flood": 2,
       "Disease": 3,
       "Drought": 3,
-      "Earthquake": 11,
+      "Earthquake": 10,
       "Severe Weather": 2,
       "Conflict": 2,
       "Forest Fire": 6,
@@ -39,7 +39,7 @@
       "Africa": 5,
       "Americas": 6,
       "Europe": 9,
-      "Oceania": 2,
+      "Oceania": 1,
       "Unknown": 2
     }
   },
@@ -132,15 +132,6 @@
       "iso2": "CN",
       "region": "Asia",
       "country_group": "A",
-      "max_severity": "MEDIUM"
-    },
-    {
-      "country": "Vanuatu",
-      "count": 1,
-      "max_sev_rank": 2,
-      "iso2": "VU",
-      "region": "Oceania",
-      "country_group": "B",
       "max_severity": "MEDIUM"
     },
     {
@@ -35750,129 +35741,6 @@
               "published_date": "2026-08-24T13:38:15+00:00",
               "outlet": "U.S. News & World Report",
               "image": "https://www.bing.com/th?id=ONUT.nFleLDvF6MjncbgYTxN40A"
-            }
-          ]
-        }
-      ],
-      "logs_total": 1
-    },
-    {
-      "incident_id": "20260816-VU-EQ",
-      "tree_id": "cdf61cee65a24c6ba5b8990f8f890435",
-      "canonical_name": "Earthquake M6.1 Port-Olry, Vanuatu 2026-08-16",
-      "summary": "A magnitude 6.1 earthquake struck off the coast of Vanuatu on August 16, 2026, with a depth of approximately 155-188 km. The US Geological Survey and GFZ German Research Center for Geosciences confirmed the event, which occurred near the Sanma province.",
-      "country": "Vanuatu",
-      "iso2": "VU",
-      "lat": -14.5474,
-      "lon": 167.1934,
-      "country_group": "B",
-      "region": "Oceania",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-08-16",
-      "first_reported_date": "2026-08-16",
-      "last_updated_date": "2026-08-17",
-      "days_since_event": 9,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 5
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 6.1 - 56 km NNE of Port-Olry, Vanuatu",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tl4w",
-          "meta": "188.148 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 6.1,
-        "max_depth_km": 188.148,
-        "place": "56 km NNE of Port-Olry, Vanuatu",
-        "felt": 1,
-        "sig": 573,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Vanuatu Islands Earthquake 2026: How can a magnitude 6.1 earthquake strike 188 km deep beneath Earth’s surface?- Moneycontrol.com",
-          "published_date": "2026-08-16"
-        },
-        {
-          "headline": "Urgent: 6.0-magnitude quake hits Vanuatu Islands: GFZ",
-          "published_date": "2026-08-16"
-        },
-        {
-          "headline": "Magnitude 6.1 earthquake strikes off Vanuatu",
-          "published_date": "2026-08-16"
-        },
-        {
-          "headline": "Magnitude 6.1 earthquake strikes off Vanuatu: USGS | International",
-          "published_date": "2026-08-16"
-        },
-        {
-          "headline": "Magnitude 6.1 earthquake strikes off Vanuatu",
-          "published_date": "2026-08-17"
-        }
-      ],
-      "news_total": 5,
-      "logs": [
-        {
-          "log_date": "2026-08-17",
-          "summary": "A magnitude 6.1 earthquake struck off the coast of Vanuatu on August 16, 2026, with a depth of approximately 155-188 km. The US Geological Survey and GFZ German Research Center for Geosciences confirmed the event, which occurred near the Sanma province.",
-          "news": [
-            {
-              "news_id": "cf7c5525970c50d6bb524166571fcdd1",
-              "url": "https://www.moneycontrol.com/science/vanuatu-islands-earthquake-2026-how-can-a-magnitude-6-1-earthquake-strike-188-km-deep-beneath-earth-s-surface-article-14006567.html",
-              "headline": "Vanuatu Islands Earthquake 2026: How can a magnitude 6.1 earthquake strike 188 km deep beneath Earth’s surface?- Moneycontrol.com",
-              "body": "A deep magnitude 6.1 earthquake struck near Vanuatu, with its epicentre around 188 km below Earth’s surface. Here’s how seismic waves from such a deep quake can still be felt above ground.",
-              "published_date": "2026-08-16",
-              "outlet": "Moneycontrol",
-              "image": ""
-            },
-            {
-              "news_id": "7d4dab5dc855502db337126e73d1bdc9",
-              "url": "http://www.chinaview.cn/20260816/a3ad1a643a074957890e3b8d9523c7c8/c.html",
-              "headline": "Urgent: 6.0-magnitude quake hits Vanuatu Islands: GFZ",
-              "body": "Hong Kong, Aug. 16 (Xinhua) -- A 6.0-magnitude earthquake jolted Vanuatu Islands on Sunday, the GFZ German Research Center for Geosciences said. The epicenter, with a depth of 155.1 km, was initially ...",
-              "published_date": "2026-08-16",
-              "outlet": "Xinhuanet",
-              "image": ""
-            },
-            {
-              "news_id": "5228911d3aa3512c8876bdb3b118c8be",
-              "url": "https://www.msn.com/en-ph/news/other/magnitude-61-earthquake-strikes-off-vanuatu/ar-AA2adhL8?ocid=BingNewsVerp",
-              "headline": "Magnitude 6.1 earthquake strikes off Vanuatu",
-              "body": "SYDNEY — A magnitude 6.1 earthquake struck off the coast of South Pacific nation Vanuatu on Sunday, the US Geological Survey ...",
-              "published_date": "2026-08-16",
-              "outlet": "Global News - Inquirer.net on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.o9fSXFm5PAocZmpAf1K6Lg"
-            },
-            {
-              "news_id": "bd5bb4f8eec9510894250b18d862a897",
-              "url": "https://www.bssnews.net/international/415013",
-              "headline": "Magnitude 6.1 earthquake strikes off Vanuatu: USGS | International",
-              "body": "SYDNEY, Aug 16, 2026 (BSS/AFP) - A magnitude 6.1 earthquake struck off the coast of South Pacific nation Vanuatu on",
-              "published_date": "2026-08-16",
-              "outlet": "Bangladesh Sangsbad Sangstha",
-              "image": ""
             }
           ]
         }
