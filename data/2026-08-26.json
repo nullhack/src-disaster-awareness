@@ -1,32 +1,32 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-08-26",
-  "generated_at": "2026-08-26T02:42:07Z",
+  "generated_at": "2026-08-26T14:09:34Z",
   "as_of": "2026-08-26",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 35,
-    "new_today": 0,
+    "reportable_total": 37,
+    "new_today": 11,
     "critical": 13,
     "high": 6,
-    "medium": 7,
-    "low": 9,
+    "medium": 8,
+    "low": 10,
     "disease_outbreaks": 3,
-    "countries_affected": 24,
-    "news_total": 5734,
+    "countries_affected": 25,
+    "news_total": 5823,
     "max_magnitude": 7.7,
     "by_severity": {
       "CRITICAL": 13,
       "HIGH": 6,
-      "MEDIUM": 7,
-      "LOW": 9
+      "MEDIUM": 8,
+      "LOW": 10
     },
     "by_type": {
       "Flood": 2,
       "Disease": 3,
-      "Drought": 3,
-      "Earthquake": 13,
+      "Drought": 4,
+      "Earthquake": 14,
       "Severe Weather": 2,
       "Conflict": 2,
       "Forest Fire": 6,
@@ -37,16 +37,16 @@
       "Asia": 10,
       "Global": 2,
       "Africa": 4,
-      "Americas": 7,
-      "Unknown": 2,
-      "Europe": 8,
-      "Oceania": 2
+      "Americas": 6,
+      "Unknown": 3,
+      "Europe": 9,
+      "Oceania": 3
     }
   },
   "by_country": [
     {
       "country": "",
-      "count": 7,
+      "count": 8,
       "max_sev_rank": 1,
       "iso2": "XX",
       "region": "Global",
@@ -159,6 +159,15 @@
       "iso2": "TL",
       "region": "Asia",
       "country_group": "A",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "Fiji",
+      "count": 1,
+      "max_sev_rank": 2,
+      "iso2": "FJ",
+      "region": "Oceania",
+      "country_group": "B",
       "max_severity": "MEDIUM"
     },
     {
@@ -296,7 +305,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 12
+        "news": 13
       },
       "source_links": [],
       "physical": {
@@ -351,6 +360,10 @@
           "published_date": "2026-08-20"
         },
         {
+          "headline": "Unpredictable Amount of Rainfall Causes Inland Flooding in Recent Heavy Rain That Hit Japan's Chiba Pref.",
+          "published_date": "2026-08-20T16:24:00+00:00"
+        },
+        {
           "headline": "Could a giant underground river save Tokyo from torrential rain?",
           "published_date": "2026-08-24"
         },
@@ -359,7 +372,7 @@
           "published_date": "2026-08-25"
         }
       ],
-      "news_total": 12,
+      "news_total": 13,
       "logs": [
         {
           "log_date": "2026-08-20",
@@ -483,7 +496,7 @@
       "disease_name": null,
       "event_date": "2024-05-30",
       "first_reported_date": "2024-05-30",
-      "last_updated_date": "2026-08-25",
+      "last_updated_date": "2026-08-26",
       "days_since_event": 818,
       "source_count": 1,
       "should_report": false,
@@ -494,7 +507,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 83
+        "news": 85
       },
       "source_links": [
         {
@@ -846,9 +859,17 @@
         {
           "headline": "Three more die of dengue, 994 hospitalised in 24hrs",
           "published_date": "2026-08-25T15:15:35+00:00"
+        },
+        {
+          "headline": "Haryana dengue cases reach 147 as Gurgaon and Jhajjar report highest numbers",
+          "published_date": "2026-08-26"
+        },
+        {
+          "headline": "Dengue: Death toll 88 as three die in 24 hours",
+          "published_date": "2026-08-26T03:47:47+00:00"
         }
       ],
-      "news_total": 83,
+      "news_total": 85,
       "logs": [
         {
           "log_date": "2026-07-08",
@@ -1008,7 +1029,7 @@
       "disease_name": "Covid-19",
       "event_date": "2025-05-28",
       "first_reported_date": "2025-05-28",
-      "last_updated_date": "2026-08-24",
+      "last_updated_date": "2026-08-25",
       "days_since_event": 455,
       "source_count": 1,
       "should_report": false,
@@ -1019,7 +1040,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 127
+        "news": 130
       },
       "source_links": [
         {
@@ -1545,11 +1566,23 @@
           "published_date": "2026-08-21"
         },
         {
+          "headline": "These school districts in Iowa are improving math scores. Here's how.",
+          "published_date": "2026-08-24"
+        },
+        {
           "headline": "China Port Delays Push Stranded Container Capacity Above Covid Peak",
           "published_date": "2026-08-24"
+        },
+        {
+          "headline": "Cancer vaccines could transform treatment and prevention – but misinformation ab...",
+          "published_date": "2026-08-24T03:48:33+00:00"
+        },
+        {
+          "headline": "Howie Mandel Almost Died From Self-Medicating During COVID Pandemic",
+          "published_date": "2026-08-25"
         }
       ],
-      "news_total": 127,
+      "news_total": 130,
       "logs": [
         {
           "log_date": "2026-07-08",
@@ -1699,7 +1732,7 @@
       "incident_id": "20250905-CD-DI",
       "tree_id": "5c179437a46a56aca2f8b70aeceda07a",
       "canonical_name": "Ebola Kinshasa, DR Congo 2025-09-05",
-      "summary": "Pope Leo called the DRC Ebola crisis a \"global\" concern as Ervebo vaccine doses arrived, though their efficacy against the Bundibugyo strain remains unproven. The Red Cross reported six workers were injured in attacks in Ituri and Haut-Uele provinces last week, and Al Jazeera highlighted that nearly half of those infected are dying, consistent with the high case fatality rate.",
+      "summary": "As of late August 2026, confirmed Ebola cases in the Democratic Republic of Congo have surpassed 5,500 with over 2,600 deaths, marking one of the highest weekly death tolls yet with more than 300 deaths in the past week. The outbreak remains the fastest-spreading on record, and health workers continue to struggle to contain the virus amid persistent challenges.",
       "country": "DR Congo",
       "iso2": "CD",
       "lat": -4.0,
@@ -1718,7 +1751,7 @@
       "disease_name": "Ebola",
       "event_date": "2025-09-05",
       "first_reported_date": "2025-09-05",
-      "last_updated_date": "2026-08-25",
+      "last_updated_date": "2026-08-26",
       "days_since_event": 355,
       "source_count": 12,
       "should_report": true,
@@ -1729,7 +1762,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 280
+        "news": 283
       },
       "source_links": [
         {
@@ -2897,10 +2930,6 @@
           "published_date": "2026-08-23"
         },
         {
-          "headline": "DR Congo Ebola cases top 5,500 as WHO warns of crisis",
-          "published_date": "2026-08-24"
-        },
-        {
           "headline": "Nearly one in two Ebola patients dying in DR Congo outbreak",
           "published_date": "2026-08-24"
         },
@@ -2929,15 +2958,31 @@
           "published_date": "2026-08-24"
         },
         {
+          "headline": "DR Congo Ebola cases top 5,500 as WHO warns of crisis",
+          "published_date": "2026-08-24"
+        },
+        {
           "headline": "Pope Leo XIV Calls DRC Ebola Crisis Global as Doses Land, Efficacy Unproven",
           "published_date": "2026-08-25"
         },
         {
           "headline": "Attacks on Red Cross in DR Congo making Ebola fight ‘harder’",
           "published_date": "2026-08-25"
+        },
+        {
+          "headline": "Congo’s Ebola outbreak records one of its highest weekly death tolls yet",
+          "published_date": "2026-08-25"
+        },
+        {
+          "headline": "Health: The DRC Ebola Outbreak Is Spreading At A Rapid Pace. Why? : 1A",
+          "published_date": "2026-08-25"
+        },
+        {
+          "headline": "Ebola Is Still Killing In Central Africa. These Groups Are Working To Save Lives",
+          "published_date": "2026-08-26T03:15:07+00:00"
         }
       ],
-      "news_total": 280,
+      "news_total": 283,
       "logs": [
         {
           "log_date": "2026-07-10",
@@ -3315,39 +3360,6 @@
           ]
         },
         {
-          "log_date": "2026-08-22",
-          "summary": "Data from authorities and Africa CDC suggests the Congo Ebola outbreak has not peaked and could be three times the current known size, on track to potentially surpass history's largest outbreak. The first 16,000 doses of the Ervebo vaccine have arrived in the country as part of a larger 70,000-dose allocation, with the health minister confirming the shipment amid the fastest Ebola outbreak in history.",
-          "news": [
-            {
-              "news_id": "f8a7c272f16d51229519eb35b62f34c9",
-              "url": "https://medicalxpress.com/news/2026-08-congo-ebola-outbreak-track-surpass-1.html",
-              "headline": "Here's data that shows Congo's Ebola outbreak is on track to surpass history's largest",
-              "body": "The Ebola outbreak that is spreading at unprecedented speed in Congo has not peaked yet and could be three times the current known size, according to data from authorities and Africa's top public health agency.",
-              "published_date": "2026-08-21",
-              "outlet": "Medical Xpress",
-              "image": "https://www.bing.com/th?id=ONUT.hNLhnfFO8LNIE4_hTs8oxA"
-            },
-            {
-              "news_id": "97539e92983d567cb63827fdf716c649",
-              "url": "https://www.msn.com/en-us/news/world/more-than-16000-doses-of-ervebo-vaccine-arrive-in-ebola-hit-dr-congo/ar-AA2aHWBz?ocid=BingNewsVerp",
-              "headline": "More than 16,000 doses of Ervebo vaccine arrive in Ebola-hit DR Congo",
-              "body": "The doses are the first of 70,000 allocated for Kinshasa as experts warn of the virus’s exponential spread.",
-              "published_date": "2026-08-22",
-              "outlet": "Al Jazeera on MSN",
-              "image": "https://www.bing.com/th?id=ONUT._3be2NPPrAnTndZmAPza-w"
-            },
-            {
-              "news_id": "f17ce88d2c665a42a1b1fd187eace229",
-              "url": "https://apnews.com/article/congo-ebola-vaccine-1ce25c0697bfae7656eae3e5fe6aa6ae",
-              "headline": "Congo receives more than 16,000 doses of Ebola vaccine as it grapples with unprecedented outbreak",
-              "body": "Congo has received more than 16,000 doses of the Ervebo vaccine as the country grapples with the fastest Ebola outbreak in history, the country’s health minister said.",
-              "published_date": "2026-08-22",
-              "outlet": "Associated Press News",
-              "image": "https://www.bing.com/th?id=ONUT.ipHAd9kl26Z397POWL9hWg"
-            }
-          ]
-        },
-        {
           "log_date": "2026-08-24",
           "summary": "As of August 24, confirmed Ebola cases in the DRC have reached 5,515 with a case fatality rate approaching 48%, and the death toll has surpassed 2,600. Pope Leo has urged the international community to intensify efforts to contain the outbreak, while miners in affected areas continue to risk exposure to the virus to sustain their livelihoods.\nNew reports indicate that the Ebola outbreak in the Democratic Republic of Congo recorded one of its highest weekly death tolls yet, with over 300 deaths in the past week. Additionally, Ebola responders were chased with machetes while attempting to bury a victim, highlighting the ongoing violence hampering the response.",
           "news": [
@@ -3484,9 +3496,51 @@
               "image": "https://www.bing.com/th?id=ONUT.4bNmtBQrgAXOMWloJD_Img"
             }
           ]
+        },
+        {
+          "log_date": "2026-08-26",
+          "summary": "As of late August 2026, confirmed Ebola cases in the Democratic Republic of Congo have surpassed 5,500 with over 2,600 deaths, marking one of the highest weekly death tolls yet with more than 300 deaths in the past week. The outbreak remains the fastest-spreading on record, and health workers continue to struggle to contain the virus amid persistent challenges.",
+          "news": [
+            {
+              "news_id": "f2faa48a62b55e3daa58b5c4469cd655",
+              "url": "https://news.mongabay.com/short-article/2026/08/congos-ebola-outbreak-records-one-of-its-highest-weekly-death-tolls-yet/",
+              "headline": "Congo’s Ebola outbreak records one of its highest weekly death tolls yet",
+              "body": "BUNIA, Congo (AP) — More than 300 people died of Ebola in eastern Congo in the past week, one of the highest weekly tolls yet, government data showed Monday, as health workers struggle to catch up with an outbreak that is spreading at unprecedented speed. Ministry of Health data showed that as of Saturday, the outbreak had recorded […]",
+              "published_date": "2026-08-25",
+              "outlet": "Mongabay News",
+              "image": "https://www.bing.com/th?id=ONUT.yPn7ggDjz91o9gw8nTqKJA"
+            },
+            {
+              "news_id": "6bf8fb2de3cb5961b56ad25df322f4cf",
+              "url": "https://www.usnews.com/news/health-news/articles/2026-08-25/ebola-is-still-killing-in-central-africa-these-groups-are-working-to-save-lives",
+              "headline": "Ebola Is Still Killing In Central Africa. These Groups Are Working To Save Lives",
+              "body": "The current outbreak is only the third of the Bundibugyo strain in central Africa. Congo officials are reporting a 44% ...",
+              "published_date": "2026-08-26T03:15:07+00:00",
+              "outlet": "U.S. News & World Report",
+              "image": "https://www.bing.com/th?id=ONUT.tULGt5nVGI7Bs-HBOfCplw"
+            },
+            {
+              "news_id": "080fdf3fc49a5947a192a3f48b6f9d6b",
+              "url": "https://realnewsmagazine.net/dr-congo-ebola-cases-top-5500-as-who-warns-of-crisis/",
+              "headline": "DR Congo Ebola cases top 5,500 as WHO warns of crisis",
+              "body": "CONFIRMED Ebola cases in the Democratic Republic of the Congo (DRC) have surpassed 5,500, with more than 2,600 deaths, government figures showed Monday. The World Health Organisation (WHO) said the outbreak reached a “defining moment” more than 100 days after it was declared. The latest official tally, with data through Saturday, recorded 5,514 confirmed cases […]",
+              "published_date": "2026-08-24",
+              "outlet": "realnewsmagazine",
+              "image": ""
+            },
+            {
+              "news_id": "99a6f871a6a45ad098d438c9fc1f7090",
+              "url": "https://www.npr.org/2026/08/25/nx-s1-5944343/health-the-drc-ebola-outbreak-is-spreading-at-a-rapid-pace-why",
+              "headline": "Health: The DRC Ebola Outbreak Is Spreading At A Rapid Pace. Why? : 1A",
+              "body": "The current Ebola outbreak in the Democratic Republic of the Congo is the deadliest in the country’s history.With over 2,500 deaths and more than 5,000 confirmed cases, it’s now the second largest ever worldwide. And it’s spreading at record speed. It’s even outpacing the West Africa outbreak that killed more than 11,000 people between 2014 and 2016.What do we know about why this outbreak is moving so quickly?Find more of our programs online. Listen to 1A sponsor-free by signing up for 1A+ at plus.npr.org/the1a.",
+              "published_date": "2026-08-25",
+              "outlet": "NPR",
+              "image": "https://www.bing.com/th?id=ONUT.sspGLbIMgqg3ipSGBVv_RA"
+            }
+          ]
         }
       ],
-      "logs_total": 29
+      "logs_total": 30
     },
     {
       "incident_id": "20260511-XX-DR",
@@ -3522,7 +3576,7 @@
         "gdacs": 1,
         "ercc": 0,
         "healthmap": 0,
-        "news": 166
+        "news": 168
       },
       "source_links": [
         {
@@ -4168,6 +4222,10 @@
           "published_date": "2026-08-24T19:20:45+00:00"
         },
         {
+          "headline": "Dimmitt implements Stage 1 drought restrictions, closes splash park",
+          "published_date": "2026-08-25"
+        },
+        {
           "headline": "A drought’s impact on cattle ranches",
           "published_date": "2026-08-25"
         },
@@ -4206,9 +4264,13 @@
         {
           "headline": "Amarillo City Council meets Tuesday on drought contingency plan, tax rate, old...",
           "published_date": "2026-08-25T13:24:44+00:00"
+        },
+        {
+          "headline": "City of Dimmitt implements drought contingency plan",
+          "published_date": "2026-08-25T20:52:29+00:00"
         }
       ],
-      "news_total": 166,
+      "news_total": 168,
       "logs": [
         {
           "log_date": "2026-08-18",
@@ -4871,7 +4933,7 @@
       "incident_id": "20260521-CD-DR",
       "tree_id": "d250f47c64bb40ce8843fadf6b74f707",
       "canonical_name": "Drought Buyende, DR Congo 2026-05-21",
-      "summary": "The selected news reports that East Africa is bracing for a prolonged food crisis as another El Niño season looms, with experts warning of crop failure and worsening effects on an already dire situation. The broader El Niño phenomenon is also expected to contribute to record global temperatures, potentially exacerbating drought conditions in the region.",
+      "summary": "Six million people in Somalia are now facing acute hunger, with nearly two million children at emergency levels, as severe drought and conflict worsen amidst falling humanitarian funding. In Kenya, drought has pushed food prices up, with maize rising 3.3% and beans 2.4-2.9% in July, while UNICEF reports a 32% jump in children treated for severe malnutrition in Somalia following aid cuts.",
       "country": "DR Congo",
       "iso2": "CD",
       "lat": 1.3,
@@ -4890,7 +4952,7 @@
       "disease_name": null,
       "event_date": "2026-05-21",
       "first_reported_date": "2026-05-21",
-      "last_updated_date": "2026-08-25",
+      "last_updated_date": "2026-08-26",
       "days_since_event": 97,
       "source_count": 1,
       "should_report": false,
@@ -4901,7 +4963,7 @@
         "gdacs": 1,
         "ercc": 0,
         "healthmap": 0,
-        "news": 14
+        "news": 18
       },
       "source_links": [
         {
@@ -4959,6 +5021,10 @@
           "published_date": "2026-08-17"
         },
         {
+          "headline": "Somalia faces another hunger crisis and the UN food agency head says it has far less funds to help",
+          "published_date": "2026-08-20"
+        },
+        {
           "headline": "What is El Nino – and is climate change making the weather phenomenon worse?",
           "published_date": "2026-08-21"
         },
@@ -4975,11 +5041,23 @@
           "published_date": "2026-08-22"
         },
         {
+          "headline": "Six million Somalis face acute hunger as drought and conflict worsen",
+          "published_date": "2026-08-24"
+        },
+        {
           "headline": "Relentless heat and drought take a toll on herders’ physical and mental health, in Kenya and the US",
           "published_date": "2026-08-25"
+        },
+        {
+          "headline": "Drought bites farmers, pushes food prices up",
+          "published_date": "2026-08-25T06:30:00+00:00"
+        },
+        {
+          "headline": "Somalia child hunger crisis deepens after aid cuts, UNICEF says",
+          "published_date": "2026-08-26"
         }
       ],
-      "news_total": 14,
+      "news_total": 18,
       "logs": [
         {
           "log_date": "2026-08-10",
@@ -5115,9 +5193,60 @@
               "image": "https://s.yimg.com/lo/mysterio/api/214864a2f8038223e105bbef848f48449855ba0a4d2c44cac6da8f2fb8aa56ba/lightyear_networkapi/resizefill_w1200;quality_80;format_jpg/https://media.zenfs.com/en/the_independent_577/b9f52e84987ac54cc5a28ef61cb0f636.jpg"
             }
           ]
+        },
+        {
+          "log_date": "2026-08-26",
+          "summary": "Six million people in Somalia are now facing acute hunger, with nearly two million children at emergency levels, as severe drought and conflict worsen amidst falling humanitarian funding. In Kenya, drought has pushed food prices up, with maize rising 3.3% and beans 2.4-2.9% in July, while UNICEF reports a 32% jump in children treated for severe malnutrition in Somalia following aid cuts.",
+          "news": [
+            {
+              "news_id": "df55d8427898556eb76a46dea9233ff1",
+              "url": "https://www.rfi.fr/en/africa/20260824-six-million-somalis-face-acute-hunger-as-drought-and-conflict-worsen",
+              "headline": "Six million Somalis face acute hunger as drought and conflict worsen",
+              "body": "Six million people in Somalia are facing acute hunger, with nearly two million children at emergency levels, as severe drought, conflict and falling humanitarian funding deepen what the UN describes…",
+              "published_date": "2026-08-24",
+              "outlet": "Radio France Internationale",
+              "image": "https://s.rfi.fr/media/display/089fa040-9f80-11f1-979d-005056a97e36/w:1280/p:16x9/AP26232458355606-1.jpg"
+            },
+            {
+              "news_id": "817d481edc485708abff45570c90fd7e",
+              "url": "https://www.newsday.com/news/nation/hunger-food-aid-somalia-africa-wfp-k44325",
+              "headline": "Somalia faces another hunger crisis and the UN food agency head says it has far less funds to help",
+              "body": "Six million people are facing acute food insecurity in Somalia while the World Food Program only has a tenth of the resources to help than it did during the country's last hunger crisis.",
+              "published_date": "2026-08-20",
+              "outlet": "Newsday",
+              "image": "https://cdn.newsday.com/ace/c:ZjE0ZTlhOGUtYzE1Ni00:NGEwMjljNWItM2U5NC00/landscape/1280"
+            },
+            {
+              "news_id": "00f4b33c865f50ae94718fa70383b2f0",
+              "url": "https://www.yahoo.com/news/science/articles/relentless-heat-drought-toll-herders-140406774.html",
+              "headline": "Relentless heat and drought take a toll on herders’ physical and mental health, in Kenya and the US",
+              "body": "Whether in Kenya or California, herders face dangerous temperatures and difficult conditions that put a strain on their health.",
+              "published_date": "2026-08-25",
+              "outlet": "The Conversation · via Yahoo News",
+              "image": "https://media.zenfs.com/en/the_conversation_us_articles_815/13e5583b44058740e4d1fced00b68fc7.jpg"
+            },
+            {
+              "news_id": "eaaf2bb045805e40937d585e4e97c489",
+              "url": "https://www.the-star.co.ke/counties/rift-valley/2026-08-25-drought-bites-farmers-pushes-food-prices-up",
+              "headline": "Drought bites farmers, pushes food prices up",
+              "body": "According to the Alliance for Green Revolution in Africa (AGRA) July Food Security Monitor, maize prices in Kenya rose by 3.3 per cent in July, while bean prices increased by between 2.4 and 2.9 per cent as domestic supplies tightened. Rice prices also edged up by 0.3 per cent.",
+              "published_date": "2026-08-25T06:30:00+00:00",
+              "outlet": "The Star",
+              "image": "https://cdn.radioafrica.digital/image/2026/08/836e71e4-d487-4f16-9b29-edc76bf92f00.webp?1787629013128"
+            },
+            {
+              "news_id": "f39cf97480255a88b76527ad375e78db",
+              "url": "https://www.msn.com/en-us/news/world/somalia-child-hunger-crisis-deepens-after-aid-cuts-unicef-says/ar-AA2aH7dd",
+              "headline": "Somalia child hunger crisis deepens after aid cuts, UNICEF says",
+              "body": "The drought-stricken country has recorded a 32 percent jump in the number of children treated for severe malnutrition.",
+              "published_date": "2026-08-26",
+              "outlet": "Al Jazeera",
+              "image": "https://www.aljazeera.com/wp-content/uploads/2026/08/reuters_6a893b8c-1787378572.jpg?resize=1920,1440"
+            }
+          ]
         }
       ],
-      "logs_total": 3
+      "logs_total": 4
     },
     {
       "incident_id": "20260606-CN-FL",
@@ -5690,7 +5819,7 @@
       "incident_id": "20260624-VE-EQ",
       "tree_id": "387baafc1c6b5a0391293c7f917b5333",
       "canonical_name": "Earthquake M7.2 San Felipe, Venezuela 2026-06-24",
-      "summary": "Venezuela’s interim government reported that the death toll from the June 24 twin earthquakes has risen to 6,509, as reconstruction efforts advance. Meanwhile, families of Venezuelans deported from the United States who died in the quakes are demanding an apology from the government, alleging authorities failed to protect the deportees.",
+      "summary": "Relatives of Venezuelans deported from the US who died in the earthquakes are demanding an apology from the interim government. Meanwhile, flash floods in Caracas destroyed shelters housing families displaced by the quakes, compounding the crisis. Two months on, only about 1,700 of nearly 7,000 businesses in La Guaira have reopened.",
       "country": "Venezuela",
       "iso2": "VE",
       "lat": 10.4085,
@@ -5720,7 +5849,7 @@
         "gdacs": 1,
         "ercc": 1,
         "healthmap": 0,
-        "news": 382
+        "news": 385
       },
       "source_links": [
         {
@@ -7272,6 +7401,10 @@
           "published_date": "2026-08-24"
         },
         {
+          "headline": "Flash floods in Venezuela turn heavy rain into a humanitarian crisis",
+          "published_date": "2026-08-24"
+        },
+        {
           "headline": "Families of Venezuelans deported from US who died in quakes demand apology",
           "published_date": "2026-08-25"
         },
@@ -7286,9 +7419,17 @@
         {
           "headline": "Venezuela earthquake death toll rises to 6,509 as reconstruction advances",
           "published_date": "2026-08-25"
+        },
+        {
+          "headline": "Apology sought for deportees killed in Venezuelan quakes",
+          "published_date": "2026-08-25"
+        },
+        {
+          "headline": "Two months after Venezuela’s earthquakes, La Guaira gets back to work",
+          "published_date": "2026-08-25"
         }
       ],
-      "news_total": 382,
+      "news_total": 385,
       "logs": [
         {
           "log_date": "2026-06-28",
@@ -7405,102 +7546,6 @@
           ]
         },
         {
-          "log_date": "2026-08-22",
-          "summary": "A new Washington Post investigation reveals that Venezuelan officials knew public housing buildings could collapse in a quake but built them anyway. Venezuela's oil sales have surged during the recovery, providing some economic support. Grassroots aid continues, with children in Florida collecting supplies for survivors.",
-          "news": [
-            {
-              "news_id": "34f7f024420d5426b2795f9bccbab6cf",
-              "url": "https://www.msn.com/en-gb/news/world/a-tale-of-two-buildings-how-quake-rescue-efforts-differed-in-colombia-and-venezuela/ar-AA2aaROc",
-              "headline": "A tale of two buildings: how quake rescue efforts differed in Colombia and Venezuela",
-              "body": "By Julia Symmes Cobb and Sarah Morland CALI, Colombia, Aug 15 (Reuters) - At a flattened apartment block known as Los Cocos in northern Venezuela, civilians toiled with little support to pull the living and the dead from the rubble.",
-              "published_date": "2026-08-21",
-              "outlet": "Reuters",
-              "image": "https://www.reuters.com/resizer/v2/H4YE326OKJOYDOHC5W24SGLFXQ.jpg?auth=0595cfec0a05680922ebecf4bc2a559d1359850cb168e5af006461229aee2b4d&height=1005&width=1920&quality=80&smart=true"
-            },
-            {
-              "news_id": "98299c6aa4fe5d0195150b425dfd53ae",
-              "url": "https://www.jacksonville.com/picture-gallery/news/local/2026/08/20/two-jacksonville-area-child-centers-collected-supplies-for-venezuela/91393326007/",
-              "headline": "Children collect supplies for earthquake-ravaged Venezuela",
-              "body": "Primrose School on Crosswater Parkway and Primrose School of Glen Kernan collected toys, books and essential items and tie-dyed socks for Venezuela.",
-              "published_date": "2026-08-20",
-              "outlet": "The Florida Times-Union",
-              "image": "https://s.yimg.com/bo/736882e5-8dc0-5afd-aa47-5173702865c9_1787274662020.jpg"
-            },
-            {
-              "news_id": "3284af992dd75683a8ce85f14018f0fe",
-              "url": "https://www.yahoo.com/news/world/articles/trauma-venezuela-earthquakes-still-haunts-103000482.html",
-              "headline": "The trauma of Venezuela’s earthquakes still haunts thousands nearly two months later",
-              "body": "They lost family members, homes and pieces of their lives. Nearly two months after the earthquakes, thousands of Venezuelans are still coping with psychological wounds that could take far longer to he...",
-              "published_date": "2026-08-21",
-              "outlet": "Miami Herald · via Yahoo News",
-              "image": "https://media.zenfs.com/en/miami_herald_mcclatchy_975/2cd0ade6095faeef6a32c6bc4c167992.jpg"
-            },
-            {
-              "news_id": "0e51a0473a1556b7b4fc6ea0a1a62392",
-              "url": "https://www.washingtonpost.com/world/2026/08/22/venezuela-knew-quake-could-topple-these-buildings-it-built-them-anyway/",
-              "headline": "Venezuela knew a quake could topple these buildings. It built them anyway.",
-              "body": "Public housing was supposed to be able to withstand powerful earthquakes. Instead, a Post investigation found that those ...",
-              "published_date": "2026-08-18T13:40:54+00:00",
-              "outlet": "The Washington Post",
-              "image": "https://www.bing.com/th?id=ONUT.Egu9sP4CGI6HFzAyxbv_Yw"
-            },
-            {
-              "news_id": "1bc64a4d97c15a6ba92f88ed3ff86656",
-              "url": "https://www.prnewswire.com/news-releases/pollo-campero-to-host-national-fundraising-day-to-support-earthquake-victims-in-venezuela-and-colombia-858305718.html",
-              "headline": "POLLO CAMPERO TO HOST NATIONAL FUNDRAISING DAY TO SUPPORT EARTHQUAKE VICTIMS IN VENEZUELA AND COLOMBIA",
-              "body": "/PRNewswire/ -- Pollo Campero, the Guatemalan-born fast-casual restaurant, is calling on communities across the United States to support earthquake relief and...",
-              "published_date": "2026-08-17",
-              "outlet": "PR Newswire",
-              "image": "https://s.yimg.com/bo/44143826-0b3f-51f1-a5e0-1ee1bd4565c6_1786993533058.jpg"
-            },
-            {
-              "news_id": "0c39a8163ff05ae1b22ecd73f2dddf50",
-              "url": "https://www.longwarjournal.org/archives/2026/08/venezuela-continues-difficult-recovery-from-twin-earthquakes-as-oil-sales-surge.php",
-              "headline": "Venezuela continues difficult recovery from twin earthquakes as oil sales surge",
-              "body": "Venezuela’s recovery from massive earthquakes on June 24 has become increasingly costly as the death toll has climbed, the extent of infrastructure damage has come into sharper focus, and reconstruction has placed additional strain on an already fragile economy. However, Caracas’ oil sector has also continued to expand.",
-              "published_date": "2026-08-20",
-              "outlet": "FDD's Long War Journal",
-              "image": "https://www.bing.com/th?id=ONUT.lX3hYwMkq9dancfiPnddYg"
-            },
-            {
-              "news_id": "cad6d617081755e5b4ef2a323296bdf2",
-              "url": "https://www.latinousa.org/2026/08/21/more-than-natural-disasters-colombia-venezuela-puerto-rico/",
-              "headline": "More than Natural Disasters: Colombia, Venezuela, Puerto Rico",
-              "body": "Thousands are dead, thousands more injured and missing. The earthquakes in Colombia and Venezuela have been devastating. And ...",
-              "published_date": "2026-08-18T03:10:08+00:00",
-              "outlet": "Latino USA",
-              "image": "https://www.bing.com/th?id=ONUT.UJO1HkvuZuCNY1MS7FLoZg"
-            },
-            {
-              "news_id": "b02f067f613c5c06a032230f6274d530",
-              "url": "https://www.miamiherald.com/news/nation-world/world/americas/venezuela/article316952703.html",
-              "headline": "The trauma of Venezuela’s earthquakes still haunts thousands nearly two months later",
-              "body": "They lost family members, homes and pieces of their lives. Nearly two months after the earthquakes, thousands of Venezuelans ...",
-              "published_date": "2026-08-21T16:09:01+00:00",
-              "outlet": "Miami Herald",
-              "image": "https://www.bing.com/th?id=ONUT.6VNtgbLy3e12sAVoW-iMQg"
-            },
-            {
-              "news_id": "20f830592d0d52b2843c2748aea74af5",
-              "url": "https://www.hjnews.com/world/venezuela-earthquake/image_fea4f7ac-a20e-5984-98f3-a2709484f0cf.html",
-              "headline": "Venezuela Earthquake",
-              "body": "Leida Suarez, center, and Eucaris Silva, left, hold the urns with the ashes of the members of their family who died in the earthquakes in La Guaira, Venezuela, Saturday, Aug.",
-              "published_date": "2026-08-15",
-              "outlet": "The Herald Journal",
-              "image": "https://s.yimg.com/bo/e8570f81-afe8-5ef7-9ebb-736572da2665_1786854412920.jpg"
-            },
-            {
-              "news_id": "9c9d13428dbb5449a7f64217cce4f548",
-              "url": "https://www.jacksonville.com/story/news/local/2026/08/21/jacksonville-children-send-aid-to-earthquake-ravaged-venezuela/91336779007/",
-              "headline": "Jacksonville-area children send earthquake aid to Venezuela",
-              "body": "Children at twp Jacksonville-area child care centers collected toys, books and essential items for survivors of the recent earthquakes in Venezuela.",
-              "published_date": "2026-08-21",
-              "outlet": "Florida Times-Union",
-              "image": "https://www.bing.com/th?id=ONUT.eBAk1npePMMrCau44Up2iw"
-            }
-          ]
-        },
-        {
           "log_date": "2026-08-24",
           "summary": "The earthquake death toll is reported at 6,438, with families continuing to mourn, including the funeral of two children in La Guaira. A benefit concert at the Hollywood Bowl featuring Chris Martin and the LA Philharmonic was announced to raise funds for victims.",
           "news": [
@@ -7601,9 +7646,42 @@
               "image": "https://www.bing.com/th?id=ONUT.78AsakM7aV7iatg0kXqjbQ"
             }
           ]
+        },
+        {
+          "log_date": "2026-08-26",
+          "summary": "Relatives of Venezuelans deported from the US who died in the earthquakes are demanding an apology from the interim government. Meanwhile, flash floods in Caracas destroyed shelters housing families displaced by the quakes, compounding the crisis. Two months on, only about 1,700 of nearly 7,000 businesses in La Guaira have reopened.",
+          "news": [
+            {
+              "news_id": "f3b5518b7ef3515899e8dea9d082b8e2",
+              "url": "https://www.rte.ie/news/world/2026/0825/1589078-venezuela-earthquake/",
+              "headline": "Apology sought for deportees killed in Venezuelan quakes",
+              "body": "Relatives of Venezuelan deportees from the US who died in the earthquakes that struck their country have demanded an apology from Venezuela's interim government.",
+              "published_date": "2026-08-25",
+              "outlet": "RTÉ Ireland",
+              "image": "https://www.bing.com/th?id=ONUT.wzjeWRlyLhw5LXIuxvzU6w"
+            },
+            {
+              "news_id": "36c49f098b4e585c99e1f4b0dc173abc",
+              "url": "https://www.yahoo.com/news/weather-news/articles/flash-floods-venezuela-turn-heavy-154229144.html",
+              "headline": "Flash floods in Venezuela turn heavy rain into a humanitarian crisis",
+              "body": "Heavy rain and flash floods in Caracas destroyed shelters for families displaced by earthquakes just weeks earlier.",
+              "published_date": "2026-08-24",
+              "outlet": "The Weather Channel · via Yahoo News",
+              "image": "https://media.zenfs.com/en/the_weather_channel_articles_180/3b07e749b6c1d49902e89f08108ac897.jpg"
+            },
+            {
+              "news_id": "d97ebf0ae8fa5acbbbc89b26ca6652af",
+              "url": "https://english.elpais.com/international/2026-08-25/from-tourists-to-rescue-workers-la-guaira-gets-back-to-work-after-venezuelas-earthquakes.html",
+              "headline": "Two months after Venezuela’s earthquakes, La Guaira gets back to work",
+              "body": "Just over 1,700 of the nearly 7,000 businesses operating before the disaster are still open",
+              "published_date": "2026-08-25",
+              "outlet": "EL PAÍS English",
+              "image": "https://www.bing.com/th?id=ONUT.9eZCubw68UupaGcl6e4zqw"
+            }
+          ]
         }
       ],
-      "logs_total": 34
+      "logs_total": 35
     },
     {
       "incident_id": "20260626-PH-EQ",
@@ -9953,7 +10031,7 @@
       "incident_id": "20260715-UA-CF",
       "tree_id": "f22292f8c3ff448a920c3b1fe41d3aa0",
       "canonical_name": "Conflict Ukraine 2026-07-15",
-      "summary": "UK Prime Minister Andy Burnham arrived in Kyiv on August 24, hand-carrying blueprints for Ukraine to build long-range cruise missiles, defying Russian threats. President Zelensky claimed Putin is drafting 300,000 additional troops, while a Ukrainian drone debris incident killed two children in Russia. Norway pledged over $9 billion in aid for 2027, and fuel shortages from Ukrainian strikes on Russian refineries spread to Central Asia.\nFormer Defence Minister Mykhailo Fedorov reiterated his call for elections and warned Ukraine is slowly losing the war, while President Zelensky set a window for U.S. mediation until summer 2027. Putin threatened retaliation on Ukraine's economic sectors, and Ukrainian drone strikes expanded to target Ozon warehouses. Diplomatic efforts included a Vatican official meeting Lavrov in Moscow and German Foreign Minister Johann Wadephul visiting Kyiv, while a coalition in Kyiv committed to further sanctions and defense bolstering.",
+      "summary": "Ex-Defense Minister Mykhailo Fedorov publicly stated that Ukraine is \"slowly losing to Russia,\" citing a lack of overall vision for winning the conflict and calling for fundamental changes to avoid defeat. Meanwhile, President Zelensky indicated a potential window for US-mediated peace talks, as Kyiv develops proposals with American and European officials.",
       "country": "Ukraine",
       "iso2": "UA",
       "lat": 48.9,
@@ -9983,7 +10061,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 594
+        "news": 600
       },
       "source_links": [
         {
@@ -12365,6 +12443,30 @@
           "published_date": "2026-08-25"
         },
         {
+          "headline": "Ukraine is slowly losing to Russia, ex-Defense Minister Fedorov said: EADaily",
+          "published_date": "2026-08-25"
+        },
+        {
+          "headline": "Zelensky sees window for US mediation to end Ukraine war",
+          "published_date": "2026-08-25"
+        },
+        {
+          "headline": "Pakistan Urges UN to End Sudan Fighting, Back Ceasefire - Pakistan Today",
+          "published_date": "2026-08-25"
+        },
+        {
+          "headline": "Ukraine needs changes to avoid losing war, ousted defense minister says",
+          "published_date": "2026-08-25"
+        },
+        {
+          "headline": "Putin adviser claims Ukraine planned to invade Russia on 8 March 2022, so Russia attacked first",
+          "published_date": "2026-08-25"
+        },
+        {
+          "headline": "What Vladimir Putin’s shifting vocabulary reveals about Russia-Ukraine war",
+          "published_date": "2026-08-25"
+        },
+        {
           "headline": "Defying Russia, UK Leader Brings Missile-Making Plans To Ukraine",
           "published_date": "2026-08-25T00:00:00+00:00"
         },
@@ -12381,7 +12483,7 @@
           "published_date": "2026-08-25T08:18:00+00:00"
         }
       ],
-      "news_total": 594,
+      "news_total": 600,
       "logs": [
         {
           "log_date": "2026-07-24",
@@ -12719,129 +12821,6 @@
               "published_date": "2026-07-24",
               "outlet": "CounterPunch",
               "image": ""
-            }
-          ]
-        },
-        {
-          "log_date": "2026-08-23",
-          "summary": "France pledged new interceptor missiles to Ukraine amid intensifying Russian strikes. Putin stated that Ukraine had opened \"Pandora's box\" with its strikes on economic targets. Russian and Ukrainian attacks killed 10 people, and a Ukrainian drone strike set a large Russian warehouse ablaze.\nA UK mercenary was sentenced in absentia in Moscow to a long prison term for fighting in Ukraine.",
-          "news": [
-            {
-              "news_id": "8d215b365025575d9e41321ef9e68c55",
-              "url": "https://yalibnan.com/2026/08/22/france-will-deliver-interceptor-missiles-to-ukraine-after-new-russian-strikes/",
-              "headline": "France will deliver interceptor missiles to Ukraine after new Russian strikes, Micron says",
-              "body": "French President Emmanuel Macron said Saturday that Paris would deliver new interceptor missiles to Ukraine after Russian strikes reportedly killed four people, including two children. The strikes ...",
-              "published_date": "2026-08-22",
-              "outlet": "Ya Libnan",
-              "image": ""
-            },
-            {
-              "news_id": "7634a87bdfe75ec69c6251f48ba146d2",
-              "url": "https://english.alarabiya.net/News/world/2026/08/22/france-pledges-new-interceptor-missiles-to-ukraine-as-russian-strikes-intensify",
-              "headline": "France pledges new interceptor missiles to Ukraine as Russian strikes intensify",
-              "body": "France on Saturday promised to deliver new interceptor missiles to Ukraine amid a surge in Russian strikes that have pushed ...",
-              "published_date": "2026-08-20T02:41:19+00:00",
-              "outlet": "Al Arabiya English",
-              "image": "https://www.bing.com/th?id=ONUT.v6bUSUimtR4TGg5ipSa3qw"
-            },
-            {
-              "news_id": "87eb1ec158bd5a0bb8c66f75cdff714a",
-              "url": "https://www.msn.com/en-us/news/world/ukraine-war-live-russia-s-attack-on-ukraine-mall-kills-16/ar-AA2aHw2c?ocid=BingNewsVerp",
-              "headline": "Ukraine war live: Russia’s attack on Ukraine mall kills 16",
-              "body": "Ukraine-Russia war latest: Zelensky vows response to Russia’s ‘terrorist attack’ as strike on mall kills 16 - Nine people, ...",
-              "published_date": "2026-08-23",
-              "outlet": "The Independent on MSN",
-              "image": "https://www.bing.com/th?id=ORMS.ea1cc965eccaedbf6d559fa2c966ee63"
-            },
-            {
-              "news_id": "92bc7fa767b453748bd9263891332365",
-              "url": "https://www.reuters.com/world/europe/putin-says-ukraine-opened-pandoras-box-with-strikes-economic-targets-2026-08-22/",
-              "headline": "Putin says Ukraine opened 'Pandora's box' with strikes on economic targets",
-              "body": "Russian President Vladimir Putin said in comments published on Saturday that Kyiv had opened \"Pando...",
-              "published_date": "2026-08-22T15:41:22+00:00",
-              "outlet": "Reuters",
-              "image": "https://s.yimg.com/bo/5e1aeb87-a5d0-5f88-914f-c5701ab9b0c4_1786868207430.jpg"
-            },
-            {
-              "news_id": "161c53c37d4d5518a0ee2c3140eef32f",
-              "url": "https://eadaily.com/en/news/2026/08/22/a-mercenary-from-the-uk-was-sentenced-in-moscow",
-              "headline": "A mercenary from the UK was sentenced in Moscow: EADaily",
-              "body": "EADaily, August 22nd, 2026. In Moscow, a mercenary from the UK was sentenced to a long term of imprisonment in absentia, the Russian Prosecutor General's Office said.",
-              "published_date": "2026-08-22",
-              "outlet": "EADaily",
-              "image": "https://www.bing.com/th?id=ONUT.sIaFtXFn_P2CjTLKfo7Zwg"
-            },
-            {
-              "news_id": "84dbebbde49f5e68a09464225552eb1f",
-              "url": "https://www.woonsocketcall.com/news/national_and_world_news/ap-news-summary-at-9-09-p-m-edt/article_bda0f754-2ff4-562b-a815-5ffba195cf11.html",
-              "headline": "AP News Summary at 10:14 p.m. EDT",
-              "body": "Russian and Ukrainian attacks kill 10 people, a day after deadly shopping mall drone strike",
-              "published_date": "2026-08-22",
-              "outlet": "The Woonsocket Call",
-              "image": "https://s.yimg.com/bo/a5425117-931e-5987-a5a5-92b27add4789_1786278995346.png.cf.jpg"
-            },
-            {
-              "news_id": "72a566fdfbe9591ab9498edd485357a5",
-              "url": "https://cryptobriefing.com/10-killed-in-russian-ukrainian-attacks-amid-escalating-conflict/",
-              "headline": "10 killed in Russian, Ukrainian attacks amid escalating conflict",
-              "body": "Ten killed in recent Russian and Ukrainian attacks, raising tensions. Russia entering Druzkhivka by December 31, 2026 at 55% YES.",
-              "published_date": "2026-08-22",
-              "outlet": "Crypto Briefing",
-              "image": ""
-            },
-            {
-              "news_id": "969e9ed121a050babcb40d42d9a36075",
-              "url": "https://nypost.com/2026/08/22/world-news/10-killed-in-russian-and-ukrainian-attacks-a-day-after-fatal-shopping-mall-drone-strike/",
-              "headline": "10 killed in Russian and Ukrainian attacks a day after fatal shopping mall drone strike",
-              "body": "Moscow’s forces have recently intensified their ballistic missile attacks on Kyiv, exploiting Ukraine’s chronic shortage of US-made Patriot air defense interceptors.",
-              "published_date": "2026-08-22",
-              "outlet": "New York Post",
-              "image": "https://www.bing.com/th?id=ONUT.oHjULXXDlhwstB8BGSu7sw"
-            },
-            {
-              "news_id": "f55a411f16b558e793ce9e53bd857d22",
-              "url": "https://yalibnan.com/2026/08/22/time-to-end-russias-game-of-chicken-war-against-ukraine/",
-              "headline": "Time to end Russia’s “Game of Chicken” war against Ukraine",
-              "body": "Russia launched this war, but continued geopolitical brinkmanship is destroying Ukraine while exposing Europe—and potentially ...",
-              "published_date": "2026-08-22",
-              "outlet": "Ya Libnan",
-              "image": "https://www.bing.com/th?id=ONUT.phX0UkBbTvIOTYn7KbrCiA"
-            },
-            {
-              "news_id": "e9b7837a7868505e9862fd0f10a42e2e",
-              "url": "https://www.msn.com/en-gb/news/world/putin-says-ukraine-opened-pandoras-box-with-strikes-on-economic-targets/ar-AA2aIFmo?ocid=BingNewsVerp",
-              "headline": "Putin says Ukraine opened 'Pandora's box' with strikes on economic targets",
-              "body": "Aug 22 (Reuters) - Russian President Vladimir Putin said in comments published on Saturday that Kyiv had opened \"Pandora's box\" with its strikes on Russian economic targets, saying that Russia would ...",
-              "published_date": "2026-08-23",
-              "outlet": "Reuters on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "95df1648ce955c968809b7cc53709230",
-              "url": "https://www.thejakartapost.com/world/2026/08/23/trump-heads-into-midterms-short-on-foreign-policy-wins",
-              "headline": "Trump heads into midterms short on foreign policy wins - Americas - The Jakarta Post",
-              "body": "With the Iran war now at a costly standoff and crises from Ukraine to Gaza still unresolved, President Donald Trump's ambitious foreign policy agenda appears stuck as he heads into November's midterm elections.",
-              "published_date": "2026-08-23",
-              "outlet": "The Jakarta Post",
-              "image": "https://www.bing.com/th?id=ONUT.HOonCFsQOTQYw4it6qMtBg"
-            },
-            {
-              "news_id": "db40b1c2b7ce536cad1cf5a5e56397cb",
-              "url": "https://www.express.co.uk/news/world/2241463/putin-nightmare-huge-russian-warehouse-drone-strike-ukraine",
-              "headline": "Putin nightmare as huge Russian warehouse goes up in smoke after Ukrainian drone strike",
-              "body": "The latest Russian attacks on Ukraine continue in parallel. At least two people were killed overnight by Russian drone and ...",
-              "published_date": "2026-08-23T02:41:19+00:00",
-              "outlet": "Daily Express",
-              "image": "https://www.bing.com/th?id=ONUT.h94_-7DClVkw_wYcN0zaGQ"
-            },
-            {
-              "news_id": "39c0988f660157de9ddd9f138ef65e36",
-              "url": "https://www.ilfoglio.it/en/world/2026/08/22/news/where-aircraft-carriers-die-stories-of-wars-that-grow-old-and-fester--405346",
-              "headline": "Where aircraft carriers die: stories of wars that grow old and fester",
-              "body": "The disasters faced by the Americans when dealing with toilets. And the aircraft carriers with broken toilets in Ukraine, from Vietnam to Afghanistan: the wars that were supposed to be short, the superpowers wearing themselves out, and biting off more than they can chew",
-              "published_date": "2026-08-22",
-              "outlet": "Il Foglio",
-              "image": "https://www.bing.com/th?id=ONUT.ju0PeY9Qiz_Cj4Kz1xCPMw"
             }
           ]
         },
@@ -13369,15 +13348,75 @@
               "image": ""
             }
           ]
+        },
+        {
+          "log_date": "2026-08-26",
+          "summary": "Ex-Defense Minister Mykhailo Fedorov publicly stated that Ukraine is \"slowly losing to Russia,\" citing a lack of overall vision for winning the conflict and calling for fundamental changes to avoid defeat. Meanwhile, President Zelensky indicated a potential window for US-mediated peace talks, as Kyiv develops proposals with American and European officials.",
+          "news": [
+            {
+              "news_id": "1ba54db00d1f5dcf86aa879a0feae468",
+              "url": "https://eadaily.com/en/news/2026/08/25/ukraine-is-slowly-losing-to-russia-ex-defense-minister-fedorov-said",
+              "headline": "Ukraine is slowly losing to Russia, ex-Defense Minister Fedorov said: EADaily",
+              "body": "EADaily, August 25th, 2026. Ukraine is gradually losing to Russia, said Ukrainian ex-Defense Minister Mikhail Fedorov.",
+              "published_date": "2026-08-25",
+              "outlet": "EADaily",
+              "image": "https://www.bing.com/th?id=ONUT.nWt1YPEr5sw9HQullA0jQw"
+            },
+            {
+              "news_id": "157e50557f935646b316df7de350dbeb",
+              "url": "https://www.rte.ie/news/ukraine/2026/0825/1589149-ukraine-russia-war/",
+              "headline": "Zelensky sees window for US mediation to end Ukraine war",
+              "body": "Ukraine sees a potential window for peace talks with Russia, as Kyiv develops proposals with US and European officials.",
+              "published_date": "2026-08-25",
+              "outlet": "RTÉ Ireland",
+              "image": "https://www.bing.com/th?id=ONUT.Q6kDhlzMe-6Yb88uXztMRQ"
+            },
+            {
+              "news_id": "19cff0b7ff5f5eddbea13a6c4e4ccb8a",
+              "url": "https://www.pakistantoday.com.pk/2026/08/25/at-unsc-pakistan-pushes-diplomacy-dialogue-to-end-sudan-ukraine-conflicts",
+              "headline": "Pakistan Urges UN to End Sudan Fighting, Back Ceasefire - Pakistan Today",
+              "body": "At the UN Security Council, Pakistan called for an immediate and complete ceasefire in Sudan, condemned RSF aggression, urged safe humanitarian access, and stressed diplomacy over military solutions.",
+              "published_date": "2026-08-25",
+              "outlet": "Pakistan Today",
+              "image": "https://www.bing.com/th?id=ONUT.FdhD9Ag36ru441EuDJ-rJA"
+            },
+            {
+              "news_id": "2db3ddd543c15d5d95994ecc08825c83",
+              "url": "https://www.yahoo.com/news/politics/articles/ukraine-needs-changes-avoid-losing-221054100.html",
+              "headline": "Ukraine needs changes to avoid losing war, ousted defense minister says",
+              "body": "Fedorov, a young reformer whose dismissal last month sparked weeks of protests, said Ukraine lacked any overall vision for how to win the conflict.",
+              "published_date": "2026-08-25",
+              "outlet": "Defense News · via Yahoo News",
+              "image": "https://media.zenfs.com/en/defense_news_499/b56ca0eadbd6864e0f84a51b37e44024.jpg"
+            },
+            {
+              "news_id": "3b3d069843ce5e059c6daea85911b33e",
+              "url": "https://www.yahoo.com/news/world/articles/putin-adviser-claims-ukraine-planned-161700769.html",
+              "headline": "Putin adviser claims Ukraine planned to invade Russia on 8 March 2022, so Russia attacked first",
+              "body": "An adviser to Russian ruler Vladimir Putin has come up with yet another justification for Russia's war, claiming that Ukraine had planned to invade Russia on 8 March 2022, prompting Moscow to pre-empt...",
+              "published_date": "2026-08-25",
+              "outlet": "Ukrayinska Pravda · via Yahoo News",
+              "image": "https://media.zenfs.com/en/ukrayinska_pravda_articles_451/4e4af2204730f7c1d0df57b8b8cc75c2.jpg"
+            },
+            {
+              "news_id": "87bf28d5c2a859a6b97ffa55992e1f29",
+              "url": "https://www.newsweek.com/putin-shifting-vocabulary-language-russia-ukraine-war-12365693",
+              "headline": "What Vladimir Putin’s shifting vocabulary reveals about Russia-Ukraine war",
+              "body": "Russia's President is a master orator, but years of war in Ukraine reveals cracks in the Kremlin's carefully crafted narrative.",
+              "published_date": "2026-08-25",
+              "outlet": "Newsweek",
+              "image": "https://s.yimg.com/bo/e667e4e3-29d0-5b70-aef8-10d9ddfc547d_1787681606997.jpg"
+            }
+          ]
         }
       ],
-      "logs_total": 33
+      "logs_total": 34
     },
     {
       "incident_id": "20260726-IR-CF",
       "tree_id": "13763def03ab448898154124734fe728",
       "canonical_name": "Iran/US war",
-      "summary": "As the U.S. prepares to unveil expanded secondary sanctions under Trump's \"economic D-Day\" campaign, Iran warned that supporting the measures would be considered an \"act of war\" and vowed harsh retaliation, while its top security chief threatened neighboring states against joining the economic pressure. A new poll found approval for the war dropped to just 31%, the lowest yet, as diplomatic efforts continued with Omani Foreign Minister planning a visit to Tehran for Strait of Hormuz talks and Pakistan's army chief also returning to Iran. Iran also escalated economic pressure by blacklisting 45 tankers in the Strait of Hormuz, threatening fines and cargo confiscation for violating its transit rules.\nOn August 25, Pakistan announced \"significant progress\" in talks with Iran aimed at mediating the conflict, as U.S. Treasury Secretary Bessent unveiled \"Operation Economic Outcast,\" a new round of sanctions designed to isolate Iran economically. Iran vowed retaliation against the widened sanctions, and Iranian state media aired threats against President Trump's son Barron, offering a $10 million bounty. Separately, a Reuters/Ipsos poll showed support for the war has fallen to 31% and President Trump's approval rating remained at a record low, while oil prices dropped 3% as markets interpreted the shift to economic pressure as a move away from renewed military escalation.",
+      "summary": "On August 25-26, Pakistan and Iran announced \"significant progress\" in talks to end the war, while Iran and Oman resumed discussions on managing the Strait of Hormuz and a temporary corridor. The U.S. unveiled \"Operation Economic Outcast,\" new sanctions targeting Bank Melli and 60 entities, and began planning to return diplomats to Middle East embassies. Separately, an oil tanker was struck off Oman, and Iran aired a video offering a $10 million bounty on Trump's son Barron, escalating rhetoric.",
       "country": "Iran",
       "iso2": "IR",
       "lat": 32.4,
@@ -13396,7 +13435,7 @@
       "disease_name": null,
       "event_date": "2026-07-26",
       "first_reported_date": "2026-07-26",
-      "last_updated_date": "2026-08-25",
+      "last_updated_date": "2026-08-26",
       "days_since_event": 31,
       "source_count": 1,
       "should_report": true,
@@ -13407,7 +13446,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 1115
+        "news": 1135
       },
       "source_links": [],
       "physical": {
@@ -17878,11 +17917,91 @@
           "published_date": "2026-08-25"
         },
         {
+          "headline": "‘OH MY’: Trump Thought He Had Iran Cornered Until Tehran Came for His Weak Spot with $10M Hit on Barron, Trump’s New Threat Warns of Absolute Chaos",
+          "published_date": "2026-08-25"
+        },
+        {
+          "headline": "Iran and Oman hold talks on managing the Strait of Hormuz and other news from around the Middle East",
+          "published_date": "2026-08-25"
+        },
+        {
+          "headline": "Trump’s Approval Rating Bottoms Out as Support For the Iran War Disintegrates",
+          "published_date": "2026-08-25"
+        },
+        {
+          "headline": "Oil hits one-week low as investors shrug off latest U.S. sanctions on Iran",
+          "published_date": "2026-08-25"
+        },
+        {
+          "headline": "Opinion - Iran’s attacks on US water systems are just the beginning",
+          "published_date": "2026-08-25"
+        },
+        {
+          "headline": "Buckle In America — Iran War Costs Are Steep And Growing",
+          "published_date": "2026-08-25"
+        },
+        {
+          "headline": "Iran Restarts Strait of Hormuz Talks With Oman While Trump Says All Mines Have Been Cleared: Brent Crude",
+          "published_date": "2026-08-25"
+        },
+        {
+          "headline": "Iran May Have Little to Lose as U.S. Tries to Squeeze Its Economy",
+          "published_date": "2026-08-25T00:00:00+00:00"
+        },
+        {
+          "headline": "Bessent’s ‘economic D-Day’ may not end the war — or $4 gas",
+          "published_date": "2026-08-25T00:00:00+00:00"
+        },
+        {
           "headline": "Pakistan and Iran made 'significant progress' in talks on conflict, minister...",
           "published_date": "2026-08-25T03:46:17+00:00"
+        },
+        {
+          "headline": "Pakistan, Iran made ‘significant progress’ to end US-Iran war, minister says",
+          "published_date": "2026-08-25T18:13:48+00:00"
+        },
+        {
+          "headline": "Buckle In America — Iran War Costs Are Steep And Growing",
+          "published_date": "2026-08-25T21:13:48+00:00"
+        },
+        {
+          "headline": "Hard lessons Trump has learned in Iran. Like, where's the exit?",
+          "published_date": "2026-08-26"
+        },
+        {
+          "headline": "US prepares to send diplomats back to Middle East embassies after Iran war evacuations, NYT reports",
+          "published_date": "2026-08-26"
+        },
+        {
+          "headline": "Iran and Oman hold talks on managing the Strait of Hormuz and other news from around the Middle East",
+          "published_date": "2026-08-26"
+        },
+        {
+          "headline": "Iran and Oman discuss temporary Hormuz corridor as impasse with US drags on - BusinessWorld Online",
+          "published_date": "2026-08-26"
+        },
+        {
+          "headline": "Hormuz tanker hit as Pakistan pushes Iran-US talks in Tehran",
+          "published_date": "2026-08-26"
+        },
+        {
+          "headline": "US starts bringing staff back to Middle East as Iran war tensions ease: Report",
+          "published_date": "2026-08-26"
+        },
+        {
+          "headline": "Trump’s latest wave of Iran sanctions: Which 60 entities are targeted?",
+          "published_date": "2026-08-26"
+        },
+        {
+          "headline": "The ripple effects of the Iran war threaten education for millions of children worldwide",
+          "published_date": "2026-08-26"
+        },
+        {
+          "headline": "What to Know About the Iranian Bank Singled Out in U.S. Economic War",
+          "published_date": "2026-08-26T00:00:00+00:00"
         }
       ],
-      "news_total": 1115,
+      "news_total": 1135,
       "logs": [
         {
           "log_date": "2026-07-27",
@@ -18139,192 +18258,6 @@
               "published_date": "2026-07-27",
               "outlet": "Boston Herald",
               "image": "https://www.bing.com/th?id=ONUT.wvOn0vnLkZ7wvhHPFw82Jg"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-08-23",
-          "summary": "On August 22, Iran permitted several Iraqi oil tankers to pass through the Strait of Hormuz, signaling a selective easing of restrictions, as the U.S. pivoted to an economic pressure campaign that President Trump hinted could be accompanied by renewed bombing. Iran's new hardline security chief threatened neighboring states against joining the U.S. economic isolation effort, while Iranian leaders, including President Pezeshkian, claimed the world has accepted Iran's victory in the conflict. Egypt also initiated efforts to revive U.S.-Iran negotiations amidst the ongoing standoff.\nNew reports indicate that traffic in the Strait of Hormuz has skyrocketed nearly 400% as analysts say Iran's grip on the critical waterway is weakening. Iran warned nearby nations against joining the US 'economic war' efforts and dismissed threatened new sanctions as signs of desperation from Washington. Analysts suggest Trump's economic isolation plan risks provoking Iranian strikes across the Gulf.",
-          "news": [
-            {
-              "news_id": "0748086734a1577b8a58c41dcbb88950",
-              "url": "https://www.msn.com/en-us/news/world/iran-us-war-live-tehran-allows-iraqi-tankers-through-hormuz/ar-AA2aGZNh?ocid=BingNewsVerp",
-              "headline": "Iran-US war live: Tehran allows Iraqi tankers through Hormuz",
-              "body": "Iran-US war latest: Tehran allows Iraqi tankers through Hormuz after Trump declares Strait as ‘American territory’ - US ...",
-              "published_date": "2026-08-23",
-              "outlet": "The Independent on MSN",
-              "image": "https://www.bing.com/th?id=ORMS.385f0ebc1b49fa9f0b92e6ba89cda03f"
-            },
-            {
-              "news_id": "13fcd67d5d8556cbaf83594d1894d38c",
-              "url": "https://www.msn.com/en-us/news/world/traffic-in-the-strait-of-hormuz-skyrockets-nearly-400-as-analysts-say-iran-s-grip-on-critical-waterway-weakens/ar-AA2aJpG8?ocid=BingNewsVerp",
-              "headline": "Traffic in the Strait of Hormuz skyrockets nearly 400%, as analysts say Iran’s grip on critical waterway weakens",
-              "body": "Iran appears to be losing its grip on the Strait of Hormuz while traffic through the critical waterway has exploded by nearly ...",
-              "published_date": "2026-08-23",
-              "outlet": "New York Post on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.pQR2--TlU3l5XiCwShpqXg"
-            },
-            {
-              "news_id": "cf029457d0b9563eaf05f45159d5dd9a",
-              "url": "https://www.msn.com/en-us/news/world/iran-warns-nearby-nations-against-joining-us-economic-war-efforts/ar-AA2aJdHb?ocid=BingNewsVerp",
-              "headline": "Iran warns nearby nations against joining US ‘economic war’ efforts",
-              "body": "The warning comes as US President Donald Trump threatens to isolate Iran economically to weaken its government.",
-              "published_date": "2026-08-23",
-              "outlet": "Al Jazeera on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.msWZNnt-zHrg6NXEGt3dJg"
-            },
-            {
-              "news_id": "96accecbd2cf5f899fe7ef9de7cb3e86",
-              "url": "https://www.msn.com/en-us/news/world/iran-security-chief-threatens-neighbors-against-joining-us-in-its-economic-pressure-campaign/ar-AA2aJawS?ocid=BingNewsVerp",
-              "headline": "Iran security chief threatens neighbors against joining U.S. in its economic pressure campaign",
-              "body": "The hard-line new leader of Iran's top security body is threatening neighbors against joining new U.S. efforts to squeeze ...",
-              "published_date": "2026-08-23",
-              "outlet": "Los Angeles Times on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.fvG_Vq_2BQdg5qZETmzwxQ"
-            },
-            {
-              "news_id": "380851c1f38b533c953d037b1308b874",
-              "url": "https://www.latimes.com/world-nation/story/2026-08-23/trumps-economic-isolation-plan-risks-iran-strikes-across-gulf",
-              "headline": "Trump’s economic isolation plan risks Iran strikes across the gulf",
-              "body": "President Trump is betting ramped-up economic pressure against Iran’s trading partners can finally force Tehran to accept a peace deal on U.S. terms. But, as with similar efforts before, Iran may be impervious to such pressure.",
-              "published_date": "2026-08-23",
-              "outlet": "Los Angeles Times",
-              "image": ""
-            },
-            {
-              "news_id": "c715864a4ae25d949c1e0ddf20cbb34d",
-              "url": "https://www.businesstoday.in/world/story/escalating-hormuz-crisis-boris-johnson-sees-india-as-key-to-us-exit-strategy-in-iran-550800-2026-08-23",
-              "headline": "Escalating Hormuz crisis: Boris Johnson sees India as key to US exit strategy in Iran - BusinessToday",
-              "body": "While emphasizing that Iran must never be allowed to develop nuclear weapons or finance regional proxy networks, he noted that Washington’s current approach has produced a geopolitical deadlock.",
-              "published_date": "2026-08-23",
-              "outlet": "Business Today",
-              "image": "https://www.bing.com/th?id=ONUT.kpEBxvX_TccwHN4Sf-CiQg"
-            },
-            {
-              "news_id": "00b2934ccbff5c3787773610758c6f0e",
-              "url": "https://www.msn.com/en-us/politics/government/bill-maher-checks-hunter-biden-maher-over-iran-war-nobody-asked-for-excuse-me/ar-AA2aI5Ve?ocid=BingNewsVerp",
-              "headline": "Bill Maher brings Hunter Biden back to reality over Iran war that ‘nobody asked for’",
-              "body": "Hunter Biden was brought back to reality during an appearance on “Real Time with Bill Maher,” being stopped mid-rant by the ...",
-              "published_date": "2026-08-23",
-              "outlet": "New York Post on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.Twgy3rSvRwvmPKhKW_oNuQ"
-            },
-            {
-              "news_id": "24b47ab3835857c6b8f06203afbccde7",
-              "url": "https://www.usatoday.com/story/news/world/2026/08/22/trump-wants-more-economic-pressure-on-iran-what-are-his-options/91425879007/",
-              "headline": "Trump wants more economic pressure on Iran. What are his options?",
-              "body": "President Donald Trump has vowed to hit Iran hard economically, after Treasury Secretary Scott Bessent said that Washington would impose measures on Tehran that have \"never been seen\" as soon as next week.",
-              "published_date": "2026-08-22",
-              "outlet": "USA TODAY",
-              "image": "https://www.bing.com/th?id=ONUT.dYFdKwgLaOm0IxsUYkE_ow"
-            },
-            {
-              "news_id": "f557276e5930590994572eae86b29a59",
-              "url": "https://www.aljazeera.com/news/2026/8/22/what-did-war-with-the-us-reveal-about-irans-weapons-capabilities",
-              "headline": "What did war with the US reveal about Iran’s weapons capabilities?",
-              "body": "Iran says production is ongoing, but details will not be revealed during war conditions.",
-              "published_date": "2026-08-22",
-              "outlet": "Al Jazeera",
-              "image": "https://www.bing.com/th?id=ONUT.3J4euaIXXjQP2dKtCNrYVg"
-            },
-            {
-              "news_id": "b4b806eb93d6563c874f50d769784436",
-              "url": "https://kfgo.com/2026/08/23/iran-says-new-sanctions-threatened-by-desperate-us-will-fail/",
-              "headline": "Iran says new sanctions threatened by ‘desperate’ US will fail",
-              "body": "By Elwely Elwelly and Menna AlaaElDin DUBAI, Aug 23 (Reuters) - Iran's foreign minister dismissed the threat of new U.S. sanctions as a sign of desperation on Sunday and said the expected new measures would fail to defeat Tehran. U.S. Treasury Secretar...",
-              "published_date": "2026-08-23",
-              "outlet": "KFGO",
-              "image": "https://www.bing.com/th?id=ONUT.fWLXIUW2NZ7x0bXiLHetpQ"
-            },
-            {
-              "news_id": "6f7bae2ae9ae537496a0b2c12f406094",
-              "url": "https://www.al-monitor.com/originals/2026/08/iran-condemns-us-plans-announce-new-sanctions",
-              "headline": "Iran condemns US plans to announce new sanctions",
-              "body": "By Menna Alaa El-Din and Kanishka SinghCAIRO/WASHINGTON, Aug 22 (Reuters) - Iran on Saturday denounced U.S. plans to announce new sanctions that could put further strain on the Islamic Republic's economy and have an impact on its most important trading partners including China.After nearly six months of war since the U.S. and Israel launched airstrikes against Iran on February 28, the sides are not firing at each other but also showing no sign of pursuing peace talks.",
-              "published_date": "2026-08-22",
-              "outlet": "Al-Monitor",
-              "image": "https://www.bing.com/th?id=ONUT.0m73B5ToLKQKYIDEm3ScNQ"
-            },
-            {
-              "news_id": "01ebd077e43b51a192833c17f5c3858d",
-              "url": "https://www.msn.com/en-in/news/other/us-israel-iran-war-live-news-iran-s-mohammad-bagher-ghalibaf-claims-us-put-regional-allies-at-risk-for-the-sake-of-israel/ar-AA2aHyi5?ocid=BingNewsVerp",
-              "headline": "US-Israel-Iran war live news: Iran's Mohammad Bagher Ghalibaf claims US put regional allies at risk 'for the sake of Israel'",
-              "body": "India, Aug. 22 -- Iranian Parliament Speaker Mohammad Bagher Ghalibaf claimed that the United States put the security and ...",
-              "published_date": "2026-08-23",
-              "outlet": "The Sunday Guardian Live on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.qWrKwK6J3eAOMo02bxpyWg"
-            },
-            {
-              "news_id": "ebb39f7344ec5fb7850c9691f1184a2d",
-              "url": "https://www.msn.com/en-us/news/world/iran-grants-permission-for-some-iraqi-oil-tankers-to-pass-through-hormuz/ar-AA2aIGFi?ocid=BingNewsVerp",
-              "headline": "Iran grants permission for some Iraqi oil tankers to pass through Hormuz",
-              "body": "Iraqi President Nizar Amidi says his country’s territory will not be used to launch attacks against any other state.",
-              "published_date": "2026-08-23",
-              "outlet": "Al Jazeera on MSN",
-              "image": "https://www.bing.com/th?id=ORMS.75ff92a52fe2820014620d0af177250d"
-            },
-            {
-              "news_id": "41224286d15258f9b0d7d71649287672",
-              "url": "https://www.msn.com/en-us/news/world/can-iran-retaliate-against-countries-that-join-us-economic-war/ar-AA2aKY9v?ocid=BingNewsVerp",
-              "headline": "Can Iran retaliate against countries that join US ‘economic war’?",
-              "body": "Iran’s security chief has warned of retaliation against countries joining US ‘economic war’.",
-              "published_date": "2026-08-23",
-              "outlet": "Al Jazeera on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "6bf65d7142725e7b8d439e5e709f86cd",
-              "url": "https://www.foxnews.com/live-news/trump-iran-war-sanctions-economic-crackdown-08-22-26",
-              "headline": "Trump says Iran could be bombed ‘a little bit more’ as US shifts to economic crackdown",
-              "body": "During a Friday rally for Sen. Darline Graham, President Donald Trump hinted at possibly restarting a bombing campaign in Iran, even as the US is publicly moving toward a new strategy of economic punishment and sanctions.",
-              "published_date": "2026-08-22",
-              "outlet": "Fox News",
-              "image": ""
-            },
-            {
-              "news_id": "d08ae5d88e8650068bc81e9f22b037fc",
-              "url": "https://www.baltimoresun.com/2026/08/22/egypt-speaks-with-iran-after-tehran-claims-victory-and-other-middle-east-developments/",
-              "headline": "Iran security chief threatens neighbors against economic measures, and other Mideast developments",
-              "body": "By The Associated Press Egypt is trying to revive Iran-U.S. negotiations. Iran’s president has said the world accepts that his country has won the war. France and Saudi Arabia are expected to discuss plans to bypass the Strait of…",
-              "published_date": "2026-08-22",
-              "outlet": "The Baltimore Sun",
-              "image": "https://www.bing.com/th?id=ONUT.NdwnqWW7WB5j-WHJqAEbcQ"
-            },
-            {
-              "news_id": "db01be621b4b5b0f90a0471760867402",
-              "url": "https://www.bostonglobe.com/2026/08/22/world/iran-says-world-has-accepted-it-defeated-us/",
-              "headline": "Iran says the world has accepted it has defeated the US, and other Middle East developments - The Boston Globe",
-              "body": "The remarks came as the Trump administration is touting a crushing financial campaign against Iran.",
-              "published_date": "2026-08-22",
-              "outlet": "The Boston Globe",
-              "image": "https://www.bing.com/th?id=ONUT.EHD9o6E_EEfcUomgc4hLLA"
-            },
-            {
-              "news_id": "6e0fe987c1415205bcc896c82ae90b12",
-              "url": "https://www.washingtonpost.com/business/2026/08/22/middle-east-iran-israel-golan/58e6f61e-9e0b-11f1-9cc4-2dc9b46e2d5c_story.html",
-              "headline": "Iran security chief threatens neighbors against economic measures, and other Mideast developments",
-              "body": "Iran’s president says the world has accepted that it’s won the war with the United States and remarks by the U.S. Ambassador ...",
-              "published_date": "2026-08-22T00:00:00+00:00",
-              "outlet": "The Washington Post",
-              "image": "https://www.bing.com/th?id=ONUT.4M04gcYL4Pl3di00slthuA"
-            },
-            {
-              "news_id": "7de09ebcdfbc5ff89d1cde1d742da3f2",
-              "url": "https://www.theguardian.com/us-news/ng-interactive/2026/aug/22/trump-iran-war-midterm-elections",
-              "headline": "Persuasion, denial and bluster: Trump ‘stuck’ on Iran war ahead of elections",
-              "body": "As the president tries to extract the US from his Iran war quagmire, leadership in Tehran is only too happy to crush his midterm dreams",
-              "published_date": "2026-08-22",
-              "outlet": "The Guardian",
-              "image": ""
-            },
-            {
-              "news_id": "bffe3a0e07b45fcfa1fc76d38eb4b9b7",
-              "url": "https://www.msn.com/en-us/news/world/breaking-down-trump-s-iran-promises-and-where-things-stand-26-weeks-later/vi-AA2aJLT6?ocid=BingNewsVerp",
-              "headline": "Breaking down Trump's Iran promises - and where things stand 26 weeks later",
-              "body": "Donald Trump’s self-imposed 60-day deadline for reaching an agreement with Iran has expired, while a conflict he once ...",
-              "published_date": "2026-08-23",
-              "outlet": "The David Pakman Show on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.0RZ8tLkjgyDDTmaoG5s1Mw"
             }
           ]
         },
@@ -19068,9 +19001,195 @@
               "image": "https://www.bing.com/th?id=ONUT.EzWyAnfd4avS8iva5KMuxA"
             }
           ]
+        },
+        {
+          "log_date": "2026-08-26",
+          "summary": "On August 25-26, Pakistan and Iran announced \"significant progress\" in talks to end the war, while Iran and Oman resumed discussions on managing the Strait of Hormuz and a temporary corridor. The U.S. unveiled \"Operation Economic Outcast,\" new sanctions targeting Bank Melli and 60 entities, and began planning to return diplomats to Middle East embassies. Separately, an oil tanker was struck off Oman, and Iran aired a video offering a $10 million bounty on Trump's son Barron, escalating rhetoric.",
+          "news": [
+            {
+              "news_id": "31b484acae695ba9a842872578b245dd",
+              "url": "https://www.forbes.com/sites/michaelpdempsey/2026/08/25/buckle-in-america---iran-war-costs-are-steep-and-growing/",
+              "headline": "Buckle In America — Iran War Costs Are Steep And Growing",
+              "body": "In addition to the mounting economic toll, there are several other emerging—and worrisome—consequences from the Iran war.",
+              "published_date": "2026-08-25T21:13:48+00:00",
+              "outlet": "Forbes",
+              "image": ""
+            },
+            {
+              "news_id": "6a4ec38eb3205aa58c46be2964e3d9d5",
+              "url": "https://atlantablackstar.com/2026/08/25/trump-thought-he-had-iran-cornered-until-tehran-came-for-his-weak-spot/",
+              "headline": "‘OH MY’: Trump Thought He Had Iran Cornered Until Tehran Came for His Weak Spot with $10M Hit on Barron, Trump’s New Threat Warns of Absolute Chaos",
+              "body": "The latest escalation in the Iran war arrived not with a missile launch or a diplomatic threat, but with a disturbing video aimed at President Donald",
+              "published_date": "2026-08-25",
+              "outlet": "Atlanta Black Star",
+              "image": "https://www.bing.com/th?id=ONUT.Kfq_V9AiCrYIu15wYtSUOw"
+            },
+            {
+              "news_id": "fe99c206dbb3577fa00411577df072d9",
+              "url": "https://www.baltimoresun.com/2026/08/25/ship-disabled-strait-of-hormuz-attack-middle-east-news/",
+              "headline": "Iran and Oman hold talks on managing the Strait of Hormuz and other news from around the Middle East",
+              "body": "The critical waterway for oil shipments remains largely shut down.",
+              "published_date": "2026-08-25",
+              "outlet": "The Baltimore Sun",
+              "image": "https://www.bing.com/th?id=ONUT.-AlqQ5bUVWf4RsmRaSMJAQ"
+            },
+            {
+              "news_id": "855e6cea66f357a48af26dec90061909",
+              "url": "https://www.nytimes.com/2026/08/26/world/europe/iran-melli-bank-us-sanctions.html",
+              "headline": "What to Know About the Iranian Bank Singled Out in U.S. Economic War",
+              "body": "Bank Melli, Iran’s largest lender, already faces waves of sanctions that severely limit its ability to operate abroad. Every foreign branch must be shut down, Treasury Secretary Scott Bessent said.",
+              "published_date": "2026-08-26T00:00:00+00:00",
+              "outlet": "The New York Times",
+              "image": ""
+            },
+            {
+              "news_id": "691d21bedeb25d67a4276d78c441a838",
+              "url": "https://www.msn.com/en-us/news/other/hard-lessons-trump-has-learned-in-iran-like-wheres-the-exit/ar-AA2aS7vg?ocid=BingNewsVerp",
+              "headline": "Hard lessons Trump has learned in Iran. Like, where's the exit?",
+              "body": "As \"Epic Fury\" approaches the half-year mark, Trump is confronting hard lessons that some of his modern-day predecessors would recognize all too well.",
+              "published_date": "2026-08-26",
+              "outlet": "USA TODAY on MSN",
+              "image": ""
+            },
+            {
+              "news_id": "6948b8fe02415702bc5d1bee71068f89",
+              "url": "https://www.yahoo.com/news/politics/articles/trump-approval-rating-bottoms-support-164459093.html",
+              "headline": "Trump’s Approval Rating Bottoms Out as Support For the Iran War Disintegrates",
+              "body": "The president and his war are wildly unpopular — and there’s no end in sight",
+              "published_date": "2026-08-25",
+              "outlet": "Rolling Stone · via Yahoo News",
+              "image": "https://media.zenfs.com/en/rolling_stone_news_992/3e0bd4dc04646a3e2bb5ec9261c864bf.jpg"
+            },
+            {
+              "news_id": "b21d34ed1b165b299d83eb11058faf8d",
+              "url": "https://www.msn.com/en-gb/news/world/us-prepares-to-send-diplomats-back-to-middle-east-embassies-after-iran-war-evacuations-nyt-reports/ar-AA2aSYRd?ocid=BingNewsVerp",
+              "headline": "US prepares to send diplomats back to Middle East embassies after Iran war evacuations, NYT reports",
+              "body": "Aug 25 (Reuters) - The U.S. State Department is preparing to return diplomats to embassies in the Middle East that were evacuated before and during the war with Iran, the New York Times reported on ...",
+              "published_date": "2026-08-26",
+              "outlet": "Reuters on MSN",
+              "image": ""
+            },
+            {
+              "news_id": "ec6c3fdb6e1053c091c642ed63e12067",
+              "url": "https://thehill.com/policy/international/6049608-pakistan-iran-peace-progress/",
+              "headline": "Pakistan, Iran made ‘significant progress’ to end US-Iran war, minister says",
+              "body": "Pakistan and Iran on Tuesday announced that “significant progress” has been made to end the U.S.-Isr...",
+              "published_date": "2026-08-25T18:13:48+00:00",
+              "outlet": "The Hill",
+              "image": "https://s.yimg.com/bo/093b0147-bc67-5306-a055-27c203a2dc76_1787682874360.jpg"
+            },
+            {
+              "news_id": "b215ce5506a0541cbbb9e85e0632dbb6",
+              "url": "https://www.cnbc.com/2026/08/25/oil-hits-one-week-low-as-investors-shrug-off-iran-sanctions.html",
+              "headline": "Oil hits one-week low as investors shrug off latest U.S. sanctions on Iran",
+              "body": "Oil prices fell to a one-week low on Tuesday as traders shrugged off the latest U.S. sanctions threat against Iran, despite persistent supply risk.",
+              "published_date": "2026-08-25",
+              "outlet": "CNBC",
+              "image": ""
+            },
+            {
+              "news_id": "6b3a827011dc56b480559fd5eb2c223f",
+              "url": "https://www.ajc.com/news/2026/08/iran-and-oman-hold-talks-on-managing-the-strait-of-hormuz-and-other-news-from-around-the-middle-east/",
+              "headline": "Iran and Oman hold talks on managing the Strait of Hormuz and other news from around the Middle East",
+              "body": "Iran and Oman say their top diplomats have met to discuss a phased approach to managing ship traffic through the Strait of Hormuz. A joint statement released by the countries says their foreign ministers met in Tehran on Tuesday. The critical waterway for oil shipments remains largely shut down nearly six months after the U.S. and Israel went to war with Iran. An oil tanker was disabled late on Monday after being struck by an unknown projectile off Oman, underscoring risks to shipping in the strait. The United Kingdom Maritime Trade Organization on Tuesday said the crew is safe and no environmental damage was immediately reported.",
+              "published_date": "2026-08-26",
+              "outlet": "Atlanta Journal-Constitution",
+              "image": "https://s.yimg.com/bo/87019548-f56e-5f1e-b62f-4073a44c8106_1787680756032.jpg"
+            },
+            {
+              "news_id": "25e586245adc5d9da511af88328c9f52",
+              "url": "https://bworldonline.com/world/2026/08/26/772538/iran-and-oman-discuss-temporary-hormuz-corridor-as-impasse-with-us-drags-on/",
+              "headline": "Iran and Oman discuss temporary Hormuz corridor as impasse with US drags on - BusinessWorld Online",
+              "body": "CAIRO — Iran said it had restarted talks with neighbor Oman to manage the Strait of Hormuz as it faces heightened economic pressure from US President Donald Trump in the wider conflict. Iran and Oman have been in on-and-off talks for weeks about controlling traffic through the strategic waterway, which handled one-fifth of global oil […]",
+              "published_date": "2026-08-26",
+              "outlet": "BusinessWorld",
+              "image": "https://s.yimg.com/bo/2af77799-c450-5b66-8957-bcc36d40ec2e_1782876282516.jpg"
+            },
+            {
+              "news_id": "01854a4da47e577f96dbbb4dbecedfe2",
+              "url": "https://www.nytimes.com/2026/08/25/world/middleeast/iran-us-economy-sanctions.html",
+              "headline": "Iran May Have Little to Lose as U.S. Tries to Squeeze Its Economy",
+              "body": "Experts warn that a campaign aimed at avoiding military escalation could instead provoke it, as Iranian leaders vow ...",
+              "published_date": "2026-08-25T00:00:00+00:00",
+              "outlet": "The New York Times",
+              "image": "https://www.bing.com/th?id=ONUT.MHaWKcVke2rKgPGEqNSj8w"
+            },
+            {
+              "news_id": "4a39d9b4f87654899de19353eaa418ed",
+              "url": "https://www.yahoo.com/news/us/articles/opinion-iran-attacks-us-water-160000788.html",
+              "headline": "Opinion - Iran’s attacks on US water systems are just the beginning",
+              "body": "Iran isn’t waiting for this war to end before it looks for the next vulnerability, and neither should we.",
+              "published_date": "2026-08-25",
+              "outlet": "The Hill · via Yahoo News",
+              "image": "https://media.zenfs.com/en/the_hill_articles_341/a53057869f6b842b5633d44ec19e9736.jpg"
+            },
+            {
+              "news_id": "7e76207a351f5599b7825c33440a5518",
+              "url": "https://finance.yahoo.com/economy/articles/buckle-america-iran-war-costs-202849349.html",
+              "headline": "Buckle In America — Iran War Costs Are Steep And Growing",
+              "body": "In addition to the mounting economic toll, there are several other emerging—and worrisome—consequences from the Iran war.",
+              "published_date": "2026-08-25",
+              "outlet": "Forbes · via Yahoo Finance",
+              "image": "https://media.zenfs.com/en/forbes_contributor_845/a1d5334bbbcaceac94f4b4a1c5f47451.jpg"
+            },
+            {
+              "news_id": "8595d864c5cc546eb33619158d914bc9",
+              "url": "https://www.benzinga.com/news/politics/26/08/61425372/iran-oman-strait-hormuz-talks-trump-mines-cleared-brent",
+              "headline": "Iran Restarts Strait of Hormuz Talks With Oman While Trump Says All Mines Have Been Cleared: Brent Crude",
+              "body": "Iran and Oman discuss reopening the Strait of Hormuz as Trump says mines are cleared, sending Brent crude lower.",
+              "published_date": "2026-08-25",
+              "outlet": "Benzinga",
+              "image": "https://s.yimg.com/bo/b0f07bd7-884f-559c-b115-a1a27e2e7e31_1787710125159.jpg"
+            },
+            {
+              "news_id": "96cb2b9409ce5a349013bbbd1797ec5b",
+              "url": "https://www.msn.com/en-in/news/other/hormuz-tanker-hit-as-pakistan-pushes-iran-us-talks-in-tehran/ar-AA2aTaJL?ocid=BingNewsVerp",
+              "headline": "Hormuz tanker hit as Pakistan pushes Iran-US talks in Tehran",
+              "body": "A projectile struck an oil tanker off Oman as Pakistan wrapped up talks in Tehran on reopening the Strait of Hormuz. The ...",
+              "published_date": "2026-08-26",
+              "outlet": "India Today on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.ZJSNA0fIY8sUa-2zTCnXWw"
+            },
+            {
+              "news_id": "04723b033d6e5d2eb4d661ea1e164376",
+              "url": "https://www.politico.com/news/2026/08/25/purely-just-up-to-iran-bessents-d-day-unlikely-to-end-war-calm-energy-markets-01049825",
+              "headline": "Bessent’s ‘economic D-Day’ may not end the war — or $4 gas",
+              "body": "Ongoing tensions with Iran guarantee a longer period of uncertainty for the markets, said Brett Erickson, managing principal ...",
+              "published_date": "2026-08-25T00:00:00+00:00",
+              "outlet": "Politico",
+              "image": "https://www.bing.com/th?id=ONUT.hlrHMIT1qkORPdns9A2EBg"
+            },
+            {
+              "news_id": "bc60121723e6548094a36712d619fd65",
+              "url": "https://www.indiatoday.in/world/story/us-starts-bringing-diplomats-and-their-families-back-to-middle-east-as-iran-war-tensions-ease-report-2979981-2026-08-26",
+              "headline": "US starts bringing staff back to Middle East as Iran war tensions ease: Report",
+              "body": "The US is sending diplomats back to several Middle East missions after scaling them down during tensions with Iran. The phased return signals a lower immediate risk of escalation, though security reviews continue.",
+              "published_date": "2026-08-26",
+              "outlet": "India Today",
+              "image": "https://www.bing.com/th?id=ONUT.seQ0Cy-BS2f4TTqQACPGBQ"
+            },
+            {
+              "news_id": "b1c49d91962a5fc19166591cb4131990",
+              "url": "https://www.msn.com/en-us/news/other/trump-s-latest-wave-of-iran-sanctions-which-60-entities-are-targeted/ar-AA2aTEW6?ocid=BingNewsVerp",
+              "headline": "Trump’s latest wave of Iran sanctions: Which 60 entities are targeted?",
+              "body": "Dozens of groups in Iran and other countries face US sanctions over ties to Iranian oil, weapons and cyberoperations.",
+              "published_date": "2026-08-26",
+              "outlet": "Al Jazeera on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.f4mXTulQzCPHK1GumGcE8A"
+            },
+            {
+              "news_id": "1753bb9e75a05a84a3e49ad2fe91b30b",
+              "url": "https://www.msn.com/en-us/news/other/the-ripple-effects-of-the-iran-war-threaten-education-for-millions-of-children-worldwide/ar-AA2aSYnn?ocid=BingNewsVerp",
+              "headline": "The ripple effects of the Iran war threaten education for millions of children worldwide",
+              "body": "Rising fuel costs and economic strain from the Iran war threaten to push millions of children out of school globally, hitting ...",
+              "published_date": "2026-08-26",
+              "outlet": "Los Angeles Times on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.AidqeDggWbLmsuRAq35YjA"
+            }
+          ]
         }
       ],
-      "logs_total": 30
+      "logs_total": 31
     },
     {
       "incident_id": "20260727-GR-WF",
@@ -22146,7 +22265,7 @@
       "incident_id": "20260728-JP-EQ",
       "tree_id": "8b9a0fd7d7d84dcf9915f43fd81312cd",
       "canonical_name": "Earthquake M6.8 Uto, Japan 2026-07-28",
-      "summary": "A new report highlights ongoing language barriers faced by foreign residents in Kumamoto Prefecture who struggled to access relief information following the July 28 earthquake, adding detail to a challenge previously noted in recovery efforts.",
+      "summary": "The Japanese Red Cross has expressed concern that evacuees' health may deteriorate due to prolonged stays in shelters or vehicles. Additionally, a volunteer network launched after the 2024 Noto earthquake is providing free laundry services to Kumamoto evacuees through local businesses. In other recovery news, fans of the Touken Ranbu game rushed to buy sake from a quake-hit brewery after the owner's lament about unsold stock went viral.",
       "country": "Japan",
       "iso2": "JP",
       "lat": 32.6817,
@@ -22165,7 +22284,7 @@
       "disease_name": null,
       "event_date": "2026-07-28",
       "first_reported_date": "2026-07-28",
-      "last_updated_date": "2026-08-25",
+      "last_updated_date": "2026-08-26",
       "days_since_event": 29,
       "source_count": 6,
       "should_report": true,
@@ -22176,7 +22295,7 @@
         "gdacs": 1,
         "ercc": 1,
         "healthmap": 0,
-        "news": 320
+        "news": 322
       },
       "source_links": [
         {
@@ -23496,6 +23615,10 @@
           "published_date": "2026-08-24T02:01:43+00:00"
         },
         {
+          "headline": "Two Japan earthquakes in one day: Night quake near Tokyo injures 37, Hokkaido struck",
+          "published_date": "2026-08-25"
+        },
+        {
           "headline": "Laundry businesses in quake-hit Kumamoto wash evacuees’ clothes for free",
           "published_date": "2026-08-25"
         },
@@ -23504,11 +23627,15 @@
           "published_date": "2026-08-25"
         },
         {
-          "headline": "Two Japan earthquakes in one day: Night quake near Tokyo injures 37, Hokkaido struck",
-          "published_date": "2026-08-25"
+          "headline": "Touken Ranbu game fans help save quake-hit Kumamoto brewery",
+          "published_date": "2026-08-26"
+        },
+        {
+          "headline": "Japanese Red Cross worried over Kumamoto evacuees’ health after quake",
+          "published_date": "2026-08-26"
         }
       ],
-      "news_total": 320,
+      "news_total": 322,
       "logs": [
         {
           "log_date": "2026-07-28",
@@ -23931,39 +24058,6 @@
           ]
         },
         {
-          "log_date": "2026-08-20",
-          "summary": "Teams of teachers mobilized from across Japan are supporting the reopening of earthquake-hit schools in Kumamoto Prefecture, drawing on past disaster experience to help restore normal operations. Additionally, insurance claims and inquiries related to the Kumamoto earthquake have topped 40,000, covering seven prefectures in Kyushu, highlighting the widespread administrative and financial fallout.",
-          "news": [
-            {
-              "news_id": "2c9109782f4253bfa63e844567499843",
-              "url": "https://www.japantimes.co.jp/news/2026/08/20/japan/society/teacher-teams-help-kumamoto-schools/",
-              "headline": "Teams of teachers rally to support reopening of earthquake-hit Kumamoto schools",
-              "body": "Drawing on their past experiences in disaster-stricken areas, team members are helping schools in the prefecture return to normal.",
-              "published_date": "2026-08-20",
-              "outlet": "The Japan Times",
-              "image": "https://www.bing.com/th?id=ONUT.NIcp3So93cgntYNvzrfdQA"
-            },
-            {
-              "news_id": "3d5ad0d4f0c35385a799b835e38d3b06",
-              "url": "https://www.japantimes.co.jp/news/2026/08/19/japan/kumamoto-quake-insurance/",
-              "headline": "Kumamoto earthquake insurance claims and inquiries top 40,000",
-              "body": "In addition to Kumamoto, the six other prefectures in Kyushu were also included in the figure.",
-              "published_date": "2026-08-19",
-              "outlet": "The Japan Times",
-              "image": "https://www.bing.com/th?id=ONUT.RlemAQAx05t4-qPHsoAqrg"
-            },
-            {
-              "news_id": "039df5a7233e547e93cfd3c2a8be3e70",
-              "url": "https://mb.com.ph/2026/08/20/teacher-teams-rally-to-reopen-quake-hit-kumamoto-schools",
-              "headline": "Teacher teams rally to reopen quake-hit Kumamoto schools",
-              "body": "UKI, Kumamoto Pref., Aug. 20 (Jiji Press) -- Teams of teachers mobilized from across Japan are supporting schools in the southwestern prefecture of Kumamoto,...",
-              "published_date": "2026-08-20",
-              "outlet": "Manila Bulletin",
-              "image": "https://www.bing.com/th?id=ONUT.Pi9xgTrPxp1zWWBUGykwcg"
-            }
-          ]
-        },
-        {
           "log_date": "2026-08-23",
           "summary": "The Japanese government is preparing measures to support tourism in the quake-hit Kyushu region as part of an upcoming aid package. Additional reports highlight thieves targeting empty homes of Kumamoto earthquake victims and a local doctor bringing medical care to evacuees.",
           "news": [
@@ -24172,9 +24266,51 @@
               "image": "https://www.bing.com/th?id=ONUT.fOW3IxQSFt1QCTBbTn8G0g"
             }
           ]
+        },
+        {
+          "log_date": "2026-08-26",
+          "summary": "The Japanese Red Cross has expressed concern that evacuees' health may deteriorate due to prolonged stays in shelters or vehicles. Additionally, a volunteer network launched after the 2024 Noto earthquake is providing free laundry services to Kumamoto evacuees through local businesses. In other recovery news, fans of the Touken Ranbu game rushed to buy sake from a quake-hit brewery after the owner's lament about unsold stock went viral.",
+          "news": [
+            {
+              "news_id": "7429d835b5c9582d868f71ec4474700e",
+              "url": "https://www.japantimes.co.jp/news/2026/08/26/japan/touken-ranbu-sake-kumamoto/",
+              "headline": "Touken Ranbu game fans help save quake-hit Kumamoto brewery",
+              "body": "After an online post from the 12th-generation owner of the brewery lamenting unsold sake went viral, fans rushed to buy sake from them that is associated with the video game.",
+              "published_date": "2026-08-26",
+              "outlet": "The Japan Times",
+              "image": "https://www.bing.com/th?id=ONUT.PecaAGrfPuSlB1wxCVnekQ"
+            },
+            {
+              "news_id": "9e6053be99355d0d8d7fdee88e74b77d",
+              "url": "https://www.japantimes.co.jp/news/2026/08/26/japan/red-cross-concern-kumamoto-health/",
+              "headline": "Japanese Red Cross worried over Kumamoto evacuees’ health after quake",
+              "body": "Officials said that evacuees’ health could deteriorate due to prolonged life at shelters or in their own cars.",
+              "published_date": "2026-08-26",
+              "outlet": "The Japan Times",
+              "image": "https://www.bing.com/th?id=ONUT.petoUAxGJJyTJPchyKDiIQ"
+            },
+            {
+              "news_id": "45e3fd4def335a50aa8426c037d32008",
+              "url": "https://www.japantimes.co.jp/news/2026/08/25/japan/society/free-laundry-services-for-kumamoto-evacuees/",
+              "headline": "Laundry businesses in quake-hit Kumamoto wash evacuees’ clothes for free",
+              "body": "The Disaster Sentaku Assistance Team, a volunteer network launched after the 2024 Noto Peninsula earthquake, works with local businesses to provide the service.",
+              "published_date": "2026-08-25",
+              "outlet": "The Japan Times",
+              "image": "https://www.bing.com/th?id=ONUT.M8dMIv-vUQOsn0eSnOHrKw"
+            },
+            {
+              "news_id": "414785f032fc5b50b106d514dd59658d",
+              "url": "https://www.msn.com/en-xl/news/other/viral-false-claims-about-quakes-hiroshima-expose-japan-s-online-conspiracy-problem/ar-AA2aR2VP?ocid=BingNewsVerp",
+              "headline": "Viral false claims about quakes, Hiroshima expose Japan’s online conspiracy problem",
+              "body": "Claims that a deadly quake was artificial and Hiroshima was not hit by an atomic bomb have alarmed experts tracking Japan's ...",
+              "published_date": "2026-08-25",
+              "outlet": "South China Morning Post on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.kuSGV8syYOUgNZtbe1P6xw"
+            }
+          ]
         }
       ],
-      "logs_total": 19
+      "logs_total": 20
     },
     {
       "incident_id": "20260730-XX-DR",
@@ -26512,7 +26648,7 @@
         "gdacs": 1,
         "ercc": 2,
         "healthmap": 0,
-        "news": 120
+        "news": 121
       },
       "source_links": [
         {
@@ -27022,11 +27158,15 @@
           "published_date": "2026-08-24T13:56:08+00:00"
         },
         {
+          "headline": "Multiple Wildfires Erupt on Tues. as Firefighting Forces Mobilize - tovima.com",
+          "published_date": "2026-08-25"
+        },
+        {
           "headline": "Wildfires expose — and detonate — buried bombs and mines from WWI and WWII",
           "published_date": "2026-08-25"
         }
       ],
-      "news_total": 120,
+      "news_total": 121,
       "logs": [
         {
           "log_date": "2026-08-04",
@@ -28565,7 +28705,7 @@
       "disease_name": null,
       "event_date": "2026-08-06",
       "first_reported_date": "2026-08-06",
-      "last_updated_date": "2026-08-25",
+      "last_updated_date": "2026-08-26",
       "days_since_event": 20,
       "source_count": 1,
       "should_report": false,
@@ -28576,7 +28716,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 28
+        "news": 29
       },
       "source_links": [
         {
@@ -28708,9 +28848,13 @@
         {
           "headline": "They flew a drone over an active volcano... what it saw was absolutely terrifying",
           "published_date": "2026-08-25"
+        },
+        {
+          "headline": "Why does this volcano erupt so often?",
+          "published_date": "2026-08-26"
         }
       ],
-      "news_total": 28,
+      "news_total": 29,
       "logs": [
         {
           "log_date": "2026-08-08",
@@ -29782,7 +29926,7 @@
       "incident_id": "20260810-CO-EQ",
       "tree_id": "c686af40e85948b99d7f0b784e056bdb",
       "canonical_name": "Earthquake M7.4 San José del Palmar, Colombia 2026-08-10",
-      "summary": "New developments on August 24-25 include Nicky Jam partnering with Grupo Argos to build earthquake-resistant homes for affected families, and Project HOPE detailing its emergency response and long-term recovery plans. Shakira finalized her $1.25 million school rebuilding pledge through Global Citizen and Live Nation in partnership with Howard Buffett, while the UN scaled up aid targeting 100,000 people. Human-interest stories of survival and hope emerged, and the \"Voices for Life\" concert featuring Maluma and Sebastian Yatra raised funds for victims.",
+      "summary": "The death toll from the August 10 earthquake has risen to 331 as damage mounts two weeks after the event. Beyoncé announced a personal $1 million donation to relief organizations, while the first recycled-plastic home was delivered in Chocó to help displaced families. Criticism emerged over a music video allegedly filmed amid rubble in Pereira, and an analysis highlighted reconstruction as a potential economic opportunity for both Colombia and Venezuela.",
       "country": "Colombia",
       "iso2": "CO",
       "lat": 0.3112,
@@ -29801,7 +29945,7 @@
       "disease_name": null,
       "event_date": "2026-08-10",
       "first_reported_date": "2026-08-10",
-      "last_updated_date": "2026-08-25",
+      "last_updated_date": "2026-08-26",
       "days_since_event": 16,
       "source_count": 6,
       "should_report": true,
@@ -29812,7 +29956,7 @@
         "gdacs": 1,
         "ercc": 3,
         "healthmap": 0,
-        "news": 433
+        "news": 440
       },
       "source_links": [
         {
@@ -31016,10 +31160,6 @@
           "published_date": "2026-08-15T20:51:44+00:00"
         },
         {
-          "headline": "Colombian president asks Trump to suspend tariffs to help earthquake recovery",
-          "published_date": "2026-08-16"
-        },
-        {
           "headline": "Aftermath of earthquake in Pereira, Colombia",
           "published_date": "2026-08-16"
         },
@@ -31093,6 +31233,10 @@
         },
         {
           "headline": "US forces begin delivering aid to Colombia after deadly earthquake",
+          "published_date": "2026-08-16"
+        },
+        {
+          "headline": "Colombian president asks Trump to suspend tariffs to help earthquake recovery",
           "published_date": "2026-08-16"
         },
         {
@@ -31356,10 +31500,6 @@
           "published_date": "2026-08-18T21:21:06+00:00"
         },
         {
-          "headline": "Firefighters pull dog alive from Colombia quake rubble as search grows more urgent",
-          "published_date": "2026-08-19"
-        },
-        {
           "headline": "Shakira visits quake-damaged schools in Colombia; announces major education aid; pledges university support",
           "published_date": "2026-08-19"
         },
@@ -31421,6 +31561,10 @@
         },
         {
           "headline": "The earthquake on the other side of the world",
+          "published_date": "2026-08-19"
+        },
+        {
+          "headline": "Firefighters pull dog alive from Colombia quake rubble as search grows more urgent",
           "published_date": "2026-08-19"
         },
         {
@@ -31516,10 +31660,6 @@
           "published_date": "2026-08-23"
         },
         {
-          "headline": "Colombia Earthquake Concert",
-          "published_date": "2026-08-23"
-        },
-        {
           "headline": "Shakira Pledges $1.25 Million to Rebuild Schools in Earthquake-Hit Chocó",
           "published_date": "2026-08-23"
         },
@@ -31541,6 +31681,10 @@
         },
         {
           "headline": "Colombian Entertainment Unites in Solidarity to Raise Funds After Earthquake",
+          "published_date": "2026-08-23"
+        },
+        {
+          "headline": "Colombia Earthquake Concert",
           "published_date": "2026-08-23"
         },
         {
@@ -31568,18 +31712,6 @@
           "published_date": "2026-08-24T02:58:05+00:00"
         },
         {
-          "headline": "Venezuela and Colombia find a silver lining in earthquake reconstruction",
-          "published_date": "2026-08-25"
-        },
-        {
-          "headline": "Colombia’s new president Abelardo de la Espriella announces immigration crackdown",
-          "published_date": "2026-08-25"
-        },
-        {
-          "headline": "Revisiting Colombia two weeks after the devastating earthquake",
-          "published_date": "2026-08-25"
-        },
-        {
           "headline": "Shakira visits quake-damaged schools in Colombia; announces major education aid; pledges university support",
           "published_date": "2026-08-25"
         },
@@ -31594,9 +31726,49 @@
         {
           "headline": "Shakira makes surprise Colombia visit, helps raise $1M for earthquake relief",
           "published_date": "2026-08-25"
+        },
+        {
+          "headline": "BEYONCÉ TO MAKE A PERSONAL 1 MILLION DOLLAR DONATION TO ORGANIZATIONS IN COLOMBIA TO AID WITH RELIEF EFFORTS FOLLOWING THE RECENT EARTHQUAKE",
+          "published_date": "2026-08-25"
+        },
+        {
+          "headline": "Colombia Earthquake Death Toll Rises to 331 as Damage Mounts Two Weeks After",
+          "published_date": "2026-08-25"
+        },
+        {
+          "headline": "First Recycled-Plastic Home Delivered in Choco After Earthquake in Colombia",
+          "published_date": "2026-08-25"
+        },
+        {
+          "headline": "Criticism Over Alleged Music Video Filmed Among Earthquake Ruins",
+          "published_date": "2026-08-25"
+        },
+        {
+          "headline": "Venezuela and Colombia find a silver lining in earthquake reconstruction",
+          "published_date": "2026-08-25"
+        },
+        {
+          "headline": "Colombia’s new president Abelardo de la Espriella announces immigration crackdown",
+          "published_date": "2026-08-25"
+        },
+        {
+          "headline": "Revisiting Colombia two weeks after the devastating earthquake",
+          "published_date": "2026-08-25"
+        },
+        {
+          "headline": "...MILLION DOLLAR DONATION TO ORGANIZATIONS IN COLOMBIA TO AID WITH RELIEF...",
+          "published_date": "2026-08-25T17:48:41+00:00"
+        },
+        {
+          "headline": "Video from Colombia quake falsely linked to Peru tremor",
+          "published_date": "2026-08-26"
+        },
+        {
+          "headline": "Video from Colombia quake falsely linked to Peru tremor",
+          "published_date": "2026-08-26"
         }
       ],
-      "news_total": 433,
+      "news_total": 440,
       "logs": [
         {
           "log_date": "2026-08-10",
@@ -31938,48 +32110,6 @@
           ]
         },
         {
-          "log_date": "2026-08-23",
-          "summary": "The Economist reports that damage from the M7.4 earthquake is estimated at more than $30 billion, placing significant strain on Colombia's debt-burdened government as it scrambles to fund reconstruction. Meanwhile, Latin music stars Karol G and Maluma united for earthquake relief efforts.",
-          "news": [
-            {
-              "news_id": "6e51d5c7813d5603ab2335fa2c30c398",
-              "url": "https://www.economist.com/the-world-in-brief/2026/08/23/8c72d785-13bf-479f-8b1e-2f8b5fbed818",
-              "headline": "Rebuilding Colombia after a massive earthquake",
-              "body": "Meanwhile the debt-burdened government is scrambling to pay for reconstruction. The damage is estimated at more than 30 ...",
-              "published_date": "2026-08-23T00:00:00+00:00",
-              "outlet": "The Economist",
-              "image": "https://www.bing.com/th?id=ONUT.g-0UELEntEJndx1UQGD0kQ"
-            },
-            {
-              "news_id": "f07f49f1241b5a1ea2678c8452a43b94",
-              "url": "https://www.yahoo.com/entertainment/music/articles/karol-g-maluma-more-unite-153402865.html",
-              "headline": "Karol G, Maluma & More Unite for Colombia Earthquake Relief & More Uplifting Moments in Latin Music",
-              "body": "Plus, Maná becomes the first Latin act to perform for Apple Music's Rediscovered series, and Elvis Crespo returns to NYC for a free concert.",
-              "published_date": "2026-08-22",
-              "outlet": "Billboard · via Yahoo News",
-              "image": "https://media.zenfs.com/en/billboard_547/f049be3f32a33485f45c6c61282d1825.jpg"
-            },
-            {
-              "news_id": "0f2410e71f2958999037db490ac6924e",
-              "url": "https://www.wjcl.com/article/shakira-visit-colombia-earthquake-damage/73459250",
-              "headline": "Shakira makes surprise visit in earthquake-damaged Colombia and commits to rebuilding schools",
-              "body": "Colombian superstar Shakira pledged to help rebuild at least 10 schools in a remote region of her home country after a devastating earthquake struck last week.",
-              "published_date": "2026-08-18",
-              "outlet": "WJCL Savannah",
-              "image": "https://s.yimg.com/bo/77fa411f-60c7-5da3-9215-e52c52a4eebd_1787045893894.jpg"
-            },
-            {
-              "news_id": "ef76055663e75325a5d7d0eda5e5f0e0",
-              "url": "https://www.kark.com/news/business/ap-shakira-makes-surprise-visit-to-earthquake-damaged-colombian-schools-and-says-she-will-help-rebuild/",
-              "headline": "Shakira makes surprise visit in earthquake-damaged Colombia and commits to...",
-              "body": "BOGOTÁ, Colombia (AP) — Colombian superstar Shakira announced Monday that she will help rebuild at l...",
-              "published_date": "2026-08-18T02:47:55+00:00",
-              "outlet": "KARK",
-              "image": "https://s.yimg.com/bo/8b4918b9-02ab-53e0-b9ef-39876be457e8_1787028385515.jpg"
-            }
-          ]
-        },
-        {
           "log_date": "2026-08-24",
           "summary": "President De la Espriella met with business leaders to discuss private sector involvement in earthquake rebuilding. Colombian entertainment figures held a \"Voices for Life\" concert and organized fundraising campaigns for victims. The IDF's Alliance of Brothers delegation completed search-and-rescue operations in Cali, rescuing all 27 trapped individuals.",
           "news": [
@@ -32179,21 +32309,144 @@
               "image": "https://www.detroitnews.com/gcdn/authoring/images/USATToDetroitNews/2026/08/18/PDTN/91358015007-91354875007-getty-images-2290405913.jpeg?crop=4646,2614,x0,y283&width=3200&height=1801&format=pjpg&auto=webp"
             }
           ]
+        },
+        {
+          "log_date": "2026-08-26",
+          "summary": "The death toll from the August 10 earthquake has risen to 331 as damage mounts two weeks after the event. Beyoncé announced a personal $1 million donation to relief organizations, while the first recycled-plastic home was delivered in Chocó to help displaced families. Criticism emerged over a music video allegedly filmed amid rubble in Pereira, and an analysis highlighted reconstruction as a potential economic opportunity for both Colombia and Venezuela.",
+          "news": [
+            {
+              "news_id": "bc9a601374a85d1bbc75acf09cf8e0e9",
+              "url": "https://www.msn.com/en-us/public-safety-and-emergencies/natural-disasters/video-from-colombia-quake-falsely-linked-to-peru-tremor/ar-AA2aWif3?ocid=BingNewsVerp",
+              "headline": "Video from Colombia quake falsely linked to Peru tremor",
+              "body": "After a 6.7-magnitude earthquake hit southern Peru on August 20, 2026, social media posts shared a video of a crumbling ...",
+              "published_date": "2026-08-26",
+              "outlet": "AFP Fact Check on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.6uglaHC5fnVeX2_ZWHZ0kA"
+            },
+            {
+              "news_id": "e2af4b04884f5245848475b1abcc6c02",
+              "url": "https://finance.yahoo.com/healthcare/articles/beyonc-personal-1-million-dollar-181600862.html",
+              "headline": "BEYONCÉ TO MAKE A PERSONAL 1 MILLION DOLLAR DONATION TO ORGANIZATIONS IN COLOMBIA TO AID WITH RELIEF EFFORTS FOLLOWING THE RECENT EARTHQUAKE",
+              "body": "Today, Beyoncé announces a personal donation of $1 Million US Dollars to organizations currently on the ground in Colombia with relief efforts following the devastation caused by the recent earthquake.",
+              "published_date": "2026-08-25",
+              "outlet": "Yahoo Finance",
+              "image": ""
+            },
+            {
+              "news_id": "6ba69c750efe52469c754fcbd3350ef5",
+              "url": "https://colombiaone.com/2026/08/25/colombia-earthquake-death-toll/",
+              "headline": "Colombia Earthquake Death Toll Rises to 331 as Damage Mounts Two Weeks After",
+              "body": "The death toll from the powerful earthquake that struck Colombia on Aug. 10 has risen to 331 and lots of damage.",
+              "published_date": "2026-08-25",
+              "outlet": "colombiaone",
+              "image": "https://www.bing.com/th?id=ONUT.F5PyfXh330FtXYy18Zd4OA"
+            },
+            {
+              "news_id": "99642ec2f131544c8c6b812a739a0b1a",
+              "url": "https://colombiaone.com/2026/08/25/first-recycled-plastic-home-choco-after-earthquake-colombia/",
+              "headline": "First Recycled-Plastic Home Delivered in Choco After Earthquake in Colombia",
+              "body": "An important alternative could ease the situation of thousands of families who lost everything in the earthquake: a recycled-plastic home.",
+              "published_date": "2026-08-25",
+              "outlet": "colombiaone",
+              "image": "https://www.bing.com/th?id=ONUT.c37polny3GdGkRvUxMSrtA"
+            },
+            {
+              "news_id": "7dccae426f3b53448aa7ac2ee99a93b4",
+              "url": "https://colombiaone.com/2026/08/25/criticism-over-alleged-music-video-filmed-among-earthquake-ruins/",
+              "headline": "Criticism Over Alleged Music Video Filmed Among Earthquake Ruins",
+              "body": "Criticism in Colombia following the posting on social media of a music video showing a man singing amid the earthquake rubble in Pereira.",
+              "published_date": "2026-08-25",
+              "outlet": "colombiaone",
+              "image": "https://www.bing.com/th?id=ONUT.vnNartF9pT1RIRiVuKFrZg"
+            },
+            {
+              "news_id": "f23de5d4269f5a4d9dca126960eaee80",
+              "url": "https://www.msn.com/en-us/money/economy/venezuela-and-colombia-find-a-silver-lining-in-earthquake-reconstruction/ar-AA2aThHx?ocid=BingNewsVerp",
+              "headline": "Venezuela and Colombia find a silver lining in earthquake reconstruction",
+              "body": "By bnl editorial staff Reconstruction spending after the devastating earthquakes that struck Venezuela and Colombia this year ...",
+              "published_date": "2026-08-25",
+              "outlet": "bne IntelliNews on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.10pIb7244znImt1RobvTlw"
+            },
+            {
+              "news_id": "0c66c71f212a5ac4b328087d32bb0868",
+              "url": "https://www.yahoo.com/news/world/articles/video-colombia-quake-falsely-linked-040839862.html",
+              "headline": "Video from Colombia quake falsely linked to Peru tremor",
+              "body": "After a 6.7-magnitude earthquake hit southern Peru on August 20, 2026, social media posts shared a video of a crumbling structure falsely claiming it shows visuals from the tremor. The footage was in ...",
+              "published_date": "2026-08-26",
+              "outlet": "AFP · via Yahoo News",
+              "image": "https://media.zenfs.com/en/afp_factcheck_us_713/a1dd887bf8aec0caa5bbf68ac6e6eb5b.jpg"
+            },
+            {
+              "news_id": "fecec1a6daa25dfe8acec70133f74762",
+              "url": "https://www.theguardian.com/world/2026/aug/25/colombia-immigration-crackdown-president-abelardo-de-la-espriella",
+              "headline": "Colombia’s new president Abelardo de la Espriella announces immigration crackdown",
+              "body": "Far-right leader echoes ally Donald Trump and says operations to ‘track down illegal immigrants’ should begin this week, amid earthquake aftermath",
+              "published_date": "2026-08-25",
+              "outlet": "The Guardian",
+              "image": ""
+            },
+            {
+              "news_id": "bba46c915c7f5c7899d5a0561e8c9fd5",
+              "url": "https://www.goshennews.com/news/national_news/colombia-earthquake-concert/image_18e4d447-2756-5477-b063-3077b71e67fd.html",
+              "headline": "Colombia Earthquake Concert",
+              "body": "Colombian singer Maluma performs during a \"Voices for Life\" concert to raise funds for earthquake victims in Bogota, Colombia, Sunday, Aug. 23, 2026. (AP Photo/Fernando Vergara)",
+              "published_date": "2026-08-23",
+              "outlet": "Goshen News",
+              "image": "https://s.yimg.com/bo/63b0d722-285f-53f3-a4e2-34e4b76b4a61_1787566545464.jpg"
+            },
+            {
+              "news_id": "79ec75de31935a7db71769b06a9fccd9",
+              "url": "https://apnews.com/article/colombia-earthquake-abelardo-de-la-espriella-trump-d5472db0c7b2f929b43a4c190dc0d41b",
+              "headline": "Colombian president asks Trump to suspend tariffs to help earthquake recovery",
+              "body": "Colombia's President Abelardo de la Espriella has asked U.S. President Donald Trump to suspend tariffs to help Colombia recover from a devastating earthquake.",
+              "published_date": "2026-08-16",
+              "outlet": "Associated Press",
+              "image": "https://s.yimg.com/bo/bedecd87-c85e-560b-a427-00a3e60bdded_1786311790729.png.cf.jpg"
+            },
+            {
+              "news_id": "9e9661627cc85c638bf99ab3e28824de",
+              "url": "https://www.yahoo.com/news/world/articles/firefighters-pull-dog-alive-colombia-014700864.html",
+              "headline": "Firefighters pull dog alive from Colombia quake rubble as search grows more urgent",
+              "body": "In the aftermath of a major disaster, every second matters.",
+              "published_date": "2026-08-19",
+              "outlet": "The Cool Down · via Yahoo News",
+              "image": "https://media.zenfs.com/en/the_cool_down_737/f19e861b90449265d6cab2711edcf0e3.jpg"
+            },
+            {
+              "news_id": "764bac8def1056919c7fb32e5a62628a",
+              "url": "https://www.nbcnews.com/video/inside-colombia-two-weeks-since-7-4-magnitude-earthquake-rocked-the-country-268808261832",
+              "headline": "Revisiting Colombia two weeks after the devastating earthquake",
+              "body": "Two weeks after a powerful 7.4-magnitude earthquake rocked Western Colombia, at least 329 people are dead, more than 4,500 are hurt, and hundreds are still missing. NBC News' George Solis reports.",
+              "published_date": "2026-08-25",
+              "outlet": "NBC News",
+              "image": "https://www.bing.com/th?id=ONUT.fa5LenXtTLJ78zjv8KKeYw"
+            },
+            {
+              "news_id": "732c5b6a7b2e518f83680b140196cc28",
+              "url": "https://www.wowktv.com/business/press-releases/cision/20260825NY33481/beyonce-to-make-a-personal-1-million-dollar-donation-to-organizations-in-colombia-to-aid-with-relief-efforts-following-the-recent-earthquake",
+              "headline": "...MILLION DOLLAR DONATION TO ORGANIZATIONS IN COLOMBIA TO AID WITH RELIEF...",
+              "body": "NEW YORK, Aug. 25, 2026 /PRNewswire/ -- Today, Beyoncé announces a personal donation of $1 Million...",
+              "published_date": "2026-08-25T17:48:41+00:00",
+              "outlet": "WOWK 13 News",
+              "image": "https://s.yimg.com/bo/e2248c27-ce82-4b80-baf9-a8b1ca3cb312.png.cf.jpg"
+            }
+          ]
         }
       ],
-      "logs_total": 15
+      "logs_total": 16
     },
     {
       "incident_id": "20260812-XX-SW",
       "tree_id": "8a1e62b17f6e49e9ad462dd2080d0653",
       "canonical_name": "Severe Weather 2026-08-12",
-      "summary": "Severe thunderstorms, tornadoes, and flash flooding impacted multiple regions across the United States from August 20–24, 2026. Confirmed tornadoes struck in Atlantic Beach (Long Island), Dover (Delaware), and York/Lancaster counties (Pennsylvania), while prolonged power outages from earlier storms left thousands without electricity in Gary, Indiana, for over a week. Widespread damage from downed trees, damaged homes, and flooding was reported in the Northeast, Mid-Atlantic, Southeast, and Midwest.",
+      "summary": "Federal disaster aid was approved for 21 counties in Indiana following the August 11 derecho, and residents in Gary, Indiana, continue to face prolonged power outages two weeks after the storm, with a nonprofit providing hot meals to affected residents.",
       "country": "",
       "iso2": "XX",
       "lat": null,
       "lon": null,
       "country_group": "C",
-      "region": "Americas",
+      "region": "Unknown",
       "incident_type": "Severe Weather",
       "incident_category": "Natural",
       "is_disease": false,
@@ -32206,7 +32459,7 @@
       "disease_name": null,
       "event_date": "2026-08-12",
       "first_reported_date": "2026-08-12",
-      "last_updated_date": "2026-08-25",
+      "last_updated_date": "2026-08-26",
       "days_since_event": 14,
       "source_count": 3,
       "should_report": true,
@@ -32217,7 +32470,7 @@
         "gdacs": 0,
         "ercc": 3,
         "healthmap": 0,
-        "news": 102
+        "news": 119
       },
       "source_links": [
         {
@@ -32523,6 +32776,10 @@
           "published_date": "2026-08-22"
         },
         {
+          "headline": "Afternoon strong to severe storms possible in the Pittsburgh area on Saturday | First Alert Weather",
+          "published_date": "2026-08-22"
+        },
+        {
           "headline": "Alabama Power putting weather data to work to combat outages",
           "published_date": "2026-08-22T03:32:34+00:00"
         },
@@ -32655,11 +32912,75 @@
           "published_date": "2026-08-25"
         },
         {
+          "headline": "Limited severe storm coverage this evening, lower humidity midweek will make for pleasant late August days",
+          "published_date": "2026-08-25"
+        },
+        {
+          "headline": "Severe Storms Possible for Some",
+          "published_date": "2026-08-25"
+        },
+        {
+          "headline": "Wednesday will be the last call for rain this month, severe storms possible",
+          "published_date": "2026-08-25"
+        },
+        {
+          "headline": "Quiet evening, monitoring severe potential Wednesday",
+          "published_date": "2026-08-25"
+        },
+        {
+          "headline": "Some sun and some thunderstorms over the next few days",
+          "published_date": "2026-08-25"
+        },
+        {
+          "headline": "Ohio went from drought to flooding in a year. A tale of two Augusts",
+          "published_date": "2026-08-25"
+        },
+        {
+          "headline": "Possible severe storms on Wednesday",
+          "published_date": "2026-08-25"
+        },
+        {
+          "headline": "Threat of severe storms Wednesday, with tornado risk for south suburbs, NW Indiana",
+          "published_date": "2026-08-25"
+        },
+        {
+          "headline": "Minnesota weather: More humid Tuesday with isolated late day strong storms",
+          "published_date": "2026-08-25"
+        },
+        {
           "headline": "French potato crop to shrink by 23% after severe weather, growers say",
           "published_date": "2026-08-25T03:50:46+00:00"
+        },
+        {
+          "headline": "Trump approves major disaster declaration, 21 counties to get individual assistance",
+          "published_date": "2026-08-26"
+        },
+        {
+          "headline": "First Alert: Damaging winds possible Wednesday",
+          "published_date": "2026-08-26"
+        },
+        {
+          "headline": "Severe storms possible tonight across the region before cooler Wednesday",
+          "published_date": "2026-08-26"
+        },
+        {
+          "headline": "Nonprofit provides hot meals to Kansas City, Kansas residents affected by severe storm",
+          "published_date": "2026-08-26"
+        },
+        {
+          "headline": "Trump approves major disaster declaration, 21 counties to get individual assistance",
+          "published_date": "2026-08-26"
+        },
+        {
+          "headline": "Powerful storms knocked out power in northwest Indiana 2 weeks ago. This majority Black city has suffered the most",
+          "published_date": "2026-08-26"
+        },
+        {
+          "headline": "Hawaii officials warn of ‘storm chaser’ scams after Hurricane Lala",
+          "published_date": "2026-08-26"
         }
       ],
-      "news_total": 102,
+      "news_total": 119,
       "logs": [
         {
           "log_date": "2026-08-25",
@@ -33584,19 +33905,178 @@
               "image": "https://www.bing.com/th?id=ONUT.QYcwCSn4ocNRezAahKphbw"
             }
           ]
+        },
+        {
+          "log_date": "2026-08-26",
+          "summary": "Federal disaster aid was approved for 21 counties in Indiana following the August 11 derecho, and residents in Gary, Indiana, continue to face prolonged power outages two weeks after the storm, with a nonprofit providing hot meals to affected residents.",
+          "news": [
+            {
+              "news_id": "80c42e41dcb0577ea18ed83719211d55",
+              "url": "https://www.ksnblocal4.com/2026/08/25/limited-severe-storm-coverage-this-evening-lower-humidity-midweek-will-make-pleasant-late-august-days/",
+              "headline": "Limited severe storm coverage this evening, lower humidity midweek will make for pleasant late August days",
+              "body": "Limited severe storm coverage this evening, lower humidity midweek will make for pleasantly warm August days",
+              "published_date": "2026-08-25",
+              "outlet": "KSNB Local4",
+              "image": "https://www.bing.com/th?id=ONUT.VmpmOqjqPD8uR_HyPko6Xg"
+            },
+            {
+              "news_id": "74d64cc2a7bf594d909a175fd5dff239",
+              "url": "https://www.wndu.com/2026/08/26/trump-approves-major-disaster-declaration-21-counties-get-individual-assistance/",
+              "headline": "Trump approves major disaster declaration, 21 counties to get individual assistance",
+              "body": "Gov. Mike Braun says federal aid is now approved following August 11’s derecho storm and severe weather.",
+              "published_date": "2026-08-26",
+              "outlet": "WNDU",
+              "image": "https://www.bing.com/th?id=ONUT.g05YYF12bBWc-uCX8K0Rdw"
+            },
+            {
+              "news_id": "696a60165a1351019c03136647debb42",
+              "url": "https://www.kcbd.com/2026/08/25/severe-storms-possible-some/",
+              "headline": "Severe Storms Possible for Some",
+              "body": "A Severe Thunderstorm Watch in effect for Castro, Swisher, Briscoe, and Hall counties until 11 PM CDT Tuesday. This WATCH includes the communities of Dimmitt, Tulia, Silverton, Memphis, and Turkey in the northern KCBD/FOX34 viewing area.",
+              "published_date": "2026-08-25",
+              "outlet": "KCBD NewsChannel 11",
+              "image": "https://www.bing.com/th?id=ONUT.D6y05JSMipVZ0LLQflqdBw"
+            },
+            {
+              "news_id": "3d10f0d8fc4453ddb6109f263ea181fe",
+              "url": "https://www.cbsnews.com/pittsburgh/news/afternoon-strong-to-severe-storms-possible-in-the-pittsburgh-area-on-saturday-first-alert-weather/",
+              "headline": "Afternoon strong to severe storms possible in the Pittsburgh area on Saturday | First Alert Weather",
+              "body": "Saturday is a First Alert Weather day due to the chance for severe storms after 4 p.m.",
+              "published_date": "2026-08-22",
+              "outlet": "CBS News",
+              "image": "https://s.yimg.com/bo/08cb3b0d-a1ba-5650-8b00-9127e19e44d3_1787398471548.png.cf.jpg"
+            },
+            {
+              "news_id": "a2109d2cdcfe5dd2a67b0dbd820c0f95",
+              "url": "https://www.yahoo.com/news/weather-news/articles/wednesday-last-call-rain-month-234722750.html",
+              "headline": "Wednesday will be the last call for rain this month, severe storms possible",
+              "body": "After experiencing sunny weather and temperatures in the 90s today, the region will see scattered showers and potential severe storms on Wednesday followed by a dry, hot stretch through the weekend.",
+              "published_date": "2026-08-25",
+              "outlet": "KOLR Springfield · via Yahoo News",
+              "image": "https://media.zenfs.com/en/kolr_springfield_articles_251/ec0d22f0ae9f002d9fb2859f0d045369.jpg"
+            },
+            {
+              "news_id": "f15b6a96a2cd50c3a53c98a8750621ad",
+              "url": "https://www.wnem.com/2026/08/25/quiet-evening-monitoring-severe-potential-wednesday/",
+              "headline": "Quiet evening, monitoring severe potential Wednesday",
+              "body": "A few strong storms are possible on Wednesday. Here's the latest!",
+              "published_date": "2026-08-25",
+              "outlet": "WNEM",
+              "image": ""
+            },
+            {
+              "news_id": "93fde0aa6fb65a7691bda4733d31afd5",
+              "url": "https://www.wtva.com/2026/08/25/some-sun-some-thunderstorms-over-next-few-days/",
+              "headline": "Some sun and some thunderstorms over the next few days",
+              "body": "We will see some of the thunderstorms on our Wednesday be on the strong to severe side at times",
+              "published_date": "2026-08-25",
+              "outlet": "WTVA 9 News",
+              "image": "https://www.bing.com/th?id=ONUT.xs0dJfqfX5ah1hMI5zv36A"
+            },
+            {
+              "news_id": "2d7c8078f7b55f178e263d1722d27e2c",
+              "url": "https://www.msn.com/en-us/news/other/first-alert-damaging-winds-possible-wednesday/ar-AA2aU3kK?ocid=BingNewsVerp",
+              "headline": "First Alert: Damaging winds possible Wednesday",
+              "body": "Another round of severe weather is on the way for Wednesday.",
+              "published_date": "2026-08-26",
+              "outlet": "KAIT on MSN",
+              "image": ""
+            },
+            {
+              "news_id": "4db9fb2b056353c8ba83d02a131491c7",
+              "url": "https://www.knopnews2.com/2026/08/26/severe-storms-possible-tonight-across-region-before-cooler-wednesday/",
+              "headline": "Severe storms possible tonight across the region before cooler Wednesday",
+              "body": "Severe storms could develop across the region tonight, bringing the potential for damaging winds and large hail before conditions improve Wednesday.",
+              "published_date": "2026-08-26",
+              "outlet": "KNOP",
+              "image": "https://www.bing.com/th?id=ONUT.JbPk-OpZXP3oos3SEpe6Tw"
+            },
+            {
+              "news_id": "6b8dd84bf4e85d0ab168e3909aa891e5",
+              "url": "https://www.yahoo.com/news/weather-news/articles/nonprofit-provides-hot-meals-kansas-031215292.html",
+              "headline": "Nonprofit provides hot meals to Kansas City, Kansas residents affected by severe storm",
+              "body": "Operation BBQ Relief is working throughout the week to provide Kansas City, Kansas residents with a hot meal after many a severe storm leaves behind devastation.",
+              "published_date": "2026-08-26",
+              "outlet": "WDAF · via Yahoo News",
+              "image": "https://media.zenfs.com/en/wdaf_articles_412/a3b5c1286d103a6549f6f4755e6957ed.jpg"
+            },
+            {
+              "news_id": "dc22038144ce5a279c3f63bef74915e9",
+              "url": "https://www.dispatch.com/story/weather/severe/2026/08/25/ohio-august-rainfall-2025-drought-vs-2026-flooding/91406663007/",
+              "headline": "Ohio went from drought to flooding in a year. A tale of two Augusts",
+              "body": "Last August brought drought and falling reservoir levels. This year, Columbus has seen nearly 10 inches of rain and Hoover Reservoir is overflowing.",
+              "published_date": "2026-08-25",
+              "outlet": "The Columbus Dispatch",
+              "image": "https://www.bing.com/th?id=ONUT.XlGXS2L3mRWnZaepipjJRQ"
+            },
+            {
+              "news_id": "807598c627be5f24a2e06852ebe6cc3b",
+              "url": "https://www.yahoo.com/news/weather-news/articles/possible-severe-storms-wednesday-194920474.html",
+              "headline": "Possible severe storms on Wednesday",
+              "body": "We are in a Slight (Level 2 out of 5) Risk for Severe weather on Wednesday. We are expecting two rounds of thunderstorms. Both have the possibility to maintain strong winds and produce hail, but the a...",
+              "published_date": "2026-08-25",
+              "outlet": "WREG · via Yahoo News",
+              "image": "https://media.zenfs.com/en/wreg_articles_784/d2a652e6362f86b6731bc50e71100867.png.cf.jpg"
+            },
+            {
+              "news_id": "84aa3cf61685552a806674fe33f01f72",
+              "url": "https://www.msn.com/en-us/news/other/trump-approves-major-disaster-declaration-21-counties-to-get-individual-assistance/ar-AA2aVtMs?ocid=BingNewsVerp",
+              "headline": "Trump approves major disaster declaration, 21 counties to get individual assistance",
+              "body": "Gov. Mike Braun says federal aid is now approved following August 11’s derecho storm and severe weather.",
+              "published_date": "2026-08-26",
+              "outlet": "WNDU on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.foYy-1uoJWb8gD2hZQhFPg"
+            },
+            {
+              "news_id": "6f535a43fc535b17a299ea35d64003c6",
+              "url": "https://www.msn.com/en-us/news/other/powerful-storms-knocked-out-power-in-northwest-indiana-2-weeks-ago-this-majority-black-city-has-suffered-the-most/ar-AA2aTaHM?ocid=BingNewsVerp",
+              "headline": "Powerful storms knocked out power in northwest Indiana 2 weeks ago. This majority Black city has suffered the most",
+              "body": "With power still out, residents in Gary, Indiana, a majority Black community, are frustrated by persistent power outages ...",
+              "published_date": "2026-08-26",
+              "outlet": "CNN on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.gmn6a0QjHhDSeBVdlCSuyQ"
+            },
+            {
+              "news_id": "5a18ea36b69050358e8b46200d5e51bd",
+              "url": "https://abc7chicago.com/post/chicago-area-weather-forecast-week-threat-severe-storms-wednesday-tornado-risk-south-suburbs-nw-indiana/19733884/",
+              "headline": "Threat of severe storms Wednesday, with tornado risk for south suburbs, NW Indiana",
+              "body": "There is a threat of severe weather Wednesday in the Chicago area.",
+              "published_date": "2026-08-25",
+              "outlet": "ABC 7 Chicago",
+              "image": "https://s.yimg.com/bo/e89d9c9f-05e5-500b-8e83-1421e3868e9d_1787677281526.jpg"
+            },
+            {
+              "news_id": "d46ec0cd86ec534ca861182503c0a756",
+              "url": "https://www.fox9.com/weather/minnesota-weather-forecast-aug-25-2026",
+              "headline": "Minnesota weather: More humid Tuesday with isolated late day strong storms",
+              "body": "Tuesday turns warmer and more humid across Minnesota, with chances of isolated strong thunderstorms later in the day.",
+              "published_date": "2026-08-25",
+              "outlet": "FOX 9 Minneapolis-St. Paul",
+              "image": "https://www.bing.com/th?id=ONUT.MaaRPvOHrnxaVp4Mv6CWTA"
+            },
+            {
+              "news_id": "a787baef1c585d4883dc746fc656bca0",
+              "url": "https://www.msn.com/en-us/news/other/hawaii-officials-warn-of-storm-chaser-scams-after-hurricane-lala/ar-AA2aVm0q?ocid=BingNewsVerp",
+              "headline": "Hawaii officials warn of ‘storm chaser’ scams after Hurricane Lala",
+              "body": "Storm chasers are scammers and imposters who may ask for money, fees, or personal financial information to “process” disaster ...",
+              "published_date": "2026-08-26",
+              "outlet": "Hawaii News Now on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.14c13baa461e5fa87a61bb8eb3f839e1"
+            }
+          ]
         }
       ],
-      "logs_total": 1
+      "logs_total": 2
     },
     {
       "incident_id": "20260814-ID-EQ",
       "tree_id": "aeb6e9b226904e9684922e25e165cd7b",
       "canonical_name": "Earthquake M7.7 Ende, Indonesia 2026-08-14",
-      "summary": "A \"Voces por la Vida\" concert in Bogotá raised US$3.6 million for victims of the Colombia earthquake. Colombian artists Karol G and Maluma also united for earthquake relief efforts. A viral video falsely linked to the Indonesia NTT earthquake was confirmed to have been recorded in Colombia.",
+      "summary": "The death toll from the M7.7 earthquake in Flores, Indonesia has risen to 103, with the highest fatalities in Manggarai (41) and East Manggarai (34). The Health Ministry has established field hospitals at Ruteng and Aeramo to support medical services, while the West Papua community raised Rp167.6 million for earthquake victims.",
       "country": "Indonesia",
       "iso2": "ID",
-      "lat": -8.3101,
-      "lon": 121.3517,
+      "lat": -8.2849,
+      "lon": 120.1465,
       "country_group": "A",
       "region": "Asia",
       "incident_type": "Earthquake",
@@ -33613,18 +34093,30 @@
       "first_reported_date": "2026-08-14",
       "last_updated_date": "2026-08-25",
       "days_since_event": 12,
-      "source_count": 11,
+      "source_count": 16,
       "should_report": true,
       "search_keys": [],
       "sources": {
         "who_don": 0,
-        "usgs": 10,
+        "usgs": 15,
         "gdacs": 1,
         "ercc": 0,
         "healthmap": 0,
-        "news": 390
+        "news": 392
       },
       "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 5.9 - 36 km NE of Labuan Bajo, Indonesia",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkta",
+          "meta": "10 km depth"
+        },
+        {
+          "type": "USGS",
+          "label": "M 6.1 - 58 km N of Ende, Indonesia",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkuc",
+          "meta": "10 km depth"
+        },
         {
           "type": "USGS",
           "label": "M 7.7 - 68 km NNW of Ende, Indonesia",
@@ -33644,10 +34136,22 @@
           "meta": "10 km depth"
         },
         {
+          "type": "USGS",
+          "label": "M 5.6 - 61 km NNW of Ende, Indonesia",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tku7",
+          "meta": "10 km depth"
+        },
+        {
           "type": "GDACS",
           "label": "Red alert · Earthquake M7.7 Nusa Tenggara Timur, Indonesia 2026-08-14",
           "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1558059",
           "meta": ""
+        },
+        {
+          "type": "USGS",
+          "label": "M 5.7 - 125 km NNE of Palu, Indonesia",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tl1s",
+          "meta": "72.495 km depth"
         },
         {
           "type": "USGS",
@@ -33687,6 +34191,12 @@
         },
         {
           "type": "USGS",
+          "label": "M 5.6 - 67 km NNW of Ende, Indonesia",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tm8h",
+          "meta": "10 km depth"
+        },
+        {
+          "type": "USGS",
           "label": "M 5.7 - 194 km SW of Labuan, Indonesia",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tmlu",
           "meta": "10 km depth"
@@ -33695,8 +34205,8 @@
       "physical": {
         "max_magnitude": 7.7,
         "max_depth_km": 10.0,
-        "place": "68 km NNW of Ende, Indonesia",
-        "felt": 21,
+        "place": "36 km NE of Labuan Bajo, Indonesia",
+        "felt": 1,
         "sig": 924,
         "tsunami": false,
         "gdacs_alertlevel": "Red",
@@ -34976,6 +35486,10 @@
           "published_date": "2026-08-19"
         },
         {
+          "headline": "Kemenkes Establishes Field Hospitals in Ruteng, Aeramo to Support Post-Earthquake Services in NTT",
+          "published_date": "2026-08-19"
+        },
+        {
           "headline": "A triple crisis: Earthquake takes a heavy toll on Colombia's impoverished and neglected region",
           "published_date": "2026-08-19"
         },
@@ -35244,10 +35758,6 @@
           "published_date": "2026-08-24T02:11:43+00:00"
         },
         {
-          "headline": "NTT Earthquake Death Toll Rises to 103",
-          "published_date": "2026-08-25"
-        },
-        {
           "headline": "Catholic groups offer support to Indonesia quake survivors - CathNews",
           "published_date": "2026-08-25"
         },
@@ -35262,9 +35772,17 @@
         {
           "headline": "Chinese research institute apologises after sparking alarm with 7.7 quake alert",
           "published_date": "2026-08-25"
+        },
+        {
+          "headline": "West Papua Community Raises Rp167.6 Million for Flores Earthquake Victims",
+          "published_date": "2026-08-25"
+        },
+        {
+          "headline": "NTT Earthquake Death Toll Rises to 103",
+          "published_date": "2026-08-25"
         }
       ],
-      "news_total": 390,
+      "news_total": 392,
       "logs": [
         {
           "log_date": "2026-08-15",
@@ -35921,183 +36439,6 @@
           ]
         },
         {
-          "log_date": "2026-08-21",
-          "summary": "As of August 21-22, a magnitude 5.0 aftershock struck 63 km northwest of Ende, while tourism in Flores begins to recover with Labuan Bajo and Komodo National Park back in operation, though inland overland disruptions persist. The Indonesian Navy has deployed five warships to support relief efforts, and the government has yet to open the door to foreign aid, appreciating condolences but not accepting international assistance at this time.",
-          "news": [
-            {
-              "news_id": "83b5bb37e2885669a908dbb3f39c7de7",
-              "url": "https://en.tempo.co/read/2118005/fact-check-no-red-sky-after-m7-7-earthquake-in-ntt",
-              "headline": "Fact Check: No Red Sky After M7.7 Earthquake in NTT",
-              "body": "The results showed that the dark red sky phenomenon occurred in Colombia, not Indonesia. This natural phenomenon occurred ...",
-              "published_date": "2026-08-21T06:03:53+00:00",
-              "outlet": "Tempo.co English",
-              "image": "https://www.bing.com/th?id=ONUT.NFwBH4DH1JfRBxWAumJLLQ"
-            },
-            {
-              "news_id": "70382f31b2455567b645994f1c0ea1ad",
-              "url": "https://en.tempo.co/read/2118040/indonesia-yet-to-open-door-to-foreign-aid-for-ntt-earthquake",
-              "headline": "Indonesia Yet to Open Door to Foreign Aid for NTT Earthquake",
-              "body": "Indonesia appreciates the messages of condolence, concern, and solidarity from friendly countries regarding the NTT ...",
-              "published_date": "2026-08-21T14:50:09+00:00",
-              "outlet": "Tempo.co English",
-              "image": "https://www.bing.com/th?id=ONUT.igBKzVKLvJJ0lTBsXzDeGg"
-            },
-            {
-              "news_id": "8a5b8bac144b562cb1b401954b7cf530",
-              "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/08/17/no-thai-building-damage-reported-after-indonesia-quake",
-              "headline": "No Thai building damage reported after Indonesia quake",
-              "body": "BANGKOK: The Department of Disaster Prevention and Mitigation (DDPM) confirmed that no damage was found in high-rise buildings in southern Thailand after an earthquake in Indonesia.",
-              "published_date": "2026-08-17",
-              "outlet": "The Star",
-              "image": "https://apicms.thestar.com.my/uploads/images/2026/08/17/4063569.jpeg"
-            },
-            {
-              "news_id": "b4132ee1f87d5645ae6c25c22ec0830d",
-              "url": "https://www.counton2.com/news/charleston-animal-society-collecting-donations-for-pets-affected-by-colombia-7-4-magnitude-earthquake/",
-              "headline": "Charleston Animal Society collecting donations for pets affected by Colombia...",
-              "body": "NORTH CHARLESTON, S.C. (WCBD) – The Charleston Animal Society is collecting supplies to aid animals ...",
-              "published_date": "2026-08-20T17:32:39+00:00",
-              "outlet": "WCBD-TV Charleston",
-              "image": "https://s.yimg.com/bo/aaf83a53-e4be-5dd7-94ea-7695bcac42ec_1787248509318.jpg"
-            },
-            {
-              "news_id": "ff395a885eff5566a3fa6d0110743ee1",
-              "url": "https://www.yahoo.com/news/world/articles/vatf-1-returns-home-earthquake-022551938.html",
-              "headline": "VATF-1 returns home from earthquake-ravaged Colombia",
-              "body": "CHANTILLY, Va. (DC News Now) — Members of Virginia Task Force 1 (VA-TF1) received a heroes’ welcome home Thursday night, after ten days in Colombia. The ten-member team arrived at their headquarters, ...",
-              "published_date": "2026-08-21",
-              "outlet": "DC News Now Washington · via Yahoo News",
-              "image": "https://media.zenfs.com/en/wdvm_articles_310/b287480db66257fa950745b246423b84.png.cf.jpg"
-            },
-            {
-              "news_id": "83073b89a4795b1db2e5dc44bb7698e7",
-              "url": "https://abcnews4.com/news/local/charleston-animal-society-holds-supply-drive-to-aid-pets-affected-by-colombia-earthquake-leashes-collars-animal-food-crates-cali-pereira-quibdo-rescue",
-              "headline": "Charleston Animal Society holds supply drive to aid pets affected by Colombia earthquake",
-              "body": "Charleston Animal Society is mobilizing to help animals in need in Colombia as the country recovers from a massive 7.4 magnitude earthquake that took place on A",
-              "published_date": "2026-08-20",
-              "outlet": "ABC News 4 Charleston",
-              "image": "https://s.yimg.com/bo/e60892af-b692-50ce-a835-5ea7dd2d080e_1786549948618.jpg"
-            },
-            {
-              "news_id": "01bd1a722950503a8f504dad86ce0323",
-              "url": "https://www.yahoo.com/news/weather-news/articles/indonesia-issues-tsunami-warning-following-003418044.html",
-              "headline": "Search for survivors continues after powerful earthquake kills dozens in Indonesia",
-              "body": "Rescuers are digging through the rubble of collapsed buildings in Indonesia, searching for bodies and possible survivors following the deadly magnitude 7.7 earthquake that struck the country Saturday,...",
-              "published_date": "2026-08-16",
-              "outlet": "Yahoo",
-              "image": "https://s.yimg.com/lo/mysterio/api/1333f5fa4f69e9a868bf23949a9dec796726b88f4b4400e0dda35f06bf2c74b6/lightyear_networkapi/resizefill_w960;quality_80;format_webp/https://media.zenfs.com/en/cnn_articles_875/056fa88a79beb82dd963fe8dd6e74091.jpg"
-            },
-            {
-              "news_id": "5e5d240e454e510694aa7104fe5b5da7",
-              "url": "https://www.msn.com/en-ca/video/other/watch-chaos-as-powerful-earthquake-hits-indonesia/vi-AA2aaLdV?ocid=BingNewsVerp",
-              "headline": "Watch: Chaos as powerful earthquake hits Indonesia",
-              "body": "Chaotic scenes as earthquake rattles Indonesia caught on camera ...",
-              "published_date": "2026-08-21",
-              "outlet": "Euronews on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "a3fa0b330f065330a80e1df3e0b883f0",
-              "url": "https://www.live5news.com/2026/08/20/even-distance-lowcountry-animal-shelter-raises-donations-after-colombia-earthquake/",
-              "headline": "‘Even from a distance’: Lowcountry animal shelter raises donations after Colombia earthquake",
-              "body": "The Charleston Animal Society is accepting donations for animals and pets in South America after a magnitude 7.4 earthquake struck parts of Colombia.",
-              "published_date": "2026-08-20",
-              "outlet": "Live 5 News",
-              "image": "https://www.bing.com/th?id=ONUT.pXw_2EaxvvSdSMndSEUOlg"
-            },
-            {
-              "news_id": "2b7fdc0d52dc5178a2af60f091840e6c",
-              "url": "https://www.ksat.com/news/world/2026/08/18/fear-grips-children-after-deadly-earthquake-in-eastern-indonesia-leaves-thousands-displaced/",
-              "headline": "Fear grips children after deadly earthquake in eastern Indonesia leaves thousands displaced",
-              "body": "Thousands of people are still displaced on Indonesia’s Flores island, three days after a magnitude 7.7 earthquake killed at least 70 people, injured nearly 1,200 and damaged about 12,000 homes.",
-              "published_date": "2026-08-18",
-              "outlet": "KSAT",
-              "image": ""
-            },
-            {
-              "news_id": "4ace66ffb65e5c5e9fe6727ba8716663",
-              "url": "https://www.msn.com/en-us/news/world/magnitude-77-quake-hits-off-coast-of-indonesia-usgs-says/ar-AA2a8LDX",
-              "headline": "Magnitude 7.7 quake hits off coast of Indonesia, USGS says",
-              "body": "A magnitude 7.7 earthquake hit just north of the Flores region in the eastern part of Indonesia, the United States Geological Survey reported on Friday.",
-              "published_date": "2026-08-21",
-              "outlet": "NBC News",
-              "image": ""
-            },
-            {
-              "news_id": "c9e52510179a55f68cea905c6c916ecc",
-              "url": "https://www.china.org.cn/world/Off_the_Wire/2026-08/21/content_118657614.shtml",
-              "headline": "Urgent: 5.0-magnitude quake hits 63 km NW of Ende, Indonesia -- USGS",
-              "body": "BEIJING, Aug. 21 (Xinhua) -- An earthquake with a magnitude of 5.0 jolted 63 km NW of Ende, Indonesia at 1924 GMT on Thursday, the U.S. Geological Survey said.",
-              "published_date": "2026-08-21T13:55:29+00:00",
-              "outlet": "China.org.cn",
-              "image": ""
-            },
-            {
-              "news_id": "c903ecd2bbfd574590762854ebbf401a",
-              "url": "https://www.ttgasia.com/2026/08/21/flores-tourism-moves-toward-recovery-despite-ongoing-overland-disruptions/",
-              "headline": "Flores tourism moves toward recovery despite ongoing overland disruptions | TTG Asia",
-              "body": "Tourism in Flores is gradually recovering following the August 15 earthquake, with Labuan Bajo and the main Komodo National Park circuit back in operation, although several inland destinations and transport links remain disrupted.",
-              "published_date": "2026-08-21",
-              "outlet": "TTG Asia",
-              "image": "https://www.bing.com/th?id=ONUT.efhhFVjq-Mq8LX0H3qiNFA"
-            },
-            {
-              "news_id": "1f3f7be21bfe597c9b9b3428f8d7d2a4",
-              "url": "https://en.tempo.co/read/2118013/indonesian-navy-deploys-5-warships-to-aid-ntt-earthquake-relief",
-              "headline": "Indonesian Navy Deploys 5 Warships to Aid NTT Earthquake Relief",
-              "body": "The warships mobilization is part of disaster relief efforts through Military Operations Other Than War (OMSP).",
-              "published_date": "2026-08-21T14:05:28+00:00",
-              "outlet": "Tempo.co English",
-              "image": "https://www.bing.com/th?id=ONUT.e5B9sTFGtofzlXYaePXL_g"
-            },
-            {
-              "news_id": "8a8bf6405e745050894c8c7f8e10dc09",
-              "url": "https://www.nytimes.com/2026/08/15/world/asia/earthquake-indonesia-flores-tsunami.html",
-              "headline": "At Least 47 Dead as 7.7-Magnitude Earthquake Rocks Indonesia",
-              "body": "At least 38 people were killed in eastern Indonesia on Saturday after it was rocked by a 7.7-magnitude earthquake, one of the largest the region had experienced in decades, offici",
-              "published_date": "2026-08-15T06:13:00+00:00",
-              "outlet": "The New York Times",
-              "image": "https://static01.nyt.com/images/2026/08/15/multimedia/15int-indonesia-quake-photo-01-cvqh/15int-indonesia-quake-photo-01-cvqh-facebookJumbo.jpg"
-            },
-            {
-              "news_id": "574a2da22c8953d492a54f6b7f78cd87",
-              "url": "https://www.accuweather.com/en/weather-news/powerful-7-7-magnitude-earthquake-hits-indonesia-forcing-villagers-to-flee/1922946",
-              "headline": "Powerful 7.7 magnitude earthquake hits Indonesia, forcing villagers to flee",
-              "body": "Videos posted to social media showed buildings collapsing and panicked residents running and...",
-              "published_date": "2026-08-21T14:10:09+00:00",
-              "outlet": "AccuWeather",
-              "image": "https://s.yimg.com/bo/5527d2df-28f0-57ee-b51e-b94c20c0eed4_1786760512576.jpg"
-            },
-            {
-              "news_id": "decdfa9b3c9a5d8e99c0e9f1e0644a09",
-              "url": "https://www.msn.com/en-ph/news/other/powerful-quake-off-indonesia-kills-one-sparks-mass-evacuations/ar-AA2a9ANP",
-              "headline": "Powerful quake off Indonesia kills one, sparks mass evacuations",
-              "body": "A powerful 7.7-magnitude earthquake struck off Flores island in eastern Indonesia early Saturday, killing at least one person and sending thousands fleeing.",
-              "published_date": "2026-08-21",
-              "outlet": "ABS-CBN",
-              "image": "https://dam.mediacorp.sg/image/upload/s--2uku9bbI--/c_crop,h_576,w_1024,x_0,y_106/c_fill,g_auto,h_676,w_1200/fl_relative,g_south_east,l_mediacorp:cna:watermark:2023-11:afp_watermark_14112023,w_0.1/f_auto,q_auto/v1/mediacorp/cna/image/2026/08/15/indonesia_earthquake_1.jpg?itok=ORp7oRD4"
-            },
-            {
-              "news_id": "d69aba0b4a885c53891272b2906b96f9",
-              "url": "https://www.daytondailynews.com/nation-world/indonesia-earthquake/image_928c63dc-4d6a-57a4-8029-0e556a19363e.html",
-              "headline": "Indonesia Earthquake",
-              "body": "People stand near earthquake-damaged buildings in Satar Punda, East Nusa Tenggara province, Indonesia, Tuesday, Aug. 18, 2026. (AP Photo/Firdia Lisnawati)",
-              "published_date": "2026-08-17",
-              "outlet": "Dayton Daily News",
-              "image": "https://s.yimg.com/bo/8a964925-f8ef-5734-87c7-6abb7aa8d360_1787016608614.jpg"
-            },
-            {
-              "news_id": "8b93b355999952f39c700a0eefa0c58d",
-              "url": "https://theshillongtimes.com/2026/08/21/colombia-declares-emergency-in-earthquake-hit-regions/",
-              "headline": "Colombia declares emergency in earthquake-hit regions",
-              "body": "Bogota, Aug 20: Colombian President Abelardo de la Espriella has signed a decree declaring a 30-day state of economic, social and ecological emergency in parts of the country hit by the August 10 earthquake. The decree, signed after a cabinet meeting in Bogota on Wednesday (local time), covers 15 affected departments, including Valle del Cauca,…",
-              "published_date": "2026-08-21",
-              "outlet": "The Shillong Times",
-              "image": ""
-            }
-          ]
-        },
-        {
           "log_date": "2026-08-22",
           "summary": "As of August 22, the death toll from the M7.7 earthquake has risen to 83, and the BMKG has recorded 4,258 aftershocks, including 31 of magnitude 5.0 or higher. Recovery efforts continue to be hampered by ongoing aftershocks.",
           "news": [
@@ -36369,9 +36710,42 @@
               "image": "https://www.bing.com/th?id=ONUT.Uo46K-szIzQW45LritOqiA"
             }
           ]
+        },
+        {
+          "log_date": "2026-08-26",
+          "summary": "The death toll from the M7.7 earthquake in Flores, Indonesia has risen to 103, with the highest fatalities in Manggarai (41) and East Manggarai (34). The Health Ministry has established field hospitals at Ruteng and Aeramo to support medical services, while the West Papua community raised Rp167.6 million for earthquake victims.",
+          "news": [
+            {
+              "news_id": "99e2050397b65c2db3b62c78ecf7b1de",
+              "url": "https://en.tempo.co/read/2118253/west-papua-community-raises-rp167-6-million-for-flores-earthquake-victims",
+              "headline": "West Papua Community Raises Rp167.6 Million for Flores Earthquake Victims",
+              "body": "A fundraising drive in West Papua has raised Rp167.6 million to help victims of the 7.7-magnitude earthquake that struck Flores, East Nusa Tenggara.",
+              "published_date": "2026-08-25",
+              "outlet": "Tempo.co English",
+              "image": "https://www.bing.com/th?id=ONUT.lNjLJZFUXdiL4smKlOIM_w"
+            },
+            {
+              "news_id": "9f0c9be28d93532b9343654a2fd7dfbe",
+              "url": "https://observerid.com/kemenkes-establishes-field-hospitals-in-ruteng-aeramo-to-support-post-earthquake-services-in-ntt/",
+              "headline": "Kemenkes Establishes Field Hospitals in Ruteng, Aeramo to Support Post-Earthquake Services in NTT",
+              "body": "The Health Ministry (Kemenkes) established two field hospitals at Ruteng General Hospital (RSUD) in Manggarai regency and RSUD Aeramo in Nagekeo regency. The setup of these emergency facilities aims to ensure readiness for medical services while supporting the recovery of healthcare facilities following the 7.7-magnitude earthquake that struck East Nusa Tenggara (NTT) last Saturday.",
+              "published_date": "2026-08-19",
+              "outlet": "observerid",
+              "image": "https://cdn.observerid.com/2026/08/Establishes-Field-Hospitals.webp"
+            },
+            {
+              "news_id": "1ff10aa45ce455eeba3581b2c0d29e53",
+              "url": "https://en.tempo.co/read/2118280/ntt-earthquake-death-toll-rises-to-103",
+              "headline": "NTT Earthquake Death Toll Rises to 103",
+              "body": "The highest number of fatalities was in the Manggarai region, namely 41 people, and in East Manggarai, namely 34 people.",
+              "published_date": "2026-08-25",
+              "outlet": "Tempo.co English",
+              "image": "https://www.bing.com/th?id=ONUT.8ZGo3XWsiH88RlhhEs24-w"
+            }
+          ]
         }
       ],
-      "logs_total": 8
+      "logs_total": 9
     },
     {
       "incident_id": "20260814-BE-WF",
@@ -36407,7 +36781,7 @@
         "gdacs": 1,
         "ercc": 1,
         "healthmap": 0,
-        "news": 68
+        "news": 69
       },
       "source_links": [
         {
@@ -36667,6 +37041,10 @@
           "published_date": "2026-08-20"
         },
         {
+          "headline": "Wildfires expose - and detonate - buried bombs and mines from WWI and WWII",
+          "published_date": "2026-08-22"
+        },
+        {
           "headline": "European wildfires reveal a hidden danger: buried bombs and mines from WWI and WWII",
           "published_date": "2026-08-22"
         },
@@ -36707,7 +37085,7 @@
           "published_date": "2026-08-23T02:49:46+00:00"
         }
       ],
-      "news_total": 68,
+      "news_total": 69,
       "logs": [
         {
           "log_date": "2026-08-18",
@@ -37079,36 +37457,36 @@
       "logs_total": 5
     },
     {
-      "incident_id": "20260814-ID-EQ",
+      "incident_id": "20260815-ID-EQ",
       "tree_id": "02bdf815017a45678230df1f611e6a90",
-      "canonical_name": "Earthquake M6.1 Ende, Indonesia 2026-08-14",
+      "canonical_name": "Earthquake M6.9 Pematangsiantar, Indonesia 2026-08-15",
       "summary": "A 7.7-magnitude earthquake struck Indonesia's East Nusa Tenggara province on August 15, 2026, killing at least 100 people and injuring over 1,200. Thousands remain displaced and await aid, while some businesses on Flores Island have begun to reopen. Relief operations continue as authorities manage the aftermath.",
       "country": "Indonesia",
       "iso2": "ID",
-      "lat": -8.2849,
-      "lon": 120.1465,
+      "lat": 3.0856,
+      "lon": 99.015,
       "country_group": "A",
       "region": "Asia",
       "incident_type": "Earthquake",
       "incident_category": "Natural",
       "is_disease": false,
       "severity": "HIGH",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
+      "priority": "HIGH",
+      "priority_rank": 1,
       "pandemic_potential": null,
       "event_status": null,
       "extended_monitoring": false,
       "disease_name": null,
-      "event_date": "2026-08-14",
-      "first_reported_date": "2026-08-14",
+      "event_date": "2026-08-15",
+      "first_reported_date": "2026-08-15",
       "last_updated_date": "2026-08-24",
-      "days_since_event": 12,
-      "source_count": 6,
+      "days_since_event": 11,
+      "source_count": 1,
       "should_report": true,
       "search_keys": [],
       "sources": {
         "who_don": 0,
-        "usgs": 6,
+        "usgs": 1,
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
@@ -37117,46 +37495,16 @@
       "source_links": [
         {
           "type": "USGS",
-          "label": "M 5.9 - 36 km NE of Labuan Bajo, Indonesia",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkta",
-          "meta": "10 km depth"
-        },
-        {
-          "type": "USGS",
-          "label": "M 6.1 - 58 km N of Ende, Indonesia",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkuc",
-          "meta": "10 km depth"
-        },
-        {
-          "type": "USGS",
-          "label": "M 5.6 - 61 km NNW of Ende, Indonesia",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tku7",
-          "meta": "10 km depth"
-        },
-        {
-          "type": "USGS",
           "label": "M 6.9 - 15 km NNW of Pematangsiantar, Indonesia",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkyk",
           "meta": "172.526 km depth"
-        },
-        {
-          "type": "USGS",
-          "label": "M 5.7 - 125 km NNE of Palu, Indonesia",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tl1s",
-          "meta": "72.495 km depth"
-        },
-        {
-          "type": "USGS",
-          "label": "M 5.6 - 67 km NNW of Ende, Indonesia",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tm8h",
-          "meta": "10 km depth"
         }
       ],
       "physical": {
         "max_magnitude": 6.9,
-        "max_depth_km": 10.0,
-        "place": "36 km NE of Labuan Bajo, Indonesia",
-        "felt": 1,
+        "max_depth_km": 172.526,
+        "place": "15 km NNW of Pematangsiantar, Indonesia",
+        "felt": 32,
         "sig": 746,
         "tsunami": false,
         "gdacs_alertlevel": null,
@@ -37667,7 +38015,7 @@
       "disease_name": null,
       "event_date": "2026-08-20",
       "first_reported_date": "2026-08-20",
-      "last_updated_date": "2026-08-25",
+      "last_updated_date": "2026-08-26",
       "days_since_event": 6,
       "source_count": 1,
       "should_report": true,
@@ -37678,7 +38026,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 42
+        "news": 44
       },
       "source_links": [
         {
@@ -37699,6 +38047,10 @@
         "gdacs_population": null
       },
       "news": [
+        {
+          "headline": "6.7-magnitude earthquake shakes Peru's southern Andes, no immediate damage reported",
+          "published_date": "2026-08-20"
+        },
         {
           "headline": "Peru earthquake raises concern about activity along the Ring of Fire",
           "published_date": "2026-08-20"
@@ -37866,9 +38218,13 @@
         {
           "headline": "Peru earthquake: Scary videos show aftermath in Ayacucho as 6.7-magnitude quake shakes region",
           "published_date": "2026-08-25"
+        },
+        {
+          "headline": "Video from Colombia quake falsely linked to Peru tremor",
+          "published_date": "2026-08-26"
         }
       ],
-      "news_total": 42,
+      "news_total": 44,
       "logs": [
         {
           "log_date": "2026-08-21",
@@ -38243,16 +38599,200 @@
       "logs_total": 0
     },
     {
-      "incident_id": "20260825-TW-EQ",
-      "tree_id": "0d2108cbdd2945f3bc603036dddc1252",
-      "canonical_name": "Earthquake M5.5 Hengchun, Taiwan 2026-08-25",
+      "incident_id": "20260825-XX-DR",
+      "tree_id": "8e437650e0284086b4ad68831ffbeeee",
+      "canonical_name": "Drought 2026-08-25",
+      "summary": "Multiple regions are experiencing severe drought impacts in August 2026: France's wine industry faces an early harvest after 63 days of heat wave conditions; British florists report their worst year as drought decimates flower stocks; Central Java farmers struggle with both drought and rat infestations; a $91.6 million water project was commissioned in drought-stricken Jamaica; and before-and-after photos from California's Chino Hills show the toll of extreme heat and drought. Additionally, a forecasted \"super El Niño\" threatens to worsen drought conditions in India and disrupt global supply chains.",
+      "country": "",
+      "iso2": "XX",
+      "lat": null,
+      "lon": null,
+      "country_group": "C",
+      "region": "Europe",
+      "incident_type": "Drought",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "LOW",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": null,
+      "event_status": null,
+      "extended_monitoring": false,
+      "disease_name": null,
+      "event_date": "2026-08-25",
+      "first_reported_date": "2026-08-25",
+      "last_updated_date": "2026-08-26",
+      "days_since_event": 1,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 0,
+        "gdacs": 0,
+        "ercc": 1,
+        "healthmap": 0,
+        "news": 9
+      },
+      "source_links": [
+        {
+          "type": "ERCC",
+          "label": "ECHO Daily Map of 25 August 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5763",
+          "meta": ""
+        }
+      ],
+      "physical": {
+        "max_magnitude": null,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Meridian promises to keep energy price increases below inflation in coming year",
+          "published_date": "2026-08-25"
+        },
+        {
+          "headline": "A 'super El Niño' could make India's monsoon drier yet more dangerous",
+          "published_date": "2026-08-25"
+        },
+        {
+          "headline": "$91.6m Bunkers Hill water project commissioned amid drought - Jamaica Observer",
+          "published_date": "2026-08-25"
+        },
+        {
+          "headline": "Before and after photos of Chino Hills show the toll of this summer's drought and heat",
+          "published_date": "2026-08-25"
+        },
+        {
+          "headline": "Your lawn may be greener with drought restriction changes this week",
+          "published_date": "2026-08-25"
+        },
+        {
+          "headline": "‘We’ve Never Seen Anything Like It’: Early Harvest Rattles France’s Wine Industry",
+          "published_date": "2026-08-25T00:00:00+00:00"
+        },
+        {
+          "headline": "What Super El Niño Means For Business Supply Chains And The Economy",
+          "published_date": "2026-08-25T00:00:00+00:00"
+        },
+        {
+          "headline": "British florists face ‘worst year yet' as drought decimates stocks",
+          "published_date": "2026-08-26"
+        },
+        {
+          "headline": "Rats, drought compound woes for Central Java farmers - Archipelago - The Jakarta Post",
+          "published_date": "2026-08-26"
+        }
+      ],
+      "news_total": 9,
+      "logs": [
+        {
+          "log_date": "2026-08-26",
+          "summary": "Multiple regions are experiencing severe drought impacts in August 2026: France's wine industry faces an early harvest after 63 days of heat wave conditions; British florists report their worst year as drought decimates flower stocks; Central Java farmers struggle with both drought and rat infestations; a $91.6 million water project was commissioned in drought-stricken Jamaica; and before-and-after photos from California's Chino Hills show the toll of extreme heat and drought. Additionally, a forecasted \"super El Niño\" threatens to worsen drought conditions in India and disrupt global supply chains.",
+          "news": [
+            {
+              "news_id": "6a3cd660744b52cf8abf60095235d8d9",
+              "url": "https://www.nytimes.com/2026/08/25/world/europe/heat-drought-france-champagne.html",
+              "headline": "‘We’ve Never Seen Anything Like It’: Early Harvest Rattles France’s Wine Industry",
+              "body": "France has seen four heat waves since May, totaling 63 days of heat wave conditions, according to the country’s weather ...",
+              "published_date": "2026-08-25T00:00:00+00:00",
+              "outlet": "The New York Times",
+              "image": "https://www.bing.com/th?id=ONUT._DfhRpf6yDqjzZqbbfL73g"
+            },
+            {
+              "news_id": "497303034b785bf0aff11777c010163c",
+              "url": "https://www.msn.com/en-gb/money/general/british-florists-face-worst-year-yet-as-drought-decimates-stocks/ar-AA2aUCM6?ocid=BingNewsVerp",
+              "headline": "British florists face ‘worst year yet' as drought decimates stocks",
+              "body": "EXCLUSIVE: Flower growers across Britain are struggling to adapt to record low rainfall and extremely high temperatures.",
+              "published_date": "2026-08-26",
+              "outlet": "Daily Express on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.NhNEoGgUHNN0gQqSXNi8Vg"
+            },
+            {
+              "news_id": "d86ad81fd8d156fba76e3808cda82ab8",
+              "url": "https://www.nzherald.co.nz/business/companies/energy/meridian-energy-returns-to-130m-profit-after-drought-hit-loss-promises-to-keep-energy-price-increases-below-inflation-in-coming-year/AOW4SPJNKRAJXBX6NJEPN74WFA/",
+              "headline": "Meridian promises to keep energy price increases below inflation in coming year",
+              "body": "Meridian Energy has returned to profit after last year's $452m loss.",
+              "published_date": "2026-08-25",
+              "outlet": "NZ Herald",
+              "image": "https://www.bing.com/th?id=ONUT.hNNtWQGpbqX6PQwqCpSxRA"
+            },
+            {
+              "news_id": "6240cb8d917a5780839626b31268aa9a",
+              "url": "https://www.thejakartapost.com/indonesia/2026/08/26/rats-drought-compound-woes-for-central-java-farmers",
+              "headline": "Rats, drought compound woes for Central Java farmers - Archipelago - The Jakarta Post",
+              "body": "Authorities said the surge in the rat population was partly driven by a prolonged dry season, which has allowed dense scrub to grow and provide shelter for the pests.",
+              "published_date": "2026-08-26",
+              "outlet": "The Jakarta Post",
+              "image": ""
+            },
+            {
+              "news_id": "7474bddce0f855448acb133616328a48",
+              "url": "https://phys.org/news/2026-08-super-el-nio-india-monsoon.html",
+              "headline": "A 'super El Niño' could make India's monsoon drier yet more dangerous",
+              "body": "India is currently in the middle of its summer monsoon, but this year's rainfall presents an interesting paradox. Much of the country has received less rain than usual so far, yet has still been hit by severe floods and landslides. In the southern state of Kerala, for example, devastating floods occurred despite the overall monsoon rainfall remaining well below average.",
+              "published_date": "2026-08-25",
+              "outlet": "Phys.org",
+              "image": ""
+            },
+            {
+              "news_id": "82ddcb847d1b5b8cb77fbab8dfb12800",
+              "url": "https://www.jamaicaobserver.com/2026/08/25/91-6m-bunkers-hill-water-project-commissioned-amid-drought/",
+              "headline": "$91.6m Bunkers Hill water project commissioned amid drought - Jamaica Observer",
+              "body": "CLARENDON, Jamaica — Approximately 1,000 residents across Bunkers Hill, Mears, Broadleaf and Nairne Castle in Northern Clarendon are set to benefit from improved access to potable water following the commissioning of the $91.6-million Bunkers Hill Water Supply Project on Tuesday. In a release, the Ministry of Water, Environment and Climate Change said the project was implemented by Rural Water Supply Limited (RWSL) and handed over to the National Water Commission...",
+              "published_date": "2026-08-25",
+              "outlet": "Jamaica Observer",
+              "image": "https://www.bing.com/th?id=ONUT.iSzLWai0mk2GBTw1yt78Cw"
+            },
+            {
+              "news_id": "4ecd26cda247586abbb6bbba9d1ca505",
+              "url": "https://www.latimes.com/california/newsletter/2026-08-25/before-after-photos-of-chino-hills-show-toll-of-drought-heat",
+              "headline": "Before and after photos of Chino Hills show the toll of this summer's drought and heat",
+              "body": "Your morning catch-up: This summer's extreme heat and drought, inside the Lakers deal and more big stories",
+              "published_date": "2026-08-25",
+              "outlet": "Los Angeles Times",
+              "image": "https://www.bing.com/th?id=ONUT.fgGPvm2W99xAJd0x-eEbfA"
+            },
+            {
+              "news_id": "07e58c6f381f524cbc7dd27e5702487c",
+              "url": "https://www.caller.com/story/news/local/our-water/2026/08/25/corpus-christi-water-drought-restrictions-may-again-loosen/91459682007/",
+              "headline": "Your lawn may be greener with drought restriction changes this week",
+              "body": "It's good news for homeowners seeking greener lawns. Corpus Christi drought restrictions are expected to again loosen this week.",
+              "published_date": "2026-08-25",
+              "outlet": "Corpus Christi Caller-Times",
+              "image": "https://s.yimg.com/bo/22a6d0d3-2a74-5cc5-aabc-5f27ffbfe820_1787686699260.jpg"
+            },
+            {
+              "news_id": "41be3e3d7a3550b5bfe43d2bcfa90e87",
+              "url": "https://www.forbes.com/sites/chloedemrovsky/2026/08/25/what-super-el-nio-means-for-business-supply-chains-and-the-economy/",
+              "headline": "What Super El Niño Means For Business Supply Chains And The Economy",
+              "body": "A strong El Niño event is forecasted for 2026. It could cause trillions in economic damage, significantly impacting global ...",
+              "published_date": "2026-08-25T00:00:00+00:00",
+              "outlet": "Forbes",
+              "image": "https://www.bing.com/th?id=ONUT.taM6TsVuEKlGl0PeC7tPog"
+            }
+          ]
+        }
+      ],
+      "logs_total": 1
+    },
+    {
+      "incident_id": "20260825-FJ-EQ",
+      "tree_id": "086503266086469085ac06c37f94e54b",
+      "canonical_name": "Earthquake M5.5 the Fiji Islands, Fiji 2026-08-25",
       "summary": "",
-      "country": "Taiwan",
-      "iso2": "TW",
-      "lat": 22.6053,
-      "lon": 121.5709,
-      "country_group": "A",
-      "region": "Asia",
+      "country": "Fiji",
+      "iso2": "FJ",
+      "lat": -23.3497,
+      "lon": 179.8207,
+      "country_group": "B",
+      "region": "Oceania",
       "incident_type": "Earthquake",
       "incident_category": "Natural",
       "is_disease": false,
@@ -38281,6 +38821,78 @@
       "source_links": [
         {
           "type": "USGS",
+          "label": "M 5.5 - south of the Fiji Islands",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tnci",
+          "meta": "528.283 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 5.5,
+        "max_depth_km": 528.283,
+        "place": "south of the Fiji Islands",
+        "felt": null,
+        "sig": 465,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Urgent: 5.5-magnitude quake hits Fiji Islands Region -- GFZ",
+          "url": "https://www.china.org.cn/world/Off_the_Wire/2026-08/20/content_118655791.shtml",
+          "outlet": "China.org.cn",
+          "published_date": "2026-08-20T00:01:00+00:00"
+        },
+        {
+          "headline": "Magnitude 5.5 Earthquake Strikes south of the Fiji Islands",
+          "url": "https://cedarnews.net/newstasks/949821/magnitude-5-earthquake-south-fiji-islands/",
+          "outlet": "Cedar News",
+          "published_date": "2026-08-25"
+        }
+      ],
+      "news_total": 2,
+      "logs": [],
+      "logs_total": 0
+    },
+    {
+      "incident_id": "20260825-TW-EQ",
+      "tree_id": "0d2108cbdd2945f3bc603036dddc1252",
+      "canonical_name": "Earthquake M5.5 Hengchun, Taiwan 2026-08-25",
+      "summary": "A magnitude 5.5 earthquake struck 108 km northeast of Hengchun, Taiwan, at 3:00 p.m. local time on August 25, 2026, according to multiple sources. The Central Weather Administration issued a national alert initially overestimating the quake at magnitude 6.6 before correcting it to 5.8, attributing the error to limited seismic data. The earthquake occurred in waters off Taitung county, with no immediate reports of major damage.",
+      "country": "Taiwan",
+      "iso2": "TW",
+      "lat": 22.6053,
+      "lon": 121.5709,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": null,
+      "event_status": null,
+      "extended_monitoring": false,
+      "disease_name": null,
+      "event_date": "2026-08-25",
+      "first_reported_date": "2026-08-25",
+      "last_updated_date": "2026-08-26",
+      "days_since_event": 1,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "ercc": 0,
+        "healthmap": 0,
+        "news": 3
+      },
+      "source_links": [
+        {
+          "type": "USGS",
           "label": "M 5.5 - 108 km NE of Hengchun, Taiwan",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tnbm",
           "meta": "14.608 km depth"
@@ -38299,20 +38911,54 @@
       "news": [
         {
           "headline": "Magnitude 5.5 Earthquake Strikes Northeast of Hengchun, Taiwan",
-          "url": "https://cedarnews.net/newstasks/949585/magnitude-5-earthquake-strikes-northeast-hengchun-taiwan/",
-          "outlet": "Cedar News",
           "published_date": "2026-08-21T13:27:39+00:00"
         },
         {
           "headline": "5.5-magnitude earthquake hits waters off Taiwan: CENC",
-          "url": "https://www.chinadaily.com.cn/a/202608/25/WS6a8d499fe4b057c97e209a59.html",
-          "outlet": "China Daily",
           "published_date": "2026-08-25"
+        },
+        {
+          "headline": "CWA explains erroneous national earthquake alert - Taipei Times",
+          "published_date": "2026-08-26"
         }
       ],
-      "news_total": 2,
-      "logs": [],
-      "logs_total": 0
+      "news_total": 3,
+      "logs": [
+        {
+          "log_date": "2026-08-26",
+          "summary": "A magnitude 5.5 earthquake struck 108 km northeast of Hengchun, Taiwan, at 3:00 p.m. local time on August 25, 2026, according to multiple sources. The Central Weather Administration issued a national alert initially overestimating the quake at magnitude 6.6 before correcting it to 5.8, attributing the error to limited seismic data. The earthquake occurred in waters off Taitung county, with no immediate reports of major damage.",
+          "news": [
+            {
+              "news_id": "d625709503b35a0e9b52ac14031b0647",
+              "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/08/26/2003863167",
+              "headline": "CWA explains erroneous national earthquake alert - Taipei Times",
+              "body": "Limited seismic data was to blame for a national-level alert issued across Taiwan yesterday following an offshore earthquake that was initially overestimated at magnitude 6.6, Central Weather Administration (CWA) officials said.The quake, which was later determined to have a magnitude of 5.8, regist",
+              "published_date": "2026-08-26",
+              "outlet": "Taipei Times",
+              "image": "https://www.bing.com/th?id=ONUT.MH3nvjIkqsjKDsXK5IN9gg"
+            },
+            {
+              "news_id": "b46d68a3e8d652e8ba039b7bea149892",
+              "url": "https://cedarnews.net/newstasks/949585/magnitude-5-earthquake-strikes-northeast-hengchun-taiwan/",
+              "headline": "Magnitude 5.5 Earthquake Strikes Northeast of Hengchun, Taiwan",
+              "body": "A magnitude 5.5 earthquake struck 108 km northeast of Hengchun, Taiwan, at 3:00 p.m. local time on Tuesday, August 25, 2026.",
+              "published_date": "2026-08-21T13:27:39+00:00",
+              "outlet": "Cedar News",
+              "image": ""
+            },
+            {
+              "news_id": "dca394b2791b5caea519a7c5ae5f439e",
+              "url": "https://www.chinadaily.com.cn/a/202608/25/WS6a8d499fe4b057c97e209a59.html",
+              "headline": "5.5-magnitude earthquake hits waters off Taiwan: CENC",
+              "body": "BEIJING -- A 5.5-magnitude earthquake jolted waters off Taitung county in Taiwan at 3 pm on Tuesday (Beijing Time), according to the China Earthquake Networks Center (CENC). The epicenter was ...",
+              "published_date": "2026-08-25",
+              "outlet": "China Daily",
+              "image": ""
+            }
+          ]
+        }
+      ],
+      "logs_total": 1
     }
   ]
 }
