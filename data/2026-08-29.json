@@ -1,29 +1,29 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-08-29",
-  "generated_at": "2026-08-29T07:56:55Z",
+  "generated_at": "2026-08-29T17:15:15Z",
   "as_of": "2026-08-29",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 35,
-    "new_today": 9,
+    "reportable_total": 36,
+    "new_today": 15,
     "critical": 14,
     "high": 4,
-    "medium": 10,
+    "medium": 11,
     "low": 7,
     "disease_outbreaks": 3,
-    "countries_affected": 24,
-    "news_total": 6238,
+    "countries_affected": 25,
+    "news_total": 6351,
     "max_magnitude": 7.7,
     "by_severity": {
       "CRITICAL": 14,
       "HIGH": 4,
-      "MEDIUM": 10,
+      "MEDIUM": 11,
       "LOW": 7
     },
     "by_type": {
-      "Flood": 3,
+      "Flood": 4,
       "Disease": 3,
       "Drought": 4,
       "Earthquake": 13,
@@ -34,11 +34,11 @@
       "": 1
     },
     "by_region": {
-      "Asia": 11,
+      "Asia": 13,
       "Global": 2,
       "Africa": 4,
-      "Unknown": 3,
       "Americas": 6,
+      "Unknown": 2,
       "Europe": 7,
       "Oceania": 2
     }
@@ -121,6 +121,15 @@
       "count": 2,
       "max_sev_rank": 2,
       "iso2": "CN",
+      "region": "Asia",
+      "country_group": "A",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "India",
+      "count": 1,
+      "max_sev_rank": 2,
+      "iso2": "IN",
       "region": "Asia",
       "country_group": "A",
       "max_severity": "MEDIUM"
@@ -487,7 +496,7 @@
       "disease_name": null,
       "event_date": "2024-05-30",
       "first_reported_date": "2024-05-30",
-      "last_updated_date": "2026-08-27",
+      "last_updated_date": "2026-08-29",
       "days_since_event": 821,
       "source_count": 1,
       "should_report": false,
@@ -498,7 +507,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 88
+        "news": 90
       },
       "source_links": [
         {
@@ -870,9 +879,17 @@
         {
           "headline": "550 new dengue cases reported in 24hrs",
           "published_date": "2026-08-27T11:23:02+00:00"
+        },
+        {
+          "headline": "प्रयागराज के होलागढ़ में ग्राम प्रधान ने कराया दवा छिड़काव: डेंगू व संक्रामक बीमारियों से बचाव के लिए की गई पहल - Barai Harakh(Soraon) News",
+          "published_date": "2026-08-28"
+        },
+        {
+          "headline": "Dengue hospitalisations hit record high with 726 cases in 24 hours",
+          "published_date": "2026-08-29"
         }
       ],
-      "news_total": 88,
+      "news_total": 90,
       "logs": [
         {
           "log_date": "2026-07-08",
@@ -1031,7 +1048,7 @@
       "incident_id": "20250528-XX-DI",
       "tree_id": "2988d8638e0956a89029b6059b7c5f7f",
       "canonical_name": "COVID-19 Global 2025-05-28",
-      "summary": "The U.S. FDA approved Moderna's updated 2026-2027 COVID-19 vaccine, adding to previously approved Pfizer/BioNTech XFG-adapted shot. Meanwhile, COVID-19 cases continue to rise in the Bay Area, with health officials advising precautions for higher-risk individuals.",
+      "summary": "The FDA has approved updated 2026-2027 COVID-19 vaccines from Moderna, Pfizer-BioNTech, and Novavax-Sanofi targeting the XFG \"Stratus\" variant for adults 65 and older and high-risk individuals. COVID-19 activity continues to rise in California during the summer, with officials advising protective measures.",
       "country": "",
       "iso2": "XX",
       "lat": null,
@@ -1061,7 +1078,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 141
+        "news": 142
       },
       "source_links": [
         {
@@ -1645,9 +1662,13 @@
         {
           "headline": "FDA approves new COVID vaccines: 5 things to know",
           "published_date": "2026-08-28T13:55:56+00:00"
+        },
+        {
+          "headline": "What to know about the COVID and flu vaccines for 2026",
+          "published_date": "2026-08-28T23:19:45+00:00"
         }
       ],
-      "news_total": 141,
+      "news_total": 142,
       "logs": [
         {
           "log_date": "2026-07-08",
@@ -1670,39 +1691,6 @@
               "published_date": "2026-07-08T15:12:31+00:00",
               "outlet": "Newsweek on MSN",
               "image": "https://www.bing.com/th?id=ONUT.UkYafoaYVW2mm2fZDxb3Pw"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-08-23",
-          "summary": "As the school year begins, vaccine confusion is widespread among families regarding flu and COVID shots for children. Florida is experiencing a summer surge in COVID cases, prompting experts to advise residents to check their vaccination status. Meanwhile, the case of an unvaccinated Canadian man allegedly denied a kidney transplant before his death has raised new questions about vaccine requirements for medical procedures.",
-          "news": [
-            {
-              "news_id": "7b2b35f785715af0bf8ea8fe3cd80eb2",
-              "url": "https://www.usatoday.com/story/news/health/2026/08/21/flu-covid-shots-school-begins-vaccine-confusion/91401809007/",
-              "headline": "As the school year begins, here's what to know about flu, COVID shots",
-              "body": "As kids head back to school, vaccine confusion is everywhere. So what do families need to know?",
-              "published_date": "2026-08-21",
-              "outlet": "USA Today",
-              "image": "https://s.yimg.com/bo/d0b92d37-e32e-53ed-8332-d58cfb7b8667_1780351513564.jpg"
-            },
-            {
-              "news_id": "824ecc49b4fb5e9f997978875bb2e69f",
-              "url": "https://health.yahoo.com/conditions/infectious/coronavirus/articles/florida-covid-cases-rising-during-161358199.html",
-              "headline": "Florida COVID cases rising during summer surge. Should you get shots?",
-              "body": "Experts say rising cases are a reminder to review whether you're up to date on COVID vaccination.",
-              "published_date": "2026-08-21",
-              "outlet": "Daytona Beach News-Journal · via Yahoo News",
-              "image": "https://media.zenfs.com/en/daytona-beach-news-journal/eaef176513110c9cc2f4cc99ded9143b.jpg"
-            },
-            {
-              "news_id": "cc99f66106a357b5a1f5f21d2a8c407d",
-              "url": "https://www.yahoo.com/news/world/articles/unvaccinated-canadian-man-garnet-harper-020000715.html",
-              "headline": "Unvaccinated Canadian man Garnet Harper was allegedly denied kidney transplant before his death. Here's what we know",
-              "body": "Harper's widow claimed he was denied a transplant because he wasn't vaccinated against COVID-19.",
-              "published_date": "2026-08-17",
-              "outlet": "Snopes · via Yahoo News",
-              "image": "https://media.zenfs.com/en/snopes_632/461944bb176b1b4731ed61ad1f527333.jpg"
             }
           ]
         },
@@ -1807,15 +1795,75 @@
               "image": "https://www.bing.com/th?id=ONUT.QHyOacI55sAnTsTbgjbpRQ"
             }
           ]
+        },
+        {
+          "log_date": "2026-08-29",
+          "summary": "The FDA has approved updated 2026-2027 COVID-19 vaccines from Moderna, Pfizer-BioNTech, and Novavax-Sanofi targeting the XFG \"Stratus\" variant for adults 65 and older and high-risk individuals. COVID-19 activity continues to rise in California during the summer, with officials advising protective measures.",
+          "news": [
+            {
+              "news_id": "0590fc22b66f5b5fb89738410f73da0a",
+              "url": "https://health.yahoo.com/conditions/infectious/coronavirus/articles/fda-just-approved-covid-shots-172803806.html",
+              "headline": "The FDA Just Approved New COVID Shots. Here’s What Happens Now.",
+              "body": "A few things have changed about the vaccines from previous seasons.",
+              "published_date": "2026-08-28",
+              "outlet": "HuffPost Life · via Yahoo News",
+              "image": "https://media.zenfs.com/en/huffpost_life_308/6076ef037ec3afb53c0c11983dae62bb.jpg"
+            },
+            {
+              "news_id": "7f7c423cbba151e2ab4f7f717659c78d",
+              "url": "https://www.beckershospitalreview.com/quality/public-health/fda-approves-new-covid-vaccines-5-things-to-know/",
+              "headline": "FDA approves new COVID vaccines: 5 things to know",
+              "body": "FDA approves COVID vaccines from Pfizer and Moderna targeting the XFG subvariant for high-risk and older adults, available soon in U.S. clinics.",
+              "published_date": "2026-08-28T13:55:56+00:00",
+              "outlet": "Becker’s Hospital Review",
+              "image": "https://s.yimg.com/bo/f871caac-31f3-55e2-ab1d-632cc0a605e6_1786443203726.jpg"
+            },
+            {
+              "news_id": "9fabe3babc035cf1b198400cae84894f",
+              "url": "https://health.yahoo.com/treatments/vaccines/articles/fda-approves-updated-covid-19-205157074.html",
+              "headline": "FDA Approves Updated COVID-19 Vaccines — Should You Get One?",
+              "body": "All new shots target the XFG variant, and are approved for adults 65 and older. Younger people in high-risk groups are also eligible, depending on the shot.",
+              "published_date": "2026-08-28",
+              "outlet": "Everyday Health · via Yahoo News",
+              "image": "https://media.zenfs.com/en/everyday_health_747/e65810f355d28e6a1fdb358f9351b263.jpg"
+            },
+            {
+              "news_id": "2fab01551a68570bb63231d181e9ab53",
+              "url": "https://www.yahoo.com/news/us/articles/more-californians-test-positive-covid-150000461.html",
+              "headline": "More Californians test positive for COVID-19 during summer",
+              "body": "(The Center Square) - COVID-19 activity rises during the summer in California, and officials are advising people to take steps to protect themselves. COVID-19 cases are no longer reportable.",
+              "published_date": "2026-08-28",
+              "outlet": "The Center Square · via Yahoo News",
+              "image": "https://media.zenfs.com/en/the_center_square_articles_912/7640fde1f02263a0903d5b365fd51cc7.jpg"
+            },
+            {
+              "news_id": "5903db97f39c57cab9748e1b73258140",
+              "url": "https://www.yahoo.com/news/science/articles/fda-approves-updated-covid-vaccines-144214757.html",
+              "headline": "FDA approves updated COVID vaccines targeting XFG ‘Stratus’ variant",
+              "body": "The FDA has approved updated COVID-19 vaccines from Moderna, Pfizer-BioNTech and Novavax-Sanofi for the 2026-27 season.",
+              "published_date": "2026-08-28",
+              "outlet": "LiveNow Fox · via Yahoo News",
+              "image": "https://media.zenfs.com/en/livenow_fox_840/7d147486155cbaf457e2a7016f187958.jpg"
+            },
+            {
+              "news_id": "42a83f0b8e925b09bfc56f24e6dab1a0",
+              "url": "https://www.13newsnow.com/article/news/nation-world/covid-flu-vaccines-2026/507-ccfb7d88-ed7b-4f20-8776-181f1dea894f",
+              "headline": "What to know about the COVID and flu vaccines for 2026",
+              "body": "Newly formulated flu and COVID-19 vaccines have been approved. Here's what to know. (Photo Adobe...",
+              "published_date": "2026-08-28T23:19:45+00:00",
+              "outlet": "13 News, WVEC Hampton Roads",
+              "image": "https://s.yimg.com/bo/c8cd812e-082c-5452-b6c5-c1dd3aed2277_1787975271784.jpg"
+            }
+          ]
         }
       ],
-      "logs_total": 22
+      "logs_total": 23
     },
     {
       "incident_id": "20250905-CD-DI",
       "tree_id": "5c179437a46a56aca2f8b70aeceda07a",
       "canonical_name": "Ebola Kinshasa, DR Congo 2025-09-05",
-      "summary": "Congo has begun vaccinating people against Ebola, marking the start of vaccination efforts in the country's worst outbreak on record. The outbreak has spread to two new health zones, bringing the total affected areas to 60. Meanwhile, the World Health Organization declared Uganda Ebola-free after 42 consecutive days without a new case.",
+      "summary": "Congo began vaccinating people against Ebola on August 28, 2026, deploying 16,250 Ervebo doses in an effort to slow the fastest-growing outbreak in history, which has now spread to 60 health zones with 5,794 confirmed cases and 2,786 deaths. The United States donated experimental antibody treatments to Uganda to bolster preparedness, while Canada extended Ebola travel restrictions for another 30 days. Ongoing attacks on health workers and the unproven efficacy of Ervebo against the Bundibugyo strain continue to complicate response efforts.",
       "country": "DR Congo",
       "iso2": "CD",
       "lat": -4.0,
@@ -1845,7 +1893,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 305
+        "news": 316
       },
       "source_links": [
         {
@@ -2999,6 +3047,10 @@
           "published_date": "2026-08-21T14:51:41+00:00"
         },
         {
+          "headline": "Health Highlights: Alfalfa Outbreak, Fauci's Legal Fund, and Ebola Vaccination in Congo | Health",
+          "published_date": "2026-08-22"
+        },
+        {
           "headline": "Weekly Health Update | Ebola Tops 5,000 Cases; Polio Outbreaks Recede",
           "published_date": "2026-08-22"
         },
@@ -3037,6 +3089,10 @@
         {
           "headline": "Ebola Outbreak in Eastern Congo Spreads to 2 New Health Zones With a Total of 60 Areas Now Affected",
           "published_date": "2026-08-23T12:02:34+00:00"
+        },
+        {
+          "headline": "Attacks on health workers in DR Congo making Ebola fight 'harder,' Red Cross says",
+          "published_date": "2026-08-24"
         },
         {
           "headline": "Nearly one in two Ebola patients dying in DR Congo outbreak",
@@ -3111,6 +3167,10 @@
           "published_date": "2026-08-26T03:15:07+00:00"
         },
         {
+          "headline": "Uganda gets Shs1.87b mobile lab to speed up Ebola detection",
+          "published_date": "2026-08-27"
+        },
+        {
           "headline": "DR Congo cases continue to rise despite some progress",
           "published_date": "2026-08-27"
         },
@@ -3155,11 +3215,43 @@
           "published_date": "2026-08-28T12:13:15+00:00"
         },
         {
+          "headline": "Pope Leo XIV Calls DRC Ebola Crisis Global as Doses Land, Efficacy Unproven",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "Canada extends Ebola travel restrictions for another 30 days",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "U.S. Donates Experimental Antibody Treatment to Bolster Uganda's Fight Against Ebola",
+          "published_date": "2026-08-29"
+        },
+        {
           "headline": "Ebola spreads to two new zones in DRC; 60 areas now affected",
           "published_date": "2026-08-29"
+        },
+        {
+          "headline": "Pope calls for more efforts to stop Ebola in DR Congo",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "US Gives Uganda Experimental Ebola Treatment As DRC Outbreak Continues to Spread",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "DR Congo launches Ebola vaccination campaign",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "Ebola spreads to two new zones in DRC; 60 areas now affected",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "Where Congo’s Ebola outbreak stands 100 days in",
+          "published_date": "2026-08-29T09:21:36+00:00"
         }
       ],
-      "news_total": 305,
+      "news_total": 316,
       "logs": [
         {
           "log_date": "2026-07-10",
@@ -3537,48 +3629,6 @@
           ]
         },
         {
-          "log_date": "2026-08-26",
-          "summary": "As of late August 2026, confirmed Ebola cases in the Democratic Republic of Congo have surpassed 5,500 with over 2,600 deaths, marking one of the highest weekly death tolls yet with more than 300 deaths in the past week. The outbreak remains the fastest-spreading on record, and health workers continue to struggle to contain the virus amid persistent challenges.",
-          "news": [
-            {
-              "news_id": "f2faa48a62b55e3daa58b5c4469cd655",
-              "url": "https://news.mongabay.com/short-article/2026/08/congos-ebola-outbreak-records-one-of-its-highest-weekly-death-tolls-yet/",
-              "headline": "Congo’s Ebola outbreak records one of its highest weekly death tolls yet",
-              "body": "BUNIA, Congo (AP) — More than 300 people died of Ebola in eastern Congo in the past week, one of the highest weekly tolls yet, government data showed Monday, as health workers struggle to catch up with an outbreak that is spreading at unprecedented speed. Ministry of Health data showed that as of Saturday, the outbreak had recorded […]",
-              "published_date": "2026-08-25",
-              "outlet": "Mongabay News",
-              "image": "https://www.bing.com/th?id=ONUT.yPn7ggDjz91o9gw8nTqKJA"
-            },
-            {
-              "news_id": "6bf8fb2de3cb5961b56ad25df322f4cf",
-              "url": "https://www.usnews.com/news/health-news/articles/2026-08-25/ebola-is-still-killing-in-central-africa-these-groups-are-working-to-save-lives",
-              "headline": "Ebola Is Still Killing In Central Africa. These Groups Are Working To Save Lives",
-              "body": "The current outbreak is only the third of the Bundibugyo strain in central Africa. Congo officials are reporting a 44% ...",
-              "published_date": "2026-08-26T03:15:07+00:00",
-              "outlet": "U.S. News & World Report",
-              "image": "https://www.bing.com/th?id=ONUT.tULGt5nVGI7Bs-HBOfCplw"
-            },
-            {
-              "news_id": "080fdf3fc49a5947a192a3f48b6f9d6b",
-              "url": "https://realnewsmagazine.net/dr-congo-ebola-cases-top-5500-as-who-warns-of-crisis/",
-              "headline": "DR Congo Ebola cases top 5,500 as WHO warns of crisis",
-              "body": "CONFIRMED Ebola cases in the Democratic Republic of the Congo (DRC) have surpassed 5,500, with more than 2,600 deaths, government figures showed Monday. The World Health Organisation (WHO) said the outbreak reached a “defining moment” more than 100 days after it was declared. The latest official tally, with data through Saturday, recorded 5,514 confirmed cases […]",
-              "published_date": "2026-08-24",
-              "outlet": "realnewsmagazine",
-              "image": ""
-            },
-            {
-              "news_id": "99a6f871a6a45ad098d438c9fc1f7090",
-              "url": "https://www.npr.org/2026/08/25/nx-s1-5944343/health-the-drc-ebola-outbreak-is-spreading-at-a-rapid-pace-why",
-              "headline": "Health: The DRC Ebola Outbreak Is Spreading At A Rapid Pace. Why? : 1A",
-              "body": "The current Ebola outbreak in the Democratic Republic of the Congo is the deadliest in the country’s history.With over 2,500 deaths and more than 5,000 confirmed cases, it’s now the second largest ever worldwide. And it’s spreading at record speed. It’s even outpacing the West Africa outbreak that killed more than 11,000 people between 2014 and 2016.What do we know about why this outbreak is moving so quickly?Find more of our programs online. Listen to 1A sponsor-free by signing up for 1A+ at plus.npr.org/the1a.",
-              "published_date": "2026-08-25",
-              "outlet": "NPR",
-              "image": "https://www.bing.com/th?id=ONUT.sspGLbIMgqg3ipSGBVv_RA"
-            }
-          ]
-        },
-        {
           "log_date": "2026-08-27",
           "summary": "As of August 26, 2026, WHO reports the Ebola outbreak in DR Congo has not yet turned a corner despite a slowdown in acceleration, with over 5,600 confirmed cases and deaths surpassing 2,700. The first 16,000+ doses of the Ervebo vaccine have arrived as part of a 70,000-dose allocation, though health workers continue to face attacks—Red Cross workers were injured in Ituri and Haut-Uele—and remain unpaid, leading to ongoing strikes and exhaustion.\nThe Ebola outbreak in DR Congo continues to escalate, with cases rising despite targeted containment measures. A Forbes analysis reports that the epidemic's reproduction number has remained near 1 for six weeks, indicating the outbreak is still out of control and not yet turning a corner.",
           "news": [
@@ -3760,21 +3810,153 @@
               "image": "https://www.bing.com/th?id=ONUT.mzI9WkXvr7oi7UI7_lsXKg"
             }
           ]
+        },
+        {
+          "log_date": "2026-08-29",
+          "summary": "Congo began vaccinating people against Ebola on August 28, 2026, deploying 16,250 Ervebo doses in an effort to slow the fastest-growing outbreak in history, which has now spread to 60 health zones with 5,794 confirmed cases and 2,786 deaths. The United States donated experimental antibody treatments to Uganda to bolster preparedness, while Canada extended Ebola travel restrictions for another 30 days. Ongoing attacks on health workers and the unproven efficacy of Ervebo against the Bundibugyo strain continue to complicate response efforts.",
+          "news": [
+            {
+              "news_id": "a68439f8292b59f8923803babb715da5",
+              "url": "https://www.msn.com/en-us/health/medical/pope-leo-xiv-calls-drc-ebola-crisis-global-as-doses-land-efficacy-unproven/ar-AA2aPz0F",
+              "headline": "Pope Leo XIV Calls DRC Ebola Crisis Global as Doses Land, Efficacy Unproven",
+              "body": "DRC Ebola vaccine deployment has begun with 16,250 Ervebo doses arriving in Kinshasa, as Pope Leo XIV called for international action and confirmed cases reached 5,515 -- but Ervebo's cross-protection against the Bundibugyo strain remains unproven in humans,",
+              "published_date": "2026-08-29",
+              "outlet": "Tech Times",
+              "image": "https://d.techtimes.com/en/full/473537/topshot-pope-leo-xiv-leads-holy.jpg"
+            },
+            {
+              "news_id": "c6f2dad3ed6c576aa2ad0eb27e09bf3a",
+              "url": "https://www.monitor.co.ug/uganda/news/national/uganda-gets-shs1-87b-mobile-lab-to-speed-up-ebola-detection--5572556",
+              "headline": "Uganda gets Shs1.87b mobile lab to speed up Ebola detection",
+              "body": "New mobile lab to take Ebola testing closer to outbreak zones",
+              "published_date": "2026-08-27",
+              "outlet": "Monitor",
+              "image": "https://www.monitor.co.ug/resource/blob/5572558/c562f05c8ba5d790d5b85082a566e1e3/latest04pix-data.jpg"
+            },
+            {
+              "news_id": "46c250e0c77f50d8a7d0436b7dcc499a",
+              "url": "https://www.devdiscourse.com/article/health/3966592-health-highlights-alfalfa-outbreak-faucis-legal-fund-and-ebola-vaccination-in-congo",
+              "headline": "Health Highlights: Alfalfa Outbreak, Fauci's Legal Fund, and Ebola Vaccination in Congo | Health",
+              "body": "The latest health news includes a multistate outbreak of E. coli and salmonella linked to alfalfa sprouts, a legal defense fund for Dr. Anthony Fauci amid multiple investigations, the approval of Regeneron's drug for a rare bone disorder by the FDA, and Ebola vaccination efforts in the Democratic Republic of Congo.",
+              "published_date": "2026-08-22",
+              "outlet": "Devdiscourse",
+              "image": "https://www.devdiscourse.com/img?imageUrl=https://devdiscourse.blob.core.windows.net/aiimagegallery/10_05_2025_06_11_18_4335557.png&width=920&format=jpeg"
+            },
+            {
+              "news_id": "484a08f503d25c91884e144a7990c845",
+              "url": "https://www.msn.com/en-ca/lifestyle/smart-living/canada-extends-ebola-travel-restrictions-for-another-30-days/ar-AA2b7zNH",
+              "headline": "Canada extends Ebola travel restrictions for another 30 days",
+              "body": "Government officials say people from Ebola-affected countries will continue to be banned from entering Canada for another 30 days, prolonging the state of limbo for tens of thousands of people who have had their residency applications suspended since May.",
+              "published_date": "2026-08-29",
+              "outlet": "The Canadian Press",
+              "image": ""
+            },
+            {
+              "news_id": "679ff80da40454c8b6cba8d050d9a225",
+              "url": "https://www.msn.com/en-xl/africa/top-stories/us-donates-experimental-antibody-treatment-to-bolster-ugandas-fight-against-ebola/ar-AA2b2nJR",
+              "headline": "U.S. Donates Experimental Antibody Treatment to Bolster Uganda's Fight Against Ebola",
+              "body": "The United States government has delivered an experimental antibody treatment for Ebola to Uganda's Ministry of Health, strengthening the country's preparedness amid an ongoing outbreak of Bundibugyo virus disease in neighbouring Democratic Republic of the Congo (DRC).",
+              "published_date": "2026-08-29",
+              "outlet": "allAfrica.com",
+              "image": ""
+            },
+            {
+              "news_id": "79be490fb2c75beb8fd43ceb874b0cbd",
+              "url": "https://www.msn.com/en-us/news/other/ebola-spreads-to-two-new-zones-in-drc-60-areas-now-affected/ar-AA2b97VS?ocid=BingNewsVerp",
+              "headline": "Ebola spreads to two new zones in DRC; 60 areas now affected",
+              "body": "DRC’s is the fastest-spreading Ebola outbreak ever recorded, with 5,794 confirmed cases and 2,786 deaths.",
+              "published_date": "2026-08-29",
+              "outlet": "Al Jazeera on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.V8AbNJ2h9Cx7omSQ_RFBrw"
+            },
+            {
+              "news_id": "3e7416704e9c551ca6d28f404add39a4",
+              "url": "https://sg.news.yahoo.com/attacks-health-workers-dr-congo-120805467.html",
+              "headline": "Attacks on health workers in DR Congo making Ebola fight 'harder,' Red Cross says",
+              "body": "Driven by the rare Bundibugyo strain of the virus, for which there are no vaccines or treatments, the outbreak is the biggest in the DRC's history.",
+              "published_date": "2026-08-24",
+              "outlet": "Yahoo News Singapore",
+              "image": "https://s.yimg.com/lo/mysterio/api/46071678c27ae5b89200fe5a8dc42cc211b8464691668d277a4c3570488057b5/lightyear_networkapi/resizefill_w1024_h576;quality_80;format_jpg/https://media.zenfs.com/en/euronews_sg_videos_151/47193e8de23279673738833c2d375401.jpg"
+            },
+            {
+              "news_id": "86fc8ba6cd3c5c2cbf3f895393d2b4b6",
+              "url": "https://nypost.com/2026/08/28/world-news/eastern-congo-ebola-outbreak-spreads-to-2-new-health-zones-total-of-60-areas-now-affected/",
+              "headline": "Congo Ebola outbreak spreads to affect total of 60 areas in fastest-growing outbreak in history",
+              "body": "The outbreak is spreading under extremely difficult conditions, fueled by insecurity, displacement, a health workers’ strike and intense population movements.",
+              "published_date": "2026-08-28",
+              "outlet": "New York Post",
+              "image": "https://www.bing.com/th?id=ONUT.l62ne7ajxqR3kgpIgXV0DQ"
+            },
+            {
+              "news_id": "c51df4c3135454fca1d08f17c6cf70af",
+              "url": "https://medicalxpress.com/news/2026-08-congo-vaccinations-fastest-ebola-outbreak.html",
+              "headline": "Congo begins vaccinations to fight the fastest-growing Ebola outbreak in history",
+              "body": "Congo on Thursday began vaccinating people against Ebola as health authorities work to slow the fastest-growing outbreak of the disease in history.",
+              "published_date": "2026-08-28",
+              "outlet": "Medical Xpress",
+              "image": "https://www.bing.com/th?id=ONUT.2sWfvXAbsLHENyqR3Qp_FA"
+            },
+            {
+              "news_id": "4a0b7976ba4355e38375bb6995661e6d",
+              "url": "https://www.msn.com/en-my/public-safety-and-emergencies/health-and-safety-alerts/pope-calls-for-more-efforts-to-stop-ebola-in-dr-congo/ar-AA2aKXYa",
+              "headline": "Pope calls for more efforts to stop Ebola in DR Congo",
+              "body": "The pontiff called on the international community to help contain the virus in DR Congo, which health officials warn is spreading exponentially.",
+              "published_date": "2026-08-29",
+              "outlet": "Free Malaysia Today",
+              "image": "https://www.jamaicaobserver.com/jamaicaobserver/news/wp-content/uploads/sites/4/2025/05/000_463B89D-1024x683.jpg"
+            },
+            {
+              "news_id": "6d47453d466f5d99b4e289e565b9abe9",
+              "url": "https://www.msn.com/en-xl/africa/top-stories/us-gives-uganda-experimental-ebola-treatment-as-drc-outbreak-continues-to-spread/ar-AA2b7o9T",
+              "headline": "US Gives Uganda Experimental Ebola Treatment As DRC Outbreak Continues to Spread",
+              "body": "The United States has given Uganda doses of an experimental Ebola treatment as the country strengthens preparations against possible new infections from the Democratic Republic of Congo (DRC), where a major Bundibugyo virus outbreak continues to spread.",
+              "published_date": "2026-08-29",
+              "outlet": "AllAfrica",
+              "image": ""
+            },
+            {
+              "news_id": "4ee7090eb26852339a201c5257f9e21f",
+              "url": "https://www.msn.com/en-ae/public-safety-and-emergencies/health-and-safety-alerts/dr-congo-launches-ebola-vaccination-campaign/ar-AA2b4WM7",
+              "headline": "DR Congo launches Ebola vaccination campaign",
+              "body": "KINSHASA, 28th August, 2026 (WAM) -- The Democratic Republic of the Congo began vaccinating people against Ebola on Thursday as health authorities work to slow the deadliest outbreak of the disease recorded in the country.",
+              "published_date": "2026-08-29",
+              "outlet": "Emirates News Agency",
+              "image": "https://jen.jiji.com/images/agent/kazinform/KAZ-13577e09-a1f4-4f74-a_01.jpg"
+            },
+            {
+              "news_id": "143c18a5db04536b9a21ffdc45a3acd1",
+              "url": "https://www.beckershospitalreview.com/quality/public-health/where-congos-ebola-outbreak-stands-100-days-in/",
+              "headline": "Where Congo’s Ebola outbreak stands 100 days in",
+              "body": "One hundred days after the World Health Organization declared an Ebola outbreak in the Democratic Republic of Congo, the outbreak has become the ...",
+              "published_date": "2026-08-29T09:21:36+00:00",
+              "outlet": "Becker's Hospital Review",
+              "image": ""
+            },
+            {
+              "news_id": "1612995752325b5eb8ace4687fc34cf7",
+              "url": "https://www.msn.com/en-us/news/other/ebola-spreads-to-two-new-zones-in-drc-60-areas-now-affected/ar-AA2b97VS",
+              "headline": "Ebola spreads to two new zones in DRC; 60 areas now affected",
+              "body": "DRC's is the fastest-spreading Ebola outbreak ever recorded, with 5,794 confirmed cases and 2,786 deaths.",
+              "published_date": "2026-08-29",
+              "outlet": "Al Jazeera",
+              "image": "https://www.aljazeera.com/wp-content/uploads/2026/08/reuters_6a91f41e-1787950110.jpg?resize=1920,1440"
+            }
+          ]
         }
       ],
-      "logs_total": 32
+      "logs_total": 33
     },
     {
       "incident_id": "20260511-XX-DR",
       "tree_id": "d75afb3078c54d74b37c4f8bb985dfce",
       "canonical_name": "Drought Green",
-      "summary": "Extreme drought in Minnesota surged, with the affected area growing fivefold in a single week. In South Florida, extreme drought persists in parts of Miami-Dade and Broward counties. Meanwhile, drought conditions worsen in Louisiana as a hot, dry pattern settles in with little rain expected.",
+      "summary": "New localized developments include a fish protection order limiting water use in British Columbia's Bessette Creek to protect salmon, and the revelation that Colorado's Andrews Glacier is thinning over three feet per year due to heat and drought. England experienced a severe \"flash drought\" pushing its water network toward breaking point, while the United Nations held talks in Mongolia highlighting drought's spread to previously less vulnerable regions. Drought remains across 31% of Iowa, and a drought disaster was declared for parts of Puerto Rico, consistent with prior reporting.",
       "country": "",
       "iso2": "XX",
       "lat": null,
       "lon": null,
       "country_group": "C",
-      "region": "Unknown",
+      "region": "Asia",
       "incident_type": "Drought",
       "incident_category": "Natural",
       "is_disease": false,
@@ -3787,7 +3969,7 @@
       "disease_name": null,
       "event_date": "2026-05-11",
       "first_reported_date": "2026-05-11",
-      "last_updated_date": "2026-08-28",
+      "last_updated_date": "2026-08-29",
       "days_since_event": 110,
       "source_count": 1,
       "should_report": true,
@@ -3798,7 +3980,7 @@
         "gdacs": 1,
         "ercc": 0,
         "healthmap": 0,
-        "news": 193
+        "news": 199
       },
       "source_links": [
         {
@@ -4444,6 +4626,10 @@
           "published_date": "2026-08-24T19:20:45+00:00"
         },
         {
+          "headline": "Colorado remains ‘epicenter’ of worst drought conditions in the West, as heat records pile up",
+          "published_date": "2026-08-25"
+        },
+        {
           "headline": "A drought’s impact on cattle ranches",
           "published_date": "2026-08-25"
         },
@@ -4490,6 +4676,10 @@
         {
           "headline": "City of Dimmitt implements drought contingency plan",
           "published_date": "2026-08-25T20:52:29+00:00"
+        },
+        {
+          "headline": "US declares drought disaster for parts of Puerto Rico as dry conditions persist",
+          "published_date": "2026-08-26"
         },
         {
           "headline": "August rains bring drought relief, but dryness lingers | Chattanooga Times Free Press",
@@ -4564,6 +4754,10 @@
           "published_date": "2026-08-27"
         },
         {
+          "headline": "England’s Water Network Buckles Under Sudden Summer Drought",
+          "published_date": "2026-08-27T09:27:03+00:00"
+        },
+        {
           "headline": "New order slashes water use to protect North Okanagan salmon amid drought - Houston Today",
           "published_date": "2026-08-28"
         },
@@ -4590,9 +4784,21 @@
         {
           "headline": "Pleasant mornings and hot afternoons this weekend",
           "published_date": "2026-08-28"
+        },
+        {
+          "headline": "Drought and heat a one-two punch for Colorado’s remaining glaciers",
+          "published_date": "2026-08-28T00:00:00+00:00"
+        },
+        {
+          "headline": "Europe's summer drought threatens fish in rivers, lakes and farms",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "SW Florida's water: After red tide, restoration, drought, what's next?",
+          "published_date": "2026-08-29"
         }
       ],
-      "news_total": 193,
+      "news_total": 199,
       "logs": [
         {
           "log_date": "2026-08-18",
@@ -4871,75 +5077,6 @@
           ]
         },
         {
-          "log_date": "2026-08-26",
-          "summary": "New drought developments include Bristol Water imposing its first hosepipe ban in 50 years, affecting 1.2 million people, while Czech farmers reduce herds due to feed crop shortages from the summer drought. The Pacific Northwest (Oregon, Idaho, Washington) is experiencing historic drought with dwindling snowpack and record low stream flows exacerbating wildfires. El Salvador and Panama have declared emergencies over El Niño-fueled drought, adding to prior alerts in Honduras and the Caribbean.",
-          "news": [
-            {
-              "news_id": "e88247fe980d5cd88d7c8f6572622a0b",
-              "url": "https://www.myhighplains.com/news/local-news/castro-county/city-of-dimmitt-implements-drought-contingency-plan/",
-              "headline": "City of Dimmitt implements drought contingency plan",
-              "body": "The City of Dimmitt announced that it has implemented Stage 1 of its TX Water Drought Contingency Plan.",
-              "published_date": "2026-08-25T20:52:29+00:00",
-              "outlet": "KAMR Amarillo",
-              "image": "https://s.yimg.com/bo/ce210c63-35af-5570-8c99-0fdf38ed793d_1787693227953.jpg"
-            },
-            {
-              "news_id": "20ef9499b85955958b0a04c5a45c0f5f",
-              "url": "https://bendbulletin.com/2026/08/26/northwest-late-summer-days-marred-by-historic-drought-exacerbating-wildfires/",
-              "headline": "Northwest late summer days marred by historic drought, exacerbating wildfires - The Bulletin",
-              "body": "Dwindling snowpack, record low stream flows, soil-moisture evaporation and depleted reservoirs are causing pain across Oregon, Idaho and Washington. The last weeks of summer find Oregon and much of the […]",
-              "published_date": "2026-08-26",
-              "outlet": "The Bulletin",
-              "image": "https://s.yimg.com/bo/656c5bc7-828b-52cb-b475-cf009f124cac_1787752368364.jpg"
-            },
-            {
-              "news_id": "a6052be546f15df495f0575f60d1327d",
-              "url": "https://kfgo.com/2026/08/26/czech-farmers-cut-herds-as-drought-triggers-feed-crop-shortage/",
-              "headline": "Czech farmers cut herds as drought triggers feed crop shortage",
-              "body": "By Jan Lopatka KOSETICE, Czech Republic, Aug 26 (Reuters) - Exceptional summer drought has hit Czech farmers by reducing grain yields but also harming feed crops, leading to scarcity and skyrocketing prices that are forcing some to rush to cut their h...",
-              "published_date": "2026-08-26",
-              "outlet": "KFGO",
-              "image": ""
-            },
-            {
-              "news_id": "bda54da021275a4180bc7d9d4babd967",
-              "url": "https://abc7amarillo.com/news/local/dimmitt-implements-stage-1-drought-restrictions-closes-splash-park",
-              "headline": "Dimmitt implements Stage 1 drought restrictions, closes splash park",
-              "body": "The City of Dimmitt implemented Stage 1 of its drought contingency plan.Stage 1, classified as mild water shortage conditions, calls for a consistent 25% reduct",
-              "published_date": "2026-08-25",
-              "outlet": "KVII 7 Amarillo",
-              "image": "https://s.yimg.com/bo/b035f520-3ff2-5375-8b20-44ba4f64e5dc_1787703130422.jpg"
-            },
-            {
-              "news_id": "6ff85dd30fd65e4f8ca83716a8dee661",
-              "url": "https://www.gloucestershirelive.co.uk/news/regional-news/bristol-water-hosepipe-ban-you-11128531",
-              "headline": "Bristol Water hosepipe ban - all you need to know",
-              "body": "For the first time in 50 years, 1.2 million people across a wide area around Bristol will be the subject of a hosepipe ban",
-              "published_date": "2026-08-26",
-              "outlet": "Gloucestershire Live",
-              "image": "https://www.bing.com/th?id=ONUT.22hK_DKv-9r1DSqrIvA6Fw"
-            },
-            {
-              "news_id": "16ea837aac295d4bbbfdf3968ec03377",
-              "url": "https://www.msn.com/en-my/news/other/el-salvador-on-red-alert-due-to-el-nino-fuelled-drought/ar-AA2aVlKi?ocid=BingNewsVerp",
-              "headline": "El Salvador on red alert due to El Nino-fuelled drought",
-              "body": "The lack of rain, usually abundant at this time of year, has wiped out crops and prompted food aid for rural families without ...",
-              "published_date": "2026-08-26",
-              "outlet": "Free Malaysia Today on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.shVMVAxQIxFYzq6KziZC0w"
-            },
-            {
-              "news_id": "f7a5e14797ee5e27b33475686d3fd276",
-              "url": "https://www.msn.com/en-gb/news/other/panama-and-el-salvador-declare-emergency-over-el-nino-fuelled-drought/ar-AA2aYt7F?ocid=BingNewsVerp",
-              "headline": "Panama and El Salvador declare emergency over El Nino-fuelled drought",
-              "body": "Panama and El Salvador have become the latest countries along with Honduras to declare an emergency over El Nino, which has ...",
-              "published_date": "2026-08-26",
-              "outlet": "France 24 on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.wsVcTnTqN0KE82w0EbVH5g"
-            }
-          ]
-        },
-        {
           "log_date": "2026-08-27",
           "summary": "The U.S. declared a drought disaster for parts of Puerto Rico amid persistent dry conditions. France relaxed rules for cheese production due to drought-altered cow diets, while Karnataka, India, faces its most severe drought in decades and seeks central aid. In Colorado, Grand Junction urged residents to water street trees, and Tennessee saw drought relief after August rains.\nDrought conditions worsened in South Dakota, with Western Meade County reported in extreme drought according to the latest U.S. Drought Monitor. Panama and El Salvador declared alerts as El Niño intensified, threatening crops, water supplies, and Panama Canal traffic. Additionally, Orange County, Texas, issued a seven-day burn ban due to dry conditions, joining several other counties under similar restrictions.",
           "news": [
@@ -5085,9 +5222,114 @@
               "image": "https://media.zenfs.com/en/ktal_shreveport_articles_492/9100074b1cf7db53f72ddfe35e206d22.jpg"
             }
           ]
+        },
+        {
+          "log_date": "2026-08-29",
+          "summary": "New localized developments include a fish protection order limiting water use in British Columbia's Bessette Creek to protect salmon, and the revelation that Colorado's Andrews Glacier is thinning over three feet per year due to heat and drought. England experienced a severe \"flash drought\" pushing its water network toward breaking point, while the United Nations held talks in Mongolia highlighting drought's spread to previously less vulnerable regions. Drought remains across 31% of Iowa, and a drought disaster was declared for parts of Puerto Rico, consistent with prior reporting.",
+          "news": [
+            {
+              "news_id": "6bad5c7821a45f6ea838466c72c697c2",
+              "url": "https://www.newsday.com/news/nation/europe-drought-fish-economy-c00969",
+              "headline": "Europe's summer drought threatens fish in rivers, lakes and farms",
+              "body": "Extreme drought and heat have severely impacted the Danube River and surrounding regions.",
+              "published_date": "2026-08-29",
+              "outlet": "Newsday",
+              "image": "https://s.yimg.com/bo/2f4034a9-4a3f-5ce6-be97-984e213b46fc_1787983638735.jpg"
+            },
+            {
+              "news_id": "816cb43410d354028237d6b0ffb44b74",
+              "url": "https://www.summitdaily.com/news/colorado-epicenter-worst-drought-conditions-heat-records/",
+              "headline": "Colorado remains ‘epicenter’ of worst drought conditions in the West, as heat records pile up",
+              "body": "As Colorado nears the final month of the 2026 water year, extreme drought is persisting across the state as many regions, including the Western Slope, continue to rack up records when it comes to heat...",
+              "published_date": "2026-08-25",
+              "outlet": "Summit Daily News",
+              "image": "https://s.yimg.com/bo/b90ec7b1-ca51-582f-ad80-c0d6635d4ebd_1787720548017.jpg"
+            },
+            {
+              "news_id": "2ab1c54b14c95fe2a2d26625ef58dacb",
+              "url": "https://www.cpr.org/2026/08/28/colorado-glaciers-drought-heat-rocky-mountain-national-park/",
+              "headline": "Drought and heat a one-two punch for Colorado’s remaining glaciers",
+              "body": "Andrews Glacier, in Rocky Mountain National Park, is thinning at a rate of more than three feet per year, according to Dan ...",
+              "published_date": "2026-08-28T00:00:00+00:00",
+              "outlet": "Colorado Public Radio",
+              "image": "https://www.bing.com/th?id=ONUT.3li0NORj7At1ecZgIqTXmw"
+            },
+            {
+              "news_id": "b4491a409fdb57f2bafb76fd99453314",
+              "url": "https://houston-today.com/2026/08/28/new-order-slashes-water-use-to-protect-north-okanagan-salmon-amid-drought/",
+              "headline": "New order slashes water use to protect North Okanagan salmon amid drought - Houston Today",
+              "body": "The province issued a temporary fish protection order for the Bessette Creek watershed Friday, Aug. 28",
+              "published_date": "2026-08-28",
+              "outlet": "Houston Today",
+              "image": "https://s.yimg.com/bo/e7b1f54f-c1d9-5f86-a17e-a9de08512844_1787959171511.jpg"
+            },
+            {
+              "news_id": "21a9f2ca3115539c9448e2469d00beaa",
+              "url": "https://www.newsleader.com/story/weather/2026/08/28/virginia-drought-watch-emergencies-advisories-map/91507150007/",
+              "headline": "Drought watch lifted for parts of Virginia. Here's the latest",
+              "body": "Virginia lifted the drought watch for the Big Sandy region, but many other areas remain under advisory status.",
+              "published_date": "2026-08-28",
+              "outlet": "The Staunton News Leader",
+              "image": "https://s.yimg.com/bo/c06cd712-4c03-5277-bf8b-0db8ec2afaab_1782724747711.jpg"
+            },
+            {
+              "news_id": "a4cf7a5c526f51c4936a114e87e03441",
+              "url": "https://www.yahoo.com/news/science/articles/sw-floridas-water-red-tide-090209997.html",
+              "headline": "SW Florida's water: After red tide, restoration, drought, what's next?",
+              "body": "Water has shaped Southwest Florida's greatest environmental crises and recoveries. A free, nonpatrisan Sept. 19 summit will explore its future",
+              "published_date": "2026-08-29",
+              "outlet": "Naples Daily News · via Yahoo News",
+              "image": "https://media.zenfs.com/en/naples-daily-news/f6a91f6f1dacde04ce4a08249b9d42e5.jpg"
+            },
+            {
+              "news_id": "0b569f22934b5c20876330a20d791024",
+              "url": "https://www.bostonherald.com/2026/08/28/united-nations-mongolia-drought/",
+              "headline": "United Nations talks in Mongolia expose growing drought crisis as climate impacts worsen",
+              "body": "Droughts are emerging in areas that were not considered highly vulnerable a decade ago.",
+              "published_date": "2026-08-28",
+              "outlet": "Boston Herald",
+              "image": "https://s.yimg.com/bo/e7169002-df0a-5d84-95e7-e5f795af98f9_1787956733053.jpg"
+            },
+            {
+              "news_id": "9765687dfa81516fa8d72a0d0cc2607e",
+              "url": "https://www.palmbeachpost.com/story/weather/2026/08/28/west-palm-beach-drought-florida-weather-rain/91490652007/",
+              "headline": "Severe drought persists in Palm Beach County",
+              "body": "Eastern Palm Beach County is under moderate drought, while the western part of the county is under severe drought.",
+              "published_date": "2026-08-28",
+              "outlet": "The Palm Beach Post",
+              "image": "https://s.yimg.com/bo/fbf404bf-8bc9-5691-a2a3-62bc35acffd7_1785378445453.jpg"
+            },
+            {
+              "news_id": "9aef894bef505f85818871da5ca534c3",
+              "url": "https://www.desmoinesregister.com/story/weather/iowa/2026/08/28/iowa-drought-monitor-map-western-iowa-conditions/91507838007/",
+              "headline": "Drought remains across 31% of Iowa. See where dry conditions linger",
+              "body": "The new Iowa Drought Monitor map shows about 31% of Iowa experiencing some form of dryness or drought.",
+              "published_date": "2026-08-28",
+              "outlet": "The Des Moines Register",
+              "image": "https://s.yimg.com/bo/42d22938-d2f0-51fa-859f-442f4d9a4bbc_1787937850892.jpg"
+            },
+            {
+              "news_id": "710df1a2274f51999d50251761eedf32",
+              "url": "https://www.wsls.com/news/2026/08/26/us-declares-drought-disaster-for-parts-of-puerto-rico-as-dry-conditions-persist/",
+              "headline": "US declares drought disaster for parts of Puerto Rico as dry conditions persist",
+              "body": "The U.S. government has announced a drought disaster for more than two dozen cities and towns in Puerto Rico as water woes deepen across the U.S. Caribbean territory with no relief in sight.",
+              "published_date": "2026-08-26",
+              "outlet": "WSLS Newschannel 10 Roanoke",
+              "image": "https://s.yimg.com/bo/d0cc2444-bc0a-5ef0-a83d-b3007cea5f8d_1787760623984.jpg"
+            },
+            {
+              "news_id": "9a7c790ecf945904bc29688fdc3113e3",
+              "url": "https://www.bloomberg.com/news/articles/2026-08-29/england-s-water-network-buckles-under-sudden-summer-drought",
+              "headline": "England’s Water Network Buckles Under Sudden Summer Drought",
+              "body": "The severe “flash drought” that has gripped England is pushing an already struggling water network toward breaking point — ...",
+              "published_date": "2026-08-27T09:27:03+00:00",
+              "outlet": "Bloomberg",
+              "image": "https://www.bing.com/th?id=ONUT.chy_Am5HzqT8XN8VXLDrgg"
+            }
+          ]
         }
       ],
-      "logs_total": 11
+      "logs_total": 12
     },
     {
       "incident_id": "20260521-CD-DR",
@@ -7868,7 +8110,7 @@
       "incident_id": "20260626-PH-EQ",
       "tree_id": "97104f9b52cd5e6ebc506ce2ee60dac5",
       "canonical_name": "Earthquake M6.5 Sarangani, Philippines 2026-06-26",
-      "summary": "Negros Occidental provincial government donated PHP2 million in cash aid to Sarangani province for earthquake recovery. Additionally, a separate article reports a magnitude-6.3 earthquake off the southern Philippines in early August, continuing the aftershock sequence.",
+      "summary": "A strong earthquake jolted Davao Occidental again on a Friday, as reported by Net25. In response to the ongoing seismic activity, PLDT Enterprise deployed Starlink satellite connectivity and emergency communications support to help maintain critical links for communities and responders in Mindanao.",
       "country": "Philippines",
       "iso2": "PH",
       "lat": 5.2392,
@@ -7898,7 +8140,7 @@
         "gdacs": 2,
         "ercc": 0,
         "healthmap": 0,
-        "news": 95
+        "news": 96
       },
       "source_links": [
         {
@@ -8314,11 +8556,15 @@
           "published_date": "2026-08-25T14:07:15+00:00"
         },
         {
+          "headline": "Strong earthquake jolts Davao Occidental on Friday anew",
+          "published_date": "2026-08-28"
+        },
+        {
           "headline": "When Connectivity Matters Most: PLDT Enterprise Brings Starlink Support to Mindanao Recovery Efforts",
           "published_date": "2026-08-28"
         }
       ],
-      "news_total": 95,
+      "news_total": 96,
       "logs": [
         {
           "log_date": "2026-07-08",
@@ -8340,39 +8586,6 @@
               "body": "A magnitude 6.6 earthquake struck off the coast of southern Philippines on Friday, June 26, according to the country's Institute of Volcanology and Seismology (Phivolcs). The quake struck at 7.34pm ...",
               "published_date": "2026-07-08T22:10:39+00:00",
               "outlet": "Khaleej Times",
-              "image": ""
-            }
-          ]
-        },
-        {
-          "log_date": "2026-08-19",
-          "summary": "A magnitude 5.2 earthquake struck off the coast of Sarangani, Davao Occidental on Friday, adding to the ongoing aftershock sequence. Meanwhile, Filipino-American groups in Texas formed a coalition to aid Mindanao's earthquake recovery, and a DepEd official in Sarangani expressed concern over classroom shortages exacerbated by quake devastation.",
-          "news": [
-            {
-              "news_id": "c300698c455c5dbd9942b5cd8e3c3ca8",
-              "url": "https://usa.inquirer.net/206755/texas-fil-am-groups-join-forces-to-aid-mindanao-earthquake-recovery",
-              "headline": "Texas Fil-Am groups join forces to aid Mindanao earthquake recovery",
-              "body": "Filipino organizations across Texas formed a coalition to help Mindanao communities recover from the magnitude 7.8 earthquake ...",
-              "published_date": "2026-08-19T15:52:14+00:00",
-              "outlet": "INQUIRER.net USA",
-              "image": "https://www.bing.com/th?id=ONUT.K9NQqtkDp7h7rIWl1WH5ug"
-            },
-            {
-              "news_id": "bdaf9321c597531cb122b283bb83b1ce",
-              "url": "https://mb.com.ph/2026/08/14/deped-sarangani-official-wary-of-the-impact-of-classroom-shortage-to-learners-amid-quake-devastation",
-              "headline": "DepEd Sarangani official wary of the impact of classroom shortage to learners amid quake devastation",
-              "body": "DAVAO CITY – An official of the Department of Education (DepEd) in Sarangani Province is wary of the impact of classroom shortage among learners as ...",
-              "published_date": "2026-08-14",
-              "outlet": "Manila Bulletin",
-              "image": ""
-            },
-            {
-              "news_id": "567cc3622dd05babb35e62f43c4e3f7d",
-              "url": "https://newsinfo.inquirer.net/2284422/magnitude-5-2-earthquake-hits-off-sarangani-shore-on-friday",
-              "headline": "Magnitude 5.2 earthquake hits off Sarangani shore on Friday",
-              "body": "MANILA, Philippines — A magnitude 5.2 earthquake struck off the shore of Sarangani town in Davao Occidental on Friday morning, according to the Philippine Institute of Volcanology and Seismology ...",
-              "published_date": "2026-08-15T02:29:17+00:00",
-              "outlet": "Philippine Daily Inquirer",
               "image": ""
             }
           ]
@@ -8514,9 +8727,42 @@
               "image": "https://www.bing.com/th?id=ONUT.q1HkxN3SPEkd-SFQ82Y6ew"
             }
           ]
+        },
+        {
+          "log_date": "2026-08-29",
+          "summary": "A strong earthquake jolted Davao Occidental again on a Friday, as reported by Net25. In response to the ongoing seismic activity, PLDT Enterprise deployed Starlink satellite connectivity and emergency communications support to help maintain critical links for communities and responders in Mindanao.",
+          "news": [
+            {
+              "news_id": "f5cea538a4d05964a409c4e86e179376",
+              "url": "https://net25.com/news/strong-earthquake-jolts-davao-occidental-on-friday-anew",
+              "headline": "Strong earthquake jolts Davao Occidental on Friday anew",
+              "body": "NET25 is the Filipino broadcast network for breaking news, live TV streaming, Radyo Agila and Eagle FM radio, program schedules, entertainment, weather, and elections coverage.",
+              "published_date": "2026-08-28",
+              "outlet": "NET25",
+              "image": "https://www.bing.com/th?id=ONUT.5tg9KnTdfMGgS4zFhYrbJQ"
+            },
+            {
+              "news_id": "479c0c9236a954cca85033d29358fc70",
+              "url": "https://insiderph.com/pldt-taps-starlink-to-keep-mindanao-connected-after-earthquake",
+              "headline": "PLDT taps Starlink to keep Mindanao connected after earthquake",
+              "body": "PLDT Inc. is turning to satellites to keep critical communications running in parts of Mindanao after a powerful earthquake disrupted power and connectivity.",
+              "published_date": "2026-01-13",
+              "outlet": "insiderph",
+              "image": ""
+            },
+            {
+              "news_id": "7701c54980175d0a8301d9fd31df7c74",
+              "url": "http://www.mindanaotimes.com.ph/when-connectivity-matters-most-pldt-enterprise-brings-starlink-support-to-mindanao-recovery-efforts/",
+              "headline": "When Connectivity Matters Most: PLDT Enterprise Brings Starlink Support to Mindanao Recovery Efforts",
+              "body": "MANILA, Philippines – In the aftermath of the powerful earthquake that struck parts of Mindanao, PLDT Enterprise, together with PLDT and Smart, deployed Starlink satellite connectivity solutions and mobilized emergency communications support to assist communities, responders, and local government units in maintaining critical links during a time of urgent need. PLDT and Smart immediately dispatched...",
+              "published_date": "2026-08-28",
+              "outlet": "Mindanao Times",
+              "image": "https://www.bing.com/th?id=ONUT.MWcFyF0Eu7nCd27frInNaQ"
+            }
+          ]
         }
       ],
-      "logs_total": 13
+      "logs_total": 14
     },
     {
       "incident_id": "20260709-XX-SW",
@@ -10282,7 +10528,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 648
+        "news": 651
       },
       "source_links": [
         {
@@ -12840,6 +13086,10 @@
           "published_date": "2026-08-27T16:20:09+00:00"
         },
         {
+          "headline": "‘The War Shall Not Stop the Music’: Violin Virtuoso Recounts Meeting Pope Leo XIV",
+          "published_date": "2026-08-28"
+        },
+        {
           "headline": "Russian drones batter Ukraine’s Kyiv region, hitting apartments and warehouses for a second day",
           "published_date": "2026-08-28"
         },
@@ -12872,6 +13122,14 @@
           "published_date": "2026-08-28T20:21:14+00:00"
         },
         {
+          "headline": "Behind CIA Director Ratcliffe’s secret trip to Russia: The Ukraine war spirals out of control",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "Russia has oil, so why is it importing petrol from India",
+          "published_date": "2026-08-29"
+        },
+        {
           "headline": "Why the fight for Ukraine is a test of American values | Opinion",
           "published_date": "2026-08-29"
         },
@@ -12896,7 +13154,7 @@
           "published_date": "2026-08-29"
         }
       ],
-      "news_total": 648,
+      "news_total": 651,
       "logs": [
         {
           "log_date": "2026-07-24",
@@ -13670,7 +13928,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 1236
+        "news": 1258
       },
       "source_links": [],
       "physical": {
@@ -17945,6 +18203,10 @@
           "published_date": "2026-08-24"
         },
         {
+          "headline": "Iran warns of a harsh as US announces new sanctions and other Middle East news",
+          "published_date": "2026-08-24"
+        },
+        {
           "headline": "Iran warns of a harsh response as US announces new sanctions and other Middle East news",
           "published_date": "2026-08-24"
         },
@@ -18075,6 +18337,10 @@
         {
           "headline": "US futures and oil prices slip with pressure on Treasurys ongoing",
           "published_date": "2026-08-24T11:53:32+00:00"
+        },
+        {
+          "headline": "The Latest Empty Threat Against Iran",
+          "published_date": "2026-08-25"
         },
         {
           "headline": "Can Pakistan’s Asim Munir convince Iran military chiefs to return to talks?",
@@ -18223,6 +18489,14 @@
         {
           "headline": "Buckle In America — Iran War Costs Are Steep And Growing",
           "published_date": "2026-08-25T21:13:48+00:00"
+        },
+        {
+          "headline": "Iran warns of military ship ban in Hormuz under potential deal with Oman, and other Middle East news",
+          "published_date": "2026-08-26"
+        },
+        {
+          "headline": "Wall Street holds mostly steady following the latest update on inflation",
+          "published_date": "2026-08-26"
         },
         {
           "headline": "Trump declares ‘mission accomplished’ in Iran as conflict drags on",
@@ -18377,6 +18651,10 @@
           "published_date": "2026-08-26T12:20:45+00:00"
         },
         {
+          "headline": "Regional powers seek off-ramp from Iran war, and other Middle East developments",
+          "published_date": "2026-08-27"
+        },
+        {
           "headline": "Trump's oil and gas stock trades continued during Iran war, filings show",
           "published_date": "2026-08-27"
         },
@@ -18517,6 +18795,22 @@
           "published_date": "2026-08-27T23:00:36+00:00"
         },
         {
+          "headline": "Live Updates: Iran vows to resist U.S. sanctions as war passes 6-month mark",
+          "published_date": "2026-08-28"
+        },
+        {
+          "headline": "Iran war updates: IRGC says ‘decisive control’ over Strait of Hormuz",
+          "published_date": "2026-08-28"
+        },
+        {
+          "headline": "The Latest: Iran war reaches its six-month mark as Trump tries increasing economic pressure",
+          "published_date": "2026-08-28"
+        },
+        {
+          "headline": "Six months on, the Iran war has changed the Middle East, but not in the way its architects had hoped",
+          "published_date": "2026-08-28"
+        },
+        {
           "headline": "What is Trump’s exit strategy in Iran? | The Excerpt",
           "published_date": "2026-08-28"
         },
@@ -18593,6 +18887,10 @@
           "published_date": "2026-08-28"
         },
         {
+          "headline": "Iran war drives US transport fuel surcharges, but also industry profits",
+          "published_date": "2026-08-28T10:03:00+00:00"
+        },
+        {
           "headline": "Trump used to say he saw a quick end to his Iran war, but 6 months later he clai...",
           "published_date": "2026-08-28T10:25:11+00:00"
         },
@@ -18605,8 +18903,56 @@
           "published_date": "2026-08-28T21:25:11+00:00"
         },
         {
+          "headline": "For Trump, the Iran War Is Stuck Between Combat and Genuine Peace",
+          "published_date": "2026-08-28T21:56:14+00:00"
+        },
+        {
           "headline": "Oil Prices Decline Amid Uncertain Iran Conflict",
           "published_date": "2026-08-28T22:25:11+00:00"
+        },
+        {
+          "headline": "Trump said repeatedly in 6 months the US was nearly done in Iran. Watch",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "The latest: Iran war reaches its six-month mark as Trump shifts focus",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "6 months on, Iran’s leaders are defying the US and signaling no tolerance for dissent",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "Six months into the Iran war, a new Gulf security architecture is emerging",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "Iran hard-liners tighten grip as war with US enters sixth month",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "Over 6 months of war: Iran govt says will 'stand firm' against US sanctions",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "6 months on, Iran's leaders are defying the US and signaling no tolerance for dissent",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "US Iran War Causing 'Shortfalls' in Department of Defense, Navy and US Military Payroll",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "Iran Tells Trump ‘Pressure Doesn’t Work,’ Calls on Countries to Reject US Sanctions as Tehran Sets Condit",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "US-Israel war on Iran, six months down the line: In numbers",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "US announces fresh Iran sanctions as war reaches six monthsPublished on: August 29, 2026 12:18 AM",
+          "published_date": "2026-08-29"
         },
         {
           "headline": "IRGC asserts strict Hormuz control as the US maintains its naval blockade",
@@ -18629,7 +18975,7 @@
           "published_date": "2026-08-29"
         }
       ],
-      "news_total": 1236,
+      "news_total": 1258,
       "logs": [
         {
           "log_date": "2026-07-27",
@@ -19637,7 +19983,7 @@
         "gdacs": 1,
         "ercc": 5,
         "healthmap": 0,
-        "news": 565
+        "news": 576
       },
       "source_links": [
         {
@@ -21865,6 +22211,22 @@
           "published_date": "2026-08-26"
         },
         {
+          "headline": "Containment on Black Canyon Fire inches forward",
+          "published_date": "2026-08-26T08:36:16+00:00"
+        },
+        {
+          "headline": "Umatilla National Forest fires update for Aug. 27 - La Grande Observer",
+          "published_date": "2026-08-27"
+        },
+        {
+          "headline": "Van Zandt County wildfire contained after reaching 650 acres",
+          "published_date": "2026-08-27"
+        },
+        {
+          "headline": "Level 3 ‘Go Now’ evacuation notice issued for Mt. Hood National Forest area due to Austin Fire",
+          "published_date": "2026-08-27"
+        },
+        {
           "headline": "New wildfire reported near Oakridge",
           "published_date": "2026-08-27"
         },
@@ -21917,6 +22279,14 @@
           "published_date": "2026-08-27T19:01:11+00:00"
         },
         {
+          "headline": "Timber, Plaskett fires grow in California's Big Sur; Highway 1 closed",
+          "published_date": "2026-08-28"
+        },
+        {
+          "headline": "Ross Fire Grows Into One of Largest Wildfires on Record in North Texas",
+          "published_date": "2026-08-28"
+        },
+        {
           "headline": "New moisture sensors could help make wildfire danger ratings better in Arizona",
           "published_date": "2026-08-28"
         },
@@ -21941,6 +22311,26 @@
           "published_date": "2026-08-28"
         },
         {
+          "headline": "Federal Wildfire Crews Are Stretched Thin. California Is Stepping in to Help",
+          "published_date": "2026-08-28T00:00:00+00:00"
+        },
+        {
+          "headline": "Firefighters set to continue battling Ross fire, which has scorched 85,000 acres...",
+          "published_date": "2026-08-28T10:36:16+00:00"
+        },
+        {
+          "headline": "Fire burning in Cajon Pass forces closure of some northbound 15 Freeway lanes",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "Japan to send SDF helicopters to wildfire-hit Indonesia",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "Bonner, Boundary counties placed on stage 2 fire restrictions",
+          "published_date": "2026-08-29"
+        },
+        {
           "headline": "Big Sur fires close 45 miles of California’s scenic Hwy. 1. Here’s what to know",
           "published_date": "2026-08-29T01:35:43+00:00"
         },
@@ -21949,7 +22339,7 @@
           "published_date": "2026-08-29T01:35:43+00:00"
         }
       ],
-      "news_total": 565,
+      "news_total": 576,
       "logs": [
         {
           "log_date": "2026-07-27",
@@ -25231,7 +25621,7 @@
       "incident_id": "20260728-JP-EQ",
       "tree_id": "8b9a0fd7d7d84dcf9915f43fd81312cd",
       "canonical_name": "Earthquake M6.8 Uto, Japan 2026-07-28",
-      "summary": "One month after the Kumamoto earthquake, over 2,000 evacuees remain in temporary shelters. Japan's drone industry, coordinated through JUIDA, operated a 10-day response involving six companies for indoor mall search and damage mapping. The government has launched a travel discount campaign to revitalize tourism in the Kyushu region.",
+      "summary": "JR Kyushu announced on August 28 that the Kyushu Shinkansen will fully reopen on September 18, ending a 52-day closure due to earthquake damage, though speed limits will remain in effect near the fault zone.",
       "country": "Japan",
       "iso2": "JP",
       "lat": 32.6817,
@@ -25261,7 +25651,7 @@
         "gdacs": 1,
         "ercc": 2,
         "healthmap": 0,
-        "news": 335
+        "news": 337
       },
       "source_links": [
         {
@@ -26566,6 +26956,10 @@
         },
         {
           "headline": "A moderate earthquake shakes Japan, injuring more than 30 people in the Tokyo...",
+          "published_date": "2026-08-23T07:21:52+00:00"
+        },
+        {
+          "headline": "A moderate earthquake shakes Japan, injuring more than 30 people in the Tokyo...",
           "published_date": "2026-08-23T11:38:51+00:00"
         },
         {
@@ -26663,9 +27057,13 @@
         {
           "headline": "Kyushu Shinkansen reopens September 18; speed limits persist near earthquake fault zone",
           "published_date": "2026-08-29"
+        },
+        {
+          "headline": "Kyushu Shinkansen reopens September 18; speed limits persist near earthquake fault zone",
+          "published_date": "2026-08-29"
         }
       ],
-      "news_total": 335,
+      "news_total": 337,
       "logs": [
         {
           "log_date": "2026-07-28",
@@ -27088,48 +27486,6 @@
           ]
         },
         {
-          "log_date": "2026-08-26",
-          "summary": "The Japanese Red Cross has expressed concern that evacuees' health may deteriorate due to prolonged stays in shelters or vehicles. Additionally, a volunteer network launched after the 2024 Noto earthquake is providing free laundry services to Kumamoto evacuees through local businesses. In other recovery news, fans of the Touken Ranbu game rushed to buy sake from a quake-hit brewery after the owner's lament about unsold stock went viral.",
-          "news": [
-            {
-              "news_id": "7429d835b5c9582d868f71ec4474700e",
-              "url": "https://www.japantimes.co.jp/news/2026/08/26/japan/touken-ranbu-sake-kumamoto/",
-              "headline": "Touken Ranbu game fans help save quake-hit Kumamoto brewery",
-              "body": "After an online post from the 12th-generation owner of the brewery lamenting unsold sake went viral, fans rushed to buy sake from them that is associated with the video game.",
-              "published_date": "2026-08-26",
-              "outlet": "The Japan Times",
-              "image": "https://www.bing.com/th?id=ONUT.PecaAGrfPuSlB1wxCVnekQ"
-            },
-            {
-              "news_id": "9e6053be99355d0d8d7fdee88e74b77d",
-              "url": "https://www.japantimes.co.jp/news/2026/08/26/japan/red-cross-concern-kumamoto-health/",
-              "headline": "Japanese Red Cross worried over Kumamoto evacuees’ health after quake",
-              "body": "Officials said that evacuees’ health could deteriorate due to prolonged life at shelters or in their own cars.",
-              "published_date": "2026-08-26",
-              "outlet": "The Japan Times",
-              "image": "https://www.bing.com/th?id=ONUT.petoUAxGJJyTJPchyKDiIQ"
-            },
-            {
-              "news_id": "45e3fd4def335a50aa8426c037d32008",
-              "url": "https://www.japantimes.co.jp/news/2026/08/25/japan/society/free-laundry-services-for-kumamoto-evacuees/",
-              "headline": "Laundry businesses in quake-hit Kumamoto wash evacuees’ clothes for free",
-              "body": "The Disaster Sentaku Assistance Team, a volunteer network launched after the 2024 Noto Peninsula earthquake, works with local businesses to provide the service.",
-              "published_date": "2026-08-25",
-              "outlet": "The Japan Times",
-              "image": "https://www.bing.com/th?id=ONUT.M8dMIv-vUQOsn0eSnOHrKw"
-            },
-            {
-              "news_id": "414785f032fc5b50b106d514dd59658d",
-              "url": "https://www.msn.com/en-xl/news/other/viral-false-claims-about-quakes-hiroshima-expose-japan-s-online-conspiracy-problem/ar-AA2aR2VP?ocid=BingNewsVerp",
-              "headline": "Viral false claims about quakes, Hiroshima expose Japan’s online conspiracy problem",
-              "body": "Claims that a deadly quake was artificial and Hiroshima was not hit by an atomic bomb have alarmed experts tracking Japan's ...",
-              "published_date": "2026-08-25",
-              "outlet": "South China Morning Post on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.kuSGV8syYOUgNZtbe1P6xw"
-            }
-          ]
-        },
-        {
           "log_date": "2026-08-27",
           "summary": "The Japanese government announced plans to subsidize trips to the quake-hit Kyushu region to revive tourism, as local visitor numbers remain down by 62% a month after the disaster. The Emperor and Empress are scheduled to visit Kumamoto in late September, while a drone maker that assisted in the response has seen its profile rise. Additionally, a government economic report cited the Kumamoto earthquake as a key reason for closely monitoring the impact of natural disasters.",
           "news": [
@@ -27248,9 +27604,42 @@
               "image": "https://s.yimg.com/bo/7db994ca-ffae-505d-b39d-3c945bfac1d4_1787483092568.jpg"
             }
           ]
+        },
+        {
+          "log_date": "2026-08-29",
+          "summary": "JR Kyushu announced on August 28 that the Kyushu Shinkansen will fully reopen on September 18, ending a 52-day closure due to earthquake damage, though speed limits will remain in effect near the fault zone.",
+          "news": [
+            {
+              "news_id": "0cad80cb8b645c57b2307fbdab56250b",
+              "url": "https://www.msn.com/en-us/news/news/kyushu-shinkansen-reopens-september-18-speed-limits-persist-near-earthquake-fault-zone/ar-AA2b8jK3?ocid=BingNewsVerp",
+              "headline": "Kyushu Shinkansen reopens September 18; speed limits persist near earthquake fault zone",
+              "body": "Kyushu Shinkansen service resumes September 18, ending a 52-day earthquake closure. JR Kyushu confirmed the date August 28 ...",
+              "published_date": "2026-08-29",
+              "outlet": "Tech Times on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.dmaPuBc8oS-dCbKculdbhw"
+            },
+            {
+              "news_id": "077d6d738f3d5c2b9eb3226d7b460eef",
+              "url": "https://www.msn.com/en-us/public-safety-and-emergencies/health-and-safety-alerts/kyushu-shinkansen-reopens-september-18-speed-limits-persist-near-earthquake-fault-zone/ar-AA2b8jK3?ocid=BingNewsVerp",
+              "headline": "Kyushu Shinkansen reopens September 18; speed limits persist near earthquake fault zone",
+              "body": "Kyushu Shinkansen service resumes September 18, ending a 52-day earthquake closure. JR Kyushu confirmed the date August 28 ...",
+              "published_date": "2026-08-29",
+              "outlet": "Tech Times on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.dmaPuBc8oS-dCbKculdbhw"
+            },
+            {
+              "news_id": "df0225196f1151b6844218419f0b7379",
+              "url": "https://www.timesunion.com/news/world/article/a-moderate-earthquake-of-magnitude-5-9-shakes-22399410.php",
+              "headline": "A moderate earthquake shakes Japan, injuring more than 30 people in the Tokyo...",
+              "body": "A moderate earthquake with a preliminary magnitude of 5.9 has rattled eastern Japan, including the...",
+              "published_date": "2026-08-23T07:21:52+00:00",
+              "outlet": "Albany Times Union",
+              "image": "https://s.yimg.com/bo/7db994ca-ffae-505d-b39d-3c945bfac1d4_1787483092568.jpg"
+            }
+          ]
         }
       ],
-      "logs_total": 22
+      "logs_total": 23
     },
     {
       "incident_id": "20260730-XX-DR",
@@ -27275,7 +27664,7 @@
       "disease_name": null,
       "event_date": "2026-07-30",
       "first_reported_date": "2026-07-30",
-      "last_updated_date": "2026-08-27",
+      "last_updated_date": "2026-08-29",
       "days_since_event": 30,
       "source_count": 1,
       "should_report": true,
@@ -27286,7 +27675,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 434
+        "news": 439
       },
       "source_links": [
         {
@@ -29042,9 +29431,29 @@
         {
           "headline": "Clifton Water District says drought rates are curbing water use",
           "published_date": "2026-08-27"
+        },
+        {
+          "headline": "Drought remains across 31% of Iowa. See where dry conditions linger",
+          "published_date": "2026-08-28"
+        },
+        {
+          "headline": "LUMS Researchers Help International Scientists Discover Compounds That Could Make Crops More Drought-Resistant",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "Dutch farmers report fewer crops, smaller carrots, onions and potatoes after drought",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "Drought and heat making for below average crops in North Dakota, but farmers say they've seen worse",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "Europe's summer drought threatens fish in rivers, lakes and farms",
+          "published_date": "2026-08-29T05:12:55+00:00"
         }
       ],
-      "news_total": 434,
+      "news_total": 439,
       "logs": [
         {
           "log_date": "2026-07-31",
@@ -29501,18 +29910,18 @@
       "disease_name": null,
       "event_date": "2026-07-31",
       "first_reported_date": "2026-07-31",
-      "last_updated_date": "2026-08-25",
+      "last_updated_date": "2026-08-29",
       "days_since_event": 29,
-      "source_count": 3,
+      "source_count": 2,
       "should_report": true,
       "search_keys": [],
       "sources": {
         "who_don": 0,
         "usgs": 0,
         "gdacs": 1,
-        "ercc": 2,
+        "ercc": 1,
         "healthmap": 0,
-        "news": 121
+        "news": 122
       },
       "source_links": [
         {
@@ -29525,12 +29934,6 @@
           "type": "ERCC",
           "label": "ECHO Daily Map of 03 August 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5743",
-          "meta": ""
-        },
-        {
-          "type": "ERCC",
-          "label": "ECHO Daily Map of 21 August 2026",
-          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5760",
           "meta": ""
         }
       ],
@@ -30028,9 +30431,13 @@
         {
           "headline": "Wildfires expose — and detonate — buried bombs and mines from WWI and WWII",
           "published_date": "2026-08-25"
+        },
+        {
+          "headline": "German Chancellor Merz visits Hürtgen Forest fire site amid boos and whistles",
+          "published_date": "2026-08-29"
         }
       ],
-      "news_total": 121,
+      "news_total": 122,
       "logs": [
         {
           "log_date": "2026-08-04",
@@ -32260,6 +32667,72 @@
       "logs_total": 7
     },
     {
+      "incident_id": "20260809-IN-FL",
+      "tree_id": "c3a298b11ada4b3d923299b870b675ba",
+      "canonical_name": "Flood India 2026-08-09",
+      "summary": "",
+      "country": "India",
+      "iso2": "IN",
+      "lat": 25.3356491,
+      "lon": 83.0076292,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Flood",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "MEDIUM",
+      "priority_rank": 2,
+      "pandemic_potential": null,
+      "event_status": null,
+      "extended_monitoring": false,
+      "disease_name": null,
+      "event_date": "2026-08-09",
+      "first_reported_date": "2026-08-09",
+      "last_updated_date": "2026-08-29",
+      "days_since_event": 20,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 0,
+        "gdacs": 1,
+        "ercc": 0,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "GDACS",
+          "label": "Orange alert · Flood India 2026-08-09",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=FL&eventid=1104121",
+          "meta": ""
+        }
+      ],
+      "physical": {
+        "max_magnitude": null,
+        "max_depth_km": null,
+        "place": "India",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": "Orange",
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Odisha flood update: IMD predicts heavy rains across districts till September 4",
+          "url": "https://english.mathrubhumi.com/news/india/odisha-low-pressure-bay-of-bengal-imd-rain-warning-2026-adr26ir7",
+          "outlet": "Mathrubhumi English",
+          "published_date": "2026-08-29"
+        }
+      ],
+      "news_total": 1,
+      "logs": [],
+      "logs_total": 0
+    },
+    {
       "incident_id": "20260810-UG-OT",
       "tree_id": "fc8584ed043b47e4b483254061106862",
       "canonical_name": "Uganda 2026-08-10",
@@ -32475,7 +32948,7 @@
       "incident_id": "20260810-CO-EQ",
       "tree_id": "c686af40e85948b99d7f0b784e056bdb",
       "canonical_name": "Earthquake M7.4 San José del Palmar, Colombia 2026-08-10",
-      "summary": "The UN warned that damage to 4,000 schools from the August 10 earthquake increases the risk of child recruitment by armed groups in Chocó and Valle del Cauca. Separately, 3,300 food kits were delivered to Cali by The Church of Jesus Christ of Latter-day Saints to support affected families.",
+      "summary": "The UN warned that damage to 4,000 schools from the August 10 earthquake increases the risk of child recruitment by armed groups in Chocó and Valle del Cauca. Separately, 3,300 food kits were delivered to Cali by The Church of Jesus Christ of Latter-day Saints to support affected families.\nOn August 28, a vigil for earthquake victims was held at Bolivar Square in Bogota, attended by the public and covered by AP. Separately, satellite company SES and pop star Shakira are working to accelerate aid delivery to affected communities, with SES's local director coordinating a rescue and recovery plan.",
       "country": "Colombia",
       "iso2": "CO",
       "lat": 0.3112,
@@ -32505,7 +32978,7 @@
         "gdacs": 1,
         "ercc": 3,
         "healthmap": 0,
-        "news": 465
+        "news": 469
       },
       "source_links": [
         {
@@ -33194,6 +33667,10 @@
         },
         {
           "headline": "Rescuers search for survivors after powerful earthquake in western Colombia",
+          "published_date": "2026-08-12"
+        },
+        {
+          "headline": "Tampa Bay Colombian community mobilizes to help earthquake survivors",
           "published_date": "2026-08-12"
         },
         {
@@ -34285,6 +34762,10 @@
           "published_date": "2026-08-25"
         },
         {
+          "headline": "BEYONCÉ TO MAKE A PERSONAL 1 MILLION DOLLAR DONATION TO ORGANIZATIONS IN COLOMBIA TO AID WITH RELIEF EFFORTS FOLLOWING THE RECENT EARTHQUAKE",
+          "published_date": "2026-08-25"
+        },
+        {
           "headline": "Shakira visits quake-damaged schools in Colombia; announces major education aid; pledges university support",
           "published_date": "2026-08-25"
         },
@@ -34413,6 +34894,10 @@
           "published_date": "2026-08-28"
         },
         {
+          "headline": "Colombia Earthquake Vigil",
+          "published_date": "2026-08-28"
+        },
+        {
           "headline": "Risks of child recruitment by armed groups rise in post-quake Colombia",
           "published_date": "2026-08-28"
         },
@@ -34425,11 +34910,15 @@
           "published_date": "2026-08-28"
         },
         {
+          "headline": "Satellite Titan SES, Pop Star Shakira Race To Aid Quake-Hit Colombians",
+          "published_date": "2026-08-28"
+        },
+        {
           "headline": "Colombia's earthquake exposes coffee supply chain fragility",
           "published_date": "2026-08-28"
         }
       ],
-      "news_total": 465,
+      "news_total": 469,
       "logs": [
         {
           "log_date": "2026-08-10",
@@ -34910,7 +35399,7 @@
         },
         {
           "log_date": "2026-08-29",
-          "summary": "The UN warned that damage to 4,000 schools from the August 10 earthquake increases the risk of child recruitment by armed groups in Chocó and Valle del Cauca. Separately, 3,300 food kits were delivered to Cali by The Church of Jesus Christ of Latter-day Saints to support affected families.",
+          "summary": "The UN warned that damage to 4,000 schools from the August 10 earthquake increases the risk of child recruitment by armed groups in Chocó and Valle del Cauca. Separately, 3,300 food kits were delivered to Cali by The Church of Jesus Christ of Latter-day Saints to support affected families.\nOn August 28, a vigil for earthquake victims was held at Bolivar Square in Bogota, attended by the public and covered by AP. Separately, satellite company SES and pop star Shakira are working to accelerate aid delivery to affected communities, with SES's local director coordinating a rescue and recovery plan.",
           "news": [
             {
               "news_id": "b077fef9f6825321961abc072d940cd4",
@@ -34920,6 +35409,15 @@
               "published_date": "2026-08-28",
               "outlet": "Wealth of Geeks · via Yahoo News",
               "image": "https://media.zenfs.com/en/wealth_of_geeks_188/789bf63b48d33fda290dac592e2ce0fa.jpg"
+            },
+            {
+              "news_id": "e270ca89d95055f09ecad5541bb0594f",
+              "url": "https://www.hjnews.com/world/colombia-earthquake-vigil/image_ef96ccfe-b7e0-5f03-af9d-43152245a613.html",
+              "headline": "Colombia Earthquake Vigil",
+              "body": "People attend a vigil in honor of earthquake victims at the Bolivar square in Bogota, Colombia, Friday, Aug. 28, 2026. (AP Photo/Fernando Vergara)",
+              "published_date": "2026-08-28",
+              "outlet": "The Herald Journal",
+              "image": "https://s.yimg.com/bo/39a0b78f-f8d0-591c-b9e0-a8b5d4d55ce0_1787989902693.jpg"
             },
             {
               "news_id": "abf8ef6d43b556c58fc2739e48997f13",
@@ -34940,6 +35438,15 @@
               "image": "https://www.bing.com/th?id=ONUT.4w3sQWnE8JagcY_vWtWEjg"
             },
             {
+              "news_id": "d975c7b46217553cb2755d00d8cbf2b8",
+              "url": "https://pr.newsaegis.com/article/BEYONCE-TO-MAKE-A-PERSONAL-1-MILLION-DOLLAR-DONATION-TO-ORGANIZATIONS-IN-COLOMBIA-TO-AID-WITH-RELIEF-EFFORTS-FOLLOWING-THE-RECENT-EARTHQUAKE/6a8ddc7d5b3d9368bc022b8c",
+              "headline": "BEYONCÉ TO MAKE A PERSONAL 1 MILLION DOLLAR DONATION TO ORGANIZATIONS IN COLOMBIA TO AID WITH RELIEF EFFORTS FOLLOWING THE RECENT EARTHQUAKE",
+              "body": "The donation is earmarked to immediately help provide food and housing supplies to the hardest hit...",
+              "published_date": "2026-08-25",
+              "outlet": "St. Clair News-Aegis",
+              "image": "https://s.yimg.com/bo/39e76502-8ac1-51a7-9d8d-2d52ed3e048c_1786271935052.png.cf.jpg"
+            },
+            {
               "news_id": "b702540127125f56923ff466ef5dce8a",
               "url": "https://www.thechurchnews.com/living-faith/2026/08/28/3300-food-kits-being-delivered-cali-colombia-after-7-4-earthquake/",
               "headline": "3,300 food kits being delivered to Cali, Colombia, after 7.4 earthquake",
@@ -34956,6 +35463,24 @@
               "published_date": "2026-08-28",
               "outlet": "Agencia EFE",
               "image": "https://www.bing.com/th?id=ONUT.oAGWlV7ubJz2vGefyOrU6Q"
+            },
+            {
+              "news_id": "2fcc6ae9ab22599fb92069db1c6050e8",
+              "url": "https://www.forbes.com/sites/kevinholdenplatt/2026/08/28/satellite-titan-ses-pop-star-shakira-race-to-aid-quake-hit-colombians/",
+              "headline": "Satellite Titan SES, Pop Star Shakira Race To Aid Quake-Hit Colombians",
+              "body": "When seismic waves from the Colombian earthquake started shaking his home, a local director for the satellite titan SES rapidly began crafting a rescue and recovery plan.",
+              "published_date": "2026-08-28",
+              "outlet": "Forbes",
+              "image": "https://www.bing.com/th?id=ONUT.48kAse1T9BwvObbPMemEaQ"
+            },
+            {
+              "news_id": "56cd2c78fbbc572588e7d30c270ac7b0",
+              "url": "https://baynews9.com/fl/tampa/news/2026/08/12/tampa-bay-colombian-community-mobilizes-to-help-earthquake-survivors",
+              "headline": "Tampa Bay Colombian community mobilizes to help earthquake survivors",
+              "body": "Tampa Bay organizations are combining efforts to collect relief supplies to send to families in Colombia affected by this week's earthquake.",
+              "published_date": "2026-08-12",
+              "outlet": "Bay News 9",
+              "image": ""
             }
           ]
         }
@@ -34966,7 +35491,7 @@
       "incident_id": "20260812-XX-SW",
       "tree_id": "8a1e62b17f6e49e9ad462dd2080d0653",
       "canonical_name": "Severe Weather 2026-08-12",
-      "summary": "Indiana residents can now apply for FEMA assistance for the severe storms and power outages from early August, as federal aid becomes available for application following the previous approval for 21 counties.",
+      "summary": "The National Weather Service confirmed three additional tornadoes from the Aug. 11 derecho in central Ohio, including two in Franklin County, raising the total tornado count in Ohio from that event. In response, Franklin County Auditor noted that homes damaged by the weeks of severe weather may qualify for a property tax reduction under state law.",
       "country": "",
       "iso2": "XX",
       "lat": null,
@@ -34985,7 +35510,7 @@
       "disease_name": null,
       "event_date": "2026-08-12",
       "first_reported_date": "2026-08-12",
-      "last_updated_date": "2026-08-28",
+      "last_updated_date": "2026-08-29",
       "days_since_event": 17,
       "source_count": 3,
       "should_report": true,
@@ -34996,7 +35521,7 @@
         "gdacs": 0,
         "ercc": 3,
         "healthmap": 0,
-        "news": 145
+        "news": 155
       },
       "source_links": [
         {
@@ -35606,11 +36131,51 @@
           "published_date": "2026-08-27T12:21:19+00:00"
         },
         {
+          "headline": "Utah weather: Isolated thunderstorms Friday evening, with strong to severe storms this weekend",
+          "published_date": "2026-08-28"
+        },
+        {
+          "headline": "Ohio homes damaged by severe weather may qualify for tax reduction",
+          "published_date": "2026-08-28"
+        },
+        {
+          "headline": "Severe weather overnight causes storm damage in Luling",
+          "published_date": "2026-08-28"
+        },
+        {
           "headline": "National Weather Service confirms 3 more tornadoes, including 2 in Franklin County, during Aug. 11 storms",
           "published_date": "2026-08-28T12:28:34+00:00"
+        },
+        {
+          "headline": "Severe storms knock out power, close schools in Greater Nebraska",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "Severe storms cause road to buckle in New Jersey",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "Risk of severe storms, damaging winds",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "Tracking Duke Energy power outages amid rain, severe storms in Charlotte region - Aug. 28, 2026",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "Severe storms spark cancellations at San Antonio-area schools",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "FIRST ALERT: Storms, heavy rain chances plus sticky warmth this weekend",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "Ohio tornado total in Aug. 11 derecho rises again. Where they touched down",
+          "published_date": "2026-08-29"
         }
       ],
-      "news_total": 145,
+      "news_total": 155,
       "logs": [
         {
           "log_date": "2026-08-25",
@@ -36916,9 +37481,123 @@
               "image": ""
             }
           ]
+        },
+        {
+          "log_date": "2026-08-29",
+          "summary": "The National Weather Service confirmed three additional tornadoes from the Aug. 11 derecho in central Ohio, including two in Franklin County, raising the total tornado count in Ohio from that event. In response, Franklin County Auditor noted that homes damaged by the weeks of severe weather may qualify for a property tax reduction under state law.",
+          "news": [
+            {
+              "news_id": "9ce6d910c1aa5504b60b6818b8814819",
+              "url": "https://www.yahoo.com/news/weather-news/articles/utah-weather-isolated-thunderstorms-friday-195144384.html",
+              "headline": "Utah weather: Isolated thunderstorms Friday evening, with strong to severe storms this weekend",
+              "body": "The bottom line: Isolated showers and storms will develop over the region Friday afternoon and evening. A late-August cold front arrives this weekend with more numerous thunderstorms and cooler condit...",
+              "published_date": "2026-08-28",
+              "outlet": "KTVX · via Yahoo News",
+              "image": "https://media.zenfs.com/en/ktvx_articles_781/1d680e37218c0dbc13ee12eb7d4e6de3.png.cf.jpg"
+            },
+            {
+              "news_id": "ed0bb8da987c5c1faea7c13169381f53",
+              "url": "https://www.yahoo.com/news/weather-news/articles/ohio-homes-damaged-severe-weather-000000445.html",
+              "headline": "Ohio homes damaged by severe weather may qualify for tax reduction",
+              "body": "COLUMBUS, Ohio (WCMH) — If your home was damaged during the weeks of severe weather, you may be able to get some relief on your property taxes. Franklin County Auditor Michael Stinziano said state law...",
+              "published_date": "2026-08-28",
+              "outlet": "WCMH · via Yahoo News",
+              "image": "https://media.zenfs.com/en/wcmh_articles_195/a1a95b6ccabc3faa4ff2ccca8595307f.jpg"
+            },
+            {
+              "news_id": "dc42a40ab11c569a9422cb7971b32dcf",
+              "url": "https://www.msn.com/en-us/news/other/severe-storms-knock-out-power-close-schools-in-greater-nebraska/ar-AA2b7IUK?ocid=BingNewsVerp",
+              "headline": "Severe storms knock out power, close schools in Greater Nebraska",
+              "body": "Winds reached up to 90 mph in Greater Nebraska as crews clear damage.",
+              "published_date": "2026-08-29",
+              "outlet": "KNOP on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.-vkkhjQP_8Z6md8930DnZw"
+            },
+            {
+              "news_id": "04b2ee5603ef538b8c0e8cc63c3432e6",
+              "url": "https://www.yahoo.com/news/weather-news/articles/severe-weather-overnight-causes-storm-202310924.html",
+              "headline": "Severe weather overnight causes storm damage in Luling",
+              "body": "Severe weather Thursday night into Friday morning caused damage in Luling, a town about 45 miles south of Austin.",
+              "published_date": "2026-08-28",
+              "outlet": "KXAN · via Yahoo News",
+              "image": "https://media.zenfs.com/en/kxan_articles_390/5a76534572d840427d298c98f972bc6d.jpg"
+            },
+            {
+              "news_id": "c9efed9ced745aeab0926203632aca1f",
+              "url": "https://www.msn.com/en-us/weather/general/severe-storms-cause-road-to-buckle-in-new-jersey/vi-AA2b7cK1?ocid=BingNewsVerp",
+              "headline": "Severe storms cause road to buckle in New Jersey",
+              "body": "Severe storms brought flooding rain to parts of South Jersey, causing part of a road to buckle in Gloucester County.",
+              "published_date": "2026-08-29",
+              "outlet": "FOX 29 News Philadelphia on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.jCHeoBw9isP78Y06Eas8pg"
+            },
+            {
+              "news_id": "c183b268a51b55d0833dc7ccb17c49a9",
+              "url": "https://www.msn.com/en-us/weather/general/risk-of-severe-storms-damaging-winds/vi-AA2b8ix6?ocid=BingNewsVerp",
+              "headline": "Risk of severe storms, damaging winds",
+              "body": "Cyclospora lettuce update: FDA issues strongest warning, adds 3 more states We finally have an issue where President Trump ...",
+              "published_date": "2026-08-29",
+              "outlet": "WSB-TV Channel 2 on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.ZoZaKvJO4pxMnhiub6LNRw"
+            },
+            {
+              "news_id": "e083d7e81caa54fabd8c0c8bb621b567",
+              "url": "https://www.msn.com/en-us/news/other/severe-thunderstorm-warning-issued-for-sarasota-area/ar-AA2b46bD?ocid=BingNewsVerp",
+              "headline": "Severe thunderstorm warning issued for Sarasota area",
+              "body": "A severe thunderstorm warning was issued by the National Weather Service in Tampa Bay Ruskin at 2:02 p.m. on Thursday, Aug.",
+              "published_date": "2026-08-27",
+              "outlet": "Sarasota Herald-Tribune on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.3d49d605dc1fc2756696a965d7690396"
+            },
+            {
+              "news_id": "8033a65dddfc57eeae3c669d55c851ab",
+              "url": "https://www.10tv.com/article/news/local/national-weather-service-confirms-tornadoes-franklin-madison-county-august-storms/530-f57a1207-bb16-4897-8eab-da5d3fc039dc",
+              "headline": "National Weather Service confirms 3 more tornadoes, including 2 in Franklin County, during Aug. 11 storms",
+              "body": "COLUMBUS, Ohio — The National Weather Service confirmed three additional tornadoes touched down in central Ohio, including ...",
+              "published_date": "2026-08-28T12:28:34+00:00",
+              "outlet": "10tv.com",
+              "image": "https://www.bing.com/th?id=ONUT.LLM4dS3EFX6LV5TLFv1J6A"
+            },
+            {
+              "news_id": "7b424232d1575f6695a7c70b43c378b3",
+              "url": "https://www.msn.com/en-us/money/general/tracking-duke-energy-power-outages-amid-rain-severe-storms-in-charlotte-region-aug-28-2026/ar-AA2b9arQ?ocid=BingNewsVerp",
+              "headline": "Tracking Duke Energy power outages amid rain, severe storms in Charlotte region - Aug. 28, 2026",
+              "body": "Rain, severe storms expected throughout Friday evening ...",
+              "published_date": "2026-08-29",
+              "outlet": "WBTV on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.IA5hKiyL96A7p5L1oP-Luw"
+            },
+            {
+              "news_id": "1650f72fc0af591cbe1ef3fb6817e0c6",
+              "url": "https://www.msn.com/en-us/weather/general/severe-storms-spark-cancellations-at-san-antonio-area-schools/vi-AA2b83We?ocid=BingNewsVerp",
+              "headline": "Severe storms spark cancellations at San Antonio-area schools",
+              "body": "Severe storms have forced at least one area school district to cancel classes in the San Antonio region. Somerset Independent ...",
+              "published_date": "2026-08-29",
+              "outlet": "Stringr on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.jex8Gu-4zL3h6_6OhmchzQ"
+            },
+            {
+              "news_id": "6b9a5a27aab35ba6aa00f99f90ceacab",
+              "url": "https://www.msn.com/en-us/news/other/first-alert-storms-heavy-rain-chances-plus-sticky-warmth-this-weekend/ar-AA2b8W57?ocid=BingNewsVerp",
+              "headline": "FIRST ALERT: Storms, heavy rain chances plus sticky warmth this weekend",
+              "body": "Stormy, steamy weekend transition as August ends in Upper Michigan -- heavy downpours at times.",
+              "published_date": "2026-08-29",
+              "outlet": "Upper Michigan's Source on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.F6fwf3QtMObJ_j185aA2_w"
+            },
+            {
+              "news_id": "6652aa19603b558dbce841921ad40289",
+              "url": "https://www.msn.com/en-us/news/other/ohio-tornado-total-in-aug-11-derecho-rises-again-where-they-touched-down/ar-AA2b8frS?ocid=BingNewsVerp",
+              "headline": "Ohio tornado total in Aug. 11 derecho rises again. Where they touched down",
+              "body": "The number of tornadoes out of severe thunderstorms and a possible derecho that struck Central and Southwest Ohio on Aug. 11 ...",
+              "published_date": "2026-08-29",
+              "outlet": "The Columbus Dispatch on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.YxUd-gsJFbzg4Z3bHdIBkA"
+            }
+          ]
         }
       ],
-      "logs_total": 3
+      "logs_total": 4
     },
     {
       "incident_id": "20260813-SO-EQ",
@@ -39748,7 +40427,7 @@
       "incident_id": "20260814-BE-WF",
       "tree_id": "e3f11dcc90c54d6cb31bcaee959ff976",
       "canonical_name": "Forest Fire Liege, Belgium 2026-08-14",
-      "summary": "German Chancellor Friedrich Merz visited the Hürtgen Forest fire site as firefighting continued in Belgium’s High Fens. The wildfire has also brought attention to the danger of unexploded ordnance from World War I and II, with reports of bombs being exposed and detonated across European fire zones.",
+      "summary": "German Chancellor Friedrich Merz visited the Hürtgen Forest fire site as firefighting continues in Belgium’s High Fens. Additionally, wildfires across Europe, including in Belgium, have exposed and detonated buried bombs and mines from WWI and WWII; blasts have been reported in Belgium, France, Germany, and the Netherlands, prompting bomb-disposal responses.",
       "country": "Belgium",
       "iso2": "BE",
       "lat": 50.527965469575896,
@@ -39769,14 +40448,14 @@
       "first_reported_date": "2026-08-14",
       "last_updated_date": "2026-08-29",
       "days_since_event": 15,
-      "source_count": 2,
+      "source_count": 3,
       "should_report": true,
       "search_keys": [],
       "sources": {
         "who_don": 0,
         "usgs": 0,
         "gdacs": 1,
-        "ercc": 1,
+        "ercc": 2,
         "healthmap": 0,
         "news": 73
       },
@@ -39791,6 +40470,12 @@
           "type": "ERCC",
           "label": "ECHO Daily Map of 17 August 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5755",
+          "meta": ""
+        },
+        {
+          "type": "ERCC",
+          "label": "ECHO Daily Map of 21 August 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5760",
           "meta": ""
         }
       ],
@@ -40314,57 +40999,6 @@
           ]
         },
         {
-          "log_date": "2026-08-21",
-          "summary": "As of August 20 (after seven days of fighting), Belgium's largest wildfire in a century—the blaze in the High Fens reserve—was officially brought \"under control\" by local officials, with hundreds of firefighters having contained the 12-square-mile fire.",
-          "news": [
-            {
-              "news_id": "bd23ebdeda7d5454a35b25ce78f4090c",
-              "url": "https://www.theguardian.com/world/live/2026/aug/17/europe-wildfires-france-greece-belgium-germany-climate-crisis-drought-extreme-heat-latest-news-updates",
-              "headline": "French PM booed on visit to wildfire-affected region as EU sends assistance to Belgium and Spain – as it happened",
-              "body": "Belgium wildfire creeps closer to German border, as 104 firefighters and 36 vehicles from France help with Spain wildfire effort",
-              "published_date": "2026-08-17",
-              "outlet": "The Guardian",
-              "image": ""
-            },
-            {
-              "news_id": "b892b01152665ddcab59c8002925eec2",
-              "url": "https://phys.org/news/2026-08-belgium-century.html",
-              "headline": "Belgium's fire of the century now 'under control'",
-              "body": "Belgium's largest wildfire in a century was brought \"under control\" Thursday after a seven-day fight involving hundreds of firefighters in the boggy terrain of the High Fens nature reserve.",
-              "published_date": "2026-08-20",
-              "outlet": "Phys.org",
-              "image": "https://www.bing.com/th?id=ONUT.oPSINWHGguxB12Q15DJ25w"
-            },
-            {
-              "news_id": "ca906f2754315200a434109d7c436332",
-              "url": "https://www.msn.com/en-ca/weather/general/fire-of-the-century-in-eastern-belgium-brought-under-control-local-official-says/vi-AA2azpBk?ocid=BingNewsVerp",
-              "headline": "Fire of the century in eastern Belgium brought 'under control,' local official says",
-              "body": "Smoke rises from a scorched field and forest as a wildfire burns near Waimes, 17 August, 2026 ...",
-              "published_date": "2026-08-20",
-              "outlet": "Euronews on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.zB4Hc1HNoKO_iDE2gXPgaw"
-            },
-            {
-              "news_id": "3de85d1b051b59af9029986736fe5185",
-              "url": "https://www.al.com/news/2026/08/2-dead-near-athens-as-firefighters-battle-massive-wildfires-in-belgium-greece.html",
-              "headline": "2 dead near Athens as firefighters battle massive wildfires in Belgium, Greece",
-              "body": "Two people are dead as a result of wildfires on a Greek island near Athens. Firefighters continue to battle wildfires in eastern Belgium and Greece. According to The Associated Press, a blaze in eastern Belgium burned about 12 square miles in what is being ...",
-              "published_date": "2026-08-16T11:55:00+00:00",
-              "outlet": "al",
-              "image": ""
-            },
-            {
-              "news_id": "b70b37900e4857ed9bf6b1bb5136f844",
-              "url": "https://www.msn.com/en-gb/news/world/fire-crews-battle-blazes-in-belgium-and-greece-as-two-die-on-island-near-athens/ar-AA2aeZLW",
-              "headline": "Fire crews battle blazes in Belgium and Greece as two die on island near Athens",
-              "body": "In Greece, two people were killed in a wildfire on the island of Salamina, west of Athens, firefighters said.",
-              "published_date": "2026-08-20",
-              "outlet": "PA Media",
-              "image": "https://s.yimg.com/lo/mysterio/api/a08009cdf1d3614187d262828332506bf3f257714157420ca3dc79c2a850a9ee/lightyear_networkapi/resizefill_w1200;quality_80;format_jpg/https://media.zenfs.com/en/pa_viral_news_704/33e1a31a66186724dc564d2f7468985b.jpg"
-            }
-          ]
-        },
-        {
           "log_date": "2026-08-22",
           "summary": "Belgium has launched a national resilience plan in response to the record wildfire that burned through the High Fens nature reserve in August 2026. The initiative aims to improve firefighting coordination and prevention measures following the largest forest fire in Belgium in over a century.",
           "news": [
@@ -40465,9 +41099,69 @@
               "image": "https://www.bing.com/th?id=ONUT.FEaUco8pGpwd35SvD6QeEw"
             }
           ]
+        },
+        {
+          "log_date": "2026-08-29",
+          "summary": "German Chancellor Friedrich Merz visited the Hürtgen Forest fire site as firefighting continues in Belgium’s High Fens. Additionally, wildfires across Europe, including in Belgium, have exposed and detonated buried bombs and mines from WWI and WWII; blasts have been reported in Belgium, France, Germany, and the Netherlands, prompting bomb-disposal responses.",
+          "news": [
+            {
+              "news_id": "260ecd66cd03587bbf1ba9b94e9a4fac",
+              "url": "https://www.msn.com/en-my/money/general/german-chancellor-merz-visits-hürtgen-forest-fire-site-amid-boos-and-whistles/ar-AA2aIdH6?ocid=BingNewsVerp",
+              "headline": "German Chancellor Merz visits Hürtgen Forest fire site amid boos and whistles",
+              "body": "Chancellor Friedrich Merz travelled to Hürtgenwald today, as firefighting in Belgium's High Fens continues. The blaze on the ...",
+              "published_date": "2026-08-27",
+              "outlet": "Euronews on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.tEpbNiQZ_s9x5SOIqBELNA"
+            },
+            {
+              "news_id": "c5a87038fad95c45b17548387ec08025",
+              "url": "https://abc7news.com/post/europe-fires-wildfires-expose-detonate-buried-bombs-mines-wwi-wwii-france-belgium-germany-netherlands/19718223/",
+              "headline": "Wildfires expose - and detonate - buried bombs and mines from WWI and WWII",
+              "body": "The wildfires burning across Europe this summer have exposed a potentially deadly threat lurking beneath the blackened landscape: rusty bombs and mines from World War I and II.",
+              "published_date": "2026-08-22",
+              "outlet": "ABC7 News",
+              "image": "https://s.yimg.com/bo/5da4d6cf-4d34-527d-b5f6-b5a0e46785db_1787404119894.jpg"
+            },
+            {
+              "news_id": "bf216b3402955b99b4e37e06e96b9e4a",
+              "url": "https://www.msn.com/en-us/weather/topstories/german-chancellor-merz-visits-hürtgen-forest-fire-site-amid-boos-and-whistles/ar-AA2aIJOn?ocid=BingNewsVerp",
+              "headline": "German Chancellor Merz visits Hürtgen Forest fire site amid boos and whistles",
+              "body": "Chancellor Friedrich Merz travelled to Hürtgenwald today, as firefighting in Belgium's High Fens continues. The blaze on the ...",
+              "published_date": "2026-08-28",
+              "outlet": "Euronews on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.bJMVDcUhlsjXdxvVYJGHQg"
+            },
+            {
+              "news_id": "f3d10a02f2465303ab6c100750af9338",
+              "url": "https://www.msn.com/en-us/news/world/wildfires-expose-and-detonate-buried-bombs-and-mines-from-wwi-and-wwii/ar-AA2aQ29g",
+              "headline": "Wildfires expose — and detonate — buried bombs and mines from WWI and WWII",
+              "body": "Some of the weapons have exploded in the intense heat. Blasts have been reported in France, Belgium, Germany and the Netherlands, where a bomb-disposal team was dispatched to check a forest threatened by flames near a site of fierce fighting in the Limburg province in 1944.",
+              "published_date": "2026-08-29",
+              "outlet": "Los Angeles Times",
+              "image": ""
+            },
+            {
+              "news_id": "39cf783dc773511da61b1b7d7008aa6c",
+              "url": "https://www.nashuatelegraph.com/top-headlines/2026/08/24/wildfires-expose-and-detonate-buried-bombs-and-mines-from-wwi-and-wwii/",
+              "headline": "Wildfires expose — and detonate — buried bombs and mines from WWI and WWII",
+              "body": "ELSENBORN, Belgium (AP) — The wildfires burning across Europe this summer have exposed a potentially deadly threat lurking beneath the blackened landscape: rusty bombs and mines from World War I and II that threaten crews responding to the flames. Some of the weapons have exploded in the intense heat. Blasts have been reported in France, […]",
+              "published_date": "2026-08-24",
+              "outlet": "The Nashua Telegraph",
+              "image": "https://s.yimg.com/bo/5491445f-65fc-5830-884e-12b2461a8fb0_1787551557157.jpg"
+            },
+            {
+              "news_id": "e74e8dda0fbf593e96fd9e8ff8265582",
+              "url": "https://www.arkansasonline.com/news/2026/aug/23/wildfires-expose-bombs-left-over-from-world-wars/",
+              "headline": "Wildfires expose bombs left over from world wars | Arkansas Democrat Gazette",
+              "body": "ELSENBORN, Belgium -- The wildfires burning across Europe this summer have exposed a potentially deadly threat lurking beneath the blackened landscape: rusty bombs and mines from World War I and II that threaten crews responding to the flames.",
+              "published_date": "2026-08-23",
+              "outlet": "Arkansas Democrat-Gazette",
+              "image": "https://www.bing.com/th?id=ONUT.ARFsXgTTqs8-QMN4o8LLLg"
+            }
+          ]
         }
       ],
-      "logs_total": 5
+      "logs_total": 6
     },
     {
       "incident_id": "20260815-ID-EQ",
@@ -40943,7 +41637,7 @@
       "incident_id": "20260825-XX-DR",
       "tree_id": "8e437650e0284086b4ad68831ffbeeee",
       "canonical_name": "Drought 2026-08-25",
-      "summary": "Oklahoma City reached its 29th day of 100°F+ temperatures under a burn ban, while a strong El Niño is expected to bring a mild winter but little drought relief for Wisconsin. Puerto Rico's water emergency worsened as residents face dry reservoirs and service interruptions, though Tropical Storm Dolly's remnants may bring rain to the island. Laredo, Texas continues a dry August but an end to the drought may be approaching, and Connecticut experienced a summer swing from drought to flooding. Additionally, the Welsh Rugby Union issued pitch safety advice after a record-breaking hot and dry summer.",
+      "summary": "Oklahoma City reached its 29th day of 100°F+ temperatures under a burn ban, while a strong El Niño is expected to bring a mild winter but little drought relief for Wisconsin. Puerto Rico's water emergency worsened as residents face dry reservoirs and service interruptions, though Tropical Storm Dolly's remnants may bring rain to the island. Laredo, Texas continues a dry August but an end to the drought may be approaching, and Connecticut experienced a summer swing from drought to flooding. Additionally, the Welsh Rugby Union issued pitch safety advice after a record-breaking hot and dry summer.\nDrought continues to impact various regions: Western Colorado's fall leaf color change is expected to be less vibrant due to extreme drought and heat, while Denver Water has mandated an early end to lawn watering by October 1 due to persistent dry conditions. In central Pennsylvania, several counties have been removed from Drought Watch status as conditions improved, but European fishers in Slovenia, Serbia, Bosnia, Czech Republic, Romania, and Hungary are struggling as summer drought parches rivers and lakes. Additionally, bear encounters in the western U.S. are rising as drought devastates wildlands and food sources, driving bears into populated areas.",
       "country": "",
       "iso2": "XX",
       "lat": null,
@@ -40973,7 +41667,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 51
+        "news": 57
       },
       "source_links": [
         {
@@ -41187,7 +41881,27 @@
           "published_date": "2026-08-28"
         },
         {
+          "headline": "Native grasses are a responsible lawn alternative (Opinion)",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "Drought and heat impact on fall leaf color change in Western Colorado",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "Several Midstate counties no longer in Drought Watch status; others upgraded from warnings",
+          "published_date": "2026-08-29"
+        },
+        {
           "headline": "No rain ahead in Laredo's dry August, but end to drought likely approaching",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "Photos show European fishers on the brink as summer drought parches rivers, lakes and farms",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "Drought triggers mandatory early end to Denver lawn watering",
           "published_date": "2026-08-29"
         },
         {
@@ -41197,9 +41911,13 @@
         {
           "headline": "Empty jugs and dry reservoirs: Inside Puerto Rico’s worsening water emergency",
           "published_date": "2026-08-29"
+        },
+        {
+          "headline": "Bear encounters are on the rise. Here's what to do if you meet one",
+          "published_date": "2026-08-29T11:03:49+00:00"
         }
       ],
-      "news_total": 51,
+      "news_total": 57,
       "logs": [
         {
           "log_date": "2026-08-26",
@@ -41617,8 +42335,17 @@
         },
         {
           "log_date": "2026-08-29",
-          "summary": "Oklahoma City reached its 29th day of 100°F+ temperatures under a burn ban, while a strong El Niño is expected to bring a mild winter but little drought relief for Wisconsin. Puerto Rico's water emergency worsened as residents face dry reservoirs and service interruptions, though Tropical Storm Dolly's remnants may bring rain to the island. Laredo, Texas continues a dry August but an end to the drought may be approaching, and Connecticut experienced a summer swing from drought to flooding. Additionally, the Welsh Rugby Union issued pitch safety advice after a record-breaking hot and dry summer.",
+          "summary": "Oklahoma City reached its 29th day of 100°F+ temperatures under a burn ban, while a strong El Niño is expected to bring a mild winter but little drought relief for Wisconsin. Puerto Rico's water emergency worsened as residents face dry reservoirs and service interruptions, though Tropical Storm Dolly's remnants may bring rain to the island. Laredo, Texas continues a dry August but an end to the drought may be approaching, and Connecticut experienced a summer swing from drought to flooding. Additionally, the Welsh Rugby Union issued pitch safety advice after a record-breaking hot and dry summer.\nDrought continues to impact various regions: Western Colorado's fall leaf color change is expected to be less vibrant due to extreme drought and heat, while Denver Water has mandated an early end to lawn watering by October 1 due to persistent dry conditions. In central Pennsylvania, several counties have been removed from Drought Watch status as conditions improved, but European fishers in Slovenia, Serbia, Bosnia, Czech Republic, Romania, and Hungary are struggling as summer drought parches rivers and lakes. Additionally, bear encounters in the western U.S. are rising as drought devastates wildlands and food sources, driving bears into populated areas.",
           "news": [
+            {
+              "news_id": "3646f1a4ac0c5e549217d74873c3d824",
+              "url": "https://www.dailycamera.com/2026/08/29/boulder-colorado-native-grasses-responsible-lawn-water-drought-opinion/",
+              "headline": "Native grasses are a responsible lawn alternative (Opinion)",
+              "body": "Lawns are pretty much part of us. But the water-intensive versions are incompatible with where we live. Native grass lawns can help solve this problem. They do require that the owner actually involve themselves with biology, soils and we…",
+              "published_date": "2026-08-29",
+              "outlet": "Daily Camera",
+              "image": "https://www.bing.com/th?id=ONUT.aQanqMS4CkDKMgX7ozBp6g"
+            },
             {
               "news_id": "ab985c33df1a5ac2882df8b846c4a7a3",
               "url": "https://kfor.com/news/friday-in-okc-tapped-100-degrees-that-is-day-29-of-100-or-hotter-our-oklahoma-weekend-will-be-sunny-and-hot/",
@@ -41627,6 +42354,15 @@
               "published_date": "2026-08-27T00:27:06+00:00",
               "outlet": "KFOR",
               "image": "https://www.bing.com/th?id=ONUT.HqoCCSWxH1AH3dlJUAocdg"
+            },
+            {
+              "news_id": "e92c3ca08a3d5d31944785381beb096e",
+              "url": "https://www.kjct8.com/2026/08/29/drought-heat-impact-fall-leaf-color-change-western-colorado/",
+              "headline": "Drought and heat impact on fall leaf color change in Western Colorado",
+              "body": "With the extreme drought this year in portions of Western Colorado and the hot temperatures, we wanted to know how this would affect the changing of the leaves heading into the fall.",
+              "published_date": "2026-08-29",
+              "outlet": "KJCT",
+              "image": "https://www.bing.com/th?id=ONUT.wj50sp82vdd54o0RJXerHQ"
             },
             {
               "news_id": "60829933c67657578edd7bd60e610c2a",
@@ -41647,6 +42383,15 @@
               "image": "https://www.bing.com/th?id=ONUT.jV8OJYRL_1e638T-pnLyUg"
             },
             {
+              "news_id": "8e70ae05ec255669b8d00b15fae51d02",
+              "url": "https://www.yahoo.com/news/weather-news/articles/several-midstate-counties-no-longer-024627842.html",
+              "headline": "Several Midstate counties no longer in Drought Watch status; others upgraded from warnings",
+              "body": "(WHTM) — Drought conditions improved greatly across central Pennsylvania, the Department of Environmental Protection announced Thursday. Three counties in the Midstate are now back to normal after rec...",
+              "published_date": "2026-08-29",
+              "outlet": "WHTM · via Yahoo News",
+              "image": "https://media.zenfs.com/en/whtm_articles_902/3bdbee805785ac1641e0304af77d42fa.png.cf.jpg"
+            },
+            {
               "news_id": "5d38c25312cf5247bcd030a3524eb0e4",
               "url": "https://www.msn.com/en-us/news/other/no-rain-ahead-in-laredo-s-dry-august-but-end-to-drought-likely-approaching/ar-AA2b8vmi?ocid=BingNewsVerp",
               "headline": "No rain ahead in Laredo's dry August, but end to drought likely approaching",
@@ -41656,6 +42401,15 @@
               "image": "https://www.bing.com/th?id=ONUT.w-wbN9Nzavekny1wRTXQqg"
             },
             {
+              "news_id": "1971ace9a4855c89965b06dce2887373",
+              "url": "https://apnews.com/photo-gallery/photos-show-european-fishers-brink-summer-drought-parches-rivers-lakes-farms-63129da8f5ab49c2b0c55b3352859033",
+              "headline": "Photos show European fishers on the brink as summer drought parches rivers, lakes and farms",
+              "body": "NOVI SAD (AP) — Persistent drought and scorching heat this summer have ravaged ecosystems and businesses across the region, from a lake in Slovenia and the side channel of the Danube in Serbia, to fish farms in Bosnia, the Czech Republic, Romania and Hungary.",
+              "published_date": "2026-08-29",
+              "outlet": "Associated Press",
+              "image": "https://s.yimg.com/bo/b739fd2e-5d52-5750-b946-533f3aa24999_1787986188719.jpg"
+            },
+            {
               "news_id": "0f3b7d16985953e29426c9dfa2e62897",
               "url": "https://www.bbc.com/sport/rugby-union/articles/c14dl5k562ko",
               "headline": "WRU issues pitch safety advice after record-breaking hot and dry summer",
@@ -41663,6 +42417,15 @@
               "published_date": "2026-08-28",
               "outlet": "BBC",
               "image": "https://www.bing.com/th?id=ONUT.XWUEJTP_5haFm2vpWDCfjg"
+            },
+            {
+              "news_id": "b80c16551c545917a5122e76068dd637",
+              "url": "https://www.msn.com/en-us/news/other/drought-triggers-mandatory-early-end-to-denver-lawn-watering/vi-AA2b82Cw?ocid=BingNewsVerp",
+              "headline": "Drought triggers mandatory early end to Denver lawn watering",
+              "body": "With dry conditions persisting across Colorado, Denver Water has set an October 1 deadline for residents to turn off their ...",
+              "published_date": "2026-08-29",
+              "outlet": "9news.com on MSN",
+              "image": "https://www.bing.com/th?id=ONUT._LJiBDdawd0dprwOuvN0cg"
             },
             {
               "news_id": "8c3ef8e2c4f45544b22985e9d0aef457",
@@ -41680,6 +42443,15 @@
               "body": "The scramble to find water is a daily survival routine for residents in Puerto Rico due to widespread service interruptions and extreme drought.",
               "published_date": "2026-08-29",
               "outlet": "CNN on MSN",
+              "image": ""
+            },
+            {
+              "news_id": "b2d6573ea8235dcda1f7074ab7a9c001",
+              "url": "https://www.reuters.com/business/environment/bear-encounters-are-rise-heres-what-do-if-you-meet-one-2026-08-29/",
+              "headline": "Bear encounters are on the rise. Here's what to do if you meet one",
+              "body": "A drought in the western U.S. has devastated wildlands, dried up food sources and sent bears wandering along city sidewalks and into homes and shops in search of food.",
+              "published_date": "2026-08-29T11:03:49+00:00",
+              "outlet": "Reuters",
               "image": ""
             }
           ]
@@ -41873,7 +42645,7 @@
       "incident_id": "20260826-NP-FL",
       "tree_id": "26a139d9c4274b379e946b7b737af269",
       "canonical_name": "Flood Bagmati, Nepal 2026-08-26",
-      "summary": "As of August 28, the death toll from the flash floods has climbed to over 470, with more than 1,900 people reported missing. Rescue operations have saved 117 foreign tourists, while authorities warn of further flooding from a swelling lake. International aid is arriving, including $500,000 from the US and support from the WHO and India.",
+      "summary": "As of August 28, the death toll from the flash floods has climbed to over 470, with more than 1,900 people reported missing. Rescue operations have saved 117 foreign tourists, while authorities warn of further flooding from a swelling lake. International aid is arriving, including $500,000 from the US and support from the WHO and India.\nAs of August 29, the death toll from the Bagmati flash floods has risen to over 600, with 633 bodies recovered, and the number of missing has soared to nearly 3,000. Rescue operations are being hampered by bad weather, forcing a suspension of helicopter missions, while Nepal appeals for international technical assistance and billions in aid. Warnings continue about potential new flooding from a swelling lake, and the disaster has exposed risks to Nepal's hydropower infrastructure.",
       "country": "Nepal",
       "iso2": "NP",
       "lat": 27.2952744,
@@ -41903,7 +42675,7 @@
         "gdacs": 1,
         "ercc": 0,
         "healthmap": 0,
-        "news": 73
+        "news": 100
       },
       "source_links": [
         {
@@ -41947,6 +42719,10 @@
         {
           "headline": "List of nationalities of missing tourists in Nepal flood",
           "published_date": "2026-08-26T23:58:58+00:00"
+        },
+        {
+          "headline": "More than 1,300 missing in Nepal, Tibet after catastrophic floods left little time to flee",
+          "published_date": "2026-08-27"
         },
         {
           "headline": "Catastrophic floods kill over 350 in Nepal and Tibet, with more than 1,300 missing - WXXV News 25",
@@ -42037,11 +42813,19 @@
           "published_date": "2026-08-28"
         },
         {
+          "headline": "Number Of Missing In Deadly Nepal, China Floods Jumps Past 2,400",
+          "published_date": "2026-08-28"
+        },
+        {
           "headline": "Nepal-China mountain region hit by deadly flood has danger but also draws trekkers to its heights",
           "published_date": "2026-08-28"
         },
         {
           "headline": "Race to get aid into Nepal and Tibet amid warnings flood lake could burst",
+          "published_date": "2026-08-28"
+        },
+        {
+          "headline": "New satellite images show China-Nepal border crossing wiped out in flash flood - AOL",
           "published_date": "2026-08-28"
         },
         {
@@ -42073,7 +42857,27 @@
           "published_date": "2026-08-28"
         },
         {
+          "headline": "Rescuers retrieve flood survivors caked in mud as death toll in Nepal-China border disaster climbs",
+          "published_date": "2026-08-28"
+        },
+        {
+          "headline": "Families of 33 missing Britons rush to Nepal as fears grow of more floods",
+          "published_date": "2026-08-28"
+        },
+        {
+          "headline": "Chinese control of information hampers assessment of Tibet flood damage",
+          "published_date": "2026-08-28"
+        },
+        {
+          "headline": "Nepal floods: Number of missing jumps to over 2,000",
+          "published_date": "2026-08-28"
+        },
+        {
           "headline": "On the ground in decimated Nepal flood zone – The Latest",
+          "published_date": "2026-08-28"
+        },
+        {
+          "headline": "‘Erased before their eyes’: desperate rescue efforts continue after Nepal-Tibet floods - The Latest",
           "published_date": "2026-08-28"
         },
         {
@@ -42082,6 +42886,10 @@
         },
         {
           "headline": "Almost 2,000 missing in Nepal as Himalayan border flash flood death toll passes 570 - WCCB Charlotte",
+          "published_date": "2026-08-28"
+        },
+        {
+          "headline": "Iran offers condolences to Nepal as floods death toll hits 552",
           "published_date": "2026-08-28"
         },
         {
@@ -42181,6 +42989,10 @@
           "published_date": "2026-08-28T10:37:25+00:00"
         },
         {
+          "headline": "In the Age of Global Warming, Some Fear ‘the Entire Himalayas Are Melting’",
+          "published_date": "2026-08-28T11:08:07+00:00"
+        },
+        {
           "headline": "Nepal monitoring two lakes, flood risk to remain until they're fully drained,...",
           "published_date": "2026-08-28T12:08:28+00:00"
         },
@@ -42193,7 +43005,19 @@
           "published_date": "2026-08-29"
         },
         {
+          "headline": "India sends medical, tunnel rescue team to Nepal for flood relief",
+          "published_date": "2026-08-29"
+        },
+        {
           "headline": "Nepal rescues 117 tourists after floodsPublished on: August 28, 2026 8:15 PM",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "Nepal glacial disaster and the new geography of climate risk - Asia Times",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "Number of missing in Nepal floods rises to nearly 3,000 as UNICEF says 17,000 children need aid",
           "published_date": "2026-08-29"
         },
         {
@@ -42205,7 +43029,31 @@
           "published_date": "2026-08-29"
         },
         {
+          "headline": "Number of missing in Nepal, China floods soars to nearly 3,000",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "‘We can only pray’: Family of missing Malaysian in Nepal tragedy anxiously awaits news",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "Kate Middleton & Prince William Issue Statement on Nepal Flash Flood, Send Condolences to Victims",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "Nepal flood death toll surpasses 600, with more than 3,000 missing, as poor weather hampers rescues",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "Nepal-China flood survivors reach safe areas as families await news of nearly 3,000 missing",
+          "published_date": "2026-08-29"
+        },
+        {
           "headline": "Before and after: Satellite images reveal how Himalayan flood erased Nepal-China border crossing",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "You have questions about the Nepal floods. Our Himalayan expert has answers.",
           "published_date": "2026-08-29"
         },
         {
@@ -42213,11 +43061,43 @@
           "published_date": "2026-08-29"
         },
         {
+          "headline": "‘Generous support’: Nepal President Ram Chandra Paudel thanks India for relief materials after deadly floods",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "Live updates: China-Nepal flood death toll passes 600 | CNN",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "Number of missing in deadly Nepal, China floods soars to nearly 3,000",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "Nepal floods LIVE | Death toll reaches 633, nearly 3,000 missing; fresh rainfall warning in flood affected threaten rescue operations",
+          "published_date": "2026-08-29"
+        },
+        {
+          "headline": "Catastrophic Flood Exposes the Risks of Nepal’s Hydropower Bet",
+          "published_date": "2026-08-29T00:00:00+00:00"
+        },
+        {
+          "headline": "‘Immense’ Devastation as Nepal Continues Search for 2,400 Missing in Floods",
+          "published_date": "2026-08-29T00:00:00+00:00"
+        },
+        {
+          "headline": "Nepal wants technical help for flood, billions of dollars as bad weather hampers...",
+          "published_date": "2026-08-29T02:07:16+00:00"
+        },
+        {
           "headline": "How Nepal’s Deadly Floods Wrecked Homes, Power Plants and Bridges",
           "published_date": "2026-08-29T02:29:30+00:00"
+        },
+        {
+          "headline": "Nepal-China flood survivors reach safe areas as families await news of nearly...",
+          "published_date": "2026-08-29T07:08:05+00:00"
         }
       ],
-      "news_total": 73,
+      "news_total": 100,
       "logs": [
         {
           "log_date": "2026-08-28",
@@ -42650,7 +43530,7 @@
         },
         {
           "log_date": "2026-08-29",
-          "summary": "As of August 28, the death toll from the flash floods has climbed to over 470, with more than 1,900 people reported missing. Rescue operations have saved 117 foreign tourists, while authorities warn of further flooding from a swelling lake. International aid is arriving, including $500,000 from the US and support from the WHO and India.",
+          "summary": "As of August 28, the death toll from the flash floods has climbed to over 470, with more than 1,900 people reported missing. Rescue operations have saved 117 foreign tourists, while authorities warn of further flooding from a swelling lake. International aid is arriving, including $500,000 from the US and support from the WHO and India.\nAs of August 29, the death toll from the Bagmati flash floods has risen to over 600, with 633 bodies recovered, and the number of missing has soared to nearly 3,000. Rescue operations are being hampered by bad weather, forcing a suspension of helicopter missions, while Nepal appeals for international technical assistance and billions in aid. Warnings continue about potential new flooding from a swelling lake, and the disaster has exposed risks to Nepal's hydropower infrastructure.",
           "news": [
             {
               "news_id": "5a50cd545dc25f3898b296c56be62993",
@@ -42662,6 +43542,15 @@
               "image": "https://www.bing.com/th?id=ONUT.szU5mJtC3uHMHtWXdhUbIQ"
             },
             {
+              "news_id": "ec230aa903505517982a1be34284278d",
+              "url": "https://www.msn.com/en-in/news/other/india-sends-medical-tunnel-rescue-team-to-nepal-for-flood-relief/ar-AA2b8jpN?ocid=BingNewsVerp",
+              "headline": "India sends medical, tunnel rescue team to Nepal for flood relief",
+              "body": "India dispatched its third assistance flight to flood-hit Nepal, carrying an 11-member specialised medical and tunnel rescue ...",
+              "published_date": "2026-08-29",
+              "outlet": "Asianet Newsable on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.xOFpYT0G7lYXt0dZxva70A"
+            },
+            {
               "news_id": "1adab6512738530097e9053c9f3fbbd6",
               "url": "https://www.msn.com/en-xl/asia/pakistan/nepal-rescues-117-tourists-after-floodspublished-on-august-28-2026-815-pm/ar-AA2b7R1l?ocid=BingNewsVerp",
               "headline": "Nepal rescues 117 tourists after floodsPublished on: August 28, 2026 8:15 PM",
@@ -42671,6 +43560,33 @@
               "image": "https://www.bing.com/th?id=ONUT.V--Q8wnpptaFFqJbq_MhmQ"
             },
             {
+              "news_id": "33b1dca85c7e56ed936d9b0728ca582b",
+              "url": "https://asiatimes.com/2026/08/nepal-glacial-disaster-and-the-new-geography-of-climate-risk/",
+              "headline": "Nepal glacial disaster and the new geography of climate risk - Asia Times",
+              "body": "On August 26, the Himalayas seemed to move. An enormous mass of ice and rock broke loose near the Nepal-Tibet border, plunging into the Lhende Khola River",
+              "published_date": "2026-08-29",
+              "outlet": "Asia Times",
+              "image": "https://www.bing.com/th?id=ONUT.Jj16WBncKX3-I4ieb7P2mw"
+            },
+            {
+              "news_id": "e1db945ad46e514bb0df69b16750aef2",
+              "url": "https://www.msn.com/en-ca/news/other/number-of-missing-in-nepal-floods-passes-2400-as-unicef-says-17000-children-need-aid/ar-AA2b90lr?ocid=BingNewsVerp",
+              "headline": "Number of missing in Nepal floods rises to nearly 3,000 as UNICEF says 17,000 children need aid",
+              "body": "Rescuers were battling through mud even as the threat of new floods loomed, with emergency teams recovering 633 bodies so far ...",
+              "published_date": "2026-08-29",
+              "outlet": "Euronews on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.XHahedfMTHtun7aWGTPXRw"
+            },
+            {
+              "news_id": "60604c13e212566992e348fa3aa7445d",
+              "url": "https://www.nytimes.com/2026/08/29/travel/flash-flood-nepal-global-warming-himalayas.html",
+              "headline": "In the Age of Global Warming, Some Fear ‘the Entire Himalayas Are Melting’",
+              "body": "A glacier unleashed a deadly flood earlier this week. For local trekking guides and climbers, the mountains were already ...",
+              "published_date": "2026-08-28T11:08:07+00:00",
+              "outlet": "The New York Times",
+              "image": "https://www.bing.com/th?id=ONUT.APApt3_tp0MAMHwUKBl7xw"
+            },
+            {
               "news_id": "e6e8a28197f15d4b894abdfe07bb9c92",
               "url": "https://www.hjnews.com/world/nepal-flash-floods/image_c7eafaef-fada-54d0-9e25-19a9503e3db0.html",
               "headline": "APTOPIX Nepal Flash Floods",
@@ -42678,6 +43594,15 @@
               "published_date": "2026-08-28",
               "outlet": "The Herald Journal",
               "image": "https://s.yimg.com/bo/4cbf3907-8ccf-59ba-8796-b7f29f47f5a9_1787924157574.jpg"
+            },
+            {
+              "news_id": "143b4cc614905d009ce2495b6c3072e9",
+              "url": "https://www.channelstv.com/2026/08/28/missing-soar-over-2400-after-deadly-nepal-china-floods/",
+              "headline": "Number Of Missing In Deadly Nepal, China Floods Jumps Past 2,400",
+              "body": "The number of people missing in Nepal and China leaped to more than 2,400 Friday, underscoring the scale of the disaster days after a tsunami-like wall of water and debris swept away villages and killed hundreds.",
+              "published_date": "2026-08-28",
+              "outlet": "Channels Television",
+              "image": "https://www.bing.com/th?id=ONUT.He0NYFVlvvemtODjjhyOAQ"
             },
             {
               "news_id": "8df7e6a1806c5de59c91ff6f15c21829",
@@ -42698,6 +43623,24 @@
               "image": "https://www.bing.com/th?id=ONUT.fXg2GvGZTe_Frjze-WR9vA"
             },
             {
+              "news_id": "0a2806f14cf55e4aa41574200b2b9ecc",
+              "url": "https://www.reuters.com/world/china/nepal-needs-help-technical-areas-not-search-rescue-foreign-minister-says-2026-08-29/",
+              "headline": "Nepal wants technical help for flood, billions of dollars as bad weather hampers...",
+              "body": "Nepal suspended search and rescue on Saturday due to bad weather and said it needs foreign technical...",
+              "published_date": "2026-08-29T02:07:16+00:00",
+              "outlet": "Reuters",
+              "image": "https://s.yimg.com/bo/3071747b-4814-5737-a63b-b7dfa36f88f3_1787983945981.jpg"
+            },
+            {
+              "news_id": "c4535aa5feb755a880a4fc49474a68e8",
+              "url": "https://www.philstar.com/world/2026/08/29/2552621/number-missing-nepal-china-floods-soars-nearly-3000",
+              "headline": "Number of missing in Nepal, China floods soars to nearly 3,000",
+              "body": "Rescuers in Nepal and China were still battling Saturday to locate thousands of people missing days after a deadly, tsunami-like wall of water and debris swept through the Himalayan region, engulfing villages.",
+              "published_date": "2026-08-29",
+              "outlet": "Philstar.com",
+              "image": "https://www.bing.com/th?id=ONUT.09PC4ORL4cisLtY7H_gpkA"
+            },
+            {
               "news_id": "459ac27d51295779a812c70a42fa6839",
               "url": "https://www.baltimoresun.com/2026/08/28/nepal-china-mountain-region-hit-by-deadly-flood-has-danger-but-also-draws-trekkers-to-its-heights/",
               "headline": "Nepal-China mountain region hit by deadly flood has danger but also draws trekkers to its heights",
@@ -42705,6 +43648,15 @@
               "published_date": "2026-08-28",
               "outlet": "The Baltimore Sun",
               "image": "https://www.bing.com/th?id=ONUT.iNWbgLYzpabeyy4-zJTRyA"
+            },
+            {
+              "news_id": "88715bb12ea55e1c8de9fdaf3a94ea59",
+              "url": "https://www.malaymail.com/news/malaysia/2026/08/29/we-can-only-pray-family-of-missing-malaysian-in-nepal-tragedy-anxiously-awaits-news-after-nepal-floods/233209",
+              "headline": "‘We can only pray’: Family of missing Malaysian in Nepal tragedy anxiously awaits news",
+              "body": "KUALA LUMPUR, Aug 29 — “Only prayer and patience can strengthen our spirits,” lamented Mures, the eldest son of senior citizen K. Balasingam, 71, who has yet to be contacted...",
+              "published_date": "2026-08-29",
+              "outlet": "Malay Mail",
+              "image": "https://www.bing.com/th?id=ONUT.Yx0N5JhTWUbMyx2zTSd4mw"
             },
             {
               "news_id": "e2dfc4b1b7d559fdb7deb0b96db158ae",
@@ -42725,6 +43677,15 @@
               "image": "https://www.bing.com/th?id=ONUT.ZvTR5CKSIj0L3I100gqUUw"
             },
             {
+              "news_id": "74e9388e094b5d04a1bd75adc9d08f15",
+              "url": "https://www.aol.com/articles/satellite-images-show-china-nepal-111516000.html",
+              "headline": "New satellite images show China-Nepal border crossing wiped out in flash flood - AOL",
+              "body": "Satellite images reveal the scale of destruction at key border crossing",
+              "published_date": "2026-08-28",
+              "outlet": "AOL",
+              "image": "https://www.bing.com/th?id=ONUT.qVRFUrorHh5OS-8NtVlqqg"
+            },
+            {
               "news_id": "925625a935d5531dadcbe55ac7cc1c13",
               "url": "https://apnews.com/article/nepal-floods-families-missing-81e5cfdb8536fd34dc5f2b6b0ac2cb97",
               "headline": "Virginia family with 4 relatives missing in the Nepal-China floods pleads for more rescue help",
@@ -42732,6 +43693,15 @@
               "published_date": "2026-08-28",
               "outlet": "Associated Press News",
               "image": "https://www.bing.com/th?id=ONUT.REl-qfjTYhxBlDs_H2MZRg"
+            },
+            {
+              "news_id": "8f40bb12be7558f9a5e81a0cb6fb3340",
+              "url": "https://www.nytimes.com/2026/08/29/business/nepal-hydropower-flood.html",
+              "headline": "Catastrophic Flood Exposes the Risks of Nepal’s Hydropower Bet",
+              "body": "The loss of power-generating capacity has raised questions about an ambitious expansion of renewable energy in one of the ...",
+              "published_date": "2026-08-29T00:00:00+00:00",
+              "outlet": "The New York Times",
+              "image": "https://www.bing.com/th?id=ONUT.4km-fK7jJkcn0zBTyDcrTQ"
             },
             {
               "news_id": "76b8efb959515028b5c0911de0ff7c55",
@@ -42788,6 +43758,15 @@
               "image": "https://www.bing.com/th?id=ONUT.M_8r2rA6y_k9oUDnLBpmpw"
             },
             {
+              "news_id": "e14c5e98d3f75efca844d47ecd344f34",
+              "url": "https://www.msn.com/en-us/news/other/kate-middleton-prince-william-issue-statement-on-nepal-flash-flood-send-condolences-to-victims/ar-AA2b7JOY?ocid=BingNewsVerp",
+              "headline": "Kate Middleton & Prince William Issue Statement on Nepal Flash Flood, Send Condolences to Victims",
+              "body": "Kate Middleton and Prince William are speaking out in response to the deadly flash flood along the Nepal-China border, which ...",
+              "published_date": "2026-08-29",
+              "outlet": "Just Jared on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.V6l6mhtpFXVRub6Xy7zZVA"
+            },
+            {
               "news_id": "2e8056a0695a54e6949bea50cfb4e659",
               "url": "https://www.dallasnews.com/news/world/article/death-toll-from-flash-floods-rises-with-rescuers-22407200.php",
               "headline": "Rescuers retrieve flood survivors caked in mud as death toll in Nepal-China...",
@@ -42804,6 +43783,24 @@
               "published_date": "2026-08-25T23:58:58+00:00",
               "outlet": "KAGS TV",
               "image": "https://s.yimg.com/bo/0a5a6d21-0d29-509e-addb-d337d44beca8_1787744657992.jpg"
+            },
+            {
+              "news_id": "c18ec6d778295296b43ae6598f85a179",
+              "url": "https://www.cbsnews.com/news/nepal-flash-flood-death-missing-americans-rescue/",
+              "headline": "Nepal flood death toll surpasses 600, with more than 3,000 missing, as poor weather hampers rescues",
+              "body": "A Nepali Army spokesperson said early Saturday that helicopter operations were on hold until weather conditions improved.",
+              "published_date": "2026-08-29",
+              "outlet": "CBS News",
+              "image": "https://s.yimg.com/bo/61fb8025-c670-54fd-b807-66c5f2d824fd_1787966709478.jpg"
+            },
+            {
+              "news_id": "0dd722ed47a05651aae5f7187c74423c",
+              "url": "https://apnews.com/article/nepal-china-flood-rescue-fde34c839b648f93f6aa011f044deb00",
+              "headline": "Nepal-China flood survivors reach safe areas as families await news of nearly 3,000 missing",
+              "body": "Poor weather temporarily hampered aerial rescue operations in Nepal as the search for thousands of missing people in areas devastated by catastrophic flash floods along the border with China entered its fourth day.",
+              "published_date": "2026-08-29",
+              "outlet": "Associated Press News",
+              "image": ""
             },
             {
               "news_id": "02389d0176e95cff840e73fffdaae780",
@@ -42824,6 +43821,15 @@
               "image": "https://www.bing.com/th?id=ONUT.7GZZEWdGgbYpgInICu1-Yw"
             },
             {
+              "news_id": "7df6a6244e61509fbc70cd7fb67c9d57",
+              "url": "http://wdbj7.com/2026/08/27/more-than-1300-missing-nepal-tibet-after-catastrophic-floods-left-little-time-flee/",
+              "headline": "More than 1,300 missing in Nepal, Tibet after catastrophic floods left little time to flee",
+              "body": "Rescue teams were searching for hundreds of missing people along the Nepal-China border after a catastrophic and deadly torrent of floods and mud swept through several communities.",
+              "published_date": "2026-08-27",
+              "outlet": "WDBJ 7 Roanoke",
+              "image": "https://s.yimg.com/bo/a622080f-2196-598c-9ec0-88b1e4da2a12_1787839758650.jpg"
+            },
+            {
               "news_id": "b4432ec69cc25c549f9593c5e9be1f16",
               "url": "https://www.yahoo.com/news/world/articles/fact-check-cctv-footage-shows-203500836.html",
               "headline": "Fact Check: CCTV footage shows deadly flood destroying Nepal-China border crossing",
@@ -42833,6 +43839,42 @@
               "image": "https://media.zenfs.com/en/snopes_632/3b7ccb526a0a335a5a8a8ec4bf23a6bc.jpg"
             },
             {
+              "news_id": "2e1182c9aa48524f99adcf7a7a5a06c2",
+              "url": "https://www.chicagotribune.com/2026/08/28/nepal-china-flood-survivors/",
+              "headline": "Rescuers retrieve flood survivors caked in mud as death toll in Nepal-China border disaster climbs",
+              "body": "Rescuers on the Nepal-China border are pulling out flood survivors caked in dark brown mud while helicopters lift stranded people to safety.",
+              "published_date": "2026-08-28",
+              "outlet": "Chicago Tribune",
+              "image": "https://www.bing.com/th?id=ONUT.zTpKBlelKJDSgRxBSiR3jQ"
+            },
+            {
+              "news_id": "29f243b1c5e4518bb5711c25976db5b4",
+              "url": "https://www.theguardian.com/world/2026/aug/28/families-missing-britons-nepal-flash-floods",
+              "headline": "Families of 33 missing Britons rush to Nepal as fears grow of more floods",
+              "body": "Desperate relatives trying to reach loved ones last seen in area where entire villages have been swept away",
+              "published_date": "2026-08-28",
+              "outlet": "The Guardian",
+              "image": ""
+            },
+            {
+              "news_id": "7cca34f227cf5f4681b277b4c2d0e81a",
+              "url": "https://www.theguardian.com/world/2026/aug/28/chinese-controls-information-hamper-assessment-tibet-flood-damage",
+              "headline": "Chinese control of information hampers assessment of Tibet flood damage",
+              "body": "Scale of devastation emerges in Nepal as reporters reach disaster area, but Chinese state media focus more on rescue efforts",
+              "published_date": "2026-08-28",
+              "outlet": "The Guardian",
+              "image": ""
+            },
+            {
+              "news_id": "f34597361f945c09b20f6c669b8102c7",
+              "url": "https://www.lemonde.fr/en/international/article/2026/08/28/nepal-floods-number-of-missing-jumps-to-over-2-000_6756944_4.html",
+              "headline": "Nepal floods: Number of missing jumps to over 2,000",
+              "body": "The number of people missing in Nepal and China leaped to more than 2,400 on Friday, August 28, underscoring the scale of the ...",
+              "published_date": "2026-08-28",
+              "outlet": "Le Monde",
+              "image": "https://www.bing.com/th?id=ONUT.Kh01Pf4knMIohjSkANHV4A"
+            },
+            {
               "news_id": "5259a19224a353bf98f914aab63e24c3",
               "url": "https://www.msn.com/en-in/news/world/before-and-after-satellite-images-reveal-how-himalayan-flood-erased-nepal-china-border-crossing/ar-AA2b5UkN?ocid=BingNewsVerp",
               "headline": "Before and after: Satellite images reveal how Himalayan flood erased Nepal-China border crossing",
@@ -42840,6 +43882,15 @@
               "published_date": "2026-08-29",
               "outlet": "The Times of India on MSN",
               "image": "https://www.bing.com/th?id=ONUT.ne-5oFPy3x1v_zKTs8UABw"
+            },
+            {
+              "news_id": "b4d43859777652baa94f533e5cb30591",
+              "url": "https://www.msn.com/en-us/weather/general/you-have-questions-about-the-nepal-floods-our-himalayan-expert-has-answers/ar-AA2ba7Ju?ocid=BingNewsVerp",
+              "headline": "You have questions about the Nepal floods. Our Himalayan expert has answers.",
+              "body": "Ben Ayers, Outside’s longtime Nepal expert, offers insight into the devastating floods that killed hundreds and left ...",
+              "published_date": "2026-08-29",
+              "outlet": "Outside Online on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.1pptlSYYRUo95go2sOqekQ"
             },
             {
               "news_id": "b5904ea07a965d5fa78bc4cfe4d65dce",
@@ -42869,6 +43920,60 @@
               "image": "https://www.bing.com/th?id=ORMS.6b79a3d9a4011fbe1fa352d31e0ad12c"
             },
             {
+              "news_id": "8e99075b03835fb29f5d809dcfb45482",
+              "url": "https://www.theguardian.com/news/video/2026/aug/28/erased-before-their-eyes-on-the-ground-in-decimated-nepal-flood-zone-the-latest",
+              "headline": "‘Erased before their eyes’: desperate rescue efforts continue after Nepal-Tibet floods - The Latest",
+              "body": "Rescue efforts are continuing in Nepal and Tibet after flash floods that have killed hundreds and left many more missing, with fears of fresh flooding due to an overflowing lake. Lucy Hough speaks with south Asia correspondent Hannah Ellis-Petersen, who is in Nepal, about the situation on the ground",
+              "published_date": "2026-08-28",
+              "outlet": "The Guardian",
+              "image": ""
+            },
+            {
+              "news_id": "3933eff911855482a78ebdf399161b6d",
+              "url": "https://www.hindustantimes.com/world-news/generous-support-nepal-president-ram-chandra-paudel-thanks-india-for-relief-materials-after-deadly-floods-101787994226222.html",
+              "headline": "‘Generous support’: Nepal President Ram Chandra Paudel thanks India for relief materials after deadly floods",
+              "body": "India is providing relief and rescue support to the Himalayan country, as the third flight with assistance reached Kathmandu on Friday. | World News",
+              "published_date": "2026-08-29",
+              "outlet": "Hindustan Times",
+              "image": "https://www.bing.com/th?id=ONUT.Z8rzMtUFeT-sVURnUH2ung"
+            },
+            {
+              "news_id": "ec192be33cc251b0b70f8c58590ba622",
+              "url": "https://www.expressnews.com/news/world/article/flood-rescue-enters-fourth-day-in-nepal-china-22408764.php",
+              "headline": "Nepal-China flood survivors reach safe areas as families await news of nearly...",
+              "body": "Poor weather temporarily hampered aerial rescue operations in Nepal as the search for thousands of...",
+              "published_date": "2026-08-29T07:08:05+00:00",
+              "outlet": "San Antonio Express-News",
+              "image": "https://s.yimg.com/bo/1d916dcc-5814-5dfa-831c-76249c32af61_1787977876476.jpg"
+            },
+            {
+              "news_id": "9cfb1f45c17b596d8ca8ab670ed94084",
+              "url": "https://www.nytimes.com/2026/08/29/world/asia/nepal-flood-rescue.html",
+              "headline": "‘Immense’ Devastation as Nepal Continues Search for 2,400 Missing in Floods",
+              "body": "As rescue efforts entered their fourth day, the scale of destruction came into focus, signaling a daunting recovery for the ...",
+              "published_date": "2026-08-29T00:00:00+00:00",
+              "outlet": "The New York Times",
+              "image": "https://www.bing.com/th?id=ONUT.ZG5jjTlnu8l4FDVgTmhEjg"
+            },
+            {
+              "news_id": "6535eff91ebf5c27b5402bf9c681dd9e",
+              "url": "https://www.cnn.com/2026/08/29/world/live-news/nepal-china-flood",
+              "headline": "Live updates: China-Nepal flood death toll passes 600 | CNN",
+              "body": "Rescue efforts are in their fourth day but Nepali authorities are warning they are struggling to cope with the number of decomposing bodies recovered. Follow for news updates.",
+              "published_date": "2026-08-29",
+              "outlet": "CNN",
+              "image": ""
+            },
+            {
+              "news_id": "743d3036bbfc5964b370f840cb61b054",
+              "url": "https://www.channelnewsasia.com/asia/nepal-tibet-china-floods-nearly-3000-missing-6348831",
+              "headline": "Number of missing in deadly Nepal, China floods soars to nearly 3,000",
+              "body": "The death toll has risen to more than 600, as search and rescue teams battle muddy conditions to reach survivors in affected areas.",
+              "published_date": "2026-08-29",
+              "outlet": "CNA",
+              "image": "https://www.bing.com/th?id=ONUT.dl_f0ILoFBdc6W7H8Lyugw"
+            },
+            {
               "news_id": "d09dfcf1285f50cd95f3d5b3e6175dd8",
               "url": "https://www.wfmz.com/news/ap/ap-national/the-latest-rescuers-search-for-hundreds-still-missing-in-area-of-nepal-china-border-disaster/article_b18b8d46-48ba-5152-af8a-4d0d83e809ee.html",
               "headline": "The Latest: Almost 2,000 missing in Nepal as Himalayan border flash flood death toll passes 570",
@@ -42878,6 +43983,15 @@
               "image": "https://www.bing.com/th?id=ONUT._qYX1cO-cmS54xUa12c9sw"
             },
             {
+              "news_id": "0a43d4dc0c125b129ac6091c3d77747b",
+              "url": "https://www.newindianexpress.com/live/2026/Aug/29/nepal-floods-live-at-least-586-people-have-died-2478-remain-missing",
+              "headline": "Nepal floods LIVE | Death toll reaches 633, nearly 3,000 missing; fresh rainfall warning in flood affected threaten rescue operations",
+              "body": "The group, led by Dr Chitley and his wife Janhavi, had departed Mumbai on August 23 for Kathmandu and was last heard from on the evening of August 25, hours bef",
+              "published_date": "2026-08-29",
+              "outlet": "The New Indian Express",
+              "image": "https://www.bing.com/th?id=ONUT.1lIojOidWejmGWUZnIAMlA"
+            },
+            {
               "news_id": "3a0411d69aa055348cc1bfaf32c6ee89",
               "url": "https://www.wccbcharlotte.com/2026/08/28/almost-2000-missing-in-nepal-as-himalayan-border-flash-flood-death-toll-passes-570/",
               "headline": "Almost 2,000 missing in Nepal as Himalayan border flash flood death toll passes 570 - WCCB Charlotte",
@@ -42885,6 +43999,15 @@
               "published_date": "2026-08-28",
               "outlet": "WCCB Charlotte",
               "image": "https://www.bing.com/th?id=ONUT.gDyz3Q6pUF-d_CO2_hS3Yw"
+            },
+            {
+              "news_id": "13ca75bc9202530ea3f78ade330d8498",
+              "url": "https://www.presstv.co.uk/Detail/2026/08/28/775230/Iran-offers-condolences-to-Nepal-over-deadly-floods",
+              "headline": "Iran offers condolences to Nepal as floods death toll hits 552",
+              "body": "Iranian officials express condolences to Nepal over the deadly floods hitting the country.",
+              "published_date": "2026-08-28",
+              "outlet": "presstv",
+              "image": ""
             }
           ]
         }
