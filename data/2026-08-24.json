@@ -1,37 +1,36 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-08-24",
-  "generated_at": "2026-08-29T17:15:15Z",
+  "generated_at": "2026-08-30T06:52:07Z",
   "as_of": "2026-08-24",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 8,
+    "reportable_total": 7,
     "new_today": 2,
     "critical": 0,
     "high": 3,
     "medium": 1,
-    "low": 4,
+    "low": 3,
     "disease_outbreaks": 0,
-    "countries_affected": 8,
-    "news_total": 41,
+    "countries_affected": 7,
+    "news_total": 38,
     "max_magnitude": 6.9,
     "by_severity": {
       "CRITICAL": 0,
       "HIGH": 3,
       "MEDIUM": 1,
-      "LOW": 4
+      "LOW": 3
     },
     "by_type": {
       "Earthquake": 4,
-      "": 3,
-      "Forest Fire": 1
+      "": 3
     },
     "by_region": {
       "Oceania": 1,
       "Africa": 2,
-      "Europe": 2,
       "Asia": 2,
+      "Europe": 1,
       "Unknown": 1
     }
   },
@@ -51,15 +50,6 @@
       "max_sev_rank": 1,
       "iso2": "UG",
       "region": "Africa",
-      "country_group": "C",
-      "max_severity": "LOW"
-    },
-    {
-      "country": "Spain",
-      "count": 1,
-      "max_sev_rank": 1,
-      "iso2": "ES",
-      "region": "Europe",
       "country_group": "C",
       "max_severity": "LOW"
     },
@@ -134,7 +124,7 @@
       "event_date": "2026-08-02",
       "first_reported_date": "2026-08-02",
       "last_updated_date": "2026-08-19",
-      "days_since_event": 27,
+      "days_since_event": 28,
       "source_count": 3,
       "should_report": true,
       "search_keys": [],
@@ -272,7 +262,7 @@
       "event_date": "2026-08-05",
       "first_reported_date": "2026-08-05",
       "last_updated_date": "2026-08-19",
-      "days_since_event": 24,
+      "days_since_event": 25,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -485,7 +475,7 @@
       "event_date": "2026-08-10",
       "first_reported_date": "2026-08-10",
       "last_updated_date": "2026-08-23",
-      "days_since_event": 19,
+      "days_since_event": 20,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -568,112 +558,6 @@
       "logs_total": 1
     },
     {
-      "incident_id": "20260810-ES-WF",
-      "tree_id": "96f1acb1397d496d9d223545bb47ff8a",
-      "canonical_name": "Forest Fire Huesca, Spain 2026-08-10",
-      "summary": "A wildfire in the Aragon region of Spain has claimed the life of a member of Spain's Military Emergency Unit. Dangerous drying conditions are expected to return, raising continued fire risk in the area.",
-      "country": "Spain",
-      "iso2": "ES",
-      "lat": 42.43515438021663,
-      "lon": -0.7477659091566426,
-      "country_group": "C",
-      "region": "Europe",
-      "incident_type": "Forest Fire",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "LOW",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-08-10",
-      "first_reported_date": "2026-08-10",
-      "last_updated_date": "2026-08-23",
-      "days_since_event": 19,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 1,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 3
-      },
-      "source_links": [
-        {
-          "type": "GDACS",
-          "label": "Green alert · Forest Fire Huesca, Spain 2026-08-10",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=WF&eventid=1030410",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "Spain",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": "Green",
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Aragon wildfire claims Spanish soldier's life as dangerous drying returns Monday",
-          "published_date": "2026-08-17"
-        },
-        {
-          "headline": "Aragon wildfire claims Spanish soldier's life as dangerous drying returns Monday",
-          "published_date": "2026-08-18"
-        },
-        {
-          "headline": "Labor welcomes One Nation comments on migration | Evening News Bulletin 23 August 2026",
-          "published_date": "2026-08-23"
-        }
-      ],
-      "news_total": 3,
-      "logs": [
-        {
-          "log_date": "2026-08-24",
-          "summary": "A wildfire in the Aragon region of Spain has claimed the life of a member of Spain's Military Emergency Unit. Dangerous drying conditions are expected to return, raising continued fire risk in the area.",
-          "news": [
-            {
-              "news_id": "05114345d08e573f82cca7ef7d8f34c6",
-              "url": "https://www.sbs.com.au/news/podcast-episode/labor-welcomes-one-nation-comments-on-migration-evening-news-bulletin-23-august-2026/acliqb5yh",
-              "headline": "Labor welcomes One Nation comments on migration | Evening News Bulletin 23 August 2026",
-              "body": "Labor welcomes comments from One Nation about immigration; wildfires hit Serbia and Spain; Sydney’s AFLW side takes on Essendon at the SCG.",
-              "published_date": "2026-08-23",
-              "outlet": "SBS",
-              "image": "https://www.bing.com/th?id=ONUT.vbp_WFqH895neC5hDvTVTQ"
-            },
-            {
-              "news_id": "6f46a56f87d0510d8480d4a7e8862522",
-              "url": "https://www.msn.com/en-us/weather/general/aragon-wildfire-claims-spanish-soldier-s-life-as-dangerous-drying-returns-monday/ar-AA2ahmwU?ocid=BingNewsVerp",
-              "headline": "Aragon wildfire claims Spanish soldier's life as dangerous drying returns Monday",
-              "body": "Spain wildfire 2026 claimed its first military fatality Sunday when a member of Spain's Military Emergency Unit died after ...",
-              "published_date": "2026-08-18",
-              "outlet": "Tech Times on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.MTPoAl6LW6YM475tGgdejw"
-            },
-            {
-              "news_id": "60cdc568628e5ad5b1b4c0996adc6067",
-              "url": "https://www.msn.com/en-us/news/world/aragon-wildfire-claims-spanish-soldier-s-life-as-dangerous-drying-returns-monday/ar-AA2ahmwU?ocid=BingNewsVerp",
-              "headline": "Aragon wildfire claims Spanish soldier's life as dangerous drying returns Monday",
-              "body": "Spain wildfire 2026 claimed its first military fatality Sunday when a member of Spain's Military Emergency Unit died after ...",
-              "published_date": "2026-08-17",
-              "outlet": "Tech Times on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.MTPoAl6LW6YM475tGgdejw"
-            }
-          ]
-        }
-      ],
-      "logs_total": 1
-    },
-    {
       "incident_id": "20260815-ID-EQ",
       "tree_id": "02bdf815017a45678230df1f611e6a90",
       "canonical_name": "Earthquake M6.9 Pematangsiantar, Indonesia 2026-08-15",
@@ -697,7 +581,7 @@
       "event_date": "2026-08-15",
       "first_reported_date": "2026-08-15",
       "last_updated_date": "2026-08-24",
-      "days_since_event": 14,
+      "days_since_event": 15,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -902,7 +786,7 @@
       "event_date": "2026-08-17",
       "first_reported_date": "2026-08-17",
       "last_updated_date": "2026-08-24",
-      "days_since_event": 12,
+      "days_since_event": 13,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -968,7 +852,7 @@
       "event_date": "2026-08-18",
       "first_reported_date": "2026-08-18",
       "last_updated_date": "2026-08-19",
-      "days_since_event": 11,
+      "days_since_event": 12,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -1040,7 +924,7 @@
       "event_date": "2026-08-19",
       "first_reported_date": "2026-08-19",
       "last_updated_date": "2026-08-20",
-      "days_since_event": 10,
+      "days_since_event": 11,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],

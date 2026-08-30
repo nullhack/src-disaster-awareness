@@ -1,51 +1,42 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-08-25",
-  "generated_at": "2026-08-29T17:15:15Z",
+  "generated_at": "2026-08-30T06:52:07Z",
   "as_of": "2026-08-25",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 13,
-    "new_today": 5,
+    "reportable_total": 11,
+    "new_today": 4,
     "critical": 0,
     "high": 3,
-    "medium": 5,
-    "low": 5,
+    "medium": 4,
+    "low": 4,
     "disease_outbreaks": 0,
-    "countries_affected": 12,
-    "news_total": 141,
+    "countries_affected": 10,
+    "news_total": 127,
     "max_magnitude": 6.9,
     "by_severity": {
       "CRITICAL": 0,
       "HIGH": 3,
-      "MEDIUM": 5,
-      "LOW": 5
+      "MEDIUM": 4,
+      "LOW": 4
     },
     "by_type": {
-      "Flood": 2,
-      "Earthquake": 7,
+      "Flood": 1,
+      "Earthquake": 6,
       "": 3,
       "Forest Fire": 1
     },
     "by_region": {
-      "Asia": 5,
-      "Oceania": 3,
+      "Asia": 4,
+      "Oceania": 2,
       "Africa": 2,
       "Europe": 2,
       "Unknown": 1
     }
   },
   "by_country": [
-    {
-      "country": "Japan",
-      "count": 1,
-      "max_sev_rank": 1,
-      "iso2": "JP",
-      "region": "Asia",
-      "country_group": "A",
-      "max_severity": "LOW"
-    },
     {
       "country": "Sudan",
       "count": 1,
@@ -119,15 +110,6 @@
       "max_severity": "MEDIUM"
     },
     {
-      "country": "Fiji",
-      "count": 1,
-      "max_sev_rank": 2,
-      "iso2": "FJ",
-      "region": "Oceania",
-      "country_group": "B",
-      "max_severity": "MEDIUM"
-    },
-    {
       "country": "New Zealand",
       "count": 1,
       "max_sev_rank": 3,
@@ -147,208 +129,6 @@
     }
   ],
   "incidents": [
-    {
-      "incident_id": "20230814-JP-FL",
-      "tree_id": "98f8ea684924412eacc0093c76daf1bb",
-      "canonical_name": "Torrential rain in eastern Japan starting late on August 13 has caused landslides, power outages, and claimed at least nine lives.",
-      "summary": "Torrential rain starting late on August 13, 2023, caused record-breaking flooding in eastern Japan, particularly in Chiba Prefecture. The flooding resulted in at least eight to nine deaths, widespread power outages affecting over 22,000 households, and stranded thousands of travelers at Tokyo's Narita Airport. Authorities issued the highest-level rain warnings as the region experienced unprecedented rainfall, equivalent to three months' worth in 12 hours.",
-      "country": "Japan",
-      "iso2": "JP",
-      "lat": 36.2,
-      "lon": 138.3,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Flood",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "LOW",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2023-08-14",
-      "first_reported_date": "2023-08-14",
-      "last_updated_date": "2026-08-25",
-      "days_since_event": 1111,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 13
-      },
-      "source_links": [],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Street Floods in Japan Amid Severe Storm Warnings",
-          "published_date": "2026-08-13"
-        },
-        {
-          "headline": "Torrential rain near Tokyo causes flooding and paralyzes traffic, killing 1",
-          "published_date": "2026-08-13"
-        },
-        {
-          "headline": "Eight dead, and over 10K left stranded as record-breaking rain pummels Japan",
-          "published_date": "2026-08-14"
-        },
-        {
-          "headline": "4 dead as ‘unprecedented’ rain floods Eastern Japan, strands thousands at Narita Airport",
-          "published_date": "2026-08-14"
-        },
-        {
-          "headline": "Record-Breaking Rainfall Leaves Eight Dead and Thousands Stranded in Japan",
-          "published_date": "2026-08-14T09:39:00+00:00"
-        },
-        {
-          "headline": "Record-Breaking Rainfall in Japan Leaves Several People Dead",
-          "published_date": "2026-08-14T12:47:00+00:00"
-        },
-        {
-          "headline": "Eastern Japan rain kills nine, local broadcaster reports",
-          "published_date": "2026-08-16"
-        },
-        {
-          "headline": "Japan's record rains strand thousands at Narita airport; kill eight",
-          "published_date": "2026-08-20"
-        },
-        {
-          "headline": "Record rainfall leaves four dead, thousands stranded in Japan",
-          "published_date": "2026-08-20"
-        },
-        {
-          "headline": "Unprecedented rainfall in Japan leaves at least four dead in Chiba prefecture",
-          "published_date": "2026-08-20"
-        },
-        {
-          "headline": "Unpredictable Amount of Rainfall Causes Inland Flooding in Recent Heavy Rain That Hit Japan's Chiba Pref.",
-          "published_date": "2026-08-20T16:24:00+00:00"
-        },
-        {
-          "headline": "Could a giant underground river save Tokyo from torrential rain?",
-          "published_date": "2026-08-24"
-        },
-        {
-          "headline": "Could a giant underground river save Tokyo from torrential rain?",
-          "published_date": "2026-08-25"
-        }
-      ],
-      "news_total": 13,
-      "logs": [
-        {
-          "log_date": "2026-08-20",
-          "summary": "Torrential rain starting late on August 13, 2023, caused record-breaking flooding in eastern Japan, particularly in Chiba Prefecture. The flooding resulted in at least eight to nine deaths, widespread power outages affecting over 22,000 households, and stranded thousands of travelers at Tokyo's Narita Airport. Authorities issued the highest-level rain warnings as the region experienced unprecedented rainfall, equivalent to three months' worth in 12 hours.",
-          "news": [
-            {
-              "news_id": "82d5c3b3a6a05bd9b4292683f8c37485",
-              "url": "https://www.msn.com/en-us/news/world/japans-record-rains-strand-thousands-at-narita-airport-kill-eight/ar-AA2a5eM1",
-              "headline": "Japan's record rains strand thousands at Narita airport; kill eight",
-              "body": "By Issei Kato, Hina Suzuki and Mariko Katsumura OAMISHIROSATO, Japan, Aug 14 (Reuters) - Record rainfall in Japan stranded thousands of travellers at Tokyo's Narita airport on Friday, bringing floods to the surrounding area that disrupted transport,",
-              "published_date": "2026-08-20",
-              "outlet": "Reuters",
-              "image": "https://www.reuters.com/resizer/v2/RDCTQCF725LHJJXDB3T4HCD5UI.jpg?auth=19c542b832f8438bf59348ee5610661d926b89f6edb823b7ab81126daa1557f1&height=1005&width=1920&quality=80&smart=true"
-            },
-            {
-              "news_id": "5141f93b5d325883b16adb476ad316a5",
-              "url": "https://www.yahoo.com/news/videos/street-floods-japan-amid-severe-142053564.html",
-              "headline": "Street Floods in Japan Amid Severe Storm Warnings",
-              "body": "A residential street in Fukuyama, Japan, flooded on August 12 amid a thunderstorm advisory active across the greater area. Footage captured on August 12 in Fukuyama – a city in Hiroshima Prefecture – ...",
-              "published_date": "2026-08-13",
-              "outlet": "Yahoo",
-              "image": "https://s.yimg.com/lo/mysterio/api/c3101f6fa320fe52892a9f8c8762800e909fbd27bd89c6612e4f65eb99da9680/lightyear_networkapi/resizefill_w1200;quality_80;format_jpg/https://cf-images.us-east-1.prod.boltdns.net/v1/jit/6415665815001/69958c72-b10a-4f86-8640-b15f61fa4c6f/main/1280x720/3s434ms/match/image.jpg"
-            },
-            {
-              "news_id": "8808d4688b525183b3f1060ebcf7588e",
-              "url": "https://apnews.com/article/japan-rain-floods-00b3ce16f648f9c3885bf547edad1696",
-              "headline": "Torrential rain near Tokyo causes flooding and paralyzes traffic, killing 1",
-              "body": "Record-breaking heavy rain has pounded eastern Japan, flooding roads and homes, paralyzing traffic, and causing power outages near Tokyo.",
-              "published_date": "2026-08-13",
-              "outlet": "Associated Press News",
-              "image": ""
-            },
-            {
-              "news_id": "cf3e8ae3b91b517c8c74a30433fa20a7",
-              "url": "https://www.msn.com/en-us/news/world/record-rainfall-leaves-four-dead-thousands-stranded-in-japan/ar-AA2a4yVN",
-              "headline": "Record rainfall leaves four dead, thousands stranded in Japan",
-              "body": "Record rainfall in Chiba claims lives as more than 22,000 households without power on busy Bon Buddhist holiday week.",
-              "published_date": "2026-08-20",
-              "outlet": "Al Jazeera",
-              "image": "https://www.aljazeera.com/wp-content/uploads/2026/08/afp_6a7e936f08bc-1786680175.jpg?resize=1920,1440"
-            },
-            {
-              "news_id": "8fe0f113a85757d09456379f279753e3",
-              "url": "https://www.straitstimes.com/asia/east-asia/eastern-japan-rain-kills-nine-local-media-reports",
-              "headline": "Eastern Japan rain kills nine, local broadcaster reports",
-              "body": "Torrential downpours starting late on Aug 13 triggered landslide warnings and power outages. Read more at straitstimes.com. Read more at straitstimes.com.",
-              "published_date": "2026-08-16",
-              "outlet": "manual",
-              "image": ""
-            },
-            {
-              "news_id": "ad527be1ec6459809582fee7517a3cd9",
-              "url": "https://www.nytimes.com/2026/08/14/world/asia/chiba-tokyo-flood-rain-deaths.html",
-              "headline": "Record-Breaking Rainfall Leaves Eight Dead and Thousands Stranded in Japan",
-              "body": "Three months' worth of rain fell in just 12 hours in a region east of Tokyo, leading to deadly flooding. By Kiuko Notoya Reporting from Tokyo At least eight people have died in Japan after record-breaking rain set off flooding across a large region to ...",
-              "published_date": "2026-08-14T09:39:00+00:00",
-              "outlet": "nytimes.com",
-              "image": ""
-            },
-            {
-              "news_id": "e6bbf20d8deb54099be2c3954a4f71b4",
-              "url": "https://www.nytimes.com/video/world/asia/100000011091919/japan-rain-flooding-chiba.html",
-              "headline": "Record-Breaking Rainfall in Japan Leaves Several People Dead",
-              "body": "Heavy rain in Japan pummeled Chiba Prefecture, a region just east of Tokyo, leaving several people dead and stranding thousands at Narita International Airport.",
-              "published_date": "2026-08-14T12:47:00+00:00",
-              "outlet": "The New York Times",
-              "image": "https://static01.nyt.com/images/2026/08/14/multimedia/14int-Japan-Rain1-whlj/14int-Japan-Rain1-whlj-facebookJumbo.jpg?play-overlay"
-            },
-            {
-              "news_id": "296111b27eea58e5b576a3d3ef11ff64",
-              "url": "https://nypost.com/2026/08/14/world-news/eight-dead-thousands-of-travellers-and-commuters-stranded-as-record-breaking-rain-pummels-japan/",
-              "headline": "Eight dead, and over 10K left stranded as record-breaking rain pummels Japan",
-              "body": "Among the eight people who have died in the flooding was a man believed to be in his 60s or 70s who was found floating on a flooded road in Ichikawa.",
-              "published_date": "2026-08-14",
-              "outlet": "New York Post",
-              "image": "https://nypost.com/wp-content/uploads/sites/2/2026/08/137403445.jpg?quality=75&strip=all&w=1200"
-            },
-            {
-              "news_id": "0bbb1d5cc6595e2398e1def37aa6868d",
-              "url": "https://www.msn.com/en-gb/public-safety-and-emergencies/natural-disasters/unprecedented-rainfall-in-japan-leaves-at-least-four-dead-in-chiba-prefecture/ar-AA2a5Bdm",
-              "headline": "Unprecedented rainfall in Japan leaves at least four dead in Chiba prefecture",
-              "body": "Unprecedented rainfall battered Japan on Thursday, leaving at least four people dead and flooding parts of Chiba prefecture, east of Tokyo. Authorities issued the region's highest-level rain warning for the first time,",
-              "published_date": "2026-08-20",
-              "outlet": "Euronews",
-              "image": "https://s.yimg.com/lo/mysterio/api/4a3c81dda71db85730d4fe8f7e458a64c7d80e9c26edb43cc7c2810f635b6026/lightyear_networkapi/resizefill_w800_h450;quality_80;format_jpg/https://media.zenfs.com/en/euronews_us_news_articles_566/5a66e45d2fced7eb0ade027638c107f0.jpg"
-            },
-            {
-              "news_id": "b0d73dc933fe57a0bc7b59869afcfa11",
-              "url": "https://timesofindia.indiatimes.com/world/rest-of-world/4-dead-as-unprecedented-rain-floods-eastern-japan-strands-thousands-at-narita-airport/articleshow/133227253.cms",
-              "headline": "4 dead as ‘unprecedented’ rain floods Eastern Japan, strands thousands at Narita Airport",
-              "body": "At least four people have died in eastern Japan after what authorities described as “unprecedented” heavy rain triggered widespread disruption, leaving thousands stranded overnight at Narita airport and snarling road and rail services, officials said Friday.",
-              "published_date": "2026-08-14",
-              "outlet": "Indiatimes",
-              "image": ""
-            }
-          ]
-        }
-      ],
-      "logs_total": 1
-    },
     {
       "incident_id": "20260606-CN-FL",
       "tree_id": "942158e18da35420a79e4a17fefb8013",
@@ -373,7 +153,7 @@
       "event_date": "2026-06-06",
       "first_reported_date": "2026-06-06",
       "last_updated_date": "2026-08-25",
-      "days_since_event": 84,
+      "days_since_event": 85,
       "source_count": 3,
       "should_report": true,
       "search_keys": [],
@@ -967,7 +747,7 @@
       "event_date": "2026-08-02",
       "first_reported_date": "2026-08-02",
       "last_updated_date": "2026-08-19",
-      "days_since_event": 27,
+      "days_since_event": 28,
       "source_count": 3,
       "should_report": true,
       "search_keys": [],
@@ -1105,7 +885,7 @@
       "event_date": "2026-08-05",
       "first_reported_date": "2026-08-05",
       "last_updated_date": "2026-08-19",
-      "days_since_event": 24,
+      "days_since_event": 25,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -1318,7 +1098,7 @@
       "event_date": "2026-08-10",
       "first_reported_date": "2026-08-10",
       "last_updated_date": "2026-08-23",
-      "days_since_event": 19,
+      "days_since_event": 20,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -1423,8 +1203,8 @@
       "disease_name": null,
       "event_date": "2026-08-10",
       "first_reported_date": "2026-08-10",
-      "last_updated_date": "2026-08-23",
-      "days_since_event": 19,
+      "last_updated_date": "2026-08-25",
+      "days_since_event": 20,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -1434,7 +1214,7 @@
         "gdacs": 1,
         "ercc": 0,
         "healthmap": 0,
-        "news": 3
+        "news": 4
       },
       "source_links": [
         {
@@ -1466,9 +1246,13 @@
         {
           "headline": "Labor welcomes One Nation comments on migration | Evening News Bulletin 23 August 2026",
           "published_date": "2026-08-23"
+        },
+        {
+          "headline": "The figures of the 43rd Group of the Spanish Air Force in 61 consecutive days of fighting the fire",
+          "published_date": "2026-08-25"
         }
       ],
-      "news_total": 3,
+      "news_total": 4,
       "logs": [
         {
           "log_date": "2026-08-24",
@@ -1530,7 +1314,7 @@
       "event_date": "2026-08-15",
       "first_reported_date": "2026-08-15",
       "last_updated_date": "2026-08-24",
-      "days_since_event": 14,
+      "days_since_event": 15,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -1735,7 +1519,7 @@
       "event_date": "2026-08-16",
       "first_reported_date": "2026-08-16",
       "last_updated_date": "2026-08-25",
-      "days_since_event": 13,
+      "days_since_event": 14,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -1862,7 +1646,7 @@
       "event_date": "2026-08-17",
       "first_reported_date": "2026-08-17",
       "last_updated_date": "2026-08-24",
-      "days_since_event": 12,
+      "days_since_event": 13,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -1928,7 +1712,7 @@
       "event_date": "2026-08-18",
       "first_reported_date": "2026-08-18",
       "last_updated_date": "2026-08-19",
-      "days_since_event": 11,
+      "days_since_event": 12,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -2000,7 +1784,7 @@
       "event_date": "2026-08-19",
       "first_reported_date": "2026-08-19",
       "last_updated_date": "2026-08-20",
-      "days_since_event": 10,
+      "days_since_event": 11,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -2066,7 +1850,7 @@
       "event_date": "2026-08-24",
       "first_reported_date": "2026-08-24",
       "last_updated_date": "2026-08-25",
-      "days_since_event": 5,
+      "days_since_event": 6,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -2107,78 +1891,6 @@
           "headline": "Magnitude 6.0 earthquake strikes off the coast of Timor-Leste along the Pacific Ring of Fire",
           "url": "https://www.msn.com/en-us/public-safety-and-emergencies/natural-disasters/magnitude-6-0-earthquake-strikes-off-the-coast-of-timor-leste-along-the-pacific-ring-of-fire/ar-AA2aPF5l",
           "outlet": "Fox Weather",
-          "published_date": "2026-08-25"
-        }
-      ],
-      "news_total": 2,
-      "logs": [],
-      "logs_total": 0
-    },
-    {
-      "incident_id": "20260825-FJ-EQ",
-      "tree_id": "086503266086469085ac06c37f94e54b",
-      "canonical_name": "Earthquake M5.5 the Fiji Islands, Fiji 2026-08-25",
-      "summary": "",
-      "country": "Fiji",
-      "iso2": "FJ",
-      "lat": -23.3497,
-      "lon": 179.8207,
-      "country_group": "B",
-      "region": "Oceania",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-08-25",
-      "first_reported_date": "2026-08-25",
-      "last_updated_date": "2026-08-25",
-      "days_since_event": 4,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 2
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 5.5 - south of the Fiji Islands",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tnci",
-          "meta": "528.283 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 5.5,
-        "max_depth_km": 528.283,
-        "place": "south of the Fiji Islands",
-        "felt": null,
-        "sig": 465,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Urgent: 5.5-magnitude quake hits Fiji Islands Region -- GFZ",
-          "url": "https://www.china.org.cn/world/Off_the_Wire/2026-08/20/content_118655791.shtml",
-          "outlet": "China.org.cn",
-          "published_date": "2026-08-20T00:01:00+00:00"
-        },
-        {
-          "headline": "Magnitude 5.5 Earthquake Strikes south of the Fiji Islands",
-          "url": "https://cedarnews.net/newstasks/949821/magnitude-5-earthquake-south-fiji-islands/",
-          "outlet": "Cedar News",
           "published_date": "2026-08-25"
         }
       ],
