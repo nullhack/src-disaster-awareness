@@ -1,26 +1,26 @@
 {
   "schema_version": "1.5",
-  "report_date": "2026-08-30",
+  "report_date": "2026-08-31",
   "generated_at": "2026-08-31T07:07:37Z",
-  "as_of": "2026-08-30",
+  "as_of": "2026-08-31",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 37,
-    "new_today": 16,
+    "reportable_total": 36,
+    "new_today": 0,
     "critical": 15,
     "high": 2,
     "medium": 12,
-    "low": 8,
+    "low": 7,
     "disease_outbreaks": 3,
-    "countries_affected": 26,
-    "news_total": 6614,
+    "countries_affected": 25,
+    "news_total": 6611,
     "max_magnitude": 7.7,
     "by_severity": {
       "CRITICAL": 15,
       "HIGH": 2,
       "MEDIUM": 12,
-      "LOW": 8
+      "LOW": 7
     },
     "by_type": {
       "Flood": 4,
@@ -31,12 +31,12 @@
       "Conflict": 2,
       "Forest Fire": 6,
       "Volcano": 1,
-      "": 2
+      "": 1
     },
     "by_region": {
       "Asia": 14,
       "Global": 2,
-      "Africa": 4,
+      "Africa": 3,
       "Americas": 4,
       "Unknown": 2,
       "Europe": 8,
@@ -95,15 +95,6 @@
       "max_sev_rank": 1,
       "iso2": "CA",
       "region": "Americas",
-      "country_group": "C",
-      "max_severity": "LOW"
-    },
-    {
-      "country": "Uganda",
-      "count": 1,
-      "max_sev_rank": 1,
-      "iso2": "UG",
-      "region": "Africa",
       "country_group": "C",
       "max_severity": "LOW"
     },
@@ -33536,112 +33527,6 @@
       "news_total": 1,
       "logs": [],
       "logs_total": 0
-    },
-    {
-      "incident_id": "20260810-UG-OT",
-      "tree_id": "fc8584ed043b47e4b483254061106862",
-      "canonical_name": "Uganda 2026-08-10",
-      "summary": "The Ebola outbreak in the Democratic Republic of Congo is intensifying, with less than 10% of cases coming from known contacts, indicating widespread community transmission. The country has received more than 16,000 doses of the Ervebo vaccine to combat the fastest Ebola outbreak in history. Pope Leo XIV has appealed for international aid for those affected by the outbreak in the DRC.",
-      "country": "Uganda",
-      "iso2": "UG",
-      "lat": 1.4,
-      "lon": 32.3,
-      "country_group": "C",
-      "region": "Africa",
-      "incident_type": "",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "LOW",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-08-10",
-      "first_reported_date": "2026-08-10",
-      "last_updated_date": "2026-08-23",
-      "days_since_event": 21,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 0,
-        "ercc": 1,
-        "healthmap": 0,
-        "news": 3
-      },
-      "source_links": [
-        {
-          "type": "ERCC",
-          "label": "ECHO Daily Map of 10 August 2026",
-          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5748",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Here’s data that shows Congo’s Ebola outbreak is on track to surpass history’s largest",
-          "published_date": "2026-08-21"
-        },
-        {
-          "headline": "Congo receives more than 16,000 doses of Ebola vaccine as it grapples with unprecedented outbreak",
-          "published_date": "2026-08-22"
-        },
-        {
-          "headline": "Pope appeals for international aid for Ebola victims in DRC - Vatican News",
-          "published_date": "2026-08-23"
-        }
-      ],
-      "news_total": 3,
-      "logs": [
-        {
-          "log_date": "2026-08-24",
-          "summary": "The Ebola outbreak in the Democratic Republic of Congo is intensifying, with less than 10% of cases coming from known contacts, indicating widespread community transmission. The country has received more than 16,000 doses of the Ervebo vaccine to combat the fastest Ebola outbreak in history. Pope Leo XIV has appealed for international aid for those affected by the outbreak in the DRC.",
-          "news": [
-            {
-              "news_id": "22c3a33ddc075475bcaf90bf7db7988a",
-              "url": "https://www.ocregister.com/2026/08/21/congo-ebola-by-the-numbers/",
-              "headline": "Here’s data that shows Congo’s Ebola outbreak is on track to surpass history’s largest",
-              "body": "Less than 10% of cases are currently coming from known contacts.",
-              "published_date": "2026-08-21",
-              "outlet": "Orange County Register",
-              "image": "https://www.bing.com/th?id=ONUT.ACM7A9sdTk5ZP4ctYBdw8g"
-            },
-            {
-              "news_id": "d22931c1c9855b418db733489405c356",
-              "url": "https://www.news4jax.com/news/world/2026/08/22/congo-receives-more-than-16000-doses-of-ebola-vaccine-as-it-grapples-with-unprecedented-outbreak/",
-              "headline": "Congo receives more than 16,000 doses of Ebola vaccine as it grapples with unprecedented outbreak",
-              "body": "Congo has received more than 16,000 doses of the Ervebo vaccine as the country grapples with the fastest Ebola outbreak in history, the country’s health minister said.",
-              "published_date": "2026-08-22",
-              "outlet": "News4JAX",
-              "image": "https://www.bing.com/th?id=ONUT.XPkjKSwnJZMcJ4e1pgQ0ig"
-            },
-            {
-              "news_id": "8fb43f64371351028c73cb5a86243a65",
-              "url": "https://www.vaticannews.va/en/pope/news/2026-08/pope-leo-xiv-appeal-ebola-outbreak-dr-congo.html",
-              "headline": "Pope appeals for international aid for Ebola victims in DRC - Vatican News",
-              "body": "Pope Leo XIV urges international care for people affected by the Ebola outbreak in the Democratic Republic of Congo and for victims of a mining ...",
-              "published_date": "2026-08-23",
-              "outlet": "Vatican News",
-              "image": "https://www.bing.com/th?id=ONUT._zjMXfElC1d4kSSkkX5AVQ"
-            }
-          ]
-        }
-      ],
-      "logs_total": 1
     },
     {
       "incident_id": "20260810-ES-WF",

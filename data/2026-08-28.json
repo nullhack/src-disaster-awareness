@@ -1,36 +1,36 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-08-28",
-  "generated_at": "2026-08-30T17:38:42Z",
+  "generated_at": "2026-08-31T07:07:37Z",
   "as_of": "2026-08-28",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 16,
-    "new_today": 4,
-    "critical": 1,
-    "high": 1,
+    "reportable_total": 14,
+    "new_today": 3,
+    "critical": 0,
+    "high": 0,
     "medium": 7,
     "low": 7,
     "disease_outbreaks": 0,
-    "countries_affected": 14,
-    "news_total": 331,
-    "max_magnitude": 6.9,
+    "countries_affected": 12,
+    "news_total": 225,
+    "max_magnitude": 6.1,
     "by_severity": {
-      "CRITICAL": 1,
-      "HIGH": 1,
+      "CRITICAL": 0,
+      "HIGH": 0,
       "MEDIUM": 7,
       "LOW": 7
     },
     "by_type": {
       "Flood": 2,
       "Drought": 1,
-      "Earthquake": 8,
       "Forest Fire": 3,
-      "": 2
+      "": 2,
+      "Earthquake": 6
     },
     "by_region": {
-      "Asia": 8,
+      "Asia": 6,
       "Africa": 3,
       "Europe": 3,
       "Americas": 1,
@@ -145,24 +145,6 @@
       "region": "Asia",
       "country_group": "A",
       "max_severity": "MEDIUM"
-    },
-    {
-      "country": "Indonesia",
-      "count": 1,
-      "max_sev_rank": 3,
-      "iso2": "ID",
-      "region": "Asia",
-      "country_group": "A",
-      "max_severity": "HIGH"
-    },
-    {
-      "country": "Philippines",
-      "count": 1,
-      "max_sev_rank": 4,
-      "iso2": "PH",
-      "region": "Asia",
-      "country_group": "A",
-      "max_severity": "LOW"
     }
   ],
   "incidents": [
@@ -190,7 +172,7 @@
       "event_date": "2023-08-14",
       "first_reported_date": "2023-08-14",
       "last_updated_date": "2026-08-27",
-      "days_since_event": 1112,
+      "days_since_event": 1113,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -396,7 +378,7 @@
       "event_date": "2026-05-21",
       "first_reported_date": "2026-05-21",
       "last_updated_date": "2026-08-26",
-      "days_since_event": 101,
+      "days_since_event": 102,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -715,7 +697,7 @@
       "event_date": "2026-06-06",
       "first_reported_date": "2026-06-06",
       "last_updated_date": "2026-08-25",
-      "days_since_event": 85,
+      "days_since_event": 86,
       "source_count": 3,
       "should_report": true,
       "search_keys": [],
@@ -1286,672 +1268,10 @@
       "logs_total": 13
     },
     {
-      "incident_id": "20260626-PH-EQ",
-      "tree_id": "97104f9b52cd5e6ebc506ce2ee60dac5",
-      "canonical_name": "Earthquake M6.5 Sarangani, Philippines 2026-06-26",
-      "summary": "A strong earthquake jolted Davao Occidental again on a Friday, as reported by Net25. In response to the ongoing seismic activity, PLDT Enterprise deployed Starlink satellite connectivity and emergency communications support to help maintain critical links for communities and responders in Mindanao.",
-      "country": "Philippines",
-      "iso2": "PH",
-      "lat": 5.2392,
-      "lon": 125.1965,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "CRITICAL",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-06-26",
-      "first_reported_date": "2026-06-26",
-      "last_updated_date": "2026-08-28",
-      "days_since_event": 65,
-      "source_count": 4,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 2,
-        "gdacs": 2,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 97
-      },
-      "source_links": [
-        {
-          "type": "GDACS",
-          "label": "Orange alert · Magnitude 6.5M, Depth:42km",
-          "url": "https://www.gdacs.org/report.aspx?eventid=1548668&episodeid=1714645&eventtype=EQ",
-          "meta": "Magnitude 6.5M, Depth:42km"
-        },
-        {
-          "type": "USGS",
-          "label": "M 6.3 - 32 km SW of Sarangani, Philippines",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ti6x",
-          "meta": "10 km depth"
-        },
-        {
-          "type": "USGS",
-          "label": "M 5.6 - 40 km SW of Sarangani, Philippines",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tif5",
-          "meta": "10 km depth"
-        },
-        {
-          "type": "GDACS",
-          "label": "Green alert · Earthquake M6.3 Sarangani, Philippines 2026-08-05",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1556215",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": 6.5,
-        "max_depth_km": 10.0,
-        "place": "Philippines",
-        "felt": 51,
-        "sig": 645,
-        "tsunami": false,
-        "gdacs_alertlevel": "Orange",
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "PLDT taps Starlink to keep Mindanao connected after earthquake",
-          "published_date": "2026-01-13"
-        },
-        {
-          "headline": "Magnitude 6.6 earthquake rocks Davao Occidental",
-          "published_date": "2026-06-26"
-        },
-        {
-          "headline": "6.6-magnitude earthquake strikes southern Philippines; aftershocks expected",
-          "published_date": "2026-07-08T22:10:39+00:00"
-        },
-        {
-          "headline": "Philippines devastated by massive 6.9 magnitude earthquake, 69 feared dead",
-          "published_date": "2026-07-12T19:48:26+00:00"
-        },
-        {
-          "headline": "Reckitt Philippines Inc. donates P283k to PRC for Mindanao earthquake response",
-          "published_date": "2026-07-14"
-        },
-        {
-          "headline": "Magnitude 5.2 earthquake rocks Philippines' Masbate",
-          "published_date": "2026-07-14"
-        },
-        {
-          "headline": "Earthquake of magnitude 6.05 strikes Mindanao, Philippines, GFZ says",
-          "published_date": "2026-07-14T00:00:00+00:00"
-        },
-        {
-          "headline": "DILG-Davao seeks strengthening of infrastructure audit program for death, damage prevention",
-          "published_date": "2026-07-15"
-        },
-        {
-          "headline": "6.5-magnitude offshore earthquake strikes S. Philippines",
-          "published_date": "2026-07-15"
-        },
-        {
-          "headline": "Earthquake of magnitude 6.05 strikes Mindanao, Philippines, GFZ says",
-          "published_date": "2026-07-15T09:07:40+00:00"
-        },
-        {
-          "headline": "EARTHQUAKE: 4.5 Magnitude Quake Hits Cagayan (July 15, 2026) | PhilNews",
-          "published_date": "2026-07-16"
-        },
-        {
-          "headline": "Suzuki Philippines extends assistance to earthquake-affected dealership employees in General Santos",
-          "published_date": "2026-07-16T00:00:00+00:00"
-        },
-        {
-          "headline": "Earthquake in Philippines disrupts school’s morning flag ceremony",
-          "published_date": "2026-07-17T08:51:29+00:00"
-        },
-        {
-          "headline": "Magnitude 6 2 Earthquake Strikes Off Southern Philippines Following Series Of Ring Of Fire Quakes",
-          "published_date": "2026-07-18"
-        },
-        {
-          "headline": "Minor Sea Level Disturbance Reported After Strong Earthquake Off The Coast Of Balut Island Davao Occidental",
-          "published_date": "2026-07-18"
-        },
-        {
-          "headline": "Magnitude 65 Earthquake Struck Off The Coast Of Balut Island Sarangani Davao Occidental",
-          "published_date": "2026-07-18"
-        },
-        {
-          "headline": "Magnitude 5 2 Aftershock Struck Masbate Phivolcs",
-          "published_date": "2026-07-18"
-        },
-        {
-          "headline": "Philippine Senate President Praises Uae Aid For Mindanao Earthquake Victims",
-          "published_date": "2026-07-18"
-        },
-        {
-          "headline": "Thai students send messages of support to Filipino children after Mindanao earthquake",
-          "published_date": "2026-07-18T00:00:00+00:00"
-        },
-        {
-          "headline": "MSN",
-          "published_date": "2026-07-19"
-        },
-        {
-          "headline": "5.0-magnitude aftershock hits Davao Occidental",
-          "published_date": "2026-07-19"
-        },
-        {
-          "headline": "‘Taiwan-ihan’ answers call on relief, recovery efforts for Mindanao quake",
-          "published_date": "2026-07-20T14:40:13+00:00"
-        },
-        {
-          "headline": "Nissan extends support to Mindanao earthquake-affected communities - BusinessWorld Online",
-          "published_date": "2026-07-25"
-        },
-        {
-          "headline": "Nissan extends support to Mindanao earthquake-affected communities - BusinessWorld Online",
-          "published_date": "2026-07-25"
-        },
-        {
-          "headline": "DSWD distributes 1M family food packs in quake-hit Mindanao",
-          "published_date": "2026-07-27T04:05:07+00:00"
-        },
-        {
-          "headline": "DSWD hits 1 million mark in family food packs for quake victims",
-          "published_date": "2026-07-28T04:05:07+00:00"
-        },
-        {
-          "headline": "Two strong aftershocks jolt Sarangani in Davao Occidental",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Saudi Arabia pledges aid to 120K Mindanao quake victims",
-          "published_date": "2026-07-29T03:55:27+00:00"
-        },
-        {
-          "headline": "B2Gold anaffiliate donate nearly P4 million in relief and rebuilding support to earthquake- and typhoon-affected Mindanao communities",
-          "published_date": "2026-07-30T09:30:49+00:00"
-        },
-        {
-          "headline": "‘Art for Everyone’ aims to help quake victims, cancer patients",
-          "published_date": "2026-07-31"
-        },
-        {
-          "headline": "DSWD distributes 1M family food packs for quake-hit Mindanao families",
-          "published_date": "2026-08-02T04:05:07+00:00"
-        },
-        {
-          "headline": "Philippines earthquake leaves region in 'panic' as 6.3 magnitude shakes island - AOL",
-          "published_date": "2026-08-05"
-        },
-        {
-          "headline": "6.3-Magnitude Earthquake Jolts Southern Philippines, Residents Flee Buildings In Panic",
-          "published_date": "2026-08-05"
-        },
-        {
-          "headline": "Sultan Kudarat, Sarangani cut classes after earthquake",
-          "published_date": "2026-08-05"
-        },
-        {
-          "headline": "Magnitude 7.0 quake strikes off Davao Occidental",
-          "published_date": "2026-08-05"
-        },
-        {
-          "headline": "Magnitude 7.0 Earthquake Shakes Sarangani, Davao Occidental | PhilNews",
-          "published_date": "2026-08-05"
-        },
-        {
-          "headline": "Philippines earthquake leaves region in 'panic' as 6.3 magnitude shakes island",
-          "published_date": "2026-08-05"
-        },
-        {
-          "headline": "Magnitude 7 earthquake strikes Sarangani",
-          "published_date": "2026-08-05"
-        },
-        {
-          "headline": "Un séisme de magnitude 6,3 frappe le sud des Philippines",
-          "published_date": "2026-08-05"
-        },
-        {
-          "headline": "Breaking: Magnitude 7.0 earthquake rocks Sarangani, Davao Occidental",
-          "published_date": "2026-08-05"
-        },
-        {
-          "headline": "6.3-magnitude earthquake hits Philippines",
-          "published_date": "2026-08-05"
-        },
-        {
-          "headline": "6.4 magnitude earthquake strikes off coast of southern Philippines",
-          "published_date": "2026-08-05"
-        },
-        {
-          "headline": "Magnitude 6.4 earthquake felt across SOCCSKSARGEN; no tsunami threat",
-          "published_date": "2026-08-05"
-        },
-        {
-          "headline": "Classes, work in Southern Mindanao cancelled due to magnitude-6.4 quake",
-          "published_date": "2026-08-05"
-        },
-        {
-          "headline": "M7.0 earthquake jolts waters off Davao Occidental; no tsunami threat",
-          "published_date": "2026-08-05"
-        },
-        {
-          "headline": "Kidapawan suspends classes following magnitude 6.4 earthquake",
-          "published_date": "2026-08-05"
-        },
-        {
-          "headline": "6.4-magnitude quake jolts Davao Occidental, aftershock of destructive June tremor — PHIVOLCS - BusinessWorld Online",
-          "published_date": "2026-08-05"
-        },
-        {
-          "headline": "Philippines earthquake leaves region in 'panic' as 6.3 magnitude shakes island",
-          "published_date": "2026-08-05"
-        },
-        {
-          "headline": "6.4-magnitude earthquake hits off southern Philippines",
-          "published_date": "2026-08-05"
-        },
-        {
-          "headline": "PCG reports no tsunami threat, damage after strong Mindanao quake",
-          "published_date": "2026-08-05"
-        },
-        {
-          "headline": "Strong 6.3-magnitude earthquake rocks southern coast of Philippines",
-          "published_date": "2026-08-05"
-        },
-        {
-          "headline": "Magnitude 6.4 earthquake strikes off southern Philippines; no tsunami warning",
-          "published_date": "2026-08-05"
-        },
-        {
-          "headline": "Phivolcs ibinaba sa magnitude 6.4 ang lindol na yumanig sa Sarangani",
-          "published_date": "2026-08-05T00:00:00+00:00"
-        },
-        {
-          "headline": "6.4-magnitude offshore quake jolts Davao Occidental",
-          "published_date": "2026-08-05T07:00:00+00:00"
-        },
-        {
-          "headline": "A 6.3-magnitude earthquake hits off southern Philippines: USGS",
-          "published_date": "2026-08-05T11:31:00+00:00"
-        },
-        {
-          "headline": "Strong quake struck anew southern Mindanao",
-          "published_date": "2026-08-05T13:08:00+00:00"
-        },
-        {
-          "headline": "Magnitude 6.4 earthquake jolts Davao Occidental",
-          "published_date": "2026-08-05T14:20:00+00:00"
-        },
-        {
-          "headline": "EARTHQUAKE: 4.7 Magnitude Quake Hits Davao Occidental (August 6, 2026) | PhilNews",
-          "published_date": "2026-08-06"
-        },
-        {
-          "headline": "5.9-magnitude earthquake strikes off Philippines coast",
-          "published_date": "2026-08-06"
-        },
-        {
-          "headline": "Breaking: Magnitude 7.0 earthquake rocks Sarangani, Davao Occidental",
-          "published_date": "2026-08-06"
-        },
-        {
-          "headline": "F2F classes remain suspended in GenSan, Sarangani after quake",
-          "published_date": "2026-08-06"
-        },
-        {
-          "headline": "Magnitude 6.3 aftershock strikes off Balut Island in Sarangani",
-          "published_date": "2026-08-06"
-        },
-        {
-          "headline": "Magnitude 6.4 quake hits Sarangani; aftershocks expected",
-          "published_date": "2026-08-06"
-        },
-        {
-          "headline": "Philippines quake rattles crowd at Mindanao subsidy site, two months into recovery",
-          "published_date": "2026-08-06"
-        },
-        {
-          "headline": "Philippines quake rattles crowd at Mindanao subsidy site, two months into recovery",
-          "published_date": "2026-08-06"
-        },
-        {
-          "headline": "Choc : 5 tonnes de cocaïne saisies au large du Portugal, 14 morts dans un monastère en Éthiopie, éclairs meurtriers en Inde et séisme aux Philippines",
-          "published_date": "2026-08-06"
-        },
-        {
-          "headline": "6.3-magnitude offshore earthquake strikes Southern Philippines",
-          "published_date": "2026-08-06"
-        },
-        {
-          "headline": "Magnitude 6.4 earthquake strikes off Davao Occidental",
-          "published_date": "2026-08-06"
-        },
-        {
-          "headline": "Police stations affected by M6.4 Davao earthquake still functional",
-          "published_date": "2026-08-06"
-        },
-        {
-          "headline": "6.3 magnitude earthquake hits off southern Philippines – USGS",
-          "published_date": "2026-08-06"
-        },
-        {
-          "headline": "Powerful 6.3-Magnitude Earthquake Strikes Off Southern Philippines",
-          "published_date": "2026-08-06T00:01:00+00:00"
-        },
-        {
-          "headline": "Magnitude 5.6, 5.3 quakes hit Davao Occidental",
-          "published_date": "2026-08-06T14:44:33+00:00"
-        },
-        {
-          "headline": "A magnitude-6.3 earthquake struck off the southern Philippines at shallow depth",
-          "published_date": "2026-08-07"
-        },
-        {
-          "headline": "A magnitude-6.3 earthquake struck off the southern Philippines at shallow depth",
-          "published_date": "2026-08-07"
-        },
-        {
-          "headline": "From Philippines to Colombia: Deadly earthquakes that struck the world in 2026",
-          "published_date": "2026-08-11"
-        },
-        {
-          "headline": "Video of earthquake shaking schoolyard is from Philippines, not Colombia",
-          "published_date": "2026-08-12"
-        },
-        {
-          "headline": "Rescuers call for silence around earthquake rubble as window for survival narrows in Colombia",
-          "published_date": "2026-08-13"
-        },
-        {
-          "headline": "SCPF brings educational assistance, community support to Sarangani’s quake-hit barangay",
-          "published_date": "2026-08-13T15:04:50+00:00"
-        },
-        {
-          "headline": "DepEd Sarangani official wary of the impact of classroom shortage to learners amid quake devastation",
-          "published_date": "2026-08-14"
-        },
-        {
-          "headline": "Magnitude 5.2 earthquake hits off Sarangani shore on Friday",
-          "published_date": "2026-08-15T02:29:17+00:00"
-        },
-        {
-          "headline": "A triple crisis: Earthquake takes a heavy toll on Colombia’s impoverished and neglected region",
-          "published_date": "2026-08-19"
-        },
-        {
-          "headline": "Texas Fil-Am groups join forces to aid Mindanao earthquake recovery",
-          "published_date": "2026-08-19T15:52:14+00:00"
-        },
-        {
-          "headline": "Magnitude 4.3 earthquake strikes Balut Island in Sarangani",
-          "published_date": "2026-08-19T21:00:00+00:00"
-        },
-        {
-          "headline": "Rhode Island community comes together to raise funds for Colombia earthquake relief",
-          "published_date": "2026-08-20"
-        },
-        {
-          "headline": "A magnitude 7.4 earthquake killed more than 300 people across Colombia's Chocó region",
-          "published_date": "2026-08-20"
-        },
-        {
-          "headline": "Colombia earthquake response enters grim phase as hope for more survivors fades",
-          "published_date": "2026-08-20"
-        },
-        {
-          "headline": "World Bank says it disbursed $200 million to Colombia for quake response",
-          "published_date": "2026-08-20"
-        },
-        {
-          "headline": "Colombia and Israel's Cynical Disaster Diplomacy",
-          "published_date": "2026-08-20"
-        },
-        {
-          "headline": "A magnitude 7.4 earthquake killed more than 300 people across Colombia’s Chocó region",
-          "published_date": "2026-08-20"
-        },
-        {
-          "headline": "Magnitude 5.2 quake jolts Sarangani",
-          "published_date": "2026-08-21"
-        },
-        {
-          "headline": "Magnitude 5.2 quake jolts Sarangani",
-          "published_date": "2026-08-21"
-        },
-        {
-          "headline": "A shallow magnitude-6.3 quake struck off the southern Philippines",
-          "published_date": "2026-08-23"
-        },
-        {
-          "headline": "A shallow magnitude-6.3 quake struck off the southern Philippines",
-          "published_date": "2026-08-23"
-        },
-        {
-          "headline": "Negros Occidental gives P2-M cash aid to earthquake-hit Sarangani",
-          "published_date": "2026-08-25T14:07:15+00:00"
-        },
-        {
-          "headline": "When Connectivity Matters Most: PLDT Enterprise Brings Starlink Support to Mindanao Recovery Efforts",
-          "published_date": "2026-08-28"
-        },
-        {
-          "headline": "Strong earthquake jolts Davao Occidental on Friday anew",
-          "published_date": "2026-08-28"
-        },
-        {
-          "headline": "When Connectivity Matters Most: PLDT Enterprise Brings Starlink Support to Mindanao Recovery Efforts",
-          "published_date": "2026-08-28"
-        }
-      ],
-      "news_total": 97,
-      "logs": [
-        {
-          "log_date": "2026-07-08",
-          "summary": "A magnitude 6.6 earthquake struck off the coast of Sarangani, Davao Occidental, Philippines on June 26, 2026, at around 7:34 PM according to Phivolcs. The quake generated reports of strong shaking in nearby areas, and aftershocks are expected. No immediate damage or casualties have been reported in the available excerpts.",
-          "news": [
-            {
-              "news_id": "c98d83be00545152847e4ce690142b43",
-              "url": "https://www.gmanetwork.com/regionaltv/news/114592/magnitude-66-earthquake-rocks-davao-occidental/story/",
-              "headline": "Magnitude 6.6 earthquake rocks Davao Occidental",
-              "body": "A magnitude 6.6 earthquake struck off the coast of Sarangani, Davao Occidental around 7:34 p.m. on Friday, June 26, 2026, according to the Philippine Institute of Volcanology and Seismology (PHIVOLCS).",
-              "published_date": "2026-06-26",
-              "outlet": "GMA Network",
-              "image": "https://www.bing.com/th?id=ONUT.XYQ-sSuMS-uYfx20Da573Q"
-            },
-            {
-              "news_id": "abe25c7f62c058c1bfb39549906eafe6",
-              "url": "https://www.khaleejtimes.com/world/asia/66-magnitude-earthquake-davao-philippines-aftershocks-june-26-2026",
-              "headline": "6.6-magnitude earthquake strikes southern Philippines; aftershocks expected",
-              "body": "A magnitude 6.6 earthquake struck off the coast of southern Philippines on Friday, June 26, according to the country's Institute of Volcanology and Seismology (Phivolcs). The quake struck at 7.34pm ...",
-              "published_date": "2026-07-08T22:10:39+00:00",
-              "outlet": "Khaleej Times",
-              "image": ""
-            }
-          ]
-        },
-        {
-          "log_date": "2026-08-21",
-          "summary": "A magnitude 4.3 earthquake struck Balut Island in Sarangani on an unspecified recent date, with tremors felt in several Southern Mindanao towns, adding to the ongoing aftershock sequence following the June 26 major quake.",
-          "news": [
-            {
-              "news_id": "d45f1d11d8a453a6ad6002519829bf2d",
-              "url": "https://www.msn.com/en-ph/news/national/magnitude-52-quake-jolts-sarangani/ar-AA2azBTl",
-              "headline": "Magnitude 5.2 quake jolts Sarangani",
-              "body": "MANILA, Philippines — A magnitude 5.2 earthquake, which was an aftershock of a powerful temblor that jolted Sarangani two months ago, rocked the province and nearby areas on Wednesday morning, according to the Philippine Institute of Volcanology and Seismology.",
-              "published_date": "2026-08-21",
-              "outlet": "Philstar.com",
-              "image": "https://media.philstar.com/photos/2026/08/20/eart_2026-08-20_20-55-21.jpg"
-            },
-            {
-              "news_id": "b1deb45e040f5d218f363d51c9051e7f",
-              "url": "https://www.msn.com/en-us/news/news/rhode-island-community-comes-together-to-raise-funds-for-colombia-earthquake-relief/ar-AA2a7KA5",
-              "headline": "Rhode Island community comes together to raise funds for Colombia earthquake relief",
-              "body": "State leaders and local communities came together on Friday to host a fundraiser for those impacted by the devastating earthquake in Colombia.",
-              "published_date": "2026-08-20",
-              "outlet": "WJAR Providence",
-              "image": "https://turnto10.com/resources/media2/16x9/1920/1320/center/90/f68291f0-83e9-46a3-a1fc-e6c7783acb8a-TURGEONCOLUMBIANRELIEFEVENTNAVIGANTCREDITUNION_0001_frame_93.jpeg"
-            },
-            {
-              "news_id": "4ca83ec44bf35d518ecf0e08bca8ce9b",
-              "url": "https://www.bostonherald.com/2026/08/19/colombia-earthquake-triple-crisis/",
-              "headline": "A triple crisis: Earthquake takes a heavy toll on Colombia’s impoverished and neglected region",
-              "body": "About 10% of Choco’s population was affected or displaced by the earthquake.",
-              "published_date": "2026-08-19",
-              "outlet": "Boston Herald",
-              "image": "https://www.bostonherald.com/wp-content/uploads/2026/08/Colombia_Earthquake_79699-1-1.jpg?w=8640&h=5760"
-            },
-            {
-              "news_id": "117a0a11a591557babff543d4bf39bf4",
-              "url": "https://www.msn.com/en-us/news/world/a-magnitude-7-4-earthquake-killed-more-than-300-people-across-colombia-s-chocó-region/ar-AA2ashzm",
-              "headline": "A magnitude 7.4 earthquake killed more than 300 people across Colombia's Chocó region",
-              "body": "A powerful earthquake that struck western Colombia on August 10, 2026 has become the deadliest seismic disaster the country has recorded in more than two decades, with the confirmed death toll climbing past 300 in the days that followed.",
-              "published_date": "2026-08-20",
-              "outlet": "Morning Overview",
-              "image": "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA2as9H4.img?w=1280&h=720&m=4&q=87"
-            },
-            {
-              "news_id": "0cdc17cb54db55d193fea1701758a5dc",
-              "url": "https://www.msn.com/en-us/news/world/colombia-earthquake-response-enters-grim-phase-as-hope-for-more-survivors-fades/ar-AA2a209N",
-              "headline": "Colombia earthquake response enters grim phase as hope for more survivors fades",
-              "body": "By Nelson Bocanegra and Julia Symmes Cobb CALI/PEREIRA, Colombia Aug 13 (Reuters) - Hopes of finding more survivors from the powerful earthquake that rocked Colombia early this week were fading on Thursday as rescue workers narrowed their searches,",
-              "published_date": "2026-08-20",
-              "outlet": "Reuters",
-              "image": "https://media.rnztools.nz/rnz/image/upload/s--T-WhpYe7--/t_tohu-badge-facebook/f_auto/q_auto/4JJWW2H_AFP__20260813__C4LM7KF__v1__HighRes__ColombiaEarthquakeAftermath_jpg"
-            },
-            {
-              "news_id": "11182fa3f32750788e20d9afc19d5ba9",
-              "url": "https://www.msn.com/en-us/money/companies/world-bank-says-it-disbursed-200-million-to-colombia-for-quake-response/ar-AA2a7wZE",
-              "headline": "World Bank says it disbursed $200 million to Colombia for quake response",
-              "body": "WASHINGTON, Aug 14 (Reuters) - The World Bank on Friday said it had disbursed $200 million to Colombia for its emergency response to a deadly August 10 earthquake that left hundreds dead. The multilateral development bank said it was working with the Colombian government and development partners,",
-              "published_date": "2026-08-20",
-              "outlet": "Reuters",
-              "image": ""
-            },
-            {
-              "news_id": "0c4a04d8302151a883054c3aa33ecd45",
-              "url": "https://newsinfo.inquirer.net/2288384/magnitude-4-3-quake-struck-balut-island-in-sarangani",
-              "headline": "Magnitude 4.3 earthquake strikes Balut Island in Sarangani",
-              "body": "A magnitude 4.3 earthquake struck Balut Island in Sarangani, with tremors felt in several towns in Southern Mindanao, the Philippine Institute of Volcanology and",
-              "published_date": "2026-08-19T21:00:00+00:00",
-              "outlet": "Inquirer.net",
-              "image": "https://newsinfo.inquirer.net/files/2021/06/map-sarangani.jpg"
-            },
-            {
-              "news_id": "61048876761b555aa9d5a582a3a839f8",
-              "url": "https://www.delcotimes.com/2026/08/13/rescuers-silence-earthquake-rubble-colombia/",
-              "headline": "Rescuers call for silence around earthquake rubble as window for survival narrows in Colombia",
-              "body": "Aid agencies consider the first 48 to 72 hours after a quake to be the prime window for retrieving survivors.",
-              "published_date": "2026-08-13",
-              "outlet": "Delco Times",
-              "image": "https://www.delcotimes.com/wp-content/uploads/2026/08/APTOPIX_Colombia_Earthquake_31125-1.jpg?w=1999&h=1333"
-            },
-            {
-              "news_id": "cf72c879187f58f0a7094960549c480b",
-              "url": "https://www.msn.com/en-ph/news/national/magnitude-52-quake-jolts-sarangani/ar-AA2azBTl?ocid=BingNewsVerp",
-              "headline": "Magnitude 5.2 quake jolts Sarangani",
-              "body": "MANILA, Philippines — A magnitude 5.2 earthquake, which was an aftershock of a powerful temblor that jolted Sarangani two ...",
-              "published_date": "2026-08-21",
-              "outlet": "Philstar.com on MSN",
-              "image": "https://www.bing.com/th?id=ORMS.31cd263fe72945374126b7f6aa2c541e"
-            },
-            {
-              "news_id": "4cb95efa905e5d1d888a0639ceda1997",
-              "url": "https://www.msn.com/en-us/news/world/colombia-and-israel-s-cynical-disaster-diplomacy/ar-AA2a7dss",
-              "headline": "Colombia and Israel's Cynical Disaster Diplomacy",
-              "body": "Under the cover of earthquake response, Colombian President Abelardo de la Espriella has dramatically reversed Colombia's stance toward Israel, recognizing controversial Israeli claims over the occupied Golan Heights.",
-              "published_date": "2026-08-20",
-              "outlet": "Jacobin",
-              "image": "https://media.jacobin.com/images/2026/8/917686622017.jpg"
-            },
-            {
-              "news_id": "bc97626937e4523e9983ce31c3ac82f8",
-              "url": "https://www.msn.com/en-us/news/world/a-magnitude-7-4-earthquake-killed-more-than-300-people-across-colombia-s-chocó-region/ar-AA2ashzm?ocid=BingNewsVerp",
-              "headline": "A magnitude 7.4 earthquake killed more than 300 people across Colombia’s Chocó region",
-              "body": "A powerful earthquake that struck western Colombia on August 10, 2026 has become the deadliest seismic disaster the country ...",
-              "published_date": "2026-08-20",
-              "outlet": "Morning Overview on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.VS4QK5CxPviUOBZdXbByUg"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-08-25",
-          "summary": "Negros Occidental provincial government donated PHP2 million in cash aid to Sarangani province for earthquake recovery. Additionally, a separate article reports a magnitude-6.3 earthquake off the southern Philippines in early August, continuing the aftershock sequence.",
-          "news": [
-            {
-              "news_id": "2aef22b8f941501fa3155f477dcd0d5d",
-              "url": "https://www.pna.gov.ph/articles/1282594",
-              "headline": "Negros Occidental gives P2-M cash aid to earthquake-hit Sarangani",
-              "body": "The Negros Occidental provincial government donated PHP2 million to Sarangani province, which incurred widespread damage ...",
-              "published_date": "2026-08-25T14:07:15+00:00",
-              "outlet": "Philippine News Agency",
-              "image": "https://www.bing.com/th?id=ONUT.CFc6836V-8_NE07m5juXLA"
-            },
-            {
-              "news_id": "00d4e512c57154298a89d045928c2533",
-              "url": "https://www.msn.com/en-us/news/world/a-shallow-magnitude-6-3-quake-struck-off-the-southern-philippines/ar-AA2aJ4x1?ocid=BingNewsVerp",
-              "headline": "A shallow magnitude-6.3 quake struck off the southern Philippines",
-              "body": "A strong, shallow earthquake rattled the southern Philippines in early August, shaking parts of Mindanao and unnerving a ...",
-              "published_date": "2026-08-23",
-              "outlet": "Morning Overview on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.q1HkxN3SPEkd-SFQ82Y6ew"
-            },
-            {
-              "news_id": "ffd525abadf353c597869b4eea3f830b",
-              "url": "https://www.msn.com/en-us/news/other/a-shallow-magnitude-6-3-quake-struck-off-the-southern-philippines/ar-AA2aJ4x1?ocid=BingNewsVerp",
-              "headline": "A shallow magnitude-6.3 quake struck off the southern Philippines",
-              "body": "A strong, shallow earthquake rattled the southern Philippines in early August, shaking parts of Mindanao and unnerving a ...",
-              "published_date": "2026-08-23",
-              "outlet": "Morning Overview on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.q1HkxN3SPEkd-SFQ82Y6ew"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-08-29",
-          "summary": "A strong earthquake jolted Davao Occidental again on a Friday, as reported by Net25. In response to the ongoing seismic activity, PLDT Enterprise deployed Starlink satellite connectivity and emergency communications support to help maintain critical links for communities and responders in Mindanao.",
-          "news": [
-            {
-              "news_id": "f5cea538a4d05964a409c4e86e179376",
-              "url": "https://net25.com/news/strong-earthquake-jolts-davao-occidental-on-friday-anew",
-              "headline": "Strong earthquake jolts Davao Occidental on Friday anew",
-              "body": "NET25 is the Filipino broadcast network for breaking news, live TV streaming, Radyo Agila and Eagle FM radio, program schedules, entertainment, weather, and elections coverage.",
-              "published_date": "2026-08-28",
-              "outlet": "NET25",
-              "image": "https://www.bing.com/th?id=ONUT.5tg9KnTdfMGgS4zFhYrbJQ"
-            },
-            {
-              "news_id": "479c0c9236a954cca85033d29358fc70",
-              "url": "https://insiderph.com/pldt-taps-starlink-to-keep-mindanao-connected-after-earthquake",
-              "headline": "PLDT taps Starlink to keep Mindanao connected after earthquake",
-              "body": "PLDT Inc. is turning to satellites to keep critical communications running in parts of Mindanao after a powerful earthquake disrupted power and connectivity.",
-              "published_date": "2026-01-13",
-              "outlet": "insiderph",
-              "image": ""
-            },
-            {
-              "news_id": "7701c54980175d0a8301d9fd31df7c74",
-              "url": "http://www.mindanaotimes.com.ph/when-connectivity-matters-most-pldt-enterprise-brings-starlink-support-to-mindanao-recovery-efforts/",
-              "headline": "When Connectivity Matters Most: PLDT Enterprise Brings Starlink Support to Mindanao Recovery Efforts",
-              "body": "MANILA, Philippines – In the aftermath of the powerful earthquake that struck parts of Mindanao, PLDT Enterprise, together with PLDT and Smart, deployed Starlink satellite connectivity solutions and mobilized emergency communications support to assist communities, responders, and local government units in maintaining critical links during a time of urgent need. PLDT and Smart immediately dispatched...",
-              "published_date": "2026-08-28",
-              "outlet": "Mindanao Times",
-              "image": "https://www.bing.com/th?id=ONUT.MWcFyF0Eu7nCd27frInNaQ"
-            }
-          ]
-        }
-      ],
-      "logs_total": 14
-    },
-    {
       "incident_id": "20260805-RS-WF",
       "tree_id": "65c2cfe6c88644e4b0890ba794c98988",
       "canonical_name": "Forest Fire Juznobanatski okrug, Serbia 2026-08-05",
-      "summary": "New international firefighting support has been deployed: 69 Romanian firefighters with 15 technical vehicles and a Black Hawk helicopter arrived over the weekend of August 22-23. The European Union continues to send urgent support via its civil protection mechanism to fight fires devastating the Deliblato Sands Special Nature Reserve. EU and Russian aircraft remain active in assisting Serbian firefighting efforts.",
+      "summary": "Hungary has dispatched 12 firefighters and four vehicles to Serbia to assist in combating the ongoing forest fires. European countries are coordinating firefighting resources across borders, with Serbia continuing to use both Russian and EU assistance. Multiple fires remain active across the region.",
       "country": "Serbia",
       "iso2": "RS",
       "lat": 44.852559079479136,
@@ -1971,7 +1291,7 @@
       "event_date": "2026-08-05",
       "first_reported_date": "2026-08-05",
       "last_updated_date": "2026-08-26",
-      "days_since_event": 25,
+      "days_since_event": 26,
       "source_count": 2,
       "should_report": false,
       "search_keys": [],
@@ -1981,7 +1301,7 @@
         "gdacs": 1,
         "ercc": 1,
         "healthmap": 0,
-        "news": 14
+        "news": 16
       },
       "source_links": [
         {
@@ -2045,6 +1365,10 @@
           "published_date": "2026-08-23T02:26:59+00:00"
         },
         {
+          "headline": "Planes, helicopters, crews: How Europe is scrambling to contain a record wildfire season",
+          "published_date": "2026-08-24"
+        },
+        {
           "headline": "Fire spreading toward Trebinje: One front moving toward urban areas; Homes threatened again",
           "published_date": "2026-08-24"
         },
@@ -2061,11 +1385,15 @@
           "published_date": "2026-08-24"
         },
         {
+          "headline": "Hungarian firefighters helping in Serbia",
+          "published_date": "2026-08-26"
+        },
+        {
           "headline": "Cities shrouded in smoke; Fires devour everything in their path; Army called in",
           "published_date": "2026-08-26"
         }
       ],
-      "news_total": 14,
+      "news_total": 16,
       "logs": [
         {
           "log_date": "2026-08-23",
@@ -2201,9 +1529,42 @@
               "image": ""
             }
           ]
+        },
+        {
+          "log_date": "2026-08-30",
+          "summary": "Hungary has dispatched 12 firefighters and four vehicles to Serbia to assist in combating the ongoing forest fires. European countries are coordinating firefighting resources across borders, with Serbia continuing to use both Russian and EU assistance. Multiple fires remain active across the region.",
+          "news": [
+            {
+              "news_id": "aba31f83e3c056c392449c4d25a002d1",
+              "url": "https://dailynewshungary.com/hungarian-firefighters-forest-fires-serbia/",
+              "headline": "Hungarian firefighters helping in Serbia",
+              "body": "Hungary is sending 12 firefighters and four vehicles to Serbia to aid the battle against forest fires.",
+              "published_date": "2026-08-26",
+              "outlet": "Daily News Hungary",
+              "image": "https://dailynewshungary.b-cdn.net/wp-content/uploads/2026/08/Hungarian-firefighters-helping-in-Serbia-illustration.webp"
+            },
+            {
+              "news_id": "d23461662cc159fbaaece55d51b78a07",
+              "url": "https://timesofindia.indiatimes.com/world/europe/planes-helicopters-crews-how-europe-is-scrambling-to-contain-a-record-wildfire-season/articleshow/133451780.cms",
+              "headline": "Planes, helicopters, crews: How Europe is scrambling to contain a record wildfire season",
+              "body": "Wildfires are stretching firefighting capacity across Europe, forcing countries to move aircraft, helicopters and crews across borders as several blazes burn at the same time. Serbia is using both Russian and EU assistance, while crews in Ankara brought a large wooded-area fire under control early Monday after an eight-hour operation.",
+              "published_date": "2026-08-24",
+              "outlet": "The Times of India",
+              "image": "https://static.toiimg.com/thumb/msid-133452048,width-1280,height-720,resizemode-6,overlay-toi_sw,pt-32,y_pad-600/photo.jpg"
+            },
+            {
+              "news_id": "5d8f08c28410500b86c21a8df2151486",
+              "url": "https://www.b92.net/english/region/262123/wildfires-continue-to-rage-across-the-region/vest",
+              "headline": "Cities shrouded in smoke; Fires devour everything in their path; Army called in",
+              "body": "Several fires remain active across the region, as firefighters, the military and other emergency services work to contain the blazes and prevent them from spreading.",
+              "published_date": "2026-08-26",
+              "outlet": "B92",
+              "image": "https://www.bing.com/th?id=ONUT.uXJHqw3FMQ1j1wEDvCf34g"
+            }
+          ]
         }
       ],
-      "logs_total": 3
+      "logs_total": 4
     },
     {
       "incident_id": "20260808-CA-WF",
@@ -2229,7 +1590,7 @@
       "event_date": "2026-08-08",
       "first_reported_date": "2026-08-08",
       "last_updated_date": "2026-08-28",
-      "days_since_event": 22,
+      "days_since_event": 23,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -2949,7 +2310,7 @@
       "event_date": "2026-08-10",
       "first_reported_date": "2026-08-10",
       "last_updated_date": "2026-08-23",
-      "days_since_event": 20,
+      "days_since_event": 21,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -3055,7 +2416,7 @@
       "event_date": "2026-08-10",
       "first_reported_date": "2026-08-10",
       "last_updated_date": "2026-08-25",
-      "days_since_event": 20,
+      "days_since_event": 21,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -3165,7 +2526,7 @@
       "event_date": "2026-08-13",
       "first_reported_date": "2026-08-13",
       "last_updated_date": "2026-08-28",
-      "days_since_event": 17,
+      "days_since_event": 18,
       "source_count": 3,
       "should_report": true,
       "search_keys": [],
@@ -3175,7 +2536,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 5
+        "news": 6
       },
       "source_links": [
         {
@@ -3209,6 +2570,10 @@
       },
       "news": [
         {
+          "headline": "Magnitude 6.0 earthquake strikes off Somalia’s Puntland coast",
+          "published_date": "2020-11-29"
+        },
+        {
           "headline": "Magnitude 6.0 Earthquake Strikes Gulf of Aden North of Puntland Coast",
           "published_date": "2026-08-26T11:35:57+00:00"
         },
@@ -3229,7 +2594,7 @@
           "published_date": "2026-08-28"
         }
       ],
-      "news_total": 5,
+      "news_total": 6,
       "logs": [
         {
           "log_date": "2026-08-28",
@@ -3277,211 +2642,6 @@
       "logs_total": 1
     },
     {
-      "incident_id": "20260815-ID-EQ",
-      "tree_id": "02bdf815017a45678230df1f611e6a90",
-      "canonical_name": "Earthquake M6.9 Pematangsiantar, Indonesia 2026-08-15",
-      "summary": "A 7.7-magnitude earthquake struck Indonesia's East Nusa Tenggara province on August 15, 2026, killing at least 100 people and injuring over 1,200. Thousands remain displaced and await aid, while some businesses on Flores Island have begun to reopen. Relief operations continue as authorities manage the aftermath.",
-      "country": "Indonesia",
-      "iso2": "ID",
-      "lat": 3.0856,
-      "lon": 99.015,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "HIGH",
-      "priority": "HIGH",
-      "priority_rank": 1,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-08-15",
-      "first_reported_date": "2026-08-15",
-      "last_updated_date": "2026-08-24",
-      "days_since_event": 15,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 12
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 6.9 - 15 km NNW of Pematangsiantar, Indonesia",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkyk",
-          "meta": "172.526 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 6.9,
-        "max_depth_km": 172.526,
-        "place": "15 km NNW of Pematangsiantar, Indonesia",
-        "felt": 32,
-        "sig": 746,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "People are displaced after powerful earthquake in Indonesia, in photos",
-          "published_date": "2026-08-17"
-        },
-        {
-          "headline": "People await aid after powerful earthquake in Indonesia, in photos - WTOP News",
-          "published_date": "2026-08-18"
-        },
-        {
-          "headline": "Video filmed after 2024 Taiwan tremor falsely linked to Indonesian earthquake damage",
-          "published_date": "2026-08-18T13:59:08+00:00"
-        },
-        {
-          "headline": "Fear grips children after deadly earthquake in eastern Indonesia leaves thousands displaced",
-          "published_date": "2026-08-19"
-        },
-        {
-          "headline": "Businesses reopen after eastern Indonesia earthquake displaced thousands",
-          "published_date": "2026-08-19T13:59:05+00:00"
-        },
-        {
-          "headline": "Flores Earthquake Death Toll Reaches 100 as 1,600 Remain Injured",
-          "published_date": "2026-08-24"
-        },
-        {
-          "headline": "Indonesia earthquake death toll hits 100 as relief efforts continue",
-          "published_date": "2026-08-24"
-        },
-        {
-          "headline": "Indonesia says death toll from August 15 earthquake reaches 100",
-          "published_date": "2026-08-24"
-        },
-        {
-          "headline": "Indonesia says death toll from August 15 earthquake reaches 100",
-          "published_date": "2026-08-24"
-        },
-        {
-          "headline": "Indonesia Earthquake Death Toll Rises to 91 in East Nusa Tenggara",
-          "published_date": "2026-08-24T02:08:28+00:00"
-        },
-        {
-          "headline": "Indonesia Says Death Toll From August 15 Earthquake Reaches 100",
-          "published_date": "2026-08-24T13:38:15+00:00"
-        },
-        {
-          "headline": "How Paramedics and Survivors Cope After the NTT Earthquake",
-          "published_date": "2026-08-24T13:59:08+00:00"
-        }
-      ],
-      "news_total": 12,
-      "logs": [
-        {
-          "log_date": "2026-08-24",
-          "summary": "A 7.7-magnitude earthquake struck Indonesia's East Nusa Tenggara province on August 15, 2026, killing at least 100 people and injuring over 1,200. Thousands remain displaced and await aid, while some businesses on Flores Island have begun to reopen. Relief operations continue as authorities manage the aftermath.",
-          "news": [
-            {
-              "news_id": "59a93bd061db59828b73057663f71eb2",
-              "url": "https://apnews.com/article/people-await-aid-after-powerful-earthquake-indonesia-photos-3696677a5dc54d5ab4dc52ff05e9b6fb",
-              "headline": "People are displaced after powerful earthquake in Indonesia, in photos",
-              "body": "REO, Indonesia (AP) — Thousands of people are still waiting for aid after a powerful earthquake in Indonesia.",
-              "published_date": "2026-08-17",
-              "outlet": "Associated Press",
-              "image": "https://s.yimg.com/bo/7355b24b-f6b0-537f-8acf-327dc5f9ed76_1787480158975.jpg"
-            },
-            {
-              "news_id": "a914ee02dba553c596307581f7afd7bd",
-              "url": "https://en.tempo.co/read/2118220/how-paramedics-and-survivors-cope-after-the-ntt-earthquake",
-              "headline": "How Paramedics and Survivors Cope After the NTT Earthquake",
-              "body": "Health workers are struggling to cope with earthquake victims in East Nusa Tenggara. Displaced residents need clean water and ...",
-              "published_date": "2026-08-24T13:59:08+00:00",
-              "outlet": "Tempo.co English",
-              "image": "https://www.bing.com/th?id=ONUT.h8jAKgJ4q8fF7nOowIB5BQ"
-            },
-            {
-              "news_id": "4749ef1ac88457e4b0d5f945c2fee633",
-              "url": "https://www.msn.com/en-us/news/world/indonesia-earthquake-death-toll-hits-100-as-relief-efforts-continue/vi-AA2aOiKA?ocid=BingNewsVerp",
-              "headline": "Indonesia earthquake death toll hits 100 as relief efforts continue",
-              "body": "The death toll from the 7.7-magnitude earthquake that struck eastern Indonesia on August 15 has risen to 100, according to ...",
-              "published_date": "2026-08-24",
-              "outlet": "Cover Media US on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.kGaMiVAunNxjxjyJ8s0rkQ"
-            },
-            {
-              "news_id": "4abca149d37852978fa3145633fb5e50",
-              "url": "https://factcheck.afp.com/doc.afp.com.C64C7NQ",
-              "headline": "Video filmed after 2024 Taiwan tremor falsely linked to Indonesian earthquake damage",
-              "body": "The deadly 7.7-magnitude earthquake that rattled Indonesia in August 2026 damaged hundreds of houses and buildings but a ...",
-              "published_date": "2026-08-18T13:59:08+00:00",
-              "outlet": "AFP Fact Check",
-              "image": "https://www.bing.com/th?id=ONUT.ePk9c--y4Ki76BVk22CtJQ"
-            },
-            {
-              "news_id": "b7beeef889ed59b398fd8d9fc5f7db29",
-              "url": "https://www.ourmidland.com/news/world/article/businesses-reopen-after-eastern-indonesia-22394189.php",
-              "headline": "Businesses reopen after eastern Indonesia earthquake displaced thousands",
-              "body": "Grocery stores, gas stations and other businesses have reopened across Indonesia’s Flores island. Th...",
-              "published_date": "2026-08-19T13:59:05+00:00",
-              "outlet": "Midland Daily News",
-              "image": "https://s.yimg.com/bo/beecda73-ff8a-557c-abe5-216c5722bae6_1787123275720.jpg"
-            },
-            {
-              "news_id": "4cbe2b4b0dc058e1856bd52932bdc92f",
-              "url": "https://www.msn.com/en-us/news/world/indonesia-says-death-toll-from-august-15-earthquake-reaches-100/ar-AA2aOhvp?ocid=BingNewsVerp",
-              "headline": "Indonesia says death toll from August 15 earthquake reaches 100",
-              "body": "JAKARTA, Aug 24 (Reuters) - The death toll from an earthquake that hit eastern Indonesia reached 100 on Monday, the disaster ...",
-              "published_date": "2026-08-24",
-              "outlet": "Reuters on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.9raP-XDwG3wR9EXkuvj66w"
-            },
-            {
-              "news_id": "b1ae2a11b4f955e89fe68ada362838af",
-              "url": "https://en.tempo.co/read/2118178/indonesia-earthquake-death-toll-rises-to-91-in-east-nusa-tenggara",
-              "headline": "Indonesia Earthquake Death Toll Rises to 91 in East Nusa Tenggara",
-              "body": "Indonesia's East Nusa Tenggara (NTT) earthquake death toll has risen to 91, with 1,286 injured as authorities continue relief ...",
-              "published_date": "2026-08-24T02:08:28+00:00",
-              "outlet": "Tempo.co English",
-              "image": "https://www.bing.com/th?id=ONUT.3BDnr64Ux0Ekf-bD3BsjTw"
-            },
-            {
-              "news_id": "f14f013c8c025787ad0c376f4b9b85a0",
-              "url": "https://wtop.com/world/2026/08/people-await-aid-after-powerful-earthquake-in-indonesia-in-photos/",
-              "headline": "People await aid after powerful earthquake in Indonesia, in photos - WTOP News",
-              "body": "REO, Indonesia (AP) — Thousands of people are still waiting for aid after a powerful earthquake in Indonesia.",
-              "published_date": "2026-08-18",
-              "outlet": "WTOP Washington",
-              "image": "https://s.yimg.com/bo/6a31fb01-5770-5344-a7f8-e1ee8e9e4042_1786269947617.png.cf.jpg"
-            },
-            {
-              "news_id": "4d32269402045f598d4312a2aab82129",
-              "url": "https://wsau.com/2026/08/24/indonesia-says-death-toll-from-august-15-earthquake-reaches-100/",
-              "headline": "Indonesia says death toll from August 15 earthquake reaches 100",
-              "body": "JAKARTA, Aug 24 (Reuters) - The death toll from an earthquake that hit eastern Indonesia reached 100 on Monday, the disaster agency chief said, as relief operations continued for a 10th day. The 7.7-magnitude quake shook the province of East Nusa T...",
-              "published_date": "2026-08-24",
-              "outlet": "WSAU",
-              "image": "https://www.bing.com/th?id=ONUT.pDsanQuj6CfBO804rFiJBw"
-            },
-            {
-              "news_id": "78c4f93a6f9a5ab4b800061ec0549c76",
-              "url": "https://www.usnews.com/news/world/articles/2026-08-24/indonesia-says-death-toll-from-august-15-earthquake-reaches-100",
-              "headline": "Indonesia Says Death Toll From August 15 Earthquake Reaches 100",
-              "body": "The death toll from an earthquake that hit eastern Indonesia reached 100 on Monday, the disaster agency chief said, as ...",
-              "published_date": "2026-08-24T13:38:15+00:00",
-              "outlet": "U.S. News & World Report",
-              "image": "https://www.bing.com/th?id=ONUT.nFleLDvF6MjncbgYTxN40A"
-            }
-          ]
-        }
-      ],
-      "logs_total": 1
-    },
-    {
       "incident_id": "20260816-VU-EQ",
       "tree_id": "cdf61cee65a24c6ba5b8990f8f890435",
       "canonical_name": "Earthquake M6.1 Port-Olry, Vanuatu 2026-08-16",
@@ -3505,7 +2665,7 @@
       "event_date": "2026-08-16",
       "first_reported_date": "2026-08-16",
       "last_updated_date": "2026-08-25",
-      "days_since_event": 14,
+      "days_since_event": 15,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -3632,7 +2792,7 @@
       "event_date": "2026-08-17",
       "first_reported_date": "2026-08-17",
       "last_updated_date": "2026-08-24",
-      "days_since_event": 13,
+      "days_since_event": 14,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -3698,7 +2858,7 @@
       "event_date": "2026-08-24",
       "first_reported_date": "2026-08-24",
       "last_updated_date": "2026-08-25",
-      "days_since_event": 6,
+      "days_since_event": 7,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -3770,7 +2930,7 @@
       "event_date": "2026-08-25",
       "first_reported_date": "2026-08-25",
       "last_updated_date": "2026-08-27",
-      "days_since_event": 5,
+      "days_since_event": 6,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -3880,7 +3040,7 @@
       "event_date": "2026-08-27",
       "first_reported_date": "2026-08-27",
       "last_updated_date": "2026-08-27",
-      "days_since_event": 3,
+      "days_since_event": 4,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -3946,7 +3106,7 @@
       "event_date": "2026-08-28",
       "first_reported_date": "2026-08-28",
       "last_updated_date": "2026-08-28",
-      "days_since_event": 2,
+      "days_since_event": 3,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],

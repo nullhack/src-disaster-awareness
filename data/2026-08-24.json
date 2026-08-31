@@ -1,36 +1,36 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-08-24",
-  "generated_at": "2026-08-30T17:38:42Z",
+  "generated_at": "2026-08-31T07:07:37Z",
   "as_of": "2026-08-24",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 7,
-    "new_today": 2,
+    "reportable_total": 6,
+    "new_today": 1,
     "critical": 0,
-    "high": 3,
+    "high": 2,
     "medium": 1,
     "low": 3,
     "disease_outbreaks": 0,
-    "countries_affected": 7,
-    "news_total": 38,
-    "max_magnitude": 6.9,
+    "countries_affected": 6,
+    "news_total": 26,
+    "max_magnitude": 6.3,
     "by_severity": {
       "CRITICAL": 0,
-      "HIGH": 3,
+      "HIGH": 2,
       "MEDIUM": 1,
       "LOW": 3
     },
     "by_type": {
-      "Earthquake": 4,
+      "Earthquake": 3,
       "": 3
     },
     "by_region": {
       "Oceania": 1,
       "Africa": 2,
-      "Asia": 2,
       "Europe": 1,
+      "Asia": 1,
       "Unknown": 1
     }
   },
@@ -81,15 +81,6 @@
       "max_severity": "HIGH"
     },
     {
-      "country": "Indonesia",
-      "count": 1,
-      "max_sev_rank": 3,
-      "iso2": "ID",
-      "region": "Asia",
-      "country_group": "A",
-      "max_severity": "HIGH"
-    },
-    {
       "country": "China",
       "count": 1,
       "max_sev_rank": 3,
@@ -124,7 +115,7 @@
       "event_date": "2026-08-02",
       "first_reported_date": "2026-08-02",
       "last_updated_date": "2026-08-19",
-      "days_since_event": 28,
+      "days_since_event": 29,
       "source_count": 3,
       "should_report": true,
       "search_keys": [],
@@ -262,7 +253,7 @@
       "event_date": "2026-08-05",
       "first_reported_date": "2026-08-05",
       "last_updated_date": "2026-08-19",
-      "days_since_event": 25,
+      "days_since_event": 26,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -475,7 +466,7 @@
       "event_date": "2026-08-10",
       "first_reported_date": "2026-08-10",
       "last_updated_date": "2026-08-23",
-      "days_since_event": 20,
+      "days_since_event": 21,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -558,211 +549,6 @@
       "logs_total": 1
     },
     {
-      "incident_id": "20260815-ID-EQ",
-      "tree_id": "02bdf815017a45678230df1f611e6a90",
-      "canonical_name": "Earthquake M6.9 Pematangsiantar, Indonesia 2026-08-15",
-      "summary": "A 7.7-magnitude earthquake struck Indonesia's East Nusa Tenggara province on August 15, 2026, killing at least 100 people and injuring over 1,200. Thousands remain displaced and await aid, while some businesses on Flores Island have begun to reopen. Relief operations continue as authorities manage the aftermath.",
-      "country": "Indonesia",
-      "iso2": "ID",
-      "lat": 3.0856,
-      "lon": 99.015,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "HIGH",
-      "priority": "HIGH",
-      "priority_rank": 1,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-08-15",
-      "first_reported_date": "2026-08-15",
-      "last_updated_date": "2026-08-24",
-      "days_since_event": 15,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 12
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 6.9 - 15 km NNW of Pematangsiantar, Indonesia",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkyk",
-          "meta": "172.526 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 6.9,
-        "max_depth_km": 172.526,
-        "place": "15 km NNW of Pematangsiantar, Indonesia",
-        "felt": 32,
-        "sig": 746,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "People are displaced after powerful earthquake in Indonesia, in photos",
-          "published_date": "2026-08-17"
-        },
-        {
-          "headline": "People await aid after powerful earthquake in Indonesia, in photos - WTOP News",
-          "published_date": "2026-08-18"
-        },
-        {
-          "headline": "Video filmed after 2024 Taiwan tremor falsely linked to Indonesian earthquake damage",
-          "published_date": "2026-08-18T13:59:08+00:00"
-        },
-        {
-          "headline": "Fear grips children after deadly earthquake in eastern Indonesia leaves thousands displaced",
-          "published_date": "2026-08-19"
-        },
-        {
-          "headline": "Businesses reopen after eastern Indonesia earthquake displaced thousands",
-          "published_date": "2026-08-19T13:59:05+00:00"
-        },
-        {
-          "headline": "Flores Earthquake Death Toll Reaches 100 as 1,600 Remain Injured",
-          "published_date": "2026-08-24"
-        },
-        {
-          "headline": "Indonesia earthquake death toll hits 100 as relief efforts continue",
-          "published_date": "2026-08-24"
-        },
-        {
-          "headline": "Indonesia says death toll from August 15 earthquake reaches 100",
-          "published_date": "2026-08-24"
-        },
-        {
-          "headline": "Indonesia says death toll from August 15 earthquake reaches 100",
-          "published_date": "2026-08-24"
-        },
-        {
-          "headline": "Indonesia Earthquake Death Toll Rises to 91 in East Nusa Tenggara",
-          "published_date": "2026-08-24T02:08:28+00:00"
-        },
-        {
-          "headline": "Indonesia Says Death Toll From August 15 Earthquake Reaches 100",
-          "published_date": "2026-08-24T13:38:15+00:00"
-        },
-        {
-          "headline": "How Paramedics and Survivors Cope After the NTT Earthquake",
-          "published_date": "2026-08-24T13:59:08+00:00"
-        }
-      ],
-      "news_total": 12,
-      "logs": [
-        {
-          "log_date": "2026-08-24",
-          "summary": "A 7.7-magnitude earthquake struck Indonesia's East Nusa Tenggara province on August 15, 2026, killing at least 100 people and injuring over 1,200. Thousands remain displaced and await aid, while some businesses on Flores Island have begun to reopen. Relief operations continue as authorities manage the aftermath.",
-          "news": [
-            {
-              "news_id": "59a93bd061db59828b73057663f71eb2",
-              "url": "https://apnews.com/article/people-await-aid-after-powerful-earthquake-indonesia-photos-3696677a5dc54d5ab4dc52ff05e9b6fb",
-              "headline": "People are displaced after powerful earthquake in Indonesia, in photos",
-              "body": "REO, Indonesia (AP) — Thousands of people are still waiting for aid after a powerful earthquake in Indonesia.",
-              "published_date": "2026-08-17",
-              "outlet": "Associated Press",
-              "image": "https://s.yimg.com/bo/7355b24b-f6b0-537f-8acf-327dc5f9ed76_1787480158975.jpg"
-            },
-            {
-              "news_id": "a914ee02dba553c596307581f7afd7bd",
-              "url": "https://en.tempo.co/read/2118220/how-paramedics-and-survivors-cope-after-the-ntt-earthquake",
-              "headline": "How Paramedics and Survivors Cope After the NTT Earthquake",
-              "body": "Health workers are struggling to cope with earthquake victims in East Nusa Tenggara. Displaced residents need clean water and ...",
-              "published_date": "2026-08-24T13:59:08+00:00",
-              "outlet": "Tempo.co English",
-              "image": "https://www.bing.com/th?id=ONUT.h8jAKgJ4q8fF7nOowIB5BQ"
-            },
-            {
-              "news_id": "4749ef1ac88457e4b0d5f945c2fee633",
-              "url": "https://www.msn.com/en-us/news/world/indonesia-earthquake-death-toll-hits-100-as-relief-efforts-continue/vi-AA2aOiKA?ocid=BingNewsVerp",
-              "headline": "Indonesia earthquake death toll hits 100 as relief efforts continue",
-              "body": "The death toll from the 7.7-magnitude earthquake that struck eastern Indonesia on August 15 has risen to 100, according to ...",
-              "published_date": "2026-08-24",
-              "outlet": "Cover Media US on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.kGaMiVAunNxjxjyJ8s0rkQ"
-            },
-            {
-              "news_id": "4abca149d37852978fa3145633fb5e50",
-              "url": "https://factcheck.afp.com/doc.afp.com.C64C7NQ",
-              "headline": "Video filmed after 2024 Taiwan tremor falsely linked to Indonesian earthquake damage",
-              "body": "The deadly 7.7-magnitude earthquake that rattled Indonesia in August 2026 damaged hundreds of houses and buildings but a ...",
-              "published_date": "2026-08-18T13:59:08+00:00",
-              "outlet": "AFP Fact Check",
-              "image": "https://www.bing.com/th?id=ONUT.ePk9c--y4Ki76BVk22CtJQ"
-            },
-            {
-              "news_id": "b7beeef889ed59b398fd8d9fc5f7db29",
-              "url": "https://www.ourmidland.com/news/world/article/businesses-reopen-after-eastern-indonesia-22394189.php",
-              "headline": "Businesses reopen after eastern Indonesia earthquake displaced thousands",
-              "body": "Grocery stores, gas stations and other businesses have reopened across Indonesia’s Flores island. Th...",
-              "published_date": "2026-08-19T13:59:05+00:00",
-              "outlet": "Midland Daily News",
-              "image": "https://s.yimg.com/bo/beecda73-ff8a-557c-abe5-216c5722bae6_1787123275720.jpg"
-            },
-            {
-              "news_id": "4cbe2b4b0dc058e1856bd52932bdc92f",
-              "url": "https://www.msn.com/en-us/news/world/indonesia-says-death-toll-from-august-15-earthquake-reaches-100/ar-AA2aOhvp?ocid=BingNewsVerp",
-              "headline": "Indonesia says death toll from August 15 earthquake reaches 100",
-              "body": "JAKARTA, Aug 24 (Reuters) - The death toll from an earthquake that hit eastern Indonesia reached 100 on Monday, the disaster ...",
-              "published_date": "2026-08-24",
-              "outlet": "Reuters on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.9raP-XDwG3wR9EXkuvj66w"
-            },
-            {
-              "news_id": "b1ae2a11b4f955e89fe68ada362838af",
-              "url": "https://en.tempo.co/read/2118178/indonesia-earthquake-death-toll-rises-to-91-in-east-nusa-tenggara",
-              "headline": "Indonesia Earthquake Death Toll Rises to 91 in East Nusa Tenggara",
-              "body": "Indonesia's East Nusa Tenggara (NTT) earthquake death toll has risen to 91, with 1,286 injured as authorities continue relief ...",
-              "published_date": "2026-08-24T02:08:28+00:00",
-              "outlet": "Tempo.co English",
-              "image": "https://www.bing.com/th?id=ONUT.3BDnr64Ux0Ekf-bD3BsjTw"
-            },
-            {
-              "news_id": "f14f013c8c025787ad0c376f4b9b85a0",
-              "url": "https://wtop.com/world/2026/08/people-await-aid-after-powerful-earthquake-in-indonesia-in-photos/",
-              "headline": "People await aid after powerful earthquake in Indonesia, in photos - WTOP News",
-              "body": "REO, Indonesia (AP) — Thousands of people are still waiting for aid after a powerful earthquake in Indonesia.",
-              "published_date": "2026-08-18",
-              "outlet": "WTOP Washington",
-              "image": "https://s.yimg.com/bo/6a31fb01-5770-5344-a7f8-e1ee8e9e4042_1786269947617.png.cf.jpg"
-            },
-            {
-              "news_id": "4d32269402045f598d4312a2aab82129",
-              "url": "https://wsau.com/2026/08/24/indonesia-says-death-toll-from-august-15-earthquake-reaches-100/",
-              "headline": "Indonesia says death toll from August 15 earthquake reaches 100",
-              "body": "JAKARTA, Aug 24 (Reuters) - The death toll from an earthquake that hit eastern Indonesia reached 100 on Monday, the disaster agency chief said, as relief operations continued for a 10th day. The 7.7-magnitude quake shook the province of East Nusa T...",
-              "published_date": "2026-08-24",
-              "outlet": "WSAU",
-              "image": "https://www.bing.com/th?id=ONUT.pDsanQuj6CfBO804rFiJBw"
-            },
-            {
-              "news_id": "78c4f93a6f9a5ab4b800061ec0549c76",
-              "url": "https://www.usnews.com/news/world/articles/2026-08-24/indonesia-says-death-toll-from-august-15-earthquake-reaches-100",
-              "headline": "Indonesia Says Death Toll From August 15 Earthquake Reaches 100",
-              "body": "The death toll from an earthquake that hit eastern Indonesia reached 100 on Monday, the disaster agency chief said, as ...",
-              "published_date": "2026-08-24T13:38:15+00:00",
-              "outlet": "U.S. News & World Report",
-              "image": "https://www.bing.com/th?id=ONUT.nFleLDvF6MjncbgYTxN40A"
-            }
-          ]
-        }
-      ],
-      "logs_total": 1
-    },
-    {
       "incident_id": "20260817-RU-EQ",
       "tree_id": "12df6f02f83943eca1dd61f13acf1510",
       "canonical_name": "Earthquake M5.8 Petropavlovsk-Kamchatsky, Russia 2026-08-17",
@@ -786,7 +572,7 @@
       "event_date": "2026-08-17",
       "first_reported_date": "2026-08-17",
       "last_updated_date": "2026-08-24",
-      "days_since_event": 13,
+      "days_since_event": 14,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -852,7 +638,7 @@
       "event_date": "2026-08-18",
       "first_reported_date": "2026-08-18",
       "last_updated_date": "2026-08-19",
-      "days_since_event": 12,
+      "days_since_event": 13,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -924,7 +710,7 @@
       "event_date": "2026-08-19",
       "first_reported_date": "2026-08-19",
       "last_updated_date": "2026-08-20",
-      "days_since_event": 11,
+      "days_since_event": 12,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
