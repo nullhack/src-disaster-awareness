@@ -1,20 +1,20 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-08-31",
-  "generated_at": "2026-08-31T07:07:37Z",
+  "generated_at": "2026-08-31T19:32:37Z",
   "as_of": "2026-08-31",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
     "reportable_total": 36,
-    "new_today": 0,
+    "new_today": 8,
     "critical": 15,
     "high": 2,
     "medium": 12,
     "low": 7,
     "disease_outbreaks": 3,
     "countries_affected": 25,
-    "news_total": 6611,
+    "news_total": 6704,
     "max_magnitude": 7.7,
     "by_severity": {
       "CRITICAL": 15,
@@ -34,12 +34,12 @@
       "": 1
     },
     "by_region": {
-      "Asia": 14,
+      "Asia": 15,
       "Global": 2,
       "Africa": 3,
       "Americas": 4,
       "Unknown": 2,
-      "Europe": 8,
+      "Europe": 7,
       "Oceania": 3
     }
   },
@@ -275,7 +275,7 @@
       "incident_id": "20230814-JP-FL",
       "tree_id": "98f8ea684924412eacc0093c76daf1bb",
       "canonical_name": "Torrential rain in eastern Japan starting late on August 13 has caused landslides, power outages, and claimed at least nine lives.",
-      "summary": "Torrential rain starting late on August 13, 2023, caused record-breaking flooding in eastern Japan, particularly in Chiba Prefecture. The flooding resulted in at least eight to nine deaths, widespread power outages affecting over 22,000 households, and stranded thousands of travelers at Tokyo's Narita Airport. Authorities issued the highest-level rain warnings as the region experienced unprecedented rainfall, equivalent to three months' worth in 12 hours.",
+      "summary": "Recent analysis of the torrential rain in Chiba Prefecture highlights that the sewage system was unable to handle the volume of rainwater, leading to inland flooding in urban areas. Additionally, discussions about potential infrastructure solutions like an underground river have been prompted by the record rainfall.",
       "country": "Japan",
       "iso2": "JP",
       "lat": 36.2,
@@ -473,9 +473,51 @@
               "image": ""
             }
           ]
+        },
+        {
+          "log_date": "2026-08-31",
+          "summary": "Recent analysis of the torrential rain in Chiba Prefecture highlights that the sewage system was unable to handle the volume of rainwater, leading to inland flooding in urban areas. Additionally, discussions about potential infrastructure solutions like an underground river have been prompted by the record rainfall.",
+          "news": [
+            {
+              "news_id": "1d2a849fc2ed56e2a44ad09c984dcc25",
+              "url": "https://www.msn.com/en-xl/news/other/could-a-giant-underground-river-save-tokyo-from-torrential-rain/ar-AA2aMYTR?ocid=BingNewsVerp",
+              "headline": "Could a giant underground river save Tokyo from torrential rain?",
+              "body": "TOKYO -- Japan has been hit by a string of devastating rainstorms in recent years, including the latest record rainfall that ...",
+              "published_date": "2026-08-24",
+              "outlet": "The Mainichi on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.RRj-PiY-s7qvtIZXz6Qq1Q"
+            },
+            {
+              "news_id": "7ff28539c1b6570aa2e7396a87a2dc6b",
+              "url": "https://japannews.yomiuri.co.jp/society/general-news/20260820-344546/",
+              "headline": "Unpredictable Amount of Rainfall Causes Inland Flooding in Recent Heavy Rain That Hit Japan's Chiba Pref.",
+              "body": "In urban areas covered in concrete, rainwater cannot seep into the soil. Usually, it is treated and discharged into rivers via the sewer system, but the system was unable to handle the volume of rainwater in the recent heavy rain that hit Chiba Prefecture,",
+              "published_date": "2026-08-20T16:24:00+00:00",
+              "outlet": "The Japan News",
+              "image": ""
+            },
+            {
+              "news_id": "cdf6c1b62fac5a80a1109fa86d001a5e",
+              "url": "https://apnews.com/article/japan-heavy-rain-flooding-ishikawa-toyama-d37ef074f214d72b545ba917b6e41963",
+              "headline": "Heavy rain and flooding in north-central Japan strands people and vehicles",
+              "body": "Torrential rain has struck Japan’s north-central prefectures of Ishikawa and Toyama. The severe weather on Thursday triggered flooding and landslides, caused road closures and stranded people in flooded homes and vehicles.",
+              "published_date": "2026-08-27",
+              "outlet": "Associated Press News",
+              "image": ""
+            },
+            {
+              "news_id": "33c9a32454605458a0e0f7431abf6921",
+              "url": "https://www.msn.com/en-xl/news/other/could-a-giant-underground-river-save-tokyo-from-torrential-rain/ar-AA2aMYTR",
+              "headline": "Could a giant underground river save Tokyo from torrential rain?",
+              "body": "TOKYO -- Japan has been hit by a string of devastating rainstorms in recent years, including the latest record rainfall that caused extensive damage i･･･",
+              "published_date": "2026-08-25",
+              "outlet": "The Mainichi",
+              "image": "https://cdn.mainichi.jp/vol1/2026/08/24/20260824p2a00m0na004000p/0c10.jpg?1"
+            }
+          ]
         }
       ],
-      "logs_total": 1
+      "logs_total": 2
     },
     {
       "incident_id": "20240530-XX-DI",
@@ -4000,7 +4042,7 @@
       "disease_name": null,
       "event_date": "2026-05-11",
       "first_reported_date": "2026-05-11",
-      "last_updated_date": "2026-08-30",
+      "last_updated_date": "2026-08-31",
       "days_since_event": 112,
       "source_count": 1,
       "should_report": true,
@@ -4011,7 +4053,7 @@
         "gdacs": 1,
         "ercc": 0,
         "healthmap": 0,
-        "news": 205
+        "news": 208
       },
       "source_links": [
         {
@@ -4829,6 +4871,10 @@
           "published_date": "2026-08-29"
         },
         {
+          "headline": "This El Niño Will Be Unlike Any in the Past Eight Decades",
+          "published_date": "2026-08-30"
+        },
+        {
           "headline": "DA orders agencies: Adjust El Niño plans",
           "published_date": "2026-08-30"
         },
@@ -4851,9 +4897,17 @@
         {
           "headline": "Getting through Eastern Europe when drought detours your river cruise",
           "published_date": "2026-08-30"
+        },
+        {
+          "headline": "El Niño 2026/2027: A Strong El Niño with the potential to become the strongest on record - UTUSAN SARAWAK",
+          "published_date": "2026-08-31"
+        },
+        {
+          "headline": "Knowledge Nugget | From grasslands to drought resilience: Key takeaways from UNCCD CoP 17",
+          "published_date": "2026-08-31T06:45:22+00:00"
         }
       ],
-      "news_total": 205,
+      "news_total": 208,
       "logs": [
         {
           "log_date": "2026-08-18",
@@ -6286,7 +6340,7 @@
       "disease_name": null,
       "event_date": "2026-06-24",
       "first_reported_date": "2026-06-24",
-      "last_updated_date": "2026-08-29",
+      "last_updated_date": "2026-08-30",
       "days_since_event": 68,
       "source_count": 5,
       "should_report": true,
@@ -6297,7 +6351,7 @@
         "gdacs": 1,
         "ercc": 1,
         "healthmap": 0,
-        "news": 392
+        "news": 393
       },
       "source_links": [
         {
@@ -7909,9 +7963,13 @@
         {
           "headline": "Curaçao, Aruba eyed as reconstruction hubs after deadly quakes in Colombia, Venezuela",
           "published_date": "2026-08-29"
+        },
+        {
+          "headline": "Bloomington Ayuda raises money for relief funds after earthquakes devastate Colombia, Venezuela",
+          "published_date": "2026-08-30"
         }
       ],
-      "news_total": 392,
+      "news_total": 393,
       "logs": [
         {
           "log_date": "2026-06-28",
@@ -8799,7 +8857,7 @@
       "incident_id": "20260709-XX-SW",
       "tree_id": "57241e74348141e0b32f20607ee05d66",
       "canonical_name": "Severe Weather 2026-07-09",
-      "summary": "As of late August 2026, more than 38,300 homes and businesses in Gary, Indiana, lost power from severe storms on August 11, and many remain without power 13 days later. Severe thunderstorm threats and flood risks persist across multiple states, including the Lehigh Valley, Baltimore, Pittsburgh, Virginia, and Mississippi, with forecasts calling for possible damaging winds, hail, and heavy rain.",
+      "summary": "Severe storms continue across the US, with a heat dome bringing storms and flooding to the Northeast and monsoon activity triggering flash flood warnings in Arizona. Flash flooding in Grand Canyon National Park resulted in at least one death and over a dozen missing. Additional severe thunderstorm threats and a ground stop at Denver International Airport were reported.",
       "country": "",
       "iso2": "XX",
       "lat": null,
@@ -8818,7 +8876,7 @@
       "disease_name": null,
       "event_date": "2026-07-09",
       "first_reported_date": "2026-07-09",
-      "last_updated_date": "2026-08-30",
+      "last_updated_date": "2026-08-31",
       "days_since_event": 53,
       "source_count": 4,
       "should_report": true,
@@ -8829,7 +8887,7 @@
         "gdacs": 0,
         "ercc": 4,
         "healthmap": 0,
-        "news": 206
+        "news": 215
       },
       "source_links": [
         {
@@ -9669,6 +9727,10 @@
           "published_date": "2026-08-27"
         },
         {
+          "headline": "Arizona weather forecast: Monsoon storm threats return to Arizona",
+          "published_date": "2026-08-28"
+        },
+        {
           "headline": "Severe storms cause damage across Cyprus",
           "published_date": "2026-08-29"
         },
@@ -9689,11 +9751,43 @@
           "published_date": "2026-08-29"
         },
         {
+          "headline": "Weather alert issued for Pinellas County early Sunday evening, says the NWS",
+          "published_date": "2026-08-30"
+        },
+        {
+          "headline": "More Rain, Warming Temperatures and Muggy Conditions for New Work Week",
+          "published_date": "2026-08-30"
+        },
+        {
+          "headline": "FIRST ALERT: Storm chance Monday, summer heat stint",
+          "published_date": "2026-08-30"
+        },
+        {
           "headline": "Ground stop issued for flights to Denver International Airport",
           "published_date": "2026-08-30"
+        },
+        {
+          "headline": "Flood advisory for Pinellas County Sunday evening due to excessive rainfall",
+          "published_date": "2026-08-30"
+        },
+        {
+          "headline": "One dead, over a dozen missing, following severe flash flooding in Grand Canyon National Park",
+          "published_date": "2026-08-30"
+        },
+        {
+          "headline": "Severe thunderstorm, flash flood warnings issued for Maricopa County",
+          "published_date": "2026-08-30"
+        },
+        {
+          "headline": "A massive heat dome is bringing storms to the Northeast, and causing sweltering temperatures heading into fall",
+          "published_date": "2026-08-31"
+        },
+        {
+          "headline": "Tarlac declares state of calamity as floods wreck 2 bridges",
+          "published_date": "2026-08-31"
         }
       ],
-      "news_total": 206,
+      "news_total": 215,
       "logs": [
         {
           "log_date": "2026-07-26",
@@ -10224,147 +10318,6 @@
           ]
         },
         {
-          "log_date": "2026-08-21",
-          "summary": "In late August 2026, severe storms continued across multiple states, with flash flood warnings in New Jersey and strong-to-severe thunderstorm threats in central Alabama, Northeast Ohio, the Milwaukee area, and Kansas City. The National Weather Service is investigating possible tornado damage in Lancaster County, Pennsylvania, after a tornado warning was issued. Meanwhile, flood recovery efforts persist in central Indiana and West Virginia, which earlier declared a state of emergency for all 55 counties.",
-          "news": [
-            {
-              "news_id": "807dc9f593085f9aa19861f42f2500ac",
-              "url": "https://www.msn.com/en-us/weather/topstories/first-alert-strong-to-severe-storms-likely-in-some-areas-friday/ar-AA2ax6w5?ocid=BingNewsVerp",
-              "headline": "FIRST ALERT: Strong to severe storms likely in some areas Friday",
-              "body": "The relentless heat and humidity comes to an end with a bang on Friday as strong to severe storms develop.",
-              "published_date": "2026-08-21",
-              "outlet": "WMBF News on MSN",
-              "image": "https://www.bing.com/th?id=ORMS.80cd6eec2b5c469ba14068efec4b064c"
-            },
-            {
-              "news_id": "ebd20595bba6596fb93e64e16b57e62a",
-              "url": "https://golfweek.usatoday.com/story/weather/2026/08/18/live-updates-indiana-flood-august-18-2026-latest-news-weather-forecast-indianapolis-carmel-hamilton--live/91349232007/",
-              "headline": "Live flood recovery updates: Conner Prairie's corn maze remains flooded",
-              "body": "Hoosiers on Aug. 18, 2026, continue to deal with the aftermath of historic flooding from a likely derecho.",
-              "published_date": "2026-08-18",
-              "outlet": "Golfweek",
-              "image": ""
-            },
-            {
-              "news_id": "de6f67cf704c5b8bb014b21f0422ca79",
-              "url": "https://www.msn.com/en-us/weather/meteorology/strong-to-severe-storms-threaten-central-alabama-tonight-into-friday-morning-heat-continues-on-friday/vi-AA2aAsmS?ocid=BingNewsVerp",
-              "headline": "Strong to severe storms threaten central Alabama tonight into Friday morning, heat continues on Friday",
-              "body": "Chief Meteorologist Dave Nussbaum has your latest Central Alabama forecast. The big concern shifts to strong to severe storms ...",
-              "published_date": "2026-08-21",
-              "outlet": "WIAT Birmingham on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.2sWxJxzoQ-WLrcN5CTtO8A"
-            },
-            {
-              "news_id": "9cd923d4f3dd50749900098c0c5b5c52",
-              "url": "https://www.palmbeachpost.com/story/news/state/2026/08/17/florida-breaking-news-and-video-for-the-week-of-aug-17th--live/91336194007/",
-              "headline": "Florida mall kiosk robbed of $22,000 worth of jewelry Florida Feed",
-              "body": "The Florida Feed provides you with quick bits of video and breaking news content from across the state.",
-              "published_date": "2026-08-17",
-              "outlet": "The Palm Beach Post",
-              "image": "https://www.palmbeachpost.com/gcdn/authoring/authoring-images/2026/08/19/PPEN/91368275007-screen-shot-1787148107481.jpg?crop=1279,719,x0,y0&width=1279&height=719&format=pjpg&auto=webp"
-            },
-            {
-              "news_id": "79d0b56728bd5641bf0f0bd7ef88a0d7",
-              "url": "https://www.pennlive.com/weather/2026/08/did-a-tornado-hit-lancaster-county-the-nws-is-planning-to-find-out.html",
-              "headline": "Did a tornado hit Lancaster County? The NWS is planning to find out",
-              "body": "The NWS State College said a survey team is being sent to the area to see whether the damage shows signs of a tornado. On Thursday, National Weather Service forecasters issued a tornado warning for Columbia and other parts of Lancaster County until 5 p.m.",
-              "published_date": "2026-08-21T10:24:00+00:00",
-              "outlet": "PennLive",
-              "image": "https://www.pennlive.com/resizer/v2/XL2UTBIENZDKRLL7KQYPS76MEQ.jpg?auth=f66308eb77fbfa7ba0da0788f6773f5d2ddae34e6afda30d1839dc3cf068d3d9&width=1280&smart=true&quality=90"
-            },
-            {
-              "news_id": "d6e07b86cc5d54d398f5d3f1ea37b05a",
-              "url": "https://www.msn.com/en-us/weather/topstories/prepare-your-home-for-outages-ahead-of-more-severe-weather/ar-AA2aBIlH?ocid=BingNewsVerp",
-              "headline": "Prepare your home for outages ahead of more severe weather",
-              "body": "Hawaiian Electric crews continue restoration efforts following Storm Lala while preparing for potential new outages from an ...",
-              "published_date": "2026-08-21",
-              "outlet": "KHON2 on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.K69geyyCpbCb1uRdsBiEzA"
-            },
-            {
-              "news_id": "2ba46bfda55853e5a5c05b261f2df08e",
-              "url": "https://www.hawaiinewsnow.com/2026/08/21/first-alert-forecast-developing-storm-moke-will-be-south-islands/",
-              "headline": "First Alert Forecast: Developing storm “Moke” will be south of the islands",
-              "body": "Another tropical system is making its way toward the Central Pacific, but the overall setup is shaping up to be far more manageable in terms of severe wind. Tropical Depression 2C—expected to organize into Tropical Storm Moke—is running into atmospheric speed bumps that will keep it from building into a major hurricane. Moderate upper-level wind shear and pockets of dry air are tilting the system and disrupting its convective core. While the system won’t pack a damaging wind punch, its broad footprint means it will act like a giant, moisture-rich sponge moving across the region.",
-              "published_date": "2026-08-21",
-              "outlet": "Hawaii News Now",
-              "image": "https://gray-khnl-prod.gtv-cdn.com/resizer/v2/KWYDBYY2N5FV5OJLZBGA7GCHXU.png?auth=644c1ad1053c26e98336f2fefef301ab8110a84c85c2d6185f72040aff830ec8&width=1200&height=600&smart=true"
-            },
-            {
-              "news_id": "cc4ed71d3962582eb88f5c6f878bb7d5",
-              "url": "https://www.cleveland.com/weather/2026/08/gorgeous-friday-gives-way-to-storms-and-early-taste-of-fall-in-northeast-ohio.html",
-              "headline": "Gorgeous Friday gives way to storms and early taste of fall in Northeast Ohio",
-              "body": "Sunny Friday gives way to storms Saturday, followed by lake-enhanced rain and a fall-like cooldown Sunday across Northeast ...",
-              "published_date": "2026-08-16T16:14:07+00:00",
-              "outlet": "cleveland.com",
-              "image": "https://www.bing.com/th?id=ONUT.-N0ljMHjkgk6XHGK2010SA"
-            },
-            {
-              "news_id": "75163bc904b65c929ac13cb5c17167fe",
-              "url": "https://www.nj.com/weather/2026/08/nj-weather-severe-thunderstorms-could-trigger-flash-flooding-thursday-latest-forecast.html",
-              "headline": "N.J. weather: Severe thunderstorms could trigger flash flooding Thursday. Latest forecast.",
-              "body": "Confidence is increasing in that there will be some severe weather and flash flooding concerns,\" the National Weather Service said early Wednesday. \"Some areas may see multiple rounds of thunderstorms bringing heavy rain,",
-              "published_date": "2026-08-19T07:45:00+00:00",
-              "outlet": "NJ.com",
-              "image": "https://www.nj.com/resizer/v2/GBXOFD5SPRC7XEV3JFKICCWYRA.jpg?auth=4f602a2186915c184a991315ff550006de38fffe75f64f954a02d5a3d7c9ab9f&width=1280&smart=true&quality=90"
-            },
-            {
-              "news_id": "e1e600297f1e58bc9ad94e61a082ad69",
-              "url": "https://www.msn.com/en-us/weather/topstories/two-rounds-of-storms-expected-in-milwaukee-area-on-aug-21/ar-AA2aE1Uj?ocid=BingNewsVerp",
-              "headline": "Two rounds of storms expected in Milwaukee area on Aug. 21",
-              "body": "Two rounds of thunderstorms are expected to roll through the Milwaukee area Aug. 21.",
-              "published_date": "2026-08-21",
-              "outlet": "Milwaukee Journal Sentinel on MSN",
-              "image": "https://www.bing.com/th?id=ORMS.f9502d2f99a3b72014fe9337e67c4296"
-            },
-            {
-              "news_id": "ed8c09f45bd65dda9d2144077466ef17",
-              "url": "https://www.msn.com/en-us/weather/topstories/first-alert-heat-leads-to-increasing-storms-friday/ar-AA2ax6w5",
-              "headline": "FIRST ALERT: Heat leads to increasing storms Friday",
-              "body": "The relentless heat and humidity continue through the end of the week before strong storms begin to break down this latest heat wave.",
-              "published_date": "2026-08-21",
-              "outlet": "WMBF News",
-              "image": "https://gray-wmbf-prod.gtv-cdn.com/resizer/v2/FD46NO2UABDNVCAZNO4THBZ76Y.png?auth=30c949f1b7c7982925071d695734be33a18d4adfe370a03346102e5d2a2dcbc9&width=1200&height=600&smart=true"
-            },
-            {
-              "news_id": "34769779055156fe9bb6502facf044d7",
-              "url": "https://www.azcentral.com/story/weather/indianapolis/2026/08/16/live-updates-relief-efforts-continue-after-days-of-rain-flooding--live/91324284007/",
-              "headline": "Live flood updates: Severe weather could cause more flooding in Indy",
-              "body": "Relief efforts continue in central Indiana Aug. 16 after days of rain caused flooding throughout Marion County and beyond.",
-              "published_date": "2026-08-16",
-              "outlet": "azcentral.com",
-              "image": "https://www.azcentral.com/gcdn/authoring/authoring-images/2026/08/16/PIND/91327848007-160826-ravenswood-ct-04.JPG?crop=6598,3712,x0,y388&width=3200&height=1801&format=pjpg&auto=webp"
-            },
-            {
-              "news_id": "4cb3bc62c4c551c7bac6821cf7732971",
-              "url": "https://www.kctv5.com/2026/08/21/friday-first-warn-storm-threat-returns-severe-weather-possible/",
-              "headline": "Friday First Warn: Storm threat returns, severe weather possible",
-              "body": "Quiet start to the day, but afternoon and evening could bring strong storms to the region starting at 4 p.m.",
-              "published_date": "2026-08-21",
-              "outlet": "KCTV",
-              "image": "https://gray-kctv-prod.gtv-cdn.com/resizer/v2/4SUKQOWLWVB5LDKFUFUSK66HTE.png?auth=acd69172231bdb049760da26be437dee543e255f36dd697ec3bdcfe27c449f15&width=1200&height=600&smart=true"
-            },
-            {
-              "news_id": "b86e8940edc55681b085324fc08bfa8f",
-              "url": "https://www.wsaz.com/2026/08/18/state-emergency-declared-wva-due-extreme-weather/",
-              "headline": "State of Emergency declared in W.Va. due to extreme weather",
-              "body": "The declaration covers all 55 counties in the state.",
-              "published_date": "2026-08-18",
-              "outlet": "WSAZ",
-              "image": "https://gray-wsaz-prod.gtv-cdn.com/resizer/v2/AXAFWHSJVZDWXFBS72YYRZ2LNI.jpg?auth=9f318e06a04f02771e82022b5cc232caa88bb7628b997fde522add2cb7c8bb1c&width=1200&height=600&smart=true"
-            },
-            {
-              "news_id": "235db6a97497507e8bddc94870aeee00",
-              "url": "https://www.nj.com/weather/2026/08/nj-weather-flash-flood-warnings-posted-as-strong-thunderstorms-sweep-across-region-live-updates.html",
-              "headline": "N.J. weather: Flash flood warnings, thunderstorm alerts posted as strong storms sweep across region. Live updates.",
-              "body": "The Weather Prediction Center says most of New Jersey has a slight risk of getting excessive rainfall, and a wide swath of northern and central New Jersey has a moderate risk — the second highest of four risk levels for potential flooding.",
-              "published_date": "2026-08-20T17:02:00+00:00",
-              "outlet": "NJ.com",
-              "image": "https://www.nj.com/resizer/v2/VARCOLUNYRGLTFM6NXE2ROI25A.jpg?auth=8ac41966edf836f93c8fa26f1a52660150456d09e85ec0530d071c9b3b205470&width=1280&smart=true&quality=90"
-            }
-          ]
-        },
-        {
           "log_date": "2026-08-25",
           "summary": "As of late August 2026, some homes and businesses in Gary, Indiana, remain without power 13 days after severe storms, though Northern Indiana Public Service Co. reported that most of the 370,000 affected customers have had power restored.",
           "news": [
@@ -10555,15 +10508,165 @@
               "image": "https://www.bing.com/th?id=ONUT.VtIQx3wCC3bAQ28Lz52cQw"
             }
           ]
+        },
+        {
+          "log_date": "2026-08-31",
+          "summary": "Severe storms continue across the US, with a heat dome bringing storms and flooding to the Northeast and monsoon activity triggering flash flood warnings in Arizona. Flash flooding in Grand Canyon National Park resulted in at least one death and over a dozen missing. Additional severe thunderstorm threats and a ground stop at Denver International Airport were reported.",
+          "news": [
+            {
+              "news_id": "5a33da94b7ea5b358e8d8ec0c6a5877a",
+              "url": "https://www.tampabay.com/news/weather/2026/08/30/weather-alert-issued-pinellas-county-early-sunday-evening-says-nws/",
+              "headline": "Weather alert issued for Pinellas County early Sunday evening, says the NWS",
+              "body": "The National Weather Service issued a report at 4:33 p.m. on Sunday for strong thunderstorms until 5:15 p.m. for Pinellas County.",
+              "published_date": "2026-08-30",
+              "outlet": "Tampa Bay Times",
+              "image": ""
+            },
+            {
+              "news_id": "35363f5df773565f9794dd0c238f3dbb",
+              "url": "https://www.accuweather.com/en/severe-weather/severe-storms-and-downpours-to-pummel-plains-to-east-coast/1926527",
+              "headline": "Severe storms and downpours to pummel Plains to East Coast",
+              "body": "Severe thunderstorms packing damaging winds, hail and flash flooding will target the Plains and...",
+              "published_date": "2026-08-25T07:59:03+00:00",
+              "outlet": "AccuWeather",
+              "image": "https://s.yimg.com/bo/44d89588-d5ab-5d6c-a37e-c3bdccea4bf7_1787676619569.jpg"
+            },
+            {
+              "news_id": "0f7f87c68aba53d9969079425c116831",
+              "url": "https://www.wnem.com/2026/08/30/more-rain-warming-temperatures-muggy-conditions-new-work-week/",
+              "headline": "More Rain, Warming Temperatures and Muggy Conditions for New Work Week",
+              "body": "Sunday night brings additional showers and thunderstorms with the the continued chances of localized heavy rainfall. Heat and humidity build significantly Monday through Wednesday with heat index values reaching 95-100 degrees. Conditions improve by the end of the week.",
+              "published_date": "2026-08-30",
+              "outlet": "WNEM",
+              "image": "https://www.bing.com/th?id=ONUT.HCX7PFC97QvhdUV7la_KAA"
+            },
+            {
+              "news_id": "b620160e6bc15944b0cf417462daf012",
+              "url": "https://cyprus-mail.com/2026/08/29/severe-storms-cause-damage-across-cyprus",
+              "headline": "Severe storms cause damage across Cyprus",
+              "body": "Severe storms that hit Cyprus around noon on Saturday caused damage in several parts of the island, bringing down trees, disrupting roads and damaging photovoltaic installations and greenhouses. Strovolos mayor Stavros Stavrinidis reported several incidents involving fallen branches and warned that they could pose a risk to residents and motorists.…",
+              "published_date": "2026-08-29",
+              "outlet": "Cyprus Mail",
+              "image": "https://www.bing.com/th?id=ONUT.SWKytM3jq93Cyj2XlQJnig"
+            },
+            {
+              "news_id": "05908eff60cc554ba8781c8ece0e5c13",
+              "url": "https://www.msn.com/en-us/news/other/a-massive-heat-dome-is-bringing-storms-to-the-northeast-and-causing-sweltering-temperatures-heading-into-fall/ar-AA2bdwu3?ocid=BingNewsVerp",
+              "headline": "A massive heat dome is bringing storms to the Northeast, and causing sweltering temperatures heading into fall",
+              "body": "A round of severe storms and flooding is taking aim at the Northeast by middle of next week, fueled by a heat dome settling ...",
+              "published_date": "2026-08-31",
+              "outlet": "CNN on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.sFUo8YutO9PYbx3MUO4znA"
+            },
+            {
+              "news_id": "32d916692882576580926a5da0138103",
+              "url": "https://localnews8.com/weather/2026/08/29/showers-and-thunderstorms-to-continue-through-the-weekend/",
+              "headline": "Showers and thunderstorms to continue through the weekend - Local News 8",
+              "body": "IDAHO FALLS, Idaho (KIFI)- A slight risk for severe weather has shifted south into northern Utah. The strongest storms could bring isolated damaging wind gusts of 50 to 60 mph, along with hail around the size of quarters. A cold front moving through the Central Mountains is helping fuel showers and thunderstorms across the Snake",
+              "published_date": "2026-08-29",
+              "outlet": "LocalNews8.com",
+              "image": "https://www.bing.com/th?id=ONUT.WtPatzxan_-U4C5tl3UhkA"
+            },
+            {
+              "news_id": "6bcbb350a649510698b9d34d69f77985",
+              "url": "https://www.uppermichiganssource.com/2026/08/30/first-alert-storm-chance-monday-summer-heat-stint/",
+              "headline": "FIRST ALERT: Storm chance Monday, summer heat stint",
+              "body": "Temperatures in the 80s for most of this week.",
+              "published_date": "2026-08-30",
+              "outlet": "Upper Michigan's Source",
+              "image": ""
+            },
+            {
+              "news_id": "af379b12ff805a02a8918d199b58185f",
+              "url": "https://www.azcentral.com/story/news/local/arizona-weather/2026/08/29/thunderstorms-are-back-in-phoenix-to-end-august/91531549007/",
+              "headline": "Great chances for storms' return to Arizona for final weekend in August",
+              "body": "Powerful upper level support and ample moisture team up to rid Arizona of the heat and bring back strong monsoon thunderstorms through the weekend.",
+              "published_date": "2026-08-29",
+              "outlet": "azcentral.com",
+              "image": "https://www.bing.com/th?id=ONUT.-mmQkHGUQ5tvvWHb-Ky57Q"
+            },
+            {
+              "news_id": "95d5081261b7569995265767c1b6ab5a",
+              "url": "https://www.msn.com/en-us/news/other/ground-stop-issued-for-flights-to-denver-international-airport/ar-AA2bbHuZ?ocid=BingNewsVerp",
+              "headline": "Ground stop issued for flights to Denver International Airport",
+              "body": "On Saturday afternoon, a ground stop was issued for flights to Denver International Airport.",
+              "published_date": "2026-08-30",
+              "outlet": "CBS News on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.KU_65HzUzMsqBmvw4xdttw"
+            },
+            {
+              "news_id": "55d20bb5408c50af8bdc8aebd268b681",
+              "url": "https://www.yahoo.com/news/weather-news/articles/arizona-weather-forecast-monsoon-moisture-144749033.html",
+              "headline": "Arizona weather forecast: Monsoon storm threats return to Arizona",
+              "body": "Flash flood watches are active across central, northern, and southern Arizona due to heavy rain and severe storms.",
+              "published_date": "2026-08-28",
+              "outlet": "KSAZ · via Yahoo News",
+              "image": "https://media.zenfs.com/en/ksaz_fox_local_article_698/5d8ebb215bf833f318e3f41ff3388bf4.jpg"
+            },
+            {
+              "news_id": "5e579e056a055ae1ba1153eae7e94dc1",
+              "url": "https://www.yahoo.com/news/weather-news/articles/severe-weather-impacting-northern-utah-145352988.html",
+              "headline": "Severe weather impacting Northern Utah this weekend",
+              "body": "SALT LAKE CITY (ABC4) – Happy Saturday, Utah! It’ll be an active day with scattered thunderstorms across the state, some of which will likely be severe. Weather today Showers and thunderstorms can be ...",
+              "published_date": "2026-08-29",
+              "outlet": "KTVX · via Yahoo News",
+              "image": "https://media.zenfs.com/en/ktvx_articles_781/f6024cbc53a75bc353219e43534492d4.png.cf.jpg"
+            },
+            {
+              "news_id": "7e101f118a7154439de1b3b53d0f0f49",
+              "url": "https://www.tampabay.com/news/weather/2026/08/30/flood-advisory-pinellas-county-sunday-evening-due-excessive-rainfall/",
+              "headline": "Flood advisory for Pinellas County Sunday evening due to excessive rainfall",
+              "body": "A flood advisory was issued by the National Weather Service on Sunday at 5:25 p.m. in effect until 7:30 p.m. for Pinellas County.",
+              "published_date": "2026-08-30",
+              "outlet": "Tampa Bay Times",
+              "image": ""
+            },
+            {
+              "news_id": "3a411e3b56b659389d1a69af220c097d",
+              "url": "https://cyprus-mail.com/2026/08/29/police-urge-caution-on-roads-amid-severe-weather",
+              "headline": "Police urge caution on roads amid severe weather",
+              "body": "Police on Saturday urged drivers to exercise extra caution as severe weather sweeps through the region, warning that deteriorating road conditions could pose serious risks to motorists. Drivers were advised to reduce their speed and adapt their driving to prevailing conditions, while maintaining a greater distance from vehicles ahead. They…",
+              "published_date": "2026-08-29",
+              "outlet": "Cyprus Mail",
+              "image": "https://www.bing.com/th?id=ONUT.lqrZP90QixeCYOJmfT7IFA"
+            },
+            {
+              "news_id": "ced045b8e99059478ed1fcc5c1ba7d4f",
+              "url": "https://www.knau.org/knau-and-arizona-news/2026-08-30/flash-flooding-in-the-grand-canyon-prompts-evacuations-and-colorado-river-closure",
+              "headline": "One dead, over a dozen missing, following severe flash flooding in Grand Canyon National Park",
+              "body": "At least one person is dead and more than a dozen others missing after severe flash flooding in one of the most visited portions of Grand Canyon National Park.",
+              "published_date": "2026-08-30",
+              "outlet": "KNAU Arizona Public Radio",
+              "image": "https://www.bing.com/th?id=ONUT.Jl24YFNmli1cYummF0zf5w"
+            },
+            {
+              "news_id": "32021a9c8a2253a88c47d2374d9cf668",
+              "url": "https://www.msn.com/en-ph/news/other/tarlac-declares-state-of-calamity-as-floods-wreck-2-bridges/ar-AA2beEC4?ocid=BingNewsVerp",
+              "headline": "Tarlac declares state of calamity as floods wreck 2 bridges",
+              "body": "MANILA, Philippines — Tarlac has been placed under a state of calamity after severe flooding damaged two bridges and ...",
+              "published_date": "2026-08-31",
+              "outlet": "PhilStar Global on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.vIEsnSyQwgKQ5yUim42ksg"
+            },
+            {
+              "news_id": "a72e2ddf6c4d55408b7c314fe8336f05",
+              "url": "https://www.azcentral.com/story/news/local/arizona/2026/08/30/severe-thunderstorm-warning-maricopa-county/91542424007/",
+              "headline": "Severe thunderstorm, flash flood warnings issued for Maricopa County",
+              "body": "A severe thunderstorm was moving across metro Phoenix on Sunday night, bringing flash flood warnings.",
+              "published_date": "2026-08-30",
+              "outlet": "The Arizona Republic",
+              "image": "https://s.yimg.com/bo/9ac08f57-744a-5412-bb35-63a7edd52a53_1786221680161.jpg"
+            }
+          ]
         }
       ],
-      "logs_total": 12
+      "logs_total": 13
     },
     {
       "incident_id": "20260715-UA-CF",
       "tree_id": "f22292f8c3ff448a920c3b1fe41d3aa0",
       "canonical_name": "Conflict Ukraine 2026-07-15",
-      "summary": "Ukrainian drones struck Ozon and DNS logistics facilities in Russia's Rostov region amid a state of emergency, as Russia imposed new gasoline sales restrictions with lines of 30-50 cars at stations due to refinery damage from Ukrainian strikes, forcing Moscow to import petrol from India. CIA Director Ratcliffe's secret Moscow visit reportedly included a proposal for a trilateral Trump-Putin-Zelensky meeting, while Russia resumed strikes on Kyiv following a deadly attack on a care home that killed 34. Turkey summoned Ukraine's ambassador over Black Sea vessel attacks, and Russia warned of a military response to NATO nuclear expansion in Europe, as Putin test-fired a nuclear-capable missile that could reach the US.\nUK Prime Minister Andy Burnham visited Kyiv and provided Ukraine with blueprints to build its own long-range cruise missiles, defying Russian threats of consequences. Ukraine expanded its drone campaign to target Ozon logistics hubs in southern Russia, hitting six facilities since August 22, as Russia continues to suffer domestic fuel shortages forcing it to import petrol from India due to refinery damage. Russia test-fired a nuclear-capable intercontinental ballistic missile days after CIA Director Ratcliffe's secret Moscow visit, while a Vatican envoy visited Moscow calling for an urgent end to the war.",
+      "summary": "The death toll from Russia's deadliest strike on Ukraine this year, targeting a warehouse west of Kyiv, has risen to 38, with four people still missing, according to Ukrainian President Volodymyr Zelenskyy.",
       "country": "Ukraine",
       "iso2": "UA",
       "lat": 48.9,
@@ -10593,7 +10696,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 672
+        "news": 675
       },
       "source_links": [
         {
@@ -13299,11 +13402,23 @@
           "published_date": "2026-08-30"
         },
         {
+          "headline": "Opinie | Europe cannot protect Russia from itself",
+          "published_date": "2026-08-30"
+        },
+        {
+          "headline": "AP Exclusive: US coaches Polish forces in a drone-focused drill based on lessons from Ukraine",
+          "published_date": "2026-08-30"
+        },
+        {
+          "headline": "Death toll rises to 38 from Russia's deadliest attack on Ukraine this year",
+          "published_date": "2026-08-30"
+        },
+        {
           "headline": "Ukraine war latest: Dozens killed at care home after Russia unleashes deadliest attack this year",
           "published_date": "2026-08-30T08:02:50+00:00"
         }
       ],
-      "news_total": 672,
+      "news_total": 675,
       "logs": [
         {
           "log_date": "2026-07-24",
@@ -13641,66 +13756,6 @@
               "published_date": "2026-07-24",
               "outlet": "CounterPunch",
               "image": ""
-            }
-          ]
-        },
-        {
-          "log_date": "2026-08-28",
-          "summary": "Russia threatened to strike British military targets inside and outside Ukraine after accusing Kyiv of using Storm Shadow missiles against targets in Donetsk. The European Union is advancing plans to unlock frozen Russian assets to support Ukraine, as fighting continues in the Donetsk region.",
-          "news": [
-            {
-              "news_id": "c0e55aaffecc585dbbebfb10fbe346e7",
-              "url": "https://www.cnbc.com/2026/08/28/russia-donetsk-ukraine-frozen-assets.html",
-              "headline": "Russian forces intensify attacks in Donetsk as Ukraine lauds fresh EU push to unlock frozen assets",
-              "body": "Russia claims advances toward Sloviansk and Kramatorsk as fighting intensifies in Donetsk.",
-              "published_date": "2026-08-28",
-              "outlet": "CNBC",
-              "image": "https://s.yimg.com/bo/65c60b29-5eee-55d9-8e9b-ea7c56e54ab2_1787910859474.jpg"
-            },
-            {
-              "news_id": "57c429bb5d0850a69050edd7a432a64a",
-              "url": "https://www.wsws.org/en/articles/2026/08/27/tpmx-a27.html",
-              "headline": "UK-Russia conflict escalates after Burnham’s provocations in Ukraine",
-              "body": "Having already supplied Ukraine with long-range Storm Shadow cruise missiles, the UK has now shared classified blueprints with Kyiv to allow the country to eventually manufacture its own.",
-              "published_date": "2026-08-27",
-              "outlet": "World Socialist Web Site",
-              "image": "https://s.yimg.com/bo/4623f5ea-7f13-5cd0-aae5-6e8c28f1d873_1787861347099.jpg"
-            },
-            {
-              "news_id": "db7890950ae1535fbfcb85ea0112b5ac",
-              "url": "https://www.politico.com/newsletters/forecast/2026/08/27/can-zelenskyy-change-his-spots-01052695",
-              "headline": "Can Zelenskyy change his spots?",
-              "body": "Volodymyr Zelenskyy must moderate how he rules, otherwise pressure will mount for a wartime election. That’s the lesson ...",
-              "published_date": "2026-08-27T16:20:09+00:00",
-              "outlet": "Politico",
-              "image": "https://www.bing.com/th?id=ONUT.1QPOYqcdh6wgamUgyFBuJQ"
-            },
-            {
-              "news_id": "6c9f7bdd55cb59ed8fa10f5c0437051d",
-              "url": "https://www.yahoo.com/news/world/articles/putin-moves-escalate-ukraine-war-154235033.html",
-              "headline": "Putin Moves to Escalate Ukraine War as Talks Stall",
-              "body": "Report: Putin Moves to Escalate Ukraine War as Talks Stall",
-              "published_date": "2026-08-27",
-              "outlet": "Newsmax · via Yahoo News",
-              "image": "https://media.zenfs.com/en/newsmax_809/2936fa40f763630e4f0319ec6fadae89.jpg"
-            },
-            {
-              "news_id": "9490bb203a80514983a7bd45e72caef0",
-              "url": "https://www.arkansasonline.com/news/2026/aug/28/russia-launches-strikes-on-9-ukraine-cities/",
-              "headline": "Russia launches strikes on 9 Ukraine cities | Arkansas Democrat Gazette",
-              "body": "KYIV, Ukraine -- Russia bombarded cities across Ukraine with missiles and drones in an overnight onslaught that ran into the daylight hours of Thursday, when explosions echoed around Kyiv through the morning.",
-              "published_date": "2026-08-28",
-              "outlet": "Arkansas Democrat-Gazette",
-              "image": "https://s.yimg.com/bo/8899cf44-7b10-5449-b100-ed0c8cc91dd6_1787905740021.jpg"
-            },
-            {
-              "news_id": "7e5df432ee66503da0c83b9782c82456",
-              "url": "https://www.foxnews.com/world/russia-threatens-strikes-uk-military-targets-catastrophic-consequences-ukraine",
-              "headline": "Russia threatens strikes on UK military targets, ‘catastrophic consequences’ over Ukraine",
-              "body": "Russia threatened to strike British military targets inside and outside Ukraine after Moscow accused Kyiv of using Storm Shadow missiles against Donetsk.",
-              "published_date": "2026-08-27",
-              "outlet": "Fox News",
-              "image": "https://s.yimg.com/bo/ba383c41-2486-54b5-b758-fb3113228249_1787900924382.jpg"
             }
           ]
         },
@@ -14093,15 +14148,48 @@
               "image": "https://www.bing.com/th?id=ONUT.1_N7e7mZH_-Hr-MgPXLApA"
             }
           ]
+        },
+        {
+          "log_date": "2026-08-31",
+          "summary": "The death toll from Russia's deadliest strike on Ukraine this year, targeting a warehouse west of Kyiv, has risen to 38, with four people still missing, according to Ukrainian President Volodymyr Zelenskyy.",
+          "news": [
+            {
+              "news_id": "9c6a9acb05f4570baad8ae19615d7a92",
+              "url": "https://www.nrc.nl/nieuws/2026/08/30/europe-cannot-protect-russia-from-itself-a4935343",
+              "headline": "Opinie | Europe cannot protect Russia from itself",
+              "body": "Fear of Vladimir Putin going fully rogue has paralysed the West for long enough, writes Radek Sikorski.",
+              "published_date": "2026-08-30",
+              "outlet": "NRC",
+              "image": "https://www.bing.com/th?id=ONUT.PeFD0dMugx2dPxsWqFnv9A"
+            },
+            {
+              "news_id": "77cebf5120eb585390b770e03668eb27",
+              "url": "https://www.clickondetroit.com/news/world/2026/08/30/ap-exclusive-us-coaches-polish-forces-in-a-drone-focused-drill-based-on-lessons-from-ukraine/",
+              "headline": "AP Exclusive: US coaches Polish forces in a drone-focused drill based on lessons from Ukraine",
+              "body": "Members of the Polish special forces are taking part in an exercise that simulates moving through enemy lines and launching a drone strike on a key enemy location.",
+              "published_date": "2026-08-30",
+              "outlet": "clickondetroit.com",
+              "image": ""
+            },
+            {
+              "news_id": "b44772290e0a57358c3174a4559f9608",
+              "url": "https://www.local10.com/news/world/2026/08/30/death-toll-rises-to-38-from-russias-deadliest-attack-on-ukraine-this-year/",
+              "headline": "Death toll rises to 38 from Russia's deadliest attack on Ukraine this year",
+              "body": "KYIV, Ukraine (AP) — The death toll from a Russian strike on a warehouse west of Kyiv, the war's deadliest attack this year, rose to 38 with four people still missing, Ukrainian President Volodymyr Zelenskyy said Sunday.",
+              "published_date": "2026-08-30",
+              "outlet": "WPLG Local 10",
+              "image": "https://www.bing.com/th?id=ONUT.7THFZeQvhCC5l5tvVUlo1g"
+            }
+          ]
         }
       ],
-      "logs_total": 38
+      "logs_total": 39
     },
     {
       "incident_id": "20260726-IR-CF",
       "tree_id": "13763def03ab448898154124734fe728",
       "canonical_name": "Iran/US war",
-      "summary": "As the war passes the six-month mark, Iran's leaders openly acknowledge its severe economic toll—president Pezeshkian reports a one-third drop in foreign trade due to US sanctions and blockade—while the US intensifies its \"Operation Economic Outcast\" sanctions campaign, targeting Iranian financial entities. Iran's leadership solidifies around hardline military generals and clerics, signaling readiness for a prolonged confrontation and no tolerance for dissent. Meanwhile, US military readiness is strained, with the Navy facing payroll shortfalls, Patriot missile stocks in Europe deemed \"beyond critical,\" and military leaders warning Defense Secretary Hegseth that the war is unsustainable.",
+      "summary": "US forces struck Iranian rocket launchers on Larak Island on August 30, the first direct military action in weeks, prompting Iran to retaliate with ballistic missile attacks on US bases in Jordan. President Trump claimed that Iran's Kharg Island was \"blown to smithereens,\" though no confirmation was provided. The exchange marks a significant escalation after a period of diplomatic and economic pressure.",
       "country": "Iran",
       "iso2": "IR",
       "lat": 32.4,
@@ -14120,7 +14208,7 @@
       "disease_name": null,
       "event_date": "2026-07-26",
       "first_reported_date": "2026-07-26",
-      "last_updated_date": "2026-08-30",
+      "last_updated_date": "2026-08-31",
       "days_since_event": 36,
       "source_count": 1,
       "should_report": true,
@@ -14131,7 +14219,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 1301
+        "news": 1324
       },
       "source_links": [],
       "physical": {
@@ -18686,6 +18774,10 @@
           "published_date": "2026-08-25T03:46:17+00:00"
         },
         {
+          "headline": "Asian Refiners Scoop Up Argentinian Oil as Iran War Hits Supply",
+          "published_date": "2026-08-25T06:58:53+00:00"
+        },
+        {
           "headline": "Pipelines and ports: Iran war spurs Gulf infrastructure investment",
           "published_date": "2026-08-25T12:20:45+00:00"
         },
@@ -19348,9 +19440,97 @@
         {
           "headline": "Trump's 'biggest oil deal in history': What the US gains from control of 65 billion barrels of Venezuela's crude?",
           "published_date": "2026-08-30"
+        },
+        {
+          "headline": "Iran war exacting an uneven economic toll",
+          "published_date": "2026-08-30"
+        },
+        {
+          "headline": "US commanders warn Hegseth Iran war ‘unsustainable’: Report - Türkiye Today",
+          "published_date": "2026-08-30"
+        },
+        {
+          "headline": "US strikes Iranian rocket launchers in first attack since late July",
+          "published_date": "2026-08-30"
+        },
+        {
+          "headline": "US strikes Iran for first time in a month",
+          "published_date": "2026-08-30"
+        },
+        {
+          "headline": "Iran targets American bases in Jordan in retaliation to US strikes",
+          "published_date": "2026-08-30"
+        },
+        {
+          "headline": "Iran attacks US bases in Jordan after US strikes Larak Island",
+          "published_date": "2026-08-30"
+        },
+        {
+          "headline": "US-Iran Conflict Escalates Near Hormuz Strait as Tehran Hits Back for Larak Island Strikes: Brent Crude R",
+          "published_date": "2026-08-30"
+        },
+        {
+          "headline": "U.S. Forces Strike Iranian Rocket Launchers On The Strait Of Hormuz In First Military Action In Weeks",
+          "published_date": "2026-08-30"
+        },
+        {
+          "headline": "Investors prosper and consumers pay as the Iran war exacts an uneven economic toll 6 months in",
+          "published_date": "2026-08-30"
+        },
+        {
+          "headline": "US strikes Iran’s Larak Island",
+          "published_date": "2026-08-30T00:00:00+00:00"
+        },
+        {
+          "headline": "Investors prosper and consumers pay as the Iran war exacts an uneven economic...",
+          "published_date": "2026-08-30T06:58:50+00:00"
+        },
+        {
+          "headline": "US forces strike Iranian rocket launchers on the Strait of Hormuz in first...",
+          "published_date": "2026-08-30T20:58:53+00:00"
+        },
+        {
+          "headline": "Global Bond Yields Rise Amid U.S.-Iran Conflict, Impacting SMCI",
+          "published_date": "2026-08-30T23:58:53+00:00"
+        },
+        {
+          "headline": "AP News Summary at 2:08 a.m. EDT",
+          "published_date": "2026-08-31"
+        },
+        {
+          "headline": "The home front: How Israel, Iran, and US leaders have been hit by the war",
+          "published_date": "2026-08-31"
+        },
+        {
+          "headline": "West Asia LIVE: UAE says dealt with drone coming from Iran over its waters",
+          "published_date": "2026-08-31"
+        },
+        {
+          "headline": "Trump says Iran's Kharg is being 'blown to smithereens', but gives no details",
+          "published_date": "2026-08-31"
+        },
+        {
+          "headline": "Latest developments in the US-Iran war",
+          "published_date": "2026-08-31"
+        },
+        {
+          "headline": "Iran's leader calls for Muslim unity, NBC crew attacked in West Bank and other Mideast news",
+          "published_date": "2026-08-31"
+        },
+        {
+          "headline": "Trump calls plunder of Venezuelan oil a ‘gift’ as Washington tries to refill war-drained reserves",
+          "published_date": "2026-08-31"
+        },
+        {
+          "headline": "US plans to sanction another bank to keep economic pressure on Iran",
+          "published_date": "2026-08-31"
+        },
+        {
+          "headline": "Ted Cruz Defends Trump's 'Mission Accomplished' Claim on Iran: 'Air Force Is in Rubble...Navy Is Sunk'",
+          "published_date": "2026-08-31"
         }
       ],
-      "news_total": 1301,
+      "news_total": 1324,
       "logs": [
         {
           "log_date": "2026-07-27",
@@ -19607,147 +19787,6 @@
               "published_date": "2026-07-27",
               "outlet": "Boston Herald",
               "image": "https://www.bing.com/th?id=ONUT.wvOn0vnLkZ7wvhHPFw82Jg"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-08-28",
-          "summary": "On the six-month anniversary of the war, President Trump dispatched a new warship to the Middle East, and mediators shifted diplomacy back toward reopening the Strait of Hormuz. The conflict has settled into a costly stalemate, with oil markets adjusting to the prolonged disruption and Trump's approval ratings continuing to slide.",
-          "news": [
-            {
-              "news_id": "b692dba71d7b5a4cb6b6cf13af930ca9",
-              "url": "https://www.msn.com/en-us/news/other/trumps-excursion-in-iran-has-lasted-6-months-what-went-wrong/ar-AA2b6xt8?ocid=BingNewsVerp",
-              "headline": "Trump's 'excursion' in Iran has lasted 6 months. What went wrong?",
-              "body": "Six months after the start of the war with Iran, the United States has shifted its strategy from military action to economic ...",
-              "published_date": "2026-08-28",
-              "outlet": "USA TODAY on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.G3P2brYCAj-oWM6fzHScfw"
-            },
-            {
-              "news_id": "4e012ff693af587baff8f2b0d19d532d",
-              "url": "https://www.msn.com/en-in/news/other/trump-s-popularity-sinks-sharply-as-iran-war-hits-6-months-rating-negative-in-47-of-50-states/ar-AA2b1v3p?ocid=BingNewsVerp",
-              "headline": "Trump's popularity sinks sharply as Iran war hits 6 months; rating negative in 47 of 50 states",
-              "body": "Recent reports indicate a significant decline in President Trump's public approval ratings, with negative net approval in 47 ...",
-              "published_date": "2026-08-28",
-              "outlet": "Times Now on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.cBUQRNovw-q3wKoDuzmG6w"
-            },
-            {
-              "news_id": "480b9b82d38658299ec90cb568288f6a",
-              "url": "https://apnews.com/article/iran-us-war-six-months-israel-mideast-1685cdc4e6ef330406e0ebe242b21e70",
-              "headline": "Six months on, the Iran war has changed the Middle East, but not in the way its architects had hoped",
-              "body": "The Iran war has changed the Middle East, but not in the ways that the United States and Israel had hoped.",
-              "published_date": "2026-08-28",
-              "outlet": "Associated Press News",
-              "image": "https://www.bing.com/th?id=ONUT.5GepdkYS0gTKHyT2cQ3dOw"
-            },
-            {
-              "news_id": "38f800e228885e7dacd744f05aa73aa0",
-              "url": "https://www.msn.com/en-us/money/other/six-months-into-the-iran-war-markets-become-accustomed-to-stalemate-with-no-end-in-sight/ar-AA2b5Huh?ocid=BingNewsVerp",
-              "headline": "Six months into the Iran war: Markets become accustomed to stalemate with no end in sight",
-              "body": "The war has far exceeded the four to six weeks the Trump administration estimated it would take to meet its objectives in Iran.",
-              "published_date": "2026-08-28",
-              "outlet": "CNBC on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "04cee05c721b5c78a8eb12dfa7e26a9c",
-              "url": "https://www.nytimes.com/2026/08/28/business/iran-war-oil-stocks-prices.html",
-              "headline": "How 6 Months of War in Iran Jolted Oil, Gas, Stocks and More",
-              "body": "After the United States and Israel attacked Iran on Feb. 28, the price of oil immediately jumped, interest rates rose and ...",
-              "published_date": "2026-08-26T12:20:45+00:00",
-              "outlet": "The New York Times",
-              "image": "https://www.bing.com/th?id=ONUT.s--un34TcKpZx9mIkKuONA"
-            },
-            {
-              "news_id": "01bc966f5a3054dc8aff26dc44c3a8a4",
-              "url": "https://thehill.com/newsletters/morning-report/6056636-iran-war-approach-shifts-six-month-mark/",
-              "headline": "Iran war shifts into neutral as six-month mark arrives",
-              "body": "Iran war approach shifts ▪ Trump gives Paxton a boost ▪ Warsh makes key Fed speech ▪ Leavitt’s last day Today marks six ...",
-              "published_date": "2026-08-28T12:20:45+00:00",
-              "outlet": "The Hill",
-              "image": "https://www.bing.com/th?id=ONUT.Zk8vBCY4aC0-4JdL2RO_1g"
-            },
-            {
-              "news_id": "101cc166a17353b7b5c1e074f7391bed",
-              "url": "https://www.dailysabah.com/world/mid-east/6-months-into-iran-war-costly-stalemate-looks-most-likely-endgame",
-              "headline": "6 months into Iran war, costly stalemate looks most likely endgame",
-              "body": "Six months after U.S. and Israeli forces attacked Iran, killing its supreme leader and maiming his son and successor, the war has settled into a costly...",
-              "published_date": "2026-08-27",
-              "outlet": "Daily Sabah",
-              "image": "https://www.bing.com/th?id=ONUT.I5FBURs0WoPBPg65g6ewdw"
-            },
-            {
-              "news_id": "58cfec40e6fb5f61966254ce233c006e",
-              "url": "https://apnews.com/live/donald-trump-news-updates-08-28-2026",
-              "headline": "Live updates: Iran war reaches its six-month mark as Trump turns focus to increasing economic pressure",
-              "body": "The Iran war reaches six-month mark, a judge says Pentagon’s measures against Anthropic were ‘illegal and baseless’ and a judge again blocks Trump mail ballot executive order.",
-              "published_date": "2026-08-28",
-              "outlet": "Associated Press News",
-              "image": "https://www.bing.com/th?id=ONUT.HgON628zr-MJqyuxtvLe-w"
-            },
-            {
-              "news_id": "32ec32c7feef523b87abb6330efb3ffe",
-              "url": "https://www.msn.com/en-us/news/other/iran-live-trump-sends-new-warship-to-middle-east/ar-AA2b1hDj?ocid=BingNewsVerp",
-              "headline": "Iran live: Trump sends new warship to Middle East",
-              "body": "Iran-US war latest: Trump sends new warship to Middle East after claiming ‘very big victory’ over Tehran - Trump insists US ...",
-              "published_date": "2026-08-28",
-              "outlet": "The Independent on MSN",
-              "image": "https://www.bing.com/th?id=ORMS.4fc4cfab047866c0eb6b6833c0e4eae6"
-            },
-            {
-              "news_id": "71e7307e11ae5f08a11fb877603e723a",
-              "url": "https://www.businesstoday.in/latest/economy/story/india-paid-29-more-for-cooking-gas-after-hormuz-strikes-report-551988-2026-08-28",
-              "headline": "India paid 29% more for cooking gas after Hormuz strikes: Report - BusinessToday",
-              "body": "India paid 29% more per tonne for imported LPG than pre-war market expectations after the Hormuz strikes, as the energy crisis pushed up cooking-gas costs. The price shock added an estimated $1.1 billion to India’s LPG import bill, while imports fell sharply during the six-month period.",
-              "published_date": "2026-08-28",
-              "outlet": "Business Today",
-              "image": "https://www.bing.com/th?id=ONUT.-jQnjt96-dIxAURqgFdfrQ"
-            },
-            {
-              "news_id": "00ccab0eea0a542d9f6e62f0cf14d786",
-              "url": "https://www.reuters.com/business/energy/pipelines-ports-iran-war-spurs-gulf-infrastructure-investment-2026-08-28/",
-              "headline": "Pipelines and ports: Iran war spurs Gulf infrastructure investment",
-              "body": "The Iran war's redrawing of the global trade map is forcing Gulf nations to retool their investment play book, ploughing ...",
-              "published_date": "2026-08-25T12:20:45+00:00",
-              "outlet": "Reuters",
-              "image": "https://www.bing.com/th?id=ONUT.ZhaOfvGgY34J94XXCLzntA"
-            },
-            {
-              "news_id": "26ab77c1dc735cf5aada2452a5feb1d7",
-              "url": "https://www.msn.com/en-us/news/world/us-israel-war-on-iran-six-months-down-the-line-in-numbers/ar-AA2b7rQW?ocid=BingNewsVerp",
-              "headline": "US-Israel war on Iran, six months down the line: In numbers",
-              "body": "Al Jazeera tracks six months of the Iran war, from the dead and displaced to the shock delivered to the global economy.",
-              "published_date": "2026-08-28",
-              "outlet": "Al Jazeera on MSN",
-              "image": "https://www.bing.com/th?id=ORMS.56021ce46b53751eb9a04c49f65da094"
-            },
-            {
-              "news_id": "1be7e03e4f61543a84b030d775d1b45a",
-              "url": "https://www.msn.com/en-us/news/other/iran-war-diplomacy-turns-toward-reopening-strait-of-hormuz/ar-AA2b5cr7?ocid=BingNewsVerp",
-              "headline": "Iran war diplomacy turns toward reopening Strait of Hormuz",
-              "body": "By Elwely Elwelly and Enas Alashray DUBAI/CAIRO, Aug 28 (Reuters) - Iran war mediators have placed renewed emphasis on ...",
-              "published_date": "2026-08-28",
-              "outlet": "Reuters on MSN",
-              "image": "https://www.bing.com/th?id=ORMS.bafc0d5b51457d832cbfda1fc1c259a0"
-            },
-            {
-              "news_id": "4d392a6fc31f538dab22804b8762be6d",
-              "url": "https://www.winnipegfreepress.com/world/2026/08/27/the-latest-regional-powers-seek-off-ramp-as-iran-war-drags-on-months-longer-than-trump-promised",
-              "headline": "The Latest: Trump signs order to rename Lake Ontario to ‘Lake America’",
-              "body": "President Donald Trump said Thursday he is renaming Lake Ontario to be known as “Lake America” in the U.S. as he exacerbates his trade war with Canada. The Republican president signed an executive order updating the lake’s name for the U.S. geographic naming service. Trump cannot, however, force Canada to follow his preferred naming convention.",
-              "published_date": "2026-08-27",
-              "outlet": "Winnipeg Free Press",
-              "image": "https://www.bing.com/th?id=ONUT.ThLeTHaET_QQ0Rdyhum5cw"
-            },
-            {
-              "news_id": "94d35f15376550a4badcd744ad0bc148",
-              "url": "https://www.msn.com/en-in/money/general/from-52-to-negative-26-the-6-month-freefall-of-trump-s-approval-ratings-amid-iran-war/ar-AA2b77nq?ocid=BingNewsVerp",
-              "headline": "From 52% to negative 26: The 6-month freefall of Trump's approval ratings amid Iran war",
-              "body": "As the Midterm elections approach, President Trump's approval ratings have plummeted significantly, largely due to rising ...",
-              "published_date": "2026-08-28",
-              "outlet": "Times Now on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.mA31vKvciNhY8qxnt3hIZg"
             }
           ]
         },
@@ -20509,9 +20548,222 @@
               "image": "https://www.bing.com/th?id=ONUT.stY2xwUSQjzreF50NqEBqQ"
             }
           ]
+        },
+        {
+          "log_date": "2026-08-31",
+          "summary": "US forces struck Iranian rocket launchers on Larak Island on August 30, the first direct military action in weeks, prompting Iran to retaliate with ballistic missile attacks on US bases in Jordan. President Trump claimed that Iran's Kharg Island was \"blown to smithereens,\" though no confirmation was provided. The exchange marks a significant escalation after a period of diplomatic and economic pressure.",
+          "news": [
+            {
+              "news_id": "6b55fe354bdd54018095e716ba7f3080",
+              "url": "https://www.columbian.com/news/2026/aug/30/iran-war-exacting-an-uneven-economic-toll/",
+              "headline": "Iran war exacting an uneven economic toll",
+              "body": "NEW YORK — As the United States and Israel relentlessly bombed Iran in the opening days of the war, the most dramatic predictions of the conflict’s toll were unsparing: surging oil prices, worldwide r",
+              "published_date": "2026-08-30",
+              "outlet": "The Columbian",
+              "image": ""
+            },
+            {
+              "news_id": "0d39d0a1c5a15f719feaa49e79242724",
+              "url": "https://www.turkiyetoday.com/region/us-commanders-warn-hegseth-iran-war-is-unsustainable-report-3227121",
+              "headline": "US commanders warn Hegseth Iran war ‘unsustainable’: Report - Türkiye Today",
+              "body": "Top brass issues formal dissent over force extensions as regional commitments reportedly degrade American homeland defense",
+              "published_date": "2026-08-30",
+              "outlet": "Türkiye Today",
+              "image": "https://www.bing.com/th?id=ONUT.HI3_PIp46MRkJ_xNqhzA4Q"
+            },
+            {
+              "news_id": "c8075477cd495f94abb85eca5e7580f5",
+              "url": "https://www.yahoo.com/news/us/articles/us-strikes-iranian-rocket-launchers-224724228.html",
+              "headline": "US strikes Iranian rocket launchers in first attack since late July",
+              "body": "The U.S. military struck two Iranian rocket launchers on Sunday, marking its first attack on the Middle Eastern country in more than a month, with Iran reportedly retaliating later in the day. America...",
+              "published_date": "2026-08-30",
+              "outlet": "The Hill · via Yahoo News",
+              "image": "https://media.zenfs.com/en/the_hill_articles_341/7aec49b2ef5b5237a336ee2bdbcedd4e.jpg"
+            },
+            {
+              "news_id": "2fcc7c6691db567cb4c894e59e1f5dbc",
+              "url": "https://www.telegraph.co.uk/world-news/2026/08/30/pete-hegseth-told-not-to-extend-iran-war/",
+              "headline": "US strikes Iran for first time in a month",
+              "body": "Trump claims Iranian energy hub was ‘blown to smithereens’ – after military chiefs told Hegseth not to extend war",
+              "published_date": "2026-08-30",
+              "outlet": "The Telegraph",
+              "image": "https://www.bing.com/th?id=ONUT.CJtXA-ws8jVex-Vll3e7XA"
+            },
+            {
+              "news_id": "9822319c73cd5c86af77536c8ca982e8",
+              "url": "https://www.chron.com/news/article/us-forces-strike-iranian-rocket-launchers-on-the-22410070.php",
+              "headline": "US forces strike Iranian rocket launchers on the Strait of Hormuz in first...",
+              "body": "A U.S. officials says that U.S. forces have struck Iranian rocket launchers on the Strait of Hormuz...",
+              "published_date": "2026-08-30T20:58:53+00:00",
+              "outlet": "Houston Chronicle",
+              "image": "https://s.yimg.com/bo/3f4e02d0-1c22-5d11-ba9f-75332a93d09a_1788122929049.jpg"
+            },
+            {
+              "news_id": "ef554b92e0ab52ca813eac5efbbfdc7c",
+              "url": "https://www.goshennews.com/news/national_news/ap-news-summary-at-2-08-a-m-edt/article_d9931e91-b8b8-5422-93ef-4a9b0a6c6566.html",
+              "headline": "AP News Summary at 2:08 a.m. EDT",
+              "body": "US strikes Iranian rocket launchers on the Strait of Hormuz in first military action in weeks",
+              "published_date": "2026-08-31",
+              "outlet": "Goshen News",
+              "image": "https://s.yimg.com/bo/f6ed379e-4847-5ec6-a192-ea76adb635a0_1786288568305.jpg"
+            },
+            {
+              "news_id": "060fb58cecc358fbaad5ff6479db6fd4",
+              "url": "https://www.aljazeera.com/news/2026/8/30/us-strikes-irans-lark-island-in-first-attack-in-weeks",
+              "headline": "Iran targets American bases in Jordan in retaliation to US strikes",
+              "body": "The exchange of attacks is the first flare-up in violence between the two sides since late July.",
+              "published_date": "2026-08-30",
+              "outlet": "Al Jazeera",
+              "image": "https://www.bing.com/th?id=ONUT.8gBx-ToCbGkE37CqA3Ee7A"
+            },
+            {
+              "news_id": "57a1abab896a5080832b0926ad2f05c3",
+              "url": "https://www.yahoo.com/news/world/articles/us-strikes-iran-lark-island-201547836.html",
+              "headline": "Iran attacks US bases in Jordan after US strikes Larak Island",
+              "body": "The exchange of attacks is the first flare-up in violence between the two sides since late July.",
+              "published_date": "2026-08-30",
+              "outlet": "Al Jazeera · via Yahoo News",
+              "image": "https://media.zenfs.com/en/al_jazeera_289/e2ee54bd46bdbf1a0561ae2aba83bccc.jpg"
+            },
+            {
+              "news_id": "a7248538b9175f4e9c4817a68010ef05",
+              "url": "https://www.gurufocus.com/news/9059505/global-bond-yields-rise-amid-usiran-conflict-impacting-smci",
+              "headline": "Global Bond Yields Rise Amid U.S.-Iran Conflict, Impacting SMCI",
+              "body": "On August 30, 2026, the ongoing U.S.-Iran conflict has led to a significant surge in global bond...",
+              "published_date": "2026-08-30T23:58:53+00:00",
+              "outlet": "Guru Focus",
+              "image": "https://s.yimg.com/bo/9e126d5f-2be4-584e-8b6a-51d1e9aa9238_1786190592723.png.cf.jpg"
+            },
+            {
+              "news_id": "3e9d867459715861976f7dc256ed69df",
+              "url": "https://www.msn.com/en-us/news/world/the-home-front-how-israel-iran-and-us-leaders-have-been-hit-by-the-war/ar-AA2bcPW0?ocid=BingNewsVerp",
+              "headline": "The home front: How Israel, Iran, and US leaders have been hit by the war",
+              "body": "Six months into the US-Israel war on Iran, the governments in the three countries are fighting political wars at home.",
+              "published_date": "2026-08-31",
+              "outlet": "Al Jazeera on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.M97ZVmuGCfJ9pJtPYFAYSA"
+            },
+            {
+              "news_id": "a368a14abc7b58a185d213388345be28",
+              "url": "https://www.thehindu.com/news/international/west-asia-war-us-attack-on-iran-live-updates-donald-trump-strait-of-hormuz-news-september-1-2026/article71409553.ece",
+              "headline": "West Asia LIVE: UAE says dealt with drone coming from Iran over its waters",
+              "body": "Follow The Hindu for LIVE updates on West Asia conflict as U.S. forces strike IRGC rocket launchers on Larak Island. Get latest news on Iran's retaliatory strikes against U.S. bases and the worsening crisis in the Strait of Hormuz.",
+              "published_date": "2026-08-31",
+              "outlet": "The Hindu",
+              "image": "https://www.bing.com/th?id=ONUT.bJraetSlj618czMnEEzDKg"
+            },
+            {
+              "news_id": "6fb0b7b23d505315bc8387fc32742b27",
+              "url": "https://www.msn.com/en-ca/news/other/trump-says-irans-kharg-is-being-blown-to-smithereens-but-gives-no-details/ar-AA2bf77c?ocid=BingNewsVerp",
+              "headline": "Trump says Iran's Kharg is being 'blown to smithereens', but gives no details",
+              "body": "By Phil Stewart and David Lawder WASHINGTON, Aug 30 (Reuters) - Iran's energy hub of Kharg Island is being blown to ...",
+              "published_date": "2026-08-31",
+              "outlet": "Reuters on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.bafc0d5b51457d832cbfda1fc1c259a0"
+            },
+            {
+              "news_id": "439afb6330dc552489f85d7d6811e8d2",
+              "url": "https://www.al-monitor.com/originals/2026/08/latest-developments-us-iran-war-1",
+              "headline": "Latest developments in the US-Iran war",
+              "body": "The Middle East war has flared again for the first time in a month, with American strikes on Iran prompting retaliation from Tehran on Monday. Here are the latest developments: - Iran attacks Jordan, UAE - Iran's Revolutionary Guards said Monday they attacked two US military air bases with ballistic missiles in Washington-allied Jordan, causing \"heavy damage\", state media reported.",
+              "published_date": "2026-08-31",
+              "outlet": "Al-Monitor",
+              "image": "https://www.bing.com/th?id=ONUT.jOWOeA4mrLkTDypzDGj9Fw"
+            },
+            {
+              "news_id": "9da9c04dfe2c5368bf2e267b2f46fba1",
+              "url": "https://www.bloomberg.com/news/articles/2026-08-31/asian-refiners-scoop-up-argentinian-oil-as-iran-war-hits-supply",
+              "headline": "Asian Refiners Scoop Up Argentinian Oil as Iran War Hits Supply",
+              "body": "Asian refiners have increased purchases of Argentinian crude as the Iran war disrupts supply from the Middle East and drives competition for barrels from other regions.",
+              "published_date": "2026-08-25T06:58:53+00:00",
+              "outlet": "Bloomberg",
+              "image": ""
+            },
+            {
+              "news_id": "7bd1fb59902855d69ceedeac36c92e29",
+              "url": "https://pix11.com/news/national-news/ap-national/ap-investors-prosper-and-consumers-pay-as-the-iran-war-exacts-an-uneven-economic-toll-6-months-in/",
+              "headline": "Investors prosper and consumers pay as the Iran war exacts an uneven economic...",
+              "body": "NEW YORK (AP) — As the U.S. and Israel relentlessly bombed Iran in the opening days of war, the most...",
+              "published_date": "2026-08-30T06:58:50+00:00",
+              "outlet": "WPIX 11 New York",
+              "image": "https://s.yimg.com/bo/e5abf5b4-221d-56fc-a229-394b9d32b784_1788154835837.jpg"
+            },
+            {
+              "news_id": "5d46a6b5740c55e6a8eb4f19f1db12d6",
+              "url": "https://www.msn.com/en-gb/news/other/iran-s-leader-calls-for-muslim-unity-nbc-crew-attacked-in-west-bank-and-other-mideast-news/ar-AA2bduVu?ocid=BingNewsVerp",
+              "headline": "Iran's leader calls for Muslim unity, NBC crew attacked in West Bank and other Mideast news",
+              "body": "Iran's leader calls for Muslim unity, NBC crew attacked in West Bank and other Mideast news - Iran’s supreme leader has ...",
+              "published_date": "2026-08-31",
+              "outlet": "The Independent on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.cLHD7sWnK8D2tQEhczO2pA"
+            },
+            {
+              "news_id": "ec99c1b1badc553b8a321f856f38d8df",
+              "url": "https://www.presstv.co.uk/Detail/2026/08/31/775382/Trump-calls-plunder-of-Venezuelan-oil-a-‘gift’-as-Washington-tries-to-refill-war-drained-reserves",
+              "headline": "Trump calls plunder of Venezuelan oil a ‘gift’ as Washington tries to refill war-drained reserves",
+              "body": "US President Donald Trump has announced that Washington will pour Venezuelan crude into America’s emptied Strategic Petroleum Reserve, dressing up the seizure of a sovereign nation’s wealth as a “gift” to the American people.",
+              "published_date": "2026-08-31",
+              "outlet": "presstv",
+              "image": "https://www.bing.com/th?id=ONUT.d97Jbc4QJzLzCKXhA_Lukw"
+            },
+            {
+              "news_id": "d1e86ca1c1b05d02acee5b5aaddb5474",
+              "url": "https://www.msn.com/en-us/news/other/us-plans-to-sanction-another-bank-to-keep-economic-pressure-on-iran/ar-AA2beTkz?ocid=BingNewsVerp",
+              "headline": "US plans to sanction another bank to keep economic pressure on Iran",
+              "body": "Washington has recently stepped up efforts to economically pressure Tehran amid the deadlocked truce talks.",
+              "published_date": "2026-08-31",
+              "outlet": "Al Jazeera on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.0226cac51ef44b8531426adbc9d3dd86"
+            },
+            {
+              "news_id": "a3daa354effd515c926b58a380526e77",
+              "url": "https://www.benzinga.com/news/politics/26/08/61513817/ted-cruz-defends-trumps-mission-accomplished-claim-on-iran-air-force-is-in-rubble-navy-is-sunk",
+              "headline": "Ted Cruz Defends Trump's 'Mission Accomplished' Claim on Iran: 'Air Force Is in Rubble...Navy Is Sunk'",
+              "body": "Ted Cruz defends Trump’s “mission accomplished” message, arguing the US achieved its goals even as the Iran conflict enters a new phase.",
+              "published_date": "2026-08-31",
+              "outlet": "Benzinga",
+              "image": "https://s.yimg.com/bo/574bd8b5-fc52-5024-8323-97e24b864026_1788154461982.jpg"
+            },
+            {
+              "news_id": "ac3b5d9920ea5192a1554a7e1d990515",
+              "url": "https://www.benzinga.com/news/politics/26/08/61513352/us-iran-conflict-hormuz-larak-island-strikes-brent-crude",
+              "headline": "US-Iran Conflict Escalates Near Hormuz Strait as Tehran Hits Back for Larak Island Strikes: Brent Crude R",
+              "body": "U.S.-Iran tensions escalated near the Strait of Hormuz as Iran retaliated for U.S. strikes on Larak Island, pushing Brent crude above $89.",
+              "published_date": "2026-08-30",
+              "outlet": "Benzinga",
+              "image": "https://s.yimg.com/bo/ceff05f1-1507-5e6d-9c9d-d2028e18c589_1788141140575.jpg"
+            },
+            {
+              "news_id": "3773d0ca24bd539e88c4ca1ae9dfd3e7",
+              "url": "https://www.huffpost.com/entry/us-forces-strike-iranian-rocket-launchers-strait-hormuz_n_6a948d4fe4b0e9dbd39bcf91",
+              "headline": "U.S. Forces Strike Iranian Rocket Launchers On The Strait Of Hormuz In First Military Action In Weeks",
+              "body": "A U.S. officials says that U.S. forces have struck Iranian rocket launchers on the Strait of Hormuz in the first military action in a month.",
+              "published_date": "2026-08-30",
+              "outlet": "HuffPost",
+              "image": "https://www.bing.com/th?id=ONUT.GrDsfV-1_HJsDP8AUDlTLQ"
+            },
+            {
+              "news_id": "0007961ece9351e58b78b65ace8faa01",
+              "url": "https://apnews.com/article/iran-economy-stocks-trump-airlines-energy-oil-dd9861bbb882b04e1680f6b2847b3495",
+              "headline": "Investors prosper and consumers pay as the Iran war exacts an uneven economic toll 6 months in",
+              "body": "Six months after the U.S. and Israel launched their war against Iran, the direst economic predictions haven't come true.",
+              "published_date": "2026-08-30",
+              "outlet": "Associated Press News",
+              "image": "https://www.bing.com/th?id=ONUT.9lZez7WHU2Tl5XxpVCZHOA"
+            },
+            {
+              "news_id": "6acace6b14a752b1aefaafe680db047f",
+              "url": "https://www.politico.com/news/2026/08/30/us-strikes-irans-larak-island-01056585",
+              "headline": "US strikes Iran’s Larak Island",
+              "body": "U.S. forces struck Iran’s Larak Island on Sunday, a U.S. official said, after observing military personnel preparing to ...",
+              "published_date": "2026-08-30T00:00:00+00:00",
+              "outlet": "Politico",
+              "image": "https://www.bing.com/th?id=ONUT.yTlA56h0KemOMjIZFK8xMw"
+            }
+          ]
         }
       ],
-      "logs_total": 35
+      "logs_total": 36
     },
     {
       "incident_id": "20260727-GR-WF",
@@ -20536,7 +20788,7 @@
       "disease_name": null,
       "event_date": "2026-07-27",
       "first_reported_date": "2026-07-27",
-      "last_updated_date": "2026-08-30",
+      "last_updated_date": "2026-08-31",
       "days_since_event": 35,
       "source_count": 6,
       "should_report": true,
@@ -20547,7 +20799,7 @@
         "gdacs": 1,
         "ercc": 5,
         "healthmap": 0,
-        "news": 619
+        "news": 631
       },
       "source_links": [
         {
@@ -22691,6 +22943,10 @@
           "published_date": "2026-08-24T04:47:53+00:00"
         },
         {
+          "headline": "Ross Fire explodes to at least 85,000 acres in North Texas, leaving destruction across 2 counties",
+          "published_date": "2026-08-25"
+        },
+        {
           "headline": "West Java Forest Fires Burn Nearly 200 Hectares in 2026",
           "published_date": "2026-08-25"
         },
@@ -23047,11 +23303,23 @@
           "published_date": "2026-08-30"
         },
         {
+          "headline": "Camp Creek Fire grows to 9,495 acres, west of Augusta",
+          "published_date": "2026-08-30"
+        },
+        {
           "headline": "Willowfork Firefighters Injured in Crash at Ross Fire, Texas",
           "published_date": "2026-08-30"
         },
         {
           "headline": "Plaskett Fire grows past 8,000 acres as crews try to protect homes near Highway 1",
+          "published_date": "2026-08-30"
+        },
+        {
+          "headline": "Orangutan rescued from Borneo fire battles respiratory illness",
+          "published_date": "2026-08-30"
+        },
+        {
+          "headline": "Firefighters continue to secure uncontained portion of the deadly 15,085-acre Hawk Fire",
           "published_date": "2026-08-30"
         },
         {
@@ -23071,11 +23339,43 @@
           "published_date": "2026-08-30"
         },
         {
+          "headline": "Firefighters battle Penobscot wildfire, Castine Road closed",
+          "published_date": "2026-08-30"
+        },
+        {
           "headline": "Timber Fire nears 16,000 acres burned in Monterey County",
           "published_date": "2026-08-30"
+        },
+        {
+          "headline": "Ross fire scorches 85,300 acres as crews push to contain North Texas blaze",
+          "published_date": "2026-08-31"
+        },
+        {
+          "headline": "Burning Kalimantan forests put orangutans at risk",
+          "published_date": "2026-08-31"
+        },
+        {
+          "headline": "Tennessee firefighters to battle Ross Fire in Texas",
+          "published_date": "2026-08-31"
+        },
+        {
+          "headline": "Malaysia’s Sabah on haze alert, as air quality in state capital hits unhealthy level",
+          "published_date": "2026-08-31"
+        },
+        {
+          "headline": "Hawk Fire 98% contained after burning 15,085 acres",
+          "published_date": "2026-08-31"
+        },
+        {
+          "headline": "Kalimantan Fires: Indonesian Military Leads Ecosystem Restoration",
+          "published_date": "2026-08-31"
+        },
+        {
+          "headline": "Haze: Sabah goes on alert with Tawau, KK recording unhealthy API levels",
+          "published_date": "2026-08-31"
         }
       ],
-      "news_total": 619,
+      "news_total": 631,
       "logs": [
         {
           "log_date": "2026-07-27",
@@ -32765,7 +33065,7 @@
       "disease_name": null,
       "event_date": "2026-08-08",
       "first_reported_date": "2026-08-08",
-      "last_updated_date": "2026-08-28",
+      "last_updated_date": "2026-08-31",
       "days_since_event": 23,
       "source_count": 1,
       "should_report": false,
@@ -32776,7 +33076,7 @@
         "gdacs": 1,
         "ercc": 0,
         "healthmap": 0,
-        "news": 71
+        "news": 72
       },
       "source_links": [
         {
@@ -33080,9 +33380,13 @@
         {
           "headline": "Black summer: How Canada can improve its wildfire strategy",
           "published_date": "2026-08-28"
+        },
+        {
+          "headline": "Ontario wildfire smoke drove Michigan AQI to 616 as researchers warn the threat is growing",
+          "published_date": "2026-08-31"
         }
       ],
-      "news_total": 71,
+      "news_total": 72,
       "logs": [
         {
           "log_date": "2026-08-10",
@@ -36313,7 +36617,7 @@
         "gdacs": 0,
         "ercc": 2,
         "healthmap": 0,
-        "news": 171
+        "news": 172
       },
       "source_links": [
         {
@@ -37013,6 +37317,10 @@
           "published_date": "2026-08-29T16:35:28+00:00"
         },
         {
+          "headline": "FEMA Approves $119M for Iowa, Kansas, Missouri, Nebraska",
+          "published_date": "2026-08-30"
+        },
+        {
           "headline": "Storm Center AM Update: Hot Through the Week; Spotty Storms",
           "published_date": "2026-08-30"
         },
@@ -37025,7 +37333,7 @@
           "published_date": "2026-08-30"
         }
       ],
-      "news_total": 171,
+      "news_total": 172,
       "logs": [
         {
           "log_date": "2026-08-25",
@@ -38529,7 +38837,7 @@
       "incident_id": "20260814-ID-EQ",
       "tree_id": "aeb6e9b226904e9684922e25e165cd7b",
       "canonical_name": "Earthquake M7.7 Ende, Indonesia 2026-08-14",
-      "summary": "The recovery from the M7.7 earthquake continues as Indonesia's Public Works Minister vows to rebuild damaged public facilities in East Nusa Tenggara. Caritas Indonesia is actively assisting in affected areas, and the Health Ministry has deployed 206 medical reserve volunteers to restore healthcare services in the region.\nAs of late August, the number of earthquake evacuees in East Nusa Tenggara is declining as aftershocks begin to ease. Recovery efforts are shifting focus to long-term rebuilding, with special attention to the needs of affected children, while tourism authorities in Labuan Bajo assess post-quake recovery for the region's tourism industry.",
+      "summary": "As of August 30, 2026, the number of people displaced by the earthquake has increased to 188,161, with 9,765 aftershocks recorded but now declining. A total of 1,954 tons of aid has been distributed to affected communities by the National Disaster Mitigation Agency (BNPB).",
       "country": "Indonesia",
       "iso2": "ID",
       "lat": -8.2849,
@@ -38548,7 +38856,7 @@
       "disease_name": null,
       "event_date": "2026-08-14",
       "first_reported_date": "2026-08-14",
-      "last_updated_date": "2026-08-30",
+      "last_updated_date": "2026-08-31",
       "days_since_event": 17,
       "source_count": 16,
       "should_report": true,
@@ -38559,7 +38867,7 @@
         "gdacs": 1,
         "ercc": 0,
         "healthmap": 0,
-        "news": 420
+        "news": 423
       },
       "source_links": [
         {
@@ -40349,9 +40657,21 @@
         {
           "headline": "Kemenkes deploys 206 medical reserve volunteers to restore healthcare services in post-quake NTT",
           "published_date": "2026-08-30"
+        },
+        {
+          "headline": "NTT Earthquake: Evacuee Numbers Fall as Aftershocks Decline",
+          "published_date": "2026-08-31"
+        },
+        {
+          "headline": "188,000 Displaced Victims of the East Nusa Tenggara Earthquake Remain (August 30, 2026) | Pusat Data Ekonomi dan Bisnis Indonesia | Databoks",
+          "published_date": "2026-08-31"
+        },
+        {
+          "headline": "Aid totaling 1,954 tons distributed to NTT quake victims, BNPB says",
+          "published_date": "2026-08-31"
         }
       ],
-      "news_total": 420,
+      "news_total": 423,
       "logs": [
         {
           "log_date": "2026-08-15",
@@ -41008,57 +41328,6 @@
           ]
         },
         {
-          "log_date": "2026-08-27",
-          "summary": "As of August 27, the death toll from the M7.7 earthquake has risen to 111, with over 176,000 people displaced. Indonesia's government announced it will cover one semester of tuition fees for 5,000 university students affected by the disaster. A magnitude 5 aftershock also struck near Ende, continuing the sequence of tremors.",
-          "news": [
-            {
-              "news_id": "6b9448b980375a209c6cbaa3fe2badee",
-              "url": "https://www.msn.com/en-us/news/other/usgs-reports-average-earthquake-activity-expected-in-2026/vi-AA2b3Wlb?ocid=BingNewsVerp",
-              "headline": "USGS reports average earthquake activity expected in 2026",
-              "body": "A 7.7 magnitude earthquake has hit Flores Island in Indonesia, prompting a tsunami alert and resulting in fatalities. This incident occurs alongside a series of significant seismic events globally, ...",
-              "published_date": "2026-08-27",
-              "outlet": "Amazon S3 on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "c4cf8507c5a25b2990fb6bfc5dbb9f9c",
-              "url": "https://factcheck.afp.com/doc.afp.com.C6LQ8T3",
-              "headline": "Video of 2024 Taiwan tremor falsely linked to recent Indonesian earthquake damage",
-              "body": "The deadly 7.7-magnitude earthquake that rattled Indonesia in August 2026 damaged hundreds of houses and buildings but a ...",
-              "published_date": "2026-08-27T23:06:52+00:00",
-              "outlet": "AFP Fact Check",
-              "image": "https://www.bing.com/th?id=ONUT.4ru5fluh3tUwHVMbUDnOWA"
-            },
-            {
-              "news_id": "3b70d8b5939354afb532574f4b7f31a5",
-              "url": "https://www.anews.com.tr/asia/2026/08/27/indonesia-earthquake-death-toll-rises-to-111-over-176000-displaced",
-              "headline": "Indonesia earthquake death toll rises to 111, over 176,000 displaced",
-              "body": "Indonesia earthquake death toll rises to 111, over 176,000 displaced",
-              "published_date": "2026-08-27",
-              "outlet": "anews",
-              "image": "https://www.bing.com/th?id=ONUT._W-4ZcClHWO5mlw5dD225A"
-            },
-            {
-              "news_id": "16d07b1cafaf5e33a9b7fbcec900a16a",
-              "url": "https://en.antaranews.com/news/428739/ntt-earthquake-indonesia-to-cover-tuition-for-5000-students",
-              "headline": "NTT Earthquake: Indonesia to cover tuition for 5,000 students",
-              "body": "Indonesia’s Higher Education, Science, and Technology Ministry has pledged to cover one semester of tuition fees for 5,000 university students affected ...",
-              "published_date": "2026-08-27",
-              "outlet": "ANTARA News",
-              "image": "https://www.bing.com/th?id=ONUT.ZodXcBnPlO-9DzNeL1WwYA"
-            },
-            {
-              "news_id": "1f4abbeb14455e2ca80f3b2cbfca95bd",
-              "url": "https://cedarnews.net/newstasks/950681/magnitude-5-earthquake-strikes-ende-indonesia/",
-              "headline": "Magnitude 5 Earthquake Strikes Near Ende, Indonesia",
-              "body": "A magnitude 5 earthquake struck near Ende in Indonesia’s East Nusa Tenggara province at approximately 10:15 p.m. local time on Wednesday, ...",
-              "published_date": "2026-08-27T10:10:23+00:00",
-              "outlet": "Cedar News",
-              "image": ""
-            }
-          ]
-        },
-        {
           "log_date": "2026-08-28",
           "summary": "The death toll from the August 14 M7.7 earthquake remains at 111 with over 176,000 displaced. New developments include the Transmigration Ministry allocating Rp200 million to repair a damaged madrasah in West Manggarai, the Palestinian Embassy distributing humanitarian aid to East Nusa Tenggara, and the Health Ministry establishing inflatable field hospitals to ensure safe surgical operations. Additionally, a viral video of giant waves was confirmed to be from Portugal, not Indonesia's tsunami.",
           "news": [
@@ -41186,9 +41455,42 @@
               "image": "https://www.bing.com/th?id=ONUT.zCMDfrK-DwKJfUvdwOxyQQ"
             }
           ]
+        },
+        {
+          "log_date": "2026-08-31",
+          "summary": "As of August 30, 2026, the number of people displaced by the earthquake has increased to 188,161, with 9,765 aftershocks recorded but now declining. A total of 1,954 tons of aid has been distributed to affected communities by the National Disaster Mitigation Agency (BNPB).",
+          "news": [
+            {
+              "news_id": "c4b38f2735ea5e4c87e5eb5f4a34259a",
+              "url": "https://en.tempo.co/read/2118600/ntt-earthquake-evacuee-numbers-fall-as-aftershocks-decline",
+              "headline": "NTT Earthquake: Evacuee Numbers Fall as Aftershocks Decline",
+              "body": "BNPB says 188,161 people remain displaced after the NTT earthquake, while aftershocks have begun to ease after 9,765 were recorded.",
+              "published_date": "2026-08-31",
+              "outlet": "Tempo.co English",
+              "image": "https://www.bing.com/th?id=ONUT.XIfnPntzTRSgKgbo9qBkcA"
+            },
+            {
+              "news_id": "3a29ef4879945b9a86cb54e79b7a88e8",
+              "url": "https://databoks.katadata.co.id/en/environment/statistics/6a94c3ef8dc61/188000-displaced-victims-of-the-east-nusa-tenggara-earthquake-remain-august-30-2026",
+              "headline": "188,000 Displaced Victims of the East Nusa Tenggara Earthquake Remain (August 30, 2026) | Pusat Data Ekonomi dan Bisnis Indonesia | Databoks",
+              "body": "The BNPB reported that, as of 7:00 am on Sunday (August 30, 2026), the number of victims displaced by the earthquake in East Nusa Tenggara, Indonesia, reached 188,161 people.",
+              "published_date": "2026-08-31",
+              "outlet": "Databoks",
+              "image": ""
+            },
+            {
+              "news_id": "e8b453d1e7c456a08fe462c07958cc1c",
+              "url": "https://en.antaranews.com/news/429091/aid-totaling-1954-tons-distributed-to-ntt-quake-victims-bnpb-says",
+              "headline": "Aid totaling 1,954 tons distributed to NTT quake victims, BNPB says",
+              "body": "The National Disaster Mitigation Agency (BNPB) reported that a total of 1,954 tons of aid had been delivered to communities affected by the earthquake in East ...",
+              "published_date": "2026-08-31",
+              "outlet": "ANTARA News",
+              "image": "https://www.bing.com/th?id=ONUT.6qxFBJPUomkysw4rVHHp8w"
+            }
+          ]
         }
       ],
-      "logs_total": 12
+      "logs_total": 13
     },
     {
       "incident_id": "20260814-BE-WF",
@@ -42199,13 +42501,13 @@
       "incident_id": "20260825-XX-DR",
       "tree_id": "8e437650e0284086b4ad68831ffbeeee",
       "canonical_name": "Drought 2026-08-25",
-      "summary": "New drought developments include the Netherlands shattering 1976 records as Rhine flows hit their lowest, prompting calls to overhaul drainage systems. A record $5.3 million was paid for a Panama Canal transit slot as reduced water levels limit crossings. In India, Karnataka faces a drought situation with 53.10 lakh hectares of agriculture in the 2026-27 season, significantly below previous years. Additionally, Central American drought relief is anticipated from Tropical Storm Dolly's remnants, while fall foliage in the Mid-Atlantic and Virginia is expected to be poor due to ongoing drought. In the U.S., a heat dome persists over the Texas Panhandle, Southwest Missouri warns of extreme fire season, Florida's aquifer is low, northeast Wisconsin continues drought, and Colorado sees record bear reports as drought impacts natural food sources. Europe's Danube River drought deepens, threatening fish and river cruises.\nHungary's beekeepers' association warns that the bee population is at risk as August drought and extreme heat have wiped out natural pollen sources, leaving bees starving and parched.",
+      "summary": "New drought developments reported on August 30-31: The federal government finalized a new Colorado River plan to cut water amid severe depletion, causing uncertainty for cities and farmers. In Sarawak, Malaysia, drought and haze have shrunk river channels, making journeys perilous. Tunisia is sweltering under near-50°C temperatures, with power cuts disrupting water supplies and straining health services. United Nations desertification talks in Mongolia concluded, highlighting the growing drought crisis globally. India faces a 13% rainfall deficit, threatening Kharif crop yields, while a South Carolina farmer reported losing crops due to drought.",
       "country": "",
       "iso2": "XX",
       "lat": null,
       "lon": null,
       "country_group": "C",
-      "region": "Europe",
+      "region": "Asia",
       "incident_type": "Drought",
       "incident_category": "Natural",
       "is_disease": false,
@@ -42218,7 +42520,7 @@
       "disease_name": null,
       "event_date": "2026-08-25",
       "first_reported_date": "2026-08-25",
-      "last_updated_date": "2026-08-30",
+      "last_updated_date": "2026-08-31",
       "days_since_event": 6,
       "source_count": 1,
       "should_report": true,
@@ -42229,7 +42531,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 80
+        "news": 86
       },
       "source_links": [
         {
@@ -42451,6 +42753,10 @@
           "published_date": "2026-08-28"
         },
         {
+          "headline": "United Nations talks in Mongolia expose growing drought crisis as climate impacts worsen",
+          "published_date": "2026-08-28"
+        },
+        {
           "headline": "Drought, Heat, Low Water Levels: Europe’s River Cruises Take a Hit",
           "published_date": "2026-08-28T07:20:40+00:00"
         },
@@ -42569,9 +42875,29 @@
         {
           "headline": "Peter Moore: How dry we are",
           "published_date": "2026-08-30"
+        },
+        {
+          "headline": "Colorado River plan to cut water amid drought brings uncertainty for cities and farmers",
+          "published_date": "2026-08-30"
+        },
+        {
+          "headline": "Sarawak Rivers Board warns Rajang journeys perilous as haze blinds boatmen, drought shrinks channels",
+          "published_date": "2026-08-30"
+        },
+        {
+          "headline": "Tunisia swelters as power cuts disrupt water supplies",
+          "published_date": "2026-08-31"
+        },
+        {
+          "headline": "What does a 13% rainfall deficit mean for India’s kharif crop?",
+          "published_date": "2026-08-31"
+        },
+        {
+          "headline": "Drought strains South Carolina farm’s crops",
+          "published_date": "2026-08-31"
         }
       ],
-      "news_total": 80,
+      "news_total": 86,
       "logs": [
         {
           "log_date": "2026-08-26",
@@ -42720,102 +43046,6 @@
               "published_date": "2026-08-25T00:00:00+00:00",
               "outlet": "Forbes",
               "image": "https://www.bing.com/th?id=ONUT.taM6TsVuEKlGl0PeC7tPog"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-08-28",
-          "summary": "New drought impacts reported on August 28: UK wildlife centers are overwhelmed with dehydrated hedgehogs and owls due to heat and drought, Minnesota's DNR warns residential trees are at risk of dying from drought stress, and Kansas wheat acreage is declining under pressure from drought and shifting crop economics. In contrast, Corpus Christi loosened drought restrictions to Stage 1 after reservoirs rebounded from upstream flooding. Additionally, coral records show human-caused climate change is making El Niño stronger, which could intensify drought globally.",
-          "news": [
-            {
-              "news_id": "c06f62e5e91954dcb8623a3ae3329848",
-              "url": "https://www.forbes.com/sites/davidrvetter/2026/08/28/human-caused-climate-change-is-making-el-nio-stronger-corals-show/",
-              "headline": "Human-Caused Climate Change Is Making El Niño Stronger, Corals Show",
-              "body": "Coral skeletons reveal El Niño is stronger than at any point in 1,000 years. Scientists say human-caused climate change is ...",
-              "published_date": "2026-08-27T12:05:21+00:00",
-              "outlet": "Forbes",
-              "image": "https://www.bing.com/th?id=ONUT.l0TP90LRg1WEWMsNU0cw4g"
-            },
-            {
-              "news_id": "064b1c061a2f5e04bf220e1d5fd3fac1",
-              "url": "https://www.msn.com/en-us/news/other/drought-worsens-through-the-hottest-stretch-of-the-year/ar-AA2b3Q7w?ocid=BingNewsVerp",
-              "headline": "Drought worsens through the hottest stretch of the year",
-              "body": "Hot and dry conditions elevate concerns for flash drought ...",
-              "published_date": "2026-08-28",
-              "outlet": "KBTX News 3 on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.1mXyOSWkEWHRPyAa3gPkkQ"
-            },
-            {
-              "news_id": "375bd3f4f4e25cfe93e66eaa0024477b",
-              "url": "https://www.ctinsider.com/weather/article/ct-weather-bridgeport-summer-rainfall-record-2026-22406104.php",
-              "headline": "Connecticut summer swung from drought to flooding as Bridgeport broke a rainfall record",
-              "body": "We saw some wacky weather in Connecticut this summer. From 100-degree temperatures to days of heavy rain, tranquil stretches ...",
-              "published_date": "2026-08-25T12:05:21+00:00",
-              "outlet": "CT Insider",
-              "image": "https://www.bing.com/th?id=ONUT.B3wjmfZfPcve360nu0qf5g"
-            },
-            {
-              "news_id": "e916bde866595ade92d51c75a724e574",
-              "url": "https://www.dailycamera.com/2026/08/28/colorado-river-drought-lake-powell-mead-glen-canyon-dam/",
-              "headline": "As the Colorado River shrinks, the case for keeping water in Lake Powell is evaporating (Opinion)",
-              "body": "As the the Colorado River’s supply continues to shrink, shifting more water from Lake Powell to Lake Mead would strengthen the reliability of domestic water supplies for about 25 million people in Arizona, Nevada and California, sustain m…",
-              "published_date": "2026-08-28",
-              "outlet": "Daily Camera",
-              "image": "https://www.bing.com/th?id=ONUT.wM9avDXWs1_M7aRimXFiSw"
-            },
-            {
-              "news_id": "7f9cb499c613594e9658630c37df5e3b",
-              "url": "https://www.fox21online.com/news/mn-dnr-warns-residential-trees-are-at-risk-of-dying-from-drought-stress/article_d8b0017d-84a1-44d6-b14d-6c35de9846d7.html",
-              "headline": "MN DNR warns residential trees are at risk of dying from drought stress",
-              "body": "According to the DNR, residential trees are at greater risk of decay and death because of drought stress. Dry conditions can also contribute to environmental challenges, including insect infestations, disease",
-              "published_date": "2026-08-27",
-              "outlet": "Fox21Online",
-              "image": "https://www.bing.com/th?id=ONUT.boMayET3GD37Fa1jMYf_Zg"
-            },
-            {
-              "news_id": "1ce6e8774d0d55d38208836b0b43efe8",
-              "url": "https://www.msn.com/en-us/news/other/corpus-christi-loosens-drought-restrictions-to-stage-1/ar-AA2b2Pve?ocid=BingNewsVerp",
-              "headline": "Corpus Christi loosens drought restrictions to Stage 1",
-              "body": "After upstream flooding increased water levels in Corpus Christi's reservoirs, the city loosened drought restrictions to ...",
-              "published_date": "2026-08-28",
-              "outlet": "Corpus Christi Caller-Times on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.BtnhvbneUBACBrm5a6faOQ"
-            },
-            {
-              "news_id": "9a219eaee88c5eeca91314041685971b",
-              "url": "https://www.yahoo.com/news/world/articles/uk-wildlife-centers-overwhelmed-drought-101000034.html",
-              "headline": "UK wildlife centers overwhelmed as drought dehydrates hedgehogs, owls",
-              "body": "\"It's been unprecedented, [they have] been really struggling with the heat.\"",
-              "published_date": "2026-08-28",
-              "outlet": "The Cool Down · via Yahoo News",
-              "image": "https://media.zenfs.com/en/the_cool_down_737/37bfa9885d9496f3bfd07a3c3f59d3b5.jpg"
-            },
-            {
-              "news_id": "1a36685218d55098b2b90c4e2ef5b194",
-              "url": "https://hpj.com/2026/08/28/august-28-editorial-opinion-column/",
-              "headline": "Wheat state no more? Let’s hope not - High Plains Journal",
-              "body": "Field Editor Kylene Scott writes about how Kansas wheat acreage faces pressure as drought, crop economics and diversification push farmers toward corn and soybeans.",
-              "published_date": "2026-08-28",
-              "outlet": "High Plains Journal",
-              "image": "https://www.bing.com/th?id=ONUT.Ty_jpCBfDYyfTcTeJ3GVEQ"
-            },
-            {
-              "news_id": "2ae53554bc7351939ad61abf8776b393",
-              "url": "https://www.msn.com/en-us/weather/general/as-drought-strains-utah-rangelands-concerns-remain-over-future-of-wild-horses/vi-AA2b58Cc?ocid=BingNewsVerp",
-              "headline": "As drought strains Utah rangelands, concerns remain over future of wild horses",
-              "body": "None ...",
-              "published_date": "2026-08-28",
-              "outlet": "FOX 13 KSTU Salt Lake City, UT on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "8fcb54d19eef5502b3f51a193995d221",
-              "url": "https://www.dailycamera.com/2026/08/28/boulder-hotel-severe-drought-development-letters/",
-              "headline": "Building during a severe drought; Initiative 95; ballot petitions; unequal tax system (Letters)",
-              "body": "Nearly every day there’s an article about the severe drought (both in the U.S. and all over the globe). So! Kids, let’s build a 110-room hotel in downtown Boulder! Does anyone else register the extreme disconnect here?",
-              "published_date": "2026-08-28",
-              "outlet": "Daily Camera",
-              "image": "https://www.bing.com/th?id=ONUT.iwh45OxCdUutyRgeMQwY_A"
             }
           ]
         },
@@ -43154,9 +43384,69 @@
               "image": "https://www.bing.com/th?id=ONUT.oh30EHuLaIHIYlBTRb0czw"
             }
           ]
+        },
+        {
+          "log_date": "2026-08-31",
+          "summary": "New drought developments reported on August 30-31: The federal government finalized a new Colorado River plan to cut water amid severe depletion, causing uncertainty for cities and farmers. In Sarawak, Malaysia, drought and haze have shrunk river channels, making journeys perilous. Tunisia is sweltering under near-50°C temperatures, with power cuts disrupting water supplies and straining health services. United Nations desertification talks in Mongolia concluded, highlighting the growing drought crisis globally. India faces a 13% rainfall deficit, threatening Kharif crop yields, while a South Carolina farmer reported losing crops due to drought.",
+          "news": [
+            {
+              "news_id": "060dc76f4d72517ab0d664949ef331b8",
+              "url": "https://www.1011now.com/2026/08/30/colorado-river-plan-cut-water-amid-drought-brings-uncertainty-cities-farmers/",
+              "headline": "Colorado River plan to cut water amid drought brings uncertainty for cities and farmers",
+              "body": "Mayor Robert Morris of Cave Creek, Arizona, is worried about more water shortages from the severely depleted Colorado River. The federal government recently finalized a new river plan to help keep it from plunging further, causing concerns and uncertainty among those who rely on its water.",
+              "published_date": "2026-08-30",
+              "outlet": "KOLN",
+              "image": "https://www.bing.com/th?id=ONUT.nBC8DDsCkVgP4QSELsBf5A"
+            },
+            {
+              "news_id": "bfb5d47ad8b9578b83e39eb38f353139",
+              "url": "https://www.malaymail.com/news/malaysia/2026/08/30/thick-haze-blankets-rajang-igan-rivers-as-drought-shrinks-channels-sarawak-rivers-board-issues-alert/233299",
+              "headline": "Sarawak Rivers Board warns Rajang journeys perilous as haze blinds boatmen, drought shrinks channels",
+              "body": "SIBU, Aug 30 — River transport users in Sarawak have been advised to plan their journeys carefully and exercise greater vigilance amid the current drought and haze conditions to...",
+              "published_date": "2026-08-30",
+              "outlet": "Malay Mail",
+              "image": "https://www.bing.com/th?id=ONUT.wQA1RAms7K2JK1mZeLgX1Q"
+            },
+            {
+              "news_id": "d478f0d7ca8455eaae980c320dd77dec",
+              "url": "https://www.aljazeera.com/news/2026/8/31/tunisia-swelters-as-power-cuts-disrupt-water-supplies",
+              "headline": "Tunisia swelters as power cuts disrupt water supplies",
+              "body": "Near 50C temperatures are driving record electricity demand, disrupting water supplies and straining health services.",
+              "published_date": "2026-08-31",
+              "outlet": "Al Jazeera",
+              "image": "https://www.bing.com/th?id=ONUT.ErPdZ8ZEcenaGcv4ABYXBA"
+            },
+            {
+              "news_id": "6406359f9bee51068464619419a6749e",
+              "url": "https://www.newsday.com/news/nation/cop17-mongolia-climate-change-drought-desertification-h58257",
+              "headline": "United Nations talks in Mongolia expose growing drought crisis as climate impacts worsen",
+              "body": "Representatives from nearly 200 countries have wrapped up United Nations desertification talks in Mongolia.",
+              "published_date": "2026-08-28",
+              "outlet": "Newsday",
+              "image": "https://s.yimg.com/bo/f20cd57f-e1f4-53a4-95bc-0e51ff3f1b6a_1787932683997.jpg"
+            },
+            {
+              "news_id": "0d9a1677af39501385fbccd5b98f22d8",
+              "url": "https://www.newslaundry.com/2026/08/31/what-does-a-13-rainfall-deficit-mean-for-indias-kharif-crop",
+              "headline": "What does a 13% rainfall deficit mean for India’s kharif crop?",
+              "body": "Even though the area under Kharif may look normal, the yield may be lower, says former agriculture secretary Siraj Hussain.",
+              "published_date": "2026-08-31",
+              "outlet": "Newslaundry",
+              "image": "https://www.bing.com/th?id=ONUT.xu-SaGY6zLjB7smR8XLIMA"
+            },
+            {
+              "news_id": "fd8074803f995a3490ff66d32fd51a7a",
+              "url": "https://www.msn.com/en-us/news/other/ground-was-so-dry-drought-strains-south-carolina-farm-s-crops/ar-AA2bdIAU?ocid=BingNewsVerp",
+              "headline": "Drought strains South Carolina farm’s crops",
+              "body": "A South Carolina farmer says this summer’s drought has caused her to lose many crops, including potatoes and peppers.",
+              "published_date": "2026-08-31",
+              "outlet": "WMBF News on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.41856d9e5215c2912dca000a724aba2a"
+            }
+          ]
         }
       ],
-      "logs_total": 5
+      "logs_total": 6
     },
     {
       "incident_id": "20260825-FJ-EQ",
@@ -43378,7 +43668,7 @@
       "incident_id": "20260826-NP-FL",
       "tree_id": "26a139d9c4274b379e946b7b737af269",
       "canonical_name": "Flood Bagmati, Nepal 2026-08-26",
-      "summary": "As of August 30, the death toll from the Bagmati flash floods has exceeded 700, with at least 734 reported dead and nearly 2,500 still missing. Rescue operations resumed after weather delays, but the Bhotekoshi River has risen again, prompting fresh flood warnings. Nepal has begun burying unidentified bodies while preserving DNA samples for later identification, and international rescue teams from India, China, and South Korea have been deployed to support search efforts, as thousands of displaced survivors face severe shortages of water and medicine in crowded camps.\nAs of August 30, the death toll from the Bagmati flash floods has surpassed 750, with some reports estimating 788 killed, and more than 3,000 people remain missing. Rescue operations are ongoing, with rescuers drilling through debris to reach workers trapped in tunnels, while authorities issued fresh flood warnings as the Bhote Koshi River's flow increased. Nepal has begun burying unidentified bodies while preserving DNA samples, and survivors continue to arrive at relief camps amid shortages of water and medicine.",
+      "summary": "As of August 31, the death toll from the Bagmati flash floods has risen to at least 903, with over 4,200 people still missing. Rescue teams, aided by Chinese and Indian experts, are working around the clock to reach hundreds trapped in hydropower tunnels, while authorities warn of fresh flooding as water levels rise in the Bhotekoshi River. Mass burials of unidentified victims continue, and families of missing foreign nationals, including dozens of Americans and Australians, await news amidst the devastation.",
       "country": "Nepal",
       "iso2": "NP",
       "lat": 27.2952744,
@@ -43397,7 +43687,7 @@
       "disease_name": null,
       "event_date": "2026-08-26",
       "first_reported_date": "2026-08-26",
-      "last_updated_date": "2026-08-30",
+      "last_updated_date": "2026-08-31",
       "days_since_event": 5,
       "source_count": 1,
       "should_report": true,
@@ -43408,7 +43698,7 @@
         "gdacs": 1,
         "ercc": 0,
         "healthmap": 0,
-        "news": 171
+        "news": 201
       },
       "source_links": [
         {
@@ -43535,6 +43825,10 @@
         },
         {
           "headline": "Nepal floods: Chinese rescuers search for missing after floods",
+          "published_date": "2026-08-27"
+        },
+        {
+          "headline": "Nepal floods highlight growing glacier risks in warming Himalayas",
           "published_date": "2026-08-27"
         },
         {
@@ -44098,6 +44392,54 @@
           "published_date": "2026-08-30"
         },
         {
+          "headline": "What Caused Nepal’s Catastrophic Flood — and Why Climate Change Is Raising the Risks",
+          "published_date": "2026-08-30"
+        },
+        {
+          "headline": "‘The house got carried 100 metres away’: some Nepal flood victims had minutes of notice. Others had seconds",
+          "published_date": "2026-08-30"
+        },
+        {
+          "headline": "Nepal Flash Floods",
+          "published_date": "2026-08-30"
+        },
+        {
+          "headline": "Nepal warns of possible fresh flooding as communities grapple with devastation",
+          "published_date": "2026-08-30"
+        },
+        {
+          "headline": "Nepal-Tibet floods: Death toll climbs to over 750; more than 3,000 people still missing after tragic incident",
+          "published_date": "2026-08-30"
+        },
+        {
+          "headline": "What Caused Nepal’s Catastrophic Flood — and Why Climate Change Is Raising the Risks - AOL",
+          "published_date": "2026-08-30"
+        },
+        {
+          "headline": "Families balance hope and despair in race to find survivors in Nepal as 42 Australians still missing",
+          "published_date": "2026-08-30"
+        },
+        {
+          "headline": "Nepal-Tibet disaster: death toll exceeds 800 amid warnings of new flash floods – as it happened",
+          "published_date": "2026-08-30"
+        },
+        {
+          "headline": "Nepal’s disaster agency says death toll from last week's floods has risen past 900",
+          "published_date": "2026-08-30"
+        },
+        {
+          "headline": "Saved by a lunch break: Nepal floods destroyed many schools, but students at this school survived",
+          "published_date": "2026-08-30"
+        },
+        {
+          "headline": "APTOPIX Nepal Flash Floods",
+          "published_date": "2026-08-30"
+        },
+        {
+          "headline": "Nepal floods: India ramps up rescue support amid rising death toll",
+          "published_date": "2026-08-30"
+        },
+        {
           "headline": "Nepal-China Floods Disaster: Latest Developments",
           "published_date": "2026-08-30T02:11:24+00:00"
         },
@@ -44112,9 +44454,77 @@
         {
           "headline": "Death toll nears 800, 3,000 still missing in Nepal-Tibet flooding",
           "published_date": "2026-08-30T19:21:28+00:00"
+        },
+        {
+          "headline": "‘No encouraging indications of survivors’: Tennessee group gives update amid sea...",
+          "published_date": "2026-08-30T20:17:34+00:00"
+        },
+        {
+          "headline": "They went to Nepal for a spiritual journey. Then an epic flood arrived.",
+          "published_date": "2026-08-30T22:17:34+00:00"
+        },
+        {
+          "headline": "Nepal floods: Death toll rises to 903, with 4,247 missing",
+          "published_date": "2026-08-31"
+        },
+        {
+          "headline": "No missing Britons among the hundreds rescued after Nepal flash floods",
+          "published_date": "2026-08-31"
+        },
+        {
+          "headline": "Fresh flood danger sparks alarm",
+          "published_date": "2026-08-31"
+        },
+        {
+          "headline": "5 days of silence: Indian families await word on loved ones missing in Nepal floods",
+          "published_date": "2026-08-31"
+        },
+        {
+          "headline": "Nepal races to rescue hundreds trapped in flood-hit tunnels",
+          "published_date": "2026-08-31"
+        },
+        {
+          "headline": "Rescue efforts intensify after Nepal-Tibet flooding as deaths climb past 900",
+          "published_date": "2026-08-31"
+        },
+        {
+          "headline": "The 'all-weather' Rasuwa-Kerung route is no more",
+          "published_date": "2026-08-31"
+        },
+        {
+          "headline": "Nepal, China discussed flood and glacier risks months before deadly disaster",
+          "published_date": "2026-08-31"
+        },
+        {
+          "headline": "In disaster aftermath, Nepal battles a flood of misinformation",
+          "published_date": "2026-08-31"
+        },
+        {
+          "headline": "Nepal-China flood disaster: What’s the latest toll, how many are missing?",
+          "published_date": "2026-08-31"
+        },
+        {
+          "headline": "Young girl rescued from rubble three days after Nepal flash flood – video",
+          "published_date": "2026-08-31"
+        },
+        {
+          "headline": "Nepal floods caused by glacier collapse that registered as earthquake",
+          "published_date": "2026-08-31"
+        },
+        {
+          "headline": "The Nepal floods seem a world away – but make no mistake, climate breakdown will affect us all | Nesrine Malik",
+          "published_date": "2026-08-31"
+        },
+        {
+          "headline": "Nepal teams seek hundreds trapped in hydropower tunnels after deadly floods",
+          "published_date": "2026-08-31T04:17:34+00:00"
+        },
+        {
+          "headline": "Heartbreak in Northern Territory as Nepalese community mourns flood victims: How you can help",
+          "published_date": "2026-08-31T06:29:33+00:00"
         }
       ],
-      "news_total": 171,
+      "news_total": 201,
       "logs": [
         {
           "log_date": "2026-08-28",
@@ -45672,9 +46082,285 @@
               "image": "https://s.yimg.com/bo/bb8a55a9-295a-5689-aac5-ebe799af660e_1787948790268.jpg"
             }
           ]
+        },
+        {
+          "log_date": "2026-08-31",
+          "summary": "As of August 31, the death toll from the Bagmati flash floods has risen to at least 903, with over 4,200 people still missing. Rescue teams, aided by Chinese and Indian experts, are working around the clock to reach hundreds trapped in hydropower tunnels, while authorities warn of fresh flooding as water levels rise in the Bhotekoshi River. Mass burials of unidentified victims continue, and families of missing foreign nationals, including dozens of Americans and Australians, await news amidst the devastation.",
+          "news": [
+            {
+              "news_id": "0f12401b8f135e1a82d8be64b8931594",
+              "url": "https://www.yahoo.com/news/science/articles/caused-nepal-catastrophic-flood-why-184029096.html",
+              "headline": "What Caused Nepal’s Catastrophic Flood — and Why Climate Change Is Raising the Risks",
+              "body": "An expert breaks it down.",
+              "published_date": "2026-08-30",
+              "outlet": "Katie Couric Media · via Yahoo News",
+              "image": "https://media.zenfs.com/en/katie_couric_media_articles_233/a3f08d42cb9c621584d16c9d88568591.png.cf.jpg"
+            },
+            {
+              "news_id": "b92373e457875b7f9765b7a7ee3116f8",
+              "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/08/31/nepal-floods-death-toll-rises-to-903-with-4247-missing",
+              "headline": "Nepal floods: Death toll rises to 903, with 4,247 missing",
+              "body": "KATHMANDU: Devastating floods near the border with China have killed at least 903 people in Nepal, while the number of missing in the country has soared to 4,247, its disaster authority said Monday (Aug 31), as rescue efforts entered a sixth day",
+              "published_date": "2026-08-31",
+              "outlet": "The Star",
+              "image": "https://www.bing.com/th?id=ONUT.54qh4lXk1Oh3r7MaMgE6fw"
+            },
+            {
+              "news_id": "5de5d00fa2d35becbfa5a2c278eb5bb1",
+              "url": "https://www.msn.com/en-ca/news/other/no-missing-britons-among-the-hundreds-rescued-after-nepal-flash-floods/ar-AA2betbF?ocid=BingNewsVerp",
+              "headline": "No missing Britons among the hundreds rescued after Nepal flash floods",
+              "body": "Anguish for families as no missing Britons among the hundreds rescued after Nepal flash floods - Nepal’s tourist board issued ...",
+              "published_date": "2026-08-31",
+              "outlet": "The Independent on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.f0ryFf40eHr5o2YXnHkPaw"
+            },
+            {
+              "news_id": "b01ed07841215a1c8794b2ee2af3e545",
+              "url": "https://www.theguardian.com/australia-news/2026/aug/31/nepal-tibet-flash-flood-relief-efforts-australian-charities-ntwnfb",
+              "headline": "‘The house got carried 100 metres away’: some Nepal flood victims had minutes of notice. Others had seconds",
+              "body": "Bhagat Lal, 68, has a son studying in Brisbane. Other relatives are missing, while their house was found washed up on the river.",
+              "published_date": "2026-08-30",
+              "outlet": "The Guardian",
+              "image": ""
+            },
+            {
+              "news_id": "433bba71b17e544d8b35b5d9bd42dbca",
+              "url": "https://www.hjnews.com/world/nepal-flash-floods/image_fdd17481-f9f2-59b7-8f4f-35cac5a95d10.html",
+              "headline": "Nepal Flash Floods",
+              "body": "Volunteers and rescuers carry the body of a flash flood victim for mass burial in Chitwan, Nepal, Monday, Aug. 31, 2026. (AP Photo/Dar Yasin)",
+              "published_date": "2026-08-30",
+              "outlet": "The Herald Journal",
+              "image": "https://s.yimg.com/bo/5f9e859f-f7e5-5be4-b0bf-64d2fd2c6760_1788154727798.jpg"
+            },
+            {
+              "news_id": "ab4f2c672d74597b830f62db238cba72",
+              "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/08/31/fresh-flood-danger-sparks-alarm",
+              "headline": "Fresh flood danger sparks alarm",
+              "body": "Authorities here are warning of possible fresh flooding and urged residents in flood-affected districts to remain on high alert after water levels rose in the Bhotekoshi River.",
+              "published_date": "2026-08-31",
+              "outlet": "The Star",
+              "image": "https://www.bing.com/th?id=ONUT.iXDEqek93cr3x2CtIAIb4w"
+            },
+            {
+              "news_id": "a2731583d8f1566fb9d5958ab97ce1a8",
+              "url": "https://6abc.com/story/nepal-floods-highlight-growing-glacier-risks-warming-himalayas/19745570/",
+              "headline": "Nepal floods highlight growing glacier risks in warming Himalayas",
+              "body": "Scientists say a deadly flash flood in Nepal on Wednesday was likely caused by a glacier chunk breaking off and temporarily damming a river.",
+              "published_date": "2026-08-27",
+              "outlet": "WPVI 6abc Philadelphia",
+              "image": "https://s.yimg.com/bo/a0e86c65-db12-5921-8064-9a02763e974f_1787853079782.jpg"
+            },
+            {
+              "news_id": "993be67bef645dcb9974699f451bcb96",
+              "url": "https://www.alaskasnewssource.com/2026/08/30/nepal-warns-possible-fresh-flooding-communities-grapple-with-devastation/",
+              "headline": "Nepal warns of possible fresh flooding as communities grapple with devastation",
+              "body": "Authorities in Nepal warned of possible fresh flooding on Sunday and urged residents in flood-affected districts to remain on high alert.",
+              "published_date": "2026-08-30",
+              "outlet": "Alaska News Source",
+              "image": "https://s.yimg.com/bo/3e548174-12a9-5551-8707-dc02dd741dee_1788101973524.jpg"
+            },
+            {
+              "news_id": "6b4bbfd3d3565ef3abe46471a29bcad4",
+              "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/08/30/nepal-tibet-floods-death-toll-climbs-to-over-750-more-than-3000-people-still-missing-after-tragic-incident",
+              "headline": "Nepal-Tibet floods: Death toll climbs to over 750; more than 3,000 people still missing after tragic incident",
+              "body": "The death toll from devastating flash floods and landslides in Nepal and China's Tibet region has climbed to 750, while more than 3,000 people remain missing.",
+              "published_date": "2026-08-30",
+              "outlet": "The Star",
+              "image": "https://www.bing.com/th?id=ONUT.Cvkg_qzgqhh61At710cqoA"
+            },
+            {
+              "news_id": "bb5762697cc15f37895f4ac18e95ace7",
+              "url": "https://www.msn.com/en-in/news/other/5-days-of-silence-indian-families-await-word-on-loved-ones-missing-in-nepal-floods/ar-AA2bdO52?ocid=BingNewsVerp",
+              "headline": "5 days of silence: Indian families await word on loved ones missing in Nepal floods",
+              "body": "Five days after Nepal's floods, families across India are still searching for relatives missing during the Kailash Mansarovar pilgrimage and at flood-hit work sites. With communication links disrupted ...",
+              "published_date": "2026-08-31",
+              "outlet": "India Today on MSN",
+              "image": ""
+            },
+            {
+              "news_id": "cab56f25e9bc516eb43eaa5ebf7dea47",
+              "url": "https://www.aol.com/articles/caused-nepal-catastrophic-flood-why-184029000.html",
+              "headline": "What Caused Nepal’s Catastrophic Flood — and Why Climate Change Is Raising the Risks - AOL",
+              "body": "An expert breaks it down.",
+              "published_date": "2026-08-30",
+              "outlet": "AOL",
+              "image": "https://www.bing.com/th?id=ONUT.gWNy-SYMwcRYMDgMoFqkAw"
+            },
+            {
+              "news_id": "e15acafe17d65d66b199b08987880a82",
+              "url": "https://www.timeslive.co.za/news/world/2026-08-31-nepal-races-to-rescue-hundreds-trapped-in-flood-hit-tunnels/",
+              "headline": "Nepal races to rescue hundreds trapped in flood-hit tunnels",
+              "body": "Relief teams race against time amid fears of new flooding from unstable lake",
+              "published_date": "2026-08-31",
+              "outlet": "TimesLIVE",
+              "image": "https://www.bing.com/th?id=ONUT.dZ6rs9h-llK6AFeeYu78Aw"
+            },
+            {
+              "news_id": "72eaa2c67ef95a7d85a8c4a8345c446e",
+              "url": "https://www.washingtonpost.com/world/2026/08/30/families-those-missing-nepal-search-answers-after-devastating-flood/",
+              "headline": "They went to Nepal for a spiritual journey. Then an epic flood arrived.",
+              "body": "At least 85 U.S. citizens remain missing in Nepal and Tibet after a glacier collapse caused...",
+              "published_date": "2026-08-30T22:17:34+00:00",
+              "outlet": "Washington Post",
+              "image": "https://s.yimg.com/bo/12f966ed-24bd-5327-b02e-54e1a370c7c6_1788130453336.jpg"
+            },
+            {
+              "news_id": "9b65291c32865e5ea1da1591de4fb462",
+              "url": "https://www.theguardian.com/world/2026/aug/30/families-balance-hope-and-despair-in-race-to-find-survivors-in-nepal-as-australians-still-missing",
+              "headline": "Families balance hope and despair in race to find survivors in Nepal as 42 Australians still missing",
+              "body": "The walls of teaching hospital in Nepal fill with pictures of unidentified victims as authorities collect DNA samples and plan burials before morgues fill up",
+              "published_date": "2026-08-30",
+              "outlet": "The Guardian",
+              "image": "https://www.bing.com/th?id=ONUT.eNtnTY-axbvQicAZJh5AHA"
+            },
+            {
+              "news_id": "d635574b66a75a5c96919363a93840bb",
+              "url": "https://www.wftv.com/news/world/rescue-efforts/3OND32TJGEYUNJZXU2PP4YRLTA/",
+              "headline": "Rescue efforts intensify after Nepal-Tibet flooding as deaths climb past 900",
+              "body": "Rescuers are trying to find trapped workers in hydroelectric plant tunnels after catastrophic flooding in Nepal and Tibet killed at least 900 people and left more than 4,700 missing",
+              "published_date": "2026-08-31",
+              "outlet": "WFTV 9 Orlando",
+              "image": "https://s.yimg.com/bo/88c983bd-cf25-58f2-92aa-6ea3bf786ffc_1788155855813.jpg"
+            },
+            {
+              "news_id": "ca928f3f03445b6fb733a16c110e77e3",
+              "url": "https://www.reuters.com/world/china/nepal-teams-seek-hundreds-trapped-hydropower-tunnels-after-deadly-floods-2026-08-31/",
+              "headline": "Nepal teams seek hundreds trapped in hydropower tunnels after deadly floods",
+              "body": "Nepal's rescue teams, helped by Chinese and Indian experts, worked overnight to reach hundreds of pe...",
+              "published_date": "2026-08-31T04:17:34+00:00",
+              "outlet": "Reuters",
+              "image": "https://s.yimg.com/bo/d325eacd-28e6-5bb5-a6fd-00fa7e8fc190_1788151068268.jpg"
+            },
+            {
+              "news_id": "f2119dcd00145b6680acfc64fda68db7",
+              "url": "https://www.msn.com/en-xl/asia/nepal/the-all-weather-rasuwa-kerung-route-is-no-more/ar-AA2bdQPy?ocid=BingNewsVerp",
+              "headline": "The 'all-weather' Rasuwa-Kerung route is no more",
+              "body": "Kathmandu, Aug. 30 -- The road to Rasuwagadhi was less a conventional highway than a narrow shelf cut into the steep walls of ...",
+              "published_date": "2026-08-31",
+              "outlet": "Kathmandu Post (EKantipur.com) on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.0xB_QcZ5ghubHD0prwO9IQ"
+            },
+            {
+              "news_id": "1ce2a30a457351b2a4461758e622f309",
+              "url": "https://www.theguardian.com/world/live/2026/aug/30/nepal-tibet-floods-search-survivors-tunnel-day-five-latest-news-updates",
+              "headline": "Nepal-Tibet disaster: death toll exceeds 800 amid warnings of new flash floods – as it happened",
+              "body": "Searches continue as mass burials of unidentified victims begin days after floods and landslides hit Nepal-Tibet border",
+              "published_date": "2026-08-30",
+              "outlet": "The Guardian",
+              "image": ""
+            },
+            {
+              "news_id": "ab3bf4f38591568685ec8eece6018142",
+              "url": "https://www.channelnewsasia.com/asia/nepal-china-flood-early-warnings-risks-6350661",
+              "headline": "Nepal, China discussed flood and glacier risks months before deadly disaster",
+              "body": "Officials from Nepal and China had discussed strengthening cooperation three months ago, to monitor and respond to floods, weather and glacier-related hazards, according to an agenda prepared by the Nepali side and seen by Reuters.",
+              "published_date": "2026-08-31",
+              "outlet": "CNA",
+              "image": "https://www.bing.com/th?id=ONUT.Laaqrm3qFEiEHdfJK90EuA"
+            },
+            {
+              "news_id": "f60d9dab789b5719bbc4f7197ed4df30",
+              "url": "https://www.msn.com/en-xl/asia/nepal/in-disaster-aftermath-nepal-battles-a-flood-of-misinformation/ar-AA2bewSz?ocid=BingNewsVerp",
+              "headline": "In disaster aftermath, Nepal battles a flood of misinformation",
+              "body": "Kathmandu, Aug. 31 -- Hours after the Bhotekoshi floods swept away settlements in Rasuwa and Nuwakot districts on Wednesday morning, social media platforms were inundated with dramatic clips ...",
+              "published_date": "2026-08-31",
+              "outlet": "Kathmandu Post (EKantipur.com) on MSN",
+              "image": ""
+            },
+            {
+              "news_id": "af6674785a6555009dac3582ebb7d614",
+              "url": "https://lasvegassun.com/news/2026/aug/31/nepals-disaster-agency-says-death-toll-from-last-w/",
+              "headline": "Nepal’s disaster agency says death toll from last week's floods has risen past 900",
+              "body": "Nepal’s disaster agency says death toll from last week's floods has risen past 900",
+              "published_date": "2026-08-30",
+              "outlet": "Las Vegas Sun",
+              "image": "https://s.yimg.com/bo/615ad34d-2c7d-5ec4-ab0f-e885f3d0fb55_1784259293348.png.cf.jpg"
+            },
+            {
+              "news_id": "bb4a0cc4baec5d2990f29701bc8a6af5",
+              "url": "https://www.msn.com/en-us/news/world/nepal-china-flood-disaster-what-s-the-latest-toll-how-many-are-missing/ar-AA2bclYn?ocid=BingNewsVerp",
+              "headline": "Nepal-China flood disaster: What’s the latest toll, how many are missing?",
+              "body": "Over 3,000 people remain missing days after a glacier collapse triggered devastating floods near China-Nepal border.",
+              "published_date": "2026-08-31",
+              "outlet": "Al Jazeera on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.oky-349Vhi4_BeY2Oe9ZOQ"
+            },
+            {
+              "news_id": "f1e6e9c5872e5f34871046afe0c9e13e",
+              "url": "https://apnews.com/article/nepal-floods-school-children-53608d28c0257c365bd4a8886f2576b1",
+              "headline": "Saved by a lunch break: Nepal floods destroyed many schools, but students at this school survived",
+              "body": "Some schoolchildren in Nepal have survived catastrophic floods by leaving their classrooms for lunch.",
+              "published_date": "2026-08-30",
+              "outlet": "Associated Press News",
+              "image": "https://www.bing.com/th?id=ONUT.i5P8eWsLNo8E3djFJIZHXA"
+            },
+            {
+              "news_id": "285726a8ae165a8fb8ed07b1fad40bdb",
+              "url": "https://www.theguardian.com/world/video/2026/aug/31/young-girl-rescued-from-rubble-three-days-after-nepal-flash-flood-video",
+              "headline": "Young girl rescued from rubble three days after Nepal flash flood – video",
+              "body": "A total of 804 people are confirmed dead and more than 3,000 still missing after a deadly wall of water swept through the Himalayan border zone, engulfing entire villages",
+              "published_date": "2026-08-31",
+              "outlet": "The Guardian",
+              "image": ""
+            },
+            {
+              "news_id": "c66ee1709cf551708e18406993650947",
+              "url": "https://www.msn.com/en-gb/news/other/nepal-floods-caused-by-glacier-collapse-that-registered-as-earthquake/ar-AA2b1kyy?ocid=BingNewsVerp",
+              "headline": "Nepal floods caused by glacier collapse that registered as earthquake",
+              "body": "What triggered Nepal flash floods? And why are experts worried a second flood is ‘imminent’? - Signal detected by monitors ...",
+              "published_date": "2026-08-31",
+              "outlet": "The Independent on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.8BM9wy9VvI7lcj5RtuoA7w"
+            },
+            {
+              "news_id": "45981ff34ea458f795792317cd7cc7d7",
+              "url": "https://www.hjnews.com/world/aptopix-nepal-flash-floods/image_d088d028-de8a-5134-8c7d-52cab738db43.html",
+              "headline": "APTOPIX Nepal Flash Floods",
+              "body": "Relatives console Muna Khadka, center, who lost her son Aayush Khada, in flash floods, during mass burials in Chitwan, Nepal, Monday, Aug. 31, 2026. (AP Photo/Dar Yasin)",
+              "published_date": "2026-08-30",
+              "outlet": "The Herald Journal",
+              "image": "https://s.yimg.com/bo/08e8fba1-903d-5699-a5d3-768b8fd80f31_1788154704971.jpg"
+            },
+            {
+              "news_id": "07c45be13df552e586f491a54233e4c2",
+              "url": "https://www.couriermail.com.au/news/heartbreak-in-northern-territory-as-nepalese-community-mourns-flood-victims-how-you-can-help/news-story/048d5cb473f2dc8642dbc1859d034588",
+              "headline": "Heartbreak in Northern Territory as Nepalese community mourns flood victims: How you can help",
+              "body": "A disaster a continent away has struck close to home in the NT, where members of the Nepalese community are anxiously ...",
+              "published_date": "2026-08-31T06:29:33+00:00",
+              "outlet": "The Courier Mail",
+              "image": "https://www.bing.com/th?id=ONUT.uGZhkA17VViMlcr6dsQLqw"
+            },
+            {
+              "news_id": "47d679dae3b65189bcab516652a4798f",
+              "url": "https://www.newindianexpress.com/india/2026/Aug/30/nepal-floods-india-ramps-up-rescue-support-amid-rising-death-toll",
+              "headline": "Nepal floods: India ramps up rescue support amid rising death toll",
+              "body": "NEW DELHI: India has stepped up its rescue and relief operations in flood-hit Nepal, deploying tunnel engineers, doctors, paramedics and forensic experts as res",
+              "published_date": "2026-08-30",
+              "outlet": "The New Indian Express",
+              "image": "https://www.bing.com/th?id=ONUT.U82BdpXuQg4cEhTeKEx4zg"
+            },
+            {
+              "news_id": "18884603ff4f58a9a4ed9a13331b9032",
+              "url": "https://www.wkrn.com/news/local-news/nepal-flood-isha-foundation-update-tennessee/",
+              "headline": "‘No encouraging indications of survivors’: Tennessee group gives update amid sea...",
+              "body": "Among the more than 70 people associated with the group who are missing are 22 Americans.",
+              "published_date": "2026-08-30T20:17:34+00:00",
+              "outlet": "WKRN Nashville",
+              "image": "https://s.yimg.com/bo/9f5c4c2f-e4dd-5ddd-a5d7-c3d2e3ae13ab_1788144214238.jpg"
+            },
+            {
+              "news_id": "021785d4d55451b7bf88a9fce1bf8ff5",
+              "url": "https://www.theguardian.com/commentisfree/2026/aug/31/climate-crisis-nepal-floods-india-caribbean",
+              "headline": "The Nepal floods seem a world away – but make no mistake, climate breakdown will affect us all | Nesrine Malik",
+              "body": "Richer countries might have more resources to deal with catastrophe, but this problem grips the entire planet, however much leaders may want to deny it, says Guardian columnist Nesrine Malik",
+              "published_date": "2026-08-31",
+              "outlet": "The Guardian",
+              "image": ""
+            }
+          ]
         }
       ],
-      "logs_total": 3
+      "logs_total": 4
     },
     {
       "incident_id": "20260827-CN-OT",
@@ -45818,7 +46504,7 @@
       "incident_id": "20260830-NZ-EQ",
       "tree_id": "8294188c901c45438efa272f15c85589",
       "canonical_name": "Earthquake M5.8 Kermadec Islands, New Zealand 2026-08-30",
-      "summary": "",
+      "summary": "A moderate earthquake struck the Kermadec Islands region of New Zealand on August 30, 2026, at around 09:02 GMT. The magnitude was reported as 5.8 by some sources, with other agencies recording 5.9 or 5.7. There were no immediate reports of damage or tsunami threat.",
       "country": "New Zealand",
       "iso2": "NZ",
       "lat": -30.1462,
@@ -45848,7 +46534,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 2
+        "news": 3
       },
       "source_links": [
         {
@@ -45871,20 +46557,54 @@
       "news": [
         {
           "headline": "5.8-Magnitude Earthquake hits Kermadec Islands: Is New Zealand safe? Here’s the science behind the quake- Moneycontrol.com",
-          "url": "https://www.moneycontrol.com/science/5-8-magnitude-earthquake-hits-kermadec-islands-is-new-zealand-safe-here-s-the-science-behind-the-quake-article-14018375.html",
-          "outlet": "Moneycontrol",
           "published_date": "2026-08-30"
         },
         {
           "headline": "M5.7 Earthquake Strikes Kermadec Islands Region, New Zealand",
-          "url": "https://cedarnews.net/newstasks/954713/earthquake-m5-7-strikes-kermadec-islands-region/",
-          "outlet": "Cedar News",
           "published_date": "2026-08-30"
+        },
+        {
+          "headline": "5.9-magnitude quake hits Kermadec Islands, New Zealand -- GFZ",
+          "published_date": "2026-08-30T00:00:00+00:00"
         }
       ],
-      "news_total": 2,
-      "logs": [],
-      "logs_total": 0
+      "news_total": 3,
+      "logs": [
+        {
+          "log_date": "2026-08-31",
+          "summary": "A moderate earthquake struck the Kermadec Islands region of New Zealand on August 30, 2026, at around 09:02 GMT. The magnitude was reported as 5.8 by some sources, with other agencies recording 5.9 or 5.7. There were no immediate reports of damage or tsunami threat.",
+          "news": [
+            {
+              "news_id": "0347acad6f5d5e47a88effc3f4e9567c",
+              "url": "https://www.china.org.cn/world/Off_the_Wire/2026-08/30/content_118671289.shtml",
+              "headline": "5.9-magnitude quake hits Kermadec Islands, New Zealand -- GFZ",
+              "body": "HONG KONG, Aug. 30 (Xinhua) -- An earthquake with a magnitude of 5.9 jolted Kermadec Islands, New Zealand, at 0902 GMT on Sunday, the GFZ German Research Centre for Geosciences said.",
+              "published_date": "2026-08-30T00:00:00+00:00",
+              "outlet": "China.org.cn",
+              "image": ""
+            },
+            {
+              "news_id": "26b1dc87cd5d5c7da25dcc4ab6a0fc20",
+              "url": "https://www.moneycontrol.com/science/5-8-magnitude-earthquake-hits-kermadec-islands-is-new-zealand-safe-here-s-the-science-behind-the-quake-article-14018375.html",
+              "headline": "5.8-Magnitude Earthquake hits Kermadec Islands: Is New Zealand safe? Here’s the science behind the quake- Moneycontrol.com",
+              "body": "A 5.8-magnitude earthquake struck the Kermadec Islands region offshore New Zealand. Here’s where the quake occurred, whether it posed a threat and why the region experiences frequent earthquakes.",
+              "published_date": "2026-08-30",
+              "outlet": "Moneycontrol",
+              "image": ""
+            },
+            {
+              "news_id": "1341cee9bd9c50fcaeb620fbca4912c4",
+              "url": "https://cedarnews.net/newstasks/954713/earthquake-m5-7-strikes-kermadec-islands-region/",
+              "headline": "M5.7 Earthquake Strikes Kermadec Islands Region, New Zealand",
+              "body": "A preliminary magnitude 5.7 earthquake struck the Kermadec Islands region of New Zealand at 9:02 p.m. local time on August 30.",
+              "published_date": "2026-08-30",
+              "outlet": "Cedar News",
+              "image": "https://www.bing.com/th?id=ONUT.EByAS3kcDk3GoAVYJmaZzA"
+            }
+          ]
+        }
+      ],
+      "logs_total": 1
     }
   ]
 }

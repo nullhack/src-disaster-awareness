@@ -1,31 +1,31 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-08-28",
-  "generated_at": "2026-08-31T07:07:37Z",
+  "generated_at": "2026-08-31T19:32:37Z",
   "as_of": "2026-08-28",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 14,
-    "new_today": 3,
+    "reportable_total": 13,
+    "new_today": 2,
     "critical": 0,
     "high": 0,
     "medium": 7,
-    "low": 7,
+    "low": 6,
     "disease_outbreaks": 0,
-    "countries_affected": 12,
-    "news_total": 225,
+    "countries_affected": 11,
+    "news_total": 154,
     "max_magnitude": 6.1,
     "by_severity": {
       "CRITICAL": 0,
       "HIGH": 0,
       "MEDIUM": 7,
-      "LOW": 7
+      "LOW": 6
     },
     "by_type": {
       "Flood": 2,
       "Drought": 1,
-      "Forest Fire": 3,
+      "Forest Fire": 2,
       "": 2,
       "Earthquake": 6
     },
@@ -33,7 +33,6 @@
       "Asia": 6,
       "Africa": 3,
       "Europe": 3,
-      "Americas": 1,
       "Oceania": 1
     }
   },
@@ -71,15 +70,6 @@
       "max_sev_rank": 1,
       "iso2": "RS",
       "region": "Europe",
-      "country_group": "C",
-      "max_severity": "LOW"
-    },
-    {
-      "country": "Canada",
-      "count": 1,
-      "max_sev_rank": 1,
-      "iso2": "CA",
-      "region": "Americas",
       "country_group": "C",
       "max_severity": "LOW"
     },
@@ -152,7 +142,7 @@
       "incident_id": "20230814-JP-FL",
       "tree_id": "98f8ea684924412eacc0093c76daf1bb",
       "canonical_name": "Torrential rain in eastern Japan starting late on August 13 has caused landslides, power outages, and claimed at least nine lives.",
-      "summary": "Torrential rain starting late on August 13, 2023, caused record-breaking flooding in eastern Japan, particularly in Chiba Prefecture. The flooding resulted in at least eight to nine deaths, widespread power outages affecting over 22,000 households, and stranded thousands of travelers at Tokyo's Narita Airport. Authorities issued the highest-level rain warnings as the region experienced unprecedented rainfall, equivalent to three months' worth in 12 hours.",
+      "summary": "Recent analysis of the torrential rain in Chiba Prefecture highlights that the sewage system was unable to handle the volume of rainwater, leading to inland flooding in urban areas. Additionally, discussions about potential infrastructure solutions like an underground river have been prompted by the record rainfall.",
       "country": "Japan",
       "iso2": "JP",
       "lat": 36.2,
@@ -350,9 +340,51 @@
               "image": ""
             }
           ]
+        },
+        {
+          "log_date": "2026-08-31",
+          "summary": "Recent analysis of the torrential rain in Chiba Prefecture highlights that the sewage system was unable to handle the volume of rainwater, leading to inland flooding in urban areas. Additionally, discussions about potential infrastructure solutions like an underground river have been prompted by the record rainfall.",
+          "news": [
+            {
+              "news_id": "1d2a849fc2ed56e2a44ad09c984dcc25",
+              "url": "https://www.msn.com/en-xl/news/other/could-a-giant-underground-river-save-tokyo-from-torrential-rain/ar-AA2aMYTR?ocid=BingNewsVerp",
+              "headline": "Could a giant underground river save Tokyo from torrential rain?",
+              "body": "TOKYO -- Japan has been hit by a string of devastating rainstorms in recent years, including the latest record rainfall that ...",
+              "published_date": "2026-08-24",
+              "outlet": "The Mainichi on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.RRj-PiY-s7qvtIZXz6Qq1Q"
+            },
+            {
+              "news_id": "7ff28539c1b6570aa2e7396a87a2dc6b",
+              "url": "https://japannews.yomiuri.co.jp/society/general-news/20260820-344546/",
+              "headline": "Unpredictable Amount of Rainfall Causes Inland Flooding in Recent Heavy Rain That Hit Japan's Chiba Pref.",
+              "body": "In urban areas covered in concrete, rainwater cannot seep into the soil. Usually, it is treated and discharged into rivers via the sewer system, but the system was unable to handle the volume of rainwater in the recent heavy rain that hit Chiba Prefecture,",
+              "published_date": "2026-08-20T16:24:00+00:00",
+              "outlet": "The Japan News",
+              "image": ""
+            },
+            {
+              "news_id": "cdf6c1b62fac5a80a1109fa86d001a5e",
+              "url": "https://apnews.com/article/japan-heavy-rain-flooding-ishikawa-toyama-d37ef074f214d72b545ba917b6e41963",
+              "headline": "Heavy rain and flooding in north-central Japan strands people and vehicles",
+              "body": "Torrential rain has struck Japan’s north-central prefectures of Ishikawa and Toyama. The severe weather on Thursday triggered flooding and landslides, caused road closures and stranded people in flooded homes and vehicles.",
+              "published_date": "2026-08-27",
+              "outlet": "Associated Press News",
+              "image": ""
+            },
+            {
+              "news_id": "33c9a32454605458a0e0f7431abf6921",
+              "url": "https://www.msn.com/en-xl/news/other/could-a-giant-underground-river-save-tokyo-from-torrential-rain/ar-AA2aMYTR",
+              "headline": "Could a giant underground river save Tokyo from torrential rain?",
+              "body": "TOKYO -- Japan has been hit by a string of devastating rainstorms in recent years, including the latest record rainfall that caused extensive damage i･･･",
+              "published_date": "2026-08-25",
+              "outlet": "The Mainichi",
+              "image": "https://cdn.mainichi.jp/vol1/2026/08/24/20260824p2a00m0na004000p/0c10.jpg?1"
+            }
+          ]
         }
       ],
-      "logs_total": 1
+      "logs_total": 2
     },
     {
       "incident_id": "20260521-CD-DR",
@@ -1565,726 +1597,6 @@
         }
       ],
       "logs_total": 4
-    },
-    {
-      "incident_id": "20260808-CA-WF",
-      "tree_id": "f52f6ace54154fa492b21fdcc031e9c7",
-      "canonical_name": "Forest Fire Canada 2026-08-08",
-      "summary": "A recent AP report indicates that last week's fast-moving wildfire in British Columbia harmed approximately 150 structures and forced over 20,000 people to evacuate. Meanwhile, Yukon First Nations firefighters expressed readiness to assist but have not been called to help in B.C., and the fire season continues to take a heavy toll on Indigenous communities.",
-      "country": "Canada",
-      "iso2": "CA",
-      "lat": 49.624572772875915,
-      "lon": -119.77439088673991,
-      "country_group": "C",
-      "region": "Americas",
-      "incident_type": "Forest Fire",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "LOW",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-08-08",
-      "first_reported_date": "2026-08-08",
-      "last_updated_date": "2026-08-28",
-      "days_since_event": 23,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 1,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 71
-      },
-      "source_links": [
-        {
-          "type": "GDACS",
-          "label": "Green alert · Forest Fire Canada 2026-08-08",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=WF&eventid=1030240",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "Canada",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": "Green",
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Wildfire destroys about 230 homes in western Canadian Indigenous community, officials say",
-          "published_date": "2026-08-04"
-        },
-        {
-          "headline": "Thousands evacuated from their homes as wildfires rage across Canada",
-          "published_date": "2026-08-04"
-        },
-        {
-          "headline": "Wildfire destroys about 230 homes in western Canadian Indigenous community, officials say",
-          "published_date": "2026-08-05"
-        },
-        {
-          "headline": "Wildfire destroys about 230 homes in western Canadian Indigenous community, officials say - WTOP News",
-          "published_date": "2026-08-05"
-        },
-        {
-          "headline": "More wildfires. Fewer Experts. PIPSC action warns of climate cuts",
-          "published_date": "2026-08-06"
-        },
-        {
-          "headline": "Climate Change Made Canada's Forests Much More Likely to Burn: Report",
-          "published_date": "2026-08-06"
-        },
-        {
-          "headline": "Wildfire prompts evacuation alert in metro Vancouver",
-          "published_date": "2026-08-06T14:01:41+00:00"
-        },
-        {
-          "headline": "Climate change contributed to big Canada fires, study says as Trump blames...",
-          "published_date": "2026-08-06T14:35:39+00:00"
-        },
-        {
-          "headline": "Study of Canada fires highlights climate change | Arkansas Democrat Gazette",
-          "published_date": "2026-08-07"
-        },
-        {
-          "headline": "Challenging fire weather continues in West as thousands evacuated in Canada while Spokane crews gain ground",
-          "published_date": "2026-08-08"
-        },
-        {
-          "headline": "British Columbia district declares state of emergency, issues evacuation orders...",
-          "published_date": "2026-08-08T14:01:41+00:00"
-        },
-        {
-          "headline": "Explosive Wildfire in British Columbia Leaves 1 Dead",
-          "published_date": "2026-08-08T14:01:41+00:00"
-        },
-        {
-          "headline": "Wildfires News | Today's Latest Stories | Reuters",
-          "published_date": "2026-08-08T14:35:36+00:00"
-        },
-        {
-          "headline": "Wildfires burn across western US and Canada as residents are evacuated",
-          "published_date": "2026-08-09"
-        },
-        {
-          "headline": "Wildfires burn across western US and Canada as residents are evacuated",
-          "published_date": "2026-08-09"
-        },
-        {
-          "headline": "UPDATE: Police confirm death of woman in Summerland wildfire, crews brace for windy night",
-          "published_date": "2026-08-09"
-        },
-        {
-          "headline": "Crews battle wildfires in western U.S. and Canada",
-          "published_date": "2026-08-09"
-        },
-        {
-          "headline": "UPDATE: Police confirm death of woman in Summerland wildfire, crews brace for windy night",
-          "published_date": "2026-08-09"
-        },
-        {
-          "headline": "Wildfires burn across western US and Canada as residents are evacuated – Associated Press",
-          "published_date": "2026-08-09T00:00:00+00:00"
-        },
-        {
-          "headline": "Canada puts the military on standby as British Columbia wildfires kill 1 and displace thousands - WTOP News",
-          "published_date": "2026-08-10"
-        },
-        {
-          "headline": "Wildfires burn across western US and Canada as residents are evacuated",
-          "published_date": "2026-08-10"
-        },
-        {
-          "headline": "Canada puts the military on standby as British Columbia wildfires kill 1 and displace thousands",
-          "published_date": "2026-08-10"
-        },
-        {
-          "headline": "British Columbia declares state of emergency as wildfires force thousands to evacuate",
-          "published_date": "2026-08-10"
-        },
-        {
-          "headline": "Wildfires raging in western U.S., Canada amid severe drought force thousands to evacuate",
-          "published_date": "2026-08-10"
-        },
-        {
-          "headline": "Canadian wildfire that forced 20,000 to flee may signal ‘new normal’",
-          "published_date": "2026-08-10T03:38:56+00:00"
-        },
-        {
-          "headline": "Wildfires burn across western US and Canada as residents are evacuated",
-          "published_date": "2026-08-10T04:00:46+00:00"
-        },
-        {
-          "headline": "Western Canada fights growing wildfires as thousands more told to be ready to leave",
-          "published_date": "2026-08-11"
-        },
-        {
-          "headline": "Western Canada fights growing wildfires as thousands more told to be ready to leave",
-          "published_date": "2026-08-11"
-        },
-        {
-          "headline": "Western Canada fights to control growing wildfire that has forced thousands to flee",
-          "published_date": "2026-08-11"
-        },
-        {
-          "headline": "NetNewsLedger - Northwest Wildfires: 108 Active Fires as Rinker Lake Complex Tops 378,000 Hectares",
-          "published_date": "2026-08-11"
-        },
-        {
-          "headline": "British Columbia wildfire that has forced 20,000 to flee grew overnight, officials say",
-          "published_date": "2026-08-11"
-        },
-        {
-          "headline": "Western Canada fights growing wildfires as thousands more told to be ready to leave",
-          "published_date": "2026-08-11T00:00:00+00:00"
-        },
-        {
-          "headline": "Opinion: President Trump has a point—Canada needs a new boreal wildfire strategy",
-          "published_date": "2026-08-11T05:34:09+00:00"
-        },
-        {
-          "headline": "Insurance Bureau of Canada Deploys On-the-Ground Support for BC Wildfire Evacuees and Affected Residents",
-          "published_date": "2026-08-12"
-        },
-        {
-          "headline": "B.C.’s deadly wildfires raise a difficult question: Is this the new normal?",
-          "published_date": "2026-08-12"
-        },
-        {
-          "headline": "British Columbia wildfire that has forced 20,000 to flee grew overnight,...",
-          "published_date": "2026-08-12T00:00:46+00:00"
-        },
-        {
-          "headline": "Canadian wildfire that forced 20,000 to flee may signal ‘new normal’",
-          "published_date": "2026-08-13"
-        },
-        {
-          "headline": "Canadian wildfire that forced 20,000 to flee may signal ‘new normal’",
-          "published_date": "2026-08-13"
-        },
-        {
-          "headline": "Western Canada fights growing wildfires as thousands more told to be ready to leave",
-          "published_date": "2026-08-13"
-        },
-        {
-          "headline": "Canadian wildfire that forced 20,000 to flee may signal ‘new normal’",
-          "published_date": "2026-08-13"
-        },
-        {
-          "headline": "Canadian wildfire that forced 20,000 to flee may signal ‘new normal’",
-          "published_date": "2026-08-13"
-        },
-        {
-          "headline": "Canadian wildfire that forced 20,000 to flee may signal ‘new normal’",
-          "published_date": "2026-08-13"
-        },
-        {
-          "headline": "Canadian wildfire that forced 20,000 to flee may signal ‘new normal’",
-          "published_date": "2026-08-13"
-        },
-        {
-          "headline": "What to know about the Bald Range fire and B.C.'s wildfire emergency",
-          "published_date": "2026-08-13"
-        },
-        {
-          "headline": "‘The Earth itself was screaming out:’ Bay Mills Indian Community fights pipeline...",
-          "published_date": "2026-08-13T17:56:04+00:00"
-        },
-        {
-          "headline": "Highway reopening shows parts of Summerland, BC., unscathed in fire evacuation zone",
-          "published_date": "2026-08-14"
-        },
-        {
-          "headline": "Here's the latest on northwestern Ontario's forest fires: Wednesday, Aug. 19",
-          "published_date": "2026-08-14T16:31:09+00:00"
-        },
-        {
-          "headline": "Bald Range wildfire puts BC prevention strategy back under scrutiny as Okanagan contractor calls for more fuel reduction",
-          "published_date": "2026-08-17"
-        },
-        {
-          "headline": "Here's the latest on northwestern Ontario's forest fires: Sunday, Aug. 16",
-          "published_date": "2026-08-17T03:52:26+00:00"
-        },
-        {
-          "headline": "Canada's wildfire season is taking a heavy toll on First Nations",
-          "published_date": "2026-08-17T08:55:00+00:00"
-        },
-        {
-          "headline": "This stunning NASA map tracks our summer of wildfire smoke",
-          "published_date": "2026-08-17T08:56:04+00:00"
-        },
-        {
-          "headline": "Canada’s out-of-control wildfire crisis is cooking up a future nobody wants to live in",
-          "published_date": "2026-08-17T08:56:07+00:00"
-        },
-        {
-          "headline": "Alberta reports zero active wildfires in August for first time in 40 years",
-          "published_date": "2026-08-18"
-        },
-        {
-          "headline": "The Government of Canada provides an update regarding the 2026 wildfire season - August update",
-          "published_date": "2026-08-18"
-        },
-        {
-          "headline": "America’s Rural Lands Are Burning",
-          "published_date": "2026-08-18"
-        },
-        {
-          "headline": "Fast-moving wildfires reshaping B.C.’s forests, new study finds",
-          "published_date": "2026-08-18"
-        },
-        {
-          "headline": "Wildfire in British Columbia harmed 150 structures and forced 20,000 to evacuate",
-          "published_date": "2026-08-18"
-        },
-        {
-          "headline": "What you need to know about B.C. wildfires on Aug. 18",
-          "published_date": "2026-08-19"
-        },
-        {
-          "headline": "Wildfire season tracking to be 4th worst on record; fire risk remains elevated",
-          "published_date": "2026-08-19"
-        },
-        {
-          "headline": "Wildland firefighting bill gains steam as smoke reaches Congress",
-          "published_date": "2026-08-19"
-        },
-        {
-          "headline": "Yukon First Nations firefighters wonder why they haven't been called to help in B.C. - Medicine Hat News",
-          "published_date": "2026-08-21"
-        },
-        {
-          "headline": "Yukon First Nations firefighters wonder why they haven't been called to help in B.C.",
-          "published_date": "2026-08-21"
-        },
-        {
-          "headline": "NetNewsLedger - Northwestern Ontario Wildfire Update: 65 Active Fires, Two New Starts Reported",
-          "published_date": "2026-08-22"
-        },
-        {
-          "headline": "Wildfire season tracking to be 4th worst on record; fire risk remains elevated",
-          "published_date": "2026-08-22"
-        },
-        {
-          "headline": "A crew of CT firefighters are heading west to help fight wildfires",
-          "published_date": "2026-08-22"
-        },
-        {
-          "headline": "US Wildfires Burn 7.7 Million Acres, Almost Double From 2025",
-          "published_date": "2026-08-23"
-        },
-        {
-          "headline": "NetNewsLedger - Aug. 24, 2026: Canada-U.S. Tariffs, Iran Tensions, Wildfires and Thunder Bay Election Lead the News",
-          "published_date": "2026-08-24"
-        },
-        {
-          "headline": "July Lightning Incident Update: Monday, August 24, 2026",
-          "published_date": "2026-08-24T00:00:00+00:00"
-        },
-        {
-          "headline": "Opinion: 3 ways to improve Canada’s wildfire advisory capacity",
-          "published_date": "2026-08-26"
-        },
-        {
-          "headline": "Not much trouble from Ainslie Creek wildfire on Thursday, BCWS says",
-          "published_date": "2026-08-27"
-        },
-        {
-          "headline": "Black summer: How Canada can improve its wildfire strategy",
-          "published_date": "2026-08-28"
-        }
-      ],
-      "news_total": 71,
-      "logs": [
-        {
-          "log_date": "2026-08-10",
-          "summary": "In early August 2026, wildfires in western Canada, particularly the Bald Range fire near Summerland, British Columbia, escalated dramatically. The fire burned over 33,000 acres, destroyed approximately 230 homes, and resulted in the death of one woman, prompting evacuation orders for around 20,000 people. In response, British Columbia declared a state of emergency as crews faced challenging conditions from severe drought and windy weather.",
-          "news": [
-            {
-              "news_id": "e653e42eb12f5167b2d7f58429f1b56a",
-              "url": "https://www.reuters.com/business/environment/wildfire-prompts-evacuation-alert-metro-vancouver-2026-08-06/",
-              "headline": "Wildfire prompts evacuation alert in metro Vancouver",
-              "body": "A wildfire prompted an evacuation alert on Wednesday about 30 kilometers (18.64 miles) from Vancouver, one of Canada's largest metropolitan areas, as bl...",
-              "published_date": "2026-08-06T14:01:41+00:00",
-              "outlet": "Reuters",
-              "image": "https://s.yimg.com/bo/e2c3a7b8-d449-56d2-b2fa-85bcf633185c_1786046435219.jpg"
-            },
-            {
-              "news_id": "def28745836c54f9b228628fca8b7cf0",
-              "url": "https://www.wsws.org/en/articles/2026/08/04/ixuo-a04.html",
-              "headline": "Thousands evacuated from their homes as wildfires rage across Canada",
-              "body": "More than 900 fires are currently burning across Canada, with dozens of them out of control. Over 120 of these are raging in British Columbia, where residents of well over 2,000 properties had been evacuated under 32 orders as of Friday.",
-              "published_date": "2026-08-04",
-              "outlet": "World Socialist Web Site",
-              "image": "https://s.yimg.com/bo/2ec68469-7c99-59f7-b078-ab72da7207a7_1785811949744.jpg"
-            },
-            {
-              "news_id": "e980114c07e65c33a512812d0e5c564e",
-              "url": "https://prescottenews.com/2026/08/09/wildfires-burn-across-western-us-and-canada-as-residents-are-evacuated-associated-press/",
-              "headline": "Wildfires burn across western US and Canada as residents are evacuated – Associated Press",
-              "body": "The Bald Range wildfire, that has forced people out of their homes in the south Okanagan region, burns in Summerland, B.C., ...",
-              "published_date": "2026-08-09T00:00:00+00:00",
-              "outlet": "Prescott eNews",
-              "image": "https://www.bing.com/th?id=ONUT.m5WNyBvUflB1GlVvrrgS3A"
-            },
-            {
-              "news_id": "1474eb150c355a3c9bfdc0eb75a5936e",
-              "url": "https://www.kelownanow.com/watercooler/news/news/Wildfire/Wildfire_erupts_west_of_Summerland_forces_evacuations/1786169766",
-              "headline": "UPDATE: Police confirm death of woman in Summerland wildfire, crews brace for windy night",
-              "body": "(UPDATE: Aug. 9 @ 10:15 pm) - It's going to be a difficult night for firefighters on the front lines. That's the message from the BC W...",
-              "published_date": "2026-08-09",
-              "outlet": "KelownaNow",
-              "image": "https://www.bing.com/th?id=ONUT.R04jQRBL7uM0KPeAc4YjzA"
-            },
-            {
-              "news_id": "3eea27f82b7655da8e05f3585c9b5184",
-              "url": "https://wtop.com/world/2026/08/wildfire-destroys-about-230-homes-in-western-canadian-indigenous-community-officials-say/",
-              "headline": "Wildfire destroys about 230 homes in western Canadian Indigenous community, officials say - WTOP News",
-              "body": "VERNON, British Columbia (AP) — A fast-moving wildfire destroyed about 230 homes in an Indigenous community in western Canada, officials said Tuesday, making it one of the country’s most destructive…",
-              "published_date": "2026-08-05",
-              "outlet": "WTOP Washington",
-              "image": "https://s.yimg.com/bo/6a31fb01-5770-5344-a7f8-e1ee8e9e4042_1783677946294.png.cf.jpg"
-            },
-            {
-              "news_id": "2e81b7085ccc5a4aaf257956f99bd1f6",
-              "url": "https://www.npr.org/2026/08/09/nx-s1-5926463/western-us-wildfires-canada-utah",
-              "headline": "Crews battle wildfires in western U.S. and Canada",
-              "body": "There have been 183 new wildfires, including eight large ones, across the U.S. since Saturday, the National Interagency Fire Center reported on Sunday.",
-              "published_date": "2026-08-09",
-              "outlet": "NPR",
-              "image": "https://www.bing.com/th?id=ONUT.gZoPygeB2tHRVuHcbWoB_w"
-            },
-            {
-              "news_id": "a2559a08099a51108aed6a039fce2794",
-              "url": "https://www.applevalleynewsnow.com/weather/challenging-fire-weather-continues-in-west-as-thousands-evacuated-in-canada-while-spokane-crews-gain/article_039384fd-3cf1-5012-82f9-d3a9cf055583.html",
-              "headline": "Challenging fire weather continues in West as thousands evacuated in Canada while Spokane crews gain ground",
-              "body": "(CNN) — Fire danger continued in the Pacific Northwest and Western Canada over the weekend, posing challenging conditions for crews battling to keep destructive blazes from spreading across the region",
-              "published_date": "2026-08-08",
-              "outlet": "Apple Valley News Now",
-              "image": "https://s.yimg.com/bo/75e1f872-a056-5f1a-b28d-461c7b0fdc00_1786357036390.png.cf.jpg"
-            },
-            {
-              "news_id": "3f7222f9408056158d8127c303074534",
-              "url": "https://www.reuters.com/business/environment/british-columbia-district-declares-state-emergency-issues-evacuation-orders-2026-08-08/",
-              "headline": "British Columbia district declares state of emergency, issues evacuation orders...",
-              "body": "A state of emergency was declared by the district of Summerland, British Columbia, early Saturday as...",
-              "published_date": "2026-08-08T14:01:41+00:00",
-              "outlet": "Reuters",
-              "image": "https://s.yimg.com/bo/56d24594-ce22-5c34-a00b-bafe7eec3066_1786198699360.jpg"
-            },
-            {
-              "news_id": "c43f7cf5682b59a3882c19672cd64487",
-              "url": "https://www.kelownanow.com/watercooler/news/news/Okanagan/Wildfire_erupts_west_of_Summerland_forces_evacuations/1786300847",
-              "headline": "UPDATE: Police confirm death of woman in Summerland wildfire, crews brace for windy night",
-              "body": "(UPDATE: Aug. 9 @ 10:15 pm) - It's going to be a difficult night for firefighters on the front lines. That's the message from the BC W...",
-              "published_date": "2026-08-09",
-              "outlet": "KelownaNow",
-              "image": "https://www.bing.com/th?id=ONUT.ufpW6LC1894aI4awmkIQdw"
-            },
-            {
-              "news_id": "f6d8006617185f57bae1db96c9329a3f",
-              "url": "https://www.npr.org/2026/08/10/nx-s1-5926464/british-columbia-declares-state-of-emergency-as-wildfires-force-thousands-to-evacuate",
-              "headline": "British Columbia declares state of emergency as wildfires force thousands to evacuate",
-              "body": "Evacuation orders and alerts have been issued in British Columbia as wildfires burn across the province. Officials have declared a state of emergency.",
-              "published_date": "2026-08-10",
-              "outlet": "NPR",
-              "image": ""
-            },
-            {
-              "news_id": "709514bf5eb350ae91558660a9243b29",
-              "url": "https://www.nytimes.com/2026/08/10/world/canada/western-canada-wildfires-british-columbia-bc.html",
-              "headline": "Explosive Wildfire in British Columbia Leaves 1 Dead",
-              "body": "The Bald Range fire had burned more than 33,000 acres and remained out of control on Sunday, officials said. About 20,000 people were ordered to evacuate.",
-              "published_date": "2026-08-08T14:01:41+00:00",
-              "outlet": "The New York Times",
-              "image": ""
-            },
-            {
-              "news_id": "1f8bae2ad4c35e61a9095e6ccb46e62d",
-              "url": "https://www.cbsnews.com/news/wildfires-western-us-canada-severe-drought-evacuations/",
-              "headline": "Wildfires raging in western U.S., Canada amid severe drought force thousands to evacuate",
-              "body": "More than 40 large wildfires are burning in the West, fueled by severe drought, as over 100 blazes scorch parts of western Canada.",
-              "published_date": "2026-08-10",
-              "outlet": "CBS News",
-              "image": "https://s.yimg.com/bo/042dd056-1e93-5bc9-869c-9bcf93e13658_1786367778581.jpg"
-            },
-            {
-              "news_id": "84191596b0f856e7a430d06dcb84c19d",
-              "url": "https://www.insurancejournal.com/news/international/2026/08/06/880633.htm",
-              "headline": "Climate Change Made Canada's Forests Much More Likely to Burn: Report",
-              "body": "The planet's warming had a strong influence on destructive wildfires in Canada that have raged across Ontario and the Northwest Territories since late",
-              "published_date": "2026-08-06",
-              "outlet": "Insurance Journal",
-              "image": "https://s.yimg.com/bo/80844fb6-caa5-5473-abe0-6ff6055d130a_1786040420313.jpg"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-08-15",
-          "summary": "A highway reopening in the fire evacuation zone showed parts of Summerland, BC, remained unscathed, while hillsides were scarred black and an inn that was a popular wedding venue was destroyed.",
-          "news": [
-            {
-              "news_id": "a19728b34e3f586287173a86efa499db",
-              "url": "https://www.kiro7.com/news/world/canadian-wildfire/RQO5BB77JQ2ODDOFSMQTLH3MOY/",
-              "headline": "Canadian wildfire that forced 20,000 to flee may signal ‘new normal’",
-              "body": "British Columbia Premier David Eby says a fast-moving wildfire in western Canada that forced more than 20,000 people from their homes may signal a “new normal” after outpacing official models and giving some residents little time to evacuate",
-              "published_date": "2026-08-13",
-              "outlet": "KIRO 7 Seattle-Tacoma",
-              "image": "https://s.yimg.com/bo/725d463c-741d-5ba1-bd96-8b95ea1a115a_1786606700175.jpg"
-            },
-            {
-              "news_id": "3fd20c3a4df750dc90b4140d1cc71f3f",
-              "url": "https://www.msn.com/en-ca/money/general/highway-reopening-shows-parts-of-summerland-bc-unscathed-in-fire-evacuation-zone/ar-AA29ZURq?ocid=BingNewsVerp",
-              "headline": "Highway reopening shows parts of Summerland, BC., unscathed in fire evacuation zone",
-              "body": "PENTICTON — Hillsides and forest scarred black can be seen north of Summerland, B.C., along with the wreckage of an inn that provided an idyllic wedding location beside Okanagan Lake before the deadly ...",
-              "published_date": "2026-08-14",
-              "outlet": "The Canadian Press on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "9132254a11195d8e850cdbac93b27e9a",
-              "url": "https://www.winnipegfreepress.com/canada/2026/08/13/what-to-know-about-the-bald-range-fire-and-b-c-s-wildfire-emergency-2",
-              "headline": "What to know about the Bald Range fire and B.C.'s wildfire emergency",
-              "body": "Premier David Eby has said British Columbia",
-              "published_date": "2026-08-13",
-              "outlet": "Winnipeg Free Press",
-              "image": ""
-            }
-          ]
-        },
-        {
-          "log_date": "2026-08-19",
-          "summary": "As of August 18, thousands of Summerland residents were permitted to return home after the Bald Range wildfire evacuation orders were mostly lifted. New research indicates fast-moving wildfires like the Bald Range blaze are burning larger and harming forests' regrowth capacity. Canada's wildfire season is on track to be the fourth worst on record, with elevated fire risk persisting across many regions.",
-          "news": [
-            {
-              "news_id": "041e0f793f1b56b9acdf155e0a067941",
-              "url": "https://www.accuweather.com/en/climate/the-earth-itself-was-screaming-out-bay-mills-indian-community-fights-pipeline-permitting-while-enveloped-in-wildfire-smoke/1922629",
-              "headline": "‘The Earth itself was screaming out:’ Bay Mills Indian Community fights pipeline...",
-              "body": "A Canadian oil and gas company wants to continue operating its Michigan pipeline for 99 more years....",
-              "published_date": "2026-08-13T17:56:04+00:00",
-              "outlet": "AccuWeather",
-              "image": "https://s.yimg.com/bo/4318a56f-5ce2-524c-ac8d-c922279e2d1c_1786658904232.jpg"
-            },
-            {
-              "news_id": "28466e6a17d05e0dbfb725e19c417a0a",
-              "url": "https://www.cbc.ca/news/canada/thunder-bay/northwestern-ontario-wildfires-aug-16-9.7311497",
-              "headline": "Here's the latest on northwestern Ontario's forest fires: Wednesday, Aug. 19",
-              "body": "There are 78 active wildfires in northwestern Ontario, according to the latest report issued Tuesday night from Ontario's ...",
-              "published_date": "2026-08-14T16:31:09+00:00",
-              "outlet": "CBC.ca",
-              "image": "https://www.bing.com/th?id=ONUT.G44pH0TQvz7zmZaDJtbjjQ"
-            },
-            {
-              "news_id": "433f5c6a35a25a359b96c2e014976219",
-              "url": "https://ny1.com/nyc/all-boroughs/ap-top-news/2026/08/13/canadian-wildfire-that-forced-20000-to-flee-may-signal-new-normal",
-              "headline": "Canadian wildfire that forced 20,000 to flee may signal ‘new normal’",
-              "body": "British Columbia Premier David Eby says a fast-moving wildfire in western Canada that forced more than 20,000 people from their homes may signal a “new normal” after outpacing official models and giving some residents little time to evacuate",
-              "published_date": "2026-08-13",
-              "outlet": "NY1 News",
-              "image": "https://s.yimg.com/bo/96e8d77a-4a09-5f78-871a-cf771562322d_1786509795215.jpg"
-            },
-            {
-              "news_id": "a0f6c726e5ca56ccaf38689944299091",
-              "url": "https://www.cp24.com/news/canada/2026/08/18/alberta-reports-zero-active-wildfires-in-wake-of-record-rainfall-in-parts-of-province/",
-              "headline": "Alberta reports zero active wildfires in August for first time in 40 years",
-              "body": "Record rains in Alberta this summer have given way to an almost-predictable stat of the opposite kind: zero wildfires.",
-              "published_date": "2026-08-18",
-              "outlet": "CP24",
-              "image": ""
-            },
-            {
-              "news_id": "270d4d04c0e1503ab11e74ae8f9b4bcc",
-              "url": "https://pr.newsaegis.com/article/The-Government-of-Canada-provides-an-update-regarding-the-2026-wildfire-season-August-update/6a84b5e9e2557832e110f958",
-              "headline": "The Government of Canada provides an update regarding the 2026 wildfire season - August update",
-              "body": "For the remainder of August, modelling by Natural Resources Canada (NRCan) indicates that fires in...",
-              "published_date": "2026-08-18",
-              "outlet": "St. Clair News-Aegis",
-              "image": "https://s.yimg.com/bo/39e76502-8ac1-51a7-9d8d-2d52ed3e048c_1786271935052.png.cf.jpg"
-            },
-            {
-              "news_id": "b919c3ee889f51e3a96aa1276090ae6a",
-              "url": "https://www.nationalobserver.com/2026/08/17/analysis/canada-wildfire-crisis-greenhouse-gases-forests",
-              "headline": "Canada’s out-of-control wildfire crisis is cooking up a future nobody wants to live in",
-              "body": "Canada’s calm, low-fire summers are gone, cooked away by unchecked fossil fuel burning. Here’s what we’ve replaced them with ...",
-              "published_date": "2026-08-17T08:56:07+00:00",
-              "outlet": "Canada's National Observer",
-              "image": "https://www.bing.com/th?id=ONUT.RinEpXiYjGClXnNNmtGfow"
-            },
-            {
-              "news_id": "5a6c27eb95545be4a049211cae052a81",
-              "url": "https://www.clickondetroit.com/news/world/2026/08/13/canadian-wildfire-that-forced-20000-to-flee-may-signal-new-normal/",
-              "headline": "Canadian wildfire that forced 20,000 to flee may signal ‘new normal’",
-              "body": "British Columbia Premier David Eby says a fast-moving wildfire in western Canada that forced more than 20,000 people from their homes may signal a “new normal” after outpacing official models and giving some residents little time to evacuate.",
-              "published_date": "2026-08-13",
-              "outlet": "ClickOnDetroit",
-              "image": "https://s.yimg.com/bo/9ee505c1-64e9-591e-b86d-5d2158ac70e7_1786604963492.jpg"
-            },
-            {
-              "news_id": "efc93fe74e83578798b21321389d87a6",
-              "url": "https://www.theatlantic.com/science/2026/08/fire-season-rural-fires/688314/",
-              "headline": "America’s Rural Lands Are Burning",
-              "body": "This summer has been a terrible fire season in the U.S.—just not in the most populated places.",
-              "published_date": "2026-08-18",
-              "outlet": "The Atlantic",
-              "image": "https://s.yimg.com/bo/2502a597-e357-5dd0-b8fc-da7ce750334d_1787064003822.jpg"
-            },
-            {
-              "news_id": "232636c9d7375ecd879f9e9734a95192",
-              "url": "https://www.cbc.ca/news/canada/thunder-bay/northwestern-ontario-wildfires-aug-16-9.7309040",
-              "headline": "Here's the latest on northwestern Ontario's forest fires: Sunday, Aug. 16",
-              "body": "There are 85 active wildfires in northwestern Ontario, according to the latest report issued Saturday night from Ontario's ...",
-              "published_date": "2026-08-17T03:52:26+00:00",
-              "outlet": "CBC.ca",
-              "image": "https://www.bing.com/th?id=ONUT.iL5cP0I4mqzM_H3kYmLaxw"
-            },
-            {
-              "news_id": "35dba2fdeca650a7a9ad25fd30865408",
-              "url": "https://www.clickorlando.com/news/world/2026/08/13/canadian-wildfire-that-forced-20000-to-flee-may-signal-new-normal/",
-              "headline": "Canadian wildfire that forced 20,000 to flee may signal ‘new normal’",
-              "body": "British Columbia Premier David Eby says a fast-moving wildfire in western Canada that forced more than 20,000 people from their homes may signal a “new normal” after outpacing official models and giving some residents little time to evacuate.",
-              "published_date": "2026-08-13",
-              "outlet": "WKMG ClickOrlando",
-              "image": "https://s.yimg.com/bo/9ee505c1-64e9-591e-b86d-5d2158ac70e7_1786604963492.jpg"
-            },
-            {
-              "news_id": "0fafd7323b7a5746a28823465970bae7",
-              "url": "https://www.msn.com/en-ca/news/canada/what-you-need-to-know-about-bc-wildfires-on-aug-18/ar-AA2ancqA?ocid=BingNewsVerp",
-              "headline": "What you need to know about B.C. wildfires on Aug. 18",
-              "body": "Thousands of Summerland residents were given the go-ahead to return home on Tuesday as the district lifted the majority of ...",
-              "published_date": "2026-08-19",
-              "outlet": "CBC.ca on MSN",
-              "image": "https://www.bing.com/th?id=ORMS.04d7dfa0113d0a5a22f7221387678244"
-            },
-            {
-              "news_id": "c9a2e4893520533eb461fb466867932b",
-              "url": "https://www.msn.com/en-ca/money/general/bald-range-wildfire-puts-bc-prevention-strategy-back-under-scrutiny-as-okanagan-contractor-calls-for-more-fuel-reduction/ar-AA2aid1C?ocid=BingNewsVerp",
-              "headline": "Bald Range wildfire puts BC prevention strategy back under scrutiny as Okanagan contractor calls for more fuel reduction",
-              "body": "The Bald Range wildfire has become more than another difficult entry in British Columbia’s fire season. After racing toward ...",
-              "published_date": "2026-08-17",
-              "outlet": "#Investing on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.jRhQ8xaMr_mIU2rlcob2xA"
-            },
-            {
-              "news_id": "ade38b6cae4652d39508f83ac6d3c39e",
-              "url": "https://www.msn.com/en-ca/weather/extreme-weather-events/wildfire-season-tracking-to-be-4th-worst-on-record/ar-AA2aprPd?ocid=BingNewsVerp",
-              "headline": "Wildfire season tracking to be 4th worst on record; fire risk remains elevated",
-              "body": "OTTAWA — Canada is on track for its fourth worst wildfire season on record.",
-              "published_date": "2026-08-19",
-              "outlet": "The Canadian Press on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "3914065bfaaf515e97dc6753d9624a79",
-              "url": "https://www.msn.com/en-ca/news/canada/fast-moving-wildfires-reshaping-bc-s-forests-new-study-finds/ar-AA2ao616?ocid=BingNewsVerp",
-              "headline": "Fast-moving wildfires reshaping B.C.’s forests, new study finds",
-              "body": "New research suggests that fast-moving wildfires, such as the Bald Ridge blaze near Summerland that forced recent evacuations, are burning bigger and leaving forests less able to grow back to their ...",
-              "published_date": "2026-08-18",
-              "outlet": "The Vancouver Sun on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "542dd48f02f9582c89fbab842db40472",
-              "url": "https://www.fastcompany.com/91589686/this-stunning-nasa-map-tracks-our-summer-of-wildfire-smoke",
-              "headline": "This stunning NASA map tracks our summer of wildfire smoke",
-              "body": "Hundreds of fires have burned in Canada and the northwestern U.S. This visualization shows exactly...",
-              "published_date": "2026-08-17T08:56:04+00:00",
-              "outlet": "Fast Company Magazine",
-              "image": "https://s.yimg.com/bo/a450e525-5a78-58b1-bf3a-6623ef7a12a5_1786958554774.gif"
-            },
-            {
-              "news_id": "8919a27355935e9583225474db62558e",
-              "url": "https://www.wftv.com/news/world/canada-puts-military/IB5M7QPX3QZ5VPZKREY2OHFO3E/",
-              "headline": "Canada puts the military on standby as British Columbia wildfires kill 1 and displace thousands",
-              "body": "Canada has put its military on standby to help battle wildfires in British Columbia, where one person has died and thousands have been forced to flee their homes as fast-moving blazes wreak destruction",
-              "published_date": "2026-08-10",
-              "outlet": "WFTV 9 Orlando",
-              "image": "https://s.yimg.com/bo/aa8efc87-c0e8-5bee-b999-e517f3e94882_1786395691268.jpg"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-08-22",
-          "summary": "A recent AP report indicates that last week's fast-moving wildfire in British Columbia harmed approximately 150 structures and forced over 20,000 people to evacuate. Meanwhile, Yukon First Nations firefighters expressed readiness to assist but have not been called to help in B.C., and the fire season continues to take a heavy toll on Indigenous communities.",
-          "news": [
-            {
-              "news_id": "78c0d5793e4a52b7a5d364c0b188325f",
-              "url": "https://www.msn.com/en-ca/weather/extreme-weather-events/wildfire-season-tracking-to-be-4th-worst-on-record/ar-AA2aprPd",
-              "headline": "Wildfire season tracking to be 4th worst on record; fire risk remains elevated",
-              "body": "OTTAWA — Canada is on track for its fourth worst wildfire season on record.",
-              "published_date": "2026-08-22",
-              "outlet": "The Canadian Press",
-              "image": "https://www.brandonsun.com/wp-content/uploads/sites/3/2026/08/50b8f8439362d0213a4d38d78e98ca6fb9b166a5a1601cd431e5ec9f8a944a94.jpg?w=1600"
-            },
-            {
-              "news_id": "758b68eb242f5f318f3ffe21648e29e7",
-              "url": "https://www.msn.com/en-us/news/us/a-crew-of-ct-firefighters-are-heading-west-to-help-fight-wildfires/ar-AA2abE9D",
-              "headline": "A crew of CT firefighters are heading west to help fight wildfires",
-              "body": "A team of firefighters with the state's Department of Energy and Environmental Protection is helping with wildfire suppression efforts in Minnesota, as wildfires continue to rage across Canada and the region,",
-              "published_date": "2026-08-22",
-              "outlet": "Hartford Courant",
-              "image": "https://www.courant.com/wp-content/uploads/2026/07/202607151433MCT_____PHOTO____US-NEWS-MINN-WILDFIRES-FILEPIC-MS_48e106.jpg?w=1440&h=827"
-            },
-            {
-              "news_id": "232a2b91dce95cb3bc31487af14f71bf",
-              "url": "https://medicinehatnews.com/news/national-news/2026/08/21/yukon-first-nations-firefighters-wonder-why-they-havent-been-called-to-help-in-b-c/",
-              "headline": "Yukon First Nations firefighters wonder why they haven't been called to help in B.C. - Medicine Hat News",
-              "body": "Fire crews with Yukon First Nations Wildfire say they are ready, willing and able to help with out-of-control fires burning in British Columbia and are wondering why they haven’t received the call. The organization’s CEO Nick Mauro said he had 40 or so firefighters with the skills and training ready to go and despite having",
-              "published_date": "2026-08-21",
-              "outlet": "Medicine Hat News",
-              "image": "https://medicinehatnews.com/wp-content/uploads/cp/2026/08/8cf5871ec014cd31d28264e7cc86a0c2f7e966a12e2bcb60a68bddd75a145a80-300x225.jpg"
-            },
-            {
-              "news_id": "d516a33cdaca52d28dcf010da5c4a46e",
-              "url": "https://www.nationalobserver.com/2026/08/17/news/wildfire-season-first-nations-toll",
-              "headline": "Canada's wildfire season is taking a heavy toll on First Nations",
-              "body": "Thousands have been forced from their homes as Indigenous leaders raise concerns about firefighting resources, emergency assistance and who decides when communities are safe.",
-              "published_date": "2026-08-17T08:55:00+00:00",
-              "outlet": "Canada's National Observer",
-              "image": "https://www.nationalobserver.com/sites/default/files/img/2026/08/13/first-nations-canada-wildfires-fires-british-columbia-ontario.jpeg"
-            },
-            {
-              "news_id": "02509603af585c838302d1c36226bfca",
-              "url": "https://apnews.com/article/wildfires-canada-british-columbia-e8929ef2f9a70ffb5400bc1661d143db",
-              "headline": "Wildfire in British Columbia harmed 150 structures and forced 20,000 to evacuate",
-              "body": "Officials say last week's fast-moving wildfire in western Canada destroyed or damaged about 150 structures, forcing over 20,000 people to evacuate.",
-              "published_date": "2026-08-18",
-              "outlet": "Associated Press News",
-              "image": ""
-            },
-            {
-              "news_id": "2c25d4e712935f10bfce173d41461f87",
-              "url": "https://rollcall.com/2026/08/19/wildland-firefighting-bill-gains-steam-as-smoke-reaches-congress/",
-              "headline": "Wildland firefighting bill gains steam as smoke reaches Congress",
-              "body": "Wildfire smoke drifting into Washington, D.C., from the Western U.S. and Canada this summer made it hard to ignore the national threat stronger wildfires pose to lawmakers’ constituents across the country. As a result, a bipartisan coalition led by Western lawmakers has a better shot this year at enacting legislation targeting wildfires at their source […]",
-              "published_date": "2026-08-19",
-              "outlet": "CQ Politics",
-              "image": "https://s.yimg.com/bo/1e302e13-f910-558a-b7eb-ea478e43578a_1787172316743.jpg"
-            },
-            {
-              "news_id": "da3f3e3a636e5ab987809615dad9f4c1",
-              "url": "https://www.winnipegfreepress.com/canada/2026/08/21/yukon-first-nations-firefighters-say-they-havent-been-called-to-help-in-b-c",
-              "headline": "Yukon First Nations firefighters wonder why they haven't been called to help in B.C.",
-              "body": "Fire crews with Yukon First Nations Wildfire say they are ready, willing and able to help with out-of-control fires burning in British Columbia and are wondering why they haven",
-              "published_date": "2026-08-21",
-              "outlet": "Winnipeg Free Press",
-              "image": "https://www.winnipegfreepress.com/wp-content/uploads/sites/2/2026/08/7e681c05a2fb1672bfc3126a5e2da3a0f4336cfd5fa1ac24c018b8c6875fb2c4.jpg?w=1600"
-            }
-          ]
-        }
-      ],
-      "logs_total": 7
     },
     {
       "incident_id": "20260810-UG-OT",
