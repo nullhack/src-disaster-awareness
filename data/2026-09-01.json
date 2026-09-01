@@ -1,32 +1,32 @@
 {
   "schema_version": "1.5",
-  "report_date": "2026-08-31",
+  "report_date": "2026-09-01",
   "generated_at": "2026-09-01T06:20:23Z",
-  "as_of": "2026-08-31",
+  "as_of": "2026-09-01",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 35,
-    "new_today": 14,
+    "reportable_total": 34,
+    "new_today": 0,
     "critical": 14,
     "high": 2,
-    "medium": 12,
+    "medium": 11,
     "low": 7,
     "disease_outbreaks": 3,
-    "countries_affected": 25,
-    "news_total": 6712,
+    "countries_affected": 24,
+    "news_total": 6711,
     "max_magnitude": 7.7,
     "by_severity": {
       "CRITICAL": 14,
       "HIGH": 2,
-      "MEDIUM": 12,
+      "MEDIUM": 11,
       "LOW": 7
     },
     "by_type": {
       "Flood": 4,
       "Disease": 3,
       "Drought": 3,
-      "Earthquake": 13,
+      "Earthquake": 12,
       "Severe Weather": 2,
       "Conflict": 2,
       "Forest Fire": 6,
@@ -39,7 +39,7 @@
       "Africa": 3,
       "Americas": 4,
       "Unknown": 2,
-      "Europe": 7,
+      "Europe": 6,
       "Oceania": 3
     }
   },
@@ -141,15 +141,6 @@
       "iso2": "VU",
       "region": "Oceania",
       "country_group": "B",
-      "max_severity": "MEDIUM"
-    },
-    {
-      "country": "Russia",
-      "count": 1,
-      "max_sev_rank": 2,
-      "iso2": "RU",
-      "region": "Europe",
-      "country_group": "C",
       "max_severity": "MEDIUM"
     },
     {
@@ -42910,72 +42901,6 @@
         }
       ],
       "logs_total": 1
-    },
-    {
-      "incident_id": "20260817-RU-EQ",
-      "tree_id": "12df6f02f83943eca1dd61f13acf1510",
-      "canonical_name": "Earthquake M5.8 Petropavlovsk-Kamchatsky, Russia 2026-08-17",
-      "summary": "",
-      "country": "Russia",
-      "iso2": "RU",
-      "lat": 53.024,
-      "lon": 159.7106,
-      "country_group": "C",
-      "region": "Europe",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-08-17",
-      "first_reported_date": "2026-08-17",
-      "last_updated_date": "2026-08-24",
-      "days_since_event": 15,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 1
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 5.8 - 72 km E of Petropavlovsk-Kamchatsky, Russia",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/usd0015edq",
-          "meta": "54.741 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 5.8,
-        "max_depth_km": 54.741,
-        "place": "72 km E of Petropavlovsk-Kamchatsky, Russia",
-        "felt": null,
-        "sig": 518,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "A mega earthquake off Russia sent tsunami warnings across the Pacific",
-          "url": "https://www.msn.com/en-us/weather/general/a-mega-earthquake-off-russia-sent-tsunami-warnings-across-the-pacific/vi-AA2aOEqs?ocid=BingNewsVerp",
-          "outlet": "Places on MSN",
-          "published_date": "2026-08-24"
-        }
-      ],
-      "news_total": 1,
-      "logs": [],
-      "logs_total": 0
     },
     {
       "incident_id": "20260824-TL-EQ",

@@ -1,38 +1,37 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-08-27",
-  "generated_at": "2026-08-31T19:32:37Z",
+  "generated_at": "2026-09-01T06:20:23Z",
   "as_of": "2026-08-27",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 12,
+    "reportable_total": 11,
     "new_today": 3,
     "critical": 0,
     "high": 0,
     "medium": 5,
-    "low": 7,
+    "low": 6,
     "disease_outbreaks": 0,
-    "countries_affected": 11,
-    "news_total": 147,
+    "countries_affected": 10,
+    "news_total": 129,
     "max_magnitude": 6.1,
     "by_severity": {
       "CRITICAL": 0,
       "HIGH": 0,
       "MEDIUM": 5,
-      "LOW": 7
+      "LOW": 6
     },
     "by_type": {
       "Flood": 2,
-      "Drought": 1,
       "Forest Fire": 2,
       "": 3,
       "Earthquake": 4
     },
     "by_region": {
       "Asia": 5,
-      "Africa": 2,
       "Europe": 3,
+      "Africa": 1,
       "Oceania": 1,
       "Unknown": 1
     }
@@ -54,15 +53,6 @@
       "iso2": "JP",
       "region": "Asia",
       "country_group": "A",
-      "max_severity": "LOW"
-    },
-    {
-      "country": "DR Congo",
-      "count": 1,
-      "max_sev_rank": 1,
-      "iso2": "CD",
-      "region": "Africa",
-      "country_group": "C",
       "max_severity": "LOW"
     },
     {
@@ -163,7 +153,7 @@
       "event_date": "2023-08-14",
       "first_reported_date": "2023-08-14",
       "last_updated_date": "2026-08-27",
-      "days_since_event": 1113,
+      "days_since_event": 1114,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -388,325 +378,6 @@
       "logs_total": 2
     },
     {
-      "incident_id": "20260521-CD-DR",
-      "tree_id": "d250f47c64bb40ce8843fadf6b74f707",
-      "canonical_name": "Drought Buyende, DR Congo 2026-05-21",
-      "summary": "Six million people in Somalia are now facing acute hunger, with nearly two million children at emergency levels, as severe drought and conflict worsen amidst falling humanitarian funding. In Kenya, drought has pushed food prices up, with maize rising 3.3% and beans 2.4-2.9% in July, while UNICEF reports a 32% jump in children treated for severe malnutrition in Somalia following aid cuts.",
-      "country": "DR Congo",
-      "iso2": "CD",
-      "lat": 1.3,
-      "lon": 33.167,
-      "country_group": "C",
-      "region": "Africa",
-      "incident_type": "Drought",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "LOW",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-05-21",
-      "first_reported_date": "2026-05-21",
-      "last_updated_date": "2026-08-26",
-      "days_since_event": 102,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 1,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 18
-      },
-      "source_links": [
-        {
-          "type": "GDACS",
-          "label": "Green alert · Drought Buyende, DR Congo 2026-05-21",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=DR&eventid=1027465",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "Democratic Republic of Congo, Kenya, Tanzania, Uganda",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": "Green",
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Why is Uganda experiencing a food crisis?",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Why is Uganda experiencing a food crisis?",
-          "published_date": "2026-08-04"
-        },
-        {
-          "headline": "Strong El Niño could push 49 million more people into acute hunger, UN agency...",
-          "published_date": "2026-08-05T02:44:59+00:00"
-        },
-        {
-          "headline": "Thousands flee yearslong drought in Somalia as hunger deepens and aid shrinks",
-          "published_date": "2026-08-12"
-        },
-        {
-          "headline": "Updated El Niño forecast warns of 'historic event'",
-          "published_date": "2026-08-13"
-        },
-        {
-          "headline": "A growing weather pattern could affect millions around the globe",
-          "published_date": "2026-08-13"
-        },
-        {
-          "headline": "East Africa braces for prolonged food crisis as another El Niño season looms",
-          "published_date": "2026-08-16"
-        },
-        {
-          "headline": "Looming El Niño signals bad water economy for East Africa",
-          "published_date": "2026-08-16T14:46:23+00:00"
-        },
-        {
-          "headline": "East Africa braces for prolonged food crisis as another El Niño season looms",
-          "published_date": "2026-08-17"
-        },
-        {
-          "headline": "Somalia faces another hunger crisis and the UN food agency head says it has far less funds to help",
-          "published_date": "2026-08-20"
-        },
-        {
-          "headline": "What is El Nino – and is climate change making the weather phenomenon worse?",
-          "published_date": "2026-08-21"
-        },
-        {
-          "headline": "How the 'Super El Niño' could affect our weather",
-          "published_date": "2026-08-21"
-        },
-        {
-          "headline": "East Africa braces for prolonged food crisis as another El Niño season looms",
-          "published_date": "2026-08-22"
-        },
-        {
-          "headline": "True scale of devastating wildfires wreaking havoc across the globe",
-          "published_date": "2026-08-22"
-        },
-        {
-          "headline": "Six million Somalis face acute hunger as drought and conflict worsen",
-          "published_date": "2026-08-24"
-        },
-        {
-          "headline": "Relentless heat and drought take a toll on herders’ physical and mental health, in Kenya and the US",
-          "published_date": "2026-08-25"
-        },
-        {
-          "headline": "Drought bites farmers, pushes food prices up",
-          "published_date": "2026-08-25T06:30:00+00:00"
-        },
-        {
-          "headline": "Somalia child hunger crisis deepens after aid cuts, UNICEF says",
-          "published_date": "2026-08-26"
-        }
-      ],
-      "news_total": 18,
-      "logs": [
-        {
-          "log_date": "2026-08-10",
-          "summary": "A food crisis in Uganda has resulted in at least 19 deaths from starvation, with 1.5 million people at risk of malnutrition, according to expert warnings. Additionally, a separate report highlights that a strong El Niño event could push nearly 49 million more people globally into acute hunger, exacerbating drought conditions in the region.",
-          "news": [
-            {
-              "news_id": "7862eea4d4d45783ace612a4e9faacf9",
-              "url": "https://www.yahoo.com/news/world/articles/why-uganda-experiencing-food-crisis-080425306.html",
-              "headline": "Why is Uganda experiencing a food crisis?",
-              "body": "At least 19 people have died of starvation in the country and 1.5 million are at risk of malnutrition, experts warn.",
-              "published_date": "2026-07-29",
-              "outlet": "Al Jazeera · via Yahoo News",
-              "image": "https://media.zenfs.com/en/al_jazeera_289/f8a014e2d14a96c53862dbe615bf8e34"
-            },
-            {
-              "news_id": "70073bcda1b75d6d9303672411972a16",
-              "url": "https://www.msn.com/en-us/news/world/why-is-uganda-experiencing-a-food-crisis/ar-AA28XnJ2",
-              "headline": "Why is Uganda experiencing a food crisis?",
-              "body": "At least 19 people have died of starvation in the country and 1.5 million are at risk of malnutrition, experts warn.",
-              "published_date": "2026-08-04",
-              "outlet": "Al Jazeera",
-              "image": "https://www.aljazeera.com/wp-content/uploads/2022/06/000_32C226X.jpg?resize=1920,1440"
-            },
-            {
-              "news_id": "359b77bef7e154b7b81415e662ee3c35",
-              "url": "https://www.reuters.com/business/environment/strong-el-nio-could-push-49-million-more-people-into-acute-hunger-un-agency-says-2026-08-05/",
-              "headline": "Strong El Niño could push 49 million more people into acute hunger, UN agency...",
-              "body": "A powerful El Niño weather event could push an additional nearly 49 million people into acute food i...",
-              "published_date": "2026-08-05T02:44:59+00:00",
-              "outlet": "Reuters",
-              "image": "https://s.yimg.com/bo/817996e7-5814-5b70-8ec7-d42cdcbb73e7_1785918146865.jpg"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-08-21",
-          "summary": "New reports highlight deepening drought in Somalia, with thousands fleeing rural areas to displacement camps as hunger rises and aid funding shrinks. El Niño forecasts have been updated, indicating a greater than 90% chance of a very strong event during fall/winter 2026-27, with experts warning of crop failure and prolonged food crisis across East Africa.",
-          "news": [
-            {
-              "news_id": "f5d6f4178a6655abaaf98f4775528192",
-              "url": "https://www.wftv.com/news/world/thousands-flee/6WDF4SKH2Y4SLPLWIWU77RHJXI/",
-              "headline": "Thousands flee yearslong drought in Somalia as hunger deepens and aid shrinks",
-              "body": "One Somali family's long trek to escape drought conditions is an example of a deepening humanitarian emergency in Somalia, where years of drought, conflict and economic pressures are pushing more families from rural communities into displacement camps as hunger rises and humanitarian funding shrinks",
-              "published_date": "2026-08-12",
-              "outlet": "WFTV 9 Orlando",
-              "image": "https://s.yimg.com/bo/0cce5b7c-762e-5a22-abda-3613daf2b9fc_1786518610925.jpg"
-            },
-            {
-              "news_id": "fc8dff5ad2345c3e9b35ff101bfe990e",
-              "url": "https://www.yahoo.com/news/science/articles/updated-el-ni-o-forecast-130114419.html",
-              "headline": "Updated El Niño forecast warns of 'historic event'",
-              "body": "El Niño continues to strengthen, and it has a greater than 90% chance of becoming a \"very strong\" event during the fall and winter of 2026-27.",
-              "published_date": "2026-08-13",
-              "outlet": "USA TODAY · via Yahoo News",
-              "image": "https://media.zenfs.com/en/usa_today_news_641/3d2a38e0019e29fc5b6a77f2fa5eb921.png.cf.jpg"
-            },
-            {
-              "news_id": "d385d07511875b16a2a0ad4f5785910e",
-              "url": "https://www.theeastafrican.co.ke/tea/sustainability/climate/looming-el-niño-signals-bad-water-economy-for-east-africa-5561224",
-              "headline": "Looming El Niño signals bad water economy for East Africa",
-              "body": "As Africa faces an 81 percent chance of a very strong El Niño season between October and December, it is also raising the prospect of one of the continent’s most disruptive events that could directly ...",
-              "published_date": "2026-08-16T14:46:23+00:00",
-              "outlet": "The EastAfrican",
-              "image": ""
-            },
-            {
-              "news_id": "12e84a73abc45b33934c5d4317a70fdf",
-              "url": "https://www.msn.com/en-xl/africa/top-stories/east-africa-braces-for-prolonged-food-crisis-as-another-el-niño-season-looms/ar-AA2abrzD?ocid=BingNewsVerp",
-              "headline": "East Africa braces for prolonged food crisis as another El Niño season looms",
-              "body": "Experts warn of crop failure and effects that will worsen an already bad ...",
-              "published_date": "2026-08-16",
-              "outlet": "The EastAfrican on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "1847ae2eb63951d98d801caf73eaca64",
-              "url": "https://www.yahoo.com/news/weather-news/articles/growing-weather-pattern-could-affect-182052331.html",
-              "headline": "A growing weather pattern could affect millions around the globe",
-              "body": "NOAA says El Niño has a 90% chance of becoming very strong and a 69% chance of reaching historic intensity, with global weather impacts possible.",
-              "published_date": "2026-08-13",
-              "outlet": "Cleveland.com · via Yahoo News",
-              "image": "https://media.zenfs.com/en/cleveland_com_articles_529/2a29603725d7f85a83631b49606db78e.jpg"
-            },
-            {
-              "news_id": "782b6875bb835d0c82d85ea489f68039",
-              "url": "https://www.zawya.com/en/economy/africa/east-africa-braces-for-prolonged-food-crisis-as-another-el-nino-season-looms-457396",
-              "headline": "East Africa braces for prolonged food crisis as another El Niño season looms",
-              "body": "Agra’s Food Security Monitor report suggested this surge reflected “exchange-rate pressures, tightening seasonal availability, and strong regional dem...",
-              "published_date": "2026-08-17",
-              "outlet": "ZAWYA",
-              "image": ""
-            }
-          ]
-        },
-        {
-          "log_date": "2026-08-24",
-          "summary": "The selected news reports that East Africa is bracing for a prolonged food crisis as another El Niño season looms, with experts warning of crop failure and worsening effects on an already dire situation. The broader El Niño phenomenon is also expected to contribute to record global temperatures, potentially exacerbating drought conditions in the region.",
-          "news": [
-            {
-              "news_id": "14ba70a2ac285bd2b61470a118978540",
-              "url": "https://malaysia.news.yahoo.com/el-nino-climate-change-making-124542465.html",
-              "headline": "What is El Nino – and is climate change making the weather phenomenon worse?",
-              "body": "Meteorologists warn El Nino could contribute to record global temperatures and the hottest year ever in 2027",
-              "published_date": "2026-08-21",
-              "outlet": "Yahoo Malaysia",
-              "image": "https://s.yimg.com/lo/mysterio/api/a5ccc2e86a205b6c769092c68ba094988ecc8ad19df442e4ccaf2738236b4284/lightyear_networkapi/resizefill_w1200;quality_80;format_jpg/https://media.zenfs.com/en/the_independent_577/6eb37c2633dedfe60304b8038a8e1ce9.jpg"
-            },
-            {
-              "news_id": "f24ed4eb269e59ff8a97b8acaa838aa5",
-              "url": "https://www.msn.com/en-xl/money/general/east-africa-braces-for-prolonged-food-crisis-as-another-el-niño-season-looms/ar-AA2abrzD",
-              "headline": "East Africa braces for prolonged food crisis as another El Niño season looms",
-              "body": "Experts warn of crop failure and effects that will worsen an already bad",
-              "published_date": "2026-08-22",
-              "outlet": "The East African",
-              "image": ""
-            },
-            {
-              "news_id": "2071e202bfbe5f06847bbd6c542d5324",
-              "url": "https://www.yahoo.com/news/videos/super-el-ni-o-could-130819059.html",
-              "headline": "How the 'Super El Niño' could affect our weather",
-              "body": "This winter, we are expecting to see what is called a “Super El Niño.” FOX 9 meteorologist Cody Matz spoke with Dr. Kenny Blumenfeld, Minnesota, senior climatologist for the Minnesota Department of N...",
-              "published_date": "2026-08-21",
-              "outlet": "Yahoo",
-              "image": "https://s.yimg.com/lo/mysterio/api/e80b8b75720b209974eaf68aa0534ebde75e453a5c56eb57afa60a3c3da42eec/lightyear_networkapi/resizefill_w1200;quality_80;format_jpg/https://media.zenfs.com/en/kmsp_fox_local_videos_345/f3113ea3d22d9e23a96d67de17577127.jpg"
-            },
-            {
-              "news_id": "e28cf1265ceb58b08127caa673a06982",
-              "url": "https://www.msn.com/en-au/weather/general/true-scale-of-devastating-wildfires-wreaking-havoc-across-the-globe/ar-AA2aeMg8",
-              "headline": "True scale of devastating wildfires wreaking havoc across the globe",
-              "body": "The world is on fire: True scale of devastating blazes wreaking havoc across the globe - IN DEPTH: Driven by record-breaking temperatures and drought, wildfires have scorched a land mass the size of Spain,",
-              "published_date": "2026-08-22",
-              "outlet": "The Independent",
-              "image": "https://s.yimg.com/lo/mysterio/api/214864a2f8038223e105bbef848f48449855ba0a4d2c44cac6da8f2fb8aa56ba/lightyear_networkapi/resizefill_w1200;quality_80;format_jpg/https://media.zenfs.com/en/the_independent_577/b9f52e84987ac54cc5a28ef61cb0f636.jpg"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-08-26",
-          "summary": "Six million people in Somalia are now facing acute hunger, with nearly two million children at emergency levels, as severe drought and conflict worsen amidst falling humanitarian funding. In Kenya, drought has pushed food prices up, with maize rising 3.3% and beans 2.4-2.9% in July, while UNICEF reports a 32% jump in children treated for severe malnutrition in Somalia following aid cuts.",
-          "news": [
-            {
-              "news_id": "df55d8427898556eb76a46dea9233ff1",
-              "url": "https://www.rfi.fr/en/africa/20260824-six-million-somalis-face-acute-hunger-as-drought-and-conflict-worsen",
-              "headline": "Six million Somalis face acute hunger as drought and conflict worsen",
-              "body": "Six million people in Somalia are facing acute hunger, with nearly two million children at emergency levels, as severe drought, conflict and falling humanitarian funding deepen what the UN describes…",
-              "published_date": "2026-08-24",
-              "outlet": "Radio France Internationale",
-              "image": "https://s.rfi.fr/media/display/089fa040-9f80-11f1-979d-005056a97e36/w:1280/p:16x9/AP26232458355606-1.jpg"
-            },
-            {
-              "news_id": "817d481edc485708abff45570c90fd7e",
-              "url": "https://www.newsday.com/news/nation/hunger-food-aid-somalia-africa-wfp-k44325",
-              "headline": "Somalia faces another hunger crisis and the UN food agency head says it has far less funds to help",
-              "body": "Six million people are facing acute food insecurity in Somalia while the World Food Program only has a tenth of the resources to help than it did during the country's last hunger crisis.",
-              "published_date": "2026-08-20",
-              "outlet": "Newsday",
-              "image": "https://cdn.newsday.com/ace/c:ZjE0ZTlhOGUtYzE1Ni00:NGEwMjljNWItM2U5NC00/landscape/1280"
-            },
-            {
-              "news_id": "00f4b33c865f50ae94718fa70383b2f0",
-              "url": "https://www.yahoo.com/news/science/articles/relentless-heat-drought-toll-herders-140406774.html",
-              "headline": "Relentless heat and drought take a toll on herders’ physical and mental health, in Kenya and the US",
-              "body": "Whether in Kenya or California, herders face dangerous temperatures and difficult conditions that put a strain on their health.",
-              "published_date": "2026-08-25",
-              "outlet": "The Conversation · via Yahoo News",
-              "image": "https://media.zenfs.com/en/the_conversation_us_articles_815/13e5583b44058740e4d1fced00b68fc7.jpg"
-            },
-            {
-              "news_id": "eaaf2bb045805e40937d585e4e97c489",
-              "url": "https://www.the-star.co.ke/counties/rift-valley/2026-08-25-drought-bites-farmers-pushes-food-prices-up",
-              "headline": "Drought bites farmers, pushes food prices up",
-              "body": "According to the Alliance for Green Revolution in Africa (AGRA) July Food Security Monitor, maize prices in Kenya rose by 3.3 per cent in July, while bean prices increased by between 2.4 and 2.9 per cent as domestic supplies tightened. Rice prices also edged up by 0.3 per cent.",
-              "published_date": "2026-08-25T06:30:00+00:00",
-              "outlet": "The Star",
-              "image": "https://cdn.radioafrica.digital/image/2026/08/836e71e4-d487-4f16-9b29-edc76bf92f00.webp?1787629013128"
-            },
-            {
-              "news_id": "f39cf97480255a88b76527ad375e78db",
-              "url": "https://www.msn.com/en-us/news/world/somalia-child-hunger-crisis-deepens-after-aid-cuts-unicef-says/ar-AA2aH7dd",
-              "headline": "Somalia child hunger crisis deepens after aid cuts, UNICEF says",
-              "body": "The drought-stricken country has recorded a 32 percent jump in the number of children treated for severe malnutrition.",
-              "published_date": "2026-08-26",
-              "outlet": "Al Jazeera",
-              "image": "https://www.aljazeera.com/wp-content/uploads/2026/08/reuters_6a893b8c-1787378572.jpg?resize=1920,1440"
-            }
-          ]
-        }
-      ],
-      "logs_total": 4
-    },
-    {
       "incident_id": "20260606-CN-FL",
       "tree_id": "942158e18da35420a79e4a17fefb8013",
       "canonical_name": "Flood Hunan, China 2026-06-06",
@@ -730,7 +401,7 @@
       "event_date": "2026-06-06",
       "first_reported_date": "2026-06-06",
       "last_updated_date": "2026-08-25",
-      "days_since_event": 86,
+      "days_since_event": 87,
       "source_count": 3,
       "should_report": true,
       "search_keys": [],
@@ -1324,7 +995,7 @@
       "event_date": "2026-08-05",
       "first_reported_date": "2026-08-05",
       "last_updated_date": "2026-08-26",
-      "days_since_event": 26,
+      "days_since_event": 27,
       "source_count": 2,
       "should_report": false,
       "search_keys": [],
@@ -1623,7 +1294,7 @@
       "event_date": "2026-08-10",
       "first_reported_date": "2026-08-10",
       "last_updated_date": "2026-08-23",
-      "days_since_event": 21,
+      "days_since_event": 22,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -1729,7 +1400,7 @@
       "event_date": "2026-08-10",
       "first_reported_date": "2026-08-10",
       "last_updated_date": "2026-08-25",
-      "days_since_event": 21,
+      "days_since_event": 22,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -1839,7 +1510,7 @@
       "event_date": "2026-08-16",
       "first_reported_date": "2026-08-16",
       "last_updated_date": "2026-08-25",
-      "days_since_event": 15,
+      "days_since_event": 16,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -1966,7 +1637,7 @@
       "event_date": "2026-08-17",
       "first_reported_date": "2026-08-17",
       "last_updated_date": "2026-08-24",
-      "days_since_event": 14,
+      "days_since_event": 15,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -2032,7 +1703,7 @@
       "event_date": "2026-08-19",
       "first_reported_date": "2026-08-19",
       "last_updated_date": "2026-08-20",
-      "days_since_event": 12,
+      "days_since_event": 13,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -2098,7 +1769,7 @@
       "event_date": "2026-08-24",
       "first_reported_date": "2026-08-24",
       "last_updated_date": "2026-08-25",
-      "days_since_event": 7,
+      "days_since_event": 8,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -2170,7 +1841,7 @@
       "event_date": "2026-08-25",
       "first_reported_date": "2026-08-25",
       "last_updated_date": "2026-08-27",
-      "days_since_event": 6,
+      "days_since_event": 7,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -2280,7 +1951,7 @@
       "event_date": "2026-08-27",
       "first_reported_date": "2026-08-27",
       "last_updated_date": "2026-08-27",
-      "days_since_event": 4,
+      "days_since_event": 5,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
