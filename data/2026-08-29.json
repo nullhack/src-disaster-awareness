@@ -1,29 +1,29 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-08-29",
-  "generated_at": "2026-09-02T05:59:42Z",
+  "generated_at": "2026-09-02T17:13:22Z",
   "as_of": "2026-08-29",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 17,
-    "new_today": 4,
+    "reportable_total": 16,
+    "new_today": 3,
     "critical": 0,
     "high": 1,
-    "medium": 9,
+    "medium": 8,
     "low": 7,
     "disease_outbreaks": 0,
-    "countries_affected": 15,
-    "news_total": 265,
+    "countries_affected": 14,
+    "news_total": 264,
     "max_magnitude": 6.1,
     "by_severity": {
       "CRITICAL": 0,
       "HIGH": 1,
-      "MEDIUM": 9,
+      "MEDIUM": 8,
       "LOW": 7
     },
     "by_type": {
-      "Flood": 3,
+      "Flood": 2,
       "Drought": 1,
       "Forest Fire": 3,
       "Volcano": 1,
@@ -31,7 +31,7 @@
       "Earthquake": 7
     },
     "by_region": {
-      "Asia": 7,
+      "Asia": 6,
       "Africa": 3,
       "Europe": 4,
       "Americas": 1,
@@ -101,15 +101,6 @@
       "region": "Europe",
       "country_group": "C",
       "max_severity": "LOW"
-    },
-    {
-      "country": "India",
-      "count": 1,
-      "max_sev_rank": 2,
-      "iso2": "IN",
-      "region": "Asia",
-      "country_group": "A",
-      "max_severity": "MEDIUM"
     },
     {
       "country": "Somalia",
@@ -1979,72 +1970,6 @@
         }
       ],
       "logs_total": 2
-    },
-    {
-      "incident_id": "20260809-IN-FL",
-      "tree_id": "c3a298b11ada4b3d923299b870b675ba",
-      "canonical_name": "Flood India 2026-08-09",
-      "summary": "",
-      "country": "India",
-      "iso2": "IN",
-      "lat": 25.3356491,
-      "lon": 83.0076292,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Flood",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-08-09",
-      "first_reported_date": "2026-08-09",
-      "last_updated_date": "2026-08-29",
-      "days_since_event": 24,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 1,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 1
-      },
-      "source_links": [
-        {
-          "type": "GDACS",
-          "label": "Orange alert · Flood India 2026-08-09",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=FL&eventid=1104121",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "India",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": "Orange",
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Odisha flood update: IMD predicts heavy rains across districts till September 4",
-          "url": "https://english.mathrubhumi.com/news/india/odisha-low-pressure-bay-of-bengal-imd-rain-warning-2026-adr26ir7",
-          "outlet": "Mathrubhumi English",
-          "published_date": "2026-08-29"
-        }
-      ],
-      "news_total": 1,
-      "logs": [],
-      "logs_total": 0
     },
     {
       "incident_id": "20260810-UG-OT",
