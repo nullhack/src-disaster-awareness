@@ -1,37 +1,37 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-08-27",
-  "generated_at": "2026-09-03T05:58:03Z",
+  "generated_at": "2026-09-03T17:05:00Z",
   "as_of": "2026-08-27",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 11,
+    "reportable_total": 10,
     "new_today": 3,
     "critical": 0,
     "high": 0,
     "medium": 5,
-    "low": 6,
+    "low": 5,
     "disease_outbreaks": 0,
-    "countries_affected": 10,
-    "news_total": 129,
+    "countries_affected": 9,
+    "news_total": 113,
     "max_magnitude": 6.1,
     "by_severity": {
       "CRITICAL": 0,
       "HIGH": 0,
       "MEDIUM": 5,
-      "LOW": 6
+      "LOW": 5
     },
     "by_type": {
       "Flood": 2,
-      "Forest Fire": 2,
       "": 3,
+      "Forest Fire": 1,
       "Earthquake": 4
     },
     "by_region": {
       "Asia": 5,
-      "Europe": 3,
       "Africa": 1,
+      "Europe": 2,
       "Oceania": 1,
       "Unknown": 1
     }
@@ -53,15 +53,6 @@
       "iso2": "JP",
       "region": "Asia",
       "country_group": "A",
-      "max_severity": "LOW"
-    },
-    {
-      "country": "Serbia",
-      "count": 1,
-      "max_sev_rank": 1,
-      "iso2": "RS",
-      "region": "Europe",
-      "country_group": "C",
       "max_severity": "LOW"
     },
     {
@@ -970,305 +961,6 @@
         }
       ],
       "logs_total": 13
-    },
-    {
-      "incident_id": "20260805-RS-WF",
-      "tree_id": "65c2cfe6c88644e4b0890ba794c98988",
-      "canonical_name": "Forest Fire Juznobanatski okrug, Serbia 2026-08-05",
-      "summary": "Hungary has dispatched 12 firefighters and four vehicles to Serbia to assist in combating the ongoing forest fires. European countries are coordinating firefighting resources across borders, with Serbia continuing to use both Russian and EU assistance. Multiple fires remain active across the region.",
-      "country": "Serbia",
-      "iso2": "RS",
-      "lat": 44.852559079479136,
-      "lon": 21.1370600946794,
-      "country_group": "C",
-      "region": "Europe",
-      "incident_type": "Forest Fire",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "LOW",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-08-05",
-      "first_reported_date": "2026-08-05",
-      "last_updated_date": "2026-08-26",
-      "days_since_event": 29,
-      "source_count": 2,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 1,
-        "ercc": 1,
-        "healthmap": 0,
-        "news": 16
-      },
-      "source_links": [
-        {
-          "type": "GDACS",
-          "label": "Green alert · Forest Fire Juznobanatski okrug, Serbia 2026-08-05",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=WF&eventid=1030252",
-          "meta": ""
-        },
-        {
-          "type": "ERCC",
-          "label": "ECHO Daily Map of 24 August 2026",
-          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5762",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "Serbia",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": "Green",
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Dačić: Serbia activated the EU Civil Protection Mechanism, Russian Ilyushin is also necessary, the hardest thing is in the sandbar",
-          "published_date": "2026-08-21"
-        },
-        {
-          "headline": "Help arrives to fight wildfires: EU sends four helicopters and two teams to Serbia; One Black Hawk has landed",
-          "published_date": "2026-08-22"
-        },
-        {
-          "headline": "Russian plane extinguishes major wildfire hotspots in Serbia",
-          "published_date": "2026-08-23"
-        },
-        {
-          "headline": "Serbia battles huge wildfire, evacuations in Spain",
-          "published_date": "2026-08-23"
-        },
-        {
-          "headline": "EU sends firefighting helicopters to Serbia",
-          "published_date": "2026-08-23"
-        },
-        {
-          "headline": "Europe Battles Extreme Weather: France, Spain, Serbia & Bosnia Hit By Wildfires, Floods And Storms",
-          "published_date": "2026-08-23"
-        },
-        {
-          "headline": "Serbian fire crews battle major blaze at a nature reserve",
-          "published_date": "2026-08-23"
-        },
-        {
-          "headline": "EU sends helicopters, firefighters to Serbia to tackle wildfires",
-          "published_date": "2026-08-23"
-        },
-        {
-          "headline": "Vulin pointed out that the EU ignored the fires in Serbia before the arrival of the Russian Il-76",
-          "published_date": "2026-08-23T02:26:59+00:00"
-        },
-        {
-          "headline": "Planes, helicopters, crews: How Europe is scrambling to contain a record wildfire season",
-          "published_date": "2026-08-24"
-        },
-        {
-          "headline": "Fire spreading toward Trebinje: One front moving toward urban areas; Homes threatened again",
-          "published_date": "2026-08-24"
-        },
-        {
-          "headline": "EU, Russian aircraft help Serbia battle wildfires",
-          "published_date": "2026-08-24"
-        },
-        {
-          "headline": "Romanian firefighters, Black Hawk helicopter deploy to Serbia to fight wildfires",
-          "published_date": "2026-08-24"
-        },
-        {
-          "headline": "EU sends urgent support to Serbia as wildfires intensify",
-          "published_date": "2026-08-24"
-        },
-        {
-          "headline": "Hungarian firefighters helping in Serbia",
-          "published_date": "2026-08-26"
-        },
-        {
-          "headline": "Cities shrouded in smoke; Fires devour everything in their path; Army called in",
-          "published_date": "2026-08-26"
-        }
-      ],
-      "news_total": 16,
-      "logs": [
-        {
-          "log_date": "2026-08-23",
-          "summary": "International assistance has been mobilized to combat wildfires in Serbia, with the European Union sending four helicopters and two firefighting teams under its Civil Protection Mechanism. Reports also indicate that a Russian Ilyushin Il-76 aircraft was deployed, and that EU aid arrived only after Russia's offer. These efforts are focused on the most affected areas, including the sandbar region likely linked to this incident.",
-          "news": [
-            {
-              "news_id": "ea5431fc01a95cecba18fba020118d29",
-              "url": "https://www.b92.net/english/society/261217/help-arrives-to-fight-wildfires-eu-sends-four-helicopters-and-two-teams-to-serbia-one-black-hawk-has-landed/vest",
-              "headline": "Help arrives to fight wildfires: EU sends four helicopters and two teams to Serbia; One Black Hawk has landed",
-              "body": "The European Union has sent assistance to Serbia to help fight wildfires, European Commissioner for Crisis Management Hadja Lahbib said.",
-              "published_date": "2026-08-22",
-              "outlet": "B92",
-              "image": "https://www.bing.com/th?id=ONUT.xPJZB9vTjdBamCY1MjQxfg"
-            },
-            {
-              "news_id": "8b808f44ff555fc791be7ed00e7f1bc8",
-              "url": "https://www.msn.com/en-gb/news/world/eu-sends-helicopters-firefighters-to-serbia-to-tackle-wildfires/ar-AA2aICGl?ocid=BingNewsVerp",
-              "headline": "EU sends helicopters, firefighters to Serbia to tackle wildfires",
-              "body": "BELGRADE, Aug 22 (Reuters) - The European Union’s Civil Protection Mechanism will send helicopters and firefighters to help ...",
-              "published_date": "2026-08-23",
-              "outlet": "Reuters on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.sMkXINjoLBuKZRm9VAmxPw"
-            },
-            {
-              "news_id": "f2c2b868bfd1549aa7674ad719e451c6",
-              "url": "https://en.vijesti.me/world-a/balkan/823061/dacic-srbija-aktivirala-mehanizam-civilne-zastite-eu-neophodan-i-ruski-iljusin-najteze-u-pjescari",
-              "headline": "Dačić: Serbia activated the EU Civil Protection Mechanism, Russian Ilyushin is also necessary, the hardest thing is in the sandbar",
-              "body": "Serbia has not activated the European Union (EU) Civil Protection Mechanism to receive international assistance in extinguishing the fires, N1 television was told earlier today ...",
-              "published_date": "2026-08-21",
-              "outlet": "Vijesti",
-              "image": "https://www.bing.com/th?id=ONUT.xF4xEAh9FSytgNe0AseW9g"
-            },
-            {
-              "news_id": "5bdf3ad5617e5eb8824f438bb7ca4d05",
-              "url": "https://iz.ru/en/node/2153316",
-              "headline": "Vulin pointed out that the EU ignored the fires in Serbia before the arrival of the Russian Il-76",
-              "body": "The European Union (EU) did not respond to forest fires in Serbia until the arrival of the Russian IL-76 special aircraft of the Russian Ministry of Emergency Situations. This was announced on August ...",
-              "published_date": "2026-08-23T02:26:59+00:00",
-              "outlet": "Izvestia",
-              "image": ""
-            }
-          ]
-        },
-        {
-          "log_date": "2026-08-24",
-          "summary": "International firefighting efforts continue, with a Russian Ilyushin Il-76 aircraft performing 19 flights and dropping 798 tons of water over four days to extinguish major hotspots. The European Union has also sent helicopters and firefighters under its Civil Protection Mechanism to help battle the wildfire in the Deliblato Sands nature reserve. Local fire crews remain engaged in fighting the blaze, which has prompted evacuations in other parts of Europe.",
-          "news": [
-            {
-              "news_id": "1fd42723885c5fcb970337c359b239cd",
-              "url": "https://tass.com/emergencies/2176707",
-              "headline": "Russian plane extinguishes major wildfire hotspots in Serbia",
-              "body": "According to the Russian emergencies ministry, over the four days of participating in firefighting operations, the aircraft has performed 19 flights and dropped an overall of 798 tons of water",
-              "published_date": "2026-08-23",
-              "outlet": "TASS Russian News Agency",
-              "image": ""
-            },
-            {
-              "news_id": "4f191a3363535a1bb70a36c4884816ab",
-              "url": "https://www.katherinetimes.com.au/story/9335556/serbia-battles-huge-wildfire-evacuations-in-spain/",
-              "headline": "Serbia battles huge wildfire, evacuations in Spain",
-              "body": "The European Union is sending helicopters and firefighters to Serbia to help tackle a wildfire in a reserve,...",
-              "published_date": "2026-08-23",
-              "outlet": "Katherine Times",
-              "image": "https://www.bing.com/th?id=ONUT.KNs3Z0L0vmilvsynL9sXCQ"
-            },
-            {
-              "news_id": "52ce1ce94b55565caae63dcda3215f48",
-              "url": "https://www.koreaherald.com/article/10849047",
-              "headline": "EU sends firefighting helicopters to Serbia",
-              "body": "BELGRADE, Serbia (Reuters) -- The European Union’s Civil Protection Mechanism sent helicopters and firefighters to help Serbia fight a massive wildfire in a na",
-              "published_date": "2026-08-23",
-              "outlet": "The Korea Herald",
-              "image": "https://www.bing.com/th?id=ONUT.Chn7rDeHJYnpNxMdsGbJeA"
-            },
-            {
-              "news_id": "12896b53be4e58c898cb7b711c22dcd2",
-              "url": "https://www.wionews.com/videos/europe-battles-extreme-weather-france-spain-serbia-bosnia-hit-by-wildfires-floods-and-storms-1787507767435",
-              "headline": "Europe Battles Extreme Weather: France, Spain, Serbia & Bosnia Hit By Wildfires, Floods And Storms",
-              "body": "Extreme weather is gripping multiple European nations as severe wildfires, flash floods and powerful storms force thousands of people to evacuate. France is battling a major wildfire across the Cap Ferret Peninsula in the southwest, where extreme summer heat and months of drought have created dangerous fire conditions. Authorities ordered the evacuation of the popular tourism hotspot as flames threatened homes and the peninsula’s main escape route. More than 10,000 hectares of forest have reportedly been affected, while around 63,000 people, including large numbers of tourists, were forced to leave the area. Boats and emergency teams were deployed as authorities worked to protect residents and visitors. Spain is also facing a contrasting weather crisis, with intense wildfires occurring alongside torrential rainfall and flash flooding. Heavy rains disrupted road and rail transport and injured more than 11 people.",
-              "published_date": "2026-08-23",
-              "outlet": "WION",
-              "image": ""
-            },
-            {
-              "news_id": "c972adcebcb65735bb6174d5643aebb4",
-              "url": "https://www.msn.com/en-us/public-safety-and-emergencies/fire-and-rescue/serbian-fire-crews-battle-major-blaze-at-a-nature-reserve/vi-AA2aIVoW?ocid=BingNewsVerp",
-              "headline": "Serbian fire crews battle major blaze at a nature reserve",
-              "body": "Serbian fire crews continued to battle a major wildfire in the Deliblato Sands nature reserve on Saturday (August 22), as ...",
-              "published_date": "2026-08-23",
-              "outlet": "Reuters on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.rcDE9giVYgBjW6dgHEOCTg"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-08-25",
-          "summary": "New international firefighting support has been deployed: 69 Romanian firefighters with 15 technical vehicles and a Black Hawk helicopter arrived over the weekend of August 22-23. The European Union continues to send urgent support via its civil protection mechanism to fight fires devastating the Deliblato Sands Special Nature Reserve. EU and Russian aircraft remain active in assisting Serbian firefighting efforts.",
-          "news": [
-            {
-              "news_id": "ee0134d0f9e15b5f9c83ab1250b88ba3",
-              "url": "https://www.b92.net/english/region/261681/fires-near-trebinje-and-nevesinje-remain-active/vest",
-              "headline": "Fire spreading toward Trebinje: One front moving toward urban areas; Homes threatened again",
-              "body": "Fight against wildfires in the areas of Trebinje and Nevesinje is still ongoing, with fires threatening homes in some locations approaching urban areas. Firefighters battling the blaze in inaccessible terrain will be assisted by a helicopter from Bosnian Army.",
-              "published_date": "2026-08-24",
-              "outlet": "B92",
-              "image": "https://www.bing.com/th?id=ONUT.7RPr5BoYtghWRE25WxT6Pw"
-            },
-            {
-              "news_id": "a9dc68af8b8c5d0eb2c357e0dc768364",
-              "url": "https://www.aljazeera.com/news/2026/8/24/eu-russian-aircraft-help-serbia-battle-wildfires",
-              "headline": "EU, Russian aircraft help Serbia battle wildfires",
-              "body": "EU and Russian aircraft help Serbia fight major wildfires as extreme heat fuels fires across the Balkans.",
-              "published_date": "2026-08-24",
-              "outlet": "Al Jazeera",
-              "image": "https://www.bing.com/th?id=ONUT.GQ-KeYfckAsdD6vgV0IdAQ"
-            },
-            {
-              "news_id": "4525d3181a4f57e38dd121b374d9a99d",
-              "url": "https://www.romania-insider.com/romanian-firefighters-black-hawk-serbia-wildfires-2026",
-              "headline": "Romanian firefighters, Black Hawk helicopter deploy to Serbia to fight wildfires",
-              "body": "A total of 69 Romanian firefighters deployed to Serbia over the weekend of August 22 to 23 to protect communities affected by fires, according to an announcement made by Romanian foreign minister Oana Toiu. The detachment included 15 technical vehicles and a Black Hawk helicopter. The Romanian...",
-              "published_date": "2026-08-24",
-              "outlet": "Romania Insider",
-              "image": "https://www.bing.com/th?id=ONUT.NVBRN_irzQwJiQrb9aGypA"
-            },
-            {
-              "news_id": "70a556e3008953239ce3b4d2712be6e6",
-              "url": "https://seenews.com/news/eu-sends-urgent-support-to-serbia-as-wildfires-intensify-1300067",
-              "headline": "EU sends urgent support to Serbia as wildfires intensify",
-              "body": "The European Union has sent urgent support to Serbia through its civil protection mechanism to help the Balkan state fight severe wildfires that have been devastating the Deliblato Sands Special Nature Reserve in the northern province of Vojvodina, the Directorate-General for European Civil Protection and Humanitarian Aid Operations (ECHO) said on Monday.",
-              "published_date": "2026-08-24",
-              "outlet": "SeeNews",
-              "image": ""
-            }
-          ]
-        },
-        {
-          "log_date": "2026-08-30",
-          "summary": "Hungary has dispatched 12 firefighters and four vehicles to Serbia to assist in combating the ongoing forest fires. European countries are coordinating firefighting resources across borders, with Serbia continuing to use both Russian and EU assistance. Multiple fires remain active across the region.",
-          "news": [
-            {
-              "news_id": "aba31f83e3c056c392449c4d25a002d1",
-              "url": "https://dailynewshungary.com/hungarian-firefighters-forest-fires-serbia/",
-              "headline": "Hungarian firefighters helping in Serbia",
-              "body": "Hungary is sending 12 firefighters and four vehicles to Serbia to aid the battle against forest fires.",
-              "published_date": "2026-08-26",
-              "outlet": "Daily News Hungary",
-              "image": "https://dailynewshungary.b-cdn.net/wp-content/uploads/2026/08/Hungarian-firefighters-helping-in-Serbia-illustration.webp"
-            },
-            {
-              "news_id": "d23461662cc159fbaaece55d51b78a07",
-              "url": "https://timesofindia.indiatimes.com/world/europe/planes-helicopters-crews-how-europe-is-scrambling-to-contain-a-record-wildfire-season/articleshow/133451780.cms",
-              "headline": "Planes, helicopters, crews: How Europe is scrambling to contain a record wildfire season",
-              "body": "Wildfires are stretching firefighting capacity across Europe, forcing countries to move aircraft, helicopters and crews across borders as several blazes burn at the same time. Serbia is using both Russian and EU assistance, while crews in Ankara brought a large wooded-area fire under control early Monday after an eight-hour operation.",
-              "published_date": "2026-08-24",
-              "outlet": "The Times of India",
-              "image": "https://static.toiimg.com/thumb/msid-133452048,width-1280,height-720,resizemode-6,overlay-toi_sw,pt-32,y_pad-600/photo.jpg"
-            },
-            {
-              "news_id": "5d8f08c28410500b86c21a8df2151486",
-              "url": "https://www.b92.net/english/region/262123/wildfires-continue-to-rage-across-the-region/vest",
-              "headline": "Cities shrouded in smoke; Fires devour everything in their path; Army called in",
-              "body": "Several fires remain active across the region, as firefighters, the military and other emergency services work to contain the blazes and prevent them from spreading.",
-              "published_date": "2026-08-26",
-              "outlet": "B92",
-              "image": "https://www.bing.com/th?id=ONUT.uXJHqw3FMQ1j1wEDvCf34g"
-            }
-          ]
-        }
-      ],
-      "logs_total": 4
     },
     {
       "incident_id": "20260810-UG-OT",
