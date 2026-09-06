@@ -1,26 +1,26 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-09-02",
-  "generated_at": "2026-09-05T16:08:34Z",
+  "generated_at": "2026-09-06T06:06:56Z",
   "as_of": "2026-09-02",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 11,
-    "new_today": 1,
+    "reportable_total": 10,
+    "new_today": 0,
     "critical": 0,
     "high": 0,
     "medium": 4,
-    "low": 7,
+    "low": 6,
     "disease_outbreaks": 0,
     "countries_affected": 10,
-    "news_total": 118,
+    "news_total": 116,
     "max_magnitude": 6.0,
     "by_severity": {
       "CRITICAL": 0,
       "HIGH": 0,
       "MEDIUM": 4,
-      "LOW": 7
+      "LOW": 6
     },
     "by_type": {
       "Flood": 1,
@@ -28,7 +28,6 @@
       "Forest Fire": 1,
       "Volcano": 1,
       "Earthquake": 4,
-      "Tropical Cyclone": 1,
       "": 2
     },
     "by_region": {
@@ -36,20 +35,11 @@
       "Africa": 2,
       "Europe": 1,
       "Americas": 1,
-      "Unknown": 2,
-      "Oceania": 2
+      "Oceania": 2,
+      "Unknown": 1
     }
   },
   "by_country": [
-    {
-      "country": "",
-      "count": 2,
-      "max_sev_rank": 1,
-      "iso2": "XX",
-      "region": "Unknown",
-      "country_group": "C",
-      "max_severity": "LOW"
-    },
     {
       "country": "Japan",
       "count": 1,
@@ -93,6 +83,15 @@
       "iso2": "CN",
       "region": "Asia",
       "country_group": "A",
+      "max_severity": "LOW"
+    },
+    {
+      "country": "",
+      "count": 1,
+      "max_sev_rank": 1,
+      "iso2": "XX",
+      "region": "Unknown",
+      "country_group": "C",
       "max_severity": "LOW"
     },
     {
@@ -157,7 +156,7 @@
       "event_date": "2023-08-14",
       "first_reported_date": "2023-08-14",
       "last_updated_date": "2026-08-27",
-      "days_since_event": 1118,
+      "days_since_event": 1119,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -405,7 +404,7 @@
       "event_date": "2026-05-21",
       "first_reported_date": "2026-05-21",
       "last_updated_date": "2026-08-28",
-      "days_since_event": 107,
+      "days_since_event": 108,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -728,7 +727,7 @@
       "event_date": "2026-08-05",
       "first_reported_date": "2026-08-05",
       "last_updated_date": "2026-09-01",
-      "days_since_event": 31,
+      "days_since_event": 32,
       "source_count": 2,
       "should_report": false,
       "search_keys": [],
@@ -1031,7 +1030,7 @@
       "event_date": "2026-08-06",
       "first_reported_date": "2026-08-06",
       "last_updated_date": "2026-08-29",
-      "days_since_event": 30,
+      "days_since_event": 31,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -1371,7 +1370,7 @@
       "event_date": "2026-08-13",
       "first_reported_date": "2026-08-13",
       "last_updated_date": "2026-08-28",
-      "days_since_event": 23,
+      "days_since_event": 24,
       "source_count": 3,
       "should_report": true,
       "search_keys": [],
@@ -1487,78 +1486,6 @@
       "logs_total": 1
     },
     {
-      "incident_id": "20260818-XX-TC",
-      "tree_id": "04cac989e5cf41288cd42034c3aa18f6",
-      "canonical_name": "Tropical Cyclone SEVENTEEN-26 2026-08-18",
-      "summary": "",
-      "country": "",
-      "iso2": "XX",
-      "lat": 8.3,
-      "lon": 154.6,
-      "country_group": "C",
-      "region": "Unknown",
-      "incident_type": "Tropical Cyclone",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "LOW",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-08-18",
-      "first_reported_date": "2026-08-18",
-      "last_updated_date": "2026-09-02",
-      "days_since_event": 18,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 1,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 2
-      },
-      "source_links": [
-        {
-          "type": "GDACS",
-          "label": "Green alert · Tropical Cyclone SEVENTEEN-26 2026-08-18",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=TC&eventid=1001305",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "Green notification for tropical cyclone SEVENTEEN-26. Population affected by Category 1 (120 km/h) wind speeds or higher is 0  (0 in Tropical Storm).",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": "Green",
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Higher typhoon warning possible based on Saudel’s course after rare resurgence",
-          "url": "https://www.msn.com/en-xl/weather/general/higher-typhoon-warning-possible-based-on-saudel-s-course-after-rare-resurgence/ar-AA2bo7I8?ocid=BingNewsVerp",
-          "outlet": "South China Morning Post on MSN",
-          "published_date": "2026-09-02"
-        },
-        {
-          "headline": "Higher typhoon signal possible, depending on Saudel’s course after rare resurgence",
-          "url": "https://www.msn.com/en-xl/weather/general/higher-typhoon-signal-possible-depending-on-saudel-s-course-after-rare-resurgence/ar-AA2bo7I8?ocid=BingNewsVerp",
-          "outlet": "South China Morning Post on MSN",
-          "published_date": "2026-09-02"
-        }
-      ],
-      "news_total": 2,
-      "logs": [],
-      "logs_total": 0
-    },
-    {
       "incident_id": "20260825-TW-EQ",
       "tree_id": "0d2108cbdd2945f3bc603036dddc1252",
       "canonical_name": "Earthquake M5.5 Hengchun, Taiwan 2026-08-25",
@@ -1582,7 +1509,7 @@
       "event_date": "2026-08-25",
       "first_reported_date": "2026-08-25",
       "last_updated_date": "2026-08-27",
-      "days_since_event": 11,
+      "days_since_event": 12,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -1692,7 +1619,7 @@
       "event_date": "2026-08-25",
       "first_reported_date": "2026-08-25",
       "last_updated_date": "2026-08-29",
-      "days_since_event": 11,
+      "days_since_event": 12,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -1798,7 +1725,7 @@
       "event_date": "2026-08-27",
       "first_reported_date": "2026-08-27",
       "last_updated_date": "2026-08-27",
-      "days_since_event": 9,
+      "days_since_event": 10,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -1864,7 +1791,7 @@
       "event_date": "2026-08-30",
       "first_reported_date": "2026-08-30",
       "last_updated_date": "2026-08-30",
-      "days_since_event": 6,
+      "days_since_event": 7,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -1970,7 +1897,7 @@
       "event_date": "2026-08-31",
       "first_reported_date": "2026-08-31",
       "last_updated_date": "2026-09-01",
-      "days_since_event": 5,
+      "days_since_event": 6,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
