@@ -1,50 +1,39 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-09-05",
-  "generated_at": "2026-09-08T06:04:01Z",
+  "generated_at": "2026-09-08T17:18:13Z",
   "as_of": "2026-09-05",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 9,
-    "new_today": 4,
+    "reportable_total": 6,
+    "new_today": 2,
     "critical": 1,
-    "high": 1,
-    "medium": 5,
-    "low": 2,
+    "high": 0,
+    "medium": 4,
+    "low": 1,
     "disease_outbreaks": 0,
-    "countries_affected": 7,
-    "news_total": 290,
-    "max_magnitude": 6.3,
+    "countries_affected": 6,
+    "news_total": 271,
+    "max_magnitude": 5.8,
     "by_severity": {
       "CRITICAL": 1,
-      "HIGH": 1,
-      "MEDIUM": 5,
-      "LOW": 2
+      "HIGH": 0,
+      "MEDIUM": 4,
+      "LOW": 1
     },
     "by_type": {
       "Severe Weather": 1,
       "Volcano": 1,
-      "Earthquake": 6,
-      "": 1
+      "Earthquake": 4
     },
     "by_region": {
       "Americas": 2,
-      "Oceania": 4,
-      "Asia": 1,
-      "Unknown": 2
+      "Oceania": 3,
+      "Asia": 1
     }
   },
   "by_country": [
-    {
-      "country": "",
-      "count": 3,
-      "max_sev_rank": 1,
-      "iso2": "XX",
-      "region": "Americas",
-      "country_group": "C",
-      "max_severity": "LOW"
-    },
     {
       "country": "Guatemala",
       "count": 1,
@@ -91,13 +80,13 @@
       "max_severity": "MEDIUM"
     },
     {
-      "country": "Vanuatu",
+      "country": "",
       "count": 1,
-      "max_sev_rank": 2,
-      "iso2": "VU",
-      "region": "Oceania",
-      "country_group": "B",
-      "max_severity": "MEDIUM"
+      "max_sev_rank": 4,
+      "iso2": "XX",
+      "region": "Americas",
+      "country_group": "C",
+      "max_severity": "LOW"
     }
   ],
   "incidents": [
@@ -2543,228 +2532,6 @@
       "logs_total": 1
     },
     {
-      "incident_id": "20260831-XX-OT",
-      "tree_id": "9333e1aa5b3945d7b7117a704cc1cac1",
-      "canonical_name": "2026-08-31",
-      "summary": "",
-      "country": "",
-      "iso2": "XX",
-      "lat": null,
-      "lon": null,
-      "country_group": "C",
-      "region": "Unknown",
-      "incident_type": "",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "LOW",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-08-31",
-      "first_reported_date": "2026-08-31",
-      "last_updated_date": "2026-09-01",
-      "days_since_event": 8,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 0,
-        "ercc": 1,
-        "healthmap": 0,
-        "news": 16
-      },
-      "source_links": [
-        {
-          "type": "ERCC",
-          "label": "ECHO Daily Map of 31 August 2026",
-          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5768",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Fantasy football rankings 2026: Busts and riskiest picks by model that called McLaurin's poor season",
-          "url": "https://www.cbssports.com/fantasy/football/news/fantasy-football-rankings-2026-busts-and-riskiest-picks-by-model-that-called-mclaurins-poor-season/",
-          "outlet": "CBS Sports",
-          "published_date": "2026-08-31"
-        },
-        {
-          "headline": "Rams name 11 team captains for 2026, including 3 newcomers",
-          "url": "https://theramswire.usatoday.com/story/sports/nfl/rams/2026/08/31/rams-team-captains-2026-players-vote-stafford-williams-garrett/91556250007/",
-          "outlet": "USA Today",
-          "published_date": "2026-08-31"
-        },
-        {
-          "headline": "2026 Detroit Lions practice squad, waiver wire tracker",
-          "url": "https://sports.yahoo.com/articles/2026-detroit-lions-practice-squad-140000301.html",
-          "outlet": "SB Nation · via Yahoo Sports",
-          "published_date": "2026-08-31"
-        },
-        {
-          "headline": "2026 NFL practice squad tracker: Team-by-team roster signings ahead of regular season",
-          "url": "https://www.nfl.com/news/2026-nfl-practice-squad-tracker-team-by-team-roster-signings",
-          "outlet": "NFL.com",
-          "published_date": "2026-08-31"
-        },
-        {
-          "headline": "2026 Dallas Cowboys Practice Squad Set: Full List of Players",
-          "url": "https://www.si.com/nfl/cowboys/onsi/2026-dallas-cowboys-practice-squad-set-full-list-players",
-          "outlet": "Sports Illustrated",
-          "published_date": "2026-08-31"
-        },
-        {
-          "headline": "2026 Fantasy football draft prep: Top NFL experts unveil rankings, tiers, best 150 picks",
-          "url": "https://www.cbssports.com/fantasy/football/news/2026-fantasy-football-draft-prep-top-nfl-experts-unveil-rankings-tiers-best-150-picks/",
-          "outlet": "CBS Sports",
-          "published_date": "2026-08-31"
-        },
-        {
-          "headline": "Detroit Lions 2026 Practice Squad Revealed",
-          "url": "https://www.si.com/nfl/lions/onsi/detroit-lions-2026-practice-squad-revealed",
-          "outlet": "Sports Illustrated",
-          "published_date": "2026-08-31"
-        },
-        {
-          "headline": "Green Bay Packers 2026 6th round NFL Draft pick cleared waivers, signed to practice squad",
-          "url": "https://sports.yahoo.com/articles/green-bay-packers-2026-6th-190021884.html",
-          "outlet": "Yahoo Sports",
-          "published_date": "2026-08-31"
-        },
-        {
-          "headline": "Fantasy football rankings 2026: Top sleepers, breakouts, busts by model that hit Daniel Jones' big year",
-          "url": "https://www.cbssports.com/fantasy/football/news/fantasy-football-rankings-2026-top-sleepers-breakouts-busts-from-model-that-hit-daniel-jones-big-year/",
-          "outlet": "CBS Sports",
-          "published_date": "2026-09-01"
-        },
-        {
-          "headline": "Detroit Lions 2026 practice squad revealed",
-          "url": "https://www.msn.com/en-us/sports/football/detroit-lions-2026-practice-squad-revealed/ar-AA2biiPr?ocid=BingNewsVerp",
-          "outlet": "Sports Illustrated on MSN",
-          "published_date": "2026-09-01"
-        },
-        {
-          "headline": "Rams have one of the oldest rosters in the NFL for 2026",
-          "url": "https://www.msn.com/en-us/news/other/rams-have-one-of-the-oldest-rosters-in-the-nfl-for-2026/ar-AA2bhXdW?ocid=BingNewsVerp",
-          "outlet": "USA TODAY Touchdown Wire on MSN",
-          "published_date": "2026-09-01"
-        },
-        {
-          "headline": "The Biggest Surprises and Shocks from 2026 NFL Roster Cuts",
-          "url": "https://www.msn.com/en-us/news/other/the-biggest-surprises-and-shocks-from-2026-nfl-roster-cuts/ar-AA2bgOsG?ocid=BingNewsVerp",
-          "outlet": "Bleacher Report on MSN",
-          "published_date": "2026-09-01"
-        },
-        {
-          "headline": "Five takeaways from Eagles’ initial 2026 practice squad",
-          "url": "https://www.msn.com/en-us/sports/football/five-takeaways-from-eagles-initial-2026-practice-squad/ar-AA2biuPT?ocid=BingNewsVerp",
-          "outlet": "Eagles Wire on MSN",
-          "published_date": "2026-09-01"
-        },
-        {
-          "headline": "Biggest surprises from Steelers' initial 53-man roster for 2026 season",
-          "url": "https://www.msn.com/en-us/news/other/biggest-surprises-from-steelers-initial-53-man-roster-for-2026-season/ar-AA2bgJ5N?ocid=BingNewsVerp",
-          "outlet": "Steelers Wire on MSN",
-          "published_date": "2026-09-01"
-        },
-        {
-          "headline": "Packers announce 13 signings to first practice squad of 2026",
-          "url": "https://www.msn.com/en-us/sports/football/packers-announce-13-signings-to-first-practice-squad-of-2026/ar-AA2biKrL?ocid=BingNewsVerp",
-          "outlet": "Packers Wire on MSN",
-          "published_date": "2026-09-01"
-        },
-        {
-          "headline": "Preseason NFL Power Rankings 2026: How all 32 teams stack up",
-          "url": "https://www.espn.com/nfl/story/_/id/49754534/2026-nfl-power-rankings-preseason-milestones",
-          "outlet": "ESPN",
-          "published_date": "2026-09-01T06:33:54+00:00"
-        }
-      ],
-      "news_total": 16,
-      "logs": [],
-      "logs_total": 0
-    },
-    {
-      "incident_id": "20260903-XX-EQ",
-      "tree_id": "0b0b8c87c3a04a84a81a9f224394f095",
-      "canonical_name": "Earthquake M6.3 Ocean 2026-09-03",
-      "summary": "",
-      "country": "",
-      "iso2": "XX",
-      "lat": 52.2579,
-      "lon": -169.4088,
-      "country_group": "C",
-      "region": "Unknown",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "HIGH",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-09-03",
-      "first_reported_date": "2026-09-03",
-      "last_updated_date": "2026-09-05",
-      "days_since_event": 5,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 1
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 6.3 - 84 km SSW of Nikolski, Alaska",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tdvt",
-          "meta": "35 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 6.3,
-        "max_depth_km": 35.0,
-        "place": "84 km SSW of Nikolski, Alaska",
-        "felt": 3,
-        "sig": 612,
-        "tsunami": true,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Alaska Earthquake Strikes as Recent Tremors Raise Questions About Global Seismic Activity",
-          "url": "https://colombiaone.com/2026/09/05/earthquake-alaska/",
-          "outlet": "colombiaone",
-          "published_date": "2026-09-05"
-        }
-      ],
-      "news_total": 1,
-      "logs": [],
-      "logs_total": 0
-    },
-    {
       "incident_id": "20260905-PG-EQ",
       "tree_id": "75ef15d960994968aab123d6eefd753d",
       "canonical_name": "Earthquake M5.5 Kokopo, Papua New Guinea 2026-09-05",
@@ -2827,78 +2594,6 @@
         }
       ],
       "news_total": 1,
-      "logs": [],
-      "logs_total": 0
-    },
-    {
-      "incident_id": "20260905-VU-EQ",
-      "tree_id": "d3e8177973e24ac29561825134eed0dd",
-      "canonical_name": "Earthquake M5.6 Isangel, Vanuatu 2026-09-05",
-      "summary": "",
-      "country": "Vanuatu",
-      "iso2": "VU",
-      "lat": -19.807,
-      "lon": 170.1576,
-      "country_group": "B",
-      "region": "Oceania",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-09-05",
-      "first_reported_date": "2026-09-05",
-      "last_updated_date": "2026-09-05",
-      "days_since_event": 3,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 2
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 5.6 - 96 km ESE of Isangel, Vanuatu",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tek0",
-          "meta": "10 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 5.6,
-        "max_depth_km": 10.0,
-        "place": "96 km ESE of Isangel, Vanuatu",
-        "felt": null,
-        "sig": 482,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Magnitude 5.8 Earthquake Strikes Vanuatu at 44 Km Depth",
-          "url": "https://cedarnews.net/newstasks/966152/earthquake-magnitude-5-8-strikes-vanuatu-44/",
-          "outlet": "Cedar News",
-          "published_date": "2026-09-05"
-        },
-        {
-          "headline": "Earthquake 5.8-magnitude jolts Vanuatu Islands: GFZ",
-          "url": "https://thepeninsulaqatar.com/article/05/09/2026/earthquake-58-magnitude-jolts-vanuatu-islands-gfz",
-          "outlet": "The Peninsula Qatar",
-          "published_date": "2026-09-05"
-        }
-      ],
-      "news_total": 2,
       "logs": [],
       "logs_total": 0
     }
