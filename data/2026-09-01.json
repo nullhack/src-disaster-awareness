@@ -1,25 +1,25 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-09-01",
-  "generated_at": "2026-09-11T06:10:46Z",
+  "generated_at": "2026-09-11T17:03:35Z",
   "as_of": "2026-09-01",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 11,
+    "reportable_total": 10,
     "new_today": 0,
     "critical": 0,
     "high": 0,
-    "medium": 6,
+    "medium": 5,
     "low": 5,
     "disease_outbreaks": 0,
-    "countries_affected": 11,
-    "news_total": 95,
+    "countries_affected": 10,
+    "news_total": 93,
     "max_magnitude": 6.1,
     "by_severity": {
       "CRITICAL": 0,
       "HIGH": 0,
-      "MEDIUM": 6,
+      "MEDIUM": 5,
       "LOW": 5
     },
     "by_type": {
@@ -27,11 +27,11 @@
       "Drought": 1,
       "Volcano": 1,
       "Forest Fire": 1,
-      "Earthquake": 6,
+      "Earthquake": 5,
       "": 1
     },
     "by_region": {
-      "Asia": 4,
+      "Asia": 3,
       "Africa": 2,
       "Americas": 1,
       "Europe": 1,
@@ -100,15 +100,6 @@
       "iso2": "VU",
       "region": "Oceania",
       "country_group": "B",
-      "max_severity": "MEDIUM"
-    },
-    {
-      "country": "Timor-Leste",
-      "count": 1,
-      "max_sev_rank": 2,
-      "iso2": "TL",
-      "region": "Asia",
-      "country_group": "A",
       "max_severity": "MEDIUM"
     },
     {
@@ -1426,78 +1417,6 @@
         }
       ],
       "logs_total": 1
-    },
-    {
-      "incident_id": "20260824-TL-EQ",
-      "tree_id": "cf4a9ac4e85b45f5b50a6042d238bb8b",
-      "canonical_name": "Earthquake M6.0 Lospalos, Timor-Leste 2026-08-24",
-      "summary": "",
-      "country": "Timor-Leste",
-      "iso2": "TL",
-      "lat": -6.6264,
-      "lon": 127.4598,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-08-24",
-      "first_reported_date": "2026-08-24",
-      "last_updated_date": "2026-08-25",
-      "days_since_event": 18,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 2
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 6.0 - 215 km NNE of Lospalos, Timor Leste",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tn41",
-          "meta": "10 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 6.0,
-        "max_depth_km": 10.0,
-        "place": "215 km NNE of Lospalos, Timor Leste",
-        "felt": null,
-        "sig": 554,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Magnitude 6.0 earthquake strikes off the coast of Timor-Leste along the Pacific Ring of Fire",
-          "url": "https://www.msn.com/en-us/public-safety-and-emergencies/natural-disasters/magnitude-6-0-earthquake-strikes-off-the-coast-of-timor-leste-along-the-pacific-ring-of-fire/ar-AA2aPF5l?ocid=BingNewsVerp",
-          "outlet": "Fox Weather on MSN",
-          "published_date": "2026-08-25"
-        },
-        {
-          "headline": "Magnitude 6.0 earthquake strikes off the coast of Timor-Leste along the Pacific Ring of Fire",
-          "url": "https://www.msn.com/en-us/public-safety-and-emergencies/natural-disasters/magnitude-6-0-earthquake-strikes-off-the-coast-of-timor-leste-along-the-pacific-ring-of-fire/ar-AA2aPF5l",
-          "outlet": "Fox Weather",
-          "published_date": "2026-08-25"
-        }
-      ],
-      "news_total": 2,
-      "logs": [],
-      "logs_total": 0
     },
     {
       "incident_id": "20260825-TW-EQ",
