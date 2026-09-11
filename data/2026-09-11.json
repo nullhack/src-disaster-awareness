@@ -1,32 +1,32 @@
 {
   "schema_version": "1.5",
-  "report_date": "2026-09-10",
+  "report_date": "2026-09-11",
   "generated_at": "2026-09-11T06:10:46Z",
-  "as_of": "2026-09-10",
+  "as_of": "2026-09-11",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 32,
-    "new_today": 18,
+    "reportable_total": 31,
+    "new_today": 0,
     "critical": 16,
     "high": 4,
-    "medium": 7,
+    "medium": 6,
     "low": 5,
     "disease_outbreaks": 3,
     "countries_affected": 19,
-    "news_total": 8699,
+    "news_total": 8696,
     "max_magnitude": 7.7,
     "by_severity": {
       "CRITICAL": 16,
       "HIGH": 4,
-      "MEDIUM": 7,
+      "MEDIUM": 6,
       "LOW": 5
     },
     "by_type": {
       "Disease": 3,
       "Drought": 2,
       "Flood": 4,
-      "Earthquake": 9,
+      "Earthquake": 8,
       "Severe Weather": 3,
       "Conflict": 3,
       "Forest Fire": 5,
@@ -38,7 +38,7 @@
       "Global": 2,
       "Africa": 1,
       "Americas": 4,
-      "Asia": 12,
+      "Asia": 11,
       "Unknown": 6,
       "Europe": 5,
       "Oceania": 2
@@ -74,7 +74,7 @@
     },
     {
       "country": "China",
-      "count": 2,
+      "count": 1,
       "max_sev_rank": 2,
       "iso2": "CN",
       "region": "Asia",
@@ -51145,112 +51145,6 @@
         }
       ],
       "logs_total": 14
-    },
-    {
-      "incident_id": "20260828-CN-EQ",
-      "tree_id": "cc1d40007f614aa8b99ed8e8121ee077",
-      "canonical_name": "Earthquake M5.0 China 2026-08-28",
-      "summary": "A 5.1-magnitude earthquake struck China's Sichuan province on August 28, 2026, adding to regional concerns amid the Nepal flood crisis. Separately, a magnitude 5.0 earthquake hit Tibet, with China activating a Level-IV flood response in the region. Both events occurred within days of monster flash floods that devastated towns in Tibet and bordering areas.",
-      "country": "China",
-      "iso2": "CN",
-      "lat": 29.2752,
-      "lon": 105.229,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-08-28",
-      "first_reported_date": "2026-08-28",
-      "last_updated_date": "2026-09-03",
-      "days_since_event": 14,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 1,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 3
-      },
-      "source_links": [
-        {
-          "type": "GDACS",
-          "label": "Orange alert · Earthquake M5.0 China 2026-08-28",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1562260",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "China",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": "Orange",
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "China earthquake: 5.1 magnitude quake strikes Sichuan amid Nepal flash floods, fresh disaster threat near border; what happened?",
-          "published_date": "2026-08-28"
-        },
-        {
-          "headline": "Magnitude 5 Earthquake Hits Tibet, Hundreds of Miles North of Himalayan Flood",
-          "published_date": "2026-08-28T11:57:29+00:00"
-        },
-        {
-          "headline": "Earthquake of magnitude 5 strikes Tibet days after monster flash floods",
-          "published_date": "2026-09-03"
-        }
-      ],
-      "news_total": 3,
-      "logs": [
-        {
-          "log_date": "2026-09-04",
-          "summary": "A 5.1-magnitude earthquake struck China's Sichuan province on August 28, 2026, adding to regional concerns amid the Nepal flood crisis. Separately, a magnitude 5.0 earthquake hit Tibet, with China activating a Level-IV flood response in the region. Both events occurred within days of monster flash floods that devastated towns in Tibet and bordering areas.",
-          "news": [
-            {
-              "news_id": "9f8301147f215e9db96fde548f373c79",
-              "url": "https://news24online.com/world/china-earthquake-5-1-magnitude-quake-strikes-sichuan-amid-nepal-flash-floods-fresh-disaster-threat-near-border-what-happened/912581/",
-              "headline": "China earthquake: 5.1 magnitude quake strikes Sichuan amid Nepal flash floods, fresh disaster threat near border; what happened?",
-              "body": "A 5.1-magnitude earthquake jolted China’s Sichuan province on Friday amid the ongoing Nepal flood crisis adding to concerns in region.",
-              "published_date": "2026-08-28",
-              "outlet": "News24",
-              "image": "https://www.bing.com/th?id=ONUT.79xLHunGhavQvWHe8ESArA"
-            },
-            {
-              "news_id": "821c9cda15715647ba3ec9232e5bf758",
-              "url": "https://www.usnews.com/news/world/articles/2026-08-27/magnitude-5-earthquake-hits-tibet-hundreds-of-miles-north-of-himalayan-flood",
-              "headline": "Magnitude 5 Earthquake Hits Tibet, Hundreds of Miles North of Himalayan Flood",
-              "body": "• China's earthquake networks centre also reported a magnitude 4.7 quake in Nagqu, Tibet, on Wednesday, state-run Xinhua news agency said. • China has activated a Level-IV flood response in Tibet ...",
-              "published_date": "2026-08-28T11:57:29+00:00",
-              "outlet": "U.S. News & World Report",
-              "image": ""
-            },
-            {
-              "news_id": "7c22df0b01b25f99b92a26f9749c84c5",
-              "url": "https://www.msn.com/en-in/news/other/earthquake-of-magnitude-5-strikes-tibet-days-after-monster-flash-floods/ar-AA2btWPq?ocid=BingNewsVerp",
-              "headline": "Earthquake of magnitude 5 strikes Tibet days after monster flash floods",
-              "body": "The 5-magnitude earthquake struck over a week after the monster flash floods devastated towns and valleys in Tibet and border ...",
-              "published_date": "2026-09-03",
-              "outlet": "India Today on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.yr5z-dph8Hh_PCccEoHmLA"
-            }
-          ]
-        }
-      ],
-      "logs_total": 1
     },
     {
       "incident_id": "20260831-XX-OT",
