@@ -1,29 +1,29 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-09-11",
-  "generated_at": "2026-09-12T16:23:55Z",
+  "generated_at": "2026-09-13T06:22:14Z",
   "as_of": "2026-09-11",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 17,
-    "new_today": 6,
+    "reportable_total": 16,
+    "new_today": 5,
     "critical": 6,
-    "high": 3,
+    "high": 2,
     "medium": 4,
     "low": 4,
     "disease_outbreaks": 0,
     "countries_affected": 12,
-    "news_total": 1978,
+    "news_total": 1903,
     "max_magnitude": 7.5,
     "by_severity": {
       "CRITICAL": 6,
-      "HIGH": 3,
+      "HIGH": 2,
       "MEDIUM": 4,
       "LOW": 4
     },
     "by_type": {
-      "Flood": 2,
+      "Flood": 1,
       "Earthquake": 6,
       "Severe Weather": 1,
       "Drought": 1,
@@ -33,7 +33,7 @@
       "Volcano": 1
     },
     "by_region": {
-      "Asia": 6,
+      "Asia": 5,
       "Americas": 2,
       "Unknown": 4,
       "Europe": 3,
@@ -105,15 +105,6 @@
       "max_severity": "MEDIUM"
     },
     {
-      "country": "Philippines",
-      "count": 2,
-      "max_sev_rank": 3,
-      "iso2": "PH",
-      "region": "Asia",
-      "country_group": "A",
-      "max_severity": "HIGH"
-    },
-    {
       "country": "Belgium",
       "count": 1,
       "max_sev_rank": 3,
@@ -129,6 +120,15 @@
       "iso2": "VE",
       "region": "Americas",
       "country_group": "C",
+      "max_severity": "LOW"
+    },
+    {
+      "country": "Philippines",
+      "count": 1,
+      "max_sev_rank": 4,
+      "iso2": "PH",
+      "region": "Asia",
+      "country_group": "A",
       "max_severity": "LOW"
     },
     {
@@ -175,7 +175,7 @@
       "event_date": "2026-06-06",
       "first_reported_date": "2026-06-06",
       "last_updated_date": "2026-09-06",
-      "days_since_event": 98,
+      "days_since_event": 99,
       "source_count": 3,
       "should_report": true,
       "search_keys": [],
@@ -743,7 +743,7 @@
       "incident_id": "20260624-VE-EQ",
       "tree_id": "387baafc1c6b5a0391293c7f917b5333",
       "canonical_name": "Earthquake M7.2 San Felipe, Venezuela 2026-06-24",
-      "summary": "As of September 9, the death toll from the June 24 twin earthquakes has risen to at least 6,500, according to reports highlighting how Venezuelans in the U.S. continue to grieve for lost loved ones and contribute to recovery efforts.\nA new report reveals that the FAA's UTM drone coordination system failed during the earthquake response because it requires intact cellular networks, a structural gap that affected airspace management despite drones saving over 6,600 lives. Atlas Insurance employees raised funds to support relief efforts through SOS Malta, adding to ongoing international private sector contributions.",
+      "summary": "Months after the twin earthquakes, Antonella Molina and her nephew continue searching for missing 18-year-old Andres Molina in La Guaira. A comprehensive account details how organized communities and grassroots networks are leading rebuilding efforts in the affected regions. Venezuelans in the U.S. are also navigating the prolonged aftermath, with personal stories of loss and ongoing diaspora relief contributions.",
       "country": "Venezuela",
       "iso2": "VE",
       "lat": 10.5086,
@@ -763,7 +763,7 @@
       "event_date": "2026-06-24",
       "first_reported_date": "2026-06-24",
       "last_updated_date": "2026-09-11",
-      "days_since_event": 80,
+      "days_since_event": 81,
       "source_count": 5,
       "should_report": true,
       "search_keys": [],
@@ -2471,10 +2471,6 @@
           "published_date": "2026-09-04T17:51:41+00:00"
         },
         {
-          "headline": "Months after Venezuela earthquakes, a family refuses to give up search for their missing relative",
-          "published_date": "2026-09-06"
-        },
-        {
           "headline": "Community Voices: Savannah students, teacher rally to help Venezuela",
           "published_date": "2026-09-06"
         },
@@ -2488,6 +2484,10 @@
         },
         {
           "headline": "Months after Venezuela's earthquakes, one family refuses to give up search for missing relative",
+          "published_date": "2026-09-06"
+        },
+        {
+          "headline": "Months after Venezuela earthquakes, a family refuses to give up search for their missing relative",
           "published_date": "2026-09-06"
         },
         {
@@ -2547,15 +2547,15 @@
           "published_date": "2026-09-09T16:02:20+00:00"
         },
         {
-          "headline": "Double trouble: What is a seismic doublet?",
-          "published_date": "2026-09-10"
-        },
-        {
           "headline": "Venezuela Drones Saved 6,600 Lives: UTM Airspace System Failed Because Disasters Kill Connectivity",
           "published_date": "2026-09-10"
         },
         {
           "headline": "Search continues for missing teen months after Venezuela earthquakes",
+          "published_date": "2026-09-10"
+        },
+        {
+          "headline": "Double trouble: What is a seismic doublet?",
           "published_date": "2026-09-10"
         },
         {
@@ -2680,48 +2680,6 @@
               "published_date": "2026-06-27T00:00:00+00:00",
               "outlet": "Associated Press News",
               "image": "https://www.bing.com/th?id=ONUT.EL6kfWIcSKRctjtlZLMDSA"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-09-07",
-          "summary": "Months after the twin earthquakes, a family continues the desperate search for 18-year-old Andres Molina in La Guaira, who has been missing since June 24. Antonella Molina and her nephew Pedro have not given up hope and are actively searching for him.",
-          "news": [
-            {
-              "news_id": "d88e914d30f45944a3b258664c491df3",
-              "url": "https://www.sfgate.com/news/world/article/months-after-venezuela-earthquakes-a-family-22419853.php",
-              "headline": "Months after Venezuela earthquakes, a family refuses to give up search for their...",
-              "body": "Antonella Molina and her nephew Pedro are searching for 18-year-old Andres Molina in La Guaira, Vene...",
-              "published_date": "2026-09-06T11:42:12+00:00",
-              "outlet": "San Francisco Chronicle",
-              "image": "https://s.yimg.com/bo/400f8c8d-b390-55dc-8ca8-676f646d069e_1788700874312.jpg"
-            },
-            {
-              "news_id": "970b2e69ab6753e8b8fe111cf0a15eb1",
-              "url": "https://apnews.com/article/venezuela-earthquakes-disappeared-family-search-caracas-guaira-2aa8917e2e2c2133c7769674ee84106f",
-              "headline": "Months after Venezuela earthquakes, a family refuses to give up search for their missing relative",
-              "body": "Antonella Molina and her nephew Pedro are searching for 18-year-old Andres Molina in La Guaira, Venezuela. They haven't heard from him since the earthquakes on June 24.",
-              "published_date": "2026-09-06",
-              "outlet": "Associated Press News",
-              "image": ""
-            },
-            {
-              "news_id": "fe860cbd00ff5a488982b404ec141ce3",
-              "url": "https://www.msn.com/en-gb/news/other/months-after-venezuela-earthquakes-a-family-refuses-to-give-up-search-for-their-missing-relative/ar-AA2bFLHU?ocid=BingNewsVerp",
-              "headline": "Months after Venezuela earthquakes, a family refuses to give up search for their missing relative",
-              "body": "Months after Venezuela earthquakes, a family refuses to give up search for their missing relative - Antonella Molina and her ...",
-              "published_date": "2026-09-06",
-              "outlet": "The Independent on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.dYREW_j4FNSvzKlTwKkXQg"
-            },
-            {
-              "news_id": "6c575fe683175d3a914d46934c72f5b0",
-              "url": "https://apnews.com/video/months-after-venezuelas-earthquakes-one-family-refuses-to-give-up-search-for-missing-relative-86c722ded2674208b3141c22cdcebb27",
-              "headline": "Months after Venezuela's earthquakes, one family refuses to give up search for missing relative",
-              "body": "Antonella Molina and her nephew Pedro are searching for 18-year-old Andres Molina in La Guaira, Venezuela. They haven't heard from him since the earthquakes on June 24.",
-              "published_date": "2026-09-06",
-              "outlet": "Associated Press News",
-              "image": ""
             }
           ]
         },
@@ -2880,9 +2838,78 @@
               "image": "https://s.yimg.com/bo/62ad6aa4-ed37-5415-b320-f0a3ad9525cb_1788958101249.jpg"
             }
           ]
+        },
+        {
+          "log_date": "2026-09-12",
+          "summary": "Months after the twin earthquakes, Antonella Molina and her nephew continue searching for missing 18-year-old Andres Molina in La Guaira. A comprehensive account details how organized communities and grassroots networks are leading rebuilding efforts in the affected regions. Venezuelans in the U.S. are also navigating the prolonged aftermath, with personal stories of loss and ongoing diaspora relief contributions.",
+          "news": [
+            {
+              "news_id": "d92ba5449f70536db8d18514b6243324",
+              "url": "https://www.mysanantonio.com/business/article/venezuelans-in-the-us-still-navigate-the-22423554.php",
+              "headline": "Venezuelans in the US still navigate the aftermath of deadly earthquakes,...",
+              "body": "Venezuelans are still grappling with the aftermath of the devastating back-to-back earthquakes that...",
+              "published_date": "2026-09-09T16:02:20+00:00",
+              "outlet": "San Antonio Express-News",
+              "image": "https://s.yimg.com/bo/fa92ad31-faea-5b7b-90a5-2cd46aa28a76_1788957714739.jpg"
+            },
+            {
+              "news_id": "d8e906f0d79652b597cceda1db433b9a",
+              "url": "https://www.yahoo.com/news/science/articles/double-trouble-seismic-doublet-183245073.html",
+              "headline": "Double trouble: What is a seismic doublet?",
+              "body": "The phenomenon has no strict definition, but involves similarly sized earthquakes occurring close together. The deadly quakes in Venezuela in June were considered an earthquake doublet.",
+              "published_date": "2026-09-10",
+              "outlet": "AccuWeather · via Yahoo News",
+              "image": "https://media.zenfs.com/en/accuweather_articles_339/5f7d52b11b4700f58036812ce7155f96.jpg"
+            },
+            {
+              "news_id": "b373978ba6ae52cfa9960f33a60ac2c1",
+              "url": "https://www.goskagit.com/news/nation/philanthropy-venezuela-coping/image_051a9229-89d8-5725-9750-0863e17f2dc0.html",
+              "headline": "Philanthropy Venezuela Coping",
+              "body": "Kelly Granado, whose parents, Marina and Jesús, died in Venezuela's June 24 earthquakes, holds a photo of them at her restaurant in downtown Los Angeles,...",
+              "published_date": "2026-09-09T05:07:28+00:00",
+              "outlet": "Anacortes American",
+              "image": "https://s.yimg.com/bo/9057bbab-bc03-557b-8482-759e79b1bb12_1788958100744.jpg"
+            },
+            {
+              "news_id": "0b5c2cf98d3d5a5ebeab0dce61097ba4",
+              "url": "https://theconversation.com/how-diaspora-groups-in-the-us-are-responding-to-disasters-in-nepal-colombia-venezuela-and-other-homelands-291515",
+              "headline": "How diaspora groups in the US are responding to disasters in Nepal, Colombia, Venezuela and other homelands",
+              "body": "While small in scale, these groups are well positioned to respond quickly to disaster relief efforts.",
+              "published_date": "2026-09-11",
+              "outlet": "The Conversation",
+              "image": "https://www.bing.com/th?id=ONUT.Q4PcoN6uUL0Ec616pTmYQg"
+            },
+            {
+              "news_id": "1e39bd96c3f45c329ddb0197608bcd38",
+              "url": "https://www.newsday.com/news/nation/venezuela-earthquakes-disappeared-family-search-caracas-guaira-m96036",
+              "headline": "Months after Venezuela earthquakes, a family refuses to give up search for their missing relative",
+              "body": "Antonella Molina and her nephew Pedro are searching for 18-year-old Andres Molina in La Guaira, Venezuela.",
+              "published_date": "2026-09-06",
+              "outlet": "Newsday",
+              "image": "https://s.yimg.com/bo/3d4c0f5e-be99-59de-854f-da60c5c0d654_1788697097631.jpg"
+            },
+            {
+              "news_id": "af617e47a0be5a258e42c7435828c7c0",
+              "url": "https://www.counterpunch.org/2026/09/11/how-organized-communities-are-rebuilding-in-the-wake-of-venezuelas-twin-earthquakes/",
+              "headline": "How Organized Communities Are Rebuilding in the Wake of Venezuela’s Twin Earthquakes",
+              "body": "At 3:55 a.m. on June 25, a flicker of cellular service allowed Carlos to send word to the outside world from the rubble of his home in La Guaira that he and his family had survived the twin earthquakes that shook Venezuela’s capital region hours earlier. “For now, I’m in a makeshift shelter near where my house used to be,” he wrote. “We’re trying to help and rescue our neighbors.” Then the service went out again. In the days that followed, Carlos, his neighbors, state workers, and thousands of Venezuelans dug through rubble and what remained of their homes to pull out their family, friends, and neighbors – both those who survived, and those who did not (6,462 and 6,509 respectively, according to latest official figures). Thousands more sought refuge where they could, with the largest shelter, Caribbean Maritime University, reporting an estimated 4,000 or more people in the early days (down to 2,600 within a week as other shelters were set up to provide more dignified conditions or as survivors found other housing solutions, and 830 as of late August).",
+              "published_date": "2026-09-11",
+              "outlet": "CounterPunch",
+              "image": "https://www.bing.com/th?id=ONUT.bLVFhqeEeEFxYBdw5AsJvQ"
+            },
+            {
+              "news_id": "d79f7a15ff235f3cb1386348fd5b57d0",
+              "url": "https://www.sfgate.com/business/article/venezuelans-in-the-us-still-navigate-the-22423554.php",
+              "headline": "Venezuelans in the US still navigate the aftermath of deadly earthquakes,...",
+              "body": "Venezuelans in the U.S. are grappling with the aftermath of the devastating back-to-back earthquakes...",
+              "published_date": "2026-09-09T06:45:31+00:00",
+              "outlet": "San Francisco Chronicle",
+              "image": "https://s.yimg.com/bo/88f4dd5d-32a3-53c0-994c-5d8ed9f8df21_1788957743191.jpg"
+            }
+          ]
         }
       ],
-      "logs_total": 43
+      "logs_total": 44
     },
     {
       "incident_id": "20260626-PH-EQ",
@@ -2908,7 +2935,7 @@
       "event_date": "2026-06-26",
       "first_reported_date": "2026-06-26",
       "last_updated_date": "2026-09-08",
-      "days_since_event": 78,
+      "days_since_event": 79,
       "source_count": 4,
       "should_report": true,
       "search_keys": [],
@@ -3514,7 +3541,7 @@
       "event_date": "2026-07-09",
       "first_reported_date": "2026-07-09",
       "last_updated_date": "2026-09-09",
-      "days_since_event": 65,
+      "days_since_event": 66,
       "source_count": 3,
       "should_report": true,
       "search_keys": [],
@@ -5186,7 +5213,7 @@
       "event_date": "2026-07-30",
       "first_reported_date": "2026-07-30",
       "last_updated_date": "2026-09-11",
-      "days_since_event": 44,
+      "days_since_event": 45,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -7702,7 +7729,7 @@
       "event_date": "2026-07-31",
       "first_reported_date": "2026-07-31",
       "last_updated_date": "2026-09-11",
-      "days_since_event": 43,
+      "days_since_event": 44,
       "source_count": 2,
       "should_report": true,
       "search_keys": [],
@@ -9229,7 +9256,7 @@
       "event_date": "2026-08-05",
       "first_reported_date": "2026-08-05",
       "last_updated_date": "2026-09-06",
-      "days_since_event": 38,
+      "days_since_event": 39,
       "source_count": 2,
       "should_report": false,
       "search_keys": [],
@@ -9536,7 +9563,7 @@
       "event_date": "2026-08-08",
       "first_reported_date": "2026-08-08",
       "last_updated_date": "2026-09-10",
-      "days_since_event": 35,
+      "days_since_event": 36,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -10332,7 +10359,7 @@
       "event_date": "2026-08-14",
       "first_reported_date": "2026-08-14",
       "last_updated_date": "2026-09-06",
-      "days_since_event": 29,
+      "days_since_event": 30,
       "source_count": 2,
       "should_report": true,
       "search_keys": [],
@@ -11086,7 +11113,7 @@
       "event_date": "2026-08-18",
       "first_reported_date": "2026-08-18",
       "last_updated_date": "2026-09-09",
-      "days_since_event": 25,
+      "days_since_event": 26,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -11241,7 +11268,7 @@
       "event_date": "2026-08-24",
       "first_reported_date": "2026-08-24",
       "last_updated_date": "2026-09-11",
-      "days_since_event": 19,
+      "days_since_event": 20,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -11347,7 +11374,7 @@
       "event_date": "2026-08-31",
       "first_reported_date": "2026-08-31",
       "last_updated_date": "2026-09-08",
-      "days_since_event": 12,
+      "days_since_event": 13,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -11635,7 +11662,7 @@
       "event_date": "2026-09-03",
       "first_reported_date": "2026-09-03",
       "last_updated_date": "2026-09-08",
-      "days_since_event": 9,
+      "days_since_event": 10,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -11684,796 +11711,6 @@
       "logs_total": 0
     },
     {
-      "incident_id": "20260904-PH-FL",
-      "tree_id": "6972a368ddbd4aa6aa55eab0f1080842",
-      "canonical_name": "Flood Philippines 2026-09-04",
-      "summary": "The NDRRMC reported that the death toll from the recent storms and southwest monsoon has risen to 44. DPWH Secretary Vince Dizon said flood-hit Pampanga will receive a significant financial package from the Local Government Support Fund to aid recovery. Meanwhile, lingering Habagat conditions continue to threaten farms and food supplies in affected regions.",
-      "country": "Philippines",
-      "iso2": "PH",
-      "lat": 12.9,
-      "lon": 121.8,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Flood",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "HIGH",
-      "priority": "HIGH",
-      "priority_rank": 1,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-09-04",
-      "first_reported_date": "2026-09-04",
-      "last_updated_date": "2026-09-11",
-      "days_since_event": 8,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 0,
-        "ercc": 1,
-        "healthmap": 0,
-        "news": 75
-      },
-      "source_links": [
-        {
-          "type": "ERCC",
-          "label": "ECHO Daily Map of 04 September 2026",
-          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5775",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "2 brothers drown in flood-submerged bypass road in Pampanga",
-          "published_date": "2022-07-10"
-        },
-        {
-          "headline": "Senators seek probes, flood control overhaul after August storms - BusinessWorld Online",
-          "published_date": "2026-09-01"
-        },
-        {
-          "headline": "P6.9-B ‘Panahon ng Pagkilos’ project to boost Eastern Visayas’ disaster resilience",
-          "published_date": "2026-09-01T06:49:15+00:00"
-        },
-        {
-          "headline": "Pangasinan intensifies dam, river monitoring amid rising flood risk",
-          "published_date": "2026-09-01T07:08:00+00:00"
-        },
-        {
-          "headline": "MGB: 3,786 barangays face flood, landslide risks",
-          "published_date": "2026-09-01T13:59:00+00:00"
-        },
-        {
-          "headline": "Floods persist in 385 Luzon areas",
-          "published_date": "2026-09-01T20:33:26+00:00"
-        },
-        {
-          "headline": "Filipino couple married in hip-deep Bulacan flood",
-          "published_date": "2026-09-01T21:34:00+00:00"
-        },
-        {
-          "headline": "Pangilinan seeks strict DENR review after floods - BusinessWorld Online",
-          "published_date": "2026-09-02"
-        },
-        {
-          "headline": "Philippine couple married in hip-deep floodwaters",
-          "published_date": "2026-09-02"
-        },
-        {
-          "headline": "Quezon City breaches epidemic threshold for leptospirosis",
-          "published_date": "2026-09-02T18:49:26+00:00"
-        },
-        {
-          "headline": "WATCH: Bride walks down flooded church aisle on wedding day",
-          "published_date": "2026-09-03"
-        },
-        {
-          "headline": "PHL revisits flood master plan as climate risks intensify - BusinessWorld Online",
-          "published_date": "2026-09-03"
-        },
-        {
-          "headline": "THE SCIENCE BEHIND THE CONTROVERSY: FLOOD RISKS RENEW SCRUTINY OF BULACAN AIRPORT PROJECT",
-          "published_date": "2026-09-03T21:33:00+00:00"
-        },
-        {
-          "headline": "Bride walks down the aisle despite waist-deep flooding",
-          "published_date": "2026-09-04"
-        },
-        {
-          "headline": "Philippines humor shines through even during unexpected floods",
-          "published_date": "2026-09-04"
-        },
-        {
-          "headline": "Bride walks down the aisle despite waist-deep flooding",
-          "published_date": "2026-09-04"
-        },
-        {
-          "headline": "MMDA sends flood barriers, mobile pumps to NLEX",
-          "published_date": "2026-09-04"
-        },
-        {
-          "headline": "Baby rescued from Philippines flash floods in plastic bag and washing up tub",
-          "published_date": "2026-09-04"
-        },
-        {
-          "headline": "Bride walks down the aisle despite waist-deep flooding",
-          "published_date": "2026-09-04"
-        },
-        {
-          "headline": "Absuwelto na sa kaso! Former DPWH chief Bonoan set free to testify on flood control anomaly",
-          "published_date": "2026-09-04"
-        },
-        {
-          "headline": "Couple married in flooded church aerial",
-          "published_date": "2026-09-04"
-        },
-        {
-          "headline": "Habagat, cyclones leave P2.68-B infra damage, P733.84-M agri losses in Ilocos Region",
-          "published_date": "2026-09-04"
-        },
-        {
-          "headline": "Baby rescued from Philippines flash floods in plastic bag and washing up tub",
-          "published_date": "2026-09-04"
-        },
-        {
-          "headline": "MVP must fire NLEX execs",
-          "published_date": "2026-09-04"
-        },
-        {
-          "headline": "Flooding and fractured governance",
-          "published_date": "2026-09-04"
-        },
-        {
-          "headline": "Central Luzon flood damage nearing P4 billion",
-          "published_date": "2026-09-04"
-        },
-        {
-          "headline": "Inflation eases to 6.1% as rice prices surge",
-          "published_date": "2026-09-04T00:00:00+00:00"
-        },
-        {
-          "headline": "Laguna governor pushes Laguna de Bay dredging, massive drainage rehabilitation to address flooding",
-          "published_date": "2026-09-04T17:27:00+00:00"
-        },
-        {
-          "headline": "Bigger Project NOAH Funding to Strengthen Flood, Disaster, and Climate Change Response",
-          "published_date": "2026-09-04T18:52:33+00:00"
-        },
-        {
-          "headline": "Central Luzon flood damage nearing P4 billion",
-          "published_date": "2026-09-05"
-        },
-        {
-          "headline": "Toll rebate: good optics for gov’t but floods remain",
-          "published_date": "2026-09-05"
-        },
-        {
-          "headline": "Eliminate floods!",
-          "published_date": "2026-09-05"
-        },
-        {
-          "headline": "Couple marry in flooded church",
-          "published_date": "2026-09-05"
-        },
-        {
-          "headline": "DPWH working on detailed flood master plan",
-          "published_date": "2026-09-05"
-        },
-        {
-          "headline": "DPWH laying groundwork for science-backed flood management master plans",
-          "published_date": "2026-09-05"
-        },
-        {
-          "headline": "Monsoon matrimony | Couple gets married in waist-deep floodwaters",
-          "published_date": "2026-09-05T05:57:03+00:00"
-        },
-        {
-          "headline": "WATER HAS TO GO SOMEWHERE: Expert says airport may worsen Bulacan floods",
-          "published_date": "2026-09-05T05:57:03+00:00"
-        },
-        {
-          "headline": "Gov’t actively addresses floodings amid inclement weather",
-          "published_date": "2026-09-05T16:51:42+00:00"
-        },
-        {
-          "headline": "Residents seek help as Dagupan flood persists",
-          "published_date": "2026-09-06"
-        },
-        {
-          "headline": "Romualdez camp seeks chance to respond to ‘new allegations’ from witnesses",
-          "published_date": "2026-09-06"
-        },
-        {
-          "headline": "DPWH to widen, add drainage systems along flood-prone G. Araneta Ave.",
-          "published_date": "2026-09-06"
-        },
-        {
-          "headline": "Flooding persists in parts of NCR, Rizal, and Bulacan; 11-yo boy drowns in Valenzuela",
-          "published_date": "2026-09-06"
-        },
-        {
-          "headline": "Marcos: NLEX traffic situation improving as floods recede",
-          "published_date": "2026-09-06"
-        },
-        {
-          "headline": "Storms, habagat death toll now 44",
-          "published_date": "2026-09-06T17:20:08+00:00"
-        },
-        {
-          "headline": "Climate-change preparedness boosted with more funding for Project Noah",
-          "published_date": "2026-09-06T18:52:30+00:00"
-        },
-        {
-          "headline": "More than 60 patients confined in regional hospital in Pampanga due to leptospirosis",
-          "published_date": "2026-09-06T18:52:30+00:00"
-        },
-        {
-          "headline": "Beyond the reach of justice",
-          "published_date": "2026-09-07"
-        },
-        {
-          "headline": "2 DPWH engineers axed after man died in Pampanga drainage canal",
-          "published_date": "2026-09-07"
-        },
-        {
-          "headline": "Dizon Relieves 2 Pampanga DPWH Officials After Fatal Open Drainage Incident on Fil-Am Friendship Highway",
-          "published_date": "2026-09-07"
-        },
-        {
-          "headline": "Romualdez camp seeks to respond to new flood control allegations",
-          "published_date": "2026-09-07"
-        },
-        {
-          "headline": "NLEX, MMDA join forces to solve flooding",
-          "published_date": "2026-09-07"
-        },
-        {
-          "headline": "Heavy habagat rain threatens floods in 4 Luzon provinces",
-          "published_date": "2026-09-07"
-        },
-        {
-          "headline": "Rain from southwest monsoon to persist in second week of September",
-          "published_date": "2026-09-07"
-        },
-        {
-          "headline": "Philippines Lawmaker, Cousin of Marcos, Charged With Taking Kickbacks",
-          "published_date": "2026-09-07T06:42:05+00:00"
-        },
-        {
-          "headline": "Yamsuan backs unified approach to flood mitigation works",
-          "published_date": "2026-09-07T06:49:17+00:00"
-        },
-        {
-          "headline": "43 dead from habagat, tropical cyclones — NDRRMC",
-          "published_date": "2026-09-07T18:57:25+00:00"
-        },
-        {
-          "headline": "Co’s Co-Accused Plead Not Guilty in P77-M Bulacan Flood Control Project Malversation Case at Sandiganbayan",
-          "published_date": "2026-09-08"
-        },
-        {
-          "headline": "PETA brings interactive play about flood survival to schools",
-          "published_date": "2026-09-08"
-        },
-        {
-          "headline": "San Lazaro Hospital records 22 deaths due to leptospirosis",
-          "published_date": "2026-09-08"
-        },
-        {
-          "headline": "Bigger NOAH funding to boost disaster, climate change response",
-          "published_date": "2026-09-08"
-        },
-        {
-          "headline": "Pulong may be summoned over Davao flood projects",
-          "published_date": "2026-09-08"
-        },
-        {
-          "headline": "Are we just going to watch our farm fields drown?",
-          "published_date": "2026-09-08"
-        },
-        {
-          "headline": "‘Habagat’ to bring rains over parts of Luzon, Visayas on Sept. 8",
-          "published_date": "2026-09-08"
-        },
-        {
-          "headline": "As the floods recede, let’s make accountability rise - BusinessWorld Online",
-          "published_date": "2026-09-08T15:42:05+00:00"
-        },
-        {
-          "headline": "Romualdez arrested in hospital for plunder",
-          "published_date": "2026-09-09"
-        },
-        {
-          "headline": "List: Big names, others arrested in flood control scandal",
-          "published_date": "2026-09-09"
-        },
-        {
-          "headline": "LIST: Flooded Metro Manila roads on Sept. 9",
-          "published_date": "2026-09-09"
-        },
-        {
-          "headline": "Pulong may be summoned over Davao flood projects",
-          "published_date": "2026-09-09"
-        },
-        {
-          "headline": "LIST: Flooded Metro Manila areas on September 9",
-          "published_date": "2026-09-09"
-        },
-        {
-          "headline": "Flood alert: Flooded roads in Metro Manila on Wednesday, September 9, 2026",
-          "published_date": "2026-09-09"
-        },
-        {
-          "headline": "All lanes along NLEX San Simon now open to all traffic",
-          "published_date": "2026-09-09T06:42:02+00:00"
-        },
-        {
-          "headline": "LIST: Flooded areas in Metro Manila on Wednesday amid habagat rains",
-          "published_date": "2026-09-09T18:14:27+00:00"
-        },
-        {
-          "headline": "As Habagat lingers, farms and food supplies face growing risks",
-          "published_date": "2026-09-10"
-        },
-        {
-          "headline": "As Habagat lingers, farms and food supplies face growing risks",
-          "published_date": "2026-09-11"
-        },
-        {
-          "headline": "Dizon says flood-hit Pampanga to receive 'big financial package' from local gov't support fund",
-          "published_date": "2026-09-11"
-        }
-      ],
-      "news_total": 75,
-      "logs": [
-        {
-          "log_date": "2026-09-04",
-          "summary": "Severe monsoon rains and cyclones have caused widespread flooding across the Philippines, particularly in Luzon, with damage nearing P4 billion in Central Luzon and P2.68 billion in infrastructure damage in the Ilocos Region, affecting over four million people. At least two brothers drowned in a submerged bypass road in Pampanga, and a baby was dramatically rescued from flash floods in Manila. In response, lawmakers are pushing for flood control master plan reviews and Senate investigations into the government's disaster response.",
-          "news": [
-            {
-              "news_id": "e5be8b2d75dc57499fcc971ca7b047c2",
-              "url": "https://www.aljazeera.com/video/newsfeed/2026/9/4/bride-walks-down-the-aisle-despite-waist-deep-flooding",
-              "headline": "Bride walks down the aisle despite waist-deep flooding",
-              "body": "A couple chose to get married in the middle of severe flooding in the Philippines.",
-              "published_date": "2026-09-04",
-              "outlet": "Al Jazeera",
-              "image": "https://www.bing.com/th?id=ONUT.10DxdhHou1JlqbSwG4LYtg"
-            },
-            {
-              "news_id": "a385415e07985646aa17353f3b51a932",
-              "url": "https://www.msn.com/en-us/lifestyle/other/philippines-humor-shines-through-even-during-unexpected-floods/vi-AA2bwBVr?ocid=BingNewsVerp",
-              "headline": "Philippines humor shines through even during unexpected floods",
-              "body": "A look at how Filipinos turn challenging moments into funny and memorable experiences with their unique sense of humor.",
-              "published_date": "2026-09-04",
-              "outlet": "Waleska Herrera on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.Rh46mCvUYIG2M82zSEvvNw"
-            },
-            {
-              "news_id": "96c17ca9ad8a505986af59ea9ff86a81",
-              "url": "https://bworldonline.com/the-nation/2026/09/02/774280/pangilinan-seeks-strict-denr-review-after-floods/",
-              "headline": "Pangilinan seeks strict DENR review after floods - BusinessWorld Online",
-              "body": "THE Department of Environment and Natural Resources’ (DENR) spending for anti-pollution programs will undergo strict Senate review, Senator Francis Pancratius N. Pangilinan said on Wednesday, as he attributed the widespread flooding to poor urban development. In a press statement, Mr. Pangilinan called on the DENR to enforce stricter regulations on reclamation, quarrying, mining and land […]",
-              "published_date": "2026-09-02",
-              "outlet": "BusinessWorld",
-              "image": "https://s.yimg.com/bo/f248f65a-055e-5c38-a8f0-863c91b055d6_1786968533931.jpg"
-            },
-            {
-              "news_id": "53aae382ab3f5e99b011c2aeb398c2cd",
-              "url": "https://www.msn.com/en-in/news/other/bride-walks-down-the-aisle-despite-waist-deep-flooding/vi-AA2bzUF5?ocid=BingNewsVerp",
-              "headline": "Bride walks down the aisle despite waist-deep flooding",
-              "body": "A couple chose to get married in the middle of severe flooding in the Philippines.",
-              "published_date": "2026-09-04",
-              "outlet": "Al Jazeera on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.skr2glk5WsVeh1kjvAsQ7Q"
-            },
-            {
-              "news_id": "4aed22b9278c52a5b31ec9cc143fc748",
-              "url": "https://bworldonline.com/the-nation/2026/09/01/773908/senators-seek-probes-flood-control-overhaul-after-august-storms/",
-              "headline": "Senators seek probes, flood control overhaul after August storms - BusinessWorld Online",
-              "body": "SEVERAL SENATORS on Tuesday filed resolutions seeking investigations into widespread flooding caused by successive typhoons and southwest monsoon rains in August, with lawmakers calling for a review of flood control projects and disaster resilience measures. “There is a need to assess the resilience of public infrastructure amid increasingly severe typhoons and monsoons, while ensuring that […]",
-              "published_date": "2026-09-01",
-              "outlet": "BusinessWorld",
-              "image": "https://s.yimg.com/bo/0f9e85ac-c24c-5127-bb5d-563afb92d190_1787158238028.jpg"
-            },
-            {
-              "news_id": "5846873f3e8b52f18d0ea2c5897f5b0b",
-              "url": "https://www.msn.com/en-ph/news/national/mmda-sends-flood-barriers-mobile-pumps-to-nlex/ar-AA2bzPBH?ocid=BingNewsVerp",
-              "headline": "MMDA sends flood barriers, mobile pumps to NLEX",
-              "body": "MANILA, Philippines — The Metropolitan Manila Development Authority is continuing to help ease flooding in San Simon, ...",
-              "published_date": "2026-09-04",
-              "outlet": "PhilStar Global on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.tkpuwFNX4AvHnhA5B8HY8w"
-            },
-            {
-              "news_id": "c444858ed24a5f0985c8b33fece8f07b",
-              "url": "https://www.yahoo.com/news/videos/baby-rescued-philippines-flash-floods-125730989.html",
-              "headline": "Baby rescued from Philippines flash floods in plastic bag and washing up tub",
-              "body": "A baby was placed inside a plastic bag and lowered from its flooded home as rescuers helped a family escape flash floods in Manila, Philippines.With water rising towards the second floor, rescuers use...",
-              "published_date": "2026-09-04",
-              "outlet": "Yahoo",
-              "image": ""
-            },
-            {
-              "news_id": "a597c82a1e435960a5c8e2dab974503c",
-              "url": "https://www.msn.com/en-in/weather/general/bride-walks-down-the-aisle-despite-waist-deep-flooding/vi-AA2bzUF5?ocid=BingNewsVerp",
-              "headline": "Bride walks down the aisle despite waist-deep flooding",
-              "body": "A couple chose to get married in the middle of severe flooding in the Philippines.",
-              "published_date": "2026-09-04",
-              "outlet": "Al Jazeera on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.skr2glk5WsVeh1kjvAsQ7Q"
-            },
-            {
-              "news_id": "752a0073df0c541891c29f073b665fb4",
-              "url": "https://politiko.com.ph/2026/09/04/absuwelto-na-sa-kaso-former-dpwh-chief-bonoan-set-free-to-testify-on-flood-control-anomaly/politiko-lokal/",
-              "headline": "Absuwelto na sa kaso! Former DPWH chief Bonoan set free to testify on flood control anomaly",
-              "body": "Former DPWH Secretary Manuel Bonoan was released from police custody after the Sandiganbayan dropped graft and plunder charges to make him a state witness.",
-              "published_date": "2026-09-04",
-              "outlet": "POLITIKO",
-              "image": ""
-            },
-            {
-              "news_id": "0f1ea72e964956eeb43f9209080851f5",
-              "url": "https://www.msn.com/en-gb/weather/general/couple-married-in-flooded-church-aerial/vi-AA2bzsFP?ocid=BingNewsVerp",
-              "headline": "Couple married in flooded church aerial",
-              "body": "Aerial footage of woman walking down the isle in flooded church in The Philippines.",
-              "published_date": "2026-09-04",
-              "outlet": "The Independent on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.V3BoLvZ-xDWgq0Vb1fH90g"
-            },
-            {
-              "news_id": "82622e4fb20553a991bca6629841775c",
-              "url": "https://www.yahoo.com/news/weather-news/articles/watch-bride-walks-down-flooded-131012337.html",
-              "headline": "WATCH: Bride walks down flooded church aisle on wedding day",
-              "body": "A couple in the Philippines didn't let a flooded church get in the way of their wedding ceremony.",
-              "published_date": "2026-09-03",
-              "outlet": "WFLA · via Yahoo News",
-              "image": "https://media.zenfs.com/en/wfla_article_174/c72ff472d434312052b581be845c9edb.jpg"
-            },
-            {
-              "news_id": "76bd81edb45d544f927df19ee51c55a9",
-              "url": "https://tribune.net.ph/2026/09/04/habagat-cyclones-leave-p268-b-infra-damage-p73384-m-agri-losses-in-ilocos-region",
-              "headline": "Habagat, cyclones leave P2.68-B infra damage, P733.84-M agri losses in Ilocos Region",
-              "body": "The combined effects of the enhanced southwest monsoon or Habagat and tropical cyclones Luis, Maymay, Neneng and Pilandok left more than P3.41 billion in reported infrastructure damage and…",
-              "published_date": "2026-09-04",
-              "outlet": "Daily Tribune",
-              "image": ""
-            },
-            {
-              "news_id": "44494ef3d570565a8db33f3d3ce2688f",
-              "url": "https://bworldonline.com/the-nation/2026/09/03/774620/phl-revisits-flood-master-plan-as-climate-risks-intensify/",
-              "headline": "PHL revisits flood master plan as climate risks intensify - BusinessWorld Online",
-              "body": "THE government is reviewing the country’s flood control master plan after recent severe weather exposed gaps in existing flood management measures, with Malacañang acknowledging that plans crafted by previous administrations were never fully implemented. “There was already a master plan as far back as the 1930s and 1940s,” Palace Press Officer Clarissa A. Castro told […]",
-              "published_date": "2026-09-03",
-              "outlet": "BusinessWorld",
-              "image": "https://s.yimg.com/bo/94af43fc-82d7-5248-91c0-073b68ae07bc_1788442215503.jpg"
-            },
-            {
-              "news_id": "daee88f69d2d502a8041741d261dc683",
-              "url": "https://www.msn.com/en-gb/news/other/baby-rescued-from-philippines-flash-floods-in-plastic-bag-and-washing-up-tub/vi-AA2bz75X?ocid=BingNewsVerp",
-              "headline": "Baby rescued from Philippines flash floods in plastic bag and washing up tub",
-              "body": "A baby was placed inside a plastic bag and lowered from its flooded home as rescuers helped a family escape flash floods in ...",
-              "published_date": "2026-09-04",
-              "outlet": "The Independent on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.Yv5hY06nAHHqHQ2FtnyeRQ"
-            },
-            {
-              "news_id": "355f148a16c157a6a3c632baffb8587a",
-              "url": "https://www.msn.com/en-ph/news/other/mvp-must-fire-nlex-execs/ar-AA2bzWZB?ocid=BingNewsVerp",
-              "headline": "MVP must fire NLEX execs",
-              "body": "THE North Luzon Expressway (NLEX) turned into a flooded parking lot this past week. Travel time on stretches normally covered ...",
-              "published_date": "2026-09-04",
-              "outlet": "The Manila Times on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.I908RfLFSOeQK_e02fBqMA"
-            },
-            {
-              "news_id": "7ee016a9976f50daa51a9f1f350893c3",
-              "url": "https://www.msn.com/en-ph/politics/government/flooding-and-fractured-governance/ar-AA2bzZBa?ocid=BingNewsVerp",
-              "headline": "Flooding and fractured governance",
-              "body": "The major news this week is the ongoing monsoon, which has caused flooding across much of Luzon. The government again appears helpless, unresponsive and insensitive as heavy rains overwhelm existing ...",
-              "published_date": "2026-09-04",
-              "outlet": "PhilStar Global on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "16c6dc6060b8597282f2b433b221816b",
-              "url": "https://tribune.net.ph/2026/09/04/inflation-eases-to-61-as-rice-prices-surge",
-              "headline": "Inflation eases to 6.1% as rice prices surge",
-              "body": "Philippine inflation eased to 6.1 percent in August, but rice prices accelerated and flooding could affect vegetable prices ...",
-              "published_date": "2026-09-04T00:00:00+00:00",
-              "outlet": "Daily Tribune",
-              "image": "https://www.bing.com/th?id=ONUT.WXK7fr-hBQLVnnItgJbD4A"
-            },
-            {
-              "news_id": "d8da4b6dbf445c2586c182f633e92d2e",
-              "url": "https://www.philstar.com/nation/2026/09/05/2554078/central-luzon-flood-damage-nearing-p4-billion",
-              "headline": "Central Luzon flood damage nearing P4 billion",
-              "body": "The amount of damage caused by severe flooding in Central Luzon is nearing P4 billion, with more than four million people affected, according to the Office of Civil Defense.",
-              "published_date": "2026-09-04",
-              "outlet": "Philstar.com",
-              "image": "https://www.bing.com/th?id=ONUT.YgF13TJe9OkIbQRmQSTVUg"
-            },
-            {
-              "news_id": "2217566b38a653cea85a855039597687",
-              "url": "https://newsinfo.inquirer.net/2299239/2-brothers-drown-in-flood-submerged-bypass-road-in-pampanga",
-              "headline": "2 brothers drown in flood-submerged bypass road in Pampanga",
-              "body": "Search and rescue personnel retrieve the bodies of two brothers who drowned after their truck fell into a flooded portion of Balucuc Bypass Road in Apalit, Pampanga, on Sept. 4. —Photo courtesy of",
-              "published_date": "2022-07-10",
-              "outlet": "Inquirer.net",
-              "image": "https://www.bing.com/th?id=ONUT.ynqaU0cP-WKI67w-aK_yyg"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-09-08",
-          "summary": "The National Disaster Risk Reduction and Management Council reported 43 deaths attributed to the southwest monsoon and tropical cyclones Luis, Maymay, Neneng, and Pilandok. Flooding persisted in 385 areas in Luzon that received above-average rainfall, while PAGASA warned that heavy monsoon rain could trigger floods in four provinces, with Zambales likely to be most affected in the next 24 hours.\nSan Lazaro Hospital in Manila reported 22 leptospirosis deaths as of Sept. 7, while Quezon City exceeded the epidemic threshold for the disease following heavy rains. Agricultural losses from the southwest monsoon flooding have reached at least P3.62 billion. Meanwhile, the NBI may summon Rep. Paolo Duterte over nearly P1.9 billion in flood control projects in Davao City awarded to a single contractor.",
-          "news": [
-            {
-              "news_id": "4486afa67bc65feab8a082e5b8d359b0",
-              "url": "https://www.abs-cbn.com/news/nation/2026/9/6/43-dead-from-habagat-tropical-cyclones-ndrrmc-1936",
-              "headline": "43 dead from habagat, tropical cyclones — NDRRMC",
-              "body": "Forty-three individuals reportedly died following frequent and enhanced rains brought by the southwest monsoon and tropical cyclones Luis, Maymay, Neneng, and Pilandok across the country, according to ...",
-              "published_date": "2026-09-07T18:57:25+00:00",
-              "outlet": "ABS-CBN",
-              "image": ""
-            },
-            {
-              "news_id": "4dac215020b559f786eff6692a6ebad8",
-              "url": "https://businessmirror.com.ph/2026/09/07/floods-persist-in-385-luzon-areas/",
-              "headline": "Floods persist in 385 Luzon areas",
-              "body": "A TOTAL of 385 areas in Luzon that received above-average rainfall induced by four tropical cyclones and the prevailing ...",
-              "published_date": "2026-09-01T20:33:26+00:00",
-              "outlet": "BusinessMirror",
-              "image": "https://www.bing.com/th?id=ONUT.8Xf_O9jlOd5rUzdPNE1wsQ"
-            },
-            {
-              "news_id": "99e1574d03585e5899d90acf0d8bdcc5",
-              "url": "https://www.msn.com/en-ph/news/other/peta-brings-interactive-play-about-flood-survival-to-schools/ar-AA2bLOEC?ocid=BingNewsVerp",
-              "headline": "PETA brings interactive play about flood survival to schools",
-              "body": "Picture this: The Philippines in an alternate reality where young people get to choose how they should run their community reeling from massive floods. This was the idea behind “Gen G: GG na ’to!,” ...",
-              "published_date": "2026-09-08",
-              "outlet": "Inquirer.net - Philippines Entertainment News on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "62a25ed96f4551d0bed57575b8920d34",
-              "url": "https://www.philstar.com/headlines/weather/2026/09/07/2554605/heavy-habagat-rain-threatens-floods-4-luzon-provinces",
-              "headline": "Heavy habagat rain threatens floods in 4 Luzon provinces",
-              "body": "Metro Manila may see scattered rain and thunderstorms Monday as southwest monsoon rains linger.",
-              "published_date": "2026-09-07",
-              "outlet": "Philstar.com",
-              "image": "https://www.bing.com/th?id=ONUT.yJ73P_00IXs2QZ_qg5SMKg"
-            },
-            {
-              "news_id": "326ea829493d5777a819a666b078bfe3",
-              "url": "https://www.philstar.com/headlines/2026/09/09/2555018/san-lazaro-hospital-records-22-deaths-due-leptospirosis",
-              "headline": "San Lazaro Hospital records 22 deaths due to leptospirosis",
-              "body": "The San Lazaro Hospital in Manila has recorded a total of 22 deaths due to leptospirosis, latest data as of Sept. 7 showed.",
-              "published_date": "2026-09-08",
-              "outlet": "Philstar.com",
-              "image": "https://www.bing.com/th?id=ONUT.2eRN9eoMlCgALkQRc8Om-g"
-            },
-            {
-              "news_id": "3c684829c5ba553c9b25d21ad327dc1c",
-              "url": "https://www.philstar.com/headlines/2026/09/09/2554975/bigger-noah-funding-boost-disaster-climate-change-response",
-              "headline": "Bigger NOAH funding to boost disaster, climate change response",
-              "body": "he recently released P1 billion will further expand Project Nationwide Operational Assessment of Hazards, focusing on strengthening flood management, hazard monitoring and disaster risk reduction systems as the country confronts the effects of climate change.",
-              "published_date": "2026-09-08",
-              "outlet": "Philstar.com",
-              "image": "https://www.bing.com/th?id=ONUT.IQkdde5xIP_H1v3NsX9pYg"
-            },
-            {
-              "news_id": "081d91e1e8285056b9af8a174b51accb",
-              "url": "https://www.rappler.com/philippines/weather/southwest-monsoon-update-pagasa-forecast-september-7-2026-5pm/",
-              "headline": "Rain from southwest monsoon to persist in second week of September",
-              "body": "Zambales could be the most affected province in the next 24 hours, says PAGASA on Monday afternoon, September 7",
-              "published_date": "2026-09-07",
-              "outlet": "Rappler",
-              "image": "https://www.bing.com/th?id=ONUT.M6RYXk1O4fqvMf47bILbxg"
-            },
-            {
-              "news_id": "fc1af395328550de92664857f1c80437",
-              "url": "https://www.abs-cbn.com/news/health-science/2026/9/8/quezon-city-breaches-epidemic-threshold-for-leptospirosis-1201",
-              "headline": "Quezon City breaches epidemic threshold for leptospirosis",
-              "body": "Following days of heavy rainfall that inundated parts of Quezon City, the local government said the number of leptospirosis ...",
-              "published_date": "2026-09-02T18:49:26+00:00",
-              "outlet": "ABS-CBN",
-              "image": "https://www.bing.com/th?id=ONUT.rbCWuBy2AFRnI4pkcT8_Uw"
-            },
-            {
-              "news_id": "6c1f2cabb797566d8c67b8cea4591165",
-              "url": "https://qa.philstar.com/nation/2026/09/09/2554942/pulong-may-be-summoned-over-davao-flood-projects",
-              "headline": "Pulong may be summoned over Davao flood projects",
-              "body": "The National Bureau of Investigation may summon Rep. Paolo Duterte in connection with a probe into the nearly P1.9 billion worth of flood control projects in Davao City, which were awarded to a single contractor, NBI Director Melvin Matibag said yesterday.",
-              "published_date": "2026-09-08",
-              "outlet": "Philstar.com",
-              "image": "https://www.bing.com/th?id=ONUT.6DGu0nYK6vCNgUFl0CynPw"
-            },
-            {
-              "news_id": "edef32e7ef255ac8b1f8ef3e07f6c855",
-              "url": "https://www.msn.com/en-ph/money/general/are-we-just-going-to-watch-our-farm-fields-drown/ar-AA2bLqUH?ocid=BingNewsVerp",
-              "headline": "Are we just going to watch our farm fields drown?",
-              "body": "Underserved farm fields drowned and the agriculture sector lost at least P3.62 billion as the southwest monsoon caused flooding in the country, especially Luzon. This brought extreme impacts on ...",
-              "published_date": "2026-09-08",
-              "outlet": "Inquirer Opinion on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "857c8b4e15915c6dad106be33349d6f7",
-              "url": "https://www.msn.com/en-ph/news/other/habagat-to-bring-rains-over-parts-of-luzon-visayas-on-sept-8/ar-AA2bKvBl?ocid=BingNewsVerp",
-              "headline": "‘Habagat’ to bring rains over parts of Luzon, Visayas on Sept. 8",
-              "body": "MANILA, Philippines — The southwest monsoon or “habagat” will continue to bring rains over parts of Luzon and Visayas on ...",
-              "published_date": "2026-09-08",
-              "outlet": "Inquirer.net on MSN",
-              "image": "https://www.bing.com/th?id=ORMS.b6edfa21dddf0e277062d93c898fd2fc"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-09-09",
-          "summary": "On September 9, heavy monsoon rains continued to cause flooding across Metro Manila, with multiple roads submerged. A major development saw former Speaker Martin Romualdez arrested on plunder charges related to flood control fund corruption, and the NBI may summon Rep. Paolo Duterte over P1.9 billion in Davao flood projects. Meanwhile, all lanes along NLEX San Simon reopened after floodwater receded, indicating gradual recovery in some areas.",
-          "news": [
-            {
-              "news_id": "5c2b30bc10ec5d5a9555875664a39275",
-              "url": "https://www.msn.com/en-ph/news/other/romualdez-arrested-in-hospital-for-plunder/ar-AA2bKY2Q?ocid=BingNewsVerp",
-              "headline": "Romualdez arrested in hospital for plunder",
-              "body": "MANILA, Philippines — Former Speaker and incumbent Leyte Rep. Martin Romualdez was arrested on Monday for plunder, hours after he and former Ako Bicol Rep. Elizaldy Co were charged before the ...",
-              "published_date": "2026-09-09",
-              "outlet": "Inquirer on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "c871c10595bb55e28d1fbc93eecb94af",
-              "url": "https://www.nytimes.com/2026/09/07/world/asia/philippines-romualdez-arrest-kickbacks.html",
-              "headline": "Philippines Lawmaker, Cousin of Marcos, Charged With Taking Kickbacks",
-              "body": "A cousin of President Ferdinand Marcos Jr. was charged with plundering public funds meant for flood...",
-              "published_date": "2026-09-07T06:42:05+00:00",
-              "outlet": "New York Times",
-              "image": "https://s.yimg.com/bo/468decd9-b01b-5abf-a586-7d6bb63db5fb_1788808469363.jpg"
-            },
-            {
-              "news_id": "1a420ce546fb540baf795114bb114c94",
-              "url": "https://www.autoindustriya.com/auto-industry-news/all-lanes-along-nlex-san-simon-now-open-to-all-traffic.html",
-              "headline": "All lanes along NLEX San Simon now open to all traffic",
-              "body": "Motorists who recently took the North Luzon Expressway and had to experience the long travel time due to flooding along the San Simon Interchange and Tulaoc section can now breathe a sigh of relief.",
-              "published_date": "2026-09-09T06:42:02+00:00",
-              "outlet": "AutoIndustriya.com",
-              "image": ""
-            },
-            {
-              "news_id": "a088b6259f5a515fa9cbb7a8c0e4b4cc",
-              "url": "https://www.msn.com/en-ph/news/other/list-big-names-others-arrested-in-flood-control-scandal/ar-AA2bMjKp?ocid=BingNewsVerp",
-              "headline": "List: Big names, others arrested in flood control scandal",
-              "body": "MANILA, Philippines — The government’s investigation into alleged corruption in flood control and other infrastructure ...",
-              "published_date": "2026-09-09",
-              "outlet": "Inquirer.net on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.jtlacysWpThIl-k4rlJBNA"
-            },
-            {
-              "news_id": "b38693cb91215f4097f74ef856de944a",
-              "url": "https://www.msn.com/en-ph/news/other/list-flooded-metro-manila-roads-on-sept-9/ar-AA2bQlV3?ocid=BingNewsVerp",
-              "headline": "LIST: Flooded Metro Manila roads on Sept. 9",
-              "body": "Heavy rains spawned floods along some roads in Metro Manila on Wednesday, Sept. 9.",
-              "published_date": "2026-09-09",
-              "outlet": "ABS-CBN on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.DsgC6YqQGdH0IFSjMhObzw"
-            },
-            {
-              "news_id": "ab0b0c3a64d1511cb9d4e1ccbd24eae6",
-              "url": "https://www.philstar.com/nation/2026/09/09/2554942/pulong-may-be-summoned-over-davao-flood-projects",
-              "headline": "Pulong may be summoned over Davao flood projects",
-              "body": "The National Bureau of Investigation may summon Rep. Paolo Duterte in connection with a probe into the nearly P1.9 billion worth of flood control projects in Davao City, which were awarded to a single contractor, NBI Director Melvin Matibag said yesterday.",
-              "published_date": "2026-09-09",
-              "outlet": "Philstar.com",
-              "image": "https://www.bing.com/th?id=ONUT.6DGu0nYK6vCNgUFl0CynPw"
-            },
-            {
-              "news_id": "9478919172a5514586fae33eb74585f1",
-              "url": "https://www.philstar.com/nation/2026/09/09/2555106/list-flooded-metro-manila-areas-september-9",
-              "headline": "LIST: Flooded Metro Manila areas on September 9",
-              "body": "Here's a list of flooded routes and areas in Metro Manila on Wednesday, September 9.",
-              "published_date": "2026-09-09",
-              "outlet": "Philstar.com",
-              "image": "https://www.bing.com/th?id=ONUT.wR5O0dTeZghhZ_yiPp_PDg"
-            },
-            {
-              "news_id": "de738994cd1a5b22b80c17f6efd238bb",
-              "url": "https://bworldonline.com/opinion/2026/09/09/775408/as-the-floods-recede-lets-make-accountability-rise/",
-              "headline": "As the floods recede, let’s make accountability rise - BusinessWorld Online",
-              "body": "AS DISASTER RESILIENCE Month came to an end, the habagat or southwest monsoon and Tropical Cyclones...",
-              "published_date": "2026-09-08T15:42:05+00:00",
-              "outlet": "BusinessWorld",
-              "image": "https://s.yimg.com/bo/b156e89b-1318-544c-b7d9-9d1a749809d6_1788910027069.jpg"
-            },
-            {
-              "news_id": "95fa726582da5fa9ae28131cb4b7594f",
-              "url": "https://newsinfo.inquirer.net/2301919/list-flooded-areas-in-metro-manila-on-wednesday-amid-habagat-rains",
-              "headline": "LIST: Flooded areas in Metro Manila on Wednesday amid habagat rains",
-              "body": "Photo from Manila City LGU MANILA, Philippines — Several areas in Metro Manila were flooded on Wednesday morning amid the ...",
-              "published_date": "2026-09-09T18:14:27+00:00",
-              "outlet": "Inquirer.net",
-              "image": "https://www.bing.com/th?id=ONUT.Wte_Ae6ccHLgKXC3jT61Gg"
-            },
-            {
-              "news_id": "8046fd4de07058adbb6a6d78b17546ab",
-              "url": "https://www.msn.com/en-ph/news/national/flood-alert-flooded-roads-in-metro-manila-on-wednesday-september-9-2026/ar-AA2bQ08i?ocid=BingNewsVerp",
-              "headline": "Flood alert: Flooded roads in Metro Manila on Wednesday, September 9, 2026",
-              "body": "Some roads in Metro Manila got flooded on Wednesday, September 9, 2026, due to heavy rains from the Southwest Monsoon ...",
-              "published_date": "2026-09-09",
-              "outlet": "GMA Network on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.juWgAXzZyrWbZU6wQzK18Q"
-            },
-            {
-              "news_id": "802b924a9fd05f228ee417cb2707592e",
-              "url": "https://tribune.net.ph/2026/09/08/cos-co-accused-plead-not-guilty-in-p77-m-flood-project-case",
-              "headline": "Co’s Co-Accused Plead Not Guilty in P77-M Bulacan Flood Control Project Malversation Case at Sandiganbayan",
-              "body": "Former congressman Zaldy Co’s co-accused plead not guilty to malversation over an allegedly anomalous P77-million flood control project in Balagtas, Bulacan, as Sandiganbayan proceeds with trial on ...",
-              "published_date": "2026-09-08",
-              "outlet": "Daily Tribune",
-              "image": ""
-            }
-          ]
-        },
-        {
-          "log_date": "2026-09-11",
-          "summary": "The NDRRMC reported that the death toll from the recent storms and southwest monsoon has risen to 44. DPWH Secretary Vince Dizon said flood-hit Pampanga will receive a significant financial package from the Local Government Support Fund to aid recovery. Meanwhile, lingering Habagat conditions continue to threaten farms and food supplies in affected regions.",
-          "news": [
-            {
-              "news_id": "086c8ce04285531d866424107c2521df",
-              "url": "https://www.msn.com/en-ph/money/general/as-habagat-lingers-farms-and-food-supplies-face-growing-risks/ar-AA2bVfUI?ocid=BingNewsVerp",
-              "headline": "As Habagat lingers, farms and food supplies face growing risks",
-              "body": "Heavy flooding across Central Luzon and Metro Manila in late August 2026 showed how monsoon variability has become more ...",
-              "published_date": "2026-09-11",
-              "outlet": "Inquirer.net on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.7r1OwX96l2WUdQRLMoxNig"
-            },
-            {
-              "news_id": "2d2fe329457253e5a8ba602ec6d512e5",
-              "url": "https://businessmirror.com.ph/2026/09/10/storms-habagat-death-toll-now-44/",
-              "headline": "Storms, habagat death toll now 44",
-              "body": "THE National Disaster Risk Reduction and Management Council (NDRRMC) said the death toll of the series of storms that hit the country since August and the effects of the southwest monsoon or habagat ...",
-              "published_date": "2026-09-06T17:20:08+00:00",
-              "outlet": "BusinessMirror",
-              "image": ""
-            },
-            {
-              "news_id": "e693a530b5df502ea38ba0c2c8e7d68e",
-              "url": "https://www.msn.com/en-ph/weather/meteorology/as-habagat-lingers-farms-and-food-supplies-face-growing-risks/ar-AA2bVfUI?ocid=BingNewsVerp",
-              "headline": "As Habagat lingers, farms and food supplies face growing risks",
-              "body": "Heavy flooding across Central Luzon and Metro Manila in late August 2026 showed how monsoon variability has become more ...",
-              "published_date": "2026-09-10",
-              "outlet": "Inquirer.net on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.7r1OwX96l2WUdQRLMoxNig"
-            },
-            {
-              "news_id": "e60ef4606db651a9bafda26856334c08",
-              "url": "https://www.msn.com/en-ph/news/other/dizon-says-flood-hit-pampanga-to-receive-big-financial-package-from-local-gov-t-support-fund/ar-AA2bSTTt",
-              "headline": "Dizon says flood-hit Pampanga to receive 'big financial package' from local gov't support fund",
-              "body": "DPWH Secretary Vince Dizon on Wednesday said flood-hit Pampanga will receive a financial package from the national government to help the province recover from the impact of back-to-back storms and southwest monsoon rains that have caused severe flooding.",
-              "published_date": "2026-09-11",
-              "outlet": "ABS-CBN",
-              "image": "https://od2-image-api.abs-cbn.com/prod/2026090917090/070d0ee916ee5c20345185eb9df9b02450d9fee7c0b2e6b1c58b75824e19e060.jpg?w=1200&h=800"
-            }
-          ]
-        }
-      ],
-      "logs_total": 7
-    },
-    {
       "incident_id": "20260904-ID-VO",
       "tree_id": "38558bba4e8e4cb9b3b5aa83d8aacda1",
       "canonical_name": "Volcano Banten, Indonesia 2026-09-04",
@@ -12497,7 +11734,7 @@
       "event_date": "2026-09-04",
       "first_reported_date": "2026-09-04",
       "last_updated_date": "2026-09-11",
-      "days_since_event": 8,
+      "days_since_event": 9,
       "source_count": 2,
       "should_report": true,
       "search_keys": [],
@@ -13877,7 +13114,7 @@
       "event_date": "2026-09-05",
       "first_reported_date": "2026-09-05",
       "last_updated_date": "2026-09-05",
-      "days_since_event": 7,
+      "days_since_event": 8,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -13943,7 +13180,7 @@
       "event_date": "2026-09-05",
       "first_reported_date": "2026-09-05",
       "last_updated_date": "2026-09-10",
-      "days_since_event": 7,
+      "days_since_event": 8,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
