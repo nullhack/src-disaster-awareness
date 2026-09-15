@@ -1,36 +1,35 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-09-12",
-  "generated_at": "2026-09-15T06:14:47Z",
+  "generated_at": "2026-09-15T17:43:24Z",
   "as_of": "2026-09-12",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 12,
-    "new_today": 2,
+    "reportable_total": 11,
+    "new_today": 3,
     "critical": 3,
     "high": 2,
     "medium": 3,
-    "low": 4,
+    "low": 3,
     "disease_outbreaks": 0,
     "countries_affected": 10,
-    "news_total": 799,
+    "news_total": 794,
     "max_magnitude": 6.8,
     "by_severity": {
       "CRITICAL": 3,
       "HIGH": 2,
       "MEDIUM": 3,
-      "LOW": 4
+      "LOW": 3
     },
     "by_type": {
       "Flood": 1,
       "Earthquake": 5,
       "Forest Fire": 3,
-      "Tropical Cyclone": 1,
       "": 2
     },
     "by_region": {
-      "Asia": 5,
+      "Asia": 4,
       "Europe": 3,
       "Unknown": 2,
       "Oceania": 1,
@@ -40,10 +39,10 @@
   "by_country": [
     {
       "country": "",
-      "count": 3,
+      "count": 2,
       "max_sev_rank": 1,
       "iso2": "XX",
-      "region": "Asia",
+      "region": "Unknown",
       "country_group": "C",
       "max_severity": "LOW"
     },
@@ -5949,161 +5948,6 @@
       "logs_total": 6
     },
     {
-      "incident_id": "20260818-XX-TC",
-      "tree_id": "04cac989e5cf41288cd42034c3aa18f6",
-      "canonical_name": "Tropical Cyclone SEVENTEEN-26 2026-08-18",
-      "summary": "Heavy rain from Tropical Storm Saudel has caused a mudslide in eastern China, with the death toll rising to three and nine people still missing. The mudslide damaged over a dozen houses following days of torrential rain.",
-      "country": "",
-      "iso2": "XX",
-      "lat": 8.3,
-      "lon": 154.6,
-      "country_group": "C",
-      "region": "Asia",
-      "incident_type": "Tropical Cyclone",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "LOW",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-08-18",
-      "first_reported_date": "2026-08-18",
-      "last_updated_date": "2026-09-09",
-      "days_since_event": 28,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 1,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 7
-      },
-      "source_links": [
-        {
-          "type": "GDACS",
-          "label": "Green alert · Tropical Cyclone SEVENTEEN-26 2026-08-18",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=TC&eventid=1001305",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "Green notification for tropical cyclone SEVENTEEN-26. Population affected by Category 1 (120 km/h) wind speeds or higher is 0  (0 in Tropical Storm).",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": "Green",
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Higher typhoon warning possible based on Saudel’s course after rare resurgence",
-          "published_date": "2026-09-02"
-        },
-        {
-          "headline": "Higher typhoon signal possible, depending on Saudel’s course after rare resurgence",
-          "published_date": "2026-09-02"
-        },
-        {
-          "headline": "Huge landslide kills one and buries multiple people alive as rescue teams swarm",
-          "published_date": "2026-09-05"
-        },
-        {
-          "headline": "Three dead and nine missing in China after heavy rain from tropical storm Saudel",
-          "published_date": "2026-09-06"
-        },
-        {
-          "headline": "Three dead and nine missing in China after tropical storm Saudel",
-          "published_date": "2026-09-06"
-        },
-        {
-          "headline": "Typhoon Saudel: Mudslide death toll in China rises to 3",
-          "published_date": "2026-09-07"
-        },
-        {
-          "headline": "Landslides kill 6, leave 9 missing in eastern China",
-          "published_date": "2026-09-09T05:47:21+00:00"
-        }
-      ],
-      "news_total": 7,
-      "logs": [
-        {
-          "log_date": "2026-09-05",
-          "summary": "Typhoon Saudel has undergone a rare resurgence, prompting Hong Kong to maintain a T1 signal with the possibility of a higher warning depending on its course. Meanwhile, the typhoon triggered a landslide in Gaoping town, China's Jiangxi province, leaving one person dead and 11 others missing.",
-          "news": [
-            {
-              "news_id": "d96c1db8a97c5a48a6bcbb747272dd5f",
-              "url": "https://www.msn.com/en-xl/weather/general/higher-typhoon-warning-possible-based-on-saudel-s-course-after-rare-resurgence/ar-AA2bo7I8?ocid=BingNewsVerp",
-              "headline": "Higher typhoon warning possible based on Saudel’s course after rare resurgence",
-              "body": "T1 signal will remain in force in Hong Kong, but tropical cyclone could change course after rare resurgence, bringing uncertainty Hong Kong's weather forecaster could issue a higher typhoon signal ...",
-              "published_date": "2026-09-02",
-              "outlet": "South China Morning Post on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "1e8eb0ede988511f87e1a0cc4d9b9d8b",
-              "url": "https://www.mirror.co.uk/news/world-news/gaoping-landslide-china-typhoon-saudel-37629969",
-              "headline": "Huge landslide kills one and buries multiple people alive as rescue teams swarm",
-              "body": "At least one person is dead and 11 are missing after a landslide struck Gaoping town in Suichuan, a county in China's Jiangxi province, early on Saturday",
-              "published_date": "2026-09-05",
-              "outlet": "The Mirror",
-              "image": "https://www.bing.com/th?id=ONUT.zAhLhK8Dr9Ca64D-PE_t2Q"
-            },
-            {
-              "news_id": "fb1031cf9f535d48a473a48c5edc8f66",
-              "url": "https://www.msn.com/en-xl/weather/general/higher-typhoon-signal-possible-depending-on-saudel-s-course-after-rare-resurgence/ar-AA2bo7I8?ocid=BingNewsVerp",
-              "headline": "Higher typhoon signal possible, depending on Saudel’s course after rare resurgence",
-              "body": "T1 signal will remain in force in Hong Kong on Wednesday, but tropical cyclone could change course after rare resurgence, bringing uncertainty Hong Kong's weather forecaster may issue a higher typhoon ...",
-              "published_date": "2026-09-02",
-              "outlet": "South China Morning Post on MSN",
-              "image": ""
-            }
-          ]
-        },
-        {
-          "log_date": "2026-09-07",
-          "summary": "Heavy rain from Tropical Storm Saudel has caused a mudslide in eastern China, with the death toll rising to three and nine people still missing. The mudslide damaged over a dozen houses following days of torrential rain.",
-          "news": [
-            {
-              "news_id": "0a4e1d06008e526a9ebd0e27f4bdaa73",
-              "url": "https://malaysia.news.yahoo.com/two-dead-10-missing-mudslide-052151993.html",
-              "headline": "Three dead and nine missing in China after heavy rain from tropical storm Saudel",
-              "body": "Tropical cyclone Saudel damages dozen houses following days of torrential rain",
-              "published_date": "2026-09-06",
-              "outlet": "Yahoo Malaysia",
-              "image": "https://s.yimg.com/lo/mysterio/api/4fe1c211db850e6f99a8aefb11bca12b99c60e1aece47f125da5600fda6a8996/lightyear_networkapi/smartcrop_w896_h504_faces;quality_95/https://media.zenfs.com/en/afp.com.sg/ea10908a22ede1c9b069989d1a615387.jpg"
-            },
-            {
-              "news_id": "e11ac9d31e4454a986884ccb1191d702",
-              "url": "https://www.independent.co.uk/asia/china/death-mudslide-china-tropical-storm-saudel-b3045406.html",
-              "headline": "Three dead and nine missing in China after tropical storm Saudel",
-              "body": "Tropical cyclone Saudel damages dozen houses following days of torrential rain",
-              "published_date": "2026-09-06",
-              "outlet": "The Independent",
-              "image": "https://static.independent.co.uk/2026/09/06/03/China_Jiangxi_Mudslide_82877.jpg?width=1200&height=800&crop=1200:800"
-            },
-            {
-              "news_id": "041a73f3bc345f76b01417edbd32913b",
-              "url": "https://www.msn.com/en-ph/news/other/typhoon-saudel-mudslide-death-toll-in-china-rises-to-3/ar-AA2bGDWg?ocid=BingNewsVerp",
-              "headline": "Typhoon Saudel: Mudslide death toll in China rises to 3",
-              "body": "BEIJING — The death toll from a mudslide in eastern China rose to three on Sunday, after days of torrential rain brought by Typhoon Saudel. Nine others were still missing. The mudslide hit part of a ...",
-              "published_date": "2026-09-07",
-              "outlet": "Global News - Inquirer.net on MSN",
-              "image": ""
-            }
-          ]
-        }
-      ],
-      "logs_total": 2
-    },
-    {
       "incident_id": "20260824-TL-EQ",
       "tree_id": "cf4a9ac4e85b45f5b50a6042d238bb8b",
       "canonical_name": "Earthquake M6.0 Lospalos, Timor-Leste 2026-08-24",
@@ -6126,7 +5970,7 @@
       "disease_name": null,
       "event_date": "2026-08-24",
       "first_reported_date": "2026-08-24",
-      "last_updated_date": "2026-09-11",
+      "last_updated_date": "2026-09-12",
       "days_since_event": 22,
       "source_count": 1,
       "should_report": true,
@@ -6137,7 +5981,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 3
+        "news": 5
       },
       "source_links": [
         {
@@ -6169,9 +6013,17 @@
         {
           "headline": "M5.3 earthquake hits Timor-Leste",
           "published_date": "2026-09-11"
+        },
+        {
+          "headline": "M5.3 earthquake hits Timor-Leste",
+          "published_date": "2026-09-11"
+        },
+        {
+          "headline": "Darwin homes shaken as 5.9 magnitude earthquake strikes in Banda Sea off Timor coast",
+          "published_date": "2026-09-12T05:09:00+00:00"
         }
       ],
-      "news_total": 3,
+      "news_total": 5,
       "logs": [
         {
           "log_date": "2026-09-11",

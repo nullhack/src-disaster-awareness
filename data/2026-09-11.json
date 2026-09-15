@@ -1,36 +1,35 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-09-11",
-  "generated_at": "2026-09-15T06:14:47Z",
+  "generated_at": "2026-09-15T17:43:24Z",
   "as_of": "2026-09-11",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 10,
-    "new_today": 2,
+    "reportable_total": 8,
+    "new_today": 1,
     "critical": 2,
     "high": 2,
-    "medium": 3,
-    "low": 3,
+    "medium": 2,
+    "low": 2,
     "disease_outbreaks": 0,
-    "countries_affected": 8,
-    "news_total": 441,
+    "countries_affected": 7,
+    "news_total": 431,
     "max_magnitude": 6.5,
     "by_severity": {
       "CRITICAL": 2,
       "HIGH": 2,
-      "MEDIUM": 3,
-      "LOW": 3
+      "MEDIUM": 2,
+      "LOW": 2
     },
     "by_type": {
       "Flood": 1,
-      "Earthquake": 4,
+      "Earthquake": 3,
       "Forest Fire": 3,
-      "Tropical Cyclone": 1,
       "": 1
     },
     "by_region": {
-      "Asia": 4,
+      "Asia": 2,
       "Europe": 3,
       "Unknown": 2,
       "Oceania": 1
@@ -39,10 +38,10 @@
   "by_country": [
     {
       "country": "",
-      "count": 3,
+      "count": 2,
       "max_sev_rank": 1,
       "iso2": "XX",
-      "region": "Asia",
+      "region": "Unknown",
       "country_group": "C",
       "max_severity": "LOW"
     },
@@ -60,15 +59,6 @@
       "count": 1,
       "max_sev_rank": 2,
       "iso2": "CN",
-      "region": "Asia",
-      "country_group": "A",
-      "max_severity": "MEDIUM"
-    },
-    {
-      "country": "Timor-Leste",
-      "count": 1,
-      "max_sev_rank": 2,
-      "iso2": "TL",
       "region": "Asia",
       "country_group": "A",
       "max_severity": "MEDIUM"
@@ -3892,267 +3882,6 @@
         }
       ],
       "logs_total": 6
-    },
-    {
-      "incident_id": "20260818-XX-TC",
-      "tree_id": "04cac989e5cf41288cd42034c3aa18f6",
-      "canonical_name": "Tropical Cyclone SEVENTEEN-26 2026-08-18",
-      "summary": "Heavy rain from Tropical Storm Saudel has caused a mudslide in eastern China, with the death toll rising to three and nine people still missing. The mudslide damaged over a dozen houses following days of torrential rain.",
-      "country": "",
-      "iso2": "XX",
-      "lat": 8.3,
-      "lon": 154.6,
-      "country_group": "C",
-      "region": "Asia",
-      "incident_type": "Tropical Cyclone",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "LOW",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-08-18",
-      "first_reported_date": "2026-08-18",
-      "last_updated_date": "2026-09-09",
-      "days_since_event": 28,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 1,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 7
-      },
-      "source_links": [
-        {
-          "type": "GDACS",
-          "label": "Green alert · Tropical Cyclone SEVENTEEN-26 2026-08-18",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=TC&eventid=1001305",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "Green notification for tropical cyclone SEVENTEEN-26. Population affected by Category 1 (120 km/h) wind speeds or higher is 0  (0 in Tropical Storm).",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": "Green",
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Higher typhoon warning possible based on Saudel’s course after rare resurgence",
-          "published_date": "2026-09-02"
-        },
-        {
-          "headline": "Higher typhoon signal possible, depending on Saudel’s course after rare resurgence",
-          "published_date": "2026-09-02"
-        },
-        {
-          "headline": "Huge landslide kills one and buries multiple people alive as rescue teams swarm",
-          "published_date": "2026-09-05"
-        },
-        {
-          "headline": "Three dead and nine missing in China after heavy rain from tropical storm Saudel",
-          "published_date": "2026-09-06"
-        },
-        {
-          "headline": "Three dead and nine missing in China after tropical storm Saudel",
-          "published_date": "2026-09-06"
-        },
-        {
-          "headline": "Typhoon Saudel: Mudslide death toll in China rises to 3",
-          "published_date": "2026-09-07"
-        },
-        {
-          "headline": "Landslides kill 6, leave 9 missing in eastern China",
-          "published_date": "2026-09-09T05:47:21+00:00"
-        }
-      ],
-      "news_total": 7,
-      "logs": [
-        {
-          "log_date": "2026-09-05",
-          "summary": "Typhoon Saudel has undergone a rare resurgence, prompting Hong Kong to maintain a T1 signal with the possibility of a higher warning depending on its course. Meanwhile, the typhoon triggered a landslide in Gaoping town, China's Jiangxi province, leaving one person dead and 11 others missing.",
-          "news": [
-            {
-              "news_id": "d96c1db8a97c5a48a6bcbb747272dd5f",
-              "url": "https://www.msn.com/en-xl/weather/general/higher-typhoon-warning-possible-based-on-saudel-s-course-after-rare-resurgence/ar-AA2bo7I8?ocid=BingNewsVerp",
-              "headline": "Higher typhoon warning possible based on Saudel’s course after rare resurgence",
-              "body": "T1 signal will remain in force in Hong Kong, but tropical cyclone could change course after rare resurgence, bringing uncertainty Hong Kong's weather forecaster could issue a higher typhoon signal ...",
-              "published_date": "2026-09-02",
-              "outlet": "South China Morning Post on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "1e8eb0ede988511f87e1a0cc4d9b9d8b",
-              "url": "https://www.mirror.co.uk/news/world-news/gaoping-landslide-china-typhoon-saudel-37629969",
-              "headline": "Huge landslide kills one and buries multiple people alive as rescue teams swarm",
-              "body": "At least one person is dead and 11 are missing after a landslide struck Gaoping town in Suichuan, a county in China's Jiangxi province, early on Saturday",
-              "published_date": "2026-09-05",
-              "outlet": "The Mirror",
-              "image": "https://www.bing.com/th?id=ONUT.zAhLhK8Dr9Ca64D-PE_t2Q"
-            },
-            {
-              "news_id": "fb1031cf9f535d48a473a48c5edc8f66",
-              "url": "https://www.msn.com/en-xl/weather/general/higher-typhoon-signal-possible-depending-on-saudel-s-course-after-rare-resurgence/ar-AA2bo7I8?ocid=BingNewsVerp",
-              "headline": "Higher typhoon signal possible, depending on Saudel’s course after rare resurgence",
-              "body": "T1 signal will remain in force in Hong Kong on Wednesday, but tropical cyclone could change course after rare resurgence, bringing uncertainty Hong Kong's weather forecaster may issue a higher typhoon ...",
-              "published_date": "2026-09-02",
-              "outlet": "South China Morning Post on MSN",
-              "image": ""
-            }
-          ]
-        },
-        {
-          "log_date": "2026-09-07",
-          "summary": "Heavy rain from Tropical Storm Saudel has caused a mudslide in eastern China, with the death toll rising to three and nine people still missing. The mudslide damaged over a dozen houses following days of torrential rain.",
-          "news": [
-            {
-              "news_id": "0a4e1d06008e526a9ebd0e27f4bdaa73",
-              "url": "https://malaysia.news.yahoo.com/two-dead-10-missing-mudslide-052151993.html",
-              "headline": "Three dead and nine missing in China after heavy rain from tropical storm Saudel",
-              "body": "Tropical cyclone Saudel damages dozen houses following days of torrential rain",
-              "published_date": "2026-09-06",
-              "outlet": "Yahoo Malaysia",
-              "image": "https://s.yimg.com/lo/mysterio/api/4fe1c211db850e6f99a8aefb11bca12b99c60e1aece47f125da5600fda6a8996/lightyear_networkapi/smartcrop_w896_h504_faces;quality_95/https://media.zenfs.com/en/afp.com.sg/ea10908a22ede1c9b069989d1a615387.jpg"
-            },
-            {
-              "news_id": "e11ac9d31e4454a986884ccb1191d702",
-              "url": "https://www.independent.co.uk/asia/china/death-mudslide-china-tropical-storm-saudel-b3045406.html",
-              "headline": "Three dead and nine missing in China after tropical storm Saudel",
-              "body": "Tropical cyclone Saudel damages dozen houses following days of torrential rain",
-              "published_date": "2026-09-06",
-              "outlet": "The Independent",
-              "image": "https://static.independent.co.uk/2026/09/06/03/China_Jiangxi_Mudslide_82877.jpg?width=1200&height=800&crop=1200:800"
-            },
-            {
-              "news_id": "041a73f3bc345f76b01417edbd32913b",
-              "url": "https://www.msn.com/en-ph/news/other/typhoon-saudel-mudslide-death-toll-in-china-rises-to-3/ar-AA2bGDWg?ocid=BingNewsVerp",
-              "headline": "Typhoon Saudel: Mudslide death toll in China rises to 3",
-              "body": "BEIJING — The death toll from a mudslide in eastern China rose to three on Sunday, after days of torrential rain brought by Typhoon Saudel. Nine others were still missing. The mudslide hit part of a ...",
-              "published_date": "2026-09-07",
-              "outlet": "Global News - Inquirer.net on MSN",
-              "image": ""
-            }
-          ]
-        }
-      ],
-      "logs_total": 2
-    },
-    {
-      "incident_id": "20260824-TL-EQ",
-      "tree_id": "cf4a9ac4e85b45f5b50a6042d238bb8b",
-      "canonical_name": "Earthquake M6.0 Lospalos, Timor-Leste 2026-08-24",
-      "summary": "A magnitude 6.0 earthquake struck off the coast of Lospalos in the Banda Sea late Monday night. Additionally, a magnitude 5.3 earthquake was recorded 83 kilometers east of Lospalos, Timor-Leste, on Thursday, according to the U.S. Geological Survey.",
-      "country": "Timor-Leste",
-      "iso2": "TL",
-      "lat": -6.6264,
-      "lon": 127.4598,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-08-24",
-      "first_reported_date": "2026-08-24",
-      "last_updated_date": "2026-09-11",
-      "days_since_event": 22,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 3
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 6.0 - 215 km NNE of Lospalos, Timor Leste",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tn41",
-          "meta": "10 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 6.0,
-        "max_depth_km": 10.0,
-        "place": "215 km NNE of Lospalos, Timor Leste",
-        "felt": null,
-        "sig": 554,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Magnitude 6.0 earthquake strikes off the coast of Timor-Leste along the Pacific Ring of Fire",
-          "published_date": "2026-08-25"
-        },
-        {
-          "headline": "Magnitude 6.0 earthquake strikes off the coast of Timor-Leste along the Pacific Ring of Fire",
-          "published_date": "2026-08-25"
-        },
-        {
-          "headline": "M5.3 earthquake hits Timor-Leste",
-          "published_date": "2026-09-11"
-        }
-      ],
-      "news_total": 3,
-      "logs": [
-        {
-          "log_date": "2026-09-11",
-          "summary": "A magnitude 6.0 earthquake struck off the coast of Lospalos in the Banda Sea late Monday night. Additionally, a magnitude 5.3 earthquake was recorded 83 kilometers east of Lospalos, Timor-Leste, on Thursday, according to the U.S. Geological Survey.",
-          "news": [
-            {
-              "news_id": "1169ae7b0d6954f29d5c57ce24001f47",
-              "url": "https://www.msn.com/en-us/public-safety-and-emergencies/natural-disasters/magnitude-6-0-earthquake-strikes-off-the-coast-of-timor-leste-along-the-pacific-ring-of-fire/ar-AA2aPF5l?ocid=BingNewsVerp",
-              "headline": "Magnitude 6.0 earthquake strikes off the coast of Timor-Leste along the Pacific Ring of Fire",
-              "body": "A magnitude 6.0 earthquake struck off the coast of Lospalos in the Banda Sea late Monday night.",
-              "published_date": "2026-08-25",
-              "outlet": "Fox Weather on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.blE94sNxUn57fij6XCmBpA"
-            },
-            {
-              "news_id": "cb16c8e996045fc7adcaf39b6f003554",
-              "url": "https://qazinform.com/news/m53-earthquake-hits-timor-leste-792506",
-              "headline": "M5.3 earthquake hits Timor-Leste",
-              "body": "A magnitude 5.3 earthquake struck 83 kilometers east of Lospalos, Timor-Leste, on Thursday, according to the U.S. Geological Survey (USGS), Qazinform News Agency reports.",
-              "published_date": "2026-09-11",
-              "outlet": "qazinform",
-              "image": "https://www.bing.com/th?id=ONUT.l70J-YPZFv9QO_uBlyunoA"
-            },
-            {
-              "news_id": "a94a9c198eae5d0d89c40cafa739178c",
-              "url": "https://www.msn.com/en-us/public-safety-and-emergencies/natural-disasters/magnitude-6-0-earthquake-strikes-off-the-coast-of-timor-leste-along-the-pacific-ring-of-fire/ar-AA2aPF5l",
-              "headline": "Magnitude 6.0 earthquake strikes off the coast of Timor-Leste along the Pacific Ring of Fire",
-              "body": "A magnitude 6.0 earthquake struck off the coast of Lospalos in the Banda Sea late Monday night.",
-              "published_date": "2026-08-25",
-              "outlet": "Fox Weather",
-              "image": "https://s.yimg.com/lo/mysterio/api/6d7ae33223c4ddbf9ba06368a51b585c90179ab523302cd193e0944a454d2c9c/lightyear_networkapi/resizefill_w1200;quality_80;format_jpg/https://media.zenfs.com/en/fox_weather_articles_483/53ecc49946ca3525afaf81e744f4c750.png"
-            }
-          ]
-        }
-      ],
-      "logs_total": 1
     },
     {
       "incident_id": "20260831-XX-OT",
