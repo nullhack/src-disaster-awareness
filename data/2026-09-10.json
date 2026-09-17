@@ -1,56 +1,56 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-09-10",
-  "generated_at": "2026-09-16T17:39:31Z",
+  "generated_at": "2026-09-17T06:14:54Z",
   "as_of": "2026-09-10",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 8,
+    "reportable_total": 7,
     "new_today": 0,
     "critical": 1,
-    "high": 2,
+    "high": 1,
     "medium": 3,
     "low": 2,
     "disease_outbreaks": 0,
     "countries_affected": 6,
-    "news_total": 300,
+    "news_total": 298,
     "max_magnitude": 6.5,
     "by_severity": {
       "CRITICAL": 1,
-      "HIGH": 2,
+      "HIGH": 1,
       "MEDIUM": 3,
       "LOW": 2
     },
     "by_type": {
       "Flood": 1,
-      "Earthquake": 4,
+      "Earthquake": 3,
       "Forest Fire": 2,
       "": 1
     },
     "by_region": {
       "Asia": 3,
       "Europe": 2,
-      "Unknown": 2,
+      "Unknown": 1,
       "Oceania": 1
     }
   },
   "by_country": [
-    {
-      "country": "",
-      "count": 2,
-      "max_sev_rank": 1,
-      "iso2": "XX",
-      "region": "Unknown",
-      "country_group": "C",
-      "max_severity": "LOW"
-    },
     {
       "country": "Serbia",
       "count": 1,
       "max_sev_rank": 1,
       "iso2": "RS",
       "region": "Europe",
+      "country_group": "C",
+      "max_severity": "LOW"
+    },
+    {
+      "country": "",
+      "count": 1,
+      "max_sev_rank": 1,
+      "iso2": "XX",
+      "region": "Unknown",
       "country_group": "C",
       "max_severity": "LOW"
     },
@@ -116,7 +116,7 @@
       "event_date": "2026-06-06",
       "first_reported_date": "2026-06-06",
       "last_updated_date": "2026-09-06",
-      "days_since_event": 102,
+      "days_since_event": 103,
       "source_count": 3,
       "should_report": true,
       "search_keys": [],
@@ -704,7 +704,7 @@
       "event_date": "2026-06-26",
       "first_reported_date": "2026-06-26",
       "last_updated_date": "2026-09-08",
-      "days_since_event": 82,
+      "days_since_event": 83,
       "source_count": 4,
       "should_report": true,
       "search_keys": [],
@@ -1310,7 +1310,7 @@
       "event_date": "2026-08-05",
       "first_reported_date": "2026-08-05",
       "last_updated_date": "2026-09-06",
-      "days_since_event": 42,
+      "days_since_event": 43,
       "source_count": 2,
       "should_report": false,
       "search_keys": [],
@@ -1617,7 +1617,7 @@
       "event_date": "2026-08-14",
       "first_reported_date": "2026-08-14",
       "last_updated_date": "2026-09-06",
-      "days_since_event": 33,
+      "days_since_event": 34,
       "source_count": 2,
       "should_report": true,
       "search_keys": [],
@@ -2371,7 +2371,7 @@
       "event_date": "2026-08-28",
       "first_reported_date": "2026-08-28",
       "last_updated_date": "2026-09-03",
-      "days_since_event": 19,
+      "days_since_event": 20,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -2477,7 +2477,7 @@
       "event_date": "2026-08-31",
       "first_reported_date": "2026-08-31",
       "last_updated_date": "2026-09-08",
-      "days_since_event": 16,
+      "days_since_event": 17,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -2742,78 +2742,6 @@
       "logs_total": 1
     },
     {
-      "incident_id": "20260903-XX-EQ",
-      "tree_id": "0b0b8c87c3a04a84a81a9f224394f095",
-      "canonical_name": "Earthquake M6.3 Ocean 2026-09-03",
-      "summary": "",
-      "country": "",
-      "iso2": "XX",
-      "lat": 52.2579,
-      "lon": -169.4088,
-      "country_group": "C",
-      "region": "Unknown",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "HIGH",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-09-03",
-      "first_reported_date": "2026-09-03",
-      "last_updated_date": "2026-09-08",
-      "days_since_event": 13,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 2
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 6.3 - 84 km SSW of Nikolski, Alaska",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tdvt",
-          "meta": "35 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 6.3,
-        "max_depth_km": 35.0,
-        "place": "84 km SSW of Nikolski, Alaska",
-        "felt": 3,
-        "sig": 612,
-        "tsunami": true,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Alaska Earthquake Strikes as Recent Tremors Raise Questions About Global Seismic Activity",
-          "url": "https://colombiaone.com/2026/09/05/earthquake-alaska/",
-          "outlet": "colombiaone",
-          "published_date": "2026-09-05"
-        },
-        {
-          "headline": "Prabowo orders disaster mitigation masterplan as Indonesia grapples with multiple crises",
-          "url": "https://www.channelnewsasia.com/asia/indonesia-disasters-krakatau-forest-fires-6368531",
-          "outlet": "CNA",
-          "published_date": "2026-09-08"
-        }
-      ],
-      "news_total": 2,
-      "logs": [],
-      "logs_total": 0
-    },
-    {
       "incident_id": "20260905-PG-EQ",
       "tree_id": "75ef15d960994968aab123d6eefd753d",
       "canonical_name": "Earthquake M5.5 Kokopo, Papua New Guinea 2026-09-05",
@@ -2837,7 +2765,7 @@
       "event_date": "2026-09-05",
       "first_reported_date": "2026-09-05",
       "last_updated_date": "2026-09-05",
-      "days_since_event": 11,
+      "days_since_event": 12,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
