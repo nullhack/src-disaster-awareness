@@ -1,24 +1,24 @@
 {
   "schema_version": "1.5",
-  "report_date": "2026-09-24",
+  "report_date": "2026-09-25",
   "generated_at": "2026-09-25T06:13:55Z",
-  "as_of": "2026-09-24",
+  "as_of": "2026-09-25",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 29,
-    "new_today": 14,
+    "reportable_total": 28,
+    "new_today": 0,
     "critical": 14,
-    "high": 5,
+    "high": 4,
     "medium": 6,
     "low": 4,
     "disease_outbreaks": 3,
     "countries_affected": 19,
-    "news_total": 10710,
+    "news_total": 10709,
     "max_magnitude": 7.7,
     "by_severity": {
       "CRITICAL": 14,
-      "HIGH": 5,
+      "HIGH": 4,
       "MEDIUM": 6,
       "LOW": 4
     },
@@ -26,7 +26,7 @@
       "Disease": 3,
       "Drought": 2,
       "Flood": 5,
-      "Earthquake": 7,
+      "Earthquake": 6,
       "Severe Weather": 3,
       "Conflict": 3,
       "Forest Fire": 2,
@@ -39,14 +39,14 @@
       "Americas": 6,
       "Asia": 12,
       "Europe": 4,
-      "Unknown": 2,
+      "Unknown": 1,
       "Oceania": 1
     }
   },
   "by_country": [
     {
       "country": "",
-      "count": 9,
+      "count": 8,
       "max_sev_rank": 1,
       "iso2": "XX",
       "region": "Global",
@@ -60512,72 +60512,6 @@
         }
       ],
       "logs_total": 4
-    },
-    {
-      "incident_id": "20260917-XX-EQ",
-      "tree_id": "b5b47b203a1a4f28bf6b8a79810ad668",
-      "canonical_name": "Earthquake M6.5 Ocean 2026-09-17",
-      "summary": "",
-      "country": "",
-      "iso2": "XX",
-      "lat": 52.7648,
-      "lon": -171.2949,
-      "country_group": "C",
-      "region": "Unknown",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "HIGH",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-09-17",
-      "first_reported_date": "2026-09-17",
-      "last_updated_date": "2026-09-17",
-      "days_since_event": 8,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 1
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 6.5 - 165 km W of Nikolski, Alaska",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ti1p",
-          "meta": "111.666 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 6.5,
-        "max_depth_km": 111.666,
-        "place": "165 km W of Nikolski, Alaska",
-        "felt": 6,
-        "sig": 652,
-        "tsunami": true,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Magnitude 6.5 earthquake hits southwest Alaska",
-          "url": "https://www.usatoday.com/story/news/nation/2026/09/17/earthquake-hits-alaska-aleutian-islands/91807289007/",
-          "outlet": "USA TODAY",
-          "published_date": "2026-09-17"
-        }
-      ],
-      "news_total": 1,
-      "logs": [],
-      "logs_total": 0
     },
     {
       "incident_id": "20260920-ZA-EQ",
