@@ -1,26 +1,26 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-10-03",
-  "generated_at": "2026-10-03T06:40:35Z",
+  "generated_at": "2026-10-03T17:27:23Z",
   "as_of": "2026-10-03",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 24,
-    "new_today": 11,
+    "reportable_total": 25,
+    "new_today": 13,
     "critical": 14,
     "high": 3,
     "medium": 5,
-    "low": 2,
+    "low": 3,
     "disease_outbreaks": 3,
     "countries_affected": 17,
-    "news_total": 11125,
+    "news_total": 11178,
     "max_magnitude": 7.5,
     "by_severity": {
       "CRITICAL": 14,
       "HIGH": 3,
       "MEDIUM": 5,
-      "LOW": 2
+      "LOW": 3
     },
     "by_type": {
       "Disease": 3,
@@ -31,7 +31,8 @@
       "Flood": 4,
       "Severe Weather": 2,
       "Volcano": 1,
-      "Tropical Cyclone": 2
+      "Tropical Cyclone": 2,
+      "": 1
     },
     "by_region": {
       "Global": 2,
@@ -39,11 +40,20 @@
       "Asia": 10,
       "Americas": 4,
       "Europe": 3,
-      "Unknown": 2,
+      "Unknown": 3,
       "Oceania": 2
     }
   },
   "by_country": [
+    {
+      "country": "",
+      "count": 7,
+      "max_sev_rank": 1,
+      "iso2": "XX",
+      "region": "Global",
+      "country_group": "C",
+      "max_severity": "LOW"
+    },
     {
       "country": "India",
       "count": 2,
@@ -61,15 +71,6 @@
       "region": "Asia",
       "country_group": "A",
       "max_severity": "LOW"
-    },
-    {
-      "country": "",
-      "count": 6,
-      "max_sev_rank": 2,
-      "iso2": "XX",
-      "region": "Global",
-      "country_group": "C",
-      "max_severity": "MEDIUM"
     },
     {
       "country": "Vanuatu",
@@ -1122,7 +1123,7 @@
       "disease_name": "Covid-19",
       "event_date": "2025-05-28",
       "first_reported_date": "2025-05-28",
-      "last_updated_date": "2026-10-02",
+      "last_updated_date": "2026-10-03",
       "days_since_event": 493,
       "source_count": 1,
       "should_report": false,
@@ -1133,7 +1134,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 246
+        "news": 250
       },
       "source_links": [
         {
@@ -2103,6 +2104,10 @@
           "published_date": "2026-09-29"
         },
         {
+          "headline": "17 Mitchell County residents convicted in nearly $500K PPP fraud case",
+          "published_date": "2026-09-30"
+        },
+        {
           "headline": "Can I still get a COVID vaccine? What you need to know about the latest updates",
           "published_date": "2026-09-30"
         },
@@ -2113,6 +2118,10 @@
         {
           "headline": "CMS Allegedly Considering the Sunsetting of COVID-19 Data-Reporting Requirements for Certain Long-Term Care Facilities",
           "published_date": "2026-09-30T00:00:00+00:00"
+        },
+        {
+          "headline": "Your guide to vaccines for flu, COVID-19 and RSV in Wisconsin",
+          "published_date": "2026-10-01"
         },
         {
           "headline": "Qatar Airways Ends These 20 Long-Haul Routes Since 2016",
@@ -2127,6 +2136,10 @@
           "published_date": "2026-10-01"
         },
         {
+          "headline": "Flu, COVID-19, RSV immunizations: What to know this respiratory virus season",
+          "published_date": "2026-10-02"
+        },
+        {
           "headline": "US Health Groups Set Out Flu, COVID-19 and RSV Vaccine Guidance for 2026–27",
           "published_date": "2026-10-02"
         },
@@ -2137,9 +2150,13 @@
         {
           "headline": "Your guide to vaccines for flu, COVID-19 and RSV in Wisconsin",
           "published_date": "2026-10-02"
+        },
+        {
+          "headline": "Karl-Anthony Towns Who Lost Mom To COVID-19 Talks Of Value Of Vaccine",
+          "published_date": "2026-10-03T02:44:23+00:00"
         }
       ],
-      "news_total": 246,
+      "news_total": 250,
       "logs": [
         {
           "log_date": "2026-07-08",
@@ -2388,7 +2405,7 @@
       "incident_id": "20250905-CD-DI",
       "tree_id": "5c179437a46a56aca2f8b70aeceda07a",
       "canonical_name": "Ebola Kinshasa, DR Congo 2025-09-05",
-      "summary": "DR Congo's Ebola outbreak has surpassed 8,000 confirmed cases amid a shortage of health workers, while the Africa CDC chief says contact tracing is falling far short, with only about 30,000 exposed people identified. Save the Children reports 961 children have died—about seven per day on average—with under-fives at greatest risk. Separately, NanoViricides has begun enrollment and dosing in a Phase II clinical trial of the oral drug NV-387 to treat Ebola.\nGovernment figures show the DR Congo Ebola outbreak has now killed more than 4,000 people, making it the deadliest and fastest-growing outbreak on record. In a separate development, a fire destroyed a key Ebola transit centre in Ituri as fighting and displacement disrupted response efforts. Additionally, Island Pharmaceuticals has begun manufacturing the antiviral Galidesivir for an investigational Ebola treatment program.",
+      "summary": "The Ebola death toll in DR Congo has risen above 4,000, and a treatment/transit centre was burned down, forcing nearly 19,000 people to flee. In addition, six new Ebola cases have been detected in M23-controlled areas, as health officials call for greater community cooperation in response efforts.",
       "country": "DR Congo",
       "iso2": "CD",
       "lat": -4.0,
@@ -2418,7 +2435,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 559
+        "news": 560
       },
       "source_links": [
         {
@@ -4752,6 +4769,10 @@
           "published_date": "2026-10-02"
         },
         {
+          "headline": "Six new Ebola cases detected in M23-controlled areas of eastern DRC | The Eastleigh Voice",
+          "published_date": "2026-10-02"
+        },
+        {
           "headline": "Ebola death toll surpasses 4,000 as DR Congo struggles to suppress outbreak",
           "published_date": "2026-10-03"
         },
@@ -4760,7 +4781,7 @@
           "published_date": "2026-10-03T05:41:42+00:00"
         }
       ],
-      "news_total": 559,
+      "news_total": 560,
       "logs": [
         {
           "log_date": "2026-07-10",
@@ -5138,183 +5159,6 @@
           ]
         },
         {
-          "log_date": "2026-09-29",
-          "summary": "This batch reports updated Ebola figures for the DRC outbreak, with 8,067 confirmed cases and 3,901 deaths as of Sept. 26, and confirms cases surpassing 8,000. The outbreak is now described as the deadliest ever recorded in the DRC and the second deadliest globally, with one report citing a vaccine-resistant strain and continued transmission driven by insufficient contact tracing and community deaths.\nCanada has imposed a 60‑day entry restriction on travelers from the Democratic Republic of Congo, Uganda, and South Sudan in response to the Ebola outbreak. The outbreak continues with over 8,000 confirmed cases and nearly 4,000 deaths, while violence and humanitarian access issues persist, as highlighted by a returning doctor and reports of ongoing unrest.",
-          "news": [
-            {
-              "news_id": "e9258547554c552bbdba7023476b7d48",
-              "url": "https://www.washingtonpost.com/world/2026/09/28/congo-ebola-outbreak-virus/6f80aca2-bb21-11f1-81fc-9b76f8343b6c_story.html",
-              "headline": "Congo's Ebola outbreak tops 8,000 confirmed cases as disease remains out of control",
-              "body": "The number of confirmed Ebola cases in Congo has surged past 8,000 as the country struggles with a shortage of health workers ...",
-              "published_date": "2026-09-28T00:00:00+00:00",
-              "outlet": "The Washington Post",
-              "image": "https://www.bing.com/th?id=ONUT.O-ZGdZf95r6e5c3NcSpuJg"
-            },
-            {
-              "news_id": "739fe19a10b4514da61488720c1105d5",
-              "url": "https://www.msn.com/en-xl/news/other/dr-congo-ebola-emergency-calls-grow-for-urgent-humanitarian-access/ar-AA2daeqq?ocid=BingNewsVerp",
-              "headline": "DR Congo Ebola emergency - Calls grow for urgent humanitarian access",
-              "body": "Aid teams trying to keep deadly Ebola disease from spreading in the Democratic Republic of the Congo (DRC) are increasingly concerned about ongoing fighting and violence that has forced thousands of ...",
-              "published_date": "2026-09-29",
-              "outlet": "AllAfrica on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "cd790d4d200b5429a7cee6ef4f60d274",
-              "url": "https://bacolod.bomboradyo.com/kumpirmado-nga-ebola-cases-sa-dr-congo-naglapaw-na-sa-otso-mil/",
-              "headline": "Kumpirmado nga Ebola cases sa DR Congo, naglapaw na sa otso mil",
-              "body": "Kumpirmado nga Ebola cases sa DR Congo, naglapaw na sa otso mil",
-              "published_date": "2026-09-29",
-              "outlet": "bacolod.bomboradyo",
-              "image": "https://www.bing.com/th?id=ONUT.YSGX0_PVe3rR0zhFzGSKOw"
-            },
-            {
-              "news_id": "b817f956beb259a986b70e16f2fb6227",
-              "url": "https://www.bizpacreview.com/2026/09/28/ebola-explodes-in-africa-much-faster-than-infamous-2010s-outbreak-1660992/",
-              "headline": "Ebola explodes in Africa much faster than infamous 2010s outbreak",
-              "body": "The Ebola virus has returned with a vengeance as a new strain spreads across central Africa at breakneck speed. With over 8,000 confirmed cases of ebola in […]",
-              "published_date": "2026-09-28",
-              "outlet": "BizPac Review",
-              "image": ""
-            },
-            {
-              "news_id": "70c1b88e3834561b84d0f0034f0bd550",
-              "url": "https://gazettengr.com/dr-congo-ebola-cases-hit-8067-as-violence-disrupts-humanitarian-response/",
-              "headline": "DR Congo Ebola cases hit 8,067 as violence disrupts humanitarian response",
-              "body": "DR Congo has confirmed 8,067 Ebola cases and 3,901 deaths as violence and insecurity in the Ituri Province disrupt humanitarian efforts, displacing thousands of individuals.",
-              "published_date": "2026-09-29",
-              "outlet": "Peoples Gazette",
-              "image": ""
-            },
-            {
-              "news_id": "274164bfc13858f0a568768481a70fa2",
-              "url": "https://novojornal.co.ao/internacional/detalhe/ebolardc-balanco-confirma-8067-casos-e-3901-mortes-ate-26-de-setembro-74980.html",
-              "headline": "Ébola/RDC: balanço confirma 8.067 casos e 3.901 mortes até 26 de Setembro",
-              "body": "O Ministério da Saúde da República do Congo (RDC) divulgou no último domingo, 27, que o surto de Ébola, provocado pelo vírus Bundibugyo, sem tratamento ou vacina conhecidos, atingiu os 8.067 casos e as 3.901 mortes.",
-              "published_date": "2026-09-28",
-              "outlet": "Novo Jornal",
-              "image": "https://www.bing.com/th?id=ONUT.M4tBghXIKeS-GlR_3G_25w"
-            },
-            {
-              "news_id": "ee015b03b8e659b6be8b276a33f69ec8",
-              "url": "https://english.news.cn/20260928/9422b1eb33004014a9153d5460467095/c.html",
-              "headline": "DR Congo Ebola cases top 8,000 as WHO warns outbreak still expanding",
-              "body": "KINSHASA, Sept. 28 (Xinhua) -- Confirmed Ebola cases in the Democratic Republic of the Congo (DRC) have surpassed 8,000, the DRC health authorities said Monday, as the World Health Organization (WHO) ...",
-              "published_date": "2026-09-28",
-              "outlet": "Xinhua",
-              "image": ""
-            },
-            {
-              "news_id": "d4d72e1fc8a2530f9c192c4c24cffa20",
-              "url": "https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda",
-              "headline": "Ebola disease outbreak in the Democratic Republic of the Congo",
-              "body": "Since May 2026, an Ebola virus disease outbreak caused by Bundibugyo virus has been ongoing in the Democratic Republic of the Congo (DRC).",
-              "published_date": "2026-09-28",
-              "outlet": "ecdc.europa",
-              "image": ""
-            },
-            {
-              "news_id": "75f3ee00ab95515b80344a983e60f6ad",
-              "url": "https://www.msn.com/en-us/news/other/ebola-cases-surpass-8000-as-drc-struggles-to-control-outbreak/ar-AA2d7VZl?ocid=BingNewsVerp",
-              "headline": "Ebola cases surpass 8,000 as DRC struggles to control outbreak",
-              "body": "Fatalities near 4,000 across the DRC as health workers battle community anger and a vaccine-resistant strain.",
-              "published_date": "2026-09-29",
-              "outlet": "Al Jazeera on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "4256bde27c1354c6bab581ce13d5166e",
-              "url": "https://gazettengr.com/ebola-cases-in-dr-congo-exceed-8000-as-outbreak-continues-to-expand/",
-              "headline": "Ebola cases in DR Congo exceed 8,000 as outbreak continues to expand - Peoples Gazette Nigeria",
-              "body": "The outbreak, declared in May, has become the largest and deadliest Ebola outbreak recorded in the DRC and the second largest globally, after the 2014–2016 West Africa epidemics.",
-              "published_date": "2026-09-28",
-              "outlet": "Peoples Gazette",
-              "image": "https://www.bing.com/th?id=ONUT.ObFS048yZnOrfxb1Qq9E8A"
-            },
-            {
-              "news_id": "bbb2ab2968715945a6926057047cc91a",
-              "url": "https://www.standardmedia.co.ke/national/article/2001558943/ebola-watch-the-vaccine-being-tested-against-a-virus-it-was-never-made-for?utm_cmp_rs=amp-next-page",
-              "headline": "EBOLA WATCH: The vaccine being tested against a virus it was never made for",
-              "body": "Scientists are testing an Ebola vaccine against a virus it was never designed to prevent.",
-              "published_date": "2026-09-29",
-              "outlet": "The Standard",
-              "image": "https://www.bing.com/th?id=ONUT._ShAC7iingRGxGVo8kioYA"
-            },
-            {
-              "news_id": "98b250bef8635a8c8384833e39bfb9db",
-              "url": "https://www.africaninsider.com/world/dr-congo-ebola-outbreak-exceeds-8000-cases/",
-              "headline": "DR Congo Ebola outbreak exceeds 8,000 cases",
-              "body": "The Democratic Republic of Congo has logged more than 8,000 cases of Ebola, including almost 4,000 deaths, amid the worst outbreak in the country's history, according to data from the Congolese authorities seen by AFP on Monday.",
-              "published_date": "2026-09-29",
-              "outlet": "African Insider",
-              "image": "https://www.bing.com/th?id=ONUT.RcplzY89N2kxHlbe26pCCg"
-            },
-            {
-              "news_id": "d45a0f3586dd582e9427996765f45c0f",
-              "url": "https://barlamantoday.com/2026/09/28/dr-congos-ebola-cases-surpass-8000-as-outbreak-becomes-deadliest-on-record/",
-              "headline": "DR Congo’s Ebola Cases Surpass 8,000 as Outbreak Becomes Deadliest on Record",
-              "body": "The number of confirmed Ebola cases in the Democratic Republic of Congo has surpassed 8,000 for the first time since the outbreak began, according to government data released on Monday, according to ...",
-              "published_date": "2026-09-28T00:00:00+00:00",
-              "outlet": "barlamantoday",
-              "image": ""
-            },
-            {
-              "news_id": "23b49282355858daac6626abce2ed409",
-              "url": "https://gazettengr.com/ebola-canada-announces-60-day-entry-restriction-for-drc-ugandan-south-sudan-nationals/",
-              "headline": "Ebola: Canada announces 60-day entry restriction for DRC, Ugandan, South Sudan nationals",
-              "body": "Canada first introduced travel restrictions on the three countries in May following a new wave of Ebola outbreak particularly in DR Congo.",
-              "published_date": "2026-09-29",
-              "outlet": "Peoples Gazette",
-              "image": ""
-            },
-            {
-              "news_id": "a944fd51e8bf5c02829d7556cbc997fc",
-              "url": "https://ijr.com/discover/article/ebola-drc-bundibugyo-outbreak-cdc-hhs-42c8cc5e-eee3-4a03-8b00-7fdf632d5fa3",
-              "headline": "Ebola Explodes In Africa Much Faster Than Infamous 2010s Outbreak",
-              "body": "The Ebola virus has returned with a vengeance as a new strain spreads across central Africa at breakneck speed.",
-              "published_date": "2026-09-28",
-              "outlet": "Independent Journal Review",
-              "image": "https://www.bing.com/th?id=ONUT.5DOaZLJD9agUbcGEd6PXQg"
-            },
-            {
-              "news_id": "98a0e63fb70951ba9268097f464e15d1",
-              "url": "https://qazinform.com/news/dr-congo-ebola-cases-surpass-8000-c05180",
-              "headline": "DR Congo Ebola cases surpass 8,000",
-              "body": "The Ebola outbreak in the Democratic Republic of the Congo (DRC) has exceeded 8,000 confirmed cases, as health authorities warn that declining contact tracing and continued community deaths are fueling transmission, Qazinform News Agency cites Anadolu Agency.",
-              "published_date": "2026-09-29",
-              "outlet": "qazinform",
-              "image": "https://www.bing.com/th?id=ONUT.zdgyLhVyHC2yQdfXkqs5aQ"
-            },
-            {
-              "news_id": "cb723eb38e6a5868879e0e8306cbcead",
-              "url": "https://www.wusf.org/health-news-florida/2026-09-29/tampa-based-doctor-returns-congo-discusses-challenges-treating-ebola-outbreak",
-              "headline": "A Tampa-based doctor returning from Congo on challenges of treating the Ebola outbreak",
-              "body": "Dr. Adi Nadimpalli, with Doctors Without Borders, spent weeks in the Central African nation, which is facing the second largest Ebola outbreak in recorded history, with more than 8,000 cases and 3,900 deaths.",
-              "published_date": "2026-09-29",
-              "outlet": "WUSF Public Media",
-              "image": "https://www.bing.com/th?id=ONUT.3KDLZalNo57ZGD44BdcwaA"
-            },
-            {
-              "news_id": "36c85e2118035ae0a5a80f4ee9375c1e",
-              "url": "https://jen.jiji.com/jc/eng_agt?g=kazinform&k=20260929KAZ-2aadeadf-8c2a-4ed4-8",
-              "headline": "DR Congo Ebola cases surpass 8,000",
-              "body": "NEWS JIJI PRESS",
-              "published_date": "2026-09-29",
-              "outlet": "jen.jiji",
-              "image": ""
-            },
-            {
-              "news_id": "85fab28d5c22505ca1a85de889c7e898",
-              "url": "https://yen.com.gh/world/312831-canada-extends-entry-ban-3-african-countries-explains-why/",
-              "headline": "Big blow as Canada extends ban on travellers from 3 African countries",
-              "body": "Canada extends Ebola-related immigration restrictions for DR Congo, Uganda and South Sudan by 60 days; approved visas unusable, while cases face delays.",
-              "published_date": "2026-09-29",
-              "outlet": "YEN.com.gh",
-              "image": "https://www.bing.com/th?id=ONUT.UCO2stP8aV3osVkSO6e4WA"
-            }
-          ]
-        },
-        {
           "log_date": "2026-10-01",
           "summary": "Canada extended its travel ban on travelers from the Democratic Republic of Congo, Uganda, and South Sudan amid the ongoing Ebola outbreak. Save the Children warned that seven children die each day from Ebola in DR Congo, with children under five facing a 61% case-fatality rate. The World Health Organization highlighted that early access to care and oxygen is decisive for patient survival, as the outbreak continues across seven provinces.",
           "news": [
@@ -5469,15 +5313,48 @@
               "image": "https://www.afro.who.int/sites/default/files/styles/social_1200x630/public/2026-09/Surveillance.jpeg?itok=eL5RPwRu"
             }
           ]
+        },
+        {
+          "log_date": "2026-10-03",
+          "summary": "The Ebola death toll in DR Congo has risen above 4,000, and a treatment/transit centre was burned down, forcing nearly 19,000 people to flee. In addition, six new Ebola cases have been detected in M23-controlled areas, as health officials call for greater community cooperation in response efforts.",
+          "news": [
+            {
+              "news_id": "c364e39ebf8453558e5f4df579ae8b6a",
+              "url": "https://eastleighvoice.co.ke/regional/407690/six-new-ebola-cases-detected-in-m23-controlled-areas-of-eastern-drc",
+              "headline": "Six new Ebola cases detected in M23-controlled areas of eastern DRC | The Eastleigh Voice",
+              "body": "Residents have been urged to report suspected cases quickly and cooperate with health workers carrying out surveillance and contact tracing. According to.",
+              "published_date": "2026-10-02",
+              "outlet": "eastleighvoice",
+              "image": ""
+            },
+            {
+              "news_id": "feee8ece59da59c79b0ee68676a8dc8e",
+              "url": "https://www.msn.com/en-us/news/other/ebola-death-toll-surpasses-4000-as-dr-congo-struggles-to-suppress-outbreak/ar-AA2dpSUp?ocid=BingNewsVerp",
+              "headline": "Ebola death toll surpasses 4,000 as DR Congo struggles to suppress outbreak",
+              "body": "Burning of a Ebola-hit transit camp sends 19,000 fleeing, illustrating the difficulties of controlling epidemic.",
+              "published_date": "2026-10-03",
+              "outlet": "Al Jazeera on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.0bdb674090167b32e20dde32b169c225"
+            },
+            {
+              "news_id": "5faea9888e8350c18fc08915fc335b20",
+              "url": "https://apnews.com/article/congo-ebola-outbreak-virus-4c79b59ec81a08675d2506c9e176d125",
+              "headline": "An Ebola treatment center was burned down as the death toll in Congo passes 4,000",
+              "body": "Congo’s Ebola outbreak has now recorded more than 4,000 deaths, authorities said as they struggle to contain the spread of the virus.",
+              "published_date": "2026-10-03T05:41:42+00:00",
+              "outlet": "Associated Press News",
+              "image": ""
+            }
+          ]
         }
       ],
-      "logs_total": 58
+      "logs_total": 59
     },
     {
       "incident_id": "20260511-XX-DR",
       "tree_id": "d75afb3078c54d74b37c4f8bb985dfce",
       "canonical_name": "Drought Green",
-      "summary": "Conway, Arkansas implemented Phase Three water restrictions, halting lawn and landscape irrigation due to drought. Bedford County, Virginia asked residents to voluntarily conserve water as drought persists. Karnataka, India sought Rs 3,705 crore in central drought relief, while a report detailed the decimation of Colorado’s biggest reservoir and its effects on recreation and livelihoods.",
+      "summary": "Conway, Arkansas implemented Phase Three water restrictions, halting lawn and landscape irrigation due to drought. Bedford County, Virginia asked residents to voluntarily conserve water as drought persists. Karnataka, India sought Rs 3,705 crore in central drought relief, while a report detailed the decimation of Colorado’s biggest reservoir and its effects on recreation and livelihoods.\nKarnataka, India now has 217 of its 240 taluks hit by drought, with losses estimated up to ₹60,000 crore; the state has requested ₹7,142 crore from the central government, while Andhra Pradesh declared 388 mandals drought-hit. In Maharashtra's Latur district, farmers are cutting standing sugarcane to feed livestock amid a severe fodder shortage. The Arkansas Department of Transportation suspended seasonal mowing along roads due to elevated wildfire risks, and a separate report notes September 2026 was the hottest on record and one of the driest, compounding crop losses.",
       "country": "",
       "iso2": "XX",
       "lat": null,
@@ -5507,7 +5384,7 @@
         "gdacs": 1,
         "ercc": 1,
         "healthmap": 0,
-        "news": 710
+        "news": 717
       },
       "source_links": [
         {
@@ -8355,6 +8232,10 @@
           "published_date": "2026-10-02"
         },
         {
+          "headline": "Drought, heat wave cut into crop yields",
+          "published_date": "2026-10-02"
+        },
+        {
           "headline": "Bedford County residents asked to voluntarily conserve water as drought persists",
           "published_date": "2026-10-02"
         },
@@ -8363,11 +8244,35 @@
           "published_date": "2026-10-02"
         },
         {
+          "headline": "ARDOT suspends seasonal mowing in drought areas",
+          "published_date": "2026-10-02"
+        },
+        {
           "headline": "No drought improvement across central North Carolina after dry week",
           "published_date": "2026-10-02T06:38:53+00:00"
         },
         {
+          "headline": "217 of 240 Karnataka taluks now drought-hit; losses estimated up to ₹60,000 crore",
+          "published_date": "2026-10-03"
+        },
+        {
+          "headline": "Farmers cut standing sugarcane to feed livestock amid fodder crisis in Maharashtra’s drought-hit Latur",
+          "published_date": "2026-10-03"
+        },
+        {
           "headline": "Mallikarjun Kharge urges PM Modi to step in as Karnataka seeks Rs 3,705 crore for drought relief",
+          "published_date": "2026-10-03"
+        },
+        {
+          "headline": "September was the hottest on record, one of the driest",
+          "published_date": "2026-10-03"
+        },
+        {
+          "headline": "388 AP mandals declared drought-hit",
+          "published_date": "2026-10-03"
+        },
+        {
+          "headline": "Karnataka estimates Rs 46,324 crore drought loss, seeks Rs 7,142 crore from Centre",
           "published_date": "2026-10-03"
         },
         {
@@ -8375,7 +8280,7 @@
           "published_date": "2026-10-03T05:41:58+00:00"
         }
       ],
-      "news_total": 710,
+      "news_total": 717,
       "logs": [
         {
           "log_date": "2026-08-18",
@@ -8883,8 +8788,17 @@
         },
         {
           "log_date": "2026-10-03",
-          "summary": "Conway, Arkansas implemented Phase Three water restrictions, halting lawn and landscape irrigation due to drought. Bedford County, Virginia asked residents to voluntarily conserve water as drought persists. Karnataka, India sought Rs 3,705 crore in central drought relief, while a report detailed the decimation of Colorado’s biggest reservoir and its effects on recreation and livelihoods.",
+          "summary": "Conway, Arkansas implemented Phase Three water restrictions, halting lawn and landscape irrigation due to drought. Bedford County, Virginia asked residents to voluntarily conserve water as drought persists. Karnataka, India sought Rs 3,705 crore in central drought relief, while a report detailed the decimation of Colorado’s biggest reservoir and its effects on recreation and livelihoods.\nKarnataka, India now has 217 of its 240 taluks hit by drought, with losses estimated up to ₹60,000 crore; the state has requested ₹7,142 crore from the central government, while Andhra Pradesh declared 388 mandals drought-hit. In Maharashtra's Latur district, farmers are cutting standing sugarcane to feed livestock amid a severe fodder shortage. The Arkansas Department of Transportation suspended seasonal mowing along roads due to elevated wildfire risks, and a separate report notes September 2026 was the hottest on record and one of the driest, compounding crop losses.",
           "news": [
+            {
+              "news_id": "646195f77366555d920c1f3e311ee6cd",
+              "url": "https://www.theweek.in/news/india/2026/10/03/karnataka-drought-worsens-217-taluks-hit.html",
+              "headline": "217 of 240 Karnataka taluks now drought-hit; losses estimated up to ₹60,000 crore",
+              "body": "Revenue Minister G. Parameshwara said loss assessments had been completed in the first 177 taluks, while assessment of the newly added 40 taluks was underway",
+              "published_date": "2026-10-03",
+              "outlet": "The Week",
+              "image": "https://www.bing.com/th?id=ONUT.FChIf0ET70--1uH7_ml4eA"
+            },
             {
               "news_id": "9dd72a286c3e531594e00db7a2e782fd",
               "url": "https://www.yahoo.com/news/weather-news/articles/conway-hits-phase-three-water-222107022.html",
@@ -8893,6 +8807,15 @@
               "published_date": "2026-10-02",
               "outlet": "Yahoo",
               "image": ""
+            },
+            {
+              "news_id": "f535156aef3c58d79c0680291e40c9b6",
+              "url": "https://www.newindianexpress.com/states/maharashtra/2026/Oct/03/farmers-cut-standing-sugarcane-to-feed-livestock-amid-fodder-crisis-in-maharashtras-drought-hit-latur",
+              "headline": "Farmers cut standing sugarcane to feed livestock amid fodder crisis in Maharashtra’s drought-hit Latur",
+              "body": "LATUR: Distressed farmers in drought-hit Latur district of Maharashtra are cutting down standing sugarcane crops to feed livestock amid a severe fodder shortage",
+              "published_date": "2026-10-03",
+              "outlet": "The New Indian Express",
+              "image": "https://www.bing.com/th?id=ONUT.uQsuOST7-jUo3Uf6gn0bIQ"
             },
             {
               "news_id": "105b3e35befa5abc88cfa4f42d2c0e4d",
@@ -8904,6 +8827,15 @@
               "image": "https://www.bing.com/th?id=ONUT.EtzeGzJYCH9kD-4y--pjnQ"
             },
             {
+              "news_id": "7d6be145ecd95237aed997ea0b7a1d60",
+              "url": "https://www.wtva.com/2026/10/02/drought-heat-wave-cut-into-crop-yields/",
+              "headline": "Drought, heat wave cut into crop yields",
+              "body": "Cotton and soybean fields are being harvested as peak season continues, but a recent drought and heat wave are increasing farmers’ losses.",
+              "published_date": "2026-10-02",
+              "outlet": "WTVA 9 News",
+              "image": "https://www.bing.com/th?id=ONUT.0DA3qdE9Pfwn6XdQ9gfowA"
+            },
+            {
               "news_id": "dd8a878b468250be871d7387b13c3a63",
               "url": "https://wset.com/news/local/bedford-county-residents-asked-to-voluntarily-conserve-water-as-drought-persists-bedford-water-smith-mountain-lake-stoney-creek-reservoir-lynchburg-water-resources-october-2026",
               "headline": "Bedford County residents asked to voluntarily conserve water as drought persists",
@@ -8911,6 +8843,24 @@
               "published_date": "2026-10-02",
               "outlet": "ABC 13 Lynchburg",
               "image": "https://s.yimg.com/bo/0054de95-d8f9-5383-a6c0-72962ecd6210_1789562552915.jpg"
+            },
+            {
+              "news_id": "dd48e2582e955e578ef2458156e6386d",
+              "url": "https://www.yahoo.com/news/weather-news/articles/september-hottest-record-one-driest-153423427.html",
+              "headline": "September was the hottest on record, one of the driest",
+              "body": "September 2026 was the hottest on record and one of the driest. The weather pattern for the month was dominated by upper-level high pressure creating hot and dry conditions.",
+              "published_date": "2026-10-03",
+              "outlet": "KXAN · via Yahoo News",
+              "image": "https://media.zenfs.com/en/kxan_articles_390/6fb50e52e5da06b4301cc805b7c499ea.png.cf.jpg"
+            },
+            {
+              "news_id": "001eaac2420f51b1b62c4ac50f0aae06",
+              "url": "https://www.msn.com/en-in/news/other/388-ap-mandals-declared-drought-hit/ar-AA2dsQbf?ocid=BingNewsVerp",
+              "headline": "388 AP mandals declared drought-hit",
+              "body": "VIJAYAWADA: In a major relief-oriented intervention for the farming community, the State government has declared early ...",
+              "published_date": "2026-10-03",
+              "outlet": "The New Indian Express on MSN",
+              "image": "https://www.bing.com/th?id=ONUT._vxD8O61n70iB0iw2fc0Mw"
             },
             {
               "news_id": "9e5b98e7904a5b47874e73009dc831a3",
@@ -8929,6 +8879,24 @@
               "published_date": "2026-10-03T05:41:58+00:00",
               "outlet": "WWLP",
               "image": "https://www.bing.com/th?id=ONUT.bJJEPs7EgEpN9cTO4QcdPg"
+            },
+            {
+              "news_id": "e72f73d2471159f791472019e0d37b74",
+              "url": "https://www.yahoo.com/news/weather-news/articles/ardot-suspends-seasonal-mowing-drought-230046919.html",
+              "headline": "ARDOT suspends seasonal mowing in drought areas",
+              "body": "While crews typically begin mowing grass along state-managed roads in October, some areas will not be mowed due to wildfire risks.",
+              "published_date": "2026-10-02",
+              "outlet": "KNWA Fayetteville · via Yahoo News",
+              "image": "https://media.zenfs.com/en/knwa_fayetteville_articles_688/ad2e49b5d4c69b1e464cfeea834650cb.jpg"
+            },
+            {
+              "news_id": "bbf9b922d26051edb501495874134351",
+              "url": "https://www.msn.com/en-in/news/other/karnataka-estimates-rs-46324-crore-drought-loss-seeks-rs-7142-crore-from-centre/ar-AA2dufEV?ocid=BingNewsVerp",
+              "headline": "Karnataka estimates Rs 46,324 crore drought loss, seeks Rs 7,142 crore from Centre",
+              "body": "Karnataka Chief Minister D K Shivakumar asked a Central team to approve Rs 7,142.64 crore in drought relief. The appeal ...",
+              "published_date": "2026-10-03",
+              "outlet": "India Today on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.c084536026d9eeed94d9052f6a2a77c6"
             }
           ]
         }
@@ -11283,7 +11251,7 @@
       "incident_id": "20260715-UA-CF",
       "tree_id": "f22292f8c3ff448a920c3b1fe41d3aa0",
       "canonical_name": "Conflict Ukraine 2026-07-15",
-      "summary": "Ukraine's drone chief warned that humanity is losing control of AI weapons and disclosed a $20 million Russian bounty on him, while The New York Times obtained a purported Russian plan to cut electricity and heat to three major Ukrainian cities by 90% as part of a winter campaign. Reuters reported that Ukraine faces a critical funding gap of $27 billion, with total war costs hitting $155 billion this year.",
+      "summary": "Ukraine's drone chief warned that humanity is losing control of AI weapons and disclosed a $20 million Russian bounty on him, while The New York Times obtained a purported Russian plan to cut electricity and heat to three major Ukrainian cities by 90% as part of a winter campaign. Reuters reported that Ukraine faces a critical funding gap of $27 billion, with total war costs hitting $155 billion this year.\nOn October 3, 2026, Ukraine announced a daring operation that used robotic systems and Trojan APCs to force 250 Russian soldiers to surrender. In response, Russia warned diplomats and foreigners to leave Kyiv, signaling an imminent threat of new strikes. Diplomatic efforts continued as Putin backed peace talks linked to an oil deal, while Ukraine described India's ceasefire plan as the broadest proposal received and open to truces on energy and Black Sea shipping.",
       "country": "Ukraine",
       "iso2": "UA",
       "lat": 48.9,
@@ -11313,7 +11281,7 @@
         "gdacs": 0,
         "ercc": 3,
         "healthmap": 0,
-        "news": 1360
+        "news": 1374
       },
       "source_links": [
         {
@@ -16607,6 +16575,10 @@
           "published_date": "2026-09-30T06:07:50+00:00"
         },
         {
+          "headline": "Russia Warns Diplomats to Leave Kyiv over New Strikes Threat",
+          "published_date": "2026-09-30T16:46:12+00:00"
+        },
+        {
           "headline": "Putin warns West that Russia is prepared to use ‘all weapons’ to protect Kaliningrad",
           "published_date": "2026-10-01"
         },
@@ -16747,6 +16719,10 @@
           "published_date": "2026-10-02"
         },
         {
+          "headline": "Ukraine says it forced 250 Russian soldiers to surrender in daring operation",
+          "published_date": "2026-10-02"
+        },
+        {
           "headline": "Russian President Putin’s praise for PM Modi’s peace efforts matter of pride: Shah",
           "published_date": "2026-10-02"
         },
@@ -16767,7 +16743,27 @@
           "published_date": "2026-10-02T14:31:32+00:00"
         },
         {
+          "headline": "A Paradigm Shift In Conventional Warfare: Lessons From Russia-Ukraine And US-Iran Wars – OpEd",
+          "published_date": "2026-10-03"
+        },
+        {
+          "headline": "How Kyiv cracked Russia’s kill zone and got its tanks back in the fight",
+          "published_date": "2026-10-03"
+        },
+        {
+          "headline": "Europe fortifies itself against Russia’s hybrid war",
+          "published_date": "2026-10-03"
+        },
+        {
           "headline": "Ukraine drone chief targeted by $20 million Russian bounty warns 'humanity is losing control'",
+          "published_date": "2026-10-03"
+        },
+        {
+          "headline": "Putin Backs Ukraine Peace Talks, INSTC Project",
+          "published_date": "2026-10-03"
+        },
+        {
+          "headline": "55 Indians Reportedly Still in Russian Army",
           "published_date": "2026-10-03"
         },
         {
@@ -16783,11 +16779,39 @@
           "published_date": "2026-10-03"
         },
         {
+          "headline": "St. Nicholas Greek Orthodox Shrine in New York Honors Zelenskyy and Ukrainian People - GreekReporter.com",
+          "published_date": "2026-10-03"
+        },
+        {
+          "headline": "PM Modi has ‘good ideas’ for settlement of Ukraine war: Putin",
+          "published_date": "2026-10-03"
+        },
+        {
+          "headline": "Ukraine says India's ceasefire plan is broadest, open to truce on energy and Black Sea",
+          "published_date": "2026-10-03"
+        },
+        {
+          "headline": "Putin Links Oil Deal to Ukraine Talks",
+          "published_date": "2026-10-03"
+        },
+        {
           "headline": "Seoul’s anger with Kyiv over POWs may be driven by worries about its ties to North Korea",
           "published_date": "2026-10-03T05:43:12+00:00"
+        },
+        {
+          "headline": "Zelenskyy Urges The United Nations To Pressure Russia",
+          "published_date": "2026-10-03T09:41:53+00:00"
+        },
+        {
+          "headline": "US, Russia talks on Ukraine involve oil deal tied to Kushner, Witkoff: Report",
+          "published_date": "2026-10-03T11:41:53+00:00"
+        },
+        {
+          "headline": "Exiled Russian filmmaker Zvyagintsev takes aim at Putin's war in Oscar bid",
+          "published_date": "2026-10-03T13:46:12+00:00"
         }
       ],
-      "news_total": 1360,
+      "news_total": 1374,
       "logs": [
         {
           "log_date": "2026-07-24",
@@ -17493,7 +17517,7 @@
         },
         {
           "log_date": "2026-10-03",
-          "summary": "Ukraine's drone chief warned that humanity is losing control of AI weapons and disclosed a $20 million Russian bounty on him, while The New York Times obtained a purported Russian plan to cut electricity and heat to three major Ukrainian cities by 90% as part of a winter campaign. Reuters reported that Ukraine faces a critical funding gap of $27 billion, with total war costs hitting $155 billion this year.",
+          "summary": "Ukraine's drone chief warned that humanity is losing control of AI weapons and disclosed a $20 million Russian bounty on him, while The New York Times obtained a purported Russian plan to cut electricity and heat to three major Ukrainian cities by 90% as part of a winter campaign. Reuters reported that Ukraine faces a critical funding gap of $27 billion, with total war costs hitting $155 billion this year.\nOn October 3, 2026, Ukraine announced a daring operation that used robotic systems and Trojan APCs to force 250 Russian soldiers to surrender. In response, Russia warned diplomats and foreigners to leave Kyiv, signaling an imminent threat of new strikes. Diplomatic efforts continued as Putin backed peace talks linked to an oil deal, while Ukraine described India's ceasefire plan as the broadest proposal received and open to truces on energy and Black Sea shipping.",
           "news": [
             {
               "news_id": "fd46d86589285fa0ae1774f7f71cc509",
@@ -17503,6 +17527,24 @@
               "published_date": "2026-10-02T11:43:12+00:00",
               "outlet": "Midland Daily News",
               "image": "https://s.yimg.com/bo/d933939e-904e-5806-8efb-4c2a130eb900_1790944635849.jpg"
+            },
+            {
+              "news_id": "8615d29d756853eb85def0b73cb66a04",
+              "url": "https://www.eurasiareview.com/03102026-a-paradigm-shift-in-conventional-warfare-lessons-from-russia-ukraine-and-us-iran-wars-oped/",
+              "headline": "A Paradigm Shift In Conventional Warfare: Lessons From Russia-Ukraine And US-Iran Wars – OpEd",
+              "body": "Key Takeaways: The conventional warfare is transforming in a rapid way. Traditional war, with armies, tanks, fighter aircraft, naval fleets",
+              "published_date": "2026-10-03",
+              "outlet": "Eurasia Review",
+              "image": ""
+            },
+            {
+              "news_id": "5dd4ad8c96be5d8fb0496d774f501156",
+              "url": "https://www.telegraph.co.uk/world-news/2026/10/03/how-ukraine-cracked-russias-kill-zone/",
+              "headline": "How Kyiv cracked Russia’s kill zone and got its tanks back in the fight",
+              "body": "Ukraine is gaining ground by reshaping the front line to allow for the use of armoured vehicles",
+              "published_date": "2026-10-03",
+              "outlet": "The Telegraph",
+              "image": "https://www.bing.com/th?id=ONUT.8FCOeSM7HEQqtR7O6HEkPQ"
             },
             {
               "news_id": "c97130464d51569cb36d509c717a19bb",
@@ -17523,6 +17565,15 @@
               "image": "https://www.bing.com/th?id=ONUT.M6_hN6sFI1vhHkMViKaF1A"
             },
             {
+              "news_id": "84b85360b0435fcf883089fcd0e45238",
+              "url": "https://english.elpais.com/international/2026-10-03/europe-fortifies-itself-against-russias-hybrid-war.html",
+              "headline": "Europe fortifies itself against Russia’s hybrid war",
+              "body": "Europe’s allies strengthen security as the Kremlin’s sabotage and hostile actions increase",
+              "published_date": "2026-10-03",
+              "outlet": "EL PAÍS English",
+              "image": "https://www.bing.com/th?id=ONUT.ch2esw75rLuwhw1xxsX4Hw"
+            },
+            {
               "news_id": "ce9863a89ef1576dbbfcc45a844f7765",
               "url": "https://www.yahoo.com/news/world/articles/ukraine-drone-chief-targeted-20-211000216.html",
               "headline": "Ukraine drone chief targeted by $20 million Russian bounty warns 'humanity is losing control' as AI becomes a 'digital panopticon'",
@@ -17530,6 +17581,15 @@
               "published_date": "2026-10-02",
               "outlet": "TechRadar · via Yahoo News",
               "image": "https://media.zenfs.com/en/techradar_949/a5099f2c70ae673415381538e23d6ba4.png.cf.jpg"
+            },
+            {
+              "news_id": "861c8986945c50739aa8e44a639e9abe",
+              "url": "https://www.forbes.com/sites/marktemnycky/2026/10/03/zelenskyy-urges-the-united-nations-to-pressure-russia/",
+              "headline": "Zelenskyy Urges The United Nations To Pressure Russia",
+              "body": "At the opening of the 81st session of the United Nations General Assembly, Ukrainian President...",
+              "published_date": "2026-10-03T09:41:53+00:00",
+              "outlet": "Forbes",
+              "image": "https://s.yimg.com/bo/3d334d08-5562-55bc-bcbf-0efa7b52f861_1791023600507.jpg"
             },
             {
               "news_id": "0749dd7941c55ea0ad69dc5fdf9ad3ed",
@@ -17559,6 +17619,24 @@
               "image": "https://s.yimg.com/bo/2eedcf55-671a-575c-a939-d5bca5fee4c4_1790768663795.jpg"
             },
             {
+              "news_id": "96c4a4dd041654e9b58cd4a8f1a8ed4c",
+              "url": "https://www.newsmax.com/world/globaltalk/moscow-kyiv-putin/2026/10/03/id/1271563/",
+              "headline": "Russia Warns Diplomats to Leave Kyiv over New Strikes Threat",
+              "body": "Russia on Saturday issued a new call for diplomats and foreigners to leave Kyiv, warning the Ukrainian capital of new ...",
+              "published_date": "2026-09-30T16:46:12+00:00",
+              "outlet": "Newsmax",
+              "image": "https://www.bing.com/th?id=ONUT.1gAVAdVdyoEUt8jvkFC0sQ"
+            },
+            {
+              "news_id": "a80f780a9019557195f57b9b45c39ac1",
+              "url": "https://www.yahoo.com/news/politics/articles/putin-backs-ukraine-peace-talks-131255534.html",
+              "headline": "Putin Backs Ukraine Peace Talks, INSTC Project",
+              "body": "Putin Says Russia Seeks Ukraine Peace Talks, Backs INSTC Project",
+              "published_date": "2026-10-03",
+              "outlet": "Newsmax · via Yahoo News",
+              "image": "https://media.zenfs.com/en/newsmax_809/42386cd4682c95aec5ead4696ef27c27.jpg"
+            },
+            {
               "news_id": "01dda2410a1b5da2b67c3376f1b48839",
               "url": "https://voennoedelo.com/en/posts/id20509-putin-says-ukraine-conflict-should-end-on-acceptable-terms",
               "headline": "Putin Says Ukraine Conflict Should End on Acceptable Terms",
@@ -17566,6 +17644,15 @@
               "published_date": "2026-10-02",
               "outlet": "Voennoe Delo",
               "image": "https://www.bing.com/th?id=ONUT.8sd2ij9dIO5J4Z9EZADANA"
+            },
+            {
+              "news_id": "2a861a26cd2557538ff63d38bc9a8c32",
+              "url": "https://www.ssbcrack.com/2026/10/55-indians-reportedly-still-in-russian-army.html",
+              "headline": "55 Indians Reportedly Still in Russian Army",
+              "body": "New Delhi, October 3, 2026: Around 140 Indian nationals recruited into the Russian Army have been discharged, while India is seeking the whereabouts of 55",
+              "published_date": "2026-10-03",
+              "outlet": "ssbcrack",
+              "image": "https://www.bing.com/th?id=ONUT.XlloPO2Qbv7mWAditaphEQ"
             },
             {
               "news_id": "7a98e695f6cd5409b3f4e3c948a454bc",
@@ -17595,6 +17682,24 @@
               "image": ""
             },
             {
+              "news_id": "e471ab4d6cbe5d3688c11cef8c8b4164",
+              "url": "https://www.kdrv.com/news/social/ukraine-says-it-forced-250-russian-soldiers-to-surrender-in-daring-operation/article_4278cd49-ae2a-59c5-bbd8-7dba574e8fc6.html",
+              "headline": "Ukraine says it forced 250 Russian soldiers to surrender in daring operation",
+              "body": "(CNN) — A daredevil Ukrainian operation using robots dropped behind enemy lines and “Trojan” armored personnel carriers laden with explosives has led to the capture of more than 250 Russian",
+              "published_date": "2026-10-02",
+              "outlet": "NewsWatch 12 Medford - Klamath Falls",
+              "image": "https://s.yimg.com/bo/7f8278a7-951f-56d5-ba83-5a61e562a9ed_1790959110290.jpg"
+            },
+            {
+              "news_id": "b4b0362695715a6a8ca4e56b30a2b44a",
+              "url": "https://www.reuters.com/lifestyle/exiled-russian-filmmaker-zvyagintsev-takes-aim-putins-war-oscar-bid-2026-10-03/",
+              "headline": "Exiled Russian filmmaker Zvyagintsev takes aim at Putin's war in Oscar bid",
+              "body": "Exiled Russian filmmaker Andrey Zvyagintsev takes on Vladimir Putin's war in Ukraine in \"Minotaur\", ...",
+              "published_date": "2026-10-03T13:46:12+00:00",
+              "outlet": "Reuters",
+              "image": "https://s.yimg.com/bo/ef83703f-e70f-5b0f-8db6-c559f3daa8e7_1791036455694.jpg"
+            },
+            {
               "news_id": "e7da1608ec3552dfb588ac642b35116b",
               "url": "https://www.msn.com/en-us/news/other/moscow-prepares-for-years-of-conflict-with-record-military-budget-bloomberg/ar-AA2dptzX?ocid=BingNewsVerp",
               "headline": "Moscow prepares for years of conflict with record military budget — Bloomberg",
@@ -17602,6 +17707,24 @@
               "published_date": "2026-10-03",
               "outlet": "The New Voice of Ukraine on MSN",
               "image": "https://www.bing.com/th?id=ONUT._EWR588g-4tLabop4TbQwQ"
+            },
+            {
+              "news_id": "fe5ec6713e26555aab6cfb189d6da1b9",
+              "url": "https://greekreporter.com/2026/10/03/greek-orthodox-saint-nicholas-new-york-ukraine-zelenskyy/",
+              "headline": "St. Nicholas Greek Orthodox Shrine in New York Honors Zelenskyy and Ukrainian People - GreekReporter.com",
+              "body": "New York’s Saint Nicholas Greek Orthodox National Shrine honored Volodymyr Zelenskyy and the Ukrainian people with its Beacon of Hope Award.",
+              "published_date": "2026-10-03",
+              "outlet": "Greek Reporter",
+              "image": "https://www.bing.com/th?id=ONUT.OUK3yiGeFjgYiDs_DjUZzg"
+            },
+            {
+              "news_id": "9aeed80c23e55ad6b649aaa6081f9e25",
+              "url": "https://theshillongtimes.com/2026/10/03/pm-modi-has-good-ideas-for-settlement-of-ukraine-war-putin/",
+              "headline": "PM Modi has ‘good ideas’ for settlement of Ukraine war: Putin",
+              "body": "Prime Minister Narendra Modi has “very good ideas” on a mutual settlement of the Ukraine conflict and raises the issue at “every meeting”, Russian President Vladimir Putin has said. Putin made the ...",
+              "published_date": "2026-10-03",
+              "outlet": "The Shillong Times",
+              "image": ""
             },
             {
               "news_id": "6b18921e3e0c525785e92b9b976b3c07",
@@ -17613,6 +17736,15 @@
               "image": "https://s.yimg.com/bo/879b072a-7977-5aba-b36e-21d5d070ab02_1790966667706.jpg"
             },
             {
+              "news_id": "aac8bcd9f92553848941f9bb36340860",
+              "url": "https://thehill.com/homenews/administration/6127449-trump-russia-ukraine-oil-deal-lukoil/",
+              "headline": "US, Russia talks on Ukraine involve oil deal tied to Kushner, Witkoff: Report",
+              "body": "The Trump administration’s ongoing discussions with Russia to end the Ukraine war now include a mult...",
+              "published_date": "2026-10-03T11:41:53+00:00",
+              "outlet": "The Hill",
+              "image": "https://s.yimg.com/bo/ff4aa7df-dc89-5f3f-8ce4-c5cc40e985b8_1788253551041.jpg"
+            },
+            {
               "news_id": "58658c1e79035aa586f1aaa558690f55",
               "url": "https://www.newindianexpress.com/india/2026/Oct/02/russian-president-putins-praise-for-pm-modis-peace-efforts-matter-of-pride-shah",
               "headline": "Russian President Putin’s praise for PM Modi’s peace efforts matter of pride: Shah",
@@ -17620,6 +17752,24 @@
               "published_date": "2026-10-02",
               "outlet": "The New Indian Express",
               "image": ""
+            },
+            {
+              "news_id": "cef87aaf215952eda4bcc7c450e9d78a",
+              "url": "https://www.newindianexpress.com/india/2026/Oct/03/ukraine-says-indias-ceasefire-plan-is-broadest-open-to-truce-on-energy-and-black-sea",
+              "headline": "Ukraine says India's ceasefire plan is broadest, open to truce on energy and Black Sea",
+              "body": "Ukraine has described India's proposal for a possible ceasefire with Russia as the \"broadest\" among four offers received by Kyiv, with Ukrainian Foreign Ministe",
+              "published_date": "2026-10-03",
+              "outlet": "The New Indian Express",
+              "image": "https://www.bing.com/th?id=ONUT.Rw7zANYEF-mDfO0ikh5IoQ"
+            },
+            {
+              "news_id": "831a0f60e5145bd6a5185c80dbb79d0d",
+              "url": "https://www.yahoo.com/news/politics/articles/trump-russia-talks-draw-kushner-143235378.html",
+              "headline": "Putin Links Oil Deal to Ukraine Talks",
+              "body": "Putin Links Oil Deal to Ukraine Talks",
+              "published_date": "2026-10-03",
+              "outlet": "Newsmax · via Yahoo News",
+              "image": "https://media.zenfs.com/en/newsmax_809/bb666466234381990aeac293ccee4e72.jpg"
             }
           ]
         }
@@ -17630,7 +17780,7 @@
       "incident_id": "20260726-IR-CF",
       "tree_id": "13763def03ab448898154124734fe728",
       "canonical_name": "Iran/US war",
-      "summary": "A new investigation reveals the U.S. bombing of a school in Minab killed over 120 children, drawing fresh war crimes allegations. Saudi Arabia is planning strikes against Houthis to secure Red Sea shipping lanes, while Italy warns the EU naval mission remains insufficient. Political fallout widens as a Maine Republican breaks with Trump, and economic impacts deepen with OPEC+ delaying capacity review and fuel subsidies projected to top $1 trillion.",
+      "summary": "A new investigation reveals the U.S. bombing of a school in Minab killed over 120 children, drawing fresh war crimes allegations. Saudi Arabia is planning strikes against Houthis to secure Red Sea shipping lanes, while Italy warns the EU naval mission remains insufficient. Political fallout widens as a Maine Republican breaks with Trump, and economic impacts deepen with OPEC+ delaying capacity review and fuel subsidies projected to top $1 trillion.\nThe U.S. is expanding its military presence, dispatching up to 10,000 additional troops and weighing new strikes on Iran, while Iran warns of \"painful\" retaliation. Mediators persist amid Trump's rejection of Tehran's latest offer, as top aides meet at Camp David to discuss Iran and Yemen and Saudi Arabia plans an offensive against Houthis to break the Red Sea chokehold. The economic toll deepens with record diesel prices squeezing U.S. farmers, and political analysts say the war will be the biggest story of the 2026 midterms.",
       "country": "Iran",
       "iso2": "IR",
       "lat": 32.4,
@@ -17660,7 +17810,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 2425
+        "news": 2439
       },
       "source_links": [],
       "physical": {
@@ -26755,6 +26905,10 @@
           "published_date": "2026-09-27T10:29:58+00:00"
         },
         {
+          "headline": "Nate Silver reveals the ‘biggest electoral story of 2026’ — and it’s bad news for Trump.",
+          "published_date": "2026-09-27T16:46:29+00:00"
+        },
+        {
           "headline": "Gulf nations have found ways to keep oil flowing through the Iran war, but the costs are mounting",
           "published_date": "2026-09-27T17:29:58+00:00"
         },
@@ -26905,6 +27059,10 @@
         {
           "headline": "Asian shares mostly rise amid market optimism about AI, despite Iran worries",
           "published_date": "2026-09-28T06:31:29+00:00"
+        },
+        {
+          "headline": "Mediators working to broker US-Iran deal even after Trump rejected latest Tehran...",
+          "published_date": "2026-09-28T16:46:29+00:00"
         },
         {
           "headline": "Trump Says US Will Win Iran War 'Very Soon'",
@@ -27315,6 +27473,10 @@
           "published_date": "2026-10-02"
         },
         {
+          "headline": "Iran knows US 'is winning' as Operation Economic Outcast inflicts damage, Treasury official says",
+          "published_date": "2026-10-02"
+        },
+        {
           "headline": "Donald Trump Can’t Handle 'TIME' Questions About Rising Costs and War — So He Gets Honest: 'I Don't Know What's Wrong'",
           "published_date": "2026-10-02"
         },
@@ -27339,6 +27501,10 @@
           "published_date": "2026-10-02"
         },
         {
+          "headline": "What we know and don’t know about how Iran uses asymmetric warfare",
+          "published_date": "2026-10-02"
+        },
+        {
           "headline": "Exclusive-OPEC+ delays oil capacity review after Iran war disrupts expansion plans, sources say",
           "published_date": "2026-10-02"
         },
@@ -27347,7 +27513,15 @@
           "published_date": "2026-10-02T06:44:23+00:00"
         },
         {
+          "headline": "Bahrain flew furniture and a falconer to feel at home in Malaysia, where F1 fans face long queues",
+          "published_date": "2026-10-02T16:46:32+00:00"
+        },
+        {
           "headline": "Trump says Iran will be hit 'very hard' if it is behind pilot stabbing on flight to Israel",
+          "published_date": "2026-10-03"
+        },
+        {
+          "headline": "Dual UK-Iranian national released on bail over suspected plot against US-run military base",
           "published_date": "2026-10-03"
         },
         {
@@ -27355,11 +27529,31 @@
           "published_date": "2026-10-03"
         },
         {
+          "headline": "Yemeni government forces say they seized Samaa fort from Houthis",
+          "published_date": "2026-10-03"
+        },
+        {
           "headline": "New aircraft carrier, 10,000 US troops: Is the Iran war about to escalate?",
           "published_date": "2026-10-03"
         },
         {
+          "headline": "US-Iran war LIVE: Fire, smoke seen near Aramco facility in Riyadh amid Saudi-Houthi escalation | Today News",
+          "published_date": "2026-10-03"
+        },
+        {
+          "headline": "Iran Warns of ‘Painful’ Retaliation As Trump Prepares to Send 10,000 More Troops to the Middle East — Sen",
+          "published_date": "2026-10-03"
+        },
+        {
+          "headline": "Soaring diesel prices take their toll on US farmers in midwest corn belt",
+          "published_date": "2026-10-03"
+        },
+        {
           "headline": "Trump vs Europe as US presses for release of emergency diesel stocks",
+          "published_date": "2026-10-03"
+        },
+        {
+          "headline": "Trump weighs new Iran strikes as US expands Middle East forces",
           "published_date": "2026-10-03"
         },
         {
@@ -27371,11 +27565,23 @@
           "published_date": "2026-10-03"
         },
         {
+          "headline": "Trump Aides Hold Unannounced Camp David Meeting on Iran and Yemen",
+          "published_date": "2026-10-03"
+        },
+        {
+          "headline": "Saudis plan assault on Houthis to break Red Sea chokehold",
+          "published_date": "2026-10-03"
+        },
+        {
+          "headline": "9 times Trump claimed victory in Iran war - which is actually still ongoing",
+          "published_date": "2026-10-03"
+        },
+        {
           "headline": "Thousands of troops head to Mideast, Christa Pike in critical condition after failed execution attempt, flowers in the Atacama Desert",
           "published_date": "2026-10-03T05:44:34+00:00"
         }
       ],
-      "news_total": 2425,
+      "news_total": 2439,
       "logs": [
         {
           "log_date": "2026-07-27",
@@ -28108,7 +28314,7 @@
         },
         {
           "log_date": "2026-10-03",
-          "summary": "A new investigation reveals the U.S. bombing of a school in Minab killed over 120 children, drawing fresh war crimes allegations. Saudi Arabia is planning strikes against Houthis to secure Red Sea shipping lanes, while Italy warns the EU naval mission remains insufficient. Political fallout widens as a Maine Republican breaks with Trump, and economic impacts deepen with OPEC+ delaying capacity review and fuel subsidies projected to top $1 trillion.",
+          "summary": "A new investigation reveals the U.S. bombing of a school in Minab killed over 120 children, drawing fresh war crimes allegations. Saudi Arabia is planning strikes against Houthis to secure Red Sea shipping lanes, while Italy warns the EU naval mission remains insufficient. Political fallout widens as a Maine Republican breaks with Trump, and economic impacts deepen with OPEC+ delaying capacity review and fuel subsidies projected to top $1 trillion.\nThe U.S. is expanding its military presence, dispatching up to 10,000 additional troops and weighing new strikes on Iran, while Iran warns of \"painful\" retaliation. Mediators persist amid Trump's rejection of Tehran's latest offer, as top aides meet at Camp David to discuss Iran and Yemen and Saudi Arabia plans an offensive against Houthis to break the Red Sea chokehold. The economic toll deepens with record diesel prices squeezing U.S. farmers, and political analysts say the war will be the biggest story of the 2026 midterms.",
           "news": [
             {
               "news_id": "1fb3c9d92f555b67903801b915c1ba26",
@@ -28120,6 +28326,33 @@
               "image": "https://www.bing.com/th?id=ONUT.L8o9Y0gzX1h7KdcJWNU0TQ"
             },
             {
+              "news_id": "e9ffaeb7f8bf533eaadb81480b5ad35d",
+              "url": "https://www.nj.com/politics/2026/10/nate-silver-reveals-the-biggest-electoral-story-of-2026-and-its-bad-news-for-trump.html",
+              "headline": "Nate Silver reveals the ‘biggest electoral story of 2026’ — and it’s bad news for Trump.",
+              "body": "Polling analyst Nate Silver said the U.S. war against Iran would be the “biggest electoral story” in the 2026 midterms.",
+              "published_date": "2026-09-27T16:46:29+00:00",
+              "outlet": "NJ.com",
+              "image": "https://www.bing.com/th?id=ONUT.H6F6kM7xbteSeoTpzdljAA"
+            },
+            {
+              "news_id": "647a47a5b34457eabcba4539b127e400",
+              "url": "https://www.stamfordadvocate.com/news/world/article/officials-say-mediators-are-still-working-with-22452332.php",
+              "headline": "Mediators working to broker US-Iran deal even after Trump rejected latest Tehran...",
+              "body": "Officials tell The Associated Press that mediators are working with Iran and the United States on a...",
+              "published_date": "2026-09-28T16:46:29+00:00",
+              "outlet": "Stamford Advocate",
+              "image": "https://s.yimg.com/bo/d79b8f1d-0aed-5e7e-9e25-e0c37fa969d2_1790599478833.jpg"
+            },
+            {
+              "news_id": "3e5489a342d65cc5a821a4e0ad7307bf",
+              "url": "https://lasvegassun.com/news/2026/oct/03/dual-uk-iranian-national-released-on-bail-over-sus/",
+              "headline": "Dual UK-Iranian national released on bail over suspected plot against US-run military base",
+              "body": "A dual U.K.-Iranian national arrested on suspicion of plotting a terror attack following a security incident at a U.S.-run military air base in England has been released on bail",
+              "published_date": "2026-10-03",
+              "outlet": "Las Vegas Sun",
+              "image": "https://s.yimg.com/bo/615ad34d-2c7d-5ec4-ab0f-e885f3d0fb55_1784259293348.png.cf.jpg"
+            },
+            {
               "news_id": "5c6443c107e258bb8945df404b3b2c5d",
               "url": "https://www.thehindu.com/news/international/flydubai-co-pilot-who-nearly-crashed-plane-was-barred-from-flying-by-oman-over-extremism-concerns/article71539490.ece",
               "headline": "FlyDubai co-pilot who nearly crashed plane was barred from flying by Oman over extremism concerns",
@@ -28127,6 +28360,24 @@
               "published_date": "2026-10-03",
               "outlet": "The Hindu",
               "image": "https://www.bing.com/th?id=ONUT.NTzoDks6tyo2eN6EnRKKSw"
+            },
+            {
+              "news_id": "b86141d59422572398a0382895dfc4d9",
+              "url": "https://www.nytimes.com/athletic/7655289/2026/10/03/f1-bahrain-gp-malaysia/",
+              "headline": "Bahrain flew furniture and a falconer to feel at home in Malaysia, where F1 fans face long queues",
+              "body": "The war in the Middle East led to the Bahrain GP being canceled. Until a deal for eight-week rush to ship the race to ...",
+              "published_date": "2026-10-02T16:46:32+00:00",
+              "outlet": "The New York Times",
+              "image": "https://www.bing.com/th?id=ONUT._cFz6aQu15ODbwXHzq4ejg"
+            },
+            {
+              "news_id": "b38dda197dec56c0a94ff69e7f82618b",
+              "url": "https://www.iranintl.com/en/liveblog/202610033293",
+              "headline": "Yemeni government forces say they seized Samaa fort from Houthis",
+              "body": "Trump’s top security aides met at Camp David to discuss Iran and Yemen, Axios reported, as Saudi Arabia prepares an offensive ...",
+              "published_date": "2026-10-03",
+              "outlet": "Iran International",
+              "image": "https://www.bing.com/th?id=ONUT.OcR65FgqqhW_eE7auvGTlw"
             },
             {
               "news_id": "ff546be3bad451498275f54fdd2c266e",
@@ -28156,6 +28407,15 @@
               "image": "https://media.zenfs.com/en/the_new_republic_521/4ce9e6fb4ac7946c2b4897d27d092da5.jpg"
             },
             {
+              "news_id": "891faf08cd20539b9736a5d0c6024a0f",
+              "url": "https://www.foxbusiness.com/politics/iran-knows-us-is-winning-operation-economic-outcast-campaign-inflicts-damage-treasury-official-says",
+              "headline": "Iran knows US 'is winning' as Operation Economic Outcast inflicts damage, Treasury official says",
+              "body": "A top Treasury official told FOX Business that the \"absolute isolation\" campaign the Treasury is imposing on the Iranian regime has been \"really effective.\"",
+              "published_date": "2026-10-02",
+              "outlet": "FOX Business",
+              "image": "https://s.yimg.com/bo/d1e6d4e5-b636-5471-80a2-b94ba6d6dd77_1791040477586.jpg"
+            },
+            {
               "news_id": "9de4677164025f74988894b3b2c10852",
               "url": "https://okmagazine.com/p/donald-trump-cant-handle-time-questions-about-rising-costs-war-honest/",
               "headline": "Donald Trump Can’t Handle 'TIME' Questions About Rising Costs and War — So He Gets Honest: 'I Don't Know What's Wrong'",
@@ -28163,6 +28423,15 @@
               "published_date": "2026-10-02",
               "outlet": "OK! Magazine",
               "image": "https://s.yimg.com/bo/0de68fe7-155c-5854-9f1b-0c27c147b6e2_1790965281827.jpg"
+            },
+            {
+              "news_id": "43f7162b19c954a3a3d4f02bf3bd1463",
+              "url": "https://www.livemint.com/news/us-news/us-iran-war-news-latest-live-updates-donald-trump-abbas-araghchi-ukmto-strait-of-hormuz-flydubai-flight-ceasefire-talks-11790988241642.html",
+              "headline": "US-Iran war LIVE: Fire, smoke seen near Aramco facility in Riyadh amid Saudi-Houthi escalation | Today News",
+              "body": "US-Iran war news LIVE: A large plume of smoke and fire was seen rising near an Aramco facility in Riyadh on Saturday, Reuters reported citing a witness. The incident comes amid escalating hostilities between Saudi Arabia and Yemen’s Iran-aligned Houthis.",
+              "published_date": "2026-10-03",
+              "outlet": "Mint",
+              "image": "https://www.bing.com/th?id=ONUT.AmOu25LEOgaLPhDlbQS0Dg"
             },
             {
               "news_id": "5c27aa4f73145ffcb6ce316cb2bc1b38",
@@ -28174,6 +28443,15 @@
               "image": "https://s.yimg.com/bo/fe314d4d-8cf5-521c-a69a-99e4527a5936_1790968338203.jpg"
             },
             {
+              "news_id": "72e79542a76b55b3a2be473be5e64888",
+              "url": "https://www.benzinga.com/news/politics/26/10/62151025/iran-warns-of-painful-retaliation-as-trump-prepares-to-send-10000-more-troops-to-the-middle-east-senator-chris-van-hollen-urges-congress-to-cut-off-funding",
+              "headline": "Iran Warns of ‘Painful’ Retaliation As Trump Prepares to Send 10,000 More Troops to the Middle East — Sen",
+              "body": "Iran has threatened a more lethal military response to future attacks as the Pentagon prepares to deploy up to 10,000 additional troops.",
+              "published_date": "2026-10-03",
+              "outlet": "Benzinga",
+              "image": "https://s.yimg.com/bo/4d61b3f5-fd1f-54fa-a64c-2460a4cefa34_1791015257981.jpg"
+            },
+            {
               "news_id": "f001cb279ece5ecebd05489b809384f0",
               "url": "https://www.al-monitor.com/originals/2026/10/italy-says-eu-naval-mission-red-sea-still-insufficient",
               "headline": "Italy says EU naval mission in Red Sea still insufficient",
@@ -28181,6 +28459,15 @@
               "published_date": "2026-10-02",
               "outlet": "Al-Monitor",
               "image": "https://www.bing.com/th?id=ONUT.vKC9ll5LTZ33vUeKhCa-HA"
+            },
+            {
+              "news_id": "bf20db8539fd53c5aa3eeda3f59f87b5",
+              "url": "https://www.theguardian.com/us-news/2026/oct/03/diesel-prices-midwest-farmers",
+              "headline": "Soaring diesel prices take their toll on US farmers in midwest corn belt",
+              "body": "Fuel costs are biting for crop growers, trucking firms and a host of other industries as Iran war stokes record prices",
+              "published_date": "2026-10-03",
+              "outlet": "The Guardian",
+              "image": ""
             },
             {
               "news_id": "f8835f0a7294551c9f05e300a9844572",
@@ -28199,6 +28486,15 @@
               "published_date": "2026-10-02",
               "outlet": "The Hill",
               "image": "https://s.yimg.com/bo/22c727b3-a97f-5582-b0b3-e1e0c93ba413_1790201110999.jpg"
+            },
+            {
+              "news_id": "22090d76aba553929bbef97a99af59a4",
+              "url": "https://theshillongtimes.com/2026/10/03/trump-weighs-new-iran-strikes-as-us-expands-middle-east-forces/",
+              "headline": "Trump weighs new Iran strikes as US expands Middle East forces",
+              "body": "The US military is dispatching roughly 9,000 troops aboard a group of ships to the Middle East, a US official said Thursday. The bolstering of the American military presence comes as President Donald ...",
+              "published_date": "2026-10-03",
+              "outlet": "The Shillong Times",
+              "image": ""
             },
             {
               "news_id": "dffc1f620dda5556a093c2d6aeee6ca6",
@@ -28237,6 +28533,15 @@
               "image": "https://www.bing.com/th?id=ONUT.Tnx10cTiVGnhczoLh-lyHA"
             },
             {
+              "news_id": "195503f7159a5a71810dada2add42c2f",
+              "url": "https://ijr.com/discover/top-trump-aides-reportedly-met-on-iran-yemen-66d89346",
+              "headline": "Trump Aides Hold Unannounced Camp David Meeting on Iran and Yemen",
+              "body": "Senior Trump aides met unannounced for hours at Camp David on Oct. 2, 2026 on Iran and Yemen; a U.S....",
+              "published_date": "2026-10-03",
+              "outlet": "IJR",
+              "image": "https://s.yimg.com/bo/62641418-9e65-524a-8797-94f7a7337e9a_1791008248618.png.cf.jpg"
+            },
+            {
               "news_id": "9e1e7b42a8265f93830e0f5131f83f7f",
               "url": "https://www.yahoo.com/news/world/articles/attempted-hijacking-marks-latest-setback-110000588.html",
               "headline": "Attempted hijacking marks the latest setback in the Gulf’s tourism revival",
@@ -28244,6 +28549,33 @@
               "published_date": "2026-10-02",
               "outlet": "Yahoo",
               "image": "https://www.bing.com/th?id=ONUT.lVFzTYL84rrmH_1fZkRFhA"
+            },
+            {
+              "news_id": "44d9a4fe3dd15ad19313b760686e87ca",
+              "url": "https://www.msn.com/en-gb/news/world/saudis-plan-assault-on-houthis-to-break-red-sea-chokehold/ar-AA2drkb2?ocid=BingNewsVerp",
+              "headline": "Saudis plan assault on Houthis to break Red Sea chokehold",
+              "body": "By Timour Azhari and Mubasher Bukhari RIYADH, Oct 2 (Reuters) - Saudi Arabia is planning an offensive against Iran-backed Houthi militants in Yemen, with options being considered including a coastal ...",
+              "published_date": "2026-10-03",
+              "outlet": "Reuters on MSN",
+              "image": ""
+            },
+            {
+              "news_id": "3749debcbe485b58bc6cf975967708ba",
+              "url": "https://www.ocregister.com/2026/10/02/iran-asymmetric-warfare-explained/",
+              "headline": "What we know and don’t know about how Iran uses asymmetric warfare",
+              "body": "The strategy is currently on display in the Strait of Hormuz.",
+              "published_date": "2026-10-02",
+              "outlet": "Orange County Register",
+              "image": "https://www.bing.com/th?id=ONUT.sv2pp3-gx0dlexe2RLQdbA"
+            },
+            {
+              "news_id": "c58c7afa394658de827d9b4525a356e0",
+              "url": "https://www.msn.com/en-us/news/other/9-times-trump-claimed-victory-in-iran-war-which-is-actually-still-ongoing/ar-AA2duyEL?ocid=BingNewsVerp",
+              "headline": "9 times Trump claimed victory in Iran war - which is actually still ongoing",
+              "body": "9 times Trump claimed victory in Iran war - which is actually still ongoing ...",
+              "published_date": "2026-10-03",
+              "outlet": "Indy100 on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.JOd-GDLBeRGU6Od-wBrdNw"
             },
             {
               "news_id": "c9470abd3785554e99965182bd55034c",
@@ -28302,7 +28634,7 @@
         "gdacs": 1,
         "ercc": 6,
         "healthmap": 0,
-        "news": 957
+        "news": 959
       },
       "source_links": [
         {
@@ -32076,6 +32408,10 @@
           "published_date": "2026-09-27"
         },
         {
+          "headline": "Indonesian villagers on Borneo struggle for water as El Niño intensifies peatland fires",
+          "published_date": "2026-09-27T16:40:55+00:00"
+        },
+        {
           "headline": "Wildfire in western Broward burns 400 acres, 80% contained",
           "published_date": "2026-09-28"
         },
@@ -32172,6 +32508,10 @@
           "published_date": "2026-10-01"
         },
         {
+          "headline": "Bull Fire near California border marks 6th ignition in Reno hills in 2 months",
+          "published_date": "2026-10-02"
+        },
+        {
           "headline": "Regional haze persists as Japan ends fire aid - Asia & Pacific - The Jakarta Post",
           "published_date": "2026-10-02"
         },
@@ -32188,7 +32528,7 @@
           "published_date": "2026-10-02"
         }
       ],
-      "news_total": 957,
+      "news_total": 959,
       "logs": [
         {
           "log_date": "2026-07-27",
@@ -49862,7 +50202,7 @@
       "incident_id": "20260826-NP-FL",
       "tree_id": "26a139d9c4274b379e946b7b737af269",
       "canonical_name": "Flood Bagmati, Nepal 2026-08-26",
-      "summary": "Nepal announced plans to drain four glacial lakes using gated structures to prevent future flood disasters, a project expected to take up to six years. One of the 55 Malaysians missing after the floods was confirmed alive and returned home after 37 days, while DNA-based identification of victims continues.",
+      "summary": "Nepal announced plans to drain four glacial lakes using gated structures to prevent future flood disasters, a project expected to take up to six years. One of the 55 Malaysians missing after the floods was confirmed alive and returned home after 37 days, while DNA-based identification of victims continues.\nIndia is installing an early warning system on a vulnerable glacial lake in Uttarakhand after the Bagmati floods, while Malaysian banks and insurers have announced relief for affected families. Rescue efforts continue in Nepal, a fact-check debunked AI-generated videos falsely depicting the flood, and a Cottey College student is leading campus fundraising for recovery.",
       "country": "Nepal",
       "iso2": "NP",
       "lat": 27.2952744,
@@ -49892,7 +50232,7 @@
         "gdacs": 1,
         "ercc": 2,
         "healthmap": 0,
-        "news": 1011
+        "news": 1016
       },
       "source_links": [
         {
@@ -49935,6 +50275,10 @@
         },
         {
           "headline": "भोटेकोशी बाढीपीडितलाई लामिछाने फाउन्डेसनको एक करोड बढी सहयोग",
+          "published_date": "2026-08-20"
+        },
+        {
+          "headline": "रसुवा बाढीबाट भारत सचेत : जोखिमयुक्त एक हिमतालमा राख्दैछ पूर्वसूचना प्रणाली",
           "published_date": "2026-08-20"
         },
         {
@@ -53786,6 +54130,10 @@
           "published_date": "2026-09-27T15:40:54+00:00"
         },
         {
+          "headline": "Photo: Rescue Efforts Continue After Deadly in Nepal - NEP2026090113 - UPI.com",
+          "published_date": "2026-09-27T16:52:54+00:00"
+        },
+        {
           "headline": "Photo: Rescue Efforts Continue After Deadly in Nepal - NEP2026090115 - UPI.com",
           "published_date": "2026-09-27T19:02:35+00:00"
         },
@@ -53938,6 +54286,10 @@
           "published_date": "2026-10-02"
         },
         {
+          "headline": "Cottey College student leading campus effort for Nepal flood relief",
+          "published_date": "2026-10-02"
+        },
+        {
           "headline": "Malaysian Missing After Nepal Disaster Confirmed Safe, Returns Home After 37 Days",
           "published_date": "2026-10-02T00:00:00+00:00"
         },
@@ -53958,6 +54310,14 @@
           "published_date": "2026-10-03"
         },
         {
+          "headline": "Banks and insurers ready to offer relief to families affected by Nepal-China floods, says BNM",
+          "published_date": "2026-10-03"
+        },
+        {
+          "headline": "Fact Check: क्या पानी के तेज बहाव में बहती गाड़ियों का यह वीडियो नेपाल-तिब्बत सीमा का है?",
+          "published_date": "2026-10-03"
+        },
+        {
           "headline": "Buried, numbered, waiting to be named: Nepal’s grim DNA search after the floods",
           "published_date": "2026-10-03"
         },
@@ -53970,7 +54330,7 @@
           "published_date": "2026-10-03"
         }
       ],
-      "news_total": 1011,
+      "news_total": 1016,
       "logs": [
         {
           "log_date": "2026-08-28",
@@ -54532,7 +54892,7 @@
         },
         {
           "log_date": "2026-10-03",
-          "summary": "Nepal announced plans to drain four glacial lakes using gated structures to prevent future flood disasters, a project expected to take up to six years. One of the 55 Malaysians missing after the floods was confirmed alive and returned home after 37 days, while DNA-based identification of victims continues.",
+          "summary": "Nepal announced plans to drain four glacial lakes using gated structures to prevent future flood disasters, a project expected to take up to six years. One of the 55 Malaysians missing after the floods was confirmed alive and returned home after 37 days, while DNA-based identification of victims continues.\nIndia is installing an early warning system on a vulnerable glacial lake in Uttarakhand after the Bagmati floods, while Malaysian banks and insurers have announced relief for affected families. Rescue efforts continue in Nepal, a fact-check debunked AI-generated videos falsely depicting the flood, and a Cottey College student is leading campus fundraising for recovery.",
           "news": [
             {
               "news_id": "df5f5efacad251b99d3471fb691cff04",
@@ -54562,6 +54922,15 @@
               "image": "https://s.yimg.com/bo/e7c94895-1c4a-5215-9eec-ac1eb37d1939_1790959940847.jpg"
             },
             {
+              "news_id": "d0cb9543245e5d22bdba187a32705202",
+              "url": "https://www.onlinekhabar.com/2026/10/2031515/india-alerted-to-rasuwa-floods-early-warning-system-being-installed-in-a-vulnerable-glacial-lake",
+              "headline": "रसुवा बाढीबाट भारत सचेत : जोखिमयुक्त एक हिमतालमा राख्दैछ पूर्वसूचना प्रणाली",
+              "body": "नेपालमा आएको आकस्मिक बाढीको एक महिनापछि भारतको हिमाली राज्य उत्तराखण्डले एउटा हिमतालमा पूर्वसूचना प्रणाली स्थापना गर्ने तयारी गरेको छ । उत्तराखण्डका उच्च हिमाली क्षेत्रमा हिमताल फुटेर हुने क्षति न्यूनीकरण, तालको निगरानी तथा पूर्वसूचना प्रणालीलाई थप प्रभावकारी …",
+              "published_date": "2026-08-20",
+              "outlet": "अनलाइन खबर",
+              "image": "https://www.bing.com/th?id=ONUT.eJ_xe7t7jAR_-fg0lRgdRg"
+            },
+            {
               "news_id": "492d2a92f89e547093ba3676cbab679e",
               "url": "https://www.straitstimes.com/asia/se-asia/nepal-floods-one-of-55-missing-malaysians-confirmed-alive-reunited-with-family",
               "headline": "Nepal floods: One of 55 missing Malaysians confirmed alive, reunited with family",
@@ -54589,6 +54958,15 @@
               "image": "https://www.bing.com/th?id=ONUT.83bCBfee_5a8g9st1ikc9A"
             },
             {
+              "news_id": "4b9c74cfb48755b48f2c6eee87a66128",
+              "url": "https://www.malaymail.com/news/malaysia/2026/10/03/banks-and-insurers-ready-to-offer-relief-to-families-affected-by-nepal-china-floods-says-bnm/237497",
+              "headline": "Banks and insurers ready to offer relief to families affected by Nepal-China floods, says BNM",
+              "body": "KUALA LUMPUR, Oct 3 — Financial service providers stand ready to extend appropriate relief and support to the families of the victims affected by the recent floods along the...",
+              "published_date": "2026-10-03",
+              "outlet": "Malay Mail",
+              "image": ""
+            },
+            {
               "news_id": "d84fef1fe3445cdf83914ca46b7a5abc",
               "url": "https://www.businesstoday.com.my/2026/10/02/malaysian-missing-after-nepal-disaster-confirmed-safe-returns-home-after-37-days/",
               "headline": "Malaysian Missing After Nepal Disaster Confirmed Safe, Returns Home After 37 Days",
@@ -54605,6 +54983,15 @@
               "published_date": "2026-09-28T05:52:20+00:00",
               "outlet": "UPI",
               "image": "https://s.yimg.com/bo/47444ad3-55e5-5573-969b-64c325b98d37_1788327035999.jpg"
+            },
+            {
+              "news_id": "ffb6d96bc3db5e79adac5506de46a492",
+              "url": "https://www.gnttv.com/shows/fact-check/video/fact-check-viral-videos-of-nepal-flood-and-bangkok-fish-on-roads-found-to-be-ai-generated-sns-frvd-1458303-2026-10-03",
+              "headline": "Fact Check: क्या पानी के तेज बहाव में बहती गाड़ियों का यह वीडियो नेपाल-तिब्बत सीमा का है?",
+              "body": "सोशल मीडिया पर नेपाल और थाईलैंड में आई बाढ़ से जोड़कर दो अलग-अलग वीडियो तेजी से वायरल हो रहे हैं. पहले वीडियो में पानी के तेज बहाव में गाड़ियों के बहने का दृश्य दिखाकर दावा किया गया कि यह नेपाल-तिब्बत सीमा पर आई बाढ़ का है. पड़ताल के दौरान वीडियो में गाड़ियों के अप्राकृतिक तरीके से तैरने और धुंधली नंबर प्लेट जैसी खामियां मिलीं. एआई डिटेक्शन टूल्स की जांच में यह वीडियो 80 से 89 प्रतिशत तक एआई जनरेटेड पाया गया. वहीं दूसरे वीडियो में थाईलैंड की राजधानी बैंकॉक में बाढ़ के पानी में सड़कों पर मछलियों के तैरने का दावा किया गया. जांच में सुविधा स्टोर के साइन बोर्ड पर गलत वर्तनी, पानी की कम गहराई और स्थिर गाड़ियां दिखाई दीं. एआई डिटेक्शन टूल ने 97 प्रतिशत संभावना के साथ इसे भी एआई जनरेटेड बताया. इस तरह दोनों वायरल दावे पूरी तरह भ्रामक और फर्जी साबित हुए.",
+              "published_date": "2026-10-03",
+              "outlet": "गुड न्यूज़ टुडे",
+              "image": "https://www.bing.com/th?id=ONUT.q9H4KOUP2RmVSAMbpdliTQ"
             },
             {
               "news_id": "81ee7316f280562e99db597bc8c630f0",
@@ -54641,6 +55028,24 @@
               "published_date": "2026-10-03",
               "outlet": "Sinar Daily on MSN",
               "image": "https://www.bing.com/th?id=ONUT.x8ka3pbBsjNx_nFmuRItnA"
+            },
+            {
+              "news_id": "ec9a180663c759599c727a0cc68a4111",
+              "url": "https://www.upi.com/News_Photos/view/upi/bde981ba066f7fc720737a7802f9127b/Rescue-Efforts-Continue-After-Deadly-in-Nepal/",
+              "headline": "Photo: Rescue Efforts Continue After Deadly in Nepal - NEP2026090113 - UPI.com",
+              "body": "Nepali teams continue searching for survivors of devastating Himalayan glacial floods in Nepal on...",
+              "published_date": "2026-09-27T16:52:54+00:00",
+              "outlet": "UPI",
+              "image": "https://s.yimg.com/bo/834fca94-6dc5-521b-9c3b-842dd7e9f03a_1788305122577.jpg"
+            },
+            {
+              "news_id": "b8048da510075bcbba923758c74544f4",
+              "url": "https://www.yahoo.com/news/world/articles/cottey-college-student-leading-campus-211221460.html",
+              "headline": "Cottey College student leading campus effort for Nepal flood relief",
+              "body": "A local international student is turning concern into action as her home country continues to recover from devastating floods.",
+              "published_date": "2026-10-02",
+              "outlet": "KSNF Joplin · via Yahoo News",
+              "image": "https://media.zenfs.com/en/ksnf_joplin_articles_426/75acc81ff20fccb98c0eadc593425a93.png.cf.jpg"
             },
             {
               "news_id": "3f7a9318d26f50bea024a80ba3882580",
@@ -56880,7 +57285,7 @@
       "incident_id": "20260904-PH-FL",
       "tree_id": "6972a368ddbd4aa6aa55eab0f1080842",
       "canonical_name": "Flood Philippines 2026-09-04",
-      "summary": "The Department of Health recognized the Philippine Red Cross for deploying personnel to assist areas with increased patient loads from the floods. The DPWH is fast-tracking construction of drainage facilities and septic tanks at UP-PGH to address flooding, while a tropical storm trough outside the Philippine Area of Responsibility is forecast to bring heavy rains to eastern Visayas and Mindanao, posing additional flood risks.",
+      "summary": "In Zamboanga del Sur, rescue operations are underway for two men trapped by floods in a mining tunnel. In Pampanga, two flood control walls have been heavily damaged, raising concerns about further flooding in the area.",
       "country": "Philippines",
       "iso2": "PH",
       "lat": 12.9,
@@ -56910,7 +57315,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 134
+        "news": 136
       },
       "source_links": [
         {
@@ -57466,9 +57871,17 @@
         {
           "headline": "EU allocates P10.9 million in emergency aid for severe Luzon flood victims",
           "published_date": "2026-10-03"
+        },
+        {
+          "headline": "Race against time: 2 men trapped in Zamboanga Sur flooded mining tunnel",
+          "published_date": "2026-10-03"
+        },
+        {
+          "headline": "2 floodwalls in Pampanga damaged",
+          "published_date": "2026-10-03"
         }
       ],
-      "news_total": 134,
+      "news_total": 136,
       "logs": [
         {
           "log_date": "2026-09-04",
@@ -57648,39 +58061,6 @@
           ]
         },
         {
-          "log_date": "2026-09-25",
-          "summary": "Ride-hailing company inDrive, in partnership with ASSIST, distributed relief packs to affected families in Meycauayan, Bulacan as part of recovery efforts from the recent floods. An analysis piece links the floods to ongoing corruption scandals and political feuds, while footage shows a powerful flash flood sweeping away rubbish after a river overflowed.",
-          "news": [
-            {
-              "news_id": "2da6e27186a95082ae42d0a6a5997466",
-              "url": "https://www.lionheartv.net/2026/09/indrive-philippines-team-helps-bulacan-households-recover-from-recent-floods/",
-              "headline": "inDrive Philippines Team Helps Bulacan Households Recover From Recent Floods - LionhearTV",
-              "body": "Following weeks of heavy rainfall that caused flooding in parts of Central Luzon, global mobility platform inDrive mobilized employees to distribute relief packs to affected families in Meycauayan, Bulacan. inDrive Philippines, with the nonprofit Asia Society for Social Improvement and Sustainable Transformation (ASSIST), distributes relief packs to families affected by flooding in Bulacan Working with […]",
-              "published_date": "2026-09-22",
-              "outlet": "LionhearTV",
-              "image": ""
-            },
-            {
-              "news_id": "c6f980c9d9c45f93879df4f6a80f0576",
-              "url": "https://www.hercampus.com/school/casper-libero/floods-corruption-and-a-family-feud-whats-really-behind-the-philippines-political-crisis/",
-              "headline": "Floods, Corruption, and a Family Feud: What's Really Behind the Philippines' Political Crisis",
-              "body": "Sara Duterte’s second impeachment comes amid a corruption scandal, devastating floods and a deepening feud between two powerful political families.",
-              "published_date": "2026-09-24",
-              "outlet": "Her Campus",
-              "image": "https://www.bing.com/th?id=ONUT.FakN-Nr4VcXdMUMWjw_a-Q"
-            },
-            {
-              "news_id": "b071a59ce2be58ecb97f27dd92f20ac1",
-              "url": "https://www.msn.com/en-ie/news/other/flash-flood-in-the-philippines-carries-away-rubbish-after-river-bursts-its-banks/vi-AA2cWVsR?ocid=BingNewsVerp",
-              "headline": "Flash flood in the Philippines carries away rubbish after river bursts its banks",
-              "body": "Footage shows a powerful flash flood surging through a river channel in the Philippines as it carries away a massive wave of ...",
-              "published_date": "2026-09-25",
-              "outlet": "Stories by SWNS on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.aljPEyAW9paCCYD_vDVNTQ"
-            }
-          ]
-        },
-        {
           "log_date": "2026-09-29",
           "summary": "The Rotary Club of Makati Hope Mission Team distributed food packs, water, mats and blankets to 200 flood-affected families in Calumpit. Separately, heavy rainfall and flooding led to an 18 percent year-on-year decline in overall vehicle sales in August, while electrified vehicle sales rose by over 200 percent.",
           "news": [
@@ -57745,9 +58125,42 @@
               "image": "https://www.bing.com/th?id=ONUT.hHYp11sQZGVfIqwTRr9y1g"
             }
           ]
+        },
+        {
+          "log_date": "2026-10-03",
+          "summary": "In Zamboanga del Sur, rescue operations are underway for two men trapped by floods in a mining tunnel. In Pampanga, two flood control walls have been heavily damaged, raising concerns about further flooding in the area.",
+          "news": [
+            {
+              "news_id": "3a886c658ad35adebf0b1105a0bda09b",
+              "url": "https://www.msn.com/en-ph/news/other/eu-allocates-p109-million-in-emergency-aid-for-severe-luzon-flood-victims/ar-AA2doZrA?ocid=BingNewsVerp",
+              "headline": "EU allocates P10.9 million in emergency aid for severe Luzon flood victims",
+              "body": "The European Union (EU) is providing €150,000 (about PHP 10.9 million) in humanitarian funding to support people affected by ...",
+              "published_date": "2026-10-03",
+              "outlet": "When In Manila on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.4zQww8Igejwn1juge7RDBQ"
+            },
+            {
+              "news_id": "f80face86deb57788cbd48d2e4e530f4",
+              "url": "https://www.msn.com/en-ph/news/other/race-against-time-2-men-trapped-in-zamboanga-sur-flooded-mining-tunnel/ar-AA2duktg?ocid=BingNewsVerp",
+              "headline": "Race against time: 2 men trapped in Zamboanga Sur flooded mining tunnel",
+              "body": "PAGADIAN CITY, Zamboanga del Sur — Authorities on Saturday continue to race against time for two men trapped by floods at a ...",
+              "published_date": "2026-10-03",
+              "outlet": "Inquirer.net on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.3b113480770684afa9ffb4d8fa455e92"
+            },
+            {
+              "news_id": "cdf2dd5f1dae5778acfb00358dc5cb83",
+              "url": "https://www.msn.com/en-ph/news/other/2-floodwalls-in-pampanga-damaged/ar-AA2duasn?ocid=BingNewsVerp",
+              "headline": "2 floodwalls in Pampanga damaged",
+              "body": "ARAYAT, Pampanga — Two flood control structures were heavily damaged on Friday afternoon, just 10 months after a portion of ...",
+              "published_date": "2026-10-03",
+              "outlet": "The Manila Times on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.uS-wGxa2Aqo6gJuxvsn9iA"
+            }
+          ]
         }
       ],
-      "logs_total": 19
+      "logs_total": 20
     },
     {
       "incident_id": "20260904-ID-VO",
@@ -62220,7 +62633,7 @@
         "gdacs": 0,
         "ercc": 2,
         "healthmap": 0,
-        "news": 44
+        "news": 45
       },
       "source_links": [
         {
@@ -62412,6 +62825,10 @@
           "published_date": "2026-10-01T06:24:11+00:00"
         },
         {
+          "headline": "Vietnam's Ho Chi Minh City is learning to live with floods but climate change...",
+          "published_date": "2026-10-01T16:59:10+00:00"
+        },
+        {
           "headline": "Vietnam’s Ho Chi Minh City is learning to live with floods but climate change has raised the stakes",
           "published_date": "2026-10-01T18:57:56+00:00"
         },
@@ -62424,7 +62841,7 @@
           "published_date": "2026-10-03T05:57:28+00:00"
         }
       ],
-      "news_total": 44,
+      "news_total": 45,
       "logs": [
         {
           "log_date": "2026-09-22",
@@ -62763,6 +63180,84 @@
         }
       ],
       "logs_total": 1
+    },
+    {
+      "incident_id": "20261002-XX-OT",
+      "tree_id": "e26fe4e5f998401f86333587099be0d1",
+      "canonical_name": "2026-10-02",
+      "summary": "",
+      "country": "",
+      "iso2": "XX",
+      "lat": null,
+      "lon": null,
+      "country_group": "C",
+      "region": "Unknown",
+      "incident_type": "",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "LOW",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": null,
+      "event_status": null,
+      "extended_monitoring": false,
+      "disease_name": null,
+      "event_date": "2026-10-02",
+      "first_reported_date": "2026-10-02",
+      "last_updated_date": "2026-10-03",
+      "days_since_event": 1,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 0,
+        "gdacs": 0,
+        "ercc": 1,
+        "healthmap": 0,
+        "news": 3
+      },
+      "source_links": [
+        {
+          "type": "ERCC",
+          "label": "ECHO Daily Map of 02 October 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5804",
+          "meta": ""
+        }
+      ],
+      "physical": {
+        "max_magnitude": null,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Who is winning the 2026 midterms? Latest House and Senate outlook",
+          "url": "https://www.usatoday.com/story/news/2026/10/02/who-is-winning-the-2026-midterms-latest-election-polls-who-will-win-senate-kalshi-odds-polymarket/92055821007/",
+          "outlet": "USA TODAY",
+          "published_date": "2026-10-02T00:00:00+00:00"
+        },
+        {
+          "headline": "2026 Bank of Utah Championship Friday round 2 highlights, latest cut line info",
+          "url": "https://www.msn.com/en-us/sports/golf/2026-bank-of-utah-championship-scores-friday-round-2-live-updates-projected-cut-at-black-desert/ar-AA2dqfyD?ocid=BingNewsVerp",
+          "outlet": "Golfweek on MSN",
+          "published_date": "2026-10-03"
+        },
+        {
+          "headline": "Tennessee high school football scores for week 7 of TSSAA football 2026 season",
+          "url": "https://www.msn.com/en-us/news/other/tennessee-high-school-football-scores-for-week-7-of-tssaa-football-2026-season/ar-AA2dssyk?ocid=BingNewsVerp",
+          "outlet": "The Tennessean on MSN",
+          "published_date": "2026-10-03"
+        }
+      ],
+      "news_total": 3,
+      "logs": [],
+      "logs_total": 0
     }
   ]
 }
