@@ -1,26 +1,26 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-10-05",
-  "generated_at": "2026-10-05T07:15:03Z",
+  "generated_at": "2026-10-05T21:14:50Z",
   "as_of": "2026-10-05",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 28,
-    "new_today": 9,
+    "reportable_total": 29,
+    "new_today": 16,
     "critical": 14,
     "high": 4,
     "medium": 7,
-    "low": 3,
+    "low": 4,
     "disease_outbreaks": 3,
-    "countries_affected": 18,
-    "news_total": 11341,
+    "countries_affected": 19,
+    "news_total": 11417,
     "max_magnitude": 7.5,
     "by_severity": {
       "CRITICAL": 14,
       "HIGH": 4,
       "MEDIUM": 7,
-      "LOW": 3
+      "LOW": 4
     },
     "by_type": {
       "Disease": 3,
@@ -32,14 +32,14 @@
       "Severe Weather": 2,
       "Volcano": 1,
       "Tropical Cyclone": 2,
-      "": 1
+      "": 2
     },
     "by_region": {
       "Global": 2,
-      "Africa": 1,
+      "Africa": 2,
       "Asia": 11,
-      "Americas": 5,
-      "Europe": 4,
+      "Americas": 6,
+      "Europe": 3,
       "Unknown": 3,
       "Oceania": 2
     }
@@ -70,6 +70,15 @@
       "iso2": "VN",
       "region": "Asia",
       "country_group": "A",
+      "max_severity": "LOW"
+    },
+    {
+      "country": "Sudan",
+      "count": 1,
+      "max_sev_rank": 1,
+      "iso2": "SD",
+      "region": "Africa",
+      "country_group": "C",
       "max_severity": "LOW"
     },
     {
@@ -243,7 +252,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 180
+        "news": 182
       },
       "source_links": [
         {
@@ -981,11 +990,19 @@
           "published_date": "2026-10-04T17:09:57+00:00"
         },
         {
+          "headline": "मदरसे के पास कूड़ा डालने से लोग परेशान: नपा कर्मचारियों पर कूड़ा फेंकने का आरोप, बदबू और बीमारी का खतरा बढ़ा - Gulami Ka Pura News",
+          "published_date": "2026-10-05"
+        },
+        {
+          "headline": "विधिपुर में मच्छरों के लिए फॉगिंग अभियान: बरसात के बाद बढ़ी बीमारियों से बचाव के लिए गांवों में कराया छिड़काव - Vidhipur(Bharthana) News",
+          "published_date": "2026-10-05"
+        },
+        {
           "headline": "Quebrantahuesos: la historia olvidada del Dengue en México",
           "published_date": "2026-10-05T06:13:47+00:00"
         }
       ],
-      "news_total": 180,
+      "news_total": 182,
       "logs": [
         {
           "log_date": "2026-07-08",
@@ -2497,7 +2514,7 @@
       "incident_id": "20250905-CD-DI",
       "tree_id": "5c179437a46a56aca2f8b70aeceda07a",
       "canonical_name": "Ebola Kinshasa, DR Congo 2025-09-05",
-      "summary": "The Ebola outbreak in DR Congo now exceeds 8,000 confirmed cases and 4,000 deaths, with one source reporting 8,116 cases and 3,924 deaths. A treatment center was burned down in Ituri province, while clinical trials for an oral Ebola treatment (NV-387) have started enrollment, and over 250 participants have been enrolled in a separate prevention trial.",
+      "summary": "France's Foreign Minister Jean-Noël Barrot visited the Ebola-affected region in eastern DR Congo on October 4, 2026, announcing stepped-up support and cautioning that the virus could resurge if vigilance wanes. Separately, more than 250 participants have been enrolled in a clinical trial for a potential Ebola treatment.",
       "country": "DR Congo",
       "iso2": "CD",
       "lat": -4.0,
@@ -2516,7 +2533,7 @@
       "disease_name": "Ebola",
       "event_date": "2025-09-05",
       "first_reported_date": "2025-09-05",
-      "last_updated_date": "2026-10-04",
+      "last_updated_date": "2026-10-05",
       "days_since_event": 395,
       "source_count": 15,
       "should_report": true,
@@ -2527,7 +2544,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 568
+        "news": 569
       },
       "source_links": [
         {
@@ -4903,9 +4920,13 @@
         {
           "headline": "DR콩고 에볼라 사망자 4천 명 넘어…백신 없는 '분디부교'형, 국내 의심신고 3명은 음성",
           "published_date": "2026-10-04T06:18:32+00:00"
+        },
+        {
+          "headline": "France to step up Ebola funding in Congo amid resurgence fears, minister says - MyJoyOnline",
+          "published_date": "2026-10-05"
         }
       ],
-      "news_total": 568,
+      "news_total": 569,
       "logs": [
         {
           "log_date": "2026-07-10",
@@ -5283,129 +5304,6 @@
           ]
         },
         {
-          "log_date": "2026-10-02",
-          "summary": "DR Congo's Ebola outbreak has surpassed 8,000 confirmed cases amid a shortage of health workers, while the Africa CDC chief says contact tracing is falling far short, with only about 30,000 exposed people identified. Save the Children reports 961 children have died—about seven per day on average—with under-fives at greatest risk. Separately, NanoViricides has begun enrollment and dosing in a Phase II clinical trial of the oral drug NV-387 to treat Ebola.\nGovernment figures show the DR Congo Ebola outbreak has now killed more than 4,000 people, making it the deadliest and fastest-growing outbreak on record. In a separate development, a fire destroyed a key Ebola transit centre in Ituri as fighting and displacement disrupted response efforts. Additionally, Island Pharmaceuticals has begun manufacturing the antiviral Galidesivir for an investigational Ebola treatment program.",
-          "news": [
-            {
-              "news_id": "8fe58debdc2453cf86b4866433a54489",
-              "url": "https://www.cbsnews.com/news/ebola-deaths-congo-4000-fastest-growing-outbreak-history/",
-              "headline": "Ebola death toll in Congo tops 4,000 in fastest-growing outbreak of the disease on record",
-              "body": "Congo's Ebola outbreak has now recorded more than 4,000 deaths, authorities said, in what has become the fastest-growing Ebola outbreak in history.",
-              "published_date": "2026-10-02",
-              "outlet": "CBS News",
-              "image": "https://www.bing.com/th?id=ONUT.iM6nBeqffnlQIj8TCeK_Qw"
-            },
-            {
-              "news_id": "c166d6cf23f2590b9efb56b5d40e8834",
-              "url": "https://www.marketscreener.com/news/clinical-trial-of-the-oral-drug-nv-387-to-treat-ebola-has-started-enrollment-and-dosing-of-patients-ce785adddc81ff24",
-              "headline": "Clinical Trial of the Oral Drug NV-387 to Treat Ebola Has Started Enrollment and Dosing of Patients Last Week, Says NanoViricides",
-              "body": "NanoViricides, Inc. , a clinical stage leader developing antiviral drugs that viruses cannot escape, announces that its Phase II Clinical Trial of NV-387 Oral Gummies as a Treatment for the Current...",
-              "published_date": "2026-09-29",
-              "outlet": "MarketScreener",
-              "image": ""
-            },
-            {
-              "news_id": "cf7d91f0bbca5d52820a42bb9328c350",
-              "url": "https://www.msn.com/en-my/news/other/dr-congo-ebola-outbreak-killed-more-than-4000-official-figures/ar-AA2dqQkn?ocid=BingNewsVerp",
-              "headline": "DR Congo Ebola outbreak killed more than 4,000: official figures",
-              "body": "The worst ever Ebola outbreak in the Democratic Republic of Congo has now killed more than 4,000 people out of more than ...",
-              "published_date": "2026-10-02",
-              "outlet": "Euronews (English) on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.dd58d_7q7eigMMF8Efz54Q"
-            },
-            {
-              "news_id": "bc30bfc5da225205b991042addf0343e",
-              "url": "https://apnews.com/article/congo-ebola-outbreak-virus-3e3b17dca67b96371a4a3629c4814543",
-              "headline": "Congo's Ebola outbreak tops 8,000 confirmed cases as disease remains out of control",
-              "body": "The number of confirmed Ebola cases in Congo has surged past 8,000 as the country struggles with a shortage of health workers. The new statistics were released Sunday.",
-              "published_date": "2026-09-28T09:45:00+00:00",
-              "outlet": "Associated Press News",
-              "image": "https://dims.apnews.com/dims4/default/09ebd77/2147483647/strip/true/crop/5760x3838+0+1/resize/980x653!/quality/90/?url=https://assets.apnews.com/cb/c5/74fde876e5a6b5f756b8a2b91f3f/040a6efe0d984f9daa130663e4ec940a"
-            },
-            {
-              "news_id": "0bbebbd45cb75b1eab8e96b0407a51ad",
-              "url": "https://www.savethechildren.net/news/drc-seven-children-day-average-have-died-ebola-under-fives-greatest-risk",
-              "headline": "DRC: Seven children a day on average have died of Ebola, with under-fives at greatest risk",
-              "body": "About seven children on average have died every day of the Ebola virus since the outbreak was declared in the Democratic Republic of Congo (DRC) on 15 May, with 961 children now confirmed to have died from the disease, said Save the Children.",
-              "published_date": "2026-01-10",
-              "outlet": "Save the Children International",
-              "image": ""
-            },
-            {
-              "news_id": "6c9e5296b42e5c3fb54ebf127d4b78fb",
-              "url": "https://www.msn.com/en-us/news/other/dr-congo-s-ebola-outbreak-spreads-to-two-new-health-zones-who-says/ar-AA2cZlXU",
-              "headline": "DR Congo's Ebola outbreak spreads to two new health zones, WHO says",
-              "body": "Health workers struggle as new Ebola cases are found in border regions of South Ubangi and Haut-Uele.",
-              "published_date": "2026-10-02",
-              "outlet": "Al Jazeera",
-              "image": "https://www.aljazeera.com/wp-content/uploads/2026/09/reuters_6ab6e4f3-1790371059.jpg?resize=1920,1440"
-            },
-            {
-              "news_id": "a06d538232a650a4bbe2c87dca9cb8a5",
-              "url": "https://www.msn.com/en-us/news/other/congos-ebola-outbreak-has-killed-more-than-4000-government-data-shows/ar-AA2doVB4?ocid=BingNewsVerp",
-              "headline": "Congo's Ebola outbreak has killed more than 4,000, government data shows",
-              "body": "DAKAR, Oct 2 (Reuters) - The number of deaths in Democratic Republic of Congo's Ebola outbreak has surpassed 4,000, government data showed on Friday, as the worst epidemic in the country's history ...",
-              "published_date": "2026-10-02",
-              "outlet": "Reuters on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "047c9865619c5e9d9340ec82fd0ac6d1",
-              "url": "https://www.townsvillebulletin.com.au/business/stockhead/island-pharmaceuticals-starts-galidesivir-production-for-ebola-emergencyuse-program/news-story/c4e02fd2654a09ed32bf95caeaab9e13",
-              "headline": "ILA begins antiviral manufacture for Ebola program",
-              "body": "Special Report: Island Pharmaceuticals has begun manufacturing its antiviral Galidesivir, with the goal of supplying an authorised investigational Ebola treatment in Uganda.",
-              "published_date": "2026-10-02",
-              "outlet": "Townsville Bulletin",
-              "image": "https://www.bing.com/th?id=ONUT.9hWD0IS7UqrnYKBZ740-pg"
-            },
-            {
-              "news_id": "0f3bb2a05fe85e24aec5d3aaa55868f7",
-              "url": "https://www.afro.who.int/countries/democratic-republic-of-congo/publication/ebola-bundibugyo-virus-disease-outbreak-3",
-              "headline": "EBOLA BUNDIBUGYO VIRUS DISEASE OUTBREAK Democratic Republic of the Congo | Uganda Weekly External Situation Report 18, Data as of 13 September 2026",
-              "body": "Event description",
-              "published_date": "2026-09-15",
-              "outlet": "afro.who.int",
-              "image": ""
-            },
-            {
-              "news_id": "72b58dc23881540c90a08162fa20f606",
-              "url": "https://www.marketscreener.com/news/clinical-trial-of-the-oral-drug-nv-387-to-treat-ebola-has-started-enrollment-and-dosing-of-patients-ce785adcdf8af322",
-              "headline": "Clinical Trial of the Oral Drug NV-387 to Treat Ebola Has Started Enrollment and Dosing of Patients Last Week (on or about September 23rd), Says NanoViricides",
-              "body": "SHELTON, CT / ACCESS Newswire / September 28, 2026 / NanoViricides, Inc. , a clinical stage leader developing antiviral drugs that viruses cannot escape, announces that its Phase II Clinical Trial of...",
-              "published_date": "2026-09-28",
-              "outlet": "MarketScreener",
-              "image": ""
-            },
-            {
-              "news_id": "ba64afac18c953a2a3d6bc7b7e730e09",
-              "url": "https://www.channelafrica.co.za/channelafrica/news/fire-destroys-key-ebola-centre-as-fighting-disrupts-drc-response/",
-              "headline": "Date Posted",
-              "body": "A fire has destroyed a key Ebola transit centre in Ituri as conflict and mass displacement further disrupt efforts to contain ...",
-              "published_date": "2026-10-02",
-              "outlet": "Channel Africa",
-              "image": "https://www.bing.com/th?id=ONUT.cxnjpoqHNdRJ6h4tWneCsQ"
-            },
-            {
-              "news_id": "b6843f42b34b52f4bec0060658da50fe",
-              "url": "https://www.msn.com/en-us/news/other/congo-ebola-contact-tracing-falls-far-short-as-outbreak-spreads-africa-cdc-chief-says/ar-AA2cYLN1",
-              "headline": "Congo Ebola contact tracing falls far short as outbreak spreads, Africa CDC chief says",
-              "body": "By Doyinsola Oladipo UNITED NATIONS, Sept 25 (Reuters) - Health authorities battling the Ebola outbreak in Democratic Republic of Congo have identified only about 30,000 people who may have been exposed to the virus,",
-              "published_date": "2026-10-02",
-              "outlet": "Reuters",
-              "image": "https://www.reuters.com/resizer/v2/ZYZXZCY54ZJX3DNYADPWVFT3AQ.jpg?auth=35f681e482796e19028c05a7f97e2e278bd27ff8238884c3254fba02edc3a2d8&height=1005&width=1920&quality=80&smart=true"
-            },
-            {
-              "news_id": "3f56b7fb017c5bc5809a1764359557fa",
-              "url": "https://www.afro.who.int/countries/democratic-republic-of-congo/news/surveillance-strengthens-ebola-response-democratic-republic-congo",
-              "headline": "Surveillance strengthens the Ebola response in the Democratic Republic of the Congo",
-              "body": "Bunia, the Democratic Republic of the Congo—Since the start of the Ebola outbreak caused by Bundibugyo virus disease in the Democratic Republic of the Congo, surveillance has been one of the main lines of defence against the disease. By enabling the rapid detection of alerts, investigation of suspected cases and monitoring of contacts of confirmed cases, it helps interrupt chains of transmission and protect communities.",
-              "published_date": "2026-09-30",
-              "outlet": "WHO | Regional Office for Africa",
-              "image": "https://www.afro.who.int/sites/default/files/styles/social_1200x630/public/2026-09/Surveillance.jpeg?itok=eL5RPwRu"
-            }
-          ]
-        },
-        {
           "log_date": "2026-10-03",
           "summary": "The Ebola death toll in DR Congo has risen above 4,000, and a treatment/transit centre was burned down, forcing nearly 19,000 people to flee. In addition, six new Ebola cases have been detected in M23-controlled areas, as health officials call for greater community cooperation in response efforts.",
           "news": [
@@ -5497,15 +5395,48 @@
               "image": "https://s.yimg.com/bo/31a5331a-68b0-5209-8cc7-c030b3a3186d_1788926718987.jpg"
             }
           ]
+        },
+        {
+          "log_date": "2026-10-05",
+          "summary": "France's Foreign Minister Jean-Noël Barrot visited the Ebola-affected region in eastern DR Congo on October 4, 2026, announcing stepped-up support and cautioning that the virus could resurge if vigilance wanes. Separately, more than 250 participants have been enrolled in a clinical trial for a potential Ebola treatment.",
+          "news": [
+            {
+              "news_id": "c27d2c6409ac5ef292e6c35659ba7528",
+              "url": "https://www.sfgate.com/news/world/article/inside-the-study-for-a-remedy-to-fight-congo-s-22460655.php",
+              "headline": "Inside the study for a remedy to fight Congo's deadliest Ebola outbreak",
+              "body": "More than 250 participants have been enrolled in a trial for a drug that could stop them from...",
+              "published_date": "2026-10-03T06:09:03+00:00",
+              "outlet": "San Francisco Chronicle",
+              "image": "https://s.yimg.com/bo/eb0c0524-095e-5ce9-93b8-5cc763ee76bd_1791006388229.jpg"
+            },
+            {
+              "news_id": "233b482a90cb58f991db8a8b53c4c0b4",
+              "url": "https://www.myjoyonline.com/france-to-step-up-ebola-funding-in-congo-amid-resurgence-fears-minister-says/",
+              "headline": "France to step up Ebola funding in Congo amid resurgence fears, minister says - MyJoyOnline",
+              "body": "France will step up its support for efforts to eradicate Ebola in eastern Democratic Republic of Congo, Foreign Minister Jean-Noel Barrot said on Saturday during a visit to a region hit by the virus, warning that it could quickly resurge if vigilance waned.",
+              "published_date": "2026-10-05",
+              "outlet": "MyJoyOnline",
+              "image": "https://www.bing.com/th?id=ONUT.T1xQVa9AnWhLqRHv-ZelPw"
+            },
+            {
+              "news_id": "b1510151ffad523ca0d6dd7e1c217356",
+              "url": "https://www.rfi.fr/tw/非洲/20261004-rfi法廣-尼古拉-法國外長赴非洲探訪埃博拉疫區",
+              "headline": "法國外長赴非洲探訪埃博拉疫區",
+              "body": "法國外交部長讓-諾埃爾·巴羅（Jean-Noël Barrot）於2026年10月04日星期日結束了對非洲國家剛果民主共和國（RD Congo）為期兩天的訪問。本台法廣非洲組（RFI……",
+              "published_date": "2026-10-04",
+              "outlet": "法國國際廣播電台",
+              "image": "https://www.bing.com/th?id=ONUT.7DA01oXZoO-T1F1mlvbRKg"
+            }
+          ]
         }
       ],
-      "logs_total": 60
+      "logs_total": 61
     },
     {
       "incident_id": "20260511-XX-DR",
       "tree_id": "d75afb3078c54d74b37c4f8bb985dfce",
       "canonical_name": "Drought Green",
-      "summary": "New developments include Baltimore planning to draw water from the Susquehanna River to blend with reservoir supplies, and the Philippines allocating P3.3 billion to support drought-affected farmers while facing sugar export shortfalls due to dry conditions. A Karnataka agricultural official noted that despite severe drought, conditions are expected to normalize next year, and a study indicated that drought has become less frequent and intense in the Northeast U.S. These updates reflect ongoing drought impacts and adaptation efforts across different regions.",
+      "summary": "New developments include Baltimore planning to draw water from the Susquehanna River to blend with reservoir supplies, and the Philippines allocating P3.3 billion to support drought-affected farmers while facing sugar export shortfalls due to dry conditions. A Karnataka agricultural official noted that despite severe drought, conditions are expected to normalize next year, and a study indicated that drought has become less frequent and intense in the Northeast U.S. These updates reflect ongoing drought impacts and adaptation efforts across different regions.\nThe super El Niño has reached record-breaking sea-surface temperatures, with forecasters calling it potentially the strongest event on record and warning of prolonged global drought impacts. New localized developments include Denver Water issuing $30,000 in fines and 2,000 warnings for non-compliance, Abington, Massachusetts freezing new water hookups, and drought conditions easing in Northern Virginia after sustained rain. The Philippines warns all 82 provinces could face drought by March 2027, while France's drinking water networks remain under strain from persistent rainfall deficits.",
       "country": "",
       "iso2": "XX",
       "lat": null,
@@ -5535,7 +5466,7 @@
         "gdacs": 1,
         "ercc": 1,
         "healthmap": 0,
-        "news": 734
+        "news": 748
       },
       "source_links": [
         {
@@ -8483,6 +8414,22 @@
           "published_date": "2026-10-04"
         },
         {
+          "headline": "DOST: Entire Philippines could be under drought conditions in March 2027",
+          "published_date": "2026-10-04T20:47:30+00:00"
+        },
+        {
+          "headline": "2026’s El Niño is record-breaking — and it’s not done yet",
+          "published_date": "2026-10-05"
+        },
+        {
+          "headline": "Super El Niño is here. What's so super about it?",
+          "published_date": "2026-10-05"
+        },
+        {
+          "headline": "Super El Niño is here. What's so super about it?",
+          "published_date": "2026-10-05"
+        },
+        {
           "headline": "Godzilla El Niño is coming",
           "published_date": "2026-10-05"
         },
@@ -8491,15 +8438,55 @@
           "published_date": "2026-10-05"
         },
         {
+          "headline": "Australian insurers face up to $29b drought risk",
+          "published_date": "2026-10-05"
+        },
+        {
+          "headline": "When El Niño Brings Drought, Every Minute Counts",
+          "published_date": "2026-10-05"
+        },
+        {
+          "headline": "Persistent drought puts pressure on France's drinking water networks",
+          "published_date": "2026-10-05"
+        },
+        {
+          "headline": "Abington Water Board Halts New Development Over Drought",
+          "published_date": "2026-10-05"
+        },
+        {
           "headline": "Karnataka dialogues |' Drought is severe, but we expect situation to be normal next year'",
+          "published_date": "2026-10-05"
+        },
+        {
+          "headline": "49 million at risk of hunger as super El Niño strengthens",
+          "published_date": "2026-10-05"
+        },
+        {
+          "headline": "Denver Water has issued $30,000 in fines and 2,000 warnings as it’s tried to reduce water use",
           "published_date": "2026-10-05"
         },
         {
           "headline": "Pumpkin patch saved by lucky decision last year",
           "published_date": "2026-10-05"
+        },
+        {
+          "headline": "Keep enough maize for your families, drought is coming - HH",
+          "published_date": "2026-10-05"
+        },
+        {
+          "headline": "Drought conditions ease in N. Va. after ‘sustained’ rain, state says | FFXnow",
+          "published_date": "2026-10-05"
+        },
+        {
+          "headline": "How El Niño will drive up the cost of foods you love — and some critical staples",
+          "published_date": "2026-10-05T14:41:05+00:00"
+        },
+        {
+          "headline": "All provinces to experience ‘drought’ by end of March 2027 — Solidum",
+          "published_date": "2026-10-05T20:47:32+00:00"
         }
       ],
-      "news_total": 734,
+      "news_total": 748,
       "logs": [
         {
           "log_date": "2026-08-18",
@@ -8953,7 +8940,7 @@
         },
         {
           "log_date": "2026-10-05",
-          "summary": "New developments include Baltimore planning to draw water from the Susquehanna River to blend with reservoir supplies, and the Philippines allocating P3.3 billion to support drought-affected farmers while facing sugar export shortfalls due to dry conditions. A Karnataka agricultural official noted that despite severe drought, conditions are expected to normalize next year, and a study indicated that drought has become less frequent and intense in the Northeast U.S. These updates reflect ongoing drought impacts and adaptation efforts across different regions.",
+          "summary": "New developments include Baltimore planning to draw water from the Susquehanna River to blend with reservoir supplies, and the Philippines allocating P3.3 billion to support drought-affected farmers while facing sugar export shortfalls due to dry conditions. A Karnataka agricultural official noted that despite severe drought, conditions are expected to normalize next year, and a study indicated that drought has become less frequent and intense in the Northeast U.S. These updates reflect ongoing drought impacts and adaptation efforts across different regions.\nThe super El Niño has reached record-breaking sea-surface temperatures, with forecasters calling it potentially the strongest event on record and warning of prolonged global drought impacts. New localized developments include Denver Water issuing $30,000 in fines and 2,000 warnings for non-compliance, Abington, Massachusetts freezing new water hookups, and drought conditions easing in Northern Virginia after sustained rain. The Philippines warns all 82 provinces could face drought by March 2027, while France's drinking water networks remain under strain from persistent rainfall deficits.",
           "news": [
             {
               "news_id": "a38ab39594235da1a0ad63d4d50e3f68",
@@ -8963,6 +8950,42 @@
               "published_date": "2026-10-04",
               "outlet": "VTDigger",
               "image": "https://www.bing.com/th?id=ONUT.O3LjTP9I8zr5HkamFre4Zg"
+            },
+            {
+              "news_id": "cf231335a3085fc0966f20ab9a0708d5",
+              "url": "https://www.snexplores.org/article/record-breaking-2026-el-nino",
+              "headline": "2026’s El Niño is record-breaking — and it’s not done yet",
+              "body": "Within the ocean region where El Niños form, daily sea-surface temperatures are already more extreme than at any point in recorded history.",
+              "published_date": "2026-10-05",
+              "outlet": "Science News Explores",
+              "image": "https://www.bing.com/th?id=ONUT.mucma-WRS9H1cKCSJLFmXQ"
+            },
+            {
+              "news_id": "95cdff41bb41502db3dcfaef0b04e702",
+              "url": "https://www.ijpr.org/npr-news/2026-10-05/super-el-nino-is-here-whats-so-super-about-it",
+              "headline": "Super El Niño is here. What's so super about it?",
+              "body": "This year, federal forecasters say the planet could see the strongest El Niño event on record. Here's what you need to know.",
+              "published_date": "2026-10-05",
+              "outlet": "Jefferson Public Radio",
+              "image": "https://www.bing.com/th?id=ONUT.At6kIFekrN9aHI6wFV59Kw"
+            },
+            {
+              "news_id": "d6c7529ce6945086a85b45392b93ae74",
+              "url": "https://www.abs-cbn.com/news/weather-traffic/2026/10/5/all-provinces-to-experience-drought-by-end-of-march-2027-solidum-2031",
+              "headline": "All provinces to experience ‘drought’ by end of March 2027 — Solidum",
+              "body": "All 82 provinces in the country will experience drought by the end of March next year with the anticipated ‘very strong’ El ...",
+              "published_date": "2026-10-05T20:47:32+00:00",
+              "outlet": "ABS-CBN",
+              "image": "https://www.bing.com/th?id=ONUT.yN_9gee6OI-fwjfg4McLvw"
+            },
+            {
+              "news_id": "f710e87b92335d7c9764121c7d6f5dee",
+              "url": "https://www.npr.org/2026/10/05/nx-s1-5981261/super-el-nino-floods-droughts",
+              "headline": "Super El Niño is here. What's so super about it?",
+              "body": "This year, federal forecasters say the planet could see the strongest El Niño event on record. Here's what you need to know.",
+              "published_date": "2026-10-05",
+              "outlet": "NPR",
+              "image": "https://s.yimg.com/bo/8818ac27-ce25-558e-924d-35cd9f4039be_1791208593616.jpg"
             },
             {
               "news_id": "ca1be4ec1e1c5f6b9453a2b6bf007dad",
@@ -8992,6 +9015,15 @@
               "image": "https://www.bing.com/th?id=ONUT.XJILyMo3VTg_9TlsV5bZng"
             },
             {
+              "news_id": "bd3bdf8a64dc5e4fb1693c938fbdfbfb",
+              "url": "https://r.search.yahoo.com/_ylt=A2RRLC9gC8Rq9QIAd3HQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzEwBHZ0aWQDBHNlYwNzcg--/RV=2/RE=1792442464/RO=10/RU=https://finance.yahoo.com/markets/commodities/articles/el-ni-o-drive-cost-090045058.html?fr=sycsrp_catchall/RK=2/RS=csHSjnK9KkrN7ETsvrQjD7.qAq0-",
+              "headline": "How El Niño will drive up the cost of foods you love — and some critical staples",
+              "body": "US consumers are likely to face steeper prices for coffee and chocolate, thanks to the near-record...",
+              "published_date": "2026-10-05T14:41:05+00:00",
+              "outlet": "CNN · via Yahoo Finance",
+              "image": "https://s.yimg.com/fz/api/res/1.2/LjUO9PClaVHk.058azfWLg--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7c209MTt3PTE2MA--/https://media.zenfs.com/en/cnn_articles_875/05eed0b065015e423270d2116e07ae6e.jpg"
+            },
+            {
               "news_id": "8281b627cf6c5a8698382efadd2bd7f5",
               "url": "https://www.msn.com/en-ph/news/world/da-allots-p33b-to-help-farmers-hit-by-drought/ar-AA2dyBeP?ocid=BingNewsVerp",
               "headline": "DA allots P3.3B to help farmers hit by drought",
@@ -9010,6 +9042,42 @@
               "image": ""
             },
             {
+              "news_id": "8c86dce71dd954c5b77342d28f80d0da",
+              "url": "https://www.msn.com/en-xl/news/other/australian-insurers-face-up-to-29b-drought-risk/ar-AA2dCnxx?ocid=BingNewsVerp",
+              "headline": "Australian insurers face up to $29b drought risk",
+              "body": "Droughts can exacerbate disasters that follow, such as bushfires, said DAS. Australian insurers face up to a $29b risk from ...",
+              "published_date": "2026-10-05",
+              "outlet": "Insurance Asia on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.Hg3p70Ba-6LpASuUy97W1w"
+            },
+            {
+              "news_id": "be38abd7f0fc595fa35527f5e14e1146",
+              "url": "https://www.morningagclips.com/when-el-nino-brings-drought-every-minute-counts/",
+              "headline": "When El Niño Brings Drought, Every Minute Counts",
+              "body": "ROME — By seven in the morning, the heat is already settling over the fields of Siem Reap province, Cambodia. The air is still, the...",
+              "published_date": "2026-10-05",
+              "outlet": "Morning Ag Clips",
+              "image": "https://www.bing.com/th?id=ONUT.10OEwIG6NzGyPlU3gE8lIg"
+            },
+            {
+              "news_id": "3db609f937515d59a91855cb21c6e386",
+              "url": "https://www.lemonde.fr/en/environment/article/2026/10/05/persistent-drought-puts-pressure-on-france-s-drinking-water-networks_6758251_114.html",
+              "headline": "Persistent drought puts pressure on France's drinking water networks",
+              "body": "Water reserves supplying distribution systems across France remain under strain due to a significant rainfall deficit.",
+              "published_date": "2026-10-05",
+              "outlet": "Le Monde",
+              "image": "https://www.bing.com/th?id=ONUT.RvpfIKGB8X_iG-AYXpJM_Q"
+            },
+            {
+              "news_id": "9d51626b7483514da2212a6ecef8b7de",
+              "url": "https://hoodline.com/2026/10/abington-freezes-new-water-hookups-as-drought-emergency-grips-south-shore/",
+              "headline": "Abington Water Board Halts New Development Over Drought",
+              "body": "Abington just froze new water service for development. Here's why your bill could still go up.",
+              "published_date": "2026-10-05",
+              "outlet": "Hoodline",
+              "image": "https://www.bing.com/th?id=ONUT.XRsUq8xnhM7-qJZUzF8n4A"
+            },
+            {
               "news_id": "2255c92da7ba5b9790a98c42c79623ae",
               "url": "https://www.newindianexpress.com/states/karnataka/2026/Oct/05/karnataka-dialogues-drought-is-severe-but-we-expect-situation-to-be-normal-next-year",
               "headline": "Karnataka dialogues |' Drought is severe, but we expect situation to be normal next year'",
@@ -9017,6 +9085,24 @@
               "published_date": "2026-10-05",
               "outlet": "The New Indian Express",
               "image": "https://www.bing.com/th?id=ONUT.MRMzt29GUAnq51lrWk5xxA"
+            },
+            {
+              "news_id": "12a23243f0b95a91be60129391c14acf",
+              "url": "https://rollingout.com/2026/10/05/super-el-nino-what-to-expect-this-winter/",
+              "headline": "49 million at risk of hunger as super El Niño strengthens",
+              "body": "The 2026 super El Niño is the strongest ever measured for this point in the year. Here's how it could affect rain, heat, storms and food.",
+              "published_date": "2026-10-05",
+              "outlet": "Rolling Out",
+              "image": "https://s.yimg.com/bo/a37c3481-8d51-5408-bd4b-2316daef5265_1791210274974.jpg"
+            },
+            {
+              "news_id": "06cabfa464ca5ac99c2ec626d82d11d2",
+              "url": "https://www.denverpost.com/2026/10/05/denver-water-restrictions-ban-drought-enforcement/",
+              "headline": "Denver Water has issued $30,000 in fines and 2,000 warnings as it’s tried to reduce water use",
+              "body": "Denver Water aimed to reduce customers’ use by 20%, but they’ve fallen short. “By and large, our customers put in a serious effort to save water, and that puts us in a good position for next year.”",
+              "published_date": "2026-10-05",
+              "outlet": "The Denver Post",
+              "image": "https://www.bing.com/th?id=ONUT.SATxiHIwE83HI2K9PqOrvA"
             },
             {
               "news_id": "f59bc946bbf75a2fb9c6d56bd9b75888",
@@ -9053,6 +9139,33 @@
               "published_date": "2026-09-29T06:14:56+00:00",
               "outlet": "BusinessMirror",
               "image": ""
+            },
+            {
+              "news_id": "219d86c8e64652379bbe79fe31a3d67d",
+              "url": "https://diggers.news/local/2026/10/05/keep-enough-maize-for-your-families-drought-is-coming-hh/",
+              "headline": "Keep enough maize for your families, drought is coming - HH",
+              "body": "PRESIDENT Hakainde Hichilema has urged Zambians to preserve enough maize for household consumption in view of the projected drought. And President Hichilema has pledged to donate a pontoon to the people of Nyimba in Bweengwa, Monze District, to ease movement for communities living along the Kafue",
+              "published_date": "2026-10-05",
+              "outlet": "News Diggers!",
+              "image": "https://www.bing.com/th?id=ONUT.EJpZA5rPMkeg-v2uFYaKdQ"
+            },
+            {
+              "news_id": "ae4f45de56be5977baec78641c6b6021",
+              "url": "https://www.ffxnow.com/2026/10/05/drought-conditions-ease-in-n-va-after-sustained-rain-state-says/",
+              "headline": "Drought conditions ease in N. Va. after ‘sustained’ rain, state says | FFXnow",
+              "body": "The second half of September at last doused Northern Virginia in enough rain to ease the drought that the region has faced for months. The drought warning advisory in place for Fairfax County and the rest of Northern Virginia since January has de-escalated to a drought watch, the Virginia Department of Environmental Quality (DEQ) announced",
+              "published_date": "2026-10-05",
+              "outlet": "FFXnow",
+              "image": ""
+            },
+            {
+              "news_id": "301b0112bcb85efbb590c242d23c2bd2",
+              "url": "https://www.philstar.com/headlines/weather/2026/10/05/2561112/dost-entire-philippines-could-be-under-drought-conditions-march-2027",
+              "headline": "DOST: Entire Philippines could be under drought conditions in March 2027",
+              "body": "All provinces in the country could be affected by drought and dry conditions in March 2027, according to the Department of ...",
+              "published_date": "2026-10-04T20:47:30+00:00",
+              "outlet": "Philstar.com",
+              "image": "https://www.bing.com/th?id=ONUT.XC3lygmErzPJczAxOgehuQ"
             }
           ]
         }
@@ -9093,7 +9206,7 @@
         "gdacs": 1,
         "ercc": 1,
         "healthmap": 0,
-        "news": 501
+        "news": 503
       },
       "source_links": [
         {
@@ -11091,6 +11204,14 @@
           "published_date": "2026-09-30"
         },
         {
+          "headline": "POLLO CAMPERO DONATES $25,000 TO DIRECT RELIEF FOLLOWING NATIONAL FUNDRAISING DAY FOR EARTHQUAKE VICTIMS IN VENEZUELA AND COLOMBIA",
+          "published_date": "2026-09-30"
+        },
+        {
+          "headline": "Takeaways from AP investigation into collapse of housing towers during Venezuela's earthquakes",
+          "published_date": "2026-09-30"
+        },
+        {
           "headline": "AP investigation: Warnings ignored as Venezuela coastal towers faced quake forces they couldn’t take",
           "published_date": "2026-09-30"
         },
@@ -11143,7 +11264,7 @@
           "published_date": "2026-10-03"
         }
       ],
-      "news_total": 501,
+      "news_total": 503,
       "logs": [
         {
           "log_date": "2026-06-28",
@@ -11428,7 +11549,7 @@
       "incident_id": "20260715-UA-CF",
       "tree_id": "f22292f8c3ff448a920c3b1fe41d3aa0",
       "canonical_name": "Conflict Ukraine 2026-07-15",
-      "summary": "Russia struck another major bridge in Kyiv, escalating infrastructure damage, while President Zelensky during German Chancellor Merz's visit described the relentless attacks as \"terrible nights and days\" and called the enemy \"absolute barbarians.\" The batch also includes articles on Russia’s winter strategy to make cities unlivable, Ukraine’s OSCE appeal over the Oleshky crisis, global food price impacts, and India’s ceasefire proposal, but these topics have been covered in earlier summaries.",
+      "summary": "Russia struck another major bridge in Kyiv, escalating infrastructure damage, while President Zelensky during German Chancellor Merz's visit described the relentless attacks as \"terrible nights and days\" and called the enemy \"absolute barbarians.\" The batch also includes articles on Russia’s winter strategy to make cities unlivable, Ukraine’s OSCE appeal over the Oleshky crisis, global food price impacts, and India’s ceasefire proposal, but these topics have been covered in earlier summaries.\nGermany's intelligence chief warned that Germany risks armed conflict with Russia due to Moscow's escalating shadow war against Europe. Separately, economist Steve Hanke blasted Jared Kushner for conflicts of interest in Ukraine peace diplomacy. A feature article describes the drone-dominated front line in Ukraine, while wheat prices rose 1.2% on ongoing Black Sea shipping disruptions.",
       "country": "Ukraine",
       "iso2": "UA",
       "lat": 48.9,
@@ -11458,7 +11579,7 @@
         "gdacs": 0,
         "ercc": 3,
         "healthmap": 0,
-        "news": 1394
+        "news": 1403
       },
       "source_links": [
         {
@@ -17064,11 +17185,47 @@
           "published_date": "2026-10-04"
         },
         {
+          "headline": "Drones buzz overhead, troops hunker underground in Ukraine's hellish kill zone",
+          "published_date": "2026-10-05"
+        },
+        {
+          "headline": "Economist Steve Hanke Blasts Jared Kushner Over Russia Diplomacy: ‘More Conflicts of Interest Than You Ca",
+          "published_date": "2026-10-05"
+        },
+        {
+          "headline": "Here’s How Trump’s Using The Graham Act To Trap Russia And Crush Iran | OilPrice.com",
+          "published_date": "2026-10-05"
+        },
+        {
+          "headline": "Here's how Trump's using the Graham Act to trap Russia and crush Iran",
+          "published_date": "2026-10-05"
+        },
+        {
+          "headline": "Germany at risk of violent conflict with Russia, intelligence chief says",
+          "published_date": "2026-10-05"
+        },
+        {
+          "headline": "BND Chief Warns Germany Risks Conflict With Russia",
+          "published_date": "2026-10-05"
+        },
+        {
+          "headline": "India finds its mojo in Ukraine, flydubai heroics",
+          "published_date": "2026-10-05"
+        },
+        {
+          "headline": "Wheat Futures Rise as Snarled Logistics Continue in Black Sea — Daily Grain Highlights",
+          "published_date": "2026-10-05"
+        },
+        {
           "headline": "India’s Russia-Ukraine ceasefire proposal ‘broadest’ among four on table, says Kyiv",
           "published_date": "2026-10-05"
+        },
+        {
+          "headline": "Ukraine war spillover fears driving Eastern European PV demand: Mosaic",
+          "published_date": "2026-10-05T20:49:06+00:00"
         }
       ],
-      "news_total": 1394,
+      "news_total": 1403,
       "logs": [
         {
           "log_date": "2026-07-24",
@@ -17810,8 +17967,35 @@
         },
         {
           "log_date": "2026-10-05",
-          "summary": "Russia struck another major bridge in Kyiv, escalating infrastructure damage, while President Zelensky during German Chancellor Merz's visit described the relentless attacks as \"terrible nights and days\" and called the enemy \"absolute barbarians.\" The batch also includes articles on Russia’s winter strategy to make cities unlivable, Ukraine’s OSCE appeal over the Oleshky crisis, global food price impacts, and India’s ceasefire proposal, but these topics have been covered in earlier summaries.",
+          "summary": "Russia struck another major bridge in Kyiv, escalating infrastructure damage, while President Zelensky during German Chancellor Merz's visit described the relentless attacks as \"terrible nights and days\" and called the enemy \"absolute barbarians.\" The batch also includes articles on Russia’s winter strategy to make cities unlivable, Ukraine’s OSCE appeal over the Oleshky crisis, global food price impacts, and India’s ceasefire proposal, but these topics have been covered in earlier summaries.\nGermany's intelligence chief warned that Germany risks armed conflict with Russia due to Moscow's escalating shadow war against Europe. Separately, economist Steve Hanke blasted Jared Kushner for conflicts of interest in Ukraine peace diplomacy. A feature article describes the drone-dominated front line in Ukraine, while wheat prices rose 1.2% on ongoing Black Sea shipping disruptions.",
           "news": [
+            {
+              "news_id": "00ab1e0870eb5a1491450f727d964e40",
+              "url": "https://www.npr.org/2026/10/05/nx-s1-5925803/drones-buzz-overhead-troops-hunker-underground-in-ukraines-hellish-kill-zone",
+              "headline": "Drones buzz overhead, troops hunker underground in Ukraine's hellish kill zone",
+              "body": "The front line in the Russia-Ukraine war stretches more than 700 miles and has barely moved in four years. Yet straddling this line is the kill zone, dominated by constantly evolving drone technology.",
+              "published_date": "2026-10-05",
+              "outlet": "NPR",
+              "image": "https://s.yimg.com/bo/bf93724a-81ea-5462-9299-6d8b68ba3a00_1791204378140.jpg"
+            },
+            {
+              "news_id": "4acc8c9a22705e93bef12873daa1eb40",
+              "url": "https://www.benzinga.com/news/politics/26/10/62156859/economist-steve-hanke-blasts-jared-kushner-over-russia-diplomacy-more-conflicts-of-interest-than-you-can-shake-a-stick-at",
+              "headline": "Economist Steve Hanke Blasts Jared Kushner Over Russia Diplomacy: ‘More Conflicts of Interest Than You Ca",
+              "body": "Economist Steve Hanke questioned Jared Kushner’s Ukraine diplomacy after reports linked peace talks to a potential multibillion-dollar deal.",
+              "published_date": "2026-10-05",
+              "outlet": "Benzinga",
+              "image": "https://s.yimg.com/bo/94ea9b0f-ec80-5399-838f-6170cd3be307_1791198808168.jpg"
+            },
+            {
+              "news_id": "2256919df4185f259a4b830385c2e875",
+              "url": "https://oilprice.com/Energy/Crude-Oil/Heres-How-Trumps-Using-The-Graham-Act-To-Trap-Russia-And-Crush-Iran.html",
+              "headline": "Here’s How Trump’s Using The Graham Act To Trap Russia And Crush Iran | OilPrice.com",
+              "body": "The new Graham sanctions law gives Trump sweeping tariff leverage over Russia and major buyers of Russian energy.",
+              "published_date": "2026-10-05",
+              "outlet": "OilPrice.com",
+              "image": "https://s.yimg.com/bo/22e10dbf-4260-5241-95e5-76e298221339_1791221178950.jpg"
+            },
             {
               "news_id": "e11068c5b1895b9483b751ea2adc1159",
               "url": "https://www.eurasiantimes.com/germany-says-russias-war-machine-will-turn-against-europe-as-moscow-strikes-another-bridge-in-kyiv/",
@@ -17820,6 +18004,15 @@
               "published_date": "2026-10-04",
               "outlet": "EurAsian Times",
               "image": ""
+            },
+            {
+              "news_id": "27a476d4bfaf5e65af88723d0c75a134",
+              "url": "https://www.msn.com/en-us/news/other/here-s-how-trump-s-using-the-graham-act-to-trap-russia-and-crush-iran/ar-AA2dCFKG?ocid=BingNewsVerp",
+              "headline": "Here's how Trump's using the Graham Act to trap Russia and crush Iran",
+              "body": "The new Graham sanctions law gives Trump sweeping tariff leverage over Russia and major buyers of Russian energy.",
+              "published_date": "2026-10-05",
+              "outlet": "OilPrice.com on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.E-Hm7W1d54VWGbzdwvZgKA"
             },
             {
               "news_id": "d1d1a5c9ae0a584c8e2ea2c43ace7fe0",
@@ -17831,6 +18024,15 @@
               "image": "https://www.bing.com/th?id=ONUT.P-lLL6Fb8l2-oKMcpLNn5Q"
             },
             {
+              "news_id": "31ca2017b3995d71bb948e42bc3a0fd2",
+              "url": "https://www.theinsurer.com/ti/news/ukraine-war-spillover-fears-driving-eastern-european-pv-demand-mosaic-2026-10-05/",
+              "headline": "Ukraine war spillover fears driving Eastern European PV demand: Mosaic",
+              "body": "Concerns about spillover from the Russia-Ukraine war are driving demand for broader political violence cover in Europe, as ...",
+              "published_date": "2026-10-05T20:49:06+00:00",
+              "outlet": "The Insurer",
+              "image": "https://www.bing.com/th?id=ONUT.jIct9NPbF9v5sPoFq9gUxg"
+            },
+            {
               "news_id": "0a153f635c9053bab62fdabacc9935b8",
               "url": "https://ijr.com/discover/world-2026-09-28-ukraine-seeks-osce-action-oleshky-starvation-crisis-8214ebc0",
               "headline": "Ukraine Seeks OSCE Action Over Oleshky Starvation Crisis",
@@ -17840,6 +18042,15 @@
               "image": "https://www.bing.com/th?id=ONUT.5mvMCpDwDGOQxVyb70Mdzg"
             },
             {
+              "news_id": "470e000981b45815996afd61df953064",
+              "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/10/05/germany-at-risk-of-violent-conflict-with-russia-intel-chief-says",
+              "headline": "Germany at risk of violent conflict with Russia, intelligence chief says",
+              "body": "By Sabine SieboldBERLIN, Oct 5 (Reuters) - Germany is at risk of entering a violent conflict as Moscow steps up an increasingly aggressive “shadow war” against European d… Leggi",
+              "published_date": "2026-10-05",
+              "outlet": "Internazionale",
+              "image": "https://www.bing.com/th?id=ONUT.xJhRSaA79NNCN0QTNIcf0w"
+            },
+            {
               "news_id": "df676cbb5c5e5a22bcc4aaec7203b3ad",
               "url": "https://www.aol.com/articles/deadlock-ukraine-war-crippling-global-092622000.html",
               "headline": "How deadlock in the Ukraine war is crippling global food prices - AOL",
@@ -17847,6 +18058,33 @@
               "published_date": "2026-10-04",
               "outlet": "AOL",
               "image": ""
+            },
+            {
+              "news_id": "446e7abc5d3d5c1fb4735a16bcac2eee",
+              "url": "https://ijr.com/discover/world-2026-10-05-bnd-chief-warns-germany-risks-conflict-russia-5d7891b7",
+              "headline": "BND Chief Warns Germany Risks Conflict With Russia",
+              "body": "BND chief Martin Jaeger warned Germany risks armed conflict with Russia, calling Moscow's campaign a shadow war after an ...",
+              "published_date": "2026-10-05",
+              "outlet": "Independent Journal Review",
+              "image": "https://www.bing.com/th?id=ONUT.E7oI6Nvo3GpoJAUm6UA5ug"
+            },
+            {
+              "news_id": "8723284ba73653b980f757dc37181b81",
+              "url": "https://www.theweek.in/news/india/2026/10/05/india-finds-its-mojo-in-ukraine-flydubai-heroics.html",
+              "headline": "India finds its mojo in Ukraine, flydubai heroics",
+              "body": "From brokering a comprehensive Ukraine peace plan to a pilot's heroism averting the flydubai tragedy, the Indian diplomacy is witnessing a resurgence",
+              "published_date": "2026-10-05",
+              "outlet": "The Week",
+              "image": "https://www.bing.com/th?id=ONUT.s7ljvVVJ1HzpUXMyozPdDA"
+            },
+            {
+              "news_id": "e1352ad1681f5b1d9f2c8bda3c2f6fe3",
+              "url": "https://www.morningstar.com/news/dow-jones/202610056718/wheat-futures-rise-as-snarled-logistics-continue-in-black-sea-daily-grain-highlights",
+              "headline": "Wheat Futures Rise as Snarled Logistics Continue in Black Sea — Daily Grain Highlights",
+              "body": "Kirk Maltais -Wheat for December delivery rose 1.2% to $6.91 1/2 a bushel on the Chicago Board of...",
+              "published_date": "2026-10-05",
+              "outlet": "Morningstar",
+              "image": "https://s.yimg.com/bo/a362d7f7-f342-59b9-bd36-c01cdbdbf51a_1783067230542.png.cf.jpg"
             },
             {
               "news_id": "ca146c6b35ef52e79a3ba3c150d2402b",
@@ -17866,7 +18104,7 @@
       "incident_id": "20260726-IR-CF",
       "tree_id": "13763def03ab448898154124734fe728",
       "canonical_name": "Iran/US war",
-      "summary": "Two oil tankers were struck near Oman and Iran over the weekend as Tehran restated its conditions for fully reopening the Strait of Hormuz. Crude exports from Gulf countries via the waterway have rebounded to 80% of pre-war levels, with more producers resuming transit despite ongoing threats.",
+      "summary": "Two oil tankers were struck near Oman and Iran over the weekend as Tehran restated its conditions for fully reopening the Strait of Hormuz. Crude exports from Gulf countries via the waterway have rebounded to 80% of pre-war levels, with more producers resuming transit despite ongoing threats.\nIran's oil minister resigned amid the ongoing US blockade, and Tehran reiterated that the Strait of Hormuz will remain closed until its seven conditions are fulfilled. Middle East oil exports have surpassed pre-war levels despite the conflict, while the US repositioned forces by withdrawing bombers from the UK. The war continues to shape domestic politics and economic debates, with Saudi Arabia emerging as a major beneficiary of higher oil revenues.",
       "country": "Iran",
       "iso2": "IR",
       "lat": 32.4,
@@ -17896,7 +18134,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 2462
+        "news": 2476
       },
       "source_links": [],
       "physical": {
@@ -27387,6 +27625,10 @@
           "published_date": "2026-09-30T18:21:20+00:00"
         },
         {
+          "headline": "As Iran war smolders, shunned Eritrea looks to come in from the cold",
+          "published_date": "2026-09-30T20:49:26+00:00"
+        },
+        {
           "headline": "Iran claims capture of US Navy MK 18 Mod 2 Kingfish mine-hunting underwater drone in Strait of Hormuz",
           "published_date": "2026-10-01"
         },
@@ -27675,6 +27917,10 @@
           "published_date": "2026-10-03T05:44:34+00:00"
         },
         {
+          "headline": "Iran Refuses to Reopen Strait of Hormuz Until US Meets 7 Conditions, Official Says 'Era of Wasting Time'",
+          "published_date": "2026-10-04"
+        },
+        {
           "headline": "Unintended consequences of war in Iran are helping the climate",
           "published_date": "2026-10-04"
         },
@@ -27747,7 +27993,43 @@
           "published_date": "2026-10-04T17:14:20+00:00"
         },
         {
+          "headline": "ConocoPhillips' Chairman Says Oil's Price Floor Is Rising to $70 a Barrel. Here's What That Means for Oil Stocks.",
+          "published_date": "2026-10-05"
+        },
+        {
+          "headline": "US pulls bombers from UK – What does it mean for Iran war?",
+          "published_date": "2026-10-05"
+        },
+        {
+          "headline": "Iran Says Strait of Hormuz Will Remain Closed",
+          "published_date": "2026-10-05"
+        },
+        {
+          "headline": "With complicity of media and Democrats, Trump prepares major escalation of Iran war",
+          "published_date": "2026-10-05"
+        },
+        {
+          "headline": "Middle East oil exports surpass pre-war levels despite tensions, data shows",
+          "published_date": "2026-10-05"
+        },
+        {
+          "headline": "Iran war emerges as pocketbook issue in U.S. Senate race",
+          "published_date": "2026-10-05"
+        },
+        {
+          "headline": "Trump blames Democrats and Ukraine for soaring US fuel prices, not Iran war",
+          "published_date": "2026-10-05"
+        },
+        {
+          "headline": "Saudi Arabia ‘Big Winner’ Of Iran War, With Kingdom’s Oil Revenues Soaring To $210 Billion, As Trump Ponders Escalating Conflict After Midterms",
+          "published_date": "2026-10-05"
+        },
+        {
           "headline": "Oil exports via Hormuz rebound to 80% of pre-war levels but Iran is losing its lifeline. Here's how",
+          "published_date": "2026-10-05"
+        },
+        {
+          "headline": "Huh? The Iran War Had Nothing To Do With Gas Prices?",
           "published_date": "2026-10-05"
         },
         {
@@ -27757,9 +28039,21 @@
         {
           "headline": "US Midterms: Five Issues Shaping The Vote",
           "published_date": "2026-10-05T06:16:42+00:00"
+        },
+        {
+          "headline": "He's not coming back': Months after deadly Iranian attack, families of soldiers...",
+          "published_date": "2026-10-05T10:49:23+00:00"
+        },
+        {
+          "headline": "Iran oil minister Mohsen Paknejad resigns amid US blockade, replaced by top executive",
+          "published_date": "2026-10-05T20:49:24+00:00"
+        },
+        {
+          "headline": "Exclusive: Soldiers and Gold Star families press Army leadership after deadly Iranian drone strike",
+          "published_date": "2026-10-05T20:49:27+00:00"
         }
       ],
-      "news_total": 2462,
+      "news_total": 2476,
       "logs": [
         {
           "log_date": "2026-07-27",
@@ -28483,8 +28777,80 @@
         },
         {
           "log_date": "2026-10-05",
-          "summary": "Two oil tankers were struck near Oman and Iran over the weekend as Tehran restated its conditions for fully reopening the Strait of Hormuz. Crude exports from Gulf countries via the waterway have rebounded to 80% of pre-war levels, with more producers resuming transit despite ongoing threats.",
+          "summary": "Two oil tankers were struck near Oman and Iran over the weekend as Tehran restated its conditions for fully reopening the Strait of Hormuz. Crude exports from Gulf countries via the waterway have rebounded to 80% of pre-war levels, with more producers resuming transit despite ongoing threats.\nIran's oil minister resigned amid the ongoing US blockade, and Tehran reiterated that the Strait of Hormuz will remain closed until its seven conditions are fulfilled. Middle East oil exports have surpassed pre-war levels despite the conflict, while the US repositioned forces by withdrawing bombers from the UK. The war continues to shape domestic politics and economic debates, with Saudi Arabia emerging as a major beneficiary of higher oil revenues.",
           "news": [
+            {
+              "news_id": "4a2d6d149d25565d8dc8d61cf9d7b472",
+              "url": "https://finance.yahoo.com/energy/articles/conocophillips-chairman-says-oils-price-155002520.html",
+              "headline": "ConocoPhillips' Chairman Says Oil's Price Floor Is Rising to $70 a Barrel. Here's What That Means for Oil Stocks.",
+              "body": "The Iran war and broader Middle East conflict have changed the trajectory of oil prices.",
+              "published_date": "2026-10-05",
+              "outlet": "Motley Fool · via Yahoo Finance",
+              "image": "https://media.zenfs.com/en/motleyfool.com/a82dbeef94b6b94bc2141692b620d154.jpg"
+            },
+            {
+              "news_id": "156a0f20e2ac54ba8a59edc89a3abd97",
+              "url": "https://www.reuters.com/world/iran-war-smolders-shunned-eritrea-looks-come-cold-2026-10-05/",
+              "headline": "As Iran war smolders, shunned Eritrea looks to come in from the cold",
+              "body": "When Halima Mohammed was six, her parents dropped her off in the desert at Revolution School, where the children of Eritrean ...",
+              "published_date": "2026-09-30T20:49:26+00:00",
+              "outlet": "Reuters",
+              "image": "https://www.bing.com/th?id=ONUT.m8gEDB7gb-pv-0PGA7CFSQ"
+            },
+            {
+              "news_id": "d498e9dd0f215ce1b46df5ec9827e6ab",
+              "url": "https://www.mrt.com/news/politics/article/he-s-not-coming-back-months-after-deadly-22462584.php",
+              "headline": "He's not coming back': Months after deadly Iranian attack, families of soldiers...",
+              "body": "Families of American soldiers killed and wounded in the deadliest attack on U.S. forces during the...",
+              "published_date": "2026-10-05T10:49:23+00:00",
+              "outlet": "Midland Reporter-Telegram",
+              "image": "https://s.yimg.com/bo/eaf5723f-3214-596d-8037-5446ddb6327c_1791199581405.jpg"
+            },
+            {
+              "news_id": "88e8f48402215ba7881d336a71b4ff30",
+              "url": "https://www.yahoo.com/news/politics/articles/us-pulls-bombers-uk-does-121157579.html",
+              "headline": "US pulls bombers from UK – What does it mean for Iran war?",
+              "body": "The U.S. has for decades used RAF Fairford in England as a nexus point for its global military operations.",
+              "published_date": "2026-10-05",
+              "outlet": "Yahoo",
+              "image": "https://www.bing.com/th?id=ONUT.TQDnLkvkMbhao8Zdi7blTg"
+            },
+            {
+              "news_id": "ffc7db868e0f531abc830973854a0c22",
+              "url": "https://www.indiatvnews.com/news/world/iran-oil-minister-mohsen-paknejad-resigns-amid-us-blockade-replaced-by-top-executive-latest-updates-2026-10-05-1056090",
+              "headline": "Iran oil minister Mohsen Paknejad resigns amid US blockade, replaced by top executive",
+              "body": "Iranian President Masoud Pezeshkian accepted the resignation and appointed NIOC head Hamid Bovard as acting oil minister, according to a statement broadcast by state media outlet IRIB.",
+              "published_date": "2026-10-05T20:49:24+00:00",
+              "outlet": "India TV News",
+              "image": ""
+            },
+            {
+              "news_id": "95856c606916573eb3e8075945e3b1b4",
+              "url": "https://www.democracynow.org/2026/10/5/headlines/iran_says_strait_of_hormuz_will_remain_closed",
+              "headline": "Iran Says Strait of Hormuz Will Remain Closed",
+              "body": "Iran says the Strait of Hormuz will remain closed until the U.S. meets conditions from the interim agreement the two countries reached in Islamabad back in June. During the U.N. General Assembly, Tehran offered to restore normal shipping through the strait within seven days if its demands are met. Iran says it will reopen the Strait of Hormuz only if the U.S. ends the war on all fronts, including Lebanon, lifts its naval blockade and sanctions, releases frozen Iranian assets, pays war compensation, recognizes Iran’s right to enrich uranium and accepts Iran’s role in governing the strait. Iran’s Foreign Ministry denied reports that Iran had offered U.N. nuclear inspections in exchange for sanctions relief, saying Tehran’s focus right now is the strait, not nuclear talks. This is Iran’s Foreign Minister Abbas Araghchi. Abbas Araghchi: “We hope the United States chooses the path of wisdom and reason. But if it once again turns to military options, we are better prepared than before, and we will take whatever measures are necessary to defend ourselves. If it chooses the path of diplomacy, we remain ready. The United States has lost in both war and diplomacy in the past.”",
+              "published_date": "2026-10-05",
+              "outlet": "Democracy Now!",
+              "image": ""
+            },
+            {
+              "news_id": "d5ca80b71b6a5e10aa05dc19867a1622",
+              "url": "https://www.wsws.org/en/articles/2026/10/05/vgaa-o05.html",
+              "headline": "With complicity of media and Democrats, Trump prepares major escalation of Iran war",
+              "body": "Having failed to achieve its objectives through a massive bombardment and then a blockade of the country, the White House is preparing a new and desperate gambit.",
+              "published_date": "2026-10-05",
+              "outlet": "World Socialist Web Site",
+              "image": "https://www.bing.com/th?id=ONUT.SyvPBlYTU3K6DrIDSAkcPg"
+            },
+            {
+              "news_id": "45bf30ff4f9459fd841054921d697b24",
+              "url": "https://apnews.com/article/iran-war-port-shuaiba-attack-soldiers-29f34587c6361261f6e803aff6791e8f",
+              "headline": "Exclusive: Soldiers and Gold Star families press Army leadership after deadly Iranian drone strike",
+              "body": "It's the deadliest strike against American troops during the war with Iran. Now U.S. soldiers wounded in a drone attack on ...",
+              "published_date": "2026-10-05T20:49:27+00:00",
+              "outlet": "Associated Press News",
+              "image": "https://www.bing.com/th?id=ONUT.e--OCNZWvVT-xjZxaqmyyA"
+            },
             {
               "news_id": "0fcf22569d6e5189bb4cef1259f6f34c",
               "url": "https://www.reuters.com/commentary/reuters-open-interest/oils-new-problem-isnt-supply-its-logistics-2026-10-05/",
@@ -28493,6 +28859,24 @@
               "published_date": "2026-10-05T00:16:42+00:00",
               "outlet": "Reuters",
               "image": ""
+            },
+            {
+              "news_id": "e691139095ac5497ac7d7e214b9143db",
+              "url": "https://www.msn.com/en-us/news/world/middle-east-oil-exports-surpass-pre-war-levels-despite-tensions-data-shows/ar-AA2dzkW3?ocid=BingNewsVerp",
+              "headline": "Middle East oil exports surpass pre-war levels despite tensions, data shows",
+              "body": "IRGC commander says oil flows through US-supervised route in Hormuz are ‘negligible’.",
+              "published_date": "2026-10-05",
+              "outlet": "Al Jazeera on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.5e305fe943f95084b1a25932dfac06f2"
+            },
+            {
+              "news_id": "a51bfd8e8fda5f7d9d5be1c6e54352ed",
+              "url": "https://www.benzinga.com/news/politics/26/10/62153579/iran-strait-of-hormuz-us-7-conditions-brent-oil",
+              "headline": "Iran Refuses to Reopen Strait of Hormuz Until US Meets 7 Conditions, Official Says 'Era of Wasting Time'",
+              "body": "Iran holds the Strait of Hormuz reopening hostage to seven U.S. conditions, keeping oil markets tense despite recovering crude flows.",
+              "published_date": "2026-10-04",
+              "outlet": "Benzinga",
+              "image": "https://s.yimg.com/bo/6fa70613-822d-564d-a56b-43ac03180951_1791169880948.jpg"
             },
             {
               "news_id": "397be7f8903f5c0288cdf6351ae93d78",
@@ -28504,6 +28888,15 @@
               "image": ""
             },
             {
+              "news_id": "568c964d66b65bdea4b70014907c6de4",
+              "url": "https://www.ajc.com/politics/2026/10/iran-war-emerges-as-pocketbook-issue-in-us-senate-race/",
+              "headline": "Iran war emerges as pocketbook issue in U.S. Senate race",
+              "body": "At a weekend event in Duluth, U.S. Sen. Jon Ossoff again challenged U.S. Rep. Mike Collins to break with President Donald Trump and demand an end to the war.",
+              "published_date": "2026-10-05",
+              "outlet": "The Atlanta Journal-Constitution",
+              "image": "https://www.bing.com/th?id=ONUT.QDvoUxa031uf4n7ZDg7oHg"
+            },
+            {
               "news_id": "4a5ec550a78a5665ba387b897af89441",
               "url": "https://www.ndtv.com/world-news/us-midterms-five-issues-shaping-the-vote-12139339",
               "headline": "US Midterms: Five Issues Shaping The Vote",
@@ -28513,6 +28906,24 @@
               "image": "https://www.bing.com/th?id=ONUT.fznw7yDmsTxOv4wRhfd7ag"
             },
             {
+              "news_id": "17ebe145d7415a51b8ccfe250b4810b4",
+              "url": "https://www.msn.com/en-us/news/world/trump-blames-democrats-and-ukraine-for-soaring-us-fuel-prices-not-iran-war/ar-AA2dCo1F?ocid=BingNewsVerp",
+              "headline": "Trump blames Democrats and Ukraine for soaring US fuel prices, not Iran war",
+              "body": "Trump shifts blame for fuel price hikes to blue states like California and Ukraine strikes on Russian oil refineries.",
+              "published_date": "2026-10-05",
+              "outlet": "Al Jazeera on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.6184d8f46d20fc377a529e6b9a2cd83e"
+            },
+            {
+              "news_id": "b4905f1600505cc981fc9082d4921766",
+              "url": "https://finance.yahoo.com/energy/articles/saudi-arabia-big-winner-iran-082656320.html",
+              "headline": "Saudi Arabia ‘Big Winner’ Of Iran War, With Kingdom’s Oil Revenues Soaring To $210 Billion, As Trump Ponders Escalating Conflict After Midterms",
+              "body": "While most analysts focus on oil supply disruptions and rising prices, one economist argues the real story is who is quietly pocketing an extraordinary windfall as the conflict drags on, and why they want it to continue.",
+              "published_date": "2026-10-05",
+              "outlet": "24/7 Wall St. · via Yahoo Finance",
+              "image": "https://media.zenfs.com/en/24_7_wall_st__718/f5eb254b9e4ca8281bbd4e98eba31136.jpg"
+            },
+            {
               "news_id": "39f4f82432a0592a8f4d42cb26bfd3e4",
               "url": "https://www.msn.com/en-in/money/topstories/oil-exports-via-hormuz-rebound-to-80-of-pre-war-levels-but-iran-is-losing-its-lifeline-heres-how/ar-AA2dA3co?ocid=BingNewsVerp",
               "headline": "Oil exports via Hormuz rebound to 80% of pre-war levels but Iran is losing its lifeline. Here's how",
@@ -28520,6 +28931,15 @@
               "published_date": "2026-10-05",
               "outlet": "Business Today on MSN",
               "image": "https://www.bing.com/th?id=ONUT.9TbfU-hRwsRdYMcQW5caDw"
+            },
+            {
+              "news_id": "01449c9971eb58cdbe3a116b90d830d3",
+              "url": "https://crooksandliars.com/cltv/2026/10/huh-iran-war-had-nothing-do-gas",
+              "headline": "Huh? The Iran War Had Nothing To Do With Gas Prices?",
+              "body": "Energy Sec Chris Wright claimed high diesel fuel costs was because of the Russia war with Ukraine.",
+              "published_date": "2026-10-05",
+              "outlet": "Crooks and Liars",
+              "image": "https://www.bing.com/th?id=ONUT.Uc9ZioqXpXKFIj8kIT9Egw"
             }
           ]
         }
@@ -28560,7 +28980,7 @@
         "gdacs": 1,
         "ercc": 6,
         "healthmap": 0,
-        "news": 970
+        "news": 973
       },
       "source_links": [
         {
@@ -32490,15 +32910,27 @@
           "published_date": "2026-10-04"
         },
         {
+          "headline": "Firefighters make progress on wildfire burning in Angeles National Forest",
+          "published_date": "2026-10-05"
+        },
+        {
+          "headline": "Bouquet Fire burns 1,000 acres amid Southern California heat wave",
+          "published_date": "2026-10-05"
+        },
+        {
           "headline": "Fast-growing Angeles National Forest fire near Santa Clarita reaches 40% containment, evacs remain in place",
           "published_date": "2026-10-05"
         },
         {
           "headline": "Evacuation orders still in place as LA County firefighters battle 1,048-acre Bouquet Fire near Castaic",
           "published_date": "2026-10-05"
+        },
+        {
+          "headline": "October heat, wildfires strain Southern California grid as thousands lose power",
+          "published_date": "2026-10-05T18:44:52+00:00"
         }
       ],
-      "news_total": 970,
+      "news_total": 973,
       "logs": [
         {
           "log_date": "2026-07-27",
@@ -39093,7 +39525,7 @@
       "disease_name": null,
       "event_date": "2026-07-28",
       "first_reported_date": "2026-07-28",
-      "last_updated_date": "2026-10-01",
+      "last_updated_date": "2026-10-05",
       "days_since_event": 69,
       "source_count": 7,
       "should_report": true,
@@ -39104,7 +39536,7 @@
         "gdacs": 1,
         "ercc": 1,
         "healthmap": 0,
-        "news": 378
+        "news": 379
       },
       "source_links": [
         {
@@ -40672,9 +41104,13 @@
         {
           "headline": "Emperor, Empress Visit Kumamoto after Quake",
           "published_date": "2026-10-01T06:33:07+00:00"
+        },
+        {
+          "headline": "Standing Together for Kumamoto - Rafu Shimpo",
+          "published_date": "2026-10-05"
         }
       ],
-      "news_total": 378,
+      "news_total": 379,
       "logs": [
         {
           "log_date": "2026-07-28",
@@ -41229,13 +41665,13 @@
       "incident_id": "20260730-XX-DR",
       "tree_id": "302c45c1ecce4004b90f6e71446ff165",
       "canonical_name": "Drought 2026-07-30",
-      "summary": "Bedford Water in Virginia is urging all customers to conserve water as drought conditions persist, while September rains have brought notable relief to drought zones across New England. In the UK, South East Water is extending its hosepipe ban and seeking to restrict non-essential commercial water use. Separately, a scientist advises preparing for heavy rains as a potential consequence of Super El Niño, which could bring mixed impacts to drought-affected areas.",
+      "summary": "According to the October 1, 2026 Drought Monitor, drought conditions persist across the U.S., while a new report indicates extreme drought now covers 44% of Puerto Rico. The 2026 super El Niño is described as the strongest ever measured for this point in the year, presenting multiple threats. Locally, Wisconsin's fall colors and apple crops are being affected by drought, and farms such as Annabelle's Fun Farm are adapting to maintain fall festival traditions.",
       "country": "",
       "iso2": "XX",
       "lat": null,
       "lon": null,
       "country_group": "C",
-      "region": "Europe",
+      "region": "Americas",
       "incident_type": "Drought",
       "incident_category": "Natural",
       "is_disease": false,
@@ -41248,7 +41684,7 @@
       "disease_name": null,
       "event_date": "2026-07-30",
       "first_reported_date": "2026-07-30",
-      "last_updated_date": "2026-10-02",
+      "last_updated_date": "2026-10-05",
       "days_since_event": 67,
       "source_count": 1,
       "should_report": true,
@@ -41259,7 +41695,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 583
+        "news": 595
       },
       "source_links": [
         {
@@ -41280,6 +41716,14 @@
         "gdacs_population": null
       },
       "news": [
+        {
+          "headline": "Drought Monitor Update – October 1st, 2026",
+          "published_date": "2026-01-01"
+        },
+        {
+          "headline": "Drought Monitor Update – October 1st, 2026",
+          "published_date": "2026-01-01"
+        },
         {
           "headline": "Map shows where the 2026 ‘super’ El Niño could bring lots of rain, extreme droug...",
           "published_date": "2026-01-01"
@@ -43529,6 +43973,14 @@
           "published_date": "2026-09-25"
         },
         {
+          "headline": "Extreme drought now covers 44% of Puerto Rico",
+          "published_date": "2026-09-26"
+        },
+        {
+          "headline": "Extreme drought now covers 44% of Puerto Rico",
+          "published_date": "2026-09-26"
+        },
+        {
           "headline": "UN receives just one-fifth of funds needed to prepare for El Niño crisis",
           "published_date": "2026-09-26"
         },
@@ -43601,6 +44053,14 @@
           "published_date": "2026-10-01T06:33:28+00:00"
         },
         {
+          "headline": "Bedford Water urges all customers to save water as drought persists",
+          "published_date": "2026-10-01T20:52:14+00:00"
+        },
+        {
+          "headline": "'Stealing our water': conspiracy theories about billionaires follow droughts",
+          "published_date": "2026-10-01T20:52:17+00:00"
+        },
+        {
           "headline": "September rains bring relief to New England drought zones",
           "published_date": "2026-10-02"
         },
@@ -43611,9 +44071,33 @@
         {
           "headline": "UP scientist on Super El Niño: Prepare for heavy rains, too",
           "published_date": "2026-10-02"
+        },
+        {
+          "headline": "Fall colors under stress: How drought could change Wisconsin’s Autumn show",
+          "published_date": "2026-10-05"
+        },
+        {
+          "headline": "Super El Niño 2026: 5 threats forecasters are watching now",
+          "published_date": "2026-10-05"
+        },
+        {
+          "headline": "Annabelle's Fun Farm adapts to drought to keep fall festival traditions alive",
+          "published_date": "2026-10-05"
+        },
+        {
+          "headline": "Fall colors under stress: How drought could change Wisconsin’s Autumn show",
+          "published_date": "2026-10-05"
+        },
+        {
+          "headline": "Chippewa Valley drought impacting local apple orchards, apple crop holds on",
+          "published_date": "2026-10-05T13:52:14+00:00"
+        },
+        {
+          "headline": "Chippewa Valley drought impacting local apple orchards, apple crop holds on",
+          "published_date": "2026-10-05T13:52:17+00:00"
         }
       ],
-      "news_total": 583,
+      "news_total": 595,
       "logs": [
         {
           "log_date": "2026-07-31",
@@ -43901,102 +44385,6 @@
           ]
         },
         {
-          "log_date": "2026-09-30",
-          "summary": "Rocky Mount, Virginia issued a voluntary water conservation request due to ongoing drought conditions, with the town receiving only about half its normal rainfall. In North Dakota, dry weather has caused hay shortages, with drought-damaged cereal crops down to 50% of normal, prompting producers to plan late-season alfalfa management. Separately, forecasters warn that the 2026-27 El Niño is strengthening into a very strong event, increasing the risk of heat and erratic rainfall.\nRecent reports show drought persisting across several regions: central Minnesota's drought held steady while statewide conditions eased slightly, and eastern Idaho farmers are expecting lower potato yields due to drought and heat. Alabama's drought has been increasing, especially in southern and western areas, while St. Thomas has deteriorated into exceptional drought even as Puerto Rico saw slight improvement. Forecasts warn of a potentially unprecedented El Niño in 2026/27 that could bring below-normal rainfall to South Africa, and drought combined with the Black Sea grain crisis is raising global food security concerns, while El Niño-driven drought in Papua New Guinea has forced school sports cancellations.",
-          "news": [
-            {
-              "news_id": "df3ceda38cc959c38512e14bafbd245d",
-              "url": "https://knsiradio.com/2026/09/24/drought-holds-steady-in-central-minnesota-as-statewide-conditions-ease-slightly/",
-              "headline": "Drought Holds Steady in Central Minnesota as Statewide Conditions Ease Slightly",
-              "body": "(KNSI) - The latest U.S. Drought Monitor data released Thursday shows drought conditions holding steady across...",
-              "published_date": "2026-09-24",
-              "outlet": "KNSI",
-              "image": "https://media-cdn.socastsrm.com/wordpress/wp-content/blogs.dir/2421/files/2021/07/farming-drought.jpg"
-            },
-            {
-              "news_id": "f97039dd7fd755898863b7d47e05fc28",
-              "url": "https://www.msn.com/en-in/news/other/season-of-extremes-why-india-and-the-world-must-take-the-2026-el-nino-seriously/ar-AA2desAc?ocid=BingNewsVerp",
-              "headline": "Season of extremes: Why India and the world must take the 2026 El Nino seriously",
-              "body": "Forecasters say the 2026-27 El Nino is strengthening into a very strong event. That raises the risk of heat, erratic rainfall ...",
-              "published_date": "2026-09-30",
-              "outlet": "India Today on MSN",
-              "image": "https://www.bing.com/th?id=ORMS.c240add34bbf577db4c6745f139b1887"
-            },
-            {
-              "news_id": "8e457620864d54baa3c846d9d139049a",
-              "url": "https://www.cfr.org/articles/hunger-on-the-horizon-the-new-black-sea-grain-crisis",
-              "headline": "Hunger on the Horizon: The New Black Sea Grain Crisis | Council on Foreign Relations",
-              "body": "Recent escalation in the Russia-Ukraine war has halted the Black Sea grain trade and metastasized into a war on the global food system. Combined with drought in the Northern Hemisphere, a looming super El Niño, and persistent instability in the Middle East—the world is on the verge of a crisis that could erase years of progress in reducing global hunger and push millions into acute food insecurity.",
-              "published_date": "2026-09-24",
-              "outlet": "Council",
-              "image": ""
-            },
-            {
-              "news_id": "dec6dc16246a5704b891449206d9bef0",
-              "url": "https://www.eastidahonews.com/2026/09/eastern-idaho-spud-harvest-underway-as-farmers-grapple-with-drought-heat/",
-              "headline": "Eastern Idaho spud harvest underway as farmers grapple with drought, heat - East Idaho News",
-              "body": "EDITOR’S NOTE: “From the Field” is a weekly feature bringing you the latest agriculture news in eastern Idaho. IDAHO FALLS – As spud harvest gets underway in eastern Idaho, many farmers are expecting to have lower yields than last year. Earlier this year, North American Potato Market News estimated a 5% decline in potato acreage. […]",
-              "published_date": "2026-09-29",
-              "outlet": "East Idaho News",
-              "image": "https://s3.us-west-2.amazonaws.com/assets.eastidahonews.com/wp-content/uploads/2023/05/farmer-sorts-potatoes.jpg"
-            },
-            {
-              "news_id": "902e0c66ee91525f882d4642d108fde8",
-              "url": "https://www.al.com/weather/2026/09/alabama-could-get-several-inches-of-rain-this-weekend.html",
-              "headline": "Alabama could get several inches of rain this weekend",
-              "body": "Drought conditions have been increasing in Alabama, especially in the southern and western parts of the state.",
-              "published_date": "2026-09-29T07:41:00+00:00",
-              "outlet": "al.com",
-              "image": "https://www.al.com/resizer/v2/53VVCNC6LVHQHKQGNAAZTWCNEE.JPG?auth=c938532fb7f0de592b1bd9555d6745d9005b2918c5c39d7cd0b2b9c6ff9d8a45&width=1280&smart=true&quality=90"
-            },
-            {
-              "news_id": "0dc5d1ec19ef593ba697820ccf2bd0d0",
-              "url": "https://inboundsa.com/south-africa-el-nino-2026-2027-summer-forecast/",
-              "headline": "SA faces exceptionally strong El Niño in 2026/27",
-              "body": "SAWS says the 2026/27 El Niño could reach unprecedented strength, with hotter temperatures and increased chances of below-normal mid-summer rainfall.",
-              "published_date": "2026-09-30",
-              "outlet": "inboundsa",
-              "image": "https://inboundsa.com/wp-content/uploads/2026/09/backpackerin-atacama-393339_1920.jpg"
-            },
-            {
-              "news_id": "cd9907da51315e92bdbb105551ed86ba",
-              "url": "https://www.yahoo.com/news/weather-news/articles/rocky-mount-issues-voluntary-water-203300606.html",
-              "headline": "Rocky Mount issues voluntary water conservation request",
-              "body": "FRANKLIN COUNTY, Va. (WFXR)- Town officials in Rocky Mount issued a voluntary water conservation request due to ongoing drought conditions. Officials said Rocky Mount has received about half the rainf...",
-              "published_date": "2026-09-29",
-              "outlet": "WFXR Roanoke · via Yahoo News",
-              "image": "https://media.zenfs.com/en/wfxr_roanoke_articles_319/29ffb63649386edd8fbf772b4750ef02.jpg"
-            },
-            {
-              "news_id": "1596c2dd550856e99a38c4b8de56b8c1",
-              "url": "https://stthomassource.com/content/2026/09/25/drought-worsens-on-st-thomas-as-puerto-rico-sees-some-improvement/",
-              "headline": "Drought Worsens on St. Thomas as Puerto Rico Sees Some Improvement",
-              "body": "Drought conditions have deteriorated on St. Thomas, which is now experiencing Exceptional Drought, the highest drought classification, while recent rainfall has brought some slight improvement to portions of Puerto Rico.",
-              "published_date": "2026-09-26T01:30:00+00:00",
-              "outlet": "St. Thomas Source",
-              "image": ""
-            },
-            {
-              "news_id": "3cf5d4c6b2a658779062f0fe3200ffb2",
-              "url": "https://note.com/kyouryokutai2025/n/n6164a55cb972?hl=en",
-              "headline": "🌡️ Wednesday, September 30: Sports Day Cancelled Due to El Niño, Emergency Circular from the Provincial Department of Education [September 2026]｜パプアニューギニア JICA海外協力隊 ヤマちゃん",
-              "body": "The weekly Wednesday Sports Day has been cancelled several times recently. The cause is the drought brought on by the El Niño phenomenon. While Alotau is not as severely affected, some areas in the province are facing dire conditions, and schools have received an official circular from the Depar",
-              "published_date": "2026-09-29",
-              "outlet": "note",
-              "image": "https://d2l930y2yx77uc.cloudfront.net/production/social_images/b1bfad6e248e636a195a1fb142fb683753673aac.png"
-            },
-            {
-              "news_id": "37385fda605151a098797b67b0eb36eb",
-              "url": "https://www.devilslakejournal.com/news/14611/producers-should-have-a-late-season-alfalfa-management-plan/",
-              "headline": "Producers should have a late-season alfalfa management plan",
-              "body": "<p>(Sep 15, 2026) – Dry weather has created hay shortages in many areas of North Dakota, with crops down to 50% of normal. Drought-damaged cereal crops that normally would be harvested for grain have been shifted to hay, which will help reduce the strain on hay demand.</p>",
-              "published_date": "2026-09-29",
-              "outlet": "Devils Lake Journal",
-              "image": "https://s.yimg.com/bo/09a5f3b0-c42c-5865-b655-8715892587c9_1790721623647.webp"
-            }
-          ]
-        },
-        {
           "log_date": "2026-10-01",
           "summary": "Yogyakarta, Indonesia extended its drought emergency alert after 131 consecutive dry days, the nation's longest dry spell. In the US, beekeepers in Independence County are feeding sugar to hives to help them endure drought, while Virginia's prolonged drought has enabled some drought-adapted plants to thrive. A separate report examines how heat and drought may be altering the flavor of Dijon mustard.",
           "news": [
@@ -44079,15 +44467,129 @@
               "image": "https://www.bing.com/th?id=ONUT.zZlp35JlY4aiWeb0pA4xJw"
             }
           ]
+        },
+        {
+          "log_date": "2026-10-05",
+          "summary": "According to the October 1, 2026 Drought Monitor, drought conditions persist across the U.S., while a new report indicates extreme drought now covers 44% of Puerto Rico. The 2026 super El Niño is described as the strongest ever measured for this point in the year, presenting multiple threats. Locally, Wisconsin's fall colors and apple crops are being affected by drought, and farms such as Annabelle's Fun Farm are adapting to maintain fall festival traditions.",
+          "news": [
+            {
+              "news_id": "f4ce73f5d17b5b12aa223b0dd764afe8",
+              "url": "https://travel.yahoo.com/guides/united-states/wisconsin/articles/fall-colors-under-stress-drought-162035674.html;_ylt=A2RRfEUBDsRq.wIAz4jQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzIEdnRpZAMEc2VjA3Ny",
+              "headline": "Fall colors under stress: How drought could change Wisconsin’s Autumn show",
+              "body": "This year's extreme drought across the Northwoods could make the show shorter and far less predictable.",
+              "published_date": "2026-10-05",
+              "outlet": "WITI · via Yahoo News",
+              "image": "https://s.yimg.com/fz/api/res/1.2/sgj42eDP2a7rC89QaJFrMQ--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7c209MTt3PTE2MA--/https://media.zenfs.com/en/witi_fox_local_articles_857/26ed54b450eadc1d8d1588ca87c05b70.jpg"
+            },
+            {
+              "news_id": "baf1f694d62b5042bc61a3eeea6d43b3",
+              "url": "https://r.search.yahoo.com/_ylt=A2RRfEUBDsRq.wIA5ojQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzEwBHZ0aWQDBHNlYwNzcg--/RV=2/RE=1792443137/RO=10/RU=https://rollingout.com/2026/10/05/super-el-nino-what-to-expect-this-winter//RK=2/RS=lL6WInjYIcolHCq21DWl_CnZuUk-",
+              "headline": "Super El Niño 2026: 5 threats forecasters are watching now",
+              "body": "The 2026 super El Niño is the strongest ever measured for this point in the year. Here's how it...",
+              "published_date": "2026-10-05",
+              "outlet": "Rolling Out",
+              "image": "https://s.yimg.com/fz/api/res/1.2/asdeiIHVnzHGO7sjaXDqUg--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7dz0xNjA-/https://s.yimg.com/bo/a37c3481-8d51-5408-bd4b-2316daef5265_1791210274974.jpg"
+            },
+            {
+              "news_id": "843d12c4005c5b739248af3dd21fe121",
+              "url": "https://r.search.yahoo.com/_ylt=A2RRfEUBDsRq.wIA24jQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzYEdnRpZAMEc2VjA3Ny/RV=2/RE=1792443137/RO=10/RU=https://www.sciencedaily.com/releases/2026/09/260902234457.htm/RK=2/RS=OpeFQC0Ki0DcKH.93RFFzEDyXWE-",
+              "headline": "Extreme drought now covers 44% of Puerto Rico",
+              "body": "Puerto Rico’s normally rainy season has instead brought a severe and fast-growing drought. By August 25, three-quarters of the territory was in at least ...",
+              "published_date": "2026-09-26",
+              "outlet": "Science Daily",
+              "image": "https://s.yimg.com/fz/api/res/1.2/0uZv8OZDeAX2OBIBKy1eiQ--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7dz0xNjA-/https://s.yimg.com/bo/b06cdba4-80cc-5c0f-8188-4afc4b903e92_1791187535664.webp"
+            },
+            {
+              "news_id": "4304d6229aca59839a564c8428881079",
+              "url": "https://www.koamnewsnow.com/community/annabelles-fun-farm-adapts-to-drought-to-keep-fall-festival-traditions-alive/article_2ebf6ace-0011-4637-9250-fdae540c44d2.html",
+              "headline": "Annabelle's Fun Farm adapts to drought to keep fall festival traditions alive",
+              "body": "The Brief",
+              "published_date": "2026-10-05",
+              "outlet": "KOAM",
+              "image": "https://s.yimg.com/bo/07ba482e-b721-5703-9d78-69f712da78a1_1791229944504.png.cf.jpg"
+            },
+            {
+              "news_id": "ee50bbe8696655c4b626817898846357",
+              "url": "https://r.search.yahoo.com/_ylt=A2RRfEUBDsRq.wIA3ojQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzcEdnRpZAMEc2VjA3Ny/RV=2/RE=1792443137/RO=10/RU=https://www.yahoo.com/news/weather-news/articles/chippewa-valley-drought-impacting-local-135300038.html?fr=sycsrp_catchall/RK=2/RS=1YW4XeC.Ao7MzP9jWZrkz8b0sRY-",
+              "headline": "Chippewa Valley drought impacting local apple orchards, apple crop holds on",
+              "body": "CHIPPEWA FALLS, Wis., (WLAX, WEUX) – Nearly state-wide drought has been in the weather headlines for...",
+              "published_date": "2026-10-05T13:52:17+00:00",
+              "outlet": "WLAX La Crosse · via Yahoo News",
+              "image": "https://s.yimg.com/fz/api/res/1.2/yqKQMFaOawt2sw4GHUvSKw--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7c209MTt3PTE2MA--/https://media.zenfs.com/en/wlax_la_crosse_articles_991/274661668401210e457ce8a5345f814a.jpg"
+            },
+            {
+              "news_id": "22cf7858b6595a2bb834a599a78fb2ba",
+              "url": "https://travel.yahoo.com/guides/united-states/wisconsin/articles/fall-colors-under-stress-drought-162035674.html;_ylt=A2RRfhD.DcRqywIAJ6TQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzIEdnRpZAMEc2VjA3Ny",
+              "headline": "Fall colors under stress: How drought could change Wisconsin’s Autumn show",
+              "body": "This year's extreme drought across the Northwoods could make the show shorter and far less predictable.",
+              "published_date": "2026-10-05",
+              "outlet": "WITI · via Yahoo News",
+              "image": "https://s.yimg.com/fz/api/res/1.2/sgj42eDP2a7rC89QaJFrMQ--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7c209MTt3PTE2MA--/https://media.zenfs.com/en/witi_fox_local_articles_857/26ed54b450eadc1d8d1588ca87c05b70.jpg"
+            },
+            {
+              "news_id": "35eb4ad46ea452b6a75c67201d750a2c",
+              "url": "https://r.search.yahoo.com/_ylt=A2RRfhD.DcRqywIANaTQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzcEdnRpZAMEc2VjA3Ny/RV=2/RE=1792443134/RO=10/RU=https://www.yahoo.com/news/weather-news/articles/chippewa-valley-drought-impacting-local-135300038.html?fr=sycsrp_catchall/RK=2/RS=4T7Otp_cioeelTzqxrjcC2sLMjw-",
+              "headline": "Chippewa Valley drought impacting local apple orchards, apple crop holds on",
+              "body": "CHIPPEWA FALLS, Wis., (WLAX, WEUX) – Nearly state-wide drought has been in the weather headlines for...",
+              "published_date": "2026-10-05T13:52:14+00:00",
+              "outlet": "WLAX La Crosse · via Yahoo News",
+              "image": "https://s.yimg.com/fz/api/res/1.2/yqKQMFaOawt2sw4GHUvSKw--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7c209MTt3PTE2MA--/https://media.zenfs.com/en/wlax_la_crosse_articles_991/274661668401210e457ce8a5345f814a.jpg"
+            },
+            {
+              "news_id": "183fc8a26a235a94acda578c8ae7ba45",
+              "url": "https://r.search.yahoo.com/_ylt=A2RRfhD.DcRqywIAMqTQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzYEdnRpZAMEc2VjA3Ny/RV=2/RE=1792443134/RO=10/RU=https://www.sciencedaily.com/releases/2026/09/260902234457.htm/RK=2/RS=4sMn2LbbnbcPllsGbUPWMY4IVL0-",
+              "headline": "Extreme drought now covers 44% of Puerto Rico",
+              "body": "Puerto Rico’s normally rainy season has instead brought a severe and fast-growing drought. By August 25, three-quarters of the territory was in at least ...",
+              "published_date": "2026-09-26",
+              "outlet": "Science Daily",
+              "image": "https://s.yimg.com/fz/api/res/1.2/0uZv8OZDeAX2OBIBKy1eiQ--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7dz0xNjA-/https://s.yimg.com/bo/b06cdba4-80cc-5c0f-8188-4afc4b903e92_1791187535664.webp"
+            },
+            {
+              "news_id": "e4c1fac9c1345a9c906ac462200b895b",
+              "url": "https://r.search.yahoo.com/_ylt=A2RRfEUBDsRq.wIA1YjQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzQEdnRpZAMEc2VjA3Ny/RV=2/RE=1792443137/RO=10/RU=https://www.yahoo.com/news/weather-news/articles/drought-monitor-october-1st-2026-155536873.html?fr=sycsrp_catchall/RK=2/RS=2SbnF78536XshEuQy4y7eyGx3Ek-",
+              "headline": "Drought Monitor Update – October 1st, 2026",
+              "body": "The latest drought monitor update from the USDA (US Department of Agriculture), NOAA (National Oceanic and Atmospheric Administration), CPC (Climate...",
+              "published_date": "2026-01-01",
+              "outlet": "KCAU Sioux City · via Yahoo News",
+              "image": "https://s.yimg.com/fz/api/res/1.2/IbFLOaNcGOHG.V18.4m0.Q--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7c209MTt3PTE2MA--/https://media.zenfs.com/en/kcau_sioux_city_articles_201/4ec94a6f1e16c8450a9dccd5405229af.png.cf.jpg"
+            },
+            {
+              "news_id": "858a4dc443e15520b70065e7b45b42fd",
+              "url": "https://r.search.yahoo.com/_ylt=A2RRfEUBDsRq.wIA4YjQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzgEdnRpZAMEc2VjA3Ny/RV=2/RE=1792443137/RO=10/RU=https://www.yahoo.com/news/us/articles/stealing-water-conspiracy-theories-billionaires-200752780.html?fr=sycsrp_catchall/RK=2/RS=1ivd5WW_ybnsK3al4MB8UaSrkOI-",
+              "headline": "'Stealing our water': conspiracy theories about billionaires follow droughts",
+              "body": "The warmest summer on record for the contiguous United States led to widespread and severe drought...",
+              "published_date": "2026-10-01T20:52:17+00:00",
+              "outlet": "AFP · via Yahoo News",
+              "image": "https://s.yimg.com/fz/api/res/1.2/GsYW.tz6Plwn0COhVsQK7g--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7c209MTt3PTE2MA--/https://media.zenfs.com/en/afp_factcheck_us_713/dcd2818639c1c4027428a4502a5049e4.jpg"
+            },
+            {
+              "news_id": "2828a7e8669751af96130fd61954343b",
+              "url": "https://r.search.yahoo.com/_ylt=A2RRfhD.DcRqywIAKqTQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzMEdnRpZAMEc2VjA3Ny/RV=2/RE=1792443134/RO=10/RU=https://www.yahoo.com/news/weather-news/articles/drought-monitor-october-1st-2026-155536873.html?fr=sycsrp_catchall/RK=2/RS=yEZCZVFygR1gydBGa.TarsqffDY-",
+              "headline": "Drought Monitor Update – October 1st, 2026",
+              "body": "The latest drought monitor update from the USDA (US Department of Agriculture), NOAA (National Oceanic and Atmospheric Administration), CPC (Climate...",
+              "published_date": "2026-01-01",
+              "outlet": "KCAU Sioux City · via Yahoo News",
+              "image": "https://s.yimg.com/fz/api/res/1.2/IbFLOaNcGOHG.V18.4m0.Q--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7c209MTt3PTE2MA--/https://media.zenfs.com/en/kcau_sioux_city_articles_201/4ec94a6f1e16c8450a9dccd5405229af.png.cf.jpg"
+            },
+            {
+              "news_id": "1e52e4c17b0b531fa03dd0e2a4c01952",
+              "url": "https://r.search.yahoo.com/_ylt=A2RRfhD.DcRqywIAOKTQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzgEdnRpZAMEc2VjA3Ny/RV=2/RE=1792443134/RO=10/RU=https://www.yahoo.com/news/weather-news/articles/bedford-water-urges-customers-save-202948401.html?fr=sycsrp_catchall/RK=2/RS=VTjY_rYhQtgGd6nVRrZMiwJvriw-",
+              "headline": "Bedford Water urges all customers to save water as drought persists",
+              "body": "BEDFORD COUNTY, Va. (WFXR) – Bedford Water is urging all of its customers to save water as a drought...",
+              "published_date": "2026-10-01T20:52:14+00:00",
+              "outlet": "WFXR Roanoke · via Yahoo News",
+              "image": "https://s.yimg.com/fz/api/res/1.2/kUSWvg8cDGrAnDIo3_zt_A--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7c209MTt3PTE2MA--/https://media.zenfs.com/en/wfxr_roanoke_articles_319/f855870453aa82000497d692bc02f3b1.jpg"
+            }
+          ]
         }
       ],
-      "logs_total": 50
+      "logs_total": 51
     },
     {
       "incident_id": "20260809-IN-FL",
       "tree_id": "c3a298b11ada4b3d923299b870b675ba",
       "canonical_name": "Flood India 2026-08-09",
-      "summary": "In Bihar, a 65‑year‑old man died in Saran district after being struck by a relief packet dropped from an IAF helicopter, and 28 places in the state are on orange alert as the Gandak River floods new areas following embankment breaches. A separate human‑interest story highlights a man in Calicut, Kerala, who lost ten family members in a landslide and flash flood.",
+      "summary": "A report notes that Kerala’s flash floods have claimed 33 lives and are contributing to power‑cut discussions. Meanwhile, Assam’s tea industry raised more than ₹2.26 crore for flood‑affected families through a special charity auction, highlighting ongoing relief activities.",
       "country": "India",
       "iso2": "IN",
       "lat": 25.3356491,
@@ -44106,7 +44608,7 @@
       "disease_name": null,
       "event_date": "2026-08-09",
       "first_reported_date": "2026-08-09",
-      "last_updated_date": "2026-10-03",
+      "last_updated_date": "2026-10-05",
       "days_since_event": 57,
       "source_count": 1,
       "should_report": true,
@@ -44117,7 +44619,7 @@
         "gdacs": 1,
         "ercc": 0,
         "healthmap": 0,
-        "news": 89
+        "news": 92
       },
       "source_links": [
         {
@@ -44493,9 +44995,21 @@
         {
           "headline": "Life can take much from us. What do we do with what is left?",
           "published_date": "2026-10-03"
+        },
+        {
+          "headline": "Why rain-rich Keralam is facing power cuts?",
+          "published_date": "2026-10-05"
+        },
+        {
+          "headline": "Assam Tea Industry Raises Over ₹2.26 Crore For Flood-Affected Families At Special GTAC Charity Auction",
+          "published_date": "2026-10-05"
+        },
+        {
+          "headline": "CM-hammered charity tea auction in GTAC raises over Rs 2.26 cr for Assam flood relief",
+          "published_date": "2026-10-05"
         }
       ],
-      "news_total": 89,
+      "news_total": 92,
       "logs": [
         {
           "log_date": "2026-09-02",
@@ -44536,39 +45050,6 @@
               "published_date": "2026-08-29",
               "outlet": "Mathrubhumi English",
               "image": "https://www.bing.com/th?id=ONUT.6yhdjnyRRbMbLVIj1LDxhw"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-10-01",
-          "summary": "Floodwaters are receding in Odisha's Balasore and Jagatsinghpur districts, though many villages remain submerged. In Bihar, two embankments of the Gandak River breached in Gopalganj and Saran districts amid heavy discharge from barrages. Separately, officials report at least 62 people have died from days of heavy rain and flooding in Uttar Pradesh.",
-          "news": [
-            {
-              "news_id": "2b59908c5c9d596290a77788f22d88c9",
-              "url": "https://www.newindianexpress.com/states/odisha/2026/Sep/30/floodwaters-ease-but-many-villages-still-submerged-in-balasore",
-              "headline": "Floodwaters ease but many villages still submerged in Balasore",
-              "body": "BALASORE / JAGATSINGHPUR: Flood conditions improved in Balasore and Jagatsinghpur districts on Tuesday as the rains subsided, but several areas in both district",
-              "published_date": "2026-09-30",
-              "outlet": "The New Indian Express",
-              "image": "https://www.bing.com/th?id=ONUT.lQzf91-fBcOyhkZFYBAbIw"
-            },
-            {
-              "news_id": "df3c7bee84ea5767b444f452b408461f",
-              "url": "https://www.newindianexpress.com/states/bihar/2026/Sep/30/gandak-river-embankments-breach-at-two-places-in-bihars-gopalganj-saran-districts",
-              "headline": "Gandak river embankments breach at two places in Bihar's Gopalganj, Saran districts",
-              "body": "Embankments of the Gandak River breached at two places in Bihar's Gopalganj and Saran districts on Wednesday amid heavy discharge from barrages, while seepage a",
-              "published_date": "2026-09-30",
-              "outlet": "The New Indian Express",
-              "image": "https://www.bing.com/th?id=ONUT.iYNLl-un5p6S4-kz-iDYIg"
-            },
-            {
-              "news_id": "05943b711c5c5b80822f63b60e0a07e4",
-              "url": "https://www.whio.com/news/world/heavy-rain-flooding/ZPZAJ524SM5OREDMZ4GUVNJWCU/",
-              "headline": "Heavy rain and flooding kill at least 62 in northern India",
-              "body": "Officials say at least 62 people have died after days of heavy rain and flooding in India’s northern Uttar Pradesh state",
-              "published_date": "2026-09-28",
-              "outlet": "WHIO-TV 7 Dayton",
-              "image": "https://s.yimg.com/bo/72795995-e760-5e39-af1d-96ac9b2dae41_1790592256741.jpg"
             }
           ]
         },
@@ -44655,9 +45136,42 @@
               "image": "https://www.bing.com/th?id=ONUT.0zxtlBhDoi-9Z7fWLubBlQ"
             }
           ]
+        },
+        {
+          "log_date": "2026-10-05",
+          "summary": "A report notes that Kerala’s flash floods have claimed 33 lives and are contributing to power‑cut discussions. Meanwhile, Assam’s tea industry raised more than ₹2.26 crore for flood‑affected families through a special charity auction, highlighting ongoing relief activities.",
+          "news": [
+            {
+              "news_id": "65d184cf38ff539f96c36a8f17213eed",
+              "url": "https://www.newindianexpress.com/explainers/2026/Oct/05/why-rain-rich-keralam-is-facing-power-cuts",
+              "headline": "Why rain-rich Keralam is facing power cuts?",
+              "body": "Torrential rain, landslides and flash floods have not prevented Keralam from facing a water crisis. The southwest monsoon triggered flashfloods that claimed 33",
+              "published_date": "2026-10-05",
+              "outlet": "The New Indian Express",
+              "image": "https://www.bing.com/th?id=ONUT.S91KvoUwJ-_nhwQj3aMyWg"
+            },
+            {
+              "news_id": "6cd1fe6045a150bc9dd2257846699581",
+              "url": "https://www.freepressjournal.in/india/assam-tea-industry-raises-over-226-crore-for-flood-affected-families-at-special-gtac-charity-auction",
+              "headline": "Assam Tea Industry Raises Over ₹2.26 Crore For Flood-Affected Families At Special GTAC Charity Auction",
+              "body": "Assam’s tea industry raised more than Rs 2.26 crore for flood-affected families through a special charity auction at the Guwahati Tea Auction Centre and an additional contribution. Ghilaidhari BP Tea drew the highest bid of Rs 16 lakh, while producers, buyers and other industry stakeholders joined the initiative.",
+              "published_date": "2026-10-05",
+              "outlet": "Free Press Journal",
+              "image": "https://www.bing.com/th?id=ONUT.zXBTJTBxEM8v2AALqW4Z8Q"
+            },
+            {
+              "news_id": "e095b1804bd453e39f7216c0821ed15f",
+              "url": "https://theshillongtimes.com/2026/10/05/cm-hammered-charity-tea-auction-in-gtac-raises-over-rs-2-26-cr-for-assam-flood-relief/",
+              "headline": "CM-hammered charity tea auction in GTAC raises over Rs 2.26 cr for Assam flood relief",
+              "body": "The Special Charity Tea Auction held on Monday at the Guwahati Tea Auction Centre (GTAC) under the aegis of Tea Association of India (TAI) witnessed an overwhelming response from the tea fraternity.",
+              "published_date": "2026-10-05",
+              "outlet": "The Shillong Times",
+              "image": ""
+            }
+          ]
         }
       ],
-      "logs_total": 15
+      "logs_total": 16
     },
     {
       "incident_id": "20260810-CO-EQ",
@@ -50157,7 +50671,7 @@
       "incident_id": "20260826-NP-FL",
       "tree_id": "26a139d9c4274b379e946b7b737af269",
       "canonical_name": "Flood Bagmati, Nepal 2026-08-26",
-      "summary": "65 ambulance drivers who transported bodies of the Rasuwa flood victims were honored. A symbolic funeral was performed for a missing army soldier believed killed in the disaster.\nPSDN, with financial and technical support from Project HOPE, conducted 26 emergency medical and public health service deployments in flood-hit Nuwakot and Rasuwa between September 6 and 30. Additionally, South Korean volunteer teams are involved in cleaning and recovery efforts in Nuwakot.",
+      "summary": "Nepal has officially ended search and rescue operations for those still missing from the August flood and is now focusing on rehabilitation and recovery efforts. The government is preparing to change road and bridge designs in response to the disaster, while the Nepali Congress political party has raised over 3.5 crore rupees (approximately 3.5 million USD) for affected families. Separately, a policy analysis examines how Nepal’s recovery will test the UN’s Fund for Responding to Loss and Damage.",
       "country": "Nepal",
       "iso2": "NP",
       "lat": 27.2952744,
@@ -50176,7 +50690,7 @@
       "disease_name": null,
       "event_date": "2026-08-26",
       "first_reported_date": "2026-08-26",
-      "last_updated_date": "2026-10-04",
+      "last_updated_date": "2026-10-05",
       "days_since_event": 40,
       "source_count": 3,
       "should_report": true,
@@ -50187,7 +50701,7 @@
         "gdacs": 1,
         "ercc": 2,
         "healthmap": 0,
-        "news": 1025
+        "news": 1029
       },
       "source_links": [
         {
@@ -53481,6 +53995,14 @@
           "published_date": "2026-09-19T05:18:00+00:00"
         },
         {
+          "headline": "भोटेकोशी बाढीपीडितका लागि कांग्रेसले उठायो पौने तीन करोड",
+          "published_date": "2026-09-20"
+        },
+        {
+          "headline": "बाढी विपद्पछि सडक र पुलको डिजाइन परिवर्तन तयारी",
+          "published_date": "2026-09-20"
+        },
+        {
           "headline": "Nepal flood toll crosses 1,450; over 6,000 still missing",
           "published_date": "2026-09-20"
         },
@@ -54229,6 +54751,10 @@
           "published_date": "2026-09-30T06:24:37+00:00"
         },
         {
+          "headline": "Nepal’s floods put the global loss and damage system to the test",
+          "published_date": "2026-09-30T20:55:18+00:00"
+        },
+        {
           "headline": "Sewa International Plans to Support 10,000 Children Affected by Floods; President Srikanth Gundavarapu Visits Nepal",
           "published_date": "2026-10-01"
         },
@@ -54319,9 +54845,13 @@
         {
           "headline": "South Korean volunteers engage in cleaning flood-hit areas of Nuwakot",
           "published_date": "2026-10-04"
+        },
+        {
+          "headline": "Nepal ends search and rescue after flood, focuses on rehabilitation",
+          "published_date": "2026-10-05T20:55:15+00:00"
         }
       ],
-      "news_total": 1025,
+      "news_total": 1029,
       "logs": [
         {
           "log_date": "2026-08-28",
@@ -54753,57 +55283,6 @@
           ]
         },
         {
-          "log_date": "2026-10-02",
-          "summary": "New reports from October 2026 detail ongoing diplomatic and relief efforts tied to the Bagmati flood. China proposed upgrading the Korala border point into an international trading hub after the flood destroyed the Kerung-Rasuwagadhi crossing, while Nepal continues to press for Tatopani’s reopening. Separately, the Magar Association of America contributed more than Rs 3 million to support flood victims in Rasuwa.",
-          "news": [
-            {
-              "news_id": "ae6bede37ab75194acb6e380a465f510",
-              "url": "https://www.msn.com/en-xl/asia/nepal/china-proposes-upgrading-korala-as-international-trading-point-as-nepal-insists-on-tatopani-reopening/ar-AA2dmt5q?ocid=BingNewsVerp",
-              "headline": "China proposes upgrading Korala as international trading point as Nepal insists on Tatopani reopening",
-              "body": "Kathmandu, Oct. 1 -- A flash flood in the Bhotekoshi river on August 26 swept away the Kerung-Rasuwagadhi border crossing, ...",
-              "published_date": "2026-10-02",
-              "outlet": "Kathmandu Post (EKantipur.com) on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.uxV1Wv66hP-kSG-P4b0sZg"
-            },
-            {
-              "news_id": "9a5c3704da1f54c5a0ef5225b1aa04d3",
-              "url": "https://www.onlinekhabar.com/2026/10/2030459/lamichhane-foundation-provides-over-rs-10-million-in-assistance-to-bhotekoshi-flood-victims",
-              "headline": "भोटेकोशी बाढीपीडितलाई लामिछाने फाउन्डेसनको एक करोड बढी सहयोग",
-              "body": "लन्डन । 'द लामिछाने फाउन्डेसन' ले भोटेकोशी बाढीपीडितका लागि एक करोड ७ लाख रुपैयाँ सहयोग गरेको छ । बेलायतस्थित च्यारिटी कमिसनमा दर्ता भएको द लामिछाने फाउन्डेसनले बिहीबार लन्डनस्थित नेपाली दूतावासको बैंक खातामा ५१ हजार ७ सय …",
-              "published_date": "2026-08-20",
-              "outlet": "अनलाइन खबर",
-              "image": "https://www.bing.com/th?id=ONUT.OKHYUAzEsUEAekkmpHMImg"
-            },
-            {
-              "news_id": "38ee6f48b9325cd9841d0bd1ff59172a",
-              "url": "https://www.onlinekhabar.com/2026/10/2031063/magar-association-of-america-provides-rs-3-million-to-rasuwa-flood-victims",
-              "headline": "रसुवा बाढीपीडितलाई मगर संघ अमेरिकाद्वारा ३० लाख सहयोग",
-              "body": "१६ असोज, काठमाडौं । अमेरिकामा बसोवास गर्दै आएका मगर समुदायले बाढीपीडितको राहत तथा पुनर्स्थापनाका लागि ३० लाख ३० हजार रुपैयाँ सहयोग गरेको छ । मगर संघ अमेरिकाको केन्द्रीय कार्यालयमा सेप्टेम्बर २८ मा आयोजित ‘प्राकृतिक विपदमा परेका …",
-              "published_date": "2026-09-20",
-              "outlet": "अनलाइन खबर",
-              "image": "https://www.bing.com/th?id=ONUT.nrMSqDyNyXCeZQGJUCVQwg"
-            },
-            {
-              "news_id": "0474d2813a9b556fb8f1c2390622b2b0",
-              "url": "https://www.onlinekhabar.com/2026/10/2030547/magar-association-donates-us-3-million-to-flood-victims",
-              "headline": "बाढीपीडितका लागि मगर संघ अमेरिकाको ३० लाख सहयोग",
-              "body": "१६ असोज, काठमाडौं ।अमेरिकामा बसोबास गर्ने मगर समुदायले बाढीपीडितको राहत तथा पुनर्स्थापनाका लागि ३० लाख रुपैयाँ भन्दा बढी सहयोग गरेको छ । नेपालमा आएको भीषण बाढीका कारण विभिन्न क्षेत्रमा भएको मानवीय तथा भौतिक क्षतिप्रति गहिरो दु:ख …",
-              "published_date": "2026-09-20",
-              "outlet": "अनलाइन खबर",
-              "image": "https://www.bing.com/th?id=ONUT.T6F-Py3VREXdDFqMFAOglg"
-            },
-            {
-              "news_id": "00888579e45957b8a8e698e0e674a30c",
-              "url": "https://theshillongtimes.com/2026/10/02/august-26-floods-damage-telecom-infra-worth-over-npr-88-million/",
-              "headline": "August 26 floods damage telecom infra worth over NPR 88 million",
-              "body": "State-owned Nepal Telecom has suffered infrastructure damage worth Nepalese Rupees (NPR) 88 million (USD 5,76,314 approx.) after Bhotekoshi floods damaged its mobile, wireline and transmission ...",
-              "published_date": "2026-10-02",
-              "outlet": "The Shillong Times",
-              "image": ""
-            }
-          ]
-        },
-        {
           "log_date": "2026-10-03",
           "summary": "Nepal announced plans to drain four glacial lakes using gated structures to prevent future flood disasters, a project expected to take up to six years. One of the 55 Malaysians missing after the floods was confirmed alive and returned home after 37 days, while DNA-based identification of victims continues.\nIndia is installing an early warning system on a vulnerable glacial lake in Uttarakhand after the Bagmati floods, while Malaysian banks and insurers have announced relief for affected families. Rescue efforts continue in Nepal, a fact-check debunked AI-generated videos falsely depicting the flood, and a Cottey College student is leading campus fundraising for recovery.",
           "news": [
@@ -55057,15 +55536,57 @@
               "image": "https://media.zenfs.com/en/afp_factcheck_us_713/1f14375f53096cd03fceb3e36d9788c5.jpg"
             }
           ]
+        },
+        {
+          "log_date": "2026-10-05",
+          "summary": "Nepal has officially ended search and rescue operations for those still missing from the August flood and is now focusing on rehabilitation and recovery efforts. The government is preparing to change road and bridge designs in response to the disaster, while the Nepali Congress political party has raised over 3.5 crore rupees (approximately 3.5 million USD) for affected families. Separately, a policy analysis examines how Nepal’s recovery will test the UN’s Fund for Responding to Loss and Damage.",
+          "news": [
+            {
+              "news_id": "a1a038b2acd759ed9d030eb975b517fb",
+              "url": "https://www.chathamhouse.org/2026/10/nepals-floods-put-global-loss-and-damage-system-test",
+              "headline": "Nepal’s floods put the global loss and damage system to the test",
+              "body": "Nepal’s recovery from August’s catastrophic glacial flood will test the efficiency of the UN’s Fund for Responding to Loss ...",
+              "published_date": "2026-09-30T20:55:18+00:00",
+              "outlet": "Chatham House",
+              "image": "https://www.bing.com/th?id=ONUT.jqFFGYCmbEhzj2EshJEjOg"
+            },
+            {
+              "news_id": "456026efe8375b3793cdda5c3889031e",
+              "url": "https://www.onlinekhabar.com/2026/10/2032850/nepali-congress-raises-rs-3-5-crore-for-bhotekoshi-flood-victims",
+              "headline": "भोटेकोशी बाढीपीडितका लागि कांग्रेसले उठायो पौने तीन करोड",
+              "body": "१९ असोज, काठमाडौं । नेपाली कांग्रेसले भोटेकोशी नदीमा आएको बाढीबाट प्रभावित तथा पीडित परिवारलाई राहत तथा सहयोग पु¥याउने उद्देश्यले पौने तीन करोडभन्दा बढी रकम संकलन गरेको छ । कोषाध्यक्ष उमेश श्रेष्ठले सोमबार १५ औं महाधिवेशनको बन्दसत्रमा …",
+              "published_date": "2026-09-20",
+              "outlet": "अनलाइन खबर",
+              "image": "https://www.bing.com/th?id=ONUT.7LkAsmgXvmgdpHG5Yn3N4Q"
+            },
+            {
+              "news_id": "e875438783a5547e8d82770afe3bd933",
+              "url": "https://www.onlinekhabar.com/2026/10/2032803/preparations-to-change-road-and-bridge-designs-after-flood-disaster",
+              "headline": "बाढी विपद्पछि सडक र पुलको डिजाइन परिवर्तन तयारी",
+              "body": "१९ असोज, काठमाडौं । रसुवा-भोटेकोशी बाढीपछि सरकारले सडक र पुलको डिजाइन परिवर्तन गर्ने गरी गृहकार्य थालेको छ । १० भदौमा रसुवा र ८ देखि १० असोजमा कालीगण्डकीमा आएको विनाशकारी बाढीपहिरोले जनधनको ठूलो क्षति गरेको छ । …",
+              "published_date": "2026-09-20",
+              "outlet": "अनलाइन खबर",
+              "image": "https://www.bing.com/th?id=ONUT.JgoWgxEE42Rfyze4wjzD6Q"
+            },
+            {
+              "news_id": "32102652ed025d389fad1b09319e0c41",
+              "url": "https://www.star-telegram.com/news/nation-world/world/article317497161.html",
+              "headline": "Nepal ends search and rescue after flood, focuses on rehabilitation",
+              "body": "Nepal has ended the search and rescue operation for those still missing after the devastating flood in August that killed at ...",
+              "published_date": "2026-10-05T20:55:15+00:00",
+              "outlet": "Fort Worth Star-Telegram",
+              "image": "https://www.bing.com/th?id=ONUT.GoL4899ToudSUHGlSL3OZw"
+            }
+          ]
         }
       ],
-      "logs_total": 38
+      "logs_total": 39
     },
     {
       "incident_id": "20260903-PS-CF",
       "tree_id": "e650e542b08c4c03badd08f734e3234d",
       "canonical_name": "Conflict Palestine 2026-09-03",
-      "summary": "The UK Green Party formally adopted a policy defining Zionism as racism, prompting Israel to condemn the move and bar a party member from entering the country. Tensions between Ireland and Israel escalated during Nations League matches, with Irish players wearing black armbands and bowing their heads during the Israeli anthem, followed by a second match marred by spitting allegations. Meanwhile, a US judge ruled to deport Palestinian rights advocate Salah Sarsour under a cold-war era law, and commentary discussed the Philippine walkout at the UN.",
+      "summary": "The UK Green Party formally adopted a policy defining Zionism as racism, prompting Israel to condemn the move and bar a party member from entering the country. Tensions between Ireland and Israel escalated during Nations League matches, with Irish players wearing black armbands and bowing their heads during the Israeli anthem, followed by a second match marred by spitting allegations. Meanwhile, a US judge ruled to deport Palestinian rights advocate Salah Sarsour under a cold-war era law, and commentary discussed the Philippine walkout at the UN.\nIsrael is developing the Herod’s Pool reservoir in the West Bank, siphoning water from Palestinians. The IDF intelligence chief told the cabinet that two-thirds of the terrorists who invaded on October 7 have been killed, with 2,000 remaining. Freed Syrian detainees described torture in Israeli detention, while the UK foreign secretary asserted that threats to Israel do not justify its treatment of Palestinians. Additionally, Zach Bryan wore a “Free Palestine” shirt at Gillette Stadium weeks after the Macklemore controversy.",
       "country": "Palestine",
       "iso2": "PS",
       "lat": 31.9,
@@ -55095,7 +55616,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 440
+        "news": 446
       },
       "source_links": [
         {
@@ -56653,6 +57174,10 @@
           "published_date": "2026-09-29"
         },
         {
+          "headline": "UK foreign secretary: The threats to Israel don’t justify its treatment of Palestinians - Jewish Telegraphic Agency",
+          "published_date": "2026-09-29"
+        },
+        {
           "headline": "How the New York Times’ Framing Shaped the Story of the Israel-Hamas War",
           "published_date": "2026-09-29"
         },
@@ -56797,6 +57322,14 @@
           "published_date": "2026-10-02T07:49:23+00:00"
         },
         {
+          "headline": "Zach Bryan wears \"Free Palestine\" shirt weeks after Macklemore controversy",
+          "published_date": "2026-10-03"
+        },
+        {
+          "headline": "Zach Bryan Wears ‘Free Palestine’ Shirt at Gillette Stadium After Macklemore Controversy",
+          "published_date": "2026-10-03"
+        },
+        {
           "headline": "New claims that Netanyahu rejected Hamas offer to release captives",
           "published_date": "2026-10-03"
         },
@@ -56873,11 +57406,23 @@
           "published_date": "2026-10-05"
         },
         {
+          "headline": "What is ‘Herod’s Pool’, and why is Israel developing it in the West Bank?",
+          "published_date": "2026-10-05"
+        },
+        {
+          "headline": "IDF killed two-thirds of terrorists who invaded Israel on October 7, intel chief tells cabinet",
+          "published_date": "2026-10-05"
+        },
+        {
           "headline": "Spitting allegations as Ireland and Israel fight out ill-tempered draw",
+          "published_date": "2026-10-05"
+        },
+        {
+          "headline": "Freed Syrians recount torture in Israeli detention centre",
           "published_date": "2026-10-05"
         }
       ],
-      "news_total": 440,
+      "news_total": 446,
       "logs": [
         {
           "log_date": "2026-09-04",
@@ -57223,7 +57768,7 @@
         },
         {
           "log_date": "2026-10-05",
-          "summary": "The UK Green Party formally adopted a policy defining Zionism as racism, prompting Israel to condemn the move and bar a party member from entering the country. Tensions between Ireland and Israel escalated during Nations League matches, with Irish players wearing black armbands and bowing their heads during the Israeli anthem, followed by a second match marred by spitting allegations. Meanwhile, a US judge ruled to deport Palestinian rights advocate Salah Sarsour under a cold-war era law, and commentary discussed the Philippine walkout at the UN.",
+          "summary": "The UK Green Party formally adopted a policy defining Zionism as racism, prompting Israel to condemn the move and bar a party member from entering the country. Tensions between Ireland and Israel escalated during Nations League matches, with Irish players wearing black armbands and bowing their heads during the Israeli anthem, followed by a second match marred by spitting allegations. Meanwhile, a US judge ruled to deport Palestinian rights advocate Salah Sarsour under a cold-war era law, and commentary discussed the Philippine walkout at the UN.\nIsrael is developing the Herod’s Pool reservoir in the West Bank, siphoning water from Palestinians. The IDF intelligence chief told the cabinet that two-thirds of the terrorists who invaded on October 7 have been killed, with 2,000 remaining. Freed Syrian detainees described torture in Israeli detention, while the UK foreign secretary asserted that threats to Israel do not justify its treatment of Palestinians. Additionally, Zach Bryan wore a “Free Palestine” shirt at Gillette Stadium weeks after the Macklemore controversy.",
           "news": [
             {
               "news_id": "e6eadec624cb5e198e8f9312fba8db1b",
@@ -57271,6 +57816,15 @@
               "image": "https://www.bing.com/th?id=ONUT.hfYkbhPFg0358HYvRhVh5A"
             },
             {
+              "news_id": "490a923fd7565f13b9b802f36ec916a6",
+              "url": "https://www.msn.com/en-us/news/other/what-is-herods-pool-and-why-is-israel-developing-it-in-the-west-bank/ar-AA2dCqEO?ocid=BingNewsVerp",
+              "headline": "What is ‘Herod’s Pool’, and why is Israel developing it in the West Bank?",
+              "body": "Israel is developing a reservoir on land in the occupied West Bank, with water syphoned off from Palestinians.",
+              "published_date": "2026-10-05",
+              "outlet": "Al Jazeera on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.wd1CItbYziJiR93k2TYSoA"
+            },
+            {
               "news_id": "fe1f16a327f35e5987a0136566443b28",
               "url": "https://www.yahoo.com/news/world/articles/finding-peace-promised-land-israel-114539723.html",
               "headline": "'Finding Peace in the Promised Land': From the Israel Trail to a new path for peace",
@@ -57296,6 +57850,15 @@
               "published_date": "2026-10-04",
               "outlet": "Al Jazeera",
               "image": "https://www.bing.com/th?id=ONUT.YrGN1iIMR7dV4XtJJxTz2A"
+            },
+            {
+              "news_id": "7c6ec6a3575a5290a185b4b04e46908a",
+              "url": "https://www.yahoo.com/news/us/articles/idf-killed-two-thirds-terrorists-121148767.html",
+              "headline": "IDF killed two-thirds of terrorists who invaded Israel on October 7, intel chief tells cabinet",
+              "body": "\"There are 2,000 remaining, and we will get to every last one of them,\" Maj. -Gen.",
+              "published_date": "2026-10-05",
+              "outlet": "Yahoo",
+              "image": "https://www.bing.com/th?id=ONUT.6H6c4f-ZEGTK39k65na29Q"
             },
             {
               "news_id": "27fd46d79f7151eba3494b8ea8984fff",
@@ -57325,6 +57888,15 @@
               "image": ""
             },
             {
+              "news_id": "8eff5ec2e09d5b92a7d9505ee9283d31",
+              "url": "https://www.yahoo.com/news/politics/articles/zach-bryan-wears-free-palestine-155515243.html",
+              "headline": "Zach Bryan wears \"Free Palestine\" shirt weeks after Macklemore controversy",
+              "body": "Bryan wore the shirt at Robert Kraft's Gillette Stadium, renewing a dispute over Macklemore's removal from Ed Sheeran's tour.",
+              "published_date": "2026-10-03",
+              "outlet": "NEWSWEEK · via Yahoo News",
+              "image": "https://media.zenfs.com/en/newsweek_sports_200/fc509fcc81a18e335af1bf9fabcb145f.jpg"
+            },
+            {
               "news_id": "b2714deaf3ea5bbfa77a79634d93f3a8",
               "url": "https://www.aljazeera.com/video/newsfeed/2026/10/5/spitting-allegations-as-ireland-and-israel-fight-out-ill-tempered-draw",
               "headline": "Spitting allegations as Ireland and Israel fight out ill-tempered draw",
@@ -57334,6 +57906,24 @@
               "image": "https://www.bing.com/th?id=ONUT.xh2HFwq9Pdc5Ft7XZKt51A"
             },
             {
+              "news_id": "f157255c79f95602b51a762d3b3b19c5",
+              "url": "https://www.yahoo.com/entertainment/music/articles/zach-bryan-wears-free-palestine-184518849.html",
+              "headline": "Zach Bryan Wears ‘Free Palestine’ Shirt at Gillette Stadium After Macklemore Controversy",
+              "body": "Zach Bryan brought a visible political message to Gillette Stadium on Friday night, performing in a black shirt bearing the words “Free Palestine.” The October ... Read More",
+              "published_date": "2026-10-03",
+              "outlet": "Wealth of Geeks · via Yahoo News",
+              "image": "https://media.zenfs.com/en/wealth_of_geeks_188/68ae45e52a7b0a65c4d935572fb95c03.jpg"
+            },
+            {
+              "news_id": "46786449671f5241a23ab0bf9571af28",
+              "url": "https://www.aljazeera.com/video/newsfeed/2026/10/5/freed-syrians-recount-torture-in-israeli-detention-centre",
+              "headline": "Freed Syrians recount torture in Israeli detention centre",
+              "body": "Syrians released from Israeli detention have described abuse behind bars.",
+              "published_date": "2026-10-05",
+              "outlet": "Al Jazeera",
+              "image": "https://www.bing.com/th?id=ONUT.JFhYpeVJmNFyJ7vZhiDL5w"
+            },
+            {
               "news_id": "b4a389a8fb545f8cb76b0fa8526fa0ee",
               "url": "https://english.palinfo.com/opinion_articles/how-gazas-genocide-is-reshaping-us-domestic-politics/",
               "headline": "How Gaza’s genocide is reshaping US domestic politics",
@@ -57341,6 +57931,15 @@
               "published_date": "2026-10-04",
               "outlet": "The Palestinian Information Center",
               "image": "https://www.bing.com/th?id=ONUT.Lw1HmwAcwbWCFJa9DZt05Q"
+            },
+            {
+              "news_id": "ea9cdb6a4758599ebcb061323ab40e2f",
+              "url": "https://www.jta.org/2026/09/29/israel/the-threats-israel-faces-dont-justify-the-suffering-of-the-palestinians-people-miliband-said/",
+              "headline": "UK foreign secretary: The threats to Israel don’t justify its treatment of Palestinians - Jewish Telegraphic Agency",
+              "body": "British foreign secretary touts the idea of “survivor’s responsibility\" when speaking of his family’s Holocaust history.",
+              "published_date": "2026-09-29",
+              "outlet": "JTA",
+              "image": "https://s.yimg.com/bo/71861d3b-7333-5967-98be-cef98d47c408_1790759120495.jpg"
             }
           ]
         }
@@ -57381,7 +57980,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 142
+        "news": 143
       },
       "source_links": [
         {
@@ -57963,6 +58562,10 @@
           "published_date": "2026-10-04"
         },
         {
+          "headline": "Body of jeep owner swept away by flood in Batangas found",
+          "published_date": "2026-10-05"
+        },
+        {
           "headline": "CoA finds 28 out of 119 MMDA flood pumps ‘unserviceable’",
           "published_date": "2026-10-05"
         },
@@ -57971,7 +58574,7 @@
           "published_date": "2026-10-05T06:22:58+00:00"
         }
       ],
-      "news_total": 142,
+      "news_total": 143,
       "logs": [
         {
           "log_date": "2026-09-04",
@@ -62781,7 +63384,7 @@
       "incident_id": "20260922-VN-FL",
       "tree_id": "9ab8cf1453e944399234b8ff8c29958b",
       "canonical_name": "Flood Vietnam 2026-09-22",
-      "summary": "Hue City warned of heavy rain exceeding 500 mm and began reviewing evacuation plans. In Lam Dong Province, more than 40 households were urgently relocated due to flooding from upstream overflow. Water inflow to the Tri An hydropower reservoir in the south exceeded 2,000 m³/s on October 3, indicating continued high water levels.",
+      "summary": "Dong Thap Province is reinforcing vulnerable areas and improving drainage as heavy rain, high tides, and upstream flooding continue to pose risks. The selected news also includes a report of 40 households evacuated in Lam Dong due to rising stream waters after prolonged rain, and an older briefing in which authorities urged central provinces to prepare for rising rivers and flooding.",
       "country": "Vietnam",
       "iso2": "VN",
       "lat": 14.1,
@@ -62800,7 +63403,7 @@
       "disease_name": null,
       "event_date": "2026-09-22",
       "first_reported_date": "2026-09-22",
-      "last_updated_date": "2026-10-04",
+      "last_updated_date": "2026-10-05",
       "days_since_event": 13,
       "source_count": 2,
       "should_report": false,
@@ -62811,7 +63414,7 @@
         "gdacs": 0,
         "ercc": 2,
         "healthmap": 0,
-        "news": 50
+        "news": 51
       },
       "source_links": [
         {
@@ -63037,9 +63640,13 @@
         {
           "headline": "Floodwater from upstream overflows, more than 40 households in Lam Dong must be urgently relocated",
           "published_date": "2026-10-04T06:29:20+00:00"
+        },
+        {
+          "headline": "Dong Thap steps up response to high tides, landslides | DTiNews",
+          "published_date": "2026-10-05"
         }
       ],
-      "news_total": 50,
+      "news_total": 51,
       "logs": [
         {
           "log_date": "2026-09-22",
@@ -63098,57 +63705,6 @@
               "published_date": "2026-09-22",
               "outlet": "news.tuoitre",
               "image": ""
-            }
-          ]
-        },
-        {
-          "log_date": "2026-10-01",
-          "summary": "Heavy rain and rising tides caused chaos in Ho Chi Minh City, stranding commuters as floodwaters persisted after rainfall stopped. A dike breach in Vinh Long’s Cai Ga islet damaged homes, with local authorities mobilizing support for affected households. Additionally, the floods have disrupted snake habitats in southern Vietnam, leading to a rise in snakebite cases.",
-          "news": [
-            {
-              "news_id": "af3ad7becf545344920fdab0f24afa59",
-              "url": "https://news.tuoitre.vn/chaos-in-ho-chi-minh-city-as-sudden-deluge-and-rising-tides-leave-commuters-stranded-103261001231504545.htm",
-              "headline": "Chaos in Ho Chi Minh City as sudden deluge and rising tides leave commuters stranded",
-              "body": "Raging floodwaters and severe gridlock brought key corridors across Ho Chi Minh City to a standstill late Thursday, with water levels mysteriously rising long after torrential rains had stopped.",
-              "published_date": "2026-10-01",
-              "outlet": "news.tuoitre",
-              "image": "https://www.bing.com/th?id=ONUT.0ikUYDFHQ8G3yf2nOJMvWg"
-            },
-            {
-              "news_id": "390c6e2007915759b0e23ba4176f985a",
-              "url": "https://news.tuoitre.vn/rains-floods-disrupt-reptile-habitats-raise-snakebite-risk-in-vietnam-103261001181623451.htm",
-              "headline": "Rains, floods disrupt reptile habitats, raise snakebite risk in Vietnam",
-              "body": "Heavy rain and rising floodwaters in southern Vietnam are disrupting snakes’ natural shelters, driving them into gardens and residential areas and contributing to a rise in snakebite cases.",
-              "published_date": "2026-10-01",
-              "outlet": "news.tuoitre",
-              "image": "https://www.bing.com/th?id=ONUT.OedVke2EzQ1f0yb8cZBB5A"
-            },
-            {
-              "news_id": "cfd8d2eff80255d99a272a774d34bb19",
-              "url": "https://news.laodong.vn/mat-tran/vinh-long-ho-tro-nguoi-dan-bi-thiet-hai-do-vo-de-bao-con-cai-ga-1775446.ldo",
-              "headline": "Vinh Long supports people affected by dike breach in Cai Ga islet",
-              "body": "Vinh Long - The Vietnam Fatherland Front Committee of Vinh Long province provides support to households affected by the dike ...",
-              "published_date": "2026-10-01T06:24:11+00:00",
-              "outlet": "news.laodong",
-              "image": "https://www.bing.com/th?id=ONUT.AMDzSbUAOaxEIa-Q3jh1Gg"
-            },
-            {
-              "news_id": "b1d25285d29e5619b85b744e97f44c7e",
-              "url": "https://www.deccanchronicle.com/lifestyle/environment/vietnams-ho-chi-minh-city-is-learning-to-live-with-climate-change-1992168",
-              "headline": "Vietnam's Ho Chi Minh City is Learning to Live With Climate Change",
-              "body": "A warming climate is raising sea levels and bringing heavier downpours in Vietnam",
-              "published_date": "2026-10-01",
-              "outlet": "Deccan Chronicle",
-              "image": "https://www.bing.com/th?id=ONUT.TLTxmHdWI2JT_VWrPp_yBg"
-            },
-            {
-              "news_id": "df5bb278c19150e4b8e5e6a0a8eec8f7",
-              "url": "https://apnews.com/article/vietnam-floods-asia-climate-change-4465ed27ded17e1c9e4be9257b4a6adc",
-              "headline": "Vietnam’s Ho Chi Minh City is learning to live with floods but climate change has raised the stakes",
-              "body": "Ho Chi Minh City has learned to live with flooding as high tides from the Saigon River and smaller waterways regularly ...",
-              "published_date": "2026-10-01T18:57:56+00:00",
-              "outlet": "Associated Press News",
-              "image": "https://www.bing.com/th?id=ONUT.pkldJCw5bOH3Q0a3cHTSnw"
             }
           ]
         },
@@ -63244,9 +63800,42 @@
               "image": "https://s.yimg.com/bo/f7de4634-352b-5d7e-8be4-5564e51e3481_1790840370108.jpg"
             }
           ]
+        },
+        {
+          "log_date": "2026-10-05",
+          "summary": "Dong Thap Province is reinforcing vulnerable areas and improving drainage as heavy rain, high tides, and upstream flooding continue to pose risks. The selected news also includes a report of 40 households evacuated in Lam Dong due to rising stream waters after prolonged rain, and an older briefing in which authorities urged central provinces to prepare for rising rivers and flooding.",
+          "news": [
+            {
+              "news_id": "64251149067459d6841550b17970d30c",
+              "url": "https://dtinews.dantri.com.vn/vietnam-today/dong-thap-steps-up-response-to-high-tides-landslides-20261005142510638.htm",
+              "headline": "Dong Thap steps up response to high tides, landslides | DTiNews",
+              "body": "Dong Thap Province is reinforcing vulnerable areas and improving drainage as heavy rain, high tides and upstream flooding raise the risk of inundation and landslides in the final months of the year.",
+              "published_date": "2026-10-05",
+              "outlet": "dtinews.dantri",
+              "image": "https://www.bing.com/th?id=ONUT.3dmVU6eJfVRGUFTuzbqDNA"
+            },
+            {
+              "news_id": "271182ce8e3059e8afc0ce7eb8170ccf",
+              "url": "https://dtinews.dantri.com.vn/vietnam-today/central-vietnam-steps-up-response-as-floods-rise-20260914083039784.htm",
+              "headline": "Central Vietnam steps up response as floods rise | DTiNews",
+              "body": "Vietnamese authorities have urged central provinces to closely monitor rising rivers and step up evacuations and safety measures as heavy rain and flooding hit areas from Thanh Hoa to Hue.",
+              "published_date": "2026-09-14",
+              "outlet": "dtinews.dantri",
+              "image": ""
+            },
+            {
+              "news_id": "9ea5b203d1b85c2f927e5d2a75166fc6",
+              "url": "https://dtinews.dantri.com.vn/vietnam-today/floodwaters-force-40-households-to-evacuate-in-lam-dong-20261004141945490.htm",
+              "headline": "Floodwaters force 40 households to evacuate in Lam Dong | DTiNews",
+              "body": "Prolonged heavy rain sent water levels in streams in Lam Dong Province's Bao Lam 2 Commune sharply higher, flooding homes and forcing 40 households to evacuate.",
+              "published_date": "2026-10-04",
+              "outlet": "dtinews.dantri",
+              "image": "https://www.bing.com/th?id=ONUT.ym1xHK0bFL3VALfjMUmduA"
+            }
+          ]
         }
       ],
-      "logs_total": 10
+      "logs_total": 11
     },
     {
       "incident_id": "20260930-CR-EQ",
@@ -63649,6 +64238,112 @@
               "published_date": "2026-10-03T06:07:46+00:00",
               "outlet": "LatestLY বাংলা",
               "image": "https://www.bing.com/th?id=ONUT.-7iayo8WvlSyYcCLyolifg"
+            }
+          ]
+        }
+      ],
+      "logs_total": 1
+    },
+    {
+      "incident_id": "20261005-SD-OT",
+      "tree_id": "4428c8725cd84f9e8c831369b81bcecf",
+      "canonical_name": "Sudan 2026-10-05",
+      "summary": "The Kordofan corridor, linking east and west Sudan, has been a focal point in the war, accounting for one in five recorded attacks since April 2023. Four African leaders issued a joint declaration calling for negotiations to end the civil war in Sudan. Additionally, Sudan Emergency Rooms are leading Nobel Peace Prize odds, indicating international recognition of humanitarian efforts.",
+      "country": "Sudan",
+      "iso2": "SD",
+      "lat": 12.9,
+      "lon": 30.2,
+      "country_group": "C",
+      "region": "Africa",
+      "incident_type": "",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "LOW",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": null,
+      "event_status": null,
+      "extended_monitoring": false,
+      "disease_name": null,
+      "event_date": "2026-10-05",
+      "first_reported_date": "2026-10-05",
+      "last_updated_date": "2026-10-05",
+      "days_since_event": 0,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 0,
+        "gdacs": 0,
+        "ercc": 1,
+        "healthmap": 0,
+        "news": 3
+      },
+      "source_links": [
+        {
+          "type": "ERCC",
+          "label": "ECHO Daily Map of 05 October 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5805",
+          "meta": ""
+        }
+      ],
+      "physical": {
+        "max_magnitude": null,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "The battle for Kordofan: The corridor linking Sudan’s east and west",
+          "published_date": "2026-10-01"
+        },
+        {
+          "headline": "Nobel Peace Prize Polymarket Odds as Sudan Emergency Rooms Lead at 13.4%",
+          "published_date": "2026-10-05"
+        },
+        {
+          "headline": "Four African leaders issue joint declaration as Ethiopia war escalates",
+          "published_date": "2026-10-05"
+        }
+      ],
+      "news_total": 3,
+      "logs": [
+        {
+          "log_date": "2026-10-05",
+          "summary": "The Kordofan corridor, linking east and west Sudan, has been a focal point in the war, accounting for one in five recorded attacks since April 2023. Four African leaders issued a joint declaration calling for negotiations to end the civil war in Sudan. Additionally, Sudan Emergency Rooms are leading Nobel Peace Prize odds, indicating international recognition of humanitarian efforts.",
+          "news": [
+            {
+              "news_id": "38267a4d2d825eb8b9d05a07184a6e5c",
+              "url": "https://finance.yahoo.com/markets/crypto/articles/nobel-peace-prize-polymarket-odds-150349765.html",
+              "headline": "Nobel Peace Prize Polymarket Odds as Sudan Emergency Rooms Lead at 13.4%",
+              "body": "In Trump AI news, The Wall Street Journal reported on October 3 that Director of National Intelligence Jay Clayton will lead the administration’s AI response and chair a new White House task force. Clayton told the Journal that he will lead a White House task force to assess both the ...",
+              "published_date": "2026-10-05",
+              "outlet": "99bitcoins · via Yahoo Finance",
+              "image": "https://media.zenfs.com/en/99bitcoins_us_315/b9c075adc5b0ecc14c788e5cca18260c.png.cf.jpg"
+            },
+            {
+              "news_id": "67c611fdcc695a3ca58b4837f43fcb2b",
+              "url": "https://www.yahoo.com/news/world/articles/battle-kordofan-corridor-linking-sudan-082344748.html",
+              "headline": "The battle for Kordofan: The corridor linking Sudan’s east and west",
+              "body": "Kordofan, between Darfur and central Sudan, has seen one in five recorded attacks in Sudan’s war since April 2023.",
+              "published_date": "2026-10-01",
+              "outlet": "Al Jazeera · via Yahoo News",
+              "image": "https://media.zenfs.com/en/al_jazeera_289/8630655f1315fccd870068f803f1ff55.png.cf.jpg"
+            },
+            {
+              "news_id": "11ee72ad70aa595887f3deb1ffdbfdb4",
+              "url": "https://www.msn.com/en-us/news/other/four-african-leaders-issue-joint-declaration-as-ethiopia-war-escalates/ar-AA2dzcLY?ocid=BingNewsVerp",
+              "headline": "Four African leaders issue joint declaration as Ethiopia war escalates",
+              "body": "Egyptian, Eritrean, Somali and Sudanese leaders also call for talks to end the civil war in Sudan.",
+              "published_date": "2026-10-05",
+              "outlet": "Al Jazeera on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.cc0f0e1669f7c8a29107b190b62028c9"
             }
           ]
         }
