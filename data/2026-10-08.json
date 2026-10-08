@@ -1,31 +1,31 @@
 {
   "schema_version": "1.5",
-  "report_date": "2026-10-07",
+  "report_date": "2026-10-08",
   "generated_at": "2026-10-08T07:36:21Z",
-  "as_of": "2026-10-07",
+  "as_of": "2026-10-08",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 33,
-    "new_today": 21,
+    "reportable_total": 32,
+    "new_today": 0,
     "critical": 16,
     "high": 5,
-    "medium": 7,
+    "medium": 6,
     "low": 5,
     "disease_outbreaks": 3,
     "countries_affected": 20,
-    "news_total": 12193,
+    "news_total": 12191,
     "max_magnitude": 7.7,
     "by_severity": {
       "CRITICAL": 16,
       "HIGH": 5,
-      "MEDIUM": 7,
+      "MEDIUM": 6,
       "LOW": 5
     },
     "by_type": {
       "Disease": 3,
       "Drought": 2,
-      "Earthquake": 11,
+      "Earthquake": 10,
       "Conflict": 3,
       "Forest Fire": 1,
       "Flood": 4,
@@ -41,7 +41,7 @@
       "Americas": 6,
       "Europe": 4,
       "Unknown": 4,
-      "Oceania": 2
+      "Oceania": 1
     }
   },
   "by_country": [
@@ -100,15 +100,6 @@
       "max_severity": "MEDIUM"
     },
     {
-      "country": "Vanuatu",
-      "count": 2,
-      "max_sev_rank": 2,
-      "iso2": "VU",
-      "region": "Oceania",
-      "country_group": "B",
-      "max_severity": "MEDIUM"
-    },
-    {
       "country": "India",
       "count": 1,
       "max_sev_rank": 2,
@@ -142,6 +133,15 @@
       "iso2": "PH",
       "region": "Asia",
       "country_group": "A",
+      "max_severity": "HIGH"
+    },
+    {
+      "country": "Vanuatu",
+      "count": 1,
+      "max_sev_rank": 3,
+      "iso2": "VU",
+      "region": "Oceania",
+      "country_group": "B",
       "max_severity": "HIGH"
     },
     {
@@ -65075,78 +65075,6 @@
         }
       ],
       "logs_total": 2
-    },
-    {
-      "incident_id": "20260907-VU-EQ",
-      "tree_id": "968bffb61afa43a8a1656280d9cfdc90",
-      "canonical_name": "Earthquake M5.5 the Loyalty Islands, Vanuatu 2026-09-07",
-      "summary": "",
-      "country": "Vanuatu",
-      "iso2": "VU",
-      "lat": -23.4192,
-      "lon": 171.6769,
-      "country_group": "B",
-      "region": "Oceania",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-09-07",
-      "first_reported_date": "2026-09-07",
-      "last_updated_date": "2026-09-30",
-      "days_since_event": 31,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 2
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 5.5 - southeast of the Loyalty Islands",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000teu1",
-          "meta": "10 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 5.5,
-        "max_depth_km": 10.0,
-        "place": "southeast of the Loyalty Islands",
-        "felt": null,
-        "sig": 465,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Magnitude 6.6 quake strikes near New Caledonia in the Pacific, USGS reports",
-          "url": "https://www.msn.com/en-us/news/other/magnitude-66-quake-strikes-near-new-caledonia-in-the-pacific-usgs-reports/ar-AA2cZgvN?ocid=BingNewsVerp",
-          "outlet": "Reuters on MSN",
-          "published_date": "2026-09-26"
-        },
-        {
-          "headline": "A magnitude 6.6 quake hit just 10 kilometres deep off New Caledonia’s Loyalty Islands",
-          "url": "https://www.msn.com/en-us/news/other/a-magnitude-66-quake-hit-just-10-kilometres-deep-off-new-caledonia-s-loyalty-islands/ar-AA2di3Fm?ocid=BingNewsVerp",
-          "outlet": "Morning Overview on MSN",
-          "published_date": "2026-09-30"
-        }
-      ],
-      "news_total": 2,
-      "logs": [],
-      "logs_total": 0
     },
     {
       "incident_id": "20260910-XX-SW",
