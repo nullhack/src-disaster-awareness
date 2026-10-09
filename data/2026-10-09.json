@@ -1,31 +1,31 @@
 {
   "schema_version": "1.5",
-  "report_date": "2026-10-08",
+  "report_date": "2026-10-09",
   "generated_at": "2026-10-09T07:32:32Z",
-  "as_of": "2026-10-08",
+  "as_of": "2026-10-09",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 34,
-    "new_today": 19,
+    "reportable_total": 32,
+    "new_today": 0,
     "critical": 17,
-    "high": 6,
-    "medium": 6,
+    "high": 5,
+    "medium": 5,
     "low": 5,
     "disease_outbreaks": 3,
-    "countries_affected": 20,
-    "news_total": 12356,
+    "countries_affected": 19,
+    "news_total": 12338,
     "max_magnitude": 7.7,
     "by_severity": {
       "CRITICAL": 17,
-      "HIGH": 6,
-      "MEDIUM": 6,
+      "HIGH": 5,
+      "MEDIUM": 5,
       "LOW": 5
     },
     "by_type": {
       "Disease": 3,
       "Drought": 2,
-      "Earthquake": 11,
+      "Earthquake": 9,
       "Conflict": 3,
       "Forest Fire": 1,
       "Flood": 5,
@@ -38,10 +38,10 @@
       "Global": 2,
       "Africa": 3,
       "Asia": 13,
-      "Americas": 6,
+      "Americas": 5,
       "Europe": 4,
       "Unknown": 4,
-      "Oceania": 2
+      "Oceania": 1
     }
   },
   "by_country": [
@@ -109,15 +109,6 @@
       "max_severity": "MEDIUM"
     },
     {
-      "country": "Costa Rica",
-      "count": 1,
-      "max_sev_rank": 2,
-      "iso2": "CR",
-      "region": "Americas",
-      "country_group": "C",
-      "max_severity": "MEDIUM"
-    },
-    {
       "country": "Russia",
       "count": 1,
       "max_sev_rank": 2,
@@ -127,21 +118,21 @@
       "max_severity": "MEDIUM"
     },
     {
-      "country": "Vanuatu",
-      "count": 2,
-      "max_sev_rank": 3,
-      "iso2": "VU",
-      "region": "Oceania",
-      "country_group": "B",
-      "max_severity": "HIGH"
-    },
-    {
       "country": "Philippines",
       "count": 1,
       "max_sev_rank": 3,
       "iso2": "PH",
       "region": "Asia",
       "country_group": "A",
+      "max_severity": "HIGH"
+    },
+    {
+      "country": "Vanuatu",
+      "count": 1,
+      "max_sev_rank": 3,
+      "iso2": "VU",
+      "region": "Oceania",
+      "country_group": "B",
       "max_severity": "HIGH"
     },
     {
@@ -65501,189 +65492,6 @@
       "logs_total": 16
     },
     {
-      "incident_id": "20260905-VU-EQ",
-      "tree_id": "d3e8177973e24ac29561825134eed0dd",
-      "canonical_name": "Earthquake M5.6 Isangel, Vanuatu 2026-09-05",
-      "summary": "A new magnitude 5.0 earthquake was recorded in the Vanuatu Islands on September 10, according to the GFZ German Research Centre, adding to the ongoing seismic sequence near Isangel following the initial September 5 event and the September 8 aftershock. Other reports mention a magnitude 5.2 quake off the Vanuatu coast and general increased activity in the Pacific Ring of Fire, but the September 10 quake is the most specific new update.",
-      "country": "Vanuatu",
-      "iso2": "VU",
-      "lat": -19.807,
-      "lon": 170.1576,
-      "country_group": "B",
-      "region": "Oceania",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "HIGH",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-09-05",
-      "first_reported_date": "2026-09-05",
-      "last_updated_date": "2026-10-01",
-      "days_since_event": 34,
-      "source_count": 3,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 3,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 11
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 5.6 - 96 km ESE of Isangel, Vanuatu",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tek0",
-          "meta": "10 km depth"
-        },
-        {
-          "type": "USGS",
-          "label": "M 6.6 - 80 km ENE of Tadine, New Caledonia",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000txpi",
-          "meta": "10 km depth"
-        },
-        {
-          "type": "USGS",
-          "label": "M 5.5 - 61 km ENE of Tadine, New Caledonia",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000txqi",
-          "meta": "10 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 6.6,
-        "max_depth_km": 10.0,
-        "place": "96 km ESE of Isangel, Vanuatu",
-        "felt": 10,
-        "sig": 673,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Earthquake 5.8-magnitude jolts Vanuatu Islands: GFZ",
-          "published_date": "2026-09-05"
-        },
-        {
-          "headline": "Magnitude 5.8 Earthquake Strikes Vanuatu at 44 Km Depth",
-          "published_date": "2026-09-05"
-        },
-        {
-          "headline": "Vanuatu Earthquake: Magnitude 5.1 Tremor Reported Near Isangel",
-          "published_date": "2026-09-08"
-        },
-        {
-          "headline": "5.0-magnitude quake hits Vanuatu Islands -- GFZ",
-          "published_date": "2026-09-09T18:15:38+00:00"
-        },
-        {
-          "headline": "Over a dozen earthquakes rattle Pacific Ring of Fire over last 24 hours in latest burst of seismic activity",
-          "published_date": "2026-09-10"
-        },
-        {
-          "headline": "Magnitude 5.2 earthquake strikes off coast of Vanuatu Islands",
-          "published_date": "2026-09-13"
-        },
-        {
-          "headline": "Magnitude 6.6 Quake Strikes Near New Caledonia in the Pacific, USGS Reports",
-          "published_date": "2026-09-25T21:40:00+00:00"
-        },
-        {
-          "headline": "Vanuatu Earthquakes Jolt Ring of Fire and Revive Mega-Tsunami Fears",
-          "published_date": "2026-09-26"
-        },
-        {
-          "headline": "Vanuatu Earthquakes Rattle Ring of Fire — Could a Mega-Tsunami Follow?",
-          "published_date": "2026-09-26T17:08:55+00:00"
-        },
-        {
-          "headline": "Vanuatu Earthquakes Jolt Ring of Fire and Revive Mega-Tsunami Fears",
-          "published_date": "2026-09-27"
-        },
-        {
-          "headline": "A magnitude 6.6 quake hit just 10 kilometres deep off New Caledonia’s Loyalty Islands",
-          "published_date": "2026-10-01"
-        }
-      ],
-      "news_total": 11,
-      "logs": [
-        {
-          "log_date": "2026-09-08",
-          "summary": "On September 5, a magnitude 5.8 earthquake struck near Isangel, Vanuatu, at a depth of 44 km, according to preliminary data. A subsequent magnitude 5.1 tremor was reported on September 8 east-southeast of Isangel.",
-          "news": [
-            {
-              "news_id": "e7b737916c7c5049a5f0b89d2ea44f8f",
-              "url": "https://thepeninsulaqatar.com/article/05/09/2026/earthquake-58-magnitude-jolts-vanuatu-islands-gfz",
-              "headline": "Earthquake 5.8-magnitude jolts Vanuatu Islands: GFZ",
-              "body": "Beijing: A 5.8 magnitude earthquake struck Vanuatu Islands at 17:02GMT on Saturday, the GFZ German Research Centre for Geosciences said. The epice...",
-              "published_date": "2026-09-05",
-              "outlet": "The Peninsula Qatar",
-              "image": "https://www.bing.com/th?id=ONUT.XwLHzmGzbQG94k-pitc6Rw"
-            },
-            {
-              "news_id": "04b954b0d86854ba8e52a6cf7ab093fb",
-              "url": "https://cedarnews.net/newstasks/966152/earthquake-magnitude-5-8-strikes-vanuatu-44/",
-              "headline": "Magnitude 5.8 Earthquake Strikes Vanuatu at 44 Km Depth",
-              "body": "A magnitude 5.8 earthquake struck Vanuatu early Sunday, according to preliminary seismic data.",
-              "published_date": "2026-09-05",
-              "outlet": "Cedar News",
-              "image": "https://www.bing.com/th?id=ONUT.XNbFmuk2AVaXEqV7wv9ebQ"
-            },
-            {
-              "news_id": "38ff50276729507ca6463876d80d7020",
-              "url": "https://cedarnews.net/newstasks/971423/earthquake-vanuatu-magnitude-5-1-tremor-reported/",
-              "headline": "Vanuatu Earthquake: Magnitude 5.1 Tremor Reported Near Isangel",
-              "body": "A magnitude 5.1 earthquake was reported 96 kilometers east-southeast of Isangel, Vanuatu, on September 8. According to the initial alert, the quake occurred.",
-              "published_date": "2026-09-08",
-              "outlet": "Cedar News",
-              "image": "https://www.bing.com/th?id=ONUT.VaEMHwV4IBcB-JlFc2_FeQ"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-09-14",
-          "summary": "A new magnitude 5.0 earthquake was recorded in the Vanuatu Islands on September 10, according to the GFZ German Research Centre, adding to the ongoing seismic sequence near Isangel following the initial September 5 event and the September 8 aftershock. Other reports mention a magnitude 5.2 quake off the Vanuatu coast and general increased activity in the Pacific Ring of Fire, but the September 10 quake is the most specific new update.",
-          "news": [
-            {
-              "news_id": "cc4770e6ef51503683e805c0e8fe500e",
-              "url": "https://www.yahoo.com/news/science/articles/over-dozen-earthquakes-rattle-pacific-161603865.html",
-              "headline": "Over a dozen earthquakes rattle Pacific Ring of Fire over last 24 hours in latest burst of seismic activity",
-              "body": "In the latest burst of seismic activity, more than a dozen earthquakes of magnitude 4.0 or higher have rattled the Pacific Ring of Fire.",
-              "published_date": "2026-09-10",
-              "outlet": "Yahoo",
-              "image": "https://www.bing.com/th?id=ONUT.CRbSRGocT0M62jd0iKxZ2A"
-            },
-            {
-              "news_id": "75a02dc571c35c41a5029f35061803c0",
-              "url": "https://www.gulf-times.com/article/733150/international/rest-of-the-world/magnitude-52-earthquake-strikes-off-coast-of-vanuatu-islands",
-              "headline": "Magnitude 5.2 earthquake strikes off coast of Vanuatu Islands",
-              "body": "An earthquake measuring 5.2 on the Richter scale, struck on Sunday off the coast of Vanuatu Islands in the Pacific Ocean....",
-              "published_date": "2026-09-13",
-              "outlet": "Gulf Times",
-              "image": "https://www.bing.com/th?id=ONUT.dLxsVRfm-are5h7aED3qrw"
-            },
-            {
-              "news_id": "0b387726ab4053d98b35b4f898006876",
-              "url": "https://www.china.org.cn/world/Off_the_Wire/2026-09/10/content_118688291.shtml",
-              "headline": "5.0-magnitude quake hits Vanuatu Islands -- GFZ",
-              "body": "BEIJING, Sept. 10 (Xinhua) -- An earthquake with a magnitude of 5.0 jolted Vanuatu Islands at 1701 GMT on Wednesday, the GFZ German Research Centre for Geosciences said. The epicenter, with a depth of ...",
-              "published_date": "2026-09-09T18:15:38+00:00",
-              "outlet": "China.org.cn",
-              "image": ""
-            }
-          ]
-        }
-      ],
-      "logs_total": 2
-    },
-    {
       "incident_id": "20260910-XX-SW",
       "tree_id": "859497ac74eb46749d0e6131574b2964",
       "canonical_name": "Severe Weather 2026-09-10",
@@ -68761,137 +68569,6 @@
         }
       ],
       "logs_total": 13
-    },
-    {
-      "incident_id": "20260930-CR-EQ",
-      "tree_id": "83eb8b8386cd4a2b90a7dc29d3769d8d",
-      "canonical_name": "Earthquake M5.6 Tamarindo, Costa Rica 2026-09-30",
-      "summary": "A magnitude 5.6-5.7 earthquake struck off the coast of Costa Rica on September 30, 2026, with its epicenter located approximately 106 kilometers southwest of Santa Cruz. The earthquake had a depth of 10 km, as reported by the European-Mediterranean Seismological Centre and the GFZ German Research Centre for Geosciences. No immediate reports of significant damage or casualties were noted in the selected news.",
-      "country": "Costa Rica",
-      "iso2": "CR",
-      "lat": 9.7526,
-      "lon": -86.5063,
-      "country_group": "C",
-      "region": "Americas",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-09-30",
-      "first_reported_date": "2026-09-30",
-      "last_updated_date": "2026-10-01",
-      "days_since_event": 9,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 1,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 7
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 5.6 - 94 km SW of Tamarindo, Costa Rica",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tymj",
-          "meta": "8 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 5.6,
-        "max_depth_km": 8.0,
-        "place": "94 km SW of Tamarindo, Costa Rica",
-        "felt": 3,
-        "sig": 483,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Ισχυρός σεισμός 5,7 Ρίχτερ ανοιχτά των ακτών της Κόστα Ρίκα",
-          "published_date": "2026-09-30"
-        },
-        {
-          "headline": "Ισχυρός σεισμός 5,7 Ρίχτερ ανοιχτά της Κόστα Ρίκα",
-          "published_date": "2026-09-30"
-        },
-        {
-          "headline": "Magnitude 5.7 earthquake strikes off coast of Costa Rica, EMSC says",
-          "published_date": "2026-09-30T22:12:00+00:00"
-        },
-        {
-          "headline": "5.6-Magnitude Earthquake Strikes Coast of Costa Rica",
-          "published_date": "2026-10-01"
-        },
-        {
-          "headline": "5.6-Magnitude Earthquake Strikes Coast of Costa Rica",
-          "published_date": "2026-10-01"
-        },
-        {
-          "headline": "Urgent: 5.6-magnitude quake hits off coast of Costa Rica -- GFZ",
-          "published_date": "2026-10-01"
-        },
-        {
-          "headline": "Snažan zemljotres jačine 5,7 stepeni pogodio Kostariku",
-          "published_date": "2026-10-01"
-        }
-      ],
-      "news_total": 7,
-      "logs": [
-        {
-          "log_date": "2026-10-01",
-          "summary": "A magnitude 5.6-5.7 earthquake struck off the coast of Costa Rica on September 30, 2026, with its epicenter located approximately 106 kilometers southwest of Santa Cruz. The earthquake had a depth of 10 km, as reported by the European-Mediterranean Seismological Centre and the GFZ German Research Centre for Geosciences. No immediate reports of significant damage or casualties were noted in the selected news.",
-          "news": [
-            {
-              "news_id": "21b0191d1ea456bfbd47c535b8dd1212",
-              "url": "https://qna.org.qa/en/newsbulletins/2026-10/1/0005-56-magnitude-earthquake-strikes-coast-of-costa-rica",
-              "headline": "5.6-Magnitude Earthquake Strikes Coast of Costa Rica",
-              "body": "An earthquake measuring 5.6 on the Richter scale struck off the coast of Costa Rica. The European-Mediterranean Seismological Centre (EMSC) reported that the quake occurred 106 kilometers southwest of the city of Santa Cruz,",
-              "published_date": "2026-10-01",
-              "outlet": "Qatar News Agency",
-              "image": ""
-            },
-            {
-              "news_id": "f263e7fd63f25ee3af763db942a4fcb1",
-              "url": "https://english.news.cn/20261001/787f62c784b74bffbe82eb96432299cc/c.html",
-              "headline": "Urgent: 5.6-magnitude quake hits off coast of Costa Rica -- GFZ",
-              "body": "An earthquake with a magnitude of 5.6 jolted off coast of Costa Rica at 2155 GMT on Wednesday, the GFZ German Research Centre for Geosciences said. The epicenter, with a depth of 10 km, was initially determined to be at 9.",
-              "published_date": "2026-10-01",
-              "outlet": "Xinhua",
-              "image": ""
-            },
-            {
-              "news_id": "cfcb18425b6859d59d98444cee16a0c3",
-              "url": "https://www.reuters.com/business/environment/magnitude-57-earthquake-strikes-off-coast-costa-rica-emsc-says-2026-09-30/",
-              "headline": "Magnitude 5.7 earthquake strikes off coast of Costa Rica, EMSC says",
-              "body": "A magnitude 5.7 earthquake struck off the coast of Costa Rica on Wednesday, according to the European Mediterranean Seismological Centre.",
-              "published_date": "2026-09-30T22:12:00+00:00",
-              "outlet": "Reuters",
-              "image": ""
-            },
-            {
-              "news_id": "ec4cb048f57c514297a400d93687f3d9",
-              "url": "https://www.b92.net/info/svet/272278/snazan-zemljotres-jacine-57-stepeni-pogodio-kostariku/vest",
-              "headline": "Snažan zemljotres jačine 5,7 stepeni pogodio Kostariku",
-              "body": "Zemljotres jačine 5,7 stepeni pogodio je područje kod obale Kostarike, saopštio je danas Evropsko-mediteranski seizmološki centar (EMSC).",
-              "published_date": "2026-10-01",
-              "outlet": "B92",
-              "image": "https://www.b92.net/data/images/2026-07-01/250932_shutterstock-2420028445_f.jpg"
-            }
-          ]
-        }
-      ],
-      "logs_total": 1
     },
     {
       "incident_id": "20261001-MD-OT",
