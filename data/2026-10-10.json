@@ -1,41 +1,39 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-10-10",
-  "generated_at": "2026-10-14T18:04:37Z",
+  "generated_at": "2026-10-15T05:59:52Z",
   "as_of": "2026-10-10",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 16,
-    "new_today": 4,
+    "reportable_total": 14,
+    "new_today": 3,
     "critical": 6,
     "high": 4,
-    "medium": 3,
-    "low": 3,
-    "disease_outbreaks": 1,
-    "countries_affected": 10,
-    "news_total": 2853,
+    "medium": 2,
+    "low": 2,
+    "disease_outbreaks": 0,
+    "countries_affected": 9,
+    "news_total": 2585,
     "max_magnitude": 7.7,
     "by_severity": {
       "CRITICAL": 6,
       "HIGH": 4,
-      "MEDIUM": 3,
-      "LOW": 3
+      "MEDIUM": 2,
+      "LOW": 2
     },
     "by_type": {
-      "Disease": 1,
       "Earthquake": 9,
       "Flood": 1,
       "Volcano": 1,
       "Severe Weather": 1,
-      "": 3
+      "": 2
     },
     "by_region": {
-      "Global": 1,
       "Americas": 3,
       "Asia": 5,
       "Unknown": 3,
-      "Europe": 2,
+      "Europe": 1,
       "Africa": 1,
       "Oceania": 1
     }
@@ -43,19 +41,10 @@
   "by_country": [
     {
       "country": "",
-      "count": 5,
+      "count": 4,
       "max_sev_rank": 1,
       "iso2": "XX",
-      "region": "Global",
-      "country_group": "C",
-      "max_severity": "LOW"
-    },
-    {
-      "country": "Moldova",
-      "count": 1,
-      "max_sev_rank": 1,
-      "iso2": "MD",
-      "region": "Europe",
+      "region": "Americas",
       "country_group": "C",
       "max_severity": "LOW"
     },
@@ -134,1290 +123,10 @@
   ],
   "incidents": [
     {
-      "incident_id": "20250528-XX-DI",
-      "tree_id": "2988d8638e0956a89029b6059b7c5f7f",
-      "canonical_name": "COVID-19 Global 2025-05-28",
-      "summary": "A major review found that the COVID-19 pandemic worsened psychological well-being and disrupted follow-up care for breast cancer survivors, while virtual care models emerged. Separately, health leaders urge flu shots as vaccine hesitancy, once reserved for COVID-19 and certain childhood vaccinations, is now impacting flu vaccination rates.",
-      "country": "",
-      "iso2": "XX",
-      "lat": null,
-      "lon": null,
-      "country_group": "C",
-      "region": "Global",
-      "incident_type": "Disease",
-      "incident_category": "Biological",
-      "is_disease": true,
-      "severity": "MEDIUM",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": "LOW",
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": "Covid-19",
-      "event_date": "2025-05-28",
-      "first_reported_date": "2025-05-28",
-      "last_updated_date": "2026-10-09",
-      "days_since_event": 504,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 1,
-        "usgs": 0,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 265
-      },
-      "source_links": [
-        {
-          "type": "WHO",
-          "label": "COVID-19 Global 2025-05-28",
-          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2025-DON572",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "COVID Basics: Essential Tips for Older Adults and Caregivers - AOL",
-          "published_date": "2025-10-16"
-        },
-        {
-          "headline": "Are the New COVID Vaccines Available, and Should You Get One? Experts Explain",
-          "published_date": "2026-07-08T15:12:31+00:00"
-        },
-        {
-          "headline": "CDC blocked a COVID vaccine study’s release–now you can read the whole thing",
-          "published_date": "2026-07-08T15:12:31+00:00"
-        },
-        {
-          "headline": "IMF forecasts dramatic global economic slowdown",
-          "published_date": "2026-07-09T03:32:11+00:00"
-        },
-        {
-          "headline": "Jersey Mike’s IPO reflects growing investor appetite for restaurants",
-          "published_date": "2026-07-09T03:32:11+00:00"
-        },
-        {
-          "headline": "The Meridian, a $24M mixed-use development, breaks ground in Thiensville",
-          "published_date": "2026-07-10T03:32:11+00:00"
-        },
-        {
-          "headline": "Linda Noskova holds off Karolina Muchova to win Wimbledon women's final",
-          "published_date": "2026-07-11T03:32:11+00:00"
-        },
-        {
-          "headline": "TV host Lee Teng opens up about wife's miscarriage during pandemic: ‘I felt like an empty shell'",
-          "published_date": "2026-07-11T07:14:19+00:00"
-        },
-        {
-          "headline": "Andhra Covid Deaths Trigger Southern Alert",
-          "published_date": "2026-07-14T07:14:19+00:00"
-        },
-        {
-          "headline": "Updated 2025-2026 COVID-19 Vaccines Effective Against Medically Attended Disease",
-          "published_date": "2026-07-15T09:25:38+00:00"
-        },
-        {
-          "headline": "Dr. Erica Schwartz faces vaccines questions at CDC director confirmation hearing",
-          "published_date": "2026-07-15T18:45:32+00:00"
-        },
-        {
-          "headline": "Panel to study Pentagon’s COVID vaccine mandate, troops dismissal",
-          "published_date": "2026-07-15T19:45:32+00:00"
-        },
-        {
-          "headline": "COVID Is Rising Again in the Bay Area For Summer 2026 — But Don’t Panic | KQED",
-          "published_date": "2026-07-16"
-        },
-        {
-          "headline": "Pittsfield Council Sees Last ARPA Update",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "Fbi Allowed Ecohealth Alliance Boss Through Border Controls In Return From Covid Hit China In 2021 Explosive Emails",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "Lawsuit Over Covid Vaccine Policy At Idaho National Lab Leads To 5m Settlement",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "Updated 2025-2026 COVID-19 Vaccines Reduce Hospitalization Risk in Older Adults",
-          "published_date": "2026-07-21"
-        },
-        {
-          "headline": "COVID origins questions resurface with new federal documents",
-          "published_date": "2026-07-21"
-        },
-        {
-          "headline": "Philips wins FDA clearance for new pulse oximeter",
-          "published_date": "2026-07-21"
-        },
-        {
-          "headline": "121 Covid-19 cases reported in Bengaluru this year",
-          "published_date": "2026-07-23"
-        },
-        {
-          "headline": "How well did Ireland deal with Covid? Patterns emerge ahead of final report",
-          "published_date": "2026-07-24"
-        },
-        {
-          "headline": "COVID-19 is on the upswing in California. How bad will it get this summer?",
-          "published_date": "2026-07-24"
-        },
-        {
-          "headline": "Early Summer COVID-19 Uptick in California as Test Positivity and Sewage Levels Rise",
-          "published_date": "2026-07-24"
-        },
-        {
-          "headline": "COVID-19 is on the upswing in California. How bad will it get this summer?",
-          "published_date": "2026-07-24"
-        },
-        {
-          "headline": "COVID-19 is on the upswing in California. How bad will it get this summer?",
-          "published_date": "2026-07-24T03:44:18+00:00"
-        },
-        {
-          "headline": "Delhi CM hands over Rs 1 crore each to kin of workers who died during Covid-19 duty",
-          "published_date": "2026-07-24T14:22:10+00:00"
-        },
-        {
-          "headline": "Is COVID returning? Summer uptick of virus may have begun in California | Honolulu Star-Advertiser",
-          "published_date": "2026-07-25"
-        },
-        {
-          "headline": "EXCLUSIVE: Alleged $32M COVID-19 fraud fugitive captured in Jamaica and returned to US, FBI says",
-          "published_date": "2026-07-26"
-        },
-        {
-          "headline": "Is COVID returning in the US? Tests show summer uptick of virus",
-          "published_date": "2026-07-27"
-        },
-        {
-          "headline": "American Lung Association Highlights Therapeutic Options Available to Prevent and Treat COVID-19",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "American Lung Association Highlights Therapeutic Options Available to Prevent and Treat COVID-19",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Fauci diaries, released by Sen. Rand Paul, touch on COVID origins and tense relationship with Trump",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "GOP Congressman Slams JD Vance's Silence Over CDC's $1.24 Billion Pfizer COVID Vaccine Contracts: 'Why Isn’t He Speaking Out'",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "Musk and Trump Continue to Bash Reporters for Doing Their Jobs; the Local Devastation Caused by ICE Enforcement-Coachella Valley Independent's Indy Digest: July 27, 2026 - Coachella Valley Independent",
-          "published_date": "2026-07-28"
-        },
-        {
-          "headline": "American Lung Association Highlights Therapeutic Options Available to Prevent...",
-          "published_date": "2026-07-28T10:24:09+00:00"
-        },
-        {
-          "headline": "4 things Fauci's diary reveals about COVID, Trump and fame",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "European Commission Authorizes Pfizer and BioNTech XFG-adapted COVID-19 Vaccine in the European Union",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Anthony Fauci pleads 5th, refuses to answer questions about COVID-19",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "The FTC is mailing 9,419 refund checks to consumers misled by Trend Deploy",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Fauci pleads the Fifth; Rand Paul threatens charges: Live hearing updates",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Fauci repeatedly invokes the Fifth Amendment in a contentious Senate committee hearing",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Fauci Invokes the Fifth, Refuses to Answer Questions About COVID-19 Origins After Senator Publishes Diary: ‘Unhinged Obsession’",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Fauci pleads the Fifth; Rand Paul threatens charges: Live hearing updates",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Fauci pleads the Fifth; Rand Paul threatens charges: Live hearing updates",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "BioNTech SE: European Commission Authorizes Pfizer and BioNTech XFG-adapted COVID-19 Vaccine in the European Union",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "European Commission Authorizes Pfizer and BioNTech XFG-adapted COVID-19 Vaccine in the European Union",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Animal spillover? Lab leak? What the science says about the origins of COVID-19",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Moderna Q2 Earnings Loom: Buy or Sell the Stock Ahead of Results?",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "4 things Fauci's diary reveals about COVID, Trump and fame",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Fauci invokes the Fifth Amendment, declines to testify in GOP-led Senate panel's COVID-19 hearing",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Fauci Invokes the Fifth, Refuses to Answer Questions About COVID-19 Origins Afte...",
-          "published_date": "2026-07-29T15:44:18+00:00"
-        },
-        {
-          "headline": "EU regulatory roundup: AbbVie, Pfizer & BioNTech and Incyte net approvals - Pharmaceutical Technology",
-          "published_date": "2026-07-30"
-        },
-        {
-          "headline": "Anthony Fauci Update: Former NIH Official Overheard Venting After Invoking Fifth Amendment at Senate Hearing",
-          "published_date": "2026-07-30"
-        },
-        {
-          "headline": "Dr. Anthony Fauci Unleashes Expletive-Laced Rant on Walk With Wife Hours After Senate Grilling: Report",
-          "published_date": "2026-07-30"
-        },
-        {
-          "headline": "Moderna Q2 Earnings Loom: Buy or Sell the Stock Ahead of Results?",
-          "published_date": "2026-07-30"
-        },
-        {
-          "headline": "4 things Fauci's diary reveals about COVID, Trump and fame",
-          "published_date": "2026-07-30"
-        },
-        {
-          "headline": "Rock star after Fauci hearing: ‘Biggest regret during COVID was getting the shot’",
-          "published_date": "2026-07-31"
-        },
-        {
-          "headline": "A Portrait of MAGA Psychodrama",
-          "published_date": "2026-07-31"
-        },
-        {
-          "headline": "Soulja Boy says COVID-19 was “fake,” but more than 7 million reported deaths tell a different story",
-          "published_date": "2026-07-31"
-        },
-        {
-          "headline": "NFL coach jabs at Fauci while taking questions from reporters",
-          "published_date": "2026-07-31"
-        },
-        {
-          "headline": "Rock star after Fauci hearing: ‘Biggest regret during COVID was getting the shot’",
-          "published_date": "2026-07-31"
-        },
-        {
-          "headline": "Onsite rapid testing leads to decrease in ER visits among long-term care residents",
-          "published_date": "2026-08-01"
-        },
-        {
-          "headline": "Robert F. Kennedy Jr. and CNN’s Dana Bash trade barbs during heated on-air argument over vaccines: ‘You’re talking nonsense’ - AOL",
-          "published_date": "2026-08-02"
-        },
-        {
-          "headline": "RFK Jr. targets Fauci and pushes medical misinformation in fiery CNN interview",
-          "published_date": "2026-08-03"
-        },
-        {
-          "headline": "Robert F. Kennedy Jr. and CNN’s Dana Bash trade barbs during heated on-air argument over vaccines: ‘You’re talking nonsense’",
-          "published_date": "2026-08-03"
-        },
-        {
-          "headline": "NVAX Stock Rises Ahead Of Q2 Earnings As Focus Shifts To Licensing Deals",
-          "published_date": "2026-08-03"
-        },
-        {
-          "headline": "CDC didn't say COVID-19 vaccines are 'largest carcinogenic exposure in history'",
-          "published_date": "2026-08-03"
-        },
-        {
-          "headline": "COVID Cases Are Increasing In These Areas. Here’s What Experts Want You To Know.",
-          "published_date": "2026-08-03"
-        },
-        {
-          "headline": "If You Live In These Areas, Experts Want You To Know COVID Cases Are Rising",
-          "published_date": "2026-08-03"
-        },
-        {
-          "headline": "Epidemiology of Kawasaki Disease After the COVID-19 Pandemic in Japan 2023-2024",
-          "published_date": "2026-08-03T14:53:03+00:00"
-        },
-        {
-          "headline": "What we’ve learned about COVID-19 since the pandemic",
-          "published_date": "2026-08-04"
-        },
-        {
-          "headline": "Rand Paul introduces resolution to hold Fauci in contempt of Congress",
-          "published_date": "2026-08-04"
-        },
-        {
-          "headline": "What we’ve learned about COVID-19 since the pandemic",
-          "published_date": "2026-08-04"
-        },
-        {
-          "headline": "What we’ve learned about COVID-19 since the pandemic",
-          "published_date": "2026-08-04"
-        },
-        {
-          "headline": "What we’ve learned about COVID-19 since the pandemic",
-          "published_date": "2026-08-04"
-        },
-        {
-          "headline": "American Lung Association Highlights Therapeutic Options Available to Prevent...",
-          "published_date": "2026-08-04T03:48:28+00:00"
-        },
-        {
-          "headline": "Decision of the Week: Second Circuit Clarifies Standard for Title VII Religious Accommodation Claims",
-          "published_date": "2026-08-05T00:00:00+00:00"
-        },
-        {
-          "headline": "Vaxart Provides Business Update and Reports Second Quarter 2026 Financial Results",
-          "published_date": "2026-08-06"
-        },
-        {
-          "headline": "FDA approves 1st flu shot using same technology as COVID vaccines - AOL",
-          "published_date": "2026-08-06"
-        },
-        {
-          "headline": "MRNA Stock Pares Gains Despite FDA Green Light For First mRNA Flu Vaccine — But Retail Cheers Pivot Beyond COVID",
-          "published_date": "2026-08-06"
-        },
-        {
-          "headline": "Severe COVID-19 reactivates dormant viruses, study finds",
-          "published_date": "2026-08-06"
-        },
-        {
-          "headline": "Senate committee votes to hold Fauci in contempt for refusing to answer COVID questions",
-          "published_date": "2026-08-06"
-        },
-        {
-          "headline": "Senate Committee Passes Fauci Contempt Resolution Along Party Lines",
-          "published_date": "2026-08-06"
-        },
-        {
-          "headline": "Live updates: Senate committee to vote on whether to hold Dr. Anthony Fauci in contempt of Congress | CNN Politics",
-          "published_date": "2026-08-06"
-        },
-        {
-          "headline": "Senate committee votes to hold Fauci in contempt",
-          "published_date": "2026-08-06T14:36:03+00:00"
-        },
-        {
-          "headline": "RFK Jr. criticizes US COVID-19 response at CDC shooting memorial",
-          "published_date": "2026-08-07"
-        },
-        {
-          "headline": "How Fauci went from 'icon' during AIDS crisis to COVID lightning rod",
-          "published_date": "2026-08-07"
-        },
-        {
-          "headline": "The Real Reason Rand Paul Put a DOJ Target on Anthony Fauci’s Back",
-          "published_date": "2026-08-07"
-        },
-        {
-          "headline": "COVID Cases Are Increasing In These Areas. Here’s What Experts Want You To Know.",
-          "published_date": "2026-08-08"
-        },
-        {
-          "headline": "Bill Maher has a message for Sen. Rand Paul after senator releases Fauci’s private diary",
-          "published_date": "2026-08-08"
-        },
-        {
-          "headline": "Dr. Anthony Fauci Questioned About the Federal Response to the COVID-19 Pandemic During Hearing",
-          "published_date": "2026-08-08"
-        },
-        {
-          "headline": "COVID awakens dormant viruses, and inflammation may be the trigger",
-          "published_date": "2026-08-08"
-        },
-        {
-          "headline": "Vaxart Q2 Earnings Call Highlights",
-          "published_date": "2026-08-09"
-        },
-        {
-          "headline": "Pfizer grapples with ‘a world of hurt’ after Covid triumph",
-          "published_date": "2026-08-09T02:46:15+00:00"
-        },
-        {
-          "headline": "Massive and deadly flu mistaken for COVID-19 hits Zimbabwe and kills 5 people in Bulawayo",
-          "published_date": "2026-08-11"
-        },
-        {
-          "headline": "Air Force expedites COVID reinstatement process for separated airmen, guardians",
-          "published_date": "2026-08-12"
-        },
-        {
-          "headline": "British journal retracts study on excess mortality after COVID-19 pandemic",
-          "published_date": "2026-08-12"
-        },
-        {
-          "headline": "Temporal trends in alcohol-related liver disease mortality and prior inpatient care in England before, during and after the COVID-19 pandemic (2004-2024): a population-based ...",
-          "published_date": "2026-08-12T00:00:00+00:00"
-        },
-        {
-          "headline": "Severe COVID-19 infection linked to reactivation of 11 dormant viruses, study finds",
-          "published_date": "2026-08-13"
-        },
-        {
-          "headline": "Fauci texts release revives false claims linking Covid-19 vaccination, miscarriages",
-          "published_date": "2026-08-13"
-        },
-        {
-          "headline": "COVID is surging in California. Should you get vaccinated now or wait until fall?",
-          "published_date": "2026-08-13"
-        },
-        {
-          "headline": "PM announces drive to get thousands of rough sleepers off streets for Christmas",
-          "published_date": "2026-08-13T04:44:11+00:00"
-        },
-        {
-          "headline": "ICE detains grandma with green card due to COVID delaying return to US",
-          "published_date": "2026-08-14"
-        },
-        {
-          "headline": "Marin County Pharmacist Loses Vaccine Bias Case, Court Says Body Isn't a Shield",
-          "published_date": "2026-08-14"
-        },
-        {
-          "headline": "Summer is now California's COVID busy season as winter waves fade - AOL",
-          "published_date": "2026-08-14"
-        },
-        {
-          "headline": "Is Your Cold Actually COVID? What to Know as the Summer Surge Begins",
-          "published_date": "2026-08-14"
-        },
-        {
-          "headline": "Pfizer and Valneva’s Lyme Disease Vaccine Candidate Marketing Authorization Application Validated by European Medicines Agency | Taiwan News | Aug. 14, 2026 13:00",
-          "published_date": "2026-08-14"
-        },
-        {
-          "headline": "False claims about miscarriage risk from Covid-19 vaccines are spreading online. They use a faulty interpretation of data",
-          "published_date": "2026-08-14"
-        },
-        {
-          "headline": "Summer is now California's COVID busy season as winter waves fade",
-          "published_date": "2026-08-14"
-        },
-        {
-          "headline": "COVID becoming a California summer staple as winter outbreaks fade | Honolulu Star-Advertiser",
-          "published_date": "2026-08-15"
-        },
-        {
-          "headline": "Letter to the Editor | Fauci's lies now revealed",
-          "published_date": "2026-08-15"
-        },
-        {
-          "headline": "Letter to the Editor | Keep up with vaccines",
-          "published_date": "2026-08-15"
-        },
-        {
-          "headline": "ICE detains grandma with green card due to COVID delaying return to US",
-          "published_date": "2026-08-15"
-        },
-        {
-          "headline": "Wisconsin measles outbreak may be spreading, no source found",
-          "published_date": "2026-08-15"
-        },
-        {
-          "headline": "Journal Retracts Paper Linking COVID-19 Vaccines to Deaths",
-          "published_date": "2026-08-15T00:00:00+00:00"
-        },
-        {
-          "headline": "Letter to the Editor | Fauci hearing was a trap",
-          "published_date": "2026-08-15T14:35:25+00:00"
-        },
-        {
-          "headline": "Top GCSE grades rise but key pass rate returns to pre-pandemic levels",
-          "published_date": "2026-08-15T15:26:15+00:00"
-        },
-        {
-          "headline": "Is There a Summer COVID Surge? With Cases Rising in Every State, Watch for These Symptoms",
-          "published_date": "2026-08-17"
-        },
-        {
-          "headline": "Unvaccinated Canadian man Garnet Harper was allegedly denied kidney transplant before his death. Here's what we know",
-          "published_date": "2026-08-17"
-        },
-        {
-          "headline": "US kindergarten vaccine exemptions hit record high as immunization rates slip",
-          "published_date": "2026-08-18"
-        },
-        {
-          "headline": "Kids’ vax rates dip, exemptions rise",
-          "published_date": "2026-08-18T00:00:00+00:00"
-        },
-        {
-          "headline": "Miami Gardens Ex-Officer Pleads Guilty in COVID Loan Fraud",
-          "published_date": "2026-08-19"
-        },
-        {
-          "headline": "County vaccination data may mask school-level measles risk",
-          "published_date": "2026-08-19"
-        },
-        {
-          "headline": "Federal vaccine drama is causing great confusion. Your questions, answered.",
-          "published_date": "2026-08-20T20:30:00+00:00"
-        },
-        {
-          "headline": "Florida COVID cases rising during summer surge. Should you get shots?",
-          "published_date": "2026-08-21"
-        },
-        {
-          "headline": "As the school year begins, here's what to know about flu, COVID shots",
-          "published_date": "2026-08-21"
-        },
-        {
-          "headline": "These school districts in Iowa are improving math scores. Here's how.",
-          "published_date": "2026-08-24"
-        },
-        {
-          "headline": "China Port Delays Push Stranded Container Capacity Above Covid Peak",
-          "published_date": "2026-08-24"
-        },
-        {
-          "headline": "Cancer vaccines could transform treatment and prevention – but misinformation ab...",
-          "published_date": "2026-08-24T03:48:33+00:00"
-        },
-        {
-          "headline": "Howie Mandel Almost Died From Self-Medicating During COVID Pandemic",
-          "published_date": "2026-08-25"
-        },
-        {
-          "headline": "South Texas school district cancels classes after COVID outbreak",
-          "published_date": "2026-08-26T07:32:55+00:00"
-        },
-        {
-          "headline": "COVID is spreading again in the Bay Area. Here’s who should take precautions",
-          "published_date": "2026-08-27"
-        },
-        {
-          "headline": "Moderna Receives U.S. FDA Approval for Updated 2026-2027 COVID-19 Vaccines",
-          "published_date": "2026-08-27"
-        },
-        {
-          "headline": "Pfizer and BioNTech Receive U.S. FDA Approval for XFG-adapted COVID-19 Vaccine",
-          "published_date": "2026-08-27"
-        },
-        {
-          "headline": "Pfizer and BioNTech Receive U.S. FDA Approval for XFG-adapted COVID-19 Vaccine (2026-08-27)",
-          "published_date": "2026-08-27"
-        },
-        {
-          "headline": "Anger as Sturgeon and top Nats STILL haven't given evidence to SNP Covid Inquiry",
-          "published_date": "2026-08-27"
-        },
-        {
-          "headline": "New COVID Shots Are Coming This Fall. Here’s Who Can Get One.",
-          "published_date": "2026-08-28"
-        },
-        {
-          "headline": "Fauci contempt push stalls over Senate procedure and Fifth Amendment questions",
-          "published_date": "2026-08-28"
-        },
-        {
-          "headline": "FDA approves updated COVID vaccines targeting XFG ‘Stratus’ variant",
-          "published_date": "2026-08-28"
-        },
-        {
-          "headline": "The FDA Just Approved New COVID Shots. Here’s What Happens Now.",
-          "published_date": "2026-08-28"
-        },
-        {
-          "headline": "More Californians test positive for COVID-19 during summer",
-          "published_date": "2026-08-28"
-        },
-        {
-          "headline": "FDA Approves Updated COVID-19 Vaccines — Should You Get One?",
-          "published_date": "2026-08-28"
-        },
-        {
-          "headline": "FDA approves new COVID vaccines: 5 things to know",
-          "published_date": "2026-08-28T13:55:56+00:00"
-        },
-        {
-          "headline": "What to know about the COVID and flu vaccines for 2026",
-          "published_date": "2026-08-28T18:36:53+00:00"
-        },
-        {
-          "headline": "What to know about the COVID and flu vaccines for 2026",
-          "published_date": "2026-08-28T23:19:45+00:00"
-        },
-        {
-          "headline": "FDA approves updated COVID-19 vaccines — should you get one?",
-          "published_date": "2026-08-29"
-        },
-        {
-          "headline": "What to know about the COVID and flu vaccines for 2026",
-          "published_date": "2026-08-29T07:02:15+00:00"
-        },
-        {
-          "headline": "What to know about the COVID and flu vaccines for 2026",
-          "published_date": "2026-08-29T07:32:55+00:00"
-        },
-        {
-          "headline": "People still being hauled before courts for breaching Covid rules",
-          "published_date": "2026-08-30"
-        },
-        {
-          "headline": "Extended Paxlovid fails to ease long COVID symptoms in 959-person trial",
-          "published_date": "2026-09-01"
-        },
-        {
-          "headline": "New COVID-19 vaccines approved for 2026-27 to combat latest active viruses",
-          "published_date": "2026-09-01T16:10:16+00:00"
-        },
-        {
-          "headline": "Top US doctors offer updated flu and COVID vaccine recommendations, aiming to ease confusion",
-          "published_date": "2026-09-02"
-        },
-        {
-          "headline": "COVID-19 cases are on the rise. What Kentuckians should know",
-          "published_date": "2026-09-02"
-        },
-        {
-          "headline": "Doctors say they’re filling a void left by CDC on vaccines. Here’s what to know about flu, Covid-19 and RSV this fall",
-          "published_date": "2026-09-02"
-        },
-        {
-          "headline": "Updated COVID-19 vaccines are coming this fall. Will insurance cover them?",
-          "published_date": "2026-09-02"
-        },
-        {
-          "headline": "Top US doctors offer updated flu and COVID vaccine recommendations, aiming to...",
-          "published_date": "2026-09-02T14:41:37+00:00"
-        },
-        {
-          "headline": "Doctors release vaccine recommendations for RSV, influenza, COVID-19 - UPI.com",
-          "published_date": "2026-09-02T17:31:59+00:00"
-        },
-        {
-          "headline": "What top doctors now recommend for COVID, flu, RSV vaccines",
-          "published_date": "2026-09-03"
-        },
-        {
-          "headline": "New COVID-19 vaccines approved for 2026-27 to combat latest active viruses",
-          "published_date": "2026-09-03"
-        },
-        {
-          "headline": "Your guide to fall vaccines. What's new with flu, COVID-19 and RSV",
-          "published_date": "2026-09-03"
-        },
-        {
-          "headline": "From AIDS to COVID-19 to Measles, Why do Infectious Disease Public Health Crises Keep Occurring?",
-          "published_date": "2026-09-03T16:10:15+00:00"
-        },
-        {
-          "headline": "Flu And COVID Vaccines This Season — Here’s Who Needs Them, And When",
-          "published_date": "2026-09-04"
-        },
-        {
-          "headline": "What top doctors now recommend for COVID, flu, RSV",
-          "published_date": "2026-09-04"
-        },
-        {
-          "headline": "This summer’s COVID spread: How the symptoms have changed",
-          "published_date": "2026-09-04"
-        },
-        {
-          "headline": "What to know about flu and COVID-19 vaccines in 2026",
-          "published_date": "2026-09-04"
-        },
-        {
-          "headline": "Air Force moves to quickly reinstate airmen discharged for refusing COVID-19 vaccine",
-          "published_date": "2026-09-04"
-        },
-        {
-          "headline": "What to know about flu and COVID-19 vaccines in 2026",
-          "published_date": "2026-09-04T17:48:10+00:00"
-        },
-        {
-          "headline": "Jill Scott Postpones Rest of U.S. Tour After Testing Positive for COVID",
-          "published_date": "2026-09-05"
-        },
-        {
-          "headline": "No prescription needed for new COVID-19 shots in Arizona | Exclusive",
-          "published_date": "2026-09-05"
-        },
-        {
-          "headline": "Inside FBI push to investigate Fauci & find evidence of Covid lab leak",
-          "published_date": "2026-09-06"
-        },
-        {
-          "headline": "Fall vaccine recommendations released, more Health Headlines",
-          "published_date": "2026-09-06"
-        },
-        {
-          "headline": "Pair who 'cynically abused' the healthcare system by selling more than 2,000 fake Covid-19 'passports' during the pandemic are jailed",
-          "published_date": "2026-09-06T17:31:59+00:00"
-        },
-        {
-          "headline": "Study Identifies Patients at Risk for Severe COVID-19 Post-Vaccination",
-          "published_date": "2026-09-06T17:48:10+00:00"
-        },
-        {
-          "headline": "How Bad Will This Flu Season Be? What to Expect After ‘Superflu’ Winter",
-          "published_date": "2026-09-07"
-        },
-        {
-          "headline": "Doctors release vaccine recommendations for RSV, influenza, COVID-19",
-          "published_date": "2026-09-07T17:32:48+00:00"
-        },
-        {
-          "headline": "Allegheny County covid-19 surge prompts doctors to encourage vaccination",
-          "published_date": "2026-09-08"
-        },
-        {
-          "headline": "COVID-19 infections rise across California as health officials urge vaccinations",
-          "published_date": "2026-09-08"
-        },
-        {
-          "headline": "Exeter taxi driver spent Covid loan on pizza oven and Turkish flat",
-          "published_date": "2026-09-08"
-        },
-        {
-          "headline": "I dag modtager 1,3 millioner danskere tilbud om vaccination",
-          "published_date": "2026-09-09"
-        },
-        {
-          "headline": "Is COVID resurging in Tennessee? Should you get another vaccine?",
-          "published_date": "2026-09-09"
-        },
-        {
-          "headline": "Facts on Rep. Miller-Meeks",
-          "published_date": "2026-09-10"
-        },
-        {
-          "headline": "Sanofi partners with USA Pickleball to launch \"Serve Up Protection\" campaign to help protect older adults from COVID-19 with NUVAXOVID™",
-          "published_date": "2026-09-10"
-        },
-        {
-          "headline": "COVID-19, flu vaccines are available in the Bay Area. Here’s how to get them.",
-          "published_date": "2026-09-11"
-        },
-        {
-          "headline": "Here’s Who Is Eligible for the New COVID Vaccines This Fall",
-          "published_date": "2026-09-11"
-        },
-        {
-          "headline": "VA Study: Vax Linked to Fewer COVID-Related CV Events",
-          "published_date": "2026-09-11"
-        },
-        {
-          "headline": "What to know about this year’s flu, COVID-19 and RSV shots",
-          "published_date": "2026-09-11T21:00:06+00:00"
-        },
-        {
-          "headline": "State report: ADPH approved nearly $28M in poorly documented COVID vaccine grant spending",
-          "published_date": "2026-09-12"
-        },
-        {
-          "headline": "Long-Term Adverse Effects After COVID-19 Vaccination Vary by Brand",
-          "published_date": "2026-09-13T05:26:53+00:00"
-        },
-        {
-          "headline": "Get ready for flu season: Florida pharmacies rolling out new mRNA vaccines and updated COVID shots",
-          "published_date": "2026-09-14"
-        },
-        {
-          "headline": "Amy Acton’s COVID response at center of race for Ohio governor",
-          "published_date": "2026-09-14"
-        },
-        {
-          "headline": "Thailand Responds to Reports of COVID-19 Outbreak: What is Happening in Kazakhstan",
-          "published_date": "2026-09-14"
-        },
-        {
-          "headline": "China approves Walvax’s third mRNA COVID-19 vaccine, targeting the Omicron JN.1 strain",
-          "published_date": "2026-09-14"
-        },
-        {
-          "headline": "NYC COVID Hospitalizations Rise, Officials Urge Fall Shots",
-          "published_date": "2026-09-14"
-        },
-        {
-          "headline": "New York sees troubling COVID hospitalization surge",
-          "published_date": "2026-09-15"
-        },
-        {
-          "headline": "No, Sri Lanka Will not Lose Free Vaccines Over the World Bank’s Upper-Middle-Income Reclassification - Fact Crescendo Sri Lanka English | The leading fact-checking website",
-          "published_date": "2026-09-15"
-        },
-        {
-          "headline": "What to know about this year’s flu, COVID-19 and RSV shots",
-          "published_date": "2026-09-15"
-        },
-        {
-          "headline": "COVID Cases Rising in North Carolina, Duke Sees Surge",
-          "published_date": "2026-09-16"
-        },
-        {
-          "headline": "As COVID Rises in Over Half of US, Who Should Get a Vaccine This Fall? Experts Explain",
-          "published_date": "2026-09-17"
-        },
-        {
-          "headline": "Updated COVID vaccines delayed for 50% of US children",
-          "published_date": "2026-09-17T13:23:36+00:00"
-        },
-        {
-          "headline": "CDC updates COVID return-to-work guidance for healthcare workers, but not residents",
-          "published_date": "2026-09-17T21:10:00+00:00"
-        },
-        {
-          "headline": "COVID-19 cases increased in August, September. Why doesn't Metro Health's dashboard show it?",
-          "published_date": "2026-09-18"
-        },
-        {
-          "headline": "Los Angeles-area high school football team forfeits game due to COVID-19 outbreak",
-          "published_date": "2026-09-18"
-        },
-        {
-          "headline": "Respiratory Virus Activity Levels",
-          "published_date": "2026-09-18"
-        },
-        {
-          "headline": "COVID vaccines for children in federal program delayed",
-          "published_date": "2026-09-18T05:06:36+00:00"
-        },
-        {
-          "headline": "COVID-19 pandemic",
-          "published_date": "2026-09-18T05:06:36+00:00"
-        },
-        {
-          "headline": "What's going on with COVID? The latest on strains, cases, symptoms.",
-          "published_date": "2026-09-19"
-        },
-        {
-          "headline": "COVID outbreak forces high school football team to forfeit, reports say",
-          "published_date": "2026-09-19"
-        },
-        {
-          "headline": "Iowa and South Dakota Enter Fall Virus Season with Gaps in the CDC Map Local Families Check",
-          "published_date": "2026-09-20"
-        },
-        {
-          "headline": "Wat nieuwe coronavarianten met long covid doen: de risico's van herbesmetting",
-          "published_date": "2026-09-20"
-        },
-        {
-          "headline": "Peel reviewing vaccine records for more than 27,000 students",
-          "published_date": "2026-09-20"
-        },
-        {
-          "headline": "Granit Xhaka responds as Swiss authorities investigate alleged forged Covid certificate",
-          "published_date": "2026-09-20T16:37:28+00:00"
-        },
-        {
-          "headline": "Study Finds No Neurodevelopmental Risk in Prenatal COVID-19, Except Speech",
-          "published_date": "2026-09-21T05:37:23+00:00"
-        },
-        {
-          "headline": "The 13th COVID-19 wave crests as the US heads into winter with lowest immunity since 2021",
-          "published_date": "2026-09-22"
-        },
-        {
-          "headline": "Whatever Happened to COVID Shots for Everyone? - Houston Press",
-          "published_date": "2026-09-22"
-        },
-        {
-          "headline": "Should you get a covid vaccine this fall? Here's what to know.",
-          "published_date": "2026-09-22"
-        },
-        {
-          "headline": "Should you get a COVID vaccine this fall? Here’s what to know.",
-          "published_date": "2026-09-23"
-        },
-        {
-          "headline": "Articole despre \"restricţii\"",
-          "published_date": "2026-09-23"
-        },
-        {
-          "headline": "Covid-19 vaccines delayed for about half of US children as access through federal program stalls",
-          "published_date": "2026-09-23"
-        },
-        {
-          "headline": "Trump officials may undo nursing home mandates for reporting COVID",
-          "published_date": "2026-09-23"
-        },
-        {
-          "headline": "New Survey: Most US Adults Support Vaccines, but Many Remain Unclear About Respiratory Vaccine Recommendations",
-          "published_date": "2026-09-24"
-        },
-        {
-          "headline": "Respiratory viruses rise as schools and workplaces reopen",
-          "published_date": "2026-09-24"
-        },
-        {
-          "headline": "CDC opens state ordering for COVID-19 vaccines after unexplained delay",
-          "published_date": "2026-09-24"
-        },
-        {
-          "headline": "CDC Recommends COVID-19 Vaccine to All Adults, Many Children",
-          "published_date": "2026-09-25"
-        },
-        {
-          "headline": "Mayo will pay $50,000 to settle federal complaint over denied COVID-19 vaccine...",
-          "published_date": "2026-09-25T05:35:29+00:00"
-        },
-        {
-          "headline": "‘Zombified’ CDC, hobbled by cuts, struggles to fulfill scientific mission",
-          "published_date": "2026-09-26"
-        },
-        {
-          "headline": "Are you repeating the same explanation over and over? | Streamlining communication with families and multidisciplinary teams during flu and COVID-19 outbreaks｜結の音",
-          "published_date": "2026-09-26"
-        },
-        {
-          "headline": "Hawaii pharmacies offering COVID vaccines amid uptick | Honolulu Star-Advertiser",
-          "published_date": "2026-09-27"
-        },
-        {
-          "headline": "India seeks fair access to vaccines, drugs made from shared pathogens",
-          "published_date": "2026-09-27"
-        },
-        {
-          "headline": "India stresses resilient health systems, pandemic preparedness at UN",
-          "published_date": "2026-09-27"
-        },
-        {
-          "headline": "Germany news: COVID vaccine maker BioNTech to close 3 sites",
-          "published_date": "2026-09-28"
-        },
-        {
-          "headline": "Keine Käufer gefunden - drei Biontech-Werke machen dicht",
-          "published_date": "2026-09-28"
-        },
-        {
-          "headline": "Biontech schließt Tübinger Werk – Palmer: Jobs erhalten",
-          "published_date": "2026-09-28"
-        },
-        {
-          "headline": "BioNTech to close 3 sites in Germany after failed buyer search",
-          "published_date": "2026-09-28"
-        },
-        {
-          "headline": "Appellate Division Affirmed Trial Judge's Orders Granting Summary Judgement for Defendants on COVID-19 Case",
-          "published_date": "2026-09-28T00:00:00+00:00"
-        },
-        {
-          "headline": "Invivyd Announces Positive Topline Results from LIBERTY Phase 3 Study Demonstrating VYD2311 Safety and Tolerability Superior to mRNA-based COVID-19 Vaccine; Announces Regulatory Submission Plans for VYD2311",
-          "published_date": "2026-09-29"
-        },
-        {
-          "headline": "Invivyd Announces Positive Topline Results from LIBERTY Phase 3 Study Demonstrating VYD2311 Safety and Tolerability Superior to mRNA-based COVID-19 Vaccine; Announces Regulatory Submission Plans...",
-          "published_date": "2026-09-29"
-        },
-        {
-          "headline": "Invivyd Announces Positive Topline Results from LIBERTY Phase 3 Study Demonstrating VYD2311 Safety and Tolerability Superior to mRNA-based COVID-19 Vaccine; Announces Regulatory Submission Plans for VYD2311",
-          "published_date": "2026-09-29"
-        },
-        {
-          "headline": "Markey Demands Answers on COVID Vaccine Delay for Kids",
-          "published_date": "2026-09-30"
-        },
-        {
-          "headline": "Can I still get a COVID vaccine? What you need to know about the latest updates",
-          "published_date": "2026-09-30"
-        },
-        {
-          "headline": "Invivyd Announces Positive Topline Results from LIBERTY Phase 3 Study Demonstrating VYD2311 Safety and Tolerability Superior to mRNA-based COVID-19 Vaccine",
-          "published_date": "2026-09-30"
-        },
-        {
-          "headline": "17 Mitchell County residents convicted in nearly $500K PPP fraud case",
-          "published_date": "2026-09-30"
-        },
-        {
-          "headline": "CMS Allegedly Considering the Sunsetting of COVID-19 Data-Reporting Requirements for Certain Long-Term Care Facilities",
-          "published_date": "2026-09-30T00:00:00+00:00"
-        },
-        {
-          "headline": "Qatar Airways Ends These 20 Long-Haul Routes Since 2016",
-          "published_date": "2026-10-01"
-        },
-        {
-          "headline": "Do you need a flu or COVID shot this fall? What Massachusetts recommends",
-          "published_date": "2026-10-01"
-        },
-        {
-          "headline": "Florida Attorney General Sues Pfizer and CEO Over COVID-19 Vaccine Claims",
-          "published_date": "2026-10-01"
-        },
-        {
-          "headline": "Your guide to vaccines for flu, COVID-19 and RSV in Wisconsin",
-          "published_date": "2026-10-01"
-        },
-        {
-          "headline": "Your guide to vaccines for flu, COVID-19 and RSV in Wisconsin",
-          "published_date": "2026-10-01"
-        },
-        {
-          "headline": "US Health Groups Set Out Flu, COVID-19 and RSV Vaccine Guidance for 2026–27",
-          "published_date": "2026-10-02"
-        },
-        {
-          "headline": "Sanofi and 2026 NBA Champion Karl-Anthony Towns team up to raise awareness of COVID-19 vaccination with NUVAXOVID®",
-          "published_date": "2026-10-02"
-        },
-        {
-          "headline": "Your guide to vaccines for flu, COVID-19 and RSV in Wisconsin",
-          "published_date": "2026-10-02"
-        },
-        {
-          "headline": "Flu, COVID-19, RSV immunizations: What to know this respiratory virus season",
-          "published_date": "2026-10-02"
-        },
-        {
-          "headline": "San Francisco Reports First Flu Death of 2026–27 Season as Health Officials Urge Flu and COVID Vaccines",
-          "published_date": "2026-10-03"
-        },
-        {
-          "headline": "Karl-Anthony Towns Who Lost Mom To COVID-19 Talks Of Value Of Vaccine",
-          "published_date": "2026-10-03T02:44:23+00:00"
-        },
-        {
-          "headline": "Over 65? Here's what Massachusetts recommends for flu and COVID vaccines",
-          "published_date": "2026-10-04"
-        },
-        {
-          "headline": "People Are Comparing A Possible Russian Plague To COVID. Here’s What Experts Want You To Know.",
-          "published_date": "2026-10-05"
-        },
-        {
-          "headline": "More Than 170 Candidates Sign Pledge To Remove COVID Shots From Market",
-          "published_date": "2026-10-07"
-        },
-        {
-          "headline": "Lackawanna business to pay $1.5 million for improper COVID-19 loans",
-          "published_date": "2026-10-07"
-        },
-        {
-          "headline": "More Than 170 Candidates Sign Pledge To Remove COVID Shots From Market",
-          "published_date": "2026-10-08"
-        },
-        {
-          "headline": "Pakistan has 48% of the poor in Greater Middle East; poverty in region remains at pre-pandemic levels",
-          "published_date": "2026-10-08"
-        },
-        {
-          "headline": "Panic as horror American Covid rapidly spreading in UK - 14 grim symptoms",
-          "published_date": "2026-10-08"
-        },
-        {
-          "headline": "Mortality at record nine-month low as COVID-19 deaths fall",
-          "published_date": "2026-10-08"
-        },
-        {
-          "headline": "Sonoma Co.: County Health Officer To Require Masks In Some Healthcare Facilities...",
-          "published_date": "2026-10-08T06:17:49+00:00"
-        },
-        {
-          "headline": "COVID-19 Left Lasting Scars on Breast Cancer Survivors, Major Review Finds",
-          "published_date": "2026-10-09"
-        },
-        {
-          "headline": "Health leaders urge flu shots, but fewer are getting them",
-          "published_date": "2026-10-09"
-        },
-        {
-          "headline": "Health leaders urge flu shots, but fewer are getting them",
-          "published_date": "2026-10-09"
-        }
-      ],
-      "news_total": 265,
-      "logs": [
-        {
-          "log_date": "2026-07-08",
-          "summary": "A study on COVID-19 vaccine effectiveness that was previously blocked by the CDC has now been released in full, detailing its findings. Meanwhile, new COVID-19 vaccines for the 2025-2026 season are becoming available, though access may be limited for some individuals.",
-          "news": [
-            {
-              "news_id": "f52126221c25577babbbb623df4cf035",
-              "url": "https://www.today.com/health/coronavirus/covid-vaccine-2025-2026-rcna228529",
-              "headline": "Are the New COVID Vaccines Available, and Should You Get One? Experts Explain",
-              "body": "As respiratory virus season approaches, you may be wondering if you should get the new COVID-19 vaccine to protect yourself. However, it may be more difficult for some people to find the shot this ...",
-              "published_date": "2026-07-08T15:12:31+00:00",
-              "outlet": "Today",
-              "image": ""
-            },
-            {
-              "news_id": "ff7d04e04b6157d59fbfeda0f4cd5118",
-              "url": "https://www.msn.com/en-us/health/general/cdc-blocked-a-covid-vaccine-study-s-release-now-you-can-read-the-whole-thing/ar-AA26Q57n?ocid=BingNewsVerp",
-              "headline": "CDC blocked a COVID vaccine study’s release–now you can read the whole thing",
-              "body": "The CDC blocked the release of a study about COVID-19 vaccine effectiveness. Here's what it contains.",
-              "published_date": "2026-07-08T15:12:31+00:00",
-              "outlet": "Newsweek on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.UkYafoaYVW2mm2fZDxb3Pw"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-10-06",
-          "summary": "Senator Markey demanded answers from HHS Secretary Kennedy regarding a monthlong delay that blocked free COVID-19 vaccines for millions of children nationwide. Massachusetts issued updated recommendations for flu and COVID-19 vaccines for adults over 65.",
-          "news": [
-            {
-              "news_id": "a5745b1fcc9f5a60920ce05c6ac0b83b",
-              "url": "https://www.huffpost.com/entry/russia-plague-spread-different-covid_l_6ac3aaece4b0bc90e4000ee4",
-              "headline": "People Are Comparing A Possible Russian Plague To COVID. Here’s What Experts Want You To Know.",
-              "body": "One person has died, 200 are under observation and a hospital is under quarantine. Here’s what matters most to experts.",
-              "published_date": "2026-10-05",
-              "outlet": "The Huffington Post",
-              "image": "https://s.yimg.com/bo/8869d5fa-663d-573e-bf8f-543168d44e1c_1791228796448.jpg"
-            },
-            {
-              "news_id": "57df8917598054098adf2f545f44fb38",
-              "url": "https://hoodline.com/2026/09/markey-presses-rfk-jr-as-massachusetts-kids-wait-out-covid-vaccine-delay/",
-              "headline": "Markey Demands Answers on COVID Vaccine Delay for Kids",
-              "body": "Markey demands answers after a monthlong delay blocked free COVID vaccines for millions of kids nationwide.",
-              "published_date": "2026-09-30",
-              "outlet": "Hoodline",
-              "image": "https://s.yimg.com/bo/cad0410a-94ef-5d57-bf9b-fc9cf6ea18fb_1790768837656.jpg"
-            },
-            {
-              "news_id": "d0c19d0fecef5298b3b10e39ffaf40fc",
-              "url": "https://health.yahoo.com/treatments/vaccines/articles/over-65-heres-massachusetts-recommends-100349524.html",
-              "headline": "Over 65? Here's what Massachusetts recommends for flu and COVID vaccines",
-              "body": "Here's what to know about the latest flu and COVID-19 vaccine recommendations.",
-              "published_date": "2026-10-04",
-              "outlet": "Cape Cod Times · via Yahoo News",
-              "image": "https://media.zenfs.com/en/cape-cod-times/f25a8909b20cf1a4d0b73201121fe5e6.jpg"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-10-08",
-          "summary": "More than 170 US political candidates have signed a pledge to remove COVID-19 vaccines from the market. The XFG variant is rapidly spreading in the UK with 14 reported symptoms, while mortality data indicates COVID-19 deaths have fallen to a post-pandemic low. Sonoma County, California, is reinstating mask requirements in some healthcare facilities, and a New York business has agreed to pay $1.5 million to settle claims it improperly obtained COVID-19 relief loans.",
-          "news": [
-            {
-              "news_id": "6e1d2dd84b5753ac998b7443d51d2135",
-              "url": "https://ijr.com/discover/more-than-170-candidates-sign-pledge-to-remove-covid-shots-from-market-d51f89f6",
-              "headline": "More Than 170 Candidates Sign Pledge To Remove COVID Shots From Market",
-              "body": "One month before the midterms more than 100 candidates running for public office across the country...",
-              "published_date": "2026-10-08",
-              "outlet": "IJR",
-              "image": "https://s.yimg.com/bo/b413a227-8af8-59f7-827a-1d562ca3e330_1791419776977.png.cf.jpg"
-            },
-            {
-              "news_id": "3ef02e43d51551ffbb474c278c1ab705",
-              "url": "https://ijr.com/discover/article/candidates-running-office-covid-mrna-vaccines-mary-talley-bowden-142aceeb-2b08-46a4-bb44-fd6592872c15",
-              "headline": "More Than 170 Candidates Sign Pledge To Remove COVID Shots From Market",
-              "body": "One month before the midterms more than 100 candidates running for public office across the country have pledged their commitment to remove the COVID-19 vaccines from the market.",
-              "published_date": "2026-10-07",
-              "outlet": "Independent Journal Review",
-              "image": ""
-            },
-            {
-              "news_id": "6baf2f213da65b30a66fb657385cedf3",
-              "url": "https://www.msn.com/en-in/news/other/pakistan-has-48-of-the-poor-in-greater-middle-east-poverty-in-region-remains-at-pre-pandemic-levels/ar-AA2dNvGT?ocid=BingNewsVerp",
-              "headline": "Pakistan has 48% of the poor in Greater Middle East; poverty in region remains at pre-pandemic levels",
-              "body": "World Bank report says the region accounts for 14% of the world’s extreme poor, second only to Sub-Saharan Africa. The ...",
-              "published_date": "2026-10-08",
-              "outlet": "The Print on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.AgUPzRwnOim2Q4HimwcL7g"
-            },
-            {
-              "news_id": "8cae14df17635c5e9e9dccc5c4cae4b8",
-              "url": "https://www.msn.com/en-gb/news/other/panic-as-horror-american-covid-rapidly-spreading-in-uk-14-grim-symptoms/ar-AA2dLvBM?ocid=BingNewsVerp",
-              "headline": "Panic as horror American Covid rapidly spreading in UK - 14 grim symptoms",
-              "body": "Covid cases are rising across the UK as the XFG strain becomes increasingly dominant.",
-              "published_date": "2026-10-08",
-              "outlet": "Daily Express on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.kUQSeOTDQ1q0_LQBmIlV_Q"
-            },
-            {
-              "news_id": "354a2bb2ce36546caf512cc3f4f28bd7",
-              "url": "https://www.insurancebusinessmag.com/uk/news/life-insurance/mortality-at-record-ninemonth-low-as-covid19-deaths-fall-592788.aspx",
-              "headline": "Mortality at record nine-month low as COVID-19 deaths fall",
-              "body": "CMI data shows cumulative deaths running 6.4% below the ten-year average through September, with COVID-19 fatalities at a post-pandemic low",
-              "published_date": "2026-10-08",
-              "outlet": "Insurance Business America",
-              "image": "https://www.bing.com/th?id=ONUT.dMFhneKZ55bf7LrV2yLbvA"
-            },
-            {
-              "news_id": "f366e71354b659558fb070904e1bbe0e",
-              "url": "https://www.sfgate.com/news/bayarea/article/sonoma-co-county-health-officer-to-require-22468170.php",
-              "headline": "Sonoma Co.: County Health Officer To Require Masks In Some Healthcare Facilities...",
-              "body": "Sonoma County will require masks in patient care areas of certain healthcare facilities during the...",
-              "published_date": "2026-10-08T06:17:49+00:00",
-              "outlet": "San Francisco Chronicle",
-              "image": "https://s.yimg.com/bo/ce91e317-89e5-5d03-9095-12126660efd6_1791468639258.jpg"
-            },
-            {
-              "news_id": "bb2601ebdc965cbd84bf31a001e2785e",
-              "url": "https://www.wivb.com/news/local-news/erie-county/lackawanna/lackawanna-business-to-pay-1-5-million-for-improper-covid-19-loans/",
-              "headline": "Lackawanna business to pay $1.5 million for improper COVID-19 loans",
-              "body": "BUFFALO, N.Y. (WIVB) — A steel pipe and tube manufacturer based in Lackawanna will pay $1.5 million in order to resolve allegations that is improperly obtained relief funds during the COVID-19 pand…",
-              "published_date": "2026-10-07",
-              "outlet": "WIVB Buffalo",
-              "image": "https://s.yimg.com/bo/aa6cb61f-c3f0-5228-a9d6-ecaadbe48651_1791393095805.png.cf.jpg"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-10-11",
-          "summary": "A major review found that the COVID-19 pandemic worsened psychological well-being and disrupted follow-up care for breast cancer survivors, while virtual care models emerged. Separately, health leaders urge flu shots as vaccine hesitancy, once reserved for COVID-19 and certain childhood vaccinations, is now impacting flu vaccination rates.",
-          "news": [
-            {
-              "news_id": "32eccaa9e3765f7a8598a6e9fd851718",
-              "url": "https://bioengineer.org/covid-19-left-lasting-scars-on-breast-cancer-survivors-major-review-finds/",
-              "headline": "COVID-19 Left Lasting Scars on Breast Cancer Survivors, Major Review Finds",
-              "body": "A scoping review of forty studies finds that the COVID-19 pandemic worsened psychological well-being and disrupted follow-up care for breast cancer survivors, while virtual care models emerged as a",
-              "published_date": "2026-10-09",
-              "outlet": "BIOENGINEER",
-              "image": ""
-            },
-            {
-              "news_id": "518f5a58d9355825a1a932a27ffc4d30",
-              "url": "https://www.newsday.com/news/health/flu-shots-ebx69b22",
-              "headline": "Health leaders urge flu shots, but fewer are getting them",
-              "body": "Vaccine hesitancy, once reserved for COVID-19 and certain childhood vaccinations, is now impacting the number of people receiving flu shots.",
-              "published_date": "2026-10-09",
-              "outlet": "Newsday",
-              "image": "https://s.yimg.com/bo/bfe8ca59-436b-541e-b930-6436b4b12814_1791539122150.jpg"
-            },
-            {
-              "news_id": "636c90907fa55e18a74961e4800b16c4",
-              "url": "https://www.newsday.com/news/health/coronavirus/flu-shots-ebx69b22",
-              "headline": "Health leaders urge flu shots, but fewer are getting them",
-              "body": "Vaccine hesitancy, once reserved for COVID-19 and certain childhood vaccinations, is now impacting the number of people receiving flu shots.",
-              "published_date": "2026-10-09",
-              "outlet": "Newsday",
-              "image": "https://s.yimg.com/bo/bfe8ca59-436b-541e-b930-6436b4b12814_1791539122150.jpg"
-            }
-          ]
-        }
-      ],
-      "logs_total": 46
-    },
-    {
       "incident_id": "20260624-VE-EQ",
       "tree_id": "387baafc1c6b5a0391293c7f917b5333",
       "canonical_name": "Earthquake M7.2 San Felipe, Venezuela 2026-06-24",
-      "summary": "An AP investigation detailed that the collapse of housing towers in La Guaira was linked to decisions made in 2010. A report marking 100 days after the disaster highlighted ongoing displacement and emotional struggles among survivors. Additionally, Pollo Campero donated $25,000 to Direct Relief for earthquake relief.",
+      "summary": "An AP investigation into ignored warnings identifies who is to blame for the earthquake devastation, reporting over 6,500 deaths and 17,000 homeless.",
       "country": "Venezuela",
       "iso2": "VE",
       "lat": 10.453,
@@ -1437,7 +146,7 @@
       "event_date": "2026-06-24",
       "first_reported_date": "2026-06-24",
       "last_updated_date": "2026-10-09",
-      "days_since_event": 112,
+      "days_since_event": 113,
       "source_count": 5,
       "should_report": true,
       "search_keys": [],
@@ -3441,10 +2150,6 @@
           "published_date": "2026-09-29"
         },
         {
-          "headline": "POLLO CAMPERO DONATES $25,000 TO DIRECT RELIEF FOLLOWING NATIONAL FUNDRAISING DAY FOR EARTHQUAKE VICTIMS IN VENEZUELA AND COLOMBIA",
-          "published_date": "2026-09-30"
-        },
-        {
           "headline": "Takeaways from AP investigation into collapse of housing towers during Venezuela's earthquakes",
           "published_date": "2026-09-30"
         },
@@ -3454,6 +2159,10 @@
         },
         {
           "headline": "Takeaways from AP investigation into collapse of housing towers during Venezuela's earthquakes",
+          "published_date": "2026-09-30"
+        },
+        {
+          "headline": "POLLO CAMPERO DONATES $25,000 TO DIRECT RELIEF FOLLOWING NATIONAL FUNDRAISING DAY FOR EARTHQUAKE VICTIMS IN VENEZUELA AND COLOMBIA",
           "published_date": "2026-09-30"
         },
         {
@@ -3638,75 +2347,6 @@
           ]
         },
         {
-          "log_date": "2026-10-01",
-          "summary": "Pollo Campero donated $25,000 to Direct Relief after its national fundraising day for earthquake victims in Venezuela and Colombia, adding to ongoing relief efforts for the disaster.",
-          "news": [
-            {
-              "news_id": "0eeb8801f44d5b66ab64a68ce82e1cea",
-              "url": "https://www.bostonherald.com/2026/09/30/venezuela-coastal-towers-earthquakes/",
-              "headline": "AP investigation: Warnings ignored as Venezuela coastal towers faced quake forces they couldn’t take",
-              "body": "The quakes killed more than 6,500 people and left over 17,000 homeless.",
-              "published_date": "2026-09-30",
-              "outlet": "Boston Herald",
-              "image": "https://s.yimg.com/bo/32a9a898-8d81-5d14-80c6-979f6ba4e138_1790785572855.jpg"
-            },
-            {
-              "news_id": "9ea68a43c6df52789089f89034d60fb4",
-              "url": "https://www.cubaheadlines.com/articles/341545",
-              "headline": "Venezuelan Government Ignored Warnings Before Building Collapse in La Guaira: AP Investigation",
-              "body": "An Associated Press report released on Wednesday reveals that the Venezuelan government disregarded critical warnings from scientists and engineers be...",
-              "published_date": "2026-09-30",
-              "outlet": "Cuba Headlines",
-              "image": "https://www.bing.com/th?id=ONUT.LdX22751GA0Dvq-NxDDq0w"
-            },
-            {
-              "news_id": "ac414f97a5ed53789ce1ecda688abcb8",
-              "url": "https://apnews.com/article/venezuela-la-guaira-apartments-collapse-earthquake-195ce3a5e67184b64ca7a3d19029dc23",
-              "headline": "Takeaways from AP investigation into collapse of housing towers during...",
-              "body": "CARABALLEDA, Venezuela (AP) — The collapse of public housing buildings in the Venezuelan state of La...",
-              "published_date": "2026-09-30T06:30:36+00:00",
-              "outlet": "Associated Press",
-              "image": "https://s.yimg.com/bo/42829dfe-1b1c-5046-afd7-177e53a6fff1_1790752630388.jpg"
-            },
-            {
-              "news_id": "2b26a12e94245210b9d7bf3bdc52af51",
-              "url": "https://pr.cullmantimes.com/article/POLLO-CAMPERO-DONATES-dollar25000-TO-DIRECT-RELIEF-FOLLOWING-NATIONAL-FUNDRAISING-DAY-FOR-EARTHQUAKE-VICTIMS-IN-VENEZUELA-AND-COLOMBIA/6abd9d7da74253059c76f594",
-              "headline": "POLLO CAMPERO DONATES $25,000 TO DIRECT RELIEF FOLLOWING NATIONAL FUNDRAISING DAY FOR EARTHQUAKE VICTIMS IN VENEZUELA AND COLOMBIA",
-              "body": "Guests nationwide helped the Guatemalan-born brand turn everyday meals into support for long-term...",
-              "published_date": "2026-09-30",
-              "outlet": "Cullman Times",
-              "image": "https://s.yimg.com/bo/5394bab6-1af3-5604-a2c1-ce6ce35fd671_1788866808043.png.cf.jpg"
-            },
-            {
-              "news_id": "79626b3b798154e5a49e52da649198c5",
-              "url": "https://www.newsday.com/news/nation/venezuela-la-guaira-apartments-collapse-earthquake-j38815",
-              "headline": "AP investigation: Warnings ignored as Venezuela coastal towers faced quake forces they couldn't take",
-              "body": "Scientists had warned the government not to build along Venezuela's coastal strip of La Guaira.",
-              "published_date": "2026-09-30",
-              "outlet": "Newsday",
-              "image": "https://s.yimg.com/bo/e1aee197-04e1-53c0-8ed2-7d7cf38224ed_1790743706737.jpg"
-            },
-            {
-              "news_id": "f4861bb52c5656a0bf08e1f3f2a21128",
-              "url": "https://www.wsls.com/news/world/2026/09/30/takeaways-from-ap-investigation-into-collapse-of-housing-towers-during-venezuelas-earthquakes/",
-              "headline": "Takeaways from AP investigation into collapse of housing towers during Venezuela's earthquakes",
-              "body": "The collapse of public housing in Venezuela's La Guaira state after two June earthquakes is linked to decisions made in 2010.",
-              "published_date": "2026-09-30",
-              "outlet": "WSLS Newschannel 10 Roanoke",
-              "image": "https://s.yimg.com/bo/242ab9ec-04f4-5f88-bafb-a8804cd212ad_1790742811945.jpg"
-            },
-            {
-              "news_id": "8cfedaa1ce5c5b188926a66b020e5229",
-              "url": "https://www.indcatholicnews.com/news/55979",
-              "headline": "Venezuela: Young Catholics remember earthquake victims lives of faith and hope | ICN",
-              "body": "Young Catholics in Venezuela gathered to remember friends and family killed in June's devastating earthquake, determined they should be remembered for how they lived rather than how they died.Three months after the disaster, young people and their families from La Guaira Diocese ...",
-              "published_date": "2026-09-30",
-              "outlet": "Independent Catholic News",
-              "image": ""
-            }
-          ]
-        },
-        {
           "log_date": "2026-10-04",
           "summary": "An AP investigation details that the collapse of housing towers in La Guaira was caused by rushed construction on unstable soil after 2010 mudslides, with scientists recording among the largest ground motions ever documented. The UN High Commissioner for Refugees visited quake-affected areas on October 3. Miami-Dade’s Hispanic Heritage Month kickoff featured a painting fundraiser for earthquake relief.",
           "news": [
@@ -3789,9 +2429,42 @@
               "image": "https://s.yimg.com/bo/3bbd1807-b3bd-5b42-84c5-6ef35bcf562b_1790744605817.jpg"
             }
           ]
+        },
+        {
+          "log_date": "2026-10-14",
+          "summary": "An AP investigation into ignored warnings identifies who is to blame for the earthquake devastation, reporting over 6,500 deaths and 17,000 homeless.",
+          "news": [
+            {
+              "news_id": "6baf596d03ff5ceb9a94b08f86b922ee",
+              "url": "https://www.thedailystar.net/news/world/news/venezuela-quake-death-toll-rises-2645-official-figures-4215376",
+              "headline": "Venezuela quake death toll rises to 2,645: official figures",
+              "body": "Thousands more are reported still missing after the June 24 shocks that toppled dozens of apartment complexes, mostly in the ...",
+              "published_date": "2026-10-08T19:19:02+00:00",
+              "outlet": "The Daily Star",
+              "image": "https://www.bing.com/th?id=ONUT.thfCT6t2Bp6gPUm8XJAZ3Q"
+            },
+            {
+              "news_id": "fbf13b82db085687bd175e8d08530c45",
+              "url": "https://www.ap.org/news-highlights/best-of-the-week/second-winner/2026/investigation-into-ignored-warnings-lays-out-whos-to-blame-when-venezuelan-coastal-residents-paid-with-their-lives/",
+              "headline": "Investigation into ignored warnings lays out who’s to blame when Venezuelan coastal residents paid with their lives | The Associated Press",
+              "body": "Three months after devastating earthquakes rocked Venezuela, killing more than 6,500 people and leaving more than 17,000 people homeless, the government",
+              "published_date": "2026-10-09",
+              "outlet": "The Associated Press",
+              "image": "https://www.bing.com/th?id=ONUT.TmSV5whgx3tPwCiuUTp6xQ"
+            },
+            {
+              "news_id": "77ff04c416665237af28aa256e31dad9",
+              "url": "https://www.prnewswire.com/news-releases/pollo-campero-donates-25-000-to-direct-relief-following-national-fundraising-day-for-earthquake-victims-in-venezuela-and-colombia-302895098.html",
+              "headline": "POLLO CAMPERO DONATES $25,000 TO DIRECT RELIEF FOLLOWING NATIONAL FUNDRAISING DAY FOR EARTHQUAKE VICTIMS IN VENEZUELA AND COLOMBIA",
+              "body": "/PRNewswire/ -- Pollo Campero, the Guatemalan-born fast-casual restaurant, is donating $25,000 to Direct Relief following its national fundraising day on...",
+              "published_date": "2026-09-30",
+              "outlet": "PR Newswire",
+              "image": "https://s.yimg.com/bo/6a6a7135-aa5e-5224-ad5c-9051be409f03_1790813616189.jpg"
+            }
+          ]
         }
       ],
-      "logs_total": 58
+      "logs_total": 59
     },
     {
       "incident_id": "20260728-JP-EQ",
@@ -3817,7 +2490,7 @@
       "event_date": "2026-07-28",
       "first_reported_date": "2026-07-28",
       "last_updated_date": "2026-10-10",
-      "days_since_event": 78,
+      "days_since_event": 79,
       "source_count": 7,
       "should_report": true,
       "search_keys": [],
@@ -6004,7 +4677,7 @@
       "event_date": "2026-08-10",
       "first_reported_date": "2026-08-10",
       "last_updated_date": "2026-10-07",
-      "days_since_event": 65,
+      "days_since_event": 66,
       "source_count": 11,
       "should_report": true,
       "search_keys": [],
@@ -8942,7 +7615,7 @@
       "event_date": "2026-08-14",
       "first_reported_date": "2026-08-14",
       "last_updated_date": "2026-10-10",
-      "days_since_event": 61,
+      "days_since_event": 62,
       "source_count": 27,
       "should_report": true,
       "search_keys": [],
@@ -11858,7 +10531,7 @@
       "event_date": "2026-09-04",
       "first_reported_date": "2026-09-04",
       "last_updated_date": "2026-10-10",
-      "days_since_event": 40,
+      "days_since_event": 41,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -12868,7 +11541,7 @@
       "event_date": "2026-09-04",
       "first_reported_date": "2026-09-04",
       "last_updated_date": "2026-10-09",
-      "days_since_event": 40,
+      "days_since_event": 41,
       "source_count": 2,
       "should_report": true,
       "search_keys": [],
@@ -14386,7 +13059,7 @@
       "event_date": "2026-09-10",
       "first_reported_date": "2026-09-10",
       "last_updated_date": "2026-10-07",
-      "days_since_event": 34,
+      "days_since_event": 35,
       "source_count": 3,
       "should_report": true,
       "search_keys": [],
@@ -15692,7 +14365,7 @@
       "event_date": "2026-09-17",
       "first_reported_date": "2026-09-17",
       "last_updated_date": "2026-10-04",
-      "days_since_event": 27,
+      "days_since_event": 28,
       "source_count": 2,
       "should_report": true,
       "search_keys": [],
@@ -15741,84 +14414,6 @@
       "logs_total": 0
     },
     {
-      "incident_id": "20261001-MD-OT",
-      "tree_id": "ead7c830503e4a15b309e199866758cd",
-      "canonical_name": "Moldova 2026-10-01",
-      "summary": "",
-      "country": "Moldova",
-      "iso2": "MD",
-      "lat": 47.4,
-      "lon": 28.4,
-      "country_group": "C",
-      "region": "Europe",
-      "incident_type": "",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "LOW",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-10-01",
-      "first_reported_date": "2026-10-01",
-      "last_updated_date": "2026-10-10",
-      "days_since_event": 13,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 0,
-        "ercc": 1,
-        "healthmap": 0,
-        "news": 3
-      },
-      "source_links": [
-        {
-          "type": "ERCC",
-          "label": "ECHO Daily Map of 01 October 2026",
-          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5801",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "New automatic gun turrets successfully down first Russian jet-powered drones, Air Force says",
-          "url": "https://kyivindependent.com/new-automatic-gun-turrets-successfully-down-first-russian-jet-powered-drones-air-force-says/",
-          "outlet": "The Kyiv Independent",
-          "published_date": "2026-10-05"
-        },
-        {
-          "headline": "With hybrid attacks and nuclear bluster, Putin aims to end Europe's support for Ukraine",
-          "url": "https://www.msn.com/en-us/news/other/with-hybrid-attacks-and-nuclear-bluster-putin-aims-to-end-europes-support-for-ukraine/ar-AA2dEzPi?ocid=BingNewsVerp",
-          "outlet": "The Washington Post on MSN",
-          "published_date": "2026-10-07"
-        },
-        {
-          "headline": "Trump says Ukraine should get a new president as he blames Zelenskyy for US diesel prices",
-          "url": "https://www.sun-sentinel.com/2026/10/10/trump-says-ukraine-should-get-a-new-president-as-he-blames-zelenskyy-for-us-diesel-prices/",
-          "outlet": "Sun Sentinel",
-          "published_date": "2026-10-10"
-        }
-      ],
-      "news_total": 3,
-      "logs": [],
-      "logs_total": 0
-    },
-    {
       "incident_id": "20261002-RU-EQ",
       "tree_id": "84ca1d39db20494a9fadf170b73ef484",
       "canonical_name": "Earthquake M5.8 Vilyuchinsk, Russia 2026-10-02",
@@ -15842,7 +14437,7 @@
       "event_date": "2026-10-02",
       "first_reported_date": "2026-10-02",
       "last_updated_date": "2026-10-08",
-      "days_since_event": 12,
+      "days_since_event": 13,
       "source_count": 2,
       "should_report": true,
       "search_keys": [],
@@ -15962,7 +14557,7 @@
       "event_date": "2026-10-02",
       "first_reported_date": "2026-10-02",
       "last_updated_date": "2026-10-03",
-      "days_since_event": 12,
+      "days_since_event": 13,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -16040,7 +14635,7 @@
       "event_date": "2026-10-03",
       "first_reported_date": "2026-10-03",
       "last_updated_date": "2026-10-07",
-      "days_since_event": 11,
+      "days_since_event": 12,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -16247,7 +14842,7 @@
       "event_date": "2026-10-06",
       "first_reported_date": "2026-10-06",
       "last_updated_date": "2026-10-07",
-      "days_since_event": 8,
+      "days_since_event": 9,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -16313,7 +14908,7 @@
       "event_date": "2026-10-06",
       "first_reported_date": "2026-10-06",
       "last_updated_date": "2026-10-06",
-      "days_since_event": 8,
+      "days_since_event": 9,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -16419,7 +15014,7 @@
       "event_date": "2026-10-08",
       "first_reported_date": "2026-10-08",
       "last_updated_date": "2026-10-08",
-      "days_since_event": 6,
+      "days_since_event": 7,
       "source_count": 2,
       "should_report": true,
       "search_keys": [],
