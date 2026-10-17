@@ -1,24 +1,24 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-10-17",
-  "generated_at": "2026-10-17T05:44:26Z",
+  "generated_at": "2026-10-17T16:31:48Z",
   "as_of": "2026-10-17",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 32,
-    "new_today": 12,
+    "reportable_total": 33,
+    "new_today": 18,
     "critical": 15,
-    "high": 3,
+    "high": 4,
     "medium": 8,
     "low": 6,
     "disease_outbreaks": 4,
-    "countries_affected": 20,
-    "news_total": 11806,
+    "countries_affected": 21,
+    "news_total": 11897,
     "max_magnitude": 7.7,
     "by_severity": {
       "CRITICAL": 15,
-      "HIGH": 3,
+      "HIGH": 4,
       "MEDIUM": 8,
       "LOW": 6
     },
@@ -27,7 +27,7 @@
       "Drought": 2,
       "Conflict": 3,
       "Forest Fire": 1,
-      "Earthquake": 5,
+      "Earthquake": 6,
       "Flood": 5,
       "Severe Weather": 3,
       "Tropical Cyclone": 5,
@@ -37,10 +37,10 @@
     "by_region": {
       "Global": 2,
       "Africa": 2,
-      "Unknown": 5,
+      "Unknown": 4,
       "Europe": 6,
-      "Asia": 10,
-      "Oceania": 3,
+      "Asia": 11,
+      "Oceania": 4,
       "Americas": 4
     }
   },
@@ -142,6 +142,15 @@
       "iso2": "CD",
       "region": "Africa",
       "country_group": "C",
+      "max_severity": "HIGH"
+    },
+    {
+      "country": "Pakistan",
+      "count": 1,
+      "max_sev_rank": 3,
+      "iso2": "PK",
+      "region": "Asia",
+      "country_group": "A",
       "max_severity": "HIGH"
     },
     {
@@ -250,7 +259,7 @@
       "disease_name": null,
       "event_date": "2024-05-30",
       "first_reported_date": "2024-05-30",
-      "last_updated_date": "2026-10-16",
+      "last_updated_date": "2026-10-17",
       "days_since_event": 870,
       "source_count": 1,
       "should_report": false,
@@ -261,7 +270,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 197
+        "news": 198
       },
       "source_links": [
         {
@@ -1069,9 +1078,13 @@
         {
           "headline": "CHP Warns of Rising Dengue and Chikungunya Cases Amidst Continued Mosquito Breeding Conditions",
           "published_date": "2026-10-16"
+        },
+        {
+          "headline": "7 die of dengue, 1,872 hospitalised in 24 hours",
+          "published_date": "2026-10-17T15:57:34+00:00"
         }
       ],
-      "news_total": 197,
+      "news_total": 198,
       "logs": [
         {
           "log_date": "2026-07-08",
@@ -1269,7 +1282,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 268
+        "news": 270
       },
       "source_links": [
         {
@@ -2351,6 +2364,10 @@
           "published_date": "2026-10-09"
         },
         {
+          "headline": "Symptoms of \"American COVID\" To Look Out For As XFG Variant Spreads",
+          "published_date": "2026-10-14"
+        },
+        {
           "headline": "'American Covid' - what BBC's Dr Xand says you need to know",
           "published_date": "2026-10-14"
         },
@@ -2359,11 +2376,15 @@
           "published_date": "2026-10-14"
         },
         {
+          "headline": "Final drive-thru Flu, COVID-19 vaccine clinic planned in Columbia",
+          "published_date": "2026-10-16"
+        },
+        {
           "headline": "Ombudsman files P11-B plunder complaint vs. Pharmally execs, others over pandemic purchases",
           "published_date": "2026-10-16"
         }
       ],
-      "news_total": 268,
+      "news_total": 270,
       "logs": [
         {
           "log_date": "2026-07-08",
@@ -2531,7 +2552,7 @@
       "incident_id": "20250905-CD-DI",
       "tree_id": "5c179437a46a56aca2f8b70aeceda07a",
       "canonical_name": "Ebola Kinshasa, DR Congo 2025-09-05",
-      "summary": "Africa CDC reported that over $700 million in Ebola response funds in the DRC are unaccounted for, calling for greater financial transparency. Kenya confirmed its third Ebola case, a 65‑year‑old woman related to the first two patients and detected while in quarantine. The Confederation of African Football ordered a CAF Confederation Cup match involving a DRC club to be played behind closed doors because of the outbreak.",
+      "summary": "Africa CDC reported that over $700 million in Ebola response funds in the DRC are unaccounted for, calling for greater financial transparency. Kenya confirmed its third Ebola case, a 65‑year‑old woman related to the first two patients and detected while in quarantine. The Confederation of African Football ordered a CAF Confederation Cup match involving a DRC club to be played behind closed doors because of the outbreak.\nThe DRC has banned 72 Ebola response partners from operating without accreditation in a bid to improve transparency, while Tanzania tightened border health rules for international travelers. Kenya reported that its third Ebola case was found during quarantine but three contacts remain untraced, and nearly 690,000 people have been screened. The outbreak also disrupted international sports, with Zambian players missing NWSL games because of US travel restrictions tied to the epidemic.",
       "country": "DR Congo",
       "iso2": "CD",
       "lat": -4.0,
@@ -2561,7 +2582,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 690
+        "news": 699
       },
       "source_links": [
         {
@@ -5393,7 +5414,15 @@
           "published_date": "2026-10-16"
         },
         {
+          "headline": "Kenya records two linked Ebola cases, no evidence of community spread",
+          "published_date": "2026-10-16"
+        },
+        {
           "headline": "Kenya confirms third Ebola case as health officials race to contain outbreak | Africanews",
+          "published_date": "2026-10-16"
+        },
+        {
+          "headline": "Over $700m In Ebola Funds Unaccounted For In DRC – Africa CDC",
           "published_date": "2026-10-16"
         },
         {
@@ -5405,7 +5434,27 @@
           "published_date": "2026-10-16"
         },
         {
+          "headline": "Frontline workers in DRC receive Ervebo vaccine amid growing Ebola outbreak",
+          "published_date": "2026-10-17"
+        },
+        {
           "headline": "Africa CDC says over $700 million in Ebola response funds unaccounted for in Congo",
+          "published_date": "2026-10-17"
+        },
+        {
+          "headline": "DRC: 72 Ebola partners banned from operating without accreditation",
+          "published_date": "2026-10-17"
+        },
+        {
+          "headline": "Tanzania tightens border health rules as Ebola threat looms in the region",
+          "published_date": "2026-10-17"
+        },
+        {
+          "headline": "Kenya refutes lockdown claims as third Ebola case hits the country | Nearly 690,000 screened so far",
+          "published_date": "2026-10-17"
+        },
+        {
+          "headline": "Zambia players to miss multiple NWSL games due to CDC’s Ebola travel restrictions",
           "published_date": "2026-10-17"
         },
         {
@@ -5421,6 +5470,10 @@
           "published_date": "2026-10-17"
         },
         {
+          "headline": "Kenya’s Third Ebola Case Was Quarantined; Three Contacts Are Still Untraced",
+          "published_date": "2026-10-17T00:00:00+00:00"
+        },
+        {
           "headline": "Understanding Ebola: Why Kenya's two cases don't amount to a wider outbreak",
           "published_date": "2026-10-17T04:53:04+00:00"
         },
@@ -5431,9 +5484,13 @@
         {
           "headline": "Africa CDC Says Over $700 Million in Ebola Response Funds Unaccounted for in Congo",
           "published_date": "2026-10-17T05:00:25+00:00"
+        },
+        {
+          "headline": "How prepared is Kenya for an Ebola outbreak?",
+          "published_date": "2026-10-17T15:53:07+00:00"
         }
       ],
-      "news_total": 690,
+      "news_total": 699,
       "logs": [
         {
           "log_date": "2026-07-10",
@@ -6211,8 +6268,17 @@
         },
         {
           "log_date": "2026-10-17",
-          "summary": "Africa CDC reported that over $700 million in Ebola response funds in the DRC are unaccounted for, calling for greater financial transparency. Kenya confirmed its third Ebola case, a 65‑year‑old woman related to the first two patients and detected while in quarantine. The Confederation of African Football ordered a CAF Confederation Cup match involving a DRC club to be played behind closed doors because of the outbreak.",
+          "summary": "Africa CDC reported that over $700 million in Ebola response funds in the DRC are unaccounted for, calling for greater financial transparency. Kenya confirmed its third Ebola case, a 65‑year‑old woman related to the first two patients and detected while in quarantine. The Confederation of African Football ordered a CAF Confederation Cup match involving a DRC club to be played behind closed doors because of the outbreak.\nThe DRC has banned 72 Ebola response partners from operating without accreditation in a bid to improve transparency, while Tanzania tightened border health rules for international travelers. Kenya reported that its third Ebola case was found during quarantine but three contacts remain untraced, and nearly 690,000 people have been screened. The outbreak also disrupted international sports, with Zambian players missing NWSL games because of US travel restrictions tied to the epidemic.",
           "news": [
+            {
+              "news_id": "315814a71f465f73b6e1cbeadf575519",
+              "url": "https://www.msn.com/en-xl/africa/top-stories/frontline-workers-in-drc-receive-ervebo-vaccine-amid-growing-ebola-outbreak/ar-AA2eqZc2?ocid=BingNewsVerp",
+              "headline": "Frontline workers in DRC receive Ervebo vaccine amid growing Ebola outbreak",
+              "body": "Frontline workers in DR Congo received the Ervebo vaccine on Friday as the country’s worst ever Ebola outbreak continues to ...",
+              "published_date": "2026-10-17",
+              "outlet": "Africanews on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.Y_OkUXlKP38Jy1ml3m_yCQ"
+            },
             {
               "news_id": "7fe9823196745a3ca9cb13b4bba9742a",
               "url": "https://www.msn.com/en-us/news/other/africa-cdc-says-over-700-million-in-ebola-response-funds-unaccounted-for-in-congo/ar-AA2enFmX?ocid=BingNewsVerp",
@@ -6221,6 +6287,15 @@
               "published_date": "2026-10-17",
               "outlet": "Reuters on MSN",
               "image": ""
+            },
+            {
+              "news_id": "4ca125e9ca92543dbde0c862eec3fc21",
+              "url": "https://beninwebtv.bj/en/drc-72-ebola-partners-banned-from-operating-without-accreditation/",
+              "headline": "DRC: 72 Ebola partners banned from operating without accreditation",
+              "body": "Funds have been disbursed directly by donors to implementing partners, not to the Congolese government. Africa CDC highlights a significant deficit in transpare",
+              "published_date": "2026-10-17",
+              "outlet": "beninwebtv",
+              "image": "https://www.bing.com/th?id=ONUT.vNOV6gCbxkRRtF-4Uvq3XA"
             },
             {
               "news_id": "b4ff75b969b755a3a86509c93b220d54",
@@ -6232,6 +6307,24 @@
               "image": "https://www.bing.com/th?id=ONUT.h3I4XT0u6PkMznhVTXSHTQ"
             },
             {
+              "news_id": "fc3437bda7675c9585599bd803cc62f9",
+              "url": "https://ippmedia.co.tz/the-guardian/news/local-news/read/tanzania-tightens-border-health-rules-as-ebola-threat-looms-in-the-region-2026-10-17-135557",
+              "headline": "Tanzania tightens border health rules as Ebola threat looms in the region",
+              "body": "Ministry of Health has introduced expanded public health measures for international travellers with immediate effect, seeking to prevent the entry and spread of Ebola Virus Disease (EVD) following an...",
+              "published_date": "2026-10-17",
+              "outlet": "ippmedia.co.tz",
+              "image": "https://www.bing.com/th?id=ONUT.yAXL5Lf_0_q1Cj1jh-chjQ"
+            },
+            {
+              "news_id": "ea5f6215f3475a7ea111968f01d62b58",
+              "url": "https://tanzaniatimes.net/kenya-refutes-lockdown-claims-as-third-ebola-case-hits-the-country-nearly-690000-screened-so-far/",
+              "headline": "Kenya refutes lockdown claims as third Ebola case hits the country | Nearly 690,000 screened so far",
+              "body": "The new Ebola case has been described to be a 65-year-old woman, who also happens to be a primary contact and a close relative of the first and second cases.",
+              "published_date": "2026-10-17",
+              "outlet": "The Tanzania Times",
+              "image": ""
+            },
+            {
               "news_id": "639d50c769bb5c3a883d8eb7396a4ead",
               "url": "https://nairametrics.com/2026/10/16/africa-cdc-raises-alarm-over-700-million-in-unaccounted-ebola-funds/",
               "headline": "Africa CDC raises alarm over $700 million in unaccounted Ebola funds",
@@ -6241,6 +6334,24 @@
               "image": ""
             },
             {
+              "news_id": "85a4a47f56f557e7985a07bb40c9f91b",
+              "url": "https://kenya-today.com/report-kenya-records-two-linked-ebola-cases-no-evidence-of-community-spread-12386/",
+              "headline": "Kenya records two linked Ebola cases, no evidence of community spread",
+              "body": "Kenya's health ministry confirmed two linked Bundibugyo Ebola infections, including one death, and says there is no sign of wider community transmission.",
+              "published_date": "2026-10-16",
+              "outlet": "Kenya Today",
+              "image": "https://www.bing.com/th?id=ONUT.YeJ7rEv_BJNJvJCTVKGD6g"
+            },
+            {
+              "news_id": "1eb4b5b77bc05bc4b12b3b6286529505",
+              "url": "https://eastleighvoice.co.ke/health/413094/how-prepared-is-kenya-for-an-ebola-outbreak",
+              "headline": "How prepared is Kenya for an Ebola outbreak?",
+              "body": "The first two confirmed Ebola cases in Kenya have raised urgent questions about the country's public health preparedness and ...",
+              "published_date": "2026-10-17T15:53:07+00:00",
+              "outlet": "eastleighvoice",
+              "image": "https://www.bing.com/th?id=ONUT.bGUX5GXd7QmDrIEsRSOgxA"
+            },
+            {
               "news_id": "14b01f2986985d078dd9486724446adb",
               "url": "https://eastleighvoice.co.ke/health/412839/understanding-ebola-why-kenyas-two-cases-dont-amount-to-a-wider-outbreak",
               "headline": "Understanding Ebola: Why Kenya's two cases don't amount to a wider outbreak",
@@ -6248,6 +6359,15 @@
               "published_date": "2026-10-17T04:53:04+00:00",
               "outlet": "eastleighvoice",
               "image": "https://www.bing.com/th?id=ONUT.YeJ7rEv_BJNJvJCTVKGD6g"
+            },
+            {
+              "news_id": "3d9e256f87895b2d9a512b5bd4100e5a",
+              "url": "https://sports.yahoo.com/articles/zambia-players-miss-multiple-nwsl-003104902.html",
+              "headline": "Zambia players to miss multiple NWSL games due to CDC’s Ebola travel restrictions",
+              "body": "Three Zambia international players will likely miss several weeks of the NWSL season after traveling to Uganda and facing a 21-day restriction upon reentering the United States. The Copper Queens traveled to Uganda for the first leg of CAF Olympics qualifiers on Oct. 8. The teams then traveled to Zambia, where they concluded the series Tuesday. The Centers for Disease Control restricts foreign nationals who have traveled to certain areas of Eastern Africa within the last 21 days from entering th",
+              "published_date": "2026-10-17",
+              "outlet": "Yahoo Sports",
+              "image": "https://www.bing.com/th?id=ONUT.87CpWIB9ihyAZIWkgwg8mw"
             },
             {
               "news_id": "96c0639f0f785dd48a89c230a5dc6923",
@@ -6266,6 +6386,15 @@
               "published_date": "2026-10-16",
               "outlet": "Africanews",
               "image": "https://www.bing.com/th?id=ONUT.DzIisfnxEEhs7jhi3GGRMg"
+            },
+            {
+              "news_id": "4981d0ad26c95d3792f57e740e32dc2e",
+              "url": "https://thewhistler.ng/over-700m-in-ebola-funds-unaccounted-for-in-drc-africa-cdc/",
+              "headline": "Over $700m In Ebola Funds Unaccounted For In DRC – Africa CDC",
+              "body": "The Africa Centres for Disease Control and Prevention (Africa CDC) has said more than $700m in donor funds intended for the Ebola response in the",
+              "published_date": "2026-10-16",
+              "outlet": "The Whistler",
+              "image": "https://www.bing.com/th?id=ONUT.oYsxnTNfSPQiUxW1sv5Lgw"
             },
             {
               "news_id": "961b910a8b9c53c7a32283334e900697",
@@ -6320,6 +6449,15 @@
               "published_date": "2026-10-16",
               "outlet": "africasoccer",
               "image": "https://www.bing.com/th?id=ONUT.YWDDvWlziX4WPmyVo_ukxg"
+            },
+            {
+              "news_id": "993bc374ab885fd69de53a2b5e511d6e",
+              "url": "https://easternherald.com/2026/10/17/kenya-third-ebola-case-quarantine-contacts/",
+              "headline": "Kenya’s Third Ebola Case Was Quarantined; Three Contacts Are Still Untraced",
+              "body": "A 65-year-old woman became Kenya's third Ebola patient after falling ill in quarantine. The ministry says that is why she was ...",
+              "published_date": "2026-10-17T00:00:00+00:00",
+              "outlet": "The Eastern Herald",
+              "image": "https://www.bing.com/th?id=ONUT.T1Nt_LSgwOA_zG0rqolRpg"
             }
           ]
         }
@@ -6330,7 +6468,7 @@
       "incident_id": "20260511-XX-DR",
       "tree_id": "d75afb3078c54d74b37c4f8bb985dfce",
       "canonical_name": "Drought Green",
-      "summary": "Drought has expanded to cover all of Maine despite recent rainfall, while South Carolina reports improved conditions through the Drought Response Committee. Central Florida experiences historic drought relief, bringing significant improvement just as the dry season begins. The latest October 15 Drought Monitor update provides current data on these and other ongoing conditions.",
+      "summary": "Drought has expanded to cover all of Maine despite recent rainfall, while South Carolina reports improved conditions through the Drought Response Committee. Central Florida experiences historic drought relief, bringing significant improvement just as the dry season begins. The latest October 15 Drought Monitor update provides current data on these and other ongoing conditions.\nPhilippine President Marcos advised the public to buy buckets for rainwater collection as the super El Niño persists. Maharashtra announced ₹5,000 advance relief for farmers in 305 drought-hit talukas. The Philippine Department of Education made school uniforms optional to help students cope with the El Niño threat.",
       "country": "",
       "iso2": "XX",
       "lat": null,
@@ -6360,7 +6498,7 @@
         "gdacs": 1,
         "ercc": 1,
         "healthmap": 0,
-        "news": 833
+        "news": 836
       },
       "source_links": [
         {
@@ -9712,15 +9850,27 @@
           "published_date": "2026-10-16"
         },
         {
+          "headline": "Go buy pails — a dismal governance advice",
+          "published_date": "2026-10-17"
+        },
+        {
           "headline": "El Niño could bring wetter winter to Concho Valley, help ease drought conditions",
+          "published_date": "2026-10-17"
+        },
+        {
+          "headline": "Maharashtra drought: Fadnavis announces Rs 5,000 advance relief",
           "published_date": "2026-10-17"
         },
         {
           "headline": "South Carolina DRC says drought conditions have improved",
           "published_date": "2026-10-17"
+        },
+        {
+          "headline": "DepEd: Wearing of school uniforms optional amid El Niño threat",
+          "published_date": "2026-10-17"
         }
       ],
-      "news_total": 833,
+      "news_total": 836,
       "logs": [
         {
           "log_date": "2026-08-18",
@@ -10291,8 +10441,17 @@
         },
         {
           "log_date": "2026-10-17",
-          "summary": "Drought has expanded to cover all of Maine despite recent rainfall, while South Carolina reports improved conditions through the Drought Response Committee. Central Florida experiences historic drought relief, bringing significant improvement just as the dry season begins. The latest October 15 Drought Monitor update provides current data on these and other ongoing conditions.",
+          "summary": "Drought has expanded to cover all of Maine despite recent rainfall, while South Carolina reports improved conditions through the Drought Response Committee. Central Florida experiences historic drought relief, bringing significant improvement just as the dry season begins. The latest October 15 Drought Monitor update provides current data on these and other ongoing conditions.\nPhilippine President Marcos advised the public to buy buckets for rainwater collection as the super El Niño persists. Maharashtra announced ₹5,000 advance relief for farmers in 305 drought-hit talukas. The Philippine Department of Education made school uniforms optional to help students cope with the El Niño threat.",
           "news": [
+            {
+              "news_id": "ece7cd119ec950b993447de94411262d",
+              "url": "https://www.msn.com/en-ph/news/opinion/go-buy-pails-a-dismal-governance-advice/ar-AA2eozPH?ocid=BingNewsVerp",
+              "headline": "Go buy pails — a dismal governance advice",
+              "body": "ON Sunday, Oct. 11, 2026, President Ferdinand Marcos Jr. said this during a media interview in Singapore: “Bumili na kayo ng balde para ‘pag umulan, makokolekta na ninyo lahat (Buy pails/buckets ...",
+              "published_date": "2026-10-17",
+              "outlet": "The Manila Times on MSN",
+              "image": ""
+            },
             {
               "news_id": "c1f1df87fb045286bf8af50b616894b7",
               "url": "https://www.yahoo.com/news/weather-news/articles/despite-recent-rain-drought-reached-211204799.html",
@@ -10310,6 +10469,15 @@
               "published_date": "2026-10-17",
               "outlet": "ConchoValleyHomepage.com on MSN",
               "image": "https://www.bing.com/th?id=ONUT.mVCC099eg44V8Jg_-SCVXQ"
+            },
+            {
+              "news_id": "13eb349af29b54f6bdf40c2d56445d5b",
+              "url": "https://www.msn.com/en-in/news/other/maharashtra-drought-fadnavis-announces-rs-5000-advance-relief/ar-AA2erDH2?ocid=BingNewsVerp",
+              "headline": "Maharashtra drought: Fadnavis announces Rs 5,000 advance relief",
+              "body": "Maharashtra CM Devendra Fadnavis announced a ₹5,000 advance financial aid for farmers in 305 drought-hit talukas, calling it ...",
+              "published_date": "2026-10-17",
+              "outlet": "Newsable Asianet News on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.34T9mEDR1jX9F4PvjrsbPQ"
             },
             {
               "news_id": "ad112f9018c056119278f1d5b5479463",
@@ -10346,6 +10514,15 @@
               "published_date": "2026-10-16",
               "outlet": "WKMG ClickOrlando",
               "image": "https://s.yimg.com/bo/a9a3fa0d-2b4b-5633-8ba7-c416bd7411eb_1790271500767.jpg"
+            },
+            {
+              "news_id": "90e35cddf2f25c9384dcdbacdeb92508",
+              "url": "https://www.philstar.com/headlines/2026/10/17/2563733/deped-wearing-school-uniforms-optional-amid-el-nio-threat",
+              "headline": "DepEd: Wearing of school uniforms optional amid El Niño threat",
+              "body": "Students are no longer required to wear school uniforms as part of the measures to address the adverse effects of the super El Niño expected to persist until next year, Education Secretary Sonny Angara announced yesterday.",
+              "published_date": "2026-10-17",
+              "outlet": "Philstar.com",
+              "image": "https://www.bing.com/th?id=ONUT.23aUCaRB569SM1wYR8uVZw"
             }
           ]
         }
@@ -10356,7 +10533,7 @@
       "incident_id": "20260715-UA-CF",
       "tree_id": "f22292f8c3ff448a920c3b1fe41d3aa0",
       "canonical_name": "Conflict Ukraine 2026-07-15",
-      "summary": "After Moscow broke Trump’s energy ceasefire, Ukraine struck a Russian refinery, prompting new clashes. Ukraine’s access to Starlink was temporarily restricted, leading to political disputes over responsibility, while Putin declared a “security zone” in Ukraine and refused to cede territory. Zelensky warned that a Russian victory could trigger a 20‑million refugee exodus and alleged China is providing Moscow with a Starlink alternative.",
+      "summary": "After Moscow broke Trump’s energy ceasefire, Ukraine struck a Russian refinery, prompting new clashes. Ukraine’s access to Starlink was temporarily restricted, leading to political disputes over responsibility, while Putin declared a “security zone” in Ukraine and refused to cede territory. Zelensky warned that a Russian victory could trigger a 20‑million refugee exodus and alleged China is providing Moscow with a Starlink alternative.\nPope Leo XIV spoke by telephone with President Putin from his hospital room on October 16, pleading for a ceasefire in the besieged town of Oleshky and aid for starving civilians; Putin agreed to cooperate. Meanwhile, British troops joined a NATO drill rehearsing a potential deployment to Ukraine to provide security guarantees after a ceasefire. A fresh wave of Russian strikes across Ukraine killed at least eight people and wounded nearly 60, continuing the daily toll of violence.",
       "country": "Ukraine",
       "iso2": "UA",
       "lat": 48.9,
@@ -10386,7 +10563,7 @@
         "gdacs": 0,
         "ercc": 4,
         "healthmap": 0,
-        "news": 1563
+        "news": 1570
       },
       "source_links": [
         {
@@ -16630,6 +16807,10 @@
           "published_date": "2026-10-16"
         },
         {
+          "headline": "Pope Leo speaks with Putin by telephone from hospital",
+          "published_date": "2026-10-16"
+        },
+        {
           "headline": "Volodymyr Zelenskyy claims China will transfer a Starlink-alternative to Moscow that could allow Russia to 'dominate the skies over Ukraine'",
           "published_date": "2026-10-16"
         },
@@ -16654,7 +16835,19 @@
           "published_date": "2026-10-16T15:58:49+00:00"
         },
         {
+          "headline": "Russian strikes kill civilians, injure dozens across Ukraine",
+          "published_date": "2026-10-17"
+        },
+        {
           "headline": "Pope expresses deep concern to Putin and urges ceasefire - latest",
+          "published_date": "2026-10-17"
+        },
+        {
+          "headline": "The Cypriot journalist admitted Trump's willingness to get rid of Zelensky",
+          "published_date": "2026-10-17"
+        },
+        {
+          "headline": "Putin Brutally Mocked by His Own for Bogus War Briefing",
           "published_date": "2026-10-17"
         },
         {
@@ -16666,7 +16859,15 @@
           "published_date": "2026-10-17"
         },
         {
+          "headline": "Putin agrees to cooperate with Pope Leo's plea for aid for Ukrainian town",
+          "published_date": "2026-10-17"
+        },
+        {
           "headline": "Ukraine repels Russian forces as US support wavers, energy strikes escalate",
+          "published_date": "2026-10-17"
+        },
+        {
+          "headline": "British troops rehearse deploying to Ukraine in the event of ceasefire in major Nato wargame",
           "published_date": "2026-10-17"
         },
         {
@@ -16674,11 +16875,15 @@
           "published_date": "2026-10-17"
         },
         {
+          "headline": "Pope Leo calls Putin from hospital urging ceasefire, aid to starving Ukrainians - TrentonMonitor",
+          "published_date": "2026-10-17"
+        },
+        {
           "headline": "The US economy is facing 2 hot wars heating up at a bad time for the White House",
           "published_date": "2026-10-17"
         }
       ],
-      "news_total": 1563,
+      "news_total": 1570,
       "logs": [
         {
           "log_date": "2026-07-24",
@@ -17429,7 +17634,7 @@
         },
         {
           "log_date": "2026-10-17",
-          "summary": "After Moscow broke Trump’s energy ceasefire, Ukraine struck a Russian refinery, prompting new clashes. Ukraine’s access to Starlink was temporarily restricted, leading to political disputes over responsibility, while Putin declared a “security zone” in Ukraine and refused to cede territory. Zelensky warned that a Russian victory could trigger a 20‑million refugee exodus and alleged China is providing Moscow with a Starlink alternative.",
+          "summary": "After Moscow broke Trump’s energy ceasefire, Ukraine struck a Russian refinery, prompting new clashes. Ukraine’s access to Starlink was temporarily restricted, leading to political disputes over responsibility, while Putin declared a “security zone” in Ukraine and refused to cede territory. Zelensky warned that a Russian victory could trigger a 20‑million refugee exodus and alleged China is providing Moscow with a Starlink alternative.\nPope Leo XIV spoke by telephone with President Putin from his hospital room on October 16, pleading for a ceasefire in the besieged town of Oleshky and aid for starving civilians; Putin agreed to cooperate. Meanwhile, British troops joined a NATO drill rehearsing a potential deployment to Ukraine to provide security guarantees after a ceasefire. A fresh wave of Russian strikes across Ukraine killed at least eight people and wounded nearly 60, continuing the daily toll of violence.",
           "news": [
             {
               "news_id": "f52bea0a832e5511b0e739b9aa19b8ce",
@@ -17439,6 +17644,15 @@
               "published_date": "2026-10-16",
               "outlet": "The Conversation · via Yahoo News",
               "image": "https://media.zenfs.com/en/the_conversation_us_articles_815/6e7b253e590fe64a35b7f9ff81003723.jpg"
+            },
+            {
+              "news_id": "ec350e606a6e56b88132abdd2c8d877b",
+              "url": "https://www.aljazeera.com/video/newsfeed/2026/10/17/russian-strikes-kill-civilians-injure-dozens-across-ukraine",
+              "headline": "Russian strikes kill civilians, injure dozens across Ukraine",
+              "body": "At least eight people have been killed and nearly 60 injured in the latest wave of Russian strikes across Ukraine.",
+              "published_date": "2026-10-17",
+              "outlet": "Al Jazeera",
+              "image": "https://www.bing.com/th?id=ONUT.u06D4Qf4LvhPieaTPCIWKg"
             },
             {
               "news_id": "0155756add395b92a0eaad08e1540184",
@@ -17477,6 +17691,15 @@
               "image": "https://s.yimg.com/bo/e1d7b60c-36e8-59a7-a772-4d51d65d1ef7_1792162845612.jpg"
             },
             {
+              "news_id": "15375671b5885b36ab114e0738415ff6",
+              "url": "https://iz.ru/en/node/2185845",
+              "headline": "The Cypriot journalist admitted Trump's willingness to get rid of Zelensky",
+              "body": "US President Donald Trump no longer considers the head of the Kiev regime, Vladimir Zelensky, as a partner for reaching a peace agreement and may refuse to cooperate with him. This was reported on October 16 by Cypriot journalist Alex Christoforou.",
+              "published_date": "2026-10-17",
+              "outlet": "Izvestia",
+              "image": "https://www.bing.com/th?id=ONUT.hfs3MEmnSqPrezqR_E4fhA"
+            },
+            {
               "news_id": "0e9818ab2ff056279bd62580fcf33f41",
               "url": "https://finance.yahoo.com/markets/stocks/articles/aon-aon-deepens-ukraine-war-211650950.html",
               "headline": "Aon (AON) Deepens Ukraine War Risk Insurance Support",
@@ -17493,6 +17716,15 @@
               "published_date": "2026-10-16",
               "outlet": "AOL",
               "image": "https://www.bing.com/th?id=ONUT.F0r2pLmrBfZrmfyYN4MGUg"
+            },
+            {
+              "news_id": "ce1b86d86ab55c14a7be6558ff6ebf72",
+              "url": "https://www.yahoo.com/news/politics/articles/putin-brutally-mocked-own-bogus-052014117.html",
+              "headline": "Putin Brutally Mocked by His Own for Bogus War Briefing",
+              "body": "Russian President Vladimir Putin starred in a new Kremlin propaganda video Friday touting battlefield gains in Ukraine after being freshly fluffed by President Donald Trump’s show of support. Footage ...",
+              "published_date": "2026-10-17",
+              "outlet": "Yahoo",
+              "image": ""
             },
             {
               "news_id": "ebb7ae44d8a75be593dbb2ab158bcd78",
@@ -17576,6 +17808,15 @@
               "image": "https://s.yimg.com/bo/a57e4fe3-18a6-50bb-b26b-1db17929e324_1791151398153.png.cf.jpg"
             },
             {
+              "news_id": "717c4936bef15db69b1adcc4b9621b2f",
+              "url": "https://www.msn.com/en-us/news/other/putin-agrees-to-cooperate-with-pope-leos-plea-for-aid-for-ukrainian-town/ar-AA2eoqMh?ocid=BingNewsVerp",
+              "headline": "Putin agrees to cooperate with Pope Leo's plea for aid for Ukrainian town",
+              "body": "By Joshua McElwee VATICAN CITY, Oct 16 (Reuters) - President Vladimir Putin told Pope Leo he had agreed to cooperate after the pontiff asked him on Friday to help get vital supplies into the ...",
+              "published_date": "2026-10-17",
+              "outlet": "Reuters on MSN",
+              "image": ""
+            },
+            {
               "news_id": "47f92070c1fb5d9394876dc3dbdc40ea",
               "url": "https://www.reuters.com/world/putin-says-russia-is-building-non-negotiable-security-zone-ukraine-along-border-2026-10-16/",
               "headline": "Putin says Russia is building non-negotiable 'security zone' in Ukraine along...",
@@ -17583,6 +17824,15 @@
               "published_date": "2026-10-16T15:58:49+00:00",
               "outlet": "Reuters",
               "image": "https://s.yimg.com/bo/73950b29-3577-5525-bb47-c14c3c24d426_1792176882748.jpg"
+            },
+            {
+              "news_id": "7eb8278a87eb50ff8baae890413efa41",
+              "url": "https://www.americamagazine.org/vatican-dispatch/2026/10/16/pope-leo-vladimir-putin-russia-ukraine-war-peace/",
+              "headline": "Pope Leo speaks with Putin by telephone from hospital",
+              "body": "Pope Leo XIV “spoke by telephone” with Russian President Vladimir Putin, from his hospital room on Oct. 16 and asked him to call for a ceasefire in Oleshky, where the humanitarian situation is dire.",
+              "published_date": "2026-10-16",
+              "outlet": "America Magazine",
+              "image": ""
             },
             {
               "news_id": "d988ecac872d564186d2f4995104aa72",
@@ -17612,6 +17862,15 @@
               "image": "https://media.zenfs.com/en/techradar_949/63a7b686819a4ac71c0b508b8d0b6400.jpg"
             },
             {
+              "news_id": "901d2f7a4e7c5d02869d037811bbc109",
+              "url": "https://www.msn.com/en-gb/news/other/british-troops-rehearse-deploying-to-ukraine-in-the-event-of-ceasefire-in-major-nato-wargame/ar-AA2epmmq?ocid=BingNewsVerp",
+              "headline": "British troops rehearse deploying to Ukraine in the event of ceasefire in major Nato wargame",
+              "body": "British troops will join other NATO members in a drill aimed at ensuring forces are prepared to provide Ukraine with security guarantees after the war with Russia ends ...",
+              "published_date": "2026-10-17",
+              "outlet": "Daily Star on MSN",
+              "image": ""
+            },
+            {
               "news_id": "ebe48461f96f5dbc9945edb91854f063",
               "url": "https://www.newsmax.com/us/zelenskyy-warns-russian-victory-could-trigger-massive-refugee-crisis/2026/10/16/id/1273059/",
               "headline": "Zelenskyy Warns Russian Victory Could Trigger Massive Refugee Crisis",
@@ -17628,6 +17887,15 @@
               "published_date": "2026-10-17",
               "outlet": "News Nation on MSN",
               "image": "https://www.bing.com/th?id=ONUT.ivy2fWHssqNe4eG6LAd5xQ"
+            },
+            {
+              "news_id": "a74f4dee334f5cf88776144fc4771e72",
+              "url": "https://trentonmonitor.com/2026/10/17/pope-leo-calls-putin-from-hospital-urging-ceasefire-aid-to-starving-ukrainians/",
+              "headline": "Pope Leo calls Putin from hospital urging ceasefire, aid to starving Ukrainians - TrentonMonitor",
+              "body": "Top photo caption: A combination photo shows Pope Leo XIV celebrating Mass Oct. 16, 2026, on the 10th floor at Rome’s Gemelli Hospital and a file photo of Russian President Vladimir Putin in Moscow. Pope Leo spoke by telephone with Putin Oct. 16, calling for a ceasefire in that nation’s war on Ukraine and for […]",
+              "published_date": "2026-10-17",
+              "outlet": "trentonmonitor",
+              "image": "https://www.bing.com/th?id=ONUT.XkSEdn2AQQ476Dx5z9Cu5Q"
             },
             {
               "news_id": "723c0c4b82895dc993aba8e0b47e8b09",
@@ -17656,7 +17924,7 @@
       "incident_id": "20260726-IR-CF",
       "tree_id": "13763def03ab448898154124734fe728",
       "canonical_name": "Iran/US war",
-      "summary": "Iran's attacks on shipping escalated as a cargo ship sank in the Strait of Hormuz, while Tehran boosted its air defenses and a cleric urged the war continue until security is assured. President Trump threatened to target Iran's nuclear site on Pickaxe Mountain, and oil prices surged to $110 per barrel for the first time since May. The CENTCOM chief maintained the Strait remains open for business, even as the war's economic toll deepened, with businesses cutting costs and consumers facing higher prices.",
+      "summary": "Iran's attacks on shipping escalated as a cargo ship sank in the Strait of Hormuz, while Tehran boosted its air defenses and a cleric urged the war continue until security is assured. President Trump threatened to target Iran's nuclear site on Pickaxe Mountain, and oil prices surged to $110 per barrel for the first time since May. The CENTCOM chief maintained the Strait remains open for business, even as the war's economic toll deepened, with businesses cutting costs and consumers facing higher prices.\nPresident Trump waived Russia sanctions previously signed into law under the Lindsey O Graham Act, drawing bipartisan backlash. In the Strait of Hormuz, Iran said two oil tankers struck naval mines, and data showed a record high in attacks on ships. Trump ruled out nuclear weapons but indicated possible MOAB strikes, while an Iranian lawmaker threatened to retaliate if the U.S. uses unconventional arms.",
       "country": "Iran",
       "iso2": "IR",
       "lat": 32.4,
@@ -17686,7 +17954,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 2659
+        "news": 2672
       },
       "source_links": [],
       "physical": {
@@ -28289,6 +28557,10 @@
           "published_date": "2026-10-14T00:00:00+00:00"
         },
         {
+          "headline": "Mary Peltola, Dan Sullivan clash over Iran, energy in Alaska Senate debate",
+          "published_date": "2026-10-15"
+        },
+        {
           "headline": "Ousted general warned of missile defense shortage before Iran war",
           "published_date": "2026-10-15"
         },
@@ -28305,6 +28577,10 @@
           "published_date": "2026-10-16"
         },
         {
+          "headline": "Iran lawmaker threatens to turn White House into 'Black House'",
+          "published_date": "2026-10-16"
+        },
+        {
           "headline": "Securing a military victory is not easy. What Iran is teaching America.",
           "published_date": "2026-10-16"
         },
@@ -28313,8 +28589,20 @@
           "published_date": "2026-10-16"
         },
         {
+          "headline": "Live Updates: Reported attacks on ships in or near Strait of Hormuz reach record high, data shows",
+          "published_date": "2026-10-16"
+        },
+        {
           "headline": "CENTCOM Chief: Strait of Hormuz 'Open for Business,' While Desperate Iran Can't Even Pay Own Troops",
           "published_date": "2026-10-16"
+        },
+        {
+          "headline": "Army expo attendees skeptical of Trump's Iran peace deal hopes: 'Beat 'em into submission'",
+          "published_date": "2026-10-16"
+        },
+        {
+          "headline": "Iran's Guards Say Two Tankers Hit Mines in Strait of Hormuz",
+          "published_date": "2026-10-16T15:59:07+00:00"
         },
         {
           "headline": "Alaska Senate candidates clash over the Iran war, high prices and their times in office",
@@ -28325,7 +28613,31 @@
           "published_date": "2026-10-17"
         },
         {
+          "headline": "Trump Waives Russia Sanctions He Previously Signed Into Law, Prompting Immediate International And Domestic Backlash",
+          "published_date": "2026-10-17"
+        },
+        {
+          "headline": "Trump's Russia sanctions waiver sparks GOP revolt as lawmakers call move 'beyond irresponsible'",
+          "published_date": "2026-10-17"
+        },
+        {
+          "headline": "Lawrence O’Donnell asks why Trump hasn’t ended the Iran war after ‘as soon as I want’ boast",
+          "published_date": "2026-10-17"
+        },
+        {
+          "headline": "Trump Says US Doesn’t Need Nukes in Iran War as ‘Mother of All Bombs’ Strike Plans Emerge: ‘We Don’t Have",
+          "published_date": "2026-10-17"
+        },
+        {
+          "headline": "President Donald Trump Claims Gasoline Prices Will \"Drop Like a Rock\" When the Iran War Ends, but He's Completely Missed the Bigger Picture",
+          "published_date": "2026-10-17"
+        },
+        {
           "headline": "Iran just got handed a direct warning from Trump: ‘We may have to go there,’ he says of the Pickaxe Mountain nuclear site",
+          "published_date": "2026-10-17"
+        },
+        {
+          "headline": "Pape: Trump Could Strike Iran Before Midterms",
           "published_date": "2026-10-17"
         },
         {
@@ -28333,11 +28645,19 @@
           "published_date": "2026-10-17"
         },
         {
+          "headline": "Pape: Trump Could Strike Iran Before Midterms",
+          "published_date": "2026-10-17"
+        },
+        {
+          "headline": "Iran war votes in Congress become a focal point for campaign ad attacks",
+          "published_date": "2026-10-17T03:59:04+00:00"
+        },
+        {
           "headline": "Iran war votes in Congress become a focal point for campaign ad attacks",
           "published_date": "2026-10-17T04:05:50+00:00"
         }
       ],
-      "news_total": 2659,
+      "news_total": 2672,
       "logs": [
         {
           "log_date": "2026-07-27",
@@ -29241,7 +29561,7 @@
         },
         {
           "log_date": "2026-10-17",
-          "summary": "Iran's attacks on shipping escalated as a cargo ship sank in the Strait of Hormuz, while Tehran boosted its air defenses and a cleric urged the war continue until security is assured. President Trump threatened to target Iran's nuclear site on Pickaxe Mountain, and oil prices surged to $110 per barrel for the first time since May. The CENTCOM chief maintained the Strait remains open for business, even as the war's economic toll deepened, with businesses cutting costs and consumers facing higher prices.",
+          "summary": "Iran's attacks on shipping escalated as a cargo ship sank in the Strait of Hormuz, while Tehran boosted its air defenses and a cleric urged the war continue until security is assured. President Trump threatened to target Iran's nuclear site on Pickaxe Mountain, and oil prices surged to $110 per barrel for the first time since May. The CENTCOM chief maintained the Strait remains open for business, even as the war's economic toll deepened, with businesses cutting costs and consumers facing higher prices.\nPresident Trump waived Russia sanctions previously signed into law under the Lindsey O Graham Act, drawing bipartisan backlash. In the Strait of Hormuz, Iran said two oil tankers struck naval mines, and data showed a record high in attacks on ships. Trump ruled out nuclear weapons but indicated possible MOAB strikes, while an Iranian lawmaker threatened to retaliate if the U.S. uses unconventional arms.",
           "news": [
             {
               "news_id": "fbff015512ca5176aea159c2f275fb3f",
@@ -29271,6 +29591,24 @@
               "image": "https://s.yimg.com/bo/dac71ac2-7130-58e9-a2b8-05c4a3010f55_1792211539254.jpg"
             },
             {
+              "news_id": "339bc172bd0f523dbb9bb81785e0d623",
+              "url": "https://www.msn.com/en-us/news/other/trump-waives-russia-sanctions-he-previously-signed-into-law-prompting-immediate-international-and-domestic-backlash/ar-AA2eqBXi?ocid=BingNewsVerp",
+              "headline": "Trump Waives Russia Sanctions He Previously Signed Into Law, Prompting Immediate International And Domestic Backlash",
+              "body": "The president signed an executive order on Friday night pausing the implementation of sanctions prescribed by the \"Lindsey O Graham Sanctioning Russia and Iran Act of 2026.\" ...",
+              "published_date": "2026-10-17",
+              "outlet": "International Business Times on MSN",
+              "image": ""
+            },
+            {
+              "news_id": "dc3d0be3b592546e9ceac6bfc3b12e15",
+              "url": "https://news.meaww.com/trumps-russia-sanctions-waiver-sparks-gop-revolt-as-lawmakers-call-move-beyond-irresponsible",
+              "headline": "Trump's Russia sanctions waiver sparks GOP revolt as lawmakers call move 'beyond irresponsible'",
+              "body": "Trump said that the Lindsey O Graham Sanctioning Russia and Iran Act of 2026 lets him reverse sanctions provisions for any foreign person",
+              "published_date": "2026-10-17",
+              "outlet": "MEAWW News",
+              "image": "https://www.bing.com/th?id=ONUT.UzalJuGeCV3XXfdOk0WrNA"
+            },
+            {
               "news_id": "53fb38c7a1315ad8a357a001fcdc9d20",
               "url": "https://www.iranintl.com/en/202610160393",
               "headline": "Iran cleric says Iran-US war should continue until security is assured",
@@ -29278,6 +29616,24 @@
               "published_date": "2026-10-16",
               "outlet": "Iran International",
               "image": "https://www.bing.com/th?id=ONUT.2NbA0HmM4koAJWjlCgZWqA"
+            },
+            {
+              "news_id": "42e7b5404ba851b7802f794ecdcbe5f2",
+              "url": "https://www.newsmax.com/newsfront/iran-guard-strait/2026/10/17/id/1273110/",
+              "headline": "Iran's Guards Say Two Tankers Hit Mines in Strait of Hormuz",
+              "body": "Iran's Revolutionary Guards Navy said on Saturday that two oil tankers had caught fire after hitting naval mines while ...",
+              "published_date": "2026-10-16T15:59:07+00:00",
+              "outlet": "Newsmax",
+              "image": "https://www.bing.com/th?id=ONUT.HyZ23IfCd3UATzXmricN6Q"
+            },
+            {
+              "news_id": "26dfe4fa4e385e7f89438fedc6d701f9",
+              "url": "https://www.msn.com/en-us/news/other/lawrence-o-donnell-asks-why-trump-hasn-t-ended-the-iran-war-after-as-soon-as-i-want-boast/ar-AA2eoskr?ocid=BingNewsVerp",
+              "headline": "Lawrence O’Donnell asks why Trump hasn’t ended the Iran war after ‘as soon as I want’ boast",
+              "body": "Lawrence O’Donnell seized on President Donald Trump’s claim that the Iran war would end “as soon as I want,” asking why he ...",
+              "published_date": "2026-10-17",
+              "outlet": "Arkansas Public Advocate on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.fIxIZLauNEqsbPtaeYg9SQ"
             },
             {
               "news_id": "0815ba705c6153438a712234fa40c520",
@@ -29296,6 +29652,33 @@
               "published_date": "2026-10-16",
               "outlet": "Military.com",
               "image": "https://s.yimg.com/bo/c463b26d-b32b-5a55-87c6-194e34b91c39_1790005525879.jpg"
+            },
+            {
+              "news_id": "76b29aca8a2a5cfa838d32df6f3a9591",
+              "url": "https://www.benzinga.com/news/politics/26/10/62427250/trump-iran-strikes-moab-nuclear",
+              "headline": "Trump Says US Doesn’t Need Nukes in Iran War as ‘Mother of All Bombs’ Strike Plans Emerge: ‘We Don’t Have",
+              "body": "Trump ruled out nuclear weapons and ground troops in Iran as the U.S. weighs potential strikes using conventional bombs.",
+              "published_date": "2026-10-17",
+              "outlet": "Benzinga",
+              "image": "https://s.yimg.com/bo/913213c9-9a69-5808-a025-24d2318eceb4_1792224197450.jpg"
+            },
+            {
+              "news_id": "f3e648a090cd573da0d9e87ebb24e4bd",
+              "url": "https://finance.yahoo.com/economy/policy/articles/president-donald-trump-claims-gasoline-082601014.html",
+              "headline": "President Donald Trump Claims Gasoline Prices Will \"Drop Like a Rock\" When the Iran War Ends, but He's Completely Missed the Bigger Picture",
+              "body": "Donald Trump’s victory lap on energy prices will almost certainly prove premature.",
+              "published_date": "2026-10-17",
+              "outlet": "Motley Fool · via Yahoo Finance",
+              "image": "https://media.zenfs.com/en/motleyfool.com/a3dfb8355ca5107ab437d50502e7ecdb.jpg"
+            },
+            {
+              "news_id": "1d48c72f4b425266903df9eb738766ae",
+              "url": "https://www.iranintl.com/en/202610162824",
+              "headline": "Iran lawmaker threatens to turn White House into 'Black House'",
+              "body": "Iran would consider Americans, US allies and military bases legitimate targets if Washington used unconventional weapons, ...",
+              "published_date": "2026-10-16",
+              "outlet": "Iran International",
+              "image": "https://www.bing.com/th?id=ONUT.5kFWnJR9B51-gB-aaxy8ZA"
             },
             {
               "news_id": "6dd64b58ed57568c9343ac047e650e75",
@@ -29325,6 +29708,15 @@
               "image": "https://media.zenfs.com/en/the_hill_articles_341/514896141566237727db6ee26bd8c9f8.jpg"
             },
             {
+              "news_id": "aeb5d8584241522787bae688737f0374",
+              "url": "https://www.msn.com/en-us/news/other/pape-trump-could-strike-iran-before-midterms/ar-AA2er9Qs?ocid=BingNewsVerp",
+              "headline": "Pape: Trump Could Strike Iran Before Midterms",
+              "body": "Pape: Trump Could Strike Iran Before Midterms ...",
+              "published_date": "2026-10-17",
+              "outlet": "Newsmax on MSN",
+              "image": ""
+            },
+            {
               "news_id": "da40e553dfe85653adb708fbf5dfa296",
               "url": "https://www.foxnews.com/politics/trump-backed-gop-candidate-ousted-scandal-plagued-incumbent-warns-never-ending-war-iran",
               "headline": "Trump-backed GOP candidate who ousted scandal-plagued incumbent warns against 'never-ending war' with Iran",
@@ -29332,6 +29724,24 @@
               "published_date": "2026-10-14",
               "outlet": "Fox News",
               "image": "https://s.yimg.com/bo/ad0efbf4-5580-5bef-836b-3766bc413716_1792008136088.jpg"
+            },
+            {
+              "news_id": "a84b70a551ae575f9043389b0efaacd3",
+              "url": "https://www.sfgate.com/news/politics/article/iran-war-votes-in-congress-become-a-focal-point-22481299.php",
+              "headline": "Iran war votes in Congress become a focal point for campaign ad attacks",
+              "body": "Democrats and aligned advocacy groups are hitting the airwaves with a flood of campaign ads on the I...",
+              "published_date": "2026-10-17T03:59:04+00:00",
+              "outlet": "San Francisco Chronicle",
+              "image": "https://s.yimg.com/bo/dac71ac2-7130-58e9-a2b8-05c4a3010f55_1792211539254.jpg"
+            },
+            {
+              "news_id": "615fcc9b8e7154299cbaeca851541a55",
+              "url": "https://www.yahoo.com/news/politics/articles/latest-dan-sullivan-vs-mary-184029754.html",
+              "headline": "Mary Peltola, Dan Sullivan clash over Iran, energy in Alaska Senate debate",
+              "body": "Mary Peltola and Dan Sullivan clashed over Iran, energy and fuel costs in a closely watched Alaska Senate debate.",
+              "published_date": "2026-10-15",
+              "outlet": "NEWSWEEK · via Yahoo News",
+              "image": "https://media.zenfs.com/en/newsweek_sports_200/7d87d092085f363d1c3d0ad095b5b0a0.jpg"
             },
             {
               "news_id": "d36d716f258f5415a95f289511e90766",
@@ -29343,6 +29753,15 @@
               "image": "https://www.bing.com/th?id=ONUT.KFygAG94dBm9hyK9N5AGQQ"
             },
             {
+              "news_id": "af9f86d3eb035794a86fb60be4549634",
+              "url": "https://www.cbsnews.com/live-updates/iran-war-us-trump-strait-of-hormuz-yemen-houthis-saudi-arabia/",
+              "headline": "Live Updates: Reported attacks on ships in or near Strait of Hormuz reach record high, data shows",
+              "body": "Data from a monitoring agency shows attacks around the Strait of Hormuz at a record high, as two more vessels report being attacked on Friday.",
+              "published_date": "2026-10-16",
+              "outlet": "CBS News",
+              "image": "https://s.yimg.com/bo/2491342c-4a54-5f84-a119-8ef02653e511_1792154134948.jpg"
+            },
+            {
               "news_id": "d9dd1337866d5d4d8f47d7dfe62388c9",
               "url": "https://redstate.com/bobhoge/2026/10/16/centcom-chief-strait-of-hormuz-open-for-business-while-desperate-iran-cant-even-pay-own-troops-n2208242",
               "headline": "CENTCOM Chief: Strait of Hormuz 'Open for Business,' While Desperate Iran Can't Even Pay Own Troops",
@@ -29350,6 +29769,24 @@
               "published_date": "2026-10-16",
               "outlet": "RedState",
               "image": "https://www.bing.com/th?id=ONUT.Jei1hULw5vXADhzY1Lp3FA"
+            },
+            {
+              "news_id": "baa681fde486523fa19a5c455b60b685",
+              "url": "https://www.yahoo.com/news/politics/articles/pape-trump-could-strike-iran-140705264.html",
+              "headline": "Pape: Trump Could Strike Iran Before Midterms",
+              "body": "Pape: Trump Could Strike Iran Before Midterms",
+              "published_date": "2026-10-17",
+              "outlet": "Newsmax · via Yahoo News",
+              "image": "https://media.zenfs.com/en/newsmax_809/6f5c372ee89ad3c83254f0d481347aa3.jpg"
+            },
+            {
+              "news_id": "bc5ac4e18b8a59c2b9cc483334970051",
+              "url": "https://www.foxnews.com/politics/army-expo-attendees-skeptical-trumps-iran-peace-deal-hopes-beat-em-submission",
+              "headline": "Army expo attendees skeptical of Trump's Iran peace deal hopes: 'Beat 'em into submission'",
+              "body": "AUSA Exposition attendees question Trump's optimism about an Iran deal, arguing military and economic sanctions must intensify before Tehran talks.",
+              "published_date": "2026-10-16",
+              "outlet": "Fox News",
+              "image": "https://s.yimg.com/bo/b048d00a-a7c8-52f8-bf54-b68068102a24_1792225647252.jpg"
             },
             {
               "news_id": "348e1e629b30505d91d915237f2373bc",
@@ -29399,7 +29836,7 @@
         "gdacs": 1,
         "ercc": 6,
         "healthmap": 0,
-        "news": 1035
+        "news": 1043
       },
       "source_links": [
         {
@@ -33517,6 +33954,10 @@
           "published_date": "2026-10-13"
         },
         {
+          "headline": "Indonesia relocates 8 orangutans into protected forest after rescue from...",
+          "published_date": "2026-10-13T15:59:30+00:00"
+        },
+        {
           "headline": "Palangka Raya in Indonesia shrouded in thick haze",
           "published_date": "2026-10-14"
         },
@@ -33549,6 +33990,18 @@
           "published_date": "2026-10-15"
         },
         {
+          "headline": "DNR makes progress against U.P. fires. Are they contained?",
+          "published_date": "2026-10-15T15:59:29+00:00"
+        },
+        {
+          "headline": "Zahid says Malaysia ready to help Indonesia fight forest fires after Prabowo accepts foreign aid",
+          "published_date": "2026-10-16"
+        },
+        {
+          "headline": "In lives and homes, 2026 wildfire season exacted a high toll — and it’s not over yet",
+          "published_date": "2026-10-16"
+        },
+        {
           "headline": "Amazon rainforest fires surge as El Niño fuels a dangerous drought",
           "published_date": "2026-10-16"
         },
@@ -33567,6 +34020,10 @@
         {
           "headline": "Indonesia's president ready to accept foreign assistance to combat fires,...",
           "published_date": "2026-10-16T05:04:33+00:00"
+        },
+        {
+          "headline": "Indonesia drops 2.4 tonnes of dry ice over South Sumatra in bid to disperse haze",
+          "published_date": "2026-10-17"
         },
         {
           "headline": "Smoke from Kalimantan fires detected above Jakarta as Indonesia battles blazes",
@@ -33595,9 +34052,21 @@
         {
           "headline": "All the wildfires burning across Southern California right now",
           "published_date": "2026-10-17T01:04:33+00:00"
+        },
+        {
+          "headline": "Singapore Issues Notices to 7 Indonesian Firms over Haze",
+          "published_date": "2026-10-17T15:59:30+00:00"
+        },
+        {
+          "headline": "UGM Students Urge ASEAN to Hold Indonesia Accountable for Haze",
+          "published_date": "2026-10-17T15:59:30+00:00"
+        },
+        {
+          "headline": "Wildfire Smoke Drifting Away from Jakarta, Says BMKG",
+          "published_date": "2026-10-17T15:59:30+00:00"
         }
       ],
-      "news_total": 1035,
+      "news_total": 1043,
       "logs": [
         {
           "log_date": "2026-07-27",
@@ -46430,7 +46899,7 @@
       "disease_name": null,
       "event_date": "2026-08-12",
       "first_reported_date": "2026-08-12",
-      "last_updated_date": "2026-10-14",
+      "last_updated_date": "2026-10-17",
       "days_since_event": 66,
       "source_count": 3,
       "should_report": true,
@@ -46441,7 +46910,7 @@
         "gdacs": 0,
         "ercc": 3,
         "healthmap": 0,
-        "news": 373
+        "news": 375
       },
       "source_links": [
         {
@@ -47965,9 +48434,17 @@
         {
           "headline": "Millions in firing line for severe storms",
           "published_date": "2026-10-14"
+        },
+        {
+          "headline": "Trudy spreading wind, rain as Simon struggles; both storms are threatening Mexico's coast",
+          "published_date": "2026-10-16"
+        },
+        {
+          "headline": "Tropical Cyclone Wati forms early in the Pacific, with heavy rain and strong winds possible",
+          "published_date": "2026-10-17"
         }
       ],
-      "news_total": 373,
+      "news_total": 375,
       "logs": [
         {
           "log_date": "2026-08-25",
@@ -51951,7 +52428,7 @@
       "incident_id": "20260826-NP-FL",
       "tree_id": "26a139d9c4274b379e946b7b737af269",
       "canonical_name": "Flood Bagmati, Nepal 2026-08-26",
-      "summary": "Rasuwagadhi Hydro provided Rs 500,000 per family to employees who went missing or died in the Bhotekoshi flood. The Nepali community in North Alabama donated $50,000 to the Prime Minister's Relief Fund for flood victims, while the New Zealand-Nepal Society contributed Rs 12.6 million for relief and rehabilitation. The government also declared flood-affected local levels in Gorkha, Baglung, and Dhading as disaster crisis areas.",
+      "summary": "Rasuwagadhi Hydro provided Rs 500,000 per family to employees who went missing or died in the Bhotekoshi flood. The Nepali community in North Alabama donated $50,000 to the Prime Minister's Relief Fund for flood victims, while the New Zealand-Nepal Society contributed Rs 12.6 million for relief and rehabilitation. The government also declared flood-affected local levels in Gorkha, Baglung, and Dhading as disaster crisis areas.\nNew reports highlight the ongoing psychological and logistical recovery from the Bagmati floods. An article warns that graphic flood videos on social media are increasing mental stress among children, while UNICEF is working to meet the urgent needs of over 32,000 affected children. A feature story details the difficult resettlement prospects facing survivors like Chheku Lama, who lost his home in the disaster.",
       "country": "Nepal",
       "iso2": "NP",
       "lat": 27.2952744,
@@ -51981,7 +52458,7 @@
         "gdacs": 1,
         "ercc": 2,
         "healthmap": 0,
-        "news": 1084
+        "news": 1089
       },
       "source_links": [
         {
@@ -55343,6 +55820,10 @@
           "published_date": "2026-09-20"
         },
         {
+          "headline": "बाढीका डरलाग्दा भिडियोले बालबालिकामा बढाउँदै छ मानसिक तनाव",
+          "published_date": "2026-09-20"
+        },
+        {
           "headline": "अलाबामास्थित नेपाली समुदायद्वारा बाढी प्रभावितलाई ५० हजार डलर सहयोग",
           "published_date": "2026-09-20"
         },
@@ -56319,6 +56800,10 @@
           "published_date": "2026-10-11"
         },
         {
+          "headline": "Photo: Nepal Flood Rescue Efforts Continue as Death Toll Rises - NEP2026091708 -...",
+          "published_date": "2026-10-11T16:02:37+00:00"
+        },
+        {
           "headline": "Nepal bridge wiped out by raging flood waters",
           "published_date": "2026-10-12"
         },
@@ -56339,6 +56824,10 @@
           "published_date": "2026-10-13T10:57:57+00:00"
         },
         {
+          "headline": "A Long Road To Recovery After Nepal Floods",
+          "published_date": "2026-10-13T16:02:34+00:00"
+        },
+        {
           "headline": "N.C. South Asian communities rally behind those affected by Nepal flood",
           "published_date": "2026-10-14"
         },
@@ -56347,11 +56836,19 @@
           "published_date": "2026-10-14T20:17:48+00:00"
         },
         {
+          "headline": "Nepal’s devastating flood exposes the risks of resettling disaster survivors",
+          "published_date": "2026-10-16"
+        },
+        {
           "headline": "बाढीपीडितका लागि न्युजिल्यान्ड-नेपाल सोसाइटीको १ करोड २६ लाख सहयोग",
           "published_date": "2026-10-16"
+        },
+        {
+          "headline": "Nepal Floods Resettlement",
+          "published_date": "2026-10-16T16:02:37+00:00"
         }
       ],
-      "news_total": 1084,
+      "news_total": 1089,
       "logs": [
         {
           "log_date": "2026-08-28",
@@ -56895,7 +57392,7 @@
         },
         {
           "log_date": "2026-10-17",
-          "summary": "Rasuwagadhi Hydro provided Rs 500,000 per family to employees who went missing or died in the Bhotekoshi flood. The Nepali community in North Alabama donated $50,000 to the Prime Minister's Relief Fund for flood victims, while the New Zealand-Nepal Society contributed Rs 12.6 million for relief and rehabilitation. The government also declared flood-affected local levels in Gorkha, Baglung, and Dhading as disaster crisis areas.",
+          "summary": "Rasuwagadhi Hydro provided Rs 500,000 per family to employees who went missing or died in the Bhotekoshi flood. The Nepali community in North Alabama donated $50,000 to the Prime Minister's Relief Fund for flood victims, while the New Zealand-Nepal Society contributed Rs 12.6 million for relief and rehabilitation. The government also declared flood-affected local levels in Gorkha, Baglung, and Dhading as disaster crisis areas.\nNew reports highlight the ongoing psychological and logistical recovery from the Bagmati floods. An article warns that graphic flood videos on social media are increasing mental stress among children, while UNICEF is working to meet the urgent needs of over 32,000 affected children. A feature story details the difficult resettlement prospects facing survivors like Chheku Lama, who lost his home in the disaster.",
           "news": [
             {
               "news_id": "d68755ced52b5d0999f167650bf8b82c",
@@ -56907,6 +57404,24 @@
               "image": "https://www.bing.com/th?id=ONUT.tc8EF5lH7kaub40hrRbx7g"
             },
             {
+              "news_id": "b007de0d3bf65394be2db0eab4f110fd",
+              "url": "https://www.forbes.com/sites/unicefusa/2026/10/17/a-long-road-to-recovery-after-nepal-floods/",
+              "headline": "A Long Road To Recovery After Nepal Floods",
+              "body": "UNICEF is on the ground in Nepal, working with the Government and partners to meet the needs of more than 32,000 children ...",
+              "published_date": "2026-10-13T16:02:34+00:00",
+              "outlet": "Forbes",
+              "image": "https://www.bing.com/th?id=ONUT.oJqIWd7WwJRhpfUKRQAdKg"
+            },
+            {
+              "news_id": "7643c9f410be50df874c76d2ce8d4c2a",
+              "url": "https://www.onlinekhabar.com/2026/10/2040910/horrifying-flood-videos-are-increasing-mental-stress-among-children",
+              "headline": "बाढीका डरलाग्दा भिडियोले बालबालिकामा बढाउँदै छ मानसिक तनाव",
+              "body": "३१ असोज, काठमाडौं । बाढीपहिरोले घरबारविहीन बनाएका बालबालिका आफैँमा गहिरो मानसिक पीडामा छन् । त्यसमाथि सामाजिक सञ्जाल खोल्दा देखिने बगाउँदै गरेका मानिस, मृत्यु भएका व्यक्तिका शव र ध्वस्त घरका डरलाग्दा दृश्यले उनीहरूको त्रास झन् बढाइरहेको …",
+              "published_date": "2026-09-20",
+              "outlet": "अनलाइन खबर",
+              "image": "https://www.bing.com/th?id=ONUT.nrMSqDyNyXCeZQGJUCVQwg"
+            },
+            {
               "news_id": "f9dc637c566f51f2bb7932370a1ffe6a",
               "url": "https://www.onlinekhabar.com/2026/10/2040356/nepali-community-in-alabama-donates-50000-to-flood-victims",
               "headline": "अलाबामास्थित नेपाली समुदायद्वारा बाढी प्रभावितलाई ५० हजार डलर सहयोग",
@@ -56914,6 +57429,33 @@
               "published_date": "2026-09-20",
               "outlet": "अनलाइन खबर",
               "image": "https://www.bing.com/th?id=ONUT.2iiWrue0sMObD2I1df8Yyw"
+            },
+            {
+              "news_id": "29ea1de636125175a546d0055b23e91d",
+              "url": "https://www.upi.com/News_Photos/view/upi/605447ff3ab3db5a2440b1575571e245/Nepal-Flood-Rescue-Efforts-Continue-as-Death-Toll-Rises/",
+              "headline": "Photo: Nepal Flood Rescue Efforts Continue as Death Toll Rises - NEP2026091708 -...",
+              "body": "Officials said 5 bodies were recovered from a tunnel buried by debris in Nepal on September 17,...",
+              "published_date": "2026-10-11T16:02:37+00:00",
+              "outlet": "UPI",
+              "image": "https://s.yimg.com/bo/9cbfb0ef-341e-5bc0-8cf5-6187eaa05e85_1789689080781.jpg"
+            },
+            {
+              "news_id": "66910b8dbd7b5bbc86752f465fa9e165",
+              "url": "https://www.hjnews.com/world/nepal-floods-resettlement/image_0c86d4b1-56e4-5d06-87cc-daede227ff95.html",
+              "headline": "Nepal Floods Resettlement",
+              "body": "Zyazong Tamang, right, and his wife, Nyangsal Tamang, who survived the Nepal's 2015 earthquake and the flash floods in August this year, pose for a...",
+              "published_date": "2026-10-16T16:02:37+00:00",
+              "outlet": "The Herald Journal",
+              "image": "https://s.yimg.com/bo/1d8ea7e3-2544-5c5a-8fde-c0875c50d0a2_1792134024583.jpg"
+            },
+            {
+              "news_id": "39ef498a96f65d108ca4c3750476bdff",
+              "url": "https://www.whio.com/news/world/nepals-devastating/TFGRQLPE7I2KFNFQWXKWRSUF3Y/",
+              "headline": "Nepal’s devastating flood exposes the risks of resettling disaster survivors",
+              "body": "Chheku Lama ran uphill, urging people to flee when floodwaters hit his village, Khalte, in Nepal's Rasuwa district",
+              "published_date": "2026-10-16",
+              "outlet": "WHIO-TV 7 Dayton",
+              "image": "https://s.yimg.com/bo/c35fe5f0-8eb5-5e77-ac2c-1675f007d37b_1792126837254.jpg"
             },
             {
               "news_id": "f9df83b0766952199dafbf4b573a2a33",
@@ -56942,7 +57484,7 @@
       "incident_id": "20260903-PS-CF",
       "tree_id": "e650e542b08c4c03badd08f734e3234d",
       "canonical_name": "Conflict Palestine 2026-09-03",
-      "summary": "Gaza faces catastrophic malnutrition and food shortages as Israel halts the entry of commercial goods. In the West Bank, Israeli settlers torched cars and olive groves and beat a Washington Post photojournalist during harvest-season attacks. Diplomatically, China called on Israel to stop settlement construction, the UK expanded sanctions against companies supporting settlements, and Pakistan with 18 other nations condemned Colombia's recent embassy opening in Jerusalem.",
+      "summary": "Gaza faces catastrophic malnutrition and food shortages as Israel halts the entry of commercial goods. In the West Bank, Israeli settlers torched cars and olive groves and beat a Washington Post photojournalist during harvest-season attacks. Diplomatically, China called on Israel to stop settlement construction, the UK expanded sanctions against companies supporting settlements, and Pakistan with 18 other nations condemned Colombia's recent embassy opening in Jerusalem.\nIsraeli settlers launched a coordinated attack on Palestinian farmers in the West Bank, and Prime Minister Netanyahu promised an investigation but refrained from condemning the violence. Meanwhile, five opposition leaders signed a pact to unseat Netanyahu, and a leading economist highlighted the mounting war costs ahead of the upcoming elections.",
       "country": "Palestine",
       "iso2": "PS",
       "lat": 31.9,
@@ -56972,7 +57514,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 571
+        "news": 577
       },
       "source_links": [
         {
@@ -59230,6 +59772,10 @@
           "published_date": "2026-10-14T00:00:00+00:00"
         },
         {
+          "headline": "Arab-led parties could decide the Israeli election, if anyone would partner with them",
+          "published_date": "2026-10-16"
+        },
+        {
           "headline": "Houston Player Azeez Al-Shaair Continues Writing Names Of Children Killed In Conflict Despite NFL Crackdown",
           "published_date": "2026-10-16"
         },
@@ -59242,12 +59788,20 @@
           "published_date": "2026-10-16"
         },
         {
+          "headline": "Israeli Settlers Launch a Coordinated Attack in the West Bank",
+          "published_date": "2026-10-16"
+        },
+        {
           "headline": "Settlers Beat U.S. Photographer at West Bank Olive Harvest",
           "published_date": "2026-10-16"
         },
         {
           "headline": "Commercial goods are no longer entering Gaza, raising fears of worsening shortages",
           "published_date": "2026-10-16T00:00:00+00:00"
+        },
+        {
+          "headline": "Colombia opens Jerusalem embassy and restores Israel trade deal, defying Arab pressure",
+          "published_date": "2026-10-17"
         },
         {
           "headline": "Houston player Azeez Al-Shaair continues writing names of children killed in conflict despite NFL crackdown",
@@ -59258,7 +59812,15 @@
           "published_date": "2026-10-17"
         },
         {
+          "headline": "US Iran War News Live Updates: Air India flights to Saudi Arabia cancelled till Oct 24 amid Houthi threat - The Times of India",
+          "published_date": "2026-10-17"
+        },
+        {
           "headline": "Israeli settlers torch cars and trees in West Bank during olive harvest",
+          "published_date": "2026-10-17"
+        },
+        {
+          "headline": "Israel's Opposition Leaders Join Hands Against Netanyahu, But Where Do They Differ? | Outlook India",
           "published_date": "2026-10-17"
         },
         {
@@ -59276,9 +59838,13 @@
         {
           "headline": "UK significantly expands sanction powers allowing action against companies supporting West Bank settlements",
           "published_date": "2026-10-17T05:07:29+00:00"
+        },
+        {
+          "headline": "A top economist sees Israel’s fiscal future on the ballot as costs of war, division mount",
+          "published_date": "2026-10-17T10:03:07+00:00"
         }
       ],
-      "news_total": 571,
+      "news_total": 577,
       "logs": [
         {
           "log_date": "2026-09-04",
@@ -59741,8 +60307,17 @@
         },
         {
           "log_date": "2026-10-17",
-          "summary": "Gaza faces catastrophic malnutrition and food shortages as Israel halts the entry of commercial goods. In the West Bank, Israeli settlers torched cars and olive groves and beat a Washington Post photojournalist during harvest-season attacks. Diplomatically, China called on Israel to stop settlement construction, the UK expanded sanctions against companies supporting settlements, and Pakistan with 18 other nations condemned Colombia's recent embassy opening in Jerusalem.",
+          "summary": "Gaza faces catastrophic malnutrition and food shortages as Israel halts the entry of commercial goods. In the West Bank, Israeli settlers torched cars and olive groves and beat a Washington Post photojournalist during harvest-season attacks. Diplomatically, China called on Israel to stop settlement construction, the UK expanded sanctions against companies supporting settlements, and Pakistan with 18 other nations condemned Colombia's recent embassy opening in Jerusalem.\nIsraeli settlers launched a coordinated attack on Palestinian farmers in the West Bank, and Prime Minister Netanyahu promised an investigation but refrained from condemning the violence. Meanwhile, five opposition leaders signed a pact to unseat Netanyahu, and a leading economist highlighted the mounting war costs ahead of the upcoming elections.",
           "news": [
+            {
+              "news_id": "37812c5cd09e5965ac79526ef9895451",
+              "url": "https://www.msn.com/en-us/news/other/colombia-opens-jerusalem-embassy-and-restores-israel-trade-deal-defying-arab-pressure/ar-AA2epXmr?ocid=BingNewsVerp",
+              "headline": "Colombia opens Jerusalem embassy and restores Israel trade deal, defying Arab pressure",
+              "body": "Colombia inaugurated a Jerusalem embassy Oct. 14, becoming the 10th nation to do so, restored its Israel trade deal, and triggered a swift Arab backlash.",
+              "published_date": "2026-10-17",
+              "outlet": "Latin Times on MSN",
+              "image": ""
+            },
             {
               "news_id": "61b4ce1f0a5a5cc1b530b5be2ec0976b",
               "url": "https://www.msn.com/en-gb/sport/american_football/houston-player-azeez-al-shaair-continues-writing-names-of-children-killed-in-conflict-despite-nfl-crackdown/ar-AA2emuPA?ocid=BingNewsVerp",
@@ -59762,6 +60337,15 @@
               "image": "https://www.bing.com/th?id=ORMS.f1e7d19b39023908d71d47d92bad3795"
             },
             {
+              "news_id": "4cd9a82401c952468ca1b29d176545f5",
+              "url": "https://www.pbs.org/newshour/world/arab-led-parties-could-decide-the-israeli-election-if-anyone-would-partner-with-them",
+              "headline": "Arab-led parties could decide the Israeli election, if anyone would partner with them",
+              "body": "Prime Minister Benjamin Netanyahu and his chief rivals have said they won't form a coalition with any Arab-led party after the Oct. 27 election – even if that means months of gridlock and another round of voting.",
+              "published_date": "2026-10-16",
+              "outlet": "Public Broadcasting Service (PBS)",
+              "image": "https://www.bing.com/th?id=ONUT.TNaELlo9J9wDojNewP7Ueg"
+            },
+            {
               "news_id": "091db80ca100528aa9a0cdfb76d56689",
               "url": "https://english.alarabiya.net/News/middle-east/2026/10/16/commercial-goods-are-no-longer-entering-gaza-raising-fears-of-worsening-shortages",
               "headline": "Commercial goods are no longer entering Gaza, raising fears of worsening shortages",
@@ -59769,6 +60353,15 @@
               "published_date": "2026-10-16T00:00:00+00:00",
               "outlet": "Al Arabiya English",
               "image": "https://www.bing.com/th?id=ONUT.z1R2daTgvgurv6pQvEHpkg"
+            },
+            {
+              "news_id": "dc64af5b741d526f82233e90b57ff5d2",
+              "url": "https://www.timesofisrael.com/a-top-economist-sees-israels-fiscal-future-on-the-ballot-as-costs-of-war-division-mount/",
+              "headline": "A top economist sees Israel’s fiscal future on the ballot as costs of war, division mount",
+              "body": "Ahead of election, former central bank deputy governor Zvi Eckstein says outgoing government's decisions have impacted ...",
+              "published_date": "2026-10-17T10:03:07+00:00",
+              "outlet": "The Times of Israel",
+              "image": "https://www.bing.com/th?id=ONUT.AozvwaHLamlfKLW4-qS3cA"
             },
             {
               "news_id": "63df213cc9e15e75a8e613b584dce076",
@@ -59789,6 +60382,15 @@
               "image": "https://www.bing.com/th?id=ONUT.WQetZaZktgXBf7YIIEhXyw"
             },
             {
+              "news_id": "8ff4204a1397550991ac87e490a6c21c",
+              "url": "https://timesofindia.indiatimes.com/world/middle-east/us-iran-war-news-live-hormuz-ship-attacks-us-threat-energy-plant-oil-prices-israel-latest-news/liveblog/135003154.cms",
+              "headline": "US Iran War News Live Updates: Air India flights to Saudi Arabia cancelled till Oct 24 amid Houthi threat - The Times of India",
+              "body": "In the occupied West Bank, Israeli settlers attacked Palestinian farmers and residents in several villages, with a Washington Post photojournalist am",
+              "published_date": "2026-10-17",
+              "outlet": "The Times of India",
+              "image": "https://www.bing.com/th?id=ONUT.dp6KwwQ5nSd1x7agncVANw"
+            },
+            {
               "news_id": "3a64f487fb4757f7b006c1bbf38f0cb7",
               "url": "https://www.1news.co.nz/2026/10/17/israeli-settlers-torch-cars-and-trees-in-west-bank-during-olive-harvest/",
               "headline": "Israeli settlers torch cars and trees in West Bank during olive harvest",
@@ -59798,6 +60400,15 @@
               "image": "https://www.bing.com/th?id=ONUT.Cs2_mNpCYg0w2GVCG9BxlA"
             },
             {
+              "news_id": "d34979524c54550dad1d6ebaa7aa407a",
+              "url": "https://www.outlookindia.com/international/israels-opposition-leaders-join-hands-against-netanyahu-but-where-do-they-differ",
+              "headline": "Israel's Opposition Leaders Join Hands Against Netanyahu, But Where Do They Differ? | Outlook India",
+              "body": "Five opposition leaders have signed a pact to unseat Benjamin Netanyahu, but their positions on Gaza, Palestinian statehood and regional wars remain largely aligned.",
+              "published_date": "2026-10-17",
+              "outlet": "Outlook India",
+              "image": "https://www.bing.com/th?id=ONUT.66HzBQZxWRw-Jj3KWJ_beg"
+            },
+            {
               "news_id": "7a7ea89e599f502cb203846d25e20201",
               "url": "https://www.aljazeera.com/video/newsfeed/2026/10/16/food-affordability-fears-plague-gaza-as-israel-halts-commercial-goods",
               "headline": "Food affordability fears plague Gaza as Israel halts commercial goods",
@@ -59805,6 +60416,15 @@
               "published_date": "2026-10-16",
               "outlet": "Al Jazeera",
               "image": "https://www.bing.com/th?id=ONUT.Pivz-PAjSpj7LxZ5TykllA"
+            },
+            {
+              "news_id": "1f9f4530584f55638cb9d9a4d3f3b484",
+              "url": "https://foreignpolicy.com/2026/10/16/israel-settler-attacks-palestinians-west-bank-washington-post-levine/",
+              "headline": "Israeli Settlers Launch a Coordinated Attack in the West Bank",
+              "body": "Netanyahu vowed to investigate the incident but stopped short of condemning settler violence.",
+              "published_date": "2026-10-16",
+              "outlet": "Foreign Policy",
+              "image": "https://www.bing.com/th?id=ONUT.d8nq8T-r5QSd81H0LHt0Kw"
             },
             {
               "news_id": "0907eaf4c2515a52ace656d6897a17c2",
@@ -60900,7 +61520,7 @@
         "gdacs": 1,
         "ercc": 3,
         "healthmap": 0,
-        "news": 156
+        "news": 159
       },
       "source_links": [
         {
@@ -61552,8 +62172,20 @@
           "published_date": "2026-10-16"
         },
         {
+          "headline": "Hurricane Trudy Path and Intensity: What We Know",
+          "published_date": "2026-10-16"
+        },
+        {
           "headline": "Hurricane Trudy Safety Precautions in Jalisco and Colima",
           "published_date": "2026-10-16"
+        },
+        {
+          "headline": "Hurricane Trudy makes its way toward Mexico as Typhoon Champi threatens Guam",
+          "published_date": "2026-10-17"
+        },
+        {
+          "headline": "Hurricane Trudy makes its way towards Mexico, threatening heavy rain",
+          "published_date": "2026-10-17"
         },
         {
           "headline": "Trudy forecast to near Mexico's Pacific coast as major hurricane through the weekend",
@@ -61564,7 +62196,7 @@
           "published_date": "2026-10-17T04:53:40+00:00"
         }
       ],
-      "news_total": 156,
+      "news_total": 159,
       "logs": [
         {
           "log_date": "2026-09-24",
@@ -63035,7 +63667,7 @@
       "disease_name": null,
       "event_date": "2026-10-06",
       "first_reported_date": "2026-10-06",
-      "last_updated_date": "2026-10-14",
+      "last_updated_date": "2026-10-17",
       "days_since_event": 11,
       "source_count": 1,
       "should_report": true,
@@ -63046,7 +63678,7 @@
         "gdacs": 1,
         "ercc": 0,
         "healthmap": 0,
-        "news": 84
+        "news": 85
       },
       "source_links": [
         {
@@ -63402,9 +64034,13 @@
         {
           "headline": "Verisk Estimates Insured Losses for Hurricane Isaias Could Reach USD 2 Billion",
           "published_date": "2026-10-14T06:37:23+00:00"
+        },
+        {
+          "headline": "AP News Summary at 5:06 p.m. EDT",
+          "published_date": "2026-10-17T15:52:26+00:00"
         }
       ],
-      "news_total": 84,
+      "news_total": 85,
       "logs": [
         {
           "log_date": "2026-10-09",
@@ -64730,7 +65366,7 @@
       "disease_name": null,
       "event_date": "2026-10-08",
       "first_reported_date": "2026-10-08",
-      "last_updated_date": "2026-10-16",
+      "last_updated_date": "2026-10-17",
       "days_since_event": 9,
       "source_count": 1,
       "should_report": true,
@@ -64741,7 +65377,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 136
+        "news": 138
       },
       "source_links": [
         {
@@ -65305,9 +65941,17 @@
         {
           "headline": "Track major Category 3 Hurricane Trudy as it approaches Mexico",
           "published_date": "2026-10-16T00:00:00+00:00"
+        },
+        {
+          "headline": "Powerful winds, flooding hit Sea Bright, NJ",
+          "published_date": "2026-10-17T16:05:51+00:00"
+        },
+        {
+          "headline": "Flooding hits Freeport, LI amid weekend nor’easter",
+          "published_date": "2026-10-17T16:05:51+00:00"
         }
       ],
-      "news_total": 136,
+      "news_total": 138,
       "logs": [
         {
           "log_date": "2026-10-08",
@@ -66462,7 +67106,7 @@
     {
       "incident_id": "20261009-PA-EQ",
       "tree_id": "d12a57fdf54e4b2ebbd0a7bc41daf42f",
-      "canonical_name": "Earthquake M6.6 Río Grande, Panama 2026-10-09",
+      "canonical_name": "Earthquake M5.5 Bajo Corral, Panama 2026-10-09",
       "summary": "After the earthquake sequence, 746 aftershocks have been recorded, and a Los Angeles County search and rescue team has been deployed to assist. Parametric insurance triggered a US$17.4 million payout, while aid of US$10,000–20,000 per district/municipality began flowing on October 15. Panama joined Google’s earthquake alert system, and Tocumen Airport resumed normal operations with no damage detected after inspections.",
       "country": "Panama",
       "iso2": "PA",
@@ -66484,16 +67128,16 @@
       "first_reported_date": "2026-10-09",
       "last_updated_date": "2026-10-16",
       "days_since_event": 8,
-      "source_count": 7,
+      "source_count": 8,
       "should_report": true,
       "search_keys": [],
       "sources": {
         "who_don": 0,
-        "usgs": 5,
+        "usgs": 6,
         "gdacs": 1,
         "ercc": 1,
         "healthmap": 0,
-        "news": 150
+        "news": 151
       },
       "source_links": [
         {
@@ -66501,6 +67145,12 @@
           "label": "Orange alert · Earthquake M8.0 Herrera, Panama 2026-10-09",
           "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1570339",
           "meta": ""
+        },
+        {
+          "type": "USGS",
+          "label": "M 5.5 - 3 km SW of Bajo Corral, Panama",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u18t",
+          "meta": "10 km depth"
         },
         {
           "type": "USGS",
@@ -66543,7 +67193,7 @@
         "max_magnitude": 7.6,
         "max_depth_km": 10.0,
         "place": "Panama",
-        "felt": 9,
+        "felt": 3,
         "sig": 896,
         "tsunami": true,
         "gdacs_alertlevel": "Orange",
@@ -67123,6 +67773,10 @@
           "published_date": "2026-10-15T04:57:07+00:00"
         },
         {
+          "headline": "Church sends emergency aid to Panama after earthquake",
+          "published_date": "2026-10-16"
+        },
+        {
           "headline": "From earthquake to normalcy in three days: Tocumen Airport gives an operational assessment",
           "published_date": "2026-10-16"
         },
@@ -67151,7 +67805,7 @@
           "published_date": "2026-10-16T00:00:00+00:00"
         }
       ],
-      "news_total": 150,
+      "news_total": 151,
       "logs": [
         {
           "log_date": "2026-10-09",
@@ -68285,7 +68939,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 79
+        "news": 81
       },
       "source_links": [
         {
@@ -68447,6 +69101,10 @@
           "published_date": "2026-10-10"
         },
         {
+          "headline": "Mystery surrounds young worker's death at Russia lab studying severe diseases",
+          "published_date": "2026-10-10"
+        },
+        {
           "headline": "Lab-acquired plague: the 2009 Chicago case and the 2026 Irkutsk death",
           "published_date": "2026-10-10"
         },
@@ -68559,6 +69217,10 @@
           "published_date": "2026-10-12"
         },
         {
+          "headline": "'The View' Co-Hosts 'Not Confident' About Robert F. Kennedy Jr. Being in Charge During Russian Plague Deaths: 'Wake Me Up When It's Over'",
+          "published_date": "2026-10-13"
+        },
+        {
           "headline": "Q&A: Expert discusses Russian plague scare",
           "published_date": "2026-10-13"
         },
@@ -68623,7 +69285,7 @@
           "published_date": "2026-10-17"
         }
       ],
-      "news_total": 79,
+      "news_total": 81,
       "logs": [
         {
           "log_date": "2026-10-10",
@@ -69460,7 +70122,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 5
+        "news": 6
       },
       "source_links": [
         {
@@ -69498,11 +70160,15 @@
           "published_date": "2026-10-14"
         },
         {
+          "headline": "Nepal’s devastating flood exposes the risks of resettling disaster survivors",
+          "published_date": "2026-10-16"
+        },
+        {
           "headline": "Bhotekoshi flood displaced 777 students. Nepal plans five-year school recovery",
           "published_date": "2026-10-17"
         }
       ],
-      "news_total": 5,
+      "news_total": 6,
       "logs": [
         {
           "log_date": "2026-10-14",
@@ -69553,13 +70219,13 @@
       "incident_id": "20261014-XX-TC",
       "tree_id": "562343659e8d4640b55b52c3cc1fdfb3",
       "canonical_name": "Tropical Cyclone TWENTYNINE-26 2026-10-14",
-      "summary": "",
+      "summary": "The National Weather Service reported that Tropical Storm Champi continues to intensify while moving west toward the Marianas. It has strengthened into a typhoon and may become one of the world's strongest storms, with a potential rare landfall in Guam. Meanwhile, the storm is currently outside the Philippine Area of Responsibility.",
       "country": "",
       "iso2": "XX",
       "lat": 9.6,
       "lon": 161.2,
       "country_group": "C",
-      "region": "Unknown",
+      "region": "Oceania",
       "incident_type": "Tropical Cyclone",
       "incident_category": "Natural",
       "is_disease": false,
@@ -69572,7 +70238,7 @@
       "disease_name": null,
       "event_date": "2026-10-14",
       "first_reported_date": "2026-10-14",
-      "last_updated_date": "2026-10-16",
+      "last_updated_date": "2026-10-17",
       "days_since_event": 3,
       "source_count": 1,
       "should_report": false,
@@ -69583,7 +70249,7 @@
         "gdacs": 1,
         "ercc": 0,
         "healthmap": 0,
-        "news": 1
+        "news": 4
       },
       "source_links": [
         {
@@ -69605,15 +70271,68 @@
       },
       "news": [
         {
+          "headline": "Hurricane Trudy churns in the Pacific as a Cat 1 storm near Mexico, while Champi eyes rare Guam landfall",
+          "published_date": "2026-10-13"
+        },
+        {
           "headline": "NWS: Champi continues to intensify, moving west toward Marianas",
-          "url": "https://www.guampdn.com/news/nws-champi-continues-to-intensify-moving-west-toward-marianas/article_5b1d7ed6-0f9a-4f74-a49e-a2a89f514cdb.html",
-          "outlet": "Pacific Daily News",
           "published_date": "2026-10-16"
+        },
+        {
+          "headline": "Typhoon Champi could become 1 of the world's strongest...",
+          "published_date": "2026-10-16"
+        },
+        {
+          "headline": "Bagyong ‘Champi’ sa labas ng PAR lumakas",
+          "published_date": "2026-10-17T00:00:00+00:00"
         }
       ],
-      "news_total": 1,
-      "logs": [],
-      "logs_total": 0
+      "news_total": 4,
+      "logs": [
+        {
+          "log_date": "2026-10-17",
+          "summary": "The National Weather Service reported that Tropical Storm Champi continues to intensify while moving west toward the Marianas. It has strengthened into a typhoon and may become one of the world's strongest storms, with a potential rare landfall in Guam. Meanwhile, the storm is currently outside the Philippine Area of Responsibility.",
+          "news": [
+            {
+              "news_id": "1fd22a9da5345274b6aca8e74b3c3f36",
+              "url": "https://www.guampdn.com/news/nws-champi-continues-to-intensify-moving-west-toward-marianas/article_5b1d7ed6-0f9a-4f74-a49e-a2a89f514cdb.html",
+              "headline": "NWS: Champi continues to intensify, moving west toward Marianas",
+              "body": "The National Weather Service said Tropical Storm Champi continues to intensify as it continues moving west towards the Marianas.",
+              "published_date": "2026-10-16",
+              "outlet": "Pacific Daily News",
+              "image": "https://www.bing.com/th?id=ONUT.yXUZdH0-h05kXqfEwuvxKw"
+            },
+            {
+              "news_id": "8a521899ec5e50bf8e94a2a2cdeb1b2c",
+              "url": "https://www.abante.com.ph/2026/10/17/bagyong-champi-sa-labas-ng-par-lumakas/",
+              "headline": "Bagyong ‘Champi’ sa labas ng PAR lumakas",
+              "body": "Lumakas at naging ganap na bagyo ang tropical cyclone na Champi na nasa labas ng Philippine Area of Responsibility (PAR), ...",
+              "published_date": "2026-10-17T00:00:00+00:00",
+              "outlet": "Abante",
+              "image": "https://www.bing.com/th?id=ONUT.GMq10HuBrTZammXbLxYz7A"
+            },
+            {
+              "news_id": "fced6e76782e55a7a2c9cdf85865f7bf",
+              "url": "https://rollingout.com/2026/10/16/typhoon-champi-worlds-strongest-storms/",
+              "headline": "Typhoon Champi could become 1 of the world's strongest...",
+              "body": "El Niño is fueling a record-breaking Pacific storm season, as Tropical Depression Champi could strengthen into a powerful typhoon",
+              "published_date": "2026-10-16",
+              "outlet": "Rolling Out",
+              "image": "https://s.yimg.com/bo/c4a749c3-1d32-56ea-a600-4b2064c45d9f_1792162407103.png.cf.jpg"
+            },
+            {
+              "news_id": "376002e9f3c15b60859bb53d094f4bba",
+              "url": "https://www.yahoo.com/news/articles/two-strong-hurricanes-could-brewing-232746871.html",
+              "headline": "Hurricane Trudy churns in the Pacific as a Cat 1 storm near Mexico, while Champi eyes rare Guam landfall",
+              "body": "Hurricane Trudy rapidly intensified into a Category 3 storm early Friday before being downgraded to a Category 1 storm. Landfall remains possible, but there is increased uncertainty around Trudy's tra...",
+              "published_date": "2026-10-13",
+              "outlet": "Fox Weather · via Yahoo News",
+              "image": "https://media.zenfs.com/en/fox_weather_articles_483/15a8008150ff3eb508704f8db6ea0af2.jpg"
+            }
+          ]
+        }
+      ],
+      "logs_total": 1
     },
     {
       "incident_id": "20261014-XX-SW",
@@ -69833,7 +70552,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 4
+        "news": 6
       },
       "source_links": [
         {
@@ -69855,6 +70574,10 @@
       },
       "news": [
         {
+          "headline": "Severe thunderstorms could develop in DC area Friday – WTOP News",
+          "published_date": "2026-10-16"
+        },
+        {
           "headline": "Severe thunderstorms with damging winds possible for tri-state",
           "published_date": "2026-10-16"
         },
@@ -69869,9 +70592,13 @@
         {
           "headline": "NYC, Hudson Valley and Long Island face severe storm threat Friday. What to know",
           "published_date": "2026-10-17"
+        },
+        {
+          "headline": "Update: The current severe thunderstorm warning for Hudson Valley will expire at 6:30 p.m.",
+          "published_date": "2026-10-17T15:54:44+00:00"
         }
       ],
-      "news_total": 4,
+      "news_total": 6,
       "logs": [
         {
           "log_date": "2026-10-17",
@@ -70024,7 +70751,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 14
+        "news": 17
       },
       "source_links": [
         {
@@ -70048,6 +70775,18 @@
         {
           "headline": "Earthquake of magnitude 7 strikes Russia's Kamchatka Peninsula, EMSC says",
           "published_date": "2026-10-14T05:16:20+00:00"
+        },
+        {
+          "headline": "No tsunami threat to Hawaii after 7.0M earthquake in Russia’s Kamchatka region",
+          "published_date": "2026-10-15"
+        },
+        {
+          "headline": "Russia Earthquake: 7.0-Magnitude Quake Strikes Kamchatka as NOAA Rules Out Tsunami Threat",
+          "published_date": "2026-10-16"
+        },
+        {
+          "headline": "Japan Agency Issues Erroneous 9.9 Quake Warning After Russia Tremor",
+          "published_date": "2026-10-16"
         },
         {
           "headline": "Magnitude 7.0 Earthquake Strikes Russia’s Kamchatka Peninsula; No Tsunami Threat Issued - DD India",
@@ -70102,7 +70841,7 @@
           "published_date": "2026-10-17T05:16:21+00:00"
         }
       ],
-      "news_total": 14,
+      "news_total": 17,
       "logs": [
         {
           "log_date": "2026-10-17",
@@ -70233,6 +70972,294 @@
               "published_date": "2026-10-16",
               "outlet": "Rustourismnews.com",
               "image": "https://www.bing.com/th?id=ONUT.fVX9ZjuChBdcs5pUoH9EBw"
+            }
+          ]
+        }
+      ],
+      "logs_total": 1
+    },
+    {
+      "incident_id": "20261017-PK-EQ",
+      "tree_id": "c43980c488004b3ca517d025431dbd03",
+      "canonical_name": "Earthquake M5.7 Khuzdar, Pakistan 2026-10-17",
+      "summary": "On October 17, 2026, a moderate to strong earthquake struck near Khuzdar in Balochistan, Pakistan, with various agencies reporting magnitudes between 5.6 and 6.0. The shallow quake (10-25 km depth) caused widespread shaking and panic across Khuzdar and adjacent districts such as Kalat and Surab, but initial reports indicated no casualties or significant property damage.",
+      "country": "Pakistan",
+      "iso2": "PK",
+      "lat": 28.0179,
+      "lon": 66.1708,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "HIGH",
+      "priority": "HIGH",
+      "priority_rank": 1,
+      "pandemic_potential": null,
+      "event_status": null,
+      "extended_monitoring": false,
+      "disease_name": null,
+      "event_date": "2026-10-17",
+      "first_reported_date": "2026-10-17",
+      "last_updated_date": "2026-10-17",
+      "days_since_event": 0,
+      "source_count": 1,
+      "should_report": true,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "ercc": 0,
+        "healthmap": 0,
+        "news": 17
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 5.7 - 48 km WNW of Khuzdar, Pakistan",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2y1",
+          "meta": "10 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 5.7,
+        "max_depth_km": 10.0,
+        "place": "48 km WNW of Khuzdar, Pakistan",
+        "felt": 2,
+        "sig": 651,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Magnitude 5.7 Earthquake Strikes Pakistan",
+          "published_date": "2026-10-17"
+        },
+        {
+          "headline": "5.8-Magnitude earthquake recorded in Pakistan, NCS reports- Moneycontrol.com",
+          "published_date": "2026-10-17"
+        },
+        {
+          "headline": "Earthquake Hits Pakistan with Magnitude 5.8",
+          "published_date": "2026-10-17"
+        },
+        {
+          "headline": "Magnitude 5.9 Earthquake Hits Balochistan’s Khuzdar Distric",
+          "published_date": "2026-10-17"
+        },
+        {
+          "headline": "5.7 magnitude earthquake shakes Khuzdar in Pakistan's Balochistan: Shallow 10 km depth causes severe shaking",
+          "published_date": "2026-10-17"
+        },
+        {
+          "headline": "Moderate 5.9-magnitude earthquake jolts balochistan's khuzdar district - Daily Times",
+          "published_date": "2026-10-17"
+        },
+        {
+          "headline": "Strong 6.0-magnitude quake strikes Balochistan in Pakistan",
+          "published_date": "2026-10-17"
+        },
+        {
+          "headline": "5.9-magnitude earthquake jolts Balochistan's Khuzdar",
+          "published_date": "2026-10-17"
+        },
+        {
+          "headline": "Strong earthquake strikes near Khuzdar, Pakistan",
+          "published_date": "2026-10-17"
+        },
+        {
+          "headline": "Earthquake of magnitude 5.7 jolts Pakistan's Balochistan",
+          "published_date": "2026-10-17"
+        },
+        {
+          "headline": "5.7 magnitude earthquake jolts Pakistan's Balochistan",
+          "published_date": "2026-10-17"
+        },
+        {
+          "headline": "5.9-magnitude earthquake strikes Pakistan’s Balochistan province - OrissaPOST",
+          "published_date": "2026-10-17"
+        },
+        {
+          "headline": "Earthquake Of 5.8 Magnitude Rocks Pakistan's Balochistan",
+          "published_date": "2026-10-17"
+        },
+        {
+          "headline": "Magnitude 5.8 Earthquake Strikes Pakistan, Tremor Recorded At 15 Km Depth | Outlook India",
+          "published_date": "2026-10-17"
+        },
+        {
+          "headline": "5.9-magnitude earthquake jolts Balochistan’s Khuzdar, adjoining areas | The Express Tribune",
+          "published_date": "2026-10-17"
+        },
+        {
+          "headline": "A strong earthquake occurred in Pakistan",
+          "published_date": "2026-10-17T10:36:00+00:00"
+        },
+        {
+          "headline": "Magnitude 5.6 earthquake strikes Pakistan's Balochistan province, GFZ says",
+          "published_date": "2026-10-17T16:10:48+00:00"
+        }
+      ],
+      "news_total": 17,
+      "logs": [
+        {
+          "log_date": "2026-10-17",
+          "summary": "On October 17, 2026, a moderate to strong earthquake struck near Khuzdar in Balochistan, Pakistan, with various agencies reporting magnitudes between 5.6 and 6.0. The shallow quake (10-25 km depth) caused widespread shaking and panic across Khuzdar and adjacent districts such as Kalat and Surab, but initial reports indicated no casualties or significant property damage.",
+          "news": [
+            {
+              "news_id": "d31abf084e7d5a0ab5a531712e64f613",
+              "url": "https://kashmirlife.net/magnitude-5-7-earthquake-strikes-pakistan-457052/",
+              "headline": "Magnitude 5.7 Earthquake Strikes Pakistan",
+              "body": "SRINAGAR: A magnitude 5.7 earthquake struck near Khuzdar in Pakistan’s Balochistan province on Saturday, according to the German Research Centre for Geosciences (GFZ). Follow Us On G-Ne w s | Whatsapp 🚨 M5.7 earthquake, 48 km WNW of Khuzdar, Balochistan, Pakistan. At just 10 km deep, this was a shallow quake and was likely …",
+              "published_date": "2026-10-17",
+              "outlet": "Kashmir Life",
+              "image": "https://kashmirlife.net/wp-content/uploads/2026/10/Earthquake-Rep.webp"
+            },
+            {
+              "news_id": "654a03367ca25afe8d1f269af62b8c79",
+              "url": "https://www.moneycontrol.com/world/5-8-magnitude-earthquake-recorded-in-pakistan-ncs-reports-article-14054437.html",
+              "headline": "5.8-Magnitude earthquake recorded in Pakistan, NCS reports- Moneycontrol.com",
+              "body": "A magnitude 5.8 earthquake struck Pakistan on Saturday, according to India’s National Centre for Seismology.",
+              "published_date": "2026-10-17",
+              "outlet": "Moneycontrol",
+              "image": "https://images.moneycontrol.com/static-mcnews/2025/08/20250828063143_Earthquake.jpg"
+            },
+            {
+              "news_id": "6e7aac1db6b15f04b79050e07a19b065",
+              "url": "https://udaipurkiran.com/earthquake-hits-pakistan-with-magnitude-5-8/",
+              "headline": "Earthquake Hits Pakistan with Magnitude 5.8",
+              "body": "A 5.8 magnitude earthquake struck near Khuzdar, Pakistan, causing panic but no immediate reports of damage.",
+              "published_date": "2026-10-17",
+              "outlet": "udaipurkiran.com",
+              "image": "https://udaipurkiran.com/wp-content/uploads/2026/10/earthquake-hits-pakistan-with-magnitude-5-8.webp"
+            },
+            {
+              "news_id": "b5da3602d57654489b8f1d963cc8ad0f",
+              "url": "https://www.reuters.com/business/environment/magnitude-56-earthquake-strikes-pakistans-balochistan-province-gfz-says-2026-10-17/",
+              "headline": "Magnitude 5.6 earthquake strikes Pakistan's Balochistan province, GFZ says",
+              "body": "A magnitude 5.6 earthquake struck near Khuzdar in Pakistan's Balochistan province on Saturday, the German Research Center for Geosciences (GFZ) said. The quake was at a depth of 10 km (6 ...",
+              "published_date": "2026-10-17T16:10:48+00:00",
+              "outlet": "Reuters",
+              "image": ""
+            },
+            {
+              "news_id": "e3815442931a509ebedfd5d335c8c801",
+              "url": "https://quettavoice.com/2026/10/17/magnitude-5-9-earthquake-hits-balochistans-khuzdar-distric/",
+              "headline": "Magnitude 5.9 Earthquake Hits Balochistan’s Khuzdar Distric",
+              "body": "Magnitude 5.9 Earthquake Hits Balochistan’s Khuzdar Distric",
+              "published_date": "2026-10-17",
+              "outlet": "quettavoice.com",
+              "image": "https://quettavoice.com/wp-content/uploads/2026/10/Earthquake-jolts-Quetta-mud-walled-houses-collapse-in-Harnai.jpg.webp"
+            },
+            {
+              "news_id": "c671e9246ca95d93b919c78b7eb7a19e",
+              "url": "https://www.msn.com/en-in/news/other/balochistan-khuzdar-earthquake-magnitude-5-7-depth-10km/ar-AA2eqdO6",
+              "headline": "5.7 magnitude earthquake shakes Khuzdar in Pakistan's Balochistan: Shallow 10 km depth causes severe shaking",
+              "body": "Centered 48 kilometers west-northwest of Khuzdar at a focal depth of just 10 kilometers, the tremors triggered widespread shaking across nearby districts including Kharan and Kalat.",
+              "published_date": "2026-10-17",
+              "outlet": "Zee News",
+              "image": "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA2eqbdL.img?w=700&h=400&m=4&q=54"
+            },
+            {
+              "news_id": "2b05b471aab75f768602fa950215f076",
+              "url": "https://dailytimes.com.pk/1568641/moderate-5-9-magnitude-earthquake-jolts-balochistans-khuzdar-district/",
+              "headline": "Moderate 5.9-magnitude earthquake jolts balochistan's khuzdar district - Daily Times",
+              "body": "A 5.9-magnitude earthquake struck Balochistan's Khuzdar district on Saturday, causing fear among residents, though no immediate casualties or damages were reported.",
+              "published_date": "2026-10-17",
+              "outlet": "Daily Times",
+              "image": "https://dailytimes.com.pk/assets/uploads/2026/10/17/Moderate-5.9-magnitude-earthquake-jolts-balochistans-khuzdar-district.webp"
+            },
+            {
+              "news_id": "fd02fa6be52d5bf491921bc3c20bd0f3",
+              "url": "https://timesofindia.indiatimes.com/world/pakistan/strong-6-0-magnitude-quake-strikes-balochistan-in-pakistan/articleshow/135007994.cms",
+              "headline": "Strong 6.0-magnitude quake strikes Balochistan in Pakistan",
+              "body": "An earthquake measuring 6.0 in magnitude struck southern Pakistan near Khuzdar, Balochistan on Saturday, around 95 km south of Sūrāb, according to the European-Mediterranean Seismological Centre (EMSC).",
+              "published_date": "2026-10-17",
+              "outlet": "The Times of India",
+              "image": "https://static.toiimg.com/thumb/msid-135008024,width-1280,height-720,resizemode-6,overlay-toi_sw,pt-32,y_pad-600/photo.jpg"
+            },
+            {
+              "news_id": "df1435a743d35e3aa338159a2a3e7456",
+              "url": "https://www.dawn.com/news/2037802",
+              "headline": "5.9-magnitude earthquake jolts Balochistan's Khuzdar",
+              "body": "The earthquake occurred at a depth of 25 kilometres, according to the Pakistan Meteorological Department.",
+              "published_date": "2026-10-17",
+              "outlet": "Dawn",
+              "image": "https://i.dawn.com/large/2026/10/17120727fb30744.webp"
+            },
+            {
+              "news_id": "31187bf4a30d592590b117544885b791",
+              "url": "https://ijr.com/discover/strong-earthquake-strikes-near-khuzdar-pakistan-d270817e",
+              "headline": "Strong earthquake strikes near Khuzdar, Pakistan",
+              "body": "A shallow earthquake struck near Khuzdar in Pakistan's Balochistan province on Saturday, prompting residents to leave buildings. Early reports said there were no casualties or collapses, though agencies warned of risks to vulnerable structures;",
+              "published_date": "2026-10-17",
+              "outlet": "Independent Journal Review",
+              "image": "https://ijr.com/discover/strong-earthquake-strikes-near-khuzdar-pakistan-d270817e/opengraph-image-1xo4yj?25b8a90c78f68980"
+            },
+            {
+              "news_id": "f7d57b5a287a5904b14ef937ce7b11a8",
+              "url": "https://www.thehindu.com/news/international/earthquake-of-magnitude-57-jolts-pakistans-balochistan/article71595718.ece",
+              "headline": "Earthquake of magnitude 5.7 jolts Pakistan's Balochistan",
+              "body": "A 5.7-magnitude earthquake hit Pakistan's Balochistan near Khuzdar, shaking multiple districts and prompting renewed safety concerns.",
+              "published_date": "2026-10-17",
+              "outlet": "The Hindu",
+              "image": "https://th-i.thgim.com/public/news/national/5v0ssz/article71595750.ece/alternates/LANDSCAPE_1200/Quake.jpg"
+            },
+            {
+              "news_id": "a42c5b29462e56a2a0e09a80a3e1a49c",
+              "url": "https://www.rediff.com/news/commentary/2026/oct/17/5.7-magnitude-earthquake-jolts-pakistans-balochistan/fdc968e14da10f9014f7efe82ed17767",
+              "headline": "5.7 magnitude earthquake jolts Pakistan's Balochistan",
+              "body": "A 5.7-magnitude earthquake struck Pakistans Balochistan province on Saturday, the US Geological Survey (USGS) said. The quake struck near Khuzdar town in Balochistan province, the",
+              "published_date": "2026-10-17",
+              "outlet": "Rediff.com",
+              "image": "https://im.rediff.com/news/2021/apr/05quake.jpg"
+            },
+            {
+              "news_id": "50517d994c715d58bfe946b04dfa0df1",
+              "url": "https://baku.ws/en/world/a-strong-earthquake-occurred-in-pakistan-574598",
+              "headline": "A strong earthquake occurred in Pakistan",
+              "body": "This morning, a 5.6 magnitude earthquake struck Balochistan, Pakistan. This was reported by Interfax citing the German Research Centre for Geosciences (GFZ). The epicenter of the tremors was located in the Khuzdar district,",
+              "published_date": "2026-10-17T10:36:00+00:00",
+              "outlet": "Baku.ws",
+              "image": "https://baku.ws/storage/photos/uploads/thumbs/aspect/qwQEdIkz07bb4mloUUXGkboB0OzpJrdkkXVQ1hbA.webp"
+            },
+            {
+              "news_id": "bda273c8434956d7931a04267ae0e5fe",
+              "url": "https://www.orissapost.com/5-9-magnitude-earthquake-strikes-pakistans-balochistan-province/",
+              "headline": "5.9-magnitude earthquake strikes Pakistan’s Balochistan province - OrissaPOST",
+              "body": "Islamabad: A 5.9-magnitude earthquake struck the country’s Balochistan province Saturday, according to the Pakistan Meteorological Department (PMD). However, according to initial reports, there was no loss of life or property. Also Read Tanker attacked off Saudi coast: UKMTO 1 hour ago All nine Indian sailors aboard YARA J safe in Romania: Embassy 3 hours ago […]",
+              "published_date": "2026-10-17",
+              "outlet": "OrissaPOST",
+              "image": "https://www.orissapost.com/wp-content/uploads/2025/08/earthquake-hits-Pakistan.png"
+            },
+            {
+              "news_id": "80a0ed4913de5c21a4191df1dacb202b",
+              "url": "https://www.timesnownews.com/world/asia/earthquake-of-5-8-magnitude-rocks-pakistan-article-156354800",
+              "headline": "Earthquake Of 5.8 Magnitude Rocks Pakistan's Balochistan",
+              "body": "A powerful 5.8 magnitude earthquake struck Pakistan on Saturday. No casualties have been reported yet., Asia, Times Now",
+              "published_date": "2026-10-17",
+              "outlet": "Times Now",
+              "image": "https://images.timesnownews.com/thumb/msid-156354807,thumbsize-589317,width-1280,height-720,resizemode-75/156354807.jpg"
+            },
+            {
+              "news_id": "4fc14a3c8d4e5ad49167c3624eaf8beb",
+              "url": "https://www.outlookindia.com/international/pakistan-earthquake-magnitude-5-8-tremor-15-km-depth",
+              "headline": "Magnitude 5.8 Earthquake Strikes Pakistan, Tremor Recorded At 15 Km Depth | Outlook India",
+              "body": "An earthquake of magnitude 5.8 struck Pakistan on October 17, according to India’s National Centre for Seismology, while the US Geological Survey recorded a magnitude of 5.7 and placed the epicentre near Khuzdar in Balochistan",
+              "published_date": "2026-10-17",
+              "outlet": "Outlook India",
+              "image": "https://cf-images.assettype.com/outlookindia/2026-10-17/gdje0g2k/WhatsApp-Image-2026-10-17-at-1.46.23-PM.jpeg?w=1200&amp;ar=40:21&amp;auto=format,compress&amp;ogImage=true&amp;mode=crop&amp;enlarge=true&amp;overlay=false&amp;overlay_position=bottom&amp;overlay_width=100"
+            },
+            {
+              "news_id": "114c9e6744365224bb6fbcf43fe17f69",
+              "url": "https://tribune.com.pk/story/2635350/59-magnitude-earthquake-jolts-balochistans-khuzdar-adjoining-areas",
+              "headline": "5.9-magnitude earthquake jolts Balochistan’s Khuzdar, adjoining areas | The Express Tribune",
+              "body": "Tremors also felt in Kalat, Surab as district administration reports no loss of life, property",
+              "published_date": "2026-10-17",
+              "outlet": "The Express Tribune",
+              "image": "https://i.tribune.com.pk/media/images/tribune-n-31748934350-1/tribune-n-31748934350-1-640x480.webp"
             }
           ]
         }
