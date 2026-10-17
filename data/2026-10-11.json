@@ -1,29 +1,28 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-10-11",
-  "generated_at": "2026-10-16T17:33:13Z",
+  "generated_at": "2026-10-17T05:44:26Z",
   "as_of": "2026-10-11",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 15,
-    "new_today": 2,
+    "reportable_total": 14,
+    "new_today": 1,
     "critical": 6,
     "high": 4,
-    "medium": 4,
+    "medium": 3,
     "low": 1,
-    "disease_outbreaks": 1,
+    "disease_outbreaks": 0,
     "countries_affected": 10,
-    "news_total": 2844,
+    "news_total": 2651,
     "max_magnitude": 7.7,
     "by_severity": {
       "CRITICAL": 6,
       "HIGH": 4,
-      "MEDIUM": 4,
+      "MEDIUM": 3,
       "LOW": 1
     },
     "by_type": {
-      "Disease": 1,
       "Earthquake": 9,
       "Flood": 2,
       "Volcano": 1,
@@ -31,7 +30,6 @@
       "": 1
     },
     "by_region": {
-      "Global": 1,
       "Americas": 3,
       "Asia": 6,
       "Unknown": 2,
@@ -49,15 +47,6 @@
       "region": "Africa",
       "country_group": "C",
       "max_severity": "LOW"
-    },
-    {
-      "country": "",
-      "count": 4,
-      "max_sev_rank": 2,
-      "iso2": "XX",
-      "region": "Global",
-      "country_group": "C",
-      "max_severity": "MEDIUM"
     },
     {
       "country": "Indonesia",
@@ -85,6 +74,15 @@
       "region": "Europe",
       "country_group": "C",
       "max_severity": "MEDIUM"
+    },
+    {
+      "country": "",
+      "count": 3,
+      "max_sev_rank": 3,
+      "iso2": "XX",
+      "region": "Americas",
+      "country_group": "C",
+      "max_severity": "HIGH"
     },
     {
       "country": "Philippines",
@@ -134,989 +132,6 @@
   ],
   "incidents": [
     {
-      "incident_id": "20240530-XX-DI",
-      "tree_id": "f4579a0976695da8abd83ef84f8e0fb1",
-      "canonical_name": "Dengue Global 2024-05-30",
-      "summary": "Florida's dengue outbreak has rapidly escalated, with cases surging from 190 to 485 over the past two weeks, making it a record-breaking outbreak according to CDC data. In response, Hillsborough County has approved additional helicopters and spraying to combat the disease. A school awareness campaign on dengue prevention was also held in Raebareli, India.",
-      "country": "",
-      "iso2": "XX",
-      "lat": null,
-      "lon": null,
-      "country_group": "C",
-      "region": "Global",
-      "incident_type": "Disease",
-      "incident_category": "Biological",
-      "is_disease": true,
-      "severity": "MEDIUM",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2024-05-30",
-      "first_reported_date": "2024-05-30",
-      "last_updated_date": "2026-10-11",
-      "days_since_event": 869,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 1,
-        "usgs": 0,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 193
-      },
-      "source_links": [
-        {
-          "type": "WHO",
-          "label": "Dengue Global 2024-05-30",
-          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2024-DON518",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Earth (Thailand) Celebrates 5 Years of Fighting Dengue as Title Sponsor of 'Mae Hong Son Cross Country 2026'",
-          "published_date": "2015-11-12"
-        },
-        {
-          "headline": "Dengue fever is — unfortunately — having a banner year. Can it be quelled?",
-          "published_date": "2024-07-23T00:00:00+00:00"
-        },
-        {
-          "headline": "UN agency authorizes second vaccine against dengue amid outbreaks in the Americas",
-          "published_date": "2026-07-08T14:57:06+00:00"
-        },
-        {
-          "headline": "Dengue: Surge in US Cases This Year",
-          "published_date": "2026-07-08T14:57:06+00:00"
-        },
-        {
-          "headline": "Two more die of dengue, 306 hospitalised in 24hrs",
-          "published_date": "2026-07-11T03:56:07+00:00"
-        },
-        {
-          "headline": "Two more die of dengue, 391 hospitalised in 24hrs",
-          "published_date": "2026-07-13T03:58:16+00:00"
-        },
-        {
-          "headline": "Sri Lanka expands anti-dengue drive as deaths mount",
-          "published_date": "2026-07-15"
-        },
-        {
-          "headline": "Remote health monitoring: A practical digital solution for dengue burden",
-          "published_date": "2026-07-15T01:15:18+00:00"
-        },
-        {
-          "headline": "Bangladesh floods heighten dengue, cholera risks, says IFRC",
-          "published_date": "2026-07-15T07:15:18+00:00"
-        },
-        {
-          "headline": "Two more die of dengue, 391 hospitalised in 24hrs",
-          "published_date": "2026-07-16T14:45:52+00:00"
-        },
-        {
-          "headline": "Two more die of dengue, 306 hospitalised in 24hrs",
-          "published_date": "2026-07-16T19:53:01+00:00"
-        },
-        {
-          "headline": "This tiny drone doesn't deliver packages. It kills mosquitoes- Moneycontrol.com",
-          "published_date": "2026-07-17"
-        },
-        {
-          "headline": "UKHSA travel illness warning as more than 1,000 cases so far this year",
-          "published_date": "2026-07-18T03:46:52+00:00"
-        },
-        {
-          "headline": "Mosquito Killer Drone This 40 Gram Palm Sized Ai Micro Drone Kills Flying Insects And Could One Day Help Eradicate Mosquitoes",
-          "published_date": "2026-07-19"
-        },
-        {
-          "headline": "India Approves First Dengue Vaccine QDENGA For Ages 4-60, No Pre-Vaccination Tests Required",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "Mosquitos galore",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "India Approves Its First Dengue Vaccine Qdenga How It Works Who Is Eligible And Why It Isnt A Silver Bullet",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "Qdenga India Approves First Dengue Vaccine For People Aged 4 60 Years",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "India approves first dengue vaccine Qdenga: Which age group can get the shot that targets all 4 virus sub-types?",
-          "published_date": "2026-07-20"
-        },
-        {
-          "headline": "Three more die of dengue, 372 hospitalised in 24hrs",
-          "published_date": "2026-07-20T17:07:00+00:00"
-        },
-        {
-          "headline": "QDENGA: India’s first approved dengue vaccine",
-          "published_date": "2026-07-21"
-        },
-        {
-          "headline": "Malaria, dengue, leptospirosis killed 99 people in Mumbai between 2023 and 2025: RTI",
-          "published_date": "2026-07-21"
-        },
-        {
-          "headline": "India approves first dengue vaccine",
-          "published_date": "2026-07-21"
-        },
-        {
-          "headline": "550 Dengue Cases In State; AI, Drone Mapping To Aid Prevention",
-          "published_date": "2026-07-21"
-        },
-        {
-          "headline": "Breaking News Live Updates: Delhi records 205 dengue, 58 malaria cases so far this year - The Times of India",
-          "published_date": "2026-07-21"
-        },
-        {
-          "headline": "First native Dengue fever cases recorded in France in 2026",
-          "published_date": "2026-07-22"
-        },
-        {
-          "headline": "India Gets Its First Dengue Vaccine Who Can Take It Price Effectiveness And Everything You Need To Know",
-          "published_date": "2026-07-22"
-        },
-        {
-          "headline": "India Approves Its First Dengue Vaccine Qdenga How It Works Who Is Eligible And Why It Isnt A Silver Bullet",
-          "published_date": "2026-07-22"
-        },
-        {
-          "headline": "Japanese Drugmaker Takedas Qdenga Becomes First Dengue Vaccine Approved In India",
-          "published_date": "2026-07-22"
-        },
-        {
-          "headline": "Shamli News: मलेरिया-डेंगू के लिए 19 गांव और आठ कॉलोनियां संवेदनशील",
-          "published_date": "2026-07-23"
-        },
-        {
-          "headline": "Uk Holidaymakers Told To Check This Before Flying",
-          "published_date": "2026-07-23"
-        },
-        {
-          "headline": "MBSJ sees 25% rise in dengue cases",
-          "published_date": "2026-07-23"
-        },
-        {
-          "headline": "Fantastis! Beban Ekonomi akibat DBD di Indonesia Nyaris Rp9 Triliun pada 2024",
-          "published_date": "2026-07-24"
-        },
-        {
-          "headline": "Doctors are tracking a jump in dengue as the mosquito that carries it pushes north",
-          "published_date": "2026-07-25"
-        },
-        {
-          "headline": "Doctors are tracking a jump in dengue as the mosquito that carries it pushes north",
-          "published_date": "2026-07-25"
-        },
-        {
-          "headline": "Three more die of dengue, 512 hospitalised in 24hrs",
-          "published_date": "2026-07-25T03:53:13+00:00"
-        },
-        {
-          "headline": "Doctors are tracking a jump in dengue as the mosquito that carries it pushes north",
-          "published_date": "2026-07-26"
-        },
-        {
-          "headline": "Three more die of dengue, 458 hospitalised in 24hrs",
-          "published_date": "2026-07-26T14:11:01+00:00"
-        },
-        {
-          "headline": "US, Sri Lanka partner on dengue control initiative",
-          "published_date": "2026-07-26T19:45:30+00:00"
-        },
-        {
-          "headline": "Dengue virus can infect immune cells meant to fight disease",
-          "published_date": "2026-07-27"
-        },
-        {
-          "headline": "Three more die of dengue, 458 hospitalised in 24hrs",
-          "published_date": "2026-07-27T01:07:00+00:00"
-        },
-        {
-          "headline": "Dengue death toll rises to 50 this year",
-          "published_date": "2026-07-27T19:55:11+00:00"
-        },
-        {
-          "headline": "Dengue virus can infect immune cells meant to fight disease",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "How mosquitoes are conquering the world — in four charts",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Confirmed case of dengue fever in Hillsborough County prompts response by mosquito control",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Tropical Diseases Like Dengue Fever and Chikungunya Are on the Rise in Europe",
-          "published_date": "2026-07-29"
-        },
-        {
-          "headline": "Dengue death toll rises to 50 this year",
-          "published_date": "2026-07-29T03:17:00+00:00"
-        },
-        {
-          "headline": "One more dies of dengue, 153 hospitalised in 24hrs",
-          "published_date": "2026-07-29T04:00:26+00:00"
-        },
-        {
-          "headline": "Three more die of dengue, 512 hospitalised in 24hrs",
-          "published_date": "2026-07-29T09:24:01+00:00"
-        },
-        {
-          "headline": "Two more die of dengue, 423 hospitalised in 24hrs",
-          "published_date": "2026-07-30T04:05:25+00:00"
-        },
-        {
-          "headline": "Three more die of dengue, 467 hospitalised in 24hrs",
-          "published_date": "2026-07-30T14:43:43+00:00"
-        },
-        {
-          "headline": "Google wants to release millions of mosquitoes across the US. Here’s why | Discover Wildlife",
-          "published_date": "2026-07-31"
-        },
-        {
-          "headline": "Three more die of dengue, 467 hospitalised in 24hrs",
-          "published_date": "2026-07-31T09:28:13+00:00"
-        },
-        {
-          "headline": "DENV-3 dominates dengue infections this year as experts fear more severe complications",
-          "published_date": "2026-08-02"
-        },
-        {
-          "headline": "Three more die of dengue, 580 hospitalised in 24hrs",
-          "published_date": "2026-08-03T04:41:00+00:00"
-        },
-        {
-          "headline": "Warmer winters are making diseases spread across the globe",
-          "published_date": "2026-08-04"
-        },
-        {
-          "headline": "Insurance company rejects son's dengue hospitalisation claim, mother wins Rs 26,882",
-          "published_date": "2026-08-04"
-        },
-        {
-          "headline": "Three more die of dengue, 580 hospitalised in 24hrs",
-          "published_date": "2026-08-04T05:07:16+00:00"
-        },
-        {
-          "headline": "Dengue fever: Three die as 580 cases recorded in 24 hours",
-          "published_date": "2026-08-04T15:04:33+00:00"
-        },
-        {
-          "headline": "Dengue: 195 cases recorded in 24 hours",
-          "published_date": "2026-08-05T15:06:25+00:00"
-        },
-        {
-          "headline": "Dengue: 471 new cases recorded in 24 hours",
-          "published_date": "2026-08-06T14:51:58+00:00"
-        },
-        {
-          "headline": "Two more die of dengue, 693 hospitalised in 24hrs",
-          "published_date": "2026-08-09T03:24:42+00:00"
-        },
-        {
-          "headline": "Dengue infections cross 20,000",
-          "published_date": "2026-08-10T20:21:00+00:00"
-        },
-        {
-          "headline": "Health officials report 756 fresh cases of dengue infection overnight",
-          "published_date": "2026-08-12T03:33:42+00:00"
-        },
-        {
-          "headline": "Dengue claims two lives as 723 cases recorded in 24 hours",
-          "published_date": "2026-08-13T03:24:16+00:00"
-        },
-        {
-          "headline": "Dengue claims two lives as 639 cases recorded in 24 hours",
-          "published_date": "2026-08-13T15:25:07+00:00"
-        },
-        {
-          "headline": "Two more die of dengue, 671 hospitalised in 24hrs",
-          "published_date": "2026-08-15T04:18:26+00:00"
-        },
-        {
-          "headline": "Three more die of dengue, 805 hospitalised in 24hrs",
-          "published_date": "2026-08-17T03:12:23+00:00"
-        },
-        {
-          "headline": "Dengue claims one life as 870 cases recorded in 24 hours",
-          "published_date": "2026-08-17T16:04:20+00:00"
-        },
-        {
-          "headline": "SynAct Pharma AB: SynAct Pharma progresses first commercial agreement on resomelagon for treatment of dengue in Brazil - term sheet signed",
-          "published_date": "2026-08-19"
-        },
-        {
-          "headline": "Dengue: Two more die as 671 cases recorded in 24 hours",
-          "published_date": "2026-08-19T15:24:38+00:00"
-        },
-        {
-          "headline": "Ho Chi Minh City urged to strengthen disease surveillance, early warning",
-          "published_date": "2026-08-20"
-        },
-        {
-          "headline": "लुम्बिनी प्रदेशमै पाल्पामा डेंगु संक्रमित धेरै, २ महिना नपुग्दै २३१ जनामा संक्रमण",
-          "published_date": "2026-08-20"
-        },
-        {
-          "headline": "Dengue: One dies as 750 cases recorded in 24 hours",
-          "published_date": "2026-08-20T15:25:52+00:00"
-        },
-        {
-          "headline": "How many dengue cases have been reported in Florida? See 2026 cases",
-          "published_date": "2026-08-21"
-        },
-        {
-          "headline": "Delhi reports 1,777 H1N1 cases as Nadda assesses health readiness",
-          "published_date": "2026-08-22"
-        },
-        {
-          "headline": "Warning for Irish holidaymakers due to spread of mosquitos carrying various diseases",
-          "published_date": "2026-08-22"
-        },
-        {
-          "headline": "Dengue: 702 fresh cases of inflection reported overnight",
-          "published_date": "2026-08-22T13:36:45+00:00"
-        },
-        {
-          "headline": "JP Nadda reviews Delhi's preparedness for influenza, dengue and malaria; Health Minister assures readiness",
-          "published_date": "2026-08-23"
-        },
-        {
-          "headline": "A double burden for women in dengue season",
-          "published_date": "2026-08-23"
-        },
-        {
-          "headline": "Dengue claims five more lives in 24hrs",
-          "published_date": "2026-08-23T13:34:06+00:00"
-        },
-        {
-          "headline": "Delhi H1N1 outbreak: 2,308 infections reported as dengue cases cross 2,200 - CNBC TV18",
-          "published_date": "2026-08-25"
-        },
-        {
-          "headline": "Dengue fever cases rise in Tampa Bay as health officials target mosquitoes",
-          "published_date": "2026-08-25"
-        },
-        {
-          "headline": "Three more die of dengue, 994 hospitalised in 24hrs",
-          "published_date": "2026-08-25T04:16:22+00:00"
-        },
-        {
-          "headline": "Three more die of dengue, 994 hospitalised in 24hrs",
-          "published_date": "2026-08-25T15:15:35+00:00"
-        },
-        {
-          "headline": "Haryana dengue cases reach 147 as Gurgaon and Jhajjar report highest numbers",
-          "published_date": "2026-08-26"
-        },
-        {
-          "headline": "Dengue: Death toll 88 as three die in 24 hours",
-          "published_date": "2026-08-26T03:47:47+00:00"
-        },
-        {
-          "headline": "Are Nepal's Floods Creating a New Public-Health Crisis?",
-          "published_date": "2026-08-27"
-        },
-        {
-          "headline": "Discrepancy in Delhi dengue data: Health minister and MCD figures clash",
-          "published_date": "2026-08-27"
-        },
-        {
-          "headline": "550 new dengue cases reported in 24hrs",
-          "published_date": "2026-08-27T11:23:02+00:00"
-        },
-        {
-          "headline": "प्रयागराज के होलागढ़ में ग्राम प्रधान ने कराया दवा छिड़काव: डेंगू व संक्रामक बीमारियों से बचाव के लिए की गई पहल - Barai Harakh(Soraon) News",
-          "published_date": "2026-08-28"
-        },
-        {
-          "headline": "Dengue hospitalisations hit record high with 726 cases in 24 hours",
-          "published_date": "2026-08-29"
-        },
-        {
-          "headline": "Dengue: Two more die as 996 cases recorded in 24 hours",
-          "published_date": "2026-08-29T18:23:56+00:00"
-        },
-        {
-          "headline": "Dengue: 3 deaths, 1,097 cases reported in 24 hours",
-          "published_date": "2026-08-30T18:18:31+00:00"
-        },
-        {
-          "headline": "Three more die of dengue, 1,097 hospitalised in 24hrs",
-          "published_date": "2026-08-30T18:18:31+00:00"
-        },
-        {
-          "headline": "Dengue: Four more die as 1,163 cases recorded in 24 hours",
-          "published_date": "2026-08-30T20:03:57+00:00"
-        },
-        {
-          "headline": "Dengue death toll nears 100",
-          "published_date": "2026-08-30T20:03:57+00:00"
-        },
-        {
-          "headline": "Three more die of dengue, 1,097 hospitalised in 24hrs",
-          "published_date": "2026-08-31T20:03:57+00:00"
-        },
-        {
-          "headline": "Dengue death toll crosses 100 this year",
-          "published_date": "2026-09-01T18:34:53+00:00"
-        },
-        {
-          "headline": "Northeast faces new vector threat as diseases spread to new areas: Health panel",
-          "published_date": "2026-09-02"
-        },
-        {
-          "headline": "Dengue: Five more die as 1,324 cases recorded in 24 hours",
-          "published_date": "2026-09-02T06:08:34+00:00"
-        },
-        {
-          "headline": "Five more die of dengue, 1,110 hospitalised in 24hrs",
-          "published_date": "2026-09-02T18:11:54+00:00"
-        },
-        {
-          "headline": "Four more die of dengue, 1,252 hospitalised in 24hrs",
-          "published_date": "2026-09-02T18:20:38+00:00"
-        },
-        {
-          "headline": "Health officials warn dengue risk persists despite decline in cases - Newswire",
-          "published_date": "2026-09-03"
-        },
-        {
-          "headline": "Dengue: Four more die as 1,252 cases recorded in 24 hours",
-          "published_date": "2026-09-03T18:20:39+00:00"
-        },
-        {
-          "headline": "Demam Berdarah Tak Kenal Musim, Kewaspadaan Perlu Dijaga Sepanjang Tahun",
-          "published_date": "2026-09-06"
-        },
-        {
-          "headline": "ફળ કરતાં પાન મોંઘું: ડેન્ગ્યુમાં અસરકારક પપૈયાના પાનની માગ વધી, એક પાનના રૂ.45થી 50 - Ahmedabad News",
-          "published_date": "2026-09-07"
-        },
-        {
-          "headline": "कुशीनगर के मठसुरजगीर में गंदगी से मच्छरों का प्रकोप बढ़ा: ग्रामीणों ने फॉगिंग और दवा छिड़काव की मांग की, बीमारियों का खतरा - Rampur(Hata) News",
-          "published_date": "2026-09-07"
-        },
-        {
-          "headline": "खानपुर में नालियों-गलियों में गंदगी, ग्रामीण परेशान: मच्छर-मक्खियां पनप रहे, डेंगू-हैजा जैसी बीमारियों का डर; प्रधान ने दिया आश्वासन - Khanpur Phaphund(Auraiya) News",
-          "published_date": "2026-09-07"
-        },
-        {
-          "headline": "Dangerous mosquito-borne virus spreads in one state as officials warn of rising cases",
-          "published_date": "2026-09-08"
-        },
-        {
-          "headline": "Florida Is Confronting Yet Another Surging Viral Threat: Dengue Fever",
-          "published_date": "2026-09-08"
-        },
-        {
-          "headline": "With dengue on the rise, Tampa woman battles ‘mosquito breeding ground’ next door",
-          "published_date": "2026-09-09"
-        },
-        {
-          "headline": "Health officials investigate possible Dengue death",
-          "published_date": "2026-09-09"
-        },
-        {
-          "headline": "Family says 80-year-old Tampa woman died from dengue fever",
-          "published_date": "2026-09-09"
-        },
-        {
-          "headline": "CDC updates global travel notice as incurable brain-bleeding virus reaches America",
-          "published_date": "2026-09-09"
-        },
-        {
-          "headline": "Dengue cases nearly double in one week. Here's where",
-          "published_date": "2026-09-09"
-        },
-        {
-          "headline": "Ctg Dengue tally reaches 2,548 amid intermittent rains",
-          "published_date": "2026-09-09T05:56:16+00:00"
-        },
-        {
-          "headline": "Three more die of dengue, 1,463 hospitalised in 24 hours",
-          "published_date": "2026-09-09T17:47:54+00:00"
-        },
-        {
-          "headline": "Dengue claims six more lives in 24 hours",
-          "published_date": "2026-09-10T17:04:28+00:00"
-        },
-        {
-          "headline": "Family says mom died from dengue fever | 2 SWAT members hurt in shooting | Tampa news compilation",
-          "published_date": "2026-09-11"
-        },
-        {
-          "headline": "Mahendragarh-Narnaul News: जिले में एक और मिला डेंगू मरीज, 11 पहुंची संख्या",
-          "published_date": "2026-09-12"
-        },
-        {
-          "headline": "पसईपुर केशमपुर में सड़क पर गंदा पानी जमा: नाले न होने से आवागमन मुश्किल, मच्छर-मक्खी पनपे; डेंगू-मलेरिया का खतरा - Bhagaynagar(Auraiya) News",
-          "published_date": "2026-09-12"
-        },
-        {
-          "headline": "Special Dengue Eradication Week launched across 62 Divisions - Newswire",
-          "published_date": "2026-09-14"
-        },
-        {
-          "headline": "Aedes Mosquito",
-          "published_date": "2026-09-14T00:00:00+00:00"
-        },
-        {
-          "headline": "Dengue claims eight more lives in 24 hours",
-          "published_date": "2026-09-14T18:26:36+00:00"
-        },
-        {
-          "headline": "कयासपुर गांव में कूड़े के ढेर, बीमारी फैलने का खतरा: ग्रामीणों ने शिकायत की, नालियों में पानी भरने से मच्छर बढ़े; डेंगू का खतरा - Baira Gadhiwa(Fatehpur Sadar) News",
-          "published_date": "2026-09-15"
-        },
-        {
-          "headline": "How to spot dengue fever symptoms early",
-          "published_date": "2026-09-15"
-        },
-        {
-          "headline": "How to spot dengue fever symptoms early",
-          "published_date": "2026-09-15"
-        },
-        {
-          "headline": "Dengue could rise again amid expected rainfall, health officials warn - Newswire",
-          "published_date": "2026-09-15"
-        },
-        {
-          "headline": "Dengue‑carrying mosquitoes expand their reach into new territories—including Florida",
-          "published_date": "2026-09-15"
-        },
-        {
-          "headline": "CDC updates global travel notice as incurable brain-bleeding virus reaches America",
-          "published_date": "2026-09-15"
-        },
-        {
-          "headline": "Dengue claims seven more lives in 24 hours",
-          "published_date": "2026-09-15T17:20:00+00:00"
-        },
-        {
-          "headline": "कानपुर के काजीखेड़ा में कूड़े का ढेर: महापौर प्रमिला पांडेय के सफाई मिशन पर सवाल, डेंगू का बढ़ रहा खतरा - Kajikheda News",
-          "published_date": "2026-09-16"
-        },
-        {
-          "headline": "Dengue-carrying mosquitoes expand their reach into new territories – including Florida",
-          "published_date": "2026-09-16"
-        },
-        {
-          "headline": "Survey: Many Americans not using mosquito repellent properly",
-          "published_date": "2026-09-16"
-        },
-        {
-          "headline": "Dengue cases have fallen by about 70 percent in the parts of Singapore where the government releases mosquitoes on purpose. It breeds 5 million males a week, none of which bite, and the females they mate with lay eggs that never hatch.",
-          "published_date": "2026-09-16"
-        },
-        {
-          "headline": "WHO review highlights SynAct’s resomelagon among six dengue drugs for further development",
-          "published_date": "2026-09-16"
-        },
-        {
-          "headline": "Dengue-carrying mosquitoes expand their reach into new territories - including Florida",
-          "published_date": "2026-09-16"
-        },
-        {
-          "headline": "How to spot dengue fever symptoms early",
-          "published_date": "2026-09-16"
-        },
-        {
-          "headline": "Quick takes: NWS-related border reopening, dengue in Florida, NIH PubMed tool, sprout recall, more polio",
-          "published_date": "2026-09-16"
-        },
-        {
-          "headline": "Dengue Fever Linked to Death of Elderly Woman in Florida Amid Outbreak - SSBCrack News",
-          "published_date": "2026-09-17"
-        },
-        {
-          "headline": "Five more die of dengue, 1,484 hospitalised in 24 hours",
-          "published_date": "2026-09-17T17:23:24+00:00"
-        },
-        {
-          "headline": "First Half: Allen vs. Prosper",
-          "published_date": "2026-09-18"
-        },
-        {
-          "headline": "Sonipat News: जिले में पांव पसार रहा डेंगू 14 पहुंची मरीजों की संख्या",
-          "published_date": "2026-09-19"
-        },
-        {
-          "headline": "Florida confirms a death from dengue as the state struggles with one of its worst recent outbreaks",
-          "published_date": "2026-09-19"
-        },
-        {
-          "headline": "Dengue Vaccine Boom: Takeda’s 100M-Dose Plan",
-          "published_date": "2026-09-19"
-        },
-        {
-          "headline": "In Keralam, dengue season follows the monsoon – but El Niño could give doctors a three-month head start",
-          "published_date": "2026-09-19"
-        },
-        {
-          "headline": "தமிழகத்தில் டெங்கு காய்ச்சல் நிலவரம் என்ன? சுகாதாரத் துறை அமைச்சர் அளித்த அப்டேட்",
-          "published_date": "2026-09-20"
-        },
-        {
-          "headline": "डेंगू वार्ड में मच्छरदानी नहीं, खराब शौचालय से दुर्गंध: कुशीनगर मेडिकल कॉलेज में मरीजों के तीमारदारों ने उठाए सवाल; साफ-सफाई की भी शिकायत - padrauna(Kushinagar) News",
-          "published_date": "2026-09-20"
-        },
-        {
-          "headline": "India gets its first Dengue vaccine, here's everything to know",
-          "published_date": "2026-09-20"
-        },
-        {
-          "headline": "Florida woman dies from dengue amid surge of reported cases statewide",
-          "published_date": "2026-09-20T05:25:05+00:00"
-        },
-        {
-          "headline": "Dengue: Two more die as 1,232 cases recorded in 24 hours",
-          "published_date": "2026-09-20T05:25:05+00:00"
-        },
-        {
-          "headline": "Dengue Fever: தமிழகத்தில் டெங்கு பாதிப்பு குறைகிறது.. அமைச்சர் அருண்ராஜ் சொன்ன முக்கிய தகவல்!",
-          "published_date": "2026-09-21"
-        },
-        {
-          "headline": "How worried should Florida residents, visitors be about dengue?",
-          "published_date": "2026-09-23"
-        },
-        {
-          "headline": "How worried should Florida residents, visitors be about dengue?",
-          "published_date": "2026-09-23"
-        },
-        {
-          "headline": "Five more die of dengue, 1,872 hospitalised in 24 hours",
-          "published_date": "2026-09-23T05:51:48+00:00"
-        },
-        {
-          "headline": "Dengue: Five more die as 1,872 hospitalized in 24 hours",
-          "published_date": "2026-09-23T05:51:48+00:00"
-        },
-        {
-          "headline": "Pasco County Fighting Off Dengue Fever",
-          "published_date": "2026-09-24"
-        },
-        {
-          "headline": "Hillsborough, Pasco and Pinellas counties declare states of emergency to battle dengue fever",
-          "published_date": "2026-09-24"
-        },
-        {
-          "headline": "Dengue Emergency in Tampa Bay: Everything You Need to Know About the Hillsborough, Pasco, and Pinellas Outbreak - News Talk Florida",
-          "published_date": "2026-09-25"
-        },
-        {
-          "headline": "Is this the last year of dengue?: Severe fever keeps changing its form; papaya leaf remedy has no proven benefit - Gujarat News",
-          "published_date": "2026-09-28"
-        },
-        {
-          "headline": "Dengue claims eight more lives in 24 hours",
-          "published_date": "2026-09-28T20:03:56+00:00"
-        },
-        {
-          "headline": "Even As Dengue Cases Witness A Sharp Dip In Jammu Kashmir, Doda District Sees A Surge",
-          "published_date": "2026-09-29"
-        },
-        {
-          "headline": "Dengue surge becomes Florida's largest outbreak on record",
-          "published_date": "2026-09-30"
-        },
-        {
-          "headline": "अयोध्या में गिरिजा कुंड मार्ग पर नाले से गंदगी: डेंगू-मलेरिया का खतरा, घरों में घुस रहा पानी, पंप भी बेअसर - Janaura News",
-          "published_date": "2026-10-01"
-        },
-        {
-          "headline": "एटा में संचारी रोग नियंत्रण के लिए निकली जागरूकता रैली: डॉक्टरों ने डेंगू, मलेरिया से बचाव के तरीके बताए, 31 अक्टूबर तक चलेगा अभियान - Sakit(Etah) News",
-          "published_date": "2026-10-01"
-        },
-        {
-          "headline": "प्रयागराज के यूसुफपुर जिल्ला में गंदगी का अंबार: सोरांव ब्लॉक में एक महीने से नहीं आए सफाईकर्मी, बीमारियों का बढ़ा खतरा - Saiwtha(Soraon) News",
-          "published_date": "2026-10-01"
-        },
-        {
-          "headline": "झांसी में प्राइमरी स्कूल के पास खुली नालियों से गंदगी: वार्ड 54 के लोग परेशान, मच्छर पनपने से बच्चों को डेंगू का खतरा - Primary School News",
-          "published_date": "2026-10-02"
-        },
-        {
-          "headline": "फैजुल्लागंज की गणेश विहार कॉलोनी में कमर तक पानी भरा: लोग पलायन को मजबूर, डेंगू-टाइफाइड का खतरा बढ़ा; प्रशासन पर लापरवाही का आरोप - Ghaila News",
-          "published_date": "2026-10-02"
-        },
-        {
-          "headline": "Surge of 'breakbone fever' becomes Florida's largest outbreak on record",
-          "published_date": "2026-10-02"
-        },
-        {
-          "headline": "Florida's dengue outbreak is now the largest in the continental US in decades",
-          "published_date": "2026-10-03"
-        },
-        {
-          "headline": "Dengue claims 6 more lives in 24 hours, 1,608 hospitalised",
-          "published_date": "2026-10-03"
-        },
-        {
-          "headline": "Florida's dengue outbreak is now the largest in the continental US in decades",
-          "published_date": "2026-10-04"
-        },
-        {
-          "headline": "Map shows states where dengue fever cases have risen after Florida outbreak",
-          "published_date": "2026-10-04"
-        },
-        {
-          "headline": "वजीरगंज के सोहन नगर में जगह-जगह गंदगी का अंबार: कई दिनों से नहीं हुई सफाई, डेंगू के खतरे के बीच लोगों ने की जल्द एक्शन की मांग - Wazirganj(Bisauli) News",
-          "published_date": "2026-10-04"
-        },
-        {
-          "headline": "मैगलगंज के बाईकुआ में दूषित पानी भरा, ग्रामीण परेशान: मच्छरों का प्रकोप बढ़ा, डेंगू-मलेरिया का खतरा; प्रधान ने सफाई का दिया भरोसा - Maigal Ganj(MOHAMMDI) News",
-          "published_date": "2026-10-04"
-        },
-        {
-          "headline": "कटरा नील में चोक नालियां बनीं मुसीबत: सड़क पर जमा गंदा पानी, कूड़ा और गंदगी से जलनिकासी प्रभावित - Katra Neel News",
-          "published_date": "2026-10-04"
-        },
-        {
-          "headline": "Dengue: Six more die, 2,089 hospitalized in 24 hours",
-          "published_date": "2026-10-04T17:09:57+00:00"
-        },
-        {
-          "headline": "Dengue claims six more lives in 24 hours",
-          "published_date": "2026-10-04T17:09:57+00:00"
-        },
-        {
-          "headline": "Florida Dengue Outbreak Hits Record 252 Cases as Tampa Bay Emergencies Continue - North American Community Hub",
-          "published_date": "2026-10-05"
-        },
-        {
-          "headline": "मदरसे के पास कूड़ा डालने से लोग परेशान: नपा कर्मचारियों पर कूड़ा फेंकने का आरोप, बदबू और बीमारी का खतरा बढ़ा - Gulami Ka Pura News",
-          "published_date": "2026-10-05"
-        },
-        {
-          "headline": "विधिपुर में मच्छरों के लिए फॉगिंग अभियान: बरसात के बाद बढ़ी बीमारियों से बचाव के लिए गांवों में कराया छिड़काव - Vidhipur(Bharthana) News",
-          "published_date": "2026-10-05"
-        },
-        {
-          "headline": "Quebrantahuesos: la historia olvidada del Dengue en México",
-          "published_date": "2026-10-05T06:13:47+00:00"
-        },
-        {
-          "headline": "भाईपुर-बहादुरपुर चौराहे पर जमा गंदा पानी: राहगीरों को परेशानी, डेंगू-मलेरिया जैसी बीमारियों का खतरा बढ़ा, लोगों ने की सफाई की मांग - Lathiya SAHIJANI(Chunar) News",
-          "published_date": "2026-10-06"
-        },
-        {
-          "headline": "Dengue cases surge in Chittagong, 21 deaths recorded this year",
-          "published_date": "2026-10-06T06:49:40+00:00"
-        },
-        {
-          "headline": "Record-breaking dengue fever outbreak strikes Florida: What to know?",
-          "published_date": "2026-10-07"
-        },
-        {
-          "headline": "Hillsborough to get dengue fever update",
-          "published_date": "2026-10-07"
-        },
-        {
-          "headline": "विशिष्ट कुंड डूडा कॉलोनी में सड़क पर जमा गंदा पानी: स्थानीय लोगों को आवागमन में परेशानी, डेंगू-मलेरिया का खतरा बढ़ा - Duda Colony News",
-          "published_date": "2026-10-07"
-        },
-        {
-          "headline": "मीरजापुर में संचारी रोग से बचाव को घर-घर अभियान चला: चील्ह के डिंगूरपट्टी में स्वास्थ्य टीम ने दी डेंगू-मलेरिया से बचने की जानकारी - Balliparwa(Mirzapur) News",
-          "published_date": "2026-10-07"
-        },
-        {
-          "headline": "Hillsborough approves more helicopters, product spray to fight Dengue Fever",
-          "published_date": "2026-10-08"
-        },
-        {
-          "headline": "रायबरेली के मझिलहा स्कूल में बच्चों को किया जागरूक: बच्चों को बताए डेंगू-मलेरिया से बचाव के तरीके - Dih (Raebareli) News",
-          "published_date": "2026-10-10"
-        },
-        {
-          "headline": "गढ़ीवा में बच्चों को डेंगू से बचाव की होम्योपैथिक दवा: फतेहपुर में स्वास्थ्य जागरूकता अभियान चलाकर बच्चों को साफ-सफाई और संक्रामक बीमारियों से बचाव के तरीके बताए गए - Sangaon(Fatehpur Sadar) News",
-          "published_date": "2026-10-11"
-        },
-        {
-          "headline": "लुधियानी गांव में डेंगू और बुखार का बढ़ा प्रकोप: ग्रामीण बोले- सफाई नहीं, निजी इलाज को मजबूर; प्रधान ने आरोपों को नकारा - Mahewa(Etawah) News",
-          "published_date": "2026-10-11"
-        }
-      ],
-      "news_total": 193,
-      "logs": [
-        {
-          "log_date": "2026-07-08",
-          "summary": "The World Health Organization authorized a second dengue vaccine as outbreaks continue in the Americas. The US CDC issued an alert about increased dengue risk in the United States. In the Americas, nearly 10.4 million suspected dengue cases were reported to WHO by early July 2024.",
-          "news": [
-            {
-              "news_id": "7e19082e3a5f5ef599ebac390d6edf7c",
-              "url": "https://medicalxpress.com/news/2024-05-agency-authorizes-vaccine-dengue-outbreaks.html",
-              "headline": "UN agency authorizes second vaccine against dengue amid outbreaks in the Americas",
-              "body": "A health worker fumigates for mosquitoes inside a home to help mitigate the spread of dengue in the Las Penitas area of Talara, Peru, Friday, March 1, 2024.The World Health Organization on Wednesday, ...",
-              "published_date": "2026-07-08T14:57:06+00:00",
-              "outlet": "Medical Xpress",
-              "image": ""
-            },
-            {
-              "news_id": "e3557f7e1358509cbde59ef9f9b948eb",
-              "url": "https://www.npr.org/sections/goats-and-soda/2024/07/23/g-s1-12674/dengue-mosquitoes-climate-virus-americas",
-              "headline": "Dengue fever is — unfortunately — having a banner year. Can it be quelled?",
-              "body": "In the Americas alone, almost 10.4 million suspected cases of dengue, a mosquito-borne viral disease, were reported to the World Health Organization in 2024 as of the first week of July, an increase ...",
-              "published_date": "2024-07-23T00:00:00+00:00",
-              "outlet": "NPR",
-              "image": ""
-            },
-            {
-              "news_id": "e503ebb6fcdb5c678fa3cc7dcb115da8",
-              "url": "https://www.medscape.com/viewarticle/dengue-surge-us-cases-this-year-2024a1000bzw",
-              "headline": "Dengue: Surge in US Cases This Year",
-              "body": "Federal health officials with the US Centers for Disease Control and Prevention (CDC) have issued an alert, warning health professionals and the public about an increased risk for dengue virus ...",
-              "published_date": "2026-07-08T14:57:06+00:00",
-              "outlet": "Medscape",
-              "image": ""
-            }
-          ]
-        },
-        {
-          "log_date": "2026-10-06",
-          "summary": "Florida's 2026 dengue outbreak has hit a record 252 locally acquired cases, with Tampa Bay remaining the epicenter and emergency declarations continuing. In Bangladesh, the Chittagong district is experiencing a surge, reporting 4,914 infections and 21 deaths this year.",
-          "news": [
-            {
-              "news_id": "f1938f372cc65a40b5cc68ffb9a4d096",
-              "url": "https://nchstats.com/florida-dengue-outbreak/",
-              "headline": "Florida Dengue Outbreak Hits Record 252 Cases as Tampa Bay Emergencies Continue - North American Community Hub",
-              "body": "Florida dengue outbreak reaches a record 252 locally acquired cases in 2026, with Tampa Bay driving the surge and emergencies declared.",
-              "published_date": "2026-10-05",
-              "outlet": "nchstats",
-              "image": "https://www.bing.com/th?id=ONUT.yU4NgBN7JuLQI94JIcFc8w"
-            },
-            {
-              "news_id": "7a27f98672765e38b0e71fc13b771325",
-              "url": "https://www.dhakatribune.com/bangladesh/health/421423/dengue-cases-surge-in-chittagong-21-deaths",
-              "headline": "Dengue cases surge in Chittagong, 21 deaths recorded this year",
-              "body": "The dengue outbreak in Chittagong is intensifying, with 4,914 infections and 21 deaths recorded in the district between ...",
-              "published_date": "2026-10-06T06:49:40+00:00",
-              "outlet": "Dhaka Tribune",
-              "image": "https://www.bing.com/th?id=ONUT.orTaRhAJgWhDcEjfEI4n2g"
-            },
-            {
-              "news_id": "f4e0ce1e61145081813405cd583391e2",
-              "url": "https://www.bhaskar.com/local/uttar-pradesh/azamgarh/gulami-ka-pura/news/gulami-ka-pura-garbage-dumping-controversy-dengue-malaria-outbreak-139254580.html",
-              "headline": "मदरसे के पास कूड़ा डालने से लोग परेशान: नपा कर्मचारियों पर कूड़ा फेंकने का आरोप, बदबू और बीमारी का खतरा बढ़ा - Gulami Ka Pura News",
-              "body": "Gulami Ka Pura garbage dumping controversy health risk dengue malaria danger update. Follow Dainik Bhaskar Latest Updates. गुलामी का पूरा इलाके में नगर पालिका के कर्मचारी मदरसा के पास कूड़ा फेंक रहे हैं। इससे इलाके में गंदगी फैल रही है और लोगों को डेंगू-मलेरिया जैसी बीमारियों का खतरा बढ़ गया है।",
-              "published_date": "2026-10-05",
-              "outlet": "दैनिक भास्कर",
-              "image": ""
-            },
-            {
-              "news_id": "f6a9263820ae5f4b9bc06fc6c1b732ab",
-              "url": "https://www.bhaskar.com/local/uttar-pradesh/etawah/vidhipur/news/vidhipur-etawah-fogging-campaign-mosquito-control-dengue-malaria-139257961.html",
-              "headline": "विधिपुर में मच्छरों के लिए फॉगिंग अभियान: बरसात के बाद बढ़ी बीमारियों से बचाव के लिए गांवों में कराया छिड़काव - Vidhipur(Bharthana) News",
-              "body": "Vidhipur Etawah anti-mosquito fogging campaign after rain to prevent dengue and malaria outbreaks. Follow Dainik Bhaskar Latest Updates. इटावा के महेवा विकास खंड की विधिपुर ग्राम पंचायत में फॉगिंग अभियान चलाया गया। बरसात के बाद बढ़े मच्छरों और बीमारियों को रोकने के लिए यह कदम उठाया गया।",
-              "published_date": "2026-10-05",
-              "outlet": "दैनिक भास्कर",
-              "image": "https://www.bing.com/th?id=ONUT.IiRMUc0d6CQJFKDTVvDnMw"
-            },
-            {
-              "news_id": "0645660d5c2b5d7b981445394af92af2",
-              "url": "https://www.bhaskar.com/local/uttar-pradesh/mirzapur/lathiyasahijani/news/bhaipur-bahadurpur-crossing-water-logging-disease-outbreak-health-risk-139262861.html",
-              "headline": "भाईपुर-बहादुरपुर चौराहे पर जमा गंदा पानी: राहगीरों को परेशानी, डेंगू-मलेरिया जैसी बीमारियों का खतरा बढ़ा, लोगों ने की सफाई की मांग - Lathiya SAHIJANI(Chunar) News",
-              "body": "Bhaipur Bahadurpur crossing water logging dengue malaria health risk, follow Dainik Bhaskar latest updates. भाईपुर-बहादुरपुर चौराहे पर सड़क किनारे गंदगी और सीवर का गंदा पानी बहने से राहगीरों और स्थानीय लोगों को परेशानी हो रही है। लंबे समय से जमा इस गंदे पानी के कारण आसपास बदबू आ रही है और मच्छरों की संख्या बढ़ गई है।",
-              "published_date": "2026-10-06",
-              "outlet": "दैनिक भास्कर",
-              "image": ""
-            }
-          ]
-        },
-        {
-          "log_date": "2026-10-07",
-          "summary": "Hillsborough County, Florida, is preparing for a commissioner update on its dengue response, which has cost about $850,000 in emergency purchases. In India, waterlogging in Ayodhya’s Duda Colony is raising concerns about increased dengue and malaria risk, while a health department campaign in Mirzapur is conducting door-to-door awareness on dengue and other communicable diseases.",
-          "news": [
-            {
-              "news_id": "117c734e7dbf589999d873d318897630",
-              "url": "https://www.yahoo.com/news/videos/hillsborough-dengue-fever-104523831.html",
-              "headline": "Hillsborough to get dengue fever update",
-              "body": "On Wednesday Hillsborough County commissioners are supposed to get an update on the county’s fight against dengue fever, which has cost about $850,000 in emergency purchases. FOX 13’s Matthew McClella...",
-              "published_date": "2026-10-07",
-              "outlet": "Yahoo",
-              "image": ""
-            },
-            {
-              "news_id": "6fb47025ced553ff866b06677f9caf2c",
-              "url": "https://www.bhaskar.com/local/uttar-pradesh/ayodhya/vashishtha-kund-duda-colony/news/ayodhya-duda-colony-water-logging-dengue-malaria-outbreak-risk-139278510.html",
-              "headline": "विशिष्ट कुंड डूडा कॉलोनी में सड़क पर जमा गंदा पानी: स्थानीय लोगों को आवागमन में परेशानी, डेंगू-मलेरिया का खतरा बढ़ा - Duda Colony News",
-              "body": "Ayodhya Duda Colony water logging, drainage issues, dengue, malaria risk. Follow Dainik Bhaskar Latest Updates. अयोध्या की विशिष्ट कुंड स्थित डूडा कॉलोनी में सड़क पर गंदा पानी और कीचड़ जमा है। इससे लोगों को काफी परेशानी हो रही है। लंबे समय से पानी जमा होने से मच्छरों का प्रकोप बढ़ गया है।",
-              "published_date": "2026-10-07",
-              "outlet": "दैनिक भास्कर",
-              "image": "https://www.bing.com/th?id=ONUT.xlziVKp52u3QVInIDJ7Bgg"
-            },
-            {
-              "news_id": "5187c9a5eb7753db9bdc8a027f5afe78",
-              "url": "https://www.bhaskar.com/local/uttar-pradesh/mirzapur/balliparwa/news/mirzapur-chil-dingurpatti-health-team-campaign-dengue-malaria-prevention-139276186.html",
-              "headline": "मीरजापुर में संचारी रोग से बचाव को घर-घर अभियान चला: चील्ह के डिंगूरपट्टी में स्वास्थ्य टीम ने दी डेंगू-मलेरिया से बचने की जानकारी - Balliparwa(Mirzapur) News",
-              "body": "Health department awareness campaign against communicable diseases in Mirzapur villages. Follow Dainik Bhaskar Latest Updates. चील्ह, मीरजापुर के डिंगूरपट्टी गांव में आज बुद्धवार को संचारी रोग नियंत्रण अभियान चलाया गया। स्वास्थ्य विभाग की टीम ने आंगनवाड़ी और आशा कार्यकर्ताओं के साथ मिलकर घर-घर जाकर लोगों से संपर्क किया।",
-              "published_date": "2026-10-07",
-              "outlet": "दैनिक भास्कर",
-              "image": "https://www.bing.com/th?id=ONUT.4RyQQW7v97e8KaxfkJK5sg"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-10-10",
-          "summary": "Florida's dengue outbreak has rapidly escalated, with cases surging from 190 to 485 over the past two weeks, making it a record-breaking outbreak according to CDC data. In response, Hillsborough County has approved additional helicopters and spraying to combat the disease. A school awareness campaign on dengue prevention was also held in Raebareli, India.",
-          "news": [
-            {
-              "news_id": "26bcedab044a59eaa6c5bd52754b8f6b",
-              "url": "https://www.bhaskar.com/local/uttar-pradesh/raibareli/dih/news/raebareli-majilha-school-awareness-dengue-malaria-prevention-camp-139307498.html",
-              "headline": "रायबरेली के मझिलहा स्कूल में बच्चों को किया जागरूक: बच्चों को बताए डेंगू-मलेरिया से बचाव के तरीके - Dih (Raebareli) News",
-              "body": "Raebareli Majilha school students learn dengue malaria prevention tips. Follow Dainik Bhaskar Latest Updates. रायबरेली जिले के डीह ब्लॉक के प्राथमिक विद्यालय मझिलहा में शुक्रवार को संचारी रोग नियंत्रण अभियान के तहत एक जागरूकता कार्यक्रम और बाल मेले का आयोजन किया गया। विद्यालय के शिक्षकों विजय मिश्र, ज्योति सिंह, राजकुमारी यादव और अंजना कुमारी ने बच्चों को डेंगू, मलेरिया और दिमागी बुखार जैसे संचारी रोगों से बचाव के तरीके बताए।",
-              "published_date": "2026-10-10",
-              "outlet": "दैनिक भास्कर",
-              "image": "https://www.bing.com/th?id=ONUT.7s6sBPKFjq82FYP3LWdUdA"
-            },
-            {
-              "news_id": "192a56093554585ca0de769fc905b9ce",
-              "url": "https://www.msn.com/en-us/news/other/hillsborough-approves-more-helicopters-product-spray-to-fight-dengue-fever/ar-AA2dMOvV?ocid=BingNewsVerp",
-              "headline": "Hillsborough approves more helicopters, product spray to fight Dengue Fever",
-              "body": "Hillsborough County is doubling its efforts to combat Dengue Fever, as county commissioners approved more helicopters and ...",
-              "published_date": "2026-10-08",
-              "outlet": "WFLA Tampa on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.5fBkZ_BZpYjM9bs4hZaMcg"
-            },
-            {
-              "news_id": "4b43f3035cca5397bbe8503366097ee3",
-              "url": "https://www.miaminewtimes.com/news/record-breaking-dengue-fever-outbreak-strikes-florida-what-to-know-40589026/",
-              "headline": "Record-breaking dengue fever outbreak strikes Florida: What to know?",
-              "body": "Cases have exploded in Florida from 190 to 485 over the last two weeks, according to data from the CDC",
-              "published_date": "2026-10-07",
-              "outlet": "Miami New Times",
-              "image": "https://www.bing.com/th?id=ONUT.JETVGfR3Q22taBmwCqhl_g"
-            }
-          ]
-        }
-      ],
-      "logs_total": 46
-    },
-    {
       "incident_id": "20260624-VE-EQ",
       "tree_id": "387baafc1c6b5a0391293c7f917b5333",
       "canonical_name": "Earthquake M7.2 San Felipe, Venezuela 2026-06-24",
@@ -1140,7 +155,7 @@
       "event_date": "2026-06-24",
       "first_reported_date": "2026-06-24",
       "last_updated_date": "2026-10-09",
-      "days_since_event": 114,
+      "days_since_event": 115,
       "source_count": 5,
       "should_report": true,
       "search_keys": [],
@@ -3484,7 +2499,7 @@
       "event_date": "2026-07-28",
       "first_reported_date": "2026-07-28",
       "last_updated_date": "2026-10-10",
-      "days_since_event": 80,
+      "days_since_event": 81,
       "source_count": 7,
       "should_report": true,
       "search_keys": [],
@@ -5671,7 +4686,7 @@
       "event_date": "2026-08-10",
       "first_reported_date": "2026-08-10",
       "last_updated_date": "2026-10-07",
-      "days_since_event": 67,
+      "days_since_event": 68,
       "source_count": 11,
       "should_report": true,
       "search_keys": [],
@@ -8609,7 +7624,7 @@
       "event_date": "2026-08-14",
       "first_reported_date": "2026-08-14",
       "last_updated_date": "2026-10-10",
-      "days_since_event": 63,
+      "days_since_event": 64,
       "source_count": 27,
       "should_report": true,
       "search_keys": [],
@@ -11525,7 +10540,7 @@
       "event_date": "2026-09-04",
       "first_reported_date": "2026-09-04",
       "last_updated_date": "2026-10-10",
-      "days_since_event": 42,
+      "days_since_event": 43,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -12535,7 +11550,7 @@
       "event_date": "2026-09-04",
       "first_reported_date": "2026-09-04",
       "last_updated_date": "2026-10-09",
-      "days_since_event": 42,
+      "days_since_event": 43,
       "source_count": 2,
       "should_report": true,
       "search_keys": [],
@@ -14053,7 +13068,7 @@
       "event_date": "2026-09-10",
       "first_reported_date": "2026-09-10",
       "last_updated_date": "2026-10-07",
-      "days_since_event": 36,
+      "days_since_event": 37,
       "source_count": 3,
       "should_report": true,
       "search_keys": [],
@@ -15359,7 +14374,7 @@
       "event_date": "2026-09-17",
       "first_reported_date": "2026-09-17",
       "last_updated_date": "2026-10-04",
-      "days_since_event": 29,
+      "days_since_event": 30,
       "source_count": 2,
       "should_report": true,
       "search_keys": [],
@@ -15431,7 +14446,7 @@
       "event_date": "2026-09-22",
       "first_reported_date": "2026-09-22",
       "last_updated_date": "2026-10-11",
-      "days_since_event": 24,
+      "days_since_event": 25,
       "source_count": 2,
       "should_report": true,
       "search_keys": [],
@@ -15951,7 +14966,7 @@
       "event_date": "2026-10-02",
       "first_reported_date": "2026-10-02",
       "last_updated_date": "2026-10-08",
-      "days_since_event": 14,
+      "days_since_event": 15,
       "source_count": 2,
       "should_report": true,
       "search_keys": [],
@@ -16071,7 +15086,7 @@
       "event_date": "2026-10-03",
       "first_reported_date": "2026-10-03",
       "last_updated_date": "2026-10-07",
-      "days_since_event": 13,
+      "days_since_event": 14,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -16278,7 +15293,7 @@
       "event_date": "2026-10-06",
       "first_reported_date": "2026-10-06",
       "last_updated_date": "2026-10-07",
-      "days_since_event": 10,
+      "days_since_event": 11,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -16344,7 +15359,7 @@
       "event_date": "2026-10-06",
       "first_reported_date": "2026-10-06",
       "last_updated_date": "2026-10-06",
-      "days_since_event": 10,
+      "days_since_event": 11,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -16450,7 +15465,7 @@
       "event_date": "2026-10-08",
       "first_reported_date": "2026-10-08",
       "last_updated_date": "2026-10-08",
-      "days_since_event": 8,
+      "days_since_event": 9,
       "source_count": 2,
       "should_report": true,
       "search_keys": [],
