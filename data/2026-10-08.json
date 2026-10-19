@@ -1,29 +1,29 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-10-08",
-  "generated_at": "2026-10-18T16:37:48Z",
+  "generated_at": "2026-10-19T06:21:58Z",
   "as_of": "2026-10-08",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 11,
-    "new_today": 2,
+    "reportable_total": 10,
+    "new_today": 1,
     "critical": 2,
     "high": 4,
-    "medium": 3,
+    "medium": 2,
     "low": 2,
     "disease_outbreaks": 0,
-    "countries_affected": 7,
-    "news_total": 820,
+    "countries_affected": 6,
+    "news_total": 815,
     "max_magnitude": 7.4,
     "by_severity": {
       "CRITICAL": 2,
       "HIGH": 4,
-      "MEDIUM": 3,
+      "MEDIUM": 2,
       "LOW": 2
     },
     "by_type": {
-      "Earthquake": 8,
+      "Earthquake": 7,
       "Severe Weather": 1,
       "": 2
     },
@@ -31,7 +31,6 @@
       "Americas": 3,
       "Oceania": 2,
       "Unknown": 3,
-      "Europe": 1,
       "Asia": 1,
       "Africa": 1
     }
@@ -61,15 +60,6 @@
       "max_sev_rank": 2,
       "iso2": "CR",
       "region": "Americas",
-      "country_group": "C",
-      "max_severity": "MEDIUM"
-    },
-    {
-      "country": "Russia",
-      "count": 1,
-      "max_sev_rank": 2,
-      "iso2": "RU",
-      "region": "Europe",
       "country_group": "C",
       "max_severity": "MEDIUM"
     },
@@ -126,7 +116,7 @@
       "event_date": "2026-08-10",
       "first_reported_date": "2026-08-10",
       "last_updated_date": "2026-10-07",
-      "days_since_event": 69,
+      "days_since_event": 70,
       "source_count": 11,
       "should_report": true,
       "search_keys": [],
@@ -3064,7 +3054,7 @@
       "event_date": "2026-09-05",
       "first_reported_date": "2026-09-05",
       "last_updated_date": "2026-10-01",
-      "days_since_event": 43,
+      "days_since_event": 44,
       "source_count": 3,
       "should_report": true,
       "search_keys": [],
@@ -3247,7 +3237,7 @@
       "event_date": "2026-09-10",
       "first_reported_date": "2026-09-10",
       "last_updated_date": "2026-10-07",
-      "days_since_event": 38,
+      "days_since_event": 39,
       "source_count": 3,
       "should_report": true,
       "search_keys": [],
@@ -4553,7 +4543,7 @@
       "event_date": "2026-09-17",
       "first_reported_date": "2026-09-17",
       "last_updated_date": "2026-10-04",
-      "days_since_event": 31,
+      "days_since_event": 32,
       "source_count": 2,
       "should_report": true,
       "search_keys": [],
@@ -4625,7 +4615,7 @@
       "event_date": "2026-09-30",
       "first_reported_date": "2026-09-30",
       "last_updated_date": "2026-10-01",
-      "days_since_event": 18,
+      "days_since_event": 19,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -4733,126 +4723,6 @@
       "logs_total": 1
     },
     {
-      "incident_id": "20261002-RU-EQ",
-      "tree_id": "84ca1d39db20494a9fadf170b73ef484",
-      "canonical_name": "Earthquake M5.8 Vilyuchinsk, Russia 2026-10-02",
-      "summary": "A magnitude 5.8 earthquake struck off the coast of Vilyuchinsk, Russia on October 2, 2026. The USGS reported the quake occurred at a depth of 29 km, 165 km south-southeast of Vilyuchinsk along the Kuril-Kamchatka subduction zone.",
-      "country": "Russia",
-      "iso2": "RU",
-      "lat": 51.6873,
-      "lon": 159.7398,
-      "country_group": "C",
-      "region": "Europe",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "MEDIUM",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-10-02",
-      "first_reported_date": "2026-10-02",
-      "last_updated_date": "2026-10-08",
-      "days_since_event": 16,
-      "source_count": 2,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 2,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 5
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 5.8 - 165 km SSE of Vilyuchinsk, Russia",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tz62",
-          "meta": "29.477 km depth"
-        },
-        {
-          "type": "USGS",
-          "label": "M 5.9 - 264 km SSW of Severo-Kuril’sk, Russia",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u0hy",
-          "meta": "26.047 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 5.9,
-        "max_depth_km": 26.047,
-        "place": "165 km SSE of Vilyuchinsk, Russia",
-        "felt": null,
-        "sig": 536,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Earthquake in Russia: 5.8 Magnitude Quake Hits off Coast of Vilyuchinsk in Kamchatka",
-          "published_date": "2026-10-02T18:12:00+00:00"
-        },
-        {
-          "headline": "¡El Cinturón de Fuego se vuelve a activar! Reportan sismo de 5.9 en Rusia HOY 6 de octubre de 2026",
-          "published_date": "2026-10-06"
-        },
-        {
-          "headline": "Terremoto en Rusia hoy: sismo de 5.9 de magnitud sacude región de Sévero-Kurilsk",
-          "published_date": "2026-10-06"
-        },
-        {
-          "headline": "A magnitude 5.9 quake off Russia’s Kuril Islands on Oct. 6 tied for the week’s largest worldwide",
-          "published_date": "2026-10-07"
-        },
-        {
-          "headline": "A magnitude 5.9 quake off Russia's Kuril Islands on Oct. 6 tied for the week's largest worldwide",
-          "published_date": "2026-10-08"
-        }
-      ],
-      "news_total": 5,
-      "logs": [
-        {
-          "log_date": "2026-10-07",
-          "summary": "A magnitude 5.8 earthquake struck off the coast of Vilyuchinsk, Russia on October 2, 2026. The USGS reported the quake occurred at a depth of 29 km, 165 km south-southeast of Vilyuchinsk along the Kuril-Kamchatka subduction zone.",
-          "news": [
-            {
-              "news_id": "9ea6648cb33250c6a48367723e6d3f4b",
-              "url": "https://www.aztecamorelos.com/viral-y-tendencia/el-cinturon-de-fuego-se-vuelve-a-activar-reportan-sismo-de-59-en-rusia-hoy-6-de-octubre-de-2026/",
-              "headline": "¡El Cinturón de Fuego se vuelve a activar! Reportan sismo de 5.9 en Rusia HOY 6 de octubre de 2026",
-              "body": "El Cinturón de Fuego volvió a registrar un sismo de magnitud 5.9 hoy martes 6 de octubre de 2026. El epicentro tuvo lugar en una región de Rusia.",
-              "published_date": "2026-10-06",
-              "outlet": "TV Azteca Morelos",
-              "image": "https://www.bing.com/th?id=ONUT.4jx6oqh8Rcc_tsZEvq_2ZQ"
-            },
-            {
-              "news_id": "d33e126febe9581998c3e508e93b0a6d",
-              "url": "https://www.adn40.mx/internacional/2026-10-06/terremoto-en-rusia-hoy-sismo-de-59-de-magnitud-sacude-region-de-severo-kurilsk/",
-              "headline": "Terremoto en Rusia hoy: sismo de 5.9 de magnitud sacude región de Sévero-Kurilsk",
-              "body": "El sismo ocurrió a las 16:48 horas de Rusia; hasta el momento no se registran pérdidas humanas o materiales",
-              "published_date": "2026-10-06",
-              "outlet": "ADN 40",
-              "image": "https://www.bing.com/th?id=ONUT.bhPN7My0I6HC_TomNaD26A"
-            },
-            {
-              "news_id": "d40303a9de3e5b9e97bcbbf569a5413b",
-              "url": "https://www.latestly.com/world/earthquake-in-russia-5-8-magnitude-quake-hits-off-coast-of-vilyuchinsk-in-kamchatka-7630560.html",
-              "headline": "Earthquake in Russia: 5.8 Magnitude Quake Hits off Coast of Vilyuchinsk in Kamchatka",
-              "body": "A magnitude 5.8 earthquake struck 165 km south-southeast of Vilyuchinsk in Russia's Kamchatka region at a depth of 29 km on October 2, 2026, according to the USGS. The offshore tremor occurred along the active Kuril-Kamchatka subduction zone.",
-              "published_date": "2026-10-02T18:12:00+00:00",
-              "outlet": "LatestLY",
-              "image": "https://st1.latestly.com/wp-content/uploads/2026/06/Earthquake_1-784x441.jpg"
-            }
-          ]
-        }
-      ],
-      "logs_total": 1
-    },
-    {
       "incident_id": "20261002-XX-OT",
       "tree_id": "e26fe4e5f998401f86333587099be0d1",
       "canonical_name": "2026-10-02",
@@ -4876,7 +4746,7 @@
       "event_date": "2026-10-02",
       "first_reported_date": "2026-10-02",
       "last_updated_date": "2026-10-03",
-      "days_since_event": 16,
+      "days_since_event": 17,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -4954,7 +4824,7 @@
       "event_date": "2026-10-03",
       "first_reported_date": "2026-10-03",
       "last_updated_date": "2026-10-07",
-      "days_since_event": 15,
+      "days_since_event": 16,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -5161,7 +5031,7 @@
       "event_date": "2026-10-06",
       "first_reported_date": "2026-10-06",
       "last_updated_date": "2026-10-07",
-      "days_since_event": 12,
+      "days_since_event": 13,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -5227,7 +5097,7 @@
       "event_date": "2026-10-06",
       "first_reported_date": "2026-10-06",
       "last_updated_date": "2026-10-06",
-      "days_since_event": 12,
+      "days_since_event": 13,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -5333,7 +5203,7 @@
       "event_date": "2026-10-08",
       "first_reported_date": "2026-10-08",
       "last_updated_date": "2026-10-08",
-      "days_since_event": 10,
+      "days_since_event": 11,
       "source_count": 2,
       "should_report": true,
       "search_keys": [],
