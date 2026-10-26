@@ -1,24 +1,24 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-10-24",
-  "generated_at": "2026-10-26T06:30:25Z",
+  "generated_at": "2026-10-26T19:26:18Z",
   "as_of": "2026-10-24",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 17,
-    "new_today": 4,
+    "reportable_total": 16,
+    "new_today": 3,
     "critical": 3,
-    "high": 4,
+    "high": 3,
     "medium": 5,
     "low": 5,
     "disease_outbreaks": 1,
-    "countries_affected": 13,
-    "news_total": 1525,
+    "countries_affected": 12,
+    "news_total": 1481,
     "max_magnitude": 6.9,
     "by_severity": {
       "CRITICAL": 3,
-      "HIGH": 4,
+      "HIGH": 3,
       "MEDIUM": 5,
       "LOW": 5
     },
@@ -26,7 +26,7 @@
       "Forest Fire": 1,
       "Earthquake": 6,
       "": 3,
-      "Tropical Cyclone": 4,
+      "Tropical Cyclone": 3,
       "Volcano": 1,
       "Disease": 1,
       "Flood": 1
@@ -35,7 +35,7 @@
       "Europe": 6,
       "Asia": 3,
       "Africa": 2,
-      "Americas": 3,
+      "Americas": 2,
       "Unknown": 2,
       "Oceania": 1
     }
@@ -121,15 +121,6 @@
       "region": "Asia",
       "country_group": "A",
       "max_severity": "MEDIUM"
-    },
-    {
-      "country": "Mexico",
-      "count": 1,
-      "max_sev_rank": 3,
-      "iso2": "MX",
-      "region": "Americas",
-      "country_group": "C",
-      "max_severity": "HIGH"
     },
     {
       "country": "Pakistan",
@@ -16000,448 +15991,6 @@
       "logs_total": 4
     },
     {
-      "incident_id": "20261014-MX-TC",
-      "tree_id": "562343659e8d4640b55b52c3cc1fdfb3",
-      "canonical_name": "Tropical Cyclone TWENTYNINE-26 2026-10-14",
-      "summary": "Typhoon Champi continues to affect Taiwan, with over 5,000 evacuated and around 56,000 households still without power. Nearly 24 centimetres of rain was recorded in Miaoli County as emergency crews work to restore services.",
-      "country": "Mexico",
-      "iso2": "MX",
-      "lat": 9.6,
-      "lon": 161.2,
-      "country_group": "C",
-      "region": "Americas",
-      "incident_type": "Tropical Cyclone",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "HIGH",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-10-14",
-      "first_reported_date": "2026-10-14",
-      "last_updated_date": "2026-10-24",
-      "days_since_event": 12,
-      "source_count": 2,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 1,
-        "ercc": 1,
-        "healthmap": 0,
-        "news": 45
-      },
-      "source_links": [
-        {
-          "type": "GDACS",
-          "label": "Orange alert · Tropical Cyclone TWENTYNINE-26 2026-10-14",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=TC&eventid=1001338",
-          "meta": ""
-        },
-        {
-          "type": "ERCC",
-          "label": "ECHO Daily Map of 16 October 2026",
-          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5818",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "Orange notification for tropical cyclone TWENTYNINE-26. Population affected by Category 1 (120 km/h) wind speeds or higher is 0.177 million .",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": "Orange",
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Hurricane Trudy churns in the Pacific as a Cat 1 storm near Mexico, while Champi eyes rare Guam landfall",
-          "published_date": "2026-10-13"
-        },
-        {
-          "headline": "Typhoon Champi could become 1 of the world's strongest...",
-          "published_date": "2026-10-16"
-        },
-        {
-          "headline": "NWS: Champi continues to intensify, moving west toward Marianas",
-          "published_date": "2026-10-16"
-        },
-        {
-          "headline": "Bagyong ‘Champi’ sa labas ng PAR lumakas",
-          "published_date": "2026-10-17T00:00:00+00:00"
-        },
-        {
-          "headline": "Super Typhoon Champi to threaten Taiwan; Hong Kong risk under 30%",
-          "published_date": "2026-10-17T16:12:00+00:00"
-        },
-        {
-          "headline": "Hurricane Trudy threatens Mexico with dangerous flooding, mudslides",
-          "published_date": "2026-10-18"
-        },
-        {
-          "headline": "'Champi' now a super typhoon",
-          "published_date": "2026-10-18"
-        },
-        {
-          "headline": "Super Typhoon Champi inaasahang papasok sa PAR sa Martes",
-          "published_date": "2026-10-18T00:00:00+00:00"
-        },
-        {
-          "headline": "Super Typhoon Champi, Churning Over Pacific, Becomes Strongest Storm of 2026",
-          "published_date": "2026-10-18T17:42:06+00:00"
-        },
-        {
-          "headline": "Typhoon Champi strengthens to Category 5 in Philippine Sea",
-          "published_date": "2026-10-19"
-        },
-        {
-          "headline": "Super Typhoon Champi enters PAR, prompts Signal No. 1 in five areas — PAGASA - BusinessWorld Online",
-          "published_date": "2026-10-20"
-        },
-        {
-          "headline": "See Super Typhoon Champi’s giant eye as it swirls across the Pacific",
-          "published_date": "2026-10-20T17:42:06+00:00"
-        },
-        {
-          "headline": "Super typhoon Champi on path to impact China, Taiwan within days",
-          "published_date": "2026-10-21"
-        },
-        {
-          "headline": "Super Typhoon Champi becomes world's strongest cyclone of 2026, winds hit 296 kmph",
-          "published_date": "2026-10-21"
-        },
-        {
-          "headline": "Super Typhoon Rosal prompts wind warning in Batanes as it tracks towards northern Philippines",
-          "published_date": "2026-10-21"
-        },
-        {
-          "headline": "Signal No. 2 up in Batanes due to Super Typhoon Rosal",
-          "published_date": "2026-10-21"
-        },
-        {
-          "headline": "Super Typhoon Champi live updates: Strongest storm on Earth in 2026 lashes Pacific with 185 mph winds",
-          "published_date": "2026-10-21"
-        },
-        {
-          "headline": "Super typhoon Champi path and timeline: Strongest storm of 2026 to impact Taiwan, eastern China",
-          "published_date": "2026-10-21"
-        },
-        {
-          "headline": "Batanes placed under Signal No. 2 due to ‘Rosal’",
-          "published_date": "2026-10-21"
-        },
-        {
-          "headline": "296 km/h: Super Typhoon Champi is now the strongest storm on Earth in 2026",
-          "published_date": "2026-10-21"
-        },
-        {
-          "headline": "Super Typhoon Champi intensifies to become strongest storm on Earth in 2026 equivalent of Category 5",
-          "published_date": "2026-10-21"
-        },
-        {
-          "headline": "PAGASA raises Signal No. 2 in Batanes as Super Typhoon Rosal moves away",
-          "published_date": "2026-10-21"
-        },
-        {
-          "headline": "Super Typhoon Champi becomes strongest storm on Earth this year as Pacific eyes first V-named storm since 2018",
-          "published_date": "2026-10-21"
-        },
-        {
-          "headline": "World’s strongest storm of 2026, Champi, barrels towards Taiwan; China prepares evacuations and shutdowns",
-          "published_date": "2026-10-21"
-        },
-        {
-          "headline": "Strongest storm of 2026: Typhoon Champi barrels with 296 kmph winds",
-          "published_date": "2026-10-21"
-        },
-        {
-          "headline": "Super Typhoon Champi threatens China and Taiwan: Live track and warnings",
-          "published_date": "2026-10-21"
-        },
-        {
-          "headline": "Typhoon Champi Threatens Asian Hubs With Flight Cuts: Military Aviation Also Hit",
-          "published_date": "2026-10-21"
-        },
-        {
-          "headline": "Super Typhoon Champi becomes one of 2026’s strongest storms as it heads toward Taiwan and eastern China",
-          "published_date": "2026-10-22"
-        },
-        {
-          "headline": "Typhoon spurs warnings, cancels flights in Taiwan",
-          "published_date": "2026-10-22"
-        },
-        {
-          "headline": "El Niño Supercharges Season as Typhoon Champi Heads for Taiwan",
-          "published_date": "2026-10-22"
-        },
-        {
-          "headline": "Taiwan cancels over 100 flights as Super Typhoon Champi churns towards island with 140mph winds",
-          "published_date": "2026-10-22"
-        },
-        {
-          "headline": "The Strongest Storm of The Year Has Arrived",
-          "published_date": "2026-10-22T05:19:24+00:00"
-        },
-        {
-          "headline": "Tropical Storm Vance has formed in the Pacific Ocean",
-          "published_date": "2026-10-22T05:33:40+00:00"
-        },
-        {
-          "headline": "Vance to become 11th major eastern Pacific hurricane this season. Will it turn...",
-          "published_date": "2026-10-22T05:33:40+00:00"
-        },
-        {
-          "headline": "Hundreds of flights cancelled across East Asia as Typhoon Champi roars toward Taiwan",
-          "published_date": "2026-10-23"
-        },
-        {
-          "headline": "Typhoon Rosal to exit PAR by Saturday morning as it weakens",
-          "published_date": "2026-10-23"
-        },
-        {
-          "headline": "Typhoon Champi cancels 200+ flights across Taiwan and Japan",
-          "published_date": "2026-10-23"
-        },
-        {
-          "headline": "Typhoon Champi: Over 5,000 evacuated as thousands of households lose power in Taiwan",
-          "published_date": "2026-10-24"
-        },
-        {
-          "headline": "Typhoon Champi knocks out power to thousands in Taiwan",
-          "published_date": "2026-10-24"
-        },
-        {
-          "headline": "Vance explodes into a hurricane in 48 hours: Could a major storm threaten Mexico's Pacific coast this weekend?",
-          "published_date": "2026-10-24"
-        },
-        {
-          "headline": "Typhoon Champi knocks out power to thousands in Taiwan - UCA News",
-          "published_date": "2026-10-24"
-        },
-        {
-          "headline": "Typhoon Champi hits Taiwan, killing one and injuring 350",
-          "published_date": "2026-10-24"
-        },
-        {
-          "headline": "Typhoon Rosal exits PAR on Saturday morning (October 24)",
-          "published_date": "2026-10-24"
-        },
-        {
-          "headline": "Typhoon Champi Tests China's Shrinking Port Backlog",
-          "published_date": "2026-10-24"
-        },
-        {
-          "headline": "With hurricane off Mexico sharing name with Vice President JD Vance, the social media memes fly",
-          "published_date": "2026-10-24T05:33:36+00:00"
-        }
-      ],
-      "news_total": 45,
-      "logs": [
-        {
-          "log_date": "2026-10-17",
-          "summary": "The National Weather Service reported that Tropical Storm Champi continues to intensify while moving west toward the Marianas. It has strengthened into a typhoon and may become one of the world's strongest storms, with a potential rare landfall in Guam. Meanwhile, the storm is currently outside the Philippine Area of Responsibility.",
-          "news": [
-            {
-              "news_id": "376002e9f3c15b60859bb53d094f4bba",
-              "url": "https://www.yahoo.com/news/articles/two-strong-hurricanes-could-brewing-232746871.html",
-              "headline": "Hurricane Trudy churns in the Pacific as a Cat 1 storm near Mexico, while Champi eyes rare Guam landfall",
-              "body": "Hurricane Trudy rapidly intensified into a Category 3 storm early Friday before being downgraded to a Category 1 storm. Landfall remains possible, but there is increased uncertainty around Trudy's tra...",
-              "published_date": "2026-10-13",
-              "outlet": "Fox Weather · via Yahoo News",
-              "image": "https://media.zenfs.com/en/fox_weather_articles_483/15a8008150ff3eb508704f8db6ea0af2.jpg"
-            },
-            {
-              "news_id": "fced6e76782e55a7a2c9cdf85865f7bf",
-              "url": "https://rollingout.com/2026/10/16/typhoon-champi-worlds-strongest-storms/",
-              "headline": "Typhoon Champi could become 1 of the world's strongest...",
-              "body": "El Niño is fueling a record-breaking Pacific storm season, as Tropical Depression Champi could strengthen into a powerful typhoon",
-              "published_date": "2026-10-16",
-              "outlet": "Rolling Out",
-              "image": "https://s.yimg.com/bo/c4a749c3-1d32-56ea-a600-4b2064c45d9f_1792162407103.png.cf.jpg"
-            },
-            {
-              "news_id": "1fd22a9da5345274b6aca8e74b3c3f36",
-              "url": "https://www.guampdn.com/news/nws-champi-continues-to-intensify-moving-west-toward-marianas/article_5b1d7ed6-0f9a-4f74-a49e-a2a89f514cdb.html",
-              "headline": "NWS: Champi continues to intensify, moving west toward Marianas",
-              "body": "The National Weather Service said Tropical Storm Champi continues to intensify as it continues moving west towards the Marianas.",
-              "published_date": "2026-10-16",
-              "outlet": "Pacific Daily News",
-              "image": "https://www.bing.com/th?id=ONUT.yXUZdH0-h05kXqfEwuvxKw"
-            },
-            {
-              "news_id": "8a521899ec5e50bf8e94a2a2cdeb1b2c",
-              "url": "https://www.abante.com.ph/2026/10/17/bagyong-champi-sa-labas-ng-par-lumakas/",
-              "headline": "Bagyong ‘Champi’ sa labas ng PAR lumakas",
-              "body": "Lumakas at naging ganap na bagyo ang tropical cyclone na Champi na nasa labas ng Philippine Area of Responsibility (PAR), ...",
-              "published_date": "2026-10-17T00:00:00+00:00",
-              "outlet": "Abante",
-              "image": "https://www.bing.com/th?id=ONUT.GMq10HuBrTZammXbLxYz7A"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-10-23",
-          "summary": "Super Typhoon Champi has triggered over 200 flight cancellations across Taiwan and Japan, and at least one death has been reported in Taiwan. The storm has weakened and is expected to exit the Philippine Area of Responsibility by October 24, as it continues to churn toward Taiwan and eastern China.",
-          "news": [
-            {
-              "news_id": "62540f3931c05ca48b7368a5c6bc1fac",
-              "url": "https://www.inkl.com/news/taiwan-cancels-over-100-flights-as-super-typhoon-champi-barrels-down",
-              "headline": "Taiwan cancels over 100 flights as Super Typhoon Champi churns towards island with 140mph winds",
-              "body": "Strongest storm of the year is forecast to hit island the hardest before moving towards China",
-              "published_date": "2026-10-22",
-              "outlet": "inkl",
-              "image": "https://www.bing.com/th?id=ONUT.3v8ccfhA9azEYFtsPQ4b6g"
-            },
-            {
-              "news_id": "8f55585ff26952f5803446c7d68245d4",
-              "url": "https://www.bbc.co.uk/news/live/c6kg7kzzyyvet?page=2",
-              "headline": "Hundreds of flights cancelled across East Asia as Typhoon Champi roars toward Taiwan",
-              "body": "At least one person has died in Taiwan as Japan, China and South Korea also brace for the powerful storm.",
-              "published_date": "2026-10-23",
-              "outlet": "BBC",
-              "image": "https://www.bing.com/th?id=ONUT.lqWW1Obn6wG3Lf6CkIIe5g"
-            },
-            {
-              "news_id": "5e6eb5c1758b5dd49ac22226ea23bf6c",
-              "url": "https://www.dzrh.com.ph/post/typhoon-rosal-to-exit-par-by-saturday-morning-as-it-weakens",
-              "headline": "Typhoon Rosal to exit PAR by Saturday morning as it weakens",
-              "body": "Typhoon Rosal (international name: Champi) is expected to exit the Philippine Area of Responsibility (PAR) by Saturday morning, October 24, as it continues moving away from Extreme Northern Luzon, according to PAGASA. In its 11 a.m. bulletin on Friday, October 23, PAGASA said Rosal had slightly w...",
-              "published_date": "2026-10-23",
-              "outlet": "dzrh",
-              "image": "https://www.bing.com/th?id=ONUT.yxzK9TtNpUaqlRdq6xFHhw"
-            },
-            {
-              "news_id": "7b64af270d8355ffa3457a507ac7828a",
-              "url": "https://karryon.com.au/industry-news/destination/typhoon-champi-travel-disruption/",
-              "headline": "Typhoon Champi cancels 200+ flights across Taiwan and Japan",
-              "body": "Typhoon Champi has forced more than 200 flight cancellations across Taiwan and Japan, disrupting travel to Okinawa, Hong Kong and China.",
-              "published_date": "2026-10-23",
-              "outlet": "Karryon",
-              "image": "https://www.bing.com/th?id=ONUT.R3rRXPHTqrMEAnqeyITfIQ"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-10-24",
-          "summary": "Typhoon Champi (locally named Rosal) hit Taiwan, where it caused at least one death, hundreds of injuries, and power outages for thousands of residents. The storm exited the Philippine Area of Responsibility on October 24, and while no terminal closures occurred at Shanghai and Ningbo ports, the system adds pressure on port recovery efforts.",
-          "news": [
-            {
-              "news_id": "1d5324e820a05b5a893c23f8b83159c7",
-              "url": "https://www.msn.com/en-us/news/other/vance-explodes-into-a-hurricane-in-48-hours-could-a-major-storm-threaten-mexico-s-pacific-coast-this-weekend/ar-AA2fVcDk?ocid=BingNewsVerp",
-              "headline": "Vance explodes into a hurricane in 48 hours: Could a major storm threaten Mexico's Pacific coast this weekend?",
-              "body": "Hurricane Vance formed Friday with 85 mph winds south of Acapulco. Rapid intensification forecast. No warnings yet — but the ...",
-              "published_date": "2026-10-24",
-              "outlet": "Latin Times on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.NTT74VqvaMeHRAsizbOZMw"
-            },
-            {
-              "news_id": "4ac010417e085f67a1c7536700f32ffe",
-              "url": "https://www.ucanews.com/news/typhoon-champi-knocks-out-power-to-thousands-in-taiwan/115889",
-              "headline": "Typhoon Champi knocks out power to thousands in Taiwan - UCA News",
-              "body": "One person was killed and over 500 injured since Oct. 23 when the government began issuing warnings",
-              "published_date": "2026-10-24",
-              "outlet": "UCA News",
-              "image": "https://www.bing.com/th?id=ONUT.f8IIp6XqdQxcxtNQFclMhg"
-            },
-            {
-              "news_id": "360c9bee28a15a8b978694669e9cbf3f",
-              "url": "https://www.msn.com/en-us/news/world/typhoon-champi-hits-taiwan-killing-one-and-injuring-350/ar-AA2fWVnF?ocid=BingNewsVerp",
-              "headline": "Typhoon Champi hits Taiwan, killing one and injuring 350",
-              "body": "Authorities warn of ‘destructive winds’ and urge residents to shelter as the storm passes the island’s northeast.",
-              "published_date": "2026-10-24",
-              "outlet": "Al Jazeera on MSN",
-              "image": "https://www.bing.com/th?id=ORMS.0ecf1d844a2c69322da4679fe29850a5"
-            },
-            {
-              "news_id": "f976ab02c28550d29571a6709aadd656",
-              "url": "https://www.wearegreenbay.com/international/ap-international/ap-tropical-storm-vance-has-formed-in-the-pacific-ocean/",
-              "headline": "Tropical Storm Vance has formed in the Pacific Ocean",
-              "body": "MIAMI (AP) — Tropical Storm Vance formed Wednesday in the Pacific Ocean, the National Hurricane Center said. The center of the cyclone was at sea and pos...",
-              "published_date": "2026-10-22T05:33:40+00:00",
-              "outlet": "WFRV 5 Green Bay",
-              "image": "https://s.yimg.com/bo/61353ed9-49d8-594f-9d86-fb7c0406d1c6_1792625302428.jpg"
-            },
-            {
-              "news_id": "9c7c5cf38821585cbb993ec95fe8a010",
-              "url": "https://www.msn.com/en-ph/news/other/typhoon-rosal-exits-par-on-saturday-morning-october-24/ar-AA2fWTzR?ocid=BingNewsVerp",
-              "headline": "Typhoon Rosal exits PAR on Saturday morning (October 24)",
-              "body": "MANILA, Philippines — Typhoon Rosal, internationally named “Champi,” exited the Philippine area of responsibility (PAR) on Saturday morning, October 24. The Philippine Atmospheric, Geophysical and ...",
-              "published_date": "2026-10-24",
-              "outlet": "Inquirer.net on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "2151e1503e8350939021de1413b03850",
-              "url": "https://www.accuweather.com/en/hurricane/vance-to-become-11th-major-eastern-pacific-hurricane-this-season-will-it-turn-toward-mexico/1949604",
-              "headline": "Vance to become 11th major eastern Pacific hurricane this season. Will it turn...",
-              "body": "Vance is forecast to rapidly strengthen into a major hurricane, with a dangerous landfall in Mexico...",
-              "published_date": "2026-10-22T05:33:40+00:00",
-              "outlet": "AccuWeather",
-              "image": "https://s.yimg.com/bo/68f7abd0-449d-56d6-9b9f-646173975957_1792688065414.jpg"
-            },
-            {
-              "news_id": "b9c8bd4976f15729973e38d36b35dad9",
-              "url": "https://wgnradio.com/news/national/ap-with-hurricane-off-mexico-sharing-name-with-vice-president-jd-vance-the-social-media-memes-fly/",
-              "headline": "With hurricane off Mexico sharing name with Vice President JD Vance, the social media memes fly",
-              "body": "As Vice President JD Vance travels the U.S. supporting Republican candidates in next month’s election, another Vance is on a ...",
-              "published_date": "2026-10-24T05:33:36+00:00",
-              "outlet": "WGN Radio 720",
-              "image": "https://www.bing.com/th?id=ONUT.UvGqwQNKfXu5tuId-7XkXw"
-            },
-            {
-              "news_id": "a95f74990f685b79bda01b242b34c5a1",
-              "url": "https://www.msn.com/en-us/news/other/typhoon-champi-tests-chinas-shrinking-port-backlog/ar-AA2fWhaq?ocid=BingNewsVerp",
-              "headline": "Typhoon Champi Tests China's Shrinking Port Backlog",
-              "body": "No terminal has closed at the Shanghai and Ningbo ports, but another major storm puts October's port congestion recovery at ...",
-              "published_date": "2026-10-24",
-              "outlet": "Women's Wear Daily on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.dhDbOwqNWTFhlwXw_VHedQ"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-10-25",
-          "summary": "Typhoon Champi continues to affect Taiwan, with over 5,000 evacuated and around 56,000 households still without power. Nearly 24 centimetres of rain was recorded in Miaoli County as emergency crews work to restore services.",
-          "news": [
-            {
-              "news_id": "fd970c3d487a5bb99abe639c79d511b5",
-              "url": "https://www.khaleejtimes.com/world/asia/typhoon-champ-taiwan-5000-evacuated-thousands-no-electricity",
-              "headline": "Typhoon Champi: Over 5,000 evacuated as thousands of households lose power in Taiwan",
-              "body": "Around 56,000 households are still without power as Champi continues to buffet the island, with nearly 24 centimetres of rain recorded in the western county of Miaoli on Saturday",
-              "published_date": "2026-10-24",
-              "outlet": "Khaleej Times",
-              "image": "https://www.bing.com/th?id=ONUT.ucZEec__UsUFGsiP_0mkyA"
-            },
-            {
-              "news_id": "ca9731ae17465499bfecbd5278a0500d",
-              "url": "https://www.newsweek.com/hurricane-trudy-threatens-mexico-with-life-threatening-flooding-mudslides-12585660",
-              "headline": "Hurricane Trudy threatens Mexico with dangerous flooding, mudslides",
-              "body": "Trudy’s is forecast to move away from Mexico on Sunday afternoon, but its rain, winds and coastal hazards will remain a threat.",
-              "published_date": "2026-10-18",
-              "outlet": "Newsweek",
-              "image": "https://s.yimg.com/bo/1b7e4c34-512d-56d0-adcc-663a9b1353bc_1792345406168.jpg"
-            },
-            {
-              "news_id": "75553831b15a51c89ae24ebe40b82bba",
-              "url": "https://thepeninsulaqatar.com/article/24/10/2026/typhoon-champi-knocks-out-power-to-thousands-in-taiwan",
-              "headline": "Typhoon Champi knocks out power to thousands in Taiwan",
-              "body": "Taipei: Emergency crews scrambled on Saturday to restore power to tens of thousands of homes in Taiwan after Typhoon Champi s fierce winds battered th...",
-              "published_date": "2026-10-24",
-              "outlet": "The Peninsula Qatar",
-              "image": "https://www.bing.com/th?id=ONUT.oFypBGeCqSLJ2COqT8NWVQ"
-            }
-          ]
-        }
-      ],
-      "logs_total": 7
-    },
-    {
       "incident_id": "20261015-US-EQ",
       "tree_id": "7076729247724b4a913c63204ce2601f",
       "canonical_name": "Earthquake M5.6 Lake Minchumina, United States 2026-10-15",
@@ -17169,7 +16718,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 22
+        "news": 23
       },
       "source_links": [
         {
@@ -17192,6 +16741,10 @@
       "news": [
         {
           "headline": "Niz zemljotresa kod Sicilije, izdato upozorenje na cunami, evakuisane škole",
+          "published_date": "2026-10-23"
+        },
+        {
+          "headline": "Italy Tsunami Alert: 12 Earthquakes Rock Sicily as Schools Evacuate After Magnitude 5.0 Tremor",
           "published_date": "2026-10-23"
         },
         {
@@ -17279,7 +16832,7 @@
           "published_date": "2026-10-24T05:41:32+00:00"
         }
       ],
-      "news_total": 22,
+      "news_total": 23,
       "logs": [
         {
           "log_date": "2026-10-23",
