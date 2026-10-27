@@ -1,23 +1,23 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-10-22",
-  "generated_at": "2026-10-26T19:26:18Z",
+  "generated_at": "2026-10-27T06:27:45Z",
   "as_of": "2026-10-22",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 9,
+    "reportable_total": 8,
     "new_today": 1,
-    "critical": 1,
+    "critical": 0,
     "high": 1,
     "medium": 5,
     "low": 2,
     "disease_outbreaks": 1,
-    "countries_affected": 8,
-    "news_total": 230,
+    "countries_affected": 7,
+    "news_total": 159,
     "max_magnitude": 5.9,
     "by_severity": {
-      "CRITICAL": 1,
+      "CRITICAL": 0,
       "HIGH": 1,
       "MEDIUM": 5,
       "LOW": 2
@@ -25,15 +25,14 @@
     "by_type": {
       "Earthquake": 4,
       "": 1,
-      "Tropical Cyclone": 2,
       "Volcano": 1,
-      "Disease": 1
+      "Disease": 1,
+      "Tropical Cyclone": 1
     },
     "by_region": {
       "Asia": 3,
       "Africa": 1,
       "Europe": 2,
-      "Unknown": 1,
       "Americas": 1,
       "Oceania": 1
     }
@@ -101,15 +100,6 @@
       "region": "Asia",
       "country_group": "A",
       "max_severity": "HIGH"
-    },
-    {
-      "country": "",
-      "count": 1,
-      "max_sev_rank": 4,
-      "iso2": "XX",
-      "region": "Unknown",
-      "country_group": "C",
-      "max_severity": "LOW"
     }
   ],
   "incidents": [
@@ -137,7 +127,7 @@
       "event_date": "2026-09-30",
       "first_reported_date": "2026-09-30",
       "last_updated_date": "2026-10-20",
-      "days_since_event": 26,
+      "days_since_event": 27,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -203,7 +193,7 @@
       "event_date": "2026-10-05",
       "first_reported_date": "2026-10-05",
       "last_updated_date": "2026-10-18",
-      "days_since_event": 21,
+      "days_since_event": 22,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -473,7 +463,7 @@
       "event_date": "2026-10-06",
       "first_reported_date": "2026-10-06",
       "last_updated_date": "2026-10-18",
-      "days_since_event": 20,
+      "days_since_event": 21,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -601,882 +591,6 @@
       "logs_total": 2
     },
     {
-      "incident_id": "20261007-XX-TC",
-      "tree_id": "e58a2ae2dcb5410fa0f27f7a4934445f",
-      "canonical_name": "Tropical Cyclone TWENTY-E-26 2026-10-07",
-      "summary": "Isaias weakened to a post-tropical storm.",
-      "country": "",
-      "iso2": "XX",
-      "lat": 14.1,
-      "lon": -100.9,
-      "country_group": "C",
-      "region": "Unknown",
-      "incident_type": "Tropical Cyclone",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "CRITICAL",
-      "priority": "HIGH",
-      "priority_rank": 1,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-10-07",
-      "first_reported_date": "2026-10-07",
-      "last_updated_date": "2026-10-21",
-      "days_since_event": 19,
-      "source_count": 1,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 1,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 71
-      },
-      "source_links": [
-        {
-          "type": "GDACS",
-          "label": "Orange alert · Tropical Cyclone TWENTY-E-26 2026-10-07",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=TC&eventid=1001335",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "Orange notification for tropical cyclone TWENTY-E-26. Population affected by Category 1 (120 km/h) wind speeds or higher is 56306 .",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": "Orange",
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Tropical Storm Isaias takes aim at Gulf Coast. Who is in the path?",
-          "published_date": "2026-10-04T19:34:30+00:00"
-        },
-        {
-          "headline": "Tropical Cyclones Driving Weather Impacts Through Next Week",
-          "published_date": "2026-10-07"
-        },
-        {
-          "headline": "Hurricane watches issued as Tropical Storm Isaias forms, forecast to intensify and threaten Florida",
-          "published_date": "2026-10-07"
-        },
-        {
-          "headline": "1st Hurricane of the 2026 Atlantic Hurricane Season",
-          "published_date": "2026-10-07"
-        },
-        {
-          "headline": "Tracking Tropical Storm Isaias: Interactive storm radar, latest cone, models and satellite",
-          "published_date": "2026-10-07"
-        },
-        {
-          "headline": "Tropical Storm Isaias forms in the gulf. Rain expected in areas of SC",
-          "published_date": "2026-10-07"
-        },
-        {
-          "headline": "Tropical Storm Isaias getting stronger; hurricane, storm surge watches issued for Gulf Coast",
-          "published_date": "2026-10-07"
-        },
-        {
-          "headline": "Strengthening Isaias expected to hit the U.S. Gulf coast Friday as a hurricane » Yale Climate Connections",
-          "published_date": "2026-10-07"
-        },
-        {
-          "headline": "Gulf system eyes Cat 2 hurricane strength on potential path toward Florida",
-          "published_date": "2026-10-07"
-        },
-        {
-          "headline": "Hurricane tips: Prepare now as Isaias approaches",
-          "published_date": "2026-10-07"
-        },
-        {
-          "headline": "Hurricane watches issued as Tropical Storm Isaias forms, forecast to intensify and threaten Florida",
-          "published_date": "2026-10-07"
-        },
-        {
-          "headline": "Tropical Depression 9 forms, expected to become hurricane in Gulf",
-          "published_date": "2026-10-07"
-        },
-        {
-          "headline": "HURRICANE CENTER: Tropical Storm Isaias Forms, Likely To Hit Northern Gulf As Hurricane - BocaNewsNow.com",
-          "published_date": "2026-10-07"
-        },
-        {
-          "headline": "Live updates: Tropical Storm Isaias expected to become hurricane in Gulf",
-          "published_date": "2026-10-07"
-        },
-        {
-          "headline": "Isaias live updates: Tropical storm set to become a hurricane this week",
-          "published_date": "2026-10-07"
-        },
-        {
-          "headline": "Tropical tracker: Tropical Storm Isaias forms in the Gulf, forecast to become hurricane",
-          "published_date": "2026-10-07"
-        },
-        {
-          "headline": "Warm, dry afternoons before a tropical cyclone barrels toward Kentucky",
-          "published_date": "2026-10-07"
-        },
-        {
-          "headline": "Tropical Storm Isaias forms in the gulf. Rain expected in areas of SC",
-          "published_date": "2026-10-07"
-        },
-        {
-          "headline": "Tropical Storm Isaias to threaten Gulf Coast as a dangerous hurricane",
-          "published_date": "2026-10-07"
-        },
-        {
-          "headline": "Tropical Storm Isaias: Spaghetti models track the storm’s path",
-          "published_date": "2026-10-07"
-        },
-        {
-          "headline": "Hurricane Warning: Up to 10 Inches of Rain Possible as Isaias Targets the Gulf Coast",
-          "published_date": "2026-10-07"
-        },
-        {
-          "headline": "Hurricane watches issued as Tropical Storm Isaias forms, forecast to intensify and threaten Florida",
-          "published_date": "2026-10-07"
-        },
-        {
-          "headline": "Tropical Storm Isaias organizes, takes aim at Gulf Coast in latest update",
-          "published_date": "2026-10-07"
-        },
-        {
-          "headline": "Tropical Storm Isaias tracker: Map and projected storm path",
-          "published_date": "2026-10-07"
-        },
-        {
-          "headline": "See spaghetti models on Tropical Storm Isaias, future hurricane",
-          "published_date": "2026-10-07T00:00:00+00:00"
-        },
-        {
-          "headline": "Tropical Storm Isaias Is Expected to Slam the Gulf Coast as a 'Significant...",
-          "published_date": "2026-10-07T14:34:31+00:00"
-        },
-        {
-          "headline": "Tropical Storm Isaias could become 2026’s first Atlantic hurricane: Here’s its p...",
-          "published_date": "2026-10-07T18:48:47+00:00"
-        },
-        {
-          "headline": "Mexico issues alert over three tropical cyclones",
-          "published_date": "2026-10-08"
-        },
-        {
-          "headline": "Pacific storm strengthens into a hurricane far off the coast of Mexico",
-          "published_date": "2026-10-08T00:00:00+00:00"
-        },
-        {
-          "headline": "Hurricane Simón: Checklist for Foreigners in Mexico",
-          "published_date": "2026-10-09"
-        },
-        {
-          "headline": "Tropical storm explodes into hurricane set to batter vacation hotspot — as US triple threat approaches",
-          "published_date": "2026-10-09"
-        },
-        {
-          "headline": "Event summary",
-          "published_date": "2026-10-09"
-        },
-        {
-          "headline": "Hurricane Simon strengthens into Category 4 storm as it takes aim at Mexico's Pacific coast",
-          "published_date": "2026-10-10"
-        },
-        {
-          "headline": "The Latest: Isaias drops heavy rain on Alabama as Mexico's Pacific coast prepares for Simon",
-          "published_date": "2026-10-10"
-        },
-        {
-          "headline": "Post-tropical storm lashing southwest with coastal flooding, heavy rain and strong winds | CNN",
-          "published_date": "2026-10-10"
-        },
-        {
-          "headline": "Tropical Storm Rachel to bring thunderstorms, strong winds to Las Vegas valley",
-          "published_date": "2026-10-10"
-        },
-        {
-          "headline": "A rare tropical storm could bring Utah its first significant snow of the season. Here’s what to expect.",
-          "published_date": "2026-10-10"
-        },
-        {
-          "headline": "Hurricane Simon rapidly strengths off Mexico's Pacific coast, threatens tourist region",
-          "published_date": "2026-10-10T06:14:49+00:00"
-        },
-        {
-          "headline": "Simon Strengthens Into a Category 4 Hurricane as It Approaches Mexico's Coast",
-          "published_date": "2026-10-10T17:31:04+00:00"
-        },
-        {
-          "headline": "Tropical Storm Rachel to fuel dangerous flash flood threat in the Southwest",
-          "published_date": "2026-10-11"
-        },
-        {
-          "headline": "Tropical Storm Rachel fuels major West Coast flood threat with months of rain possible in hours",
-          "published_date": "2026-10-11"
-        },
-        {
-          "headline": "Hurricane Simon pounds resorts and vulnerable towns along Mexico's Pacific coast",
-          "published_date": "2026-10-11"
-        },
-        {
-          "headline": "Rachel downgraded from 'tropical' storm, but strong winds, rain and flooding hit Southern California",
-          "published_date": "2026-10-11"
-        },
-        {
-          "headline": "Live updates: Rachel makes landfall, dropping significant rain on desert",
-          "published_date": "2026-10-11"
-        },
-        {
-          "headline": "Storm Rachel Hits Baja California, Over 100 Evacuated",
-          "published_date": "2026-10-11"
-        },
-        {
-          "headline": "Brunt of rain from Post-Tropical Cyclone Rachel arriving in Southern California",
-          "published_date": "2026-10-11"
-        },
-        {
-          "headline": "FIRST ALERT- Tropical moisture from Rachel brings wettest day in a year to Las Vegas",
-          "published_date": "2026-10-11"
-        },
-        {
-          "headline": "Highlights: Isaias brings heavy rains to northern Alabama as Mexico’s Pacific coast prepares for Hurricane Simon",
-          "published_date": "2026-10-11T06:13:31+00:00"
-        },
-        {
-          "headline": "Storms cause 5 deaths in Mexico as flood risk eases in southwestern US",
-          "published_date": "2026-10-12"
-        },
-        {
-          "headline": "Isaias weakens to post tropical storm as Simon rages in Mexico",
-          "published_date": "2026-10-12"
-        },
-        {
-          "headline": "Hurricane Simon hitting western Mexico after tropical systems kill 6",
-          "published_date": "2026-10-13"
-        },
-        {
-          "headline": "Hurricane Simon hitting western Mexico after tropical systems kill 6",
-          "published_date": "2026-10-13"
-        },
-        {
-          "headline": "Death toll rises to 6 as Hurricane Simon and Rachel remnants unleash floods in Mexico",
-          "published_date": "2026-10-13"
-        },
-        {
-          "headline": "Hurricane Simon drifts slowly near Mexico, south of due west",
-          "published_date": "2026-10-14"
-        },
-        {
-          "headline": "Puerto Vallarta Watch Lifted as Simon Stalls",
-          "published_date": "2026-10-14"
-        },
-        {
-          "headline": "Hurricane Simon stalls near Puerto Vallarta, Trudy may form",
-          "published_date": "2026-10-14"
-        },
-        {
-          "headline": "Hurricane Simon & tropical storm Rachel leave 5 dead in Mexico",
-          "published_date": "2026-10-14"
-        },
-        {
-          "headline": "Hurricane Simon lingers as tropical storm Trudy develops",
-          "published_date": "2026-10-14T20:05:23+00:00"
-        },
-        {
-          "headline": "New depression forms in eastern Pacific, to eye southwest Mexico Coast as a...",
-          "published_date": "2026-10-19T18:34:14+00:00"
-        },
-        {
-          "headline": "Rosal threatens Quezon coastal waters",
-          "published_date": "2026-10-20"
-        },
-        {
-          "headline": "Super Typhoon Rosal accelerates; Signal No. 1 raised over parts of Luzon",
-          "published_date": "2026-10-20"
-        },
-        {
-          "headline": "What you need to know about Super Typhoon Rosal",
-          "published_date": "2026-10-20"
-        },
-        {
-          "headline": "Super Typhoon Rosal to hit Thursday, may match Uwan's strength",
-          "published_date": "2026-10-20"
-        },
-        {
-          "headline": "LatAm Expat & Nomad Daily Guide for Tuesday, October 20, 2026",
-          "published_date": "2026-10-20"
-        },
-        {
-          "headline": "Watch: ST Rosal enters PAR, Taal activity top INQToday newscast",
-          "published_date": "2026-10-21"
-        },
-        {
-          "headline": "Super Typhoon Rosal enters PAR; Signal No. 1 in 5 Luzon areas",
-          "published_date": "2026-10-21"
-        },
-        {
-          "headline": "More areas under signal No. 1 as Super Typhoon ‘Rosal’ intensifies",
-          "published_date": "2026-10-21"
-        },
-        {
-          "headline": "Super Typhoon Champi’s trough to bring rain to parts of Luzon, Visayas",
-          "published_date": "2026-10-21"
-        },
-        {
-          "headline": "Super Typhoon Champi’s Planet-Sized Eye Explodes on Satellite Graphics (Video)",
-          "published_date": "2026-10-21"
-        },
-        {
-          "headline": "Batanes under Signal No. 2 as Super Typhoon Rosal maintains strength",
-          "published_date": "2026-10-21"
-        },
-        {
-          "headline": "Cebu can expect scattered rains as Rosal moves north",
-          "published_date": "2026-10-21"
-        }
-      ],
-      "news_total": 71,
-      "logs": [
-        {
-          "log_date": "2026-10-07",
-          "summary": "Tropical Storm Isaias formed in the Gulf of Mexico on October 7, 2026, and is expected to rapidly intensify into a hurricane, possibly a Category 3, by early Thursday. Hurricane watches and warnings have been issued for portions of the Gulf Coast, with the storm forecast to bring heavy rain, strong winds, and storm surge from Louisiana to Florida.",
-          "news": [
-            {
-              "news_id": "71fa07afc47752b09f4ac3d017a90e71",
-              "url": "https://www.yahoo.com/news/weather-news/articles/hurricane-watches-issued-tropical-storm-154000108.html",
-              "headline": "Hurricane watches issued as Tropical Storm Isaias forms, forecast to intensify and threaten Florida",
-              "body": "ORLANDO, Fla. — Tropical Storm Isaias formed Wednesday morning with the National Hurricane Center forecasting it to intensify close to a Category 3 storm before bearing down on the Gulf coast and thre...",
-              "published_date": "2026-10-07",
-              "outlet": "Orlando Sentinel · via Yahoo News",
-              "image": "https://media.zenfs.com/en/orlando_sentinel_national_858/81853261ea4e3ccaa8132c7f00711b30.jpg"
-            },
-            {
-              "news_id": "330df35f584a5c8e82b0598892790fdf",
-              "url": "https://okcfox.com/news/local/1st-hurricane-of-the-2026-atlantic-hurricane-season",
-              "headline": "1st Hurricane of the 2026 Atlantic Hurricane Season",
-              "body": "There's a Tropical Cyclone in the Gulf of Mexico right now and it's forecasted to develop into a Hurricane this week.",
-              "published_date": "2026-10-07",
-              "outlet": "KOKH FOX 25",
-              "image": "https://s.yimg.com/bo/de1e8a25-f012-55df-8791-623280cc98d6_1791398434393.jpg"
-            },
-            {
-              "news_id": "dec625ea426a508bbdd30b5d0d9f231a",
-              "url": "https://www.msn.com/en-us/news/other/tracking-tropical-storm-isaias-interactive-storm-radar-latest-cone-models-and-satellite/ar-AA2dKsiG?ocid=BingNewsVerp",
-              "headline": "Tracking Tropical Storm Isaias: Interactive storm radar, latest cone, models and satellite",
-              "body": "The National Hurricane Center has identified Tropical Depression Nine in the Gulf. Here's what you need to know.",
-              "published_date": "2026-10-07",
-              "outlet": "WDSU on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.Cqv821U0XAFIyG2MBbi06Q"
-            },
-            {
-              "news_id": "8f1744417bae547eb3da49805e508d84",
-              "url": "https://www.silive.com/weather/2026/10/tropical-storm-isaias-could-become-2026s-first-atlantic-hurricane-heres-its-potential-path.html",
-              "headline": "Tropical Storm Isaias could become 2026’s first Atlantic hurricane: Here’s its p...",
-              "body": "AccuWeather forecasters say the storm could peak as a Category 3 hurricane.",
-              "published_date": "2026-10-07T18:48:47+00:00",
-              "outlet": "Staten Island Advance",
-              "image": "https://s.yimg.com/bo/4df7ae02-3225-5661-a2d4-084e928843c1_1791399856320.jpg"
-            },
-            {
-              "news_id": "f6fdfa95336b5297aa40fa0c7a634776",
-              "url": "https://www.msn.com/en-us/weather/meteorology/tropical-storm-isaias-forms-in-the-gulf-rain-expected-in-areas-of-sc/ar-AA2dKMac?ocid=BingNewsVerp",
-              "headline": "Tropical Storm Isaias forms in the gulf. Rain expected in areas of SC",
-              "body": "South Carolina might not be in the direct path of Isaias, but it could still feel some impact. What to expect in Upstate.",
-              "published_date": "2026-10-07",
-              "outlet": "Greenville News on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "a3decbab662a5614aa3edd0d87f4a8f5",
-              "url": "https://www.yahoo.com/news/weather-news/articles/area-interest-gulf-could-develop-130000343.html",
-              "headline": "Tropical Storm Isaias getting stronger; hurricane, storm surge watches issued for Gulf Coast",
-              "body": "Hurricane, tropical storm and surge watches for Tropical Storm Isaias stretch from Louisiana to Florida. Here's the latest.",
-              "published_date": "2026-10-07",
-              "outlet": "The Weather Channel · via Yahoo News",
-              "image": "https://media.zenfs.com/en/the_weather_channel_articles_180/eb0d6aaf356cec2a431b3c26fe17f918.png.cf.jpg"
-            },
-            {
-              "news_id": "4f9053ccf955516b93c2ff5d9076653b",
-              "url": "https://yaleclimateconnections.org/2026/10/strengthening-isaias-expected-to-hit-the-u-s-gulf-coast-friday-as-a-hurricane/",
-              "headline": "Strengthening Isaias expected to hit the U.S. Gulf coast Friday as a hurricane » Yale Climate Connections",
-              "body": "Isaias is expected to quickly strengthen into the season’s first hurricane by early Thursday – the latest first-forming Atlantic hurricane in reliable records by a wide margin.",
-              "published_date": "2026-10-07",
-              "outlet": "Yale Climate Connections",
-              "image": ""
-            },
-            {
-              "news_id": "945b03352f915c9791c00d8630fd571a",
-              "url": "https://www.msn.com/en-us/weather/meteorology/gulf-system-eyes-cat-2-hurricane-strength-on-potential-path-toward-florida/ar-AA2dHd2s?ocid=BingNewsVerp",
-              "headline": "Gulf system eyes Cat 2 hurricane strength on potential path toward Florida",
-              "body": "Gulf Coast, including Florida Panhandle, should watch system in the Gulf and prepare for more soggy weather as it moves north.",
-              "published_date": "2026-10-07",
-              "outlet": "Pensacola News Journal on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "a7ee2d05515e56ada572d96ccdafac1f",
-              "url": "https://www.msn.com/en-us/news/other/10-steps-you-can-take-today-to-prepare-for-isaias/ar-AA2dKMoL?ocid=BingNewsVerp",
-              "headline": "Hurricane tips: Prepare now as Isaias approaches",
-              "body": "What you prepare for a hurricane or disaster may change, but taking the steps to be ready is always essential. Here are 10 things you could do today.",
-              "published_date": "2026-10-07",
-              "outlet": "USA TODAY on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "4bdaa01eef7e5bab9b01f4ab8dde35c8",
-              "url": "https://www.orlandosentinel.com/2026/10/07/hurricane-center-tracking-new-gulf-system-that-could-develop/",
-              "headline": "Hurricane watches issued as Tropical Storm Isaias forms, forecast to intensify and threaten Florida",
-              "body": "Tropical Storm Isaias formed Wednesday morning with the National Hurricane Center forecasting it to intensify close to a Category 3 storm before bearing down on the Gulf coast and threatening Florida.",
-              "published_date": "2026-10-07",
-              "outlet": "Orlando Sentinel",
-              "image": ""
-            },
-            {
-              "news_id": "a941e834df395a85a669cc1f59c9f904",
-              "url": "https://www.msn.com/en-us/news/other/tropical-depression-9-forms-expected-to-become-hurricane-in-gulf/ar-AA2dFLmP?ocid=BingNewsVerp",
-              "headline": "Tropical Depression 9 forms, expected to become hurricane in Gulf",
-              "body": "Forecasters are urging Gulf Coast residents to watch Tropical Depression Nine closely. It is expected to become tropical ...",
-              "published_date": "2026-10-07",
-              "outlet": "Naples Daily News on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.qs3xhd2CXtTh2mnRNg7wAQ"
-            },
-            {
-              "news_id": "f944fd96f07250fba9e292bb872a1fce",
-              "url": "https://bocanewsnow.com/2026/10/07/hurricane-center-tropical-storm-isaias-forms-likely-to-hit-northern-gulf-as-hurricane/",
-              "headline": "HURRICANE CENTER: Tropical Storm Isaias Forms, Likely To Hit Northern Gulf As Hurricane - BocaNewsNow.com",
-              "body": "Tropical Storm Isaias is forecast to reach a peak of 110 mph over the central Gulf before approaching the northern Gulf coast in 60-72 hours.",
-              "published_date": "2026-10-07",
-              "outlet": "BocaNewsNow.com",
-              "image": ""
-            },
-            {
-              "news_id": "a2137e345ea557f7b8cb22fba71544d9",
-              "url": "https://www.yahoo.com/news/weather-news/articles/live-updates-tropical-storm-isaias-135438064.html",
-              "headline": "Live updates: Tropical Storm Isaias expected to become hurricane in Gulf",
-              "body": "Tropical Storm Isaias has formed in the Gulf. Here’s what Alabama, Louisiana and Mississippi need to know as the storm moves.",
-              "published_date": "2026-10-07",
-              "outlet": "Shreveport Times | The Times · via Yahoo News",
-              "image": "https://media.zenfs.com/en/shreveport-times-the-times/a1147cfb8445ade06c631cd7939e9fa0.gif"
-            },
-            {
-              "news_id": "39e0a3f3a2175de5b798b08628ac897f",
-              "url": "https://www.msn.com/en-us/news/other/isaias-live-updates-tropical-storm-set-to-become-a-hurricane-this-week/ar-AA2dK8EZ?ocid=BingNewsVerp",
-              "headline": "Isaias live updates: Tropical storm set to become a hurricane this week",
-              "body": "Isaias is forecast to bring strong winds and flooding rains to the Gulf Coast and Southeast by week's end and into the ...",
-              "published_date": "2026-10-07",
-              "outlet": "USA TODAY on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.X08XvL2CzpA8bZbJW1Gdjw"
-            },
-            {
-              "news_id": "de73629fd45350d587c3322076e5a1d0",
-              "url": "https://www.kxan.com/weather/2026-tropical-timeline-tracker/",
-              "headline": "Tropical tracker: Tropical Storm Isaias forms in the Gulf, forecast to become hurricane",
-              "body": "Each year, the Atlantic Hurricane Season officially runs from June 1 through Nov. 30. Follow along as we track each storm throughout the season.",
-              "published_date": "2026-10-07",
-              "outlet": "KXAN 36 Austin",
-              "image": "https://s.yimg.com/bo/132602bd-c1bf-50b3-b21a-336c018e95d2_1791389048841.jpg"
-            },
-            {
-              "news_id": "197b1b92bb7a514f9fa7372811ab829c",
-              "url": "https://www.wbko.com/2026/10/07/warm-dry-afternoons-before-tropical-cyclone-barrels-toward-kentucky/",
-              "headline": "Warm, dry afternoons before a tropical cyclone barrels toward Kentucky",
-              "body": "Warm, dry air with low relative humidity the rest of the week, but this weekend will reverse that, as a tropical cyclone brings heavy rainfall to Kentucky.",
-              "published_date": "2026-10-07",
-              "outlet": "WBKO",
-              "image": ""
-            },
-            {
-              "news_id": "94fdb8b26f3d5bccbe7919d0a556ab37",
-              "url": "https://www.yahoo.com/news/weather-news/articles/tropical-storm-isaias-forms-gulf-144601426.html",
-              "headline": "Tropical Storm Isaias forms in the gulf. Rain expected in areas of SC",
-              "body": "South Carolina might not be in the direct path of Isaias, but it could still feel some impact. What to expect in Upstate.",
-              "published_date": "2026-10-07",
-              "outlet": "Greenville News · via Yahoo News",
-              "image": "https://media.zenfs.com/en/greenville-news/04b8ccaeb58a9f2e06c3f8f09bff35fd.gif"
-            },
-            {
-              "news_id": "242814dc4f4e5d498732884d8ceb5f26",
-              "url": "https://www.msn.com/en-us/news/other/tropical-storm-isaias-to-threaten-gulf-coast-as-a-dangerous-hurricane/ar-AA2dIaHO?ocid=BingNewsVerp",
-              "headline": "Tropical Storm Isaias to threaten Gulf Coast as a dangerous hurricane",
-              "body": "Hurricane Isaias will batter parts of the southern US this week with heavy rain and strong winds.",
-              "published_date": "2026-10-07",
-              "outlet": "CNN on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.Xw-ZfDjUmrByLQScKK3Iwg"
-            },
-            {
-              "news_id": "8f0f459f16b851ca848bbe6907abe28d",
-              "url": "https://mashable.com/science/tropical-storm-isaias-spaghetti-models-hurricane-track-storm-path",
-              "headline": "Tropical Storm Isaias: Spaghetti models track the storm’s path",
-              "body": "Tropical Storm Isaias formed Wednesday morning and is expected to become a hurricane early Thursday. Where to follow the track.",
-              "published_date": "2026-10-07",
-              "outlet": "Mashable",
-              "image": "https://www.bing.com/th?id=ONUT.oytE3nE7oYlqGtVsCTlXHw"
-            },
-            {
-              "news_id": "aecbb725a1005020abdf07ad9c3eff4e",
-              "url": "https://www.yahoo.com/news/weather-news/articles/hurricane-warning-10-inches-rain-130426612.html",
-              "headline": "Hurricane Warning: Up to 10 Inches of Rain Possible as Isaias Targets the Gulf Coast",
-              "body": "Tropical Storm Isaias has formed in the Gulf of America and could become the Atlantic’s first hurricane of 2026 before hitting the U.S. central Gulf Coast this weekend, bringing risks of heavy rain, f...",
-              "published_date": "2026-10-07",
-              "outlet": "Men's Journal · via Yahoo News",
-              "image": "https://media.zenfs.com/en/men_s_journal_718/11b26867379be182eee0834a6758c8b3.jpg"
-            },
-            {
-              "news_id": "40e7b0b518355a09865679a2399c4c32",
-              "url": "https://www.orlandosentinel.com/2026/10/06/hurricane-center-tracking-new-gulf-system-that-could-develop/",
-              "headline": "Hurricane watches issued as Tropical Storm Isaias forms, forecast to intensify and threaten Florida",
-              "body": "Tropical Storm Isaias formed Wednesday morning with the National Hurricane Center forecasting it to intensify close to a Category 3 storm before bearing down on the Gulf coast and threatening Florida.",
-              "published_date": "2026-10-07",
-              "outlet": "Orlando Sentinel",
-              "image": "https://www.bing.com/th?id=ONUT.Mk7Qs7kstqNLDqfAmt4WbQ"
-            },
-            {
-              "news_id": "caae8443f1615da084560bab816ed26b",
-              "url": "https://www.usatoday.com/story/news/weather/2026/10/07/tropical-storm-isaias-path-tracker-forecast-spaghetti-models/92131907007/",
-              "headline": "Tropical Storm Isaias takes aim at Gulf Coast. Who is in the path?",
-              "body": "Tropical Storm Isaias has formed in the Gulf and is expected to rapidly strengthen over the next few days. Here's a look at ...",
-              "published_date": "2026-10-04T19:34:30+00:00",
-              "outlet": "USA TODAY",
-              "image": "https://www.bing.com/th?id=ONUT.Akiz3F8ilKunRwRnMyoChA"
-            },
-            {
-              "news_id": "eb81f44b57085376ad6b44525db5a151",
-              "url": "https://www.yahoo.com/news/weather-news/articles/hurricane-season-ramps-tropical-storm-132736310.html",
-              "headline": "Tropical Storm Isaias organizes, takes aim at Gulf Coast in latest update",
-              "body": "The first hurricane of the 2026 Atlantic hurricane season may be only hours away.",
-              "published_date": "2026-10-07",
-              "outlet": "Pensacola News Journal · via Yahoo News",
-              "image": "https://media.zenfs.com/en/pensacola-news-journal/461927950c1b09145d241269f00ed832.png.cf.jpg"
-            },
-            {
-              "news_id": "fe3279cca1965f67ad93fccb6698c7fb",
-              "url": "https://gizmodo.com/tropical-storm-isaias-is-expected-to-slam-the-gulf-coast-as-a-hurricane-this-weekend-2000822829",
-              "headline": "Tropical Storm Isaias Is Expected to Slam the Gulf Coast as a 'Significant...",
-              "body": "Meteorologists warn the cyclone could slam into the Gulf Coast as a hurricane, bringing dangerous...",
-              "published_date": "2026-10-07T14:34:31+00:00",
-              "outlet": "Gizmodo",
-              "image": "https://s.yimg.com/bo/d1c730df-21a5-5d9c-89f8-8f55bc22f456_1791386422886.jpg"
-            },
-            {
-              "news_id": "afad04001b235ddd93a4d0c64ba5c6d5",
-              "url": "https://www.usatoday.com/story/weather/hurricanes/2026/10/07/tropical-depression-9-isaias-storm-tracker-spaghetti-models-florida-impacts/92131437007/",
-              "headline": "See spaghetti models on Tropical Storm Isaias, future hurricane",
-              "body": "Tropical Depression Nine is expected to strengthen into Tropical Storm Isaias today and then a hurricane Thursday before ...",
-              "published_date": "2026-10-07T00:00:00+00:00",
-              "outlet": "USA TODAY",
-              "image": "https://www.bing.com/th?id=ONUT.MD30W-vdBJc_nI1cw_zwrg"
-            },
-            {
-              "news_id": "e35f1eb5fce05085af61be9bb34f97f6",
-              "url": "https://www.msn.com/en-us/news/other/tropical-storm-isaias-tracker-map-and-projected-storm-path/ar-AA2dMbbt?ocid=BingNewsVerp",
-              "headline": "Tropical Storm Isaias tracker: Map and projected storm path",
-              "body": "Isaias is the ninth named storm of the Atlantic hurricane season.",
-              "published_date": "2026-10-07",
-              "outlet": "The Washington Post on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.B-ocfj6g7LrMalelZYEFlw"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-10-11",
-          "summary": "Isaias made landfall on the U.S. Gulf Coast near Destin, Florida, as a dangerous Category 2 hurricane. It then weakened and brought heavy rainfall to northern Alabama, continuing to impact the region.",
-          "news": [
-            {
-              "news_id": "5eae09883f18512bb298b3ffd7aa8bfa",
-              "url": "https://www.msn.com/en-us/news/other/tropical-storm-rachel-to-fuel-dangerous-flash-flood-threat-in-the-southwest/ar-AA2dYepE?ocid=BingNewsVerp",
-              "headline": "Tropical Storm Rachel to fuel dangerous flash flood threat in the Southwest",
-              "body": "The storm is headed for landfall over northern Baja California.",
-              "published_date": "2026-10-11",
-              "outlet": "ABC News on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "5694102bcdc75a4b85f263afd6a26f78",
-              "url": "https://www.cbsnews.com/news/hurricane-simon-takes-aim-mexico-pacific-coast/",
-              "headline": "Hurricane Simon strengthens into Category 4 storm as it takes aim at Mexico's Pacific coast",
-              "body": "Simon has strengthened into a powerful Category 4 hurricane as it barrels toward Mexico's Pacific coast.",
-              "published_date": "2026-10-10",
-              "outlet": "CBS News",
-              "image": "https://www.bing.com/th?id=ONUT.R_O2EoASgHLVvW4soonTUA"
-            },
-            {
-              "news_id": "a5fac77b2de85b1ca7c6c57e5a100da8",
-              "url": "https://apnews.com/live/hurricane-isaias-simon-10-10-2026",
-              "headline": "Highlights: Isaias brings heavy rains to northern Alabama as Mexico’s Pacific coast prepares for Hurricane Simon",
-              "body": "Isaias weakened slightly but was still a dangerous hurricane Friday as it made landfall on the U.S. Gulf Coast as a dangerous Category 2 storm.",
-              "published_date": "2026-10-11T06:13:31+00:00",
-              "outlet": "Associated Press News",
-              "image": ""
-            },
-            {
-              "news_id": "82cb3ed4c30b573fbbe4c4c0d6d241b8",
-              "url": "https://www.washingtonpost.com/national/2026/10/08/hurricane-simon-pacific/ae54d01c-c390-11f1-8170-681419af1cc9_story.html",
-              "headline": "Pacific storm strengthens into a hurricane far off the coast of Mexico",
-              "body": "MIAMI — Tropical Storm Simon has strengthened into a hurricane in the Pacific, the National Hurricane Center in Miami said Thursday. The storm was hundreds of 235 miles (380 kilometers) south of ...",
-              "published_date": "2026-10-08T00:00:00+00:00",
-              "outlet": "The Washington Post",
-              "image": ""
-            },
-            {
-              "news_id": "fb77ac58c72c55a49bccc977a7039a4e",
-              "url": "https://www.riotimesonline.com/hurricane-simon-mexico-pacific-coast-foreigners-checklist-2026/",
-              "headline": "Hurricane Simón: Checklist for Foreigners in Mexico",
-              "body": "Hurricane Simón is forecast to reach Category 4 near Mexico’s Pacific coast this weekend. What foreigners in Jalisco and Nayarit should prepare.",
-              "published_date": "2026-10-09",
-              "outlet": "The Rio Times",
-              "image": "https://www.bing.com/th?id=ONUT.HYH-lC1uz_Iyk8CMdTzGfw"
-            },
-            {
-              "news_id": "8b989796692e5d07b5bd69125ef69cd2",
-              "url": "https://www.dtnpf.com/agriculture/web/ag/news/article/2026/10/07/tropical-cyclones-driving-weather",
-              "headline": "Tropical Cyclones Driving Weather Impacts Through Next Week",
-              "body": "Another couple of dry days in the U.S., but with hurricanes having an outsized influence on the weather through next week, and a continued focus on South America planting are the weather factors driving the markets Wednesday.",
-              "published_date": "2026-10-07",
-              "outlet": "DTN/Progressive Farmer",
-              "image": ""
-            },
-            {
-              "news_id": "8e7eeac7e8d656cd94057f58b5322ebf",
-              "url": "https://www.newsobserver.com/news/nation-world/world/article317551979.html",
-              "headline": "Hurricane Simon rapidly strengths off Mexico's Pacific coast, threatens tourist region",
-              "body": "Hurricane Simon is rapidly intensifying off Mexico's Pacific coast with maximum sustained winds already near 90 mph (150 kph), the US National Hurricane Center said on Friday.",
-              "published_date": "2026-10-10T06:14:49+00:00",
-              "outlet": "The News & Observer",
-              "image": ""
-            },
-            {
-              "news_id": "a3a5d0fd45985d2ba9c2245a565e973d",
-              "url": "https://www.msn.com/en-us/news/other/tropical-storm-explodes-into-hurricane-set-to-batter-vacation-hotspot-as-us-triple-threat-approaches/ar-AA2dQMDS?ocid=BingNewsVerp",
-              "headline": "Tropical storm explodes into hurricane set to batter vacation hotspot — as US triple threat approaches",
-              "body": "The US faces a tropical triple threat as storms threaten both coasts. Along the Pacific, Rachel closes in on Baja California, while a new system, Simon, rapidly intensifies farther south.",
-              "published_date": "2026-10-09",
-              "outlet": "New York Post on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "4c4d78a7bcf85655a6f51ff238c8fe99",
-              "url": "https://www.msn.com/en-ae/news/other/mexico-issues-alert-over-three-tropical-cyclones/ar-AA2dNHlp?ocid=BingNewsVerp",
-              "headline": "Mexico issues alert over three tropical cyclones",
-              "body": "MEXICO CITY, 8th October, 2026 (WAM) -- Mexican authorities have issued an alert over three tropical cyclones moving towards the country's coasts, two in the Pacific Ocean and one in the Gulf of ...",
-              "published_date": "2026-10-08",
-              "outlet": "Emirates News Agency on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "9578679d42155f3fb35216c0080b6c92",
-              "url": "https://www.usnews.com/news/us/articles/2026-10-10/simon-strengthens-into-a-category-4-hurricane-as-it-approaches-mexicos-coast",
-              "headline": "Simon Strengthens Into a Category 4 Hurricane as It Approaches Mexico's Coast",
-              "body": "Simon has strengthened into a powerful Category 4 hurricane as it barrels toward Mexico’s coast. The National Hurricane Center in Miami said early Saturday Simon’s maximum sustained winds increased to ...",
-              "published_date": "2026-10-10T17:31:04+00:00",
-              "outlet": "U.S. News & World Report",
-              "image": ""
-            },
-            {
-              "news_id": "d2dd24ca5f33572bbabe245cccbae3ac",
-              "url": "https://www.ksat.com/news/national/2026/10/10/the-latest-isaias-weakens-after-making-landfall-as-category-2-hurricane/",
-              "headline": "The Latest: Isaias drops heavy rain on Alabama as Mexico's Pacific coast prepares for Simon",
-              "body": "Isaias has weakened after making landfall on the U.S. Gulf Coast near Destin, Florida.",
-              "published_date": "2026-10-10",
-              "outlet": "KSAT",
-              "image": "https://www.bing.com/th?id=ONUT.IH2ud19wlJE24T7tJeTyJA"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-10-14",
-          "summary": "Isaias weakened to a post-tropical storm.",
-          "news": [
-            {
-              "news_id": "c616325cd934527ba9d1ae2575caa743",
-              "url": "https://www.msn.com/en-us/news/other/tropical-storm-rachel-fuels-major-west-coast-flood-threat-with-months-of-rain-possible-in-hours/ar-AA2dYM3m?ocid=BingNewsVerp",
-              "headline": "Tropical Storm Rachel fuels major West Coast flood threat with months of rain possible in hours",
-              "body": "The Southwest is expecting rare impacts from Tropical Storm Rachel, which is forecast to make landfall in Mexico just south ...",
-              "published_date": "2026-10-11",
-              "outlet": "FOX Weather on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.ne5ZbXOv8DpIoy95ITOswQ"
-            },
-            {
-              "news_id": "d9c21929191c508fb573eebff24149d6",
-              "url": "https://www.cnn.com/2026/10/10/weather/tropical-storm-rachel-san-diego-california-climate",
-              "headline": "Post-tropical storm lashing southwest with coastal flooding, heavy rain and strong winds | CNN",
-              "body": "The remnants of Tropical Storm Rachel are soaking Southern California and the Desert Southwest after moving over land early Sunday morning. The storm is bringing a threat of coastal flooding, high winds and inland flash flooding Sunday.",
-              "published_date": "2026-10-10",
-              "outlet": "CNN",
-              "image": "https://www.bing.com/th?id=ONUT.1i5UVN3-o2xdVRjV7OwLag"
-            },
-            {
-              "news_id": "18b20f26724f554ebc4e9e37cc3d4a87",
-              "url": "https://www.ajc.com/news/2026/10/storms-leave-2-dead-in-mexico-as-flash-flood-risk-from-rachel-lingers-across-the-southwest-us/",
-              "headline": "Storms cause 5 deaths in Mexico as flood risk eases in southwestern US",
-              "body": "Hurricane Simon is still pounding Mexico's Pacific coast as it remains offshore. Authorities said Monday that five people have died in Mexico due to the hurricane and the remnants of Tropical Storm Rachel. Rachel caused street flooding and other damage in Mexico’s Baja California state. Four people died after Rachel swept through over the weekend and at least six were missing. The storm's remnants also caused flooding in the southwestern U.S. The risk had mostly ended by Monday evening. Power was gradually being restored after Hurricane Isaias hit the U.S. Southeast.",
-              "published_date": "2026-10-12",
-              "outlet": "Atlanta Journal-Constitution",
-              "image": "https://s.yimg.com/bo/29e8b0ca-aa32-50e0-beb6-881ff4087f62_1791829765092.jpg"
-            },
-            {
-              "news_id": "a28635dbdc45567f9a1ddb75e1dc4e6c",
-              "url": "https://www.msn.com/en-us/news/other/hurricane-simon-pounds-resorts-and-vulnerable-towns-along-mexicos-pacific-coast/ar-AA2e0Dey?ocid=BingNewsVerp",
-              "headline": "Hurricane Simon pounds resorts and vulnerable towns along Mexico's Pacific coast",
-              "body": "Hurricane Simon is pounding Mexico's Pacific coast as a Category 4 storm, with 150-mph winds threatening resorts near Puerto ...",
-              "published_date": "2026-10-11",
-              "outlet": "Los Angeles Times on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.JrFwrjitfvJ__M5I5TiFbg"
-            },
-            {
-              "news_id": "61cdeb97f592534985f0ecc545fddb27",
-              "url": "https://www.msn.com/en-us/news/other/hurricane-simon-threatens-southwestern-mexico-to-land-sunday/ar-AA2dYLuE?ocid=BingNewsVerp",
-              "headline": "Hurricane Simon drifts slowly near Mexico, south of due west",
-              "body": "Hurricane Simon, now a Category 1 storm, drifted slowly just south of due west Tuesday and was forecast to continue its slow movement.",
-              "published_date": "2026-10-14",
-              "outlet": "UPI News on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "8b43c1f725ff53e8812cf9c15b1a6693",
-              "url": "https://www.latimes.com/california/live/tropical-storm-rachel-updates-california-weather",
-              "headline": "Rachel downgraded from 'tropical' storm, but strong winds, rain and flooding hit Southern California",
-              "body": "The National Weather Service says Rachel is no longer a \"tropical\" storm, but risks persist. Follow for live updates.",
-              "published_date": "2026-10-11",
-              "outlet": "Los Angeles Times",
-              "image": "https://www.bing.com/th?id=ONUT.xYSx48F_rNd9t7NwTyx_XA"
-            },
-            {
-              "news_id": "8fab6b0a664b53239a164dc7e37de0c4",
-              "url": "https://www.yahoo.com/news/weather-news/articles/tropical-storm-rachel-bring-thunderstorms-222451192.html",
-              "headline": "Tropical Storm Rachel to bring thunderstorms, strong winds to Las Vegas valley",
-              "body": "Tropical Storm moisture continues to push through the West Coast, which means showers and thunderstorms will steadily be moving into the Las Vegas valley.",
-              "published_date": "2026-10-10",
-              "outlet": "KLAS · via Yahoo News",
-              "image": "https://media.zenfs.com/en/klas_articles_549/fd6dd22d098cfe2e6aaa18a6b84c4004.jpg"
-            },
-            {
-              "news_id": "75eed4dcb6325245bda3cecd6a50cb65",
-              "url": "https://www.cbsnews.com/news/hurricane-simon-still-hitting-western-mexico-tropical-systems/",
-              "headline": "Hurricane Simon hitting western Mexico after tropical systems kill 6",
-              "body": "Hurricane Simon continued to move slowly up the coast of west-central Mexico after tropical weather systems caused six deaths and damage in Pacific coastal towns and resorts.",
-              "published_date": "2026-10-13",
-              "outlet": "CBS News",
-              "image": "https://s.yimg.com/bo/762878ed-611c-5eeb-bdc6-5c21474d1837_1791898401027.jpg"
-            },
-            {
-              "news_id": "a26a22a6bad5533eb0f5b1995c5374b6",
-              "url": "https://www.riotimesonline.com/puerto-vallarta-hurricane-simon-watch-lifted-2026",
-              "headline": "Puerto Vallarta Watch Lifted as Simon Stalls",
-              "body": "Puerto Vallarta is no longer under a storm watch as Hurricane Simon stalls offshore, but Tropical Storm Trudy is strengthening to the south.",
-              "published_date": "2026-10-14",
-              "outlet": "The Rio Times",
-              "image": "https://www.bing.com/th?id=ONUT._tN3P53ijSTSxk02XpO2qA"
-            },
-            {
-              "news_id": "b38c4d45accd5313aaf45221dba52246",
-              "url": "https://www.gdacs.org/report.aspx?eventid=1001335&episodeid=28&eventtype=TC",
-              "headline": "Event summary",
-              "body": "Tropical Cyclone SIMON-26 can have a medium humanitarian impact based on the maximum sustained wind speed, exposed population and vulnerability. This site uses cookies. Visit our cookies policy page ...",
-              "published_date": "2026-10-09",
-              "outlet": "Global Disaster Alert and Coordination System",
-              "image": ""
-            },
-            {
-              "news_id": "707ec18158395dde8bae1e5647665768",
-              "url": "https://www.msn.com/en-us/weather/extreme-weather-events/hurricane-simon-lingers-as-tropical-storm-trudy-develops/vi-AA2ed6m6?ocid=BingNewsVerp",
-              "headline": "Hurricane Simon lingers as tropical storm Trudy develops",
-              "body": "Hurricane Simon remains offshore from Mexico’s Pacific coast as Tropical Storm Trudy develops in the eastern Pacific. The ...",
-              "published_date": "2026-10-14T20:05:23+00:00",
-              "outlet": "Amazon S3 on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.WOM72N_0FoS1qurG5vwXng"
-            },
-            {
-              "news_id": "9ec3720cc5be5d13b50ff69841a28038",
-              "url": "https://www.sltrib.com/news/environment/2026/10/10/how-much-snow-will-tropical-storm/",
-              "headline": "A rare tropical storm could bring Utah its first significant snow of the season. Here’s what to expect.",
-              "body": "Tropical Storm Rachel, previously a hurricane, is expected to blow through Utah. Forecasters say could bring snow with it — if the timing is right.",
-              "published_date": "2026-10-10",
-              "outlet": "The Salt Lake Tribune",
-              "image": "https://www.bing.com/th?id=ONUT.hFj4eve9rMxcJ0A3lk7TMQ"
-            },
-            {
-              "news_id": "02daa3bb4e4d5c02970d913eb0ef3b0e",
-              "url": "https://www.pressdemocrat.com/2026/10/13/hurricanes-simon-rachel-death-toll/",
-              "headline": "Death toll rises to 6 as Hurricane Simon and Rachel remnants unleash floods in Mexico",
-              "body": "The worst damage occurred in Ensenada, Baja California.",
-              "published_date": "2026-10-13",
-              "outlet": "The Press Democrat",
-              "image": "https://www.bing.com/th?id=ONUT.7SaOc90efU7Ibxnfp873Jw"
-            },
-            {
-              "news_id": "c4598f8e12fc52c6b7750467622f6a49",
-              "url": "https://www.yahoo.com/news/weather-news/articles/live-updates-rachel-makes-landfall-124053456.html",
-              "headline": "Live updates: Rachel makes landfall, dropping significant rain on desert",
-              "body": "Head Trip EDM music festival ends early on Saturday and roads closed across Palm Springs early Sunday",
-              "published_date": "2026-10-11",
-              "outlet": "The Desert Sun · via Yahoo News",
-              "image": "https://media.zenfs.com/en/the-desert-sun/f02924e0dd6809f2591f8d43bdff093c.jpg"
-            },
-            {
-              "news_id": "114bc6f2e5f951ab8caa189c49b95a15",
-              "url": "https://www.ctvnews.ca/video/2026/10/12/isaias-weakens-to-post-tropical-storm-as-simon-rages-in-mexico/",
-              "headline": "Isaias weakens to post tropical storm as Simon rages in Mexico",
-              "body": "Despite weakening to a category three storm, overnight rains from Hurricane Simon caused rivers to flood in towns across western Mexico.",
-              "published_date": "2026-10-12",
-              "outlet": "CTV News",
-              "image": "https://www.bing.com/th?id=ONUT.IvJsRgBP7-I476GRFRIDfA"
-            },
-            {
-              "news_id": "4222dd3fea215b63aae67b9736073279",
-              "url": "https://www.msn.com/en-us/video/news/hurricane-simon-stalls-near-puerto-vallarta-trudy-may-form/vi-AA2ee3uB?ocid=BingNewsVerp",
-              "headline": "Hurricane Simon stalls near Puerto Vallarta, Trudy may form",
-              "body": "Hurricane Simon has stalled in weak steering currents off Puerto Vallarta, Mexico, and is expected to wander over or near the southern Gulf of California for several days, forecasters say. The storm ...",
-              "published_date": "2026-10-14",
-              "outlet": "Amazon S3 on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "025beab583ee50cb8411968cf194e2e8",
-              "url": "https://www.riotimesonline.com/mexico-storm-rachel-baja-california-2026/",
-              "headline": "Storm Rachel Hits Baja California, Over 100 Evacuated",
-              "body": "Storm Rachel moved into northern Baja California with 60 mph winds overnight, as Tijuana evacuated its river canal and Ensenada closed its port.",
-              "published_date": "2026-10-11",
-              "outlet": "The Rio Times",
-              "image": "https://www.bing.com/th?id=ONUT.PGafaQ-xAPCzXqfPiueieg"
-            },
-            {
-              "news_id": "23f7180b15b854b5babee5507187ffab",
-              "url": "https://www.yahoo.com/news/weather-news/articles/brunt-rain-post-tropical-cyclone-143711591.html",
-              "headline": "Brunt of rain from Post-Tropical Cyclone Rachel arriving in Southern California",
-              "body": "The brunt of the rain associated with Post-Tropical Cyclone Rachel is arriving in Southern California on Sunday. According to the National Weather Service, communities in Ventura and Los Angeles count...",
-              "published_date": "2026-10-11",
-              "outlet": "KTLA · via Yahoo News",
-              "image": "https://media.zenfs.com/en/ktla_articles_362/cf3738ca3262c266e10363247b23d90e.png.cf.jpg"
-            },
-            {
-              "news_id": "b9a0adbfa43359f6b2ce9b332577f891",
-              "url": "https://www.fox5vegas.com/2026/10/11/first-alert-tropical-moisture-rachel-brings-wettest-day-year-las-vegas/",
-              "headline": "FIRST ALERT- Tropical moisture from Rachel brings wettest day in a year to Las Vegas",
-              "body": "Post-Tropical Cyclone Rachel swept through Southern Nevada with heavy rainfall and dangerous winds, making Sunday the wettest day at Reid Airport in more than a year.",
-              "published_date": "2026-10-11",
-              "outlet": "FOX5 Vegas",
-              "image": "https://www.bing.com/th?id=ONUT.HXtnykwsBqrZ-F_iyUFuWQ"
-            },
-            {
-              "news_id": "8f7065eab07054c49ea20924a173e6d2",
-              "url": "https://www.msn.com/en-in/weather/general/hurricane-simon-tropical-storm-rachel-leave-5-dead-in-mexico/vi-AA2e8ioA?ocid=BingNewsVerp",
-              "headline": "Hurricane Simon & tropical storm Rachel leave 5 dead in Mexico",
-              "body": "Hurricane Simon and Tropical Storm Rachel have left five people dead in Mexico, as severe weather brings dangerous conditions ...",
-              "published_date": "2026-10-14",
-              "outlet": "WION on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.11f1E3Q2uyhv2hkFtS4h3Q"
-            }
-          ]
-        }
-      ],
-      "logs_total": 3
-    },
-    {
       "incident_id": "20261008-PH-VO",
       "tree_id": "1b649796f0694fd38d131c5f505d82d5",
       "canonical_name": "Volcano Batangas, Philippines 2026-10-08",
@@ -1500,7 +614,7 @@
       "event_date": "2026-10-08",
       "first_reported_date": "2026-10-08",
       "last_updated_date": "2026-10-22",
-      "days_since_event": 18,
+      "days_since_event": 19,
       "source_count": 2,
       "should_report": true,
       "search_keys": [],
@@ -1877,7 +991,7 @@
       "event_date": "2026-10-10",
       "first_reported_date": "2026-10-10",
       "last_updated_date": "2026-10-21",
-      "days_since_event": 16,
+      "days_since_event": 17,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -3070,7 +2184,7 @@
       "event_date": "2026-10-15",
       "first_reported_date": "2026-10-15",
       "last_updated_date": "2026-10-20",
-      "days_since_event": 11,
+      "days_since_event": 12,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -3136,7 +2250,7 @@
       "event_date": "2026-10-16",
       "first_reported_date": "2026-10-16",
       "last_updated_date": "2026-10-19",
-      "days_since_event": 10,
+      "days_since_event": 11,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -3255,7 +2369,7 @@
       "event_date": "2026-10-17",
       "first_reported_date": "2026-10-17",
       "last_updated_date": "2026-10-18",
-      "days_since_event": 9,
+      "days_since_event": 10,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
