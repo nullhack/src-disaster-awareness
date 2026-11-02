@@ -1,24 +1,24 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-10-30",
-  "generated_at": "2026-11-02T07:49:08Z",
+  "generated_at": "2026-11-02T22:23:07Z",
   "as_of": "2026-10-30",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 17,
+    "reportable_total": 16,
     "new_today": 3,
     "critical": 5,
-    "high": 5,
+    "high": 4,
     "medium": 3,
     "low": 4,
     "disease_outbreaks": 1,
-    "countries_affected": 11,
-    "news_total": 1875,
+    "countries_affected": 10,
+    "news_total": 1836,
     "max_magnitude": 6.9,
     "by_severity": {
       "CRITICAL": 5,
-      "HIGH": 5,
+      "HIGH": 4,
       "MEDIUM": 3,
       "LOW": 4
     },
@@ -27,7 +27,7 @@
       "Drought": 1,
       "Severe Weather": 1,
       "Tropical Cyclone": 4,
-      "Earthquake": 6,
+      "Earthquake": 5,
       "": 3,
       "Flood": 1
     },
@@ -38,7 +38,7 @@
       "Europe": 3,
       "Africa": 1,
       "Unknown": 3,
-      "Oceania": 2
+      "Oceania": 1
     }
   },
   "by_country": [
@@ -112,15 +112,6 @@
       "iso2": "RU",
       "region": "Europe",
       "country_group": "C",
-      "max_severity": "HIGH"
-    },
-    {
-      "country": "Vanuatu",
-      "count": 1,
-      "max_sev_rank": 3,
-      "iso2": "VU",
-      "region": "Oceania",
-      "country_group": "B",
       "max_severity": "HIGH"
     },
     {
@@ -8554,7 +8545,7 @@
       "incident_id": "20261002-RU-EQ",
       "tree_id": "70b2a54e9fc24ba48f02f5171ac69058",
       "canonical_name": "Earthquake M5.8 Vilyuchinsk, Russia 2026-10-02",
-      "summary": "A magnitude 6.9–7.0 earthquake struck about 76 km northeast of Ozernovskiy, Russia, at 03:35 UTC on Oct. 16, 2026. U.S. monitoring agencies reported no tsunami threat, including for Hawaii. Japan briefly issued an erroneous 9.9 magnitude warning before correcting it.",
+      "summary": "Japan's false magnitude 9.9 earthquake warning, triggered by the October 16 Kamchatka earthquake, was clarified not to have been a cyberattack. The remaining news articles reiterate previously reported details of the magnitude 6.9 event.",
       "country": "Russia",
       "iso2": "RU",
       "lat": 51.6873,
@@ -8875,9 +8866,51 @@
               "image": "https://s.yimg.com/bo/6b8e2498-1c44-5577-9817-0ae92dd0dd56_1792127851277.png.cf.jpg"
             }
           ]
+        },
+        {
+          "log_date": "2026-11-02",
+          "summary": "Japan's false magnitude 9.9 earthquake warning, triggered by the October 16 Kamchatka earthquake, was clarified not to have been a cyberattack. The remaining news articles reiterate previously reported details of the magnitude 6.9 event.",
+          "news": [
+            {
+              "news_id": "92504716254a5f44bed4ec3b939fd4ab",
+              "url": "https://gizmodo.com/japans-false-emergency-alert-for-a-9-9-earthquake-wasnt-a-cyberattack-2000827000",
+              "headline": "Japan's False Emergency Alert for a 9.9 Earthquake Wasn't a Cyberattack",
+              "body": "It's easy to see why people assumed as much.",
+              "published_date": "2026-10-17T05:06:10+00:00",
+              "outlet": "Gizmodo",
+              "image": "https://s.yimg.com/bo/f590033c-1d40-5404-ab42-9ae5fd51c132_1792175005689.jpg"
+            },
+            {
+              "news_id": "f2ec72132689514cbb4d9222c89181eb",
+              "url": "https://www.msn.com/en-us/news/other/m6-9-earthquake-strikes-off-russia-s-kamchatka-peninsula/vi-AA2fFMUm?ocid=BingNewsVerp",
+              "headline": "M6.9 earthquake strikes off Russia's Kamchatka Peninsula",
+              "body": "A magnitude 6.9 earthquake struck off the Pacific coast of Russia's Kamchatka Peninsula on October 16, about 76 km northeast ...",
+              "published_date": "2026-10-20",
+              "outlet": "Amazon S3 on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.KwUOFk8_HAM78CIQ8zPeBA"
+            },
+            {
+              "news_id": "76f6728ed94a5b32b965408fb9cbcf7c",
+              "url": "https://www.msn.com/en-us/news/other/a-magnitude-6-9-earthquake-struck-135-km-beneath-russia-s-kamchatka-peninsula/ar-AA2fWAuy?ocid=BingNewsVerp",
+              "headline": "A magnitude 6.9 earthquake struck 135 km beneath Russia’s Kamchatka Peninsula",
+              "body": "A magnitude 6.9 earthquake hit 135 km beneath Russia’s Kamchatka Peninsula at 03:35 UTC on Oct. 16, the U.S. Geological ...",
+              "published_date": "2026-10-24",
+              "outlet": "Morning Overview on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.RCvl5QcvnZhSy-8w-DSTQQ"
+            },
+            {
+              "news_id": "5f438e3056aa55528876dc36d48bf5ad",
+              "url": "https://www.msn.com/en-us/video/news/magnitude-69-quake-occurs-near-russias-kamchatka-peninsula/vi-AA2fFJdN?ocid=BingNewsVerp",
+              "headline": "Magnitude 6.9 quake occurs near Russia's Kamchatka Peninsula",
+              "body": "On October 16, a magnitude 6.9 earthquake was recorded off the Pacific coast of Russia's Kamchatka Peninsula, approximately 76 kilometers northeast of Ozernovskiy, as reported by the USGS. The seismic ...",
+              "published_date": "2026-10-21",
+              "outlet": "Amazon S3 on MSN",
+              "image": ""
+            }
+          ]
         }
       ],
-      "logs_total": 2
+      "logs_total": 3
     },
     {
       "incident_id": "20261006-US-TC",
@@ -11074,595 +11107,6 @@
         }
       ],
       "logs_total": 3
-    },
-    {
-      "incident_id": "20261008-VU-EQ",
-      "tree_id": "d60f2317c83246fb94c69acf5f122fc4",
-      "canonical_name": "Earthquake M6.3 Norsup, Vanuatu 2026-10-08",
-      "summary": "A magnitude 6.1 earthquake struck near Port-Olry, Vanuatu, at 02:24 UTC on October 25, 2026. A magnitude 6.0 earthquake then struck off the coast of Vanuatu on October 28, 2026, as reported by USGS and QNA. These latest tremors add to the sequence of significant quakes affecting the island nation.",
-      "country": "Vanuatu",
-      "iso2": "VU",
-      "lat": -15.5411,
-      "lon": 168.1889,
-      "country_group": "B",
-      "region": "Oceania",
-      "incident_type": "Earthquake",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "HIGH",
-      "priority": "MEDIUM",
-      "priority_rank": 2,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-10-08",
-      "first_reported_date": "2026-10-08",
-      "last_updated_date": "2026-10-28",
-      "days_since_event": 25,
-      "source_count": 17,
-      "should_report": true,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 17,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 39
-      },
-      "source_links": [
-        {
-          "type": "USGS",
-          "label": "M 6.3 - 102 km NE of Norsup, Vanuatu",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u0xi",
-          "meta": "10 km depth"
-        },
-        {
-          "type": "USGS",
-          "label": "M 5.7 - 203 km WNW of Port-Olry, Vanuatu",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3ge",
-          "meta": "10 km depth"
-        },
-        {
-          "type": "USGS",
-          "label": "M 6.0 - 186 km NW of Port-Olry, Vanuatu",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3bc",
-          "meta": "10 km depth"
-        },
-        {
-          "type": "USGS",
-          "label": "M 5.7 - 198 km NW of Port-Olry, Vanuatu",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3ga",
-          "meta": "10 km depth"
-        },
-        {
-          "type": "USGS",
-          "label": "M 6.3 - 197 km NW of Port-Olry, Vanuatu",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3jl",
-          "meta": "16 km depth"
-        },
-        {
-          "type": "USGS",
-          "label": "M 5.7 - 205 km NW of Port-Olry, Vanuatu",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4ju",
-          "meta": "10 km depth"
-        },
-        {
-          "type": "USGS",
-          "label": "M 5.9 - 196 km NW of Port-Olry, Vanuatu",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4lm",
-          "meta": "10 km depth"
-        },
-        {
-          "type": "USGS",
-          "label": "M 6.9 - 197 km WNW of Port-Olry, Vanuatu",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4j2",
-          "meta": "10 km depth"
-        },
-        {
-          "type": "USGS",
-          "label": "M 5.5 - 55 km NNE of Port-Olry, Vanuatu",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4kq",
-          "meta": "194.632 km depth"
-        },
-        {
-          "type": "USGS",
-          "label": "M 6.3 - 170 km NW of Port-Olry, Vanuatu",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4jb",
-          "meta": "10 km depth"
-        },
-        {
-          "type": "USGS",
-          "label": "M 5.8 - 203 km NW of Port-Olry, Vanuatu",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4jw",
-          "meta": "10 km depth"
-        },
-        {
-          "type": "USGS",
-          "label": "M 5.8 - 182 km NW of Port-Olry, Vanuatu",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4k6",
-          "meta": "10 km depth"
-        },
-        {
-          "type": "USGS",
-          "label": "M 6.2 - 21 km E of Port-Olry, Vanuatu",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4rf",
-          "meta": "136.298 km depth"
-        },
-        {
-          "type": "USGS",
-          "label": "M 5.8 - 196 km NW of Port-Olry, Vanuatu",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ttfb",
-          "meta": "11 km depth"
-        },
-        {
-          "type": "USGS",
-          "label": "M 5.6 - 174 km NW of Port-Olry, Vanuatu",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ttlt",
-          "meta": "10 km depth"
-        },
-        {
-          "type": "USGS",
-          "label": "M 5.5 - 221 km NW of Port-Olry, Vanuatu",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ttld",
-          "meta": "10 km depth"
-        },
-        {
-          "type": "USGS",
-          "label": "M 6.0 - 214 km NW of Port-Olry, Vanuatu",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ttlm",
-          "meta": "10 km depth"
-        }
-      ],
-      "physical": {
-        "max_magnitude": 6.9,
-        "max_depth_km": 10.0,
-        "place": "102 km NE of Norsup, Vanuatu",
-        "felt": 4,
-        "sig": 733,
-        "tsunami": true,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Coastal communities breathe sigh of relief as 6.3 magnitude quake strikes off Vanuatu",
-          "published_date": "2026-10-20"
-        },
-        {
-          "headline": "Earthquake of magnitude 6.4 strikes Coral Sea",
-          "published_date": "2026-10-20"
-        },
-        {
-          "headline": "Magnitude 6.3 earthquake strikes northwest of Vanuatu",
-          "published_date": "2026-10-20"
-        },
-        {
-          "headline": "5.5-magnitude quake hits Vanuatu Islands -- GFZ",
-          "published_date": "2026-10-20"
-        },
-        {
-          "headline": "Strong and shallow M6.3 earthquake hits Vanuatu",
-          "published_date": "2026-10-20"
-        },
-        {
-          "headline": "Magnitude 6.3 Earthquake Hits Off Vanuatu",
-          "published_date": "2026-10-20"
-        },
-        {
-          "headline": "Magnitude 6.3 earthquake strikes off Vanuatu coast",
-          "published_date": "2026-10-20"
-        },
-        {
-          "headline": "6.3-magnitude earthquake strikes off Vanuatu, no tsunami threat",
-          "published_date": "2026-10-20"
-        },
-        {
-          "headline": "Significant M6.3 quake occurs off the coast of Vanuatu, tsunami warning not issued",
-          "published_date": "2026-10-21"
-        },
-        {
-          "headline": "Strong M6.3 earthquake hits off Vanuatu, no tsunami threat",
-          "published_date": "2026-10-21"
-        },
-        {
-          "headline": "Magnitude 6.3 earthquake strikes northwest of Vanuatu",
-          "published_date": "2026-10-21"
-        },
-        {
-          "headline": "Magnitude 6.3 earthquake strikes off Vanuatu",
-          "published_date": "2026-10-21"
-        },
-        {
-          "headline": "Requin, déluge et séisme : trois catastrophes en 24 heures qui secouent la planète",
-          "published_date": "2026-10-21"
-        },
-        {
-          "headline": "Significant M6.3 quake occurs off the coast of Vanuatu, tsunami warning not issued",
-          "published_date": "2026-10-21"
-        },
-        {
-          "headline": "A magnitude 6.3 earthquake off Vanuatu carried a USGS tsunami flag",
-          "published_date": "2026-10-22"
-        },
-        {
-          "headline": "Tsunami warning issued after two earthquakes off Vanuatu in the Pacific Ocean",
-          "published_date": "2026-10-24"
-        },
-        {
-          "headline": "Shallow 6.9 magnitude earthquake rattles Vanuatu",
-          "published_date": "2026-10-24"
-        },
-        {
-          "headline": "Βανουάτου: Σημειώθηκε ισχυρός σεισμός 7,1 Ρίχτερ – Εκδόθηκε προειδοποίηση για τσουνάμι",
-          "published_date": "2026-10-24"
-        },
-        {
-          "headline": "Động đất 6,9 độ ngoài khơi Vanuatu, cảnh báo sóng thần được dỡ bỏ",
-          "published_date": "2026-10-24"
-        },
-        {
-          "headline": "Земетресение с магнитуд 7,2 разтърси Вануату",
-          "published_date": "2026-10-24"
-        },
-        {
-          "headline": "Magnitude 6.9 earthquake strikes off Vanuatu",
-          "published_date": "2026-10-24"
-        },
-        {
-          "headline": "Magnitude 6.9 earthquake strikes near Vanuatu — Anadolu Agency",
-          "published_date": "2026-10-24"
-        },
-        {
-          "headline": "Vanuatu rocked by two powerful earthquakes four minutes apart",
-          "published_date": "2026-10-24"
-        },
-        {
-          "headline": "Multiple earthquakes of magnitudes 7.2, 6.9, 6.3 hit Vanuatu Islands: UGSC",
-          "published_date": "2026-10-24"
-        },
-        {
-          "headline": "Vanuatu Earthquake: Two Strong Quakes Of Magnitude 7.2 And 6.9 Hit Island Nation Within 25 Seconds",
-          "published_date": "2026-10-24"
-        },
-        {
-          "headline": "Magnitude 7.2 earthquake strikes waters near Vanuatu, USGS says",
-          "published_date": "2026-10-24T16:14:11+00:00"
-        },
-        {
-          "headline": "జపాన్ తీరంలో భారీ భూకంపం",
-          "published_date": "2026-10-25"
-        },
-        {
-          "headline": "Gempa 6,9 SR Terjadi Di Lepas Pantai Vanuatu, Peringatan Tsunami Dibatalkan | Jubi Papua",
-          "published_date": "2026-10-25"
-        },
-        {
-          "headline": "Russia To Japan And Australia: Geological Forces Behind Back-To-Back Earthquakes In The Pacific Ring Of Fire",
-          "published_date": "2026-10-25"
-        },
-        {
-          "headline": "Magnitude 6.9 earthquake strikes Vanuatu, tsunami warning lifted",
-          "published_date": "2026-10-25"
-        },
-        {
-          "headline": "6.2-Magnitude Earthquake Strikes off Coast of Vanuatu Islands",
-          "published_date": "2026-10-25"
-        },
-        {
-          "headline": "Earthquake of magnitude 6.16 strikes Vanuatu islands, GFZ says",
-          "published_date": "2026-10-25T16:40:16+00:00"
-        },
-        {
-          "headline": "Vanuatu has not stopped shaking, with a magnitude 6.1 felt near Port-Olry a day after a bigger jolt",
-          "published_date": "2026-10-26"
-        },
-        {
-          "headline": "Vanuatu has not stopped shaking, with a magnitude 6.1 felt near Port-Olry a day after a bigger jolt",
-          "published_date": "2026-10-27"
-        },
-        {
-          "headline": "Vanuatu has absorbed three significant quakes since October 20, the largest at magnitude 6.9",
-          "published_date": "2026-10-27"
-        },
-        {
-          "headline": "6.0-Magnitude Earthquake Strikes off Coast of Vanuatu Islands",
-          "published_date": "2026-10-28"
-        },
-        {
-          "headline": "Serie de cutremure în Vanuatu, SUA, dintre care unul cu magnitudinea 6 - Economica.net",
-          "published_date": "2026-10-28"
-        },
-        {
-          "headline": "Vanuatu has absorbed three significant quakes since October 20, the largest at magnitude 6.9",
-          "published_date": "2026-10-28"
-        },
-        {
-          "headline": "6.1-magnitude earthquake strikes off Vanuatu coast",
-          "published_date": "2026-10-28T06:02:11+00:00"
-        }
-      ],
-      "news_total": 39,
-      "logs": [
-        {
-          "log_date": "2026-10-20",
-          "summary": "A series of earthquakes struck near Vanuatu on October 19-20, 2026. A magnitude 5.5 earthquake (GFZ) hit the Vanuatu Islands on October 19, while strong magnitude 6.3-6.4 tremors occurred northwest of Vanuatu and in the Coral Sea, with no tsunami threat.",
-          "news": [
-            {
-              "news_id": "914cbb97e6415f1aba47a3696c8d9766",
-              "url": "https://pmn.co.nz/read/environment/coastal-communities-breathe-sigh-of-relief-as-6-3-magnitude-quake-strikes-off-vanuatu",
-              "headline": "Coastal communities breathe sigh of relief as 6.3 magnitude quake strikes off Vanuatu",
-              "body": "Emergency agencies confirm no tsunami threat following an offshore tremor in the northern waters of the archipelago.",
-              "published_date": "2026-10-20",
-              "outlet": "Pacific Media Network",
-              "image": "https://www.bing.com/th?id=ONUT.P3NKqtED1hfqlWNg2uplgw"
-            },
-            {
-              "news_id": "8b0aa8823b6e5367ada1131505c2b8ef",
-              "url": "https://www.msn.com/en-in/science/earth-science/earthquake-of-magnitude-6-4-strikes-coral-sea/ar-AA2fCUKe?ocid=BingNewsVerp",
-              "headline": "Earthquake of magnitude 6.4 strikes Coral Sea",
-              "body": "Port Vila [Vanuatu], October 20 (ANI): An earthquake of magnitude 6.4 struck the Coral Sea on Tuesday morning, according to the National Centre for Seismology (NCS).The earthquake occurred at a depth ...",
-              "published_date": "2026-10-20",
-              "outlet": "News18 on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "3df4627333665d4cb53f97a3b8074297",
-              "url": "https://www.rnz.co.nz/news/pacific/2041045/magnitude-6-point-3-earthquake-strikes-northwest-of-vanuatu",
-              "headline": "Magnitude 6.3 earthquake strikes northwest of Vanuatu",
-              "body": "A magnitude 6.3 earthquake has struck northwest of Vanuatu, the United States Geological Survey (USGS) said.",
-              "published_date": "2026-10-20",
-              "outlet": "RNZ",
-              "image": "https://www.bing.com/th?id=ONUT.lHkxVBNt_fDe9jLoOJfQ2w"
-            },
-            {
-              "news_id": "f91d61d7335e53cbb3382cd43cbeb347",
-              "url": "https://english.news.cn/20261020/4a351d93914745db80748fdf260c9e91/c.html",
-              "headline": "5.5-magnitude quake hits Vanuatu Islands -- GFZ",
-              "body": "An earthquake with a magnitude of 5.5 jolted Vanuatu Islands at 1852 GMT on Monday, the GFZ German Research Centre for Geosciences said. The epicenter, with a depth of 10 km, was initially determined to be at 13.",
-              "published_date": "2026-10-20",
-              "outlet": "Xinhua",
-              "image": ""
-            }
-          ]
-        },
-        {
-          "log_date": "2026-10-24",
-          "summary": "On October 24, 2026, multiple strong earthquakes struck near Vanuatu, with the largest measuring magnitude 7.2 (USGS) at a shallow depth of 10 km. A magnitude 6.9 quake followed within seconds, and a magnitude 6.3 aftershock was also recorded. Tsunami warnings were issued for a 300 km radius but were lifted within an hour, and no immediate reports of damage or casualties have been made.",
-          "news": [
-            {
-              "news_id": "ce3dd25741bc5f4285997177fcfd2067",
-              "url": "https://www.1news.co.nz/2026/10/24/shallow-69-magnitude-earthquake-rattles-vanuatu/",
-              "headline": "Shallow 6.9 magnitude earthquake rattles Vanuatu",
-              "body": "The quake hit at 3.31pm on Saturday, about 200km west of Sola, according to the United States Geological Survey (USGS).",
-              "published_date": "2026-10-24",
-              "outlet": "1News",
-              "image": "https://www.bing.com/th?id=ONUT.nSF0iWTZrkVyH-exwS-I9A"
-            },
-            {
-              "news_id": "a637ba1c0d6a5fd8811e0dead26843b1",
-              "url": "https://www.msn.com/el-gr/news/other/βανουάτου-σημειώθηκε-ισχυρός-σεισμός-71-ρίχτερ-εκδόθηκε-προειδοποίηση-για-τσουνάμι/ar-AA2fX91S?ocid=BingNewsVerp",
-              "headline": "Βανουάτου: Σημειώθηκε ισχυρός σεισμός 7,1 Ρίχτερ – Εκδόθηκε προειδοποίηση για τσουνάμι",
-              "body": "Στο Βανουάτου καταγράφηκε σεισμός 7,1 Ρίχτερ, με επίκεντρο περίπου 199 χιλιόμετρα από το Πορτ-Όλρι, προς τα βορειοδυτικά.",
-              "published_date": "2026-10-24",
-              "outlet": "ΔΕΔΟΜΕΝΟ on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.VGKi9-SUpaxzu8SulSLaww"
-            },
-            {
-              "news_id": "14a95b0783545b7b8e73fe61d23f0506",
-              "url": "https://trithucvn2.net/the-gioi/dong-dat-69-do-ngoai-khoi-vanuatu-canh-bao-song-than-duoc-do-bo.html",
-              "headline": "Động đất 6,9 độ ngoài khơi Vanuatu, cảnh báo sóng thần được dỡ bỏ",
-              "body": "Động đất 6,9 độ ngoài khơi Vanuatu kéo theo cảnh báo sóng thần trong bán kính 300 km, nhưng chưa đầy một giờ sau nguy cơ đã qua.",
-              "published_date": "2026-10-24",
-              "outlet": "trithucvn2",
-              "image": "https://www.bing.com/th?id=ONUT.wWffLGDHLryWsVKPWl860w"
-            },
-            {
-              "news_id": "5264828071455c7bb373c7a558ae4672",
-              "url": "https://nova.bg/news/view/2026/10/24/556530/земетресение-с-магнитуд-72-разтърси-вануату/",
-              "headline": "Земетресение с магнитуд 7,2 разтърси Вануату",
-              "body": "Издадено е предупреждение за цунами",
-              "published_date": "2026-10-24",
-              "outlet": "Нова телевизия",
-              "image": "https://www.bing.com/th?id=ONUT.cgpRj8RSvS07GQIs00Gsog"
-            },
-            {
-              "news_id": "ed14aed2c936557c80ae9d909239b13a",
-              "url": "https://operativmm.az/en/post/magnitude-69-earthquake-strikes-off-vanuatu/83980",
-              "headline": "Magnitude 6.9 earthquake strikes off Vanuatu",
-              "body": "A magnitude 6.9 earthquake struck off Vanuatu early Saturday, according to the US Geological Survey. The agency later recorded a magnitude 6.3 quake...",
-              "published_date": "2026-10-24",
-              "outlet": "operativmm",
-              "image": "https://www.bing.com/th?id=ONUT.eLU_ctGtsbQZrQkScyp-Ww"
-            },
-            {
-              "news_id": "b6713767de135f04bc3703c01ce7659f",
-              "url": "https://www.reuters.com/business/environment/magnitude-72-earthquake-strikes-waters-near-vanuatu-usgs-says-2026-10-24/",
-              "headline": "Magnitude 7.2 earthquake strikes waters near Vanuatu, USGS says",
-              "body": "A magnitude 7.2 earthquake struck waters about 200 km (124 miles) west of Sola, Vanuatu on Saturday, the United States Geological Survey (USGS) said. The quake was at a depth of 10 km (6 ...",
-              "published_date": "2026-10-24T16:14:11+00:00",
-              "outlet": "Reuters",
-              "image": ""
-            },
-            {
-              "news_id": "4be34117b7d9542fa975d5fe2b829e1d",
-              "url": "https://ua.news/en/dovkolo-svitu/poblizu-vanuatu-stavsia-zemletrus-magnitudoiu-6-9-anadolu-agency",
-              "headline": "Magnitude 6.9 earthquake strikes near Vanuatu — Anadolu Agency",
-              "body": "A magnitude 6.9 earthquake struck near Vanuatu, followed by a magnitude 6.3 quake, according to the U.S. Geological Survey.",
-              "published_date": "2026-10-24",
-              "outlet": "UA.NEWS",
-              "image": "https://www.bing.com/th?id=ONUT.EjOSQ3h42gnpv6IYdgeSuw"
-            },
-            {
-              "news_id": "2adde60859ee5749b53e6c142cf67d95",
-              "url": "https://7news.com.au/weather/earthquakes/tsunami-threat-after-two-powerful-earthquakes-strike-off-vanuatu-c-23066039",
-              "headline": "Vanuatu rocked by two powerful earthquakes four minutes apart",
-              "body": "The two tremors were both recorded at a depth of 10km.",
-              "published_date": "2026-10-24",
-              "outlet": "7NEWS Australia",
-              "image": "https://www.bing.com/th?id=ONUT.WpaH_Ao0COXt0r5mBWmyDQ"
-            },
-            {
-              "news_id": "efdd5bc22bc453768caf499a466356cb",
-              "url": "https://www.msn.com/en-in/science/earth-science/multiple-earthquakes-of-magnitudes-7-2-6-9-6-3-hit-vanuatu-islands-ugsc/ar-AA2fXm3B?ocid=BingNewsVerp",
-              "headline": "Multiple earthquakes of magnitudes 7.2, 6.9, 6.3 hit Vanuatu Islands: UGSC",
-              "body": "Port Vila [Vanuatu], October 24 (ANI): Multiple earthquakes, including one measuring 7.2 in preliminary magnitude, were reported near the Vanuatu Islands on Saturday, with the United States Geological ...",
-              "published_date": "2026-10-24",
-              "outlet": "News18 on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "d0601166c93d5d7ab1c0248f516560cd",
-              "url": "https://www.thedailyjagran.com/world/news/vanuatu-earthquake-two-strong-quakes-of-magnitude-7-2-and-6-9-hit-island-nation-south-pacific-australia-within-25-seconds-tsunami-warning-update-10333816",
-              "headline": "Vanuatu Earthquake: Two Strong Quakes Of Magnitude 7.2 And 6.9 Hit Island Nation Within 25 Seconds",
-              "body": "Two powerful earthquakes, measuring 7.2 and 6.9 magnitude, recently struck near the Vanuatu Islands in the South Pacific. The tremors occurred at a shallow depth of 10 km, with epicenters west of Sola and Port-Olry.",
-              "published_date": "2026-10-24",
-              "outlet": "thedailyjagran.com",
-              "image": "https://www.bing.com/th?id=ONUT.mHiUDPd8wx6fShoEnj97bg"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-10-26",
-          "summary": "On October 25, 2026, additional earthquakes struck the Vanuatu islands, with a magnitude 6.16 reported by GFZ, a magnitude 6.2 by QNA, and a magnitude 6.5 near Port‑Olry. No tsunami warnings were issued and no immediate damage or casualties were reported in these accounts.",
-          "news": [
-            {
-              "news_id": "92a7fe49ca4e56719eece24e4a9ff8fd",
-              "url": "https://telugu.oneindia.com/news/international/earthquake-today-magnitude-6-5-hit-bonin-islands-of-japan-and-port-olry-in-vanuatu-epicenter-ocean-512161.html",
-              "headline": "జపాన్ తీరంలో భారీ భూకంపం",
-              "body": "Earthquake today: Magnitude 6.5 hit Bonin Islands of Japan and Port-Olry in Vanuatu epicenter in the ocean. No tsunami warning was issued for the affected areas, and no material damage or casualties had been reported. The earthquake occurred in a seismically active. జపాన్ను భూకంపం సంభవించింది. బోనిన్ ఐలాండ్స్ ను వణికించింది. రిక్టర్ స్కేలుపై దీని తీవ్రత 6.5గా రికార్డయింది.",
-              "published_date": "2026-10-25",
-              "outlet": "Oneindia Telugu",
-              "image": "https://www.bing.com/th?id=ONUT.AoyQ33zdlfIbsgwBydKTmA"
-            },
-            {
-              "news_id": "a29920b1c82a500198ecf258e235b4fb",
-              "url": "https://www.reuters.com/business/environment/earthquake-magnitude-616-strikes-vanuatu-islands-gfz-says-2026-10-25/",
-              "headline": "Earthquake of magnitude 6.16 strikes Vanuatu islands, GFZ says",
-              "body": "An earthquake of magnitude 6.16 struck the Vanuatu islands on Sunday, the German Research Centre for Geosciences (GFZ) said.",
-              "published_date": "2026-10-25T16:40:16+00:00",
-              "outlet": "Reuters",
-              "image": ""
-            },
-            {
-              "news_id": "18fe3bd925c65ceca64e183a09a9dd19",
-              "url": "https://jubi.id/pasifik/2026/gempa-69-sr-terjadi-di-lepas-pantai-vanuatu-peringatan-tsunami-dibatalkan/",
-              "headline": "Gempa 6,9 SR Terjadi Di Lepas Pantai Vanuatu, Peringatan Tsunami Dibatalkan | Jubi Papua",
-              "body": "Gempa bumi berkekuatan magnitudo 6,9 pertama kali terjadi sekitar 200 kilometer sebelah barat Sola pada pukul 12:31 siang AEST pada Sabtu, menurut Survei",
-              "published_date": "2026-10-25",
-              "outlet": "Jubi Papua",
-              "image": "https://www.bing.com/th?id=ONUT.U0a3fxhQzZySGH_Wv0Yy3w"
-            },
-            {
-              "news_id": "70a8ad44609e54a8be7e5673c756c025",
-              "url": "https://www.thedailyjagran.com/world/news/geological-forces-behind-back-to-back-earthquakes-in-the-pacific-ring-of-fire-russia-japan-australia-vanuatu-october-surge-10333901",
-              "headline": "Russia To Japan And Australia: Geological Forces Behind Back-To-Back Earthquakes In The Pacific Ring Of Fire",
-              "body": "Japan and Vanuatu experienced strong earthquakes, highlighting increased seismic activity along the Pacific Ring of Fire.Over 120 quakes of magnitude 4.5 occurred globally in the past week, mostly in this active region, prompting renewed focus on disaster preparedness.",
-              "published_date": "2026-10-25",
-              "outlet": "thedailyjagran.com",
-              "image": "https://www.bing.com/th?id=ONUT.DUEPWKNu3mu-ox3yyjl5LA"
-            },
-            {
-              "news_id": "f39663bd0d565e82b6059595605975fc",
-              "url": "https://beinsure.com/news/magnitude-earthquake-strikes-vanuatu/",
-              "headline": "Magnitude 6.9 earthquake strikes Vanuatu, tsunami warning lifted",
-              "body": "A magnitude 6.9 earthquake struck off Vanuatu on October 24, 2026, followed by a 6.3 aftershock. Authorities later cancelled a tsunami warning",
-              "published_date": "2026-10-25",
-              "outlet": "beinsure",
-              "image": "https://www.bing.com/th?id=ONUT.jLYocGKuAMlq6hD0uU_-4A"
-            },
-            {
-              "news_id": "ebd2a68e824d5b129460bb388da3e707",
-              "url": "https://qna.org.qa/en/News-Area/News/2026-10/25/62-magnitude-earthquake-strikes-off-coast-of-vanuatu-islands",
-              "headline": "6.2-Magnitude Earthquake Strikes off Coast of Vanuatu Islands",
-              "body": "Port Vila, October 25 (QNA) - A magnitude 6.2 earthquake struck off the coast of Vanuatu island in the South Pacific on Sunday.",
-              "published_date": "2026-10-25",
-              "outlet": "Qatar News Agency",
-              "image": "https://www.bing.com/th?id=ONUT.IswQBGe8v48nZwMcX1CKkA"
-            },
-            {
-              "news_id": "bc5dce19207255c49d5698f172f336e4",
-              "url": "https://sana.sy/en/international/2353203/",
-              "headline": "Tsunami warning issued after two earthquakes off Vanuatu in the Pacific Ocean",
-              "body": "Sydney,Oct. 24 (SANA) Two earthquakes measuring 6.9 and 6.3 on the Richter scale struck off the Vanuatu archipelago in the Pacific Ocean on Saturday,",
-              "published_date": "2026-10-24",
-              "outlet": "Syrian Arab News Agency",
-              "image": ""
-            }
-          ]
-        },
-        {
-          "log_date": "2026-10-28",
-          "summary": "A magnitude 6.1 earthquake struck near Port-Olry, Vanuatu, at 02:24 UTC on October 25, 2026. A magnitude 6.0 earthquake then struck off the coast of Vanuatu on October 28, 2026, as reported by USGS and QNA. These latest tremors add to the sequence of significant quakes affecting the island nation.",
-          "news": [
-            {
-              "news_id": "bf8f2a0765c25c01b792c19b7da05e4c",
-              "url": "https://qna.org.qa/en/news/news-details?id=60-magnitude-earthquake-strikes-off-coast-of-vanuatu-islands&date=28/10/2026",
-              "headline": "6.0-Magnitude Earthquake Strikes off Coast of Vanuatu Islands",
-              "body": "Port Vila, October 28 (QNA) - A 6.0-magnitude earthquake struck off the coast of Vanuatu island in the South Pacific on Wednesday.",
-              "published_date": "2026-10-28",
-              "outlet": "Qatar News Agency",
-              "image": "https://www.bing.com/th?id=ONUT.enLKr2SVWHgtHP6FIUxFSQ"
-            },
-            {
-              "news_id": "5ef43c98ec5b5bdda5222e710c4f1dba",
-              "url": "https://www.economica.net/serie-de-cutremure-in-vanuatu-sua-dintre-care-unul-cu-magnitudinea-6_989740.html",
-              "headline": "Serie de cutremure în Vanuatu, SUA, dintre care unul cu magnitudinea 6 - Economica.net",
-              "body": "Un seism cu magnitudinea 6 a zguduit regiunea situată la 214 km nord-vest de localitatea Port-Olry din Vanuatu, miercuri, la ora 02:21 GMT, a anunţat Serviciul Geologic al Statelor Unite (USGS), informează agenţia de presă Xinhua, scrie Agerpres.",
-              "published_date": "2026-10-28",
-              "outlet": "Economica.net",
-              "image": "https://www.bing.com/th?id=ONUT.f-2fWJTGH1_Iv145i4fI6g"
-            },
-            {
-              "news_id": "146c90660a51556fab1f3e13a7bc7147",
-              "url": "https://www.msn.com/en-us/news/other/vanuatu-has-absorbed-three-significant-quakes-since-october-20-the-largest-at-magnitude-6-9/ar-AA2g9GKR?ocid=BingNewsVerp",
-              "headline": "Vanuatu has absorbed three significant quakes since October 20, the largest at magnitude 6.9",
-              "body": "Three earthquakes of magnitude 6.3 or stronger have struck off Vanuatu in the past week, and the strongest, a magnitude 6.9, ...",
-              "published_date": "2026-10-28",
-              "outlet": "Morning Overview on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.EVh1G31d82fnDuxceU4i0A"
-            },
-            {
-              "news_id": "5506723b849f589c95ec397858f013f5",
-              "url": "https://report.az/en/other-countries/6-1-magnitude-earthquake-strikes-off-vanuatu-coast",
-              "headline": "6.1-magnitude earthquake strikes off Vanuatu coast",
-              "body": "A 6.1-magnitude earthquake has been recorded off the coast of the Pacific island nation of Vanuatu. According to Report, ...",
-              "published_date": "2026-10-28T06:02:11+00:00",
-              "outlet": "Report.az",
-              "image": "https://www.bing.com/th?id=ONUT.OON4maGDpIdNmPHL9obLyA"
-            },
-            {
-              "news_id": "2868462539e1507f8110f8754a4aabdd",
-              "url": "https://www.msn.com/en-us/news/other/vanuatu-has-not-stopped-shaking-with-a-magnitude-6-1-felt-near-port-olry-a-day-after-a-bigger-jolt/ar-AA2g71DN?ocid=BingNewsVerp",
-              "headline": "Vanuatu has not stopped shaking, with a magnitude 6.1 felt near Port-Olry a day after a bigger jolt",
-              "body": "A magnitude 6.1 earthquake struck 25 kilometers east-northeast of Port-Olry, Vanuatu, at 02:24 UTC on Oct. 25, 2026, which ...",
-              "published_date": "2026-10-27",
-              "outlet": "Morning Overview on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.hZpPE2KMWHVW_Eb4oTUFnQ"
-            },
-            {
-              "news_id": "20dfd2d6e3ba587bb53b66fa1a421e8e",
-              "url": "https://www.msn.com/en-us/news/other/vanuatu-has-not-stopped-shaking-with-a-magnitude-61-felt-near-port-olry-a-day-after-a-bigger-jolt/ar-AA2g71DN?ocid=BingNewsVerp",
-              "headline": "Vanuatu has not stopped shaking, with a magnitude 6.1 felt near Port-Olry a day after a bigger jolt",
-              "body": "A magnitude 6.1 earthquake struck 25 kilometers east-northeast of Port-Olry, Vanuatu, at 02:24 UTC on Oct. 25, 2026, which ...",
-              "published_date": "2026-10-26",
-              "outlet": "Morning Overview on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.hZpPE2KMWHVW_Eb4oTUFnQ"
-            },
-            {
-              "news_id": "5358542101aa534796ddc0f4ac028a41",
-              "url": "https://www.msn.com/en-us/news/other/vanuatu-has-absorbed-three-significant-quakes-since-october-20-the-largest-at-magnitude-69/ar-AA2g9GKR?ocid=BingNewsVerp",
-              "headline": "Vanuatu has absorbed three significant quakes since October 20, the largest at magnitude 6.9",
-              "body": "Three earthquakes of magnitude 6.3 or stronger have struck off Vanuatu in the past week, and the strongest, a magnitude 6.9, ...",
-              "published_date": "2026-10-27",
-              "outlet": "Morning Overview on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.EVh1G31d82fnDuxceU4i0A"
-            }
-          ]
-        }
-      ],
-      "logs_total": 6
     },
     {
       "incident_id": "20261013-NP-OT",
