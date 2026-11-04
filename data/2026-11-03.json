@@ -1,20 +1,20 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-11-03",
-  "generated_at": "2026-11-03T20:11:03Z",
+  "generated_at": "2026-11-04T07:37:55Z",
   "as_of": "2026-11-03",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
     "reportable_total": 29,
-    "new_today": 7,
+    "new_today": 10,
     "critical": 17,
     "high": 5,
     "medium": 5,
     "low": 2,
     "disease_outbreaks": 3,
     "countries_affected": 16,
-    "news_total": 13341,
+    "news_total": 13349,
     "max_magnitude": 7.6,
     "by_severity": {
       "CRITICAL": 17,
@@ -36,10 +36,10 @@
     "by_region": {
       "Global": 2,
       "Africa": 2,
-      "Asia": 12,
+      "Unknown": 5,
       "Europe": 3,
+      "Asia": 11,
       "Americas": 4,
-      "Unknown": 4,
       "Oceania": 2
     }
   },
@@ -214,7 +214,7 @@
       "event_date": "2024-05-30",
       "first_reported_date": "2024-05-30",
       "last_updated_date": "2026-10-30",
-      "days_since_event": 887,
+      "days_since_event": 888,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -1250,8 +1250,8 @@
       "disease_name": "Covid-19",
       "event_date": "2025-05-28",
       "first_reported_date": "2025-05-28",
-      "last_updated_date": "2026-11-01",
-      "days_since_event": 524,
+      "last_updated_date": "2026-11-03",
+      "days_since_event": 525,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -1261,7 +1261,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 294
+        "news": 295
       },
       "source_links": [
         {
@@ -2457,9 +2457,13 @@
         {
           "headline": "ITAT Chennai Condones 1419-Day Appeal Delay Due to COVID-19 Disruption",
           "published_date": "2026-11-01"
+        },
+        {
+          "headline": "Denham Springs Man Pleads Guilty in $177K Pandemic Loan Fraud",
+          "published_date": "2026-11-03"
         }
       ],
-      "news_total": 294,
+      "news_total": 295,
       "logs": [
         {
           "log_date": "2026-07-08",
@@ -2620,7 +2624,7 @@
       "event_date": "2025-09-05",
       "first_reported_date": "2025-09-05",
       "last_updated_date": "2026-11-03",
-      "days_since_event": 424,
+      "days_since_event": 425,
       "source_count": 19,
       "should_report": true,
       "search_keys": [],
@@ -7641,13 +7645,13 @@
       "incident_id": "20260511-XX-DR",
       "tree_id": "d75afb3078c54d74b37c4f8bb985dfce",
       "canonical_name": "Drought Green",
-      "summary": "Recent rainfall has brought some relief to the Twin Lakes area and parts of Oklahoma, but drought conditions persist. Durham, North Carolina faces the possibility of stricter water restrictions due to ongoing drought. In Maharashtra, India, a government warning over farmer suicides highlights continued distress as drought relief is rolled out.\nGreensboro, North Carolina, moved to mandatory water restrictions, and Durham warned of possible stricter limits as severe drought persists. South Dakota's major aquifers are in decline, and prolonged drought in the Netherlands is damaging medieval churches. Reports also cover drought impacts on Colorado farmers, India's tur output forecast, and preparedness efforts in the Philippines and Morocco.",
+      "summary": "The USDA declared a drought disaster for much of Maine, unlocking federal relief for 14 counties. In North Carolina, Triangle reservoirs reached their lowest water levels of 2026 as drought intensifies, while a new map shows emergency declarations spreading across the Americas due to El Niño impacts. Additionally, drought threatens to relocate Aspen’s Snow Polo Championship this winter.",
       "country": "",
       "iso2": "XX",
       "lat": null,
       "lon": null,
       "country_group": "C",
-      "region": "Asia",
+      "region": "Unknown",
       "incident_type": "Drought",
       "incident_category": "Natural",
       "is_disease": false,
@@ -7661,7 +7665,7 @@
       "event_date": "2026-05-11",
       "first_reported_date": "2026-05-11",
       "last_updated_date": "2026-11-03",
-      "days_since_event": 176,
+      "days_since_event": 177,
       "source_count": 2,
       "should_report": true,
       "search_keys": [],
@@ -12078,84 +12082,6 @@
           ]
         },
         {
-          "log_date": "2026-10-31",
-          "summary": "New reports detail ongoing drought impacts and local changes: Utah remains over 90% in drought despite above-normal rain, while west central Nebraska saw severe drought conditions removed after recent precipitation. In India, the USDA forecasts El Niño-induced drought will slow milk production growth to 2% in 2027, and Maharashtra released funds for tree plantation maintenance. Additionally, a regional report from South Carolina notes that peaches and blackberries thrived in the drought year, but cucumbers, squash, sweet corn, and late plantings struggled.\nIn St. Croix, extreme drought is causing crop and livestock losses for farmers as conditions persist into late October. In Andhra Pradesh, India, two central government teams will assess drought and cyclone damage over four days. Meanwhile, Southwest Florida water officials may extend a water shortage order as moderate to extreme drought continues affecting the Tampa Bay area.",
-          "news": [
-            {
-              "news_id": "6a7e503bdf055dcd9f245c4fa94d8e98",
-              "url": "https://stthomassource.com/content/2026/10/30/st-croix-farmers-face-crop-and-livestock-losses-as-extreme-drought-persists/",
-              "headline": "St. Croix Farmers Face Crop and Livestock Losses as Extreme Drought Persists",
-              "body": "Farmers on St. Croix are losing crops and livestock as extreme drought conditions persist into late October, forcing them to ...",
-              "published_date": "2026-10-30T00:00:00+00:00",
-              "outlet": "St. Thomas Source",
-              "image": "https://www.bing.com/th?id=ONUT.b7d4i0qK7gDT-24La7rvKA"
-            },
-            {
-              "news_id": "472e3b6b10285a08910ea93a8cdd159d",
-              "url": "https://www.thehindubusinessline.com/economy/agri-business/drought-to-slow-indias-milk-production-growth-to-2-in-2027-says-usda/article71645521.ece",
-              "headline": "Drought to slow India’s milk production growth to 2% in 2027, says USDA",
-              "body": "El Nino-induced drought conditions are expected to constrain feed and fodder availability and affect animal productivity, says USDA’s Delhi Post",
-              "published_date": "2026-10-30",
-              "outlet": "The Hindu BusinessLine",
-              "image": "https://www.bing.com/th?id=ONUT.p6mYQfWKocyUkxkbJPCzyg"
-            },
-            {
-              "news_id": "6aedea8d3b6a5bc8a5f87169b478a38e",
-              "url": "https://www.newindianexpress.com/states/andhra-pradesh/2026/Oct/31/two-central-teams-to-assess-cyclone-damage-drought-in-ap-for-four-days",
-              "headline": "Two Central teams to assess cyclone damage & drought in AP for four days",
-              "body": "VIJAYAWADA: Two Central government teams will visit Andhra Pradesh over the next four days to assess the damage caused by Cyclone Arnab and examine the drought",
-              "published_date": "2026-10-31",
-              "outlet": "The New Indian Express",
-              "image": "https://www.bing.com/th?id=ONUT.AaaO2zPqaUq_AN9nXkvhtw"
-            },
-            {
-              "news_id": "3d021315c93f515faf4d6525a89f37eb",
-              "url": "https://www.msn.com/en-us/weather/meteorology/utah-drought-monitor-shows-rain-has-yet-to-end-drought/vi-AA2gqNJV?ocid=BingNewsVerp",
-              "headline": "Utah drought monitor shows rain has yet to end drought",
-              "body": "More than 90% of Utah remains in drought after three and a half months of above-normal rain, according to the US Drought ...",
-              "published_date": "2026-10-31",
-              "outlet": "Amazon S3 on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.bsguWc2m1V52IR_zu6J3iw"
-            },
-            {
-              "news_id": "6f921cdb09195ef085b4654d02efc063",
-              "url": "https://www.centralnebraskatoday.com/2026/10/30/severe-drought-conditions-removed-from-west-central-nebraska/",
-              "headline": "Severe drought conditions removed from west central Nebraska",
-              "body": "KEARNEY - Severe drought conditions were removed from west central Nebraska as recent precipitation helped to ...",
-              "published_date": "2026-10-30",
-              "outlet": "centralnebraskatoday",
-              "image": "https://www.bing.com/th?id=ONUT.rZ0x0ql7Mq7htv8Vlo7jgw"
-            },
-            {
-              "news_id": "2dfe041514ba553a89732e4861e34864",
-              "url": "https://baynews9.com/fl/tampa/news/2026/09/22/southwest-florida-water-officials-may-extend-water-shortage-order-despite-summer-storms",
-              "headline": "Southwest Florida water officials may extend water shortage order",
-              "body": "The latest U.S. Drought Monitor map shows moderate to extreme drought conditions still affecting much of the greater Tampa Bay area.",
-              "published_date": "2026-09-22",
-              "outlet": "Bay News 9",
-              "image": ""
-            },
-            {
-              "news_id": "a2c87d77e4715c6c8ff31cc1043430c9",
-              "url": "https://www.msn.com/en-in/news/other/maharashtra-releases-rs-9072-lakh-for-tree-plantation-maintenance-amid-drought/ar-AA2gpoNj?ocid=BingNewsVerp",
-              "headline": "Maharashtra releases Rs 90.72 lakh for tree plantation maintenance amid drought",
-              "body": "Maharashtra government has sanctioned Rs 90.72 lakh for the maintenance of tree plantations across the state for 2026-27, ...",
-              "published_date": "2026-10-31",
-              "outlet": "Mid-Day on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.0P6SqnpUYi4Ey2dlhYM_ZA"
-            },
-            {
-              "news_id": "cc6a58e804de572f81d2b6682d98c0c5",
-              "url": "https://thetandd.com/special/article_2b3c64a6-18d3-43f9-a8d7-a1beeb248fb8.html",
-              "headline": "Which crops thrived — and struggled — in drought year",
-              "body": "Drought made 2026 a difficult year for many T&D Region fruit and vegetable growers. Peaches and blackberries performed well, while cucumbers, squash, sweet corn and late plantings faced tougher conditions.",
-              "published_date": "2026-10-31",
-              "outlet": "The Times and Democrat",
-              "image": "https://s.yimg.com/bo/7e725b3d-afad-5e89-8fc8-d23405faf4d9_1793420721348.jpg"
-            }
-          ]
-        },
-        {
           "log_date": "2026-11-01",
           "summary": "Bolivia declared a state of emergency due to El Niño-driven drought. In Malawi, cattle farmers are facing greater challenges as El Niño worsens dry conditions. Sharad Pawar initiated a two-day visit to drought-affected Marathwada in India, while Denton County, Texas remains gripped by severe drought with minimal rainfall.",
           "news": [
@@ -12337,15 +12263,57 @@
               "image": "https://s.yimg.com/bo/56259b66-68e6-538c-9e50-dda4c60e5405_1793648065065.jpg"
             }
           ]
+        },
+        {
+          "log_date": "2026-11-03",
+          "summary": "The USDA declared a drought disaster for much of Maine, unlocking federal relief for 14 counties. In North Carolina, Triangle reservoirs reached their lowest water levels of 2026 as drought intensifies, while a new map shows emergency declarations spreading across the Americas due to El Niño impacts. Additionally, drought threatens to relocate Aspen’s Snow Polo Championship this winter.",
+          "news": [
+            {
+              "news_id": "d108d741bb9a5811b96c539978b42d3d",
+              "url": "https://www.pressherald.com/2026/11/02/feds-declare-maines-drought-a-natural-disaster-in-part-of-the-state-unlocking-relief-in-14-counties/",
+              "headline": "Feds declare drought a natural disaster in much of Maine, unlocking relief in 14 counties",
+              "body": "The USDA designated much of the state a disaster area last year due to the drought, making similar forms of relief available.",
+              "published_date": "2026-11-02",
+              "outlet": "Portland Press Herald",
+              "image": "https://s.yimg.com/bo/7d61bb1a-aa84-50e0-a814-88774050fc1e_1793663910855.jpg"
+            },
+            {
+              "news_id": "5198cbcefc44545da2e629b2c0de48dc",
+              "url": "https://www.aspentimes.com/news/drought-could-relocate-aspens-snow-polo-championship-this-winter/",
+              "headline": "Drought could relocate Aspen’s Snow Polo Championship this winter",
+              "body": "The St. Regis World Snow Polo Championship host Marc Ganzi sought Aspen City Council input on Monday around the conditions necessary to continue the 2026 iteration of the event in Rio Grande Park mid-December.",
+              "published_date": "2026-11-02",
+              "outlet": "The Aspen Times",
+              "image": "https://s.yimg.com/bo/68474794-c5d6-5f53-9a40-77ffc2109248_1793670434858.jpg"
+            },
+            {
+              "news_id": "0db367e6ef1a570b873fda44d93ff84b",
+              "url": "https://www.yahoo.com/news/weather-news/articles/map-shows-where-emergencies-declared-130325344.html",
+              "headline": "Map shows where emergencies declared over El Niño impact",
+              "body": "Countries across the Americas are declaring emergencies as El Niño brings risks of drought, flooding, and severe weather.",
+              "published_date": "2026-11-03",
+              "outlet": "NEWSWEEK · via Yahoo News",
+              "image": "https://media.zenfs.com/en/newsweek_sports_200/e146853e2d8892b17701a888a2d940c8.png.cf.jpg"
+            },
+            {
+              "news_id": "81c1836f627b5961987d318731a70ed3",
+              "url": "https://www.yahoo.com/news/weather-news/articles/triangle-reservoirs-see-lowest-water-102000961.html",
+              "headline": "Triangle reservoirs see lowest water levels of 2026 as drought intensifies",
+              "body": "North Carolina is still in a drought, prompting at last one Triangle city to find ways to avoid enacting new water restrictions.",
+              "published_date": "2026-11-03",
+              "outlet": "Raleigh News and Observer · via Yahoo News",
+              "image": "https://media.zenfs.com/en/raleigh_news_and_observer_mcclatchy_712/508ca42e4280b7cbc42e69f2cac7bb85.jpg"
+            }
+          ]
         }
       ],
-      "logs_total": 70
+      "logs_total": 71
     },
     {
       "incident_id": "20260715-UA-CF",
       "tree_id": "f22292f8c3ff448a920c3b1fe41d3aa0",
       "canonical_name": "Conflict Ukraine 2026-07-15",
-      "summary": "Russian drone attacks on civilian shipping have intensified, turning the Black Sea into a deadly waterway and threatening grain exports. The U.S. announced it will mediate three-way talks between Ukraine and Russia in Abu Dhabi next week, while European troops prepare for a military exercise in Poland aimed at a postwar Ukraine mission.",
+      "summary": "Russian drone attacks on civilian shipping have intensified, turning the Black Sea into a deadly waterway and threatening grain exports. The U.S. announced it will mediate three-way talks between Ukraine and Russia in Abu Dhabi next week, while European troops prepare for a military exercise in Poland aimed at a postwar Ukraine mission.\nPoland launched a major border operation amid concerns of Russian provocation, while First Lady Melania Trump hosted representatives from Ukraine and Russia at the White House. The U.S. envoy confirmed Russia-Ukraine peace talks in Abu Dhabi scheduled for November 10-11, as Ukraine's economic struggles deepen due to ongoing airstrikes.",
       "country": "Ukraine",
       "iso2": "UA",
       "lat": 48.9,
@@ -12365,7 +12333,7 @@
       "event_date": "2026-07-15",
       "first_reported_date": "2026-07-15",
       "last_updated_date": "2026-11-03",
-      "days_since_event": 111,
+      "days_since_event": 112,
       "source_count": 6,
       "should_report": true,
       "search_keys": [],
@@ -12375,7 +12343,7 @@
         "gdacs": 0,
         "ercc": 6,
         "healthmap": 0,
-        "news": 1909
+        "news": 1910
       },
       "source_links": [
         {
@@ -20039,11 +20007,23 @@
           "published_date": "2026-11-02T23:13:30+00:00"
         },
         {
+          "headline": "When the Ukraine war ends, the arms race won't",
+          "published_date": "2026-11-03"
+        },
+        {
           "headline": "Melania Trump hosting Ukraine, Russia representatives at White House",
           "published_date": "2026-11-03"
         },
         {
+          "headline": "US to mediate Ukraine-Russia talks in Abu Dhabi next week, Witkoff says",
+          "published_date": "2026-11-03"
+        },
+        {
           "headline": "Trump Envoy Witkoff Sets Russia-Ukraine Peace Talks in Abu Dhabi as US Aid to Kyiv Drops 99%",
+          "published_date": "2026-11-03"
+        },
+        {
+          "headline": "European troops prepare for a postwar Ukraine mission that's fraught with challenges - Newsday",
           "published_date": "2026-11-03"
         },
         {
@@ -20053,17 +20033,9 @@
         {
           "headline": "Poland launches major border operation as activity in Russia fuels concern over possible \"serious provocation\"",
           "published_date": "2026-11-03"
-        },
-        {
-          "headline": "US to mediate Ukraine-Russia talks in Abu Dhabi next week, Witkoff says",
-          "published_date": "2026-11-03"
-        },
-        {
-          "headline": "European troops prepare for a postwar Ukraine mission that's fraught with challenges - Newsday",
-          "published_date": "2026-11-03"
         }
       ],
-      "news_total": 1909,
+      "news_total": 1910,
       "logs": [
         {
           "log_date": "2026-07-24",
@@ -20598,7 +20570,7 @@
         },
         {
           "log_date": "2026-11-03",
-          "summary": "Russian drone attacks on civilian shipping have intensified, turning the Black Sea into a deadly waterway and threatening grain exports. The U.S. announced it will mediate three-way talks between Ukraine and Russia in Abu Dhabi next week, while European troops prepare for a military exercise in Poland aimed at a postwar Ukraine mission.",
+          "summary": "Russian drone attacks on civilian shipping have intensified, turning the Black Sea into a deadly waterway and threatening grain exports. The U.S. announced it will mediate three-way talks between Ukraine and Russia in Abu Dhabi next week, while European troops prepare for a military exercise in Poland aimed at a postwar Ukraine mission.\nPoland launched a major border operation amid concerns of Russian provocation, while First Lady Melania Trump hosted representatives from Ukraine and Russia at the White House. The U.S. envoy confirmed Russia-Ukraine peace talks in Abu Dhabi scheduled for November 10-11, as Ukraine's economic struggles deepen due to ongoing airstrikes.",
           "news": [
             {
               "news_id": "3f4c901ab8fb5f4797ef00c7eec68be3",
@@ -20610,6 +20582,15 @@
               "image": "https://s.yimg.com/bo/99c0d788-0c62-55de-be41-f3005991bc6f_1793661392116.png.cf.jpg"
             },
             {
+              "news_id": "b091b8ce727c5646896fe24ffc0ed5db",
+              "url": "https://www.yahoo.com/news/politics/articles/melania-trump-hosting-ukraine-russia-160130620.html",
+              "headline": "Melania Trump hosting Ukraine, Russia representatives at White House",
+              "body": "First lady Melania Trump will be hosting representatives from Russia and Ukraine at the White House, according to a Tuesday press release. The announcement comes after the first lady secured a localiz...",
+              "published_date": "2026-11-03",
+              "outlet": "The Hill · via Yahoo News",
+              "image": "https://media.zenfs.com/en/the_hill_articles_341/a27ec6c17ba4aad8396baa00253c7d85.jpg"
+            },
+            {
               "news_id": "52e56ed1b2905850bf0aa12983a4fb2b",
               "url": "https://www.yahoo.com/news/politics/articles/us-mediate-ukraine-russia-talks-032031028.html",
               "headline": "US to mediate Ukraine-Russia talks in Abu Dhabi next week, Witkoff says",
@@ -20619,6 +20600,15 @@
               "image": "https://media.zenfs.com/en/the_hill_articles_341/4300bc929d13e0a2005da290efdf6233.jpg"
             },
             {
+              "news_id": "d8accb8a0dd15479864bbe987018108a",
+              "url": "https://www.military.com/us-envoy-steve-witkoff-announces-russia-ukraine-negotiations-next-step-towards-peace",
+              "headline": "Trump Envoy Witkoff Sets Russia-Ukraine Peace Talks in Abu Dhabi as US Aid to Kyiv Drops 99%",
+              "body": "The peace talks mediated by the U.S. will be held Nov. 10-11 in Abu Dhabi, with input from NATO and other traditional allies.",
+              "published_date": "2026-11-03",
+              "outlet": "Military.com",
+              "image": "https://s.yimg.com/bo/d3a0b8a8-4621-5837-818a-7bf4f5783c0e_1793724087139.jpg"
+            },
+            {
               "news_id": "be1fe5ca463659b2b1255276b49e04f2",
               "url": "https://www.newsday.com/news/nation/ukraine-military-exercise-explain-a03500",
               "headline": "European troops prepare for a postwar Ukraine mission that's fraught with challenges - Newsday",
@@ -20626,6 +20616,15 @@
               "published_date": "2026-11-03",
               "outlet": "Newsday",
               "image": "https://s.yimg.com/bo/bb8cbd67-fffd-5f51-9109-a1c929e84886_1793684797847.jpg"
+            },
+            {
+              "news_id": "8da83cc3840351cab6ddfca36ae6a1ba",
+              "url": "https://www.gurufocus.com/news/9161531/ukraines-economic-struggles-deepen-amid-ongoing-conflict",
+              "headline": "Ukraine's Economic Struggles Deepen Amid Ongoing Conflict",
+              "body": "On November 02, 2026, a recent report highlights the severe impact of Russian airstrikes on...",
+              "published_date": "2026-11-02T19:54:50+00:00",
+              "outlet": "Guru Focus",
+              "image": "https://s.yimg.com/bo/9e126d5f-2be4-584e-8b6a-51d1e9aa9238_1786190592723.png.cf.jpg"
             },
             {
               "news_id": "4715e4c9ea715b5ebe6e900dd1b79287",
@@ -20644,6 +20643,24 @@
               "published_date": "2026-11-02T23:13:30+00:00",
               "outlet": "Forbes",
               "image": "https://s.yimg.com/bo/85075ff2-c2c4-5999-bc2e-270310d07efd_1793662910562.jpg"
+            },
+            {
+              "news_id": "54970ab4dc0d5cc48f5a17ad62ed0643",
+              "url": "https://www.cnbc.com/2026/11/03/russia-ukraine-peace-talks-abu-dhabi-trump-putin-xi.html",
+              "headline": "Russia confirms new Ukraine peace talks as Melania Trump prepares to host ceasefire meeting",
+              "body": "Russia confirmed Ukraine peace talks in Abu Dhabi next week and signaled a possible Trump-Putin-Xi summit, raising questions over Kyiv's role in negotiations.",
+              "published_date": "2026-11-03",
+              "outlet": "CNBC",
+              "image": "https://s.yimg.com/bo/c4d45e64-7c81-58c5-9b4e-b2d657103b6a_1793713415828.jpg"
+            },
+            {
+              "news_id": "6c17d68cfbd75147b586ae4c56a9cbca",
+              "url": "https://www.cbsnews.com/news/poland-russia-border-operation-kaliningrad-sabotage-provocation-nato/",
+              "headline": "Poland launches major border operation as activity in Russia fuels concern over possible \"serious provocation\"",
+              "body": "Poland's prime minister says a rapid, major deployment of extra security forces to the border with Russia may have prevented \"attempted acts of provocation.\"",
+              "published_date": "2026-11-03",
+              "outlet": "CBS News",
+              "image": "https://s.yimg.com/bo/dfe20182-a170-5b5c-aeea-0ba9c8957b94_1793727990121.jpg"
             }
           ]
         }
@@ -20654,7 +20671,7 @@
       "incident_id": "20260726-IR-CF",
       "tree_id": "13763def03ab448898154124734fe728",
       "canonical_name": "Iran/US war",
-      "summary": "The U.S. struck Iran's Qeshm Island despite ongoing diplomatic contacts, with President Trump simultaneously claiming oil prices are falling and that Iran wants a settlement. Vice President Vance expressed measured optimism about reaching a deal, while Secretary of State Rubio confirmed Trump favors a diplomatic exit over further military escalation. Reports also indicate that Iran has offered to reopen the Strait of Hormuz under conditions, and discussions of potential strikes on Iran's \"Pickaxe Mountain\" nuclear site continue.",
+      "summary": "The U.S. struck Iran's Qeshm Island despite ongoing diplomatic contacts, with President Trump simultaneously claiming oil prices are falling and that Iran wants a settlement. Vice President Vance expressed measured optimism about reaching a deal, while Secretary of State Rubio confirmed Trump favors a diplomatic exit over further military escalation. Reports also indicate that Iran has offered to reopen the Strait of Hormuz under conditions, and discussions of potential strikes on Iran's \"Pickaxe Mountain\" nuclear site continue.\nPresident Trump is facing mounting criticism for his apparent ignorance of U.S. fatalities and war costs, while Iran’s chief negotiator stated that the United States must act to prevent renewed hostilities. Tucker Carlson warned that Trump could be days from a nuclear decision, and economic spillovers continued with Lufthansa announcing ticket‑price increases and the Asian Cup being postponed due to the conflict. Oil markets are closely watching ceasefire talks in Doha and Washington for signs of progress.",
       "country": "Iran",
       "iso2": "IR",
       "lat": 32.4,
@@ -20674,7 +20691,7 @@
       "event_date": "2026-07-26",
       "first_reported_date": "2026-07-26",
       "last_updated_date": "2026-11-03",
-      "days_since_event": 100,
+      "days_since_event": 101,
       "source_count": 2,
       "should_report": true,
       "search_keys": [],
@@ -33086,15 +33103,15 @@
           "published_date": "2026-11-03"
         },
         {
+          "headline": "Pickaxe Mountain nuclear strike and Trump’s other Iran war options",
+          "published_date": "2026-11-03"
+        },
+        {
           "headline": "Asian Cup soccer tournament in Saudi Arabia postponed because of conflict in the Middle East",
           "published_date": "2026-11-03"
         },
         {
           "headline": "8 months into the war with Iran, Trump remains ignorant about U.S. fatalities and costs",
-          "published_date": "2026-11-03"
-        },
-        {
-          "headline": "Pickaxe Mountain nuclear strike and Trump’s other Iran war options",
           "published_date": "2026-11-03"
         },
         {
@@ -34010,7 +34027,7 @@
         },
         {
           "log_date": "2026-11-03",
-          "summary": "The U.S. struck Iran's Qeshm Island despite ongoing diplomatic contacts, with President Trump simultaneously claiming oil prices are falling and that Iran wants a settlement. Vice President Vance expressed measured optimism about reaching a deal, while Secretary of State Rubio confirmed Trump favors a diplomatic exit over further military escalation. Reports also indicate that Iran has offered to reopen the Strait of Hormuz under conditions, and discussions of potential strikes on Iran's \"Pickaxe Mountain\" nuclear site continue.",
+          "summary": "The U.S. struck Iran's Qeshm Island despite ongoing diplomatic contacts, with President Trump simultaneously claiming oil prices are falling and that Iran wants a settlement. Vice President Vance expressed measured optimism about reaching a deal, while Secretary of State Rubio confirmed Trump favors a diplomatic exit over further military escalation. Reports also indicate that Iran has offered to reopen the Strait of Hormuz under conditions, and discussions of potential strikes on Iran's \"Pickaxe Mountain\" nuclear site continue.\nPresident Trump is facing mounting criticism for his apparent ignorance of U.S. fatalities and war costs, while Iran’s chief negotiator stated that the United States must act to prevent renewed hostilities. Tucker Carlson warned that Trump could be days from a nuclear decision, and economic spillovers continued with Lufthansa announcing ticket‑price increases and the Asian Cup being postponed due to the conflict. Oil markets are closely watching ceasefire talks in Doha and Washington for signs of progress.",
           "news": [
             {
               "news_id": "cc2b4dd9a2d35b1ab769f0e461e9c89a",
@@ -34020,6 +34037,15 @@
               "published_date": "2026-11-02",
               "outlet": "The Hill · via Yahoo News",
               "image": "https://media.zenfs.com/en/the_hill_articles_341/186b832ab288a02ad2b01c6c5f4d6456.jpg"
+            },
+            {
+              "news_id": "32ff6f5a722f5fbdb02a50e22d0810ad",
+              "url": "https://finance.yahoo.com/energy/articles/lufthansa-latest-airline-flag-ticket-123253544.html",
+              "headline": "Lufthansa latest airline to flag ticket price hikes amid Iran war energy shock",
+              "body": "Lufthansa on Tuesday became the latest airline to warn that ticket prices will rise further, as it forecast a two-billion-euro ($2.2 billion) jump in annual fuel costs due to the Middle East conflict.\"With rising revenues amid consistently high demand and strict cost discipline, we were able to more than offset the increase in fuel costs of approximately half a billion euros,\" he said.",
+              "published_date": "2026-11-03",
+              "outlet": "AFP · via Yahoo Finance",
+              "image": "https://media.zenfs.com/en/afp.com/a2a358b221ee01d434b3ce7b291a3951.jpg"
             },
             {
               "news_id": "f8bd02a130c05b398abbbb06aa8373f7",
@@ -34058,6 +34084,33 @@
               "image": "https://s.yimg.com/bo/a362d7f7-f342-59b9-bd36-c01cdbdbf51a_1783067230542.png.cf.jpg"
             },
             {
+              "news_id": "d0e66cda5f735dcd8d114adabf189b92",
+              "url": "https://finance.yahoo.com/energy/articles/tucker-carlson-warns-trump-days-134500886.html",
+              "headline": "Tucker Carlson warns Trump is days away from 'inevitable' nuclear decision for Iran; oil risks $140. Brace your nest egg",
+              "body": "The world could change with the press of a button.",
+              "published_date": "2026-11-03",
+              "outlet": "Moneywise · via Yahoo Finance",
+              "image": "https://media.zenfs.com/en/moneywise_ecomm_711/6fa25fd5c265154812d5ac547ca0ea88.jpg"
+            },
+            {
+              "news_id": "94dcaa6864b75290ae1f6276cb98cb87",
+              "url": "https://www.yahoo.com/news/politics/articles/tucker-carlson-sounds-alarm-over-135144584.html",
+              "headline": "Tucker Carlson Sounds Alarm Over Alleged Donald Trump Nuclear Plans for Iran",
+              "body": "Tucker Carlson raised the possibility of a nuclear strike on Iran, alleging Benjamin Netanyahu pressured Donald Trump to consider the move. The former Fox News host warned Trump could decide within da...",
+              "published_date": "2026-11-03",
+              "outlet": "RealityTea · via Yahoo News",
+              "image": "https://media.zenfs.com/en/reality_tea_694/14e89f654d5fdd7873abbda6852e3a30.jpg"
+            },
+            {
+              "news_id": "91f5c11e0cf8532bb82f91797ead7e09",
+              "url": "https://www.newsday.com/news/nation/mideast-news-november-3-2026-q03426",
+              "headline": "Iran's chief negotiator says the US must act to prevent renewed war, and other Mideast news - Newsday",
+              "body": "Iran's chief negotiator says it's up to the United States to prevent renewed war after Tehran's \"firm and rational response.\"",
+              "published_date": "2026-11-03",
+              "outlet": "Newsday",
+              "image": "https://s.yimg.com/bo/8ece7423-5f06-5a85-a2c4-4c2837d1cd9b_1793722641103.jpg"
+            },
+            {
               "news_id": "36e8061621735878b36326cdaf74ac9f",
               "url": "https://www.yahoo.com/news/politics/articles/pickaxe-mountain-nuclear-strike-trump-060000517.html",
               "headline": "Pickaxe Mountain nuclear strike and Trump’s other Iran war options",
@@ -34065,6 +34118,33 @@
               "published_date": "2026-11-03",
               "outlet": "The Telegraph · via Yahoo News",
               "image": "https://media.zenfs.com/en/the_telegraph_258/a937680e842d63af62d4d18c0640e071.jpg"
+            },
+            {
+              "news_id": "19510849358450028811bce31d6758a1",
+              "url": "https://www.clickorlando.com/sports/2026/11/03/asian-football-confederation-postpones-the-2027-asian-cup-because-of-conflict-in-the-middle-east/",
+              "headline": "Asian Cup soccer tournament in Saudi Arabia postponed because of conflict in the Middle East",
+              "body": "The Asian Football Confederation has postponed the 2027 Asian Cup by almost a year because of the conflict in the Middle East and recent deadly attacks on Saudi Arabia by Iran-backed Houthi rebels in Yemen.",
+              "published_date": "2026-11-03",
+              "outlet": "WKMG ClickOrlando",
+              "image": "https://s.yimg.com/bo/90e4a135-fb44-57c0-8381-1b640e64c7f8_1793698710843.jpg"
+            },
+            {
+              "news_id": "e4c23373b5405c1aa6d6c38016116c08",
+              "url": "https://www.wowktv.com/business/press-releases/cision/20261103LN87901/oil-looks-to-doha-and-washington-for-signs-of-a-u-s-iran-ceasefire",
+              "headline": "Oil Looks to Doha and Washington for Signs of a U.S.-Iran Ceasefire",
+              "body": "HOUSTON, Nov. 3, 2026 /PRNewswire/ -- Oil Market Daily News Commentary - Diplomatic efforts to end...",
+              "published_date": "2026-11-03T16:57:59+00:00",
+              "outlet": "WOWK 13 News",
+              "image": "https://s.yimg.com/bo/106cb277-f6c3-56ea-a65c-d44f074b820b_1793725707491.png.cf.jpg"
+            },
+            {
+              "news_id": "6c0ed80522825cdfa87ba3807efdb88a",
+              "url": "https://www.yahoo.com/news/politics/articles/8-months-war-iran-trump-152359015.html",
+              "headline": "8 months into the war with Iran, Trump remains ignorant about U.S. fatalities and costs",
+              "body": "Americans witnessed an unsettling amount of ignorance from a president who launched a conflict he apparently has no idea how to end.",
+              "published_date": "2026-11-03",
+              "outlet": "MS NOW · via Yahoo News",
+              "image": "https://media.zenfs.com/en/msnbc_articles_593/134174258ed80dc0329124eb7b04a2d4.jpg"
             },
             {
               "news_id": "ab2f9bf7fd215dcca12b929e37a76e0d",
@@ -34103,8 +34183,8 @@
       "disease_name": null,
       "event_date": "2026-07-27",
       "first_reported_date": "2026-07-27",
-      "last_updated_date": "2026-11-02",
-      "days_since_event": 99,
+      "last_updated_date": "2026-11-03",
+      "days_since_event": 100,
       "source_count": 7,
       "should_report": true,
       "search_keys": [],
@@ -34114,7 +34194,7 @@
         "gdacs": 1,
         "ercc": 6,
         "healthmap": 0,
-        "news": 1123
+        "news": 1124
       },
       "source_links": [
         {
@@ -38662,9 +38742,13 @@
         {
           "headline": "Crews respond to brush fire in Girard Twp. Monday",
           "published_date": "2026-11-02T21:58:28+00:00"
+        },
+        {
+          "headline": "Crews work to contain 300-acre wildfire in White Mountain National Forest",
+          "published_date": "2026-11-03"
         }
       ],
-      "news_total": 1123,
+      "news_total": 1124,
       "logs": [
         {
           "log_date": "2026-07-27",
@@ -45691,8 +45775,8 @@
       "disease_name": null,
       "event_date": "2026-07-30",
       "first_reported_date": "2026-07-30",
-      "last_updated_date": "2026-10-30",
-      "days_since_event": 96,
+      "last_updated_date": "2026-11-03",
+      "days_since_event": 97,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -45702,7 +45786,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 676
+        "news": 677
       },
       "source_links": [
         {
@@ -48426,9 +48510,13 @@
         {
           "headline": "Did you know beavers can help fight drought?",
           "published_date": "2026-10-30"
+        },
+        {
+          "headline": "Which crops thrived — and struggled — in drought year",
+          "published_date": "2026-11-03"
         }
       ],
-      "news_total": 676,
+      "news_total": 677,
       "logs": [
         {
           "log_date": "2026-07-31",
@@ -48904,7 +48992,7 @@
       "event_date": "2026-08-09",
       "first_reported_date": "2026-08-09",
       "last_updated_date": "2026-10-31",
-      "days_since_event": 86,
+      "days_since_event": 87,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -49591,7 +49679,7 @@
       "event_date": "2026-08-12",
       "first_reported_date": "2026-08-12",
       "last_updated_date": "2026-10-28",
-      "days_since_event": 83,
+      "days_since_event": 84,
       "source_count": 4,
       "should_report": true,
       "search_keys": [],
@@ -52384,7 +52472,7 @@
       "event_date": "2026-08-26",
       "first_reported_date": "2026-08-26",
       "last_updated_date": "2026-11-02",
-      "days_since_event": 69,
+      "days_since_event": 70,
       "source_count": 3,
       "should_report": true,
       "search_keys": [],
@@ -52394,7 +52482,7 @@
         "gdacs": 1,
         "ercc": 2,
         "healthmap": 0,
-        "news": 1175
+        "news": 1176
       },
       "source_links": [
         {
@@ -57116,6 +57204,10 @@
           "published_date": "2026-10-31"
         },
         {
+          "headline": "Photo: Nepal Flood Rescue Efforts Continue as Death Toll Rises - NEP2026091711 -...",
+          "published_date": "2026-10-31T07:01:17+00:00"
+        },
+        {
           "headline": "Say it in Antalya, write it in Kathmandu",
           "published_date": "2026-11-01"
         },
@@ -57128,7 +57220,7 @@
           "published_date": "2026-11-02T22:03:50+00:00"
         }
       ],
-      "news_total": 1175,
+      "news_total": 1176,
       "logs": [
         {
           "log_date": "2026-08-28",
@@ -57811,7 +57903,7 @@
       "event_date": "2026-09-03",
       "first_reported_date": "2026-09-03",
       "last_updated_date": "2026-11-02",
-      "days_since_event": 61,
+      "days_since_event": 62,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -61415,7 +61507,7 @@
       "event_date": "2026-10-06",
       "first_reported_date": "2026-10-06",
       "last_updated_date": "2026-10-28",
-      "days_since_event": 28,
+      "days_since_event": 29,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -62472,7 +62564,7 @@
       "event_date": "2026-10-06",
       "first_reported_date": "2026-10-06",
       "last_updated_date": "2026-10-27",
-      "days_since_event": 28,
+      "days_since_event": 29,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -62711,7 +62803,7 @@
       "event_date": "2026-10-07",
       "first_reported_date": "2026-10-07",
       "last_updated_date": "2026-10-29",
-      "days_since_event": 27,
+      "days_since_event": 28,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -63611,7 +63703,7 @@
       "event_date": "2026-10-08",
       "first_reported_date": "2026-10-08",
       "last_updated_date": "2026-11-02",
-      "days_since_event": 26,
+      "days_since_event": 27,
       "source_count": 18,
       "should_report": true,
       "search_keys": [],
@@ -64210,7 +64302,7 @@
       "event_date": "2026-10-08",
       "first_reported_date": "2026-10-08",
       "last_updated_date": "2026-11-03",
-      "days_since_event": 26,
+      "days_since_event": 27,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -65902,7 +65994,7 @@
       "event_date": "2026-10-08",
       "first_reported_date": "2026-10-08",
       "last_updated_date": "2026-11-01",
-      "days_since_event": 26,
+      "days_since_event": 27,
       "source_count": 12,
       "should_report": true,
       "search_keys": [],
@@ -67236,7 +67328,7 @@
       "event_date": "2026-10-13",
       "first_reported_date": "2026-10-13",
       "last_updated_date": "2026-11-01",
-      "days_since_event": 21,
+      "days_since_event": 22,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -67302,7 +67394,7 @@
       "event_date": "2026-10-13",
       "first_reported_date": "2026-10-13",
       "last_updated_date": "2026-10-27",
-      "days_since_event": 21,
+      "days_since_event": 22,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -67769,7 +67861,7 @@
       "event_date": "2026-10-14",
       "first_reported_date": "2026-10-14",
       "last_updated_date": "2026-10-30",
-      "days_since_event": 20,
+      "days_since_event": 21,
       "source_count": 2,
       "should_report": true,
       "search_keys": [],
@@ -68399,7 +68491,7 @@
       "event_date": "2026-10-14",
       "first_reported_date": "2026-10-14",
       "last_updated_date": "2026-11-03",
-      "days_since_event": 20,
+      "days_since_event": 21,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -68409,7 +68501,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 141
+        "news": 142
       },
       "source_links": [
         {
@@ -68931,6 +69023,10 @@
           "published_date": "2026-10-31"
         },
         {
+          "headline": "Severe thunderstorms to threaten Plains into Tuesday night",
+          "published_date": "2026-10-31T07:03:05+00:00"
+        },
+        {
           "headline": "Severe storms to threaten Plains and South, bring rain and Election Day impacts",
           "published_date": "2026-10-31T15:56:21+00:00"
         },
@@ -68995,7 +69091,7 @@
           "published_date": "2026-11-03"
         }
       ],
-      "news_total": 141,
+      "news_total": 142,
       "logs": [
         {
           "log_date": "2026-10-17",
@@ -69226,7 +69322,7 @@
       "incident_id": "20261022-XX-CF",
       "tree_id": "3461c9a3cac24e1c8d37ad2857791e60",
       "canonical_name": "Conflict 2026-10-22",
-      "summary": "The Asian Football Confederation postponed the 2027 Asian Cup because of the conflict, marking another sports event disrupted. Wood Mackenzie reports that Houthi attacks on the East-West pipeline are reshaping growth and strategies for major oil companies. An Alhurra editorial discusses the prospects for renewed U.S. military action against Iran following the midterm elections.",
+      "summary": "The Asian Football Confederation postponed the 2027 Asian Cup because of the conflict, marking another sports event disrupted. Wood Mackenzie reports that Houthi attacks on the East-West pipeline are reshaping growth and strategies for major oil companies. An Alhurra editorial discusses the prospects for renewed U.S. military action against Iran following the midterm elections.\nIran dismissed the U.S. response to the latest peace proposal as “not convincing,” indicating continued deadlock in diplomatic efforts. Domestically, GOP dissent grew as DeSantis hit Trump over the Iran war, and Trump faced backlash for a dismissive three‑word take on the conflict. These developments highlight deepening political divisions in the U.S. over the war.",
       "country": "",
       "iso2": "XX",
       "lat": null,
@@ -69246,7 +69342,7 @@
       "event_date": "2026-10-22",
       "first_reported_date": "2026-10-22",
       "last_updated_date": "2026-11-03",
-      "days_since_event": 12,
+      "days_since_event": 13,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -69256,7 +69352,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 241
+        "news": 243
       },
       "source_links": [
         {
@@ -70218,6 +70314,14 @@
           "published_date": "2026-11-02T21:58:29+00:00"
         },
         {
+          "headline": "Dow Jones Top Markets Headlines at 7 PM ET: U.S. Stocks Mixed Amid Midterm, Iran War Nerves | Latest ...",
+          "published_date": "2026-11-03"
+        },
+        {
+          "headline": "Is America About to Change Forever? | 2026 Midterms (ft. Tom Shillue & Rich Zeoli)",
+          "published_date": "2026-11-03"
+        },
+        {
           "headline": "DeSantis Hits Trump on Iran as GOP Dissent Grows",
           "published_date": "2026-11-03"
         },
@@ -70226,11 +70330,11 @@
           "published_date": "2026-11-03"
         },
         {
-          "headline": "Iran dismisses U.S. response to peace proposal as \"not convincing\"",
+          "headline": "Wood Mackenzie: Middle East conflict reshapes growth, resilience and partnerships across the region's largest NOCs",
           "published_date": "2026-11-03"
         },
         {
-          "headline": "Wood Mackenzie: Middle East conflict reshapes growth, resilience and partnerships across the region's largest NOCs",
+          "headline": "Iran dismisses U.S. response to peace proposal as \"not convincing\"",
           "published_date": "2026-11-03"
         },
         {
@@ -70242,7 +70346,7 @@
           "published_date": "2026-11-03T06:50:41+00:00"
         }
       ],
-      "news_total": 241,
+      "news_total": 243,
       "logs": [
         {
           "log_date": "2026-10-22",
@@ -70840,8 +70944,26 @@
         },
         {
           "log_date": "2026-11-03",
-          "summary": "The Asian Football Confederation postponed the 2027 Asian Cup because of the conflict, marking another sports event disrupted. Wood Mackenzie reports that Houthi attacks on the East-West pipeline are reshaping growth and strategies for major oil companies. An Alhurra editorial discusses the prospects for renewed U.S. military action against Iran following the midterm elections.",
+          "summary": "The Asian Football Confederation postponed the 2027 Asian Cup because of the conflict, marking another sports event disrupted. Wood Mackenzie reports that Houthi attacks on the East-West pipeline are reshaping growth and strategies for major oil companies. An Alhurra editorial discusses the prospects for renewed U.S. military action against Iran following the midterm elections.\nIran dismissed the U.S. response to the latest peace proposal as “not convincing,” indicating continued deadlock in diplomatic efforts. Domestically, GOP dissent grew as DeSantis hit Trump over the Iran war, and Trump faced backlash for a dismissive three‑word take on the conflict. These developments highlight deepening political divisions in the U.S. over the war.",
           "news": [
+            {
+              "news_id": "df38292871b35fec8e34eef263cb2264",
+              "url": "https://www.yahoo.com/news/politics/articles/desantis-hits-trump-iran-gop-190619714.html",
+              "headline": "DeSantis Hits Trump on Iran as GOP Dissent Grows",
+              "body": "DeSantis Tests Break With Trump as Iran War Fuels GOP Dissent",
+              "published_date": "2026-11-03",
+              "outlet": "Newsmax · via Yahoo News",
+              "image": "https://media.zenfs.com/en/newsmax_809/07e4268463995e9bdc68693a9fcd1b07.jpg"
+            },
+            {
+              "news_id": "c153a97a1beb52d695f74fa9dc602311",
+              "url": "https://www.yahoo.com/news/politics/articles/trump-blasted-dismissive-3-word-172011782.html",
+              "headline": "Trump blasted for dismissive, 3-word take on Iran war: ‘How dumb is this man’",
+              "body": "President looks to defend unpopular conflict.",
+              "published_date": "2026-11-03",
+              "outlet": "MLive.com · via Yahoo News",
+              "image": "https://media.zenfs.com/en/mlive_com_articles_368/440197ce28df62cde5a55af90c34ad1b.jpg"
+            },
             {
               "news_id": "70d8fa5c50725bb0b9dfdcee9b2b32e9",
               "url": "https://pr.cullmantimes.com/article/Wood-Mackenzie-Middle-East-conflict-reshapes-growth-resilience-and-partnerships-across-the-regions-largest-NOCs/6ae97489cd0777acc0a66ca0",
@@ -70859,6 +70981,15 @@
               "published_date": "2026-11-03T06:50:41+00:00",
               "outlet": "Associated Press",
               "image": "https://s.yimg.com/bo/dc12ec78-7597-5e3e-8c05-189df9c0db91_1793689767364.jpg"
+            },
+            {
+              "news_id": "bc102219babd5dfcb969ce39eb05ad22",
+              "url": "https://www.yahoo.com/news/politics/articles/push-u-iran-deal-punctuated-090903840.html",
+              "headline": "Iran dismisses U.S. response to peace proposal as \"not convincing\"",
+              "body": "Trump said on eve of U.S. elections that a deal with Iran \"could happen,\" but after new U.S. strikes, Tehran called America's response to the latest proposal \"not convincing.\"",
+              "published_date": "2026-11-03",
+              "outlet": "CBS News · via Yahoo News",
+              "image": "https://media.zenfs.com/en/cbs_news_897/2942fc7aa70105123033996ad87c7f42.png.cf.jpg"
             },
             {
               "news_id": "5e2fb2836df75270b888bada4301d0b8",
@@ -70898,7 +71029,7 @@
       "event_date": "2026-10-22",
       "first_reported_date": "2026-10-22",
       "last_updated_date": "2026-11-02",
-      "days_since_event": 12,
+      "days_since_event": 13,
       "source_count": 3,
       "should_report": true,
       "search_keys": [],
@@ -72257,7 +72388,7 @@
       "event_date": "2026-10-24",
       "first_reported_date": "2026-10-24",
       "last_updated_date": "2026-11-02",
-      "days_since_event": 10,
+      "days_since_event": 11,
       "source_count": 5,
       "should_report": true,
       "search_keys": [],
@@ -72766,7 +72897,7 @@
       "event_date": "2026-10-26",
       "first_reported_date": "2026-10-26",
       "last_updated_date": "2026-11-02",
-      "days_since_event": 8,
+      "days_since_event": 9,
       "source_count": 3,
       "should_report": true,
       "search_keys": [],
@@ -73986,7 +74117,7 @@
       "event_date": "2026-10-28",
       "first_reported_date": "2026-10-28",
       "last_updated_date": "2026-10-29",
-      "days_since_event": 6,
+      "days_since_event": 7,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -74105,7 +74236,7 @@
       "event_date": "2026-10-29",
       "first_reported_date": "2026-10-29",
       "last_updated_date": "2026-10-29",
-      "days_since_event": 5,
+      "days_since_event": 6,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
@@ -74177,7 +74308,7 @@
       "event_date": "2026-10-29",
       "first_reported_date": "2026-10-29",
       "last_updated_date": "2026-10-29",
-      "days_since_event": 5,
+      "days_since_event": 6,
       "source_count": 1,
       "should_report": true,
       "search_keys": [],
