@@ -1,25 +1,25 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-11-10",
-  "generated_at": "2026-11-10T08:31:43Z",
+  "generated_at": "2026-11-10T20:30:28Z",
   "as_of": "2026-11-10",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 24,
-    "new_today": 12,
+    "reportable_total": 25,
+    "new_today": 16,
     "critical": 14,
     "high": 3,
-    "medium": 6,
+    "medium": 7,
     "low": 1,
     "disease_outbreaks": 5,
-    "countries_affected": 17,
-    "news_total": 13557,
+    "countries_affected": 18,
+    "news_total": 13615,
     "max_magnitude": 7.6,
     "by_severity": {
       "CRITICAL": 14,
       "HIGH": 3,
-      "MEDIUM": 6,
+      "MEDIUM": 7,
       "LOW": 1
     },
     "by_type": {
@@ -28,7 +28,7 @@
       "Conflict": 4,
       "Forest Fire": 1,
       "Flood": 3,
-      "Earthquake": 6,
+      "Earthquake": 7,
       "Severe Weather": 1,
       "Tropical Cyclone": 1,
       "Tsunami": 1
@@ -36,11 +36,11 @@
     "by_region": {
       "Global": 2,
       "Africa": 1,
-      "Americas": 2,
+      "Americas": 3,
       "Europe": 5,
       "Asia": 9,
-      "Unknown": 2,
-      "Oceania": 3
+      "Oceania": 4,
+      "Unknown": 1
     }
   },
   "by_country": [
@@ -87,6 +87,15 @@
       "iso2": "FJ",
       "region": "Oceania",
       "country_group": "B",
+      "max_severity": "MEDIUM"
+    },
+    {
+      "country": "Guatemala",
+      "count": 1,
+      "max_sev_rank": 2,
+      "iso2": "GT",
+      "region": "Americas",
+      "country_group": "C",
       "max_severity": "MEDIUM"
     },
     {
@@ -1302,7 +1311,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 306
+        "news": 308
       },
       "source_links": [
         {
@@ -2544,11 +2553,19 @@
           "published_date": "2026-11-09"
         },
         {
+          "headline": "Machine Learning Model Forecasts Epidemic Outbreaks from Wastewater Days in",
+          "published_date": "2026-11-10"
+        },
+        {
+          "headline": "New COVID-19 variant PJ.2.1 spreads across countries; experts monitor its growth",
+          "published_date": "2026-11-10"
+        },
+        {
           "headline": "Early Remdesivir May Reduce Mortality in Severe COVID Patients With Kidney or Liver Disease: Study",
           "published_date": "2026-11-10"
         }
       ],
-      "news_total": 306,
+      "news_total": 308,
       "logs": [
         {
           "log_date": "2026-07-08",
@@ -7701,7 +7718,7 @@
       "incident_id": "20260511-EC-DR",
       "tree_id": "d75afb3078c54d74b37c4f8bb985dfce",
       "canonical_name": "Drought Green",
-      "summary": "New reports detail the start of drought operations at Lake Lanier and other reservoirs in Georgia, satellite imagery showing Colorado's Lake Dillon shrinking due to persistent drought, and worsening drought across central North Carolina. In Pakistan, the government assured support for drought-hit families in Tharparkar. Additionally, an article notes the ongoing impact of El Niño on the Galápagos, including flooding.",
+      "summary": "New reports detail the start of drought operations at Lake Lanier and other reservoirs in Georgia, satellite imagery showing Colorado's Lake Dillon shrinking due to persistent drought, and worsening drought across central North Carolina. In Pakistan, the government assured support for drought-hit families in Tharparkar. Additionally, an article notes the ongoing impact of El Niño on the Galápagos, including flooding.\nThe U.S. Small Business Administration made low-interest disaster loans available to 14 Minnesota counties due to drought damage. Fall floods in the drought-stricken Southwest provided some water supply relief, while Maine’s drought persisted despite rain, with a wildfire still burning along the New Hampshire border. The ongoing 2026 El Niño continued to stress agriculture globally, and drought conditions were noted as worsening in Sudan amid conflict.",
       "country": "Ecuador",
       "iso2": "EC",
       "lat": -1.8,
@@ -7731,7 +7748,7 @@
         "gdacs": 1,
         "ercc": 2,
         "healthmap": 0,
-        "news": 1086
+        "news": 1091
       },
       "source_links": [
         {
@@ -12065,6 +12082,10 @@
           "published_date": "2026-11-09"
         },
         {
+          "headline": "Maine drought conditions persist despite rainy weekend",
+          "published_date": "2026-11-09"
+        },
+        {
           "headline": "Drought conditions update in Texas",
           "published_date": "2026-11-09"
         },
@@ -12105,11 +12126,27 @@
           "published_date": "2026-11-09T22:52:32+00:00"
         },
         {
+          "headline": "14 Minnesota Counties Now Eligible for Small Business Loans Due to Drought",
+          "published_date": "2026-11-10"
+        },
+        {
           "headline": "Sindh govt assured of BISP support for drought-hit Tharparkar families",
           "published_date": "2026-11-10"
+        },
+        {
+          "headline": "Sudan war: First ‘suicide’ drone attacks, now long-range strikes are the norm",
+          "published_date": "2026-11-10"
+        },
+        {
+          "headline": "2026 El Niño: Managing Root-Zone Moisture When Water Is Limited",
+          "published_date": "2026-11-10"
+        },
+        {
+          "headline": "Floods swept through the drought-stricken Southwest. Where did all that water...",
+          "published_date": "2026-11-10T19:26:27+00:00"
         }
       ],
-      "news_total": 1086,
+      "news_total": 1091,
       "logs": [
         {
           "log_date": "2026-08-18",
@@ -12563,8 +12600,26 @@
         },
         {
           "log_date": "2026-11-10",
-          "summary": "New reports detail the start of drought operations at Lake Lanier and other reservoirs in Georgia, satellite imagery showing Colorado's Lake Dillon shrinking due to persistent drought, and worsening drought across central North Carolina. In Pakistan, the government assured support for drought-hit families in Tharparkar. Additionally, an article notes the ongoing impact of El Niño on the Galápagos, including flooding.",
+          "summary": "New reports detail the start of drought operations at Lake Lanier and other reservoirs in Georgia, satellite imagery showing Colorado's Lake Dillon shrinking due to persistent drought, and worsening drought across central North Carolina. In Pakistan, the government assured support for drought-hit families in Tharparkar. Additionally, an article notes the ongoing impact of El Niño on the Galápagos, including flooding.\nThe U.S. Small Business Administration made low-interest disaster loans available to 14 Minnesota counties due to drought damage. Fall floods in the drought-stricken Southwest provided some water supply relief, while Maine’s drought persisted despite rain, with a wildfire still burning along the New Hampshire border. The ongoing 2026 El Niño continued to stress agriculture globally, and drought conditions were noted as worsening in Sudan amid conflict.",
           "news": [
+            {
+              "news_id": "536bfff267375d75ae3d5522148c3c53",
+              "url": "https://fergusnow.com/2026/11/10/14-minnesota-counties-now-eligible-for-small-business-loans-due-to-drought/",
+              "headline": "14 Minnesota Counties Now Eligible for Small Business Loans Due to Drought",
+              "body": "Atlanta, GA - The U.S. Small Business Administration is making available low-interest federal disaster loans f...",
+              "published_date": "2026-11-10",
+              "outlet": "Fergus Now",
+              "image": "https://www.bing.com/th?id=ONUT.SCl7fiw7NvY1SUirNd_JiQ"
+            },
+            {
+              "news_id": "502481fe43185698b089bcfdb897940b",
+              "url": "https://www.accuweather.com/en/climate/floods-swept-through-the-drought-stricken-southwest-where-did-all-that-water-go/1956582",
+              "headline": "Floods swept through the drought-stricken Southwest. Where did all that water...",
+              "body": "Fall floods forced evacuations and boosted some Southwest water supplies. With Lake Powell about a...",
+              "published_date": "2026-11-10T19:26:27+00:00",
+              "outlet": "AccuWeather",
+              "image": "https://s.yimg.com/bo/80f9de77-479b-538f-b377-87abd7ba60c0_1794340507054.png.cf.jpg"
+            },
             {
               "news_id": "bdc686cba15f54ed96ca63499d2e21bf",
               "url": "https://www.wabe.org/lake-lanier-and-other-reservoirs-get-lower-drought-operations-kick-in/",
@@ -12609,6 +12664,33 @@
               "published_date": "2026-11-10",
               "outlet": "The Nation",
               "image": ""
+            },
+            {
+              "news_id": "382c750d696a5c708c0bd7127b24fada",
+              "url": "https://www.bangordailynews.com/2026/11/09/midcoast/midcoast-environment/maine-drought-conditions-persist-despite-rainy-weekend/",
+              "headline": "Maine drought conditions persist despite rainy weekend",
+              "body": "As of Monday, Nov. 9, a week-old wildfire along the Maine-New Hampshire border had burned 821 acres and was only 29% contained.",
+              "published_date": "2026-11-09",
+              "outlet": "Bangor Daily News",
+              "image": "https://www.bing.com/th?id=ONUT.l4TQ3TrKYfQ6OsCGEKevWQ"
+            },
+            {
+              "news_id": "69d41ca8ed5455dcaafe7aeb2789461e",
+              "url": "https://news.un.org/en/story/2026/11/1168771",
+              "headline": "Sudan war: First ‘suicide’ drone attacks, now long-range strikes are the norm",
+              "body": "Drones and drought are “closing in” on Sudan, the UN Children’s Fund (UNICEF), said on Tuesday, describing unprecedented attacks on the country’s infrastructure including by drones travelling up to 1,500 kilometres before hitting their target.",
+              "published_date": "2026-11-10",
+              "outlet": "UN News",
+              "image": "https://www.bing.com/th?id=ONUT.96RCHE4aSARqfcT2s0ad6A"
+            },
+            {
+              "news_id": "9b2961ebe2a45f45a9ccc5fc4e32ad6e",
+              "url": "https://finance.yahoo.com/economy/articles/2026-el-ni-o-managing-093400729.html",
+              "headline": "2026 El Niño: Managing Root-Zone Moisture When Water Is Limited",
+              "body": "As the 2026 El Niño event continues to intensify, agricultural regions across Asia-Pacific, Africa and South America face drought conditions and growing pressure on irrigation supplies. Described as one of the strongest events on record, the phenomenon is projected to cause billions in agricultural losses, raising concerns about food security and the need for climate-resilient farming practices.",
+              "published_date": "2026-11-10",
+              "outlet": "Yahoo Finance",
+              "image": ""
             }
           ]
         }
@@ -12619,7 +12701,7 @@
       "incident_id": "20260715-UA-CF",
       "tree_id": "f22292f8c3ff448a920c3b1fe41d3aa0",
       "canonical_name": "Conflict Ukraine 2026-07-15",
-      "summary": "US-brokered peace talks between Russia and Ukraine are set to begin in Abu Dhabi on November 10, the first such negotiations since February, with President Trump expressing optimism about a possible broad deal. Leaked Russian mortality data suggests nearly 393,000 war-related deaths since 2022, while Russia continues to develop advanced drones and antipersonnel mines. Meanwhile, India offered to mediate, China called for de-escalation, and European allies pressed for inclusion in the negotiations.",
+      "summary": "US-brokered peace talks between Russia and Ukraine are set to begin in Abu Dhabi on November 10, the first such negotiations since February, with President Trump expressing optimism about a possible broad deal. Leaked Russian mortality data suggests nearly 393,000 war-related deaths since 2022, while Russia continues to develop advanced drones and antipersonnel mines. Meanwhile, India offered to mediate, China called for de-escalation, and European allies pressed for inclusion in the negotiations.\nOn November 10, 2026, US-brokered peace talks between Russia and Ukraine opened in Abu Dhabi, with the first session lasting about four hours and described as \"very productive\" by US Secretary of State Marco Rubio, though no significant breakthrough was reported. The talks are expected to resume the next day, while a disagreement emerged over whether the European Union should be involved, with Russia opposing EU participation and European officials insisting on a role.",
       "country": "Ukraine",
       "iso2": "UA",
       "lat": 48.9,
@@ -12649,7 +12731,7 @@
         "gdacs": 0,
         "ercc": 6,
         "healthmap": 0,
-        "news": 2052
+        "news": 2061
       },
       "source_links": [
         {
@@ -20857,7 +20939,27 @@
           "published_date": "2026-11-10"
         },
         {
+          "headline": "New Ukrainian footage shows how a Russian strike turned a civilian shelter into a mass grave | CNN",
+          "published_date": "2026-11-10"
+        },
+        {
+          "headline": "No signs of progress as U.S.-Russia-Ukraine talks get underway in Abu Dhabi, but Zelenskyy",
+          "published_date": "2026-11-10"
+        },
+        {
+          "headline": "Russia-Ukraine talks ‘very productive,’ says US’s Rubio – as it happened",
+          "published_date": "2026-11-10"
+        },
+        {
+          "headline": "Russia says no EU at Ukraine talks. Von der Leyen disagrees",
+          "published_date": "2026-11-10"
+        },
+        {
           "headline": "India urges peace as S Jaishankar and PM Modi discuss Ukraine crisis",
+          "published_date": "2026-11-10"
+        },
+        {
+          "headline": "Ukraine and Russia Meet in Abu Dhabi",
           "published_date": "2026-11-10"
         },
         {
@@ -20873,11 +20975,19 @@
           "published_date": "2026-11-10"
         },
         {
+          "headline": "Russia, Ukraine to meet for US-backed talks after Trump says broad deal possible",
+          "published_date": "2026-11-10"
+        },
+        {
           "headline": "Trump sees 'strong inclination' to end Russia-Ukraine war ahead of U.S.-brokered peace talks",
           "published_date": "2026-11-10"
         },
         {
           "headline": "‘യുദ്ധം തീർക്കാൻ ഇടപെടാം’: സെലെൻസ്കിയോട് ഫോൺ ചർച്ചയിൽ മോദി",
+          "published_date": "2026-11-10"
+        },
+        {
+          "headline": "Russia and Ukraine hold nearly 4 hours of U.S.-mediated talks in Abu Dhabi",
           "published_date": "2026-11-10"
         },
         {
@@ -20907,9 +21017,17 @@
         {
           "headline": "Europe top diplomats press Rubio on Ukraine at G7",
           "published_date": "2026-11-10T07:51:42+00:00"
+        },
+        {
+          "headline": "US-mediated talks on ending Russia-Ukraine war begin in Abu Dhabi",
+          "published_date": "2026-11-10T12:06:47+00:00"
+        },
+        {
+          "headline": "Russia, Ukraine to meet for US-backed talks after Trump says broad deal possible",
+          "published_date": "2026-11-10T20:05:27+00:00"
         }
       ],
-      "news_total": 2052,
+      "news_total": 2061,
       "logs": [
         {
           "log_date": "2026-07-24",
@@ -21732,7 +21850,7 @@
         },
         {
           "log_date": "2026-11-10",
-          "summary": "US-brokered peace talks between Russia and Ukraine are set to begin in Abu Dhabi on November 10, the first such negotiations since February, with President Trump expressing optimism about a possible broad deal. Leaked Russian mortality data suggests nearly 393,000 war-related deaths since 2022, while Russia continues to develop advanced drones and antipersonnel mines. Meanwhile, India offered to mediate, China called for de-escalation, and European allies pressed for inclusion in the negotiations.",
+          "summary": "US-brokered peace talks between Russia and Ukraine are set to begin in Abu Dhabi on November 10, the first such negotiations since February, with President Trump expressing optimism about a possible broad deal. Leaked Russian mortality data suggests nearly 393,000 war-related deaths since 2022, while Russia continues to develop advanced drones and antipersonnel mines. Meanwhile, India offered to mediate, China called for de-escalation, and European allies pressed for inclusion in the negotiations.\nOn November 10, 2026, US-brokered peace talks between Russia and Ukraine opened in Abu Dhabi, with the first session lasting about four hours and described as \"very productive\" by US Secretary of State Marco Rubio, though no significant breakthrough was reported. The talks are expected to resume the next day, while a disagreement emerged over whether the European Union should be involved, with Russia opposing EU participation and European officials insisting on a role.",
           "news": [
             {
               "news_id": "f23480ac51a45263b5cb5c5aaee4dd6f",
@@ -21798,6 +21916,42 @@
               "image": "https://www.bing.com/th?id=ONUT.rPlRY7AyVd5JCLepKjROQw"
             },
             {
+              "news_id": "5363a5529f895721bac7eee9420899ea",
+              "url": "https://www.cnn.com/2026/11/10/europe/russia-ukraine-shelter-bomb-strike-intl",
+              "headline": "New Ukrainian footage shows how a Russian strike turned a civilian shelter into a mass grave | CNN",
+              "body": "Footage exclusively obtained from Ukraine and analyzed by CNN reveals new details of how Russia struck an underground shelter with a huge bunker-busting bomb.",
+              "published_date": "2026-11-10",
+              "outlet": "CNN",
+              "image": "https://www.bing.com/th?id=ONUT.MrX9t1Wk4mfuFvt8XPamyg"
+            },
+            {
+              "news_id": "fd05ad9ae1b159c7a469f827a4b1c5a0",
+              "url": "https://www.cbsnews.com/news/us-russia-ukraine-war-talks-peace-abu-dhabi-deal/",
+              "headline": "No signs of progress as U.S.-Russia-Ukraine talks get underway in Abu Dhabi, but Zelenskyy",
+              "body": "It is the first such trilateral diplomatic push since negotiations were suspended following the start of the war with Iran.",
+              "published_date": "2026-11-10",
+              "outlet": "CBS News",
+              "image": "https://www.bing.com/th?id=ONUT.hzmVVsJwuK74OlrpKkB_RQ"
+            },
+            {
+              "news_id": "868d88f8cdef55f0ab5bfd76244633b7",
+              "url": "https://www.theguardian.com/world/live/2026/nov/10/ukraine-russia-war-us-talks-abu-dhabi-europe-latest-news-updates?source=newscura",
+              "headline": "Russia-Ukraine talks ‘very productive,’ says US’s Rubio – as it happened",
+              "body": "US-led talks in Abu Dhabi break up after four hours but are expected to resume tomorrow as Zelenskyy says humanitarian issues were discussed",
+              "published_date": "2026-11-10",
+              "outlet": "The Guardian",
+              "image": ""
+            },
+            {
+              "news_id": "a6594c1d689054679acb7f7ea36971f6",
+              "url": "https://www.msn.com/en-us/news/other/russia-says-no-eu-at-ukraine-talks-von-der-leyen-disagrees/ar-AA2h9HgS?ocid=BingNewsVerp",
+              "headline": "Russia says no EU at Ukraine talks. Von der Leyen disagrees",
+              "body": "Russia says the Abu Dhabi negotiations involve only Moscow, Kyiv and Washington, while EU officials insist Europe will participate as diplomats discuss security, ceasefires and postwar arrangements.",
+              "published_date": "2026-11-10",
+              "outlet": "Latin Times on MSN",
+              "image": ""
+            },
+            {
               "news_id": "3ebc3e3eece1502fbf8f95d99471e5ab",
               "url": "https://www.msn.com/en-in/news/other/india-urges-peace-as-s-jaishankar-and-pm-modi-discuss-ukraine-crisis/ar-AA2h4ZUO?ocid=BingNewsVerp",
               "headline": "India urges peace as S Jaishankar and PM Modi discuss Ukraine crisis",
@@ -21832,6 +21986,24 @@
               "published_date": "2026-11-09",
               "outlet": "The Baltimore Sun",
               "image": "https://www.bing.com/th?id=ONUT.eZtt-r_H0OYDGpwqKTpMHw"
+            },
+            {
+              "news_id": "8183182f3c5a5009bb56e688828c97eb",
+              "url": "https://www.briefs.co/news/kyiv-and-moscow-head-to-abu-dhabi-for-first-talks-since-febr/",
+              "headline": "Ukraine and Russia Meet in Abu Dhabi",
+              "body": "Kyiv and Moscow hold first in-person talks since February in Abu Dhabi with U.S. envoys mediating as Trump signals momentum for ending the war.",
+              "published_date": "2026-11-10",
+              "outlet": "briefs",
+              "image": "https://www.bing.com/th?id=ONUT.khfXch4ZdScY9AyiY3UQwg"
+            },
+            {
+              "news_id": "a79d975847855b1d99ae11e788e18d30",
+              "url": "https://www.star-telegram.com/news/nation-world/world/article318005347.html",
+              "headline": "Russia, Ukraine to meet for US-backed talks after Trump says broad deal possible",
+              "body": "Russian and Ukrainian officials planned to meet on Tuesday for two days of US-brokered talks - their first since February - ...",
+              "published_date": "2026-11-10T20:05:27+00:00",
+              "outlet": "Fort Worth Star-Telegram",
+              "image": "https://www.bing.com/th?id=ONUT.iUWI11r6EI3kd0WXCjj8Kw"
             },
             {
               "news_id": "7182eede10c45d6cbc1c529f496b0b01",
@@ -21897,6 +22069,15 @@
               "image": ""
             },
             {
+              "news_id": "99127755e83b5f86b729af929f27e5a2",
+              "url": "https://www.msn.com/en-us/news/other/russia-ukraine-to-meet-for-us-backed-talks-after-trump-says-broad-deal-possible/ar-AA2h6CnW?ocid=BingNewsVerp",
+              "headline": "Russia, Ukraine to meet for US-backed talks after Trump says broad deal possible",
+              "body": "By Daniel Flynn and Steve Holland KYIV/WASHINGTON, Nov 10 (Reuters) - Russian and Ukrainian officials planned to meet on Tuesday for two days of US-brokered talks — their first since February — after ...",
+              "published_date": "2026-11-10",
+              "outlet": "Reuters on MSN",
+              "image": ""
+            },
+            {
               "news_id": "3e17acdccd4d5411abb1b87cbae4d1fa",
               "url": "https://www.cnbc.com/2026/11/10/trump-russia-ukraine-abu-dhabi-war-talks.html",
               "headline": "Trump sees 'strong inclination' to end Russia-Ukraine war ahead of U.S.-brokered peace talks",
@@ -21906,6 +22087,15 @@
               "image": "https://s.yimg.com/bo/cc4c6415-e631-5949-9340-9adc5a67a67c_1794286976744.jpg"
             },
             {
+              "news_id": "dfea5ed565ab59d3b7f9cfb20a29b926",
+              "url": "https://www.firstcoastnews.com/article/news/nation-world/russia-ukraine-united-states-mediated-talks-end-war/507-89ad0ecb-2465-4ccb-9333-54d38ad83e62",
+              "headline": "US-mediated talks on ending Russia-Ukraine war begin in Abu Dhabi",
+              "body": "Russia, Ukraine and the United States have started three-way talks in the United Arab Emirates to...",
+              "published_date": "2026-11-10T12:06:47+00:00",
+              "outlet": "First Coast News",
+              "image": "https://s.yimg.com/bo/88b935c0-469e-5bab-88ed-6d752d87da23_1794313958077.jpg"
+            },
+            {
               "news_id": "58fb0f43c5f55e48bbdd5294ce39ed1d",
               "url": "https://www.manoramaonline.com/news/latest-news/2026/11/10/modi-tells-zelenskyy-india-is-ready-to-support-peace-efforts-in-ukraine-war.html",
               "headline": "‘യുദ്ധം തീർക്കാൻ ഇടപെടാം’: സെലെൻസ്കിയോട് ഫോൺ ചർച്ചയിൽ മോദി",
@@ -21913,6 +22103,15 @@
               "published_date": "2026-11-10",
               "outlet": "മനോരമ ഓൺലൈൻ",
               "image": "https://www.bing.com/th?id=ONUT.nTvg2KcZUsTuwYNjf5Yqjw"
+            },
+            {
+              "news_id": "076da8bbef765fe08d43410c346db263",
+              "url": "https://www.npr.org/2026/11/10/g-s1-152773/russia-ukraine-war-talks",
+              "headline": "Russia and Ukraine hold nearly 4 hours of U.S.-mediated talks in Abu Dhabi",
+              "body": "Hopes of progress in ending Europe's biggest conflict since World War II are tempered by the absence of any significant breakthroughs in three previous rounds of talks early this year.",
+              "published_date": "2026-11-10",
+              "outlet": "NPR",
+              "image": "https://www.bing.com/th?id=ONUT.QyfYbL7CtRWSYgR3AQNdkQ"
             },
             {
               "news_id": "4d33cd881cfd58e584dcf0f417c6b48f",
@@ -21968,7 +22167,7 @@
       "incident_id": "20260726-IR-CF",
       "tree_id": "13763def03ab448898154124734fe728",
       "canonical_name": "Iran/US war",
-      "summary": "President Trump signaled a shift toward ending the war, stating after a meeting with Qatar's prime minister that the conflict is \"effectively over\" and playing down prospects of new strikes. Iran countered by issuing a two‑day ultimatum for the U.S. to accept its latest offer or face military escalation. Meanwhile, a new poll found half of Republicans want Congress to end the war, and Secretary of State Rubio defended the conflict as necessary to stop Iran's nuclear threat.",
+      "summary": "President Trump signaled a shift toward ending the war, stating after a meeting with Qatar's prime minister that the conflict is \"effectively over\" and playing down prospects of new strikes. Iran countered by issuing a two‑day ultimatum for the U.S. to accept its latest offer or face military escalation. Meanwhile, a new poll found half of Republicans want Congress to end the war, and Secretary of State Rubio defended the conflict as necessary to stop Iran's nuclear threat.\nThe US Air Force evacuated aircraft from an English base due to a security threat, while Iran accused Washington of fabricating news about diplomatic talks. A new Reuters/Ipsos poll showed most Americans want the newly Democratic Congress to end the war, and Representative Massie advanced impeachment proceedings against Defense Secretary Hegseth, citing over 300 civilian deaths.",
       "country": "Iran",
       "iso2": "IR",
       "lat": 32.4,
@@ -21998,7 +22197,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 3289
+        "news": 3310
       },
       "source_links": [
         {
@@ -34536,6 +34735,10 @@
           "published_date": "2026-11-04T19:14:04+00:00"
         },
         {
+          "headline": "Hegseth Defends Iran War, Deflects on Vance Comments",
+          "published_date": "2026-11-04T20:10:25+00:00"
+        },
+        {
           "headline": "‘Knives out’ at Pentagon after unpopular Iran war dooms GOP in midterms",
           "published_date": "2026-11-05"
         },
@@ -35012,6 +35215,10 @@
           "published_date": "2026-11-08T18:16:00+00:00"
         },
         {
+          "headline": "Trump nominates Kansan Jeff Colyer as ambassador to UAE amid Iran war",
+          "published_date": "2026-11-08T20:10:25+00:00"
+        },
+        {
           "headline": "Rubio says Trump’s war against Iran not ‘necessarily popular’ but needed to stop a nuclear threat",
           "published_date": "2026-11-09"
         },
@@ -35148,11 +35355,27 @@
           "published_date": "2026-11-09T22:53:58+00:00"
         },
         {
+          "headline": "F1 2026 calendar update: Imola off the table, no plan B if Iran war escalates",
+          "published_date": "2026-11-10"
+        },
+        {
           "headline": "2026 carbon budget says Iran war sparked decline in fossil fuel emissions",
           "published_date": "2026-11-10"
         },
         {
+          "headline": "US Air Force evacuates aircraft from a base in England because of a threat, US official says",
+          "published_date": "2026-11-10"
+        },
+        {
+          "headline": "Economic coercion once ousted Iran’s leader – but that was the 1950s; don’t expect a repeat today",
+          "published_date": "2026-11-10"
+        },
+        {
           "headline": "Iran war oil shock drives dip in global emissions, study shows",
+          "published_date": "2026-11-10"
+        },
+        {
+          "headline": "Iran conflict helped fight climate change (kind of)",
           "published_date": "2026-11-10"
         },
         {
@@ -35164,7 +35387,43 @@
           "published_date": "2026-11-10"
         },
         {
+          "headline": "Rep. Zinke to Newsmax: Iran Conflict 'Not a War of Choice'",
+          "published_date": "2026-11-10"
+        },
+        {
+          "headline": "Economic coercion once ousted Iran’s leader – but that was the 1950s; don’t expect a repeat today - AOL",
+          "published_date": "2026-11-10"
+        },
+        {
           "headline": "Half of Republicans want Congress to end Trump’s Iran war, poll finds",
+          "published_date": "2026-11-10"
+        },
+        {
+          "headline": "Massie is giving over 300 civilian war dead a voice in Hegseth’s impeachment",
+          "published_date": "2026-11-10"
+        },
+        {
+          "headline": "Global fossil fuel emissions project slight drop in 2026 amid Iran war oil shock and renewables growthPublished on: November 10, 2026 1:02 PM",
+          "published_date": "2026-11-10"
+        },
+        {
+          "headline": "F1 2026 calendar update: Imola GP off the table, no plan B if war escalates",
+          "published_date": "2026-11-10"
+        },
+        {
+          "headline": "Jim Jordan, Trump ally and Maga firebrand, to lead House Republicans as minority leader next year - live",
+          "published_date": "2026-11-10"
+        },
+        {
+          "headline": "F1 Is Going Ahead With Qatar and Abu Dhabi Despite the Iran Conflict",
+          "published_date": "2026-11-10"
+        },
+        {
+          "headline": "Iranian lawmaker says making concessions to US would be a miscalculation",
+          "published_date": "2026-11-10"
+        },
+        {
+          "headline": "F1 Plans to Finish Season in Middle East Despite Ongoing War",
           "published_date": "2026-11-10"
         },
         {
@@ -35172,11 +35431,35 @@
           "published_date": "2026-11-10"
         },
         {
+          "headline": "F1 Confirms Qatar and Abu Dhabi Finale for 2026",
+          "published_date": "2026-11-10"
+        },
+        {
+          "headline": "Track told to halt F1 preparations as Gulf double-header edges closer",
+          "published_date": "2026-11-10"
+        },
+        {
+          "headline": "Donald Trump’s Iran war helps cut carbon emissions",
+          "published_date": "2026-11-10"
+        },
+        {
+          "headline": "F1 makes final call on Qatar and Abu Dhabi amid Middle East situation",
+          "published_date": "2026-11-10"
+        },
+        {
           "headline": "Trump says Qatar, Saudi prefer peace in Iran conflict",
           "published_date": "2026-11-10T07:52:37+00:00"
+        },
+        {
+          "headline": "Iran accuses US of ‘manufacturing fake news about imaginary talks’",
+          "published_date": "2026-11-10T16:10:25+00:00"
+        },
+        {
+          "headline": "Most Americans Want New Democratic Congress to End Trump's Iran War, Reuters/Ipsos Poll Finds",
+          "published_date": "2026-11-10T20:10:25+00:00"
         }
       ],
-      "news_total": 3289,
+      "news_total": 3310,
       "logs": [
         {
           "log_date": "2026-07-27",
@@ -36089,8 +36372,17 @@
         },
         {
           "log_date": "2026-11-10",
-          "summary": "President Trump signaled a shift toward ending the war, stating after a meeting with Qatar's prime minister that the conflict is \"effectively over\" and playing down prospects of new strikes. Iran countered by issuing a two‑day ultimatum for the U.S. to accept its latest offer or face military escalation. Meanwhile, a new poll found half of Republicans want Congress to end the war, and Secretary of State Rubio defended the conflict as necessary to stop Iran's nuclear threat.",
+          "summary": "President Trump signaled a shift toward ending the war, stating after a meeting with Qatar's prime minister that the conflict is \"effectively over\" and playing down prospects of new strikes. Iran countered by issuing a two‑day ultimatum for the U.S. to accept its latest offer or face military escalation. Meanwhile, a new poll found half of Republicans want Congress to end the war, and Secretary of State Rubio defended the conflict as necessary to stop Iran's nuclear threat.\nThe US Air Force evacuated aircraft from an English base due to a security threat, while Iran accused Washington of fabricating news about diplomatic talks. A new Reuters/Ipsos poll showed most Americans want the newly Democratic Congress to end the war, and Representative Massie advanced impeachment proceedings against Defense Secretary Hegseth, citing over 300 civilian deaths.",
           "news": [
+            {
+              "news_id": "9462287eec70599e843b3b85d1ae2955",
+              "url": "https://www.msn.com/en-au/news/other/f1-2026-calendar-update-imola-off-the-table-no-plan-b-if-iran-war-escalates/ar-AA2h90gk?ocid=BingNewsVerp",
+              "headline": "F1 2026 calendar update: Imola off the table, no plan B if Iran war escalates",
+              "body": "F1 has told Imola its services won’t be required in December, amid uncertainty in the Middle East ...",
+              "published_date": "2026-11-10",
+              "outlet": "Autosport on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.UnGn4xF3HN3wXLa3KU_yQw"
+            },
             {
               "news_id": "4f9651ae59bd53d09d609264459e4f81",
               "url": "https://www.msn.com/en-au/news/australia/2026-carbon-budget-says-iran-war-sparked-decline-in-fossil-fuel-emissions/ar-AA2h6Hne?ocid=BingNewsVerp",
@@ -36101,6 +36393,24 @@
               "image": ""
             },
             {
+              "news_id": "97ed6737cf86518697735512c3800cf3",
+              "url": "https://www.wjcl.com/article/us-air-force-evacuates-tankers-iran-threat-engalnd-base/74384367",
+              "headline": "US Air Force evacuates aircraft from a base in England because of a threat, US official says",
+              "body": "The U.S. Air Force has relocated aircraft from a base in eastern England because of a threat, a U.S. official told The Associated Press.",
+              "published_date": "2026-11-10",
+              "outlet": "WJCL Savannah",
+              "image": "https://s.yimg.com/bo/2a8984ed-56d2-5a0e-9bfc-c46f3991688a_1794307943334.jpg"
+            },
+            {
+              "news_id": "d15115db4360578e846f7da7736a6090",
+              "url": "https://www.yahoo.com/news/politics/articles/economic-coercion-once-ousted-iran-140411837.html",
+              "headline": "Economic coercion once ousted Iran’s leader – but that was the 1950s; don’t expect a repeat today",
+              "body": "A two-year blockade imposed on Iran by Britain gave way to a coup and leadership change. But seven decades later, circumstances are very different.",
+              "published_date": "2026-11-10",
+              "outlet": "The Conversation · via Yahoo News",
+              "image": "https://media.zenfs.com/en/the_conversation_us_articles_815/a6b11278180ebee71f2086bb2dee8d04.jpg"
+            },
+            {
               "news_id": "752747f22b115f98bcd13d24ad2df8c0",
               "url": "https://www.msn.com/en-xl/weather/climate-change/iran-war-oil-shock-drives-dip-in-global-emissions-study-shows/ar-AA2h7a9q?ocid=BingNewsVerp",
               "headline": "Iran war oil shock drives dip in global emissions, study shows",
@@ -36108,6 +36418,15 @@
               "published_date": "2026-11-10",
               "outlet": "DW on MSN",
               "image": "https://www.bing.com/th?id=ONUT.T6yz6FkFIFAp1c3tqDv6Qw"
+            },
+            {
+              "news_id": "029cd85281645df7a5bdfba43a563172",
+              "url": "https://www.yahoo.com/news/science/articles/iran-conflict-helped-fight-climate-110419155.html",
+              "headline": "Iran conflict helped fight climate change (kind of)",
+              "body": "For one of the few times on record, global carbon dioxide (CO2) emissions from fossil fuels are projected to decrease in 2026.",
+              "published_date": "2026-11-10",
+              "outlet": "USA TODAY · via Yahoo News",
+              "image": "https://media.zenfs.com/en/usa_today_news_641/df5c0a6b5e23c73d37510543bce8784b.jpg"
             },
             {
               "news_id": "7a5265c9299e5dbe9b94068d531913a0",
@@ -36128,6 +36447,33 @@
               "image": "https://www.bing.com/th?id=ONUT.1sP4w2JKjma5hWS1arLMvQ"
             },
             {
+              "news_id": "40e564df8f1c5c2e9de6ef359881af78",
+              "url": "https://www.newsmax.com/politics/pete-hegseth-jd-vance-iran-war/2026/11/10/id/1275818/",
+              "headline": "Hegseth Defends Iran War, Deflects on Vance Comments",
+              "body": "War Secretary Pete Hegseth defended the Iran war as necessary Tuesday but stopped short of endorsing Vice President JD Vance's assessment that the conflict was a major factor in Republicans' midterm ...",
+              "published_date": "2026-11-04T20:10:25+00:00",
+              "outlet": "Newsmax",
+              "image": ""
+            },
+            {
+              "news_id": "e3cc15f236f05df4be3ef7d8c354d290",
+              "url": "https://www.yahoo.com/news/politics/articles/rep-zinke-newsmax-iran-conflict-165306510.html",
+              "headline": "Rep. Zinke to Newsmax: Iran Conflict 'Not a War of Choice'",
+              "body": "Rep. Zinke to Newsmax: Iran Conflict 'Not a War of Choice'",
+              "published_date": "2026-11-10",
+              "outlet": "Newsmax · via Yahoo News",
+              "image": "https://media.zenfs.com/en/newsmax_809/3519997150678b078385c6d5f98cc874.jpg"
+            },
+            {
+              "news_id": "b42fd3beded7510bae03c5c6af84ee2f",
+              "url": "https://www.usnews.com/news/world/articles/2026-11-10/most-americans-want-new-democratic-congress-to-end-trumps-iran-war-reuters-ipsos-poll-finds",
+              "headline": "Most Americans Want New Democratic Congress to End Trump's Iran War, Reuters/Ipsos Poll Finds",
+              "body": "But many Americans appear concerned Democrats will use their new power to launch legal proceedings against Trump. Some 42% ...",
+              "published_date": "2026-11-10T20:10:25+00:00",
+              "outlet": "U.S. News & World Report",
+              "image": "https://www.bing.com/th?id=ONUT.xBQJm-z8de9LsV-G1dSmVA"
+            },
+            {
               "news_id": "bc7122f3a4105f0d8683ac9693571175",
               "url": "https://www.orlandosentinel.com/2026/11/09/rubio-trump-iran-war-midterms/",
               "headline": "Rubio says Trump’s war against Iran not ‘necessarily popular’ but needed to stop a nuclear threat",
@@ -36135,6 +36481,24 @@
               "published_date": "2026-11-09",
               "outlet": "Orlando Sentinel",
               "image": "https://www.bing.com/th?id=ONUT.h3X25R0WeVLAOBZxHa9j0g"
+            },
+            {
+              "news_id": "c94fbab0282158b8b67f70386d8f93d1",
+              "url": "https://thehill.com/policy/international/6210490-iran-us-war-talks-stalled/",
+              "headline": "Iran accuses US of ‘manufacturing fake news about imaginary talks’",
+              "body": "Iran’s secretary of the Supreme National Security Council on Monday accused the U.S. of “manufacturi...",
+              "published_date": "2026-11-10T16:10:25+00:00",
+              "outlet": "The Hill",
+              "image": "https://s.yimg.com/bo/235b67b2-9114-5efc-a711-deafbf167817_1794328147241.jpg"
+            },
+            {
+              "news_id": "27d95fbc743e56e7879ebefec14241a1",
+              "url": "https://www.aol.com/articles/economic-coercion-once-ousted-iran-133636000.html",
+              "headline": "Economic coercion once ousted Iran’s leader – but that was the 1950s; don’t expect a repeat today - AOL",
+              "body": "Naval Blockade.” It followed the unveiling of Task Force Iron Gate – the Trump administration’s latest plan to isolate the Iranian economy in a bid to coerce the government in Tehran to bend to ...",
+              "published_date": "2026-11-10",
+              "outlet": "AOL",
+              "image": ""
             },
             {
               "news_id": "98344953874059a7a84eaf253b8e436b",
@@ -36155,6 +36519,78 @@
               "image": "https://s.yimg.com/bo/8973e17f-85d7-5758-8ed7-3232c6275632_1794172845174.png.cf.jpg"
             },
             {
+              "news_id": "9994ae62c1035f3db0524d9d025663ae",
+              "url": "https://reason.com/2026/11/10/massie-is-giving-over-300-civilian-war-dead-a-voice-in-hegseths-impeachment/",
+              "headline": "Massie is giving over 300 civilian war dead a voice in Hegseth’s impeachment",
+              "body": "Massie's impeachment effort cites the deaths of more than 300 civilians in the Iran school bombing and U.S. strikes on suspected drug boats.",
+              "published_date": "2026-11-10",
+              "outlet": "Reason",
+              "image": "https://www.bing.com/th?id=ONUT.aH5oTgwl4n20eNGg4rYfSg"
+            },
+            {
+              "news_id": "652fca76e4ba5b52869cb8e45fe0ece9",
+              "url": "https://www.usatoday.com/story/news/politics/government/2026/11/10/trump-nominates-former-kansas-gov-jeff-colyer-as-ambassador-to-uae/92706796007/",
+              "headline": "Trump nominates Kansan Jeff Colyer as ambassador to UAE amid Iran war",
+              "body": "Donald Trump nominated former Kansas Gov. Jeff Colyer as ambassador to the United Arab Emirates, a Persian Gulf country ...",
+              "published_date": "2026-11-08T20:10:25+00:00",
+              "outlet": "USA TODAY",
+              "image": "https://www.bing.com/th?id=ONUT.qercZG3I_kRhfdHmF3YyBQ"
+            },
+            {
+              "news_id": "32f4271afe8451e0b3e9d7bc95a0dcb9",
+              "url": "https://www.msn.com/en-xl/asia/pakistan/global-fossil-fuel-emissions-project-slight-drop-in-2026-amid-iran-war-oil-shock-and-renewables-growthpublished-on-november-10-2026-102-pm/ar-AA2h7rba?ocid=BingNewsVerp",
+              "headline": "Global fossil fuel emissions project slight drop in 2026 amid Iran war oil shock and renewables growthPublished on: November 10, 2026 1:02 PM",
+              "body": "Pakistan, Nov. 10 -- Global fossil fuel emissions projected to fall slightly in 2026 due to renewable energy expansion and ...",
+              "published_date": "2026-11-10",
+              "outlet": "Daily Times on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.B8CoudkvhUXSHaMqg37u1w"
+            },
+            {
+              "news_id": "41906f7253be51678ffe27b6baef4dd9",
+              "url": "https://sports.yahoo.com/articles/f1-2026-calendar-imola-gp-145041804.html",
+              "headline": "F1 2026 calendar update: Imola GP off the table, no plan B if war escalates",
+              "body": "F1 has told Imola its services won’t be required in December, amid uncertainty in the Middle East",
+              "published_date": "2026-11-10",
+              "outlet": "Yahoo Sports",
+              "image": "https://www.bing.com/th?id=ONUT.pBL6fcP8pght_8gpfv40qw"
+            },
+            {
+              "news_id": "fea6f08774855bd2b6c8f8ef15112b79",
+              "url": "https://www.theguardian.com/us-news/live/2026/nov/10/donald-trump-pete-hegseth-thomas-massie-republicans-iran-war-impeachment-midterms-latest-news-updates",
+              "headline": "Jim Jordan, Trump ally and Maga firebrand, to lead House Republicans as minority leader next year - live",
+              "body": "The hardline conservative from Ohio beat fellow congressman Steve Scalise by a vote of 106-73",
+              "published_date": "2026-11-10",
+              "outlet": "The Guardian",
+              "image": ""
+            },
+            {
+              "news_id": "3622ae1d19ef5f0cbfb7369a1f1acfc5",
+              "url": "https://sports.yahoo.com/articles/f1-going-ahead-qatar-abu-151229371.html",
+              "headline": "F1 Is Going Ahead With Qatar and Abu Dhabi Despite the Iran Conflict",
+              "body": "F1 has told Imola it won’t be needed as a backup, so the 2026 season will end as planned with the Qatar GP on Nov. 29 and the Abu Dhabi GP on Dec. 6. After months of keeping Imola ready…",
+              "published_date": "2026-11-10",
+              "outlet": "Yahoo Sports",
+              "image": "https://www.bing.com/th?id=ONUT.umflhbmhbYhrExb9qfgdYw"
+            },
+            {
+              "news_id": "c55554a3141955d38baca6dcf14774e1",
+              "url": "https://www.iranintl.com/en/202611109202",
+              "headline": "Iranian lawmaker says making concessions to US would be a miscalculation",
+              "body": "Miller criticized the interim memorandum of understanding reached in June, which was meant to open the way to nuclear talks ...",
+              "published_date": "2026-11-10",
+              "outlet": "Iran International",
+              "image": "https://www.bing.com/th?id=ONUT.2NbA0HmM4koAJWjlCgZWqA"
+            },
+            {
+              "news_id": "d85530be431152fbbbf2f9a178f78827",
+              "url": "https://sports.yahoo.com/articles/f1-plans-finish-season-middle-170747578.html",
+              "headline": "F1 Plans to Finish Season in Middle East Despite Ongoing War",
+              "body": "F1 canceled the Saudi GP earlier this year.",
+              "published_date": "2026-11-10",
+              "outlet": "Yahoo Sports",
+              "image": ""
+            },
+            {
               "news_id": "5d3df35d0df25e289d102aca2d102b58",
               "url": "https://www.msn.com/en-us/news/other/military-strikes-a-peace-agreement-trump-opts-for-status-quo-in-iran/ar-AA2h6aO9?ocid=BingNewsVerp",
               "headline": "Military strikes? A peace agreement? Trump opts for status quo in Iran",
@@ -36173,6 +36609,24 @@
               "image": "https://s.yimg.com/bo/7c03b038-ecdf-5ecc-9629-16c59a7faa12_1794274897664.jpg"
             },
             {
+              "news_id": "151d1a4dd5ec51e88a6a23daa5996983",
+              "url": "https://sports.yahoo.com/articles/f1-confirms-qatar-abu-dhabi-175147419.html",
+              "headline": "F1 Confirms Qatar and Abu Dhabi Finale for 2026",
+              "body": "The championship has ended preparations for Imola as a backup venue but will continue monitoring the situation in the Middle East.",
+              "published_date": "2026-11-10",
+              "outlet": "Yahoo Sports",
+              "image": "https://www.bing.com/th?id=ONUT.dxU_zpda9ZsrbyWR3S-bXg"
+            },
+            {
+              "news_id": "d6b204d6088d5d13942bfa9242c6039d",
+              "url": "https://sports.yahoo.com/articles/track-told-halt-f1-preparations-143200184.html",
+              "headline": "Track told to halt F1 preparations as Gulf double-header edges closer",
+              "body": "Formula 1 is moving to stand down Imola as a replacement venue for the season finale, underlining its intention to race in Qatar and Abu Dhabi despite the ongoing conflict in the Middle East. GPblog understands that Formula One Management has decided in principle to halt preparations at the Italian circuit, with organisers expected to receive confirmation this week, potentially as early as today.",
+              "published_date": "2026-11-10",
+              "outlet": "Yahoo Sports",
+              "image": ""
+            },
+            {
               "news_id": "5aebc741cb145582939004fa1645cd5c",
               "url": "https://www.sacbee.com/news/nation-world/world/article317992109.html",
               "headline": "Trump says Qatar, Saudi prefer peace in Iran conflict",
@@ -36180,6 +36634,24 @@
               "published_date": "2026-11-10T07:52:37+00:00",
               "outlet": "The Sacramento Bee",
               "image": "https://www.bing.com/th?id=ONUT.i0oiGd2LxJmCUgG65p6uPQ"
+            },
+            {
+              "news_id": "3390d43dfc7154c192600047bdd0cd1e",
+              "url": "https://www.yahoo.com/news/science/articles/donald-trump-iran-war-helps-102559052.html",
+              "headline": "Donald Trump’s Iran war helps cut carbon emissions",
+              "body": "Donald Trump’s war against Iran has achieved what decades of climate talks have seemingly failed to – a reduction in global carbon dioxide emissions.",
+              "published_date": "2026-11-10",
+              "outlet": "The Telegraph · via Yahoo News",
+              "image": "https://media.zenfs.com/en/the_telegraph_258/8d45d01be9417d133febab48f189b098.jpg"
+            },
+            {
+              "news_id": "0d9f20f7c3ad507bb1ff400637556ca9",
+              "url": "https://sports.yahoo.com/articles/f1-poised-final-call-qatar-111246528.html",
+              "headline": "F1 makes final call on Qatar and Abu Dhabi amid Middle East situation",
+              "body": "F1 did have Imola in Italy as a backup for the season finale, in case the situation in the Middle East escalated once again",
+              "published_date": "2026-11-10",
+              "outlet": "Yahoo Sports",
+              "image": "https://www.bing.com/th?id=ONUT.j1zZn58ZoMt4plw2Ut1jPg"
             }
           ]
         }
@@ -47940,13 +48412,13 @@
       "incident_id": "20260730-XX-DR",
       "tree_id": "302c45c1ecce4004b90f6e71446ff165",
       "canonical_name": "Drought 2026-07-30",
-      "summary": "In central North Carolina, a ninth-generation farmer reports hay production has fallen to about one-third of normal due to prolonged drought. Meanwhile, the latest Drought Monitor shows slight improvement in drought conditions across Mississippi counties.",
+      "summary": "Satellite images reveal Lake Dillon in Colorado shrinking due to persistent drought, while record rainfall in the U.S. Southwest has brought rare relief, raising Lake Powell by 20 feet. In Papua New Guinea, the ecological toll of an El Niño drought is emerging years later as tree mortality increases. The ongoing El Niño is described as a polycrisis causing simultaneous drought, heat, and floods with impacts on health and energy systems.",
       "country": "",
       "iso2": "XX",
       "lat": null,
       "lon": null,
       "country_group": "C",
-      "region": "Unknown",
+      "region": "Oceania",
       "incident_type": "Drought",
       "incident_category": "Natural",
       "is_disease": false,
@@ -47959,7 +48431,7 @@
       "disease_name": null,
       "event_date": "2026-07-30",
       "first_reported_date": "2026-07-30",
-      "last_updated_date": "2026-11-09",
+      "last_updated_date": "2026-11-10",
       "days_since_event": 103,
       "source_count": 1,
       "should_report": true,
@@ -47970,7 +48442,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 687
+        "news": 690
       },
       "source_links": [
         {
@@ -50738,9 +51210,21 @@
         {
           "headline": "El Niño 2026-27 as a polycrisis: What happens when health and energy systems fail simultaneously?",
           "published_date": "2026-11-09"
+        },
+        {
+          "headline": "El Niño’s hidden toll on trees emerges years later in Papua New Guinea rainforest",
+          "published_date": "2026-11-10"
+        },
+        {
+          "headline": "Stunning satellite images reveal Colorado lake dramatically shrinking amid severe drought",
+          "published_date": "2026-11-10"
+        },
+        {
+          "headline": "Without Action, Climate Change Could Push Women Further Behind by 2050, CGIAR Warns",
+          "published_date": "2026-11-10"
         }
       ],
-      "news_total": 687,
+      "news_total": 690,
       "logs": [
         {
           "log_date": "2026-07-31",
@@ -51028,39 +51512,6 @@
           ]
         },
         {
-          "log_date": "2026-10-30",
-          "summary": "In Karnataka, India, a cloud-seeding experiment faces scrutiny as drought deepens and the monsoon season ends. The latest U.S. Drought Monitor update and Halloween storm outlook were released, indicating current drought conditions and possible relief. Additionally, conservation crews in southwestern Wyoming are building beaver-dam mimics to help keep streams flowing during dry periods.",
-          "news": [
-            {
-              "news_id": "fd82325f74e355288108ac3c8a6927a6",
-              "url": "https://www.msn.com/en-us/weather/meteorology/latest-on-the-newly-released-drought-monitor-and-outlook-for-halloween-storms-full-weather-5pm-10-29-2026/vi-AA2gmK0d?ocid=BingNewsVerp",
-              "headline": "Latest on the newly released drought monitor and outlook for Halloween storms (full weather 5pm/10.29.2026)",
-              "body": "Latest on the newly released Drought Monitor and outlook for Halloween storms (FULL WEATHER 5PM/10.29.2026) ...",
-              "published_date": "2026-10-30",
-              "outlet": "WGNO-TV New Orleans on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.u802ocVACDaBCCDSU8khIg"
-            },
-            {
-              "news_id": "43dcb8c6d81e5f9995e09eb45a34916f",
-              "url": "https://www.msn.com/en-in/weather/meteorology/karnataka-s-cloud-seeding-gamble-faces-questions-as-drought-deepens-and-monsoon-winds-down/ar-AA2goGxQ?ocid=BingNewsVerp",
-              "headline": "Karnataka’s cloud seeding gamble faces questions as drought deepens and monsoon winds down",
-              "body": "A costly weather-modification experiment is underway in drought-hit Karnataka, but scientists remain divided over whether ...",
-              "published_date": "2026-10-30",
-              "outlet": "Asianet Newsable on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.YGzUeOkmtKxgLKcb-c436w"
-            },
-            {
-              "news_id": "986f7cd947f85d2684d1ddcc4db60202",
-              "url": "https://www.msn.com/en-us/science/ecology/did-you-know-beavers-can-help-fight-drought/vi-AA2gr2oy?ocid=BingNewsVerp",
-              "headline": "Did you know beavers can help fight drought?",
-              "body": "In southwestern Wyoming, conservation crews are copying beavers' dam-building skills to help keep streams flowing during dry ...",
-              "published_date": "2026-10-30",
-              "outlet": "AccuWeather on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.9AIJ56gVyFeF3VAjArISCw"
-            }
-          ]
-        },
-        {
           "log_date": "2026-11-06",
           "summary": "New drought developments include the expansion of moderate drought to cover nearly a third of Vermont, while central North Carolina farmers are waiting for rain to plant wheat. In the Philippines, officials warn that several provinces will be hit by drought this month due to a very strong El Niño. Utah has seen above-normal rain but remains over 90% in drought, and a South Carolina crop report notes that peaches and blackberries thrived while cucumbers, squash, and sweet corn struggled.",
           "news": [
@@ -51161,9 +51612,60 @@
               "image": "https://s.yimg.com/bo/8aa718c5-418e-505e-b672-e382dc20b5fd_1793532086514.png.cf.jpg"
             }
           ]
+        },
+        {
+          "log_date": "2026-11-10",
+          "summary": "Satellite images reveal Lake Dillon in Colorado shrinking due to persistent drought, while record rainfall in the U.S. Southwest has brought rare relief, raising Lake Powell by 20 feet. In Papua New Guinea, the ecological toll of an El Niño drought is emerging years later as tree mortality increases. The ongoing El Niño is described as a polycrisis causing simultaneous drought, heat, and floods with impacts on health and energy systems.",
+          "news": [
+            {
+              "news_id": "2473c5fffbd358fdb1a7d667f22ad52f",
+              "url": "https://www.msn.com/en-us/weather/general/el-niño-s-hidden-toll-on-trees-emerges-years-later-in-papua-new-guinea-rainforest/ar-AA2h6uwT?ocid=BingNewsVerp",
+              "headline": "El Niño’s hidden toll on trees emerges years later in Papua New Guinea rainforest",
+              "body": "By Matthew Burkhart When the El Niño drought ended in a remote Papua New Guinea rainforest, the trees did not immediately ...",
+              "published_date": "2026-11-10",
+              "outlet": "Mongabay News on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.-u6rNLO3-bYfqnS_gALDSg"
+            },
+            {
+              "news_id": "0579a1c5bc9f52218d606f273992c33a",
+              "url": "https://www.msn.com/en-ca/news/other/el-niño-2026-27-as-a-polycrisis-what-happens-when-health-and-energy-systems-fail-simultaneously/ar-AA2h0Xp0?ocid=BingNewsVerp",
+              "headline": "El Niño 2026-27 as a polycrisis: What happens when health and energy systems fail simultaneously?",
+              "body": "Open any news feed from the past few months, and the disasters arrive in a stream: smoke reaching dangerous levels throughout Canada and flash floods in Ottawa, Montréal and Toronto; heat and drought ...",
+              "published_date": "2026-11-09",
+              "outlet": "The Conversation on MSN",
+              "image": ""
+            },
+            {
+              "news_id": "4c265c629ae8534eb9b1f45ddd89e3e8",
+              "url": "https://www.msn.com/en-us/weather/climate-change/stunning-satellite-images-reveal-colorado-lake-dramatically-shrinking-amid-severe-drought/ar-AA2h5lxr?ocid=BingNewsVerp",
+              "headline": "Stunning satellite images reveal Colorado lake dramatically shrinking amid severe drought",
+              "body": "Lake Dillon, a major water source for Colorado's Front Range, is showing the effects of persistent drought conditions, with ...",
+              "published_date": "2026-11-10",
+              "outlet": "FOX Weather on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.kP7Fh2mOpJRiGvhVYCQ-ng"
+            },
+            {
+              "news_id": "d78c82885d625112a01e31a7418b4527",
+              "url": "https://www.timesunion.com/news/article/floods-bring-rare-relief-to-us-southwest-22519368.php",
+              "headline": "Floods bring rare relief to US Southwest reservoirs as Lake Powell rises 20 feet",
+              "body": "Record rainfall in the U.S. Southwest is providing rare relief to the region's depleted reservoirs....",
+              "published_date": "2026-11-08T14:16:37+00:00",
+              "outlet": "Albany Times Union",
+              "image": "https://s.yimg.com/bo/f04eeb57-e528-587b-9520-4209f87b78d7_1794147824817.jpg"
+            },
+            {
+              "news_id": "dd0e0852f10550f0801e3419cf938206",
+              "url": "https://www.globalissues.org/news/2026/11/10/44554",
+              "headline": "Without Action, Climate Change Could Push Women Further Behind by 2050, CGIAR Warns",
+              "body": "BULAWAYO, Zimbabwe &, November 10 (IPS) - Fetching water was once a back-breaking daily reality – one that Nomuhle SibandaMpofu will never forget.",
+              "published_date": "2026-11-10",
+              "outlet": "Global Issues",
+              "image": ""
+            }
+          ]
         }
       ],
-      "logs_total": 66
+      "logs_total": 67
     },
     {
       "incident_id": "20260809-IN-FL",
@@ -51946,7 +52448,7 @@
       "disease_name": null,
       "event_date": "2026-08-26",
       "first_reported_date": "2026-08-26",
-      "last_updated_date": "2026-11-09",
+      "last_updated_date": "2026-11-10",
       "days_since_event": 76,
       "source_count": 3,
       "should_report": true,
@@ -51957,7 +52459,7 @@
         "gdacs": 1,
         "ercc": 2,
         "healthmap": 0,
-        "news": 1201
+        "news": 1203
       },
       "source_links": [
         {
@@ -56791,11 +57293,19 @@
           "published_date": "2026-11-08"
         },
         {
+          "headline": "UN climate summit kicks off in Turkey after a disastrous year of extreme weather",
+          "published_date": "2026-11-09"
+        },
+        {
           "headline": "Delayed death verification leaves Bhotekoshi flood-hit families without relief",
           "published_date": "2026-11-09"
+        },
+        {
+          "headline": "Nepal seeks mountain-specific measures to address climate change risks",
+          "published_date": "2026-11-10T20:13:18+00:00"
         }
       ],
-      "news_total": 1201,
+      "news_total": 1203,
       "logs": [
         {
           "log_date": "2026-08-28",
@@ -57431,7 +57941,7 @@
       "incident_id": "20260903-PS-CF",
       "tree_id": "e650e542b08c4c03badd08f734e3234d",
       "canonical_name": "Conflict Palestine 2026-09-03",
-      "summary": "A UN-appointed commission chairperson concluded that Israel is systematically adopting strategies to prevent Palestinians from staying in Gaza and maximize occupation of Palestinian territories. Meanwhile, Muslim American electoral victories in the U.S. midterms are viewed by Hamas as evidence that candidates can succeed while challenging Washington’s policies on Palestine. The “Mamdani factor” is also discussed as a potential influence on U.S. policy toward Israel and Iran.",
+      "summary": "Israeli forces killed a 14-year-old Palestinian boy in the West Bank and withheld his body, while an IDF strike on a tent near a school in eastern Gaza City killed one and wounded several. The UN reports over 2,060 settler attacks across the occupied West Bank this year, and Formula 1 champion Lewis Hamilton visited Egypt to support Gaza humanitarian aid facilities. Meanwhile, more than half a million students in Gaza have returned to school, with a partnership helping them pursue college degrees after years of war and displacement.",
       "country": "Palestine",
       "iso2": "PS",
       "lat": 31.9,
@@ -57461,7 +57971,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 820
+        "news": 827
       },
       "source_links": [
         {
@@ -60615,6 +61125,10 @@
           "published_date": "2026-11-05"
         },
         {
+          "headline": "Reports: One killed, several wounded in strike on tent in eastern Gaza City",
+          "published_date": "2026-11-05T20:13:43+00:00"
+        },
+        {
           "headline": "UK’s Birmingham council backs motion to review Israel ties",
           "published_date": "2026-11-06"
         },
@@ -60665,6 +61179,10 @@
         {
           "headline": "Israeli occupation forces and settlers commit 760 environmental violations in West Bank in 2026: Report",
           "published_date": "2026-11-06T19:53:19+00:00"
+        },
+        {
+          "headline": "The unjustifiable human cost of war as bombs destroy homes, water and power in...",
+          "published_date": "2026-11-06T20:13:44+00:00"
         },
         {
           "headline": "Stephen Miller: What Trump’s new chief of staff means for MENA",
@@ -60747,6 +61265,10 @@
           "published_date": "2026-11-09"
         },
         {
+          "headline": "Gaza students work toward college degrees after years of war and displacement",
+          "published_date": "2026-11-09"
+        },
+        {
           "headline": "Israel Adopting Strategies To Prevent Palestinians From Staying In Gaza And Maximise Occupation of Palestinian Territories",
           "published_date": "2026-11-09"
         },
@@ -60759,11 +61281,27 @@
           "published_date": "2026-11-09T22:57:01+00:00"
         },
         {
+          "headline": "Diplomatic challenges from US, Europe, Iran, await Israel's next prime minister",
+          "published_date": "2026-11-10"
+        },
+        {
+          "headline": "Lewis Hamilton arrives in Egypt to visit Gaza humanitarian aid facilities - Newsday",
+          "published_date": "2026-11-10"
+        },
+        {
           "headline": "Israeli forces kill 14-year-old Palestinian boy in occupied West Bank",
           "published_date": "2026-11-10"
+        },
+        {
+          "headline": "Israel kills 14-year-old Palestinian boy in West Bank, wounds two others in Gaza",
+          "published_date": "2026-11-10"
+        },
+        {
+          "headline": "When Israel Stands Alone: The Warnings of Jewish History",
+          "published_date": "2026-11-10T11:13:41+00:00"
         }
       ],
-      "news_total": 820,
+      "news_total": 827,
       "logs": [
         {
           "log_date": "2026-09-04",
@@ -60970,129 +61508,6 @@
           ]
         },
         {
-          "log_date": "2026-11-07",
-          "summary": "New reports indicate Gaza is buried under an estimated 68 million tonnes of rubble from Israeli strikes. Birmingham City Council passed a motion to review its financial ties with Israel, and Providence, Rhode Island voted to divest from companies linked to the conflict. Israel's Arab-led parties are now key in post-election coalition talks, while newly elected US lawmakers challenged the Israeli ambassador over arrests. Rapper Macklemore's \"Free Palestine\" tour continues to face venue denials.\nThe Democratic Party's victory in the US midterm elections signals a potential shift in US support for Israel, which could impact the ongoing conflict. Brazil is debating a proposal to designate 17 groups as terrorist, raising concerns about its impact on solidarity with Palestine. UNICEF released a report urging the protection of water and sanitation infrastructure in conflicts, highlighting the humanitarian challenges in areas like Gaza.",
-          "news": [
-            {
-              "news_id": "1ecee18de38c5bfcbc61b10b72972d8f",
-              "url": "https://www.msn.com/en-in/news/other/israeli-strikes-leave-gaza-buried-under-68m-tonnes-of-rubble/ar-AA2gUhDL?ocid=BingNewsVerp",
-              "headline": "Israeli strikes leave Gaza buried under 68M tonnes of rubble",
-              "body": "Gaza is facing an estimated 61 million to 68 million tonnes of rubble from buildings destroyed during Israel’s war, with the debris containing hazardous waste, asbestos and remnants of explosives, ...",
-              "published_date": "2026-11-07",
-              "outlet": "Newspoint on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "c1b3a1ce3fc7593397134588279a10a2",
-              "url": "https://www.msn.com/en-us/news/other/sensitive-man-cries-himself-to-sleep-because-nyt-wont-call-israel-hamas-war-a-genocide-wants-50-million-lawsuit/ar-AA2gV5z4?ocid=BingNewsVerp",
-              "headline": "Sensitive man ‘cries himself to sleep’ because NYT won’t call Israel-Hamas war a ‘genocide,’ wants $50 million: lawsuit",
-              "body": "A very sensitive Manhattan man is suing the New York Times for $50 million because it won’t call the Israel-Hamas war ...",
-              "published_date": "2026-11-07",
-              "outlet": "New York Post on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.LaptWthr1DHXTyxdZmLAVA"
-            },
-            {
-              "news_id": "e97ae8621fb15ecf8672fe8ceb717d1f",
-              "url": "https://www.newarab.com/news/uks-birmingham-council-backs-motion-review-israel-ties",
-              "headline": "UK’s Birmingham council backs motion to review Israel ties",
-              "body": "Birmingham City Council passed a motion to review its financial ties, banking arrangements, and investments linked to Israel.",
-              "published_date": "2026-11-06",
-              "outlet": "The New Arab",
-              "image": "https://www.bing.com/th?id=ONUT.krxc3ZavwHu7xtNVOe3oRQ"
-            },
-            {
-              "news_id": "6061fd864cf55bca9f373634c1056552",
-              "url": "https://www.yahoo.com/news/politics/articles/anti-israel-advert-threatens-derail-171628882.html",
-              "headline": "How anti-Israel advert threatens to derail Democrats’ midterms",
-              "body": "“Honey, you’re going to have to put those eggs back,” a woman tells her husband in a Michigan supermarket.",
-              "published_date": "2026-11-02",
-              "outlet": "The Telegraph · via Yahoo News",
-              "image": "https://media.zenfs.com/en/the_telegraph_258/917f43c74476f2ae6bfa6bba3a6acd8f.jpg"
-            },
-            {
-              "news_id": "0f1ddf6641b351faa993d3d01def7683",
-              "url": "https://www.aljazeera.com/video/newsfeed/2026/11/6/us-city-votes-to-divest-from-israel",
-              "headline": "US city votes to divest from Israel",
-              "body": "Voters in Providence, Rhode Island called for for the city to stop its investments that support genocide.",
-              "published_date": "2026-11-06",
-              "outlet": "Al Jazeera",
-              "image": ""
-            },
-            {
-              "news_id": "deac6a19d6b15e1e86c12bd432398110",
-              "url": "https://www.philstar.com/world/2026/11/07/2568527/israel-faces-new-era-sinking-us-support-after-election",
-              "headline": "Israel faces new era of sinking US support after election",
-              "body": "Prime Minister Benjamin Netanyahu's brash campaign posters are still up on Israeli public buses -- images of him, US President Donald Trump and soaring warjets that laud the two leaders attacking Iran together.",
-              "published_date": "2026-11-07",
-              "outlet": "Philstar.com",
-              "image": "https://www.bing.com/th?id=ONUT.HyQn_NPgjx-5GKHhm-2hEg"
-            },
-            {
-              "news_id": "d67cfa711cb95aaea9eb10b9ec3c9ad9",
-              "url": "https://8am.media/eng/democrats-midterm-win-trump-middle-east/",
-              "headline": "Democrats’ Midterm Win Sounds Alarm for Trump, Opens New Chance to Contain Middle East War | Hasht-e Subh",
-              "body": "The Democratic Party’s victory in the US midterm elections, and its winning of a majority in both chambers of Congress, is undoubtedly one of the most important political developments in Washington. This victory should not be seen merely as a transfer of power between America’s two political parties. It can also be read as a […]",
-              "published_date": "2026-11-07",
-              "outlet": "Hasht-e Subh Daily",
-              "image": "https://www.bing.com/th?id=ONUT.gb0_oc3O6liMmpYgqiryDQ"
-            },
-            {
-              "news_id": "4401f5e3dded5188b3423d674608e48b",
-              "url": "https://www.politico.com/newsletters/national-security-daily/2026/11/06/democrats-face-oversight-pileup-01154647",
-              "headline": "Democrats face oversight pileup",
-              "body": "TAKING AIM: Reps.-elect BRAD LANDER (D-N.Y.), DANIEL BISS (D-Ill.) and SCOTT WIENER (D-Calif.) took an early shot at Israeli Ambassador to the U.S. YECHIEL LEITER today over the arrest of the ...",
-              "published_date": "2026-11-06T00:00:00+00:00",
-              "outlet": "Politico",
-              "image": ""
-            },
-            {
-              "news_id": "d5ae6cd5ac4859c49354b27f2f0c257a",
-              "url": "https://english.palinfo.com/reports/2026/11/07/373265/",
-              "headline": "Brazil weighs terrorist designation of 17 groups amid concerns over solidarity with Palestine",
-              "body": "Brazil is facing a sensitive legislative debate over a proposal to designate 17 political and armed organizations associated with several Arab countries as terrorist groups, a move that could have far-reaching political, diplomatic and human rights implications.",
-              "published_date": "2026-11-07",
-              "outlet": "The Palestinian Information Center",
-              "image": "https://www.bing.com/th?id=ONUT.rMJKFMdIlvzTgjBk6ZKFSA"
-            },
-            {
-              "news_id": "e12f5af121345bf5a3b4eda818180ef8",
-              "url": "https://www.forbes.com/sites/unicefusa/2026/11/07/water-under-fire-unicefs-urgent-call-to-protect-wash-in-conflict/",
-              "headline": "Water Under Fire: UNICEF’s Urgent Call to Protect WASH In Conflict",
-              "body": "A new report highlights the devastating impacts of attacks that harm water, sanitation and hygiene...",
-              "published_date": "2026-11-07T15:08:50+00:00",
-              "outlet": "Forbes",
-              "image": "https://s.yimg.com/bo/69356f06-746c-5984-97c1-883ab380be41_1794072059064.jpg"
-            },
-            {
-              "news_id": "e8dad93116695d8e9f4d7ace23939b2e",
-              "url": "https://www.cavalierdaily.com/article/2026/11/uva-jewish-studies-miller-center-co-host-israel-palestine-after-the-2026-elections",
-              "headline": "U.Va. Jewish Studies, Miller Center co-host ‘Israel-Palestine after the 2026 elections’",
-              "body": "The conversation focused on internal political divisions in Israel and Palestine, the challenges of forming stable governments and the prospects of achieving a two-state solution.",
-              "published_date": "2026-11-06",
-              "outlet": "The Cavalier Daily",
-              "image": "https://s.yimg.com/bo/19361bc1-2018-5d61-a9c5-9cca0f14ef5f_1794013650753.jpg"
-            },
-            {
-              "news_id": "0f3ac7214be95ef386fb8107d0fd0c32",
-              "url": "https://komonews.com/news/local/macklemore-says-his-tour-was-denied-date-at-climate-pledge-arena-rapper-musician-controversy-ed-sheeran-palestine-israel-hamas-us-concert-venues",
-              "headline": "Seattle rapper Macklemore says his tour was denied date at Climate Pledge Arena",
-              "body": "Rapper Macklemore said his \"Free Palestine\" tour has been denied dates at nine U.S. venues, including Seattle's Climate Pledge Arena.",
-              "published_date": "2026-11-06",
-              "outlet": "KOMO",
-              "image": ""
-            },
-            {
-              "news_id": "17ce06ccaa7e5ebdbb2183d55d73f944",
-              "url": "https://www.npr.org/2026/11/06/g-s1-152138/israel-election-palestinian-arab-parties",
-              "headline": "Israel's Arab-led parties in spotlight after inconclusive election",
-              "body": "Israel's center-right opposition has a chance to unseat Netanyahu — but backing of Arab-led parties will be key.",
-              "published_date": "2026-11-06",
-              "outlet": "NPR",
-              "image": "https://www.bing.com/th?id=ONUT.eppW29vcr4O5jADZGmzJvw"
-            }
-          ]
-        },
-        {
           "log_date": "2026-11-08",
           "summary": "Trump appointed Stephen Miller, a strong Israel supporter and Iran hawk, as his new chief of staff. Gadi Eisenkot, the former Israeli army chief, emerged as the frontrunner to replace Prime Minister Netanyahu, potentially with support from Arab parties. A UN investigator called for Netanyahu to answer before the ICC, while AIPAC-backed candidates saw mixed results in the US midterm elections.\nGadi Eisenkot, Netanyahu's top rival, has been formally tasked with forming a new Israeli government, a development that could reshape the political landscape. Separately, an Arab journalist was released from police detention, and protests over the conflict continued in the US alongside a tribute in Australia to Gaza's children.",
           "news": [
@@ -61265,9 +61680,96 @@
               "image": "https://www.bing.com/th?id=ONUT.fK7i2QMVQ5EAUnJZ9O1oCw"
             }
           ]
+        },
+        {
+          "log_date": "2026-11-10",
+          "summary": "Israeli forces killed a 14-year-old Palestinian boy in the West Bank and withheld his body, while an IDF strike on a tent near a school in eastern Gaza City killed one and wounded several. The UN reports over 2,060 settler attacks across the occupied West Bank this year, and Formula 1 champion Lewis Hamilton visited Egypt to support Gaza humanitarian aid facilities. Meanwhile, more than half a million students in Gaza have returned to school, with a partnership helping them pursue college degrees after years of war and displacement.",
+          "news": [
+            {
+              "news_id": "883cd2e769925d9590d0940d82db8b17",
+              "url": "https://www.newsweek.com/i-was-the-un-torture-investigator-in-gaza-politics-decides-who-counts-12687590",
+              "headline": "I was the UN torture investigator; in Gaza, politics decides who counts",
+              "body": "Sexual violence on October 7, 2023, and the abuse of Palestinian detainees deserve the same scrutiny.",
+              "published_date": "2026-11-09",
+              "outlet": "Newsweek",
+              "image": "https://www.bing.com/th?id=ONUT.uWxJOg9SJ7mBDkPmT2LbUQ"
+            },
+            {
+              "news_id": "cda8c3bd0b9b551289d76d78abdeb1f6",
+              "url": "https://www.msn.com/en-ca/news/other/diplomatic-challenges-from-us-europe-iran-await-israel-s-next-prime-minister/ar-AA2h7f5r?ocid=BingNewsVerp",
+              "headline": "Diplomatic challenges from US, Europe, Iran, await Israel's next prime minister",
+              "body": "Ultimately, Israel's next prime minister will have to choose between interests that cannot always be reconciled.",
+              "published_date": "2026-11-10",
+              "outlet": "The Jerusalem Post on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.afuqE2aiM1r0-1dPGZAJVw"
+            },
+            {
+              "news_id": "af0b08b4893c5c9db89b38dd8b81ae78",
+              "url": "https://www.cleveland.com/letters/2026/11/time-to-end-the-attacks-on-civilians-in-global-conflict-zones.html",
+              "headline": "The unjustifiable human cost of war as bombs destroy homes, water and power in...",
+              "body": "Bombing homes and the places that supply water, electricity and fuel to heat homes does not further ...",
+              "published_date": "2026-11-06T20:13:44+00:00",
+              "outlet": "The Cleveland Plain Dealer",
+              "image": "https://s.yimg.com/bo/2e04c4cc-49f1-5125-81f4-9577d9ff88a3_1794218423454.jpg"
+            },
+            {
+              "news_id": "1f57085e77e153c186465a5d404c2fd7",
+              "url": "https://www.newsday.com/news/nation/gaza-lewis-hamilton-aid-ceasefire-p05043",
+              "headline": "Lewis Hamilton arrives in Egypt to visit Gaza humanitarian aid facilities - Newsday",
+              "body": "Lewis Hamilton, the seven-time Formula 1 World Champion, has visited Egypt's Rafah to support humanitarian aid efforts for Gaza.",
+              "published_date": "2026-11-10",
+              "outlet": "Newsday",
+              "image": "https://s.yimg.com/bo/ec144279-95f9-5f6f-83e8-37a57a80424c_1794324634423.jpg"
+            },
+            {
+              "news_id": "8a97df72ccdf5f80a6c773d1916a6257",
+              "url": "https://www.yahoo.com/news/world/articles/israeli-forces-kill-14-old-052357115.html",
+              "headline": "Israeli forces kill 14-year-old Palestinian boy in occupied West Bank",
+              "body": "Israel’s military says its soldiers opened fire to prevent Palestinians from throwing stones at vehicles in Burqa.",
+              "published_date": "2026-11-10",
+              "outlet": "Al Jazeera · via Yahoo News",
+              "image": "https://media.zenfs.com/en/al_jazeera_289/99b350e419986859f9a5709da3c9f75e.jpg"
+            },
+            {
+              "news_id": "fdf5dabb838a56ab8c1e8fcdaa804e9f",
+              "url": "https://www.pbs.org/newshour/show/gaza-students-work-toward-college-degrees-after-years-of-war-and-displacement",
+              "headline": "Gaza students work toward college degrees after years of war and displacement",
+              "body": "In Gaza, more than half a million students are back in school after three years. The picture has been equally bleak for post-secondary education, which has been virtually non-existent since the start of the war in Gaza. Special correspondent Fred de Sam Lazaro reports on an unusual partnership trying to fill part of the void.",
+              "published_date": "2026-11-09",
+              "outlet": "Public Broadcasting Service (PBS)",
+              "image": ""
+            },
+            {
+              "news_id": "b8db9d721659518fb5dd7f17f0f537d3",
+              "url": "https://www.middleeasteye.net/news/israel-kills-14-year-old-palestinian-boy-west-bank-wounds-two-gaza",
+              "headline": "Israel kills 14-year-old Palestinian boy in West Bank, wounds two others in Gaza",
+              "body": "Palestinian officials said Israeli forces withheld the boy's body as the UN reported more than 2,060 settler attacks across the occupied West Bank so far this year",
+              "published_date": "2026-11-10",
+              "outlet": "Middle East Eye",
+              "image": "https://www.bing.com/th?id=ONUT.X2qZZd4co526HbMUirN3JA"
+            },
+            {
+              "news_id": "014af8b23e345262b508bdd108eca265",
+              "url": "https://blogs.timesofisrael.com/when-israel-stands-alone-the-warnings-of-jewish-history/",
+              "headline": "When Israel Stands Alone: The Warnings of Jewish History",
+              "body": "The opinions, facts and any media content in them are presented solely by the authors, and neither The Times of Israel nor ...",
+              "published_date": "2026-11-10T11:13:41+00:00",
+              "outlet": "The Blogs | The Times of Israel",
+              "image": "https://www.bing.com/th?id=ONUT.UeJU3COoHIL94jGk6WCWCA"
+            },
+            {
+              "news_id": "e2840258acbc53d0a666d550657704ff",
+              "url": "https://www.timesofisrael.com/liveblog_entry/reports-one-killed-several-wounded-in-strike-on-tent-in-eastern-gaza-city/",
+              "headline": "Reports: One killed, several wounded in strike on tent in eastern Gaza City",
+              "body": "Palestinian media outlets report that one person was killed and several have been wounded in an IDF strike on a tent near a school in eastern Gaza City. The IDF has yet to comment.",
+              "published_date": "2026-11-05T20:13:43+00:00",
+              "outlet": "The Times of Israel",
+              "image": ""
+            }
+          ]
         }
       ],
-      "logs_total": 57
+      "logs_total": 58
     },
     {
       "incident_id": "20261008-XX-FL",
@@ -65852,7 +66354,7 @@
       "disease_name": null,
       "event_date": "2026-10-11",
       "first_reported_date": "2026-10-11",
-      "last_updated_date": "2026-11-09",
+      "last_updated_date": "2026-11-10",
       "days_since_event": 30,
       "source_count": 2,
       "should_report": true,
@@ -65863,7 +66365,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 11
+        "news": 12
       },
       "source_links": [
         {
@@ -65933,9 +66435,13 @@
         {
           "headline": "Magnitude 6.4 earthquake jolts Solomon Islands",
           "published_date": "2026-11-09T06:59:34+00:00"
+        },
+        {
+          "headline": "A magnitude 6.4 earthquake struck near Lata in the Solomon Islands",
+          "published_date": "2026-11-10"
         }
       ],
-      "news_total": 11,
+      "news_total": 12,
       "logs": [
         {
           "log_date": "2026-11-09",
@@ -68320,7 +68826,7 @@
       "incident_id": "20261022-XX-CF",
       "tree_id": "3461c9a3cac24e1c8d37ad2857791e60",
       "canonical_name": "Conflict 2026-10-22",
-      "summary": "Trump met Qatar's prime minister at the White House to discuss ending the Iran war, but Secretary of State Rubio warned negotiations are far from a breakthrough. Houthi rebels reported an airstrike near Sanaa that killed at least 44 people, mostly women and children. Additionally, container shipping rates from Asia to the U.S. West Coast have surged 343% since the conflict began, while oil prices fell to their lowest since August on hopes of a resolution.",
+      "summary": "Trump met Qatar's prime minister at the White House to discuss ending the Iran war, but Secretary of State Rubio warned negotiations are far from a breakthrough. Houthi rebels reported an airstrike near Sanaa that killed at least 44 people, mostly women and children. Additionally, container shipping rates from Asia to the U.S. West Coast have surged 343% since the conflict began, while oil prices fell to their lowest since August on hopes of a resolution.\nDefense Secretary Pete Hegseth continued to defend the Iran war as impeachment articles head toward a possible House vote. Additionally, global fossil fuel emissions are on track to fall slightly in 2026 because of the conflict's impact on oil and gas prices.",
       "country": "",
       "iso2": "XX",
       "lat": null,
@@ -68350,7 +68856,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 333
+        "news": 337
       },
       "source_links": [
         {
@@ -69680,7 +70186,23 @@
           "published_date": "2026-11-10"
         },
         {
+          "headline": "Pete Hegseth Impeachment Fight: Iran War Claims vs. Reality",
+          "published_date": "2026-11-10"
+        },
+        {
           "headline": "Envoy Jared Kushner says Trump determined to end Ukraine war, as prez tells 60 Minutes country will be different shape",
+          "published_date": "2026-11-10"
+        },
+        {
+          "headline": "Could Somalia’s election dispute push the country towards renewed conflict?",
+          "published_date": "2026-11-10"
+        },
+        {
+          "headline": "Russia and Ukraine hold nearly 4 hours of US-mediated talks in Abu Dhabi",
+          "published_date": "2026-11-10"
+        },
+        {
+          "headline": "Global emissions fall slightly as a result of the Iran war",
           "published_date": "2026-11-10"
         },
         {
@@ -69704,7 +70226,7 @@
           "published_date": "2026-11-10T07:34:41+00:00"
         }
       ],
-      "news_total": 333,
+      "news_total": 337,
       "logs": [
         {
           "log_date": "2026-10-22",
@@ -70149,7 +70671,7 @@
         },
         {
           "log_date": "2026-11-10",
-          "summary": "Trump met Qatar's prime minister at the White House to discuss ending the Iran war, but Secretary of State Rubio warned negotiations are far from a breakthrough. Houthi rebels reported an airstrike near Sanaa that killed at least 44 people, mostly women and children. Additionally, container shipping rates from Asia to the U.S. West Coast have surged 343% since the conflict began, while oil prices fell to their lowest since August on hopes of a resolution.",
+          "summary": "Trump met Qatar's prime minister at the White House to discuss ending the Iran war, but Secretary of State Rubio warned negotiations are far from a breakthrough. Houthi rebels reported an airstrike near Sanaa that killed at least 44 people, mostly women and children. Additionally, container shipping rates from Asia to the U.S. West Coast have surged 343% since the conflict began, while oil prices fell to their lowest since August on hopes of a resolution.\nDefense Secretary Pete Hegseth continued to defend the Iran war as impeachment articles head toward a possible House vote. Additionally, global fossil fuel emissions are on track to fall slightly in 2026 because of the conflict's impact on oil and gas prices.",
           "news": [
             {
               "news_id": "9b41f51e7e6f56e1b80f7cd39c158ade",
@@ -70170,6 +70692,15 @@
               "image": "https://www.bing.com/th?id=ONUT.RRae-qdLWd40C5aqjPXPOA"
             },
             {
+              "news_id": "2a461714a34852ed989465d741a82422",
+              "url": "https://www.military.com/hegseth-claims-iran-victory-in-press-conference-as-war-and-impeachment-fight-continue",
+              "headline": "Pete Hegseth Impeachment Fight: Iran War Claims vs. Reality",
+              "body": "Pete Hegseth defended the Iran war and drug-boat strikes on Tuesday as Rep. Thomas Massie's impeachment articles head toward a possible House vote.",
+              "published_date": "2026-11-10",
+              "outlet": "Military.com",
+              "image": "https://www.bing.com/th?id=ONUT.iThmM9I_1IXgizjqF2lL7A"
+            },
+            {
               "news_id": "6786498b680a5085b16e0377330c9a9a",
               "url": "https://www.msn.com/en-us/news/other/envoy-jared-kushner-says-trump-determined-to-end-ukraine-war-as-prez-tells-60-minutes-country-will-be-different-shape/ar-AA2h5g8E?ocid=BingNewsVerp",
               "headline": "Envoy Jared Kushner says Trump determined to end Ukraine war, as prez tells 60 Minutes country will be different shape",
@@ -70177,6 +70708,15 @@
               "published_date": "2026-11-10",
               "outlet": "New York Post on MSN",
               "image": "https://www.bing.com/th?id=ONUT.xcGYTC55X3cZzZKXQFY-zQ"
+            },
+            {
+              "news_id": "e2b7395cf2df576893e72c0e5f9b5359",
+              "url": "https://acleddata.com/expert-comment/could-somalias-election-dispute-push-country-towards-renewed-conflict",
+              "headline": "Could Somalia’s election dispute push the country towards renewed conflict?",
+              "body": "ACLED’s Somalia Analyst, Mohamed Daud, comments on the growing political standoff over Somalia’s electoral system, the risk of renewed armed conflict, and the challenges of holding direct elections.",
+              "published_date": "2026-11-10",
+              "outlet": "ACLED",
+              "image": "https://www.bing.com/th?id=ONUT.1xZkBLvr5-B5hpMLyCLw_w"
             },
             {
               "news_id": "a64cb2cdfc615593a9b12a172ae165db",
@@ -70204,6 +70744,24 @@
               "published_date": "2026-11-09",
               "outlet": "EWN",
               "image": "https://www.bing.com/th?id=ONUT.ConHb5buvDrIBYGFR399bw"
+            },
+            {
+              "news_id": "e5efd97d0c1d5b069c59df9ae7fec17b",
+              "url": "https://www.pressdemocrat.com/2026/11/10/russia-ukraine-us-mediated-talks/",
+              "headline": "Russia and Ukraine hold nearly 4 hours of US-mediated talks in Abu Dhabi",
+              "body": "Both sides remain far apart on key issues.",
+              "published_date": "2026-11-10",
+              "outlet": "The Press Democrat",
+              "image": "https://www.bing.com/th?id=ONUT.wP3cwANynB_ezrwUPGUemQ"
+            },
+            {
+              "news_id": "d74502c1be6c5e679329cf95b87ff188",
+              "url": "https://www.msn.com/en-us/weather/climate-change/global-emissions-fall-slightly-as-a-result-of-the-iran-war/vi-AA2h9DCo?ocid=BingNewsVerp",
+              "headline": "Global emissions fall slightly as a result of the Iran war",
+              "body": "Global fossil fuel emissions are on track to fall slightly in 2026, as soaring oil and gas prices triggered by the conflict ...",
+              "published_date": "2026-11-10",
+              "outlet": "Amazon S3 on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.KqvXIdkErgi1pd6xVHDSdQ"
             },
             {
               "news_id": "ff9402e68cc85f379c72295830593ed5",
@@ -72399,6 +72957,125 @@
       "news_total": 2,
       "logs": [],
       "logs_total": 0
+    },
+    {
+      "incident_id": "20261110-GT-EQ",
+      "tree_id": "2ca2ea2faa1f4ca2b5e1635ce7382a3b",
+      "canonical_name": "Earthquake M5.6 Puerto San José, Guatemala 2026-11-10",
+      "summary": "A magnitude 5.6 earthquake struck off the coast of Guatemala near Puerto San José on November 10, 2026, causing buildings to shake in Guatemala City and being felt in neighboring El Salvador and Nicaragua. No immediate reports of damage or casualties were mentioned in the initial coverage.",
+      "country": "Guatemala",
+      "iso2": "GT",
+      "lat": 13.5381,
+      "lon": -90.8798,
+      "country_group": "C",
+      "region": "Americas",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": null,
+      "event_status": null,
+      "extended_monitoring": false,
+      "disease_name": null,
+      "event_date": "2026-11-10",
+      "first_reported_date": "2026-11-10",
+      "last_updated_date": "2026-11-10",
+      "days_since_event": 0,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "ercc": 0,
+        "healthmap": 0,
+        "news": 4
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 5.6 - 43 km S of Puerto San José, Guatemala",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txb8",
+          "meta": "35 km depth"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 5.6,
+        "max_depth_km": 35.0,
+        "place": "43 km S of Puerto San José, Guatemala",
+        "felt": 16,
+        "sig": 489,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Magnitude 5.6 quake strikes off Guatemala coast, shakes El Salvador, Nicaragua",
+          "published_date": "2026-11-10"
+        },
+        {
+          "headline": "Quake shakes buildings in Guatemala City",
+          "published_date": "2026-11-10"
+        },
+        {
+          "headline": "Sismo de magnitud 5.6 sacude Guatemala y El Salvador | VIDEOS",
+          "published_date": "2026-11-10"
+        },
+        {
+          "headline": "Magnitude 5.6 quake strikes off Guatemala coast, shakes El Salvador, Nicaragua",
+          "published_date": "2026-11-10T19:54:54+00:00"
+        }
+      ],
+      "news_total": 4,
+      "logs": [
+        {
+          "log_date": "2026-11-10",
+          "summary": "A magnitude 5.6 earthquake struck off the coast of Guatemala near Puerto San José on November 10, 2026, causing buildings to shake in Guatemala City and being felt in neighboring El Salvador and Nicaragua. No immediate reports of damage or casualties were mentioned in the initial coverage.",
+          "news": [
+            {
+              "news_id": "cd879fe5cd3d5beaa9b289ce5cb1ecdd",
+              "url": "https://www.msn.com/en-us/news/other/magnitude-56-quake-strikes-off-guatemala-coast-shakes-el-salvador-nicaragua/ar-AA2h8S7J?ocid=BingNewsVerp",
+              "headline": "Magnitude 5.6 quake strikes off Guatemala coast, shakes El Salvador, Nicaragua",
+              "body": "GUATEMALA CITY, Nov 10 (Reuters) - A magnitude 5.6 earthquake struck off the coast of Guatemala on Tuesday morning, according to the United States Geological Survey, causing buildings in the capital ...",
+              "published_date": "2026-11-10",
+              "outlet": "Reuters on MSN",
+              "image": ""
+            },
+            {
+              "news_id": "179efe50dafb5cc49c7958a9f2896e0b",
+              "url": "https://www.msn.com/en-us/news/other/quake-shakes-buildings-in-guatemala-city/ar-AA2h90j4?ocid=BingNewsVerp",
+              "headline": "Quake shakes buildings in Guatemala City",
+              "body": "GUATEMALA CITY, Nov 10 (Reuters) - An earthquake shook buildings in Guatemala City on Tuesday morning and was also felt in neighboring El Salvador, according to Reuters witnesses. According to a ...",
+              "published_date": "2026-11-10",
+              "outlet": "Reuters on MSN",
+              "image": ""
+            },
+            {
+              "news_id": "7b4702354e35537691395929c9550f09",
+              "url": "https://www.charlotteobserver.com/news/nation-world/world/article318013444.html",
+              "headline": "Magnitude 5.6 quake strikes off Guatemala coast, shakes El Salvador, Nicaragua",
+              "body": "A magnitude 5.6 earthquake struck off the coast of Guatemala on Tuesday morning, according to the United States Geological Survey, causing buildings in the capital Guatemala City to shake.",
+              "published_date": "2026-11-10T19:54:54+00:00",
+              "outlet": "Charlotte Observer",
+              "image": ""
+            },
+            {
+              "news_id": "e686b8dfd9965a4a905ee31ac78c8e88",
+              "url": "https://www.msn.com/es-mx/noticias/other/sismo-de-magnitud-5-6-sacude-guatemala-y-el-salvador-videos/ar-AA2haePx?ocid=BingNewsVerp",
+              "headline": "Sismo de magnitud 5.6 sacude Guatemala y El Salvador | VIDEOS",
+              "body": "Un sismo de magnitud 5.6 con epicentro en las costas de Guatemala sacudió parte del territorio guatemalteco y de El Salvador ...",
+              "published_date": "2026-11-10",
+              "outlet": "Milenio on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.Y4nKpJu2YBXojXkQTNZUUQ"
+            }
+          ]
+        }
+      ],
+      "logs_total": 1
     }
   ]
 }
