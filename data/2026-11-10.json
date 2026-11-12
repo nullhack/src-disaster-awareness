@@ -1,37 +1,37 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-11-10",
-  "generated_at": "2026-11-12T08:29:11Z",
+  "generated_at": "2026-11-12T20:58:13Z",
   "as_of": "2026-11-10",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 9,
+    "reportable_total": 8,
     "new_today": 3,
     "critical": 4,
     "high": 1,
-    "medium": 3,
+    "medium": 2,
     "low": 1,
-    "disease_outbreaks": 2,
-    "countries_affected": 9,
-    "news_total": 1277,
+    "disease_outbreaks": 1,
+    "countries_affected": 8,
+    "news_total": 1275,
     "max_magnitude": 7.6,
     "by_severity": {
       "CRITICAL": 4,
       "HIGH": 1,
-      "MEDIUM": 3,
+      "MEDIUM": 2,
       "LOW": 1
     },
     "by_type": {
       "Drought": 1,
       "Earthquake": 5,
-      "Disease": 2,
+      "Disease": 1,
       "": 1
     },
     "by_region": {
       "Oceania": 3,
       "Americas": 1,
-      "Europe": 2,
+      "Europe": 1,
       "Asia": 2,
       "Africa": 1
     }
@@ -51,15 +51,6 @@
       "count": 1,
       "max_sev_rank": 2,
       "iso2": "RU",
-      "region": "Europe",
-      "country_group": "C",
-      "max_severity": "MEDIUM"
-    },
-    {
-      "country": "France",
-      "count": 1,
-      "max_sev_rank": 2,
-      "iso2": "FR",
       "region": "Europe",
       "country_group": "C",
       "max_severity": "MEDIUM"
@@ -8033,78 +8024,6 @@
         }
       ],
       "logs_total": 3
-    },
-    {
-      "incident_id": "20261102-FR-DI",
-      "tree_id": "08e51208cb5c41daa06a3c14df4a0661",
-      "canonical_name": "Shamonda France 2026-11-02",
-      "summary": "",
-      "country": "France",
-      "iso2": "FR",
-      "lat": 46.2,
-      "lon": 2.2,
-      "country_group": "C",
-      "region": "Europe",
-      "incident_type": "Disease",
-      "incident_category": "Biological",
-      "is_disease": true,
-      "severity": "MEDIUM",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-11-02",
-      "first_reported_date": "2026-11-02",
-      "last_updated_date": "2026-11-09",
-      "days_since_event": 10,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 1,
-        "usgs": 0,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 2
-      },
-      "source_links": [
-        {
-          "type": "WHO",
-          "label": "Shamonda France 2026-11-02",
-          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON623",
-          "meta": ""
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Shamonda virus: What are the risks for humans?",
-          "url": "https://www.agriland.co.uk/farming-news/shamonda-virus-what-are-the-risks-for-humans/",
-          "outlet": "Agriland",
-          "published_date": "2026-11-08"
-        },
-        {
-          "headline": "WHO Urges Testing to Confirm Infections with New COVID-19 Variant PJ.2.1",
-          "url": "https://en.tempo.co/read/2123259/who-urges-testing-to-confirm-infections-with-new-covid-19-variant-pj-2-1",
-          "outlet": "Tempo.co English",
-          "published_date": "2026-11-09T23:02:20+00:00"
-        }
-      ],
-      "news_total": 2,
-      "logs": [],
-      "logs_total": 0
     },
     {
       "incident_id": "20261105-FJ-EQ",

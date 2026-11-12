@@ -1,33 +1,33 @@
 {
   "schema_version": "1.5",
   "report_date": "2026-11-12",
-  "generated_at": "2026-11-12T08:29:11Z",
+  "generated_at": "2026-11-12T20:58:13Z",
   "as_of": "2026-11-12",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 26,
-    "new_today": 10,
+    "reportable_total": 27,
+    "new_today": 13,
     "critical": 14,
     "high": 3,
     "medium": 7,
-    "low": 2,
+    "low": 3,
     "disease_outbreaks": 5,
     "countries_affected": 19,
-    "news_total": 13833,
+    "news_total": 13948,
     "max_magnitude": 7.6,
     "by_severity": {
       "CRITICAL": 14,
       "HIGH": 3,
       "MEDIUM": 7,
-      "LOW": 2
+      "LOW": 3
     },
     "by_type": {
       "Disease": 5,
       "Drought": 2,
       "Conflict": 4,
       "Forest Fire": 1,
-      "Flood": 3,
+      "Flood": 4,
       "Earthquake": 7,
       "Severe Weather": 1,
       "Tropical Cyclone": 1,
@@ -38,10 +38,10 @@
       "Global": 2,
       "Africa": 2,
       "Americas": 3,
-      "Europe": 5,
+      "Europe": 7,
       "Asia": 8,
       "Oceania": 4,
-      "Unknown": 2
+      "Unknown": 1
     }
   },
   "by_country": [
@@ -64,6 +64,15 @@
       "max_severity": "LOW"
     },
     {
+      "country": "France",
+      "count": 2,
+      "max_sev_rank": 1,
+      "iso2": "FR",
+      "region": "Europe",
+      "country_group": "C",
+      "max_severity": "LOW"
+    },
+    {
       "country": "India",
       "count": 2,
       "max_sev_rank": 2,
@@ -77,15 +86,6 @@
       "count": 1,
       "max_sev_rank": 2,
       "iso2": "RU",
-      "region": "Europe",
-      "country_group": "C",
-      "max_severity": "MEDIUM"
-    },
-    {
-      "country": "France",
-      "count": 1,
-      "max_sev_rank": 2,
-      "iso2": "FR",
       "region": "Europe",
       "country_group": "C",
       "max_severity": "MEDIUM"
@@ -1312,7 +1312,7 @@
       "incident_id": "20250528-XX-DI",
       "tree_id": "2988d8638e0956a89029b6059b7c5f7f",
       "canonical_name": "COVID-19 Global 2025-05-28",
-      "summary": "A newly identified COVID-19 variant, PJ.2.1, is spreading across North America, Europe, Australia, New Zealand, and parts of Asia, with experts monitoring its growth and potential to trigger new waves. Separately, a machine learning model that analyzes wastewater can forecast epidemic outbreaks three days in advance, while a systematic review finds wide variation in reported pediatric heart rhythm abnormalities among COVID-19 cohorts.",
+      "summary": "A new cohort study published in JAMA Network Open compares the estimated effectiveness of the mRNA-1283 and BNT162b2 COVID-19 vaccines, providing updated real-world data on vaccine performance. Other covered news includes Moderna's Q3 earnings beat driven by COVID-19 vaccine sales and general guidance on recognizing COVID-19 symptoms during flu season, but these are not incident-specific updates.",
       "country": "",
       "iso2": "XX",
       "lat": null,
@@ -1342,7 +1342,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 310
+        "news": 313
       },
       "source_links": [
         {
@@ -2600,11 +2600,23 @@
           "published_date": "2026-11-10"
         },
         {
+          "headline": "Estimation of mRNA-1283 vs BNT162b2 COVID-19 Vaccine Effectiveness",
+          "published_date": "2026-11-10T20:25:28+00:00"
+        },
+        {
           "headline": "MRNA Q3 Earnings Beat on COVID Sales, Raises '26 Outlook, Stock Rises",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Sick this season? How to spot COVID-19 and when to seek care",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "MRNA Stock Up 3% Since Q3 Earnings Release: How to Play the Stock?",
           "published_date": "2026-11-12"
         }
       ],
-      "news_total": 310,
+      "news_total": 313,
       "logs": [
         {
           "log_date": "2026-07-08",
@@ -2627,57 +2639,6 @@
               "published_date": "2026-07-08T15:12:31+00:00",
               "outlet": "Newsweek on MSN",
               "image": "https://www.bing.com/th?id=ONUT.UkYafoaYVW2mm2fZDxb3Pw"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-11-06",
-          "summary": "A pre-winter COVID-19 surge has surpassed one million daily infections. New research from the RECOVER program analyzes long COVID symptom improvement over three years. Separately, Moderna returned to profitability in Q3 2026, citing increased vaccine sales and pipeline progress.",
-          "news": [
-            {
-              "news_id": "f028e99ece2356289e643950346a116a",
-              "url": "https://www.msn.com/en-us/money/general/moderna-q3-2026-earnings-call-transcript/ar-AA2gTR38?ocid=BingNewsVerp",
-              "headline": "Moderna Q3 2026 earnings call transcript",
-              "body": "Moderna MRNA reported third-quarter financial results on Friday. The transcript from the company’s ...",
-              "published_date": "2026-11-06",
-              "outlet": "Benzinga on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.iQScbEGYQfEv_2Jol-a2PA"
-            },
-            {
-              "news_id": "895fbc6635d9556cbe0be7e14d57b85a",
-              "url": "https://www.rttnews.com/3711366/moderna-returns-to-q3-profit-raises-fy26-outlook-on-vaccine-sales-and-pipeline-progress.aspx",
-              "headline": "Moderna Returns To Q3 Profit; Raises FY26 Outlook On Vaccine Sales And Pipeline Progress",
-              "body": "Moderna, Inc. (MRNA), a biotechnology company focused on mRNA medicines and vaccines, reported Friday third-quarter 2026 financial results, returning to profitability as revenue increased 29% year over year to $1.",
-              "published_date": "2026-11-06",
-              "outlet": "RTTNews",
-              "image": ""
-            },
-            {
-              "news_id": "dff3a73b07a6541b954f25b63102254e",
-              "url": "https://www.wsws.org/en/articles/2026/11/06/mgzl-n06.html",
-              "headline": "The latest COVID surge, the bird flu death and the fabrication of vaccine injury",
-              "body": "As a pre-winter COVID-19 surge passes one million daily infections, and a bird flu death is recorded in Washington state, the Trump administration conceals the diseases killing Americans while building a federal apparatus to manufacture the appearance of vaccine injury.",
-              "published_date": "2026-11-06",
-              "outlet": "World Socialist Web Site",
-              "image": "https://s.yimg.com/bo/6eb2762e-0715-51ac-860b-7a2f56a3e771_1793937620325.jpg"
-            },
-            {
-              "news_id": "f44006be95b65895bf154a010dbcec51",
-              "url": "https://note.com/province/n/nafab7f937b49?hl=en",
-              "headline": "How Much Does Long COVID Improve Over 3 Years? — The RECOVER Program｜Makisey",
-              "body": "This is a commentary on a paper that analyzes the prognosis and time course of improvement for Long COVID based on data from the RECOVER program, a large-scale cohort study in the United States. It investigates the probability of symptom improvement over the subsequent three years for patients w",
-              "published_date": "2026-11-06",
-              "outlet": "note",
-              "image": "https://www.bing.com/th?id=ONUT.Rly_znSwtTU58SNW0WgzgA"
-            },
-            {
-              "news_id": "f384db489f385fefb1342ae996dce959",
-              "url": "https://www.benzinga.com/news/26/11/62976181/moderna-q3-2026-earnings-call-transcript",
-              "headline": "Moderna Q3 2026 Earnings Call Transcript - Moderna (NASDAQ:MRNA)",
-              "body": "Moderna (NASDAQ:MRNA) reported third-quarter financial results on Friday. The transcript from the co...",
-              "published_date": "2026-11-06T13:48:52+00:00",
-              "outlet": "Benzinga",
-              "image": "https://s.yimg.com/bo/8db245ea-a622-570f-aa23-bc4b894e202c_1793973317289.jpg"
             }
           ]
         },
@@ -2764,15 +2725,57 @@
               "image": ""
             }
           ]
+        },
+        {
+          "log_date": "2026-11-12",
+          "summary": "A new cohort study published in JAMA Network Open compares the estimated effectiveness of the mRNA-1283 and BNT162b2 COVID-19 vaccines, providing updated real-world data on vaccine performance. Other covered news includes Moderna's Q3 earnings beat driven by COVID-19 vaccine sales and general guidance on recognizing COVID-19 symptoms during flu season, but these are not incident-specific updates.",
+          "news": [
+            {
+              "news_id": "628f011415b851d2a601c92b9d71f6f0",
+              "url": "https://www.zacks.com/stock/news/3025875/mrna-q3-earnings-beat-on-covid-sales-raises-26-outlook-stock-rises",
+              "headline": "MRNA Q3 Earnings Beat on COVID Sales, Raises '26 Outlook, Stock Rises",
+              "body": "Moderna's Q3 earnings beat estimates on strong COVID-19 vaccine sales, returning to profitability and boosting its 2026 revenue growth outlook.",
+              "published_date": "2026-11-12",
+              "outlet": "Zacks",
+              "image": "https://s.yimg.com/bo/68ddc79f-000e-5431-95b5-915171c6474f_1780420472992.jpg"
+            },
+            {
+              "news_id": "943e85f0a73e56a79fb78fc7fe1f2c65",
+              "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2856471",
+              "headline": "Estimation of mRNA-1283 vs BNT162b2 COVID-19 Vaccine Effectiveness",
+              "body": "This cohort study compares the estimated effectiveness of the mRNA-1283 and BNT162b2 vaccines at...",
+              "published_date": "2026-11-10T20:25:28+00:00",
+              "outlet": "Journal of the American Medical Association",
+              "image": "https://s.yimg.com/bo/a769e1cb-1cc4-5935-9e12-3ebb89f479b3_1794490520056.png.cf.jpg"
+            },
+            {
+              "news_id": "272e178dbb6758aaa15853d377f3f99a",
+              "url": "https://health.yahoo.com/conditions/infectious/coronavirus/articles/sick-season-spot-covid-19-114724603.html",
+              "headline": "Sick this season? How to spot COVID-19 and when to seek care",
+              "body": "Flu season is here, which means respiratory illnesses are spreading around Delaware. Learn the symptoms of COVID-19 so you can prevent the spread.",
+              "published_date": "2026-11-12",
+              "outlet": "Delaware Online | The News Journal · via Yahoo News",
+              "image": "https://media.zenfs.com/en/delaware-online-the-news-journal/2530a447f2515b32ead5f238739457bb.jpg"
+            },
+            {
+              "news_id": "ccf4205a2863507fb882b2b041422b2f",
+              "url": "https://finance.yahoo.com/markets/stocks/articles/mrna-stock-3-since-q3-165300496.html",
+              "headline": "MRNA Stock Up 3% Since Q3 Earnings Release: How to Play the Stock?",
+              "body": "Moderna's 3% post-earnings gain reflects stronger overseas COVID-19 sales and higher 2026 guidance, while oncology advances offer growth potential.",
+              "published_date": "2026-11-12",
+              "outlet": "Zacks · via Yahoo Finance",
+              "image": "https://media.zenfs.com/en/zacks.com/9e8d93e17a792e7de990e3344e61fa6a.jpg"
+            }
+          ]
         }
       ],
-      "logs_total": 58
+      "logs_total": 59
     },
     {
       "incident_id": "20250905-CD-DI",
       "tree_id": "5c179437a46a56aca2f8b70aeceda07a",
       "canonical_name": "Ebola Kinshasa, DR Congo 2025-09-05",
-      "summary": "Six months into the outbreak, MSF reported that the DRC Ebola epidemic remains out of control, with many cases likely missed and transmission in hospitals still rampant. An expert warned the virus could continue spreading for another year given the conflict and community mistrust. Kenya announced plans to impose a 21-day quarantine on its citizens returning from the DRC, and a spike in attacks on journalists was partly attributed to their Ebola reporting.",
+      "summary": "Six months into the outbreak, MSF reported that the DRC Ebola epidemic remains out of control, with many cases likely missed and transmission in hospitals still rampant. An expert warned the virus could continue spreading for another year given the conflict and community mistrust. Kenya announced plans to impose a 21-day quarantine on its citizens returning from the DRC, and a spike in attacks on journalists was partly attributed to their Ebola reporting.\nAs of November 12, 2026, the DR Congo Ebola outbreak has surpassed 11,000 confirmed cases and 5,387 deaths, with MSF warning it remains out of control due to funding gaps, unpaid staff, and supply shortages. Kenya discharged its last Ebola patient and began the 42-day countdown to being declared Ebola-free, while attacks on health workers and journalists continue to hamper containment efforts. New research also indicates the virus circulated undetected for weeks before the outbreak was officially recognized.",
       "country": "DR Congo",
       "iso2": "CD",
       "lat": -4.0,
@@ -2802,7 +2805,7 @@
         "gdacs": 0,
         "ercc": 2,
         "healthmap": 0,
-        "news": 1085
+        "news": 1099
       },
       "source_links": [
         {
@@ -7238,6 +7241,10 @@
           "published_date": "2026-11-11"
         },
         {
+          "headline": "Ebola tops 11,000 cases in Congo's deadliest outbreak",
+          "published_date": "2026-11-11T00:00:00+00:00"
+        },
+        {
           "headline": "Congo’s Ebola outbreak tops 11,000 cases as disease keeps spreading",
           "published_date": "2026-11-11T06:59:46+00:00"
         },
@@ -7266,7 +7273,55 @@
           "published_date": "2026-11-11T19:55:29+00:00"
         },
         {
+          "headline": "Attacks on health workers hamper Congo Ebola fight, Africa CDC warns",
+          "published_date": "2026-11-12"
+        },
+        {
           "headline": "Africa: All of Africa Today - November 12, 2026",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Ebola in Democratic Republic of the Congo (DRC): Persistent gaps between resources and action remain six months on",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "കോംഗോയിൽ എബോള ബാധിതർ 11,000 കടന്നു; മരണം 5,387 ആയി | DR Congo Ebola outbreak | Times Kerala",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "DR Congo Ebola outbreak surpasses 11,000 cases as conflict hampers response",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Record-breaking Ebola outbreak: phone data reconstruct first weeks of spread",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "DR Congo reports over 11,000 Ebola cases as MSF warns of response gaps",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Congo Ebola outbreak still out of control after six months, MSF says",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Africa Intelligence Brief — Thursday, November 12, 2026",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Kenya Discharges Last Ebola Patient, Begins 42-Day Countdown",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Before the first case: WHO helps South Sudan prepare for Ebola Bundibugyo virus Disease",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Spike in attacks on DR Congo journalists fueled in part by Ebola reporting",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Millions of Ebola dollars going missing as virus spreads, medical charity warns",
           "published_date": "2026-11-12"
         },
         {
@@ -7276,9 +7331,13 @@
         {
           "headline": "Congo Ebola Outbreak Still Out of Control After Six Months, MSF Says",
           "published_date": "2026-11-12T07:37:02+00:00"
+        },
+        {
+          "headline": "Ebola: Insecurity in eastern DRC blocks response as deaths pass 5,300",
+          "published_date": "2026-11-12T20:19:44+00:00"
         }
       ],
-      "news_total": 1085,
+      "news_total": 1099,
       "logs": [
         {
           "log_date": "2026-07-10",
@@ -7822,8 +7881,17 @@
         },
         {
           "log_date": "2026-11-12",
-          "summary": "Six months into the outbreak, MSF reported that the DRC Ebola epidemic remains out of control, with many cases likely missed and transmission in hospitals still rampant. An expert warned the virus could continue spreading for another year given the conflict and community mistrust. Kenya announced plans to impose a 21-day quarantine on its citizens returning from the DRC, and a spike in attacks on journalists was partly attributed to their Ebola reporting.",
+          "summary": "Six months into the outbreak, MSF reported that the DRC Ebola epidemic remains out of control, with many cases likely missed and transmission in hospitals still rampant. An expert warned the virus could continue spreading for another year given the conflict and community mistrust. Kenya announced plans to impose a 21-day quarantine on its citizens returning from the DRC, and a spike in attacks on journalists was partly attributed to their Ebola reporting.\nAs of November 12, 2026, the DR Congo Ebola outbreak has surpassed 11,000 confirmed cases and 5,387 deaths, with MSF warning it remains out of control due to funding gaps, unpaid staff, and supply shortages. Kenya discharged its last Ebola patient and began the 42-day countdown to being declared Ebola-free, while attacks on health workers and journalists continue to hamper containment efforts. New research also indicates the virus circulated undetected for weeks before the outbreak was officially recognized.",
           "news": [
+            {
+              "news_id": "fa14fac7aaad5b6c9496784829c9a75a",
+              "url": "https://www.msn.com/en-us/news/other/attacks-on-health-workers-hamper-congo-ebola-fight-africa-cdc-warns/ar-AA2hiBnW?ocid=BingNewsVerp",
+              "headline": "Attacks on health workers hamper Congo Ebola fight, Africa CDC warns",
+              "body": "DAKAR, Nov 12 (Reuters) - Attacks on health workers and facilities are increasingly hindering efforts to contain an Ebola ...",
+              "published_date": "2026-11-12",
+              "outlet": "Reuters on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.jdWp2-k4t6w74dW-60QYnw"
+            },
             {
               "news_id": "81362034abac57c686f0a07998108273",
               "url": "https://www.the-star.co.ke/news/2026-11-11-page-2-story-1-moh-plans-21-day-quarantine-for-kenyans-returning-from-dr-congo-duale-1",
@@ -7843,6 +7911,87 @@
               "image": ""
             },
             {
+              "news_id": "49bbb7e9b55f58988d39459b89adfba3",
+              "url": "https://panafricanvisions.com/2026/11/ebola-in-democratic-republic-of-the-congo-drc-persistent-gaps-between-resources-and-action-remain-six-months-on/",
+              "headline": "Ebola in Democratic Republic of the Congo (DRC): Persistent gaps between resources and action remain six months on",
+              "body": "Democratic Republic of the Congo (DRC), Médecins Sans Frontières (MSF) warns that the second largest Ebola outbreak on record remains out of control. A troubling disconnect between the considerable resources mobilised for the response and what is actually reaching patients, frontline workers, and co",
+              "published_date": "2026-11-12",
+              "outlet": "panafricanvisions.com",
+              "image": ""
+            },
+            {
+              "news_id": "d36afa893f3e53cf96aa4e24aa594412",
+              "url": "https://timeskerala.com/world/dr-congo-ebola-outbreak-2/",
+              "headline": "കോംഗോയിൽ എബോള ബാധിതർ 11,000 കടന്നു; മരണം 5,387 ആയി | DR Congo Ebola outbreak | Times Kerala",
+              "body": "ഡെമോക്രാറ്റിക് റിപ്പബ്ലിക് ഓഫ് കോംഗോയിൽ (ഡിആർ കോംഗോ) എബോള ബാധിതരുടെ എണ്ണം 11,000 കടന്നു. ഏറ്റവും പുതിയ ഔദ്യോഗിക കണക്കുകൾ പ്രകാരം 11,042 പേർക്കാണ് രോഗം",
+              "published_date": "2026-11-12",
+              "outlet": "timeskerala",
+              "image": "https://www.bing.com/th?id=ONUT.R-ajOdUL85PE63kf1zVjdg"
+            },
+            {
+              "news_id": "2b255bc0ae5d5b199bbcd7650b4c76dc",
+              "url": "https://www.msn.com/en-za/news/other/dr-congo-ebola-outbreak-surpasses-11000-cases-as-conflict-hampers-response/vi-AA2hgL85?ocid=BingNewsVerp",
+              "headline": "DR Congo Ebola outbreak surpasses 11,000 cases as conflict hampers response",
+              "body": "A healthcare worker walks inside an Ebola treatment center in Beni, North Kivu Province, Congo, Monday, Nov. 9, 2026 ...",
+              "published_date": "2026-11-12",
+              "outlet": "Africanews on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.gmVCfKx_kpo904VgxIozxA"
+            },
+            {
+              "news_id": "5a84929692b05abe94160ac5a0ba7117",
+              "url": "https://www.nature.com/articles/d41586-026-03666-z",
+              "headline": "Record-breaking Ebola outbreak: phone data reconstruct first weeks of spread",
+              "body": "The Bundibugyo virus strain was circulating for weeks before its detection in May, but was missed owing to surveillance failures, testing gaps and funding cuts, researchers say.",
+              "published_date": "2026-11-12",
+              "outlet": "Nature",
+              "image": "https://www.bing.com/th?id=ONUT.-Rj7bVmmmWa72Tny0WcaDg"
+            },
+            {
+              "news_id": "b8f7b87cd0b55dc68e7d5a0a6d3c5b2f",
+              "url": "https://sana.sy/en/health/2358205/",
+              "headline": "DR Congo reports over 11,000 Ebola cases as MSF warns of response gaps",
+              "body": "Kinshasa, Nov. 12 (SANA) – The Democratic Republic of the Congo (DRC) has recorded 11,042 Ebola infections and 5,387 deaths in what is considered the",
+              "published_date": "2026-11-12",
+              "outlet": "Syrian Arab News Agency",
+              "image": "https://www.bing.com/th?id=ONUT.1WVkQRpklsUHS3kCTQGzOA"
+            },
+            {
+              "news_id": "87ad381c173b5060a87fd3f79928a392",
+              "url": "https://www.msn.com/en-us/news/other/congo-ebola-outbreak-still-out-of-control-after-six-months-msf-says/ar-AA2hfSyl?ocid=BingNewsVerp",
+              "headline": "Congo Ebola outbreak still out of control after six months, MSF says",
+              "body": "By Olivia Le Poidevin and Jennifer Rigby GENEVA, Nov 12 (Reuters) - Six months into Congo's Ebola outbreak, many cases are ...",
+              "published_date": "2026-11-12",
+              "outlet": "Reuters on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.uAoZThaiA6CU-EzbCYduDQ"
+            },
+            {
+              "news_id": "8fc4380289065fed9bd5368cc4a97f80",
+              "url": "https://www.riotimesonline.com/africa-intelligence-brief-thursday-november-12-2026/",
+              "headline": "Africa Intelligence Brief — Thursday, November 12, 2026",
+              "body": "Africa Intelligence Brief for November 12: Ebola passes 11,000 cases in DR Congo, Uganda's succession row, South Africa's hung councils.",
+              "published_date": "2026-11-12",
+              "outlet": "The Rio Times",
+              "image": "https://www.bing.com/th?id=ONUT.V2hVN50zHassEycYzc0Qcg"
+            },
+            {
+              "news_id": "a99ef07087fd572989935b21896fd525",
+              "url": "https://allafrica.com/view/group/main/main/id/00098779.html",
+              "headline": "Kenya Discharges Last Ebola Patient, Begins 42-Day Countdown",
+              "body": "Kenya has discharged its last Ebola patient, bringing the total number of recoveries to seven and marking a major step towards containing the outbreak. The country has now begun a 42-day countdown before it can officially be declared Ebola-free. No new confirmed cases have been reported since 20 October. Health authorities said that all 135 identified contacts have completed their 21-day monitoring period, with no evidence of wider community transmission. However, surveillance will continue at border crossings, airports and health facilities throughout the countdown. The Africa Centres for Disease Control and Prevention (Africa CDC) described it as an important achievement in the regional response to the outbreak. Kenya has also urged countries that introduced travel and visa restrictions over the outbreak to reconsider them.",
+              "published_date": "2026-11-12",
+              "outlet": "AllAfrica",
+              "image": ""
+            },
+            {
+              "news_id": "075cb8176ef95e16bc7163848141ac21",
+              "url": "https://www.theeastafrican.co.ke/tea/sustainability/ebola-insecurity-in-eastern-drc-blocks-response-5668350",
+              "headline": "Ebola: Insecurity in eastern DRC blocks response as deaths pass 5,300",
+              "body": "The Democratic Republic of Congo (DRC) had reported 5,387 deaths from Ebola virus disease by Monday this week, since the ...",
+              "published_date": "2026-11-12T20:19:44+00:00",
+              "outlet": "The EastAfrican",
+              "image": "https://www.bing.com/th?id=ONUT.fquApf0yefRr7MjQa2h15g"
+            },
+            {
               "news_id": "30eb72818e7c5358b2a4a9a4ebfdea09",
               "url": "https://www.telegraph.co.uk/global-health/science-and-disease/ebola-drc-year/",
               "headline": "Ebola could be raging in DRC for another year, expert warns",
@@ -7850,6 +7999,24 @@
               "published_date": "2026-11-11",
               "outlet": "The Telegraph",
               "image": "https://www.bing.com/th?id=ONUT.b4DAvfpDygg1Ueq4SlblEw"
+            },
+            {
+              "news_id": "aefb660fe0c459e28ed1863d85ae833d",
+              "url": "https://www.washingtonpost.com/world/2026/11/11/congo-ebola-outbreak/bb622f76-dd98-11f1-912c-4fbb80d73f7f_story.html",
+              "headline": "Ebola tops 11,000 cases in Congo's deadliest outbreak",
+              "body": "BUNIA, Congo — Congo’s Ebola outbreak has topped 11,000 cases, the government said Wednesday, a stark figure that underscores the severity of the situation as the country grapples with the relentless ...",
+              "published_date": "2026-11-11T00:00:00+00:00",
+              "outlet": "The Washington Post",
+              "image": ""
+            },
+            {
+              "news_id": "5a7a092e330e5a72a2f1a5aaae9507f4",
+              "url": "https://www.afro.who.int/countries/south-sudan/news/first-case-who-helps-south-sudan-prepare-ebola-bundibugyo-virus-disease",
+              "headline": "Before the first case: WHO helps South Sudan prepare for Ebola Bundibugyo virus Disease",
+              "body": "Juba - In Nabanga, a South Sudanese town bordering the Democratic Republic of Congo (DRC), fear of the ongoing Bundibugyo Virus disease (BVD) outbreak is already shaping daily life. In September a joint assessment by health authorities and partners identified 3 450 people who had crossed into South Sudan from the DRC amid rumors and growing community concern. Although South Sudan has not reported any confirmed cases of BVD, the continued movement of people has increase anxiety about the possible spread of the disease.",
+              "published_date": "2026-11-12",
+              "outlet": "WHO | Regional Office for Africa",
+              "image": ""
             },
             {
               "news_id": "af9bcbdbd04158509ac425016b193aef",
@@ -7861,12 +8028,30 @@
               "image": ""
             },
             {
+              "news_id": "ab9e1013c85952318d6b70b5e4900152",
+              "url": "https://www.msn.com/en-us/news/world/millions-of-ebola-dollars-going-missing-as-virus-spreads-medical-charity-warns/ar-AA2hhVYs?ocid=BingNewsVerp",
+              "headline": "Millions of Ebola dollars going missing as virus spreads, medical charity warns",
+              "body": "Medical staff are going unpaid, lack proper training and are struggling with shortages of essential supplies, MSF warns ...",
+              "published_date": "2026-11-12",
+              "outlet": "BBC on MSN",
+              "image": ""
+            },
+            {
               "news_id": "ed6878bad6015c3d97de9858783b01f1",
               "url": "https://www.usnews.com/news/world/articles/2026-11-12/congo-ebola-outbreak-still-out-of-control-after-six-months-msf-says",
               "headline": "Congo Ebola Outbreak Still Out of Control After Six Months, MSF Says",
               "body": "GENEVA, Nov 12 (Reuters) - Six months into Congo's Ebola outbreak, many cases are likely being missed, transmission in hospitals in some areas is rife and the virus is still spreading out of ...",
               "published_date": "2026-11-12T07:37:02+00:00",
               "outlet": "U.S. News & World Report",
+              "image": ""
+            },
+            {
+              "news_id": "5c06c3133ae9520e9cd8a3d0e9fc5bf1",
+              "url": "https://www.msn.com/en-xl/news/other/spike-in-attacks-on-dr-congo-journalists-fueled-in-part-by-ebola-reporting/ar-AA2hgCrM?ocid=BingNewsVerp",
+              "headline": "Spike in attacks on DR Congo journalists fueled in part by Ebola reporting",
+              "body": "The recent spike in physical assaults and threats directed at journalists in the Democratic Republic of the Congo has extended into November, as the worsening Ebola virus outbreak has triggered a ...",
+              "published_date": "2026-11-12",
+              "outlet": "AllAfrica on MSN",
               "image": ""
             }
           ]
@@ -7878,7 +8063,7 @@
       "incident_id": "20260511-EC-DR",
       "tree_id": "d75afb3078c54d74b37c4f8bb985dfce",
       "canonical_name": "Drought Green",
-      "summary": "Oklahoma remains in severe drought with potential rain ahead, while Alabama continues monitoring its drought conditions. Nantucket’s drought designation improved to mild, and Karnataka assured full drought compensation to farmers. COP31 addresses drought response, Zimbabwe builds a strategic grain reserve for El Niño, and a study examines Amazon forest resilience to extreme drought.",
+      "summary": "Oklahoma remains in severe drought with potential rain ahead, while Alabama continues monitoring its drought conditions. Nantucket’s drought designation improved to mild, and Karnataka assured full drought compensation to farmers. COP31 addresses drought response, Zimbabwe builds a strategic grain reserve for El Niño, and a study examines Amazon forest resilience to extreme drought.\nNew reports highlight continuing global drought impacts: Iowa became entirely drought-free after a wet October, while North Carolina remains in extreme drought in parts. Drought is threatening Iraq’s marshes and Cambodia’s Tonle Sap way of life, and Sindh is planning emergency relief for drought-affected Tharparkar. Additionally, a study warns that extreme drought could endanger cactus species, and a strengthening El Niño may end Houston's drought this winter.",
       "country": "Ecuador",
       "iso2": "EC",
       "lat": -1.8,
@@ -7908,7 +8093,7 @@
         "gdacs": 1,
         "ercc": 2,
         "healthmap": 0,
-        "news": 1112
+        "news": 1129
       },
       "source_links": [
         {
@@ -12230,6 +12415,10 @@
           "published_date": "2026-11-08"
         },
         {
+          "headline": "What Travelers Should Know About the Galápagos Floods—and the Ongoing Impact of El Niño",
+          "published_date": "2026-11-09"
+        },
+        {
           "headline": "Lake Lanier and other reservoirs get lower; drought operations kick in",
           "published_date": "2026-11-09"
         },
@@ -12366,6 +12555,10 @@
           "published_date": "2026-11-11"
         },
         {
+          "headline": "El Niño 2026 Could Bring Drought and Floods to Africa and Beyond - FunTimes Magazine",
+          "published_date": "2026-11-11"
+        },
+        {
           "headline": "INTERACTIVE: Leadville Businesses Hit by Willow Fire and Drought Have Until July 2027 to Get Federal Help",
           "published_date": "2026-11-11"
         },
@@ -12382,15 +12575,75 @@
           "published_date": "2026-11-12"
         },
         {
+          "headline": "Drought threatens Iraq's marshes, risking one of the oldest ways of life",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Smallholder farmers struggle on El Niño frontline; will the world help?",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Wetter-than-average October brings drought-free conditions to Iowa",
+          "published_date": "2026-11-12"
+        },
+        {
           "headline": "Zim targets 600 000-tonne grain reserve amid El Niño threat",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "A check of the drought monitor and a look-ahead to the weekend",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Colorado experiencing streak of unprecedented heat",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Wetter-than-average October brings drought-free conditions to Iowa",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Sindh plans emergency relief measures for drought-affected areas of Tharparkar",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "North Carolina drought improves in spots, gets worse in others",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Who gets Idaho’s water in a drought: An 1890s farm or a federal nuclear lab?",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Study warns extreme drought could threaten cacti, including saguaros",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Opinion: California lacks critical data on water supplies. Here’s why it must modernize its systems.",
           "published_date": "2026-11-12"
         },
         {
           "headline": "Karnataka Deputy CM Parameshwara clears the air, assures ryots full drought aid",
           "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Drought Monitor Update – November 12, 2026",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Strong El Niño could end Houston's drought this winter",
+          "published_date": "2026-11-12T18:26:00+00:00"
+        },
+        {
+          "headline": "Wetter-than-average October brings drought-free conditions to Iowa",
+          "published_date": "2026-11-12T18:26:03+00:00"
+        },
+        {
+          "headline": "A way of life is disappearing on Cambodia’s Tonle Sap as El Niño pressures lake communities",
+          "published_date": "2026-11-12T20:26:03+00:00"
         }
       ],
-      "news_total": 1112,
+      "news_total": 1129,
       "logs": [
         {
           "log_date": "2026-08-18",
@@ -12898,7 +13151,7 @@
         },
         {
           "log_date": "2026-11-12",
-          "summary": "Oklahoma remains in severe drought with potential rain ahead, while Alabama continues monitoring its drought conditions. Nantucket’s drought designation improved to mild, and Karnataka assured full drought compensation to farmers. COP31 addresses drought response, Zimbabwe builds a strategic grain reserve for El Niño, and a study examines Amazon forest resilience to extreme drought.",
+          "summary": "Oklahoma remains in severe drought with potential rain ahead, while Alabama continues monitoring its drought conditions. Nantucket’s drought designation improved to mild, and Karnataka assured full drought compensation to farmers. COP31 addresses drought response, Zimbabwe builds a strategic grain reserve for El Niño, and a study examines Amazon forest resilience to extreme drought.\nNew reports highlight continuing global drought impacts: Iowa became entirely drought-free after a wet October, while North Carolina remains in extreme drought in parts. Drought is threatening Iraq’s marshes and Cambodia’s Tonle Sap way of life, and Sindh is planning emergency relief for drought-affected Tharparkar. Additionally, a study warns that extreme drought could endanger cactus species, and a strengthening El Niño may end Houston's drought this winter.",
           "news": [
             {
               "news_id": "eea76eb4838e5921a539a12f7913f150",
@@ -12919,6 +13172,51 @@
               "image": ""
             },
             {
+              "news_id": "2c7635908dff5102ad26a69924154a28",
+              "url": "https://www.npr.org/2026/11/12/nx-s1-6026458/drought-threatens-iraqs-marshes-risking-one-of-the-oldest-ways-of-life",
+              "headline": "Drought threatens Iraq's marshes, risking one of the oldest ways of life",
+              "body": "The unique marshes of southern Iraq are beginning to revive after five years of devastating drought. But challenges remain for one of the world's oldest ways of life.",
+              "published_date": "2026-11-12",
+              "outlet": "NPR",
+              "image": "https://s.yimg.com/bo/3e59acc2-e6ff-5ab3-b198-7c6b17c88a97_1793628279342.jpg"
+            },
+            {
+              "news_id": "0b9be1a164d251b8b62c35dff5a87cb4",
+              "url": "https://news.mongabay.com/2026/11/smallholder-farmers-struggle-on-el-nino-frontline-will-the-world-help/",
+              "headline": "Smallholder farmers struggle on El Niño frontline; will the world help?",
+              "body": "Smallholder farmers across the globe are bracing for, or already feeling, the effects of a historically strong El Niño. This event — forecast to peak in December with lasting impacts deep into 2027 — has brought warnings of shocks to global food prices and food security. The record-breaking 2026-2027 El Niño could drive an additional […]",
+              "published_date": "2026-11-12",
+              "outlet": "Mongabay News",
+              "image": "https://www.bing.com/th?id=ONUT.XGoqPiz9WWNcORbVfZ0UxA"
+            },
+            {
+              "news_id": "47348d697aaf5c19a36ad289d21e6ae1",
+              "url": "https://apnews.com/article/asia-nino-drought-cambodia-tonle-mekong-a63fa6862ed6339d7c6571441c326342",
+              "headline": "A way of life is disappearing on Cambodia’s Tonle Sap as El Niño pressures lake communities",
+              "body": "A way of life is disappearing on Cambodia’s Tonle Sap, where generations have lived by the rhythms of its annual floods.",
+              "published_date": "2026-11-12T20:26:03+00:00",
+              "outlet": "Associated Press News",
+              "image": "https://www.bing.com/th?id=ONUT.BLcck6HKnUBvJfHaonXtRA"
+            },
+            {
+              "news_id": "3f22e3bca1645f90ad021443fccaa3a2",
+              "url": "https://travel.yahoo.com/news/articles/travelers-know-gal-pagos-floods-221016983.html;_ylt=A2RRfYwyIPZq2gIALQTQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzEEdnRpZAMEc2VjA3Ny",
+              "headline": "What Travelers Should Know About the Galápagos Floods—and the Ongoing Impact of El Niño",
+              "body": "The October floods on Santa Cruz Island don't mean you need to cancel your trip—but El Niño will require travelers to plan wisely, now and for months to come.",
+              "published_date": "2026-11-09",
+              "outlet": "Condé Nast Traveler · via Yahoo News",
+              "image": "https://s.yimg.com/fz/api/res/1.2/OTkUWdCEbxgka5tfLNk5gw--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7c209MTt3PTE2MA--/https://media.zenfs.com/en/conde_nast_traveler_225/fc75b2bdae49b143cb3d42bbb6ff3d58.jpg"
+            },
+            {
+              "news_id": "86deedc58a785fd39c6123786a84c7d3",
+              "url": "https://www.msn.com/en-us/news/other/wetter-than-average-october-brings-drought-free-conditions-to-iowa/ar-AA2hjXT9?ocid=BingNewsVerp",
+              "headline": "Wetter-than-average October brings drought-free conditions to Iowa",
+              "body": "DES MOINES, Iowa — The latest information from the U.S. Drought Monitor, released on Thursday, shows the entire state of Iowa ...",
+              "published_date": "2026-11-12",
+              "outlet": "WHO-TV Des Moines on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.4OZHehsXjWe-hlvmMDXAtQ"
+            },
+            {
               "news_id": "41221487155c5abfa4ac1581ecb63b80",
               "url": "https://news.mongabay.com/2026/11/how-would-the-amazon-react-if-it-dried-up-a-25-year-old-field-study-has-the-answer/",
               "headline": "How would the Amazon react if it dried up? A 25-year-old field study has the answer",
@@ -12937,6 +13235,15 @@
               "image": ""
             },
             {
+              "news_id": "b326d5de358a5163ad7bb85fc4afeb96",
+              "url": "https://www.ksat.com/video/weather/weather-forecast/2026/11/12/a-check-of-the-drought-monitor-and-a-look-ahead-to-the-weekend/",
+              "headline": "A check of the drought monitor and a look-ahead to the weekend",
+              "body": "Recent rains have resulted in improved drought conditions. Meantime, beautiful weather is expected today and tomorrow. Another round of rain shows up this weekend.",
+              "published_date": "2026-11-12",
+              "outlet": "KSAT",
+              "image": "https://www.bing.com/th?id=ONUT.XQiUxbWp8l_Sco1Dd47Ehg"
+            },
+            {
               "news_id": "eac8cbafb9bb5e88a87390fa96cc69a3",
               "url": "https://www.ack.net/news/nantucket-finally-sees-improvement-in-state-drought-designation/article_fcd770e2-050d-4644-a50a-a9eaafe480bf.html",
               "headline": "Nantucket finally sees improvement in state drought designation",
@@ -12944,6 +13251,15 @@
               "published_date": "2026-11-11",
               "outlet": "The Inquirer and Mirror",
               "image": "https://s.yimg.com/bo/efbe3e8e-6b62-5ebf-88b0-d93da84a610f_1794432004243.png.cf.jpg"
+            },
+            {
+              "news_id": "10530802f8d5596b91aa0295eb2a7333",
+              "url": "https://www.yahoo.com/news/weather-news/articles/colorado-experiencing-streak-unprecedented-heat-193333191.html",
+              "headline": "Colorado experiencing streak of unprecedented heat",
+              "body": "For quite some time now, Coloradans have been subject to prolonged droughts, historic wildfires and unprecedented heat.",
+              "published_date": "2026-11-12",
+              "outlet": "KDVR Denver · via Yahoo News",
+              "image": "https://media.zenfs.com/en/kdvr_denver_articles_499/24e2d1990b115d1b560f3fc82f93912c.jpg"
             },
             {
               "news_id": "18d74f57af5758699559815fdd67a7c4",
@@ -12955,6 +13271,87 @@
               "image": "https://www.bing.com/th?id=ONUT.-iMdP1z7qGgB11lDhlQxwQ"
             },
             {
+              "news_id": "e9638015f91b58a1bed05ab536fa643b",
+              "url": "https://www.yahoo.com/news/weather-news/articles/wetter-average-october-brings-drought-185008648.html",
+              "headline": "Wetter-than-average October brings drought-free conditions to Iowa",
+              "body": "DES MOINES, Iowa — The latest information from the U.S. Drought Monitor, released on Thursday, shows the entire state of Iowa is drought-free. The Iowa Department of Natural Resources stated that the ...",
+              "published_date": "2026-11-12",
+              "outlet": "WHO Des Moines · via Yahoo News",
+              "image": "https://media.zenfs.com/en/who_des_moines_articles_923/87ee2e7887bec0530452d97db2e7c137.jpg"
+            },
+            {
+              "news_id": "a22469aeab9a5625b6c3d4e21027e9c2",
+              "url": "https://www.nation.com.pk/12-Nov-2026/sindh-plans-emergency-relief-measures-drought-affected-areas-tharparkar",
+              "headline": "Sindh plans emergency relief measures for drought-affected areas of Tharparkar",
+              "body": "The Sindh government is preparing a comprehensive relief response for drought-hit Tharparkar, with a planned survey to assess shortages of food and clean",
+              "published_date": "2026-11-12",
+              "outlet": "The Nation",
+              "image": ""
+            },
+            {
+              "news_id": "99cd8067c77c59cfb1cfbfb13b73cf59",
+              "url": "https://funtimesmagazine.com/el-nino-2026-could-bring-drought-and-floods-to-africa-and-beyond/",
+              "headline": "El Niño 2026 Could Bring Drought and Floods to Africa and Beyond - FunTimes Magazine",
+              "body": "As one of the strongest El Niño events in decades threatens to disrupt global weather patterns, millions of people across Africa, the Caribbean and other vulnerable regions face growing concerns over food security, water shortages and extreme rainfall. But there is still time to prepare.",
+              "published_date": "2026-11-11",
+              "outlet": "FunTimes Magazine",
+              "image": "https://www.bing.com/th?id=ONUT.YVfjFnKVcqa7a-jOS6VJYw"
+            },
+            {
+              "news_id": "c02b5576a0c95d16b7b0a2f3091231e9",
+              "url": "https://www.yahoo.com/news/weather-news/articles/north-carolina-drought-improves-spots-160627082.html",
+              "headline": "North Carolina drought improves in spots, gets worse in others",
+              "body": "The latest drought monitor continues to show areas of extreme drought across North Carolina.",
+              "published_date": "2026-11-12",
+              "outlet": "WNCN Raleigh · via Yahoo News",
+              "image": "https://media.zenfs.com/en/wncn_articles_322/691dd15e78621dbbffd3ae7e1561ca47.png.cf.jpg"
+            },
+            {
+              "news_id": "a0dda845631d5b5c99c9ecbf44dd15b4",
+              "url": "https://www.yahoo.com/news/us/articles/gets-idaho-water-drought-1890s-124300282.html",
+              "headline": "Who gets Idaho’s water in a drought: An 1890s farm or a federal nuclear lab?",
+              "body": "The Trump administration is suing Idaho over water for the Idaho National Laboratory, a federal site that supports the Navy’s nuclear fleet.",
+              "published_date": "2026-11-12",
+              "outlet": "Miami Herald · via Yahoo News",
+              "image": "https://media.zenfs.com/en/miami_herald_mcclatchy_975/32e49011c7e000559bc6b49b0a9319cf.jpg"
+            },
+            {
+              "news_id": "ca6735317fd75eef9b7d89a7a4ba89f7",
+              "url": "https://www.msn.com/en-us/news/other/study-warns-extreme-drought-could-threaten-cacti-including-saguaros/ar-AA2hfSmi?ocid=BingNewsVerp",
+              "headline": "Study warns extreme drought could threaten cacti, including saguaros",
+              "body": "A new study warns that some cactus species could become critically endangered if extreme drought continues.",
+              "published_date": "2026-11-12",
+              "outlet": "AZ Family on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.34cf36638851276d5e474689eb7516d6"
+            },
+            {
+              "news_id": "77f83e6b107d5dbb85c4111e245bdb3d",
+              "url": "https://www.eastbaytimes.com/2026/11/12/opinion-california-lacks-critical-data-el-nino-drought-surface-groundwater-modernize/",
+              "headline": "Opinion: California lacks critical data on water supplies. Here’s why it must modernize its systems.",
+              "body": "‘Investments in water accounting will pay dividends, allowing us to manage water precisely during times of scarcity and incentivize banking water underground in times of plenty.’",
+              "published_date": "2026-11-12",
+              "outlet": "East Bay Times",
+              "image": "https://www.bing.com/th?id=ONUT.CdkYCdyYzu1cXQgM0jvqOw"
+            },
+            {
+              "news_id": "6ce7e389631e51fdb3f0db5607a2a7c7",
+              "url": "https://who13.com/news/wetter-than-average-october-brings-drought-free-conditions-to-iowa/",
+              "headline": "Wetter-than-average October brings drought-free conditions to Iowa",
+              "body": "DES MOINES, Iowa — The latest information from the U.S. Drought Monitor, released on Thursday, shows...",
+              "published_date": "2026-11-12T18:26:03+00:00",
+              "outlet": "WHO13.com",
+              "image": "https://s.yimg.com/bo/c7ef3a61-39bd-543b-ad63-78561a6f7d51_1792477299413.jpg"
+            },
+            {
+              "news_id": "fd6105a683b75c158c5b630f4c2062a4",
+              "url": "https://cw39.com/weather/noaa-historic-strength-el-nino/",
+              "headline": "Strong El Niño could end Houston's drought this winter",
+              "body": "A strengthening El Niño, which NOAA reports has a 60% chance of reaching historic levels, may bring ...",
+              "published_date": "2026-11-12T18:26:00+00:00",
+              "outlet": "CW39 NewsFix",
+              "image": "https://s.yimg.com/bo/8f5c2952-57e7-5729-9b95-023d15c72212_1794508679202.jpg"
+            },
+            {
               "news_id": "fac6ebc25cb95da1ac651b5fb168a6a7",
               "url": "https://www.newindianexpress.com/states/karnataka/2026/Nov/12/karnataka-deputy-cm-parameshwara-clears-the-air-assures-ryots-full-drought-aid",
               "headline": "Karnataka Deputy CM Parameshwara clears the air, assures ryots full drought aid",
@@ -12962,6 +13359,15 @@
               "published_date": "2026-11-12",
               "outlet": "The New Indian Express",
               "image": "https://www.bing.com/th?id=ONUT.uRNEQRe5e64VJffPTIF3Xw"
+            },
+            {
+              "news_id": "663ca5dcefa956dbbfed677273dab59a",
+              "url": "https://www.yahoo.com/news/weather-news/articles/drought-monitor-november-12-2026-152828211.html",
+              "headline": "Drought Monitor Update – November 12, 2026",
+              "body": "The latest drought monitor update from the USDA (US Department of Agriculture), NOAA (National Oceanic and Atmospheric Administration), CPC (Climate Prediction Center), and the NDMC (National Drought ...",
+              "published_date": "2026-11-12",
+              "outlet": "KCAU Sioux City · via Yahoo News",
+              "image": "https://media.zenfs.com/en/kcau_sioux_city_articles_201/cb6519eaa599484353d2960b702f59ff.png.cf.jpg"
             }
           ]
         }
@@ -12972,7 +13378,7 @@
       "incident_id": "20260715-UA-CF",
       "tree_id": "f22292f8c3ff448a920c3b1fe41d3aa0",
       "canonical_name": "Conflict Ukraine 2026-07-15",
-      "summary": "A summit between President Xi Jinping, President Donald Trump, and President Vladimir Putin took place, drawing comparisons to the 1945 Yalta conference. Separately, South Korea urged Ukraine to honor agreements amid a diplomatic rift, while President Zelenskyy warned that the conflict with Iran is draining Patriot missile supplies needed for Ukraine's defense.",
+      "summary": "A summit between President Xi Jinping, President Donald Trump, and President Vladimir Putin took place, drawing comparisons to the 1945 Yalta conference. Separately, South Korea urged Ukraine to honor agreements amid a diplomatic rift, while President Zelenskyy warned that the conflict with Iran is draining Patriot missile supplies needed for Ukraine's defense.\nUS envoys Kushner and Witkoff arrived in Moscow for talks with Putin after two days of Abu Dhabi negotiations produced a large prisoner exchange but no ceasefire. European leaders met in Dublin to discuss Ukraine's security, while Ukraine reported new Starlink disruptions along the front line. The Black Sea has seen over 300 attacks on vessels this year, and Ireland faced pressure over alumina shipments to Russia.",
       "country": "Ukraine",
       "iso2": "UA",
       "lat": 48.9,
@@ -13002,7 +13408,7 @@
         "gdacs": 0,
         "ercc": 6,
         "healthmap": 0,
-        "news": 2110
+        "news": 2126
       },
       "source_links": [
         {
@@ -21338,6 +21744,10 @@
           "published_date": "2026-11-10T20:05:27+00:00"
         },
         {
+          "headline": "Map shows how Ukraine war shifted since Putin said it's \"coming to an end\"",
+          "published_date": "2026-11-11"
+        },
+        {
           "headline": "Russia, Ukraine reach deal on prisoner swap as US says lack of trust holds back talks",
           "published_date": "2026-11-11"
         },
@@ -21347,6 +21757,10 @@
         },
         {
           "headline": "Ukraine Front Faces Mud and Slowdown as Mild Winter Looms",
+          "published_date": "2026-11-11"
+        },
+        {
+          "headline": "Russia and Ukraine agree to a large prisoner exchange as talks end with no major breakthrough",
           "published_date": "2026-11-11"
         },
         {
@@ -21486,15 +21900,71 @@
           "published_date": "2026-11-11T17:41:46+00:00"
         },
         {
+          "headline": "What to know as European leaders meet in Dublin to discuss Ukraine's security, and their own",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Russia, Ukraine say some progress made at talks, US cites lack of trustPublished on: November 12, 2026 11:02 AM",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Ukraine says Starlink communications disrupted as US envoys meet Putin",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "MARITIME CRISIS: Over 300 Attacks and Dozens Killed as Black Sea Becomes World’s Deadliest Shipping Route",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "‘The War Must Stop’: Nobel Peace Laureate Oleksandra Matviichuk on the Urgent Need to Protect Ukraine’s Women and Children",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Why U.S.-Led Talks With Russia And Ukraine Had No Major Breakthrough",
+          "published_date": "2026-11-12"
+        },
+        {
           "headline": "Xi-Trump-Putin summit evokes 1945 Yalta carve-up",
           "published_date": "2026-11-12"
         },
         {
           "headline": "Explainer: What to know about Russia-U.S.-Ukraine trilateral talks in Abu Dhabi",
           "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Estonia \"issued a base\": our representative of Europe at the negotiations is the Army of Ukraine: EADaily",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Ireland faces pressure to stop sending Russia an ingredient vital to its war on Ukraine - Newsday",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Stay or leave? Ukrainians face a hard choice ahead of what could be the war’s toughest winter",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "US envoys arrive in Moscow for latest round of Ukrainian peace talks with Putin",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "EXPLAINER: What to know about Russia-US-Ukraine talks in Abu Dhabi",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Why U.S.-Led Talks With Russia And Ukraine Had No Major Breakthrough",
+          "published_date": "2026-11-12T00:00:00+00:00"
+        },
+        {
+          "headline": "Ushakov called the introduction of the EU contingent in Ukraine a \"recipe for endless war.\"",
+          "published_date": "2026-11-12T20:24:05+00:00"
+        },
+        {
+          "headline": "US envoys in Moscow for meeting with Putin following talks in Abu Dhabi",
+          "published_date": "2026-11-12T20:24:05+00:00"
         }
       ],
-      "news_total": 2110,
+      "news_total": 2126,
       "logs": [
         {
           "log_date": "2026-07-24",
@@ -22524,8 +22994,17 @@
         },
         {
           "log_date": "2026-11-12",
-          "summary": "A summit between President Xi Jinping, President Donald Trump, and President Vladimir Putin took place, drawing comparisons to the 1945 Yalta conference. Separately, South Korea urged Ukraine to honor agreements amid a diplomatic rift, while President Zelenskyy warned that the conflict with Iran is draining Patriot missile supplies needed for Ukraine's defense.",
+          "summary": "A summit between President Xi Jinping, President Donald Trump, and President Vladimir Putin took place, drawing comparisons to the 1945 Yalta conference. Separately, South Korea urged Ukraine to honor agreements amid a diplomatic rift, while President Zelenskyy warned that the conflict with Iran is draining Patriot missile supplies needed for Ukraine's defense.\nUS envoys Kushner and Witkoff arrived in Moscow for talks with Putin after two days of Abu Dhabi negotiations produced a large prisoner exchange but no ceasefire. European leaders met in Dublin to discuss Ukraine's security, while Ukraine reported new Starlink disruptions along the front line. The Black Sea has seen over 300 attacks on vessels this year, and Ireland faced pressure over alumina shipments to Russia.",
           "news": [
+            {
+              "news_id": "fe721c0f5cd25e92995480a9b7ec32a1",
+              "url": "https://www.msn.com/en-us/news/other/what-to-know-as-european-leaders-meet-in-dublin-to-discuss-ukraines-security-and-their-own/ar-AA2hgNgQ?ocid=BingNewsVerp",
+              "headline": "What to know as European leaders meet in Dublin to discuss Ukraine's security, and their own",
+              "body": "Leaders from over 40 European countries are gathering in Dublin for a summit focused on the continent’s fragile security. The meeting of the European Political Community includes EU and non-EU ...",
+              "published_date": "2026-11-12",
+              "outlet": "Midland Reporter-Telegram on MSN",
+              "image": ""
+            },
             {
               "news_id": "0b806ccb5e3458c285f83ea43830a2b7",
               "url": "https://www.expressnews.com/news/world/article/russia-and-ukraine-hold-a-second-day-of-22524732.php",
@@ -22534,6 +23013,24 @@
               "published_date": "2026-11-11T17:41:46+00:00",
               "outlet": "San Antonio Express-News",
               "image": "https://s.yimg.com/bo/022fd271-f4eb-5162-93d6-7538672d2d84_1794411238358.jpg"
+            },
+            {
+              "news_id": "ae8db67715aa54b4a2b225508b0c3e77",
+              "url": "https://www.msn.com/en-xl/asia/pakistan/russia-ukraine-say-some-progress-made-at-talks-us-cites-lack-of-trustpublished-on-november-12-2026-1102-am/ar-AA2hgOR3?ocid=BingNewsVerp",
+              "headline": "Russia, Ukraine say some progress made at talks, US cites lack of trustPublished on: November 12, 2026 11:02 AM",
+              "body": "Pakistan, Nov. 12 -- Russian and Ukrainian negotiators reported some progress in two days of peace talks in Abu Dhabi that ...",
+              "published_date": "2026-11-12",
+              "outlet": "Daily Times on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.3HFzsCrx9XKBqE6ofkQxpA"
+            },
+            {
+              "news_id": "b74f99e3536552a08c2860f59fa70845",
+              "url": "https://www.yahoo.com/news/world/articles/map-shows-ukraine-war-shifted-183952060.html",
+              "headline": "Map shows how Ukraine war shifted since Putin said it's \"coming to an end\"",
+              "body": "A prisoner exchange but no battlefield shift was agreed during trilateral talks in Abu Dhabi.",
+              "published_date": "2026-11-11",
+              "outlet": "NEWSWEEK · via Yahoo News",
+              "image": "https://media.zenfs.com/en/newsweek_sports_200/50f61e4cc4f6188e8791c74e47a46559.jpg"
             },
             {
               "news_id": "5362314a0fbc50f987e6275510407556",
@@ -22552,6 +23049,60 @@
               "published_date": "2026-11-11T00:00:00+00:00",
               "outlet": "The Detroit News",
               "image": "https://www.bing.com/th?id=ONUT.lbJVMFP06Sdf_AB_9GEpKw"
+            },
+            {
+              "news_id": "a748bd6d50ba59f2941ebb565205ec9d",
+              "url": "https://www.abc.net.au/news/2026-11-13/ukraine-elon-musk-starlink-access-disrupted/107380578",
+              "headline": "Ukraine says Starlink communications disrupted as US envoys meet Putin",
+              "body": "Ukrainian President Volodymyr Zelenskyy says disruptions to the Starshield satellite communications service - the military version of Elon Musk's SpaceX's Starlink - is affecting the Ukrainian front line.",
+              "published_date": "2026-11-12",
+              "outlet": "ABC (Australian Broadcasting Corporation)",
+              "image": "https://www.bing.com/th?id=ONUT.TYHHYx0yGkFswrhpvW9qYw"
+            },
+            {
+              "news_id": "5b165dd86e645766ad7b295f1ca6212a",
+              "url": "https://www.forbes.com/sites/marktemnycky/2026/11/12/why-us-led-talks-with-russia-and-ukraine-had-no-major-breakthrough/",
+              "headline": "Why U.S.-Led Talks With Russia And Ukraine Had No Major Breakthrough",
+              "body": "U.S.-led talks in Abu Dhabi brought no major breakthroughs in ending the Russia-Ukraine War. Russia still demands Ukrainian land and rejects an immediate ceasefire.",
+              "published_date": "2026-11-12T00:00:00+00:00",
+              "outlet": "Forbes",
+              "image": ""
+            },
+            {
+              "news_id": "7fa2382aa2d2589995ce9795a88c8f61",
+              "url": "https://www.theyeshivaworld.com/news/israel-news/2622343/maritime-crisis-over-300-attacks-and-dozens-killed-as-black-sea-becomes-worlds-deadliest-shipping-route.html",
+              "headline": "MARITIME CRISIS: Over 300 Attacks and Dozens Killed as Black Sea Becomes World’s Deadliest Shipping Route",
+              "body": "The Black Sea has become the world’s deadliest shipping zone, surpassing even the Strait of Hormuz, with more than 300 attacks on vessels and over 30 crew members killed since the beginning of 2026, according to new figures reported by The Wall Street Journal. The sharp escalation in maritime attacks, driven by the ongoing war […]",
+              "published_date": "2026-11-12",
+              "outlet": "The Yeshiva World",
+              "image": ""
+            },
+            {
+              "news_id": "2055b021350353939a84a49e74dd159d",
+              "url": "https://iz.ru/en/node/2200854",
+              "headline": "Ushakov called the introduction of the EU contingent in Ukraine a \"recipe for endless war.\"",
+              "body": "European countries' plans to deploy foreign troops in Ukraine after the conflict ends may lead to its endless continuation. This was announced on November 12 by Russian Presidential aide Yuri Ushakov ...",
+              "published_date": "2026-11-12T20:24:05+00:00",
+              "outlet": "Izvestia",
+              "image": ""
+            },
+            {
+              "news_id": "6283c927871355819ddda1e99c9b799b",
+              "url": "https://www.ipsnews.net/2026/11/the-war-must-stop-nobel-peace-laureate-oleksandra-matviichuk-on-the-urgent-need-to-protect-ukraines-women-and-children/",
+              "headline": "‘The War Must Stop’: Nobel Peace Laureate Oleksandra Matviichuk on the Urgent Need to Protect Ukraine’s Women and Children",
+              "body": "The War Must Stop",
+              "published_date": "2026-11-12",
+              "outlet": "Inter Press Service",
+              "image": ""
+            },
+            {
+              "news_id": "d2132bb589135e93b886082092863f94",
+              "url": "https://www.yahoo.com/news/politics/articles/why-u-led-talks-russia-110000196.html",
+              "headline": "Why U.S.-Led Talks With Russia And Ukraine Had No Major Breakthrough",
+              "body": "U.S.-led talks in Abu Dhabi brought no major breakthroughs in ending the Russia-Ukraine War. Russia still demands Ukrainian land and rejects an immediate ceasefire.",
+              "published_date": "2026-11-12",
+              "outlet": "Forbes · via Yahoo News",
+              "image": "https://media.zenfs.com/en/forbes_contributor_845/195755e33f73e2e4f5572cf9acf9fa72.jpg"
             },
             {
               "news_id": "197c92cb9121595c9bf8d2c574877815",
@@ -22581,6 +23132,15 @@
               "image": "https://www.bing.com/th?id=ONUT.vBBvVYPu2P0jAGeSyqmjrg"
             },
             {
+              "news_id": "4b15afb6883f5d9695d8eb72b8cfa0e5",
+              "url": "https://eadaily.com/en/news/2026/11/12/estonia-issued-a-base-our-representative-of-europe-at-the-negotiations-is-the-army-of-ukraine",
+              "headline": "Estonia \"issued a base\": our representative of Europe at the negotiations is the Army of Ukraine: EADaily",
+              "body": "EADaily, November 12th, 2026. The Ukrainian army is the best representative of Europe in negotiations with Russia. This was stated by the chairman of the Estonian Parliament's Foreign Affairs Committee Marko Mihkelson.",
+              "published_date": "2026-11-12",
+              "outlet": "EADaily",
+              "image": "https://www.bing.com/th?id=ONUT.mwmRxETdM1brGPd0D1BHCw"
+            },
+            {
               "news_id": "9edb33b6a72e54b991a4c8ca4e793cc7",
               "url": "https://www.iranintl.com/en/202611117704",
               "headline": "Zelenskyy warns Iran war is draining Patriot missiles needed by Ukraine",
@@ -22590,6 +23150,33 @@
               "image": "https://www.bing.com/th?id=ONUT.2NbA0HmM4koAJWjlCgZWqA"
             },
             {
+              "news_id": "cc3cf505042f53a1a9b65994cf7e0a0b",
+              "url": "https://apnews.com/article/russia-ukraine-war-putin-kushner-witkoff-683810203340077f33611fd1d1757b23",
+              "headline": "US envoys in Moscow for meeting with Putin following talks in Abu Dhabi",
+              "body": "Envoys for U.S. President Donald Trump have arrived in Moscow to discuss U.S.-mediated talks between Russia and Ukraine.",
+              "published_date": "2026-11-12T20:24:05+00:00",
+              "outlet": "Associated Press News",
+              "image": "https://www.bing.com/th?id=ONUT.dD2OTiAMTqx7dyBc9djiwA"
+            },
+            {
+              "news_id": "0af300997bf65a17b313314290b524f0",
+              "url": "https://www.newsday.com/business/ireland-russia-ukraine-war-alumina-sanctions-t96262",
+              "headline": "Ireland faces pressure to stop sending Russia an ingredient vital to its war on Ukraine - Newsday",
+              "body": "A cargo ship is set to leave Ireland for Russia with alumina, a white powder that experts say is likely used to make weapons.",
+              "published_date": "2026-11-12",
+              "outlet": "Newsday",
+              "image": "https://www.bing.com/th?id=ONUT.TW7VMsMGkYJUqBTEPbQkpQ"
+            },
+            {
+              "news_id": "64b39504ef6954bea03c21b50af42f7a",
+              "url": "https://www.twincities.com/2026/11/12/russia-ukraine-war-winter-coming/",
+              "headline": "Stay or leave? Ukrainians face a hard choice ahead of what could be the war’s toughest winter",
+              "body": "Officials warn Russia aims to create a crisis in Kyiv, impacting the nation’s morale.",
+              "published_date": "2026-11-12",
+              "outlet": "Pioneer Press",
+              "image": "https://www.bing.com/th?id=ONUT.4HlJEDzRpzRrH6HgaSnzXw"
+            },
+            {
               "news_id": "f01adb8218415c618d3dfe66a34dd804",
               "url": "https://voennoedelo.com/en/posts/id22076-ukraine-front-faces-mud-and-slowdown-as-mild-winter-looms",
               "headline": "Ukraine Front Faces Mud and Slowdown as Mild Winter Looms",
@@ -22597,6 +23184,33 @@
               "published_date": "2026-11-11",
               "outlet": "Voennoe Delo",
               "image": "https://www.bing.com/th?id=ONUT.GK6Odnp06stTUZwoedTyJA"
+            },
+            {
+              "news_id": "089fdcbd8cf9587a97d2405b1e6dd04a",
+              "url": "https://www.msn.com/en-us/news/other/us-envoys-arrive-in-moscow-for-latest-round-of-ukrainian-peace-talks-with-putin/ar-AA2hhmXx?ocid=BingNewsVerp",
+              "headline": "US envoys arrive in Moscow for latest round of Ukrainian peace talks with Putin",
+              "body": "MOSCOW, Nov 12 (Reuters) - US envoys Jared Kushner and Steve Witkoff arrived in Moscow on Thursday for talks with Russian ...",
+              "published_date": "2026-11-12",
+              "outlet": "Reuters on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.9e26fe5e194259d28c62f638ec831c86"
+            },
+            {
+              "news_id": "7ccfb19c5b7054bbb9de60d99f2ac4a6",
+              "url": "https://www.bostonherald.com/2026/11/11/russia-ukraine-prisoner-exchange/",
+              "headline": "Russia and Ukraine agree to a large prisoner exchange as talks end with no major breakthrough",
+              "body": "The talks, held over two days, were the first in nine months.",
+              "published_date": "2026-11-11",
+              "outlet": "Boston Herald",
+              "image": "https://www.bing.com/th?id=ONUT.0s-N7Na8Hmn8PwXNao7k9A"
+            },
+            {
+              "news_id": "1705fb02b6035b8b9af2c8135dfdc993",
+              "url": "https://www.the-star.co.ke/news/world/2026-11-12-what-to-know-about-russia-us-ukraine-talks-in-abu-dhabi",
+              "headline": "EXPLAINER: What to know about Russia-US-Ukraine talks in Abu Dhabi",
+              "body": "While the agreement marked a tangible outcome of the two-day discussions, no agreement was announced on a ceasefire",
+              "published_date": "2026-11-12",
+              "outlet": "The Star",
+              "image": "https://www.bing.com/th?id=ONUT.kU_vu8ozq2jHJ1Fai-JNEg"
             }
           ]
         }
@@ -22607,7 +23221,7 @@
       "incident_id": "20260726-IR-CF",
       "tree_id": "13763def03ab448898154124734fe728",
       "canonical_name": "Iran/US war",
-      "summary": "President Trump claimed the US has won the Iran war but said the naval blockade would continue, while Iranian officials responded on the sidelines of an international climate summit. Trump and Netanyahu reportedly clashed over whether to renew military action, with the US president favoring diplomacy and economic pressure. Republicans are debating new war funding, and the House blocked an impeachment attempt against Defense Secretary Hegseth.",
+      "summary": "President Trump claimed the US has won the Iran war but said the naval blockade would continue, while Iranian officials responded on the sidelines of an international climate summit. Trump and Netanyahu reportedly clashed over whether to renew military action, with the US president favoring diplomacy and economic pressure. Republicans are debating new war funding, and the House blocked an impeachment attempt against Defense Secretary Hegseth.\nPresident Trump redirected Vice President Vance from Iran negotiations to investigate domestic corruption, while House Democratic leader Jeffries signaled willingness to use a government shutdown to end the conflict. Iran’s parliament speaker reiterated that the Strait of Hormuz will never return to its pre-war status, even as oil production neared pre-war levels and prices fell on peace talk hopes.",
       "country": "Iran",
       "iso2": "IR",
       "lat": 32.4,
@@ -22637,7 +23251,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 3356
+        "news": 3367
       },
       "source_links": [
         {
@@ -35543,6 +36157,10 @@
           "published_date": "2026-11-07T17:38:38+00:00"
         },
         {
+          "headline": "Trump shifts Vance's focus from Iran to corruption in Democratic areas",
+          "published_date": "2026-11-07T20:27:07+00:00"
+        },
+        {
           "headline": "The Latest: Republican Rep. Thomas Massie files resolution to impeach Defense Secretary Pete Hegseth",
           "published_date": "2026-11-07T22:53:55+00:00"
         },
@@ -35951,6 +36569,14 @@
           "published_date": "2026-11-10T20:10:25+00:00"
         },
         {
+          "headline": "Trump pulls Vance from Iran talks to address alleged corruption",
+          "published_date": "2026-11-10T20:27:07+00:00"
+        },
+        {
+          "headline": "Hormuz Strait will ‘never return’ to pre-war status, Iran’s Ghalibaf says",
+          "published_date": "2026-11-11"
+        },
+        {
           "headline": "F1 Today | Trump provides an update in the Iran war ahead of Middle East double-header",
           "published_date": "2026-11-11"
         },
@@ -36063,11 +36689,39 @@
           "published_date": "2026-11-11T20:03:09+00:00"
         },
         {
+          "headline": "Jeffries Leaves Shutdown Option Open Over Iran War",
+          "published_date": "2026-11-11T20:27:07+00:00"
+        },
+        {
+          "headline": "Oil prices drop more than $1 as hopes for Iran, Ukraine peace talks pressure markets",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "The Strait of Hormuz was the biggest game changer for markets in 2026",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Trump Hijacks Veterans Day to Tout His Iran War Record Before His Own Ambitions Take Center Stage",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "‘No war, no peace’: Can Iran break the deadlock with the US?",
+          "published_date": "2026-11-12"
+        },
+        {
           "headline": "Trump's Iran War draws 'disaster' warning from American veterans",
           "published_date": "2026-11-12"
         },
         {
+          "headline": "Oil production nears pre-Iran war levels, OPEC says",
+          "published_date": "2026-11-12"
+        },
+        {
           "headline": "Trump defends Iran war in Veterans Day address",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "The Strait of Hormuz was the biggest game changer for markets in 2026",
           "published_date": "2026-11-12"
         },
         {
@@ -36081,9 +36735,13 @@
         {
           "headline": "Just like the US, Iran has squandered its good options to end the war",
           "published_date": "2026-11-12T06:44:41+00:00"
+        },
+        {
+          "headline": "Trump seeks 'total victory' over Iran, says 'Washington did not start war with Tehran'",
+          "published_date": "2026-11-12T20:27:04+00:00"
         }
       ],
-      "news_total": 3356,
+      "news_total": 3367,
       "logs": [
         {
           "log_date": "2026-07-27",
@@ -36942,8 +37600,17 @@
         },
         {
           "log_date": "2026-11-12",
-          "summary": "President Trump claimed the US has won the Iran war but said the naval blockade would continue, while Iranian officials responded on the sidelines of an international climate summit. Trump and Netanyahu reportedly clashed over whether to renew military action, with the US president favoring diplomacy and economic pressure. Republicans are debating new war funding, and the House blocked an impeachment attempt against Defense Secretary Hegseth.",
+          "summary": "President Trump claimed the US has won the Iran war but said the naval blockade would continue, while Iranian officials responded on the sidelines of an international climate summit. Trump and Netanyahu reportedly clashed over whether to renew military action, with the US president favoring diplomacy and economic pressure. Republicans are debating new war funding, and the House blocked an impeachment attempt against Defense Secretary Hegseth.\nPresident Trump redirected Vice President Vance from Iran negotiations to investigate domestic corruption, while House Democratic leader Jeffries signaled willingness to use a government shutdown to end the conflict. Iran’s parliament speaker reiterated that the Strait of Hormuz will never return to its pre-war status, even as oil production neared pre-war levels and prices fell on peace talk hopes.",
           "news": [
+            {
+              "news_id": "ea20e07b0ef35e0bbb16b53c2cdf2977",
+              "url": "https://www.cnbc.com/2026/11/12/oil-prices-fall-over-1-on-hopes-for-iran-ukraine-peace-talks-.html",
+              "headline": "Oil prices drop more than $1 as hopes for Iran, Ukraine peace talks pressure markets",
+              "body": "Oil prices dropped more than $1 on Thursday as hopes for progress in peace talks over the Middle East and the Russia-Ukraine wars pressured the market.",
+              "published_date": "2026-11-12",
+              "outlet": "CNBC",
+              "image": "https://www.bing.com/th?id=ONUT.sWDCHJDLz8Re78ZtxPb1iA"
+            },
             {
               "news_id": "9916acc44bf85bb79032da69b81c2eb3",
               "url": "https://www.reuters.com/commentary/reuters-open-interest/just-like-us-iran-has-squandered-its-good-options-end-war-2026-11-12/",
@@ -36952,6 +37619,42 @@
               "published_date": "2026-11-12T06:44:41+00:00",
               "outlet": "Reuters",
               "image": "https://www.bing.com/th?id=ONUT.uCqtTg1tUqrY63dF8873Lw"
+            },
+            {
+              "news_id": "4ba8e9778af45dcf9a0d10f80fedd97b",
+              "url": "https://www.aljazeera.com/news/2026/11/11/strait-of-hormuz-will-never-return-to-pre-war-status-ghalibaf",
+              "headline": "Hormuz Strait will ‘never return’ to pre-war status, Iran’s Ghalibaf says",
+              "body": "Iran's parliament speaker and top negotiator says Tehran is waiting for an official US response to its seven conditions.",
+              "published_date": "2026-11-11",
+              "outlet": "Al Jazeera",
+              "image": "https://www.bing.com/th?id=ONUT.T5kgGZUa95faVe91coUcgA"
+            },
+            {
+              "news_id": "04d15f78512552c8bc7d37da3cedaa5e",
+              "url": "https://www.msn.com/en-us/news/other/the-strait-of-hormuz-was-the-biggest-game-changer-for-markets-in-2026/ar-AA2hhE6P?ocid=BingNewsVerp",
+              "headline": "The Strait of Hormuz was the biggest game changer for markets in 2026",
+              "body": "The conflict for control over the Strait of Hormuz has been one of the defining market storylines of 2026.",
+              "published_date": "2026-11-12",
+              "outlet": "Yahoo Finance on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.2db455186f40bb72861220c6dfaf94e6"
+            },
+            {
+              "news_id": "57ecee32dde35a0a9dab3900c0093f97",
+              "url": "https://atlantablackstar.com/2026/11/12/trump-hijacks-veterans-day-to-tout-his-iran-war-record-before-his-own-ambitions-take-center-stage/",
+              "headline": "Trump Hijacks Veterans Day to Tout His Iran War Record Before His Own Ambitions Take Center Stage",
+              "body": "On a day meant to put veterans first, Donald Trump once again found a way to make the spotlight about himself. Some stages should remain off-limits to",
+              "published_date": "2026-11-12",
+              "outlet": "Atlanta Black Star",
+              "image": "https://www.bing.com/th?id=ONUT.h8Um7awvCn4cfIauzjNt4w"
+            },
+            {
+              "news_id": "b19a2f6875eb505c85a793f549be915b",
+              "url": "https://www.aljazeera.com/news/2026/11/12/no-war-no-peace-can-iran-break-the-deadlock-with-the-us",
+              "headline": "‘No war, no peace’: Can Iran break the deadlock with the US?",
+              "body": "Sustainable stalemate or slow-motion strangulation? The current 'equilibrium' is inherently unstable, experts say.",
+              "published_date": "2026-11-12",
+              "outlet": "Al Jazeera",
+              "image": ""
             },
             {
               "news_id": "6a40a5d8897658faba903eefabc721e9",
@@ -36981,6 +37684,15 @@
               "image": "https://media.zenfs.com/en/newsweek_sports_200/89613d1dfa39e421281519c77726d0c6.jpg"
             },
             {
+              "news_id": "4a37599ff80a5d44b90d20d23b9600e7",
+              "url": "https://www.newsmax.com/politics/hakeem-jeffries-iran-war/2026/11/12/id/1276104/",
+              "headline": "Jeffries Leaves Shutdown Option Open Over Iran War",
+              "body": "N.Y., declined Thursday to rule out using a looming government funding deadline to press for an end to the Iran war, saying ...",
+              "published_date": "2026-11-11T20:27:07+00:00",
+              "outlet": "Newsmax",
+              "image": "https://www.bing.com/th?id=ONUT.1ww8f-XUH2mm-93B0z5MfQ"
+            },
+            {
               "news_id": "3722aa894ad650649d8340e4fa24426a",
               "url": "https://www.npr.org/2026/11/11/nx-s1-6035875/trump-says-us-won-iran-war-iran-responds",
               "headline": "Trump says US won Iran war, Iran responds",
@@ -36997,6 +37709,15 @@
               "published_date": "2026-11-12",
               "outlet": "Newsweek on MSN",
               "image": "https://www.bing.com/th?id=ORMS.9dd8b248d217c54c1fe050e0b496050f"
+            },
+            {
+              "news_id": "70ad1a6834bd52d88f506c2c8689bd57",
+              "url": "https://www.msn.com/en-us/news/other/oil-production-nears-pre-iran-war-levels-opec-says/ar-AA2hekLz?ocid=BingNewsVerp",
+              "headline": "Oil production nears pre-Iran war levels, OPEC says",
+              "body": "Saudi Arabia reports oil outputs soared to highest levels in months despite continued shipping disruptions.",
+              "published_date": "2026-11-12",
+              "outlet": "Al Jazeera on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.7ff1f1a5e0bb4a8b13b6496702b51da3"
             },
             {
               "news_id": "38c782f8ba4a5ebaa6be7918764404fc",
@@ -37017,6 +37738,15 @@
               "image": "https://www.bing.com/th?id=ONUT.rxvUVf1kyMvlBVnyDfdvMg"
             },
             {
+              "news_id": "e42318b400e1513d98b52541b55a759b",
+              "url": "https://www.upi.com/Top_News/US/2026/11/12/iran-vance-trump/3171794509588/",
+              "headline": "Trump shifts Vance's focus from Iran to corruption in Democratic areas",
+              "body": "U.S. President Donald Trump is pulling U.S. Vice President JD Vance from talks with Iran to focus on investigating alleged ...",
+              "published_date": "2026-11-07T20:27:07+00:00",
+              "outlet": "UPI",
+              "image": "https://www.bing.com/th?id=ONUT.XrLa6PwV44pLzcJNBznyYg"
+            },
+            {
               "news_id": "f164a78611e85977bd7ec6857b69adb6",
               "url": "https://www.yahoo.com/news/politics/articles/jd-vance-seems-back-team-192444742.html",
               "headline": "JD Vance Seems To Be Back On Team Hegseth 1 Week After Ripping Iran War",
@@ -37024,6 +37754,33 @@
               "published_date": "2026-11-10",
               "outlet": "HuffPost · via Yahoo News",
               "image": "https://media.zenfs.com/en/the_huffington_post_584/77b22bb6017c863ac8972d7aaf43f751.jpg"
+            },
+            {
+              "news_id": "ef81ebd973bf58999705dc9d532faa06",
+              "url": "https://www.indiatvnews.com/news/world/trump-seeks-total-victory-over-iran-says-washington-did-not-start-war-with-tehran-latest-updates-2026-11-12-1059217",
+              "headline": "Trump seeks 'total victory' over Iran, says 'Washington did not start war with Tehran'",
+              "body": "US President Donald Trump said the United States had fought back against Iran and claimed that American military operations ...",
+              "published_date": "2026-11-12T20:27:04+00:00",
+              "outlet": "India TV News",
+              "image": "https://www.bing.com/th?id=ONUT.AM0-KzI5oRRgRunDfVTxKQ"
+            },
+            {
+              "news_id": "74129ec12c6154bf955f2983c7993b6b",
+              "url": "https://www.detroitnews.com/story/news/politics/2026/11/12/trump-says-us-does-not-need-iran-deal/92743461007/",
+              "headline": "Trump pulls Vance from Iran talks to address alleged corruption",
+              "body": "Trump directed JD Vance to focus \"his complete and total attention\" on alleged crime and corruption in Democratic-run cities and states.",
+              "published_date": "2026-11-10T20:27:07+00:00",
+              "outlet": "The Detroit News",
+              "image": ""
+            },
+            {
+              "news_id": "63def8a163725fdbb3c02f7ce7660747",
+              "url": "https://finance.yahoo.com/markets/article/the-strait-of-hormuz-was-the-biggest-game-changer-for-markets-in-2026-120000488.html",
+              "headline": "The Strait of Hormuz was the biggest game changer for markets in 2026",
+              "body": "The conflict for control over the Strait of Hormuz has been one of the defining market storylines of 2026.",
+              "published_date": "2026-11-12",
+              "outlet": "Yahoo Finance",
+              "image": "https://d29szjachogqwa.cloudfront.net/images/user-uploaded/whowonyear-16x9-gamechanger_8796.png.cf.jpg"
             },
             {
               "news_id": "ba0cf35941c857efa363f3a50f963410",
@@ -37091,7 +37848,7 @@
         "gdacs": 1,
         "ercc": 7,
         "healthmap": 0,
-        "news": 1165
+        "news": 1169
       },
       "source_links": [
         {
@@ -41811,11 +42568,27 @@
           "published_date": "2026-11-10"
         },
         {
+          "headline": "Harlan County forest fire rekindles amid dry fall conditions",
+          "published_date": "2026-11-11"
+        },
+        {
+          "headline": "PHOTOS: Fire burns 260 acres at Cacapon State Park",
+          "published_date": "2026-11-11"
+        },
+        {
+          "headline": "Forest Service seeks public input on Skillet Fire salvage project near Olney",
+          "published_date": "2026-11-11"
+        },
+        {
           "headline": "PHOTOS: Fire burns 260 acres at Cacapon State Park",
           "published_date": "2026-11-12T07:41:00+00:00"
+        },
+        {
+          "headline": "Firefighters responding to 15-acre wildfire in Anderson County",
+          "published_date": "2026-11-12T19:23:35+00:00"
         }
       ],
-      "news_total": 1165,
+      "news_total": 1169,
       "logs": [
         {
           "log_date": "2026-07-27",
@@ -58384,7 +59157,7 @@
       "incident_id": "20260903-PS-CF",
       "tree_id": "e650e542b08c4c03badd08f734e3234d",
       "canonical_name": "Conflict Palestine 2026-09-03",
-      "summary": "At the COP31 climate summit, Turkey's President Recep Tayyip Erdogan labeled the conflict in Gaza an \"ecocide,\" prompting a sharp response from Israel. Formula 1 champion Lewis Hamilton visited the Egypt-Gaza border, calling on Israel to open the Rafah crossing amid worsening humanitarian conditions. Separately, Iran's IRGC chief pledged to advance missile production, while Israel killed six people in a Gaza hospital and ordered its military to step up preparations for a possible attack on Iran; concurrently, new UN war crimes findings could lead to legal challenges against US military aid to Israel.",
+      "summary": "At the COP31 climate summit, Turkey's President Recep Tayyip Erdogan labeled the conflict in Gaza an \"ecocide,\" prompting a sharp response from Israel. Formula 1 champion Lewis Hamilton visited the Egypt-Gaza border, calling on Israel to open the Rafah crossing amid worsening humanitarian conditions. Separately, Iran's IRGC chief pledged to advance missile production, while Israel killed six people in a Gaza hospital and ordered its military to step up preparations for a possible attack on Iran; concurrently, new UN war crimes findings could lead to legal challenges against US military aid to Israel.\nGaza families face worsening winter conditions, with flooded tents and high prices making it difficult to keep children warm. France turned away an Israeli settler leader at a border crossing, adding a new diplomatic dimension to the conflict.",
       "country": "Palestine",
       "iso2": "PS",
       "lat": 31.9,
@@ -58414,7 +59187,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 843
+        "news": 854
       },
       "source_links": [
         {
@@ -61796,6 +62569,38 @@
           "published_date": "2026-11-11T14:06:03+00:00"
         },
         {
+          "headline": "University of Toronto rejects report on anti-Muslim and anti-Arab discrimination | WTX News",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "U of T rejects report, recommendations on anti-Muslim, anti-Arab discrimination - Toronto | Globalnews.ca",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Israeli strike on Gaza hospital kills at least six people, officials say - AOL",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "SA achieves nothing by having no diplomats in Israel - SA Jewish Report",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "The art of not taking a view – 'Pay attention' by Laura Kuenssberg – Media Lens",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "How the fog of war puts journalism in the frame",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "UK mosque rebukes comission’s ‘warning’ following Palestine comments",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "U of T rejects report, recommendations on anti-Muslim, anti-Arab discrimination",
+          "published_date": "2026-11-12"
+        },
+        {
           "headline": "F1 champion Lewis Hamilton calls on Israel to open Gaza’s Rafah border",
           "published_date": "2026-11-12"
         },
@@ -61804,11 +62609,23 @@
           "published_date": "2026-11-12"
         },
         {
+          "headline": "‘Her hands are as cold as ice’: Gaza families struggle to keep warm",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Israeli Airstrikes Result in Fatalities Amid Humanitarian Crisis in Gaza",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Israel hits Gaza hospital and France turns away a settler leader, and other Mideast news",
+          "published_date": "2026-11-12"
+        },
+        {
           "headline": "At COP31, Turkey's Erdogan Calls Gaza War \"Ecocide\", Israel Hits Back",
           "published_date": "2026-11-12T07:46:37+00:00"
         }
       ],
-      "news_total": 843,
+      "news_total": 854,
       "logs": [
         {
           "log_date": "2026-09-04",
@@ -62217,8 +63034,26 @@
         },
         {
           "log_date": "2026-11-12",
-          "summary": "At the COP31 climate summit, Turkey's President Recep Tayyip Erdogan labeled the conflict in Gaza an \"ecocide,\" prompting a sharp response from Israel. Formula 1 champion Lewis Hamilton visited the Egypt-Gaza border, calling on Israel to open the Rafah crossing amid worsening humanitarian conditions. Separately, Iran's IRGC chief pledged to advance missile production, while Israel killed six people in a Gaza hospital and ordered its military to step up preparations for a possible attack on Iran; concurrently, new UN war crimes findings could lead to legal challenges against US military aid to Israel.",
+          "summary": "At the COP31 climate summit, Turkey's President Recep Tayyip Erdogan labeled the conflict in Gaza an \"ecocide,\" prompting a sharp response from Israel. Formula 1 champion Lewis Hamilton visited the Egypt-Gaza border, calling on Israel to open the Rafah crossing amid worsening humanitarian conditions. Separately, Iran's IRGC chief pledged to advance missile production, while Israel killed six people in a Gaza hospital and ordered its military to step up preparations for a possible attack on Iran; concurrently, new UN war crimes findings could lead to legal challenges against US military aid to Israel.\nGaza families face worsening winter conditions, with flooded tents and high prices making it difficult to keep children warm. France turned away an Israeli settler leader at a border crossing, adding a new diplomatic dimension to the conflict.",
           "news": [
+            {
+              "news_id": "2679cb08ea595008a747de6716bbefa4",
+              "url": "https://wtxnews.com/university-of-toronto-rejects-report-on-anti-muslim-and-anti-arab-discrimination/",
+              "headline": "University of Toronto rejects report on anti-Muslim and anti-Arab discrimination | WTX News",
+              "body": "The University of Toronto has rejected a report from its Muslim, Arab, and Palestinian discrimination working group, citing significant departures from previous equity assessments. The report called for extensive recommendations to address perceived discrimination and policing issues on campus, including considerations of exceptions based on international conflicts.",
+              "published_date": "2026-11-12",
+              "outlet": "WTX News",
+              "image": "https://www.bing.com/th?id=ONUT.tkxtcwty03mMI27kJ92CQg"
+            },
+            {
+              "news_id": "51e6f397172556eabed4586f77e897d8",
+              "url": "https://globalnews.ca/news/12148029/u-of-t-rejects-report-recommendations-on-anti-muslim-anti-arab-discrimination/",
+              "headline": "U of T rejects report, recommendations on anti-Muslim, anti-Arab discrimination - Toronto | Globalnews.ca",
+              "body": "The nearly 300-page report is based on consultations with 85 people and small groups as well as 525 responses to a survey of students, staff, faculty and librarians.",
+              "published_date": "2026-11-12",
+              "outlet": "Global News",
+              "image": "https://www.bing.com/th?id=ONUT.kp5GTZg5VQvPPMIvmp0PGA"
+            },
             {
               "news_id": "8ca29d144811560cbc7b8877e8c1e710",
               "url": "https://www.ndtv.com/world-news/turkeys-erdogan-calls-gaza-war-ecocide-at-un-climate-summit-cop31-israel-hits-back-12314752",
@@ -62227,6 +63062,60 @@
               "published_date": "2026-11-12T07:46:37+00:00",
               "outlet": "NDTV",
               "image": "https://www.bing.com/th?id=ONUT.2deZfmxKkDjSVqz7HQB0ig"
+            },
+            {
+              "news_id": "964530c8f0905e808272f6b5337a9845",
+              "url": "https://www.aol.com/articles/israeli-strike-gaza-hospital-kills-092644000.html",
+              "headline": "Israeli strike on Gaza hospital kills at least six people, officials say - AOL",
+              "body": "An Israeli airstrike on a hospital in southern Gaza overnight killed at least six people, the Health Ministry in the Palestinian enclave said Thursday.",
+              "published_date": "2026-11-12",
+              "outlet": "AOL",
+              "image": "https://www.bing.com/th?id=ONUT.a9P2mS1fV6XWd-BelzSsBg"
+            },
+            {
+              "news_id": "d28cd383b69158ebaa7449baa23287ff",
+              "url": "https://www.sajr.co.za/sa-achieves-nothing-by-having-no-diplomats-in-israel/",
+              "headline": "SA achieves nothing by having no diplomats in Israel - SA Jewish Report",
+              "body": "Three years have passed since South Africa withdrew its remaining diplomats from Israel. But the deterioration in relations began",
+              "published_date": "2026-11-12",
+              "outlet": "SA Jewish Report",
+              "image": "https://www.bing.com/th?id=ONUT.j43FDBZ1PiwhwFpkfo9V-Q"
+            },
+            {
+              "news_id": "7940d7a73ce25971bb313ec8b3541c28",
+              "url": "https://www.msn.com/en-us/news/other/the-art-of-not-taking-a-view-pay-attention-by-laura-kuenssberg-media-lens/ar-AA2hiYLm?ocid=BingNewsVerp",
+              "headline": "The art of not taking a view – 'Pay attention' by Laura Kuenssberg – Media Lens",
+              "body": "To be fair to Laura Kuenssberg, she admits that her new book, ‘Pay Attention’, is not ‘an academic tome’. (Kuenssberg, ‘Pay Attention’, Corsair, 2026, p.10). Even so, it beggars belief that someone ...",
+              "published_date": "2026-11-12",
+              "outlet": "ZNetwork on MSN",
+              "image": ""
+            },
+            {
+              "news_id": "8f840548bb0758bea4a46360d22ddad0",
+              "url": "https://www.msn.com/en-au/news/news/how-the-fog-of-war-puts-journalism-in-the-frame/ar-AA2hg0RP?ocid=BingNewsVerp",
+              "headline": "How the fog of war puts journalism in the frame",
+              "body": "Since the October 2023 Hamas attack on Israel, and during Israel’s now three-year-long retaliation against Gaza, journalism’s traditional commitment to objectivity has been on trial. Reporting on the ...",
+              "published_date": "2026-11-12",
+              "outlet": "The Conversation on MSN",
+              "image": ""
+            },
+            {
+              "news_id": "7539e505829653d192daad919c74570d",
+              "url": "https://www.msn.com/en-us/news/world/uk-mosque-rebukes-comission-s-warning-following-palestine-comments/ar-AA2hjSA9?ocid=BingNewsVerp",
+              "headline": "UK mosque rebukes comission’s ‘warning’ following Palestine comments",
+              "body": "The Lewisham Islamic Centre accused the charity watchdog of imposing disproportionate expectations on Muslim charities.",
+              "published_date": "2026-11-12",
+              "outlet": "Al Jazeera on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.-mlnckGQQRvn_TmnVf6LLA"
+            },
+            {
+              "news_id": "e3381919c22a5c54a9b14af1999c739f",
+              "url": "https://www.msn.com/en-ca/news/canada/u-of-t-rejects-report-recommendations-on-anti-muslim-anti-arab-discrimination/ar-AA2hjN74?ocid=BingNewsVerp",
+              "headline": "U of T rejects report, recommendations on anti-Muslim, anti-Arab discrimination",
+              "body": "TORONTO — A review of the University of Toronto's policies and practices has found the school has a \"general pattern of over-policing and under-protecting\" Muslims, Arabs and Palestinians, with a ...",
+              "published_date": "2026-11-12",
+              "outlet": "The Canadian Press on MSN",
+              "image": ""
             },
             {
               "news_id": "f8d60100beb65892a37bfd175395692d",
@@ -62247,6 +63136,33 @@
               "image": ""
             },
             {
+              "news_id": "1e401b0e20505b878415048c74085962",
+              "url": "https://www.msn.com/en-us/news/other/her-hands-are-as-cold-as-ice-gaza-families-struggle-to-keep-warm/ar-AA2hjoeC?ocid=BingNewsVerp",
+              "headline": "‘Her hands are as cold as ice’: Gaza families struggle to keep warm",
+              "body": "Flooded tents and high prices leave Gaza families struggling to keep children warm as winter approaches.",
+              "published_date": "2026-11-12",
+              "outlet": "Al Jazeera on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.uVleaWy_g19JqPg-LNu1Xw"
+            },
+            {
+              "news_id": "8d4e5324a82d55ca8afe13892644c5d7",
+              "url": "https://www.indianewsnetwork.com/en/israeli-airstrikes-result-fatalities-amid-humanitarian-crisis-gaza-20261112",
+              "headline": "Israeli Airstrikes Result in Fatalities Amid Humanitarian Crisis in Gaza",
+              "body": "Recent Israeli airstrikes in Gaza have resulted in numerous fatalities while the UN calls for urgent aid amid worsening humanitarian conditions.",
+              "published_date": "2026-11-12",
+              "outlet": "India News Network",
+              "image": "https://www.bing.com/th?id=ONUT.UNugBr6zpPhd73j9Q-tp2w"
+            },
+            {
+              "news_id": "16a8c5323a9a544aa16c769425a80de3",
+              "url": "https://www.msn.com/en-us/news/news/israel-hits-gaza-hospital-and-france-turns-away-a-settler-leader-and-other-mideast-news/ar-AA2hhxmB?ocid=BingNewsVerp",
+              "headline": "Israel hits Gaza hospital and France turns away a settler leader, and other Mideast news",
+              "body": "Israel has struck a hospital in the Gaza Strip, killing six people and wounding at least a dozen. Health authorities say a ...",
+              "published_date": "2026-11-12",
+              "outlet": "Lake County Star on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.pJ5qVHKtxXncJgSaCGH-iw"
+            },
+            {
               "news_id": "b0707d530d9a54278aeee0d84f565dfb",
               "url": "https://www.military.com/united-nations-war-crimes-findings-could-test-us-military-aid-to-israel",
               "headline": "US Arms to Israel Could Face Legal Tests After United Nations' War Crimes Findings",
@@ -62264,13 +63180,13 @@
       "incident_id": "20261008-XX-FL",
       "tree_id": "1469058eb9eb432ea5f73ca1307025e6",
       "canonical_name": "Flood 2026-10-08",
-      "summary": "Highway 160 over Wolf Creek Pass could partially reopen this weekend as southwest Colorado digs out from devastating floods. Record rainfall from the same system has provided rare relief to Southwest reservoirs, raising Lake Powell by 20 feet. In Palm Bay, Florida, flood-impacted women are delivering supplies door-to-door to other victims.",
+      "summary": "Highway 160 over Wolf Creek Pass could partially reopen this weekend as southwest Colorado digs out from devastating floods. Record rainfall from the same system has provided rare relief to Southwest reservoirs, raising Lake Powell by 20 feet. In Palm Bay, Florida, flood-impacted women are delivering supplies door-to-door to other victims.\nFlash flooding and flood warnings affected areas of Texas, Delaware, Portugal, and British Columbia, where a shelter-in-place advisory was issued. In Malaysia, flash floods killed two people while evacuee numbers dropped slightly, and recovery continued in Brevard County, Florida, with cleanup kits and debris collection. NASA imagery showed Navajo Lake surging from recent historic floods in the Southwest, and Nepal urged for improved early warning systems after its own devastating flood.",
       "country": "",
       "iso2": "XX",
       "lat": null,
       "lon": null,
       "country_group": "C",
-      "region": "Unknown",
+      "region": "Europe",
       "incident_type": "Flood",
       "incident_category": "Natural",
       "is_disease": false,
@@ -62294,7 +63210,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 318
+        "news": 338
       },
       "source_links": [
         {
@@ -63468,6 +64384,10 @@
           "published_date": "2026-11-08T20:06:26+00:00"
         },
         {
+          "headline": "Southern, central Texas soaked by heavy rains, flood warnings issued",
+          "published_date": "2026-11-09"
+        },
+        {
           "headline": "Tarbela T-5 project work suspended indefinitely after protective bund breach | The Express Tribune",
           "published_date": "2026-11-09"
         },
@@ -63524,6 +64444,14 @@
           "published_date": "2026-11-10"
         },
         {
+          "headline": "San Jose declares local emergency amid El Niño flood risk",
+          "published_date": "2026-11-11"
+        },
+        {
+          "headline": "Netanyahu denies Israel is to blame for conditions in Gaza camps, and other Mideast news",
+          "published_date": "2026-11-11"
+        },
+        {
           "headline": "‘You’re Not Alone’: Two flood-impacted women deliver supplies door-to-door in Palm Bay",
           "published_date": "2026-11-11"
         },
@@ -63564,7 +64492,55 @@
           "published_date": "2026-11-11"
         },
         {
+          "headline": "El Niño to alter 'normal' South Florida winter, bring higher risk of severe weather",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Remote Queensland airport reopens after flood repairs",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Harris Co could face millions in losses if flood control projects miss deadlines",
+          "published_date": "2026-11-12"
+        },
+        {
           "headline": "Lynchburg Human Services continues operations as flood repairs continue",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "NASA images show Navajo Lake surging after historic floods in New Mexico and Colorado",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Brevard County libraries provide free flood cleanup kits to residents",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "A 100-year flood wrecked this Spirit hole. Two years later, it might be better than ever",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Impacts from BC drenching mount as water levels rise",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "P866.38 million in flood control funds returned to treasury — DOJ",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Nepal seeks mountain-specific early warning systems after devastating flood",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Flood evacuee numbers in Selangor, Perak fall from 1,484 to 1,445 as of 4pm",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Flash flood warning, tornado watch issued for New Castle County",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Two Malayalis die in Malaysia flash flood",
           "published_date": "2026-11-12"
         },
         {
@@ -63580,15 +64556,35 @@
           "published_date": "2026-11-12"
         },
         {
+          "headline": "Find out more as World Bank approves fresh loan for Nigeria, debt rises to $20.73bn",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "El Niño Continues to Strengthen: What It Could Mean for the Gulf Coast Heading Into 2027",
+          "published_date": "2026-11-12"
+        },
+        {
           "headline": "Flood preparations help Arcadia American Legion avoid damage after heavy rain",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Melbourne to start curbside flood debris collection for residents tomorrow",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "How Hamas shaped Gaza's winter flooding narrative: 'It was written before it rained'",
           "published_date": "2026-11-12"
         },
         {
           "headline": "World Bank pumps $500m into Nigeria’s fight against floods",
           "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Storm Charles floods Madeira before disrupting travel across Portugal",
+          "published_date": "2026-11-12T17:29:41+00:00"
         }
       ],
-      "news_total": 318,
+      "news_total": 338,
       "logs": [
         {
           "log_date": "2026-10-08",
@@ -64087,8 +65083,44 @@
         },
         {
           "log_date": "2026-11-12",
-          "summary": "Highway 160 over Wolf Creek Pass could partially reopen this weekend as southwest Colorado digs out from devastating floods. Record rainfall from the same system has provided rare relief to Southwest reservoirs, raising Lake Powell by 20 feet. In Palm Bay, Florida, flood-impacted women are delivering supplies door-to-door to other victims.",
+          "summary": "Highway 160 over Wolf Creek Pass could partially reopen this weekend as southwest Colorado digs out from devastating floods. Record rainfall from the same system has provided rare relief to Southwest reservoirs, raising Lake Powell by 20 feet. In Palm Bay, Florida, flood-impacted women are delivering supplies door-to-door to other victims.\nFlash flooding and flood warnings affected areas of Texas, Delaware, Portugal, and British Columbia, where a shelter-in-place advisory was issued. In Malaysia, flash floods killed two people while evacuee numbers dropped slightly, and recovery continued in Brevard County, Florida, with cleanup kits and debris collection. NASA imagery showed Navajo Lake surging from recent historic floods in the Southwest, and Nepal urged for improved early warning systems after its own devastating flood.",
           "news": [
+            {
+              "news_id": "74aaa365ed0451f9b5f2efaa04e010c2",
+              "url": "https://www.msn.com/en-us/news/other/el-niño-to-alter-normal-south-florida-winter-bring-higher-risk-of-severe-weather/ar-AA2hjqZT?ocid=BingNewsVerp",
+              "headline": "El Niño to alter 'normal' South Florida winter, bring higher risk of severe weather",
+              "body": "A \"very strong\" El Niño will alter the \"normal\" weather during winter and dry season across South Florida, according to the ...",
+              "published_date": "2026-11-12",
+              "outlet": "USA TODAY on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.MFtNdbatv3yynxWhNIvBtA"
+            },
+            {
+              "news_id": "6286b0d96c3b51898a7d1f41981d8b25",
+              "url": "https://australianaviation.com.au/2026/11/remote-queensland-airport-reopens-after-flood-repairs/",
+              "headline": "Remote Queensland airport reopens after flood repairs",
+              "body": "Burketown Airport, which saw significant damage from flooding during the 2022–23 disaster season, was closed in April for the major works including a new raised runway pavement, as well as upgrades to airfield lighting, drainage and service roads.",
+              "published_date": "2026-11-12",
+              "outlet": "Australian Aviation",
+              "image": "https://www.bing.com/th?id=ONUT.J9hMKAR1Jqrn2qaamvmCRw"
+            },
+            {
+              "news_id": "be4ca55436695ca6b720ecc2e08daf86",
+              "url": "https://abc13.com/videoClip/20035805/",
+              "headline": "Harris Co could face millions in losses if flood control projects miss deadlines",
+              "body": "Harris County could be on the hook for millions if it fails to meet deadlines for federally funded Hurricane Harvey flood control projects.",
+              "published_date": "2026-11-12",
+              "outlet": "ABC13 Houston",
+              "image": "https://s.yimg.com/bo/f4eea834-4d6e-5eca-a4a0-6f67679b80eb_1794508150139.jpg"
+            },
+            {
+              "news_id": "c7c050d101cf5f25831f5826f9949a01",
+              "url": "https://www.mercurynews.com/2026/11/11/san-jose-el-nino-flood-local-emergency/",
+              "headline": "San Jose declares local emergency amid El Niño flood risk",
+              "body": "The declaration comes almost a decade after the catastrophic February 2017 floods.",
+              "published_date": "2026-11-11",
+              "outlet": "The Mercury News",
+              "image": "https://www.bing.com/th?id=ONUT.OC_233rfYMUcLtzgnWjGBQ"
+            },
             {
               "news_id": "3d3557f25a395a3c8ab1a96cf14127fc",
               "url": "https://www.msn.com/en-us/news/other/lynchburg-human-services-continues-operations-as-flood-repairs-continue/ar-AA2hePRb?ocid=BingNewsVerp",
@@ -64097,6 +65129,87 @@
               "published_date": "2026-11-12",
               "outlet": "WSET on MSN",
               "image": "https://www.bing.com/th?id=ORMS.b717213f0f5806a3dd4f0cb488a5368a"
+            },
+            {
+              "news_id": "d868d6f1ffdc5044bd6ab2adfd79febd",
+              "url": "https://www.koat.com/article/nasa-images-navajo-lake-new-mexico-floods/74413881",
+              "headline": "NASA images show Navajo Lake surging after historic floods in New Mexico and Colorado",
+              "body": "New NASA images show Navajo Lake rebounding fast after historic floods pushed its levels up to 6,070 feet in elevation.",
+              "published_date": "2026-11-12",
+              "outlet": "KOAT Albuquerque",
+              "image": "https://s.yimg.com/bo/0d0da25a-7044-5321-9cce-c2cfa9882406_1794515322294.jpg"
+            },
+            {
+              "news_id": "fb78c9627d5c5e3287133c62ab934183",
+              "url": "https://www.wftv.com/news/local/brevard-county/brevard-county-libraries-provide-free-flood-cleanup-kits-residents/QWIZEOCPSNECBGZL5VOMERQJKA/",
+              "headline": "Brevard County libraries provide free flood cleanup kits to residents",
+              "body": "Brevard County residents can get free flood cleanup kits from the American Red Cross at four local public libraries.",
+              "published_date": "2026-11-12",
+              "outlet": "WFTV 9 Orlando",
+              "image": "https://s.yimg.com/bo/d635ed62-235e-5a64-98dd-d43dee4d1283_1794508369523.jpg"
+            },
+            {
+              "news_id": "3c974603dce2581cacbe6eb768557fcc",
+              "url": "https://sports.yahoo.com/articles/100-flood-wrecked-spirit-hole-140113598.html",
+              "headline": "A 100-year flood wrecked this Spirit hole. Two years later, it might be better than ever",
+              "body": "Whispering Pines restored its signature 15th hole after a 2024 flood ahead of the Spirit International golf event.",
+              "published_date": "2026-11-12",
+              "outlet": "USA TODAY Sports - Golfweek · via Yahoo Sports",
+              "image": "https://media.zenfs.com/en/usa_today_sports_golfweek_articles_635/8ffeff1ea54c440143bbb34aedb06eb1.jpg"
+            },
+            {
+              "news_id": "e1889f807d755e4c905208629b16edb1",
+              "url": "https://www.msn.com/en-ca/news/canada/impacts-from-bc-drenching-mount-as-water-levels-rise/ar-AA2hh5jM?ocid=BingNewsVerp",
+              "headline": "Impacts from BC drenching mount as water levels rise",
+              "body": "VANCOUVER — A shelter-in-place advisory has been issued for residents north of Vancouver, where roads are beginning to flood ...",
+              "published_date": "2026-11-12",
+              "outlet": "The Canadian Press on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.leO4t_6UZeCn0L_7KcEfEg"
+            },
+            {
+              "news_id": "bef45b42118a5c1089e53903a4bbdb13",
+              "url": "https://www.msn.com/en-ph/money/government-support-and-welfare/p866-38-million-in-flood-control-funds-returned-to-treasury-doj/ar-AA2hi853?ocid=BingNewsVerp",
+              "headline": "P866.38 million in flood control funds returned to treasury — DOJ",
+              "body": "The Department of Justice (DOJ) on Thursday said that P866.38 million worth of flood control funds have been returned to the country’s coffers as of October. In a press briefing, DOJ Undersecretary ...",
+              "published_date": "2026-11-12",
+              "outlet": "GMA Network on MSN",
+              "image": ""
+            },
+            {
+              "news_id": "5b50c3ee6c225e23bbd9cbd504afdee6",
+              "url": "https://kathmandupost.com/national/2026/11/12/nepal-seeks-mountain-specific-early-warning-systems-after-devastating-flood",
+              "headline": "Nepal seeks mountain-specific early warning systems after devastating flood",
+              "body": "Foreign Minister Shisir Khanal calls for better cross-border data sharing, improved high-altitude monitoring and predictable climate finance to protect vulnerable communities.",
+              "published_date": "2026-11-12",
+              "outlet": "The Kathmandu Post",
+              "image": "https://www.bing.com/th?id=ONUT.fSajPKT2VYuY1jn6TkKn_g"
+            },
+            {
+              "news_id": "d2c69a2468295a1eb2c47bb1a34308a4",
+              "url": "https://www.malaymail.com/news/malaysia/2026/11/12/flood-evacuee-numbers-in-selangor-perak-fall-from-1484-to-1445-as-of-4pm/242996",
+              "headline": "Flood evacuee numbers in Selangor, Perak fall from 1,484 to 1,445 as of 4pm",
+              "body": "KUALA LUMPUR, Nov 12 — The number of flood evacuees sheltering at temporary relief centres in Selangor and Perak fell slightly this afternoon to 1,445 people from 405 families,...",
+              "published_date": "2026-11-12",
+              "outlet": "Malay Mail",
+              "image": "https://www.bing.com/th?id=ONUT.dxllWe0qZBCkow3vziQqOQ"
+            },
+            {
+              "news_id": "b35e61e458535d2fa72c37b3ac34f087",
+              "url": "https://www.yahoo.com/news/weather-news/articles/severe-thunderstorm-warning-tornado-watch-180918641.html",
+              "headline": "Flash flood warning, tornado watch issued for New Castle County",
+              "body": "Northern Delaware is under a flash flood warning and a tornado watch.",
+              "published_date": "2026-11-12",
+              "outlet": "Delaware Online | The News Journal · via Yahoo News",
+              "image": "https://media.zenfs.com/en/delaware-online-the-news-journal/671292441fe547f1701b720d869a1106.jpg"
+            },
+            {
+              "news_id": "36e7a8b8428a57899c6683eabf5f9bfe",
+              "url": "https://www.newindianexpress.com/states/kerala/2026/Nov/12/two-malayalis-die-in-malaysia-flash-flood",
+              "headline": "Two Malayalis die in Malaysia flash flood",
+              "body": "KOZHIKODE: A holiday trip turned into a tragedy for a couple of Malayalis after a flash flood swept through the region of Selangor in Malaysia, leaving several",
+              "published_date": "2026-11-12",
+              "outlet": "The New Indian Express",
+              "image": "https://www.bing.com/th?id=ONUT.NQhHheuUSypvLxuhlWjlow"
             },
             {
               "news_id": "61407ce7ca905a3b88839fbfb4ccce45",
@@ -64126,6 +65239,42 @@
               "image": ""
             },
             {
+              "news_id": "fc152ca00e2a53478aaa687373d31083",
+              "url": "https://www.baltimoresun.com/2026/11/11/gaza-flooding-mideast-news/",
+              "headline": "Netanyahu denies Israel is to blame for conditions in Gaza camps, and other Mideast news",
+              "body": "The U.S.-backed Board of Peace said Israel is blocking winter supplies to Gaza.",
+              "published_date": "2026-11-11",
+              "outlet": "The Baltimore Sun",
+              "image": ""
+            },
+            {
+              "news_id": "b10e43b1e46350b387b00e68fcbe3f7e",
+              "url": "https://www.msn.com/en-xl/africa/nigeria/find-out-more-as-world-bank-approves-fresh-loan-for-nigeria-debt-rises-to-2073bn/ar-AA2hi9Ur?ocid=BingNewsVerp",
+              "headline": "Find out more as World Bank approves fresh loan for Nigeria, debt rises to $20.73bn",
+              "body": "The World Bank has approved another $500 million loan for Nigeria to tackle flooding, restore farmland and reduce conflicts ...",
+              "published_date": "2026-11-12",
+              "outlet": "Legit.ng on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.n1Z9rEEoiWT7rbtGXi2wLw"
+            },
+            {
+              "news_id": "ac3d16e8482c5d79a2dce3200887897b",
+              "url": "https://www.fox10tv.com/2026/11/12/el-nio-continues-strengthen-what-it-could-mean-gulf-coast-heading-into-2027/",
+              "headline": "El Niño Continues to Strengthen: What It Could Mean for the Gulf Coast Heading Into 2027",
+              "body": "A strong to potentially very strong El Niño is becoming increasingly likely as we head into the winter months and early 2027.",
+              "published_date": "2026-11-12",
+              "outlet": "FOX10 News",
+              "image": "https://www.bing.com/th?id=ONUT.j9k9ErnfIhx3hCAf3z7_Jg"
+            },
+            {
+              "news_id": "4f1074b4998e5a0a9e4249cc11ba79ab",
+              "url": "https://www.accuweather.com/en/weather-news/storm-charles-floods-madeira-before-disrupting-travel-across-portugal/1957945",
+              "headline": "Storm Charles floods Madeira before disrupting travel across Portugal",
+              "body": "More than 300 weather-related incidents were reported on Madeira, while roughly 8,000 schools closed...",
+              "published_date": "2026-11-12T17:29:41+00:00",
+              "outlet": "AccuWeather",
+              "image": "https://s.yimg.com/bo/0d3e1ffc-bea6-557a-997e-705ba7684f74_1794508083244.jpg"
+            },
+            {
               "news_id": "1c6158a5f7c353538901657964721af8",
               "url": "https://www.msn.com/en-us/news/other/flood-preparations-help-arcadia-american-legion-avoid-damage-after-heavy-rain/ar-AA2hg6p2?ocid=BingNewsVerp",
               "headline": "Flood preparations help Arcadia American Legion avoid damage after heavy rain",
@@ -64133,6 +65282,24 @@
               "published_date": "2026-11-12",
               "outlet": "MySuncoast.com on MSN",
               "image": "https://www.bing.com/th?id=ORMS.2fc6bdf13aae3ba6ff7086ab3d2e8512"
+            },
+            {
+              "news_id": "3f053150a2cd5424bd07db0888128c19",
+              "url": "https://www.wftv.com/news/local/melbourne-start-curbside-flood-debris-collection-residents-tomorrow/V5SQMWXRLJCLPDZUAEMWUSGEYA/",
+              "headline": "Melbourne to start curbside flood debris collection for residents tomorrow",
+              "body": "Flood debris collection begins in Melbourne on Nov. 13. See how to prepare your household and construction waste for pickup.",
+              "published_date": "2026-11-12",
+              "outlet": "WFTV 9 Orlando",
+              "image": "https://s.yimg.com/bo/dfbd60ef-0d00-550c-8c6c-1ffefeef3f0e_1794507554429.png.cf.jpg"
+            },
+            {
+              "news_id": "9e47bea1d24455cebb517ece4444ce71",
+              "url": "https://www.msn.com/en-us/news/other/how-hamas-shaped-gazas-winter-flooding-narrative-it-was-written-before-it-rained/ar-AA2heA52?ocid=BingNewsVerp",
+              "headline": "How Hamas shaped Gaza's winter flooding narrative: 'It was written before it rained'",
+              "body": "An HonestReporting investigation traces how Hamas-issued Gaza flooding figures spread through international media, raising ...",
+              "published_date": "2026-11-12",
+              "outlet": "The Jerusalem Post on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.wEAXyW02ri7q_p-Orr1v7w"
             },
             {
               "news_id": "fb7b34e636fd56bf9c44a3cab5cb4f2a",
@@ -64160,6 +65327,15 @@
               "published_date": "2026-11-11",
               "outlet": "WKMG ClickOrlando",
               "image": "https://s.yimg.com/bo/a76ea6f0-42e7-59cd-b782-6990ed7e79eb_1794435251366.jpg"
+            },
+            {
+              "news_id": "cedbcf0af4d05eafb6763d0487231d9b",
+              "url": "https://www.yahoo.com/news/weather-news/articles/southern-central-texas-soaked-heavy-000611840.html",
+              "headline": "Southern, central Texas soaked by heavy rains, flood warnings issued",
+              "body": "Central and southern Texas endured heavy downpours and flash flooding across the region on Sunday, prompting numerous flash flood warnings.",
+              "published_date": "2026-11-09",
+              "outlet": "United Press International · via Yahoo News",
+              "image": "https://media.zenfs.com/en/united_press_international_articles_356/0e470b34dc42e824817f6e59bc3b1e01.jpg"
             },
             {
               "news_id": "ebe1646461625062bde522a9f20e7f40",
@@ -67066,7 +68242,7 @@
       "disease_name": null,
       "event_date": "2026-10-14",
       "first_reported_date": "2026-10-14",
-      "last_updated_date": "2026-11-11",
+      "last_updated_date": "2026-11-12",
       "days_since_event": 29,
       "source_count": 1,
       "should_report": true,
@@ -67077,7 +68253,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 183
+        "news": 193
       },
       "source_links": [
         {
@@ -67779,6 +68955,10 @@
           "published_date": "2026-11-07"
         },
         {
+          "headline": "How common are late-autumn thunderstorms, tornado warnings in Pa.?",
+          "published_date": "2026-11-07T20:31:04+00:00"
+        },
+        {
           "headline": "Rio Grande Valley school districts announce cancellations due to inclement weather",
           "published_date": "2026-11-08"
         },
@@ -67829,9 +69009,45 @@
         {
           "headline": "Severe Thunderstorm Warnings Hit Australia's Queensland, NSW",
           "published_date": "2026-11-11T20:07:58+00:00"
+        },
+        {
+          "headline": "Severe weather possible this afternoon; rain/snow showers overnight into Friday",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Severe weather moving slowing through NYC area",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Severe weather triggers river overflows, evacuations in Italy",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Glenties councillor raises alarm after storm leaves rural homes cut off - Highland Radio - Latest Donegal News and Sport",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Mid-Atlantic severe storm threat includes Philadelphia, NYC",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Kansas City region saw most tornadoes ever in 2026. ‘One after another, after another’",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Live updates: Possible tornado in Delaware as storms move through region",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Apparent funnel cloud seen near Bellefonte during severe thunderstorm",
+          "published_date": "2026-11-12T00:00:00+00:00"
+        },
+        {
+          "headline": "N.J. weather: Flash flood warnings, thunderstorm alerts issued as strong storms develop. Live updates.",
+          "published_date": "2026-11-12T20:31:04+00:00"
         }
       ],
-      "news_total": 183,
+      "news_total": 193,
       "logs": [
         {
           "log_date": "2026-10-17",
@@ -69388,7 +70604,7 @@
       "incident_id": "20261022-YE-CF",
       "tree_id": "3461c9a3cac24e1c8d37ad2857791e60",
       "canonical_name": "Conflict 2026-10-22",
-      "summary": "The House rejected an impeachment resolution against Defense Secretary Pete Hegseth over his handling of the Iran war. In a Veterans Day address, President Donald Trump defended the conflict and stated the war will be over \"when we want to end it.\"",
+      "summary": "The House rejected an impeachment resolution against Defense Secretary Pete Hegseth over his handling of the Iran war. In a Veterans Day address, President Donald Trump defended the conflict and stated the war will be over \"when we want to end it.\"\nPresident Trump directed Vice President Vance away from Iran negotiations, stating the U.S. does not need a deal with Iran, while the conflict is expected to increase costs for Americans. Iran demanded compensation for environmental damage amid reports of a heated exchange between Trump and Netanyahu. Separately, Israel bombed a Gaza hospital for the first time since the ceasefire, killing six people.",
       "country": "Yemen",
       "iso2": "YE",
       "lat": 15.6,
@@ -69418,7 +70634,7 @@
         "gdacs": 0,
         "ercc": 2,
         "healthmap": 0,
-        "news": 349
+        "news": 355
       },
       "source_links": [
         {
@@ -70834,15 +72050,39 @@
           "published_date": "2026-11-11T00:00:00+00:00"
         },
         {
+          "headline": "Trump directs Vance away from Iran negotiations, toward domestic issues",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Trump's Iran war is about to leave all Americans with a more expensive bill",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Israel bombs Gaza hospital for first time since ceasefire",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Finland says it detects strike on Russian warship in Baltic Sea",
+          "published_date": "2026-11-12"
+        },
+        {
           "headline": "Trump defends Iran war in Veterans Day address",
           "published_date": "2026-11-12"
         },
         {
           "headline": "Trump says Iran war will be over \"when we want to end it\"",
           "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Putin suggests no Ukraine compromise in meeting with US envoys",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Iran unveils new peace demand amid reports of 'shouting match' between Trump, Netanyahu",
+          "published_date": "2026-11-12"
         }
       ],
-      "news_total": 349,
+      "news_total": 355,
       "logs": [
         {
           "log_date": "2026-10-22",
@@ -71305,8 +72545,35 @@
         },
         {
           "log_date": "2026-11-12",
-          "summary": "The House rejected an impeachment resolution against Defense Secretary Pete Hegseth over his handling of the Iran war. In a Veterans Day address, President Donald Trump defended the conflict and stated the war will be over \"when we want to end it.\"",
+          "summary": "The House rejected an impeachment resolution against Defense Secretary Pete Hegseth over his handling of the Iran war. In a Veterans Day address, President Donald Trump defended the conflict and stated the war will be over \"when we want to end it.\"\nPresident Trump directed Vice President Vance away from Iran negotiations, stating the U.S. does not need a deal with Iran, while the conflict is expected to increase costs for Americans. Iran demanded compensation for environmental damage amid reports of a heated exchange between Trump and Netanyahu. Separately, Israel bombed a Gaza hospital for the first time since the ceasefire, killing six people.",
           "news": [
+            {
+              "news_id": "485059a06936571bb1098b9ce4039f28",
+              "url": "https://jewishinsider.com/2026/11/trump-directs-vance-away-from-iran-negotiations-toward-domestic-issues/",
+              "headline": "Trump directs Vance away from Iran negotiations, toward domestic issues",
+              "body": "In a post on Truth Social, Trump said the U.S. doesn’t ‘need a deal with Iran’ and said Vance will work on ‘corruption and crime’",
+              "published_date": "2026-11-12",
+              "outlet": "Jewish Insider",
+              "image": "https://www.bing.com/th?id=ONUT.srzCKeayuAiXs0aUsAptOQ"
+            },
+            {
+              "news_id": "5fdde7a976875132b84bc60d89d3db1f",
+              "url": "https://www.msn.com/en-us/news/other/trump-s-iran-war-is-about-to-leave-all-americans-with-a-more-expensive-bill/ar-AA2hi1i2?ocid=BingNewsVerp",
+              "headline": "Trump's Iran war is about to leave all Americans with a more expensive bill",
+              "body": "Trump's Iran war could leave millions of American families struggling to stay warm this winter.",
+              "published_date": "2026-11-12",
+              "outlet": "Dagens.com on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.Hy10HiL7LbDJpaS9AkWhSw"
+            },
+            {
+              "news_id": "40430db75fb9540990a77a9047e3abda",
+              "url": "https://www.telegraph.co.uk/world-news/2026/11/12/israel-bombs-gaza-hospital-for-first-time-since-ceasefire/",
+              "headline": "Israel bombs Gaza hospital for first time since ceasefire",
+              "body": "Surgeon and teenager among six killed in strike intended to target Hamas commander",
+              "published_date": "2026-11-12",
+              "outlet": "The Telegraph",
+              "image": "https://www.bing.com/th?id=ONUT.sSx5xG_5pb45J1U00WtzRw"
+            },
             {
               "news_id": "c5332356ea0f54dd808d966b2284ea32",
               "url": "https://www.washingtonpost.com/politics/2026/11/11/trump-elections-hegseth-schumer/71abf8ee-ddd4-11f1-912c-4fbb80d73f7f_story.html",
@@ -71315,6 +72582,15 @@
               "published_date": "2026-11-11T00:00:00+00:00",
               "outlet": "The Washington Post",
               "image": ""
+            },
+            {
+              "news_id": "ab7b4bc908e857a88d3f3bf57369f3b7",
+              "url": "https://www.msn.com/en-us/news/other/finland-says-it-detects-strike-on-russian-warship-in-baltic-sea/ar-AA2hjhOp?ocid=BingNewsVerp",
+              "headline": "Finland says it detects strike on Russian warship in Baltic Sea",
+              "body": "Finland's military said on Thursday its forces had detected \"a strike\" on a Russian warship in the Baltic Sea a day earlier, ...",
+              "published_date": "2026-11-12",
+              "outlet": "Defense News on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.kC5IRjU8tOe8U1qJ5vMTgg"
             },
             {
               "news_id": "3267f89fa8e85e00b7fe2403c35caacd",
@@ -71332,6 +72608,24 @@
               "body": "President Trump spoke about the Iran war during a Veterans Day address at Arlington National Cemetery.",
               "published_date": "2026-11-12",
               "outlet": "Yahoo",
+              "image": ""
+            },
+            {
+              "news_id": "40294b2d1d465b61808dd96a4a5e1728",
+              "url": "https://www.yahoo.com/news/politics/articles/us-mediated-talks-russia-ukraine-025843578.html",
+              "headline": "Putin suggests no Ukraine compromise in meeting with US envoys",
+              "body": "Vladimir Putin indicated Thursday that Russia will not compromise on its hardline demands to end the Ukraine offensive, but offered a short-term ceasefire in a key frontline city during a Kremlin meet...",
+              "published_date": "2026-11-12",
+              "outlet": "AFP · via Yahoo News",
+              "image": "https://media.zenfs.com/en/afp.com/f2ed196de48a17ce34c39a9dc31692f0.jpg"
+            },
+            {
+              "news_id": "11a13e735a8b555d808313c392de7cf5",
+              "url": "https://www.foxnews.com/live-news/iran-war-news-trump-israel-hormuz-november-12",
+              "headline": "Iran unveils new peace demand amid reports of 'shouting match' between Trump, Netanyahu",
+              "body": "Iran is demanding compensation for environmental damage sustained during the war with the U.S. and Israel this week. President Donald Trump reportedly got into a \"shouting match\" with Israeli Prime Minister Benjamin Netanyahu this weekend.",
+              "published_date": "2026-11-12",
+              "outlet": "Fox News",
               "image": ""
             }
           ]
@@ -73216,7 +74510,7 @@
       "incident_id": "20261102-FR-DI",
       "tree_id": "08e51208cb5c41daa06a3c14df4a0661",
       "canonical_name": "Shamonda France 2026-11-02",
-      "summary": "",
+      "summary": "The first reported case of Shamonda virus in a human has been documented, prompting discussions among veterinary and health professionals about the risks it poses to people. The article highlights concerns regarding the virus's potential threat to human health.",
       "country": "France",
       "iso2": "FR",
       "lat": 46.2,
@@ -73235,7 +74529,7 @@
       "disease_name": null,
       "event_date": "2026-11-02",
       "first_reported_date": "2026-11-02",
-      "last_updated_date": "2026-11-09",
+      "last_updated_date": "2026-11-12",
       "days_since_event": 10,
       "source_count": 1,
       "should_report": false,
@@ -73246,7 +74540,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 2
+        "news": 3
       },
       "source_links": [
         {
@@ -73269,20 +74563,54 @@
       "news": [
         {
           "headline": "Shamonda virus: What are the risks for humans?",
-          "url": "https://www.agriland.co.uk/farming-news/shamonda-virus-what-are-the-risks-for-humans/",
-          "outlet": "Agriland",
           "published_date": "2026-11-08"
         },
         {
           "headline": "WHO Urges Testing to Confirm Infections with New COVID-19 Variant PJ.2.1",
-          "url": "https://en.tempo.co/read/2123259/who-urges-testing-to-confirm-infections-with-new-covid-19-variant-pj-2-1",
-          "outlet": "Tempo.co English",
           "published_date": "2026-11-09T23:02:20+00:00"
+        },
+        {
+          "headline": "Un nouveau foyer de grippe aviaire détecté dans le Sud-Ouest",
+          "published_date": "2026-11-12"
         }
       ],
-      "news_total": 2,
-      "logs": [],
-      "logs_total": 0
+      "news_total": 3,
+      "logs": [
+        {
+          "log_date": "2026-11-12",
+          "summary": "The first reported case of Shamonda virus in a human has been documented, prompting discussions among veterinary and health professionals about the risks it poses to people. The article highlights concerns regarding the virus's potential threat to human health.",
+          "news": [
+            {
+              "news_id": "fddeb61784ea5e9aadd61afe33f48f32",
+              "url": "https://en.tempo.co/read/2123259/who-urges-testing-to-confirm-infections-with-new-covid-19-variant-pj-2-1",
+              "headline": "WHO Urges Testing to Confirm Infections with New COVID-19 Variant PJ.2.1",
+              "body": "WHO urges testing to confirm PJ.2.1 infections, saying COVID-19 symptoms can resemble those of flu and other respiratory ...",
+              "published_date": "2026-11-09T23:02:20+00:00",
+              "outlet": "Tempo.co English",
+              "image": "https://www.bing.com/th?id=ONUT.fpQY6V3THpqkeLtKLCZd6Q"
+            },
+            {
+              "news_id": "d46c84e236095627a812a6d858465b3b",
+              "url": "https://www.agriland.co.uk/farming-news/shamonda-virus-what-are-the-risks-for-humans/",
+              "headline": "Shamonda virus: What are the risks for humans?",
+              "body": "The first reported case of Shamonda virus in a human shocked veterinary and health professionals alike, raising the question of what risk it poses to people.",
+              "published_date": "2026-11-08",
+              "outlet": "Agriland",
+              "image": ""
+            },
+            {
+              "news_id": "ddb7a2637bf75263b8becdc908d20cdd",
+              "url": "https://www.msn.com/fr-fr/actualite/other/un-nouveau-foyer-de-grippe-aviaire-détecté-dans-le-sud-ouest/ar-AA2hjbuz?ocid=BingNewsVerp",
+              "headline": "Un nouveau foyer de grippe aviaire détecté dans le Sud-Ouest",
+              "body": "Un nouveau foyer de grippe aviaire \"hautement pathogène\" a été détecté dans une basse-cour du Sud-Ouest, accentuant les ...",
+              "published_date": "2026-11-12",
+              "outlet": "AFP on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.n-llchOwcQ2w5tPTvkoEZA"
+            }
+          ]
+        }
+      ],
+      "logs_total": 1
     },
     {
       "incident_id": "20261105-FJ-EQ",
@@ -73807,6 +75135,78 @@
         }
       ],
       "news_total": 1,
+      "logs": [],
+      "logs_total": 0
+    },
+    {
+      "incident_id": "20261112-FR-FL",
+      "tree_id": "81962427da6545d99c85d53e4b346f84",
+      "canonical_name": "Flood France 2026-11-12",
+      "summary": "",
+      "country": "France",
+      "iso2": "FR",
+      "lat": 46.2,
+      "lon": 2.2,
+      "country_group": "C",
+      "region": "Europe",
+      "incident_type": "Flood",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "LOW",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": null,
+      "event_status": null,
+      "extended_monitoring": false,
+      "disease_name": null,
+      "event_date": "2026-11-12",
+      "first_reported_date": "2026-11-12",
+      "last_updated_date": "2026-11-12",
+      "days_since_event": 0,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 0,
+        "gdacs": 0,
+        "ercc": 1,
+        "healthmap": 0,
+        "news": 2
+      },
+      "source_links": [
+        {
+          "type": "ERCC",
+          "label": "ECHO Daily Map of 12 November 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5841",
+          "meta": ""
+        }
+      ],
+      "physical": {
+        "max_magnitude": null,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "France Issues Weather Warnings Across 22 Departments as Heavy Rain Hits the South",
+          "url": "https://www.rustourismnews.com/2026/11/12/france-issues-weather-warnings-across-22-departments-as-heavy-rain-hits-the-south/",
+          "outlet": "Rustourismnews.com",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Storm Charles floods Madeira before disrupting travel across Portugal",
+          "url": "https://www.yahoo.com/news/weather-news/articles/storm-charles-floods-madeira-disrupting-174724183.html",
+          "outlet": "AccuWeather · via Yahoo News",
+          "published_date": "2026-11-12"
+        }
+      ],
+      "news_total": 2,
       "logs": [],
       "logs_total": 0
     }
