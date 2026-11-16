@@ -1,26 +1,26 @@
 {
   "schema_version": "1.6",
   "report_date": "2026-11-16",
-  "generated_at": "2026-11-16T05:13:08Z",
+  "generated_at": "2026-11-16T05:38:00Z",
   "as_of": "2026-11-16",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 27,
-    "new_today": 0,
+    "reportable_total": 26,
+    "new_today": 10,
     "critical": 12,
     "high": 3,
     "medium": 10,
-    "low": 2,
+    "low": 1,
     "disease_outbreaks": 7,
     "countries_affected": 19,
-    "news_total": 14069,
+    "news_total": 14101,
     "max_magnitude": 7.6,
     "by_severity": {
       "CRITICAL": 12,
       "HIGH": 3,
       "MEDIUM": 10,
-      "LOW": 2
+      "LOW": 1
     },
     "by_type": {
       "Disease": 7,
@@ -31,12 +31,11 @@
       "Earthquake": 5,
       "Severe Weather": 2,
       "Tropical Cyclone": 1,
-      "": 1,
       "Tsunami": 1
     },
     "by_region": {
       "Global": 2,
-      "Africa": 4,
+      "Africa": 3,
       "Americas": 4,
       "Europe": 6,
       "Asia": 7,
@@ -51,15 +50,6 @@
       "max_sev_rank": 1,
       "iso2": "XX",
       "region": "Global",
-      "country_group": "C",
-      "max_severity": "LOW"
-    },
-    {
-      "country": "DR Congo",
-      "count": 2,
-      "max_sev_rank": 1,
-      "iso2": "CD",
-      "region": "Africa",
       "country_group": "C",
       "max_severity": "LOW"
     },
@@ -125,6 +115,15 @@
       "region": "Asia",
       "country_group": "B",
       "max_severity": "MEDIUM"
+    },
+    {
+      "country": "DR Congo",
+      "count": 1,
+      "max_sev_rank": 3,
+      "iso2": "CD",
+      "region": "Africa",
+      "country_group": "C",
+      "max_severity": "HIGH"
     },
     {
       "country": "Vanuatu",
@@ -241,7 +240,7 @@
       "disease_name": null,
       "event_date": "2024-05-30",
       "first_reported_date": "2024-05-30",
-      "last_updated_date": "2026-11-15",
+      "last_updated_date": "2026-11-16",
       "days_since_event": 900,
       "source_count": 1,
       "should_report": false,
@@ -254,7 +253,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 225
+        "news": 227
       },
       "source_links": [
         {
@@ -1201,9 +1200,17 @@
         {
           "headline": "Dengue claims 8 more lives, toll rises to 491",
           "published_date": "2026-11-15T07:07:21+00:00"
+        },
+        {
+          "headline": "Dengue death toll nears 500 this year",
+          "published_date": "2026-11-16T05:26:26+00:00"
+        },
+        {
+          "headline": "Dengue toll inches towards 500 as eight more succumb in a day",
+          "published_date": "2026-11-16T05:26:26+00:00"
         }
       ],
-      "news_total": 225,
+      "news_total": 227,
       "logs": [
         {
           "log_date": "2026-07-08",
@@ -1372,7 +1379,7 @@
       "disease_name": "Covid-19",
       "event_date": "2025-05-28",
       "first_reported_date": "2025-05-28",
-      "last_updated_date": "2026-11-14",
+      "last_updated_date": "2026-11-16",
       "days_since_event": 537,
       "source_count": 1,
       "should_report": false,
@@ -1385,7 +1392,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 317
+        "news": 318
       },
       "source_links": [
         {
@@ -2700,9 +2707,13 @@
         {
           "headline": "COVID-19 Vaccines Paid Off Up to $809 Per Dollar Spent in 2021 | Drug Topics",
           "published_date": "2026-11-14"
+        },
+        {
+          "headline": "MRNA Stock Up 3% Since Q3 Earnings Release: How to Play the Stock?",
+          "published_date": "2026-11-16"
         }
       ],
-      "news_total": 317,
+      "news_total": 318,
       "logs": [
         {
           "log_date": "2026-07-08",
@@ -2862,9 +2873,9 @@
       "disease_name": "Ebola",
       "event_date": "2025-09-05",
       "first_reported_date": "2025-09-05",
-      "last_updated_date": "2026-11-15",
+      "last_updated_date": "2026-11-16",
       "days_since_event": 437,
-      "source_count": 19,
+      "source_count": 21,
       "should_report": true,
       "search_keys": [
         "Ebola DR Congo update 2026",
@@ -2874,9 +2885,9 @@
         "who_don": 18,
         "usgs": 0,
         "gdacs": 0,
-        "ercc": 1,
+        "ercc": 3,
         "healthmap": 0,
-        "news": 1127
+        "news": 1129
       },
       "source_links": [
         {
@@ -3006,20 +3017,34 @@
           "date": "2026-10-23"
         },
         {
+          "type": "ERCC",
+          "label": "ECHO Daily Map of 30 October 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5831",
+          "meta": "",
+          "date": "2026-10-30"
+        },
+        {
           "type": "WHO",
           "label": "Ebola Ituri, DR Congo 2026-11-06",
           "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON625",
           "meta": "",
           "date": "2026-11-06"
+        },
+        {
+          "type": "ERCC",
+          "label": "ECHO Daily Map of 10 November 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5838",
+          "meta": "",
+          "date": "2026-11-10"
         }
       ],
       "key_links": [
         {
           "kind": "official",
-          "label": "Ebola Ituri, DR Congo 2026-11-06",
-          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON625",
-          "source": "WHO",
-          "date": "2026-11-06",
+          "label": "ECHO Daily Map of 10 November 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5838",
+          "source": "ERCC",
+          "date": "2026-11-10",
           "reason": "Newest official"
         },
         {
@@ -7531,6 +7556,10 @@
           "published_date": "2026-11-14T07:01:23+00:00"
         },
         {
+          "headline": "Ebola Outbreak Reaches 11,145 Cases, 5437 Deaths | Contagion Live",
+          "published_date": "2026-11-15"
+        },
+        {
           "headline": "Africa CDC says Ebola outbreak still out of control six months since it was declared",
           "published_date": "2026-11-15"
         },
@@ -7557,9 +7586,13 @@
         {
           "headline": "Kenyan pathologist calls for review of Ebola exposure patterns after contrasting outcomes in Kenya, Uganda and Nigeria",
           "published_date": "2026-11-15T19:07:36+00:00"
+        },
+        {
+          "headline": "Ebola outbreak kills over 5,400 in DR Congo as conflict hampers response",
+          "published_date": "2026-11-16"
         }
       ],
-      "news_total": 1127,
+      "news_total": 1129,
       "logs": [
         {
           "log_date": "2026-07-10",
@@ -8232,7 +8265,7 @@
       "disease_name": null,
       "event_date": "2026-05-11",
       "first_reported_date": "2026-05-11",
-      "last_updated_date": "2026-11-15",
+      "last_updated_date": "2026-11-16",
       "days_since_event": 189,
       "source_count": 3,
       "should_report": true,
@@ -8246,7 +8279,7 @@
         "gdacs": 1,
         "ercc": 2,
         "healthmap": 0,
-        "news": 1159
+        "news": 1162
       },
       "source_links": [
         {
@@ -12917,6 +12950,10 @@
           "published_date": "2026-11-14T07:05:08+00:00"
         },
         {
+          "headline": "Cordova town skips Christmas contest to prepare for drought",
+          "published_date": "2026-11-15"
+        },
+        {
           "headline": "Wildfire smoke over Borneo hints at danger beneath the forest",
           "published_date": "2026-11-15"
         },
@@ -12943,9 +12980,17 @@
         {
           "headline": "How Frankfurt Is Trying To Save Its Famous Apple Wine From Climate Change",
           "published_date": "2026-11-15T00:00:00+00:00"
+        },
+        {
+          "headline": "Inside the 2026 El Niño: Why extreme weather is spiking global heat and grocery bills",
+          "published_date": "2026-11-16"
+        },
+        {
+          "headline": "Karnataka: Drought delays migratory birds’ visit to and sanctuaries this winter",
+          "published_date": "2026-11-16"
         }
       ],
-      "news_total": 1159,
+      "news_total": 1162,
       "logs": [
         {
           "log_date": "2026-08-18",
@@ -13537,7 +13582,7 @@
       "disease_name": null,
       "event_date": "2026-07-15",
       "first_reported_date": "2026-07-15",
-      "last_updated_date": "2026-11-15",
+      "last_updated_date": "2026-11-16",
       "days_since_event": 124,
       "source_count": 6,
       "should_report": true,
@@ -13551,7 +13596,7 @@
         "gdacs": 0,
         "ercc": 6,
         "healthmap": 0,
-        "news": 2188
+        "news": 2193
       },
       "source_links": [
         {
@@ -22179,6 +22224,10 @@
           "published_date": "2026-11-12T20:24:05+00:00"
         },
         {
+          "headline": "Bombings in Russia kill a military officer and injure an adviser to Ukraine's former prime minister",
+          "published_date": "2026-11-13"
+        },
+        {
           "headline": "Europe pushes for seat at Ukraine peace talks but lacks unified voice | Texarkana Gazette",
           "published_date": "2026-11-13"
         },
@@ -22351,6 +22400,10 @@
           "published_date": "2026-11-14T18:44:02+00:00"
         },
         {
+          "headline": "North Port Family Aids Ukraine Amid War, Health Crisis",
+          "published_date": "2026-11-15"
+        },
+        {
           "headline": "The Ukraine war is one of history’s great turning points | The Spectator Australia",
           "published_date": "2026-11-15"
         },
@@ -22385,9 +22438,21 @@
         {
           "headline": "Ukraine war briefing: US proposes Kyiv cede land to Russia for Nato membership, Zelenskyy says",
           "published_date": "2026-11-15"
+        },
+        {
+          "headline": "Russian threat to EU: “If there is no agreement, we will have to use force”",
+          "published_date": "2026-11-15T00:00:00+00:00"
+        },
+        {
+          "headline": "Trump, Xi, and Putin to meet in Shenzhen for the most consequential trilateral summit in a generation, why Ukraine is not in the room; explained",
+          "published_date": "2026-11-16"
+        },
+        {
+          "headline": "Putin's war machine tied to troubling recruitment of young women as new deals emerge",
+          "published_date": "2026-11-16"
         }
       ],
-      "news_total": 2188,
+      "news_total": 2193,
       "logs": [
         {
           "log_date": "2026-07-24",
@@ -23330,7 +23395,7 @@
       "disease_name": null,
       "event_date": "2026-07-26",
       "first_reported_date": "2026-07-26",
-      "last_updated_date": "2026-11-15",
+      "last_updated_date": "2026-11-16",
       "days_since_event": 113,
       "source_count": 2,
       "should_report": true,
@@ -23345,7 +23410,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 3452
+        "news": 3466
       },
       "source_links": [
         {
@@ -37118,6 +37183,30 @@
           "published_date": "2026-11-14T18:44:23+00:00"
         },
         {
+          "headline": "Iran raises stakes with new drone attacks as Trump signals a waiting game | CNN",
+          "published_date": "2026-11-15"
+        },
+        {
+          "headline": "The $130 Billion Oil Boom Fueled by the Iran War",
+          "published_date": "2026-11-15"
+        },
+        {
+          "headline": "Saudi Arabia, Qatar, Jordan, Egypt condemn Iranian attack on Bahrain - as it happened",
+          "published_date": "2026-11-15"
+        },
+        {
+          "headline": "Oil supertanker ‘sinks after hitting mine’ in Strait of Hormuz",
+          "published_date": "2026-11-15"
+        },
+        {
+          "headline": "Iran vows ‘we will find you’ to 2 US Navy officers the day warship returns from Middle East",
+          "published_date": "2026-11-15"
+        },
+        {
+          "headline": "Trump’s Hormuz squeeze has Iran strangled — now slam its back door, too",
+          "published_date": "2026-11-15"
+        },
+        {
           "headline": "Blasts in Bahrain as Iran claims attack on US base",
           "published_date": "2026-11-15"
         },
@@ -37194,15 +37283,47 @@
           "published_date": "2026-11-15"
         },
         {
+          "headline": "Iran rebuilds missile arsenal, intelligence estimates up to 2,500 missiles",
+          "published_date": "2026-11-15T00:00:00+00:00"
+        },
+        {
           "headline": "Iran Attacks Bahrain as Conflict Escalates",
           "published_date": "2026-11-15T05:09:04+00:00"
         },
         {
+          "headline": "While Iran conflict drags on, there's no relief for UAE and Saudi hotels",
+          "published_date": "2026-11-15T05:29:01+00:00"
+        },
+        {
           "headline": "Pence calls Vance ‘wrong’ on Iran war, GOP midterm losses",
           "published_date": "2026-11-15T16:12:32+00:00"
+        },
+        {
+          "headline": "Can the Democrats Lower the Cost of Living by Ending the Iran War?",
+          "published_date": "2026-11-15T17:28:58+00:00"
+        },
+        {
+          "headline": "Iran launches drone strike on U.S. base in Bahrain - UPI.com",
+          "published_date": "2026-11-15T19:29:01+00:00"
+        },
+        {
+          "headline": "Third US carrier joins Iran blockade, Bessent warns of economic collapse",
+          "published_date": "2026-11-16"
+        },
+        {
+          "headline": "Iraqi president urges Trump to end Iran war, offers to help mediate",
+          "published_date": "2026-11-16"
+        },
+        {
+          "headline": "Why The US Air Force Is On High Alert Over Security Levels At Overseas Bases",
+          "published_date": "2026-11-16"
+        },
+        {
+          "headline": "The Pentagon Ignored a Warning About the Danger of Iran’s Drones",
+          "published_date": "2026-11-16T05:29:01+00:00"
         }
       ],
-      "news_total": 3452,
+      "news_total": 3466,
       "logs": [
         {
           "log_date": "2026-07-27",
@@ -38271,7 +38392,7 @@
       "disease_name": null,
       "event_date": "2026-07-27",
       "first_reported_date": "2026-07-27",
-      "last_updated_date": "2026-11-14",
+      "last_updated_date": "2026-11-16",
       "days_since_event": 112,
       "source_count": 8,
       "should_report": true,
@@ -38285,7 +38406,7 @@
         "gdacs": 1,
         "ercc": 7,
         "healthmap": 0,
-        "news": 1181
+        "news": 1183
       },
       "source_links": [
         {
@@ -43105,9 +43226,17 @@
         {
           "headline": "Third UP wildfire is now fully contained",
           "published_date": "2026-11-14"
+        },
+        {
+          "headline": "Bolivia Wildfire Passes 8,000 Hectares",
+          "published_date": "2026-11-15"
+        },
+        {
+          "headline": "Indonesia apologizes to Malaysia, Singapore over wildfire haze",
+          "published_date": "2026-11-16"
         }
       ],
-      "news_total": 1181,
+      "news_total": 1183,
       "logs": [
         {
           "log_date": "2026-07-27",
@@ -53458,7 +53587,7 @@
       "disease_name": null,
       "event_date": "2026-08-09",
       "first_reported_date": "2026-08-09",
-      "last_updated_date": "2026-11-11",
+      "last_updated_date": "2026-11-16",
       "days_since_event": 99,
       "source_count": 1,
       "should_report": true,
@@ -53472,7 +53601,7 @@
         "gdacs": 1,
         "ercc": 0,
         "healthmap": 0,
-        "news": 131
+        "news": 132
       },
       "source_links": [
         {
@@ -54043,9 +54172,13 @@
         {
           "headline": "Ganjam flood management row: Odisha Chief Secy Anu Garg hits back at Naveen Patnaik, Suresh Mahapatra",
           "published_date": "2026-11-11"
+        },
+        {
+          "headline": "Rajasthan Floods: Floods in Rajasthan, Rajasthan Floods news & Rajasthan floods latest updates | The Economic Times",
+          "published_date": "2026-11-16"
         }
       ],
-      "news_total": 131,
+      "news_total": 132,
       "logs": [
         {
           "log_date": "2026-09-02",
@@ -54264,7 +54397,7 @@
         "gdacs": 1,
         "ercc": 2,
         "healthmap": 0,
-        "news": 1213
+        "news": 1214
       },
       "source_links": [
         {
@@ -59159,6 +59292,10 @@
           "published_date": "2026-11-09T07:10:40+00:00"
         },
         {
+          "headline": "Photo: Nepali rescue teams pull survivors from deadly Himalayan glacial floods -...",
+          "published_date": "2026-11-10T05:31:16+00:00"
+        },
+        {
           "headline": "Photo: Rescue Efforts Continue After Deadly in Nepal - NEP2026090104 - UPI.com",
           "published_date": "2026-11-10T07:10:40+00:00"
         },
@@ -59179,7 +59316,7 @@
           "published_date": "2026-11-14"
         }
       ],
-      "news_total": 1213,
+      "news_total": 1214,
       "logs": [
         {
           "log_date": "2026-08-28",
@@ -59762,7 +59899,7 @@
       "disease_name": null,
       "event_date": "2026-09-03",
       "first_reported_date": "2026-09-03",
-      "last_updated_date": "2026-11-15",
+      "last_updated_date": "2026-11-16",
       "days_since_event": 74,
       "source_count": 1,
       "should_report": true,
@@ -59776,7 +59913,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 864
+        "news": 865
       },
       "source_links": [
         {
@@ -63279,9 +63416,13 @@
         {
           "headline": "Top Hamas commander who plotted October 7 attacks assassinated by Israel",
           "published_date": "2026-11-15"
+        },
+        {
+          "headline": "Israel kills senior Hamas commander in Gaza two months after killing his predecessor as ceasefire stagnates",
+          "published_date": "2026-11-16"
         }
       ],
-      "news_total": 864,
+      "news_total": 865,
       "logs": [
         {
           "log_date": "2026-09-04",
@@ -71651,7 +71792,7 @@
       "disease_name": null,
       "event_date": "2026-10-22",
       "first_reported_date": "2026-10-22",
-      "last_updated_date": "2026-11-15",
+      "last_updated_date": "2026-11-16",
       "days_since_event": 25,
       "source_count": 2,
       "should_report": true,
@@ -71665,7 +71806,7 @@
         "gdacs": 0,
         "ercc": 2,
         "healthmap": 0,
-        "news": 401
+        "news": 403
       },
       "source_links": [
         {
@@ -73323,9 +73464,17 @@
         {
           "headline": "Iran hits back at Trump's 1979 war claim, says US cannot 'escape responsibility' for aggression",
           "published_date": "2026-11-15T04:14:00+00:00"
+        },
+        {
+          "headline": "Iran raises stakes with new drone attacks as Trump signals a waiting game",
+          "published_date": "2026-11-16"
+        },
+        {
+          "headline": "The Real Reason Donald Trump Isn’t Attacking Iran: Tehran Might Have 2,500 Missiles to Strike Back and Cause Major Damage",
+          "published_date": "2026-11-16"
         }
       ],
-      "news_total": 401,
+      "news_total": 403,
       "logs": [
         {
           "log_date": "2026-10-22",
@@ -75277,146 +75426,6 @@
       "logs_total": 7
     },
     {
-      "incident_id": "20261030-CD-OT",
-      "tree_id": "bfa9d02a97364f9396eb6f34878c6e04",
-      "canonical_name": "DR Congo 2026-10-30",
-      "summary": "The Ebola outbreak in the Democratic Republic of Congo remains out of control six months after it was announced, with more than 11,000 cases recorded and nearly half proving fatal. No other relevant updates are provided in the selected news.",
-      "country": "DR Congo",
-      "iso2": "CD",
-      "lat": -4.0,
-      "lon": 21.8,
-      "country_group": "C",
-      "region": "Africa",
-      "incident_type": "",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "LOW",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": null,
-      "event_date": "2026-10-30",
-      "first_reported_date": "2026-10-30",
-      "last_updated_date": "2026-11-15",
-      "days_since_event": 17,
-      "source_count": 2,
-      "should_report": false,
-      "search_keys": [],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 0,
-        "ercc": 2,
-        "healthmap": 0,
-        "news": 3
-      },
-      "source_links": [
-        {
-          "type": "ERCC",
-          "label": "ECHO Daily Map of 30 October 2026",
-          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5831",
-          "meta": "",
-          "date": "2026-10-30"
-        },
-        {
-          "type": "ERCC",
-          "label": "ECHO Daily Map of 10 November 2026",
-          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5838",
-          "meta": "",
-          "date": "2026-11-10"
-        }
-      ],
-      "key_links": [
-        {
-          "kind": "official",
-          "label": "ECHO Daily Map of 10 November 2026",
-          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5838",
-          "source": "ERCC",
-          "date": "2026-11-10",
-          "reason": "Newest official"
-        },
-        {
-          "kind": "news",
-          "label": "Ebola outbreak remains out of control in Congo 6 months into response",
-          "url": "https://www.wsbradio.com/news/health/ebola-outbreak/ISSITMR7PA6UFJDQHZFWMA56II/",
-          "source": "WSB Radio",
-          "date": "2026-11-15",
-          "reason": "Latest log"
-        },
-        {
-          "kind": "official",
-          "label": "ECHO Daily Map of 30 October 2026",
-          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5831",
-          "source": "ERCC",
-          "date": "2026-10-30",
-          "reason": "Official record"
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "CAF Awards 2026: Everything to Know About the Ceremony, Nominees and Date",
-          "published_date": "2026-11-10"
-        },
-        {
-          "headline": "Ebola outbreak remains out of control in Congo 6 months into response",
-          "published_date": "2026-11-15"
-        },
-        {
-          "headline": "Ebola outbreak remains out of control in Congo 6 months into response",
-          "published_date": "2026-11-15"
-        }
-      ],
-      "news_total": 3,
-      "logs": [
-        {
-          "log_date": "2026-11-15",
-          "summary": "The Ebola outbreak in the Democratic Republic of Congo remains out of control six months after it was announced, with more than 11,000 cases recorded and nearly half proving fatal. No other relevant updates are provided in the selected news.",
-          "news": [
-            {
-              "news_id": "3804920c815f5a8d9bb1e744e3867ca9",
-              "url": "https://www.wsbradio.com/news/health/ebola-outbreak/ISSITMR7PA6UFJDQHZFWMA56II/",
-              "headline": "Ebola outbreak remains out of control in Congo 6 months into response",
-              "body": "Congo’s Ebola outbreak remains out of control six months after it was announced, with more than 11,000 cases recorded and nearly half proving fatal",
-              "published_date": "2026-11-15",
-              "outlet": "WSB Radio",
-              "image": "https://s.yimg.com/bo/0825e950-e561-562f-ba81-79e8fc41f5d8_1794720415272.jpg"
-            },
-            {
-              "news_id": "114d84e7ef9252d79453feae4992baca",
-              "url": "https://www.wsls.com/health/2026/11/15/ebola-outbreak-remains-out-of-control-in-congo-6-months-into-response/",
-              "headline": "Ebola outbreak remains out of control in Congo 6 months into response",
-              "body": "Congo’s Ebola outbreak remains out of control six months after it was announced, with more than 11,000 cases recorded and nearly half proving fatal.",
-              "published_date": "2026-11-15",
-              "outlet": "WSLS 10 News",
-              "image": "https://www.bing.com/th?id=ONUT.n4-pK9D7GF7DERw9WfGPUw"
-            },
-            {
-              "news_id": "8ee37a885cbf5fb086e177a3441b1387",
-              "url": "https://www.moroccoworldnews.com/2026/11/345811/caf-awards-2026-everything-to-know-about-the-ceremony-nominees-and-date/",
-              "headline": "CAF Awards 2026: Everything to Know About the Ceremony, Nominees and Date",
-              "body": "The Confederation of African Football has confirmed that the 2026 CAF Awards will take place on Wednesday, December 2, in Lagos, Nigeria.",
-              "published_date": "2026-11-10",
-              "outlet": "Morocco World News",
-              "image": ""
-            }
-          ]
-        }
-      ],
-      "logs_total": 1
-    },
-    {
       "incident_id": "20261102-FR-DI",
       "tree_id": "08e51208cb5c41daa06a3c14df4a0661",
       "canonical_name": "Shamonda France 2026-11-02",
@@ -75439,7 +75448,7 @@
       "disease_name": null,
       "event_date": "2026-11-02",
       "first_reported_date": "2026-11-02",
-      "last_updated_date": "2026-11-12",
+      "last_updated_date": "2026-11-15",
       "days_since_event": 14,
       "source_count": 1,
       "should_report": false,
@@ -75453,7 +75462,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 4
+        "news": 5
       },
       "source_links": [
         {
@@ -75508,9 +75517,13 @@
         {
           "headline": "Un nouveau foyer de grippe aviaire détecté dans le Sud-Ouest",
           "published_date": "2026-11-12"
+        },
+        {
+          "headline": "Can the Shamonda Virus, Detected in a Human in France, Reach the Americas?",
+          "published_date": "2026-11-15"
         }
       ],
-      "news_total": 4,
+      "news_total": 5,
       "logs": [
         {
           "log_date": "2026-11-12",
