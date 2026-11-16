@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.5",
+  "schema_version": "1.6",
   "report_date": "2025-10-01",
-  "generated_at": "2026-11-15T19:24:50Z",
+  "generated_at": "2026-11-16T04:42:49Z",
   "as_of": "2025-10-01",
   "tracking_window_days": 7,
   "min_severity": "LOW",
@@ -65,10 +65,13 @@
       "event_date": "2025-10-12",
       "first_reported_date": "2025-10-12",
       "last_updated_date": "2025-10-01",
-      "days_since_event": 399,
+      "days_since_event": 400,
       "source_count": 1,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Philippines Earthquake latest 2025",
+        "Philippines Earthquake 2025"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 0,
@@ -82,7 +85,26 @@
           "type": "GDACS",
           "label": "Orange alert · Magnitude 5.7M, Depth:10km",
           "url": "https://www.gdacs.org/report.aspx?eventid=1504796&episodeid=1665698&eventtype=EQ",
-          "meta": "Magnitude 5.7M, Depth:10km"
+          "meta": "Magnitude 5.7M, Depth:10km",
+          "date": "2025-10-12"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "Orange alert · Magnitude 5.7M, Depth:10km",
+          "url": "https://www.gdacs.org/report.aspx?eventid=1504796&episodeid=1665698&eventtype=EQ",
+          "source": "GDACS",
+          "date": "2025-10-12",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "6.9 magnitude earthquake kills more than 60 in central Philippines",
+          "url": "https://sports.yahoo.com/articles/strong-6-9-magnitude-earthquake-172629964.html",
+          "source": "CNN · via Yahoo Sports",
+          "date": "2025-10-01T00:00:00+00:00",
+          "reason": "Latest update"
         }
       ],
       "physical": {

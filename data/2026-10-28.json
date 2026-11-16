@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.5",
+  "schema_version": "1.6",
   "report_date": "2026-10-28",
-  "generated_at": "2026-11-15T19:24:50Z",
+  "generated_at": "2026-11-16T04:42:49Z",
   "as_of": "2026-10-28",
   "tracking_window_days": 7,
   "min_severity": "LOW",
@@ -146,10 +146,13 @@
       "event_date": "2026-08-12",
       "first_reported_date": "2026-08-12",
       "last_updated_date": "2026-10-28",
-      "days_since_event": 95,
+      "days_since_event": 96,
       "source_count": 4,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Severe Weather latest 2026",
+        "Severe Weather 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 0,
@@ -163,25 +166,55 @@
           "type": "ERCC",
           "label": "ECHO Daily Map of 12 August 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5751",
-          "meta": ""
+          "meta": "",
+          "date": "2026-08-12"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 13 August 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5753",
-          "meta": ""
+          "meta": "",
+          "date": "2026-08-13"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 20 August 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5759",
-          "meta": ""
+          "meta": "",
+          "date": "2026-08-20"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 15 October 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5817",
-          "meta": ""
+          "meta": "",
+          "date": "2026-10-15"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "ECHO Daily Map of 15 October 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5817",
+          "source": "ERCC",
+          "date": "2026-10-15",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Severe weather leaves homes damaged in Ocala",
+          "url": "https://www.wftv.com/news/local/severe-weather-leaves-homes-damaged-ocala/FA5CNTQV2FEVLDT5R5CDWCFXB4/",
+          "source": "WFTV 9 Orlando",
+          "date": "2026-08-23",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Weather Impact Alert: Showers expected across DMV, isolated severe storms...",
+          "url": "https://www.wusa9.com/article/weather/weather-impact/weather-impact-alert-showers-expected-across-dmv-isolated-severe-storms-possible-through-saturday-night/65-b7a72562-3512-45c8-ab35-94b27b176998",
+          "source": "WUSA 9 Washington, D.C.",
+          "date": "2026-08-22T17:48:49+00:00",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -2939,10 +2972,13 @@
       "event_date": "2026-09-21",
       "first_reported_date": "2026-09-21",
       "last_updated_date": "2026-10-25",
-      "days_since_event": 55,
+      "days_since_event": 56,
       "source_count": 3,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Mexico Tropical Cyclone latest 2026",
+        "Mexico Tropical Cyclone 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 0,
@@ -2956,19 +2992,48 @@
           "type": "GDACS",
           "label": "Green alert · Tropical Cyclone POLO-26 Mexico 2026-09-21",
           "url": "https://www.gdacs.org/report.aspx?eventtype=TC&eventid=1001325",
-          "meta": ""
+          "meta": "",
+          "date": "2026-09-21"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 28 September 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5798",
-          "meta": ""
+          "meta": "",
+          "date": "2026-09-28"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 09 October 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5810",
-          "meta": ""
+          "meta": "",
+          "date": "2026-10-09"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "ECHO Daily Map of 09 October 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5810",
+          "source": "ERCC",
+          "date": "2026-10-09",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Knowledge Nugget | Hurricane Polo: What it tells us about tropical cyclones",
+          "url": "https://indianexpress.com/article/upsc-current-affairs/upsc-essentials/knowledge-nugget-hurricane-polo-tropical-cyclones-el-nino-upsc-10891761/",
+          "source": "The Indian Express",
+          "date": "2026-09-24T18:03:26+00:00",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Tropical Storm Polo will impact the U.S. after slamming Mexico. See its path.",
+          "url": "https://www.wsgw.com/tropical-storm-polo-will-impact-the-u-s-after-slamming-mexico-see-its-path/",
+          "source": "WSGW 790 AM & 100.5 FM",
+          "date": "2026-09-30T19:27:09+00:00",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -4304,10 +4369,13 @@
       "event_date": "2026-10-02",
       "first_reported_date": "2026-10-02",
       "last_updated_date": "2026-10-24",
-      "days_since_event": 44,
+      "days_since_event": 45,
       "source_count": 2,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Russia Earthquake latest 2026",
+        "Russia Earthquake 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 2,
@@ -4321,13 +4389,41 @@
           "type": "USGS",
           "label": "M 5.8 - 165 km SSE of Vilyuchinsk, Russia",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tz62",
-          "meta": "29.477 km depth"
+          "meta": "29.477 km depth",
+          "date": "2026-10-02"
         },
         {
           "type": "USGS",
           "label": "M 6.9 - 76 km NE of Ozernovskiy, Russia",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2mq",
-          "meta": "135 km depth"
+          "meta": "135 km depth",
+          "date": "2026-10-16"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "M 6.9 - 76 km NE of Ozernovskiy, Russia",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2mq",
+          "source": "USGS",
+          "date": "2026-10-16",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Russia: Earthquake Of Magnitude 7 Strikes Kamchatka Peninsula",
+          "url": "https://www.thedailyjagran.com/world/news/russia-earthquake-magnitude-7-quake-strikes-kamchatka-peninsula-latest-updates-10332918",
+          "source": "thedailyjagran.com",
+          "date": "2026-10-16",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Earthquake of magnitude 7 strikes Russia's Kamchatka Peninsula",
+          "url": "https://www.daily-sun.com/world/903811/earthquake-of-magnitude-7-strikes-russia-s-kamchatka-peninsula",
+          "source": "Daily Sun",
+          "date": "2026-10-17T05:16:17+00:00",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -4675,10 +4771,13 @@
       "event_date": "2026-10-06",
       "first_reported_date": "2026-10-06",
       "last_updated_date": "2026-10-28",
-      "days_since_event": 40,
+      "days_since_event": 41,
       "source_count": 1,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "United States Tropical Cyclone latest 2026",
+        "United States Tropical Cyclone 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 0,
@@ -4692,7 +4791,34 @@
           "type": "GDACS",
           "label": "Green alert · Tropical Cyclone NINE-26 United States 2026-10-06",
           "url": "https://www.gdacs.org/report.aspx?eventtype=TC&eventid=1001334",
-          "meta": ""
+          "meta": "",
+          "date": "2026-10-06"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "Green alert · Tropical Cyclone NINE-26 United States 2026-10-06",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=TC&eventid=1001334",
+          "source": "GDACS",
+          "date": "2026-10-06",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Post-Tropical Cyclone Josephine lingers alongside a new area in the Atlantic",
+          "url": "https://wgno.com/weather/post-tropical-cyclone-josephine-lingers-alongside-a-new-area-in-the-atlantic/",
+          "source": "WGNO",
+          "date": "2026-10-23T17:54:42+00:00",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "4 dead after tropical cyclone Isaias makes landfall in Florida amid flood threat",
+          "url": "https://www.mid-day.com/news/world-news/article/tropical-cyclone-isaias-threatens-flooding-across-us-after-florida-landfall-four-dead-23654465",
+          "source": "Mid-Day",
+          "date": "2026-10-11",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -5732,7 +5858,7 @@
       "event_date": "2026-10-06",
       "first_reported_date": "2026-10-06",
       "last_updated_date": "2026-10-27",
-      "days_since_event": 40,
+      "days_since_event": 41,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -5749,7 +5875,34 @@
           "type": "ERCC",
           "label": "ECHO Daily Map of 06 October 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5806",
-          "meta": ""
+          "meta": "",
+          "date": "2026-10-06"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "ECHO Daily Map of 06 October 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5806",
+          "source": "ERCC",
+          "date": "2026-10-06",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Congo’s Ebola outbreak tops 10,000 cases as authorities race to slow the spread in African countries",
+          "url": "https://ny1.com/nyc/all-boroughs/ap-top-news/2026/10/27/congos-fast-moving-ebola-outbreak-tops-10000-confirmed-cases-as-authorities-race-to-slow-the-spread-across-africa",
+          "source": "NY1 News",
+          "date": "2026-10-27",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "What to know about Ebola outbreak that has spread from Congo to multiple African...",
+          "url": "https://www.sfgate.com/news/world/article/what-to-know-about-ebola-outbreak-that-has-spread-22489336.php",
+          "source": "San Francisco Chronicle",
+          "date": "2026-10-22T16:21:34+00:00",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -5971,10 +6124,13 @@
       "event_date": "2026-10-08",
       "first_reported_date": "2026-10-08",
       "last_updated_date": "2026-10-22",
-      "days_since_event": 38,
+      "days_since_event": 39,
       "source_count": 2,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Philippines Volcano latest 2026",
+        "Philippines Volcano 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 0,
@@ -5988,13 +6144,41 @@
           "type": "GDACS",
           "label": "Orange alert · Volcano Batangas, Philippines 2026-10-08",
           "url": "https://www.gdacs.org/report.aspx?eventtype=VO&eventid=1000151",
-          "meta": ""
+          "meta": "",
+          "date": "2026-10-08"
         },
         {
           "type": "GDACS",
           "label": "Orange alert · Volcano Negros Occidental, Philippines 2026-10-10",
           "url": "https://www.gdacs.org/report.aspx?eventtype=VO&eventid=1000152",
-          "meta": ""
+          "meta": "",
+          "date": "2026-10-10"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "Orange alert · Volcano Negros Occidental, Philippines 2026-10-10",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=VO&eventid=1000152",
+          "source": "GDACS",
+          "date": "2026-10-10",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Phreatic eruption at Taal Volcano in the Philippines; plume reaches approximately 4,000 meters｜Haru",
+          "url": "https://note.com/haru_news/n/n854cc2092f6e?hl=en",
+          "source": "note",
+          "date": "2026-10-09",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Fresh eruption occurs at Taal Volcano in the Philippines",
+          "url": "https://www.msn.com/en-us/news/other/fresh-eruption-occurs-at-taal-volcano-in-the-philippines/vi-AA2fGaPZ?ocid=BingNewsVerp",
+          "source": "Amazon S3 on MSN",
+          "date": "2026-10-21",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -6348,7 +6532,7 @@
       "event_date": "2026-10-13",
       "first_reported_date": "2026-10-13",
       "last_updated_date": "2026-10-27",
-      "days_since_event": 33,
+      "days_since_event": 34,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -6365,7 +6549,34 @@
           "type": "ERCC",
           "label": "ECHO Daily Map of 13 October 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5815",
-          "meta": ""
+          "meta": "",
+          "date": "2026-10-13"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "ECHO Daily Map of 13 October 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5815",
+          "source": "ERCC",
+          "date": "2026-10-13",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Nepal unveils flood warnings and glacial lake risk cuts to bolster disaster readiness",
+          "url": "https://www.dimsumdaily.hk/nepal-unveils-flood-warnings-and-glacial-lake-risk-cuts-to-bolster-disaster-readiness/",
+          "source": "Dimsum Daily",
+          "date": "2026-10-26T05:54:55+00:00",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Nepal turns to SMART’s drones, detection gear after declining two Malaysian rescue offers",
+          "url": "https://www.malaymail.com/news/malaysia/2026/10/26/nepal-turns-to-smarts-drones-detection-gear-after-declining-two-malaysian-rescue-offers/240633",
+          "source": "Malay Mail",
+          "date": "2026-10-26",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -6815,7 +7026,7 @@
       "event_date": "2026-10-19",
       "first_reported_date": "2026-10-19",
       "last_updated_date": "2026-10-23",
-      "days_since_event": 27,
+      "days_since_event": 28,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -6832,7 +7043,26 @@
           "type": "ERCC",
           "label": "ECHO Daily Map of 19 October 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5819",
-          "meta": ""
+          "meta": "",
+          "date": "2026-10-19"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "ECHO Daily Map of 19 October 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5819",
+          "source": "ERCC",
+          "date": "2026-10-19",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Three biggest questions for World Series Game 1 as Brewers and Rays kick off 2026 Fall Classic",
+          "url": "https://www.msn.com/en-us/sports/baseball/three-biggest-questions-for-world-series-game-1-as-brewers-and-rays-kick-off-2026-fall-classic/ar-AA2fVPfA?ocid=BingNewsVerp",
+          "source": "CBS Sports on MSN",
+          "date": "2026-10-23",
+          "reason": "News"
         }
       ],
       "physical": {
@@ -6881,10 +7111,13 @@
       "event_date": "2026-10-21",
       "first_reported_date": "2026-10-21",
       "last_updated_date": "2026-10-23",
-      "days_since_event": 25,
+      "days_since_event": 26,
       "source_count": 1,
       "should_report": false,
-      "search_keys": [],
+      "search_keys": [
+        "Spain Flood latest 2026",
+        "Spain Flood 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 0,
@@ -6898,7 +7131,34 @@
           "type": "ERCC",
           "label": "ECHO Daily Map of 21 October 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5821",
-          "meta": ""
+          "meta": "",
+          "date": "2026-10-21"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "ECHO Daily Map of 21 October 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5821",
+          "source": "ERCC",
+          "date": "2026-10-21",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "European Parliament Approves €489 Million in Disaster Relief for Italy, Spain, Portugal and Malta - https://eutoday.net",
+          "url": "https://eutoday.net/eu-parliament-approves-489-million-storm-recovery-aid/",
+          "source": "EU Today",
+          "date": "2026-10-21",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "At least four dead after storm brings flooding to southern France",
+          "url": "https://www.msn.com/en-us/news/world/at-least-four-dead-after-storm-brings-flooding-to-southern-france/ar-AA2fOLSP?ocid=BingNewsVerp",
+          "source": "BBC on MSN",
+          "date": "2026-10-23",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -6991,10 +7251,13 @@
       "event_date": "2026-10-23",
       "first_reported_date": "2026-10-23",
       "last_updated_date": "2026-10-24",
-      "days_since_event": 23,
+      "days_since_event": 24,
       "source_count": 1,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Italy Earthquake latest 2026",
+        "Italy Earthquake 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 1,
@@ -7008,7 +7271,34 @@
           "type": "USGS",
           "label": "M 5.7 - 61 km WNW of Leni, Italy",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4bk",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-10-23"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "M 5.7 - 61 km WNW of Leni, Italy",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4bk",
+          "source": "USGS",
+          "date": "2026-10-23",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Double earthquake in Italy, schools evacuated, people on the streets",
+          "url": "https://www.notizie.it/en/Double-earthquake-in-Italy:-schools--people--and-streets-evacuated/",
+          "source": "Notizie.it",
+          "date": "2026-10-24T05:41:32+00:00",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Italy earthquakes live: Tsunami warning after 12 quakes and Sicily evacuations",
+          "url": "https://www.mirror.co.uk/news/world-news/earthquakes-tsunami-italy-sicily-palermo-37804343",
+          "source": "The Mirror",
+          "date": "2026-10-24",
+          "reason": "Latest update"
         }
       ],
       "physical": {

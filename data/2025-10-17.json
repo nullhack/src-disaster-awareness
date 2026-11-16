@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.5",
+  "schema_version": "1.6",
   "report_date": "2025-10-17",
-  "generated_at": "2026-11-15T19:24:50Z",
+  "generated_at": "2026-11-16T04:42:49Z",
   "as_of": "2025-10-17",
   "tracking_window_days": 7,
   "min_severity": "LOW",
@@ -65,10 +65,13 @@
       "event_date": "2025-09-30",
       "first_reported_date": "2025-09-30",
       "last_updated_date": "2025-10-14",
-      "days_since_event": 411,
+      "days_since_event": 412,
       "source_count": 1,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Philippines Earthquake latest 2025",
+        "Philippines Earthquake 2025"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 0,
@@ -82,7 +85,26 @@
           "type": "GDACS",
           "label": "Orange alert · Magnitude 6.9M, Depth:10km",
           "url": "https://www.gdacs.org/report.aspx?eventid=1502713&episodeid=1663312&eventtype=EQ",
-          "meta": "Magnitude 6.9M, Depth:10km"
+          "meta": "Magnitude 6.9M, Depth:10km",
+          "date": "2025-09-30"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "Orange alert · Magnitude 6.9M, Depth:10km",
+          "url": "https://www.gdacs.org/report.aspx?eventid=1502713&episodeid=1663312&eventtype=EQ",
+          "source": "GDACS",
+          "date": "2025-09-30",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Watch centuries-old church's bell tower crumble during Philippines earthquake",
+          "url": "https://www.yahoo.com/news/articles/watch-centuries-old-churchs-bell-224436046.html",
+          "source": "USA TODAY · via Yahoo News",
+          "date": "2025-10-14T14:42:40+00:00",
+          "reason": "Latest update"
         }
       ],
       "physical": {

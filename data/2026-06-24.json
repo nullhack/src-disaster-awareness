@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.5",
+  "schema_version": "1.6",
   "report_date": "2026-06-24",
-  "generated_at": "2026-11-15T19:24:50Z",
+  "generated_at": "2026-11-16T04:42:49Z",
   "as_of": "2026-06-24",
   "tracking_window_days": 7,
   "min_severity": "LOW",
@@ -75,10 +75,13 @@
       "event_date": "2026-06-19",
       "first_reported_date": "2026-06-19",
       "last_updated_date": "2026-06-22",
-      "days_since_event": 149,
+      "days_since_event": 150,
       "source_count": 1,
       "should_report": false,
-      "search_keys": [],
+      "search_keys": [
+        "Russia Earthquake latest 2026",
+        "Russia Earthquake 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 1,
@@ -92,7 +95,26 @@
           "type": "USGS",
           "label": "M 6.0 - 156 km ESE of Petropavlovsk-Kamchatsky, Russia",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sui2",
-          "meta": "28.383 km depth"
+          "meta": "28.383 km depth",
+          "date": "2026-06-19"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "M 6.0 - 156 km ESE of Petropavlovsk-Kamchatsky, Russia",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sui2",
+          "source": "USGS",
+          "date": "2026-06-19",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Evacuation in Petropavlovsk-Kamchatsky was not required during the earthquake.",
+          "url": "https://iz.ru/en/node/2118182",
+          "source": "Izvestia",
+          "date": "2026-06-19T00:00:00+00:00",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -159,10 +181,13 @@
       "event_date": "2026-07-03",
       "first_reported_date": "2026-07-03",
       "last_updated_date": "2026-06-17",
-      "days_since_event": 135,
+      "days_since_event": 136,
       "source_count": 1,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Indonesia Earthquake latest 2026",
+        "Indonesia Earthquake 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 1,
@@ -176,7 +201,34 @@
           "type": "USGS",
           "label": "M 6.2 - 58 km W of Tobelo, Indonesia",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9r5",
-          "meta": "120.932 km depth"
+          "meta": "120.932 km depth",
+          "date": "2026-07-03"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "M 6.2 - 58 km W of Tobelo, Indonesia",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9r5",
+          "source": "USGS",
+          "date": "2026-07-03",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Magnitude 6.2 earthquake strikes off eastern Indonesia, no tsunami threat",
+          "url": "https://www.asiaone.com/asia/indonesia-tolebo-maluku-earthquake",
+          "source": "Asia One",
+          "date": "2026-06-17T00:00:00+00:00",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Magnitude 6.2 earthquake strikes off eastern Indonesia: USGS",
+          "url": "https://www.bssnews.net/international/402127",
+          "source": "Bangladesh Sangsbad Sangstha",
+          "date": "2026-06-17T00:00:00+00:00",
+          "reason": "Latest update"
         }
       ],
       "physical": {

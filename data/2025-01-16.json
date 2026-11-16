@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.5",
+  "schema_version": "1.6",
   "report_date": "2025-01-16",
-  "generated_at": "2026-11-15T19:24:50Z",
+  "generated_at": "2026-11-16T04:42:49Z",
   "as_of": "2025-01-16",
   "tracking_window_days": 7,
   "min_severity": "LOW",
@@ -65,10 +65,13 @@
       "event_date": "2024-12-27",
       "first_reported_date": "2024-12-27",
       "last_updated_date": "2025-01-16",
-      "days_since_event": 688,
+      "days_since_event": 689,
       "source_count": 1,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Acute Respiratory DR Congo update 2024",
+        "Acute Respiratory DR Congo 2024"
+      ],
       "sources": {
         "who_don": 1,
         "usgs": 0,
@@ -82,7 +85,26 @@
           "type": "WHO",
           "label": "Acute Respiratory Kinshasa, DR Congo 2024-12-27",
           "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2024-DON547",
-          "meta": ""
+          "meta": "",
+          "date": "2024-12-27"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "Acute Respiratory Kinshasa, DR Congo 2024-12-27",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2024-DON547",
+          "source": "WHO",
+          "date": "2024-12-27",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Q&A: Cause of DRC outbreak identified as combination of malaria, flu and malnutrition",
+          "url": "https://www.healio.com/news/infectious-disease/20250116/qa-cause-of-drc-outbreak-identified-as-combination-of-malaria-flu-and-malnutrition",
+          "source": "Healio",
+          "date": "2025-01-16T00:00:00+00:00",
+          "reason": "Latest update"
         }
       ],
       "physical": {

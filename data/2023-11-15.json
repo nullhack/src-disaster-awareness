@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.5",
+  "schema_version": "1.6",
   "report_date": "2023-11-15",
-  "generated_at": "2026-11-15T19:24:50Z",
+  "generated_at": "2026-11-16T04:42:49Z",
   "as_of": "2023-11-15",
   "tracking_window_days": 7,
   "min_severity": "LOW",
@@ -65,10 +65,13 @@
       "event_date": "2026-09-06",
       "first_reported_date": "2026-09-06",
       "last_updated_date": "2023-11-12",
-      "days_since_event": 70,
+      "days_since_event": 71,
       "source_count": 1,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Solomon Islands Earthquake latest 2026",
+        "Solomon Islands Earthquake 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 1,
@@ -82,7 +85,26 @@
           "type": "USGS",
           "label": "M 5.6 - 93 km SE of Kirakira, Solomon Islands",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000temi",
-          "meta": "38.543 km depth"
+          "meta": "38.543 km depth",
+          "date": "2026-09-06"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "M 5.6 - 93 km SE of Kirakira, Solomon Islands",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000temi",
+          "source": "USGS",
+          "date": "2026-09-06",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Recent earthquakes - Solomon Times Online",
+          "url": "https://www.solomontimes.com/today/earthquakes",
+          "source": "Solomon Times",
+          "date": "2023-11-12",
+          "reason": "News"
         }
       ],
       "physical": {

@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.5",
+  "schema_version": "1.6",
   "report_date": "2026-08-26",
-  "generated_at": "2026-11-15T19:24:50Z",
+  "generated_at": "2026-11-16T04:42:49Z",
   "as_of": "2026-08-26",
   "tracking_window_days": 7,
   "min_severity": "LOW",
@@ -134,10 +134,13 @@
       "event_date": "2026-08-02",
       "first_reported_date": "2026-08-02",
       "last_updated_date": "2026-08-19",
-      "days_since_event": 105,
+      "days_since_event": 106,
       "source_count": 3,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "New Zealand Earthquake latest 2026",
+        "New Zealand Earthquake 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 3,
@@ -151,19 +154,48 @@
           "type": "USGS",
           "label": "M 5.6 - 14 km S of Hicks Bay, New Zealand",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000thl3",
-          "meta": "52.806 km depth"
+          "meta": "52.806 km depth",
+          "date": "2026-08-02"
         },
         {
           "type": "USGS",
           "label": "M 5.7 - 127 km NW of Ternate, Indonesia",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ti49",
-          "meta": "35 km depth"
+          "meta": "35 km depth",
+          "date": "2026-08-04"
         },
         {
           "type": "USGS",
           "label": "M 6.3 - south of the Kermadec Islands",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ti8i",
-          "meta": "226.084 km depth"
+          "meta": "226.084 km depth",
+          "date": "2026-08-05"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "M 6.3 - south of the Kermadec Islands",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ti8i",
+          "source": "USGS",
+          "date": "2026-08-05",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Magnitude 5.9 earthquake hits east coast of North Island in New Zealand",
+          "url": "https://www.hirunews.lk/goldfmnews/481020/magnitude-5-9-earthquake-hits-east-coast-of-north-island-in-new-zealand",
+          "source": "Hiru News",
+          "date": "2026-08-04",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Magnitude 5.9 earthquake hits east coast of North Island in New Zealand, GFZ says",
+          "url": "https://www.reuters.com/business/environment/magnitude-59-earthquake-hits-east-coast-north-island-new-zealand-gfz-says-2026-08-02/",
+          "source": "Reuters",
+          "date": "2026-08-02T08:51:00+00:00",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -272,7 +304,7 @@
       "event_date": "2026-08-05",
       "first_reported_date": "2026-08-05",
       "last_updated_date": "2026-08-19",
-      "days_since_event": 102,
+      "days_since_event": 103,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -289,7 +321,34 @@
           "type": "ERCC",
           "label": "ECHO Daily Map of 05 August 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5745",
-          "meta": ""
+          "meta": "",
+          "date": "2026-08-05"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "ECHO Daily Map of 05 August 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5745",
+          "source": "ERCC",
+          "date": "2026-08-05",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Sudan’s RSF attacks Khartoum, seizes border town: What to know",
+          "url": "https://www.al-monitor.com/originals/2026/08/sudans-rsf-attacks-khartoum-seizes-border-town-what-know",
+          "source": "Al-Monitor",
+          "date": "2026-08-13",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "RSF renews assault on Sudan's al-Obeid as drones strike capital, witnesses say",
+          "url": "https://www.reuters.com/world/africa/rsf-renews-assault-sudans-al-obeid-drones-strike-capital-witnesses-say-2026-08-12/",
+          "source": "Reuters",
+          "date": "2026-08-12T20:21:56+00:00",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -485,10 +544,13 @@
       "event_date": "2026-08-10",
       "first_reported_date": "2026-08-10",
       "last_updated_date": "2026-08-25",
-      "days_since_event": 97,
+      "days_since_event": 98,
       "source_count": 1,
       "should_report": false,
-      "search_keys": [],
+      "search_keys": [
+        "Spain Forest Fire latest 2026",
+        "Spain Forest Fire 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 0,
@@ -502,7 +564,34 @@
           "type": "GDACS",
           "label": "Green alert · Forest Fire Huesca, Spain 2026-08-10",
           "url": "https://www.gdacs.org/report.aspx?eventtype=WF&eventid=1030410",
-          "meta": ""
+          "meta": "",
+          "date": "2026-08-10"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "Green alert · Forest Fire Huesca, Spain 2026-08-10",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=WF&eventid=1030410",
+          "source": "GDACS",
+          "date": "2026-08-10",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Aragon wildfire claims Spanish soldier's life as dangerous drying returns Monday",
+          "url": "https://www.msn.com/en-us/weather/general/aragon-wildfire-claims-spanish-soldier-s-life-as-dangerous-drying-returns-monday/ar-AA2ahmwU?ocid=BingNewsVerp",
+          "source": "Tech Times on MSN",
+          "date": "2026-08-18",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Labor welcomes One Nation comments on migration | Evening News Bulletin 23 August 2026",
+          "url": "https://www.sbs.com.au/news/podcast-episode/labor-welcomes-one-nation-comments-on-migration-evening-news-bulletin-23-august-2026/acliqb5yh",
+          "source": "SBS",
+          "date": "2026-08-23",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -595,7 +684,7 @@
       "event_date": "2026-08-10",
       "first_reported_date": "2026-08-10",
       "last_updated_date": "2026-08-23",
-      "days_since_event": 97,
+      "days_since_event": 98,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -612,7 +701,34 @@
           "type": "ERCC",
           "label": "ECHO Daily Map of 10 August 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5748",
-          "meta": ""
+          "meta": "",
+          "date": "2026-08-10"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "ECHO Daily Map of 10 August 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5748",
+          "source": "ERCC",
+          "date": "2026-08-10",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Pope appeals for international aid for Ebola victims in DRC - Vatican News",
+          "url": "https://www.vaticannews.va/en/pope/news/2026-08/pope-leo-xiv-appeal-ebola-outbreak-dr-congo.html",
+          "source": "Vatican News",
+          "date": "2026-08-23",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Congo receives more than 16,000 doses of Ebola vaccine as it grapples with unprecedented outbreak",
+          "url": "https://www.news4jax.com/news/world/2026/08/22/congo-receives-more-than-16000-doses-of-ebola-vaccine-as-it-grapples-with-unprecedented-outbreak/",
+          "source": "News4JAX",
+          "date": "2026-08-22",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -701,10 +817,13 @@
       "event_date": "2026-08-16",
       "first_reported_date": "2026-08-16",
       "last_updated_date": "2026-08-25",
-      "days_since_event": 91,
+      "days_since_event": 92,
       "source_count": 1,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Vanuatu Earthquake latest 2026",
+        "Vanuatu Earthquake 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 1,
@@ -718,7 +837,34 @@
           "type": "USGS",
           "label": "M 6.1 - 56 km NNE of Port-Olry, Vanuatu",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tl4w",
-          "meta": "188.148 km depth"
+          "meta": "188.148 km depth",
+          "date": "2026-08-16"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "M 6.1 - 56 km NNE of Port-Olry, Vanuatu",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tl4w",
+          "source": "USGS",
+          "date": "2026-08-16",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Vanuatu Islands Earthquake 2026: How can a magnitude 6.1 earthquake strike 188 km deep beneath Earth’s surface?- Moneycontrol.com",
+          "url": "https://www.moneycontrol.com/science/vanuatu-islands-earthquake-2026-how-can-a-magnitude-6-1-earthquake-strike-188-km-deep-beneath-earth-s-surface-article-14006567.html",
+          "source": "Moneycontrol",
+          "date": "2026-08-16",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Magnitude 6.1 earthquake strikes off Vanuatu: USGS | International",
+          "url": "https://www.bssnews.net/international/415013",
+          "source": "Bangladesh Sangsbad Sangstha",
+          "date": "2026-08-16",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -828,10 +974,13 @@
       "event_date": "2026-08-17",
       "first_reported_date": "2026-08-17",
       "last_updated_date": "2026-08-24",
-      "days_since_event": 90,
+      "days_since_event": 91,
       "source_count": 1,
       "should_report": false,
-      "search_keys": [],
+      "search_keys": [
+        "Russia Earthquake latest 2026",
+        "Russia Earthquake 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 1,
@@ -845,7 +994,34 @@
           "type": "USGS",
           "label": "M 5.8 - 72 km E of Petropavlovsk-Kamchatsky, Russia",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/usd0015edq",
-          "meta": "54.741 km depth"
+          "meta": "54.741 km depth",
+          "date": "2026-08-17"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "M 5.8 - 72 km E of Petropavlovsk-Kamchatsky, Russia",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/usd0015edq",
+          "source": "USGS",
+          "date": "2026-08-17",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Magnitude 8.7 earthquake hits Russia's Kamchatka Peninsula, tsunami warning in US, Japan",
+          "url": "https://www.wionews.com/world/magnitude-8-7-earthquake-hits-russia-s-kamchatka-peninsula-tsunami-warning-in-us-japan-1753835479678",
+          "source": "WION",
+          "date": "2025-07-30",
+          "reason": "News"
+        },
+        {
+          "kind": "news",
+          "label": "A mega earthquake off Russia sent tsunami warnings across the Pacific",
+          "url": "https://www.msn.com/en-us/weather/general/a-mega-earthquake-off-russia-sent-tsunami-warnings-across-the-pacific/vi-AA2aOEqs?ocid=BingNewsVerp",
+          "source": "Places on MSN",
+          "date": "2026-08-24",
+          "reason": "News"
         }
       ],
       "physical": {
@@ -900,10 +1076,13 @@
       "event_date": "2026-08-18",
       "first_reported_date": "2026-08-18",
       "last_updated_date": "2026-08-19",
-      "days_since_event": 89,
+      "days_since_event": 90,
       "source_count": 1,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "China Earthquake latest 2026",
+        "China Earthquake 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 1,
@@ -917,7 +1096,34 @@
           "type": "USGS",
           "label": "M 5.9 - 269 km SSE of Dunhuang, China",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tlrj",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-08-18"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "M 5.9 - 269 km SSE of Dunhuang, China",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tlrj",
+          "source": "USGS",
+          "date": "2026-08-18",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "5.9-magnitude quake shakes China’s central Qinghai province - Jamaica Observer",
+          "url": "https://www.jamaicaobserver.com/2026/08/18/5-9-magnitude-quake-shakes-chinas-central-qinghai-province/",
+          "source": "Jamaica Observer",
+          "date": "2026-08-18",
+          "reason": "News"
+        },
+        {
+          "kind": "news",
+          "label": "5.9-magnitude quake shakes China's central Qinghai province: USGS",
+          "url": "https://gulfnews.com/world/asia/59-magnitude-quake-shakes-chinas-central-qinghai-province-usgs-1.500645165",
+          "source": "Gulf News",
+          "date": "2026-08-19",
+          "reason": "News"
         }
       ],
       "physical": {
@@ -972,7 +1178,7 @@
       "event_date": "2026-08-19",
       "first_reported_date": "2026-08-19",
       "last_updated_date": "2026-08-20",
-      "days_since_event": 88,
+      "days_since_event": 89,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -989,7 +1195,26 @@
           "type": "ERCC",
           "label": "ECHO Daily Map of 19 August 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5757",
-          "meta": ""
+          "meta": "",
+          "date": "2026-08-19"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "ECHO Daily Map of 19 August 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5757",
+          "source": "ERCC",
+          "date": "2026-08-19",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Pilot killed, 2 Pa. State Police troopers injured in midair crash at Carlisle Airport",
+          "url": "https://www.yahoo.com/news/weather-news/articles/pa-state-police-helicopter-small-020949817.html",
+          "source": "WPVI · via Yahoo News",
+          "date": "2026-08-20",
+          "reason": "News"
         }
       ],
       "physical": {

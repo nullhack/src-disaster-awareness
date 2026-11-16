@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.5",
+  "schema_version": "1.6",
   "report_date": "2026-02-12",
-  "generated_at": "2026-11-15T19:24:50Z",
+  "generated_at": "2026-11-16T04:42:49Z",
   "as_of": "2026-02-12",
   "tracking_window_days": 7,
   "min_severity": "LOW",
@@ -75,10 +75,13 @@
       "event_date": "2025-12-22",
       "first_reported_date": "2025-12-22",
       "last_updated_date": "2026-02-11",
-      "days_since_event": 328,
+      "days_since_event": 329,
       "source_count": 1,
       "should_report": false,
-      "search_keys": [],
+      "search_keys": [
+        "Mozambique Flood latest 2025",
+        "Mozambique Flood 2025"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 0,
@@ -92,7 +95,26 @@
           "type": "GDACS",
           "label": "Orange alert · Magnitude 0 ",
           "url": "https://www.gdacs.org/report.aspx?eventid=1103694&episodeid=1&eventtype=FL",
-          "meta": "Magnitude 0 "
+          "meta": "Magnitude 0 ",
+          "date": "2025-12-22"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "Orange alert · Magnitude 0 ",
+          "url": "https://www.gdacs.org/report.aspx?eventid=1103694&episodeid=1&eventtype=FL",
+          "source": "GDACS",
+          "date": "2025-12-22",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "‘We have to rebuild’: Mozambique flood victims persevere in face of loss",
+          "url": "https://www.yahoo.com/news/articles/rebuild-mozambique-flood-victims-persevere-055743370.html",
+          "source": "Al Jazeera · via Yahoo News",
+          "date": "2026-02-11T14:41:58+00:00",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -155,10 +177,13 @@
       "event_date": "2026-02-03",
       "first_reported_date": "2026-02-03",
       "last_updated_date": "2026-02-11",
-      "days_since_event": 285,
+      "days_since_event": 286,
       "source_count": 1,
       "should_report": false,
-      "search_keys": [],
+      "search_keys": [
+        "Brazil Flood latest 2026",
+        "Brazil Flood 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 0,
@@ -172,7 +197,26 @@
           "type": "GDACS",
           "label": "Orange alert · Magnitude 0 ",
           "url": "https://www.gdacs.org/report.aspx?eventid=1103757&episodeid=25&eventtype=FL",
-          "meta": "Magnitude 0 "
+          "meta": "Magnitude 0 ",
+          "date": "2026-02-03"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "Orange alert · Magnitude 0 ",
+          "url": "https://www.gdacs.org/report.aspx?eventid=1103757&episodeid=25&eventtype=FL",
+          "source": "GDACS",
+          "date": "2026-02-03",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Pipeline blast sends a wall of water crashing through Rio facility",
+          "url": "https://www.msn.com/en-xl/news/other/pipeline-blast-sends-a-wall-of-water-crashing-through-rio-facility/vi-AA1W5TUZ?ocid=BingNewsVerp",
+          "source": "KameraOne on MSN",
+          "date": "2026-02-11T05:00:00+00:00",
+          "reason": "News"
         }
       ],
       "physical": {

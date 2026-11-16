@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.5",
+  "schema_version": "1.6",
   "report_date": "2026-10-03",
-  "generated_at": "2026-11-15T19:24:50Z",
+  "generated_at": "2026-11-16T04:42:49Z",
   "as_of": "2026-10-03",
   "tracking_window_days": 7,
   "min_severity": "LOW",
@@ -97,10 +97,13 @@
       "event_date": "2026-09-05",
       "first_reported_date": "2026-09-05",
       "last_updated_date": "2026-10-01",
-      "days_since_event": 71,
+      "days_since_event": 72,
       "source_count": 3,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Vanuatu Earthquake latest 2026",
+        "Vanuatu Earthquake 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 3,
@@ -114,19 +117,48 @@
           "type": "USGS",
           "label": "M 5.6 - 96 km ESE of Isangel, Vanuatu",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tek0",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-09-05"
         },
         {
           "type": "USGS",
           "label": "M 6.6 - 80 km ENE of Tadine, New Caledonia",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000txpi",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-09-25"
         },
         {
           "type": "USGS",
           "label": "M 5.5 - 61 km ENE of Tadine, New Caledonia",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000txqi",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-09-25"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "M 6.6 - 80 km ENE of Tadine, New Caledonia",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000txpi",
+          "source": "USGS",
+          "date": "2026-09-25",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Vanuatu Earthquake: Magnitude 5.1 Tremor Reported Near Isangel",
+          "url": "https://cedarnews.net/newstasks/971423/earthquake-vanuatu-magnitude-5-1-tremor-reported/",
+          "source": "Cedar News",
+          "date": "2026-09-08",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Magnitude 5.2 earthquake strikes off coast of Vanuatu Islands",
+          "url": "https://www.gulf-times.com/article/733150/international/rest-of-the-world/magnitude-52-earthquake-strikes-off-coast-of-vanuatu-islands",
+          "source": "Gulf Times",
+          "date": "2026-09-13",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -280,10 +312,13 @@
       "event_date": "2026-09-07",
       "first_reported_date": "2026-09-07",
       "last_updated_date": "2026-09-30",
-      "days_since_event": 69,
+      "days_since_event": 70,
       "source_count": 1,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Vanuatu Earthquake latest 2026",
+        "Vanuatu Earthquake 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 1,
@@ -297,7 +332,34 @@
           "type": "USGS",
           "label": "M 5.5 - southeast of the Loyalty Islands",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000teu1",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-09-07"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "M 5.5 - southeast of the Loyalty Islands",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000teu1",
+          "source": "USGS",
+          "date": "2026-09-07",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "A magnitude 6.6 quake hit just 10 kilometres deep off New Caledonia’s Loyalty Islands",
+          "url": "https://www.msn.com/en-us/news/other/a-magnitude-66-quake-hit-just-10-kilometres-deep-off-new-caledonia-s-loyalty-islands/ar-AA2di3Fm?ocid=BingNewsVerp",
+          "source": "Morning Overview on MSN",
+          "date": "2026-09-30",
+          "reason": "News"
+        },
+        {
+          "kind": "news",
+          "label": "Magnitude 6.6 quake strikes near New Caledonia in the Pacific, USGS reports",
+          "url": "https://www.msn.com/en-us/news/other/magnitude-66-quake-strikes-near-new-caledonia-in-the-pacific-usgs-reports/ar-AA2cZgvN?ocid=BingNewsVerp",
+          "source": "Reuters on MSN",
+          "date": "2026-09-26",
+          "reason": "News"
         }
       ],
       "physical": {
@@ -352,10 +414,13 @@
       "event_date": "2026-09-22",
       "first_reported_date": "2026-09-22",
       "last_updated_date": "2026-09-28",
-      "days_since_event": 54,
+      "days_since_event": 55,
       "source_count": 2,
       "should_report": false,
-      "search_keys": [],
+      "search_keys": [
+        "India Tropical Cyclone latest 2026",
+        "India Tropical Cyclone 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 0,
@@ -369,13 +434,41 @@
           "type": "GDACS",
           "label": "Green alert · Tropical Cyclone ONE-26 India 2026-09-22",
           "url": "https://www.gdacs.org/report.aspx?eventtype=TC&eventid=1001326",
-          "meta": ""
+          "meta": "",
+          "date": "2026-09-22"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 24 September 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5794",
-          "meta": ""
+          "meta": "",
+          "date": "2026-09-24"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "ECHO Daily Map of 24 September 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5794",
+          "source": "ERCC",
+          "date": "2026-09-24",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Cyclone Arnab Live : Latest News, Videos and Photos on Cyclone Arnab Live - India.Com News",
+          "url": "https://www.india.com/topic/cyclone-arnab-live/",
+          "source": "India.com",
+          "date": "2026-09-23",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Cyclone Alert: JTWC Issues 'Tropical Cyclone 01B' Warning, Landfall Likely Tonight, Watch",
+          "url": "https://kalingatv.com/odisha/cyclone-alert-jtwc-issues-tropical-cyclone-01b-warning-landfall-likely-tonight-watch/",
+          "source": "Kalinga TV",
+          "date": "2026-09-23",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -827,10 +920,13 @@
       "event_date": "2026-09-30",
       "first_reported_date": "2026-09-30",
       "last_updated_date": "2026-10-01",
-      "days_since_event": 46,
+      "days_since_event": 47,
       "source_count": 1,
       "should_report": false,
-      "search_keys": [],
+      "search_keys": [
+        "Costa Rica Earthquake latest 2026",
+        "Costa Rica Earthquake 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 1,
@@ -844,7 +940,34 @@
           "type": "USGS",
           "label": "M 5.6 - 94 km SW of Tamarindo, Costa Rica",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tymj",
-          "meta": "8 km depth"
+          "meta": "8 km depth",
+          "date": "2026-09-30"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "M 5.6 - 94 km SW of Tamarindo, Costa Rica",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tymj",
+          "source": "USGS",
+          "date": "2026-09-30",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "5.6-Magnitude Earthquake Strikes Coast of Costa Rica",
+          "url": "https://qna.org.qa/en/newsbulletins/2026-10/1/0005-56-magnitude-earthquake-strikes-coast-of-costa-rica",
+          "source": "Qatar News Agency",
+          "date": "2026-10-01",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Magnitude 5.7 earthquake strikes off coast of Costa Rica, EMSC says",
+          "url": "https://www.reuters.com/business/environment/magnitude-57-earthquake-strikes-off-coast-costa-rica-emsc-says-2026-09-30/",
+          "source": "Reuters",
+          "date": "2026-09-30T22:12:00+00:00",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -958,7 +1081,7 @@
       "event_date": "2026-10-02",
       "first_reported_date": "2026-10-02",
       "last_updated_date": "2026-10-03",
-      "days_since_event": 44,
+      "days_since_event": 45,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -975,7 +1098,34 @@
           "type": "ERCC",
           "label": "ECHO Daily Map of 02 October 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5804",
-          "meta": ""
+          "meta": "",
+          "date": "2026-10-02"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "ECHO Daily Map of 02 October 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5804",
+          "source": "ERCC",
+          "date": "2026-10-02",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Who is winning the 2026 midterms? Latest House and Senate outlook",
+          "url": "https://www.usatoday.com/story/news/2026/10/02/who-is-winning-the-2026-midterms-latest-election-polls-who-will-win-senate-kalshi-odds-polymarket/92055821007/",
+          "source": "USA TODAY",
+          "date": "2026-10-02T00:00:00+00:00",
+          "reason": "News"
+        },
+        {
+          "kind": "news",
+          "label": "Tennessee high school football scores for week 7 of TSSAA football 2026 season",
+          "url": "https://www.msn.com/en-us/news/other/tennessee-high-school-football-scores-for-week-7-of-tssaa-football-2026-season/ar-AA2dssyk?ocid=BingNewsVerp",
+          "source": "The Tennessean on MSN",
+          "date": "2026-10-03",
+          "reason": "News"
         }
       ],
       "physical": {

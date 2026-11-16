@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.5",
+  "schema_version": "1.6",
   "report_date": "2026-09-11",
-  "generated_at": "2026-11-15T19:24:50Z",
+  "generated_at": "2026-11-16T04:42:49Z",
   "as_of": "2026-09-11",
   "tracking_window_days": 7,
   "min_severity": "LOW",
@@ -115,10 +115,13 @@
       "event_date": "2026-06-26",
       "first_reported_date": "2026-06-26",
       "last_updated_date": "2026-09-08",
-      "days_since_event": 142,
+      "days_since_event": 143,
       "source_count": 4,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Philippines Earthquake latest 2026",
+        "Philippines Earthquake 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 2,
@@ -132,25 +135,55 @@
           "type": "GDACS",
           "label": "Orange alert · Magnitude 6.5M, Depth:42km",
           "url": "https://www.gdacs.org/report.aspx?eventid=1548668&episodeid=1714645&eventtype=EQ",
-          "meta": "Magnitude 6.5M, Depth:42km"
+          "meta": "Magnitude 6.5M, Depth:42km",
+          "date": "2026-06-26"
         },
         {
           "type": "USGS",
           "label": "M 6.3 - 32 km SW of Sarangani, Philippines",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ti6x",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-08-05"
         },
         {
           "type": "USGS",
           "label": "M 5.6 - 40 km SW of Sarangani, Philippines",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tif5",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-08-05"
         },
         {
           "type": "GDACS",
           "label": "Green alert · Earthquake M6.3 Sarangani, Philippines 2026-08-05",
           "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1556215",
-          "meta": ""
+          "meta": "",
+          "date": "2026-08-05"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "M 6.3 - 32 km SW of Sarangani, Philippines",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ti6x",
+          "source": "USGS",
+          "date": "2026-08-05",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "6.6-magnitude earthquake strikes southern Philippines; aftershocks expected",
+          "url": "https://www.khaleejtimes.com/world/asia/66-magnitude-earthquake-davao-philippines-aftershocks-june-26-2026",
+          "source": "Khaleej Times",
+          "date": "2026-07-08T22:10:39+00:00",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Negros Occidental gives P2-M cash aid to earthquake-hit Sarangani",
+          "url": "https://www.pna.gov.ph/articles/1282594",
+          "source": "Philippine News Agency",
+          "date": "2026-08-25T14:07:15+00:00",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -721,10 +754,13 @@
       "event_date": "2026-07-31",
       "first_reported_date": "2026-07-31",
       "last_updated_date": "2026-09-11",
-      "days_since_event": 107,
+      "days_since_event": 108,
       "source_count": 2,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Greece Forest Fire latest 2026",
+        "Greece Forest Fire 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 0,
@@ -738,13 +774,41 @@
           "type": "GDACS",
           "label": "Green alert · Forest Fire Sterea Ellada, Greece 2026-07-31",
           "url": "https://www.gdacs.org/report.aspx?eventtype=WF&eventid=1029987",
-          "meta": ""
+          "meta": "",
+          "date": "2026-07-31"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 03 August 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5743",
-          "meta": ""
+          "meta": "",
+          "date": "2026-08-03"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "ECHO Daily Map of 03 August 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5743",
+          "source": "ERCC",
+          "date": "2026-08-03",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Major Wildfire Threatens Protected Forests in Greece’s Pindus Mountains - GreekReporter.com",
+          "url": "https://greekreporter.com/2026/09/06/wildfire-greece-pindus-mountains/",
+          "source": "Greek Reporter",
+          "date": "2026-09-06",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Week of wildfires devastates 12,000 hectares of forest across Greece",
+          "url": "https://manilastandard.net/news/world/314773479/week-of-wildfires-devastates-12000-hectares-of-forest-across-greece.html",
+          "source": "Manila Standard",
+          "date": "2026-08-02T21:07:00+00:00",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -2175,10 +2239,13 @@
       "event_date": "2026-08-05",
       "first_reported_date": "2026-08-05",
       "last_updated_date": "2026-09-06",
-      "days_since_event": 102,
+      "days_since_event": 103,
       "source_count": 2,
       "should_report": false,
-      "search_keys": [],
+      "search_keys": [
+        "Serbia Forest Fire latest 2026",
+        "Serbia Forest Fire 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 0,
@@ -2192,13 +2259,41 @@
           "type": "GDACS",
           "label": "Green alert · Forest Fire Juznobanatski okrug, Serbia 2026-08-05",
           "url": "https://www.gdacs.org/report.aspx?eventtype=WF&eventid=1030252",
-          "meta": ""
+          "meta": "",
+          "date": "2026-08-05"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 24 August 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5762",
-          "meta": ""
+          "meta": "",
+          "date": "2026-08-24"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "ECHO Daily Map of 24 August 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5762",
+          "source": "ERCC",
+          "date": "2026-08-24",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Hungarian firefighters helping in Serbia",
+          "url": "https://dailynewshungary.com/hungarian-firefighters-forest-fires-serbia/",
+          "source": "Daily News Hungary",
+          "date": "2026-08-26",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Vulin pointed out that the EU ignored the fires in Serbia before the arrival of the Russian Il-76",
+          "url": "https://iz.ru/en/node/2153316",
+          "source": "Izvestia",
+          "date": "2026-08-23T02:26:59+00:00",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -2482,10 +2577,13 @@
       "event_date": "2026-08-14",
       "first_reported_date": "2026-08-14",
       "last_updated_date": "2026-09-06",
-      "days_since_event": 93,
+      "days_since_event": 94,
       "source_count": 2,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Belgium Forest Fire latest 2026",
+        "Belgium Forest Fire 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 0,
@@ -2499,13 +2597,41 @@
           "type": "GDACS",
           "label": "Green alert · Forest Fire Liege, Belgium 2026-08-14",
           "url": "https://www.gdacs.org/report.aspx?eventtype=WF&eventid=1030534",
-          "meta": ""
+          "meta": "",
+          "date": "2026-08-14"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 17 August 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5755",
-          "meta": ""
+          "meta": "",
+          "date": "2026-08-17"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "ECHO Daily Map of 17 August 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5755",
+          "source": "ERCC",
+          "date": "2026-08-17",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Rainfall offers new hope in fight against Belgium's biggest wildfire",
+          "url": "https://www.reuters.com/business/environment/rainfall-offers-new-hope-fight-against-belgiums-biggest-wildfire-2026-08-17/",
+          "source": "Reuters",
+          "date": "2026-08-17T06:30:16+00:00",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Wildfires battled in Belgium, Greece | Arkansas Democrat Gazette",
+          "url": "https://www.arkansasonline.com/news/2026/aug/17/wildfires-battled-in-belgium-greece/",
+          "source": "Arkansas Democrat-Gazette",
+          "date": "2026-08-17",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -3236,7 +3362,7 @@
       "event_date": "2026-08-31",
       "first_reported_date": "2026-08-31",
       "last_updated_date": "2026-09-08",
-      "days_since_event": 76,
+      "days_since_event": 77,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -3253,7 +3379,34 @@
           "type": "ERCC",
           "label": "ECHO Daily Map of 31 August 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5768",
-          "meta": ""
+          "meta": "",
+          "date": "2026-08-31"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "ECHO Daily Map of 31 August 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5768",
+          "source": "ERCC",
+          "date": "2026-08-31",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Preseason NFL Power Rankings 2026: How all 32 teams stack up",
+          "url": "https://www.espn.com/nfl/story/_/id/49754534/2026-nfl-power-rankings-preseason-milestones",
+          "source": "ESPN",
+          "date": "2026-09-01T06:33:54+00:00",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Fantasy football rankings 2026: Top sleepers, breakouts, busts by model that hit Daniel Jones' big year",
+          "url": "https://www.cbssports.com/fantasy/football/news/fantasy-football-rankings-2026-top-sleepers-breakouts-busts-from-model-that-hit-daniel-jones-big-year/",
+          "source": "CBS Sports",
+          "date": "2026-09-01",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -3524,10 +3677,13 @@
       "event_date": "2026-09-05",
       "first_reported_date": "2026-09-05",
       "last_updated_date": "2026-09-05",
-      "days_since_event": 71,
+      "days_since_event": 72,
       "source_count": 1,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Papua New Guinea Earthquake latest 2026",
+        "Papua New Guinea Earthquake 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 1,
@@ -3541,7 +3697,26 @@
           "type": "USGS",
           "label": "M 5.5 - 157 km E of Kokopo, Papua New Guinea",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000teji",
-          "meta": "114.364 km depth"
+          "meta": "114.364 km depth",
+          "date": "2026-09-05"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "M 5.5 - 157 km E of Kokopo, Papua New Guinea",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000teji",
+          "source": "USGS",
+          "date": "2026-09-05",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Magnitude 5.5 Earthquake Strikes East of Kokopo, Papua New Guinea",
+          "url": "https://cedarnews.net/newstasks/965823/earthquake-magnitude-5-strikes-east-kokopo-papua/",
+          "source": "Cedar News",
+          "date": "2026-09-05T02:42:00+00:00",
+          "reason": "News"
         }
       ],
       "physical": {

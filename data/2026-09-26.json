@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.5",
+  "schema_version": "1.6",
   "report_date": "2026-09-26",
-  "generated_at": "2026-11-15T19:24:50Z",
+  "generated_at": "2026-11-16T04:42:49Z",
   "as_of": "2026-09-26",
   "tracking_window_days": 7,
   "min_severity": "LOW",
@@ -98,10 +98,13 @@
       "event_date": "2026-07-09",
       "first_reported_date": "2026-07-09",
       "last_updated_date": "2026-09-23",
-      "days_since_event": 129,
+      "days_since_event": 130,
       "source_count": 3,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Severe Weather latest 2026",
+        "Severe Weather 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 0,
@@ -115,19 +118,48 @@
           "type": "ERCC",
           "label": "ECHO Daily Map of 09 July 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5720",
-          "meta": ""
+          "meta": "",
+          "date": "2026-07-09"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 17 July 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5731",
-          "meta": ""
+          "meta": "",
+          "date": "2026-07-17"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 23 July 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5735",
-          "meta": ""
+          "meta": "",
+          "date": "2026-07-23"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "ECHO Daily Map of 23 July 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5735",
+          "source": "ERCC",
+          "date": "2026-07-23",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Tracking severe weather this morning",
+          "url": "https://www.krgv.com/videos/tracking-severe-weather-this-morning/",
+          "source": "KRGV Rio Grande Valley",
+          "date": "2026-07-24",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Super El Nino 2026: Experts warn of rapid ocean warming and severe weather",
+          "url": "https://jang.com.pk/en/69621-super-el-nino-2026-experts-warn-of-rapid-ocean-warming-and-severe-weather-news",
+          "source": "Daily Jang",
+          "date": "2026-07-23",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -1910,10 +1942,13 @@
       "event_date": "2026-08-08",
       "first_reported_date": "2026-08-08",
       "last_updated_date": "2026-09-21",
-      "days_since_event": 99,
+      "days_since_event": 100,
       "source_count": 1,
       "should_report": false,
-      "search_keys": [],
+      "search_keys": [
+        "Canada Forest Fire latest 2026",
+        "Canada Forest Fire 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 0,
@@ -1927,7 +1962,34 @@
           "type": "GDACS",
           "label": "Green alert · Forest Fire Canada 2026-08-08",
           "url": "https://www.gdacs.org/report.aspx?eventtype=WF&eventid=1030240",
-          "meta": ""
+          "meta": "",
+          "date": "2026-08-08"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "Green alert · Forest Fire Canada 2026-08-08",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=WF&eventid=1030240",
+          "source": "GDACS",
+          "date": "2026-08-08",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Maps: Tracking Air Quality and Smoke From Wildfires in Canada and the U.S.",
+          "url": "https://www.nytimes.com/interactive/2026/weather/canada-us-wildfire-smoke-air-quality-maps.html",
+          "source": "nytimes.com",
+          "date": "2026-09-14T05:13:16+00:00",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Parks Canada Fire Cache Ready by September 2026",
+          "url": "https://www.miragenews.com/parks-canada-fire-cache-ready-by-september-2026-1742377/",
+          "source": "Mirage News",
+          "date": "2026-09-10",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -2797,10 +2859,13 @@
       "event_date": "2026-08-18",
       "first_reported_date": "2026-08-18",
       "last_updated_date": "2026-09-20",
-      "days_since_event": 89,
+      "days_since_event": 90,
       "source_count": 1,
       "should_report": false,
-      "search_keys": [],
+      "search_keys": [
+        "China Tropical Cyclone latest 2026",
+        "China Tropical Cyclone 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 0,
@@ -2814,7 +2879,34 @@
           "type": "GDACS",
           "label": "Green alert · Tropical Cyclone SEVENTEEN-26 2026-08-18",
           "url": "https://www.gdacs.org/report.aspx?eventtype=TC&eventid=1001305",
-          "meta": ""
+          "meta": "",
+          "date": "2026-08-18"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "Green alert · Tropical Cyclone SEVENTEEN-26 2026-08-18",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=TC&eventid=1001305",
+          "source": "GDACS",
+          "date": "2026-08-18",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Three dead and nine missing in China after tropical storm Saudel",
+          "url": "https://www.independent.co.uk/asia/china/death-mudslide-china-tropical-storm-saudel-b3045406.html",
+          "source": "The Independent",
+          "date": "2026-09-06",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Three dead and nine missing in China after heavy rain from tropical storm Saudel",
+          "url": "https://malaysia.news.yahoo.com/two-dead-10-missing-mudslide-052151993.html",
+          "source": "Yahoo Malaysia",
+          "date": "2026-09-06",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -3237,10 +3329,13 @@
       "event_date": "2026-09-20",
       "first_reported_date": "2026-09-20",
       "last_updated_date": "2026-09-21",
-      "days_since_event": 56,
+      "days_since_event": 57,
       "source_count": 1,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Papua New Guinea Earthquake latest 2026",
+        "Papua New Guinea Earthquake 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 1,
@@ -3254,7 +3349,34 @@
           "type": "USGS",
           "label": "M 6.4 - 49 km NNE of Kainantu, Papua New Guinea",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tiqc",
-          "meta": "104.329 km depth"
+          "meta": "104.329 km depth",
+          "date": "2026-09-20"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "M 6.4 - 49 km NNE of Kainantu, Papua New Guinea",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tiqc",
+          "source": "USGS",
+          "date": "2026-09-20",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Magnitude 6.4 Earthquake Strikes 49 km NNE of Kainantu, Papua New Guinea | Cedar News",
+          "url": "https://cedarnews.net/newstasks/996786/magnitude-6-4-earthquake-kainantu-papua-new/",
+          "source": "Cedar News",
+          "date": "2026-09-20",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Magnitude 6.12 earthquake strikes Papua New Guinea",
+          "url": "https://sharjah24.ae/en/Articles/2026/09/20/Magnitude-612-earthquake-strikes-Papua-New-Guinea",
+          "source": "Sharjah24",
+          "date": "2026-09-20",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -3609,10 +3731,13 @@
       "event_date": "2026-09-20",
       "first_reported_date": "2026-09-20",
       "last_updated_date": "2026-09-25",
-      "days_since_event": 56,
+      "days_since_event": 57,
       "source_count": 1,
       "should_report": false,
-      "search_keys": [],
+      "search_keys": [
+        "South Africa Earthquake latest 2026",
+        "South Africa Earthquake 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 1,
@@ -3626,7 +3751,34 @@
           "type": "USGS",
           "label": "M 5.7 - south of Africa",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tit5",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-09-20"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "M 5.7 - south of Africa",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tit5",
+          "source": "USGS",
+          "date": "2026-09-20",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Was South Africa hit by an earthquake? Here's what the data shows",
+          "url": "https://www.thesouthafrican.com/news/weather/was-south-africa-hit-by-an-earthquake-heres-what-the-data-shows/",
+          "source": "The South African",
+          "date": "2026-09-22",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "5.7 earthquake south of Africa was much farther offshore",
+          "url": "https://www.capetownetc.com/world/earthquake-south-of-africa-farther/",
+          "source": "Cape Town ETC",
+          "date": "2026-09-22",
+          "reason": "Latest update"
         }
       ],
       "physical": {

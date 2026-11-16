@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.5",
+  "schema_version": "1.6",
   "report_date": "2026-06-20",
-  "generated_at": "2026-11-15T19:24:50Z",
+  "generated_at": "2026-11-16T04:42:49Z",
   "as_of": "2026-06-20",
   "tracking_window_days": 7,
   "min_severity": "LOW",
@@ -85,10 +85,13 @@
       "event_date": "2026-06-16",
       "first_reported_date": "2026-06-16",
       "last_updated_date": "2026-06-13",
-      "days_since_event": 152,
+      "days_since_event": 153,
       "source_count": 1,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "China Earthquake latest 2026",
+        "China Earthquake 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 0,
@@ -102,7 +105,26 @@
           "type": "GDACS",
           "label": "Orange alert · Magnitude 6.3M, Depth:10km",
           "url": "https://www.gdacs.org/report.aspx?eventid=1546719&episodeid=1712478&eventtype=EQ",
-          "meta": "Magnitude 6.3M, Depth:10km"
+          "meta": "Magnitude 6.3M, Depth:10km",
+          "date": "2026-06-16"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "Orange alert · Magnitude 6.3M, Depth:10km",
+          "url": "https://www.gdacs.org/report.aspx?eventid=1546719&episodeid=1712478&eventtype=EQ",
+          "source": "GDACS",
+          "date": "2026-06-16",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Magnitude 6.3 earthquake rattles China, at least 1 dead, multiple injured",
+          "url": "https://www.yahoo.com/news/world/articles/magnitude-6-3-earthquake-rattles-130717611.html",
+          "source": "Yahoo",
+          "date": "2026-06-13T14:43:40+00:00",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -165,10 +187,12 @@
       "event_date": "2026-06-24",
       "first_reported_date": "2026-06-24",
       "last_updated_date": "2026-06-15",
-      "days_since_event": 144,
+      "days_since_event": 145,
       "source_count": 1,
       "should_report": false,
-      "search_keys": [],
+      "search_keys": [
+        "Yellow fever update 2026"
+      ],
       "sources": {
         "who_don": 1,
         "usgs": 0,
@@ -182,7 +206,26 @@
           "type": "WHO",
           "label": "Yellow fever Global 2026-06-24",
           "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON610",
-          "meta": ""
+          "meta": "",
+          "date": "2026-06-24"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "Yellow fever Global 2026-06-24",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON610",
+          "source": "WHO",
+          "date": "2026-06-24",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Right Groups Accuse Nigerian Immigration Officials At Lagos Airport Of Yellow Card Extortion, Petition Aviation Minister Keyamo",
+          "url": "https://saharareporters.com/2026/06/16/right-groups-accuse-nigerian-immigration-officials-lagos-airport-yellow-card-extortion",
+          "source": "Sahara Reporters",
+          "date": "2026-06-15T04:00:00+00:00",
+          "reason": "News"
         }
       ],
       "physical": {
@@ -231,10 +274,13 @@
       "event_date": "2026-07-03",
       "first_reported_date": "2026-07-03",
       "last_updated_date": "2026-06-17",
-      "days_since_event": 135,
+      "days_since_event": 136,
       "source_count": 1,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Indonesia Earthquake latest 2026",
+        "Indonesia Earthquake 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 1,
@@ -248,7 +294,34 @@
           "type": "USGS",
           "label": "M 6.2 - 58 km W of Tobelo, Indonesia",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9r5",
-          "meta": "120.932 km depth"
+          "meta": "120.932 km depth",
+          "date": "2026-07-03"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "M 6.2 - 58 km W of Tobelo, Indonesia",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9r5",
+          "source": "USGS",
+          "date": "2026-07-03",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Magnitude 6.2 earthquake strikes off eastern Indonesia, no tsunami threat",
+          "url": "https://www.asiaone.com/asia/indonesia-tolebo-maluku-earthquake",
+          "source": "Asia One",
+          "date": "2026-06-17T00:00:00+00:00",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Magnitude 6.2 earthquake strikes off eastern Indonesia: USGS",
+          "url": "https://www.bssnews.net/international/402127",
+          "source": "Bangladesh Sangsbad Sangstha",
+          "date": "2026-06-17T00:00:00+00:00",
+          "reason": "Latest update"
         }
       ],
       "physical": {

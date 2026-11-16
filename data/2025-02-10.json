@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.5",
+  "schema_version": "1.6",
   "report_date": "2025-02-10",
-  "generated_at": "2026-11-15T19:24:50Z",
+  "generated_at": "2026-11-16T04:42:49Z",
   "as_of": "2025-02-10",
   "tracking_window_days": 7,
   "min_severity": "LOW",
@@ -65,10 +65,13 @@
       "event_date": "2025-11-05",
       "first_reported_date": "2025-11-05",
       "last_updated_date": "2025-02-06",
-      "days_since_event": 375,
+      "days_since_event": 376,
       "source_count": 1,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Rift Valley fever Mauritania update 2025",
+        "Rift Valley fever Mauritania 2025"
+      ],
       "sources": {
         "who_don": 1,
         "usgs": 0,
@@ -82,7 +85,26 @@
           "type": "WHO",
           "label": "Rift Valley fever Assaba, Mauritania 2025-11-05",
           "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2025-DON584",
-          "meta": ""
+          "meta": "",
+          "date": "2025-11-05"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "Rift Valley fever Assaba, Mauritania 2025-11-05",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2025-DON584",
+          "source": "WHO",
+          "date": "2025-11-05",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Seroepidemiological Reconstruction of Long-term Rift Valley Fever Virus Circulation in Nouakchott, Mauritania",
+          "url": "https://www.nature.com/nature-index/article/10.1093/infdis/jiaf108",
+          "source": "Nature",
+          "date": "2025-02-06T05:00:00+00:00",
+          "reason": "News"
         }
       ],
       "physical": {

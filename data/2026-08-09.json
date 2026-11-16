@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.5",
+  "schema_version": "1.6",
   "report_date": "2026-08-09",
-  "generated_at": "2026-11-15T19:24:50Z",
+  "generated_at": "2026-11-16T04:42:49Z",
   "as_of": "2026-08-09",
   "tracking_window_days": 7,
   "min_severity": "LOW",
@@ -76,7 +76,7 @@
       "event_date": "2026-08-06",
       "first_reported_date": "2026-08-06",
       "last_updated_date": "2026-08-06",
-      "days_since_event": 101,
+      "days_since_event": 102,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -89,6 +89,16 @@
         "news": 1
       },
       "source_links": [],
+      "key_links": [
+        {
+          "kind": "news",
+          "label": "Early wildfire surge raises alarm in Indonesia",
+          "url": "https://asianews.network/early-wildfire-surge-raises-alarm-in-indonesia/",
+          "source": "manual",
+          "date": "2026-08-06",
+          "reason": "News"
+        }
+      ],
       "physical": {
         "max_magnitude": null,
         "max_depth_km": null,
@@ -135,10 +145,13 @@
       "event_date": "2026-08-08",
       "first_reported_date": "2026-08-08",
       "last_updated_date": "2026-08-09",
-      "days_since_event": 99,
+      "days_since_event": 100,
       "source_count": 1,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "United States Earthquake latest 2026",
+        "United States Earthquake 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 1,
@@ -152,7 +165,34 @@
           "type": "USGS",
           "label": "M 5.6 - 57 km WNW of Skwentna, Alaska",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026powmkf",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-08-08"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "M 5.6 - 57 km WNW of Skwentna, Alaska",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026powmkf",
+          "source": "USGS",
+          "date": "2026-08-08",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Tremor in Alaska: 5.5 Magnitude Earthquake Rattles Skwentna | Science-Environment",
+          "url": "https://www.devdiscourse.com/article/science-environment/3961390-tremor-in-alaska-55-magnitude-earthquake-rattles-skwentna",
+          "source": "Devdiscourse",
+          "date": "2026-08-08",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Magnitude 5.6 earthquake strikes remote Southcentral Alaska",
+          "url": "https://www.alaskasnewssource.com/2026/08/08/magnitude-56-earthquake-strikes-remote-southcentral-alaska/",
+          "source": "Alaska's News Source",
+          "date": "2026-08-08",
+          "reason": "Latest update"
         }
       ],
       "physical": {

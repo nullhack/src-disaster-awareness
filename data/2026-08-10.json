@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.5",
+  "schema_version": "1.6",
   "report_date": "2026-08-10",
-  "generated_at": "2026-11-15T19:24:50Z",
+  "generated_at": "2026-11-16T04:42:49Z",
   "as_of": "2026-08-10",
   "tracking_window_days": 7,
   "min_severity": "LOW",
@@ -87,7 +87,7 @@
       "event_date": "2026-08-06",
       "first_reported_date": "2026-08-06",
       "last_updated_date": "2026-08-06",
-      "days_since_event": 101,
+      "days_since_event": 102,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -100,6 +100,16 @@
         "news": 1
       },
       "source_links": [],
+      "key_links": [
+        {
+          "kind": "news",
+          "label": "Early wildfire surge raises alarm in Indonesia",
+          "url": "https://asianews.network/early-wildfire-surge-raises-alarm-in-indonesia/",
+          "source": "manual",
+          "date": "2026-08-06",
+          "reason": "News"
+        }
+      ],
       "physical": {
         "max_magnitude": null,
         "max_depth_km": null,
@@ -146,10 +156,13 @@
       "event_date": "2026-08-07",
       "first_reported_date": "2026-08-07",
       "last_updated_date": "2026-08-10",
-      "days_since_event": 100,
+      "days_since_event": 101,
       "source_count": 1,
       "should_report": false,
-      "search_keys": [],
+      "search_keys": [
+        "Spain Forest Fire latest 2026",
+        "Spain Forest Fire 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 0,
@@ -163,7 +176,34 @@
           "type": "GDACS",
           "label": "Green alert · Forest Fire Huelva, Spain 2026-08-07",
           "url": "https://www.gdacs.org/report.aspx?eventtype=WF&eventid=1030237",
-          "meta": ""
+          "meta": "",
+          "date": "2026-08-07"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "Green alert · Forest Fire Huelva, Spain 2026-08-07",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=WF&eventid=1030237",
+          "source": "GDACS",
+          "date": "2026-08-07",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Southern Spain wildfire worsens as wind gusts hamper firefighting efforts",
+          "url": "https://www.reuters.com/business/environment/southern-spain-wildfire-worsens-wind-gusts-hamper-firefighting-efforts-2026-08-10/",
+          "source": "Reuters",
+          "date": "2026-08-10T14:03:25+00:00",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Hundreds evacuated as another wildfire hits south-western Spain",
+          "url": "https://www.msn.com/en-ca/weather/general/hundreds-evacuated-as-another-wildfire-hits-south-western-spain/ar-AA29IxD3?ocid=BingNewsVerp",
+          "source": "DPA International on MSN",
+          "date": "2026-08-10",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -256,10 +296,13 @@
       "event_date": "2026-08-08",
       "first_reported_date": "2026-08-08",
       "last_updated_date": "2026-08-09",
-      "days_since_event": 99,
+      "days_since_event": 100,
       "source_count": 1,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "United States Earthquake latest 2026",
+        "United States Earthquake 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 1,
@@ -273,7 +316,34 @@
           "type": "USGS",
           "label": "M 5.6 - 57 km WNW of Skwentna, Alaska",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026powmkf",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-08-08"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "M 5.6 - 57 km WNW of Skwentna, Alaska",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026powmkf",
+          "source": "USGS",
+          "date": "2026-08-08",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Tremor in Alaska: 5.5 Magnitude Earthquake Rattles Skwentna | Science-Environment",
+          "url": "https://www.devdiscourse.com/article/science-environment/3961390-tremor-in-alaska-55-magnitude-earthquake-rattles-skwentna",
+          "source": "Devdiscourse",
+          "date": "2026-08-08",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Magnitude 5.6 earthquake strikes remote Southcentral Alaska",
+          "url": "https://www.alaskasnewssource.com/2026/08/08/magnitude-56-earthquake-strikes-remote-southcentral-alaska/",
+          "source": "Alaska's News Source",
+          "date": "2026-08-08",
+          "reason": "Latest update"
         }
       ],
       "physical": {

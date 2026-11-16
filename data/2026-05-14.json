@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.5",
+  "schema_version": "1.6",
   "report_date": "2026-05-14",
-  "generated_at": "2026-11-15T19:24:50Z",
+  "generated_at": "2026-11-16T04:42:49Z",
   "as_of": "2026-05-14",
   "tracking_window_days": 7,
   "min_severity": "LOW",
@@ -65,10 +65,12 @@
       "event_date": "2024-07-31",
       "first_reported_date": "2024-07-31",
       "last_updated_date": "2026-05-09",
-      "days_since_event": 837,
+      "days_since_event": 838,
       "source_count": 1,
       "should_report": false,
-      "search_keys": [],
+      "search_keys": [
+        "AMR update 2024"
+      ],
       "sources": {
         "who_don": 1,
         "usgs": 0,
@@ -82,7 +84,26 @@
           "type": "WHO",
           "label": "AMR Global 2024-07-31",
           "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2024-DON527",
-          "meta": ""
+          "meta": "",
+          "date": "2024-07-31"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "AMR Global 2024-07-31",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2024-DON527",
+          "source": "WHO",
+          "date": "2024-07-31",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Multidrug-resistant strain of K. pneumoniae detected in Northeast Brazil",
+          "url": "https://medicalxpress.com/news/2024-11-multidrug-resistant-strain-pneumoniae-northeast.html",
+          "source": "Medical Xpress",
+          "date": "2026-05-09T00:00:00+00:00",
+          "reason": "Latest update"
         }
       ],
       "physical": {

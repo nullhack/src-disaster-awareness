@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.5",
+  "schema_version": "1.6",
   "report_date": "2026-08-07",
-  "generated_at": "2026-11-15T19:24:50Z",
+  "generated_at": "2026-11-16T04:42:49Z",
   "as_of": "2026-08-07",
   "tracking_window_days": 7,
   "min_severity": "LOW",
@@ -86,10 +86,13 @@
       "event_date": "2026-07-09",
       "first_reported_date": "2026-07-09",
       "last_updated_date": "2026-07-31",
-      "days_since_event": 129,
+      "days_since_event": 130,
       "source_count": 6,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Spain Forest Fire latest 2026",
+        "Spain Forest Fire 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 0,
@@ -103,37 +106,69 @@
           "type": "GDACS",
           "label": "Green alert · Forest Fire Almeria, Spain 2026-07-09",
           "url": "https://www.gdacs.org/report.aspx?eventtype=WF&eventid=1029448",
-          "meta": ""
+          "meta": "",
+          "date": "2026-07-09"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 10 July 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5722",
-          "meta": ""
+          "meta": "",
+          "date": "2026-07-10"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 14 July 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5726",
-          "meta": ""
+          "meta": "",
+          "date": "2026-07-14"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 22 July 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5734",
-          "meta": ""
+          "meta": "",
+          "date": "2026-07-22"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 24 July 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5737",
-          "meta": ""
+          "meta": "",
+          "date": "2026-07-24"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 28 July 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5739",
-          "meta": ""
+          "meta": "",
+          "date": "2026-07-28"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "ECHO Daily Map of 28 July 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5739",
+          "source": "ERCC",
+          "date": "2026-07-28",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Spain declares national emergency in Madrid region over forest fires",
+          "url": "https://www.msn.com/en-ph/news/world/spain-declares-national-emergency-in-madrid-region-over-forest-fires/ar-AA28zKmj?ocid=BingNewsVerp",
+          "source": "The Manila Times on MSN",
+          "date": "2026-07-25",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Spain wildfires UPDATES: At least 4 'Brits' dead as fire tears through Almeria",
+          "url": "https://www.msn.com/en-gb/news/world/spain-wildfires-updates-at-least-4-brits-dead-as-fire-tears-through-almeria/ar-AA27CXiC",
+          "source": "Daily Express",
+          "date": "2026-07-10T13:56:00+00:00",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -2286,10 +2321,13 @@
       "event_date": "2026-07-28",
       "first_reported_date": "2026-07-28",
       "last_updated_date": "2026-07-31",
-      "days_since_event": 110,
+      "days_since_event": 111,
       "source_count": 1,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "China Earthquake latest 2026",
+        "China Earthquake 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 1,
@@ -2303,7 +2341,34 @@
           "type": "USGS",
           "label": "M 5.8 - 191 km NW of Oula Xiuma, China",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tga9",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-07-28"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "M 5.8 - 191 km NW of Oula Xiuma, China",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tga9",
+          "source": "USGS",
+          "date": "2026-07-28",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Two earthquakes strike China's Qinghai province",
+          "url": "https://www.msn.com/en-us/news/world/two-earthquakes-strike-chinas-qinghai-province/ar-AA28Pwjp?ocid=BingNewsVerp",
+          "source": "Reuters on MSN",
+          "date": "2026-07-28",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Multiple earthquakes hit China, Tibet, and Nepal",
+          "url": "https://www.msn.com/en-in/news/other/multiple-earthquakes-hit-china-tibet-and-nepal/ar-AA297Lvn?ocid=BingNewsVerp",
+          "source": "Newspoint on MSN",
+          "date": "2026-07-31",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -2450,7 +2515,7 @@
       "event_date": "2026-08-06",
       "first_reported_date": "2026-08-06",
       "last_updated_date": "2026-08-06",
-      "days_since_event": 101,
+      "days_since_event": 102,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -2463,6 +2528,16 @@
         "news": 1
       },
       "source_links": [],
+      "key_links": [
+        {
+          "kind": "news",
+          "label": "Early wildfire surge raises alarm in Indonesia",
+          "url": "https://asianews.network/early-wildfire-surge-raises-alarm-in-indonesia/",
+          "source": "manual",
+          "date": "2026-08-06",
+          "reason": "News"
+        }
+      ],
       "physical": {
         "max_magnitude": null,
         "max_depth_km": null,

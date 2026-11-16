@@ -774,6 +774,41 @@ function dataBranchUrl(i) {
   return `${REPO_URL}/tree/data/incidents/${treeId}`;
 }
 
+function _newsItemHtml(n) {
+  return `<li><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.headline)}</a>
+    <div class="meta">${fmtDate(n.published_date) || ""} · ${esc(n.outlet || "")}</div></li>`;
+}
+
+function _newsListHtml(news, visible = 3) {
+  if (!news || !news.length) return `<p class="muted">No linked news.</p>`;
+  const shown = news.slice(0, visible);
+  const rest = news.slice(visible);
+  const head = `<ul class="drawer__news">${shown.map(_newsItemHtml).join("")}</ul>`;
+  if (!rest.length) return head;
+  return `${head}
+    <details class="drawer__more">
+      <summary>Show all ${news.length} article(s)</summary>
+      <ul class="drawer__news">${rest.map(_newsItemHtml).join("")}</ul>
+    </details>`;
+}
+
+function _keyLinksHtml(keyLinks) {
+  if (!keyLinks || !keyLinks.length) return "";
+  return `<div class="drawer__section">
+    <h3>Most relevant links</h3>
+    <ul class="key-links">
+      ${keyLinks.map((L) => `
+        <li class="key-link key-link--${esc(L.kind || "news")}">
+          <a href="${esc(L.url)}" target="_blank" rel="noopener">
+            <span class="key-link__reason">${esc(L.reason || (L.kind === "official" ? "Official" : "News"))}</span>
+            <span class="key-link__label">${esc(L.label)}</span>
+            <span class="key-link__meta">${esc(L.source || "")}${L.date ? ` · ${fmtDate(L.date)}` : ""}</span>
+          </a>
+        </li>`).join("")}
+    </ul>
+  </div>`;
+}
+
 function _logEntryHtml(log) {
   return `
         <li class="log-entry">
@@ -785,9 +820,7 @@ function _logEntryHtml(log) {
               </span>
               <div class="log-entry__summary">${esc(log.summary)}</div>
             </summary>
-            ${log.news.length ? `<ul class="drawer__news">${log.news.map((n) => `
-              <li><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.headline)}</a>
-              <div class="meta">${fmtDate(n.published_date) || ""} · ${esc(n.outlet || "")}</div></li>`).join("")}</ul>` : `<p class="muted">No linked news.</p>`}
+            ${_newsListHtml(log.news)}
           </details>
         </li>`;
 }
@@ -813,7 +846,8 @@ function _timelineHtml(logs, logsTotal) {
   return `<div class="drawer__section"><h3>${header}</h3><ul class="drawer__logs">${entries}</ul></div>`;
 }
 
-function openDrawer(id) {  const i = STATE.digest.incidents.find((x) => x.incident_id === id);
+function openDrawer(id) {
+  const i = STATE.digest.incidents.find((x) => x.incident_id === id);
   if (!i) return;
   $("#drawerTitle").textContent = i.canonical_name;
   const phys = i.physical || {};
@@ -843,6 +877,7 @@ function openDrawer(id) {  const i = STATE.digest.incidents.find((x) => x.incide
       ${i.extended_monitoring ? `<span class="tag" title="Perpetual monitoring regardless of news recency" style="cursor:help">🔁 Extended monitoring</span>` : ""}
     </div>
     ${i.summary ? `<div class="drawer__summary">${esc(i.summary)}</div>` : ""}
+    ${_keyLinksHtml(i.key_links)}
     <div class="drawer__section">
       <h3>Key facts</h3>
       <div class="drawer__grid">
@@ -863,23 +898,26 @@ function openDrawer(id) {  const i = STATE.digest.incidents.find((x) => x.incide
       <h3>Source coverage · ${i.source_count} record(s)</h3>
       <div class="cell-src">${sourceTags(i.sources, true)}</div>
       ${(i.source_links && i.source_links.length) ? `
-        <h4 class="drawer__subhead">Original source records (${i.source_links.length})</h4>
-        <ul class="src-links">
-          ${i.source_links.map((L) => `
-            <li>${L.url ? `<a class="src-link" href="${esc(L.url)}" target="_blank" rel="noopener">` : `<span class="src-link src-link--no-url" aria-disabled="true">`}
-              <span class="src-link__type src-link__type--${L.type}">${L.type}</span>
-              <span class="src-link__label">${esc(L.label)}${L.meta ? ` <em>${esc(L.meta)}</em>` : ""}</span>
-              <span class="src-link__arrow" aria-hidden="true">${L.url ? "↗" : "⊘"}</span>
-            ${L.url ? `</a>` : `</span>`}</li>`).join("")}
-        </ul>` : `<p class="muted">No deep links available for this incident.</p>`}
+        <details class="drawer__more">
+          <summary>All source records (${i.source_links.length})</summary>
+          <ul class="src-links">
+            ${i.source_links.map((L) => `
+              <li>${L.url ? `<a class="src-link" href="${esc(L.url)}" target="_blank" rel="noopener">` : `<span class="src-link src-link--no-url" aria-disabled="true">`}
+                <span class="src-link__type src-link__type--${L.type}">${L.type}</span>
+                <span class="src-link__label">${esc(L.label)}${L.meta ? ` <em>${esc(L.meta)}</em>` : ""}</span>
+                <span class="src-link__arrow" aria-hidden="true">${L.url ? "↗" : "⊘"}</span>
+              ${L.url ? `</a>` : `</span>`}</li>`).join("")}
+          </ul>
+        </details>` : `<p class="muted">No deep links available for this incident.</p>`}
     </div>
     ${_timelineHtml(i.logs, i.logs_total)}
-    ${(i.news && i.news.length && !(i.logs && i.logs.length)) ? `<div class="drawer__section"><h3>News · ${i.news_total} linked (${i.news.length} shown)</h3>
-      <ul class="drawer__news">${i.news.map((n) => `
-        <li><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.headline)}</a>
-        <div class="meta">${fmtDate(n.published_date) || ""} · ${esc(n.outlet || "")}</div></li>`).join("")}</ul></div>` : ""}
-    ${(i.search_keys && i.search_keys.length) ? `<div class="drawer__section"><h3>Search keys</h3>
-      <div class="keys">${i.search_keys.map((k) => `<code>${esc(k)}</code>`).join("")}</div></div>` : ""}
+    ${(i.news && i.news.length && !(i.logs && i.logs.length)) ? `<div class="drawer__section"><h3>News · ${i.news_total} linked</h3>
+      ${_newsListHtml(i.news)}</div>` : ""}
+    ${(i.search_keys && i.search_keys.length) ? `<div class="drawer__section">
+      <details class="drawer__more">
+        <summary>Search keys (${i.search_keys.length})</summary>
+        <div class="keys">${i.search_keys.map((k) => `<code>${esc(k)}</code>`).join("")}</div>
+      </details></div>` : ""}
   `;
   $("#drawerBody").innerHTML = body;
   const drawer = $("#drawer");

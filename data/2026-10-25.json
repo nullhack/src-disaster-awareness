@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.5",
+  "schema_version": "1.6",
   "report_date": "2026-10-25",
-  "generated_at": "2026-11-15T19:24:50Z",
+  "generated_at": "2026-11-16T04:42:49Z",
   "as_of": "2026-10-25",
   "tracking_window_days": 7,
   "min_severity": "LOW",
@@ -164,10 +164,13 @@
       "event_date": "2026-09-21",
       "first_reported_date": "2026-09-21",
       "last_updated_date": "2026-10-25",
-      "days_since_event": 55,
+      "days_since_event": 56,
       "source_count": 3,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Mexico Tropical Cyclone latest 2026",
+        "Mexico Tropical Cyclone 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 0,
@@ -181,19 +184,48 @@
           "type": "GDACS",
           "label": "Green alert · Tropical Cyclone POLO-26 Mexico 2026-09-21",
           "url": "https://www.gdacs.org/report.aspx?eventtype=TC&eventid=1001325",
-          "meta": ""
+          "meta": "",
+          "date": "2026-09-21"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 28 September 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5798",
-          "meta": ""
+          "meta": "",
+          "date": "2026-09-28"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 09 October 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5810",
-          "meta": ""
+          "meta": "",
+          "date": "2026-10-09"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "ECHO Daily Map of 09 October 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5810",
+          "source": "ERCC",
+          "date": "2026-10-09",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Knowledge Nugget | Hurricane Polo: What it tells us about tropical cyclones",
+          "url": "https://indianexpress.com/article/upsc-current-affairs/upsc-essentials/knowledge-nugget-hurricane-polo-tropical-cyclones-el-nino-upsc-10891761/",
+          "source": "The Indian Express",
+          "date": "2026-09-24T18:03:26+00:00",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Tropical Storm Polo will impact the U.S. after slamming Mexico. See its path.",
+          "url": "https://www.wsgw.com/tropical-storm-polo-will-impact-the-u-s-after-slamming-mexico-see-its-path/",
+          "source": "WSGW 790 AM & 100.5 FM",
+          "date": "2026-09-30T19:27:09+00:00",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -1529,10 +1561,13 @@
       "event_date": "2026-09-30",
       "first_reported_date": "2026-09-30",
       "last_updated_date": "2026-10-20",
-      "days_since_event": 46,
+      "days_since_event": 47,
       "source_count": 1,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Taiwan Earthquake latest 2026",
+        "Taiwan Earthquake 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 1,
@@ -1546,7 +1581,26 @@
           "type": "USGS",
           "label": "M 5.6 - 74 km S of Yonakuni, Japan",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tyhk",
-          "meta": "10.792 km depth"
+          "meta": "10.792 km depth",
+          "date": "2026-09-30"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "M 5.6 - 74 km S of Yonakuni, Japan",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tyhk",
+          "source": "USGS",
+          "date": "2026-09-30",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Free AI tool to let public check quake damage from photos: Research center - Focus Taiwan",
+          "url": "https://focustaiwan.tw/sci-tech/202610200016",
+          "source": "Focus Taiwan",
+          "date": "2026-10-20",
+          "reason": "News"
         }
       ],
       "physical": {
@@ -1595,10 +1649,13 @@
       "event_date": "2026-10-02",
       "first_reported_date": "2026-10-02",
       "last_updated_date": "2026-10-24",
-      "days_since_event": 44,
+      "days_since_event": 45,
       "source_count": 2,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Russia Earthquake latest 2026",
+        "Russia Earthquake 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 2,
@@ -1612,13 +1669,41 @@
           "type": "USGS",
           "label": "M 5.8 - 165 km SSE of Vilyuchinsk, Russia",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tz62",
-          "meta": "29.477 km depth"
+          "meta": "29.477 km depth",
+          "date": "2026-10-02"
         },
         {
           "type": "USGS",
           "label": "M 6.9 - 76 km NE of Ozernovskiy, Russia",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2mq",
-          "meta": "135 km depth"
+          "meta": "135 km depth",
+          "date": "2026-10-16"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "M 6.9 - 76 km NE of Ozernovskiy, Russia",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2mq",
+          "source": "USGS",
+          "date": "2026-10-16",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Russia: Earthquake Of Magnitude 7 Strikes Kamchatka Peninsula",
+          "url": "https://www.thedailyjagran.com/world/news/russia-earthquake-magnitude-7-quake-strikes-kamchatka-peninsula-latest-updates-10332918",
+          "source": "thedailyjagran.com",
+          "date": "2026-10-16",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Earthquake of magnitude 7 strikes Russia's Kamchatka Peninsula",
+          "url": "https://www.daily-sun.com/world/903811/earthquake-of-magnitude-7-strikes-russia-s-kamchatka-peninsula",
+          "source": "Daily Sun",
+          "date": "2026-10-17T05:16:17+00:00",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -1966,7 +2051,7 @@
       "event_date": "2026-10-05",
       "first_reported_date": "2026-10-05",
       "last_updated_date": "2026-10-18",
-      "days_since_event": 41,
+      "days_since_event": 42,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -1983,7 +2068,34 @@
           "type": "ERCC",
           "label": "ECHO Daily Map of 05 October 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5805",
-          "meta": ""
+          "meta": "",
+          "date": "2026-10-05"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "ECHO Daily Map of 05 October 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5805",
+          "source": "ERCC",
+          "date": "2026-10-05",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Deadly Airstrikes Expose Growing Battle Over Sudan’s Gold | OilPrice.com",
+          "url": "https://oilprice.com/Energy/Energy-General/Deadly-Airstrikes-Expose-Growing-Battle-Over-Sudans-Gold.html",
+          "source": "OilPrice.com",
+          "date": "2026-10-16",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "RSF drone strike in Sudan kills 26 women, four children: Official, witnesses",
+          "url": "https://english.alarabiya.net/News/middle-east/2026/10/09/rsf-drone-strike-in-sudan-kills-26-women-four-children-official-witnesses",
+          "source": "Al Arabiya English",
+          "date": "2026-10-08T20:31:24+00:00",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -2236,10 +2348,13 @@
       "event_date": "2026-10-06",
       "first_reported_date": "2026-10-06",
       "last_updated_date": "2026-10-18",
-      "days_since_event": 40,
+      "days_since_event": 41,
       "source_count": 1,
       "should_report": false,
-      "search_keys": [],
+      "search_keys": [
+        "Russia Earthquake latest 2026",
+        "Russia Earthquake 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 1,
@@ -2253,7 +2368,34 @@
           "type": "USGS",
           "label": "M 5.9 - 264 km SSW of Severo-Kuril’sk, Russia",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u0hy",
-          "meta": "26.047 km depth"
+          "meta": "26.047 km depth",
+          "date": "2026-10-06"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "M 5.9 - 264 km SSW of Severo-Kuril’sk, Russia",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u0hy",
+          "source": "USGS",
+          "date": "2026-10-06",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Earthquake in Russia: 5.8 Magnitude Quake Hits off Coast of Vilyuchinsk in Kamchatka",
+          "url": "https://www.latestly.com/world/earthquake-in-russia-5-8-magnitude-quake-hits-off-coast-of-vilyuchinsk-in-kamchatka-7630560.html",
+          "source": "LatestLY",
+          "date": "2026-10-02T18:12:00+00:00",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "A magnitude 5.9 quake off Russia's Kuril Islands on Oct. 6 tied for the week's largest worldwide",
+          "url": "https://www.msn.com/en-us/news/other/a-magnitude-5-9-quake-off-russia-s-kuril-islands-on-oct-6-tied-for-the-week-s-largest-worldwide/ar-AA2dLf1C",
+          "source": "Morning Overview",
+          "date": "2026-10-08",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -2387,10 +2529,13 @@
       "event_date": "2026-10-08",
       "first_reported_date": "2026-10-08",
       "last_updated_date": "2026-10-22",
-      "days_since_event": 38,
+      "days_since_event": 39,
       "source_count": 2,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Philippines Volcano latest 2026",
+        "Philippines Volcano 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 0,
@@ -2404,13 +2549,41 @@
           "type": "GDACS",
           "label": "Orange alert · Volcano Batangas, Philippines 2026-10-08",
           "url": "https://www.gdacs.org/report.aspx?eventtype=VO&eventid=1000151",
-          "meta": ""
+          "meta": "",
+          "date": "2026-10-08"
         },
         {
           "type": "GDACS",
           "label": "Orange alert · Volcano Negros Occidental, Philippines 2026-10-10",
           "url": "https://www.gdacs.org/report.aspx?eventtype=VO&eventid=1000152",
-          "meta": ""
+          "meta": "",
+          "date": "2026-10-10"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "Orange alert · Volcano Negros Occidental, Philippines 2026-10-10",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=VO&eventid=1000152",
+          "source": "GDACS",
+          "date": "2026-10-10",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Phreatic eruption at Taal Volcano in the Philippines; plume reaches approximately 4,000 meters｜Haru",
+          "url": "https://note.com/haru_news/n/n854cc2092f6e?hl=en",
+          "source": "note",
+          "date": "2026-10-09",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Fresh eruption occurs at Taal Volcano in the Philippines",
+          "url": "https://www.msn.com/en-us/news/other/fresh-eruption-occurs-at-taal-volcano-in-the-philippines/vi-AA2fGaPZ?ocid=BingNewsVerp",
+          "source": "Amazon S3 on MSN",
+          "date": "2026-10-21",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -2764,10 +2937,13 @@
       "event_date": "2026-10-15",
       "first_reported_date": "2026-10-15",
       "last_updated_date": "2026-10-20",
-      "days_since_event": 31,
+      "days_since_event": 32,
       "source_count": 1,
       "should_report": false,
-      "search_keys": [],
+      "search_keys": [
+        "United States Earthquake latest 2026",
+        "United States Earthquake 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 1,
@@ -2781,7 +2957,26 @@
           "type": "USGS",
           "label": "M 5.6 - 43 km NNW of Lake Minchumina, Alaska",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ukynnb",
-          "meta": "4.5 km depth"
+          "meta": "4.5 km depth",
+          "date": "2026-10-15"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "M 5.6 - 43 km NNW of Lake Minchumina, Alaska",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ukynnb",
+          "source": "USGS",
+          "date": "2026-10-15",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "A magnitude 5.6 quake shook interior Alaska and 106 people filed felt reports",
+          "url": "https://www.msn.com/en-us/news/other/a-magnitude-56-quake-shook-interior-alaska-and-106-people-filed-felt-reports/ar-AA2fAsIU?ocid=BingNewsVerp",
+          "source": "Morning Overview on MSN",
+          "date": "2026-10-20",
+          "reason": "News"
         }
       ],
       "physical": {
@@ -2830,10 +3025,13 @@
       "event_date": "2026-10-16",
       "first_reported_date": "2026-10-16",
       "last_updated_date": "2026-10-19",
-      "days_since_event": 30,
+      "days_since_event": 31,
       "source_count": 1,
       "should_report": false,
-      "search_keys": [],
+      "search_keys": [
+        "Cook Islands Tropical Cyclone latest 2026",
+        "Cook Islands Tropical Cyclone 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 0,
@@ -2847,7 +3045,34 @@
           "type": "GDACS",
           "label": "Green alert · Tropical Cyclone ONE-26 French Polynesia 2026-10-16",
           "url": "https://www.gdacs.org/report.aspx?eventtype=TC&eventid=1001339",
-          "meta": ""
+          "meta": "",
+          "date": "2026-10-16"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "Green alert · Tropical Cyclone ONE-26 French Polynesia 2026-10-16",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=TC&eventid=1001339",
+          "source": "GDACS",
+          "date": "2026-10-16",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Cyclone alert in force for Cook Islands as tropical depression intensifies",
+          "url": "https://www.msn.com/en-nz/news/national/cyclone-alert-in-force-for-cook-islands-as-tropical-depression-intensifies/ar-AA2ellj6?ocid=BingNewsVerp",
+          "source": "RNZ on MSN",
+          "date": "2026-10-17",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Cyclone Wati: Cook Islands today, Austral Islands tomorrow",
+          "url": "https://www.weatherwatch.co.nz/content/cyclone-wati-cook-islands-today-austral-islands-tomorrow",
+          "source": "WeatherWatch",
+          "date": "2026-10-19",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -2949,10 +3174,13 @@
       "event_date": "2026-10-17",
       "first_reported_date": "2026-10-17",
       "last_updated_date": "2026-10-18",
-      "days_since_event": 29,
+      "days_since_event": 30,
       "source_count": 1,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Pakistan Earthquake latest 2026",
+        "Pakistan Earthquake 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 1,
@@ -2966,7 +3194,34 @@
           "type": "USGS",
           "label": "M 5.7 - 48 km WNW of Khuzdar, Pakistan",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2y1",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-10-17"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "M 5.7 - 48 km WNW of Khuzdar, Pakistan",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2y1",
+          "source": "USGS",
+          "date": "2026-10-17",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Pakistan: One killed after earthquake jolts Balochistan's Khuzdar district",
+          "url": "https://ianslive.in/pakistan-one-person-killed-after-earthquake-jolts-balochistans-khuzdar--20261018132040",
+          "source": "Ianslive",
+          "date": "2026-10-18",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Pakistan Earthquake Of Magnitude 5.9 Hits Balochistan's Khuzdar, 1 Killed As Rockfall Damages Region",
+          "url": "https://www.freepressjournal.in/world/pakistan-earthquake-of-magnitude-59-hits-balochistans-khuzdar-1-killed-as-rockfall-damages-region",
+          "source": "Free Press Journal",
+          "date": "2026-10-18",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -3282,7 +3537,7 @@
       "event_date": "2026-10-19",
       "first_reported_date": "2026-10-19",
       "last_updated_date": "2026-10-23",
-      "days_since_event": 27,
+      "days_since_event": 28,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -3299,7 +3554,26 @@
           "type": "ERCC",
           "label": "ECHO Daily Map of 19 October 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5819",
-          "meta": ""
+          "meta": "",
+          "date": "2026-10-19"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "ECHO Daily Map of 19 October 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5819",
+          "source": "ERCC",
+          "date": "2026-10-19",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Three biggest questions for World Series Game 1 as Brewers and Rays kick off 2026 Fall Classic",
+          "url": "https://www.msn.com/en-us/sports/baseball/three-biggest-questions-for-world-series-game-1-as-brewers-and-rays-kick-off-2026-fall-classic/ar-AA2fVPfA?ocid=BingNewsVerp",
+          "source": "CBS Sports on MSN",
+          "date": "2026-10-23",
+          "reason": "News"
         }
       ],
       "physical": {
@@ -3348,10 +3622,13 @@
       "event_date": "2026-10-21",
       "first_reported_date": "2026-10-21",
       "last_updated_date": "2026-10-23",
-      "days_since_event": 25,
+      "days_since_event": 26,
       "source_count": 1,
       "should_report": false,
-      "search_keys": [],
+      "search_keys": [
+        "Spain Flood latest 2026",
+        "Spain Flood 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 0,
@@ -3365,7 +3642,34 @@
           "type": "ERCC",
           "label": "ECHO Daily Map of 21 October 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5821",
-          "meta": ""
+          "meta": "",
+          "date": "2026-10-21"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "ECHO Daily Map of 21 October 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5821",
+          "source": "ERCC",
+          "date": "2026-10-21",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "European Parliament Approves €489 Million in Disaster Relief for Italy, Spain, Portugal and Malta - https://eutoday.net",
+          "url": "https://eutoday.net/eu-parliament-approves-489-million-storm-recovery-aid/",
+          "source": "EU Today",
+          "date": "2026-10-21",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "At least four dead after storm brings flooding to southern France",
+          "url": "https://www.msn.com/en-us/news/world/at-least-four-dead-after-storm-brings-flooding-to-southern-france/ar-AA2fOLSP?ocid=BingNewsVerp",
+          "source": "BBC on MSN",
+          "date": "2026-10-23",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -3458,10 +3762,13 @@
       "event_date": "2026-10-23",
       "first_reported_date": "2026-10-23",
       "last_updated_date": "2026-10-24",
-      "days_since_event": 23,
+      "days_since_event": 24,
       "source_count": 1,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Italy Earthquake latest 2026",
+        "Italy Earthquake 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 1,
@@ -3475,7 +3782,34 @@
           "type": "USGS",
           "label": "M 5.7 - 61 km WNW of Leni, Italy",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4bk",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-10-23"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "M 5.7 - 61 km WNW of Leni, Italy",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4bk",
+          "source": "USGS",
+          "date": "2026-10-23",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Double earthquake in Italy, schools evacuated, people on the streets",
+          "url": "https://www.notizie.it/en/Double-earthquake-in-Italy:-schools--people--and-streets-evacuated/",
+          "source": "Notizie.it",
+          "date": "2026-10-24T05:41:32+00:00",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Italy earthquakes live: Tsunami warning after 12 quakes and Sicily evacuations",
+          "url": "https://www.mirror.co.uk/news/world-news/earthquakes-tsunami-italy-sicily-palermo-37804343",
+          "source": "The Mirror",
+          "date": "2026-10-24",
+          "reason": "Latest update"
         }
       ],
       "physical": {

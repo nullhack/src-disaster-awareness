@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.5",
+  "schema_version": "1.6",
   "report_date": "2026-09-14",
-  "generated_at": "2026-11-15T19:24:50Z",
+  "generated_at": "2026-11-16T04:42:49Z",
   "as_of": "2026-09-14",
   "tracking_window_days": 7,
   "min_severity": "LOW",
@@ -106,10 +106,13 @@
       "event_date": "2026-06-26",
       "first_reported_date": "2026-06-26",
       "last_updated_date": "2026-09-08",
-      "days_since_event": 142,
+      "days_since_event": 143,
       "source_count": 4,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Philippines Earthquake latest 2026",
+        "Philippines Earthquake 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 2,
@@ -123,25 +126,55 @@
           "type": "GDACS",
           "label": "Orange alert · Magnitude 6.5M, Depth:42km",
           "url": "https://www.gdacs.org/report.aspx?eventid=1548668&episodeid=1714645&eventtype=EQ",
-          "meta": "Magnitude 6.5M, Depth:42km"
+          "meta": "Magnitude 6.5M, Depth:42km",
+          "date": "2026-06-26"
         },
         {
           "type": "USGS",
           "label": "M 6.3 - 32 km SW of Sarangani, Philippines",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ti6x",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-08-05"
         },
         {
           "type": "USGS",
           "label": "M 5.6 - 40 km SW of Sarangani, Philippines",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tif5",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-08-05"
         },
         {
           "type": "GDACS",
           "label": "Green alert · Earthquake M6.3 Sarangani, Philippines 2026-08-05",
           "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1556215",
-          "meta": ""
+          "meta": "",
+          "date": "2026-08-05"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "M 6.3 - 32 km SW of Sarangani, Philippines",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ti6x",
+          "source": "USGS",
+          "date": "2026-08-05",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "6.6-magnitude earthquake strikes southern Philippines; aftershocks expected",
+          "url": "https://www.khaleejtimes.com/world/asia/66-magnitude-earthquake-davao-philippines-aftershocks-june-26-2026",
+          "source": "Khaleej Times",
+          "date": "2026-07-08T22:10:39+00:00",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Negros Occidental gives P2-M cash aid to earthquake-hit Sarangani",
+          "url": "https://www.pna.gov.ph/articles/1282594",
+          "source": "Philippine News Agency",
+          "date": "2026-08-25T14:07:15+00:00",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -712,10 +745,13 @@
       "event_date": "2026-07-31",
       "first_reported_date": "2026-07-31",
       "last_updated_date": "2026-09-11",
-      "days_since_event": 107,
+      "days_since_event": 108,
       "source_count": 2,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Greece Forest Fire latest 2026",
+        "Greece Forest Fire 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 0,
@@ -729,13 +765,41 @@
           "type": "GDACS",
           "label": "Green alert · Forest Fire Sterea Ellada, Greece 2026-07-31",
           "url": "https://www.gdacs.org/report.aspx?eventtype=WF&eventid=1029987",
-          "meta": ""
+          "meta": "",
+          "date": "2026-07-31"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 03 August 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5743",
-          "meta": ""
+          "meta": "",
+          "date": "2026-08-03"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "ECHO Daily Map of 03 August 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5743",
+          "source": "ERCC",
+          "date": "2026-08-03",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Major Wildfire Threatens Protected Forests in Greece’s Pindus Mountains - GreekReporter.com",
+          "url": "https://greekreporter.com/2026/09/06/wildfire-greece-pindus-mountains/",
+          "source": "Greek Reporter",
+          "date": "2026-09-06",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Week of wildfires devastates 12,000 hectares of forest across Greece",
+          "url": "https://manilastandard.net/news/world/314773479/week-of-wildfires-devastates-12000-hectares-of-forest-across-greece.html",
+          "source": "Manila Standard",
+          "date": "2026-08-02T21:07:00+00:00",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -2166,10 +2230,13 @@
       "event_date": "2026-08-24",
       "first_reported_date": "2026-08-24",
       "last_updated_date": "2026-09-12",
-      "days_since_event": 83,
+      "days_since_event": 84,
       "source_count": 1,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Timor-Leste Earthquake latest 2026",
+        "Timor-Leste Earthquake 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 1,
@@ -2183,7 +2250,34 @@
           "type": "USGS",
           "label": "M 6.0 - 215 km NNE of Lospalos, Timor Leste",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tn41",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-08-24"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "M 6.0 - 215 km NNE of Lospalos, Timor Leste",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tn41",
+          "source": "USGS",
+          "date": "2026-08-24",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "M5.3 earthquake hits Timor-Leste",
+          "url": "https://qazinform.com/news/m53-earthquake-hits-timor-leste-792506",
+          "source": "qazinform",
+          "date": "2026-09-11",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Magnitude 6.0 earthquake strikes off the coast of Timor-Leste along the Pacific Ring of Fire",
+          "url": "https://www.msn.com/en-us/public-safety-and-emergencies/natural-disasters/magnitude-6-0-earthquake-strikes-off-the-coast-of-timor-leste-along-the-pacific-ring-of-fire/ar-AA2aPF5l",
+          "source": "Fox Weather",
+          "date": "2026-08-25",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -2280,7 +2374,7 @@
       "event_date": "2026-08-31",
       "first_reported_date": "2026-08-31",
       "last_updated_date": "2026-09-08",
-      "days_since_event": 76,
+      "days_since_event": 77,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -2297,7 +2391,34 @@
           "type": "ERCC",
           "label": "ECHO Daily Map of 31 August 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5768",
-          "meta": ""
+          "meta": "",
+          "date": "2026-08-31"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "ECHO Daily Map of 31 August 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5768",
+          "source": "ERCC",
+          "date": "2026-08-31",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Preseason NFL Power Rankings 2026: How all 32 teams stack up",
+          "url": "https://www.espn.com/nfl/story/_/id/49754534/2026-nfl-power-rankings-preseason-milestones",
+          "source": "ESPN",
+          "date": "2026-09-01T06:33:54+00:00",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Fantasy football rankings 2026: Top sleepers, breakouts, busts by model that hit Daniel Jones' big year",
+          "url": "https://www.cbssports.com/fantasy/football/news/fantasy-football-rankings-2026-top-sleepers-breakouts-busts-from-model-that-hit-daniel-jones-big-year/",
+          "source": "CBS Sports",
+          "date": "2026-09-01",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -2568,7 +2689,7 @@
       "event_date": "2026-09-11",
       "first_reported_date": "2026-09-11",
       "last_updated_date": "2026-09-12",
-      "days_since_event": 65,
+      "days_since_event": 66,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -2585,7 +2706,34 @@
           "type": "ERCC",
           "label": "ECHO Daily Map of 11 September 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5784",
-          "meta": ""
+          "meta": "",
+          "date": "2026-09-11"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "ECHO Daily Map of 11 September 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5784",
+          "source": "ERCC",
+          "date": "2026-09-11",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Africa’s top health body warns Congo’s Ebola outbreak is rapidly spreading beyond epicenter",
+          "url": "https://www.bostonherald.com/2026/09/10/congo-ebola-spreading-beyond-epicenter/",
+          "source": "Boston Herald",
+          "date": "2026-09-10",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "CBE's 233 MW Kamoa Project Comes Online with AIKO ABC Modules",
+          "url": "https://www.prnewswire.com/news-releases/cbes-233-mw-kamoa-project-comes-online-with-aiko-abc-modules-302876862.html",
+          "source": "PR Newswire",
+          "date": "2026-09-12",
+          "reason": "Latest update"
         }
       ],
       "physical": {

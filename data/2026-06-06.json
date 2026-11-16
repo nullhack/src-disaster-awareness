@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.5",
+  "schema_version": "1.6",
   "report_date": "2026-06-06",
-  "generated_at": "2026-11-15T19:24:50Z",
+  "generated_at": "2026-11-16T04:42:49Z",
   "as_of": "2026-06-06",
   "tracking_window_days": 7,
   "min_severity": "LOW",
@@ -65,10 +65,13 @@
       "event_date": "2025-08-29",
       "first_reported_date": "2025-08-29",
       "last_updated_date": "2026-06-05",
-      "days_since_event": 443,
+      "days_since_event": 444,
       "source_count": 1,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Cholera Afghanistan update 2025",
+        "Cholera Afghanistan 2025"
+      ],
       "sources": {
         "who_don": 1,
         "usgs": 0,
@@ -82,7 +85,26 @@
           "type": "WHO",
           "label": "Cholera Afghanistan 2025-08-29",
           "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2025-DON579",
-          "meta": ""
+          "meta": "",
+          "date": "2025-08-29"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "Cholera Afghanistan 2025-08-29",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2025-DON579",
+          "source": "WHO",
+          "date": "2025-08-29",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Africa experiencing worst outbreak of cholera in 25 years, Africa CDC says",
+          "url": "https://www.aol.com/articles/africa-experiencing-worst-outbreak-cholera-152739691.html",
+          "source": "AOL",
+          "date": "2026-06-05T00:00:00+00:00",
+          "reason": "Latest update"
         }
       ],
       "physical": {

@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.5",
+  "schema_version": "1.6",
   "report_date": "2026-11-15",
-  "generated_at": "2026-11-15T19:24:50Z",
+  "generated_at": "2026-11-16T04:42:49Z",
   "as_of": "2026-11-15",
   "tracking_window_days": 7,
   "min_severity": "LOW",
@@ -38,10 +38,10 @@
       "Global": 2,
       "Africa": 4,
       "Americas": 4,
-      "Europe": 7,
+      "Europe": 6,
       "Asia": 8,
       "Oceania": 2,
-      "Unknown": 1
+      "Unknown": 2
     }
   },
   "by_country": [
@@ -251,10 +251,12 @@
       "event_date": "2024-05-30",
       "first_reported_date": "2024-05-30",
       "last_updated_date": "2026-11-15",
-      "days_since_event": 899,
+      "days_since_event": 900,
       "source_count": 1,
       "should_report": false,
-      "search_keys": [],
+      "search_keys": [
+        "Dengue update 2024"
+      ],
       "sources": {
         "who_don": 1,
         "usgs": 0,
@@ -268,7 +270,34 @@
           "type": "WHO",
           "label": "Dengue Global 2024-05-30",
           "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2024-DON518",
-          "meta": ""
+          "meta": "",
+          "date": "2024-05-30"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "Dengue Global 2024-05-30",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2024-DON518",
+          "source": "WHO",
+          "date": "2024-05-30",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Dengue claims 8 more lives, toll rises to 491",
+          "url": "https://www.dhakastream.net/health/dengue-claims-8-more-lives-toll-rises-491-201206",
+          "source": "dhakastream.net",
+          "date": "2026-11-15T07:07:21+00:00",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Florida Is Facing Its Worst Dengue Outbreak in Decades, With at Least 524 Locally Acquired Cases. Here's What to Know",
+          "url": "https://www.smithsonianmag.com/smart-news/florida-is-facing-its-worst-dengue-outbreak-in-decades-with-at-least-524-locally-acquired-cases-heres-what-to-know-180989865/",
+          "source": "Smithsonian Magazine",
+          "date": "2026-11-12",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -1353,10 +1382,12 @@
       "event_date": "2025-05-28",
       "first_reported_date": "2025-05-28",
       "last_updated_date": "2026-11-14",
-      "days_since_event": 536,
+      "days_since_event": 537,
       "source_count": 1,
       "should_report": false,
-      "search_keys": [],
+      "search_keys": [
+        "COVID-19 update 2025"
+      ],
       "sources": {
         "who_don": 1,
         "usgs": 0,
@@ -1370,7 +1401,34 @@
           "type": "WHO",
           "label": "COVID-19 Global 2025-05-28",
           "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2025-DON572",
-          "meta": ""
+          "meta": "",
+          "date": "2025-05-28"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "COVID-19 Global 2025-05-28",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2025-DON572",
+          "source": "WHO",
+          "date": "2025-05-28",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "COVID-19 Vaccines Paid Off Up to $809 Per Dollar Spent in 2021 | Drug Topics",
+          "url": "https://www.drugtopics.com/view/covid-19-vaccines-paid-off-up-to-809-per-dollar-spent-in-2021",
+          "source": "Drug Topics",
+          "date": "2026-11-14",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Traws Pharma Reports Final Phase 2a Results for Ratutrelvir in COVID-infected Subjects, Showing Fewer Treatment-Related Adverse Events and No Viral Rebounds Versus PAXLOVID®",
+          "url": "https://www.santelog.com/actualites-sante-nasdaq/traws-pharma-reports-final-phase-2a-results-ratutrelvir-covid-infected",
+          "source": "Santé log",
+          "date": "2026-11-12",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -2794,7 +2852,7 @@
       "incident_id": "20250905-CD-DI",
       "tree_id": "5c179437a46a56aca2f8b70aeceda07a",
       "canonical_name": "Ebola Kinshasa, DR Congo 2025-09-05",
-      "summary": "The World Health Organization has confirmed 81 attacks on health facilities during the DR Congo Ebola outbreak, with over 1,000 contacts lost to violence that has hampered containment. In a separate analysis, the Time magazine emphasizes that cuts to international assistance, including the gutting of USAID, along with inadequate healthcare infrastructure and conflict, are severely undermining efforts to control the epidemic.",
+      "summary": "Six months after its declaration, the Ebola outbreak in DR Congo remains uncontrolled, with over 11,000 cases and a near-50% fatality rate. Clinical trials for vaccines and treatments have begun in the hard-hit Bunia area, offering cautious hope. An ADF attack sent about 180 patients fleeing from a health center, underscoring persistent security threats to containment efforts.",
       "country": "DR Congo",
       "iso2": "CD",
       "lat": -4.0,
@@ -2814,10 +2872,13 @@
       "event_date": "2025-09-05",
       "first_reported_date": "2025-09-05",
       "last_updated_date": "2026-11-15",
-      "days_since_event": 436,
+      "days_since_event": 437,
       "source_count": 19,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Ebola DR Congo update 2026",
+        "Ebola DR Congo 2026"
+      ],
       "sources": {
         "who_don": 18,
         "usgs": 0,
@@ -2831,115 +2892,160 @@
           "type": "WHO",
           "label": "Ebola Kinshasa, DR Congo 2025-09-05",
           "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2025-DON580",
-          "meta": ""
+          "meta": "",
+          "date": "2025-09-05"
         },
         {
           "type": "WHO",
           "label": "Ebola DR Congo 2025-12-01",
           "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2025-DON589",
-          "meta": ""
+          "meta": "",
+          "date": "2025-12-01"
         },
         {
           "type": "WHO",
           "label": "Ebola Ituri, DR Congo 2026-05-16",
           "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON602",
-          "meta": ""
+          "meta": "",
+          "date": "2026-05-16"
         },
         {
           "type": "WHO",
           "label": "Ebola Ituri, DR Congo 2026-05-21",
           "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON603",
-          "meta": ""
+          "meta": "",
+          "date": "2026-05-21"
         },
         {
           "type": "WHO",
           "label": "Ebola Ituri, DR Congo 2026-05-29",
           "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON605",
-          "meta": ""
+          "meta": "",
+          "date": "2026-05-29"
         },
         {
           "type": "WHO",
           "label": "Ebola United Arab Emirates 2026-06-08",
           "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON606",
-          "meta": ""
+          "meta": "",
+          "date": "2026-06-08"
         },
         {
           "type": "WHO",
           "label": "Ebola Ituri, DR Congo 2026-06-13",
           "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON607",
-          "meta": ""
+          "meta": "",
+          "date": "2026-06-13"
         },
         {
           "type": "WHO",
           "label": "Ebola Ituri, DR Congo 2026-06-19",
           "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON608",
-          "meta": ""
+          "meta": "",
+          "date": "2026-06-19"
         },
         {
           "type": "WHO",
           "label": "Ebola Ituri, DR Congo 2026-07-03",
           "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON612",
-          "meta": ""
+          "meta": "",
+          "date": "2026-07-03"
         },
         {
           "type": "WHO",
           "label": "Ebola Ituri, DR Congo 2026-07-17",
           "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON613",
-          "meta": ""
+          "meta": "",
+          "date": "2026-07-17"
         },
         {
           "type": "WHO",
           "label": "Ebola Haut-Uele, DR Congo 2026-08-01",
           "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON614",
-          "meta": ""
+          "meta": "",
+          "date": "2026-08-01"
         },
         {
           "type": "WHO",
           "label": "Ebola Bas-Uele, DR Congo 2026-08-14",
           "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON615",
-          "meta": ""
+          "meta": "",
+          "date": "2026-08-14"
         },
         {
           "type": "WHO",
           "label": "Ebola Bas-Uele, DR Congo 2026-08-28",
           "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON616",
-          "meta": ""
+          "meta": "",
+          "date": "2026-08-28"
         },
         {
           "type": "WHO",
           "label": "Ebola Bas-Uele, DR Congo 2026-09-10",
           "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON617",
-          "meta": ""
+          "meta": "",
+          "date": "2026-09-10"
         },
         {
           "type": "WHO",
           "label": "Ebola Bas-Uele, DR Congo 2026-09-25",
           "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON618",
-          "meta": ""
+          "meta": "",
+          "date": "2026-09-25"
         },
         {
           "type": "WHO",
           "label": "Ebola Bas-Uele, DR Congo 2026-10-08",
           "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON619",
-          "meta": ""
+          "meta": "",
+          "date": "2026-10-08"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 20 October 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5820",
-          "meta": ""
+          "meta": "",
+          "date": "2026-10-20"
         },
         {
           "type": "WHO",
           "label": "Ebola Ituri, DR Congo 2026-10-23",
           "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON622",
-          "meta": ""
+          "meta": "",
+          "date": "2026-10-23"
         },
         {
           "type": "WHO",
           "label": "Ebola Ituri, DR Congo 2026-11-06",
           "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON625",
-          "meta": ""
+          "meta": "",
+          "date": "2026-11-06"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "Ebola Ituri, DR Congo 2026-11-06",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON625",
+          "source": "WHO",
+          "date": "2026-11-06",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "2 more provinces affected as DR Congo Ebola outbreak remains \"very active\": health minister",
+          "url": "https://www.thestar.com.my/news/world/2026/07/10/2-more-provinces-affected-as-dr-congo-ebola-outbreak-remains-very-active-health-minister",
+          "source": "The Star",
+          "date": "2026-07-10",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Roundup: WHO said Ebola outbreak in DR Congo intensifies, regional risk persists",
+          "url": "https://www.thestar.com.my/news/world/2026/07/08/roundup-who-said-ebola-outbreak-in-dr-congo-intensifies-regional-risk-persists",
+          "source": "The Star",
+          "date": "2026-07-08",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -7222,10 +7328,6 @@
           "published_date": "2026-11-09T07:00:20+00:00"
         },
         {
-          "headline": "DR Congo health center attack sends Ebola patients fleeing",
-          "published_date": "2026-11-10"
-        },
-        {
           "headline": "User",
           "published_date": "2026-11-10"
         },
@@ -7235,6 +7337,10 @@
         },
         {
           "headline": "Outrage as US retains Uganda on Level 4 ‘Do Not Travel’ advisory",
+          "published_date": "2026-11-10"
+        },
+        {
+          "headline": "DR Congo health center attack sends Ebola patients fleeing",
           "published_date": "2026-11-10"
         },
         {
@@ -7840,183 +7946,6 @@
           ]
         },
         {
-          "log_date": "2026-11-12",
-          "summary": "Six months into the outbreak, MSF reported that the DRC Ebola epidemic remains out of control, with many cases likely missed and transmission in hospitals still rampant. An expert warned the virus could continue spreading for another year given the conflict and community mistrust. Kenya announced plans to impose a 21-day quarantine on its citizens returning from the DRC, and a spike in attacks on journalists was partly attributed to their Ebola reporting.\nAs of November 12, 2026, the DR Congo Ebola outbreak has surpassed 11,000 confirmed cases and 5,387 deaths, with MSF warning it remains out of control due to funding gaps, unpaid staff, and supply shortages. Kenya discharged its last Ebola patient and began the 42-day countdown to being declared Ebola-free, while attacks on health workers and journalists continue to hamper containment efforts. New research also indicates the virus circulated undetected for weeks before the outbreak was officially recognized.",
-          "news": [
-            {
-              "news_id": "fa14fac7aaad5b6c9496784829c9a75a",
-              "url": "https://www.msn.com/en-us/news/other/attacks-on-health-workers-hamper-congo-ebola-fight-africa-cdc-warns/ar-AA2hiBnW?ocid=BingNewsVerp",
-              "headline": "Attacks on health workers hamper Congo Ebola fight, Africa CDC warns",
-              "body": "DAKAR, Nov 12 (Reuters) - Attacks on health workers and facilities are increasingly hindering efforts to contain an Ebola ...",
-              "published_date": "2026-11-12",
-              "outlet": "Reuters on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.jdWp2-k4t6w74dW-60QYnw"
-            },
-            {
-              "news_id": "81362034abac57c686f0a07998108273",
-              "url": "https://www.the-star.co.ke/news/2026-11-11-page-2-story-1-moh-plans-21-day-quarantine-for-kenyans-returning-from-dr-congo-duale-1",
-              "headline": "MoH plans 21-day quarantine for Kenyans returning from DR Congo - Duale",
-              "body": "Afya House doing everything to ensure no new Ebola case during 42-day monitoring period that begins November 12 and ends on December 23",
-              "published_date": "2026-11-11",
-              "outlet": "The Star",
-              "image": "https://www.bing.com/th?id=ONUT.9t7-sWDfBsdlwJMhq1yGBw"
-            },
-            {
-              "news_id": "62039de68800555294a20e44ad84c141",
-              "url": "https://allafrica.com/stories/202611120147.html",
-              "headline": "Africa: All of Africa Today - November 12, 2026",
-              "body": "The Africa Centres for Disease Control and Prevention (Africa CDC) described it as an important achievement in the regional response to the outbreak. Kenya has also urged countries that introduced ...",
-              "published_date": "2026-11-12",
-              "outlet": "AllAfrica",
-              "image": ""
-            },
-            {
-              "news_id": "49bbb7e9b55f58988d39459b89adfba3",
-              "url": "https://panafricanvisions.com/2026/11/ebola-in-democratic-republic-of-the-congo-drc-persistent-gaps-between-resources-and-action-remain-six-months-on/",
-              "headline": "Ebola in Democratic Republic of the Congo (DRC): Persistent gaps between resources and action remain six months on",
-              "body": "Democratic Republic of the Congo (DRC), Médecins Sans Frontières (MSF) warns that the second largest Ebola outbreak on record remains out of control. A troubling disconnect between the considerable resources mobilised for the response and what is actually reaching patients, frontline workers, and co",
-              "published_date": "2026-11-12",
-              "outlet": "panafricanvisions.com",
-              "image": ""
-            },
-            {
-              "news_id": "d36afa893f3e53cf96aa4e24aa594412",
-              "url": "https://timeskerala.com/world/dr-congo-ebola-outbreak-2/",
-              "headline": "കോംഗോയിൽ എബോള ബാധിതർ 11,000 കടന്നു; മരണം 5,387 ആയി | DR Congo Ebola outbreak | Times Kerala",
-              "body": "ഡെമോക്രാറ്റിക് റിപ്പബ്ലിക് ഓഫ് കോംഗോയിൽ (ഡിആർ കോംഗോ) എബോള ബാധിതരുടെ എണ്ണം 11,000 കടന്നു. ഏറ്റവും പുതിയ ഔദ്യോഗിക കണക്കുകൾ പ്രകാരം 11,042 പേർക്കാണ് രോഗം",
-              "published_date": "2026-11-12",
-              "outlet": "timeskerala",
-              "image": "https://www.bing.com/th?id=ONUT.R-ajOdUL85PE63kf1zVjdg"
-            },
-            {
-              "news_id": "2b255bc0ae5d5b199bbcd7650b4c76dc",
-              "url": "https://www.msn.com/en-za/news/other/dr-congo-ebola-outbreak-surpasses-11000-cases-as-conflict-hampers-response/vi-AA2hgL85?ocid=BingNewsVerp",
-              "headline": "DR Congo Ebola outbreak surpasses 11,000 cases as conflict hampers response",
-              "body": "A healthcare worker walks inside an Ebola treatment center in Beni, North Kivu Province, Congo, Monday, Nov. 9, 2026 ...",
-              "published_date": "2026-11-12",
-              "outlet": "Africanews on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.gmVCfKx_kpo904VgxIozxA"
-            },
-            {
-              "news_id": "5a84929692b05abe94160ac5a0ba7117",
-              "url": "https://www.nature.com/articles/d41586-026-03666-z",
-              "headline": "Record-breaking Ebola outbreak: phone data reconstruct first weeks of spread",
-              "body": "The Bundibugyo virus strain was circulating for weeks before its detection in May, but was missed owing to surveillance failures, testing gaps and funding cuts, researchers say.",
-              "published_date": "2026-11-12",
-              "outlet": "Nature",
-              "image": "https://www.bing.com/th?id=ONUT.-Rj7bVmmmWa72Tny0WcaDg"
-            },
-            {
-              "news_id": "b8f7b87cd0b55dc68e7d5a0a6d3c5b2f",
-              "url": "https://sana.sy/en/health/2358205/",
-              "headline": "DR Congo reports over 11,000 Ebola cases as MSF warns of response gaps",
-              "body": "Kinshasa, Nov. 12 (SANA) – The Democratic Republic of the Congo (DRC) has recorded 11,042 Ebola infections and 5,387 deaths in what is considered the",
-              "published_date": "2026-11-12",
-              "outlet": "Syrian Arab News Agency",
-              "image": "https://www.bing.com/th?id=ONUT.1WVkQRpklsUHS3kCTQGzOA"
-            },
-            {
-              "news_id": "87ad381c173b5060a87fd3f79928a392",
-              "url": "https://www.msn.com/en-us/news/other/congo-ebola-outbreak-still-out-of-control-after-six-months-msf-says/ar-AA2hfSyl?ocid=BingNewsVerp",
-              "headline": "Congo Ebola outbreak still out of control after six months, MSF says",
-              "body": "By Olivia Le Poidevin and Jennifer Rigby GENEVA, Nov 12 (Reuters) - Six months into Congo's Ebola outbreak, many cases are ...",
-              "published_date": "2026-11-12",
-              "outlet": "Reuters on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.uAoZThaiA6CU-EzbCYduDQ"
-            },
-            {
-              "news_id": "8fc4380289065fed9bd5368cc4a97f80",
-              "url": "https://www.riotimesonline.com/africa-intelligence-brief-thursday-november-12-2026/",
-              "headline": "Africa Intelligence Brief — Thursday, November 12, 2026",
-              "body": "Africa Intelligence Brief for November 12: Ebola passes 11,000 cases in DR Congo, Uganda's succession row, South Africa's hung councils.",
-              "published_date": "2026-11-12",
-              "outlet": "The Rio Times",
-              "image": "https://www.bing.com/th?id=ONUT.V2hVN50zHassEycYzc0Qcg"
-            },
-            {
-              "news_id": "a99ef07087fd572989935b21896fd525",
-              "url": "https://allafrica.com/view/group/main/main/id/00098779.html",
-              "headline": "Kenya Discharges Last Ebola Patient, Begins 42-Day Countdown",
-              "body": "Kenya has discharged its last Ebola patient, bringing the total number of recoveries to seven and marking a major step towards containing the outbreak. The country has now begun a 42-day countdown before it can officially be declared Ebola-free. No new confirmed cases have been reported since 20 October. Health authorities said that all 135 identified contacts have completed their 21-day monitoring period, with no evidence of wider community transmission. However, surveillance will continue at border crossings, airports and health facilities throughout the countdown. The Africa Centres for Disease Control and Prevention (Africa CDC) described it as an important achievement in the regional response to the outbreak. Kenya has also urged countries that introduced travel and visa restrictions over the outbreak to reconsider them.",
-              "published_date": "2026-11-12",
-              "outlet": "AllAfrica",
-              "image": ""
-            },
-            {
-              "news_id": "075cb8176ef95e16bc7163848141ac21",
-              "url": "https://www.theeastafrican.co.ke/tea/sustainability/ebola-insecurity-in-eastern-drc-blocks-response-5668350",
-              "headline": "Ebola: Insecurity in eastern DRC blocks response as deaths pass 5,300",
-              "body": "The Democratic Republic of Congo (DRC) had reported 5,387 deaths from Ebola virus disease by Monday this week, since the ...",
-              "published_date": "2026-11-12T20:19:44+00:00",
-              "outlet": "The EastAfrican",
-              "image": "https://www.bing.com/th?id=ONUT.fquApf0yefRr7MjQa2h15g"
-            },
-            {
-              "news_id": "30eb72818e7c5358b2a4a9a4ebfdea09",
-              "url": "https://www.telegraph.co.uk/global-health/science-and-disease/ebola-drc-year/",
-              "headline": "Ebola could be raging in DRC for another year, expert warns",
-              "body": "Controlling the outbreak in an area where conflict and mistrust of authorities is rife will be hard",
-              "published_date": "2026-11-11",
-              "outlet": "The Telegraph",
-              "image": "https://www.bing.com/th?id=ONUT.b4DAvfpDygg1Ueq4SlblEw"
-            },
-            {
-              "news_id": "aefb660fe0c459e28ed1863d85ae833d",
-              "url": "https://www.washingtonpost.com/world/2026/11/11/congo-ebola-outbreak/bb622f76-dd98-11f1-912c-4fbb80d73f7f_story.html",
-              "headline": "Ebola tops 11,000 cases in Congo's deadliest outbreak",
-              "body": "BUNIA, Congo — Congo’s Ebola outbreak has topped 11,000 cases, the government said Wednesday, a stark figure that underscores the severity of the situation as the country grapples with the relentless ...",
-              "published_date": "2026-11-11T00:00:00+00:00",
-              "outlet": "The Washington Post",
-              "image": ""
-            },
-            {
-              "news_id": "5a7a092e330e5a72a2f1a5aaae9507f4",
-              "url": "https://www.afro.who.int/countries/south-sudan/news/first-case-who-helps-south-sudan-prepare-ebola-bundibugyo-virus-disease",
-              "headline": "Before the first case: WHO helps South Sudan prepare for Ebola Bundibugyo virus Disease",
-              "body": "Juba - In Nabanga, a South Sudanese town bordering the Democratic Republic of Congo (DRC), fear of the ongoing Bundibugyo Virus disease (BVD) outbreak is already shaping daily life. In September a joint assessment by health authorities and partners identified 3 450 people who had crossed into South Sudan from the DRC amid rumors and growing community concern. Although South Sudan has not reported any confirmed cases of BVD, the continued movement of people has increase anxiety about the possible spread of the disease.",
-              "published_date": "2026-11-12",
-              "outlet": "WHO | Regional Office for Africa",
-              "image": ""
-            },
-            {
-              "news_id": "af9bcbdbd04158509ac425016b193aef",
-              "url": "https://www.msn.com/en-xl/africa/other/spike-in-attacks-on-dr-congo-journalists-fueled-in-part-by-ebola-reporting/ar-AA2hgCrM?ocid=BingNewsVerp",
-              "headline": "Spike in attacks on DR Congo journalists fueled in part by Ebola reporting",
-              "body": "The recent spike in physical assaults and threats directed at journalists in the Democratic Republic of the Congo has extended into November, as the worsening Ebola virus outbreak has triggered a ...",
-              "published_date": "2026-11-12",
-              "outlet": "AllAfrica on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "ab9e1013c85952318d6b70b5e4900152",
-              "url": "https://www.msn.com/en-us/news/world/millions-of-ebola-dollars-going-missing-as-virus-spreads-medical-charity-warns/ar-AA2hhVYs?ocid=BingNewsVerp",
-              "headline": "Millions of Ebola dollars going missing as virus spreads, medical charity warns",
-              "body": "Medical staff are going unpaid, lack proper training and are struggling with shortages of essential supplies, MSF warns ...",
-              "published_date": "2026-11-12",
-              "outlet": "BBC on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "ed6878bad6015c3d97de9858783b01f1",
-              "url": "https://www.usnews.com/news/world/articles/2026-11-12/congo-ebola-outbreak-still-out-of-control-after-six-months-msf-says",
-              "headline": "Congo Ebola Outbreak Still Out of Control After Six Months, MSF Says",
-              "body": "GENEVA, Nov 12 (Reuters) - Six months into Congo's Ebola outbreak, many cases are likely being missed, transmission in hospitals in some areas is rife and the virus is still spreading out of ...",
-              "published_date": "2026-11-12T07:37:02+00:00",
-              "outlet": "U.S. News & World Report",
-              "image": ""
-            },
-            {
-              "news_id": "5c06c3133ae9520e9cd8a3d0e9fc5bf1",
-              "url": "https://www.msn.com/en-xl/news/other/spike-in-attacks-on-dr-congo-journalists-fueled-in-part-by-ebola-reporting/ar-AA2hgCrM?ocid=BingNewsVerp",
-              "headline": "Spike in attacks on DR Congo journalists fueled in part by Ebola reporting",
-              "body": "The recent spike in physical assaults and threats directed at journalists in the Democratic Republic of the Congo has extended into November, as the worsening Ebola virus outbreak has triggered a ...",
-              "published_date": "2026-11-12",
-              "outlet": "AllAfrica on MSN",
-              "image": ""
-            }
-          ]
-        },
-        {
           "log_date": "2026-11-13",
           "summary": "Updated figures indicate the Ebola outbreak in DR Congo has killed more than 5,500 people and surpassed 11,000 cases. Médecins Sans Frontières has called on the government and UN to ensure rigorous use of resources, and Africa CDC warns that attacks on health workers are impeding containment. Kenya is also in talks with Saudi Arabia to lift Ebola travel restrictions on its citizens.\nUN officials hailed progress in the Ebola response but cited insecurity as the biggest remaining challenge. Attacks on health workers and facilities continue to hamper containment, and Médecins Sans Frontières warned that funds meant for the response are not reaching frontline workers. Uganda kept its border with DRC closed, while the WHO reported rising infections and violence, noting that in some areas more people are being killed by Allied Democratic Forces fighters than by Ebola.",
           "news": [
@@ -8189,15 +8118,111 @@
               "image": ""
             }
           ]
+        },
+        {
+          "log_date": "2026-11-15",
+          "summary": "Six months after its declaration, the Ebola outbreak in DR Congo remains uncontrolled, with over 11,000 cases and a near-50% fatality rate. Clinical trials for vaccines and treatments have begun in the hard-hit Bunia area, offering cautious hope. An ADF attack sent about 180 patients fleeing from a health center, underscoring persistent security threats to containment efforts.",
+          "news": [
+            {
+              "news_id": "bbad0d2771d156758a1c3b9e079e96b6",
+              "url": "https://www.msn.com/en-us/news/other/africa-cdc-says-ebola-outbreak-still-out-of-control-six-months-since-it-was-declared/ar-AA2htQmf?ocid=BingNewsVerp",
+              "headline": "Africa CDC says Ebola outbreak still out of control six months since it was declared",
+              "body": "By Jessica Donati DAKAR, Nov 15 (Reuters) - Africa's top public health agency said on Sunday that the Ebola outbreak in Congo was still out of control six months after it was declared, citing problems ...",
+              "published_date": "2026-11-15",
+              "outlet": "Reuters on MSN",
+              "image": ""
+            },
+            {
+              "news_id": "e2d1b1f1972a579eb05fcac431f8134a",
+              "url": "https://www.usnews.com/news/health-news/articles/2026-11-15/ebola-outbreak-remains-out-of-control-in-congo-6-months-into-response",
+              "headline": "Ebola Outbreak Remains Out of Control in Congo 6 Months Into Response",
+              "body": "Congo’s Ebola outbreak remains out of control six months after it was announced, with more than 11,000 cases recorded and ...",
+              "published_date": "2026-11-09T07:00:20+00:00",
+              "outlet": "U.S. News & World Report",
+              "image": "https://www.bing.com/th?id=ONUT.HKbrTY7JMVVOWx6zIyn3oA"
+            },
+            {
+              "news_id": "e28424a4fbca5239ae802d1b95dc78e3",
+              "url": "https://apnews.com/article/congo-ebola-six-months-0bbf5ac7d0d5262a146f68f8143ffe7b",
+              "headline": "Ebola outbreak remains out of control in Congo 6 months into response",
+              "body": "Congo’s Ebola outbreak remains out of control six months after it was announced, with more than 11,000 cases recorded and nearly half proving fatal.",
+              "published_date": "2026-11-14T07:01:23+00:00",
+              "outlet": "Associated Press News",
+              "image": ""
+            },
+            {
+              "news_id": "fdd6634b7bae5257bf12ef0d6ebdda8d",
+              "url": "https://eastleighvoice.co.ke/health/423904/kenyan-pathologist-calls-for-review-of-ebola-exposure-patterns-after-contrasting-outcomes-in-kenya-uganda-and-nigeria",
+              "headline": "Kenyan pathologist calls for review of Ebola exposure patterns after contrasting outcomes in Kenya, Uganda and Nigeria",
+              "body": "While Kenya and Uganda experienced further infections after imported cases, Nigeria managed to contain its imported ...",
+              "published_date": "2026-11-15T19:07:36+00:00",
+              "outlet": "eastleighvoice",
+              "image": "https://www.bing.com/th?id=ONUT.qJskXpzd8pjqe9vTCAKslQ"
+            },
+            {
+              "news_id": "697b3579574a52aaa6b3e3d5a63e1d52",
+              "url": "https://www.lemonde.fr/en/le-monde-africa/article/2026/11/15/ebola-in-the-drc-s-main-epicenter-first-treatment-trials-rekindle-hope_6781117_124.html",
+              "headline": "Ebola: In the DRC's main epicenter, first treatment trials rekindle hope",
+              "body": "In Bunia, in the eastern Democratic Republic of Congo, where the outbreak has hit hard, clinical trials are underway to test several vaccines and treatments. The aim is to protect people from ...",
+              "published_date": "2026-11-15",
+              "outlet": "Le Monde",
+              "image": ""
+            },
+            {
+              "news_id": "03f0de985c6b560f8e6e60c4cab460c7",
+              "url": "https://ijr.com/discover/health-2026-11-10-dr-congo-adf-attack-reportedly-sends-180-patients-fleeing-ea6d992f",
+              "headline": "DR Congo health center attack sends Ebola patients fleeing",
+              "body": "An ADF attack in eastern Democratic Republic of the Congo killed at least 33 people and sent about 180 patients fleeing a ...",
+              "published_date": "2026-11-10",
+              "outlet": "Independent Journal Review",
+              "image": "https://www.bing.com/th?id=ONUT.ZdgVzVEgghQmfbwJFRl1Mw"
+            },
+            {
+              "news_id": "4fbc27c6456054678088985113e130e6",
+              "url": "https://medicalxpress.com/news/2026-11-ebola-outbreak-congo-months-response.html",
+              "headline": "Ebola outbreak remains out of control in Congo 6 months into response",
+              "body": "Six months after an Ebola outbreak was declared in Congo, the disease remains out of control and efforts to contain it are faltering.",
+              "published_date": "2026-11-15",
+              "outlet": "Medical Xpress",
+              "image": "https://www.bing.com/th?id=ONUT.16sFRMq_v0Vymi2WZodmXg"
+            },
+            {
+              "news_id": "26a1595b79a85a36bedf615d17574d38",
+              "url": "https://africacdc.org/news-item/six-months-on-accessing-hard-to-reach-communities-key-to-halting-ebola-outbreak/",
+              "headline": "Six months on, accessing hard-to-reach communities key to halting Ebola outbreak – Africa CDC",
+              "body": "15 November 2026 | Addis Ababa, Geneva, Kinshasa, New York, Rome Six months into the Ebola outbreak caused by Bundibugyo virus in the Democratic Republic of the Congo, significant progress has been made in bringing lifesaving services closer to affected communities, despite immense challenges. However, fuelled by ongoing conflict, displacement and humanitarian needs, the outbreak […]",
+              "published_date": "2026-11-15",
+              "outlet": "Africa CDC",
+              "image": "https://www.bing.com/th?id=ONUT.Jp333nkR1q1jj-gm6F5vfw"
+            },
+            {
+              "news_id": "53b4e9a2c04758889b3cbc604061e0b6",
+              "url": "https://africa.dailynewsegypt.com/congo-ebola-six-months/",
+              "headline": "Congo Ebola crisis: 11,000 cases after six months",
+              "body": "The Congo Ebola outbreak hit six months on 15 November with more than 11,000 cases and about 5,400 deaths; Bunia cases halved but the virus has spread.",
+              "published_date": "2026-11-15",
+              "outlet": "africa.dailynewsegypt",
+              "image": "https://www.bing.com/th?id=ONUT.R190urD6TC92zU3zLJAofQ"
+            },
+            {
+              "news_id": "bcebfbaece205cc89b47aaca1db15b09",
+              "url": "https://mundour.com/2026/11/15/alerta-por-ebola-y-virus-shamonda-parte-medico-con-el-dr-julio-castro/",
+              "headline": "Alerta por Ébola y virus Shamonda || Parte Médico con el Dr. Julio Castro",
+              "body": "Los mundos de union radio en un sólo site con las noticias de Venezuela. Con información exclusiva de la actualidad noticiosa de Venezuela y el mundo. Escucha en vivo toda nuestra programación, comparte en las redes sociales y mantente al día en el acontecer político, económico, deportivo y del entretenimiento en un mismo lugar. Unión Radio, todo el tiempo en todas partes. Lo mejor de Circuito Exitos, Circuito Onda, Circuito La Mega.",
+              "published_date": "2026-11-15",
+              "outlet": "mundour",
+              "image": ""
+            }
+          ]
         }
       ],
-      "logs_total": 93
+      "logs_total": 94
     },
     {
       "incident_id": "20260511-EC-DR",
       "tree_id": "d75afb3078c54d74b37c4f8bb985dfce",
       "canonical_name": "Drought Green",
-      "summary": "An opinion piece urges California to modernize its water accounting systems to better handle drought shortages. The UN reports on the ongoing struggle and preparedness efforts in Central America's Dry Corridor, where farming families face severe rain deficits. The Philippines' El Niño-related drought losses are approaching ₱10 billion in farm damage.",
+      "summary": "An opinion piece urges California to modernize its water accounting systems to better handle drought shortages. The UN reports on the ongoing struggle and preparedness efforts in Central America's Dry Corridor, where farming families face severe rain deficits. The Philippines' El Niño-related drought losses are approaching ₱10 billion in farm damage.\nTelangana Chief Minister Revanth Reddy met Prime Minister Modi on November 15 to seek drought relief as the state's agricultural crisis deepens. Ahus Island in Papua New Guinea suffers severe water shortages with dry creeks and contaminated rain, while Frankfurt's apple wine orchards are adapting to drought conditions. Colorado Springs Utilities drew down its water storage to the lowest level since 2014 to cope with persistent drought.",
       "country": "Ecuador",
       "iso2": "EC",
       "lat": -1.8,
@@ -8217,10 +8242,13 @@
       "event_date": "2026-05-11",
       "first_reported_date": "2026-05-11",
       "last_updated_date": "2026-11-15",
-      "days_since_event": 188,
+      "days_since_event": 189,
       "source_count": 3,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Belize Drought latest 2026",
+        "Belize Drought 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 0,
@@ -8234,19 +8262,48 @@
           "type": "GDACS",
           "label": "Green alert · Drought Green",
           "url": "",
-          "meta": ""
+          "meta": "",
+          "date": "2026-05-11"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 25 August 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5763",
-          "meta": ""
+          "meta": "",
+          "date": "2026-08-25"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 06 November 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5835",
-          "meta": ""
+          "meta": "",
+          "date": "2026-11-06"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "ECHO Daily Map of 06 November 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5835",
+          "source": "ERCC",
+          "date": "2026-11-06",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "El Niño Drought Nears ₱10 Billion in Philippine Farm Losses",
+          "url": "https://www.global-agriculture.com/farming-agriculture/el-nino-drought-nears-₱10-billion-in-philippine-farm-losses/",
+          "source": "global-agriculture",
+          "date": "2026-11-14",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Wet October erases last drought conditions across Iowa, DNR says",
+          "url": "https://www.desmoinesregister.com/story/weather/iowa/2026/11/13/iowa-drought-monitor-no-dryness/92757861007/",
+          "source": "The Des Moines Register",
+          "date": "2026-11-13T16:05:08+00:00",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -12713,10 +12770,6 @@
           "published_date": "2026-11-11"
         },
         {
-          "headline": "What to know as \"super El Niño\" conditions take shape",
-          "published_date": "2026-11-12"
-        },
-        {
           "headline": "Alabama climatologist office monitoring droughts | Nov. 11, 2026 | News 19 at 4 p.m.",
           "published_date": "2026-11-12"
         },
@@ -12782,6 +12835,10 @@
         },
         {
           "headline": "Opinion: California lacks critical data on water supplies. Here’s why it must modernize its systems.",
+          "published_date": "2026-11-12"
+        },
+        {
+          "headline": "What to know as \"super El Niño\" conditions take shape",
           "published_date": "2026-11-12"
         },
         {
@@ -13360,7 +13417,7 @@
         },
         {
           "log_date": "2026-11-15",
-          "summary": "An opinion piece urges California to modernize its water accounting systems to better handle drought shortages. The UN reports on the ongoing struggle and preparedness efforts in Central America's Dry Corridor, where farming families face severe rain deficits. The Philippines' El Niño-related drought losses are approaching ₱10 billion in farm damage.",
+          "summary": "An opinion piece urges California to modernize its water accounting systems to better handle drought shortages. The UN reports on the ongoing struggle and preparedness efforts in Central America's Dry Corridor, where farming families face severe rain deficits. The Philippines' El Niño-related drought losses are approaching ₱10 billion in farm damage.\nTelangana Chief Minister Revanth Reddy met Prime Minister Modi on November 15 to seek drought relief as the state's agricultural crisis deepens. Ahus Island in Papua New Guinea suffers severe water shortages with dry creeks and contaminated rain, while Frankfurt's apple wine orchards are adapting to drought conditions. Colorado Springs Utilities drew down its water storage to the lowest level since 2014 to cope with persistent drought.",
           "news": [
             {
               "news_id": "d6bd6a878bcd5b3b8d88efd28e7b5e0b",
@@ -13372,6 +13429,33 @@
               "image": "https://www.bing.com/th?id=ONUT.BVW-Cf5wLKnj_nu1lI3JbA"
             },
             {
+              "news_id": "82687605e66151b7a70072362afac371",
+              "url": "https://www.earth.com/climate/wildfire-smoke-over-borneo-hints-at-danger-beneath-the-forest/",
+              "headline": "Wildfire smoke over Borneo hints at danger beneath the forest",
+              "body": "A satellite view of Borneo’s wildfires reveals how prolonged drought can put forests and carbon-rich peatlands at risk.",
+              "published_date": "2026-11-15",
+              "outlet": "Earth.com",
+              "image": ""
+            },
+            {
+              "news_id": "d9cabaf489ef593c9309a0f975e9d8a7",
+              "url": "https://www.msn.com/en-in/news/other/revanth-reddy-meets-pm-modi-seeks-drought-relief-for-telangana/ar-AA2htaMK?ocid=BingNewsVerp",
+              "headline": "Revanth Reddy meets PM Modi, seeks drought relief for Telangana",
+              "body": "Hyderabad: Telangana Chief Minister Revanth Reddy met Prime Minister Narendra Modi in New Delhi on Sunday, November 15, to ...",
+              "published_date": "2026-11-15",
+              "outlet": "Newspoint on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.tYELC0Eb-aLjJXWQiw57Rw"
+            },
+            {
+              "news_id": "7be48acddd3e5145bc8d6b299759d68e",
+              "url": "https://www.msn.com/en-za/news/other/inside-the-2026-el-niño-why-extreme-weather-is-spiking-global-heat-and-grocery-bills/ar-AA2htNra?ocid=BingNewsVerp",
+              "headline": "Inside the 2026 El Niño: Why extreme weather is spiking global heat and grocery bills",
+              "body": "An exceptionally strong El Niño is driving global weather extremes — from floods in Peru to droughts in Asia — pushing 2026 ...",
+              "published_date": "2026-11-15",
+              "outlet": "IOL on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.rme8HwVAenBaMIK1e4oVMg"
+            },
+            {
               "news_id": "6b62d1acb637536aa978afe7220503d8",
               "url": "https://news.un.org/en/story/2026/11/1168776",
               "headline": "When the rains fail: Preparing for drought in Central America",
@@ -13381,6 +13465,33 @@
               "image": "https://www.bing.com/th?id=ONUT.yZamB1bBE1n6R8trEyklbA"
             },
             {
+              "news_id": "25c290c54dc45daa972263e9d6dc4143",
+              "url": "https://www.theguardian.com/environment/2026/nov/16/png-ahus-island-water-cop-31-climate-crisis-impact-papua-new-guinea",
+              "headline": "The creeks are dry, the rain is contaminated and food is scarce. What lies ahead for the people of Ahus Island?",
+              "body": "A small island community spent years preparing for the climate crisis. Now they have no water – and nowhere else to go",
+              "published_date": "2026-11-15",
+              "outlet": "The Guardian",
+              "image": ""
+            },
+            {
+              "news_id": "cd7a32d65eb7510193521b249910ebac",
+              "url": "https://www.rtoinsider.com/151480-southwest-hydro-output-falls-record-lows/",
+              "headline": "Southwest Hydro Output Falls to Record Lows, Further Decline Expected",
+              "body": "Southwest hydroelectric output sank to record lows in summer 2026 and is expected to fall again inn 2027 in the face of prolonged drought.",
+              "published_date": "2026-11-15",
+              "outlet": "RTO Insider",
+              "image": "https://www.bing.com/th?id=ONUT.IY1QzAsDd4JhnsDmUGYiNA"
+            },
+            {
+              "news_id": "b02b7f796ade57f99c109cc2a6b6877a",
+              "url": "https://www.forbes.com/sites/christopherelliott/2026/11/15/how-frankfurt-is-trying-to-save-its-famous-apple-wine-from-climate-change/",
+              "headline": "How Frankfurt Is Trying To Save Its Famous Apple Wine From Climate Change",
+              "body": "In a drought-stricken orchard on the Lohrberg, the trees are getting a makeover. Here’s what it means for your next visit to ...",
+              "published_date": "2026-11-15T00:00:00+00:00",
+              "outlet": "Forbes",
+              "image": "https://www.bing.com/th?id=ONUT.vKC93Kx4MRZo2FcYCwW7dA"
+            },
+            {
               "news_id": "7dcc9a4ed3a351be85c1ce572c192548",
               "url": "https://www.global-agriculture.com/farming-agriculture/el-nino-drought-nears-₱10-billion-in-philippine-farm-losses/",
               "headline": "El Niño Drought Nears ₱10 Billion in Philippine Farm Losses",
@@ -13388,6 +13499,24 @@
               "published_date": "2026-11-14",
               "outlet": "global-agriculture",
               "image": "https://www.bing.com/th?id=ONUT.zz9YthP1R6lyLDMOwnb2tA"
+            },
+            {
+              "news_id": "594580382a2f5199a15a9cc86cfef7d5",
+              "url": "https://www.yahoo.com/news/weather-news/articles/know-super-el-ni-o-182205747.html",
+              "headline": "What to know as \"super El Niño\" conditions take shape",
+              "body": "Here's what to know about El Niño, the powerful climate pattern impacting weather across the globe.",
+              "published_date": "2026-11-12",
+              "outlet": "CBS News · via Yahoo News",
+              "image": "https://media.zenfs.com/en/cbs_news_897/553110815279c7643e19ef8b9e6db431.png.cf.jpg"
+            },
+            {
+              "news_id": "838f7cd458bf568a96a2527b438607da",
+              "url": "https://gazette.com/2026/11/15/utilities-looks-to-spring-storms-after-drawing-down-water-storage/",
+              "headline": "Utilities looks to spring storms after drawing down water storage",
+              "body": "Colorado Springs Utilities drew down its water storage to the lowest levels since 2014 to get through the last year of drought conditions.",
+              "published_date": "2026-11-15",
+              "outlet": "The Gazette",
+              "image": "https://www.bing.com/th?id=ONUT._xm4YT7n1FbMii_4Y8DTog"
             }
           ]
         }
@@ -13398,7 +13527,7 @@
       "incident_id": "20260715-UA-CF",
       "tree_id": "f22292f8c3ff448a920c3b1fe41d3aa0",
       "canonical_name": "Conflict Ukraine 2026-07-15",
-      "summary": "Bombings in Moscow and St. Petersburg killed a Russian military officer and critically injured an adviser to Ukraine's former prime minister. Diplomatic moves include a planned trilateral Trump–Xi–Putin meeting at the APEC summit in Shenzhen and a reported U.S. proposal to grant Ukraine NATO membership in exchange for surrendering the Donbas region to Russia. Russia has also presented a document demanding NATO withdraw to its 1997 borders, and an article examines hybrid warfare tactics linked to Russia across Europe.",
+      "summary": "Bombings in Moscow and St. Petersburg killed a Russian military officer and critically injured an adviser to Ukraine's former prime minister. Diplomatic moves include a planned trilateral Trump–Xi–Putin meeting at the APEC summit in Shenzhen and a reported U.S. proposal to grant Ukraine NATO membership in exchange for surrendering the Donbas region to Russia. Russia has also presented a document demanding NATO withdraw to its 1997 borders, and an article examines hybrid warfare tactics linked to Russia across Europe.\nPrince Harry traveled to Ukraine for a conference on war trauma. President Zelensky said Starshield restrictions are helping Russia carry out attacks on Ukraine's energy infrastructure. Meanwhile, arrests in South Africa linked to the war suggest the country may be serving as a transit route for Russia's operations.",
       "country": "Ukraine",
       "iso2": "UA",
       "lat": 48.9,
@@ -13418,10 +13547,13 @@
       "event_date": "2026-07-15",
       "first_reported_date": "2026-07-15",
       "last_updated_date": "2026-11-15",
-      "days_since_event": 123,
+      "days_since_event": 124,
       "source_count": 6,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Ukraine Conflict latest 2026",
+        "Ukraine Conflict 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 0,
@@ -13435,37 +13567,69 @@
           "type": "ERCC",
           "label": "ECHO Daily Map of 15 July 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5727",
-          "meta": ""
+          "meta": "",
+          "date": "2026-07-15"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 09 September 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5782",
-          "meta": ""
+          "meta": "",
+          "date": "2026-09-09"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 23 September 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5792",
-          "meta": ""
+          "meta": "",
+          "date": "2026-09-23"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 07 October 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5807",
-          "meta": ""
+          "meta": "",
+          "date": "2026-10-07"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 28 October 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5827",
-          "meta": ""
+          "meta": "",
+          "date": "2026-10-28"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 03 November 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5832",
-          "meta": ""
+          "meta": "",
+          "date": "2026-11-03"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "ECHO Daily Map of 03 November 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5832",
+          "source": "ERCC",
+          "date": "2026-11-03",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Car bombing in Russia injures an adviser to Ukraine’s ex-prime minister",
+          "url": "https://apnews.com/video/car-bombing-in-russia-injures-an-adviser-to-ukraines-ex-prime-minister-b139e6571ecb4adc8baf9f42195e614c",
+          "source": "Associated Press News",
+          "date": "2026-11-14T07:05:47+00:00",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Bombings in Russia kill a military officer and injure an adviser to Ukraine's former prime minister",
+          "url": "https://www.kiro7.com/news/world/bombings-russia-kill/H4C7ZEGFHM7N7FX7E6J4ZL7ECA/",
+          "source": "KIRO 7 Seattle-Tacoma",
+          "date": "2026-11-13",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -22200,11 +22364,19 @@
           "published_date": "2026-11-15"
         },
         {
+          "headline": "The Kyiv Independent confronts journalism in times of war",
+          "published_date": "2026-11-15"
+        },
+        {
           "headline": "Trump, Xi, and Putin to meet in Shenzhen for the most consequential trilateral summit in a generation, why Ukraine is not in the room; explained",
           "published_date": "2026-11-15"
         },
         {
           "headline": "Prince Harry visits Ukraine for war trauma conferencePublished on: November 15, 2026 5:35 PM",
+          "published_date": "2026-11-15"
+        },
+        {
+          "headline": "Putin wants control of Eastern Europe back. A ‘Yalta’ with Trump and Xi in Shenzhen",
           "published_date": "2026-11-15"
         },
         {
@@ -22221,14 +22393,6 @@
         },
         {
           "headline": "Ukraine war briefing: US proposes Kyiv cede land to Russia for Nato membership, Zelenskyy says",
-          "published_date": "2026-11-15"
-        },
-        {
-          "headline": "The Kyiv Independent confronts journalism in times of war",
-          "published_date": "2026-11-15"
-        },
-        {
-          "headline": "Putin wants control of Eastern Europe back. A ‘Yalta’ with Trump and Xi in Shenzhen",
           "published_date": "2026-11-15"
         }
       ],
@@ -23028,8 +23192,17 @@
         },
         {
           "log_date": "2026-11-15",
-          "summary": "Bombings in Moscow and St. Petersburg killed a Russian military officer and critically injured an adviser to Ukraine's former prime minister. Diplomatic moves include a planned trilateral Trump–Xi–Putin meeting at the APEC summit in Shenzhen and a reported U.S. proposal to grant Ukraine NATO membership in exchange for surrendering the Donbas region to Russia. Russia has also presented a document demanding NATO withdraw to its 1997 borders, and an article examines hybrid warfare tactics linked to Russia across Europe.",
+          "summary": "Bombings in Moscow and St. Petersburg killed a Russian military officer and critically injured an adviser to Ukraine's former prime minister. Diplomatic moves include a planned trilateral Trump–Xi–Putin meeting at the APEC summit in Shenzhen and a reported U.S. proposal to grant Ukraine NATO membership in exchange for surrendering the Donbas region to Russia. Russia has also presented a document demanding NATO withdraw to its 1997 borders, and an article examines hybrid warfare tactics linked to Russia across Europe.\nPrince Harry traveled to Ukraine for a conference on war trauma. President Zelensky said Starshield restrictions are helping Russia carry out attacks on Ukraine's energy infrastructure. Meanwhile, arrests in South Africa linked to the war suggest the country may be serving as a transit route for Russia's operations.",
           "news": [
+            {
+              "news_id": "f5683173778d562388d558dfb9742f4b",
+              "url": "https://www.spectator.com.au/2026/11/the-ukraine-war-is-one-of-historys-great-turning-points/",
+              "headline": "The Ukraine war is one of history’s great turning points | The Spectator Australia",
+              "body": "When Vladimir Putin invaded Ukraine, Russia’s president launched what was supposed to be a textbook twentieth-century invasion. Military commentators believed…",
+              "published_date": "2026-11-15",
+              "outlet": "The Spectator Australia",
+              "image": "https://www.bing.com/th?id=ONUT.XQFMJtuX8F4Q28FItWnD2w"
+            },
             {
               "news_id": "bb15d073b5445a89bd2b11cfd07b329b",
               "url": "https://www.lemonde.fr/en/international/article/2026/11/15/the-kyiv-independent-confronts-journalism-in-times-of-war_6781249_4.html",
@@ -23038,6 +23211,24 @@
               "published_date": "2026-11-15",
               "outlet": "Le Monde",
               "image": "https://www.bing.com/th?id=ONUT.XMcBDrYoMga3z7oN1PVlEQ"
+            },
+            {
+              "news_id": "f99b9f2083805bf996291295abcf6c07",
+              "url": "https://www.msn.com/en-in/news/other/trump-xi-and-putin-to-meet-in-shenzhen-for-the-most-consequential-trilateral-summit-in-a-generation-why-ukraine-is-not-in-the-room-explained/ar-AA2hsuG4?ocid=BingNewsVerp",
+              "headline": "Trump, Xi, and Putin to meet in Shenzhen for the most consequential trilateral summit in a generation, why Ukraine is not in the room; explained",
+              "body": "India, Nov. 15 -- WASHINGTON/BEIJING - When US President Donald Trump proposed, in March 2026, that his first major objective ...",
+              "published_date": "2026-11-15",
+              "outlet": "The Sunday Guardian Live on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.vunj3ccTG4pEvM2JdZuC5Q"
+            },
+            {
+              "news_id": "2f37e7783d1c5e90b59882d5f7065ccb",
+              "url": "https://www.msn.com/en-xl/news/other/prince-harry-visits-ukraine-for-war-trauma-conferencepublished-on-november-15-2026-5-35-pm/ar-AA2htqsz?ocid=BingNewsVerp",
+              "headline": "Prince Harry visits Ukraine for war trauma conferencePublished on: November 15, 2026 5:35 PM",
+              "body": "Pakistan, Nov. 15 -- Prince Harry travelled to Ukraine for a major medical conference, continuing his support for people ...",
+              "published_date": "2026-11-15",
+              "outlet": "Daily Times on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.8ZV17F5sNPv9bENvWOjNtA"
             },
             {
               "news_id": "d9b23c2c73ab5415ab2cd55de1301b47",
@@ -23076,6 +23267,24 @@
               "image": "https://www.bing.com/th?id=ONUT.-ngYSkDQuWdoHZ36V81h6g"
             },
             {
+              "news_id": "78b1d3cf24855fc68df7a445b20c891a",
+              "url": "https://www.outlookindia.com/international/ukraine-donbas-nato-membership-us-peace-talks-territorial-withdrawal",
+              "headline": "The Price Of Ukraine’s NATO Ambition: Is Donbas Now On The Table? | Outlook India",
+              "body": "Zelenskyy says US negotiators raised a possible Donbas withdrawal in exchange for NATO membership, but opposition from Russia, legal constraints in Ukraine and NATO’s unanimity rule complicate the idea.",
+              "published_date": "2026-11-15",
+              "outlet": "Outlook India",
+              "image": "https://www.bing.com/th?id=ONUT.0i9KTFYOs1Q1mQ5yehlCQw"
+            },
+            {
+              "news_id": "ba86be9f765b54018b396d2ea9d9c5e8",
+              "url": "https://www.thecommonsense.co.za/Editorials/south-africa-transit-route-russias-war",
+              "headline": "Is South Africa a Transit Route to Russia’s War?",
+              "body": "The arrest of nine Zimbabweans in Gauteng over alleged involvement in the Russia-Ukraine war raises questions about whether South Africa is becoming a...",
+              "published_date": "2026-11-15",
+              "outlet": "thecommonsense",
+              "image": ""
+            },
+            {
               "news_id": "f5650e6a4aca54acbede4aedbfc5287a",
               "url": "https://nypost.com/2026/11/14/world-news/us-floats-nato-membership-for-ukraine-in-exchange-for-giving-up-donbas/",
               "headline": "US floats NATO membership for Ukraine in exchange for giving up Donbas territory",
@@ -23083,6 +23292,24 @@
               "published_date": "2026-11-14",
               "outlet": "New York Post",
               "image": "https://www.bing.com/th?id=ONUT.rwWhIoHlaEjMVt6bXHJ8jA"
+            },
+            {
+              "news_id": "a20f6c23ad755119ba4626896d1d57c5",
+              "url": "https://www.msn.com/en-us/news/world/starshield-restrictions-help-russia-s-energy-attacks-on-ukraine-zelenskyy/ar-AA2htvDC?ocid=BingNewsVerp",
+              "headline": "Starshield restrictions help Russia’s energy attacks on Ukraine: Zelenskyy",
+              "body": "Starlink has recently denied restricting internet speeds, but Elon Musk suggested the US military could be behind it.",
+              "published_date": "2026-11-15",
+              "outlet": "Al Jazeera on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.UozWCV1dgOFKNOQro0nPSg"
+            },
+            {
+              "news_id": "47f89d6fb9b7543593c58ba90785cff3",
+              "url": "https://www.theguardian.com/world/2026/nov/15/ukraine-war-briefing-us-proposes-kyiv-cede-land-to-russia-for-nato-membership-zelenskyy-says",
+              "headline": "Ukraine war briefing: US proposes Kyiv cede land to Russia for Nato membership, Zelenskyy says",
+              "body": "Ukrainian president says Kyiv not ready to concede Donbas but would put idea to a referendum in exchange for security guarantees and funding. What we know on day 1,726",
+              "published_date": "2026-11-15",
+              "outlet": "The Guardian",
+              "image": ""
             }
           ]
         }
@@ -23093,7 +23320,7 @@
       "incident_id": "20260726-IR-CF",
       "tree_id": "13763def03ab448898154124734fe728",
       "canonical_name": "Iran/US war",
-      "summary": "Iran attacked a US radar site in Bahrain using six drones, prompting Bahrain to issue its first public threat alerts since September. President Trump signaled a shift away from both new military strikes and further talks, declaring the US does not need a deal, though experts caution his strategy remains unclear. The conflict also continues to drive oil price volatility and is accelerating Southeast Asia’s shift to renewable energy due to persistent fuel disruptions.",
+      "summary": "Iran attacked a US radar site in Bahrain using six drones, prompting Bahrain to issue its first public threat alerts since September. President Trump signaled a shift away from both new military strikes and further talks, declaring the US does not need a deal, though experts caution his strategy remains unclear. The conflict also continues to drive oil price volatility and is accelerating Southeast Asia’s shift to renewable energy due to persistent fuel disruptions.\nIran launched a drone attack on a US military base in Bahrain, prompting condemnations from Saudi Arabia, Qatar, Jordan, and Egypt, while also indicating it remains open to a deal with the US. The IEA reported that global oil shipments have rebounded to surplus for the first time since the war began, and Iran stated it will seek reparations from regional countries. Yemen's army repositioned troops away from the Bab al-Mandeb Strait amid the continuing tensions.",
       "country": "Iran",
       "iso2": "IR",
       "lat": 32.4,
@@ -23113,10 +23340,14 @@
       "event_date": "2026-07-26",
       "first_reported_date": "2026-07-26",
       "last_updated_date": "2026-11-15",
-      "days_since_event": 112,
+      "days_since_event": 113,
       "source_count": 2,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Iran Conflict latest 2026",
+        "Iran Conflict 2026",
+        "Iran war casualties 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 0,
@@ -23130,7 +23361,34 @@
           "type": "ERCC",
           "label": "ECHO Daily Map of 23 October 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5824",
-          "meta": ""
+          "meta": "",
+          "date": "2026-10-23"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "ECHO Daily Map of 23 October 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5824",
+          "source": "ERCC",
+          "date": "2026-10-23",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Oil Prices Rise Amid Mixed Signals on Iran Conflict",
+          "url": "https://www.gurufocus.com/news/9193457/oil-prices-rise-amid-mixed-signals-on-iran-conflict",
+          "source": "Guru Focus",
+          "date": "2026-11-12T07:09:04+00:00",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Nation States: Eight Lessons From the Iran Conflict of 2026 - The Clay Travis and Buck Sexton Show | iHeart",
+          "url": "https://www.iheart.com/podcast/1119-the-clay-travis-and-buck-57927691/episode/nation-states-eight-lessons-from-the-349910857/",
+          "source": "iHeartRadio",
+          "date": "2026-11-12",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -35265,10 +35523,6 @@
           "published_date": "2026-10-31T23:50:50+00:00"
         },
         {
-          "headline": "America's war with Iran won't end until Washington faces reality",
-          "published_date": "2026-11-01"
-        },
-        {
           "headline": "Khanna says he’d stop funding further US military actions in Iran",
           "published_date": "2026-11-01"
         },
@@ -35290,6 +35544,10 @@
         },
         {
           "headline": "Al Hadath reports Israel preparing for possible renewed Iran fighting within days",
+          "published_date": "2026-11-01"
+        },
+        {
+          "headline": "America's war with Iran won't end until Washington faces reality",
           "published_date": "2026-11-01"
         },
         {
@@ -36885,7 +37143,19 @@
           "published_date": "2026-11-15"
         },
         {
+          "headline": "Bahrain issues first threat alerts since September as Iran says it attacked US base",
+          "published_date": "2026-11-15"
+        },
+        {
+          "headline": "Iran is playing with fire: It told the UN nuclear watchdog it will not discuss inspections while Trump threatens strikes",
+          "published_date": "2026-11-15"
+        },
+        {
           "headline": "Iran targets Bahrain base but says path to US deal is open",
+          "published_date": "2026-11-15"
+        },
+        {
+          "headline": "IRGC outlet says Iran targeted US base in Bahrain",
           "published_date": "2026-11-15"
         },
         {
@@ -36897,11 +37167,23 @@
           "published_date": "2026-11-15"
         },
         {
+          "headline": "Trump keeps signaling an end to Iran war, but expert warns a crucial piece of his strategy is missing",
+          "published_date": "2026-11-15"
+        },
+        {
+          "headline": "Iran Attacks Bahrain as Conflict Escalates",
+          "published_date": "2026-11-15"
+        },
+        {
           "headline": "Iran says it will seek reparations from regional countries",
           "published_date": "2026-11-15"
         },
         {
           "headline": "Iran launches new Bahrain attacks just days after F1 commits to Qatar and Abu Dhabi finales | GRANDE PRÊMIO",
+          "published_date": "2026-11-15"
+        },
+        {
+          "headline": "Iran war accelerates Southeast Asia's renewable energy push",
           "published_date": "2026-11-15"
         },
         {
@@ -36914,30 +37196,6 @@
         },
         {
           "headline": "Iran’s Janfada campaign gives Basij recruitment a patriotic banner",
-          "published_date": "2026-11-15"
-        },
-        {
-          "headline": "Bahrain issues first threat alerts since September as Iran says it attacked US base",
-          "published_date": "2026-11-15"
-        },
-        {
-          "headline": "Iran is playing with fire: It told the UN nuclear watchdog it will not discuss inspections while Trump threatens strikes",
-          "published_date": "2026-11-15"
-        },
-        {
-          "headline": "IRGC outlet says Iran targeted US base in Bahrain",
-          "published_date": "2026-11-15"
-        },
-        {
-          "headline": "Trump keeps signaling an end to Iran war, but expert warns a crucial piece of his strategy is missing",
-          "published_date": "2026-11-15"
-        },
-        {
-          "headline": "Iran Attacks Bahrain as Conflict Escalates",
-          "published_date": "2026-11-15"
-        },
-        {
-          "headline": "Iran war accelerates Southeast Asia's renewable energy push",
           "published_date": "2026-11-15"
         },
         {
@@ -37758,7 +38016,7 @@
         },
         {
           "log_date": "2026-11-15",
-          "summary": "Iran attacked a US radar site in Bahrain using six drones, prompting Bahrain to issue its first public threat alerts since September. President Trump signaled a shift away from both new military strikes and further talks, declaring the US does not need a deal, though experts caution his strategy remains unclear. The conflict also continues to drive oil price volatility and is accelerating Southeast Asia’s shift to renewable energy due to persistent fuel disruptions.",
+          "summary": "Iran attacked a US radar site in Bahrain using six drones, prompting Bahrain to issue its first public threat alerts since September. President Trump signaled a shift away from both new military strikes and further talks, declaring the US does not need a deal, though experts caution his strategy remains unclear. The conflict also continues to drive oil price volatility and is accelerating Southeast Asia’s shift to renewable energy due to persistent fuel disruptions.\nIran launched a drone attack on a US military base in Bahrain, prompting condemnations from Saudi Arabia, Qatar, Jordan, and Egypt, while also indicating it remains open to a deal with the US. The IEA reported that global oil shipments have rebounded to surplus for the first time since the war began, and Iran stated it will seek reparations from regional countries. Yemen's army repositioned troops away from the Bab al-Mandeb Strait amid the continuing tensions.",
           "news": [
             {
               "news_id": "7d5e99bc272d5b38a6d497335f2bebec",
@@ -37770,6 +38028,24 @@
               "image": "https://s.yimg.com/bo/8072ed98-9ef9-5f9e-9851-7c1c6466a959_1794719571578.jpg"
             },
             {
+              "news_id": "3995d241b4ca5532a637ac99958482c6",
+              "url": "https://www.msn.com/en-my/news/other/blasts-in-bahrain-as-iran-claims-attack-on-us-base/ar-AA2ht2pR?ocid=BingNewsVerp",
+              "headline": "Blasts in Bahrain as Iran claims attack on US base",
+              "body": "Sirens sounded and authorities posted several alerts on social media urging residents to seek shelter, their first warnings ...",
+              "published_date": "2026-11-15",
+              "outlet": "Free Malaysia Today on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.GHo32PvJUq5MdPTOxWg9JA"
+            },
+            {
+              "news_id": "c6eea89b63925f3dbe46860f4233e37d",
+              "url": "https://www.theguardian.com/world/live/2026/nov/15/middle-east-crisis-live-iran-bahrain-strikes-gulf-donald-trump-us-israel-yemen-houthis?source=newscura",
+              "headline": "Saudi Arabia, Qatar, Jordan, Egypt condemn Iranian attack on Bahrain - as it happened",
+              "body": "Bahrain lies directly across Persian Gulf from Iran and is home to US Navy Fifth Fleet",
+              "published_date": "2026-11-15",
+              "outlet": "The Guardian",
+              "image": ""
+            },
+            {
               "news_id": "9bd3a76ebdca5c35af31813a8c19aecf",
               "url": "https://finance.yahoo.com/energy/articles/iran-war-accelerates-southeast-asia-200000988.html",
               "headline": "Iran War Accelerates Southeast Asia’s Renewable Energy Push",
@@ -37779,6 +38055,15 @@
               "image": "https://media.zenfs.com/en/oilprice.com/5929c9b51ab7b435c1a0a60325f2f2bd.jpg"
             },
             {
+              "news_id": "aa481ad174a25b698674d15c2f635780",
+              "url": "https://www.aljazeera.com/news/liveblog/2026/11/15/iran-war-live-israel-vows-gaza-offensive-policy-despite-caretaker-status",
+              "headline": "Explosions in Aden; Yemen’s army ‘repositioning’ troops from Bab al-Mandeb",
+              "body": "The army of Yemen's internationally recognised government says it is \"repositioning\" troops away from Bab al-Mandeb",
+              "published_date": "2026-11-15",
+              "outlet": "Al Jazeera",
+              "image": ""
+            },
+            {
               "news_id": "8d9b6d2df4c2501ba1f3e3902c2308be",
               "url": "https://www.sun-sentinel.com/2026/11/14/with-shifting-iran-rhetoric-following-us-elections-trump-leaves-mideast-in-limbo-about-path-ahead/",
               "headline": "With shifting Iran rhetoric following US elections, Trump leaves Mideast in limbo about path ahead",
@@ -37786,6 +38071,24 @@
               "published_date": "2026-11-14",
               "outlet": "Sun Sentinel",
               "image": "https://www.bing.com/th?id=ONUT.tvSr8VtLGLeEC9SOD1_xCw"
+            },
+            {
+              "news_id": "3824882ab390546ca028db96515d04b1",
+              "url": "https://johnmenadue.com/post/2026/11/americas-war-with-iran-wont-end-until-washington-faces-reality/",
+              "headline": "America's war with Iran won't end until Washington faces reality",
+              "body": "The US war has battered Iran without eliminating its regional influence. Further escalation risks deepening the crisis, while diplomacy demands that Washington recognise Tehran as a power it must negotiate with.",
+              "published_date": "2026-11-01",
+              "outlet": "Pearls and Irritations",
+              "image": "https://www.bing.com/th?id=ONUT.IWnHatjaH9GD4-ZsI9VXUA"
+            },
+            {
+              "news_id": "f59b818193d15ae6a9af6f805a4cfa06",
+              "url": "https://www.msn.com/en-us/news/other/us-intel-iran-still-has-up-to-2500-missiles/ar-AA2hukjM?ocid=BingNewsVerp",
+              "headline": "US Intel: Iran Still Has Up to 2,500 Missiles",
+              "body": "US Intel: Iran Still Has Up to 2,500 Missiles ...",
+              "published_date": "2026-11-15",
+              "outlet": "Newsmax on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.Mq2SYduWjuspn1Am-wL2VA"
             },
             {
               "news_id": "69cf7cef69a353d4bb74bef868e548bf",
@@ -37815,6 +38118,15 @@
               "image": "https://media.zenfs.com/en/newsmax_809/ebd9e29b30eca8e873ed81d02dc4a309.jpg"
             },
             {
+              "news_id": "1dd5667bc3aa50b9803fd66f4e53d469",
+              "url": "https://www.stripes.com/theaters/middle_east/2026-11-15/iran-targets-bahrain-base-us-deal-23473000.html",
+              "headline": "Iran targets Bahrain base but says path to US deal is open",
+              "body": "The Islamic Revolutionary Guard Corps launched six drones at the Riffa helicopter base, describing the move as a response to “blatant aggression of the U.S. military.”",
+              "published_date": "2026-11-15",
+              "outlet": "Stars and Stripes",
+              "image": "https://s.yimg.com/bo/3165e8c7-8682-56fb-9a5e-147219b502d4_1794769451589.jpg"
+            },
+            {
               "news_id": "5c0a79f86b66568cb1fb9f5e7fa720f1",
               "url": "https://www.iranintl.com/en/202611150377",
               "headline": "IRGC outlet says Iran targeted US base in Bahrain",
@@ -37822,6 +38134,24 @@
               "published_date": "2026-11-15",
               "outlet": "Iran International",
               "image": "https://www.bing.com/th?id=ONUT.2NbA0HmM4koAJWjlCgZWqA"
+            },
+            {
+              "news_id": "1f86d36145795dd1aeb8f7f392d36879",
+              "url": "https://www.msn.com/en-in/news/other/iran-launches-drone-attack-on-us-base-in-bahrain-amid-rising-tensions/ar-AA2hsvA9?ocid=BingNewsVerp",
+              "headline": "Iran launches drone attack on US base in Bahrain amid rising tensions",
+              "body": "AI-generated illustration BAHRAIN, Nov 15: Iran has launched a drone attack on a military base in Bahrain, targeting a US ...",
+              "published_date": "2026-11-15",
+              "outlet": "Newspoint on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.n1-t2A8Ej93PN4ZMYEUCeg"
+            },
+            {
+              "news_id": "baa4ab507e075c4d96be4ac75df351f3",
+              "url": "https://www.msn.com/en-us/money/economy/global-oil-market-moves-to-surplus-as-persian-gulf-shipments-rebound-iea-says/ar-AA2hrUCg?ocid=BingNewsVerp",
+              "headline": "Global oil market moves to surplus as Persian Gulf shipments rebound, IEA says",
+              "body": "The global oil market is expected to return to a surplus in Q4 for the first time since the Iran war began, as exports from the Middle Eastern recover faster than global demand despite continued ...",
+              "published_date": "2026-11-15",
+              "outlet": "Seeking Alpha on MSN",
+              "image": ""
             },
             {
               "news_id": "a5c13f297e2758fdb05ebcf660ce130a",
@@ -37842,6 +38172,24 @@
               "image": ""
             },
             {
+              "news_id": "cedf9a3a72ca531587b2d397769e1bf1",
+              "url": "https://www.iranintl.com/en/202611157301",
+              "headline": "Iran says it will seek reparations from regional countries",
+              "body": "Iran will pursue reparations from regional countries, the Foreign Ministry spokesman said Sunday, dismissing as baseless a ...",
+              "published_date": "2026-11-15",
+              "outlet": "Iran International",
+              "image": "https://www.bing.com/th?id=ONUT.2NbA0HmM4koAJWjlCgZWqA"
+            },
+            {
+              "news_id": "7d4549421ae4555296116084b16250ae",
+              "url": "https://grandepremio.com/en/f1/iran-attacks-bahrain-again-as-f1-faces-renewed-security-concerns-over-qatar-and-abu-dhabi-races/",
+              "headline": "Iran launches new Bahrain attacks just days after F1 commits to Qatar and Abu Dhabi finales | GRANDE PRÊMIO",
+              "body": "Bahrain intercepted Iranian aerial attacks on Sunday as Tehran claimed to have targeted a US military radar site roughly 110 km from Qatar's Lusail circuit. The escalation comes five days after Formula 1 abandoned its Imola contingency plan.",
+              "published_date": "2026-11-15",
+              "outlet": "grandepremio",
+              "image": "https://www.bing.com/th?id=ONUT.XPLad7jgJX0Ygj_luYN9lA"
+            },
+            {
               "news_id": "617629f696835ccb9e5253713a12ccaf",
               "url": "https://www.msn.com/en-us/news/other/iran-war-accelerates-southeast-asias-renewable-energy-push/ar-AA2hrhZa?ocid=BingNewsVerp",
               "headline": "Iran war accelerates Southeast Asia's renewable energy push",
@@ -37851,6 +38199,24 @@
               "image": "https://www.bing.com/th?id=ONUT.UEpnT3oSMXBIMu4SRb8pLg"
             },
             {
+              "news_id": "81bb8b4cd3db566089e0f87e05dea058",
+              "url": "https://thehill.com/homenews/administration/6221381-pence-vance-midterm-losses/",
+              "headline": "Pence calls Vance ‘wrong’ on Iran war, GOP midterm losses",
+              "body": "Former Vice President Mike Pence said Vice President Vance was “wrong” about attributing the Iran wa...",
+              "published_date": "2026-11-15T16:12:32+00:00",
+              "outlet": "The Hill",
+              "image": "https://s.yimg.com/bo/77112037-ee42-5b63-ace6-295b02a9ec93_1794769085923.jpg"
+            },
+            {
+              "news_id": "21fe6f1f4b3e50899149b1f1aec1eed8",
+              "url": "https://www.yahoo.com/news/world/articles/holt-newsmax-iran-faces-surrender-141009160.html",
+              "headline": "Holt to Newsmax: Iran Faces Surrender, Revolution",
+              "body": "Holt to Newsmax: Iran Faces Surrender, Revolution",
+              "published_date": "2026-11-15",
+              "outlet": "Newsmax · via Yahoo News",
+              "image": "https://media.zenfs.com/en/newsmax_809/ca682df3a93e971bcfb7742e9650b40e.png.cf.jpg"
+            },
+            {
               "news_id": "9940206b37c551c296f1b02aa426ce6d",
               "url": "https://www.gurufocus.com/news/9193457/oil-prices-rise-amid-mixed-signals-on-iran-conflict",
               "headline": "Oil Prices Rise Amid Mixed Signals on Iran Conflict",
@@ -37858,6 +38224,24 @@
               "published_date": "2026-11-12T07:09:04+00:00",
               "outlet": "Guru Focus",
               "image": "https://s.yimg.com/bo/cb5bb6c1-f470-50ac-9e6b-d75eb50d01f5_1793980442767.png.cf.jpg"
+            },
+            {
+              "news_id": "26ddc1e4246c58c793a086d4a07cf28c",
+              "url": "https://www.iranintl.com/en/202611152344",
+              "headline": "Iran leader's aide accuses AIPAC of blocking Hegseth impeachment",
+              "body": "Mohammad Mokhber, an adviser to Iran's supreme leader, accused the pro-Israel lobby AIPAC of derailing the impeachment of US ...",
+              "published_date": "2026-11-15",
+              "outlet": "Iran International",
+              "image": "https://www.bing.com/th?id=ONUT.2NbA0HmM4koAJWjlCgZWqA"
+            },
+            {
+              "news_id": "5d43c60526c15255afdcee1e91e484f8",
+              "url": "https://www.iranintl.com/en/202611151752",
+              "headline": "Iran’s Janfada campaign gives Basij recruitment a patriotic banner",
+              "body": "Iran’s Revolutionary Guards are expanding a campaign built around sacrifice for the homeland into a route for military training and Basij paramilitary recruitment, giving a force associated with decades of domestic repression a broader patriotic appeal.",
+              "published_date": "2026-11-15",
+              "outlet": "Iran International",
+              "image": "https://www.bing.com/th?id=ONUT.dt7klagQuFdwYKKdXS59wQ"
             },
             {
               "news_id": "fe9402471ae85f04a7ba1670e7740318",
@@ -37897,10 +38281,13 @@
       "event_date": "2026-07-27",
       "first_reported_date": "2026-07-27",
       "last_updated_date": "2026-11-14",
-      "days_since_event": 111,
+      "days_since_event": 112,
       "source_count": 8,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Forest Fire latest 2026",
+        "Forest Fire 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 0,
@@ -37914,49 +38301,83 @@
           "type": "ERCC",
           "label": "ECHO Daily Map of 27 July 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5738",
-          "meta": ""
+          "meta": "",
+          "date": "2026-07-27"
         },
         {
           "type": "GDACS",
           "label": "Green alert · Forest Fire Kriti, Greece 2026-07-30",
           "url": "https://www.gdacs.org/report.aspx?eventtype=WF&eventid=1029958",
-          "meta": ""
+          "meta": "",
+          "date": "2026-07-30"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 31 July 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5742",
-          "meta": ""
+          "meta": "",
+          "date": "2026-07-31"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 04 August 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5744",
-          "meta": ""
+          "meta": "",
+          "date": "2026-08-04"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 07 August 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5747",
-          "meta": ""
+          "meta": "",
+          "date": "2026-08-07"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 28 August 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5767",
-          "meta": ""
+          "meta": "",
+          "date": "2026-08-28"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 25 September 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5795",
-          "meta": ""
+          "meta": "",
+          "date": "2026-09-25"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 04 November 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5833",
-          "meta": ""
+          "meta": "",
+          "date": "2026-11-04"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "ECHO Daily Map of 04 November 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5833",
+          "source": "ERCC",
+          "date": "2026-11-04",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Amazon rainforest fires surge as El Niño fuels a dangerous drought",
+          "url": "https://www.earth.com/climate/amazon-rainforest-fires-surge-as-el-nino-fuels-a-dangerous-drought/",
+          "source": "Earth.com",
+          "date": "2026-10-16",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Prabowo Not Planning to Declare Forest Fires as National Disaster: Why?",
+          "url": "https://en.tempo.co/read/2121497/prabowo-not-planning-to-declare-forest-fires-as-national-disaster-why",
+          "source": "Tempo.co English",
+          "date": "2026-10-14T06:50:56+00:00",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -49723,10 +50144,13 @@
       "event_date": "2026-07-30",
       "first_reported_date": "2026-07-30",
       "last_updated_date": "2026-11-15",
-      "days_since_event": 108,
+      "days_since_event": 109,
       "source_count": 1,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Drought latest 2026",
+        "Drought 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 0,
@@ -49740,7 +50164,34 @@
           "type": "ERCC",
           "label": "ECHO Daily Map of 30 July 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5741",
-          "meta": ""
+          "meta": "",
+          "date": "2026-07-30"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "ECHO Daily Map of 30 July 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5741",
+          "source": "ERCC",
+          "date": "2026-07-30",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "El Niño: How South Africans can prepare for drought challenges",
+          "url": "https://www.sapeople.com/weather/el-nino-how-south-africans-can-prepare-for-drought-challenges/",
+          "source": "SAPeople",
+          "date": "2026-11-14",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Rajasthan govt announces ₹9,321 crore drought relief package for affected areas",
+          "url": "https://newsonair.gov.in/rajasthan-govt-announces-₹9321-crore-drought-relief-package-for-affected-areas/",
+          "source": "News On AIR",
+          "date": "2026-11-14",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -53017,10 +53468,13 @@
       "event_date": "2026-08-09",
       "first_reported_date": "2026-08-09",
       "last_updated_date": "2026-11-11",
-      "days_since_event": 98,
+      "days_since_event": 99,
       "source_count": 1,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "India Flood latest 2026",
+        "India Flood 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 0,
@@ -53034,7 +53488,34 @@
           "type": "GDACS",
           "label": "Orange alert · Flood India 2026-08-09",
           "url": "https://www.gdacs.org/report.aspx?eventtype=FL&eventid=1104121",
-          "meta": ""
+          "meta": "",
+          "date": "2026-08-09"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "Orange alert · Flood India 2026-08-09",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=FL&eventid=1104121",
+          "source": "GDACS",
+          "date": "2026-08-09",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Bhutan glacial lake outburst sends floodwaters toward India; Assam, Bengal on high alert",
+          "url": "https://www.financialexpress.com/india-news/bhutan-glacial-lake-outburst-shintaphu-lake-flood-alert-north-bengal-assam-sankosh-river-evacuations/4372818/",
+          "source": "The Financial Express",
+          "date": "2026-10-31T06:15:42+00:00",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Chitrakoot To Kainchi Dham: While Nepal Buries Its Dead, The 'Floods' India Isn't Talking About | Grim Scenes In Videos",
+          "url": "https://www.msn.com/en-in/news/other/chitrakoot-to-kainchi-dham-while-nepal-buries-its-dead-the-floods-india-isnt-talking-about-grim-scenes-in-videos/ar-AA2bog3k?ocid=BingNewsVerp",
+          "source": "News18 on MSN",
+          "date": "2026-09-02",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -53779,10 +54260,13 @@
       "event_date": "2026-08-26",
       "first_reported_date": "2026-08-26",
       "last_updated_date": "2026-11-14",
-      "days_since_event": 81,
+      "days_since_event": 82,
       "source_count": 3,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Nepal Flood latest 2026",
+        "Nepal Flood 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 0,
@@ -53796,19 +54280,48 @@
           "type": "GDACS",
           "label": "Orange alert · Flood Bagmati, Nepal 2026-08-26",
           "url": "https://www.gdacs.org/report.aspx?eventtype=FL&eventid=1104124",
-          "meta": ""
+          "meta": "",
+          "date": "2026-08-26"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 14 September 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5785",
-          "meta": ""
+          "meta": "",
+          "date": "2026-09-14"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 29 September 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5799",
-          "meta": ""
+          "meta": "",
+          "date": "2026-09-29"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "ECHO Daily Map of 29 September 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5799",
+          "source": "ERCC",
+          "date": "2026-09-29",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "APTOPIX Climate COP31 Nepal Flooding",
+          "url": "https://www.goshennews.com/news/national_news/aptopix-climate-cop31-nepal-flooding/image_6ff0f2ad-5339-5c98-8c15-efbb03cb138c.html",
+          "source": "Goshen News",
+          "date": "2026-11-14",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Photo: Nepali rescue teams pull survivors from deadly Himalayan glacial floods -...",
+          "url": "https://www.upi.com/News_Photos/view/upi/8c19a783db78fcbf1d7d220d7f037b99/Nepali-rescue-teams-pull-survivors-from-deadly-Himalayan-glacial-floods/",
+          "source": "UPI",
+          "date": "2026-11-08T20:05:17+00:00",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -59259,10 +59772,13 @@
       "event_date": "2026-09-03",
       "first_reported_date": "2026-09-03",
       "last_updated_date": "2026-11-15",
-      "days_since_event": 73,
+      "days_since_event": 74,
       "source_count": 1,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Palestine Conflict latest 2026",
+        "Palestine Conflict 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 0,
@@ -59276,7 +59792,34 @@
           "type": "ERCC",
           "label": "ECHO Daily Map of 03 September 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5774",
-          "meta": ""
+          "meta": "",
+          "date": "2026-09-03"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "ECHO Daily Map of 03 September 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5774",
+          "source": "ERCC",
+          "date": "2026-09-03",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Palestine | Palestine | Today's latest from Al Jazeera",
+          "url": "https://www.aljazeera.com/where/palestine",
+          "source": "Al Jazeera",
+          "date": "2026-09-01",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "UK accused of ‘silencing’ pro-Palestine voices through entry bans",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/11/13/uk-accused-of-silencing-pro-palestine-voices-through-entry-bans",
+          "source": "Al Jazeera",
+          "date": "2026-11-13",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -63194,7 +63737,7 @@
       "incident_id": "20261008-FR-FL",
       "tree_id": "1469058eb9eb432ea5f73ca1307025e6",
       "canonical_name": "Flood 2026-10-08",
-      "summary": "A canal breach in Shropshire, UK, flooded homes, while a flooded street stranded cars in Wilmington, California. In Colorado, Wolf Creek Pass reopened after flood damage, and in Georgia, the flood emergency was extended as McCaysville lifted curfew and reopened a road to Tennessee. Elsewhere, Kenyans brace for heavy El Niño rains as flood survivors recall losses, Gaza’s humanitarian crisis worsens with heavy rain flooding tents, and Florida communities continue to struggle with flood recovery.\nFlorida floods prompted a chimp sanctuary to use drones for food deliveries, while a Lewis County family displaced by July floods received a new home. Kenya also faces economic strain from El Niño‑driven flood risks, with maize shortages and rising inflation.",
+      "summary": "Flood impacts persist across several regions: in Malaysia, Selangor’s evacuation centres are emptying while Perak sees a rise in victims; the Bay Area was hit by massive waves flooding streets and homes; and Southern Colorado faces a daunting recovery. New developments include Santa Rosa declaring a local emergency for El Niño, a flood watch in New Hampshire, Utah residents raising $200,000 for flood relief, and Brevard County food pantries bracing for ongoing needs.",
       "country": "France",
       "iso2": "FR",
       "lat": 46.2,
@@ -63214,10 +63757,13 @@
       "event_date": "2026-10-08",
       "first_reported_date": "2026-10-08",
       "last_updated_date": "2026-11-15",
-      "days_since_event": 38,
+      "days_since_event": 39,
       "source_count": 2,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Flood latest 2026",
+        "Flood 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 0,
@@ -63231,13 +63777,41 @@
           "type": "ERCC",
           "label": "ECHO Daily Map of 08 October 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5808",
-          "meta": ""
+          "meta": "",
+          "date": "2026-10-08"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 12 November 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5841",
-          "meta": ""
+          "meta": "",
+          "date": "2026-11-12"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "ECHO Daily Map of 12 November 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5841",
+          "source": "ERCC",
+          "date": "2026-11-12",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Evacuation centres empty slowly in Selangor while Perak flood toll rises",
+          "url": "https://www.malaymail.com/news/malaysia/2026/11/15/evacuation-centres-empty-slowly-in-selangor-while-perak-flood-toll-rises/243313",
+          "source": "Malay Mail",
+          "date": "2026-11-15",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "After floods ravaged their town, these Utah women brought neighbors together — and raised $200,000 to help",
+          "url": "https://www.sltrib.com/news/2026/11/14/these-utah-women-raised-200k-help/",
+          "source": "The Salt Lake Tribune",
+          "date": "2026-11-14",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -64628,18 +65202,6 @@
           "published_date": "2026-11-13T07:08:38+00:00"
         },
         {
-          "headline": "Massive waves slam Bay Area coastline as officials warn to stay away",
-          "published_date": "2026-11-14"
-        },
-        {
-          "headline": "Video: Dangerous waves, biggest in a decade, flood Bay Area streets and threaten homes",
-          "published_date": "2026-11-14"
-        },
-        {
-          "headline": "After floods ravaged their town, these Utah women brought neighbors together — and raised $200,000 to help",
-          "published_date": "2026-11-14"
-        },
-        {
           "headline": "Chimp sanctuary delivers an ape’s food by drone amid Florida floods - WXXV News 25",
           "published_date": "2026-11-14"
         },
@@ -64653,6 +65215,18 @@
         },
         {
           "headline": "Humanitarian situation in Gaza worsens amid political deadlock",
+          "published_date": "2026-11-14"
+        },
+        {
+          "headline": "Massive waves slam Bay Area coastline as officials warn to stay away",
+          "published_date": "2026-11-14"
+        },
+        {
+          "headline": "Video: Dangerous waves, biggest in a decade, flood Bay Area streets and threaten homes",
+          "published_date": "2026-11-14"
+        },
+        {
+          "headline": "After floods ravaged their town, these Utah women brought neighbors together — and raised $200,000 to help",
           "published_date": "2026-11-14"
         },
         {
@@ -64937,111 +65511,6 @@
               "published_date": "2026-10-08",
               "outlet": "Pensacola News Journal · via Yahoo News",
               "image": "https://media.zenfs.com/en/pensacola-news-journal/abbf2d218ce7768508608b3c9a6117d1.jpg"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-11-11",
-          "summary": "In Pagosa Springs, Colorado, floodwaters tore a nearly new home from its foundation during the recent flooding. NASA reported that heavy rain in the Southwest rapidly raised water levels in New Mexico’s Navajo Reservoir. Additionally, flood warnings remain in Valley areas, prompting homeowners to check their property’s flood risk.\nFlood risk persists in San Antonio with 1–3 more inches of rain possible. Rescue teams in Nepal continue searching for survivors in mud-filled tunnels. In Florida, an estimated 20,000 buildings were impacted by recent floodwaters. Gaza is assessing damage as floods subside, with charities warning over 940,000 displaced people in flood-prone areas, while Malaysia still hosts 1,325 evacuees in relief centres. Additionally, a lawsuit has been filed over a girl’s death in last year’s Hill Country flood in Texas.",
-          "news": [
-            {
-              "news_id": "55d2add54feb5864850a913eb782e7e8",
-              "url": "https://www.yahoo.com/news/weather-news/articles/pagosa-springs-resident-home-torn-042014111.html",
-              "headline": "Pagosa Springs resident has new home torn from the foundation in recent flooding",
-              "body": "Recovery is underway for many in Pagosa Springs after the recent devastating floods, including one man whose nearly brand-new home was ripped from its foundation by the floodwaters.",
-              "published_date": "2026-11-11",
-              "outlet": "KDVR Denver · via Yahoo News",
-              "image": "https://media.zenfs.com/en/kdvr_denver_articles_499/bbccc803d434e7b36e9b7c55a9b807a0.jpg"
-            },
-            {
-              "news_id": "774c6c1951415e00adacd939aa6520b9",
-              "url": "https://news4sanantonio.com/news/local/live-wet-conditions-and-risk-for-flooding-remains-additional-1-to-3-inches-of-rain-san-antonio-texas-precipitation-flood-steady-showers",
-              "headline": "Flood risk remains with 1-3 more inches of rain possible - share your photos and video",
-              "body": "WOAI NBC News Channel 4 San Antonio provides local news, weather forecasts, traffic updates, investigations, and items of interest in the community, sports and entertainment programming for San Antonio and nearby towns and communities in South Central Texas, including Windcrest, Uvalde, Universal City, Somerset, Seguin, Schertz, San Marcos, Sabinal, Poth, Poteet, Pleasanton, Pearsall, New Braunfels, Live Oak, Kerrville, Hondo, Helotes, Goliad, Fredericksburg, Floresville, Eagle Pass, Devine, Del Rio, Cuero, Crystal City, Converse, Cibolo, Castroville, Carrizo Springs, Boerne, Bandera.",
-              "published_date": "2026-11-09",
-              "outlet": "WOAI News 4 San Antonio",
-              "image": "https://s.yimg.com/bo/dad4b04d-08ed-5282-85e3-d4995fa93bbd_1794226105354.png.cf.jpg"
-            },
-            {
-              "news_id": "de2f9aba9abf5a5f805f6a83a72be021",
-              "url": "https://www.upi.com/News_Photos/view/upi/3df1a3340e5e085adbf51003a7019ff9/Rescue-Teams-and-Army-Race-to-Find-Survivors-Amid-Heavy-Flood-Mud/",
-              "headline": "Photo: Rescue Teams and Army Race to Find Survivors Amid Heavy Flood Mud -...",
-              "body": "Nepali rescue teams and army units continue searching for survivors inside mud-filled tunnels...",
-              "published_date": "2026-11-08T20:06:26+00:00",
-              "outlet": "UPI",
-              "image": "https://s.yimg.com/bo/61a104e9-960c-5569-b1dc-1c5f05f3673a_1788391340443.jpg"
-            },
-            {
-              "news_id": "39c1656dc5f859198402399509f57efd",
-              "url": "https://www.msn.com/en-us/weather/extreme-weather-events/how-much-rain-can-florida-take-recent-rain-bombs-offer-a-troubling-preview/ar-AA2hefNY?ocid=BingNewsVerp",
-              "headline": "How much rain can Florida take? Recent ‘rain bombs' offer a troubling preview",
-              "body": "An estimated 20,000 buildings were impacted by floodwaters last week.",
-              "published_date": "2026-11-11",
-              "outlet": "Miami Herald on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "93522afc5057521f9d8902b46ae1d34b",
-              "url": "https://www.msn.com/en-us/news/other/family-of-beaumont-girl-who-died-in-camp-mystic-flood-sues-camp/ar-AA2heo4A?ocid=BingNewsVerp",
-              "headline": "Family of Beaumont girl who died in Camp Mystic flood sues camp",
-              "body": "The family of Mary Grace Baker, a Beaumont native who died in last year’s Hill Country floods, is suing Camp Mystic and ...",
-              "published_date": "2026-11-11",
-              "outlet": "The Beaumont Enterprise on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.GGls0OcWKoJL7DEBN2NrNw"
-            },
-            {
-              "news_id": "7406ed9e3cd05b8d8358ea1df39099f3",
-              "url": "https://www.msn.com/en-us/news/other/as-gaza-floods-subside-palestinians-assess-human-and-material-damage/ar-AA2hdGef?ocid=BingNewsVerp",
-              "headline": "As Gaza floods subside, Palestinians assess human and material damage",
-              "body": "A deadly sandbank collapse buried families alive in Deir el-Balah, as survivors describe desperate rescue attempts.",
-              "published_date": "2026-11-11",
-              "outlet": "Al Jazeera on MSN",
-              "image": ""
-            },
-            {
-              "news_id": "960e7c3a58d65f9dafc67cb5a3c06a83",
-              "url": "https://www.theguardian.com/global-development/2026/nov/11/thousands-without-shelter-lethal-cold-storm-gaza-israel-tents-displaced-people-flood",
-              "headline": "Thousands without shelter face lethal conditions in storm-hit Gaza as they wait for 150,000 tents",
-              "body": "Charities warn of lack of protection amid health fears for more than 940,000 displaced people living in flood-prone areas",
-              "published_date": "2026-11-11",
-              "outlet": "The Guardian",
-              "image": ""
-            },
-            {
-              "news_id": "bedc388954bb5ffbafbe542e4d90f95d",
-              "url": "https://science.nasa.gov/earth/earth-observatory/water-surges-into-navajo-reservoir/",
-              "headline": "Water Surges Into Navajo Reservoir - NASA Science",
-              "body": "Rounds of heavy rain in the U.S. Southwest flooded rivers and rapidly raised New Mexico’s second-largest reservoir.",
-              "published_date": "2026-11-11",
-              "outlet": "NASA",
-              "image": "https://s.yimg.com/bo/cd842338-aed7-5b2a-afa5-576220c1e680_1794376938368.jpg"
-            },
-            {
-              "news_id": "8b425d56ecea59a69842bd1bb5106b70",
-              "url": "https://www.thestar.com.my/news/nation/2026/11/11/1325-still-at-flood-relief-centres-in-perak-selangor",
-              "headline": "1,325 still at flood relief centres in Perak, Selangor",
-              "body": "KUALA LUMPUR: A total of 1,325 people from 373 families remained at flood relief centres in Perak and Selangor on Wednesday (Nov 11) morning.",
-              "published_date": "2026-11-11",
-              "outlet": "The Star",
-              "image": "https://www.bing.com/th?id=ONUT.Lhm6JAL66jChkGCJLUnnFw"
-            },
-            {
-              "news_id": "3291c102849d57e7b0ea5216449e959a",
-              "url": "https://www.abc15.com/interactive/flood-warnings-remain-as-valley-homeowners-check-property-flood-risk-general-news",
-              "headline": "Flood warnings remain as Valley homeowners check property flood risk General news",
-              "body": "Flood warnings remain after last weekend’s storms. Learn how to check your property’s mapped flood risk, request a free determination and find local floodplain help.",
-              "published_date": "2026-11-05",
-              "outlet": "ABC 15 Phoenix",
-              "image": "https://s.yimg.com/bo/47ff59e3-903e-5257-a964-a7aa68d7b601_1793141142104.png.cf.jpg"
-            },
-            {
-              "news_id": "4e38d69066355eaabcb7ab4e48403fa3",
-              "url": "https://www.msn.com/en-au/weather/general/nepal-tibet-floods-showed-the-need-for-greater-climate-finance-is-the-world-listening/ar-AA2hek2Q?ocid=BingNewsVerp",
-              "headline": "Nepal-Tibet floods showed the need for greater climate finance. Is the world listening?",
-              "body": "Earlier this year, a massive flash flood ripped through Nepalese and Tibetan townships along the Bhote Koshi river system, ...",
-              "published_date": "2026-11-11",
-              "outlet": "The Conversation on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.b-X7i-ADkOk14hp5q-8h8Q"
             }
           ]
         },
@@ -65416,9 +65885,87 @@
               "image": "https://media.zenfs.com/en/when_in_your_state_861/bde3b8a04dffba0420981f56b6a7726c"
             }
           ]
+        },
+        {
+          "log_date": "2026-11-15",
+          "summary": "Flood impacts persist across several regions: in Malaysia, Selangor’s evacuation centres are emptying while Perak sees a rise in victims; the Bay Area was hit by massive waves flooding streets and homes; and Southern Colorado faces a daunting recovery. New developments include Santa Rosa declaring a local emergency for El Niño, a flood watch in New Hampshire, Utah residents raising $200,000 for flood relief, and Brevard County food pantries bracing for ongoing needs.",
+          "news": [
+            {
+              "news_id": "dc7da5e7f9e65533a85ede2ccf83ffde",
+              "url": "https://www.malaymail.com/news/malaysia/2026/11/15/evacuation-centres-empty-slowly-in-selangor-while-perak-flood-toll-rises/243313",
+              "headline": "Evacuation centres empty slowly in Selangor while Perak flood toll rises",
+              "body": "KUALA LUMPUR, Nov 15 —The number of flood victims taking shelter at temporary evacuation centres (PPS) in Selangor has decreased, while in Perak, there was a slight increase as...",
+              "published_date": "2026-11-15",
+              "outlet": "Malay Mail",
+              "image": "https://www.bing.com/th?id=ONUT.RROxIZ9N6hY3QwGWyKNAmw"
+            },
+            {
+              "news_id": "4dca7c048fd15f9a9be3bc1ca2b40094",
+              "url": "https://www.mercurynews.com/2026/11/14/massive-waves-slam-bay-area-coastline-as-officials-warn-to-stay-away/",
+              "headline": "Massive waves slam Bay Area coastline as officials warn to stay away",
+              "body": "In Pacifica, video showed ocean water flooding homes along the coastline and huge sprays of water and foam over a seawall.",
+              "published_date": "2026-11-14",
+              "outlet": "The Mercury News",
+              "image": "https://www.bing.com/th?id=ONUT.MeHuXU-rKIvO0zaA9qkkmQ"
+            },
+            {
+              "news_id": "5752b990ab575748bc663873636f77cb",
+              "url": "https://www.yahoo.com/news/weather-news/articles/video-biggest-waves-decade-hit-190331672.html",
+              "headline": "Video: Dangerous waves, biggest in a decade, flood Bay Area streets and threaten homes",
+              "body": "The Bay Area's highest waves in more than a decade slammed the California coast Saturday, flooding streets, endangering homes and threatening to engulf anyone who got too close.",
+              "published_date": "2026-11-14",
+              "outlet": "San Francisco Chronicle · via Yahoo News",
+              "image": "https://media.zenfs.com/en/san_francisco_chronicle_hearst_178/66548c8299ab5a1c8872dea44581394c.jpg"
+            },
+            {
+              "news_id": "a8178cd9978c5e4e87bf5385d3bc63c2",
+              "url": "https://gazette.com/2026/11/15/after-the-flood-colorado-communities-struggle-with-daunting-recovery/",
+              "headline": "After the flood: Colorado communities struggle with daunting recovery",
+              "body": "Across Southern Colorado, communities are facing obstacles to recovery that could linger for years after the rain finally stops.",
+              "published_date": "2026-11-15",
+              "outlet": "Colorado Springs Gazette",
+              "image": "https://s.yimg.com/bo/8c265c5d-d67c-5818-ac6c-8342cefa7b0e_1794748468289.png.cf.jpg"
+            },
+            {
+              "news_id": "d12dcce83f7451e5bef08c4f17188870",
+              "url": "https://www.pressdemocrat.com/2026/11/15/santa-rosa-local-emergency-el-nino/",
+              "headline": "Santa Rosa declares local emergency as 'Super El Niño' threat looms",
+              "body": "Following neighboring jurisdictions, the emergency declaration gives city officials extra flexibility to mobilize resources, streamline purchases, and seek state or federal aid if needed.",
+              "published_date": "2026-11-15",
+              "outlet": "The Press Democrat",
+              "image": "https://www.bing.com/th?id=ONUT.NbRdVxUPARKAYinnztd0bA"
+            },
+            {
+              "news_id": "cdf9cee66b8f5734b2ac7d22ec5eba19",
+              "url": "https://indepthnh.org/2026/11/15/flood-watch/",
+              "headline": "Flood Watch",
+              "body": "InDepthNH protects independent journalism that holds government accountable to the people. Our investigative reporting ...",
+              "published_date": "2026-11-15",
+              "outlet": "InDepthNH.org",
+              "image": "https://www.bing.com/th?id=ONUT.Oq3WiWVNrMlCCKQ6TqLMag"
+            },
+            {
+              "news_id": "b16f5595bc2a595e83a8f550bca50d2c",
+              "url": "https://www.sltrib.com/news/2026/11/14/these-utah-women-raised-200k-help/",
+              "headline": "After floods ravaged their town, these Utah women brought neighbors together — and raised $200,000 to help",
+              "body": "After devastating floods tore through their southern Utah town, a handful of women stepped up to help their neighbors, and raised ore than $200,000 to help.",
+              "published_date": "2026-11-14",
+              "outlet": "The Salt Lake Tribune",
+              "image": "https://s.yimg.com/bo/78e4f96b-b586-5353-a415-70e0b9fea4f1_1794749907151.jpg"
+            },
+            {
+              "news_id": "1dfb239ead63583c88b516fd225872f7",
+              "url": "https://www.msn.com/en-us/news/other/food-pantries-brace-for-brevard-flood-victims-in-need-of-food-supplies/ar-AA2hsQm7?ocid=BingNewsVerp",
+              "headline": "Food pantries brace for Brevard flood victims in need of food, supplies",
+              "body": "Local food pantries and volunteers are supporting Brevard flood victims while federal aid remains undetermined.",
+              "published_date": "2026-11-15",
+              "outlet": "Florida Today on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.QadrxySkL9T3kXlBY9gdbQ"
+            }
+          ]
         }
       ],
-      "logs_total": 23
+      "logs_total": 24
     },
     {
       "incident_id": "20261008-VU-EQ",
@@ -65444,10 +65991,13 @@
       "event_date": "2026-10-08",
       "first_reported_date": "2026-10-08",
       "last_updated_date": "2026-11-13",
-      "days_since_event": 38,
+      "days_since_event": 39,
       "source_count": 19,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Vanuatu Earthquake latest 2026",
+        "Vanuatu Earthquake 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 19,
@@ -65461,115 +66011,160 @@
           "type": "USGS",
           "label": "M 6.3 - 102 km NE of Norsup, Vanuatu",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u0xi",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-10-08"
         },
         {
           "type": "USGS",
           "label": "M 5.7 - 198 km NW of Port-Olry, Vanuatu",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3ga",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-10-19"
         },
         {
           "type": "USGS",
           "label": "M 5.7 - 203 km WNW of Port-Olry, Vanuatu",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3ge",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-10-19"
         },
         {
           "type": "USGS",
           "label": "M 6.0 - 186 km NW of Port-Olry, Vanuatu",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3bc",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-10-19"
         },
         {
           "type": "USGS",
           "label": "M 5.4 - 196 km NW of Port-Olry, Vanuatu",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3c6",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-10-19"
         },
         {
           "type": "USGS",
           "label": "M 6.3 - 197 km NW of Port-Olry, Vanuatu",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3jl",
-          "meta": "16 km depth"
+          "meta": "16 km depth",
+          "date": "2026-10-20"
         },
         {
           "type": "USGS",
           "label": "M 5.5 - 55 km NNE of Port-Olry, Vanuatu",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4kq",
-          "meta": "194.632 km depth"
+          "meta": "194.632 km depth",
+          "date": "2026-10-24"
         },
         {
           "type": "USGS",
           "label": "M 5.7 - 205 km NW of Port-Olry, Vanuatu",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4ju",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-10-24"
         },
         {
           "type": "USGS",
           "label": "M 6.9 - 197 km WNW of Port-Olry, Vanuatu",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4j2",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-10-24"
         },
         {
           "type": "USGS",
           "label": "M 5.8 - 203 km NW of Port-Olry, Vanuatu",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4jw",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-10-24"
         },
         {
           "type": "USGS",
           "label": "M 6.3 - 170 km NW of Port-Olry, Vanuatu",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4jb",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-10-24"
         },
         {
           "type": "USGS",
           "label": "M 5.8 - 182 km NW of Port-Olry, Vanuatu",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4k6",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-10-24"
         },
         {
           "type": "USGS",
           "label": "M 5.9 - 196 km NW of Port-Olry, Vanuatu",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4lm",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-10-24"
         },
         {
           "type": "USGS",
           "label": "M 6.2 - 21 km E of Port-Olry, Vanuatu",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4rf",
-          "meta": "136.298 km depth"
+          "meta": "136.298 km depth",
+          "date": "2026-10-25"
         },
         {
           "type": "USGS",
           "label": "M 5.8 - 196 km NW of Port-Olry, Vanuatu",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ttfb",
-          "meta": "11 km depth"
+          "meta": "11 km depth",
+          "date": "2026-10-27"
         },
         {
           "type": "USGS",
           "label": "M 6.0 - 214 km NW of Port-Olry, Vanuatu",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ttlm",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-10-28"
         },
         {
           "type": "USGS",
           "label": "M 5.6 - 174 km NW of Port-Olry, Vanuatu",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ttlt",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-10-28"
         },
         {
           "type": "USGS",
           "label": "M 5.5 - 221 km NW of Port-Olry, Vanuatu",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ttld",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-10-28"
         },
         {
           "type": "USGS",
           "label": "M 6.0 - 165 km NW of Port-Olry, Vanuatu",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tupl",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-11-01"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "M 6.0 - 165 km NW of Port-Olry, Vanuatu",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tupl",
+          "source": "USGS",
+          "date": "2026-11-01",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "6.1-magnitude earthquake strikes off Vanuatu coast",
+          "url": "https://report.az/en/other-countries/6-1-magnitude-earthquake-strikes-off-vanuatu-coast",
+          "source": "Report.az",
+          "date": "2026-10-28T06:02:11+00:00",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "6.0-Magnitude Earthquake Strikes off Coast of Vanuatu Islands",
+          "url": "https://qna.org.qa/en/news/news-details?id=60-magnitude-earthquake-strikes-off-coast-of-vanuatu-islands&date=28/10/2026",
+          "source": "Qatar News Agency",
+          "date": "2026-10-28",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -65998,10 +66593,13 @@
       "event_date": "2026-10-08",
       "first_reported_date": "2026-10-08",
       "last_updated_date": "2026-11-10",
-      "days_since_event": 38,
+      "days_since_event": 39,
       "source_count": 13,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Panama Earthquake latest 2026",
+        "Panama Earthquake 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 10,
@@ -66015,79 +66613,118 @@
           "type": "USGS",
           "label": "M 5.5 - west of Macquarie Island",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u0ws",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-10-08"
         },
         {
           "type": "USGS",
           "label": "M 6.6 - 14 km W of Río Grande, Panama",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u19w",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-10-09"
         },
         {
           "type": "USGS",
           "label": "M 5.9 - west of Macquarie Island",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u164",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-10-09"
         },
         {
           "type": "USGS",
           "label": "M 5.5 - 3 km SW of Bajo Corral, Panama",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u18t",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-10-09"
         },
         {
           "type": "USGS",
           "label": "M 5.6 - 13 km WNW of Río Grande, Panama",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2un",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-10-09"
         },
         {
           "type": "USGS",
           "label": "M 5.8 - 1 km S of El Cacao, Panama",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u18x",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-10-09"
         },
         {
           "type": "USGS",
           "label": "M 7.6 - 10 km WSW of Pitaloza Arriba, Panama",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u18k",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-10-09"
         },
         {
           "type": "GDACS",
           "label": "Orange alert · Earthquake M8.0 Herrera, Panama 2026-10-09",
           "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1570339",
-          "meta": ""
+          "meta": "",
+          "date": "2026-10-09"
         },
         {
           "type": "USGS",
           "label": "M 6.0 - 7 km N of La Tronosa, Panama",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u1cf",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-10-10"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 12 October 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5811",
-          "meta": ""
+          "meta": "",
+          "date": "2026-10-12"
         },
         {
           "type": "USGS",
           "label": "M 6.1 - 17 km W of Río Grande, Panama",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u1wn",
-          "meta": "11 km depth"
+          "meta": "11 km depth",
+          "date": "2026-10-12"
         },
         {
           "type": "USGS",
           "label": "M 6.8 - central Mid-Atlantic Ridge",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u214",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-10-13"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 29 October 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5829",
-          "meta": ""
+          "meta": "",
+          "date": "2026-10-29"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "ECHO Daily Map of 29 October 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5829",
+          "source": "ERCC",
+          "date": "2026-10-29",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Panama earthquake LIVE: Tsunami threat issued for Mexico and Colombia after huge tremor",
+          "url": "https://www.express.co.uk/news/world/2256001/panama-earthquake-live-pitaloza-arriba",
+          "source": "Daily Express",
+          "date": "2026-10-09T18:27:45+00:00",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Panama hands over 70 temporary homes after earthquake",
+          "url": "https://ua.news/en/dovkolo-svitu/u-panami-peredali-70-timchasovikh-budinkiv-simiam-pislia-zemletrusu-the-rio-times",
+          "source": "UA.NEWS",
+          "date": "2026-11-09",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -67393,10 +68030,13 @@
       "event_date": "2026-10-10",
       "first_reported_date": "2026-10-10",
       "last_updated_date": "2026-11-13",
-      "days_since_event": 36,
+      "days_since_event": 37,
       "source_count": 1,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Pneumonia Russia update 2026",
+        "Pneumonia Russia 2026"
+      ],
       "sources": {
         "who_don": 1,
         "usgs": 0,
@@ -67410,7 +68050,34 @@
           "type": "WHO",
           "label": "Pneumonia Russia 2026-10-10",
           "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620",
-          "meta": ""
+          "meta": "",
+          "date": "2026-10-10"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "Pneumonia Russia 2026-10-10",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620",
+          "source": "WHO",
+          "date": "2026-10-10",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Donald Trump Admits He's 'Concerned' About Russia's Plague-Like Pneumonia Outbreak",
+          "url": "https://okmagazine.com/p/donald-trump-concerned-russia-plague-pneumonia-outbreak/",
+          "source": "OK! Magazine",
+          "date": "2026-10-06",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Russia reports a worker at a Siberian plague institute got pneumonia from an unknown cause and died",
+          "url": "https://www.boston25news.com/news/local/russia-reports-worker-siberian-plague-institute-got-pneumonia-an-unknown-cause-died/35YGKTPICBDNFEO2H24STNSB7I/",
+          "source": "FOX 25 Boston",
+          "date": "2026-10-05",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -68079,10 +68746,13 @@
       "event_date": "2026-10-11",
       "first_reported_date": "2026-10-11",
       "last_updated_date": "2026-11-11",
-      "days_since_event": 35,
+      "days_since_event": 36,
       "source_count": 2,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Solomon Islands Earthquake latest 2026",
+        "Solomon Islands Earthquake 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 2,
@@ -68096,13 +68766,41 @@
           "type": "USGS",
           "label": "M 6.2 - 79 km SSE of Panguna, Papua New Guinea",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u1kv",
-          "meta": "53.473 km depth"
+          "meta": "53.473 km depth",
+          "date": "2026-10-11"
         },
         {
           "type": "USGS",
           "label": "M 6.4 - 30 km WSW of Lata, Solomon Islands",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tx16",
-          "meta": "17 km depth"
+          "meta": "17 km depth",
+          "date": "2026-11-09"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "M 6.4 - 30 km WSW of Lata, Solomon Islands",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tx16",
+          "source": "USGS",
+          "date": "2026-11-09",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Magnitude 6.4 earthquake jolts Solomon Islands",
+          "url": "https://www.aa.com.tr/en/asia-pacific/magnitude-64-earthquake-jolts-solomon-islands/4116437",
+          "source": "Anadolu Agency",
+          "date": "2026-11-09T06:59:34+00:00",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "6.4 magnitude earthquake strikes Solomon Islands",
+          "url": "https://en.yenisafak.com/world/64-magnitude-earthquake-strikes-solomon-islands-3725343",
+          "source": "en.yenisafak",
+          "date": "2026-11-09",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -68249,10 +68947,13 @@
       "event_date": "2026-10-14",
       "first_reported_date": "2026-10-14",
       "last_updated_date": "2026-11-13",
-      "days_since_event": 32,
+      "days_since_event": 33,
       "source_count": 1,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Severe Weather latest 2026",
+        "Severe Weather 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 0,
@@ -68266,7 +68967,34 @@
           "type": "ERCC",
           "label": "ECHO Daily Map of 14 October 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5816",
-          "meta": ""
+          "meta": "",
+          "date": "2026-10-14"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "ECHO Daily Map of 14 October 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5816",
+          "source": "ERCC",
+          "date": "2026-10-14",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Severe weather possible this afternoon; rain/snow showers overnight into Friday",
+          "url": "https://www.wfmz.com/weather/severe-weather-possible-this-afternoon-rain-snow-showers-overnight-into-friday/article_a00a1eb5-c2f8-4850-8789-499f0c099770.html",
+          "source": "WFMZ Eastern Pennsylvania and Western New Jersey",
+          "date": "2026-11-12",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Severe weather triggers river overflows, evacuations in Italy",
+          "url": "https://www.anews.com.tr/europe/2026/11/12/severe-weather-triggers-river-overflows-evacuations-in-italy",
+          "source": "anews",
+          "date": "2026-11-12",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -70913,7 +71641,7 @@
       "incident_id": "20261022-YE-CF",
       "tree_id": "3461c9a3cac24e1c8d37ad2857791e60",
       "canonical_name": "Conflict 2026-10-22",
-      "summary": "Iran hit back at President Trump's assertion that Tehran has been waging war since 1979, insisting the US cannot evade responsibility for aggression. Fresh missile threats against Saudi Arabia led major airlines to extend flight cancellations through 2027, worsening travel disruptions. Concurrently, Southeast Asian leaders opened their annual summit in Manila, prioritizing the ongoing conflicts' toll on energy costs and regional security.",
+      "summary": "Iran hit back at President Trump's assertion that Tehran has been waging war since 1979, insisting the US cannot evade responsibility for aggression. Fresh missile threats against Saudi Arabia led major airlines to extend flight cancellations through 2027, worsening travel disruptions. Concurrently, Southeast Asian leaders opened their annual summit in Manila, prioritizing the ongoing conflicts' toll on energy costs and regional security.\nIranian strikes on US bases in Bahrain and Houthi advances forcing a Yemeni government retreat from Bab al-Mandeb have escalated Gulf tensions. In Gaza, Israel killed a top Hamas commander, while hundreds of oil spills from boat strikes pose a generational threat to Persian Gulf wildlife. Protests at the ASEAN summit clashed with police, reflecting regional opposition to the conflict and President Trump's visit.",
       "country": "Yemen",
       "iso2": "YE",
       "lat": 15.6,
@@ -70933,10 +71661,13 @@
       "event_date": "2026-10-22",
       "first_reported_date": "2026-10-22",
       "last_updated_date": "2026-11-15",
-      "days_since_event": 24,
+      "days_since_event": 25,
       "source_count": 2,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Conflict latest 2026",
+        "Conflict 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 0,
@@ -70950,13 +71681,41 @@
           "type": "ERCC",
           "label": "ECHO Daily Map of 22 October 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5822",
-          "meta": ""
+          "meta": "",
+          "date": "2026-10-22"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 11 November 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5839",
-          "meta": ""
+          "meta": "",
+          "date": "2026-11-11"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "ECHO Daily Map of 11 November 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5839",
+          "source": "ERCC",
+          "date": "2026-11-11",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "McFarland Speaker Series kicks off with talk on Irish conflict",
+          "url": "https://www.tribtoday.com/news/local-news/2026/11/mcfarland-speaker-series-kicks-off-with-talk-on-irish-conflict/",
+          "source": "Tribune Chronicle",
+          "date": "2026-11-14",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Southeast Asian leaders will call for peaceful resolutions of conflicts. Trump will join final talks - Newsday",
+          "url": "https://www.newsday.com/news/nation/asean-manila-philippines-trump-h46679",
+          "source": "Newsday",
+          "date": "2026-11-14",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -72539,15 +73298,15 @@
           "published_date": "2026-11-15"
         },
         {
+          "headline": "Heritage Foundation's Victoria Coates on Russia-Ukraine talks, Iran war latest and Nvidia scandal",
+          "published_date": "2026-11-15"
+        },
+        {
           "headline": "Protesters clash with police near ASEAN summit over Trump visit, Middle East conflict",
           "published_date": "2026-11-15"
         },
         {
           "headline": "Iranian strikes on US bases in Bahrain escalate Gulf tensions",
-          "published_date": "2026-11-15"
-        },
-        {
-          "headline": "Heritage Foundation's Victoria Coates on Russia-Ukraine talks, Iran war latest and Nvidia scandal",
           "published_date": "2026-11-15"
         },
         {
@@ -73083,8 +73842,17 @@
         },
         {
           "log_date": "2026-11-15",
-          "summary": "Iran hit back at President Trump's assertion that Tehran has been waging war since 1979, insisting the US cannot evade responsibility for aggression. Fresh missile threats against Saudi Arabia led major airlines to extend flight cancellations through 2027, worsening travel disruptions. Concurrently, Southeast Asian leaders opened their annual summit in Manila, prioritizing the ongoing conflicts' toll on energy costs and regional security.",
+          "summary": "Iran hit back at President Trump's assertion that Tehran has been waging war since 1979, insisting the US cannot evade responsibility for aggression. Fresh missile threats against Saudi Arabia led major airlines to extend flight cancellations through 2027, worsening travel disruptions. Concurrently, Southeast Asian leaders opened their annual summit in Manila, prioritizing the ongoing conflicts' toll on energy costs and regional security.\nIranian strikes on US bases in Bahrain and Houthi advances forcing a Yemeni government retreat from Bab al-Mandeb have escalated Gulf tensions. In Gaza, Israel killed a top Hamas commander, while hundreds of oil spills from boat strikes pose a generational threat to Persian Gulf wildlife. Protests at the ASEAN summit clashed with police, reflecting regional opposition to the conflict and President Trump's visit.",
           "news": [
+            {
+              "news_id": "bd9427263e0758b7a5899db8ce05189a",
+              "url": "https://www.motherjones.com/environment/2026/11/trump-iran-war-environment-effects-oil-spills-persian-gulf-wildlife-birds-fish-wildlife-threat/",
+              "headline": "Trump’s war poses a “generational threat” to wildlife in the Persian Gulf",
+              "body": "Since the hostilities began in February, boat strikes have resulted in hundreds of oil spills.",
+              "published_date": "2026-11-15",
+              "outlet": "Mother Jones",
+              "image": "https://www.bing.com/th?id=ONUT.uzDhVTWvVXTWSoBt7jEXfg"
+            },
             {
               "news_id": "87ae998c460e5e528ed0b0aa3b4d652a",
               "url": "https://dailypost.ng/2026/11/14/russia-ukraine-war-us-offers-ukraine-nato-membership-for-surrendering-donbas-zelensky/",
@@ -73093,6 +73861,15 @@
               "published_date": "2026-11-14",
               "outlet": "Daily Post Nigeria",
               "image": ""
+            },
+            {
+              "news_id": "642068f6ebdf5aeb840d0e7b8872a499",
+              "url": "https://www.orlandosentinel.com/2026/11/15/israel-kills-a-top-hamas-commander-as-jordan-sentences-3-in-church-attack-and-other-mideast-news/",
+              "headline": "Israel kills a top Hamas commander as Jordan sentences 3 in church attack, and other Mideast news",
+              "body": "By The Associated Press Israeli forces killed a top commander of the militant Hamas group in an overnight airstrike on southern Gaza, Israel said Sunday. In Jordan, three men were sentenced to death for a deadly shooting last month at a…",
+              "published_date": "2026-11-15",
+              "outlet": "Orlando Sentinel",
+              "image": "https://www.bing.com/th?id=ONUT.eiFhkYDxv92UdOugMiOJTg"
             },
             {
               "news_id": "f12ee905c7a8527798d05d698a6af8ef",
@@ -73122,6 +73899,15 @@
               "image": "https://image.cnbcfm.com/api/v1/image/108547407-17943136831794313679-49551049620-1080pnbcnews.jpg?v=1794313681&w=750&h=422&vtcrop=y"
             },
             {
+              "news_id": "6a19db69ee7f5fd396f3399272805295",
+              "url": "https://www.msn.com/en-ph/news/other/protesters-clash-with-police-near-asean-summit-over-trump-visit-middle-east-conflict/ar-AA2htud2?ocid=BingNewsVerp",
+              "headline": "Protesters clash with police near ASEAN summit over Trump visit, Middle East conflict",
+              "body": "Hundreds of protesters, denouncing the expected visit of US President Donald Trump and the conflict in the Middle East, clashed with police as they marched towards the venue of the ASEAN leaders' ...",
+              "published_date": "2026-11-15",
+              "outlet": "ABS-CBN on MSN",
+              "image": ""
+            },
+            {
               "news_id": "896d96dfd093588b95b49e97db1f5d02",
               "url": "https://www.yahoo.com/news/world/articles/ukraine-war-latest-large-scale-191544195.html",
               "headline": "Ukraine war latest: 'Large-scale' prisoner exchange agreed as 2nd day of Abu Dhabi talks concludes, Umerov says",
@@ -73129,6 +73915,15 @@
               "published_date": "2026-11-11",
               "outlet": "Yahoo",
               "image": "https://s.yimg.com/lo/mysterio/api/1302266d429f73c1d9a5e383c50f53e3a59b0125427b84317e649adb6de00f36/lightyear_networkapi/resizefill_w976;quality_80;format_webp/https://media.zenfs.com/en/kyiv_independent_articles_496/37d077142069e6d1dffc6460ad121a56.jpg"
+            },
+            {
+              "news_id": "979ab9c8df715d5ea84ae6413d182719",
+              "url": "https://www.businessday.co.za/world/middle-east/2026-11-15-iran-resumes-attacks-amid-uncertainty-over-deal-to-end-conflict/",
+              "headline": "Iranian strikes on US bases in Bahrain escalate Gulf tensions",
+              "body": "Yemeni government retreats from Bab al-Mandeb as Houthi forces advance",
+              "published_date": "2026-11-15",
+              "outlet": "Sasfin Bank",
+              "image": "https://www.bing.com/th?id=ONUT.9B0bJtMCZsbrw1ci6oTP2Q"
             },
             {
               "news_id": "0206fd6999d3528e9e69772d9160c07e",
@@ -73231,10 +74026,13 @@
       "event_date": "2026-10-24",
       "first_reported_date": "2026-10-24",
       "last_updated_date": "2026-11-08",
-      "days_since_event": 22,
+      "days_since_event": 23,
       "source_count": 8,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Japan Earthquake latest 2026",
+        "Japan Earthquake 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 8,
@@ -73248,49 +74046,83 @@
           "type": "USGS",
           "label": "M 7.0 - Bonin Islands, Japan region",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pt26298050",
-          "meta": "473 km depth"
+          "meta": "473 km depth",
+          "date": "2026-10-24"
         },
         {
           "type": "USGS",
           "label": "M 7.0 - Bonin Islands, Japan region",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pt26297050",
-          "meta": "473 km depth"
+          "meta": "473 km depth",
+          "date": "2026-10-24"
         },
         {
           "type": "USGS",
           "label": "M 6.5 - Bonin Islands, Japan region",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4r9",
-          "meta": "492.376 km depth"
+          "meta": "492.376 km depth",
+          "date": "2026-10-25"
         },
         {
           "type": "USGS",
           "label": "M 5.5 - 5 km ESE of Asahi, Japan",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ttpe",
-          "meta": "41.356 km depth"
+          "meta": "41.356 km depth",
+          "date": "2026-10-28"
         },
         {
           "type": "USGS",
           "label": "M 6.0 - 58 km SSE of Shima, Japan",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tuku",
-          "meta": "352.449 km depth"
+          "meta": "352.449 km depth",
+          "date": "2026-10-31"
         },
         {
           "type": "USGS",
           "label": "M 6.1 - 144 km SE of Hasaki, Japan",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000twg9",
-          "meta": "29 km depth"
+          "meta": "29 km depth",
+          "date": "2026-11-06"
         },
         {
           "type": "USGS",
           "label": "M 5.5 - 74 km NE of Hasaki, Japan",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000twrq",
-          "meta": "31.748 km depth"
+          "meta": "31.748 km depth",
+          "date": "2026-11-07"
         },
         {
           "type": "USGS",
           "label": "M 5.5 - 10 km NW of Hamakita, Japan",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000twt0",
-          "meta": "38.081 km depth"
+          "meta": "38.081 km depth",
+          "date": "2026-11-07"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "M 5.5 - 74 km NE of Hasaki, Japan",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000twrq",
+          "source": "USGS",
+          "date": "2026-11-07",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Japan Earthquake LIVE: Powerful 6.3 Magnitude Quake Strikes Japan’s Bonin Islands Region | WION",
+          "url": "https://www.military-stuff.org/japan-earthquake-live-powerful-6-3-magnitude-quake-strikes-japans-bonin-islands-region-wion/",
+          "source": "military-stuff",
+          "date": "2026-10-25",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Strong and deep M6.5 earthquake hits Bonin Islands, Japan region",
+          "url": "https://watchers.news/2026/10/25/strong-and-deep-m6-5-earthquake-hits-bonin-islands-japan-region/",
+          "source": "The Watchers",
+          "date": "2026-10-25",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -73858,10 +74690,13 @@
       "event_date": "2026-10-26",
       "first_reported_date": "2026-10-26",
       "last_updated_date": "2026-11-15",
-      "days_since_event": 20,
+      "days_since_event": 21,
       "source_count": 3,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "India Tropical Cyclone latest 2026",
+        "India Tropical Cyclone 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 0,
@@ -73875,19 +74710,48 @@
           "type": "GDACS",
           "label": "Orange alert · Tropical Cyclone TWO-26 India 2026-10-26",
           "url": "http://www.gdacs.org/report.aspx?eventtype=TC&eventid=1001345",
-          "meta": ""
+          "meta": "",
+          "date": "2026-10-26"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 27 October 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5826",
-          "meta": ""
+          "meta": "",
+          "date": "2026-10-27"
         },
         {
           "type": "GDACS",
           "label": "Green alert · Tropical Cyclone FOUR-26 India 2026-11-01",
           "url": "http://www.gdacs.org/report.aspx?eventtype=TC&eventid=1001346",
-          "meta": ""
+          "meta": "",
+          "date": "2026-11-01"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "Green alert · Tropical Cyclone FOUR-26 India 2026-11-01",
+          "url": "http://www.gdacs.org/report.aspx?eventtype=TC&eventid=1001346",
+          "source": "GDACS",
+          "date": "2026-11-01",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Climate change increased tropical Cyclone Arnab's damage by 33 per cent: Study",
+          "url": "https://www.mid-day.com/lifestyle/nature-and-wildlife/article/climate-change-increased-tropical-cyclone-arnabs-damage-by-33-per-cent-study-23659303",
+          "source": "Mid-Day",
+          "date": "2026-11-10",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Cyclone Arnab Latest News, Cyclone Arnab Top Stories, Updates, Photos, Videos - India Today",
+          "url": "https://www.indiatoday.in/topic/cyclone-arnab",
+          "source": "India Today",
+          "date": "2019-09-12",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -75109,7 +75973,7 @@
       "event_date": "2026-10-30",
       "first_reported_date": "2026-10-30",
       "last_updated_date": "2026-11-15",
-      "days_since_event": 16,
+      "days_since_event": 17,
       "source_count": 2,
       "should_report": false,
       "search_keys": [],
@@ -75126,13 +75990,41 @@
           "type": "ERCC",
           "label": "ECHO Daily Map of 30 October 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5831",
-          "meta": ""
+          "meta": "",
+          "date": "2026-10-30"
         },
         {
           "type": "ERCC",
           "label": "ECHO Daily Map of 10 November 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5838",
-          "meta": ""
+          "meta": "",
+          "date": "2026-11-10"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "ECHO Daily Map of 10 November 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5838",
+          "source": "ERCC",
+          "date": "2026-11-10",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Ebola outbreak remains out of control in Congo 6 months into response",
+          "url": "https://www.wsbradio.com/news/health/ebola-outbreak/ISSITMR7PA6UFJDQHZFWMA56II/",
+          "source": "WSB Radio",
+          "date": "2026-11-15",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "CAF Awards 2026: Everything to Know About the Ceremony, Nominees and Date",
+          "url": "https://www.moroccoworldnews.com/2026/11/345811/caf-awards-2026-everything-to-know-about-the-ceremony-nominees-and-date/",
+          "source": "Morocco World News",
+          "date": "2026-11-10",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -75221,10 +76113,13 @@
       "event_date": "2026-11-02",
       "first_reported_date": "2026-11-02",
       "last_updated_date": "2026-11-12",
-      "days_since_event": 13,
+      "days_since_event": 14,
       "source_count": 1,
       "should_report": false,
-      "search_keys": [],
+      "search_keys": [
+        "Shamonda France update 2026",
+        "Shamonda France 2026"
+      ],
       "sources": {
         "who_don": 1,
         "usgs": 0,
@@ -75238,7 +76133,34 @@
           "type": "WHO",
           "label": "Shamonda France 2026-11-02",
           "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON623",
-          "meta": ""
+          "meta": "",
+          "date": "2026-11-02"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "Shamonda France 2026-11-02",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON623",
+          "source": "WHO",
+          "date": "2026-11-02",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Shamonda virus: What are the risks for humans?",
+          "url": "https://www.agriland.co.uk/farming-news/shamonda-virus-what-are-the-risks-for-humans/",
+          "source": "Agriland",
+          "date": "2026-11-08",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "WHO Urges Testing to Confirm Infections with New COVID-19 Variant PJ.2.1",
+          "url": "https://en.tempo.co/read/2123259/who-urges-testing-to-confirm-infections-with-new-covid-19-variant-pj-2-1",
+          "source": "Tempo.co English",
+          "date": "2026-11-09T23:02:20+00:00",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -75331,10 +76253,13 @@
       "event_date": "2026-11-05",
       "first_reported_date": "2026-11-05",
       "last_updated_date": "2026-11-11",
-      "days_since_event": 10,
+      "days_since_event": 11,
       "source_count": 1,
       "should_report": false,
-      "search_keys": [],
+      "search_keys": [
+        "Tsunami latest 2026",
+        "Tsunami 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 0,
@@ -75348,7 +76273,34 @@
           "type": "ERCC",
           "label": "ECHO Daily Map of 05 November 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5834",
-          "meta": ""
+          "meta": "",
+          "date": "2026-11-05"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "ECHO Daily Map of 05 November 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5834",
+          "source": "ERCC",
+          "date": "2026-11-05",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "UNESCO warns there’s close to a 100% chance of a Mediterranean tsunami",
+          "url": "https://www.sciencedaily.com/releases/2026/09/260910022149.htm",
+          "source": "Science Daily",
+          "date": "2026-11-08",
+          "reason": "News"
+        },
+        {
+          "kind": "news",
+          "label": "Greece holiday island loved by Brits issued scary ‘tsunami' warning - ‘must prepare'",
+          "url": "https://www.msn.com/en-gb/news/other/greece-holiday-island-loved-by-brits-issued-scary-tsunami-warning-must-prepare/ar-AA2h3khC?ocid=BingNewsVerp",
+          "source": "Daily Express on MSN",
+          "date": "2026-11-10",
+          "reason": "News"
         }
       ],
       "physical": {
@@ -75409,10 +76361,12 @@
       "event_date": "2026-11-06",
       "first_reported_date": "2026-11-06",
       "last_updated_date": "2026-11-14",
-      "days_since_event": 9,
+      "days_since_event": 10,
       "source_count": 1,
       "should_report": false,
-      "search_keys": [],
+      "search_keys": [
+        "Yellow fever update 2026"
+      ],
       "sources": {
         "who_don": 1,
         "usgs": 0,
@@ -75426,7 +76380,34 @@
           "type": "WHO",
           "label": "Yellow fever Burkina Faso 2026-11-06",
           "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON624",
-          "meta": ""
+          "meta": "",
+          "date": "2026-11-06"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "Yellow fever Burkina Faso 2026-11-06",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON624",
+          "source": "WHO",
+          "date": "2026-11-06",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "CDC Travel Health Notices: Key Outbreak Alerts for Clinicians",
+          "url": "https://www.emjreviews.com/microbiology-infectious-diseases/news/cdc-travel-health-notices-key-outbreak-alerts-for-clinicians/",
+          "source": "European Medical Journal",
+          "date": "2026-11-14",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Infection Outbreak Triggers Level 2 CDC Travel Alert",
+          "url": "https://travel.yahoo.com/advice/safety/articles/infection-outbreak-triggers-level-2-040300625.html;_ylt=A2RRDsn7W_lq6QIAlcPQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzEEdnRpZAMEc2VjA3Ny",
+          "source": "Travel Host · via Yahoo News",
+          "date": "2026-11-12",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -75515,10 +76496,13 @@
       "event_date": "2026-11-10",
       "first_reported_date": "2026-11-10",
       "last_updated_date": "2026-11-11",
-      "days_since_event": 5,
+      "days_since_event": 6,
       "source_count": 1,
       "should_report": false,
-      "search_keys": [],
+      "search_keys": [
+        "Guatemala Earthquake latest 2026",
+        "Guatemala Earthquake 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 1,
@@ -75532,7 +76516,34 @@
           "type": "USGS",
           "label": "M 5.6 - 43 km S of Puerto San José, Guatemala",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txb8",
-          "meta": "35 km depth"
+          "meta": "35 km depth",
+          "date": "2026-11-10"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "M 5.6 - 43 km S of Puerto San José, Guatemala",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txb8",
+          "source": "USGS",
+          "date": "2026-11-10",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "5.6-Magnitude Earthquake Strikes off Coast of Guatemala",
+          "url": "https://qna.org.qa/en/news/news-details?id=56-magnitude-earthquake-strikes-off-coast-of-guatemala&date=11/11/2026",
+          "source": "Qatar News Agency",
+          "date": "2026-11-11",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "Strong earthquake shakes Guatemala/ Tremors felt as far as Nicaragua and El Salvador",
+          "url": "https://www.cna.al/english/kosova-bota/i-i-forte-shkund-guatemalen--ndihen-deri-ne-nikaragua-i479663",
+          "source": "CNA",
+          "date": "2026-11-10",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -75745,13 +76756,13 @@
       "incident_id": "20261113-XX-SW",
       "tree_id": "5f60e62071f246e085d621d269c4f3e3",
       "canonical_name": "Severe Weather 2026-11-13",
-      "summary": "The National Weather Service is surveying storm damage in New Castle County, Delaware, and Burlington County, New Jersey. A tornado in Chesterfield has been rated EF-1 with 100 mph winds. Additionally, hail piled up like snow near Philadelphia, leaving drivers stranded and requiring cleanup crews.",
+      "summary": "In Texas, severe thunderstorms led to possible flight ground stops at Houston airports and forced the Austin Championship golf tournament to start early on Sunday to avoid storms. Additionally, school districts in the Rio Grande Valley began implementing backup graduation plans in response to the severe weather.",
       "country": "",
       "iso2": "XX",
       "lat": null,
       "lon": null,
       "country_group": "C",
-      "region": "Europe",
+      "region": "Unknown",
       "incident_type": "Severe Weather",
       "incident_category": "Natural",
       "is_disease": false,
@@ -75765,10 +76776,13 @@
       "event_date": "2026-11-13",
       "first_reported_date": "2026-11-13",
       "last_updated_date": "2026-11-15",
-      "days_since_event": 2,
+      "days_since_event": 3,
       "source_count": 1,
       "should_report": false,
-      "search_keys": [],
+      "search_keys": [
+        "Severe Weather latest 2026",
+        "Severe Weather 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 0,
@@ -75782,7 +76796,34 @@
           "type": "ERCC",
           "label": "ECHO Daily Map of 13 November 2026",
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5842",
-          "meta": ""
+          "meta": "",
+          "date": "2026-11-13"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "ECHO Daily Map of 13 November 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5842",
+          "source": "ERCC",
+          "date": "2026-11-13",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Valley schools announce backup graduation plans in case of severe weather",
+          "url": "https://www.krgv.com/news/valley-schools-announce-backup-graduation-plans-in-case-of-severe-weather/",
+          "source": "KRGV Rio Grande Valley",
+          "date": "2026-11-15",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "AccuWeather Alert: Severe storms to be followed by colder air",
+          "url": "https://6abc.com/videoClip/20036779/",
+          "source": "WPVI 6abc Philadelphia",
+          "date": "2026-11-12",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -76011,9 +77052,204 @@
               "image": "https://www.bing.com/th?id=ONUT.sIcxS77-usgEExb3JU7gsw"
             }
           ]
+        },
+        {
+          "log_date": "2026-11-15",
+          "summary": "In Texas, severe thunderstorms led to possible flight ground stops at Houston airports and forced the Austin Championship golf tournament to start early on Sunday to avoid storms. Additionally, school districts in the Rio Grande Valley began implementing backup graduation plans in response to the severe weather.",
+          "news": [
+            {
+              "news_id": "48dadb0a739e54d4a52ceb37454d9acc",
+              "url": "https://www.yahoo.com/news/weather-news/articles/towering-40-foot-waves-slam-192816060.html",
+              "headline": "'DO NOT GO TO THE BEACH': Weather service now warns Bay Area waves could top 60 feet",
+              "body": "A hurricane-strength system could make the Bay Area coast exceptionally dangerous.",
+              "published_date": "2026-11-12",
+              "outlet": "SFGate · via Yahoo News",
+              "image": "https://media.zenfs.com/en/sfgate_hearst_151/40abf27f3c0416fe90724ed78bf9e1df.jpg"
+            },
+            {
+              "news_id": "13cdd94648f4572abe504a2468cc6c8e",
+              "url": "https://www.nbcwashington.com/weather/storm-team4-forecast-evening-weather-nov-13-2026/4183148/",
+              "headline": "Storm Team4 Forecast: Evening weather, Nov. 13, 2026",
+              "body": "Storm Team4 has the weather forecast for D.C., Maryland and Northern Virginia.",
+              "published_date": "2026-11-14",
+              "outlet": "NBC Washington",
+              "image": "https://s.yimg.com/bo/8c478c07-a4ea-5111-985c-e14a940113d1_1794633129610.jpg"
+            },
+            {
+              "news_id": "c4f1b1d4601c5c32abd24542e07d28e6",
+              "url": "https://www.msn.com/en-us/news/other/san-mateo-countys-temporary-shelter-opening-may-be-just-in-time-for-storms/ar-AA2htzaf?ocid=BingNewsVerp",
+              "headline": "San Mateo County's temporary shelter opening may be just in time for storms",
+              "body": "San Mateo County will open more temporary shelter for homeless people and families when severe weather is forecast, starting ...",
+              "published_date": "2026-11-15",
+              "outlet": "Local News Matters on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.bee391e0615fb8df984918ed0d83c54b"
+            },
+            {
+              "news_id": "14c0e78693385c98ad3e6068d98846fd",
+              "url": "https://www.indiatvnews.com/news/india/after-arnab-and-murasu-cyclone-akvan-approaches-bay-of-bengal-imd-issues-fresh-warning-2026-11-15-1059494",
+              "headline": "After Arnab and Murasu, Cyclone Akvan approaches Bay of Bengal, IMD issues fresh warning",
+              "body": "Cyclone Akvan is likely to form over the central Bay of Bengal by November 16, according to the IMD. Wind speeds could reach ...",
+              "published_date": "2026-11-12T07:02:57+00:00",
+              "outlet": "India TV News",
+              "image": "https://www.bing.com/th?id=ONUT.FN1C_uQ2VBF68brQLIVAng"
+            },
+            {
+              "news_id": "b32e2bbf12bc5cbab90b501998ba1009",
+              "url": "https://www.wishtv.com/news/strong-thunderstorms-possible-this-afternoon-before-cold-front-sweeps-through-central-indiana-nov-11-2026/",
+              "headline": "Strong thunderstorms possible this afternoon before cold front sweeps through Central Indiana | Nov. 11, 2026",
+              "body": "Severe thunderstorms are forecasted as a cold front brings colder air and potential Friday morning snowflakes to central Indiana.",
+              "published_date": "2026-11-11",
+              "outlet": "WISH-TV Indianapolis",
+              "image": "https://s.yimg.com/bo/c3eca2d7-8899-5bac-804f-365aca4371aa_1794396270797.jpg"
+            },
+            {
+              "news_id": "a22dc10c18ac54a4ae268d56a5ad7112",
+              "url": "https://snowreport.co.za/south-africa-weather-forecast-16-november-2026/",
+              "headline": "MONDAY WEATHER: Three wind warnings and the severe thunderstorm warnings continue",
+              "body": "Detailed forecast and maps on our website",
+              "published_date": "2026-11-15",
+              "outlet": "snowreport",
+              "image": "https://www.bing.com/th?id=ONUT.ov7Bz09s3tAJ7VL_TL_TzA"
+            },
+            {
+              "news_id": "b6831ff81b6e53ac9f00df8178faee9f",
+              "url": "https://www.msn.com/en-in/news/other/imd-predicts-severe-cyclonic-storm-forming-in-bay-of-bengal-by-nov-17/ar-AA2ht1Mz?ocid=BingNewsVerp",
+              "headline": "IMD predicts severe cyclonic storm forming in Bay of Bengal by Nov 17",
+              "body": "The IMD has forecast that a depression over the Bay of Bengal will intensify into a cyclonic storm by November 16 and a ...",
+              "published_date": "2026-11-15",
+              "outlet": "Asianet Newsable on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.ObUkgFYfDO0PNznyYlkocQ"
+            },
+            {
+              "news_id": "fdd54cec2d3753d195ffa4d8422af10a",
+              "url": "https://www.rustourismnews.com/2026/11/15/houston-bush-and-hobby-airports-face-possible-flight-ground-stops/",
+              "headline": "Houston Bush and Hobby Airports Face Possible Flight Ground Stops",
+              "body": "Houston Bush and Hobby airports face possible FAA ground stops on November 15 as thunderstorms threaten flights during the US aviation recovery.",
+              "published_date": "2026-11-15",
+              "outlet": "Rustourismnews.com",
+              "image": "https://www.bing.com/th?id=ONUT.qxinLr4emCSqElhrzyVgCg"
+            },
+            {
+              "news_id": "3c88d2d14af75272bdd1e9d8a7c0fc11",
+              "url": "https://www.abc.net.au/news/2026-11-14/cape-york-town-of-weipa-breaks-weather-records-in-prolonged-heat/107384870",
+              "headline": "More records set in Queensland as heatwave set to enter fourth week",
+              "body": "A Queensland town has sweated through 39 consecutive days above 36 degrees Celsius and has recorded its highest-ever November temperature.",
+              "published_date": "2026-11-14",
+              "outlet": "ABC (Australian Broadcasting Corporation)",
+              "image": "https://www.bing.com/th?id=ONUT.MLbnrGtUEtqxs0adYeHcdQ"
+            },
+            {
+              "news_id": "36c36ff125aa5a7b81911d4a237c6c19",
+              "url": "https://www.krgv.com/news/valley-schools-announce-backup-graduation-plans-in-case-of-severe-weather/",
+              "headline": "Valley schools announce backup graduation plans in case of severe weather",
+              "body": "Severe weather across the Rio Grande Valley forces local school districts to activate indoor backup plans and alternative schedules for 2026 graduation ceremonies.",
+              "published_date": "2026-11-15",
+              "outlet": "KRGV Rio Grande Valley",
+              "image": "https://s.yimg.com/bo/54351feb-d380-5b3c-8ea8-47868103650f_1794732913475.jpg"
+            },
+            {
+              "news_id": "9e0b13f6686a5a3c80796467a008961b",
+              "url": "https://www.newindianexpress.com/india/2026/Nov/14/bay-of-bengal-system-likely-to-intensify-into-cyclone-by-november-16-says-imd",
+              "headline": "Bay of Bengal system likely to intensify into cyclone by November 16, says IMD",
+              "body": "The low-pressure area over the Southeast Bay of Bengal has intensified into a well-marked low-pressure system and is likely to develop into a depression within",
+              "published_date": "2026-11-14",
+              "outlet": "The New Indian Express",
+              "image": "https://www.bing.com/th?id=ONUT.EJgTjACS07Y7uLN9ju1s1g"
+            },
+            {
+              "news_id": "6907c31077ed5f7299994a983ddbc8ec",
+              "url": "https://nypost.com/2026/11/14/us-news/massive-wave-damages-capitola-wharf-as-evacuation-warning-issued/",
+              "headline": "Dramatic moment freak wave bursts through California pier as powerful tides flood streets",
+              "body": "See the scary moment a freak wave wrecked a pier railing in the Northern California city of Capitola.",
+              "published_date": "2026-11-14",
+              "outlet": "New York Post",
+              "image": "https://www.bing.com/th?id=ONUT.8PQvRoiOhN6TFDPNcIxF4Q"
+            },
+            {
+              "news_id": "4a66f76bd89b5483b427f3124c61c380",
+              "url": "https://www.newsweek.com/california-beaches-close-as-35-foot-waves-hit-amid-powerful-el-nino-12715373",
+              "headline": "California beaches close as 35-foot waves hit amid powerful El Niño",
+              "body": "The City of Santa Cruz closed the city’s beaches and the Santa Cruz Wharf until 5 a.m. PST on Sunday...",
+              "published_date": "2026-11-14",
+              "outlet": "Newsweek",
+              "image": "https://s.yimg.com/bo/ba74fa4f-5d45-5c77-a59a-6a204643fe88_1794663323520.jpg"
+            },
+            {
+              "news_id": "4423e0b4e6015c29acc641ef05e2747d",
+              "url": "https://www.riotimesonline.com/kwazulu-natal-severe-thunderstorm-warning-14-november/",
+              "headline": "KwaZulu-Natal Braces for Severe Storms",
+              "body": "South Africa's weather service issued an orange Level 5 warning for severe storms in western KwaZulu-Natal on 14 November, from 13:00 local time.",
+              "published_date": "2026-11-14",
+              "outlet": "The Rio Times",
+              "image": "https://www.bing.com/th?id=ONUT.yvGZwoW6YuGhAk8KCCvdJg"
+            },
+            {
+              "news_id": "b899273d964c5ee8b639ff044c7d93e7",
+              "url": "https://www.msn.com/en-za/news/other/severe-thunderstorms-hail-and-flooding-possible-in-ethekwini/ar-AA2hpWk4?ocid=BingNewsVerp",
+              "headline": "Severe thunderstorms, hail and flooding possible in eThekwini",
+              "body": "Residents in eThekwini and parts of KwaZulu-Natal have been urged to take precautions as severe thunderstorms, heavy rain, ...",
+              "published_date": "2026-11-14",
+              "outlet": "South Africa Mercury on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.63ace5f3e9e9d3967d2b02af9d4bfd3a"
+            },
+            {
+              "news_id": "8a3bf33acf9858a28385d72de8a9372f",
+              "url": "https://sports.yahoo.com/articles/austin-championship-final-round-gets-150408788.html",
+              "headline": "Austin Championship Final Round Gets Early Start Due To Storms",
+              "body": "The PGA Tour moved the Austin Championship final round tee times up to 7 a.m. Sunday to beat heavy storms. Trace Crowe leads by one shot.",
+              "published_date": "2026-11-15",
+              "outlet": "Gameday Times · via Yahoo Sports",
+              "image": "https://media.zenfs.com/en/gameday_times_324/15ba2e0c85589261c476b3f0945961dc.jpg"
+            },
+            {
+              "news_id": "253264c2eab95ba2a0060d343ac73f61",
+              "url": "https://www.msn.com/en-za/news/other/heavy-rain-thunderstorms-and-flooding-expected-across-parts-of-kwazulu-natal/ar-AA2hpC98?ocid=BingNewsVerp",
+              "headline": "Heavy rain, thunderstorms and flooding expected across parts of KwaZulu-Natal",
+              "body": "The SA Weather Service issued a Level 2 warning for disruptive rain over the eastern parts of KwaZulu-Natal, including ...",
+              "published_date": "2026-11-14",
+              "outlet": "IOL on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.Nex5Vhhlm3WSaP48SEQ9sg"
+            },
+            {
+              "news_id": "403bf1db892f531d881ed61d5d4336dd",
+              "url": "https://www.theweek.in/news/india/2026/11/14/cyclone-akvan-to-make-landfall-in-andhra-pradesh-depression-over-the-bay-of-bengal-to-turn-into-cyclonic-storm.html",
+              "headline": "Cyclone Akvan to make landfall in Andhra Pradesh? Depression over the Bay of Bengal to turn into cyclonic storm",
+              "body": "A low-pressure system over the Bay of Bengal is projected to intensify into Cyclone Akvan by November 16, bringing heavy rainfall and strong winds to coastal regions including Odisha and Andhra Pradesh",
+              "published_date": "2026-11-14",
+              "outlet": "The Week",
+              "image": "https://www.bing.com/th?id=ONUT.XIX_H_5hcmzLO6d4hwxxPQ"
+            },
+            {
+              "news_id": "070aef26819f5128b067e2a986efc98d",
+              "url": "https://www.newindianexpress.com/states/tamil-nadu/2026/Nov/15/depression-in-bay-of-bengal-likely-to-intensify-into-severe-cyclone-chennais-rainfall-depends-on-its-track",
+              "headline": "Depression in Bay of Bengal likely to intensify into severe cyclone; Chennai’s rainfall depends on its track",
+              "body": "CHENNAI: A depression over the southeast and adjoining southwest Bay of Bengal is likely to intensify into a cyclonic storm on November 16 and a severe cyclonic",
+              "published_date": "2026-11-15",
+              "outlet": "The New Indian Express",
+              "image": "https://www.bing.com/th?id=ONUT.0ADjEx3W4E5vVL7PtkUsEA"
+            },
+            {
+              "news_id": "b1f6bc79867a55b89d470cebeb304f7f",
+              "url": "https://6abc.com/videoClip/20036779/",
+              "headline": "AccuWeather Alert: Severe storms to be followed by colder air",
+              "body": "Severe weather swept through the area today, and the storms will be followed by colder air on Friday.",
+              "published_date": "2026-11-12",
+              "outlet": "WPVI 6abc Philadelphia",
+              "image": "https://s.yimg.com/bo/ec21a1c5-35ec-5812-a759-704e875ddb50_1794529936586.jpg"
+            },
+            {
+              "news_id": "a38c8018b41c5e6d8a2ba1fc52d3f153",
+              "url": "https://www.sfgate.com/news/bayarea/article/san-mateo-co-opening-of-temporary-shelter-from-22531646.php",
+              "headline": "San Mateo Co.: Opening Of Temporary Shelter From Severe Weather May Be Just In...",
+              "body": "San Mato County will open more temporary shelter for homeless people and families when severe...",
+              "published_date": "2026-11-14T22:02:56+00:00",
+              "outlet": "San Francisco Chronicle",
+              "image": "https://s.yimg.com/bo/23d86f86-3898-5083-8816-acac5d6e850d_1793033789275.jpg"
+            }
+          ]
         }
       ],
-      "logs_total": 2
+      "logs_total": 3
     },
     {
       "incident_id": "20261113-PE-EQ",
@@ -76039,10 +77275,13 @@
       "event_date": "2026-11-13",
       "first_reported_date": "2026-11-13",
       "last_updated_date": "2026-11-14",
-      "days_since_event": 2,
+      "days_since_event": 3,
       "source_count": 1,
       "should_report": false,
-      "search_keys": [],
+      "search_keys": [
+        "Peru Earthquake latest 2026",
+        "Peru Earthquake 2026"
+      ],
       "sources": {
         "who_don": 0,
         "usgs": 1,
@@ -76056,7 +77295,34 @@
           "type": "USGS",
           "label": "M 5.8 - 79 km WSW of Changuillo, Peru",
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ty1a",
-          "meta": "10 km depth"
+          "meta": "10 km depth",
+          "date": "2026-11-13"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "M 5.8 - 79 km WSW of Changuillo, Peru",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ty1a",
+          "source": "USGS",
+          "date": "2026-11-13",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Magnitude 5.8 Earthquake Strikes Peru During Pope Leo XIV’s Visit - JETSS",
+          "url": "https://www.jetss.com/2026/11/14/magnitude-5-8-earthquake-strikes-peru-during-pope-leo-xivs-visit/",
+          "source": "Jetss",
+          "date": "2026-11-14",
+          "reason": "Latest update"
+        },
+        {
+          "kind": "news",
+          "label": "5.6-magnitude quake hits Near Coast of Peru -- GFZ",
+          "url": "https://english.news.cn/20261114/5fe0cc724eb441adb6573a6cb04472fe/c.html",
+          "source": "Xinhua",
+          "date": "2026-11-14",
+          "reason": "Latest update"
         }
       ],
       "physical": {
@@ -76158,10 +77424,13 @@
       "event_date": "2026-11-13",
       "first_reported_date": "2026-11-13",
       "last_updated_date": "2026-11-15",
-      "days_since_event": 2,
+      "days_since_event": 3,
       "source_count": 1,
       "should_report": true,
-      "search_keys": [],
+      "search_keys": [
+        "Middle Qatar update 2026",
+        "Middle Qatar 2026"
+      ],
       "sources": {
         "who_don": 1,
         "usgs": 0,
@@ -76175,7 +77444,34 @@
           "type": "WHO",
           "label": "Middle Qatar 2026-11-13",
           "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON626",
-          "meta": ""
+          "meta": "",
+          "date": "2026-11-13"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "Middle Qatar 2026-11-13",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON626",
+          "source": "WHO",
+          "date": "2026-11-13",
+          "reason": "Latest official"
+        },
+        {
+          "kind": "news",
+          "label": "Le Qatar signale ses premiers cas de MERS-CoV depuis 2022",
+          "url": "https://www.mesvaccins.net/web/news/24580-le-qatar-signale-ses-premiers-cas-de-mers-cov-depuis-2022",
+          "source": "MesVaccins.net",
+          "date": "2026-11-15",
+          "reason": "News"
+        },
+        {
+          "kind": "news",
+          "label": "Major deadly virus warning over tourist hotspot as WHO breaks silence over new cases",
+          "url": "https://www.msn.com/en-gb/news/other/major-deadly-virus-warning-over-tourist-hotspot-as-who-breaks-silence-over-new-cases/ar-AA2hrGGD?ocid=BingNewsVerp",
+          "source": "Daily Star on MSN",
+          "date": "2026-11-15",
+          "reason": "News"
         }
       ],
       "physical": {
