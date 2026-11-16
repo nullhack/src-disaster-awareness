@@ -2,7 +2,11 @@ from __future__ import annotations
 
 from datetime import datetime, timezone
 
-from scripts.generate_dashboard_data import _resolve_region, generate_md_report
+from scripts.generate_dashboard_data import (
+    _resolve_region,
+    generate_md_report,
+    select_key_links,
+)
 from disaster_report.sources.gdacs import _resolve_gdacs_link
 
 
@@ -48,6 +52,194 @@ class TestResolveGdacsLink:
     def test_returns_empty_when_nothing_reconstructable(self) -> None:
         rf: dict[str, object] = {}
         assert _resolve_gdacs_link(rf) == ""
+
+
+class TestSelectKeyLinks:
+    def test_uses_latest_official_and_two_relevant_log_news(self) -> None:
+        source_links = [
+            {"type": "WHO", "label": "Old", "url": "https://who/old", "date": "2026-11-01"},
+            {"type": "WHO", "label": "New", "url": "https://who/new", "date": "2026-11-10"},
+        ]
+        logs = [{
+            "log_date": "2026-11-11",
+            "summary": "",
+            "news": [
+                {
+                    "headline": "Ebola cases rise in DR Congo",
+                    "url": "https://news/1",
+                    "outlet": "Reuters",
+                    "published_date": "2026-11-11",
+                },
+                {
+                    "headline": "Ebola update",
+                    "url": "https://news/2",
+                    "outlet": "AP",
+                    "published_date": "2026-11-10",
+                },
+                {
+                    "headline": "Unrelated celebrity news",
+                    "url": "https://news/3",
+                    "outlet": "MSN",
+                    "published_date": "2026-11-12",
+                },
+            ],
+        }]
+        incident = {
+            "canonical_name": "Ebola Kinshasa, DR Congo 2026-11-01",
+            "country": "DR Congo",
+            "physical": {},
+            "search_keys": [],
+        }
+        links = select_key_links(source_links, logs, [], incident)
+        assert [link["kind"] for link in links] == ["official", "news", "news"]
+        assert links[0]["url"] == "https://who/new"
+        assert {link["url"] for link in links[1:]} == {
+            "https://news/1",
+            "https://news/2",
+        }
+
+    def test_fills_news_from_older_logs(self) -> None:
+        logs = [
+            {
+                "log_date": "2026-11-09",
+                "summary": "",
+                "news": [
+                    {
+                        "headline": "Ebola cases reported",
+                        "url": "https://news/1",
+                        "outlet": "Reuters",
+                        "published_date": "2026-11-09",
+                    },
+                    {
+                        "headline": "Ebola response grows",
+                        "url": "https://news/2",
+                        "outlet": "AP",
+                        "published_date": "2026-11-09",
+                    },
+                ],
+            },
+            {
+                "log_date": "2026-11-11",
+                "summary": "",
+                "news": [
+                    {
+                        "headline": "Ebola latest update",
+                        "url": "https://news/3",
+                        "outlet": "BBC",
+                        "published_date": "2026-11-11",
+                    },
+                ],
+            },
+        ]
+        incident = {
+            "canonical_name": "Ebola Kinshasa, DR Congo 2026-11-01",
+            "country": "DR Congo",
+            "physical": {},
+            "search_keys": [],
+        }
+        links = select_key_links([], logs, [], incident)
+        assert len(links) == 3
+
+    def test_manual_incident_shows_three_news(self) -> None:
+        news = [
+            {
+                "headline": "Flood hits Greece",
+                "url": "https://news/1",
+                "outlet": "Reuters",
+                "published_date": "2026-11-11",
+            },
+            {
+                "headline": "Greece flood worsens",
+                "url": "https://news/2",
+                "outlet": "AP",
+                "published_date": "2026-11-10",
+            },
+            {
+                "headline": "Flood damage assessed",
+                "url": "https://news/3",
+                "outlet": "BBC",
+                "published_date": "2026-11-09",
+            },
+        ]
+        incident = {
+            "canonical_name": "Flood Greece 2026-11-01",
+            "country": "Greece",
+            "physical": {},
+            "search_keys": [],
+        }
+        links = select_key_links([], [], news, incident)
+        assert len(links) == 3
+        assert all(link["kind"] == "news" for link in links)
+
+    def test_term_match_beats_newer_unrelated_news(self) -> None:
+        news = [
+            {
+                "headline": "Ebola outbreak worsens",
+                "url": "https://news/1",
+                "outlet": "Reuters",
+                "published_date": "2026-11-01",
+            },
+            {
+                "headline": "Celebrity news",
+                "url": "https://news/2",
+                "outlet": "AP",
+                "published_date": "2026-11-12",
+            },
+        ]
+        incident = {
+            "canonical_name": "Ebola Kinshasa, DR Congo 2026-11-01",
+            "country": "DR Congo",
+            "physical": {},
+            "search_keys": [],
+        }
+        links = select_key_links([], [], news, incident)
+        assert links[0]["url"] == "https://news/1"
+
+    def test_dedupes_same_headline(self) -> None:
+        news = [
+            {
+                "headline": "Flood hits Greece",
+                "url": "https://news/1",
+                "outlet": "Reuters",
+                "published_date": "2026-11-11",
+            },
+            {
+                "headline": "Flood hits Greece",
+                "url": "https://news/2",
+                "outlet": "AP",
+                "published_date": "2026-11-10",
+            },
+            {
+                "headline": "Greece flood worsens",
+                "url": "https://news/3",
+                "outlet": "BBC",
+                "published_date": "2026-11-09",
+            },
+        ]
+        incident = {
+            "canonical_name": "Flood Greece 2026-11-01",
+            "country": "Greece",
+            "physical": {},
+            "search_keys": [],
+        }
+        links = select_key_links([], [], news, incident)
+        assert len(links) == 2
+
+    def test_fills_short_news_pool_with_additional_official(self) -> None:
+        source_links = [
+            {"type": "USGS", "label": "Older", "url": "https://usgs/old", "date": "2026-11-01"},
+            {"type": "USGS", "label": "Newer", "url": "https://usgs/new", "date": "2026-11-10"},
+            {"type": "USGS", "label": "Oldest", "url": "https://usgs/oldest", "date": "2026-10-01"},
+        ]
+        incident = {
+            "canonical_name": "Earthquake Vanuatu 2026-11-01",
+            "country": "Vanuatu",
+            "physical": {},
+            "search_keys": [],
+        }
+        links = select_key_links(source_links, [], [], incident)
+        assert len(links) == 3
+        assert all(link["kind"] == "official" for link in links)
 
 
 def _make_incident(

@@ -16,10 +16,12 @@ body:
         After submission:
         - The `ingest-submissions` workflow runs at **00:01, 09:00, 17:00 UTC** (3×/day).
         - You'll see a comment on this issue with the resulting incident id and classification.
-        - If the article is rejected (not disaster-related, paywall, fetch failed), the issue
-          will be closed with a reason and labeled `submission-rejected`.
-        - If accepted, it will be labeled `submission-imported` and the incident will appear
-          on the dashboard after the next publish cycle.
+        - If the article is accepted, it is labeled `submission-imported` and the incident
+          appears on the dashboard after the next publish cycle.
+        - If the classifier is unsure, the article cannot be fetched, or no country can be
+          determined, the issue stays open with `submission-review`. A maintainer can add
+          `submission-approved` to import it, or `submission-rejected` and close it to decline.
+        - Declined submissions are labeled `submission-rejected` and closed with a reason.
 
   - type: input
     id: url
@@ -56,7 +58,7 @@ body:
     id: country
     attributes:
       label: Country (optional)
-      description: ISO-2 country code where the event is occurring. Helps geo-location; classifier may still override.
+      description: Where the event is occurring. Used only when the article text does not identify a country; the classifier still wins.
       options:
         - 🇦🇫 AF - Afghanistan
         - 🇦🇽 AX - Åland Islands

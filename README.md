@@ -103,23 +103,27 @@ print(len(s.read_incidents()), 'incidents,', len(s.active_incidents(7)), 'active
 
 ## External submissions
 
-External users can submit disaster-related news articles via GitHub issues.
-The flow is fully automated end-to-end:
+External users can submit disaster-related news articles via GitHub issues:
 
 1. **Submit**: open a new issue at
    https://github.com/nullhack/src-disaster-awareness/issues/new/choose and
    pick the **📰 Disaster news submission** template. Paste the article URL
-   (required); optionally hint a category, country, or event date.
+   (required); optionally hint a category or country.
 2. **Triage**: the `ingest-submissions` workflow (cron `0 1,9,17 * * *`, 3×/day)
    extracts the URL, fetches metadata via trafilatura, classifies via the DSPy
-   `SubmissionClassifier`, and either births a new `MANUAL` incident or rejects.
-3. **Outcome**: the issue is labeled `submission-imported` (with a tracking
-   comment showing the new incident id) or `submission-rejected` (closed with a
-   reason). Re-running on the same URL is idempotent (`sha1(url)[:16]` natural
-   key) so duplicates are silently skipped.
+   `SubmissionClassifier`, and births a new `MANUAL` incident when the result is
+   clear.
+3. **Review**: classifier non-accepts, fetch failures, and unresolved countries
+   stay open as `submission-review`. A maintainer adds `submission-approved` to
+   import, or adds `submission-rejected` and closes the issue to decline. Adding
+   `submission-approved` triggers an immediate run.
+4. **Outcome**: accepted issues are labeled `submission-imported` with a tracking
+   comment. Re-running on the same URL is idempotent (`sha1(url)[:16]` natural
+   key) so duplicates are skipped.
 
-The three labels — `submission-pending`, `submission-imported`,
-`submission-rejected` — are the only state machine.
+The five labels — `submission-pending`, `submission-review`,
+`submission-approved`, `submission-imported`, `submission-rejected` — are the
+state machine. The bot only auto-closes malformed submissions with no URL.
 
 ## Secrets
 
