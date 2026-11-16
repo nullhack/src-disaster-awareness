@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=20261116" />
 </head>
 <body data-theme="light">
 
@@ -160,9 +160,9 @@
 
   <!-- ============ DETAIL DRAWER ============ -->
   <div class="scrim" id="scrim" hidden>
-    <aside class="drawer" id="drawer" aria-hidden="true" aria-label="Incident detail">
+    <aside class="drawer" id="drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="drawerHeading">
       <div class="drawer__bar">
-        <span class="drawer__title" id="drawerTitle">Incident</span>
+        <span class="drawer__title" id="drawerTitle" aria-hidden="true">Incident</span>
         <button class="drawer__close" id="drawerClose" type="button" aria-label="Close">×</button>
       </div>
       <div class="drawer__body" id="drawerBody"></div>
@@ -175,6 +175,6 @@
   <!-- D3 + topojson from CDN -->
   <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
-  <script src="app.js"></script>
+  <script src="app.js?v=20261116"></script>
 </body>
 </html>

@@ -195,6 +195,143 @@ class TestSelectKeyLinks:
         links = select_key_links([], [], news, incident)
         assert links[0]["url"] == "https://news/1"
 
+    def test_ignores_news_outside_freshness_window(self) -> None:
+        logs = [{
+            "log_date": "2026-11-11",
+            "summary": "",
+            "news": [
+                {
+                    "headline": "Cyclone Arnab Latest News",
+                    "url": "https://news/old",
+                    "outlet": "Legacy",
+                    "published_date": "2019-09-12",
+                },
+                {
+                    "headline": "Cyclone Arnab update",
+                    "url": "https://news/new-1",
+                    "outlet": "Reuters",
+                    "published_date": "2026-11-11",
+                },
+                {
+                    "headline": "Cyclone Arnab relief",
+                    "url": "https://news/new-2",
+                    "outlet": "AP",
+                    "published_date": "2026-11-10",
+                },
+                {
+                    "headline": "Cyclone Arnab damage",
+                    "url": "https://news/new-3",
+                    "outlet": "BBC",
+                    "published_date": "2026-11-09",
+                },
+            ],
+        }]
+        incident = {
+            "canonical_name": "Cyclone Arnab 2026-11-01",
+            "country": "Mozambique",
+            "physical": {},
+            "search_keys": [],
+        }
+        links = select_key_links([], logs, [], incident)
+        assert all(link["url"] != "https://news/old" for link in links)
+        assert len(links) == 3
+
+    def test_prefers_latest_log_on_tied_relevance(self) -> None:
+        logs = [
+            {
+                "log_date": "2026-11-09",
+                "summary": "",
+                "news": [{
+                    "headline": "Ebola cases reported",
+                    "url": "https://news/old",
+                    "outlet": "Reuters",
+                    "published_date": "2026-11-09",
+                }],
+            },
+            {
+                "log_date": "2026-11-10",
+                "summary": "",
+                "news": [{
+                    "headline": "Ebola cases confirmed",
+                    "url": "https://news/new",
+                    "outlet": "AP",
+                    "published_date": "2026-11-10",
+                }],
+            },
+        ]
+        incident = {
+            "canonical_name": "Ebola Kinshasa, DR Congo 2026-11-01",
+            "country": "DR Congo",
+            "physical": {},
+            "search_keys": [],
+        }
+        links = select_key_links([], logs, [], incident)
+        assert links[0]["url"] == "https://news/new"
+        assert links[0]["reason"] == "Latest log"
+
+    def test_reasons_name_the_actual_selection_rule(self) -> None:
+        source_links = [
+            {"type": "WHO", "label": "Sitrep", "url": "https://who/new", "date": "2026-11-10"},
+        ]
+        logs = [
+            {
+                "log_date": "2026-11-09",
+                "summary": "",
+                "news": [{
+                    "headline": "Ebola cases reported",
+                    "url": "https://news/old",
+                    "outlet": "Reuters",
+                    "published_date": "2026-11-09",
+                }],
+            },
+            {
+                "log_date": "2026-11-10",
+                "summary": "",
+                "news": [{
+                    "headline": "Ebola cases confirmed",
+                    "url": "https://news/new",
+                    "outlet": "AP",
+                    "published_date": "2026-11-10",
+                }],
+            },
+        ]
+        incident = {
+            "canonical_name": "Ebola Kinshasa, DR Congo 2026-11-01",
+            "country": "DR Congo",
+            "physical": {},
+            "search_keys": [],
+        }
+        links = select_key_links(source_links, logs, [], incident)
+        assert [link["reason"] for link in links] == [
+            "Newest official",
+            "Latest log",
+            "Related article",
+        ]
+
+    def test_skips_zero_relevance_news_when_relevant_items_exist(self) -> None:
+        news = [
+            {
+                "headline": "Ebola outbreak remains out of control in Congo",
+                "url": "https://news/ebola",
+                "outlet": "Reuters",
+                "published_date": "2026-11-15",
+            },
+            {
+                "headline": "CAF Awards 2026: Everything to Know",
+                "url": "https://news/caf",
+                "outlet": "Morocco World News",
+                "published_date": "2026-11-10",
+            },
+        ]
+        incident = {
+            "canonical_name": "DR Congo 2026-10-30",
+            "country": "DR Congo",
+            "physical": {},
+            "search_keys": [],
+        }
+        links = select_key_links([], [], news, incident)
+        assert [link["url"] for link in links] == ["https://news/ebola"]
+
     def test_dedupes_same_headline(self) -> None:
         news = [
             {

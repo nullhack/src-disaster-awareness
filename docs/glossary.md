@@ -187,7 +187,7 @@ The typed `dspy.Signature` behind the digester's relevance gate. Input fields: `
 *Aliases: none · Source: discovery interview 2026-07-07 · revised 2026-07-10 (pipeline-phases D1 split)*
 
 ### OpenRouter
-An AI provider behind the digest (called via `dspy.LM`→litellm→httpx) that is flaky (400s retry before raising `litellm.exceptions.BadRequestError`) and whose structured output is client-side (dspy TypeAdapter on the `FilterDigest` signature), so the summary is unconstrained model text that renderers must escape. The model id comes from `config.toml` `[openrouter] model` (currently `openrouter/deepseek/deepseek-v4-flash`), not hardcoded in code. `dspy.LM(model=, api_key=)` + `dspy.configure(lm=lm)` once; `dspy.ChainOfThought(FilterDigest)(...)` per digest.
+An AI provider behind the digest (called via `dspy.LM`→litellm→httpx) that is flaky (400s retry before raising `litellm.exceptions.BadRequestError`) and whose structured output is client-side (dspy TypeAdapter on the `FilterDigest` signature), so the summary is unconstrained model text that renderers must escape. The model id comes from `config.toml` `[openrouter] model` (currently `openrouter/deepseek/deepseek-v4.1-flash-1017`), not hardcoded in code. `dspy.LM(model=, api_key=)` + `dspy.configure(lm=lm)` once; `dspy.ChainOfThought(FilterDigest)(...)` per digest.
 *Aliases: none · Source: discovery interview 2026-07-04 · revised 2026-07-07*
 
 ## Context: Reporting
@@ -215,7 +215,7 @@ A frozen `Settings` field read from `config.toml [ingest]` (default 7) that sets
 *Aliases: none · Source: discovery interview 2026-07-09*
 
 ### config discipline
-The rule that the OpenRouter model id is read ONLY from `config.toml` `[openrouter] model`, with no hardcoded fallback constant or fallback model list in code. The model id (currently `openrouter/deepseek/deepseek-v4-flash`) lives in config.toml and nowhere else; changing models is a config edit, not a code change.
+The rule that the OpenRouter model id is read ONLY from `config.toml` `[openrouter] model`, with no hardcoded fallback constant or fallback model list in code. The model id (currently `openrouter/deepseek/deepseek-v4.1-flash-1017`) lives in config.toml and nowhere else; changing models is a config edit, not a code change.
 *Aliases: none · Source: discovery interview 2026-07-07 · revised 2026-07-08*
 
 ### clock

@@ -78,6 +78,9 @@ const STATE = {
   sort: { key: "severity", dir: "asc" },
   tab: "watchlist",
   trend: { window: "30", metric: "n" }, // metric: n(news)|e(events); two panels: disease(by pathogen) + geo(by kind)
+  drawerOpen: false,
+  drawerReturnFocus: null,
+  drawerTimer: null,
 };
 
 const $ = (s, r = document) => r.querySelector(s);
@@ -592,7 +595,7 @@ function renderWatchlist() {
       <td><span class="chip chip--${i.severity}"><span class="dot dot--${i.severity}"></span>${i.severity}</span></td>
       <td>${i.priority ? `<span class="chip chip--pri${i.priority === 'HIGH' ? 'HIGH' : ''}">${i.priority}</span>` : "—"}</td>
       <td>
-        <div class="cell-name">${i.extended_monitoring ? '<span title="Extended monitoring" style="cursor:help">🔁</span> ' : ""}${esc(i.canonical_name)}</div>
+        <button class="row-open" type="button" aria-label="Open ${esc(i.canonical_name)} (${esc(i.incident_id)})">${i.extended_monitoring ? '<span title="Extended monitoring" style="cursor:help">🔁</span> ' : ""}${esc(i.canonical_name)}</button>
         <div class="cell-sub">${i.incident_id}${i.disease_name ? " · " + esc(i.disease_name) : ""}</div>
       </td>
       <td class="cell-country">${esc(i.iso2 === "XX" ? "Global" : i.country)}<small>${esc(i.region || "")}</small></td>
@@ -602,7 +605,11 @@ function renderWatchlist() {
       <td class="num">${sourceTags(i.sources)}</td>
     </tr>`).join("");
   $$("#watchTable tbody tr").forEach((tr) =>
-    tr.addEventListener("click", () => openDrawer(tr.dataset.id)));
+    tr.addEventListener("click", (e) =>
+      openDrawer(
+        tr.dataset.id,
+        e.target.closest(".row-open") || tr.querySelector(".row-open")
+      )));
 }
 
 function sortIncidents(arr) {
@@ -624,7 +631,7 @@ function renderDiseaseGrid() {
   $("#cntDisease").textContent = items.length;
   $("#diseaseEmpty").hidden = items.length > 0;
   $("#diseaseGrid").innerHTML = items.map((i) => `
-    <div class="disease-card" data-id="${i.incident_id}">
+    <div class="disease-card" data-id="${i.incident_id}" role="button" tabindex="0" aria-label="Open ${esc(i.disease_name || i.canonical_name)}">
       <div class="disease-card__head">
         <div>
           <div class="disease-card__name">${esc(i.disease_name || i.canonical_name)}</div>
@@ -640,8 +647,15 @@ function renderDiseaseGrid() {
         <span class="tag">${i.news_total} news</span>
       </div>
     </div>`).join("");
-  $$(".disease-card").forEach((c) =>
-    c.addEventListener("click", () => openDrawer(c.dataset.id)));
+  $$(".disease-card").forEach((c) => {
+    c.addEventListener("click", () => openDrawer(c.dataset.id, c));
+    c.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        openDrawer(c.dataset.id, c);
+      }
+    });
+  });
 }
 
 /* ---------- RECENT ACTIVITY (48h) ---------- */
@@ -741,7 +755,7 @@ function renderRecentActivity() {
     const name = e.incident_name || e.detail;
     const detailLine = e.detail;
     return `
-      <div class="recent-row" data-id="${esc(e.incident_id)}">
+      <div class="recent-row" data-id="${esc(e.incident_id)}" role="button" tabindex="0" aria-label="Open ${esc(e.incident_name || e.incident_id)}">
         <span class="recent-ts">${esc(tsLbl)}</span>
         <span class="recent-badge ${BADGE[e.kind]}">${LABEL[e.kind]}</span>
         <span class="recent-main">
@@ -754,8 +768,15 @@ function renderRecentActivity() {
       </div>`;
   }).join("");
 
-  $$("#recentFeed .recent-row").forEach((row) =>
-    row.addEventListener("click", () => openDrawer(row.dataset.id)));
+  $$("#recentFeed .recent-row").forEach((row) => {
+    row.addEventListener("click", () => openDrawer(row.dataset.id, row));
+    row.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        openDrawer(row.dataset.id, row);
+      }
+    });
+  });
 }
 
 /* ---------- DRAWER ---------- */
@@ -775,41 +796,65 @@ function dataBranchUrl(i) {
 }
 
 function _newsItemHtml(n) {
+  const meta = [fmtDate(n.published_date), n.outlet].filter(Boolean).join(" · ");
   return `<li><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.headline)}</a>
-    <div class="meta">${fmtDate(n.published_date) || ""} · ${esc(n.outlet || "")}</div></li>`;
+    ${meta ? `<div class="meta">${esc(meta)}</div>` : ""}</li>`;
 }
 
-function _newsListHtml(news, visible = 3) {
-  if (!news || !news.length) return `<p class="muted">No linked news.</p>`;
-  const shown = news.slice(0, visible);
-  const rest = news.slice(visible);
+function _moreSummary(openText, closeText = "Show fewer") {
+  return `<span class="more-open">${esc(openText)}</span><span class="more-close">${esc(closeText)}</span>`;
+}
+
+function _newsListHtml(news, visible = 3, excludeUrls = null, browseUrl = "") {
+  const excluded = excludeUrls || new Set();
+  const items = (news || []).filter((n) => !excluded.has(n.url));
+  if (!items.length) return `<p class="muted">${excluded.size ? "No other linked news." : "No linked news."}</p>`;
+  const shown = items.slice(0, visible);
+  const rest = items.slice(visible);
   const head = `<ul class="drawer__news">${shown.map(_newsItemHtml).join("")}</ul>`;
   if (!rest.length) return head;
+  const expanded = rest.slice(0, 50);
+  const overflow = rest.length - expanded.length;
   return `${head}
     <details class="drawer__more">
-      <summary>Show all ${news.length} article(s)</summary>
-      <ul class="drawer__news">${rest.map(_newsItemHtml).join("")}</ul>
+      <summary>${_moreSummary(`Show more articles (${items.length} total)`)}</summary>
+      <ul class="drawer__news">${expanded.map(_newsItemHtml).join("")}</ul>
+      ${overflow && browseUrl ? `<p class="muted drawer__hint">${overflow} more in the <a href="${esc(browseUrl)}" target="_blank" rel="noopener">data branch</a>.</p>` : ""}
     </details>`;
 }
 
-function _keyLinksHtml(keyLinks) {
-  if (!keyLinks || !keyLinks.length) return "";
+function _keyLinksHtml(i) {
+  const keyLinks = i.key_links || [];
+  if (!keyLinks.length) return "";
+  const total = Math.max(
+    keyLinks.length,
+    (i.news_total || 0) + ((i.source_links || []).length)
+  );
+  const hasOfficial = keyLinks.some((L) => L.kind === "official");
+  const rule = hasOfficial
+    ? "Newest official record plus up to two recent articles, de-duplicated."
+    : "Up to three recent articles, de-duplicated.";
   return `<div class="drawer__section">
-    <h3>Most relevant links</h3>
+    <h3>Key links · ${keyLinks.length} of ${total.toLocaleString()}</h3>
+    <p class="key-links__rule">${rule}</p>
     <ul class="key-links">
-      ${keyLinks.map((L) => `
+      ${keyLinks.map((L, idx) => {
+        const meta = [L.source, L.date ? fmtDate(L.date) : ""].filter(Boolean).join(" · ");
+        return `
         <li class="key-link key-link--${esc(L.kind || "news")}">
           <a href="${esc(L.url)}" target="_blank" rel="noopener">
+            <span class="key-link__rank" aria-hidden="true">${idx + 1}</span>
             <span class="key-link__reason">${esc(L.reason || (L.kind === "official" ? "Official" : "News"))}</span>
             <span class="key-link__label">${esc(L.label)}</span>
-            <span class="key-link__meta">${esc(L.source || "")}${L.date ? ` · ${fmtDate(L.date)}` : ""}</span>
+            ${meta ? `<span class="key-link__meta">${esc(meta)}</span>` : ""}
           </a>
-        </li>`).join("")}
+        </li>`;
+      }).join("")}
     </ul>
   </div>`;
 }
 
-function _logEntryHtml(log) {
+function _logEntryHtml(log, browseUrl) {
   return `
         <li class="log-entry">
           <details>
@@ -818,14 +863,14 @@ function _logEntryHtml(log) {
                 <span class="log-entry__date">${fmtDateTime(log.log_date) || ""}</span>
                 <span class="log-entry__count">${log.news.length} article(s)</span>
               </span>
-              <div class="log-entry__summary">${esc(log.summary)}</div>
+              <span class="log-entry__summary">${esc(log.summary)}</span>
             </summary>
-            ${_newsListHtml(log.news)}
+            ${_newsListHtml(log.news, 3, null, browseUrl)}
           </details>
         </li>`;
 }
 
-function _timelineHtml(logs, logsTotal) {
+function _timelineHtml(logs, logsTotal, browseUrl) {
   if (!logs || !logs.length) return "";
   const total = logsTotal || logs.length;
   const trimmed = total > logs.length;
@@ -834,25 +879,40 @@ function _timelineHtml(logs, logsTotal) {
   if (trimmed && reversed.length > 1) {
     const recent = reversed.slice(0, -1);
     const genesis = reversed[reversed.length - 1];
-    entries = recent.map(_logEntryHtml).join("")
+    entries = recent.map((log) => _logEntryHtml(log, browseUrl)).join("")
       + `<li class="log-entry--gap" title="${total - logs.length} log(s) hidden">⋮</li>`
-      + _logEntryHtml(genesis);
+      + _logEntryHtml(genesis, browseUrl);
   } else {
-    entries = reversed.map(_logEntryHtml).join("");
+    entries = reversed.map((log) => _logEntryHtml(log, browseUrl)).join("");
   }
   const header = trimmed
     ? `Timeline · ${logs.length} of ${total} log(s)`
     : `Timeline · ${logs.length} log(s)`;
-  return `<div class="drawer__section"><h3>${header}</h3><ul class="drawer__logs">${entries}</ul></div>`;
+  const browse = browseUrl
+    ? ` <a class="drawer__all-link" href="${esc(browseUrl)}" target="_blank" rel="noopener">All news files ↗</a>`
+    : "";
+  return `<div class="drawer__section"><h3>${header}${browse}</h3><ul class="drawer__logs">${entries}</ul></div>`;
 }
 
-function openDrawer(id) {
+function openDrawer(id, opener = null) {
   const i = STATE.digest.incidents.find((x) => x.incident_id === id);
   if (!i) return;
+  const drawer = $("#drawer");
+  if (!STATE.drawerOpen) {
+    STATE.drawerReturnFocus = opener || document.activeElement;
+  }
+  STATE.drawerOpen = true;
+  clearTimeout(STATE.drawerTimer);
   $("#drawerTitle").textContent = i.canonical_name;
   const phys = i.physical || {};
+  const keyUrls = new Set(
+    (i.key_links || []).map((L) => L.url).filter(Boolean)
+  );
+  const sourceLinks = i.source_links || [];
+  const otherSourceLinks = sourceLinks.filter((L) => !keyUrls.has(L.url));
+  const browseUrl = `${dataBranchUrl(i)}/news`;
   const body = `
-    <h2>${esc(i.canonical_name)}</h2>
+    <h2 id="drawerHeading">${esc(i.canonical_name)}</h2>
     <div class="drawer__id">
       <code>${i.incident_id}</code>
       <a class="drawer__monitor-link"
@@ -877,7 +937,7 @@ function openDrawer(id) {
       ${i.extended_monitoring ? `<span class="tag" title="Perpetual monitoring regardless of news recency" style="cursor:help">🔁 Extended monitoring</span>` : ""}
     </div>
     ${i.summary ? `<div class="drawer__summary">${esc(i.summary)}</div>` : ""}
-    ${_keyLinksHtml(i.key_links)}
+    ${_keyLinksHtml(i)}
     <div class="drawer__section">
       <h3>Key facts</h3>
       <div class="drawer__grid">
@@ -895,43 +955,55 @@ function openDrawer(id) {
     </div>
     ${phys.place ? `<div class="drawer__section"><h3>Locality</h3><div style="font-size:13px;color:#4A4A4A">${esc(phys.place)}</div></div>` : ""}
     <div class="drawer__section">
-      <h3>Source coverage · ${i.source_count} record(s)</h3>
+      <h3>Source coverage · ${i.source_count} record(s)${sourceLinks.length && sourceLinks.length !== i.source_count ? ` · ${sourceLinks.length} with links` : ""}</h3>
       <div class="cell-src">${sourceTags(i.sources, true)}</div>
-      ${(i.source_links && i.source_links.length) ? `
+      ${sourceLinks.length ? (otherSourceLinks.length ? `
         <details class="drawer__more">
-          <summary>All source records (${i.source_links.length})</summary>
+          <summary>${_moreSummary(`Other source records (${otherSourceLinks.length})`)}</summary>
           <ul class="src-links">
-            ${i.source_links.map((L) => `
+            ${otherSourceLinks.map((L) => `
               <li>${L.url ? `<a class="src-link" href="${esc(L.url)}" target="_blank" rel="noopener">` : `<span class="src-link src-link--no-url" aria-disabled="true">`}
                 <span class="src-link__type src-link__type--${L.type}">${L.type}</span>
                 <span class="src-link__label">${esc(L.label)}${L.meta ? ` <em>${esc(L.meta)}</em>` : ""}</span>
                 <span class="src-link__arrow" aria-hidden="true">${L.url ? "↗" : "⊘"}</span>
               ${L.url ? `</a>` : `</span>`}</li>`).join("")}
           </ul>
-        </details>` : `<p class="muted">No deep links available for this incident.</p>`}
+        </details>` : `<p class="muted drawer__hint">All linked source records are shown above.</p>`) : `<p class="muted">No deep links available for this incident.</p>`}
     </div>
-    ${_timelineHtml(i.logs, i.logs_total)}
+    ${_timelineHtml(i.logs, i.logs_total, browseUrl)}
     ${(i.news && i.news.length && !(i.logs && i.logs.length)) ? `<div class="drawer__section"><h3>News · ${i.news_total} linked</h3>
-      ${_newsListHtml(i.news)}</div>` : ""}
+      ${_newsListHtml(i.news, 3, keyUrls, browseUrl)}</div>` : ""}
     ${(i.search_keys && i.search_keys.length) ? `<div class="drawer__section">
       <details class="drawer__more">
-        <summary>Search keys (${i.search_keys.length})</summary>
+        <summary>${_moreSummary(`Search keys (${i.search_keys.length})`, "Hide search keys")}</summary>
+        <p class="muted drawer__hint">Terms used to match news.</p>
         <div class="keys">${i.search_keys.map((k) => `<code>${esc(k)}</code>`).join("")}</div>
       </details></div>` : ""}
   `;
   $("#drawerBody").innerHTML = body;
-  const drawer = $("#drawer");
   drawer.classList.add("open");
   drawer.setAttribute("aria-hidden", "false");
+  document.body.classList.add("drawer-open");
   const scr = $("#scrim"); scr.hidden = false;
-  requestAnimationFrame(() => scr.classList.add("show"));
+  requestAnimationFrame(() => {
+    scr.classList.add("show");
+    $("#drawerClose").focus();
+  });
 }
 function closeDrawer() {
+  if (!STATE.drawerOpen) return;
+  STATE.drawerOpen = false;
   const drawer = $("#drawer");
   drawer.classList.remove("open");
   drawer.setAttribute("aria-hidden", "true");
-  const scr = $("#scrim"); scr.classList.remove("show");
-  setTimeout(() => { scr.hidden = true; }, 200);
+  document.body.classList.remove("drawer-open");
+  const scr = $("#scrim");
+  scr.classList.remove("show");
+  clearTimeout(STATE.drawerTimer);
+  STATE.drawerTimer = setTimeout(() => { scr.hidden = true; }, 200);
+  const target = STATE.drawerReturnFocus;
+  STATE.drawerReturnFocus = null;
+  if (target && target.isConnected) target.focus();
 }
 
 /* ---------- helpers ---------- */
@@ -1072,7 +1144,30 @@ function wireGlobalEvents() {
   $("#drawerClose").addEventListener("click", closeDrawer);
   $("#scrim").addEventListener("click", (e) => { if (e.target === $("#scrim")) closeDrawer(); });
   $("#drawer").addEventListener("click", (e) => e.stopPropagation());
-  document.addEventListener("keydown", (e) => { if (e.key === "Escape") { closeCal(); closeDrawer(); } });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") { closeCal(); closeDrawer(); return; }
+    if (e.key !== "Tab" || !STATE.drawerOpen) return;
+    const drawer = $("#drawer");
+    const focusables = $$(
+      'a[href], button:not([disabled]), summary, [tabindex]:not([tabindex="-1"])',
+      drawer
+    ).filter((el) => el.offsetParent !== null);
+    if (!focusables.length) return;
+    const first = focusables[0];
+    const last = focusables[focusables.length - 1];
+    if (!drawer.contains(document.activeElement)) {
+      e.preventDefault();
+      first.focus();
+      return;
+    }
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  });
 
   // re-render charts on resize (debounced)
   let rt;

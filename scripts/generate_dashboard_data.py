@@ -28,6 +28,7 @@ TRACKING_WINDOW_DAYS = 7
 DEFAULT_TRACKING_WINDOW_DAYS = 7
 MIN_SEVERITY = "LOW"
 MAX_RECENT_LOGS = 3
+_KEY_LINK_FRESHNESS_DAYS = 30
 
 _AGGREGATOR_DOMAINS = (
     "msn.com",
@@ -389,7 +390,20 @@ def _incident_terms(incident: dict) -> list[str]:
     return sorted(terms)
 
 
-def _news_score(item: dict, terms: list[str]) -> tuple[int, int, int, str]:
+def _news_date(item: dict) -> datetime | None:
+    value = (item.get("published_date") or "")[:10]
+    try:
+        return datetime.fromisoformat(value)
+    except (TypeError, ValueError):
+        return None
+
+
+def _news_score(
+    item: dict,
+    terms: list[str],
+    *,
+    log_tier: int = 0,
+) -> tuple[int, int, int, int, str]:
     headline = (item.get("headline") or "").lower()
     body = (item.get("body") or "").lower()
     headline_matches = sum(1 for term in terms if term in headline)
@@ -403,6 +417,7 @@ def _news_score(item: dict, terms: list[str]) -> tuple[int, int, int, str]:
         headline_matches,
         int(not aggregator),
         body_matches,
+        -log_tier,
         item.get("published_date") or "",
     )
 
@@ -411,11 +426,44 @@ def _headline_key(item: dict) -> str:
     return re.sub(r"[^a-z0-9]+", "", (item.get("headline") or "").lower())[:80]
 
 
-def _select_news(items: list[dict], terms: list[str], limit: int) -> list[dict]:
+def _select_news(
+    items: list[dict],
+    terms: list[str],
+    limit: int,
+    *,
+    log_tiers: dict[str, int] | None = None,
+) -> list[dict]:
+    tiers = log_tiers or {}
+    dated = [item for item in items if item.get("url")]
+    latest = max(
+        (date for item in dated if (date := _news_date(item)) is not None),
+        default=None,
+    )
+    if latest is not None:
+        cutoff = latest - timedelta(days=_KEY_LINK_FRESHNESS_DAYS)
+        fresh = [
+            item
+            for item in dated
+            if (date := _news_date(item)) is None or date >= cutoff
+        ]
+        if fresh:
+            dated = fresh
+
+    scored = [
+        (
+            item,
+            _news_score(
+                item, terms, log_tier=tiers.get(item.get("url") or "", 99)
+            ),
+        )
+        for item in dated
+    ]
+    has_relevance = any(score[0] or score[2] for _, score in scored)
+
     picked: list[dict] = []
     seen: set[str] = set()
-    for item in sorted(items, key=lambda n: _news_score(n, terms), reverse=True):
-        if not item.get("url"):
+    for item, score in sorted(scored, key=lambda pair: pair[1], reverse=True):
+        if has_relevance and not (score[0] or score[2]):
             continue
         key = _headline_key(item)
         if key and key in seen:
@@ -465,11 +513,21 @@ def select_key_links(
     terms = _incident_terms(incident)
     official = _latest_official(source_links)
     log_news: list[dict] = []
-    for log in reversed(logs or []):
-        log_news.extend(log.get("news") or [])
+    log_tiers: dict[str, int] = {}
+    for tier, log in enumerate(reversed(logs or [])):
+        for item in log.get("news") or []:
+            log_news.append(item)
+            url = item.get("url")
+            if url:
+                log_tiers.setdefault(url, tier)
+    latest_log_urls = {
+        item.get("url")
+        for item in (logs[-1].get("news") or [])
+        if item.get("url")
+    } if logs else set()
     news_pool = log_news or news
     selected_news = _select_news(
-        news_pool, terms, 2 if official else 3
+        news_pool, terms, 2 if official else 3, log_tiers=log_tiers
     )
     key_links: list[dict] = []
     if official:
@@ -479,16 +537,22 @@ def select_key_links(
             official["url"],
             official.get("type") or "Official",
             official.get("date") or "",
-            "Latest official",
+            "Newest official",
         ))
     for item in selected_news:
+        if not log_news:
+            reason = "News"
+        elif item["url"] in latest_log_urls:
+            reason = "Latest log"
+        else:
+            reason = "Related article"
         key_links.append(_key_link(
             "news",
             item.get("headline") or "",
             item["url"],
             item.get("outlet") or "",
             item.get("published_date") or "",
-            "Latest update" if log_news else "News",
+            reason,
         ))
     if len(key_links) < 3:
         extras = sorted(
