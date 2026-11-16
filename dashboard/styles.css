@@ -444,6 +444,36 @@ code { font-family: var(--mono); font-size: .9em; }
 .src-link__arrow { color: var(--rc-muted); font-size: 13px; flex: none; }
 .src-link:hover .src-link__arrow { color: var(--rc-red); }
 
+/* ============ KEY LINKS / EXPANDERS ============ */
+.key-links { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.key-link a {
+  display: block; padding: 9px 11px; border: 1px solid var(--rc-line);
+  border-radius: var(--radius-sm); text-decoration: none; color: var(--rc-ink);
+  background: #fff; transition: all .12s;
+}
+.key-link a:hover { border-color: var(--rc-red); background: #FFF6F7; }
+.key-link__reason {
+  display: inline-block; margin-right: 7px; padding: 2px 6px; border-radius: 4px;
+  background: var(--rc-ink); color: #fff; font: 600 9px/1.2 var(--mono);
+  text-transform: uppercase; letter-spacing: .04em;
+}
+.key-link--official .key-link__reason { background: #0093D5; }
+.key-link--news .key-link__reason { background: var(--rc-red); }
+.key-link__label { font-size: 13px; font-weight: 600; }
+.key-link__meta { display: block; font-size: 11px; color: var(--rc-muted); margin-top: 3px; }
+.drawer__more { margin-top: 10px; }
+.drawer__more summary {
+  cursor: pointer; font-size: 11px; font-weight: 700; color: var(--rc-muted);
+  text-transform: uppercase; letter-spacing: .05em; list-style: none;
+  padding: 6px 0;
+}
+.drawer__more summary::-webkit-details-marker { display: none; }
+.drawer__more summary::before { content: "▸"; margin-right: 6px; font-size: 10px; }
+.drawer__more[open] summary::before { content: "▾"; }
+.drawer__more .src-links,
+.drawer__more .drawer__news,
+.drawer__more .keys { margin-top: 6px; }
+
 /* ============ DISEASE GRID ============ */
 .disease-grid {
   display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));

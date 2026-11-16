@@ -42,6 +42,8 @@ REJECTED_LABEL = "monitoring-rejected"
 
 _SUBMISSION_LABELS = (
     "submission-pending",
+    "submission-review",
+    "submission-approved",
     "submission-imported",
     "submission-rejected",
 )

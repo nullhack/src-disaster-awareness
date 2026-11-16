@@ -3,6 +3,8 @@ name: Ingest submissions
 on:
   schedule:
     - cron: "0 1,9,17 * * *"
+  issues:
+    types: [labeled]
   workflow_dispatch:
 
 concurrency:
@@ -15,6 +17,7 @@ permissions:
 
 jobs:
   ingest-submissions:
+    if: github.event_name != 'issues' || github.event.label.name == 'submission-approved'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
@@ -31,6 +34,12 @@ jobs:
           git config --global user.email "nullhack@users.noreply.github.com"
       - name: Attach data worktree
         run: git worktree add data origin/data
+      - name: Ensure submission labels exist
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh label create submission-review --color FBCA04 --description "Submission needs a maintainer decision" --force
+          gh label create submission-approved --color 0E8A16 --description "Maintainer approved submission for import" --force
       - name: Run ingest_submissions
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

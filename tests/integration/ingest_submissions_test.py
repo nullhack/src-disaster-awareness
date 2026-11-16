@@ -100,11 +100,38 @@ class TestSourceId:
         assert _source_id("https://x.com") == _source_id("https://x.com")
 
 
+class TestParseSubmissionHints:
+    def test_parses_category_and_country_hints(self) -> None:
+        from scripts.ingest_submissions import _parse_submission_hints
+
+        body = (
+            "### Article URL\n\nhttps://x.com/a\n\n"
+            "### Category hint (optional)\n\n🔥 Wildfire\n\n"
+            "### Country (optional)\n\n🇸🇬 SG - Singapore\n"
+        )
+        hints = _parse_submission_hints(body)
+        assert hints.incident_type == "Wildfire"
+        assert hints.country_code == "SG"
+
+    def test_treats_none_and_default_category_as_empty(self) -> None:
+        from scripts.ingest_submissions import _parse_submission_hints
+
+        body = (
+            "### Category hint (optional)\n\n"
+            "🤖 Let the AI classify (default)\n\n"
+            "### Country (optional)\n\n_No response_\n"
+        )
+        hints = _parse_submission_hints(body)
+        assert hints.incident_type == ""
+        assert hints.country_code == ""
+
+
 class TestProcessIssue:
     def _patch_common(self, monkeypatch: pytest.MonkeyPatch) -> None:
         from scripts import ingest_submissions as mod
 
         monkeypatch.setattr(mod, "_reject", lambda *a, **k: pytest.fail("should not reject"))
+        monkeypatch.setattr(mod, "_review", lambda *a, **k: pytest.fail("should not review"))
         monkeypatch.setattr(mod, "_remove_label", lambda *a, **k: None)
         monkeypatch.setattr(mod, "_add_label", lambda *a, **k: None)
         monkeypatch.setattr(mod, "_comment", lambda *a, **k: None)
@@ -161,58 +188,61 @@ class TestProcessIssue:
         assert fetch_calls == []
         assert mod.IMPORTED_LABEL in sid_seen
 
-    def test_rejects_when_fetch_returns_none(
+    def test_reviews_when_fetch_returns_none(
         self,
         tmp_path: "Path",
         monkeypatch: pytest.MonkeyPatch,
     ) -> None:
         from scripts import ingest_submissions as mod
 
-        rejected: list[tuple] = []
-        monkeypatch.setattr(mod, "_reject", lambda n, r: rejected.append((n, r)))
+        reviewed: list[tuple] = []
+        monkeypatch.setattr(mod, "_reject", lambda *a, **k: pytest.fail("should not reject"))
+        monkeypatch.setattr(mod, "_review", lambda n, r: reviewed.append((n, r)))
         monkeypatch.setattr(mod, "fetch_article", lambda url: None)
         store = MagicMock()
         store.find_news_id_by_url.return_value = None
         digester = MagicMock()
         outcome = mod._process_issue(_make_issue(), store, digester, set())
-        assert outcome == "rejected:fetch-failed"
-        assert rejected and "could not fetch" in rejected[0][1]
+        assert outcome == "review:fetch-failed"
+        assert reviewed and "could not fetch" in reviewed[0][1]
 
-    def test_rejects_when_classifier_says_not_disaster(
+    def test_reviews_when_classifier_says_not_disaster(
         self,
         tmp_path: "Path",
         monkeypatch: pytest.MonkeyPatch,
     ) -> None:
         from scripts import ingest_submissions as mod
 
-        rejected: list[tuple] = []
-        monkeypatch.setattr(mod, "_reject", lambda n, r: rejected.append((n, r)))
+        reviewed: list[tuple] = []
+        monkeypatch.setattr(mod, "_reject", lambda *a, **k: pytest.fail("should not reject"))
+        monkeypatch.setattr(mod, "_review", lambda n, r: reviewed.append((n, r)))
         monkeypatch.setattr(mod, "fetch_article", lambda url: _make_fetched())
         store = MagicMock()
         store.find_news_id_by_url.return_value = None
         digester = MagicMock()
         digester.classify_submission.return_value = _make_classification(is_disaster=False)
         outcome = mod._process_issue(_make_issue(), store, digester, set())
-        assert outcome == "rejected:not-disaster"
-        assert rejected
+        assert outcome == "review:not-disaster"
+        assert reviewed
 
-    def test_rejects_when_classifier_returns_no_country(
+    def test_reviews_when_classifier_returns_no_country(
         self,
         tmp_path: "Path",
         monkeypatch: pytest.MonkeyPatch,
     ) -> None:
         from scripts import ingest_submissions as mod
 
-        rejected: list[tuple] = []
-        monkeypatch.setattr(mod, "_reject", lambda n, r: rejected.append((n, r)))
+        reviewed: list[tuple] = []
+        monkeypatch.setattr(mod, "_reject", lambda *a, **k: pytest.fail("should not reject"))
+        monkeypatch.setattr(mod, "_review", lambda n, r: reviewed.append((n, r)))
         monkeypatch.setattr(mod, "fetch_article", lambda url: _make_fetched())
         store = MagicMock()
         store.find_news_id_by_url.return_value = None
         digester = MagicMock()
         digester.classify_submission.return_value = _make_classification(country_code="")
         outcome = mod._process_issue(_make_issue(), store, digester, set())
-        assert outcome == "rejected:no-country"
-        assert rejected and "country" in rejected[0][1]
+        assert outcome == "review:no-country"
+        assert reviewed and "country" in reviewed[0][1]
 
     def test_full_ingest_path_births_incident_and_links_news(
         self,
@@ -237,6 +267,113 @@ class TestProcessIssue:
         assert isinstance(args[1], str) and len(args[1]) == 32  # uuid4 hex
         store.ingest_news_item.assert_called_once()
         store.assign_news_to_incident.assert_called_once()
+
+    def test_approved_submission_bypasses_not_disaster_classifier(
+        self,
+        tmp_path: "Path",
+        monkeypatch: pytest.MonkeyPatch,
+    ) -> None:
+        from scripts import ingest_submissions as mod
+
+        self._patch_common(monkeypatch)
+        removed: list[str] = []
+        monkeypatch.setattr(mod, "_remove_label", lambda n, label: removed.append(label))
+        monkeypatch.setattr(mod, "fetch_article", lambda url: _make_fetched())
+        store = self._make_store()
+        store.read_incident_for_news.return_value = None
+        digester = MagicMock()
+        digester.classify_submission.return_value = _make_classification(is_disaster=False)
+        outcome = mod._process_issue(
+            _make_issue(), store, digester, set(), approved=True
+        )
+        assert outcome == "imported:new"
+        report = store.ingest_source_report.call_args[0][0]
+        assert report.raw_fields["approved_override"] is True
+        assert mod.APPROVED_LABEL in removed
+
+    def test_approved_submission_without_country_returns_to_review(
+        self,
+        tmp_path: "Path",
+        monkeypatch: pytest.MonkeyPatch,
+    ) -> None:
+        from scripts import ingest_submissions as mod
+
+        reviewed: list[tuple] = []
+        monkeypatch.setattr(mod, "_reject", lambda *a, **k: pytest.fail("should not reject"))
+        monkeypatch.setattr(mod, "_review", lambda n, r: reviewed.append((n, r)))
+        monkeypatch.setattr(mod, "fetch_article", lambda url: _make_fetched())
+        store = MagicMock()
+        store.find_news_id_by_url.return_value = None
+        digester = MagicMock()
+        digester.classify_submission.return_value = _make_classification(country_code="")
+        outcome = mod._process_issue(
+            _make_issue(), store, digester, set(), approved=True
+        )
+        assert outcome == "review:no-country"
+        assert reviewed and "country" in reviewed[0][1]
+
+    def test_country_hint_fills_missing_classifier_country(
+        self,
+        tmp_path: "Path",
+        monkeypatch: pytest.MonkeyPatch,
+    ) -> None:
+        from scripts import ingest_submissions as mod
+
+        self._patch_common(monkeypatch)
+        monkeypatch.setattr(mod, "fetch_article", lambda url: _make_fetched())
+        store = self._make_store()
+        store.read_incident_for_news.return_value = None
+        digester = MagicMock()
+        digester.classify_submission.return_value = _make_classification(country_code="")
+        body = (
+            "### Article URL\n\nhttps://cnn.com/article\n\n"
+            "### Country (optional)\n\n🇸🇬 SG - Singapore\n"
+        )
+        outcome = mod._process_issue(_make_issue(body=body), store, digester, set())
+        assert outcome == "imported:new"
+        report = store.ingest_source_report.call_args[0][0]
+        assert report.places[0].country_code == "SG"
+        assert report.raw_fields["form_country_hint"] == "SG"
+
+    def test_category_hint_fills_missing_classifier_type(
+        self,
+        tmp_path: "Path",
+        monkeypatch: pytest.MonkeyPatch,
+    ) -> None:
+        from scripts import ingest_submissions as mod
+
+        self._patch_common(monkeypatch)
+        monkeypatch.setattr(mod, "fetch_article", lambda url: _make_fetched())
+        store = self._make_store()
+        store.read_incident_for_news.return_value = None
+        digester = MagicMock()
+        digester.classify_submission.return_value = _make_classification(
+            incident_type=""
+        )
+        body = (
+            "### Article URL\n\nhttps://cnn.com/article\n\n"
+            "### Category hint (optional)\n\n🔥 Wildfire\n"
+        )
+        outcome = mod._process_issue(_make_issue(body=body), store, digester, set())
+        assert outcome == "imported:new"
+        report = store.ingest_source_report.call_args[0][0]
+        assert report.incident_type == "Wildfire"
+
+    def test_review_keeps_issue_open_and_explains_labels(
+        self,
+        monkeypatch: pytest.MonkeyPatch,
+    ) -> None:
+        from scripts import ingest_submissions as mod
+
+        labels: list[str] = []
+        comments: list[str] = []
+        monkeypatch.setattr(mod, "_remove_label", lambda n, label: None)
+        monkeypatch.setattr(mod, "_add_label", lambda n, label: labels.append(label))
+        monkeypatch.setattr(mod, "_comment", lambda n, body: comments.append(body))
+        monkeypatch.setattr(mod, "_close", lambda *a, **k: pytest.fail("should not close"))
+        mod._review(7, "DSPy classifier says this is not a disaster event.")
+        assert mod.REVIEW_LABEL in labels
+        assert comments and "submission-approved" in comments[0]
 
     def test_short_circuits_when_url_already_on_existing_incident(
         self,

@@ -14,6 +14,7 @@ import tomllib
 from collections import Counter
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from urllib.parse import urlparse
 
 from disaster_report._countries import scan_countries
 from disaster_report._country_names import country_name
@@ -22,11 +23,31 @@ from disaster_report.store.content import ContentStore
 
 _ADAPTERS = adapter_registry()
 
-SCHEMA_VERSION = "1.5"
+SCHEMA_VERSION = "1.6"
 TRACKING_WINDOW_DAYS = 7
 DEFAULT_TRACKING_WINDOW_DAYS = 7
 MIN_SEVERITY = "LOW"
 MAX_RECENT_LOGS = 3
+
+_AGGREGATOR_DOMAINS = (
+    "msn.com",
+    "yahoo.com",
+    "aol.com",
+    "flipboard.com",
+    "news.google.com",
+)
+
+_TERM_STOPWORDS = frozenset({
+    "latest",
+    "update",
+    "event",
+    "news",
+    "report",
+    "with",
+    "from",
+    "this",
+    "that",
+})
 
 TYPE_CODE_MAP: dict[str, str] = {
     "Earthquake": "EQ",
@@ -352,6 +373,146 @@ def load_logs_for_incident(store: ContentStore, incident_id: str) -> list[dict]:
     return logs
 
 
+def _incident_terms(incident: dict) -> list[str]:
+    values = [
+        incident.get("canonical_name") or "",
+        incident.get("country") or "",
+        (incident.get("physical") or {}).get("place") or "",
+    ]
+    values.extend(incident.get("search_keys") or [])
+    terms: set[str] = set()
+    for value in values:
+        for term in re.findall(r"[^\W\d_]{4,}", str(value)):
+            lower = term.lower()
+            if lower not in _TERM_STOPWORDS:
+                terms.add(lower)
+    return sorted(terms)
+
+
+def _news_score(item: dict, terms: list[str]) -> tuple[int, int, int, str]:
+    headline = (item.get("headline") or "").lower()
+    body = (item.get("body") or "").lower()
+    headline_matches = sum(1 for term in terms if term in headline)
+    body_matches = sum(1 for term in terms if term in body)
+    domain = urlparse(item.get("url") or "").netloc.lower()
+    aggregator = any(
+        domain == blocked or domain.endswith("." + blocked)
+        for blocked in _AGGREGATOR_DOMAINS
+    )
+    return (
+        headline_matches,
+        int(not aggregator),
+        body_matches,
+        item.get("published_date") or "",
+    )
+
+
+def _headline_key(item: dict) -> str:
+    return re.sub(r"[^a-z0-9]+", "", (item.get("headline") or "").lower())[:80]
+
+
+def _select_news(items: list[dict], terms: list[str], limit: int) -> list[dict]:
+    picked: list[dict] = []
+    seen: set[str] = set()
+    for item in sorted(items, key=lambda n: _news_score(n, terms), reverse=True):
+        if not item.get("url"):
+            continue
+        key = _headline_key(item)
+        if key and key in seen:
+            continue
+        if key:
+            seen.add(key)
+        picked.append(item)
+        if len(picked) >= limit:
+            break
+    return picked
+
+
+def _latest_official(source_links: list[dict]) -> dict | None:
+    links = [link for link in source_links if link.get("url")]
+    if not links:
+        return None
+    return max(
+        links,
+        key=lambda link: (link.get("date") or "", link.get("label") or ""),
+    )
+
+
+def _key_link(
+    kind: str,
+    label: str,
+    url: str,
+    source: str,
+    date: str,
+    reason: str,
+) -> dict:
+    return {
+        "kind": kind,
+        "label": label,
+        "url": url,
+        "source": source,
+        "date": date,
+        "reason": reason,
+    }
+
+
+def select_key_links(
+    source_links: list[dict],
+    logs: list[dict],
+    news: list[dict],
+    incident: dict,
+) -> list[dict]:
+    terms = _incident_terms(incident)
+    official = _latest_official(source_links)
+    log_news: list[dict] = []
+    for log in reversed(logs or []):
+        log_news.extend(log.get("news") or [])
+    news_pool = log_news or news
+    selected_news = _select_news(
+        news_pool, terms, 2 if official else 3
+    )
+    key_links: list[dict] = []
+    if official:
+        key_links.append(_key_link(
+            "official",
+            official.get("label") or official.get("type") or "Official record",
+            official["url"],
+            official.get("type") or "Official",
+            official.get("date") or "",
+            "Latest official",
+        ))
+    for item in selected_news:
+        key_links.append(_key_link(
+            "news",
+            item.get("headline") or "",
+            item["url"],
+            item.get("outlet") or "",
+            item.get("published_date") or "",
+            "Latest update" if log_news else "News",
+        ))
+    if len(key_links) < 3:
+        extras = sorted(
+            (
+                link for link in source_links
+                if link.get("url") and link is not official
+            ),
+            key=lambda link: (link.get("date") or "", link.get("label") or ""),
+            reverse=True,
+        )
+        for link in extras:
+            key_links.append(_key_link(
+                "official",
+                link.get("label") or link.get("type") or "Official record",
+                link["url"],
+                link.get("type") or "Official",
+                link.get("date") or "",
+                "Official record",
+            ))
+            if len(key_links) >= 3:
+                break
+    return key_links
+
+
 def _resolve_region(name: str, latest_summary: str | None, is_disease: bool) -> str:
     if "global" in (name or "").lower():
         return "Global"
@@ -363,6 +524,7 @@ def _resolve_region(name: str, latest_summary: str | None, is_disease: bool) -> 
 
 def build_incident_object(store: ContentStore, inc: dict, as_of_date: datetime) -> dict | None:
     incident_id = inc["incident_id"]
+    search_keys = store.read_incident_search_keys(incident_id)
     reports = load_reports_for_incident(store, incident_id)
     if not reports:
         return None
@@ -489,11 +651,14 @@ def build_incident_object(store: ContentStore, inc: dict, as_of_date: datetime) 
         if key:
             source_counts[key] += 1
 
-    source_links = [
-        _ADAPTERS[r["source"]].build_source_link(r["raw_fields"], r["name"])
-        for r in reports
-        if r["source"] in _ADAPTERS
-    ]
+    source_links: list[dict] = []
+    for r in reports:
+        adapter = _ADAPTERS.get(r["source"])
+        if adapter is None:
+            continue
+        link = adapter.build_source_link(r["raw_fields"], r["name"])
+        link["date"] = r["report_date"]
+        source_links.append(link)
 
     type_code = TYPE_CODE_MAP.get(inc_type, "DI" if is_disease else "OT")
 
@@ -512,6 +677,18 @@ def build_incident_object(store: ContentStore, inc: dict, as_of_date: datetime) 
         "gdacs_alertlevel": gdacs_alert,
         "gdacs_population": gdacs_pop if gdacs_pop else None,
     }
+
+    key_links = select_key_links(
+        source_links,
+        logs,
+        news,
+        {
+            "canonical_name": canonical_name,
+            "country": country,
+            "physical": physical,
+            "search_keys": search_keys,
+        },
+    )
 
     if logs:
         news_items = [
@@ -561,9 +738,10 @@ def build_incident_object(store: ContentStore, inc: dict, as_of_date: datetime) 
         "days_since_event": days_since,
         "source_count": len(reports),
         "should_report": should_report,
-        "search_keys": [],
+        "search_keys": search_keys,
         "sources": source_counts,
         "source_links": source_links,
+        "key_links": key_links,
         "physical": physical,
         "news": news_items,
         "news_total": news_count,
