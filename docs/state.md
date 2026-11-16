@@ -21,7 +21,7 @@
 
 **Boundary:**
 - *Internal (ours):* `cli`, `pipeline`, `store.base`, `sources.{who,usgs,gdacs,ddg_news}`, `ai.{base,openrouter}`, `reporting.{markdown,report}`, `_countries`, `_country_names`, `_regions`, `_search_keys`, `config`, `models`
-- *External (depends on):* WHO DON OData feed, USGS GeoJSON feed, GDACS RSS feed, DuckDuckGo News search, OpenRouter LLM (deepseek-v4-flash)
+- *External (depends on):* WHO DON OData feed, USGS GeoJSON feed, GDACS RSS feed, DuckDuckGo News search, OpenRouter LLM (deepseek-v4.1-flash-1017)
 
 ## Contract index
 

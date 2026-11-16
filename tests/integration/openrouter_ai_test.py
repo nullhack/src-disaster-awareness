@@ -8,7 +8,7 @@ if TYPE_CHECKING:
     from disaster_report.ai.base import FilterResult
     from disaster_report.models import IncidentLog, NewsItem
 
-MODEL: str = "openrouter/deepseek/deepseek-v4-flash"
+MODEL: str = "openrouter/deepseek/deepseek-v4.1-flash-1017"
 INVALID_MODEL: str = "this-model-does-not-exist-404"
 
 

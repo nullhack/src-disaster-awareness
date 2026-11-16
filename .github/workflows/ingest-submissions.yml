@@ -47,7 +47,7 @@ jobs:
         run: |
           uv run python scripts/ingest_submissions.py \
             --tree-root data \
-            --model "openrouter/deepseek/deepseek-v4-flash" \
+            --model "openrouter/deepseek/deepseek-v4.1-flash-1017" \
             --api-key "$OPENROUTER_API_KEY" \
             -v
       - name: Count after
