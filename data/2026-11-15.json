@@ -1,25 +1,25 @@
 {
   "schema_version": "1.6",
   "report_date": "2026-11-15",
-  "generated_at": "2026-11-17T21:50:06Z",
+  "generated_at": "2026-11-18T08:41:09Z",
   "as_of": "2026-11-15",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 10,
+    "reportable_total": 9,
     "new_today": 2,
     "critical": 4,
     "high": 2,
-    "medium": 3,
+    "medium": 2,
     "low": 1,
-    "disease_outbreaks": 2,
-    "countries_affected": 9,
-    "news_total": 900,
+    "disease_outbreaks": 1,
+    "countries_affected": 8,
+    "news_total": 891,
     "max_magnitude": 7.6,
     "by_severity": {
       "CRITICAL": 4,
       "HIGH": 2,
-      "MEDIUM": 3,
+      "MEDIUM": 2,
       "LOW": 1
     },
     "by_type": {
@@ -27,15 +27,14 @@
       "Earthquake": 5,
       "Severe Weather": 1,
       "Tsunami": 1,
-      "Disease": 2
+      "Disease": 1
     },
     "by_region": {
       "Europe": 2,
       "Oceania": 2,
       "Americas": 2,
       "Asia": 2,
-      "Unknown": 1,
-      "Africa": 1
+      "Unknown": 1
     }
   },
   "by_country": [
@@ -47,15 +46,6 @@
       "region": "Europe",
       "country_group": "C",
       "max_severity": "LOW"
-    },
-    {
-      "country": "Burkina Faso",
-      "count": 1,
-      "max_sev_rank": 2,
-      "iso2": "BF",
-      "region": "Africa",
-      "country_group": "C",
-      "max_severity": "MEDIUM"
     },
     {
       "country": "Guatemala",
@@ -146,7 +136,7 @@
       "event_date": "2026-10-08",
       "first_reported_date": "2026-10-08",
       "last_updated_date": "2026-11-15",
-      "days_since_event": 40,
+      "days_since_event": 41,
       "source_count": 2,
       "should_report": true,
       "search_keys": [
@@ -2380,7 +2370,7 @@
       "event_date": "2026-10-08",
       "first_reported_date": "2026-10-08",
       "last_updated_date": "2026-11-13",
-      "days_since_event": 40,
+      "days_since_event": 41,
       "source_count": 19,
       "should_report": true,
       "search_keys": [
@@ -2982,7 +2972,7 @@
       "event_date": "2026-10-08",
       "first_reported_date": "2026-10-08",
       "last_updated_date": "2026-11-10",
-      "days_since_event": 40,
+      "days_since_event": 41,
       "source_count": 13,
       "should_report": true,
       "search_keys": [
@@ -4419,7 +4409,7 @@
       "event_date": "2026-10-11",
       "first_reported_date": "2026-10-11",
       "last_updated_date": "2026-11-11",
-      "days_since_event": 37,
+      "days_since_event": 38,
       "source_count": 2,
       "should_report": true,
       "search_keys": [
@@ -4611,8 +4601,8 @@
       "incident_category": "Natural",
       "is_disease": false,
       "severity": "CRITICAL",
-      "priority": "HIGH",
-      "priority_rank": 1,
+      "priority": "MEDIUM",
+      "priority_rank": 2,
       "pandemic_potential": null,
       "event_status": null,
       "extended_monitoring": false,
@@ -4620,8 +4610,8 @@
       "event_date": "2026-10-14",
       "first_reported_date": "2026-10-14",
       "last_updated_date": "2026-11-13",
-      "days_since_event": 34,
-      "source_count": 1,
+      "days_since_event": 35,
+      "source_count": 2,
       "should_report": true,
       "search_keys": [
         "Severe Weather latest 2026",
@@ -4631,7 +4621,7 @@
         "who_don": 0,
         "usgs": 0,
         "gdacs": 0,
-        "ercc": 1,
+        "ercc": 2,
         "healthmap": 0,
         "news": 202
       },
@@ -4642,15 +4632,22 @@
           "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5816",
           "meta": "",
           "date": "2026-10-14"
+        },
+        {
+          "type": "ERCC",
+          "label": "ECHO Daily Map of 13 November 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5842",
+          "meta": "",
+          "date": "2026-11-13"
         }
       ],
       "key_links": [
         {
           "kind": "official",
-          "label": "ECHO Daily Map of 14 October 2026",
-          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5816",
+          "label": "ECHO Daily Map of 13 November 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5842",
           "source": "ERCC",
-          "date": "2026-10-14",
+          "date": "2026-11-13",
           "reason": "Newest official"
         },
         {
@@ -7334,7 +7331,7 @@
       "event_date": "2026-10-24",
       "first_reported_date": "2026-10-24",
       "last_updated_date": "2026-11-08",
-      "days_since_event": 24,
+      "days_since_event": 25,
       "source_count": 8,
       "should_report": true,
       "search_keys": [
@@ -7998,7 +7995,7 @@
       "event_date": "2026-11-05",
       "first_reported_date": "2026-11-05",
       "last_updated_date": "2026-11-11",
-      "days_since_event": 12,
+      "days_since_event": 13,
       "source_count": 1,
       "should_report": false,
       "search_keys": [
@@ -8083,157 +8080,6 @@
       "logs_total": 0
     },
     {
-      "incident_id": "20261106-BF-DI",
-      "tree_id": "c7c537cf25114dbf8531a4aec164b085",
-      "canonical_name": "Yellow fever Burkina Faso 2026-11-06",
-      "summary": "The CDC issued a Level 2 travel alert in response to a yellow fever outbreak, urging travelers to obtain the yellow fever vaccine at least 10 days before departure. Yellow fever is listed among the active CDC Travel Health Notices, indicating ongoing public health attention.",
-      "country": "Burkina Faso",
-      "iso2": "BF",
-      "lat": 12.2,
-      "lon": -1.6,
-      "country_group": "C",
-      "region": "Africa",
-      "incident_type": "Disease",
-      "incident_category": "Biological",
-      "is_disease": true,
-      "severity": "MEDIUM",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": "MEDIUM",
-      "event_status": null,
-      "extended_monitoring": false,
-      "disease_name": "Yellow Fever",
-      "event_date": "2026-11-06",
-      "first_reported_date": "2026-11-06",
-      "last_updated_date": "2026-11-14",
-      "days_since_event": 11,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [
-        "Yellow fever update 2026"
-      ],
-      "sources": {
-        "who_don": 1,
-        "usgs": 0,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 9
-      },
-      "source_links": [
-        {
-          "type": "WHO",
-          "label": "Yellow fever Burkina Faso 2026-11-06",
-          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON624",
-          "meta": "",
-          "date": "2026-11-06"
-        }
-      ],
-      "key_links": [
-        {
-          "kind": "official",
-          "label": "Yellow fever Burkina Faso 2026-11-06",
-          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON624",
-          "source": "WHO",
-          "date": "2026-11-06",
-          "reason": "Newest official"
-        },
-        {
-          "kind": "news",
-          "label": "CDC Travel Health Notices: Key Outbreak Alerts for Clinicians",
-          "url": "https://www.emjreviews.com/microbiology-infectious-diseases/news/cdc-travel-health-notices-key-outbreak-alerts-for-clinicians/",
-          "source": "European Medical Journal",
-          "date": "2026-11-14",
-          "reason": "Latest log"
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Infection Outbreak Triggers Level 2 CDC Travel Alert",
-          "published_date": "2026-11-12"
-        },
-        {
-          "headline": "Infection Outbreak Triggers Level 2 CDC Travel Alert",
-          "published_date": "2026-11-12"
-        },
-        {
-          "headline": "Infection Outbreak Triggers Level 2 CDC Travel Alert",
-          "published_date": "2026-11-12"
-        },
-        {
-          "headline": "Infection Outbreak Triggers Level 2 CDC Travel Alert",
-          "published_date": "2026-11-12"
-        },
-        {
-          "headline": "Infection Outbreak Triggers Level 2 CDC Travel Alert",
-          "published_date": "2026-11-12"
-        },
-        {
-          "headline": "Infection Outbreak Triggers Level 2 CDC Travel Alert",
-          "published_date": "2026-11-12"
-        },
-        {
-          "headline": "Infection Outbreak Triggers Level 2 CDC Travel Alert",
-          "published_date": "2026-11-12"
-        },
-        {
-          "headline": "Infection Outbreak Triggers Level 2 CDC Travel Alert",
-          "published_date": "2026-11-12"
-        },
-        {
-          "headline": "CDC Travel Health Notices: Key Outbreak Alerts for Clinicians",
-          "published_date": "2026-11-14"
-        }
-      ],
-      "news_total": 9,
-      "logs": [
-        {
-          "log_date": "2026-11-15",
-          "summary": "The CDC issued a Level 2 travel alert in response to a yellow fever outbreak, urging travelers to obtain the yellow fever vaccine at least 10 days before departure. Yellow fever is listed among the active CDC Travel Health Notices, indicating ongoing public health attention.",
-          "news": [
-            {
-              "news_id": "a12610c62d335d42a0eda670ad017f65",
-              "url": "https://travel.yahoo.com/advice/safety/articles/infection-outbreak-triggers-level-2-040300625.html;_ylt=A2RRDsn7W_lq6QIAlcPQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzEEdnRpZAMEc2VjA3Ny",
-              "headline": "Infection Outbreak Triggers Level 2 CDC Travel Alert",
-              "body": "The federal agency is urging passengers to secure targeted vaccinations 10 days before departure.",
-              "published_date": "2026-11-12",
-              "outlet": "Travel Host · via Yahoo News",
-              "image": "https://s.yimg.com/fz/api/res/1.2/5gJRPuVigfICRGN0EuHVqw--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7c209MTt3PTE2MA--/https://media.zenfs.com/en/travel_host_634/c483e94d9c88c6d48a6e8505739716d8.jpg"
-            },
-            {
-              "news_id": "0b45044f7d3b59a284cc4941e31e40cd",
-              "url": "https://www.emjreviews.com/microbiology-infectious-diseases/news/cdc-travel-health-notices-key-outbreak-alerts-for-clinicians/",
-              "headline": "CDC Travel Health Notices: Key Outbreak Alerts for Clinicians",
-              "body": "Review active CDC Travel Health Notices for Ebola, yellow fever, polio, and dengue to guide U.S. patient consultations. Read more.",
-              "published_date": "2026-11-14",
-              "outlet": "European Medical Journal",
-              "image": "https://www.bing.com/th?id=ONUT.NRJIyprWyaec237eRKzJFQ"
-            },
-            {
-              "news_id": "ac73b34d1e595b68a4cc0d2f210e1aa9",
-              "url": "https://travel.yahoo.com/advice/safety/articles/infection-outbreak-triggers-level-2-040300625.html;_ylt=A2RRrziUWPlq6AIAbaDQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzEEdnRpZAMEc2VjA3Ny",
-              "headline": "Infection Outbreak Triggers Level 2 CDC Travel Alert",
-              "body": "The federal agency is urging passengers to secure targeted vaccinations 10 days before departure.",
-              "published_date": "2026-11-12",
-              "outlet": "Travel Host · via Yahoo News",
-              "image": "https://s.yimg.com/fz/api/res/1.2/5gJRPuVigfICRGN0EuHVqw--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7c209MTt3PTE2MA--/https://media.zenfs.com/en/travel_host_634/c483e94d9c88c6d48a6e8505739716d8.jpg"
-            }
-          ]
-        }
-      ],
-      "logs_total": 1
-    },
-    {
       "incident_id": "20261110-GT-EQ",
       "tree_id": "2ca2ea2faa1f4ca2b5e1635ce7382a3b",
       "canonical_name": "Earthquake M5.6 Puerto San José, Guatemala 2026-11-10",
@@ -8257,7 +8103,7 @@
       "event_date": "2026-11-10",
       "first_reported_date": "2026-11-10",
       "last_updated_date": "2026-11-11",
-      "days_since_event": 7,
+      "days_since_event": 8,
       "source_count": 1,
       "should_report": false,
       "search_keys": [
@@ -8537,7 +8383,7 @@
       "event_date": "2026-11-13",
       "first_reported_date": "2026-11-13",
       "last_updated_date": "2026-11-15",
-      "days_since_event": 4,
+      "days_since_event": 5,
       "source_count": 1,
       "should_report": true,
       "search_keys": [
