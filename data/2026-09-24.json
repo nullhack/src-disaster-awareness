@@ -1,50 +1,43 @@
 {
   "schema_version": "1.6",
   "report_date": "2026-09-24",
-  "generated_at": "2026-11-24T01:03:21Z",
+  "generated_at": "2026-11-24T05:42:14Z",
   "as_of": "2026-09-24",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 5,
+    "reportable_total": 6,
     "new_today": 0,
     "critical": 1,
     "high": 1,
     "medium": 1,
-    "low": 2,
+    "low": 3,
     "disease_outbreaks": 0,
-    "countries_affected": 4,
-    "news_total": 496,
+    "countries_affected": 3,
+    "news_total": 497,
     "max_magnitude": 6.4,
     "by_severity": {
       "CRITICAL": 1,
       "HIGH": 1,
       "MEDIUM": 1,
-      "LOW": 2
+      "LOW": 3
     },
     "by_type": {
       "Flood": 1,
       "Severe Weather": 1,
       "Forest Fire": 1,
       "Tropical Cyclone": 1,
+      "El Niño": 1,
       "Earthquake": 1
     },
     "by_region": {
       "Asia": 2,
       "Americas": 2,
+      "South-Eastern Asia": 1,
       "Oceania": 1
     }
   },
   "by_country": [
-    {
-      "country": "",
-      "count": 2,
-      "max_sev_rank": 1,
-      "iso2": "XX",
-      "region": "Americas",
-      "country_group": "C",
-      "max_severity": "LOW"
-    },
     {
       "country": "Canada",
       "count": 1,
@@ -94,6 +87,11 @@
       "pandemic_potential": null,
       "event_status": null,
       "extended_monitoring": false,
+      "scope": "country",
+      "region_code": "",
+      "region_name": "",
+      "monitoring_status": "",
+      "tracking_window_days": 0,
       "disease_name": null,
       "event_date": "2026-06-06",
       "first_reported_date": "2026-06-06",
@@ -722,6 +720,11 @@
       "pandemic_potential": null,
       "event_status": null,
       "extended_monitoring": false,
+      "scope": "",
+      "region_code": "",
+      "region_name": "",
+      "monitoring_status": "",
+      "tracking_window_days": 0,
       "disease_name": null,
       "event_date": "2026-07-09",
       "first_reported_date": "2026-07-09",
@@ -2566,6 +2569,11 @@
       "pandemic_potential": null,
       "event_status": null,
       "extended_monitoring": false,
+      "scope": "country",
+      "region_code": "",
+      "region_name": "",
+      "monitoring_status": "",
+      "tracking_window_days": 0,
       "disease_name": null,
       "event_date": "2026-08-08",
       "first_reported_date": "2026-08-08",
@@ -3483,6 +3491,11 @@
       "pandemic_potential": null,
       "event_status": null,
       "extended_monitoring": false,
+      "scope": "",
+      "region_code": "",
+      "region_name": "",
+      "monitoring_status": "",
+      "tracking_window_days": 0,
       "disease_name": null,
       "event_date": "2026-08-18",
       "first_reported_date": "2026-08-18",
@@ -3934,6 +3947,97 @@
       "logs_total": 3
     },
     {
+      "incident_id": "20260917-XX-EN",
+      "tree_id": "86a1b2c3d4e5f60718293a4b5c6d7e8f",
+      "canonical_name": "El Niño — South-Eastern Asia",
+      "summary": "Super El Niño conditions are forecast for late 2026, with a 98% chance of a very strong event. Southeast Asia faces lingering heat, rising living costs, and disruption to livelihoods.",
+      "country": "",
+      "iso2": "XX",
+      "lat": null,
+      "lon": null,
+      "country_group": "C",
+      "region": "South-Eastern Asia",
+      "incident_type": "El Niño",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "LOW",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": null,
+      "event_status": "monitoring",
+      "extended_monitoring": true,
+      "scope": "regional",
+      "region_code": "035",
+      "region_name": "South-Eastern Asia",
+      "monitoring_status": "monitoring",
+      "tracking_window_days": 365,
+      "disease_name": null,
+      "event_date": "2026-09-17",
+      "first_reported_date": "2026-09-17",
+      "last_updated_date": "2026-09-17",
+      "days_since_event": 68,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [
+        "South-Eastern Asia El Niño latest 2026",
+        "South-Eastern Asia El Niño 2026"
+      ],
+      "sources": {
+        "who_don": 0,
+        "usgs": 0,
+        "gdacs": 0,
+        "ercc": 0,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [],
+      "key_links": [
+        {
+          "kind": "news",
+          "label": "Super El Nino could reshape daily life, threaten livelihoods in Southeast Asia with lingering heat",
+          "url": "https://www.channelnewsasia.com/cna-insider/insider/super-el-nino-southeast-asia-heat-livelihoods-climate-phenomenon-6388436",
+          "source": "MANUAL",
+          "date": "2026-09-17",
+          "reason": "Latest log"
+        }
+      ],
+      "physical": {
+        "max_magnitude": null,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Super El Nino could reshape daily life, threaten livelihoods in Southeast Asia with lingering heat",
+          "published_date": "2026-09-17"
+        }
+      ],
+      "news_total": 1,
+      "logs": [
+        {
+          "log_date": "2026-09-17",
+          "summary": "Super El Niño conditions are forecast for late 2026, with a 98% chance of a very strong event. Southeast Asia faces lingering heat, rising living costs, and disruption to livelihoods.",
+          "news": [
+            {
+              "news_id": "995e8d6676d75d748d755a0a3ad168cd",
+              "url": "https://www.channelnewsasia.com/cna-insider/insider/super-el-nino-southeast-asia-heat-livelihoods-climate-phenomenon-6388436",
+              "headline": "Super El Nino could reshape daily life, threaten livelihoods in Southeast Asia with lingering heat",
+              "body": "The chance of a “very strong” El Nino from next month to December is forecast to be 98 per cent now. CNA’s Insight looks at how living costs could rise and how ready the region is for the disruptions ahead.",
+              "published_date": "2026-09-17",
+              "outlet": "MANUAL",
+              "image": ""
+            }
+          ]
+        }
+      ],
+      "logs_total": 1
+    },
+    {
       "incident_id": "20260920-PG-EQ",
       "tree_id": "9b71603be29a46559e22da05495ebf5f",
       "canonical_name": "Earthquake M6.4 Kainantu, Papua New Guinea 2026-09-20",
@@ -3953,6 +4057,11 @@
       "pandemic_potential": null,
       "event_status": null,
       "extended_monitoring": false,
+      "scope": "country",
+      "region_code": "",
+      "region_name": "",
+      "monitoring_status": "",
+      "tracking_window_days": 0,
       "disease_name": null,
       "event_date": "2026-09-20",
       "first_reported_date": "2026-09-20",

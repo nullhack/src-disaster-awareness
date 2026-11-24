@@ -10,9 +10,15 @@ const SEV_ORDER = ["CRITICAL", "HIGH", "MEDIUM", "LOW"];
 const SEV_COLOR = { CRITICAL: "#7A0019", HIGH: "#E4002B", MEDIUM: "#E8A317", LOW: "#4F7CAC" };
 const TYPE_COLOR = {
   Earthquake: "#8B5A2B", Disease: "#7A0019", Flood: "#1F77B4",
-  Wildfire: "#E8741E", "Tropical Cyclone": "#0E9594", Other: "#6E6E6E",
+  Wildfire: "#E8741E", "Tropical Cyclone": "#0E9594",
+  "El Niño": "#B45309", "La Niña": "#0E7490", Monsoon: "#2563EB",
+  Climate: "#7C3AED", Other: "#6E6E6E",
 };
 const typeColor = (t) => TYPE_COLOR[t] || TYPE_COLOR.Other;
+const placeLabel = (i) => {
+  if (i.scope === "regional") return i.region_name || i.region || "Region";
+  return i.iso2 === "XX" ? "Global" : (i.country || "Global");
+};
 const REPO_URL = "https://github.com/nullhack/src-disaster-awareness";
 // distinct palette for disease pathogens (disease trend panel)
 const DISEASE_COLOR = {
@@ -340,7 +346,7 @@ async function renderMap() {
   const filtered = getFiltered();
   const byCountry = new Map();
   filtered.forEach((i) => {
-    if (i.iso2 === "XX" || i.lat == null) return;
+    if (i.iso2 === "XX" || i.scope === "regional" || i.scope === "global" || i.lat == null) return;
     const c = byCountry.get(i.iso2) || { iso2: i.iso2, country: i.country, count: 0, news: 0, maxRank: 99, lat: i.lat, lon: i.lon };
     c.count += 1;
     c.news += i.news_total || 0;
@@ -598,7 +604,7 @@ function renderWatchlist() {
         <button class="row-open" type="button" aria-label="Open ${esc(i.canonical_name)} (${esc(i.incident_id)})">${i.extended_monitoring ? '<span title="Extended monitoring" style="cursor:help">🔁</span> ' : ""}${esc(i.canonical_name)}</button>
         <div class="cell-sub">${i.incident_id}${i.disease_name ? " · " + esc(i.disease_name) : ""}</div>
       </td>
-      <td class="cell-country">${esc(i.iso2 === "XX" ? "Global" : i.country)}<small>${esc(i.region || "")}</small></td>
+      <td class="cell-country">${esc(placeLabel(i))}<small>${esc(i.region || "")}</small></td>
       <td>${typePill(i.incident_type)}</td>
       <td><div class="cell-name">${fmtDate(i.event_date)}</div><div class="cell-sub">${i.days_since_event ?? "?"}d ago</div></td>
       <td class="num"><b>${i.news_total}</b></td>
@@ -675,7 +681,7 @@ function renderRecentActivity() {
   getFiltered().forEach((inc) => {
     const id = inc.incident_id;
     const name = inc.canonical_name || id;
-    const country = inc.iso2 === "XX" ? "Global" : (inc.country || "");
+    const country = placeLabel(inc);
     // new incident: first_reported_date within 48h
     if (within(inc.first_reported_date || inc.event_date)) {
       events.push({
@@ -941,7 +947,7 @@ function openDrawer(id, opener = null) {
     <div class="drawer__section">
       <h3>Key facts</h3>
       <div class="drawer__grid">
-        ${kv("Country", `${esc(i.iso2 === "XX" ? "Global" : i.country)} (${i.iso2})`)}
+        ${kv("Location", `${esc(placeLabel(i))}${i.scope === "regional" ? "" : ` (${i.iso2})`}`)}
         ${kv("Region", esc(i.region || "—"))}
         ${kv("Country group", esc(i.country_group || "—"))}
         ${kv("Event date", `${fmtDate(i.event_date)} · ${i.days_since_event ?? "?"}d ago`)}

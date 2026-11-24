@@ -1,53 +1,47 @@
 {
   "schema_version": "1.6",
   "report_date": "2026-10-30",
-  "generated_at": "2026-11-24T01:03:21Z",
+  "generated_at": "2026-11-24T05:42:14Z",
   "as_of": "2026-10-30",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 14,
+    "reportable_total": 16,
     "new_today": 1,
     "critical": 4,
     "high": 4,
     "medium": 2,
-    "low": 4,
+    "low": 6,
     "disease_outbreaks": 0,
     "countries_affected": 10,
-    "news_total": 949,
+    "news_total": 951,
     "max_magnitude": 6.9,
     "by_severity": {
       "CRITICAL": 4,
       "HIGH": 4,
       "MEDIUM": 2,
-      "LOW": 4
+      "LOW": 6
     },
     "by_type": {
       "Severe Weather": 1,
+      "El Niño": 1,
       "Tropical Cyclone": 4,
       "Earthquake": 5,
       "": 3,
-      "Flood": 1
+      "Flood": 1,
+      "Monsoon": 1
     },
     "by_region": {
       "Americas": 4,
+      "South-Eastern Asia": 1,
       "Europe": 3,
       "Africa": 1,
       "Unknown": 3,
-      "Asia": 2,
+      "Asia": 3,
       "Oceania": 1
     }
   },
   "by_country": [
-    {
-      "country": "",
-      "count": 4,
-      "max_sev_rank": 1,
-      "iso2": "XX",
-      "region": "Americas",
-      "country_group": "C",
-      "max_severity": "LOW"
-    },
     {
       "country": "DR Congo",
       "count": 1,
@@ -73,6 +67,15 @@
       "iso2": "ES",
       "region": "Europe",
       "country_group": "C",
+      "max_severity": "LOW"
+    },
+    {
+      "country": "Malaysia",
+      "count": 1,
+      "max_sev_rank": 1,
+      "iso2": "MY",
+      "region": "Asia",
+      "country_group": "A",
       "max_severity": "LOW"
     },
     {
@@ -151,6 +154,11 @@
       "pandemic_potential": null,
       "event_status": null,
       "extended_monitoring": false,
+      "scope": "",
+      "region_code": "",
+      "region_name": "",
+      "monitoring_status": "",
+      "tracking_window_days": 0,
       "disease_name": null,
       "event_date": "2026-08-12",
       "first_reported_date": "2026-08-12",
@@ -2958,6 +2966,97 @@
       "logs_total": 23
     },
     {
+      "incident_id": "20260917-XX-EN",
+      "tree_id": "86a1b2c3d4e5f60718293a4b5c6d7e8f",
+      "canonical_name": "El Niño — South-Eastern Asia",
+      "summary": "Super El Niño conditions are forecast for late 2026, with a 98% chance of a very strong event. Southeast Asia faces lingering heat, rising living costs, and disruption to livelihoods.",
+      "country": "",
+      "iso2": "XX",
+      "lat": null,
+      "lon": null,
+      "country_group": "C",
+      "region": "South-Eastern Asia",
+      "incident_type": "El Niño",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "LOW",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": null,
+      "event_status": "monitoring",
+      "extended_monitoring": true,
+      "scope": "regional",
+      "region_code": "035",
+      "region_name": "South-Eastern Asia",
+      "monitoring_status": "monitoring",
+      "tracking_window_days": 365,
+      "disease_name": null,
+      "event_date": "2026-09-17",
+      "first_reported_date": "2026-09-17",
+      "last_updated_date": "2026-09-17",
+      "days_since_event": 68,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [
+        "South-Eastern Asia El Niño latest 2026",
+        "South-Eastern Asia El Niño 2026"
+      ],
+      "sources": {
+        "who_don": 0,
+        "usgs": 0,
+        "gdacs": 0,
+        "ercc": 0,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [],
+      "key_links": [
+        {
+          "kind": "news",
+          "label": "Super El Nino could reshape daily life, threaten livelihoods in Southeast Asia with lingering heat",
+          "url": "https://www.channelnewsasia.com/cna-insider/insider/super-el-nino-southeast-asia-heat-livelihoods-climate-phenomenon-6388436",
+          "source": "MANUAL",
+          "date": "2026-09-17",
+          "reason": "Latest log"
+        }
+      ],
+      "physical": {
+        "max_magnitude": null,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Super El Nino could reshape daily life, threaten livelihoods in Southeast Asia with lingering heat",
+          "published_date": "2026-09-17"
+        }
+      ],
+      "news_total": 1,
+      "logs": [
+        {
+          "log_date": "2026-09-17",
+          "summary": "Super El Niño conditions are forecast for late 2026, with a 98% chance of a very strong event. Southeast Asia faces lingering heat, rising living costs, and disruption to livelihoods.",
+          "news": [
+            {
+              "news_id": "995e8d6676d75d748d755a0a3ad168cd",
+              "url": "https://www.channelnewsasia.com/cna-insider/insider/super-el-nino-southeast-asia-heat-livelihoods-climate-phenomenon-6388436",
+              "headline": "Super El Nino could reshape daily life, threaten livelihoods in Southeast Asia with lingering heat",
+              "body": "The chance of a “very strong” El Nino from next month to December is forecast to be 98 per cent now. CNA’s Insight looks at how living costs could rise and how ready the region is for the disruptions ahead.",
+              "published_date": "2026-09-17",
+              "outlet": "MANUAL",
+              "image": ""
+            }
+          ]
+        }
+      ],
+      "logs_total": 1
+    },
+    {
       "incident_id": "20260921-MX-TC",
       "tree_id": "b2b5a81f17654768a73f0dbf9eebd032",
       "canonical_name": "Tropical Cyclone POLO-26 Mexico 2026-09-21",
@@ -2977,6 +3076,11 @@
       "pandemic_potential": null,
       "event_status": null,
       "extended_monitoring": false,
+      "scope": "country",
+      "region_code": "",
+      "region_name": "",
+      "monitoring_status": "",
+      "tracking_window_days": 0,
       "disease_name": null,
       "event_date": "2026-09-21",
       "first_reported_date": "2026-09-21",
@@ -4374,6 +4478,11 @@
       "pandemic_potential": null,
       "event_status": null,
       "extended_monitoring": false,
+      "scope": "country",
+      "region_code": "",
+      "region_name": "",
+      "monitoring_status": "",
+      "tracking_window_days": 0,
       "disease_name": null,
       "event_date": "2026-10-02",
       "first_reported_date": "2026-10-02",
@@ -4776,6 +4885,11 @@
       "pandemic_potential": null,
       "event_status": null,
       "extended_monitoring": false,
+      "scope": "country",
+      "region_code": "",
+      "region_name": "",
+      "monitoring_status": "",
+      "tracking_window_days": 0,
       "disease_name": null,
       "event_date": "2026-10-06",
       "first_reported_date": "2026-10-06",
@@ -5863,6 +5977,11 @@
       "pandemic_potential": null,
       "event_status": null,
       "extended_monitoring": false,
+      "scope": "country",
+      "region_code": "",
+      "region_name": "",
+      "monitoring_status": "",
+      "tracking_window_days": 0,
       "disease_name": null,
       "event_date": "2026-10-06",
       "first_reported_date": "2026-10-06",
@@ -6129,6 +6248,11 @@
       "pandemic_potential": null,
       "event_status": null,
       "extended_monitoring": false,
+      "scope": "",
+      "region_code": "",
+      "region_name": "",
+      "monitoring_status": "",
+      "tracking_window_days": 0,
       "disease_name": null,
       "event_date": "2026-10-07",
       "first_reported_date": "2026-10-07",
@@ -7059,6 +7183,11 @@
       "pandemic_potential": null,
       "event_status": null,
       "extended_monitoring": false,
+      "scope": "country",
+      "region_code": "",
+      "region_name": "",
+      "monitoring_status": "",
+      "tracking_window_days": 0,
       "disease_name": null,
       "event_date": "2026-10-13",
       "first_reported_date": "2026-10-13",
@@ -7553,6 +7682,11 @@
       "pandemic_potential": null,
       "event_status": null,
       "extended_monitoring": false,
+      "scope": "country",
+      "region_code": "",
+      "region_name": "",
+      "monitoring_status": "",
+      "tracking_window_days": 0,
       "disease_name": null,
       "event_date": "2026-10-14",
       "first_reported_date": "2026-10-14",
@@ -8214,6 +8348,11 @@
       "pandemic_potential": null,
       "event_status": null,
       "extended_monitoring": false,
+      "scope": "",
+      "region_code": "",
+      "region_name": "",
+      "monitoring_status": "",
+      "tracking_window_days": 0,
       "disease_name": null,
       "event_date": "2026-10-19",
       "first_reported_date": "2026-10-19",
@@ -8299,6 +8438,11 @@
       "pandemic_potential": null,
       "event_status": null,
       "extended_monitoring": false,
+      "scope": "country",
+      "region_code": "",
+      "region_name": "",
+      "monitoring_status": "",
+      "tracking_window_days": 0,
       "disease_name": null,
       "event_date": "2026-10-21",
       "first_reported_date": "2026-10-21",
@@ -8439,6 +8583,11 @@
       "pandemic_potential": null,
       "event_status": null,
       "extended_monitoring": false,
+      "scope": "country",
+      "region_code": "",
+      "region_name": "",
+      "monitoring_status": "",
+      "tracking_window_days": 0,
       "disease_name": null,
       "event_date": "2026-10-23",
       "first_reported_date": "2026-10-23",
@@ -8828,6 +8977,97 @@
       "logs_total": 3
     },
     {
+      "incident_id": "20261023-MY-MS",
+      "tree_id": "85a1b2c3d4e5f60718293a4b5c6d7e8f",
+      "canonical_name": "Northeast Monsoon — Malaysia",
+      "summary": "Malaysia's 2026/2027 Northeast Monsoon season is expected to begin on 27 October 2026, with elevated flood risk through the season.",
+      "country": "Malaysia",
+      "iso2": "MY",
+      "lat": 4.2,
+      "lon": 109.7,
+      "country_group": "A",
+      "region": "Asia",
+      "incident_type": "Monsoon",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "LOW",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": null,
+      "event_status": "monitoring",
+      "extended_monitoring": true,
+      "scope": "country",
+      "region_code": "",
+      "region_name": "",
+      "monitoring_status": "monitoring",
+      "tracking_window_days": 365,
+      "disease_name": null,
+      "event_date": "2026-10-23",
+      "first_reported_date": "2026-10-23",
+      "last_updated_date": "2026-10-23",
+      "days_since_event": 32,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [
+        "Malaysia Monsoon latest 2026",
+        "Malaysia Monsoon 2026"
+      ],
+      "sources": {
+        "who_don": 0,
+        "usgs": 0,
+        "gdacs": 0,
+        "ercc": 0,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [],
+      "key_links": [
+        {
+          "kind": "news",
+          "label": "Start of Northeast Monsoon expected on Oct 27, MetMalaysia says",
+          "url": "https://www.thestar.com.my/news/nation/2026/10/23/start-of-northeast-monsoon-expected-on-oct-27-metmalaysia-says",
+          "source": "MANUAL",
+          "date": "2026-10-23",
+          "reason": "Latest log"
+        }
+      ],
+      "physical": {
+        "max_magnitude": null,
+        "max_depth_km": null,
+        "place": "",
+        "felt": null,
+        "sig": null,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Start of Northeast Monsoon expected on Oct 27, MetMalaysia says",
+          "published_date": "2026-10-23"
+        }
+      ],
+      "news_total": 1,
+      "logs": [
+        {
+          "log_date": "2026-10-23",
+          "summary": "Malaysia's 2026/2027 Northeast Monsoon season is expected to begin on 27 October 2026, with elevated flood risk through the season.",
+          "news": [
+            {
+              "news_id": "bf841ee6e9475189a3d73a2b5a73775e",
+              "url": "https://www.thestar.com.my/news/nation/2026/10/23/start-of-northeast-monsoon-expected-on-oct-27-metmalaysia-says",
+              "headline": "Start of Northeast Monsoon expected on Oct 27, MetMalaysia says",
+              "body": "PETALING JAYA: The 2026/2027 Northeast Monsoon season is expected to start next Tuesday (Oct 27), says the Malaysian Meteorological Department (MetMalaysia).",
+              "published_date": "2026-10-23",
+              "outlet": "MANUAL",
+              "image": ""
+            }
+          ]
+        }
+      ],
+      "logs_total": 1
+    },
+    {
       "incident_id": "20261028-ID-EQ",
       "tree_id": "a09efc3959de4728bb8e60aec17f86b0",
       "canonical_name": "Earthquake M5.7 Tual, Indonesia 2026-10-28",
@@ -8847,6 +9087,11 @@
       "pandemic_potential": null,
       "event_status": null,
       "extended_monitoring": false,
+      "scope": "country",
+      "region_code": "",
+      "region_name": "",
+      "monitoring_status": "",
+      "tracking_window_days": 0,
       "disease_name": null,
       "event_date": "2026-10-28",
       "first_reported_date": "2026-10-28",
@@ -8996,6 +9241,11 @@
       "pandemic_potential": null,
       "event_status": null,
       "extended_monitoring": false,
+      "scope": "country",
+      "region_code": "",
+      "region_name": "",
+      "monitoring_status": "",
+      "tracking_window_days": 0,
       "disease_name": null,
       "event_date": "2026-10-29",
       "first_reported_date": "2026-10-29",
@@ -9145,6 +9395,11 @@
       "pandemic_potential": null,
       "event_status": null,
       "extended_monitoring": false,
+      "scope": "country",
+      "region_code": "",
+      "region_name": "",
+      "monitoring_status": "",
+      "tracking_window_days": 0,
       "disease_name": null,
       "event_date": "2026-10-29",
       "first_reported_date": "2026-10-29",
