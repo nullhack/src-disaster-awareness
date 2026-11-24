@@ -1,53 +1,41 @@
 {
   "schema_version": "1.6",
   "report_date": "2026-11-16",
-  "generated_at": "2026-11-24T05:42:14Z",
+  "generated_at": "2026-11-24T11:10:39Z",
   "as_of": "2026-11-16",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 9,
+    "reportable_total": 7,
     "new_today": 1,
     "critical": 2,
     "high": 1,
     "medium": 3,
-    "low": 3,
+    "low": 1,
     "disease_outbreaks": 1,
-    "countries_affected": 7,
-    "news_total": 721,
+    "countries_affected": 6,
+    "news_total": 719,
     "max_magnitude": 7.6,
     "by_severity": {
       "CRITICAL": 2,
       "HIGH": 1,
       "MEDIUM": 3,
-      "LOW": 3
+      "LOW": 1
     },
     "by_type": {
       "Flood": 2,
-      "El Niño": 1,
       "Earthquake": 3,
-      "Monsoon": 1,
       "Tsunami": 1,
       "Disease": 1
     },
     "by_region": {
-      "Asia": 4,
-      "South-Eastern Asia": 1,
+      "Asia": 3,
       "Europe": 1,
       "Americas": 2,
       "Oceania": 1
     }
   },
   "by_country": [
-    {
-      "country": "Malaysia",
-      "count": 1,
-      "max_sev_rank": 1,
-      "iso2": "MY",
-      "region": "Asia",
-      "country_group": "A",
-      "max_severity": "LOW"
-    },
     {
       "country": "India",
       "count": 1,
@@ -904,97 +892,6 @@
         }
       ],
       "logs_total": 26
-    },
-    {
-      "incident_id": "20260917-XX-EN",
-      "tree_id": "86a1b2c3d4e5f60718293a4b5c6d7e8f",
-      "canonical_name": "El Niño — South-Eastern Asia",
-      "summary": "Super El Niño conditions are forecast for late 2026, with a 98% chance of a very strong event. Southeast Asia faces lingering heat, rising living costs, and disruption to livelihoods.",
-      "country": "",
-      "iso2": "XX",
-      "lat": null,
-      "lon": null,
-      "country_group": "C",
-      "region": "South-Eastern Asia",
-      "incident_type": "El Niño",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "LOW",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": "monitoring",
-      "extended_monitoring": true,
-      "scope": "regional",
-      "region_code": "035",
-      "region_name": "South-Eastern Asia",
-      "monitoring_status": "monitoring",
-      "tracking_window_days": 365,
-      "disease_name": null,
-      "event_date": "2026-09-17",
-      "first_reported_date": "2026-09-17",
-      "last_updated_date": "2026-09-17",
-      "days_since_event": 68,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [
-        "South-Eastern Asia El Niño latest 2026",
-        "South-Eastern Asia El Niño 2026"
-      ],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 1
-      },
-      "source_links": [],
-      "key_links": [
-        {
-          "kind": "news",
-          "label": "Super El Nino could reshape daily life, threaten livelihoods in Southeast Asia with lingering heat",
-          "url": "https://www.channelnewsasia.com/cna-insider/insider/super-el-nino-southeast-asia-heat-livelihoods-climate-phenomenon-6388436",
-          "source": "MANUAL",
-          "date": "2026-09-17",
-          "reason": "Latest log"
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Super El Nino could reshape daily life, threaten livelihoods in Southeast Asia with lingering heat",
-          "published_date": "2026-09-17"
-        }
-      ],
-      "news_total": 1,
-      "logs": [
-        {
-          "log_date": "2026-09-17",
-          "summary": "Super El Niño conditions are forecast for late 2026, with a 98% chance of a very strong event. Southeast Asia faces lingering heat, rising living costs, and disruption to livelihoods.",
-          "news": [
-            {
-              "news_id": "995e8d6676d75d748d755a0a3ad168cd",
-              "url": "https://www.channelnewsasia.com/cna-insider/insider/super-el-nino-southeast-asia-heat-livelihoods-climate-phenomenon-6388436",
-              "headline": "Super El Nino could reshape daily life, threaten livelihoods in Southeast Asia with lingering heat",
-              "body": "The chance of a “very strong” El Nino from next month to December is forecast to be 98 per cent now. CNA’s Insight looks at how living costs could rise and how ready the region is for the disruptions ahead.",
-              "published_date": "2026-09-17",
-              "outlet": "MANUAL",
-              "image": ""
-            }
-          ]
-        }
-      ],
-      "logs_total": 1
     },
     {
       "incident_id": "20261008-FR-FL",
@@ -4876,97 +4773,6 @@
               "body": "An earthquake with a magnitude of 6.4 jolted 27 km SW of Lata, Solomon Islands at 0335 GMT on Monday, the U.S. Geological Survey said. The epicenter, with a depth of 25.0 km, was initially determined ...",
               "published_date": "2026-11-09",
               "outlet": "Xinhua",
-              "image": ""
-            }
-          ]
-        }
-      ],
-      "logs_total": 1
-    },
-    {
-      "incident_id": "20261023-MY-MS",
-      "tree_id": "85a1b2c3d4e5f60718293a4b5c6d7e8f",
-      "canonical_name": "Northeast Monsoon — Malaysia",
-      "summary": "Malaysia's 2026/2027 Northeast Monsoon season is expected to begin on 27 October 2026, with elevated flood risk through the season.",
-      "country": "Malaysia",
-      "iso2": "MY",
-      "lat": 4.2,
-      "lon": 109.7,
-      "country_group": "A",
-      "region": "Asia",
-      "incident_type": "Monsoon",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "LOW",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": "monitoring",
-      "extended_monitoring": true,
-      "scope": "country",
-      "region_code": "",
-      "region_name": "",
-      "monitoring_status": "monitoring",
-      "tracking_window_days": 365,
-      "disease_name": null,
-      "event_date": "2026-10-23",
-      "first_reported_date": "2026-10-23",
-      "last_updated_date": "2026-10-23",
-      "days_since_event": 32,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [
-        "Malaysia Monsoon latest 2026",
-        "Malaysia Monsoon 2026"
-      ],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 1
-      },
-      "source_links": [],
-      "key_links": [
-        {
-          "kind": "news",
-          "label": "Start of Northeast Monsoon expected on Oct 27, MetMalaysia says",
-          "url": "https://www.thestar.com.my/news/nation/2026/10/23/start-of-northeast-monsoon-expected-on-oct-27-metmalaysia-says",
-          "source": "MANUAL",
-          "date": "2026-10-23",
-          "reason": "Latest log"
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Start of Northeast Monsoon expected on Oct 27, MetMalaysia says",
-          "published_date": "2026-10-23"
-        }
-      ],
-      "news_total": 1,
-      "logs": [
-        {
-          "log_date": "2026-10-23",
-          "summary": "Malaysia's 2026/2027 Northeast Monsoon season is expected to begin on 27 October 2026, with elevated flood risk through the season.",
-          "news": [
-            {
-              "news_id": "bf841ee6e9475189a3d73a2b5a73775e",
-              "url": "https://www.thestar.com.my/news/nation/2026/10/23/start-of-northeast-monsoon-expected-on-oct-27-metmalaysia-says",
-              "headline": "Start of Northeast Monsoon expected on Oct 27, MetMalaysia says",
-              "body": "PETALING JAYA: The 2026/2027 Northeast Monsoon season is expected to start next Tuesday (Oct 27), says the Malaysian Meteorological Department (MetMalaysia).",
-              "published_date": "2026-10-23",
-              "outlet": "MANUAL",
               "image": ""
             }
           ]
