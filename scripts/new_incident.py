@@ -68,6 +68,11 @@ def _build_report(args: argparse.Namespace) -> SourceReport:
         places=places,
         report_date=args.date,
         raw_fields={},
+        scope=args.scope,
+        region_code=args.region_code,
+        region_name=args.region_name,
+        monitoring_status=args.monitoring_status,
+        tracking_window_days=args.tracking_window_days,
     )
 
 
@@ -84,6 +89,32 @@ def main() -> int:
     parser.add_argument("--country", default="", help="ISO-2 country code (optional)")
     parser.add_argument("--subdivision", default="", help="subdivision (optional)")
     parser.add_argument("--locality", default="", help="locality (optional)")
+    parser.add_argument(
+        "--scope",
+        default="",
+        choices=("", "country", "regional", "global"),
+        help="incident scope (default: inferred from place)",
+    )
+    parser.add_argument("--region-code", default="", help="UN M49 region code")
+    parser.add_argument("--region-name", default="", help="UN M49 region name")
+    parser.add_argument(
+        "--monitoring-status",
+        default="",
+        choices=("", "event", "monitoring"),
+        help="event or ongoing monitoring",
+    )
+    parser.add_argument(
+        "--tracking-window-days",
+        type=int,
+        default=0,
+        help="per-incident dashboard/repoll window in days",
+    )
+    parser.add_argument(
+        "--search-key",
+        action="append",
+        default=[],
+        help="explicit repoll search key (repeatable)",
+    )
     parser.add_argument("--summary", default="", help="timeline log summary (optional)")
     parser.add_argument("--log-date", default="", help="timeline log date (default: --date)")
     parser.add_argument("--news-url", default="", help="linked news url (optional)")
@@ -103,8 +134,24 @@ def main() -> int:
     store.ingest_report_places(report_id, report.places)
 
     incident_id = args.incident_id or uuid.uuid4().hex
-    store.add_report_incident(report_id, incident_id)
-    store.set_search_keys(incident_id, derive_repoll_keys(report))
+    monitoring = args.monitoring_status == "monitoring"
+    metadata: dict[str, object] = {
+        "incident_type": report.incident_type,
+        "name": report.name,
+        "first_seen_at": report.report_date,
+        "scope": report.scope,
+        "region_code": report.region_code,
+        "region_name": report.region_name,
+        "monitoring_status": report.monitoring_status,
+        "tracking_window_days": report.tracking_window_days,
+        "extended_monitoring": monitoring,
+    }
+    if report.incident_type in {"El Niño", "La Niña", "Monsoon", "Climate"}:
+        metadata["incident_category"] = "climate"
+    store.add_report_incident(report_id, incident_id, metadata=metadata)
+    search_keys = args.search_key or derive_repoll_keys(report)
+    if search_keys:
+        store.set_search_keys(incident_id, search_keys)
 
     news_id: str | None = None
     if args.news_url:

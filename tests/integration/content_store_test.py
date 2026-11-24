@@ -4,6 +4,8 @@ import uuid
 from datetime import datetime, timezone
 from pathlib import Path
 
+import yaml
+
 from disaster_report.models import (
     IncidentLog,
     NewsItem,
@@ -38,6 +40,11 @@ def _build_report(
     places: list[ReportPlace] | None = None,
     report_date: str = "2026-07-01",
     raw_fields: dict[str, object] | None = None,
+    scope: str = "",
+    region_code: str = "",
+    region_name: str = "",
+    monitoring_status: str = "",
+    tracking_window_days: int = 0,
 ) -> SourceReport:
     return SourceReport(
         source=source,
@@ -47,6 +54,11 @@ def _build_report(
         places=places if places is not None else [],
         report_date=report_date,
         raw_fields=raw_fields if raw_fields is not None else {},
+        scope=scope,
+        region_code=region_code,
+        region_name=region_name,
+        monitoring_status=monitoring_status,
+        tracking_window_days=tracking_window_days,
     )
 
 
@@ -672,6 +684,124 @@ class TestResumabilityStamp:
         assert store.read_searched_report_keys() == set()
 
 
+class TestRegionalIncidentMetadata:
+    def _birth(self, store: ContentStore, *, source_id: str) -> tuple[str, str]:
+        rid = store.ingest_source_report(
+            _build_report(
+                source_id=source_id,
+                incident_type="El Niño",
+                name="El Niño — South-Eastern Asia",
+                scope="regional",
+                region_code="035",
+                region_name="South-Eastern Asia",
+                monitoring_status="monitoring",
+                tracking_window_days=365,
+            )
+        )
+        inc = _new_incident_id()
+        store.add_report_incident(
+            rid,
+            inc,
+            metadata={
+                "incident_category": "climate",
+                "incident_type": "El Niño",
+                "name": "El Niño — South-Eastern Asia",
+                "first_seen_at": "2026-09-17",
+                "scope": "regional",
+                "region_code": "035",
+                "region_name": "South-Eastern Asia",
+                "monitoring_status": "monitoring",
+                "tracking_window_days": 365,
+                "extended_monitoring": True,
+                "search_keys": [
+                    "South-Eastern Asia El Niño latest 2026",
+                ],
+            },
+        )
+        return rid, inc
+
+    def test_regional_report_and_incident_metadata_roundtrip(
+        self, tmp_path: Path
+    ) -> None:
+        store = ContentStore(tmp_path)
+        rid, inc = self._birth(store, source_id="manual-el-nino")
+        report = store.read_source_report_by_id(rid)
+        assert report is not None
+        assert report.scope == "regional"
+        assert report.region_code == "035"
+        assert report.region_name == "South-Eastern Asia"
+        assert report.monitoring_status == "monitoring"
+        assert report.tracking_window_days == 365
+        incident = next(i for i in store.read_incidents() if i.incident_id == inc)
+        assert incident.incident_category == "climate"
+        assert incident.incident_type == "El Niño"
+        assert incident.scope == "regional"
+        assert incident.region_code == "035"
+        assert incident.region_name == "South-Eastern Asia"
+        assert incident.monitoring_status == "monitoring"
+        assert incident.tracking_window_days == 365
+        assert store.read_incident_search_keys(inc) == [
+            "South-Eastern Asia El Niño latest 2026"
+        ]
+        manifest = yaml.safe_load(
+            (incident_dir(tmp_path, inc) / "incident.yaml").read_text()
+        )
+        assert manifest["incident_category"] == "climate"
+        assert manifest["extended_monitoring"] is True
+
+    def test_find_regional_incident_by_code_and_name(self, tmp_path: Path) -> None:
+        store = ContentStore(tmp_path)
+        _, inc = self._birth(store, source_id="manual-el-nino")
+        assert store.find_regional_incident("El Niño", region_code="035") == inc
+        assert (
+            store.find_regional_incident(
+                "El Niño", region_name="south-eastern asia"
+            )
+            == inc
+        )
+        assert store.find_regional_incident("El Niño", region_code="030") is None
+        assert store.find_regional_incident("Flood", region_code="035") is None
+        assert store.find_regional_incident("", region_code="035") is None
+
+    def test_find_regional_incident_ignores_country_scope(self, tmp_path: Path) -> None:
+        store = ContentStore(tmp_path)
+        rid = store.ingest_source_report(
+            _build_report(
+                source_id="manual-monsoon",
+                incident_type="Monsoon",
+                scope="country",
+                region_code="035",
+                region_name="South-Eastern Asia",
+            )
+        )
+        inc = _new_incident_id()
+        store.add_report_incident(rid, inc)
+        assert store.find_regional_incident("Monsoon", region_code="035") is None
+
+    def test_relinking_report_preserves_existing_incident_metadata(
+        self, tmp_path: Path
+    ) -> None:
+        store = ContentStore(tmp_path)
+        _, inc = self._birth(store, source_id="manual-el-nino")
+        rid = store.ingest_source_report(
+            _build_report(
+                source_id="manual-el-nino-followup",
+                incident_type="El Niño",
+                scope="regional",
+                region_code="035",
+                region_name="South-Eastern Asia",
+            )
+        )
+        store.add_report_incident(rid, inc)
+        incident = next(i for i in store.read_incidents() if i.incident_id == inc)
+        assert incident.name == "El Niño — South-Eastern Asia"
+        assert incident.first_seen_at == "2026-09-17"
+        assert incident.incident_category == "climate"
+        assert store.read_incident_search_keys(inc) == [
+            "South-Eastern Asia El Niño latest 2026"
+        ]
+
+
 class TestExtendedMonitoring:
     def _birth(self, store: ContentStore, tmp_path: Path, *, source_id: str) -> str:
         rid = store.ingest_source_report(_build_report(source_id=source_id))
@@ -683,7 +813,6 @@ class TestExtendedMonitoring:
         store = ContentStore(tmp_path)
         inc = self._birth(store, tmp_path, source_id="us-em-1")
         store.set_extended_monitoring(inc, True)
-        import yaml
         manifest = yaml.safe_load(
             (incident_dir(tmp_path, inc) / "incident.yaml").read_text()
         )

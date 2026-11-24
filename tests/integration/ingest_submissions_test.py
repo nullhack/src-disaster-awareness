@@ -35,6 +35,10 @@ def _make_classification(
     country_name: str = "United States",
     summary: str = "Major wildfire burning.",
     event_date: str = "2026-07-17",
+    scope: str = "",
+    region_code: str = "",
+    region_name: str = "",
+    monitoring_status: str = "",
 ) -> "SubmissionClassification":
     from disaster_report.ai.base import SubmissionClassification
 
@@ -45,6 +49,10 @@ def _make_classification(
         country_name=country_name,
         summary=summary,
         event_date=event_date,
+        scope=scope,
+        region_code=region_code,
+        region_name=region_name,
+        monitoring_status=monitoring_status,
     )
 
 
@@ -52,6 +60,7 @@ def _make_fetched(
     url: str = "https://cnn.com/article",
     title: str = "Article title",
     description: str = "Article description.",
+    body: str = "",
     author: str = "Jane",
     sitename: str = "CNN",
     published_date: str = "2026-07-17",
@@ -62,7 +71,7 @@ def _make_fetched(
         url=url,
         title=title,
         description=description,
-        body="",
+        body=body,
         published_date=published_date,
         author=author,
         sitename=sitename,
@@ -112,6 +121,20 @@ class TestParseSubmissionHints:
         hints = _parse_submission_hints(body)
         assert hints.incident_type == "Wildfire"
         assert hints.country_code == "SG"
+
+    def test_parses_scope_region_and_tracking_hints(self) -> None:
+        from scripts.ingest_submissions import _parse_submission_hints
+
+        body = (
+            "### Scope\n\nRegional\n\n"
+            "### Region\n\nSouth-Eastern Asia\n\n"
+            "### Tracking\n\nOngoing monitoring\n"
+        )
+        hints = _parse_submission_hints(body)
+        assert hints.scope == "regional"
+        assert hints.region_code == "035"
+        assert hints.region_name == "South-Eastern Asia"
+        assert hints.monitoring_status == "monitoring"
 
     def test_treats_none_and_default_category_as_empty(self) -> None:
         from scripts.ingest_submissions import _parse_submission_hints
@@ -290,6 +313,186 @@ class TestProcessIssue:
         report = store.ingest_source_report.call_args[0][0]
         assert report.raw_fields["approved_override"] is True
         assert mod.APPROVED_LABEL in removed
+
+    def test_approved_regional_climate_submission_births_monitoring_incident(
+        self,
+        tmp_path: "Path",
+        monkeypatch: pytest.MonkeyPatch,
+    ) -> None:
+        from scripts import ingest_submissions as mod
+
+        self._patch_common(monkeypatch)
+        fetched = _make_fetched(
+            url="https://www.channelnewsasia.com/el-nino",
+            title=(
+                "Super El Nino could reshape daily life, threaten livelihoods "
+                "in Southeast Asia with lingering heat"
+            ),
+            description=(
+                "A very strong El Nino is forecast. CNA looks at how ready "
+                "Southeast Asia is for the disruptions ahead."
+            ),
+            published_date="2026-09-17",
+        )
+        monkeypatch.setattr(mod, "fetch_article", lambda url: fetched)
+        store = self._make_store()
+        store.read_incident_for_news.return_value = None
+        store.read_incident_ids_for_report.return_value = []
+        store.find_regional_incident.return_value = None
+        store.read_incident_search_keys.return_value = []
+        store.ingest_source_report.return_value = "rid-elnino"
+        digester = MagicMock()
+        digester.classify_submission.return_value = _make_classification(
+            is_disaster=False,
+            incident_type="",
+            country_code="SG",
+            country_name="Singapore",
+            summary="",
+            event_date="",
+            scope="country",
+        )
+        body = (
+            "### Article URL\n\nhttps://www.channelnewsasia.com/el-nino\n\n"
+            "### Category hint (optional)\n\nNone\n\n"
+            "### Country (optional)\n\nNone\n"
+        )
+        outcome = mod._process_issue(
+            _make_issue(body=body), store, digester, set(), approved=True
+        )
+        assert outcome == "imported:new"
+        report = store.ingest_source_report.call_args[0][0]
+        assert report.scope == "regional"
+        assert report.region_code == "035"
+        assert report.region_name == "South-Eastern Asia"
+        assert report.places == []
+        assert report.incident_type == "El Niño"
+        assert report.name == "El Niño — South-Eastern Asia"
+        assert report.monitoring_status == "monitoring"
+        assert report.tracking_window_days == 365
+        assert report.raw_fields["approved_override"] is True
+        metadata = store.add_report_incident.call_args.kwargs["metadata"]
+        assert metadata["incident_category"] == "climate"
+        assert metadata["extended_monitoring"] is True
+        incident_id = store.add_report_incident.call_args[0][1]
+        store.set_extended_monitoring.assert_called_once_with(incident_id, True)
+        keys = store.set_search_keys.call_args[0][1]
+        assert "South-Eastern Asia El Niño latest 2026" in keys
+
+    def test_approved_country_climate_submission_infers_country_from_text(
+        self,
+        tmp_path: "Path",
+        monkeypatch: pytest.MonkeyPatch,
+    ) -> None:
+        from scripts import ingest_submissions as mod
+
+        self._patch_common(monkeypatch)
+        fetched = _make_fetched(
+            url="https://www.thestar.com.my/monsoon",
+            title="Start of Northeast Monsoon expected on Oct 27, MetMalaysia says",
+            description=(
+                "The meteorological department says the 2026/2027 Northeast "
+                "Monsoon season starts next week."
+            ),
+            body=(
+                "KUALA LUMPUR: Malaysia's meteorological department says the "
+                "2026/2027 Northeast Monsoon season starts next week."
+            ),
+            published_date="2026-10-23",
+        )
+        monkeypatch.setattr(mod, "fetch_article", lambda url: fetched)
+        store = self._make_store()
+        store.read_incident_for_news.return_value = None
+        store.read_incident_ids_for_report.return_value = []
+        store.find_regional_incident.return_value = None
+        store.read_incident_search_keys.return_value = []
+        store.ingest_source_report.return_value = "rid-monsoon"
+        digester = MagicMock()
+        digester.classify_submission.return_value = _make_classification(
+            is_disaster=False,
+            incident_type="",
+            country_code="",
+            summary="",
+            event_date="",
+        )
+        outcome = mod._process_issue(
+            _make_issue(
+                body=(
+                    "### Article URL\n\nhttps://www.thestar.com.my/monsoon\n\n"
+                    "### Country (optional)\n\nNone\n"
+                )
+            ),
+            store,
+            digester,
+            set(),
+            approved=True,
+        )
+        assert outcome == "imported:new"
+        report = store.ingest_source_report.call_args[0][0]
+        assert report.scope == "country"
+        assert report.places[0].country_code == "MY"
+        assert report.incident_type == "Monsoon"
+        assert report.monitoring_status == "monitoring"
+        assert report.tracking_window_days == 365
+        metadata = store.add_report_incident.call_args.kwargs["metadata"]
+        assert metadata["incident_category"] == "climate"
+
+    def test_regional_scope_without_region_returns_to_review(
+        self,
+        tmp_path: "Path",
+        monkeypatch: pytest.MonkeyPatch,
+    ) -> None:
+        from scripts import ingest_submissions as mod
+
+        reviewed: list[tuple] = []
+        monkeypatch.setattr(mod, "_reject", lambda *a, **k: pytest.fail("should not reject"))
+        monkeypatch.setattr(mod, "_review", lambda n, r: reviewed.append((n, r)))
+        monkeypatch.setattr(mod, "fetch_article", lambda url: _make_fetched())
+        store = MagicMock()
+        store.find_news_id_by_url.return_value = None
+        digester = MagicMock()
+        digester.classify_submission.return_value = _make_classification(
+            incident_type="El Niño",
+            country_code="",
+            scope="regional",
+        )
+        outcome = mod._process_issue(_make_issue(), store, digester, set())
+        assert outcome == "review:no-region"
+        assert reviewed and "Region" in reviewed[0][1]
+
+    def test_regional_submission_reuses_existing_incident_without_overwriting_metadata(
+        self,
+        tmp_path: "Path",
+        monkeypatch: pytest.MonkeyPatch,
+    ) -> None:
+        from scripts import ingest_submissions as mod
+
+        self._patch_common(monkeypatch)
+        monkeypatch.setattr(
+            mod,
+            "fetch_article",
+            lambda url: _make_fetched(
+                description="El Nino conditions across Southeast Asia.",
+                published_date="2026-11-20",
+            ),
+        )
+        store = self._make_store()
+        store.read_incident_for_news.return_value = None
+        store.read_incident_ids_for_report.return_value = []
+        store.find_regional_incident.return_value = "inc-existing"
+        store.read_incident_search_keys.return_value = ["existing key"]
+        digester = MagicMock()
+        digester.classify_submission.return_value = _make_classification(
+            incident_type="El Niño",
+            country_code="",
+            scope="regional",
+            region_code="035",
+            region_name="South-Eastern Asia",
+        )
+        outcome = mod._process_issue(_make_issue(), store, digester, set())
+        assert outcome == "imported:existing"
+        store.add_report_incident.assert_called_once_with("rid-1", "inc-existing")
+        store.set_incident_metadata.assert_not_called()
+        store.set_search_keys.assert_not_called()
 
     def test_approved_submission_without_country_returns_to_review(
         self,

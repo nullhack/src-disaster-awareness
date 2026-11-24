@@ -18,8 +18,8 @@ body:
         - You'll see a comment on this issue with the resulting incident id and classification.
         - If the article is accepted, it is labeled `submission-imported` and the incident
           appears on the dashboard after the next publish cycle.
-        - If the classifier is unsure, the article cannot be fetched, or no country can be
-          determined, the issue stays open with `submission-review`. A maintainer can add
+        - If the classifier is unsure, the article cannot be fetched, or no country/region
+          can be determined, the issue stays open with `submission-review`. A maintainer can add
           `submission-approved` to import it, or `submission-rejected` and close it to decline.
         - Declined submissions are labeled `submission-rejected` and closed with a reason.
 
@@ -50,6 +50,9 @@ body:
         - 🦠 Disease outbreak
         - 🥵 Heat wave
         - ⛈️ Severe storm
+        - 🌡️ El Niño / La Niña
+        - 🌧️ Monsoon / seasonal
+        - 🌍 Climate pattern
         - ❓ Other
     validations:
       required: false
@@ -309,3 +312,37 @@ body:
         - 🇾🇪 YE - Yemen
         - 🇿🇲 ZM - Zambia
         - 🇿🇼 ZW - Zimbabwe
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope (optional)
+      description: Use regional for multi-country events or climate patterns such as El Niño. This overrides a classifier-guessed country.
+      options:
+        - 🤖 Let the AI classify (default)
+        - Single country
+        - Regional
+        - Global
+    validations:
+      required: false
+
+  - type: input
+    id: region
+    attributes:
+      label: Region (optional)
+      description: UN M49 subregion name, e.g. South-Eastern Asia, Southern Asia, Western Africa, Central America.
+      placeholder: South-Eastern Asia
+    validations:
+      required: false
+
+  - type: dropdown
+    id: tracking
+    attributes:
+      label: Tracking (optional)
+      description: Use ongoing monitoring for slow-onset, seasonal, or climate patterns that should stay visible beyond the standard 7-day window.
+      options:
+        - 🤖 Let the AI classify (default)
+        - Standard event
+        - Ongoing monitoring
+    validations:
+      required: false

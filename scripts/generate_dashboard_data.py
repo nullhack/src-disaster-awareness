@@ -61,6 +61,10 @@ TYPE_CODE_MAP: dict[str, str] = {
     "Tsunami": "TS",
     "Severe Weather": "SW",
     "Conflict": "CF",
+    "El Niño": "EN",
+    "La Niña": "LN",
+    "Monsoon": "MS",
+    "Climate": "CL",
 }
 
 SEVERITY_RANK = {"LOW": 1, "MEDIUM": 2, "HIGH": 3, "CRITICAL": 4}
@@ -303,6 +307,11 @@ def load_incidents(store: ContentStore) -> list[dict]:
             "name": inc.name,
             "first_seen_at": inc.first_seen_at,
             "genesis_report_id": inc.genesis_report_id,
+            "scope": inc.scope,
+            "region_code": inc.region_code,
+            "region_name": inc.region_name,
+            "monitoring_status": inc.monitoring_status,
+            "tracking_window_days": inc.tracking_window_days,
         }
         for inc in store.read_incidents()
     ]
@@ -629,8 +638,12 @@ def build_incident_object(store: ContentStore, inc: dict, as_of_date: datetime) 
             break
 
     is_disease = inc["incident_category"] == "disease"
+    scope = inc.get("scope") or ("country" if iso2 else "")
+    region_name = inc.get("region_name", "")
+    monitoring_status = inc.get("monitoring_status", "")
+    tracking_window_days = int(inc.get("tracking_window_days") or 0)
 
-    if iso2:
+    if iso2 and scope not in {"regional", "global"}:
         country = country_name(iso2)
         group = country_group(iso2)
         region = ISO2_TO_REGION.get(iso2, "Unknown")
@@ -638,7 +651,12 @@ def build_incident_object(store: ContentStore, inc: dict, as_of_date: datetime) 
         iso2 = "XX"
         country = ""
         group = "C"
-        region = _resolve_region(inc["name"], latest_summary, is_disease)
+        if scope == "regional" and region_name:
+            region = region_name
+        elif scope == "global":
+            region = "Global"
+        else:
+            region = _resolve_region(inc["name"], latest_summary, is_disease)
     inc_type = inc["incident_type"] or ""
     disease_name = parse_disease_name(inc["name"]) if is_disease else None
     pandemic_pot = parse_pandemic_potential(disease_name) if is_disease else None
@@ -706,7 +724,10 @@ def build_incident_object(store: ContentStore, inc: dict, as_of_date: datetime) 
     elif reports:
         last_updated = max(r["report_date"] for r in reports if r["report_date"])
 
-    days_since = (as_of_date.date() - datetime.fromisoformat(event_date_short).date()).days if event_date_short else 0
+    try:
+        days_since = (as_of_date.date() - datetime.fromisoformat(event_date_short).date()).days if event_date_short else 0
+    except ValueError:
+        days_since = 0
 
     _SOURCE_COUNT_KEYS = {"WHO": "who_don", "USGS": "usgs", "GDACS": "gdacs", "ERCC": "ercc"}
     source_counts = {"who_don": 0, "usgs": 0, "gdacs": 0, "ercc": 0, "healthmap": 0, "news": news_count}
@@ -791,10 +812,17 @@ def build_incident_object(store: ContentStore, inc: dict, as_of_date: datetime) 
         "priority": priority,
         "priority_rank": priority_rank,
         "pandemic_potential": pandemic_pot,
-        "event_status": None,
+        "event_status": (
+            "monitoring" if monitoring_status == "monitoring" else None
+        ),
         "extended_monitoring": bool(
             store.is_extended_monitoring(incident_id)
         ),
+        "scope": scope,
+        "region_code": inc.get("region_code", ""),
+        "region_name": region_name,
+        "monitoring_status": monitoring_status,
+        "tracking_window_days": tracking_window_days,
         "disease_name": disease_name,
         "event_date": event_date_short,
         "first_reported_date": event_date_short,
@@ -826,7 +854,8 @@ def is_active_on_date(inc_obj: dict, target_date: datetime, window_days: int) ->
         return False
     if last_dt > target_date:
         return False
-    window_start = target_date - timedelta(days=window_days)
+    effective_window = int(inc_obj.get("tracking_window_days") or 0) or window_days
+    window_start = target_date - timedelta(days=effective_window)
     return last_dt >= window_start
 
 
@@ -841,7 +870,7 @@ def generate_daily_digest(incidents: list[dict], target_date: datetime, as_of: d
     by_country_map: dict[str, dict] = {}
     for i in reportable:
         iso2 = i.get("iso2", "")
-        if not iso2:
+        if not iso2 or iso2 == "XX" or i.get("scope") in {"regional", "global"}:
             continue
         if iso2 not in by_country_map:
             by_country_map[iso2] = {
@@ -861,7 +890,13 @@ def generate_daily_digest(incidents: list[dict], target_date: datetime, as_of: d
     news_total = sum(i["news_total"] for i in reportable)
     max_mag = max((i["physical"]["max_magnitude"] for i in reportable if i["physical"]["max_magnitude"] is not None), default=None)
     disease_count = sum(1 for i in reportable if i["is_disease"])
-    countries_affected = len(set(i["iso2"] for i in reportable if i["iso2"]))
+    countries_affected = len(
+        {
+            i["iso2"]
+            for i in reportable
+            if i["iso2"] and i["iso2"] != "XX" and i.get("scope") != "regional"
+        }
+    )
 
     yesterday = target_date - timedelta(days=1)
     prev_active_ids = {i["incident_id"] for i in incidents if is_active_on_date(i, yesterday, tracking_window_days)}

@@ -295,6 +295,90 @@ _SUBREGIONS_BY_ALPHA_2: dict[str, str] = {
 }
 
 
+_SUBREGION_CODES: dict[str, str] = {
+    "Eastern Africa": "014",
+    "Middle Africa": "017",
+    "Northern Africa": "015",
+    "Southern Africa": "018",
+    "Western Africa": "011",
+    "Caribbean": "029",
+    "Central America": "013",
+    "Northern America": "021",
+    "South America": "005",
+    "Central Asia": "143",
+    "Eastern Asia": "030",
+    "South-Eastern Asia": "035",
+    "Southern Asia": "034",
+    "Western Asia": "145",
+    "Eastern Europe": "151",
+    "Northern Europe": "154",
+    "Southern Europe": "039",
+    "Western Europe": "155",
+    "Australia and New Zealand": "053",
+    "Melanesia": "054",
+    "Micronesia": "057",
+    "Polynesia": "061",
+}
+
+_SUBREGION_ALIASES: dict[str, str] = {
+    "south east asia": "South-Eastern Asia",
+    "southeast asia": "South-Eastern Asia",
+    "south eastern asia": "South-Eastern Asia",
+    "south-eastern asia": "South-Eastern Asia",
+    "east asia": "Eastern Asia",
+    "south asia": "Southern Asia",
+    "west asia": "Western Asia",
+    "central asia": "Central Asia",
+    "north africa": "Northern Africa",
+    "east africa": "Eastern Africa",
+    "south africa": "Southern Africa",
+    "west africa": "Western Africa",
+    "central africa": "Middle Africa",
+    "north america": "Northern America",
+    "central america": "Central America",
+    "south america": "South America",
+    "australia and new zealand": "Australia and New Zealand",
+}
+
+
+def region_code_for_name(name: str) -> str:
+    normalized = _normalize_region_name(name)
+    return _SUBREGION_CODES.get(normalized, "")
+
+
+def region_name_for_code(code: str) -> str:
+    for name, region_code in _SUBREGION_CODES.items():
+        if region_code == code:
+            return name
+    return ""
+
+
+def normalize_region_name(name: str) -> str:
+    cleaned = (name or "").strip()
+    if not cleaned:
+        return ""
+    lowered = cleaned.lower().replace("_", " ").replace("-", " ").strip()
+    direct = {key.lower(): key for key in _SUBREGION_CODES}
+    if lowered in direct:
+        return direct[lowered]
+    return _SUBREGION_ALIASES.get(lowered, cleaned)
+
+
+def region_name_from_text(text: str) -> str:
+    lowered = (text or "").lower().replace("_", " ").replace("-", " ")
+    for alias, name in _SUBREGION_ALIASES.items():
+        if alias in lowered:
+            return name
+    for name in _SUBREGION_CODES:
+        if name.lower().replace("-", " ") in lowered:
+            return name
+    return ""
+
+
+def _normalize_region_name(name: str) -> str:
+    return normalize_region_name(name)
+
+
 def subregion_for_country(alpha_2: str) -> str:
     if not alpha_2:
         return ""

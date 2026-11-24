@@ -20,6 +20,11 @@ def _build_report(
     places: list[ReportPlace] | None = ...,
     report_date: str = ...,
     raw_fields: dict[str, object] | None = ...,
+    scope: str = ...,
+    region_code: str = ...,
+    region_name: str = ...,
+    monitoring_status: str = ...,
+    tracking_window_days: int = ...,
 ) -> SourceReport: ...
 def _build_news(
     *,
@@ -126,6 +131,19 @@ class TestPersistence:
 class TestResumabilityStamp:
     def test_mark_report_searched_makes_key_appear(self, tmp_path) -> None: ...
     def test_unsearched_report_absent(self, tmp_path) -> None: ...
+
+class TestRegionalIncidentMetadata:
+    def _birth(self, store, *, source_id: str) -> tuple[str, str]: ...
+    def test_regional_report_and_incident_metadata_roundtrip(
+        self, tmp_path
+    ) -> None: ...
+    def test_find_regional_incident_by_code_and_name(self, tmp_path) -> None: ...
+    def test_find_regional_incident_ignores_country_scope(
+        self, tmp_path
+    ) -> None: ...
+    def test_relinking_report_preserves_existing_incident_metadata(
+        self, tmp_path
+    ) -> None: ...
 
 class TestExtendedMonitoring:
     def _birth(self, store, tmp_path, *, source_id: str) -> str: ...

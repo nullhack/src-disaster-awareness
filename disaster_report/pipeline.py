@@ -280,6 +280,8 @@ def _repoll_one_incident(
     adapter = adapter_by_src.get(genesis.source)
     repoll_keys_fn = getattr(adapter, "derive_repoll_keys", None) if adapter else None
     keys = repoll_keys_fn(genesis) if repoll_keys_fn else derive_repoll_keys(genesis)
+    if not keys:
+        keys = wh.read_incident_search_keys(incident.incident_id)
     seen_urls: set[str] = set()
     all_candidates: list[NewsItem] = []
     for repoll_key in keys:
@@ -380,10 +382,13 @@ def _generate_logs_for_incident(
     already_linked = wh.read_summarized_news_ids(incident.incident_id)
     all_news = wh.read_news(incident.incident_id)
     unsummarized = [n for n in all_news if n.news_id not in already_linked]
-    if len(unsummarized) < min_news_threshold:
+    effective_threshold = (
+        1 if incident.monitoring_status == "monitoring" else min_news_threshold
+    )
+    if len(unsummarized) < effective_threshold:
         logger.info(
             "logs: incident %s — %s — %d unsummarized, below threshold %d, skip",
-            incident.incident_id, incident.name, len(unsummarized), min_news_threshold,
+            incident.incident_id, incident.name, len(unsummarized), effective_threshold,
         )
         return
     logger.info("logs: incident %s — %s — %d unsummarized of %d total", incident.incident_id, incident.name, len(unsummarized), len(all_news))

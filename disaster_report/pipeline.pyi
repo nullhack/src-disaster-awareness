@@ -42,6 +42,12 @@ def search_news(
     active_window_days: int = 7,
     repoll: bool = False,
 ) -> None: ...
+def _generate_logs_for_incident(
+    wh: ContentStore,
+    digest_fn: object,
+    incident: object,
+    min_news_threshold: int,
+) -> None: ...
 def generate_logs(
     warehouse: object, digester: object, min_news_threshold: int = 3
 ) -> None: ...

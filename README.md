@@ -16,7 +16,10 @@ relevance filter gets its source URL fetched, extracting real `title`,
 External submissions are accepted via GitHub issues using the
 [`📰 Disaster news submission`](.github/ISSUE_TEMPLATE/news_submission.yml)
 template; the `ingest-submissions` workflow (cron 3×/day) fetches, classifies
-via DSPy, and births incidents from accepted submissions.
+via DSPy, and births incidents from accepted submissions. Submissions can be
+single-country events, regional patterns such as El Niño, or global; a
+maintainer approval imports an article even when the classifier reads it as a
+slow-onset or background climate story.
 
 ## How to run
 
@@ -108,15 +111,18 @@ External users can submit disaster-related news articles via GitHub issues:
 1. **Submit**: open a new issue at
    https://github.com/nullhack/src-disaster-awareness/issues/new/choose and
    pick the **📰 Disaster news submission** template. Paste the article URL
-   (required); optionally hint a category or country.
+   (required); optionally hint a category, country, region, scope, or tracking
+   mode (standard event vs. ongoing monitoring).
 2. **Triage**: the `ingest-submissions` workflow (cron `0 1,9,17 * * *`, 3×/day)
    extracts the URL, fetches metadata via trafilatura, classifies via the DSPy
    `SubmissionClassifier`, and births a new `MANUAL` incident when the result is
-   clear.
-3. **Review**: classifier non-accepts, fetch failures, and unresolved countries
-   stay open as `submission-review`. A maintainer adds `submission-approved` to
-   import, or adds `submission-rejected` and closes the issue to decline. Adding
-   `submission-approved` triggers an immediate run.
+   clear. An approved non-disaster submission is imported as a regional
+   monitoring incident when the article names a region, or as a country incident
+   when it names a country.
+3. **Review**: classifier non-accepts, fetch failures, and unresolved
+   countries/regions stay open as `submission-review`. A maintainer adds
+   `submission-approved` to import, or adds `submission-rejected` and closes the
+   issue to decline. Adding `submission-approved` triggers an immediate run.
 4. **Outcome**: accepted issues are labeled `submission-imported` with a tracking
    comment. Re-running on the same URL is idempotent (`sha1(url)[:16]` natural
    key) so duplicates are skipped.
@@ -124,6 +130,36 @@ External users can submit disaster-related news articles via GitHub issues:
 The five labels — `submission-pending`, `submission-review`,
 `submission-approved`, `submission-imported`, `submission-rejected` — are the
 state machine. The bot only auto-closes malformed submissions with no URL.
+
+## Regional and slow-onset monitoring
+
+An incident can be scoped to one country, a region, or the globe. A regional
+incident stores a UN M49 subregion in `region_code`/`region_name` and no
+`places`; a country incident keeps its `ReportPlace` list. Scope, region, and
+monitoring status are set on the incident manifest (`incident.yaml`) at birth
+and also carried on the genesis report.
+
+`monitoring_status: monitoring` marks a slow-onset or background event. The
+importer sets it for climate-pattern types (El Niño, La Niña, Monsoon, Climate)
+and for regional/global scope. Monitoring incidents use
+`tracking_window_days` (365 for imports) instead of the global 7-day dashboard
+window, so an article older than a week remains visible while the pattern is
+active. A monitoring incident also generates a log from a single news item,
+rather than waiting for the normal three-item threshold.
+
+Regional incidents have `iso2: XX` in the dashboard and are excluded from
+`by_country`/`countries_affected`, the map, and country counts; they still
+appear in the incident list and in `by_region`/`by_type`. Their search keys and
+repoll queries are region-anchored (for example
+`South-Eastern Asia El Niño latest 2026`). Country reports can later attach to
+the same incident.
+
+Current seeded examples:
+
+| Incident | Type | Scope | Window |
+|---|---|---|---|
+| El Niño — South-Eastern Asia | El Niño | regional (035) | 365 days |
+| Northeast Monsoon — Malaysia | Monsoon | country (MY) | 365 days |
 
 ## Secrets
 
@@ -174,7 +210,7 @@ data/
 ├── reports/source={USGS,GDACS,WHO}/<ruuid>.yaml     # raw feed staging (unlinked)
 ├── news/<nuuid>.yaml                                 # transient news staging
 └── incidents/<iuuid>/
-    ├── incident.yaml                                 # {id, search_keys:[…]}
+    ├── incident.yaml                                 # {id, search_keys:[…], scope, region_*, monitoring_status, tracking_window_days}
     ├── reports/source=<src>/<ruuid>.yaml             # linked reports
     ├── news/<nuuid>.yaml                             # pending news (unsummarized)
     └── logs/<YYYY-MM-DD>/

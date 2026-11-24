@@ -20,3 +20,7 @@ class SubmissionClassification:
     country_name: str
     summary: str
     event_date: str
+    scope: str = ""
+    region_code: str = ""
+    region_name: str = ""
+    monitoring_status: str = ""
