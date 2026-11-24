@@ -14,7 +14,6 @@ class ReportPlace:
 
 @dataclass(frozen=True)
 class SourceReport:
-
     source: str
     source_id: str
     incident_type: str
@@ -23,6 +22,11 @@ class SourceReport:
     report_date: str
     raw_fields: dict[str, object]
     news_searched_at: str = ""
+    scope: str = ""
+    region_code: str = ""
+    region_name: str = ""
+    monitoring_status: str = ""
+    tracking_window_days: int = 0
 
 
 @dataclass(frozen=True)
@@ -50,13 +54,17 @@ class IncidentLog:
 
 @dataclass(frozen=True)
 class Incident:
-
     incident_id: str
     incident_category: str
     incident_type: str
     name: str
     first_seen_at: str
     genesis_report_id: str
+    scope: str = ""
+    region_code: str = ""
+    region_name: str = ""
+    monitoring_status: str = ""
+    tracking_window_days: int = 0
 
 
 @dataclass(frozen=True)

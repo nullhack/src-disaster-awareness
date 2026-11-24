@@ -64,6 +64,17 @@ def _natural_key(d: dict[str, Any]) -> str:
     return f"{d.get('source', '')}:{d.get('source_id', '')}"
 
 
+def _int_value(value: object) -> int:
+    if value is None:
+        return 0
+    if isinstance(value, (int, str)):
+        try:
+            return int(value)
+        except ValueError:
+            return 0
+    return 0
+
+
 def _load_yaml_files(
     directory: Path, *, recursive: bool
 ) -> list[tuple[dict[str, Any], Path]]:
@@ -181,13 +192,23 @@ class ContentStore:
 
     # ------------------------------------------------------------ incidents
 
-    def _ensure_incident(self, incident_id: str) -> dict[str, Any]:
+    def _ensure_incident(
+        self, incident_id: str, metadata: dict[str, object] | None = None
+    ) -> dict[str, Any]:
         inc = self._incidents.get(incident_id)
-        if inc is not None:
-            return inc
-        inc = {"id": incident_id, "search_keys": []}
-        self._incidents[incident_id] = inc
-        dump_yaml(incident_manifest_path(self._root, incident_id), inc)
+        if inc is None:
+            inc = {"id": incident_id, "search_keys": []}
+            self._incidents[incident_id] = inc
+        if metadata:
+            changed = False
+            for key, value in metadata.items():
+                if value in ("", None, 0):
+                    continue
+                if inc.get(key) != value:
+                    inc[key] = value
+                    changed = True
+            if changed:
+                dump_yaml(incident_manifest_path(self._root, incident_id), inc)
         return inc
 
     def read_incident_search_keys(self, incident_id: str) -> list[str]:
@@ -215,17 +236,48 @@ class ContentStore:
             genesis = self._genesis(self._linked_reports(iuuid))
             if genesis is None:
                 continue
+            inc = self._incidents.get(iuuid, {})
             greport = self._reports.get(genesis, {})
             source = greport.get("source", "")
-            category = _SOURCE_CATEGORIES.get(source, "geophysical")
+            category = str(
+                inc.get("incident_category")
+                or _SOURCE_CATEGORIES.get(source, "geophysical")
+            )
+            places = greport.get("places", [])
+            scope = str(
+                inc.get("scope")
+                or greport.get("scope")
+                or ("country" if places else "")
+            )
             result.append(
                 Incident(
                     incident_id=iuuid,
                     incident_category=category,
-                    incident_type=greport.get("incident_type", ""),
-                    name=greport.get("name", ""),
-                    first_seen_at=greport.get("report_date", ""),
+                    incident_type=str(
+                        inc.get("incident_type")
+                        or greport.get("incident_type", "")
+                    ),
+                    name=str(inc.get("name") or greport.get("name", "")),
+                    first_seen_at=str(
+                        inc.get("first_seen_at")
+                        or greport.get("report_date", "")
+                    ),
                     genesis_report_id=genesis,
+                    scope=scope,
+                    region_code=str(
+                        inc.get("region_code") or greport.get("region_code", "")
+                    ),
+                    region_name=str(
+                        inc.get("region_name") or greport.get("region_name", "")
+                    ),
+                    monitoring_status=str(
+                        inc.get("monitoring_status")
+                        or greport.get("monitoring_status", "")
+                    ),
+                    tracking_window_days=_int_value(
+                        inc.get("tracking_window_days")
+                        or greport.get("tracking_window_days")
+                    ),
                 )
             )
         result.sort(key=lambda i: i.first_seen_at)
@@ -245,6 +297,27 @@ class ContentStore:
         inc["extended_monitoring"] = bool(enabled)
         dump_yaml(incident_manifest_path(self._root, incident_id), inc)
 
+    def set_incident_metadata(
+        self, incident_id: str, metadata: dict[str, object]
+    ) -> None:
+        self._ensure_incident(incident_id, metadata)
+
+    def find_regional_incident(
+        self, incident_type: str, region_code: str = "", region_name: str = ""
+    ) -> str | None:
+        if not incident_type:
+            return None
+        for inc in self.read_incidents():
+            if inc.incident_type != incident_type:
+                continue
+            if inc.scope != "regional":
+                continue
+            if region_code and inc.region_code == region_code:
+                return inc.incident_id
+            if region_name and inc.region_name.lower() == region_name.lower():
+                return inc.incident_id
+        return None
+
     # ----------------------------------------------------- source reports in
 
     def ingest_source_report(self, report: SourceReport) -> str:
@@ -261,6 +334,11 @@ class ContentStore:
             "news_searched_at": report.news_searched_at or "",
             "places": [_place_dict(p) for p in report.places],
             "raw_fields": _coerce_raw(report.raw_fields),
+            "scope": report.scope,
+            "region_code": report.region_code,
+            "region_name": report.region_name,
+            "monitoring_status": report.monitoring_status,
+            "tracking_window_days": report.tracking_window_days,
         }
         path = report_staging_path(self._root, report.source, ruuid)
         dump_yaml(path, data)
@@ -313,6 +391,11 @@ class ContentStore:
             report_date=d.get("report_date", ""),
             raw_fields=_coerce_raw(d.get("raw_fields")),
             news_searched_at=d.get("news_searched_at", ""),
+            scope=d.get("scope", ""),
+            region_code=d.get("region_code", ""),
+            region_name=d.get("region_name", ""),
+            monitoring_status=d.get("monitoring_status", ""),
+            tracking_window_days=_int_value(d.get("tracking_window_days")),
         )
 
     def _report_full(self, ruuid: str) -> SourceReport:
@@ -428,11 +511,16 @@ class ContentStore:
 
     # ----------------------------------------------- report <-> incident link
 
-    def add_report_incident(self, report_id: str, incident_id: str) -> None:
+    def add_report_incident(
+        self,
+        report_id: str,
+        incident_id: str,
+        metadata: dict[str, object] | None = None,
+    ) -> None:
         report = self._reports.get(report_id)
         if report is None:
             return
-        self._ensure_incident(incident_id)
+        self._ensure_incident(incident_id, metadata)
         if self._report_incident.get(report_id) == incident_id:
             return
         source = report.get("source", "")

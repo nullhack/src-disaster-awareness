@@ -16,6 +16,11 @@ class SourceReport:
     report_date: str
     raw_fields: dict[str, object]
     news_searched_at: str = ""
+    scope: str = ""
+    region_code: str = ""
+    region_name: str = ""
+    monitoring_status: str = ""
+    tracking_window_days: int = 0
 
 @dataclass(frozen=True)
 class NewsItem:
@@ -44,6 +49,11 @@ class Incident:
     name: str
     first_seen_at: str
     genesis_report_id: str
+    scope: str = ""
+    region_code: str = ""
+    region_name: str = ""
+    monitoring_status: str = ""
+    tracking_window_days: int = 0
 
 @dataclass(frozen=True)
 class FetchedArticle:

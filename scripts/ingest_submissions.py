@@ -51,6 +51,14 @@ from disaster_report.ai.openrouter import OpenRouterDigester
 from disaster_report.fetchers import fetch_article
 from disaster_report.models import NewsItem, ReportPlace, SourceReport
 from disaster_report.store.content import ContentStore
+from disaster_report._countries import scan_countries
+from disaster_report._search_keys import derive_repoll_keys
+from disaster_report._regions import (
+    normalize_region_name,
+    region_code_for_name,
+    region_name_for_code,
+    region_name_from_text,
+)
 
 from scripts._gh_issues import add_label as _add_label
 from scripts._gh_issues import close as _close
@@ -85,6 +93,13 @@ _CATEGORY_HINTS: tuple[tuple[str, str], ...] = (
     ("disease", "Disease outbreak"),
     ("heat wave", "Heat wave"),
     ("severe storm", "Severe storm"),
+    ("el niño", "El Niño"),
+    ("el nino", "El Niño"),
+    ("enso", "El Niño"),
+    ("la niña", "La Niña"),
+    ("la nina", "La Niña"),
+    ("monsoon", "Monsoon"),
+    ("climate", "Climate"),
     ("other", "Other"),
 )
 
@@ -99,10 +114,26 @@ _MONITORING_LABELS = (
 class _SubmissionHints:
     incident_type: str = ""
     country_code: str = ""
+    scope: str = ""
+    region_code: str = ""
+    region_name: str = ""
+    monitoring_status: str = ""
 
 
 def _now_iso() -> str:
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
+
+
+def _safe_report_date(*candidates: str) -> str:
+    for candidate in candidates:
+        value = (candidate or "").strip()[:10]
+        if not value:
+            continue
+        try:
+            return datetime.fromisoformat(value).date().isoformat()
+        except ValueError:
+            continue
+    return ""
 
 
 def _list_issues(label: str, exclude: tuple[str, ...]) -> list[dict]:
@@ -195,11 +226,51 @@ def _parse_category_hint(value: str) -> str:
     return ""
 
 
+def _parse_scope_hint(value: str) -> str:
+    lower = _clean_hint(value).lower()
+    if not lower or "let the ai" in lower:
+        return ""
+    if "regional" in lower or "region" == lower:
+        return "regional"
+    if "global" in lower:
+        return "global"
+    if "country" in lower or "single" in lower:
+        return "country"
+    return ""
+
+
+def _parse_region_hint(value: str) -> tuple[str, str]:
+    cleaned = _clean_hint(value)
+    if not cleaned:
+        return "", ""
+    if cleaned.isdigit():
+        name = region_name_for_code(cleaned)
+        return cleaned, name
+    name = normalize_region_name(cleaned)
+    return region_code_for_name(name), name
+
+
+def _parse_tracking_hint(value: str) -> str:
+    lower = _clean_hint(value).lower()
+    if not lower or "let the ai" in lower:
+        return ""
+    if "monitor" in lower or "ongoing" in lower or "slow" in lower:
+        return "monitoring"
+    if "event" in lower or "standard" in lower:
+        return "event"
+    return ""
+
+
 def _parse_submission_hints(body: str) -> _SubmissionHints:
     fields = _parse_form_fields(body)
+    region_code, region_name = _parse_region_hint(_form_field(fields, "region"))
     return _SubmissionHints(
         incident_type=_parse_category_hint(_form_field(fields, "category hint")),
         country_code=_parse_country_hint(_form_field(fields, "country")),
+        scope=_parse_scope_hint(_form_field(fields, "scope")),
+        region_code=region_code,
+        region_name=region_name,
+        monitoring_status=_parse_tracking_hint(_form_field(fields, "tracking")),
     )
 
 
@@ -276,6 +347,43 @@ def _resolve_incident_type(classified: str, hint: str) -> str:
     return _INCIDENT_TYPE_MAP.get(raw, raw)
 
 
+_CLIMATE_TYPES = frozenset({"El Niño", "La Niña", "Monsoon", "Climate"})
+
+
+def _infer_climate_type(text: str) -> str:
+    lower = (text or "").lower()
+    if "el niño" in lower or "el nino" in lower or "enso" in lower:
+        return "El Niño"
+    if "la niña" in lower or "la nina" in lower:
+        return "La Niña"
+    if "monsoon" in lower:
+        return "Monsoon"
+    return ""
+
+
+def _default_monitoring_status(scope: str, incident_type: str) -> str:
+    if incident_type in _CLIMATE_TYPES or scope in {"regional", "global"}:
+        return "monitoring"
+    return "event"
+
+
+def _incident_metadata(report: SourceReport) -> dict[str, object]:
+    metadata: dict[str, object] = {
+        "incident_type": report.incident_type,
+        "name": report.name,
+        "first_seen_at": report.report_date,
+        "scope": report.scope,
+        "region_code": report.region_code,
+        "region_name": report.region_name,
+        "monitoring_status": report.monitoring_status,
+        "tracking_window_days": report.tracking_window_days,
+        "extended_monitoring": report.monitoring_status == "monitoring",
+    }
+    if report.incident_type in _CLIMATE_TYPES:
+        metadata["incident_category"] = "climate"
+    return metadata
+
+
 def _process_issue(
     issue: dict,
     store: ContentStore,
@@ -311,28 +419,107 @@ def _process_issue(
     if not cls.is_disaster and not approved:
         _review(number, "DSPy classifier says this is not a disaster event.")
         return "review:not-disaster"
+    scope = hints.scope or cls.scope or ""
+    region_code = hints.region_code or cls.region_code
+    region_name = hints.region_name or normalize_region_name(cls.region_name)
+    if region_code and not region_name:
+        region_name = region_name_for_code(region_code)
+    if region_name and not region_code:
+        region_code = region_code_for_name(region_name)
     country_code = cls.country_code or hints.country_code
-    if not country_code:
-        _review(
-            number,
-            "neither the DSPy classifier nor the issue form identified the event "
-            "country. Edit the Country field, then re-add `submission-approved`.",
+    inferred_region = ""
+    if not region_name and (
+        scope == "regional"
+        or (approved and not cls.is_disaster and not hints.country_code)
+    ):
+        inferred_region = region_name_from_text(
+            f"{fetched.title} {fetched.description} {body}"
         )
-        return "review:no-country"
+        if inferred_region:
+            region_name = inferred_region
+            region_code = region_code_for_name(inferred_region)
+            if approved and not cls.is_disaster and not hints.scope:
+                scope = "regional"
+                country_code = ""
+    if not country_code and scope not in {"regional", "global"}:
+        scanned = scan_countries(
+            f"{fetched.title} {fetched.description} {fetched.body}"
+        )
+        if len(scanned) == 1:
+            country_code = scanned[0][1]
+    if not scope:
+        if region_name or region_code:
+            scope = "regional"
+        elif country_code:
+            scope = "country"
+    if scope == "country":
+        if not country_code:
+            _review(
+                number,
+                "neither the DSPy classifier nor the issue form identified the event "
+                "country. Edit the Country field, then re-add `submission-approved`.",
+            )
+            return "review:no-country"
+        places: list[ReportPlace] = [
+            ReportPlace(country_code=country_code, subdivision="", locality="")
+        ]
+    elif scope == "regional":
+        country_code = ""
+        if not region_name:
+            _review(
+                number,
+                "the submission is regional but neither the classifier nor the issue "
+                "form identified a region. Edit the Region field, then re-add "
+                "`submission-approved`.",
+            )
+            return "review:no-region"
+        places = []
+    elif scope == "global":
+        country_code = ""
+        region_code = ""
+        region_name = ""
+        places = []
+    else:
+        if country_code:
+            scope = "country"
+            places = [
+                ReportPlace(country_code=country_code, subdivision="", locality="")
+            ]
+        elif region_name:
+            scope = "regional"
+            places = []
+        else:
+            _review(
+                number,
+                "neither the DSPy classifier nor the issue form identified a country "
+                "or region. Edit the Country/Region field, then re-add "
+                "`submission-approved`.",
+            )
+            return "review:no-country"
     incident_type = _resolve_incident_type(cls.incident_type, hints.incident_type)
-    places: list[ReportPlace] = [
-        ReportPlace(country_code=country_code, subdivision="", locality="")
-    ]
+    if incident_type == "Unknown":
+        inferred = _infer_climate_type(f"{fetched.title} {fetched.description}")
+        if inferred:
+            incident_type = inferred
+    monitoring_status = (
+        hints.monitoring_status
+        or cls.monitoring_status
+        or _default_monitoring_status(scope, incident_type)
+    )
+    tracking_window_days = 365 if monitoring_status == "monitoring" else 0
+    report_name = cls.summary or fetched.title or issue.get("title", "")[:120]
+    if scope == "regional" and incident_type in _CLIMATE_TYPES and region_name:
+        report_name = f"{incident_type} — {region_name}"
     report = SourceReport(
         source="MANUAL",
         source_id=sid,
         incident_type=incident_type,
-        name=cls.summary or fetched.title or issue.get("title", "")[:120],
+        name=report_name,
         places=places,
-        report_date=(
-            cls.event_date
-            or fetched.published_date
-            or issue.get("createdAt", "")[:10]
+        report_date=_safe_report_date(
+            cls.event_date,
+            fetched.published_date,
+            issue.get("createdAt", ""),
         ),
         raw_fields={
             "url": url,
@@ -349,18 +536,39 @@ def _process_issue(
             "approved_override": bool(approved and not cls.is_disaster),
             "form_category_hint": hints.incident_type,
             "form_country_hint": hints.country_code,
+            "form_region_hint": hints.region_name,
+            "form_scope_hint": hints.scope,
+            "form_tracking_hint": hints.monitoring_status,
         },
+        scope=scope,
+        region_code=region_code,
+        region_name=region_name,
+        monitoring_status=monitoring_status,
+        tracking_window_days=tracking_window_days,
     )
     rid = store.ingest_source_report(report)
     store.ingest_report_places(rid, report.places)
+    metadata = _incident_metadata(report)
     existing_inc = store.read_incident_ids_for_report(rid)
     if existing_inc:
         incident_id = existing_inc[0]
         outcome = "imported:existing"
+    elif scope == "regional" and (
+        found := store.find_regional_incident(
+            incident_type, region_code=region_code, region_name=region_name
+        )
+    ):
+        incident_id = found
+        store.add_report_incident(rid, incident_id)
+        outcome = "imported:existing"
     else:
         incident_id = uuid.uuid4().hex
-        store.add_report_incident(rid, incident_id)
+        store.add_report_incident(rid, incident_id, metadata=metadata)
         outcome = "imported:new"
+    if monitoring_status == "monitoring":
+        store.set_extended_monitoring(incident_id, True)
+    if not store.read_incident_search_keys(incident_id):
+        store.set_search_keys(incident_id, derive_repoll_keys(report))
     news = NewsItem(
         url=url,
         title=fetched.title,
@@ -373,10 +581,17 @@ def _process_issue(
         sitename=fetched.sitename,
     )
     _ingest_news_safely(store, news, incident_id, number)
+    location = (
+        f"region={region_name}"
+        if scope == "regional"
+        else f"country={country_code}"
+        if country_code
+        else "global"
+    )
     _mark_imported(
         number,
         f"Tracking as incident `{incident_id[:8]}`. "
-        f"Type={incident_type}, country={country_code}.",
+        f"Type={incident_type}, {location}.",
     )
     manual_keys.add(sid)
     return outcome
@@ -430,6 +645,8 @@ def main() -> int:
         "review:fetch-failed": 0,
         "review:not-disaster": 0,
         "review:no-country": 0,
+        "review:no-region": 0,
+        "review:no-location": 0,
         "rejected:no-url": 0,
         "error": 0,
     }
@@ -461,6 +678,8 @@ def main() -> int:
         f"review(fetch)={counts['review:fetch-failed']} "
         f"review(not-disaster)={counts['review:not-disaster']} "
         f"review(no-country)={counts['review:no-country']} "
+        f"review(no-region)={counts['review:no-region']} "
+        f"review(no-location)={counts['review:no-location']} "
         f"rejected(no-url)={counts['rejected:no-url']} "
         f"errors={counts['error']}"
     )

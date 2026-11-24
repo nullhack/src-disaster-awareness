@@ -70,6 +70,24 @@ class SubmissionClassifier(dspy.Signature):
     event_date: str = dspy.OutputField(
         desc="Event date as YYYY-MM-DD if discoverable, else empty."
     )
+    scope: str = dspy.OutputField(
+        desc="'country' for an event in one country, 'regional' for a multi-country "
+        "region or climate pattern, or 'global'. Empty if not a disaster or trackable "
+        "climate pattern."
+    )
+    region_code: str = dspy.OutputField(
+        desc="UN M49 numeric subregion code when scope is regional (e.g. 035 for "
+        "South-Eastern Asia). Empty otherwise."
+    )
+    region_name: str = dspy.OutputField(
+        desc="UN M49 subregion name when scope is regional (e.g. South-Eastern Asia). "
+        "Empty otherwise."
+    )
+    monitoring_status: str = dspy.OutputField(
+        desc="'monitoring' for slow-onset, seasonal, recurring or climate patterns "
+        "that should be tracked continuously (e.g. El Nino, monsoon). "
+        "'event' for discrete incidents."
+    )
 
 
 class OpenRouterDigester:
@@ -146,6 +164,12 @@ class OpenRouterDigester:
             country_name=str(getattr(result, "country_name", "") or ""),
             summary=str(getattr(result, "summary", "") or ""),
             event_date=str(getattr(result, "event_date", "") or ""),
+            scope=str(getattr(result, "scope", "") or "").strip().lower(),
+            region_code=str(getattr(result, "region_code", "") or "").strip(),
+            region_name=str(getattr(result, "region_name", "") or "").strip(),
+            monitoring_status=str(
+                getattr(result, "monitoring_status", "") or ""
+            ).strip().lower(),
         )
 
 

@@ -56,6 +56,12 @@ def derive_search_keys(
         loose = " ".join(p for p in (incident_type, country, year_label, disease) if p)
         return strict, loose
 
+    if not report.places and report.region_name:
+        loose = " ".join(
+            p for p in (incident_type, report.region_name, year_label, disease) if p
+        )
+        return "", loose
+
     primary_region = _shared_continent_tokens(
         [subregion_for_country(p.country_code) for p in report.places]
     )
@@ -74,6 +80,16 @@ def derive_repoll_keys(report: SourceReport) -> list[str]:
         return [
             f"{place_name} {incident_type} latest {year_label}",
             f"{place_name} {incident_type} {year_label}",
+        ]
+    if report.region_name and incident_type:
+        return [
+            f"{report.region_name} {incident_type} latest {year_label}",
+            f"{report.region_name} {incident_type} {year_label}",
+        ]
+    if report.scope == "global" and incident_type:
+        return [
+            f"{incident_type} latest {year_label}",
+            f"{incident_type} {year_label}",
         ]
     return []
 

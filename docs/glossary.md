@@ -27,7 +27,7 @@ The v5 storage adapter (`disaster_report/store/content.py`) that owns reads/writ
 *Aliases: store · Source: v5 rewire 2026-07-18*
 
 ### incident manifest
-A sparse YAML file `incidents/<iuuid>/incident.yaml` with shape `{id, search_keys}`. Holds NO genesis fields (name/type/category/first_seen_at are derived lazily at read time from the earliest-dated linked report) and NO report_ids list (location-derived). `search_keys` is materialised once at birth via `derive_repoll_keys(genesis_report)` and is the only mutable field besides append-only log/news additions.
+A sparse YAML file `incidents/<iuuid>/incident.yaml` with shape `{id, search_keys, incident_type?, name?, first_seen_at?, scope?, region_code?, region_name?, monitoring_status?, tracking_window_days?, extended_monitoring?, incident_category?}`. The optional fields are written at birth for manual/climate/regional submissions and override the report-derived genesis projection; ordinary source-born incidents keep only `id` and `search_keys`. `search_keys` is materialised once at birth via `derive_repoll_keys(genesis_report)` and is the only mutable field besides `extended_monitoring` and append-only log/news additions.
 *Aliases: incident.yaml · Source: v5 rewire 2026-07-18*
 
 ### location-as-link
@@ -141,7 +141,7 @@ A warehouse table `(incident_id PK, incident_category, incident_type, name, firs
 *Aliases: none · Source: discovery interview 2026-07-08*
 
 ### incident_category
-A 2-value taxonomy field `{disease, geophysical}` on the `incidents` table, derived from the genesis report's source (WHO→disease, USGS/GDACS→geophysical) via `_category_for_source(source)` at incident birth. NOT stored on `source_reports` — derived at birth. A taxonomy boundary sourced from the adapter, not a hardcoded token list. Drives the top-level `##` section of the markdown report.
+A taxonomy field `{disease, geophysical, climate}` on the incident projection, derived from the genesis report's source (WHO→disease, USGS/GDACS→geophysical) via `_category_for_source(source)` at incident birth, unless the manifest overrides it (a manual El Niño/Monsoon/Climate submission sets `incident_category: climate`). NOT stored on `source_reports` — derived at birth. A taxonomy boundary sourced from the adapter, not a hardcoded token list. Drives the top-level `##` section of the markdown report.
 *Aliases: none · Source: discovery interview 2026-07-08*
 
 ### incident_type
@@ -165,7 +165,16 @@ An append-only story of an incident made of dated summary rows keyed by `(iso_da
 *Aliases: IncidentLog · Source: discovery interview 2026-07-04*
 
 ### active incident
-An incident whose most recent `report_news_links.linked_at` (news publication date) is within `active_window_days` of the injected clock's now, derived at read time, and that is therefore a re-poll candidate each run. (The signal moved off `incident_logs.iso_datetime`, which now carries report/event date; reading the publication date from the link is the only signal that tracks whether news about the incident is still flowing.)
+An incident whose most recent news publication date is within its tracking window of the injected clock's now, derived at read time, and that is therefore a re-poll candidate each run. The window is the incident's `tracking_window_days` when set (monitoring incidents use 365 days), otherwise the global `active_window_days`. (The signal moved off `incident_logs.iso_datetime`, which now carries report/event date; reading the publication date is the only signal that tracks whether news about the incident is still flowing.)
+
+### monitoring incident
+A slow-onset or background incident whose manifest has `monitoring_status: monitoring` and a positive `tracking_window_days`; it stays active on the dashboard and in the repoll set for that whole window, and `generate_logs` accepts a single news item instead of the normal threshold. Climate-pattern types (El Niño, La Niña, Monsoon, Climate) and regional/global manual submissions default to monitoring.
+
+### regional incident
+An incident whose manifest has `scope: regional`, a UN M49 `region_code`/`region_name`, and no `places`; it represents a multi-country pattern rather than pinning the event to one country. It has `iso2: XX` in the dashboard and is excluded from country counts, the map, and `by_country`, but remains in the incident list and in `by_region`/`by_type`. Its search keys are region-anchored, and country reports can attach later.
+
+### tracking window
+The per-incident number of days in `incident.yaml` used by the dashboard's active test and repoll selection. Zero/absent falls back to the global `active_window_days`.
 *Aliases: none · Source: discovery interview 2026-07-04 · revised 2026-07-09*
 
 ### re-poll

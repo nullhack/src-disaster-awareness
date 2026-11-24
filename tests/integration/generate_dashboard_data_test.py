@@ -1,13 +1,71 @@
 from __future__ import annotations
 
 from datetime import datetime, timezone
+from pathlib import Path
 
+from disaster_report.models import NewsItem, SourceReport
+from disaster_report.store.content import ContentStore
 from scripts.generate_dashboard_data import (
     _resolve_region,
+    build_incident_object,
+    generate_daily_digest,
     generate_md_report,
+    is_active_on_date,
+    load_incidents,
     select_key_links,
 )
 from disaster_report.sources.gdacs import _resolve_gdacs_link
+
+
+def _seed_regional_el_nino(tmp_path: Path) -> ContentStore:
+    store = ContentStore(tmp_path)
+    rid = store.ingest_source_report(
+        SourceReport(
+            source="MANUAL",
+            source_id="manual-el-nino",
+            incident_type="El Niño",
+            name="El Niño — South-Eastern Asia",
+            places=[],
+            report_date="2026-09-17",
+            raw_fields={"url": "https://example.com/el-nino"},
+            scope="regional",
+            region_code="035",
+            region_name="South-Eastern Asia",
+            monitoring_status="monitoring",
+            tracking_window_days=365,
+        )
+    )
+    inc = "inc-el-nino"
+    store.add_report_incident(
+        rid,
+        inc,
+        metadata={
+            "incident_category": "climate",
+            "incident_type": "El Niño",
+            "name": "El Niño — South-Eastern Asia",
+            "first_seen_at": "2026-09-17",
+            "scope": "regional",
+            "region_code": "035",
+            "region_name": "South-Eastern Asia",
+            "monitoring_status": "monitoring",
+            "tracking_window_days": 365,
+            "extended_monitoring": True,
+            "search_keys": ["South-Eastern Asia El Niño latest 2026"],
+        },
+    )
+    nid = store.ingest_news_item(
+        NewsItem(
+            url="https://example.com/el-nino",
+            title="Super El Nino could reshape daily life in Southeast Asia",
+            body="A strong El Nino is forecast.",
+            published_date="2026-09-17T10:00:00Z",
+            source="ddg",
+            domain="example.com",
+            image="",
+        )
+    )
+    store.assign_news_to_incident(nid, inc)
+    return store
 
 
 class TestResolveRegion:
@@ -27,6 +85,56 @@ class TestResolveRegion:
     def test_disease_with_country_in_summary_returns_that_region(self) -> None:
         summary = "Outbreak reported in Japan with rising case counts."
         assert _resolve_region("Disease Japan 2025-01-01", summary, True) == "Asia"
+
+
+class TestRegionalIncidentDashboard:
+    def test_regional_monitoring_incident_is_visible_with_its_own_window(
+        self, tmp_path: Path
+    ) -> None:
+        store = _seed_regional_el_nino(tmp_path)
+        incidents = load_incidents(store)
+        inc = build_incident_object(
+            store, incidents[0], datetime(2026, 11, 24, tzinfo=timezone.utc)
+        )
+        assert inc is not None
+        assert inc["scope"] == "regional"
+        assert inc["region"] == "South-Eastern Asia"
+        assert inc["region_name"] == "South-Eastern Asia"
+        assert inc["region_code"] == "035"
+        assert inc["iso2"] == "XX"
+        assert inc["country"] == ""
+        assert inc["event_status"] == "monitoring"
+        assert inc["extended_monitoring"] is True
+        assert inc["tracking_window_days"] == 365
+        assert inc["incident_type"] == "El Niño"
+        assert inc["event_date"] == "2026-09-17"
+        assert inc["incident_id"].endswith("-XX-EN")
+        assert is_active_on_date(
+            inc, datetime(2026, 11, 24, tzinfo=timezone.utc), 7
+        ) is True
+        assert is_active_on_date(
+            inc, datetime(2027, 9, 18, tzinfo=timezone.utc), 7
+        ) is False
+
+    def test_digest_counts_region_without_polluting_country_totals(
+        self, tmp_path: Path
+    ) -> None:
+        store = _seed_regional_el_nino(tmp_path)
+        incidents = load_incidents(store)
+        inc = build_incident_object(
+            store, incidents[0], datetime(2026, 11, 24, tzinfo=timezone.utc)
+        )
+        assert inc is not None
+        digest = generate_daily_digest(
+            [inc],
+            datetime(2026, 11, 24, tzinfo=timezone.utc),
+            datetime(2026, 11, 24, tzinfo=timezone.utc),
+        )
+        assert digest["summary"]["reportable_total"] == 1
+        assert digest["summary"]["countries_affected"] == 0
+        assert digest["summary"]["by_region"] == {"South-Eastern Asia": 1}
+        assert digest["summary"]["by_type"] == {"El Niño": 1}
+        assert digest["by_country"] == []
 
 
 class TestResolveGdacsLink:
