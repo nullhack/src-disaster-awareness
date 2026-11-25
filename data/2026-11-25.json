@@ -1,20 +1,20 @@
 {
   "schema_version": "1.6",
   "report_date": "2026-11-25",
-  "generated_at": "2026-11-25T09:58:00Z",
+  "generated_at": "2026-11-25T22:37:48Z",
   "as_of": "2026-11-25",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
     "reportable_total": 33,
-    "new_today": 10,
+    "new_today": 12,
     "critical": 10,
     "high": 9,
     "medium": 7,
     "low": 7,
     "disease_outbreaks": 6,
     "countries_affected": 22,
-    "news_total": 14195,
+    "news_total": 14224,
     "max_magnitude": 6.9,
     "by_severity": {
       "CRITICAL": 10,
@@ -38,13 +38,13 @@
     },
     "by_region": {
       "Global": 2,
-      "Africa": 6,
+      "Africa": 5,
       "Unknown": 5,
+      "Americas": 3,
       "Europe": 5,
       "Asia": 10,
       "South-Eastern Asia": 1,
-      "Oceania": 2,
-      "Americas": 2
+      "Oceania": 2
     }
   },
   "by_country": [
@@ -3031,7 +3031,7 @@
       "incident_id": "20250905-CD-DI",
       "tree_id": "5c179437a46a56aca2f8b70aeceda07a",
       "canonical_name": "Ebola Kinshasa, DR Congo 2025-09-05",
-      "summary": "A UNICEF survey in Ebola-hit Ituri found that visits to safe spaces for women and girls rose by about 200% between January–March and July–September, with nearly 6 in 10 reporting new or worsening violence. Separately, the WHO chief said an Ebola team was evacuated from a DR Congo hospital and temporarily relocated until the situation calms after fierce fighting.",
+      "summary": "A UNICEF survey in Ebola-hit Ituri found that visits to safe spaces for women and girls rose by about 200% between January–March and July–September, with nearly 6 in 10 reporting new or worsening violence. Separately, the WHO chief said an Ebola team was evacuated from a DR Congo hospital and temporarily relocated until the situation calms after fierce fighting.\nIntensified fighting in Ituri Province forced the WHO to temporarily relocate its Ebola response team from a hospital in Akwe, after health workers were forced to shelter for more than three days. Reports link the paralysis of the Ebola response in the area to the offensive by Thomas Lubanga's rebellion, with clashes blocking roads needed to reach patients. Coverage also highlights that local customs, rites, and community suspicion remain major obstacles for health workers in eastern DR Congo.",
       "country": "DR Congo",
       "iso2": "CD",
       "lat": -4.0,
@@ -3057,7 +3057,7 @@
       "first_reported_date": "2025-09-05",
       "last_updated_date": "2026-11-25",
       "days_since_event": 446,
-      "source_count": 22,
+      "source_count": 23,
       "should_report": true,
       "search_keys": [
         "Ebola DR Congo update 2026",
@@ -3067,9 +3067,9 @@
         "who_don": 19,
         "usgs": 0,
         "gdacs": 0,
-        "ercc": 3,
+        "ercc": 4,
         "healthmap": 0,
-        "news": 1226
+        "news": 1233
       },
       "source_links": [
         {
@@ -3225,15 +3225,22 @@
           "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON630",
           "meta": "",
           "date": "2026-11-20"
+        },
+        {
+          "type": "ERCC",
+          "label": "ECHO Daily Map of 25 November 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5859",
+          "meta": "",
+          "date": "2026-11-25"
         }
       ],
       "key_links": [
         {
           "kind": "official",
-          "label": "Ebola Ituri, DR Congo 2026-11-20",
-          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON630",
-          "source": "WHO",
-          "date": "2026-11-20",
+          "label": "ECHO Daily Map of 25 November 2026",
+          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5859",
+          "source": "ERCC",
+          "date": "2026-11-25",
           "reason": "Newest official"
         },
         {
@@ -3246,11 +3253,11 @@
         },
         {
           "kind": "news",
-          "label": "WHO Warns Conflict Threatens Ebola Response in DR Congo - Voice of Nigeria",
-          "url": "https://von.gov.ng/who-warns-conflict-threatens-ebola-response-in-dr-congo/",
-          "source": "Voice of Nigeria",
-          "date": "2026-11-23",
-          "reason": "Related article"
+          "label": "Fighting in Eastern Congo Forces Ebola Workers to Evacuate, Threatening Outbreak Response",
+          "url": "https://www.usnews.com/news/world/articles/2026-11-25/fighting-in-eastern-congo-forces-ebola-workers-to-evacuate-threatening-outbreak-response",
+          "source": "U.S. News & World Report",
+          "date": "2026-11-25T21:59:15+00:00",
+          "reason": "Latest log"
         }
       ],
       "physical": {
@@ -8157,7 +8164,27 @@
           "published_date": "2026-11-25"
         },
         {
+          "headline": "WHO evacuates staff from hospital in DR Congo",
+          "published_date": "2026-11-25"
+        },
+        {
           "headline": "The DRC’s Ebola crisis revives an old ethical question: What do health workers owe patients?",
+          "published_date": "2026-11-25"
+        },
+        {
+          "headline": "RDC : En Ituri, l’offensive de la rébellion de Thomas Lubanga paralyse la riposte contre l’épidémie d’Ebola – Mali Actu",
+          "published_date": "2026-11-25"
+        },
+        {
+          "headline": "Nearly 6 in 10 women and adolescent girls surveyed in Ebola-hit Ituri report increase in violence and abuse - UNICEF",
+          "published_date": "2026-11-25"
+        },
+        {
+          "headline": "RDC : des combats près d’un hôpital de l’Ituri perturbent la riposte contre Ebola",
+          "published_date": "2026-11-25"
+        },
+        {
+          "headline": "Ebola Fight Runs Up Against Customs, Rites In Remote DR Congo",
           "published_date": "2026-11-25"
         },
         {
@@ -8167,9 +8194,17 @@
         {
           "headline": "UNICEF: Nearly 6 in 10 women and adolescent girls surveyed in Ebola-hit Ituri report increase in violence and abuse",
           "published_date": "2026-11-25T09:05:31+00:00"
+        },
+        {
+          "headline": "WHO Kenya Newsletter | October 2026",
+          "published_date": "2026-11-25T21:58:53+00:00"
+        },
+        {
+          "headline": "Fighting in Eastern Congo Forces Ebola Workers to Evacuate, Threatening Outbreak Response",
+          "published_date": "2026-11-25T21:59:15+00:00"
         }
       ],
-      "news_total": 1226,
+      "news_total": 1233,
       "logs": [
         {
           "log_date": "2026-07-10",
@@ -8821,7 +8856,7 @@
         },
         {
           "log_date": "2026-11-25",
-          "summary": "A UNICEF survey in Ebola-hit Ituri found that visits to safe spaces for women and girls rose by about 200% between January–March and July–September, with nearly 6 in 10 reporting new or worsening violence. Separately, the WHO chief said an Ebola team was evacuated from a DR Congo hospital and temporarily relocated until the situation calms after fierce fighting.",
+          "summary": "A UNICEF survey in Ebola-hit Ituri found that visits to safe spaces for women and girls rose by about 200% between January–March and July–September, with nearly 6 in 10 reporting new or worsening violence. Separately, the WHO chief said an Ebola team was evacuated from a DR Congo hospital and temporarily relocated until the situation calms after fierce fighting.\nIntensified fighting in Ituri Province forced the WHO to temporarily relocate its Ebola response team from a hospital in Akwe, after health workers were forced to shelter for more than three days. Reports link the paralysis of the Ebola response in the area to the offensive by Thomas Lubanga's rebellion, with clashes blocking roads needed to reach patients. Coverage also highlights that local customs, rites, and community suspicion remain major obstacles for health workers in eastern DR Congo.",
           "news": [
             {
               "news_id": "9602488887f950aeba95cb8d6bf7bb5f",
@@ -8842,6 +8877,15 @@
               "image": "https://www.bing.com/th?id=ONUT.u878_raa9jyc61X8UiZFnA"
             },
             {
+              "news_id": "e5375df2009a58bca998c6b672ecb8fd",
+              "url": "https://tribuneonlineng.com/who-relocates-ebola-response-team-fighting-dr-congo/",
+              "headline": "WHO evacuates staff from hospital in DR Congo",
+              "body": "The World Health Organization (WHO) has temporarily relocated its Ebola response team from a hospital in Akwe, Ituri Province, in the Democratic Republic of Congo (DR Congo), following intensified fighting that forced health workers to take shelter for more than three days.",
+              "published_date": "2026-11-25",
+              "outlet": "Tribune Online",
+              "image": "https://www.bing.com/th?id=ONUT.OjCuv6BRL91gFK1FJjDEog"
+            },
+            {
               "news_id": "df0544cc1ccb5f8a8b840e4688fe68e5",
               "url": "https://www.msn.com/en-us/news/other/the-drc-s-ebola-crisis-revives-an-old-ethical-question-what-do-health-workers-owe-patients/ar-AA2i84sT?ocid=BingNewsVerp",
               "headline": "The DRC’s Ebola crisis revives an old ethical question: What do health workers owe patients?",
@@ -8849,6 +8893,60 @@
               "published_date": "2026-11-25",
               "outlet": "The Conversation on MSN",
               "image": "https://www.bing.com/th?id=ONUT.Xgn1mR8MKLaXVas7ATh-4A"
+            },
+            {
+              "news_id": "b96b582af5b65c8f980f43713923f494",
+              "url": "https://maliactu.net/rdc-en-ituri-loffensive-de-la-rebellion-de-thomas-lubanga-paralyse-la-riposte-contre-lepidemie-debola/",
+              "headline": "RDC : En Ituri, l’offensive de la rébellion de Thomas Lubanga paralyse la riposte contre l’épidémie d’Ebola – Mali Actu",
+              "body": "RDC : En Ituri, l'offensive de la rébellion de Thomas Lubanga paralyse la riposte contre l'épidémie d'Ebola L'est de la République démocratique du Congo fait",
+              "published_date": "2026-11-25",
+              "outlet": "Maliactu",
+              "image": "https://www.bing.com/th?id=ONUT.bluf8YQ3JUeq0hCpplz2bg"
+            },
+            {
+              "news_id": "d133d0ff49ee5db5bd05e4ae8870735b",
+              "url": "https://www.usnews.com/news/world/articles/2026-11-25/fighting-in-eastern-congo-forces-ebola-workers-to-evacuate-threatening-outbreak-response",
+              "headline": "Fighting in Eastern Congo Forces Ebola Workers to Evacuate, Threatening Outbreak Response",
+              "body": "Escalating fighting in eastern Congo has forced health workers to evacuate and blocked roads needed to reach Ebola patients ...",
+              "published_date": "2026-11-25T21:59:15+00:00",
+              "outlet": "U.S. News & World Report",
+              "image": "https://www.bing.com/th?id=ONUT.KvYLnmae3dvajMlKn-REaQ"
+            },
+            {
+              "news_id": "a4ca5317d8905f9e9d2aa38a06dc5f73",
+              "url": "https://www.afro.who.int/countries/kenya/publication/who-kenya-newsletter-october-2026",
+              "headline": "WHO Kenya Newsletter | October 2026",
+              "body": "Join us for our July to October 2026 newsletter as Kenya acts swiftly on its first cases of Bundibugyo Ebola, all 47 counties gain a clearer picture of their health workforce, a new roadmap aims to ...",
+              "published_date": "2026-11-25T21:58:53+00:00",
+              "outlet": "afro.who.int",
+              "image": ""
+            },
+            {
+              "news_id": "b21c2dfab21057c5bdf632cda9dc53dd",
+              "url": "https://www.msn.com/en-xl/africa/top-stories/nearly-6-in-10-women-and-adolescent-girls-surveyed-in-ebola-hit-ituri-report-increase-in-violence-and-abuse-unicef/ar-AA2iaM8A?ocid=BingNewsVerp",
+              "headline": "Nearly 6 in 10 women and adolescent girls surveyed in Ebola-hit Ituri report increase in violence and abuse - UNICEF",
+              "body": "Findings show a worsening parallel crisis for women and girls, including emotional and psychological abuse, controlling behaviour, and physical and sexual violenceNearly 6 in 10 women and adolescent ...",
+              "published_date": "2026-11-25",
+              "outlet": "AllAfrica on MSN",
+              "image": ""
+            },
+            {
+              "news_id": "8c08d387914a5568893ead4a4db250b1",
+              "url": "https://lequotidienrdc.com/rdc-des-combats-pres-dun-hopital-de-lituri-perturbent-la-riposte-contre-ebola/",
+              "headline": "RDC : des combats près d’un hôpital de l’Ituri perturbent la riposte contre Ebola",
+              "body": "D’intenses combats près d’un hôpital de la province de l’Ituri, en République démocratique du Congo, ont perturbé les opérations de lutte contre Ebola et contraint des équipes de riposte et les partenaires humanitaires à se réfugier dans un service de maternité depuis plus de 24 heures, a alerté l'Organisation mondiale de la Santé (OMS). L'agence onusienne a lancé dimanche un appel à la paix en Ituri où ces violences menacent les soignants. « De violents combats se poursuivent depuis hier (samedi) dans les environs d’un hôpital en Ituri - dans une zone proche de l’endroit où la flambée d’Ebola est apparue pour la première fois », a déclaré sur le réseau social X le Directeur général de l’OMS, Tedros Adhanom Ghebreyesus. Il a indiqué que cette situation a perturbé le fonctionnement de l’hôpital ainsi que l’ensemble de la riposte à Ebola, « exposant gravement les patients, les familles et les agents de santé ». L’OMS travaille avec des partenaires humanitaires afin d’assurer une sortie en toute sécurité au personnel piégé dans l’établissement médical et a appelé à la protection des personnels hospitaliers, des patients et des établissements de santé, a souligné le Dr Tedros, rappelant que « le meilleur des remèdes, c’est la paix». L’Ituri demeure l’épicentre de l’épidémie L’épidémie d’Ebola dans l’est de la République démocratique du Congo reste hors de contrôle plus de six mois après sa déclaration initiale, le nombre de cas et de décès augmentant à un rythme record. Le dernier décompte du 20 novembre fait état 11 762 cas confirmés, dont 5 775 décès dans 68 zones sanitaires réparties dans huit provinces, dans ce qui est devenu la pire épidémie d’Ebola jamais enregistrée dans le vaste pays d’Afrique centrale, selon l’OMS. La province de l’Ituri demeure l’épicentre de l’épidémie, avec un total cumulé de 8028 cas confirmés et 3 791 décès, soit un taux de létalité de 47 %. La province concentre plus des deux tiers des cas confirmés cumulés et près de 60 % des nouveaux cas notifiés. Sur les 39 nouveaux cas confirmés notifiés lors du dernier rapport épidémiologique, l’Ituri recense plus de la moitié avec 23 nouveaux cas. « L’insécurité reste l’un des principaux obstacles » Les attaques se multiplient dans l’est de la RDC depuis la fin octobre, « ce qui affecte gravement la lutte contre Ebola », a déploré le Dr Tedros. Lors de son point de presse hebdomadaire, la semaine dernière, il a souligné que « l’insécurité reste l’un des principaux obstacles » à la riposte contre le virus Bundibugyo. L’attaque brutale menée début novembre contre la ville de Cantine-Aloya en illustre les conséquences. Elle a non seulement coûté la vie à 66 civils, dont trois professionnels de santé, mais aussi gravement compromis le suivi des contacts : les équipes de riposte ont perdu de vue plus de 1 000 personnes contacts de cas d’Ebola. Dans la province de Tshopo, une autre attaque survenue en novembre a tué une infirmière et grièvement blessé un autre professionnel de santé alors qu’ils répondaient à une alerte Ebola. Selon l’OMS, cette attaque a empêché l’ouverture d’un centre de traitement et favorisé la propagation du virus. « De telles attaques dissuadent également les personnes de se faire soigner dans un centre de traitement d’Ebola », a averti le Dr Tedros.",
+              "published_date": "2026-11-25",
+              "outlet": "Lequodienrdc",
+              "image": ""
+            },
+            {
+              "news_id": "ffcef2f5b6bd57478e9d4b71bf54be42",
+              "url": "https://www.channelstv.com/2026/11/25/ebola-fight-runs-up-against-customs-rites-in-remote-dr-congo/",
+              "headline": "Ebola Fight Runs Up Against Customs, Rites In Remote DR Congo",
+              "body": "For health workers in eastern DRC, tackling local suspicions is as big a problem as combating the Ebola virus that has plagued it for six months.",
+              "published_date": "2026-11-25",
+              "outlet": "Channels Television",
+              "image": "https://www.bing.com/th?id=ONUT.nSqoAgXK_RdaHII2ciYrig"
             },
             {
               "news_id": "2d35264f339a558387e69530b3689755",
@@ -9816,13 +9914,13 @@
       "incident_id": "20260511-XX-DR",
       "tree_id": "d75afb3078c54d74b37c4f8bb985dfce",
       "canonical_name": "Drought Green",
-      "summary": "Ethiopia's failed rains pushed maize prices to record highs, with IFPRI projecting 905,000 more Ethiopians falling into poverty in 2027. New Utah State University research attributes Utah's exceptionally warm, low-snow winter to conditions that could make similar drought-inducing winters more frequent in coming decades, while drought, frost and warming winters affected Wisconsin's 2026 cranberry harvest. Colorado recorded an increase in invasive mussel-infested watercraft this summer even as drought reduced boating activity, and Oklahoma's energy and livestock sectors helped sustain its economy through 2026 drought conditions, with the latest rankings showing continued dryness around Tulsa County.",
+      "summary": "Reports highlight localized drought adaptations and impacts in the United States. California growers are being presented with pomegranates as a drought-tolerant alternative crop as water shortages and declining soil quality hit Central Valley farming, while North Carolina's prolonged drought is forcing cattle producers to sell livestock and spend thousands more on winter feed amid depleted pastures and reduced hay production. In North Carolina, Ramseur residents experienced temporary water discoloration linked to drought conditions, and the SBA reminded Colorado businesses and nonprofits of an approaching deadline for drought-related disaster loan applications.",
       "country": "",
       "iso2": "XX",
       "lat": null,
       "lon": null,
       "country_group": "C",
-      "region": "Africa",
+      "region": "Americas",
       "incident_type": "Drought",
       "incident_category": "Natural",
       "is_disease": false,
@@ -9840,7 +9938,7 @@
       "disease_name": null,
       "event_date": "2026-05-11",
       "first_reported_date": "2026-05-11",
-      "last_updated_date": "2026-11-24",
+      "last_updated_date": "2026-11-25",
       "days_since_event": 198,
       "source_count": 2,
       "should_report": true,
@@ -9854,7 +9952,7 @@
         "gdacs": 1,
         "ercc": 1,
         "healthmap": 0,
-        "news": 1188
+        "news": 1192
       },
       "source_links": [
         {
@@ -9883,18 +9981,18 @@
         },
         {
           "kind": "news",
-          "label": "See Tulsa County and Oklahoma precipitation rankings, drought conditions as of Nov. 19",
-          "url": "https://tulsaworld.com/news/state-regional/weather/article_32cc5d66-1d96-475b-a160-beb70eb6f8c5.html",
-          "source": "Tulsa World",
+          "label": "SBA disaster loan deadline approaching for drought-impacted biz, nonprofits",
+          "url": "https://www.montrosepress.com/news/sba-disaster-loan-deadline-approaching-for-drought-impacted-biz-nonprofits/article_bbcd5bb5-a54c-449a-83a0-f05c3360ae46.html",
+          "source": "Montrose Daily Press",
           "date": "2026-11-24",
           "reason": "Latest log"
         },
         {
           "kind": "news",
-          "label": "Droughts put the Upper Peninsula at wildfire risk as a potential dry winter...",
-          "url": "https://www.ourmidland.com/lifestyles/article/droughts-put-upper-peninsula-wildfire-risk-22535642.php",
-          "source": "Midland Daily News",
-          "date": "2026-11-21T14:26:50+00:00",
+          "label": "See Tulsa County and Oklahoma precipitation rankings, drought conditions as of Nov. 19",
+          "url": "https://tulsaworld.com/news/state-regional/weather/article_32cc5d66-1d96-475b-a160-beb70eb6f8c5.html",
+          "source": "Tulsa World",
+          "date": "2026-11-24",
           "reason": "Related article"
         }
       ],
@@ -14642,6 +14740,10 @@
           "published_date": "2026-11-23"
         },
         {
+          "headline": "SBA disaster loan deadline approaching for drought-impacted biz, nonprofits",
+          "published_date": "2026-11-24"
+        },
+        {
           "headline": "New USU research explains Utah's missing winter, identifies warning signs of future droughts",
           "published_date": "2026-11-24"
         },
@@ -14660,9 +14762,21 @@
         {
           "headline": "Oklahoma's unique economic mix of energy, agriculture paid off in 2026",
           "published_date": "2026-11-24T00:00:00+00:00"
+        },
+        {
+          "headline": "Pomegranates offer California growers a drought-tolerant crop alternative",
+          "published_date": "2026-11-25"
+        },
+        {
+          "headline": "Drought forces cattle producers to sell livestock as feed costs climb",
+          "published_date": "2026-11-25"
+        },
+        {
+          "headline": "Drought causes temporary water discoloration in Ramseur",
+          "published_date": "2026-11-25"
         }
       ],
-      "news_total": 1188,
+      "news_total": 1192,
       "logs": [
         {
           "log_date": "2026-08-18",
@@ -14941,111 +15055,6 @@
           ]
         },
         {
-          "log_date": "2026-11-19",
-          "summary": "Fiji declared a national state of disaster and Tonga declared a state of emergency due to El Niño-driven drought, water shortages, and risks to agriculture, livestock, and public health. In the U.S., Lake Powell dropped dangerously close to a critical threshold with hydropower output at a record low, Durham spent millions to keep water flowing, and an atmospheric river was forecast to hit the drought-affected West. Forecasters also warned that below-normal rainfall could push the Davao Region into drought by March 2027, while North Carolina’s winter weather was described as its best chance to break drought.",
-          "news": [
-            {
-              "news_id": "a5f6d8d0334f506e92a6c480c4aaade4",
-              "url": "https://www.yahoo.com/news/articles/fiji-declares-state-disaster-amid-010921828.html",
-              "headline": "Fiji declares state of disaster amid El Nino-driven drought",
-              "body": "Nov 19 (Reuters) - Fiji has declared a national state of disaster after an El Nino-driven drought caused widespread water shortages, with the Pacific nation's weather bureau forecasting below-normal",
-              "published_date": "2026-11-19",
-              "outlet": "Reuters · via Yahoo News",
-              "image": "https://media.zenfs.com/en/reuters.com/ebb1e2d4c738e1a10e1643d056ce2373.jpg"
-            },
-            {
-              "news_id": "ffcc2a1147c05cd99f8ad7d32df20a7e",
-              "url": "https://www.sunstar.com.ph/davao/davao-rainfall-outlook-below-normal-in-coming-months",
-              "headline": "Davao rainfall outlook: Below normal in coming months",
-              "body": "Pagasa-Davao warns that below-normal rainfall driven by a very strong El Niño could push all provinces in the Davao Region into meteorological drought by March 2027.",
-              "published_date": "2026-11-18",
-              "outlet": "SunStar",
-              "image": "https://www.bing.com/th?id=ONUT.j35CcJaHfYUlihasH4rsug"
-            },
-            {
-              "news_id": "19dd43999b2c56a5a04873bdf7249283",
-              "url": "https://www.msn.com/en-us/news/other/durham-is-spending-millions-to-keep-water-flowing-during-the-drought/ar-AA2hIV9I?ocid=BingNewsVerp",
-              "headline": "Durham is spending millions to keep water flowing during the drought",
-              "body": "So far, Durham has received invoices for 852 million gallons from Cary and 46 million gallons from the Orange Water and Sewer ...",
-              "published_date": "2026-11-19",
-              "outlet": "WRAL News on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.dzkErw8t6W36poVPJ-MvVw"
-            },
-            {
-              "news_id": "7237f4045468524b89b74fd6145606b3",
-              "url": "https://www.msn.com/en-us/news/other/three-bone-dry-weeks-in-the-world-s-rainiest-city-the-sudden-weather-shift-stumping-climatologists/ar-AA2hItjD?ocid=BingNewsVerp",
-              "headline": "Three bone-dry weeks in the world’s rainiest city - The sudden weather shift stumping climatologists",
-              "body": "Mawsynram and Cherrapunji, also called Sohra, sit in Meghalaya in northeast India. They're usually named when people ask ...",
-              "published_date": "2026-11-19",
-              "outlet": "Climate Compass on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.0pAXa1xAUKuK_MMEICgxJw"
-            },
-            {
-              "news_id": "a6430716fd1551a99f26a7036b12787d",
-              "url": "https://www.washingtonpost.com/weather/2026/11/17/storms-hit-drought-affected-west-amid-years-first-big-atmospheric-river/",
-              "headline": "Storms to hit drought-affected West amid year’s first big atmospheric river",
-              "body": "An intense atmospheric river, the first notable one of the season, is aimed at the West Coast. The fire hose of moisture from ...",
-              "published_date": "2026-11-13T21:14:50+00:00",
-              "outlet": "The Washington Post",
-              "image": "https://www.bing.com/th?id=ONUT.cmTUWjPDpfgqhNQXLYu3rQ"
-            },
-            {
-              "news_id": "aa2ccdd046eb553cb6fe3f82d7415ec1",
-              "url": "https://samoaglobalnews.com/tonga-declares-state-of-emergency/",
-              "headline": "Tonga Declares State of Emergency",
-              "body": "Worsening drought conditions and severe water shortages are threatening communities, agriculture, livestock and public health ...",
-              "published_date": "2026-11-19T08:08:16+00:00",
-              "outlet": "samoaglobalnews",
-              "image": "https://www.bing.com/th?id=ONUT.3PAwclLI7c9KwAVsY3n0Ug"
-            },
-            {
-              "news_id": "c1ad481b908252018247216095b7d27b",
-              "url": "https://www.yahoo.com/news/us/articles/lake-powell-drops-dangerously-close-020100271.html",
-              "headline": "Lake Powell drops dangerously close to critical threshold as hydropower production hits record low",
-              "body": "Utilities must rely more heavily on alternative supplies as drought reduces dam output.",
-              "published_date": "2026-11-19",
-              "outlet": "The Cool Down · via Yahoo News",
-              "image": "https://media.zenfs.com/en/the_cool_down_737/2cb8dda6949bb07daf15dc4afb5baa33.jpg"
-            },
-            {
-              "news_id": "26db4c0612ff561697122b852883b031",
-              "url": "https://ijr.com/discover/tonga-fiji-declare-drought-emergencies-6f035e89",
-              "headline": "Fiji declares nationwide disaster after El Niño drought hits crisis levels",
-              "body": "Tonga declared a 27-day state of emergency as El Niño-driven drought worsens water shortages and...",
-              "published_date": "2026-11-19",
-              "outlet": "IJR",
-              "image": "https://s.yimg.com/bo/56126a05-81a4-58d0-9f6f-6f536e2cc6e7_1795064846411.png.cf.jpg"
-            },
-            {
-              "news_id": "5a244fbfacc8550e89d4a587ae595f8c",
-              "url": "https://tulsaworld.com/news/state-regional/weather/article_d6571b38-2dba-4248-90b7-3256ad99d299.html",
-              "headline": "See Tulsa County and Oklahoma precipitation rankings, drought conditions as of Nov. 12",
-              "body": "Check out the latest drought conditions as of Nov. 12, 2026, by national, state, or county views (updated each Thursday).",
-              "published_date": "2026-11-17",
-              "outlet": "Tulsa World",
-              "image": "https://s.yimg.com/bo/13139412-7032-5397-befb-08cbcd71a318_1794934104665.jpg"
-            },
-            {
-              "news_id": "086e29b6066952f3abbdfa96076a428a",
-              "url": "https://www.wunc.org/environment/2026-11-18/winter-weather-rain-drought-el-nino-north-carolina",
-              "headline": "Winter weather will be North Carolina's 'best chance' to break free from drought",
-              "body": "This year's El Niño could be the strongest on record. Experts predict it will bring warmer temperatures and significant precipitation to the state in the next few months, helping to soothe the ongoing drought.",
-              "published_date": "2026-11-18",
-              "outlet": "WUNC",
-              "image": "https://www.bing.com/th?id=ONUT.Yg6toqNqPrQs1GxOuNEf9w"
-            },
-            {
-              "news_id": "efa88d10446c5e65b8ccdd86d4d030a6",
-              "url": "https://sundayworld.co.za/africa/zimbabwe-urges-enhanced-use-of-climate-data-to-prepare-for-el-nino/",
-              "headline": "Zimbabwe urges enhanced use of climate data to prepare for El Nino",
-              "body": "Zimbabwe's statistics agency calls for better use of climate data to prepare for the 2026/2027 El Nino-induced drought",
-              "published_date": "2026-11-18",
-              "outlet": "Sunday World",
-              "image": "https://www.bing.com/th?id=ONUT.0ovnk7vN3xlnpdqTonwSZA"
-            }
-          ]
-        },
-        {
           "log_date": "2026-11-22",
           "summary": "Sindh’s chief minister announced a Rs5.3 billion relief package for drought-hit Thar and Umerkot. In North Carolina, drought now affects 6.2 million people as reservoirs continue to drop. Drought conditions in Michigan’s Upper Peninsula are raising wildfire risk, with meteorologists warning of a potentially dry winter.",
           "news": [
@@ -15146,9 +15155,51 @@
               "image": "https://www.bing.com/th?id=ONUT.YhgeT-L0y-qFQLZBkSrZYQ"
             }
           ]
+        },
+        {
+          "log_date": "2026-11-25",
+          "summary": "Reports highlight localized drought adaptations and impacts in the United States. California growers are being presented with pomegranates as a drought-tolerant alternative crop as water shortages and declining soil quality hit Central Valley farming, while North Carolina's prolonged drought is forcing cattle producers to sell livestock and spend thousands more on winter feed amid depleted pastures and reduced hay production. In North Carolina, Ramseur residents experienced temporary water discoloration linked to drought conditions, and the SBA reminded Colorado businesses and nonprofits of an approaching deadline for drought-related disaster loan applications.",
+          "news": [
+            {
+              "news_id": "191dd9b655845d02a307ee33f9c13d4b",
+              "url": "https://www.freshplaza.com/north-america/article/9896168/pomegranates-offer-california-growers-a-drought-tolerant-crop-alternative/",
+              "headline": "Pomegranates offer California growers a drought-tolerant crop alternative",
+              "body": "Pomegranate cultivation could provide California growers with an alternative crop as water shortages and declining soil quality affect farming operations across the Central Valley.…",
+              "published_date": "2026-11-25",
+              "outlet": "FreshPlaza",
+              "image": "https://www.bing.com/th?id=ONUT.sf-ABXfkA0JlXymMEPLNjw"
+            },
+            {
+              "news_id": "cda354e317025ad0b31aee53f444a09f",
+              "url": "https://www.yahoo.com/news/weather-news/articles/drought-forces-cattle-producers-sell-173400292.html",
+              "headline": "Drought forces cattle producers to sell livestock as feed costs climb",
+              "body": "(The Center Square) – North Carolina's prolonged drought is forcing some cattle producers to sell livestock and spend thousands of dollars more on winter feed as depleted pastures and reduced hay prod...",
+              "published_date": "2026-11-25",
+              "outlet": "The Center Square · via Yahoo News",
+              "image": "https://media.zenfs.com/en/the_center_square_articles_912/b78d856a70e92ef3e38192df4e826f1c.jpg_up.jpg"
+            },
+            {
+              "news_id": "0d0752daefc159d68fd90b74cfce5741",
+              "url": "https://www.montrosepress.com/news/sba-disaster-loan-deadline-approaching-for-drought-impacted-biz-nonprofits/article_bbcd5bb5-a54c-449a-83a0-f05c3360ae46.html",
+              "headline": "SBA disaster loan deadline approaching for drought-impacted biz, nonprofits",
+              "body": "The U.S. Small Business Administration is reminding eligible small businesses and private nonprofit organizations in Colorado impacted by the drought occurring Feb. 3, 2026 and continuing to apply for low-interest",
+              "published_date": "2026-11-24",
+              "outlet": "Montrose Daily Press",
+              "image": "https://s.yimg.com/bo/85be0c89-936b-519e-830c-5653f7a0eb82_1794066872747.png.cf.jpg"
+            },
+            {
+              "news_id": "40f1be8edbcc56ae9527453e6e904061",
+              "url": "https://www.yahoo.com/news/weather-news/articles/drought-causes-temporary-water-discoloration-041921959.html",
+              "headline": "Drought causes temporary water discoloration in Ramseur",
+              "body": "RAMSEUR, N.C. (WGHP) — People in Ramseur may notice their water is a different color. City leaders explained the reason for the discoloration. They said the discoloration comes from elevated levels of...",
+              "published_date": "2026-11-25",
+              "outlet": "WGHP Greensboro · via Yahoo News",
+              "image": "https://media.zenfs.com/en/wghp_greensboro_articles_678/4d10ab9417c2fddeea98ba38a54fada5.jpg_up.jpg"
+            }
+          ]
         }
       ],
-      "logs_total": 88
+      "logs_total": 89
     },
     {
       "incident_id": "20260715-UA-CF",
@@ -25465,7 +25516,7 @@
       "incident_id": "20260726-IR-CF",
       "tree_id": "13763def03ab448898154124734fe728",
       "canonical_name": "Iran/US war",
-      "summary": "In this batch, Iran accused the U.S. of using AI to select targets in the war and urged UN regulation, while a Saudi-led coalition struck Yemen’s Hodeidah port after an evacuation warning. President Trump said the Iran war is “funded” through January and addressed Israel’s goal of regime change in Tehran, as an ex-Mossad chief argued diplomacy will never work and a third war is inevitable. Houthi rebels also advanced closer to Aden, and oil-market coverage noted Brent near $90 and record Russian crude imports by India and China amid the war’s disruption of Middle Eastern supply.",
+      "summary": "In this batch, Iran accused the U.S. of using AI to select targets in the war and urged UN regulation, while a Saudi-led coalition struck Yemen’s Hodeidah port after an evacuation warning. President Trump said the Iran war is “funded” through January and addressed Israel’s goal of regime change in Tehran, as an ex-Mossad chief argued diplomacy will never work and a third war is inevitable. Houthi rebels also advanced closer to Aden, and oil-market coverage noted Brent near $90 and record Russian crude imports by India and China amid the war’s disruption of Middle Eastern supply.\nThe Trump administration is reportedly weighing strikes on Iran’s senior leaders, including Mojtaba Khamenei, as the war approaches its ninth month. Iran’s first vice president said Tehran is not concerned about the U.S. naval blockade, citing a significant increase in cargo through other borders, while Gulf Cooperation Council members agreed on the need to prevent renewed U.S. strikes but differed over how Washington should approach Tehran. Economic reporting highlighted Qatar’s busiest LNG export month since the war began, a $3.1 billion addition to Thanksgiving fuel costs, and an RBI study finding a 64% crude oil price surge tied to the West Asia conflict.",
       "country": "Iran",
       "iso2": "IR",
       "lat": 32.4,
@@ -25504,7 +25555,7 @@
         "gdacs": 0,
         "ercc": 2,
         "healthmap": 0,
-        "news": 3723
+        "news": 3735
       },
       "source_links": [
         {
@@ -25533,19 +25584,19 @@
         },
         {
           "kind": "news",
+          "label": "Prolonged Iran conflict threatens Gulf economies, investment plans",
+          "url": "https://www.tbsnews.net/worldbiz/middle-east/prolonged-iran-conflict-threatens-gulf-economies-investment-plans-1613446",
+          "source": "The Business Standard",
+          "date": "2026-11-25",
+          "reason": "Latest log"
+        },
+        {
+          "kind": "news",
           "label": "Report: Iran conflict erodes US power edge over China in Asia",
           "url": "https://www.msn.com/en-us/news/other/report-iran-conflict-erodes-us-power-edge-over-china-in-asia/ar-AA2hY1uE?ocid=BingNewsVerp",
           "source": "Newsmax on MSN",
           "date": "2026-11-23",
           "reason": "Related article"
-        },
-        {
-          "kind": "news",
-          "label": "Brent Crude Near $90: Oil Traders Eye OPEC’s Next Move As Iran Tensions Clash With Supply Surplus Fears",
-          "url": "https://stocktwits.com/news-articles/markets/equity/oil-market-midweek-wrap-brent-holds-near-90-despite-iran-tensions-opec-meeting-conoco-phillips-sale-in-focus/cNbH5X8R9lK",
-          "source": "Stocktwits",
-          "date": "2026-11-25",
-          "reason": "Latest log"
         }
       ],
       "physical": {
@@ -40280,6 +40331,10 @@
           "published_date": "2026-11-24"
         },
         {
+          "headline": "Houthi rebels close in on the city of Aden as Yemeni forces dig in behind a fortified line",
+          "published_date": "2026-11-24"
+        },
+        {
           "headline": "Houthi rebels close in on Aden as Yemeni forces dig in behind a fortified line",
           "published_date": "2026-11-24"
         },
@@ -40428,6 +40483,14 @@
           "published_date": "2026-11-24T22:59:05+00:00"
         },
         {
+          "headline": "Qatar LNG Exports Hit Busiest Month Since Start of Iran War, Despite Insurance Costs",
+          "published_date": "2026-11-25"
+        },
+        {
+          "headline": "Trump administration weighs targeting Iran's top regime leaders in bid to end war: report",
+          "published_date": "2026-11-25"
+        },
+        {
           "headline": "Brent Crude Near $90: Oil Traders Eye OPEC’s Next Move As Iran Tensions Clash With Supply Surplus Fears",
           "published_date": "2026-11-25"
         },
@@ -40436,7 +40499,35 @@
           "published_date": "2026-11-25"
         },
         {
+          "headline": "Prolonged Iran conflict threatens Gulf economies, investment plans",
+          "published_date": "2026-11-25"
+        },
+        {
+          "headline": "Iran War Adds $3.1 Billion To Thanksgiving Fuel Costs. American Households Have Already Paid $1,068 Extra.",
+          "published_date": "2026-11-25"
+        },
+        {
+          "headline": "Estimates of Russians killed in Ukraine surpass all combined US war deaths since WWI",
+          "published_date": "2026-11-25"
+        },
+        {
+          "headline": "Fighting in eastern Congo forces Ebola workers to evacuate, threatening outbreak response",
+          "published_date": "2026-11-25"
+        },
+        {
+          "headline": "Pape to Newsmax: Iran Strikes Growing; Low Gas Prices Temporary",
+          "published_date": "2026-11-25"
+        },
+        {
+          "headline": "The scale of Russia’s war in Ukraine laid bare as Trump embraces Putin",
+          "published_date": "2026-11-25"
+        },
+        {
           "headline": "US Iran War Live Updates: Iran accuses US of using AI to select targets in war, urges UN regulation - The Times of India",
+          "published_date": "2026-11-25"
+        },
+        {
+          "headline": "West Asia conflict triggered 64% crude oil price surge, compared with 29% during Ukraine war: RBI study- Moneycontrol.com",
           "published_date": "2026-11-25"
         },
         {
@@ -40444,15 +40535,23 @@
           "published_date": "2026-11-25"
         },
         {
+          "headline": "Iran says it is prepared to withstand US blockade, seeks to curb price rises",
+          "published_date": "2026-11-25"
+        },
+        {
           "headline": "Trump says Iran war ‘funded’ through January and addresses Israel’s goal of Tehran regime change",
           "published_date": "2026-11-25"
+        },
+        {
+          "headline": "Analysis: Iran's regional strategy at stake as proxy network weakens",
+          "published_date": "2026-11-25T00:00:00+00:00"
         },
         {
           "headline": "Libyan naval officers die following Ukrainian drone attack, and other Mideast...",
           "published_date": "2026-11-25T08:08:38+00:00"
         }
       ],
-      "news_total": 3723,
+      "news_total": 3735,
       "logs": [
         {
           "log_date": "2026-07-27",
@@ -41410,7 +41509,7 @@
         },
         {
           "log_date": "2026-11-25",
-          "summary": "In this batch, Iran accused the U.S. of using AI to select targets in the war and urged UN regulation, while a Saudi-led coalition struck Yemen’s Hodeidah port after an evacuation warning. President Trump said the Iran war is “funded” through January and addressed Israel’s goal of regime change in Tehran, as an ex-Mossad chief argued diplomacy will never work and a third war is inevitable. Houthi rebels also advanced closer to Aden, and oil-market coverage noted Brent near $90 and record Russian crude imports by India and China amid the war’s disruption of Middle Eastern supply.",
+          "summary": "In this batch, Iran accused the U.S. of using AI to select targets in the war and urged UN regulation, while a Saudi-led coalition struck Yemen’s Hodeidah port after an evacuation warning. President Trump said the Iran war is “funded” through January and addressed Israel’s goal of regime change in Tehran, as an ex-Mossad chief argued diplomacy will never work and a third war is inevitable. Houthi rebels also advanced closer to Aden, and oil-market coverage noted Brent near $90 and record Russian crude imports by India and China amid the war’s disruption of Middle Eastern supply.\nThe Trump administration is reportedly weighing strikes on Iran’s senior leaders, including Mojtaba Khamenei, as the war approaches its ninth month. Iran’s first vice president said Tehran is not concerned about the U.S. naval blockade, citing a significant increase in cargo through other borders, while Gulf Cooperation Council members agreed on the need to prevent renewed U.S. strikes but differed over how Washington should approach Tehran. Economic reporting highlighted Qatar’s busiest LNG export month since the war began, a $3.1 billion addition to Thanksgiving fuel costs, and an RBI study finding a 64% crude oil price surge tied to the West Asia conflict.",
           "news": [
             {
               "news_id": "a26beb27ea2c5377a77ef76a79c9cdae",
@@ -41420,6 +41519,24 @@
               "published_date": "2026-11-24",
               "outlet": "Newsmax · via Yahoo News",
               "image": "https://media.zenfs.com/en/newsmax_809/2d01a7d5e6a41572bb92a5095da86c36.jpg_up.jpg"
+            },
+            {
+              "news_id": "5849bb9eedc753358b21d79768cfcd69",
+              "url": "https://www.insurancejournal.com/news/international/2026/11/25/893748.htm",
+              "headline": "Qatar LNG Exports Hit Busiest Month Since Start of Iran War, Despite Insurance Costs",
+              "body": "Qatar's liquefied natural gas exports are on track for their busiest month since the outbreak of the US-Iran conflict despite a sharp rise in insurance",
+              "published_date": "2026-11-25",
+              "outlet": "Insurance Journal",
+              "image": "https://s.yimg.com/bo/f01aa326-a1dc-58f0-a5dd-7b97395e6d54_1788253471196.jpg"
+            },
+            {
+              "news_id": "447dc79e7e44540f9190e9ce6b96bb3e",
+              "url": "https://www.yahoo.com/news/politics/articles/trump-administration-weighs-targeting-irans-003601678.html",
+              "headline": "Trump administration weighs targeting Iran's top regime leaders in bid to end war: report",
+              "body": "Donald Trump's administration is reportedly weighing strikes on Iran's senior leaders, including Mojtaba Khamenei, as the war nears its ninth month.",
+              "published_date": "2026-11-25",
+              "outlet": "Fox News · via Yahoo News",
+              "image": "https://media.zenfs.com/en/fox_news_text_979/176220e289282afe3241691b2b2232e8.jpg"
             },
             {
               "news_id": "3085d07b7d4b518ca408d3e869ef989b",
@@ -41440,6 +41557,51 @@
               "image": "https://www.bing.com/th?id=ONUT.YSgo-WpPQrG6UVJdLV5FAg"
             },
             {
+              "news_id": "58c5120a22ae537d999387dfef8b6ec7",
+              "url": "https://www.tbsnews.net/worldbiz/middle-east/prolonged-iran-conflict-threatens-gulf-economies-investment-plans-1613446",
+              "headline": "Prolonged Iran conflict threatens Gulf economies, investment plans",
+              "body": "The six members of the Gulf Co-operation Council (GCC) agree on the need to prevent renewed US military strikes, but differ over how Washington should approach Tehran",
+              "published_date": "2026-11-25",
+              "outlet": "The Business Standard",
+              "image": "https://www.bing.com/th?id=ONUT.BI9xGg2Gu7uOoH5Qd85wqg"
+            },
+            {
+              "news_id": "18940ad801425887808fb0d42747ea37",
+              "url": "https://www.clickorlando.com/news/world/2026/11/24/iran-insists-no-talks-with-the-us-until-its-7-conditions-are-met-and-other-mideast-news/",
+              "headline": "Houthi rebels close in on the city of Aden as Yemeni forces dig in behind a fortified line",
+              "body": "Iran-backed Houthi rebels have advanced close to Yemen's government seat in the port city of Aden.",
+              "published_date": "2026-11-24",
+              "outlet": "WKMG ClickOrlando",
+              "image": "https://s.yimg.com/bo/d86f45d2-c045-5089-9c69-366c5cfa23eb_1795518134388.jpg"
+            },
+            {
+              "news_id": "94e3a0f1ff6654a5b9d78ff8881582ff",
+              "url": "https://www.ibtimes.com/iran-war-thanksgiving-fuel-costs-analysis-3810184",
+              "headline": "Iran War Adds $3.1 Billion To Thanksgiving Fuel Costs. American Households Have Already Paid $1,068 Extra.",
+              "body": "ITEP estimates households have already absorbed nearly $142.8 billion in higher motor-fuel costs, with businesses and consumers also facing broader price increases.",
+              "published_date": "2026-11-25",
+              "outlet": "International Business Times",
+              "image": "https://s.yimg.com/bo/90238582-5ca3-5f9e-84b9-a5aa2735a4cc_1782787105122.jpg"
+            },
+            {
+              "news_id": "aec4874730f35ffba1451df3c852b8f6",
+              "url": "https://www.msn.com/en-us/news/other/estimates-of-russians-killed-in-ukraine-surpass-all-combined-us-war-deaths-since-wwi/ar-AA2ie04S?ocid=BingNewsVerp",
+              "headline": "Estimates of Russians killed in Ukraine surpass all combined US war deaths since WWI",
+              "body": "More than 700,000 Russian soldiers have been killed in the war in Ukraine since Russia launched its full-scale war against ...",
+              "published_date": "2026-11-25",
+              "outlet": "Military Times on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.VsGITsiHEa7bHZ8vyxq20g"
+            },
+            {
+              "news_id": "3b053fc5c46857298b3cbfb3a4cbc28f",
+              "url": "https://www.courant.com/2026/11/25/congo-ebola-workers-evacuate/",
+              "headline": "Fighting in eastern Congo forces Ebola workers to evacuate, threatening outbreak response",
+              "body": "The violence has disrupted monitoring and left some treatment centers understaffed.",
+              "published_date": "2026-11-25",
+              "outlet": "Hartford Courant",
+              "image": "https://www.bing.com/th?id=ONUT.9458FX-piRAa9qjusAuzVA"
+            },
+            {
               "news_id": "e62cea553e3b5fde9e42cf582d9d37d1",
               "url": "https://www.courant.com/2026/11/24/iran-no-talks-us-mideast-news/",
               "headline": "Houthi rebels close in on Aden as Yemeni forces dig in behind a fortified line",
@@ -41447,6 +41609,15 @@
               "published_date": "2026-11-24",
               "outlet": "Hartford Courant",
               "image": "https://www.bing.com/th?id=ONUT.yvNm4ulNAn-RbHU8CgjwDQ"
+            },
+            {
+              "news_id": "f624d77b23355c3e9d4cf5ffc02c5da8",
+              "url": "https://www.msn.com/en-us/news/news/pape-to-newsmax-iran-strikes-growing-low-gas-prices-temporary/ar-AA2idGtR?ocid=BingNewsVerp",
+              "headline": "Pape to Newsmax: Iran Strikes Growing; Low Gas Prices Temporary",
+              "body": "Pape to Newsmax: Iran Strikes Growing; Low Gas Prices Temporary ...",
+              "published_date": "2026-11-25",
+              "outlet": "Newsmax on MSN",
+              "image": ""
             },
             {
               "news_id": "71882845aeb45f82830d2e29cc7de197",
@@ -41465,6 +41636,15 @@
               "published_date": "2026-11-24",
               "outlet": "New York Daily News",
               "image": "https://www.bing.com/th?id=ONUT.K0waBX8XrE_VryZ4hQzbZQ"
+            },
+            {
+              "news_id": "5c57f223fc6453b0ab824b3b9bb1fa53",
+              "url": "https://www.msn.com/en-nz/news/other/the-scale-of-russia-s-war-in-ukraine-laid-bare-as-trump-embraces-putin/ar-AA2hN134?ocid=BingNewsVerp",
+              "headline": "The scale of Russia’s war in Ukraine laid bare as Trump embraces Putin",
+              "body": "The devastating scale of Putin’s war on Ukraine laid bare as leaked figures show 500,000 Russian soldiers dead - IN DEPTH: ...",
+              "published_date": "2026-11-25",
+              "outlet": "The Independent on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.0O09dPvwybg0mPk6_0copQ"
             },
             {
               "news_id": "e82fb92912315dec932bf4ed062f4082",
@@ -41494,12 +41674,30 @@
               "image": "https://www.bing.com/th?id=ONUT.jhOvohU9fyMhRBw4JNyQ5A"
             },
             {
+              "news_id": "b8dd51ada7475e3ab6f9323f7abb84ad",
+              "url": "https://www.moneycontrol.com/news/business/banks/west-asia-conflict-triggered-64-crude-oil-price-surge-compared-with-29-during-ukraine-war-rbi-study-14089043.html",
+              "headline": "West Asia conflict triggered 64% crude oil price surge, compared with 29% during Ukraine war: RBI study- Moneycontrol.com",
+              "body": "Rupee depreciation was also sharper during the latest episode, while higher fuel prices fed into imported inflation",
+              "published_date": "2026-11-25",
+              "outlet": "Moneycontrol",
+              "image": "https://www.bing.com/th?id=ONUT.NyqT8I2VMmf7uXt4KncOuQ"
+            },
+            {
               "news_id": "fdf66c7309465ae6a32e646c48193573",
               "url": "https://www.msn.com/en-in/news/other/how-the-iran-war-drove-india-and-china-to-record-russian-oil-imports-in-2026-and-why-purchases-may-ease-in-2027/ar-AA2i8G1o?ocid=BingNewsVerp",
               "headline": "How the Iran war drove India and China to record Russian oil imports in 2026, and why purchases may ease in 2027",
               "body": "India and China are set to import record Russian crude volumes in 2026 as the Iran war disrupts Middle Eastern supplies and US sanctions waivers ease purchases. But imports could ease in 2027 as Gulf ...",
               "published_date": "2026-11-25",
               "outlet": "Mint on MSN",
+              "image": ""
+            },
+            {
+              "news_id": "fb69b22cf1a5541583f22caa9e31ed7d",
+              "url": "https://www.msn.com/en-us/news/other/iran-says-it-is-prepared-to-withstand-us-blockade-seeks-to-curb-price-rises/ar-AA2ibG7S?ocid=BingNewsVerp",
+              "headline": "Iran says it is prepared to withstand US blockade, seeks to curb price rises",
+              "body": "DUBAI, Nov 25 (Reuters) - Iran's first vice president said on Wednesday Tehran was not concerned about a US naval blockade as there had been a significant increase in cargo through other borders, and ...",
+              "published_date": "2026-11-25",
+              "outlet": "Reuters on MSN",
               "image": ""
             },
             {
@@ -41510,6 +41708,15 @@
               "published_date": "2026-11-25T08:08:38+00:00",
               "outlet": "San Francisco Chronicle",
               "image": "https://s.yimg.com/bo/47d02b0b-f932-56b0-a777-33182c1cb8e2_1795536432552.jpg"
+            },
+            {
+              "news_id": "b1b54dac2a9b535db8193fdf0c688a45",
+              "url": "https://www.upi.com/Top_News/World-News/2026/11/25/lebanon-iran-expanionist-strategy-in-doubt/8511795630505/",
+              "headline": "Analysis: Iran's regional strategy at stake as proxy network weakens",
+              "body": "Iran's four-decade expansionist strategy in the region, which helped sustain a network of armed proxies known as the Axis of ...",
+              "published_date": "2026-11-25T00:00:00+00:00",
+              "outlet": "UPI",
+              "image": "https://www.bing.com/th?id=ONUT.0A0c-qrj6JrJtMlHWB4--Q"
             },
             {
               "news_id": "e862ecdbd84b52bbbdeb79bf464913d2",
@@ -56770,7 +56977,7 @@
       "incident_id": "20260826-NP-FL",
       "tree_id": "26a139d9c4274b379e946b7b737af269",
       "canonical_name": "Flood Bagmati, Nepal 2026-08-26",
-      "summary": "Authorities have begun distributing house-rent cash assistance to flood-affected families, with money for 970 households in Bidur Municipality, Nuwakot, transferred directly into their bank accounts. Separately, the Malaysian government has disbursed RM540,000 in financial assistance to 54 family members of victims of the Nepal floods.",
+      "summary": "Authorities have begun distributing house-rent cash assistance to flood-affected families, with money for 970 households in Bidur Municipality, Nuwakot, transferred directly into their bank accounts. Separately, the Malaysian government has disbursed RM540,000 in financial assistance to 54 family members of victims of the Nepal floods.\nMalaysia's National Registration Department said certificates of presumed death for the 54 Malaysian victims of the August 26 Nepal flood could be issued as early as December, pending verification documents from the Nepali government. Meanwhile, relatives of the missing Malaysians say they are gradually accepting the reality of the tragedy. Other items in the batch, including India's $1.62 billion aid announcement and a photo gallery of rescue teams, repeat developments already reported.",
       "country": "Nepal",
       "iso2": "NP",
       "lat": 27.2952744,
@@ -56808,7 +57015,7 @@
         "gdacs": 1,
         "ercc": 2,
         "healthmap": 0,
-        "news": 1251
+        "news": 1255
       },
       "source_links": [
         {
@@ -56844,18 +57051,18 @@
         },
         {
           "kind": "news",
-          "label": "India announces a $1.6 billion aid package for Nepal’s flood recovery",
-          "url": "https://abc7news.com/story/india-announces-16-billion-aid-package-nepals-flood-recovery/20069456/",
-          "source": "ABC7 News",
+          "label": "India announces a $1.6 billion aid package for Nepal's flood recovery - Newsday",
+          "url": "https://www.newsday.com/news/nation/india-nepal-flood-modi-g45147",
+          "source": "Newsday",
           "date": "2026-11-23",
           "reason": "Latest log"
         },
         {
           "kind": "news",
-          "label": "Photo: Nepali rescue teams pull survivors from deadly Himalayan glacial floods -...",
-          "url": "https://www.upi.com/News_Photos/view/upi/971f66159bab394e13006f151c7aeea4/Nepali-rescue-teams-pull-survivors-from-deadly-Himalayan-glacial-floods/",
-          "source": "UPI",
-          "date": "2026-11-20T09:21:00+00:00",
+          "label": "India announces a $1.6 billion aid package for Nepal’s flood recovery",
+          "url": "https://abc7news.com/story/india-announces-16-billion-aid-package-nepals-flood-recovery/20069456/",
+          "source": "ABC7 News",
+          "date": "2026-11-23",
           "reason": "Latest log"
         }
       ],
@@ -61815,6 +62022,14 @@
           "published_date": "2026-11-21"
         },
         {
+          "headline": "Photo: Nepali rescue teams pull survivors from deadly Himalayan glacial floods -...",
+          "published_date": "2026-11-22T22:09:43+00:00"
+        },
+        {
+          "headline": "India announces a $1.6 billion aid package for Nepal's flood recovery - Newsday",
+          "published_date": "2026-11-23"
+        },
+        {
           "headline": "India announces a $1.6 billion aid package for Nepal’s flood recovery",
           "published_date": "2026-11-23"
         },
@@ -61871,11 +62086,19 @@
           "published_date": "2026-11-25"
         },
         {
+          "headline": "'Certificate of presumed death for Nepal flood victims to be issued as early as Dec' | Malaysiakini",
+          "published_date": "2026-11-25"
+        },
+        {
           "headline": "Govt disburses RM540,000 aid to families of Nepal flood victims",
+          "published_date": "2026-11-25"
+        },
+        {
+          "headline": "Families of missing Nepal flood victims gradually accepting reality",
           "published_date": "2026-11-25"
         }
       ],
-      "news_total": 1251,
+      "news_total": 1255,
       "logs": [
         {
           "log_date": "2026-08-28",
@@ -62482,7 +62705,7 @@
         },
         {
           "log_date": "2026-11-25",
-          "summary": "Authorities have begun distributing house-rent cash assistance to flood-affected families, with money for 970 households in Bidur Municipality, Nuwakot, transferred directly into their bank accounts. Separately, the Malaysian government has disbursed RM540,000 in financial assistance to 54 family members of victims of the Nepal floods.",
+          "summary": "Authorities have begun distributing house-rent cash assistance to flood-affected families, with money for 970 households in Bidur Municipality, Nuwakot, transferred directly into their bank accounts. Separately, the Malaysian government has disbursed RM540,000 in financial assistance to 54 family members of victims of the Nepal floods.\nMalaysia's National Registration Department said certificates of presumed death for the 54 Malaysian victims of the August 26 Nepal flood could be issued as early as December, pending verification documents from the Nepali government. Meanwhile, relatives of the missing Malaysians say they are gradually accepting the reality of the tragedy. Other items in the batch, including India's $1.62 billion aid announcement and a photo gallery of rescue teams, repeat developments already reported.",
           "news": [
             {
               "news_id": "79be9e86ed185abdaa62e62f30894c2d",
@@ -62503,6 +62726,15 @@
               "image": ""
             },
             {
+              "news_id": "ea2fcd6795fa59f594934cf88772fa8d",
+              "url": "https://www.malaysiakini.com/news/889856-certificate-of-presumed-death-for-nepal-flood-victims-to-be-issued-as-early-as-dec",
+              "headline": "'Certificate of presumed death for Nepal flood victims to be issued as early as Dec' | Malaysiakini",
+              "body": "Ramanan says NRD waiting for verification documents from Nepali govt.",
+              "published_date": "2026-11-25",
+              "outlet": "Malaysiakini",
+              "image": "https://www.bing.com/th?id=ONUT.v1zoilJAArn4AFT617RWmw"
+            },
+            {
               "news_id": "4a8ea37ada51563bbbc47a31614c1522",
               "url": "https://www.msn.com/en-my/news/national/govt-disburses-rm540000-aid-to-families-of-nepal-flood-victims/ar-AA2ibVzt?ocid=BingNewsVerp",
               "headline": "Govt disburses RM540,000 aid to families of Nepal flood victims",
@@ -62510,6 +62742,15 @@
               "published_date": "2026-11-25",
               "outlet": "The Star on MSN",
               "image": ""
+            },
+            {
+              "news_id": "7e3370bd29d25e9c914ff7d127d29cf2",
+              "url": "https://www.msn.com/en-my/lifestyle/other/families-of-missing-nepal-flood-victims-gradually-accepting-reality/vi-AA2idp25?ocid=BingNewsVerp",
+              "headline": "Families of missing Nepal flood victims gradually accepting reality",
+              "body": "Several family members of the 54 missing Malaysian victims of the Aug 26 Nepal flood tragedy say they are gradually accepting ...",
+              "published_date": "2026-11-25",
+              "outlet": "Dailymotion on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.yrepgxn8Zw9b8DMCthAh-A"
             },
             {
               "news_id": "bd456cdb44e3550f84e3e8841a948eb5",
@@ -62521,6 +62762,15 @@
               "image": "https://s.yimg.com/bo/7a5278c4-2e07-51c9-bbf0-c20df4651601_1794028468527.jpg"
             },
             {
+              "news_id": "2daa081f47fb5f868c0c1ac84124b746",
+              "url": "https://www.newsday.com/news/nation/india-nepal-flood-modi-g45147",
+              "headline": "India announces a $1.6 billion aid package for Nepal's flood recovery - Newsday",
+              "body": "India has announced a $1.62 billion aid package to help Nepal rebuild after devastating floods.",
+              "published_date": "2026-11-23",
+              "outlet": "Newsday",
+              "image": "https://s.yimg.com/bo/6e8ff4e0-28dc-5360-9f71-320472322b86_1795425173681.jpg"
+            },
+            {
               "news_id": "e1a93899df3c51e3a7e8a5362b782262",
               "url": "https://abc7news.com/story/india-announces-16-billion-aid-package-nepals-flood-recovery/20069456/",
               "headline": "India announces a $1.6 billion aid package for Nepal’s flood recovery",
@@ -62528,6 +62778,15 @@
               "published_date": "2026-11-23",
               "outlet": "ABC7 News",
               "image": "https://s.yimg.com/bo/4c504499-257d-5ca8-9ca1-6847973f15d1_1795437430965.jpg"
+            },
+            {
+              "news_id": "22170286517c5d079fe673081cf3a6b0",
+              "url": "https://www.upi.com/News_Photos/view/upi/4d070d497d0cbad81e10dea438a45807/Nepali-rescue-teams-pull-survivors-from-deadly-Himalayan-glacial-floods/",
+              "headline": "Photo: Nepali rescue teams pull survivors from deadly Himalayan glacial floods -...",
+              "body": "Nepali rescue teams succeeded in saving survivors from the devastating glacial floods that swept...",
+              "published_date": "2026-11-22T22:09:43+00:00",
+              "outlet": "UPI",
+              "image": "https://s.yimg.com/bo/0c001126-87ca-5ce5-a1fe-12cefeaade7e_1794160568419.jpg"
             }
           ]
         }
@@ -72741,7 +73000,7 @@
       "disease_name": null,
       "event_date": "2026-10-26",
       "first_reported_date": "2026-10-26",
-      "last_updated_date": "2026-11-22",
+      "last_updated_date": "2026-11-25",
       "days_since_event": 30,
       "source_count": 5,
       "should_report": true,
@@ -72755,7 +73014,7 @@
         "gdacs": 3,
         "ercc": 2,
         "healthmap": 0,
-        "news": 170
+        "news": 171
       },
       "source_links": [
         {
@@ -73510,9 +73769,13 @@
         {
           "headline": "Odisha fishermen face a triple cyclone crisis—fewer fish, fiercer seas, falling incomes",
           "published_date": "2026-11-22"
+        },
+        {
+          "headline": "Bangladesh struggles to support cyclone-hit farmers - UCA News",
+          "published_date": "2026-11-25"
         }
       ],
-      "news_total": 170,
+      "news_total": 171,
       "logs": [
         {
           "log_date": "2026-10-26",
@@ -76918,7 +77181,7 @@
       "incident_id": "20261124-MU-EQ",
       "tree_id": "16a45a60b1b64981a51788dd4598fd96",
       "canonical_name": "Earthquake M6.4 Mauritius - Reunion region, Mauritius 2026-11-24",
-      "summary": "A magnitude 6.4–6.5 earthquake struck the Indian Ocean in the Mauritius–Réunion region on 24 November 2026, with the epicenter reported about 326 km northeast of Rodrigues. Tremors were felt across Mauritius, causing residents to rush outdoors, while initial reports indicated no deaths, injuries, or major structural damage. Monitoring agencies reported no tsunami threat or official warning, though Rodrigues was briefly placed under a tsunami watch and sources differed slightly on the magnitude.",
+      "summary": "Sri Lanka's National Tsunami Early Warning Centre confirmed there is no tsunami threat to Sri Lanka from the 6.5-magnitude earthquake in the Mauritius–Réunion region, according to reports by Sri Lankan outlets. A Russian report reiterated that the quake measured 6.4 off the coast of Mauritius. No new details on damage, casualties, or local impacts in Mauritius or Rodrigues were reported.",
       "country": "Mauritius",
       "iso2": "MU",
       "lat": -17.7049,
@@ -76978,17 +77241,17 @@
         },
         {
           "kind": "news",
-          "label": "6.4-magnitude earthquake strikes near Mauritius, no tsunami warning issued",
-          "url": "https://www.indiatvnews.com/news/world/6-4-magnitude-earthquake-strikes-near-mauritius-no-tsunami-warning-issued-2026-11-24-1060271",
-          "source": "India TV News",
-          "date": "2026-11-24T12:59:00+00:00",
+          "label": "A strong earthquake of magnitude 6.4 occurred off the coast of Mauritius",
+          "url": "https://iz.ru/en/node/2207919",
+          "source": "Izvestia",
+          "date": "2026-11-25T08:57:48+00:00",
           "reason": "Latest log"
         },
         {
           "kind": "news",
-          "label": "No Tsunami Threat After 6.4-Magnitude Earthquake Strikes Near Mauritius",
-          "url": "https://www.ibtimes.co.uk/earthquake-near-mauritius-no-tsunami-threat-detected-1834439",
-          "source": "International Business Times UK",
+          "label": "No tsunami threat to Sri Lanka following Mauritius–Réunion earthquake",
+          "url": "https://srilankamirror.com/2026/11/24/news/no-tsunami-threat-to-sri-lanka-following-mauritius-reunion-earthquake",
+          "source": "Sri Lanka Mirror",
           "date": "2026-11-24",
           "reason": "Latest log"
         }
@@ -77180,9 +77443,42 @@
               "image": "https://www.bing.com/th?id=ONUT.LoCFBEQqvBQJh0kn9OT7Hw"
             }
           ]
+        },
+        {
+          "log_date": "2026-11-25",
+          "summary": "Sri Lanka's National Tsunami Early Warning Centre confirmed there is no tsunami threat to Sri Lanka from the 6.5-magnitude earthquake in the Mauritius–Réunion region, according to reports by Sri Lankan outlets. A Russian report reiterated that the quake measured 6.4 off the coast of Mauritius. No new details on damage, casualties, or local impacts in Mauritius or Rodrigues were reported.",
+          "news": [
+            {
+              "news_id": "9702c41b8e7e52eab382dab3b0d908b2",
+              "url": "https://www.news19.lk/no-tsunami-threat-to-sri-lanka-from-indian-ocean-earthquake/",
+              "headline": "ඉන්දියන් සාගරයේ භූචලනයෙන් ලංකාවට අවදානමක් නැහැ",
+              "body": "ඉන්දියන් සාගරයේ ඇතිවූ 6.5ක ප්රබලත්වයෙන් යුත් භූචලනය සම්බන්ධයෙන් මෙරටට සුනාමි අවදානමක් නොමැති බව ජාතික සුනාමි පූර්ව අනතුරු ඇඟවීමේ මධ්යස්ථානය සඳහන් කරනවා. ඉන්දියානු සාගරයේ මොරිෂස් සහ රියූනියන් (Mauritius / Reunion) කලාපයේ අද (24) පස්වරුවේ මෙලෙස භූකම්පනයක් ඇතිව තිබෙනවා. ඒ අනුව, රික්ටර් මාපකයේ 6.5ක විශාලත්වයකින් යුත් භූ චලනයක් සිදුව ඇති බවයි කාලගුණ විද්යා දෙපාර්තමේන්තුවේ ජාතික සුනාමි පූර්ව [...]",
+              "published_date": "2026-11-24",
+              "outlet": "news19",
+              "image": "https://www.bing.com/th?id=ONUT.dmdJbbA6BvD0qfp_m_cxNg"
+            },
+            {
+              "news_id": "bbada01794b45189861452ad52498867",
+              "url": "https://srilankamirror.com/2026/11/24/news/no-tsunami-threat-to-sri-lanka-following-mauritius-reunion-earthquake",
+              "headline": "No tsunami threat to Sri Lanka following Mauritius–Réunion earthquake",
+              "body": "The National Tsunami Early Warning Centre has confirmed that there is no tsunami threat to Sri Lanka following a 6.5-magnitude earthquake that struck the Indian Ocean region near Mauritius and Réunion this afternoon (24).",
+              "published_date": "2026-11-24",
+              "outlet": "Sri Lanka Mirror",
+              "image": "https://www.bing.com/th?id=ONUT.2np67PsDkO65sy-qfYZMWw"
+            },
+            {
+              "news_id": "16e14f5ddf905e3291d3298c2961466e",
+              "url": "https://iz.ru/en/node/2207919",
+              "headline": "A strong earthquake of magnitude 6.4 occurred off the coast of Mauritius",
+              "body": "An earthquake of magnitude 6.4 was recorded in the Mauritius–Reunion region. This was announced on November 25 on the website ...",
+              "published_date": "2026-11-25T08:57:48+00:00",
+              "outlet": "Izvestia",
+              "image": "https://www.bing.com/th?id=ONUT.M85KheWzny4Cc2zfTOGr8g"
+            }
+          ]
         }
       ],
-      "logs_total": 1
+      "logs_total": 2
     },
     {
       "incident_id": "20261124-KE-FL",
@@ -77226,7 +77522,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 1
+        "news": 2
       },
       "source_links": [
         {
@@ -77267,13 +77563,19 @@
       },
       "news": [
         {
+          "headline": "Kindiki's Office Fails to Account for El Niño Preparedness Funds as MPs Demand Answers on Billions Disbursed",
+          "url": "https://kenyainsights.com/kindikis-office-fails-to-account-for-el-nio-preparedness-funds-as-mps-demand-answers-on-billions-disbursed",
+          "outlet": "kenyainsights.com",
+          "published_date": "2026-11-25"
+        },
+        {
           "headline": "Kenya Met warns of continued rains in 23 counties as flood risks persist",
           "url": "https://educationnews.co.ke/news/kenya-met-warns-of-continued-rains-in-23-counties-as-flood-risks-persist",
           "outlet": "Education News",
           "published_date": "2026-11-25"
         }
       ],
-      "news_total": 1,
+      "news_total": 2,
       "logs": [],
       "logs_total": 0
     }
