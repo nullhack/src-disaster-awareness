@@ -1,30 +1,30 @@
 {
   "schema_version": "1.6",
   "report_date": "2026-11-22",
-  "generated_at": "2026-11-25T22:37:48Z",
+  "generated_at": "2026-11-26T09:42:25Z",
   "as_of": "2026-11-22",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 11,
+    "reportable_total": 10,
     "new_today": 1,
     "critical": 2,
     "high": 1,
-    "medium": 5,
+    "medium": 4,
     "low": 3,
-    "disease_outbreaks": 3,
-    "countries_affected": 8,
-    "news_total": 852,
+    "disease_outbreaks": 2,
+    "countries_affected": 7,
+    "news_total": 839,
     "max_magnitude": 6.6,
     "by_severity": {
       "CRITICAL": 2,
       "HIGH": 1,
-      "MEDIUM": 5,
+      "MEDIUM": 4,
       "LOW": 3
     },
     "by_type": {
       "Flood": 2,
-      "Disease": 3,
+      "Disease": 2,
       "Severe Weather": 1,
       "Storm": 1,
       "Earthquake": 2,
@@ -35,7 +35,7 @@
       "Asia": 3,
       "Europe": 3,
       "Unknown": 3,
-      "Africa": 2
+      "Africa": 1
     }
   },
   "by_country": [
@@ -72,15 +72,6 @@
       "max_sev_rank": 2,
       "iso2": "RU",
       "region": "Europe",
-      "country_group": "C",
-      "max_severity": "MEDIUM"
-    },
-    {
-      "country": "Burkina Faso",
-      "count": 1,
-      "max_sev_rank": 2,
-      "iso2": "BF",
-      "region": "Africa",
       "country_group": "C",
       "max_severity": "MEDIUM"
     },
@@ -142,7 +133,7 @@
       "event_date": "2026-08-09",
       "first_reported_date": "2026-08-09",
       "last_updated_date": "2026-11-16",
-      "days_since_event": 108,
+      "days_since_event": 109,
       "source_count": 1,
       "should_report": true,
       "search_keys": [
@@ -943,7 +934,7 @@
       "event_date": "2026-10-08",
       "first_reported_date": "2026-10-08",
       "last_updated_date": "2026-11-15",
-      "days_since_event": 48,
+      "days_since_event": 49,
       "source_count": 2,
       "should_report": true,
       "search_keys": [
@@ -3182,7 +3173,7 @@
       "event_date": "2026-10-10",
       "first_reported_date": "2026-10-10",
       "last_updated_date": "2026-11-17",
-      "days_since_event": 46,
+      "days_since_event": 47,
       "source_count": 1,
       "should_report": true,
       "search_keys": [
@@ -3911,7 +3902,7 @@
       "event_date": "2026-10-14",
       "first_reported_date": "2026-10-14",
       "last_updated_date": "2026-11-22",
-      "days_since_event": 42,
+      "days_since_event": 43,
       "source_count": 2,
       "should_report": true,
       "search_keys": [
@@ -6810,282 +6801,6 @@
       "logs_total": 6
     },
     {
-      "incident_id": "20261106-BF-DI",
-      "tree_id": "c7c537cf25114dbf8531a4aec164b085",
-      "canonical_name": "Yellow fever Burkina Faso 2026-11-06",
-      "summary": "India has released draft regulations that would tighten quarantine protocols for travellers arriving from countries affected by yellow fever, with unvaccinated at-risk arrivals potentially facing a six-day quarantine under the proposed airport rules. The remaining coverage in this batch consists of repeated syndicated articles about the CDC's Level 2 travel alert urging vaccination at least 10 days before departure, which restates previously reported information.",
-      "country": "Burkina Faso",
-      "iso2": "BF",
-      "lat": 12.2,
-      "lon": -1.6,
-      "country_group": "C",
-      "region": "Africa",
-      "incident_type": "Disease",
-      "incident_category": "Biological",
-      "is_disease": true,
-      "severity": "MEDIUM",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": "MEDIUM",
-      "event_status": null,
-      "extended_monitoring": false,
-      "scope": "country",
-      "region_code": "",
-      "region_name": "",
-      "monitoring_status": "",
-      "tracking_window_days": 0,
-      "disease_name": "Yellow Fever",
-      "event_date": "2026-11-06",
-      "first_reported_date": "2026-11-06",
-      "last_updated_date": "2026-11-18",
-      "days_since_event": 19,
-      "source_count": 1,
-      "should_report": false,
-      "search_keys": [
-        "Yellow fever update 2026"
-      ],
-      "sources": {
-        "who_don": 1,
-        "usgs": 0,
-        "gdacs": 0,
-        "ercc": 0,
-        "healthmap": 0,
-        "news": 13
-      },
-      "source_links": [
-        {
-          "type": "WHO",
-          "label": "Yellow fever Burkina Faso 2026-11-06",
-          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON624",
-          "meta": "",
-          "date": "2026-11-06"
-        }
-      ],
-      "key_links": [
-        {
-          "kind": "official",
-          "label": "Yellow fever Burkina Faso 2026-11-06",
-          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON624",
-          "source": "WHO",
-          "date": "2026-11-06",
-          "reason": "Newest official"
-        },
-        {
-          "kind": "news",
-          "label": "Unvaccinated yellow fever-risk travellers may face six-day quarantine; new airport rules propose changes",
-          "url": "https://www.msn.com/en-in/news/other/unvaccinated-yellow-fever-risk-travellers-may-face-six-day-quarantine-new-airport-rules-propose-changes/ar-AA2hGhpR?ocid=BingNewsVerp",
-          "source": "The Times of India on MSN",
-          "date": "2026-11-18",
-          "reason": "Latest log"
-        },
-        {
-          "kind": "news",
-          "label": "CDC Travel Health Notices: Key Outbreak Alerts for Clinicians",
-          "url": "https://www.emjreviews.com/microbiology-infectious-diseases/news/cdc-travel-health-notices-key-outbreak-alerts-for-clinicians/",
-          "source": "European Medical Journal",
-          "date": "2026-11-14",
-          "reason": "Related article"
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Infection Outbreak Triggers Level 2 CDC Travel Alert",
-          "published_date": "2026-11-12"
-        },
-        {
-          "headline": "Infection Outbreak Triggers Level 2 CDC Travel Alert",
-          "published_date": "2026-11-12"
-        },
-        {
-          "headline": "Infection Outbreak Triggers Level 2 CDC Travel Alert",
-          "published_date": "2026-11-12"
-        },
-        {
-          "headline": "Infection Outbreak Triggers Level 2 CDC Travel Alert",
-          "published_date": "2026-11-12"
-        },
-        {
-          "headline": "Infection Outbreak Triggers Level 2 CDC Travel Alert",
-          "published_date": "2026-11-12"
-        },
-        {
-          "headline": "Infection Outbreak Triggers Level 2 CDC Travel Alert",
-          "published_date": "2026-11-12"
-        },
-        {
-          "headline": "Infection Outbreak Triggers Level 2 CDC Travel Alert",
-          "published_date": "2026-11-12"
-        },
-        {
-          "headline": "Infection Outbreak Triggers Level 2 CDC Travel Alert",
-          "published_date": "2026-11-12"
-        },
-        {
-          "headline": "Infection Outbreak Triggers Level 2 CDC Travel Alert",
-          "published_date": "2026-11-12"
-        },
-        {
-          "headline": "Infection Outbreak Triggers Level 2 CDC Travel Alert",
-          "published_date": "2026-11-12"
-        },
-        {
-          "headline": "Infection Outbreak Triggers Level 2 CDC Travel Alert",
-          "published_date": "2026-11-12"
-        },
-        {
-          "headline": "CDC Travel Health Notices: Key Outbreak Alerts for Clinicians",
-          "published_date": "2026-11-14"
-        },
-        {
-          "headline": "Unvaccinated yellow fever-risk travellers may face six-day quarantine; new airport rules propose changes",
-          "published_date": "2026-11-18"
-        }
-      ],
-      "news_total": 13,
-      "logs": [
-        {
-          "log_date": "2026-11-15",
-          "summary": "The CDC issued a Level 2 travel alert in response to a yellow fever outbreak, urging travelers to obtain the yellow fever vaccine at least 10 days before departure. Yellow fever is listed among the active CDC Travel Health Notices, indicating ongoing public health attention.",
-          "news": [
-            {
-              "news_id": "ac73b34d1e595b68a4cc0d2f210e1aa9",
-              "url": "https://travel.yahoo.com/advice/safety/articles/infection-outbreak-triggers-level-2-040300625.html;_ylt=A2RRrziUWPlq6AIAbaDQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzEEdnRpZAMEc2VjA3Ny",
-              "headline": "Infection Outbreak Triggers Level 2 CDC Travel Alert",
-              "body": "The federal agency is urging passengers to secure targeted vaccinations 10 days before departure.",
-              "published_date": "2026-11-12",
-              "outlet": "Travel Host · via Yahoo News",
-              "image": "https://s.yimg.com/fz/api/res/1.2/5gJRPuVigfICRGN0EuHVqw--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7c209MTt3PTE2MA--/https://media.zenfs.com/en/travel_host_634/c483e94d9c88c6d48a6e8505739716d8.jpg"
-            },
-            {
-              "news_id": "0b45044f7d3b59a284cc4941e31e40cd",
-              "url": "https://www.emjreviews.com/microbiology-infectious-diseases/news/cdc-travel-health-notices-key-outbreak-alerts-for-clinicians/",
-              "headline": "CDC Travel Health Notices: Key Outbreak Alerts for Clinicians",
-              "body": "Review active CDC Travel Health Notices for Ebola, yellow fever, polio, and dengue to guide U.S. patient consultations. Read more.",
-              "published_date": "2026-11-14",
-              "outlet": "European Medical Journal",
-              "image": "https://www.bing.com/th?id=ONUT.NRJIyprWyaec237eRKzJFQ"
-            },
-            {
-              "news_id": "a12610c62d335d42a0eda670ad017f65",
-              "url": "https://travel.yahoo.com/advice/safety/articles/infection-outbreak-triggers-level-2-040300625.html;_ylt=A2RRDsn7W_lq6QIAlcPQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzEEdnRpZAMEc2VjA3Ny",
-              "headline": "Infection Outbreak Triggers Level 2 CDC Travel Alert",
-              "body": "The federal agency is urging passengers to secure targeted vaccinations 10 days before departure.",
-              "published_date": "2026-11-12",
-              "outlet": "Travel Host · via Yahoo News",
-              "image": "https://s.yimg.com/fz/api/res/1.2/5gJRPuVigfICRGN0EuHVqw--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7c209MTt3PTE2MA--/https://media.zenfs.com/en/travel_host_634/c483e94d9c88c6d48a6e8505739716d8.jpg"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-11-18",
-          "summary": "India has released draft regulations that would tighten quarantine protocols for travellers arriving from countries affected by yellow fever, with unvaccinated at-risk arrivals potentially facing a six-day quarantine under the proposed airport rules. The remaining coverage in this batch consists of repeated syndicated articles about the CDC's Level 2 travel alert urging vaccination at least 10 days before departure, which restates previously reported information.",
-          "news": [
-            {
-              "news_id": "4b6427e570365e2dbf19a853951f6aac",
-              "url": "https://travel.yahoo.com/advice/safety/articles/infection-outbreak-triggers-level-2-040300625.html;_ylt=A2RRL5AFxPxq8gIAC9vQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzMEdnRpZAMEc2VjA3Ny",
-              "headline": "Infection Outbreak Triggers Level 2 CDC Travel Alert",
-              "body": "The federal agency is urging passengers to secure targeted vaccinations 10 days before departure.",
-              "published_date": "2026-11-12",
-              "outlet": "Travel Host · via Yahoo News",
-              "image": "https://s.yimg.com/fz/api/res/1.2/5gJRPuVigfICRGN0EuHVqw--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7c209MTt3PTE2MA--/https://media.zenfs.com/en/travel_host_634/c483e94d9c88c6d48a6e8505739716d8.jpg"
-            },
-            {
-              "news_id": "0f2c236d262a536d9afa771f4e4dcb13",
-              "url": "https://travel.yahoo.com/advice/safety/articles/infection-outbreak-triggers-level-2-040300625.html;_ylt=A2RQfYiMhPtq.QIAm8PQtDMD;_ylu=Y29sbwN1cy13ZXN0LTIEcG9zAzMEdnRpZAMEc2VjA3Ny",
-              "headline": "Infection Outbreak Triggers Level 2 CDC Travel Alert",
-              "body": "The federal agency is urging passengers to secure targeted vaccinations 10 days before departure.",
-              "published_date": "2026-11-12",
-              "outlet": "Travel Host · via Yahoo News",
-              "image": "https://s.yimg.com/fz/api/res/1.2/5gJRPuVigfICRGN0EuHVqw--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7c209MTt3PTE2MA--/https://media.zenfs.com/en/travel_host_634/c483e94d9c88c6d48a6e8505739716d8.jpg"
-            },
-            {
-              "news_id": "6aec7c2ad5d65c6092283c283c63fe83",
-              "url": "https://travel.yahoo.com/advice/safety/articles/infection-outbreak-triggers-level-2-040300625.html;_ylt=A2RQKflCEP5qpgIAj5zQtDMD;_ylu=Y29sbwN1cy13ZXN0LTIEcG9zAzQEdnRpZAMEc2VjA3Ny",
-              "headline": "Infection Outbreak Triggers Level 2 CDC Travel Alert",
-              "body": "The federal agency is urging passengers to secure targeted vaccinations 10 days before departure.",
-              "published_date": "2026-11-12",
-              "outlet": "Travel Host · via Yahoo News",
-              "image": "https://s.yimg.com/fz/api/res/1.2/5gJRPuVigfICRGN0EuHVqw--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7c209MTt3PTE2MA--/https://media.zenfs.com/en/travel_host_634/c483e94d9c88c6d48a6e8505739716d8.jpg"
-            },
-            {
-              "news_id": "245fcd6291a351958c98132445e8e510",
-              "url": "https://www.msn.com/en-in/news/other/unvaccinated-yellow-fever-risk-travellers-may-face-six-day-quarantine-new-airport-rules-propose-changes/ar-AA2hGhpR?ocid=BingNewsVerp",
-              "headline": "Unvaccinated yellow fever-risk travellers may face six-day quarantine; new airport rules propose changes",
-              "body": "India has unveiled draft regulations enhancing quarantine protocols for travelers from yellow fever-affected nations.",
-              "published_date": "2026-11-18",
-              "outlet": "The Times of India on MSN",
-              "image": "https://www.bing.com/th?id=ORMS.d91e4a305fad9027ae6cef9580387e3f"
-            },
-            {
-              "news_id": "e1b8c5cad5865827b20d864ae91478a1",
-              "url": "https://travel.yahoo.com/advice/safety/articles/infection-outbreak-triggers-level-2-040300625.html;_ylt=A2RQWU1riftqpQIAvWnQtDMD;_ylu=Y29sbwN1cy13ZXN0LTIEcG9zAzEEdnRpZAMEc2VjA3Ny",
-              "headline": "Infection Outbreak Triggers Level 2 CDC Travel Alert",
-              "body": "The federal agency is urging passengers to secure targeted vaccinations 10 days before departure.",
-              "published_date": "2026-11-12",
-              "outlet": "Travel Host · via Yahoo News",
-              "image": "https://s.yimg.com/fz/api/res/1.2/5gJRPuVigfICRGN0EuHVqw--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7c209MTt3PTE2MA--/https://media.zenfs.com/en/travel_host_634/c483e94d9c88c6d48a6e8505739716d8.jpg"
-            },
-            {
-              "news_id": "62aa7864436d5994a09ca6873d252c6d",
-              "url": "https://travel.yahoo.com/advice/safety/articles/infection-outbreak-triggers-level-2-040300625.html;_ylt=A2RRBbW4x_xqEQMAdXXQtDMD;_ylu=Y29sbwN1cy1lYXN0LTEEcG9zAzEEdnRpZAMEc2VjA3Ny",
-              "headline": "Infection Outbreak Triggers Level 2 CDC Travel Alert",
-              "body": "The federal agency is urging passengers to secure targeted vaccinations 10 days before departure.",
-              "published_date": "2026-11-12",
-              "outlet": "Travel Host · via Yahoo News",
-              "image": "https://s.yimg.com/fz/api/res/1.2/5gJRPuVigfICRGN0EuHVqw--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7c209MTt3PTE2MA--/https://media.zenfs.com/en/travel_host_634/c483e94d9c88c6d48a6e8505739716d8.jpg"
-            },
-            {
-              "news_id": "fcfb54aed23151a2974defa90932a9e9",
-              "url": "https://travel.yahoo.com/advice/safety/articles/infection-outbreak-triggers-level-2-040300625.html;_ylt=A2RQoLV7DvxqjAIAe3XQtDMD;_ylu=Y29sbwN1cy13ZXN0LTIEcG9zAzMEdnRpZAMEc2VjA3Ny",
-              "headline": "Infection Outbreak Triggers Level 2 CDC Travel Alert",
-              "body": "The federal agency is urging passengers to secure targeted vaccinations 10 days before departure.",
-              "published_date": "2026-11-12",
-              "outlet": "Travel Host · via Yahoo News",
-              "image": "https://s.yimg.com/fz/api/res/1.2/5gJRPuVigfICRGN0EuHVqw--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7c209MTt3PTE2MA--/https://media.zenfs.com/en/travel_host_634/c483e94d9c88c6d48a6e8505739716d8.jpg"
-            },
-            {
-              "news_id": "c1b5109fa56751f5b0eb4cbc4b31ec5a",
-              "url": "https://travel.yahoo.com/advice/safety/articles/infection-outbreak-triggers-level-2-040300625.html;_ylt=A2RQlhQvEvxqyQIAvebQtDMD;_ylu=Y29sbwN1cy13ZXN0LTIEcG9zAzEEdnRpZAMEc2VjA3Ny",
-              "headline": "Infection Outbreak Triggers Level 2 CDC Travel Alert",
-              "body": "The federal agency is urging passengers to secure targeted vaccinations 10 days before departure.",
-              "published_date": "2026-11-12",
-              "outlet": "Travel Host · via Yahoo News",
-              "image": "https://s.yimg.com/fz/api/res/1.2/5gJRPuVigfICRGN0EuHVqw--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7c209MTt3PTE2MA--/https://media.zenfs.com/en/travel_host_634/c483e94d9c88c6d48a6e8505739716d8.jpg"
-            },
-            {
-              "news_id": "652a93e2b97b5776932f1088da41c2fa",
-              "url": "https://travel.yahoo.com/advice/safety/articles/infection-outbreak-triggers-level-2-040300625.html;_ylt=A2RQqyAUWv1q3QIAp.rQtDMD;_ylu=Y29sbwN1cy13ZXN0LTIEcG9zAzIEdnRpZAMEc2VjA3Ny",
-              "headline": "Infection Outbreak Triggers Level 2 CDC Travel Alert",
-              "body": "The federal agency is urging passengers to secure targeted vaccinations 10 days before departure.",
-              "published_date": "2026-11-12",
-              "outlet": "Travel Host · via Yahoo News",
-              "image": "https://s.yimg.com/fz/api/res/1.2/5gJRPuVigfICRGN0EuHVqw--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7c209MTt3PTE2MA--/https://media.zenfs.com/en/travel_host_634/c483e94d9c88c6d48a6e8505739716d8.jpg"
-            },
-            {
-              "news_id": "6a203fea994f5c5aabc2c511e02cb59c",
-              "url": "https://travel.yahoo.com/advice/safety/articles/infection-outbreak-triggers-level-2-040300625.html;_ylt=A2RQU_TmFP5qjgIA_ojQtDMD;_ylu=Y29sbwN1cy13ZXN0LTIEcG9zAzEEdnRpZAMEc2VjA3Ny",
-              "headline": "Infection Outbreak Triggers Level 2 CDC Travel Alert",
-              "body": "The federal agency is urging passengers to secure targeted vaccinations 10 days before departure.",
-              "published_date": "2026-11-12",
-              "outlet": "Travel Host · via Yahoo News",
-              "image": "https://s.yimg.com/fz/api/res/1.2/5gJRPuVigfICRGN0EuHVqw--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xMDY7cHhvZmY9MDtweW9mZj0wO3E9ODA7c209MTt3PTE2MA--/https://media.zenfs.com/en/travel_host_634/c483e94d9c88c6d48a6e8505739716d8.jpg"
-            }
-          ]
-        }
-      ],
-      "logs_total": 2
-    },
-    {
       "incident_id": "20261112-PT-OT",
       "tree_id": "14f4e24d87d54cc1ac7e6730c25fc493",
       "canonical_name": "Storm Charles has hit Portugal, prompting more than 200 flight cancellations and school closures, while Spain prepares for heavy rain and flooding.",
@@ -7114,7 +6829,7 @@
       "event_date": "2026-11-12",
       "first_reported_date": "2026-11-12",
       "last_updated_date": "2026-11-19",
-      "days_since_event": 13,
+      "days_since_event": 14,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -7236,7 +6951,7 @@
       "event_date": "2026-11-13",
       "first_reported_date": "2026-11-13",
       "last_updated_date": "2026-11-15",
-      "days_since_event": 12,
+      "days_since_event": 13,
       "source_count": 1,
       "should_report": true,
       "search_keys": [
@@ -7343,7 +7058,7 @@
       "event_date": "2026-11-16",
       "first_reported_date": "2026-11-16",
       "last_updated_date": "2026-11-18",
-      "days_since_event": 9,
+      "days_since_event": 10,
       "source_count": 2,
       "should_report": true,
       "search_keys": [
@@ -7748,7 +7463,7 @@
       "event_date": "2026-11-16",
       "first_reported_date": "2026-11-16",
       "last_updated_date": "2026-11-17",
-      "days_since_event": 9,
+      "days_since_event": 10,
       "source_count": 1,
       "should_report": false,
       "search_keys": [
@@ -7841,7 +7556,7 @@
       "event_date": "2026-11-18",
       "first_reported_date": "2026-11-18",
       "last_updated_date": "2026-11-19",
-      "days_since_event": 7,
+      "days_since_event": 8,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -7931,7 +7646,7 @@
       "event_date": "2026-11-19",
       "first_reported_date": "2026-11-19",
       "last_updated_date": "2026-11-20",
-      "days_since_event": 6,
+      "days_since_event": 7,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
