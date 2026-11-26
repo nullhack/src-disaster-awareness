@@ -1,25 +1,25 @@
 {
   "schema_version": "1.6",
   "report_date": "2026-11-26",
-  "generated_at": "2026-11-26T09:42:25Z",
+  "generated_at": "2026-11-26T22:28:14Z",
   "as_of": "2026-11-26",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 32,
-    "new_today": 6,
+    "reportable_total": 33,
+    "new_today": 17,
     "critical": 10,
     "high": 8,
-    "medium": 7,
+    "medium": 8,
     "low": 7,
     "disease_outbreaks": 6,
     "countries_affected": 21,
-    "news_total": 14238,
+    "news_total": 14301,
     "max_magnitude": 6.9,
     "by_severity": {
       "CRITICAL": 10,
       "HIGH": 8,
-      "MEDIUM": 7,
+      "MEDIUM": 8,
       "LOW": 7
     },
     "by_type": {
@@ -29,7 +29,7 @@
       "Forest Fire": 1,
       "Flood": 3,
       "El Niño": 1,
-      "Earthquake": 8,
+      "Earthquake": 9,
       "Severe Weather": 1,
       "Monsoon": 1,
       "Tropical Cyclone": 1,
@@ -39,7 +39,7 @@
     "by_region": {
       "Global": 2,
       "Africa": 5,
-      "Unknown": 5,
+      "Unknown": 6,
       "Americas": 3,
       "Europe": 5,
       "Asia": 9,
@@ -243,7 +243,7 @@
       "incident_id": "20240530-XX-DI",
       "tree_id": "f4579a0976695da8abd83ef84f8e0fb1",
       "canonical_name": "Dengue Global 2024-05-30",
-      "summary": "Bangladesh reported two more dengue deaths, raising the country’s toll this year to 520. A report noted that reported dengue cases worldwide have increased 34-fold over the past three decades, with South Asia among the affected regions. Researchers also warned that dengue is more widespread than previously thought, suggesting the threat has been underestimated and resources misallocated.",
+      "summary": "Bangladesh's dengue death toll rose to 526 after two more fatalities were reported, with 1,152 new patients admitted to hospitals nationwide, according to the Directorate General of Health Services. A subsequent report recorded one additional death, bringing the toll to 527.",
       "country": "",
       "iso2": "XX",
       "lat": null,
@@ -280,7 +280,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 241
+        "news": 242
       },
       "source_links": [
         {
@@ -306,15 +306,15 @@
           "url": "https://www.dhakatribune.com/world/425462/global-dengue-cases-rise-34-fold-in-three-decades",
           "source": "Dhaka Tribune",
           "date": "2026-11-24T00:25:33+00:00",
-          "reason": "Latest log"
+          "reason": "Related article"
         },
         {
           "kind": "news",
-          "label": "Scientists report strong new evidence that specially bred mosquitoes can fend off dengue",
-          "url": "https://apnews.com/article/dengue-mosquitoes-brazil-wolbachia-f76cedcdcdf10c8834ab828d3e12ab13",
-          "source": "Associated Press News",
-          "date": "2026-11-22T07:25:57+00:00",
-          "reason": "Related article"
+          "label": "Dengue claims 2 more lives, toll rises to 526",
+          "url": "https://www.dhakastream.net/health/dengue-claims-2-more-lives-toll-rises-526-201691",
+          "source": "dhakastream.net",
+          "date": "2026-11-26T08:54:36+00:00",
+          "reason": "Latest log"
         }
       ],
       "physical": {
@@ -1289,11 +1289,15 @@
           "published_date": "2026-11-24T10:22:28+00:00"
         },
         {
+          "headline": "Dengue toll rises to 527 as one more dies",
+          "published_date": "2026-11-25T21:57:25+00:00"
+        },
+        {
           "headline": "Dengue claims 2 more lives, toll rises to 526",
           "published_date": "2026-11-26T08:54:36+00:00"
         }
       ],
-      "news_total": 241,
+      "news_total": 242,
       "logs": [
         {
           "log_date": "2026-07-08",
@@ -1325,66 +1329,6 @@
               "published_date": "2024-07-23T00:00:00+00:00",
               "outlet": "NPR",
               "image": ""
-            }
-          ]
-        },
-        {
-          "log_date": "2026-11-17",
-          "summary": "Bangladesh's 2026 dengue death toll has crossed 500, with reports citing 502 fatalities after three more deaths in a 24-hour period, while another outlet recorded eight deaths in a single day. New hospitalizations remain high, at 1,598 in one 24-hour span and 1,952 in another, bringing the cumulative caseload for the year to 164,107. A newly published epidemiological study separately documented 13,371 dengue cases and 21 deaths across ten states in Sudan between August 2024 and July 2025.",
-          "news": [
-            {
-              "news_id": "1ff710be00a350a3993e01142e0dd74c",
-              "url": "https://bioengineer.org/sudan-dengue-outbreak-documents-13371-cases-across-ten-states-during-conflict/",
-              "headline": "Sudan Dengue Outbreak Documents 13,371 Cases Across Ten States During",
-              "body": "A descriptive epidemiological study of national surveillance data in Sudan documented 13,371 dengue fever cases and 21 fatalities across 10 states between August 2024 and July 2025 during ongoing",
-              "published_date": "2026-11-17",
-              "outlet": "BIOENGINEER",
-              "image": "https://www.bing.com/th?id=ONUT.WYvg0AJUV7nhEO8CIbn93g"
-            },
-            {
-              "news_id": "8d89168582415325a3a86b2f2ed98774",
-              "url": "https://www.daily-sun.com/health/909321/dengue-death-toll-nears-500-this-year",
-              "headline": "Dengue death toll nears 500 this year",
-              "body": "In 2024, the country reported 101,214 dengue infections and 575 deaths. The previous year (2023) saw the country’s worst ...",
-              "published_date": "2026-11-16T05:26:26+00:00",
-              "outlet": "Daily Sun",
-              "image": "https://www.bing.com/th?id=ONUT.ioWGOAdkhfhEBt-sLahIFA"
-            },
-            {
-              "news_id": "7c0a2853279157b3904ed2900ad55122",
-              "url": "https://www.dhakastream.net/health/dengue-toll-inches-towards-500-eight-more-succumb-day-201271",
-              "headline": "Dengue toll inches towards 500 as eight more succumb in a day",
-              "body": "Eight deaths from dengue fever were reported, while 1,952 new patients have been admitted to hospitals across the country in ...",
-              "published_date": "2026-11-16T05:26:26+00:00",
-              "outlet": "dhakastream.net",
-              "image": "https://www.bing.com/th?id=ONUT.D5kkpf9BARbdfgX3nTw9fQ"
-            },
-            {
-              "news_id": "94bdfaa69ebb5474a5233043872dd91a",
-              "url": "https://www.daily-sun.com/health/909492/dengue-death-toll-crosses-500-this-year",
-              "headline": "Dengue death toll crosses 500 this year",
-              "body": "In the 24-hour span, 1,598 more patients were hospitalised with viral fever, bringing the total caseload to 164,107 this ...",
-              "published_date": "2026-11-17T08:27:23+00:00",
-              "outlet": "Daily Sun",
-              "image": "https://www.bing.com/th?id=ONUT.SPOEt05ue4kI5SB8FmmSlg"
-            },
-            {
-              "news_id": "ab30bc0761b9527cb50ea427b079de61",
-              "url": "https://www.dhakastream.net/health/dengue-claims-3-more-lives-toll-rises-502-201316",
-              "headline": "Dengue toll crosses 500-mark as 3 more die",
-              "body": "Three deaths from dengue fever were reported, while 1,598 new patients have been admitted to hospitals across the country in ...",
-              "published_date": "2026-11-17T08:27:23+00:00",
-              "outlet": "dhakastream.net",
-              "image": "https://www.bing.com/th?id=ONUT.Ta-SoiOW6uHZPi9VHGHgkw"
-            },
-            {
-              "news_id": "b7c9e204f08b543ca915750143ab31b6",
-              "url": "https://dailyasianage.com/news/360212/dengue-death-toll-crosses-500",
-              "headline": "Dengue death toll crosses 500 | The Asian Age Online, Bangladesh",
-              "body": "Dengue still remains a public health concern in Bangladesh as the mosquito-borne disease claimed three more lives in the past 24 hours.",
-              "published_date": "2026-11-17",
-              "outlet": "dailyasianage",
-              "image": "https://www.bing.com/th?id=ONUT.HzJvel2cBD7ZX7cX5rNy7Q"
             }
           ]
         },
@@ -1471,9 +1415,42 @@
               "image": ""
             }
           ]
+        },
+        {
+          "log_date": "2026-11-26",
+          "summary": "Bangladesh's dengue death toll rose to 526 after two more fatalities were reported, with 1,152 new patients admitted to hospitals nationwide, according to the Directorate General of Health Services. A subsequent report recorded one additional death, bringing the toll to 527.",
+          "news": [
+            {
+              "news_id": "8db9c0f3cbc55455b0710d0d498735c0",
+              "url": "https://www.dhakastream.net/health/dengue-toll-rises-527-one-more-dies-201736",
+              "headline": "Dengue toll rises to 527 as one more dies",
+              "body": "According to a press release issued by the Directorate General of Health Services (DGHS), the latest death has taken this ...",
+              "published_date": "2026-11-25T21:57:25+00:00",
+              "outlet": "dhakastream.net",
+              "image": "https://www.bing.com/th?id=ONUT.hoqlTqpGhGMopfXZgQ1l0w"
+            },
+            {
+              "news_id": "050df82126a655f4b3fc5acd6b20965c",
+              "url": "https://cnm.mv/news/106156",
+              "headline": "Dengue vaccine aa medhu beleniveringe medhugai shakkaai vahum!",
+              "body": "Visit CNM for Latest news, photos and updates from Maldives",
+              "published_date": "2024-01-01",
+              "outlet": "Channel News Maldives",
+              "image": "https://www.bing.com/th?id=ONUT.X1pjjuYMsYx6rHrvVJsRgQ"
+            },
+            {
+              "news_id": "274ef4aeed945d2084c3a363cecdf8be",
+              "url": "https://www.dhakastream.net/health/dengue-claims-2-more-lives-toll-rises-526-201691",
+              "headline": "Dengue claims 2 more lives, toll rises to 526",
+              "body": "Two deaths from dengue fever were reported, while 1,152 new patients have been admitted to hospitals across the country in ...",
+              "published_date": "2026-11-26T08:54:36+00:00",
+              "outlet": "dhakastream.net",
+              "image": "https://www.bing.com/th?id=ONUT.4_CmbfRviibm0E3UdMnr3Q"
+            }
+          ]
         }
       ],
-      "logs_total": 59
+      "logs_total": 60
     },
     {
       "incident_id": "20250528-XX-DI",
@@ -1503,7 +1480,7 @@
       "disease_name": "Covid-19",
       "event_date": "2025-05-28",
       "first_reported_date": "2025-05-28",
-      "last_updated_date": "2026-11-25",
+      "last_updated_date": "2026-11-26",
       "days_since_event": 547,
       "source_count": 1,
       "should_report": false,
@@ -1516,7 +1493,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 331
+        "news": 332
       },
       "source_links": [
         {
@@ -2887,9 +2864,13 @@
         {
           "headline": "West Hempstead Father And Son Admit Roles In Nation’s Largest COVID Tax Fraud Sc...",
           "published_date": "2026-11-25T17:54:47+00:00"
+        },
+        {
+          "headline": "Moderna vs. Pfizer: Which Vaccine Stock Offers More Upside?",
+          "published_date": "2026-11-26"
         }
       ],
-      "news_total": 331,
+      "news_total": 332,
       "logs": [
         {
           "log_date": "2026-07-08",
@@ -3030,7 +3011,7 @@
       "incident_id": "20250905-CD-DI",
       "tree_id": "5c179437a46a56aca2f8b70aeceda07a",
       "canonical_name": "Ebola Kinshasa, DR Congo 2025-09-05",
-      "summary": "Government data reported on Nov. 26 showed confirmed Ebola cases in the Democratic Republic of Congo have surpassed 12,000 as responders continue to struggle to contain the outbreak. A Reuters investigation described hidden deaths and the broader scale of the disaster through accounts from graveyards, while Gavi signed an advance purchase agreement with the Serum Institute of India for up to 1.5 million doses of the ChAdOx1 BDBV candidate vaccine. Reports also said fighting in eastern Congo disrupted monitoring and forced Ebola workers to evacuate, leaving some treatment centers understaffed.",
+      "summary": "Government data reported on Nov. 26 showed confirmed Ebola cases in the Democratic Republic of Congo have surpassed 12,000 as responders continue to struggle to contain the outbreak. A Reuters investigation described hidden deaths and the broader scale of the disaster through accounts from graveyards, while Gavi signed an advance purchase agreement with the Serum Institute of India for up to 1.5 million doses of the ChAdOx1 BDBV candidate vaccine. Reports also said fighting in eastern Congo disrupted monitoring and forced Ebola workers to evacuate, leaving some treatment centers understaffed.\nEbola cases in the Democratic Republic of the Congo have surpassed 12,000, with deaths rising to 5,900, while fighting in eastern Congo forced Ebola responders to evacuate and disrupted containment efforts. The batch also reports that a Kenyan court found the government breached the constitution in building a U.S.-backed Ebola quarantine site, that the CDC extended Ebola-related entry suspensions affecting green-card holders, and that the outbreak is increasing vulnerability to gender-based violence.",
       "country": "DR Congo",
       "iso2": "CD",
       "lat": -4.0,
@@ -3068,7 +3049,7 @@
         "gdacs": 0,
         "ercc": 4,
         "healthmap": 0,
-        "news": 1242
+        "news": 1250
       },
       "source_links": [
         {
@@ -8215,6 +8196,10 @@
           "published_date": "2026-11-25T09:05:31+00:00"
         },
         {
+          "headline": "One moment, please...",
+          "published_date": "2026-11-25T21:53:18+00:00"
+        },
+        {
           "headline": "WHO Kenya Newsletter | October 2026",
           "published_date": "2026-11-25T21:58:53+00:00"
         },
@@ -8224,6 +8209,34 @@
         },
         {
           "headline": "Congo's Ebola cases exceed 12,000 as responders struggle to contain outbreak",
+          "published_date": "2026-11-26"
+        },
+        {
+          "headline": "Officials: Ebola cases pass 12,000 in DR Congo, deaths rise to 5,900",
+          "published_date": "2026-11-26"
+        },
+        {
+          "headline": "CDC Extends Authority for Ebola Entry Suspensions Affecting Green-Card Holders",
+          "published_date": "2026-11-26"
+        },
+        {
+          "headline": "Kenya breached constitution in building US-backed Ebola quarantine site, court says",
+          "published_date": "2026-11-26"
+        },
+        {
+          "headline": "Fighting in eastern Congo forces Ebola workers to evacuate, threatening outbreak response - Inside Politics",
+          "published_date": "2026-11-26"
+        },
+        {
+          "headline": "RDC : un pilote sud-africain aux mains des rebelles, Ebola dépasse 12 000 cas et l’Ouganda rappelé à l’ordre",
+          "published_date": "2026-11-26"
+        },
+        {
+          "headline": "Ebola outbreak in Congo reaches 12,000 cases; violence forces responders to evacuate",
+          "published_date": "2026-11-26"
+        },
+        {
+          "headline": "Ebola outbreak in Congo reaches 12,000 cases as violence forces some responders to evacuate",
           "published_date": "2026-11-26"
         },
         {
@@ -8239,7 +8252,7 @@
           "published_date": "2026-11-26T08:48:29+00:00"
         }
       ],
-      "news_total": 1242,
+      "news_total": 1250,
       "logs": [
         {
           "log_date": "2026-07-10",
@@ -8909,7 +8922,7 @@
         },
         {
           "log_date": "2026-11-26",
-          "summary": "Government data reported on Nov. 26 showed confirmed Ebola cases in the Democratic Republic of Congo have surpassed 12,000 as responders continue to struggle to contain the outbreak. A Reuters investigation described hidden deaths and the broader scale of the disaster through accounts from graveyards, while Gavi signed an advance purchase agreement with the Serum Institute of India for up to 1.5 million doses of the ChAdOx1 BDBV candidate vaccine. Reports also said fighting in eastern Congo disrupted monitoring and forced Ebola workers to evacuate, leaving some treatment centers understaffed.",
+          "summary": "Government data reported on Nov. 26 showed confirmed Ebola cases in the Democratic Republic of Congo have surpassed 12,000 as responders continue to struggle to contain the outbreak. A Reuters investigation described hidden deaths and the broader scale of the disaster through accounts from graveyards, while Gavi signed an advance purchase agreement with the Serum Institute of India for up to 1.5 million doses of the ChAdOx1 BDBV candidate vaccine. Reports also said fighting in eastern Congo disrupted monitoring and forced Ebola workers to evacuate, leaving some treatment centers understaffed.\nEbola cases in the Democratic Republic of the Congo have surpassed 12,000, with deaths rising to 5,900, while fighting in eastern Congo forced Ebola responders to evacuate and disrupted containment efforts. The batch also reports that a Kenyan court found the government breached the constitution in building a U.S.-backed Ebola quarantine site, that the CDC extended Ebola-related entry suspensions affecting green-card holders, and that the outbreak is increasing vulnerability to gender-based violence.",
           "news": [
             {
               "news_id": "a519857521d1518b976f2960c81cb4b4",
@@ -8919,6 +8932,24 @@
               "published_date": "2026-11-26",
               "outlet": "Reuters on MSN",
               "image": "https://www.bing.com/th?id=ORMS.85c28951bb67d1438af9b3e1c0cbe88a"
+            },
+            {
+              "news_id": "d0c0841875155f5da9bc87a266e7f4f6",
+              "url": "https://www.msn.com/en-us/news/other/officials-ebola-cases-pass-12000-in-dr-congo-deaths-rise-to-5900/ar-AA2ijeln?ocid=BingNewsVerp",
+              "headline": "Officials: Ebola cases pass 12,000 in DR Congo, deaths rise to 5,900",
+              "body": "The total number of Ebola cases in the Democratic Republic of the Congo has surpassed 12,000, national health officials reported this week.",
+              "published_date": "2026-11-26",
+              "outlet": "UPI on MSN",
+              "image": ""
+            },
+            {
+              "news_id": "7bb51747e9425e74bc8e369b75df8f9f",
+              "url": "https://www.africaglobalvillage.com/ebola-un-says-outbreak-driving-spike-in-gender-based-violence-in-congo/",
+              "headline": "One moment, please...",
+              "body": "In the eastern Democratic Republic of the Congo, the Ebola outbreak is increasing the vulnerability of women and girls, ...",
+              "published_date": "2026-11-25T21:53:18+00:00",
+              "outlet": "The Africa Global Village",
+              "image": "https://www.bing.com/th?id=ONUT.LlhNC1e4DR03VwiFYqUuXQ"
             },
             {
               "news_id": "99bbe21a24a35995bb9f9df3d2f5e60f",
@@ -8957,6 +8988,24 @@
               "image": "https://www.bing.com/th?id=ONUT.alRNUp6T9XIPQiPlSU1Dew"
             },
             {
+              "news_id": "6a8a4f4e446c5843a23b5aae83d8f521",
+              "url": "https://hoodline.com/2026/11/cdc-extends-authority-for-ebola-entry-suspensions-affecting-green-card-holders-for-six-months-bypasses-public-comment/",
+              "headline": "CDC Extends Authority for Ebola Entry Suspensions Affecting Green-Card Holders",
+              "body": "Green-card holders returning from parts of Africa now face a longer CDC entry ban - and no public comment this time.",
+              "published_date": "2026-11-26",
+              "outlet": "Hoodline",
+              "image": "https://s.yimg.com/bo/ef198136-0e01-589d-8f32-eaee3413fc03_1795714463628.jpg"
+            },
+            {
+              "news_id": "2d7d1d0261595709a933f7349662e5fa",
+              "url": "https://www.msn.com/en-us/news/other/kenya-breached-constitution-in-building-us-backed-ebola-quarantine-site-court-says/ar-AA2ifOBy?ocid=BingNewsVerp",
+              "headline": "Kenya breached constitution in building US-backed Ebola quarantine site, court says",
+              "body": "NAIROBI, Nov 26 (Reuters) - A Kenyan court ruled on Thursday that the government breached parts of the constitution in ...",
+              "published_date": "2026-11-26",
+              "outlet": "Reuters on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.pdZzQ6uMK1OpVm6TMPy_mA"
+            },
+            {
               "news_id": "6a6c957f68e65f3783202ee49b031f7f",
               "url": "https://www.reuters.com/investigations/fields-graves-hidden-deaths-reveal-scale-ebola-disaster-2026-11-23/",
               "headline": "Fields of graves: Hidden deaths reveal scale of Ebola disaster",
@@ -8966,6 +9015,15 @@
               "image": "https://s.yimg.com/bo/a88e1c96-1fc0-5b5d-ae1e-ca734b7b5e30_1795416261690.jpg"
             },
             {
+              "news_id": "427848a09c6e500793eda669270195ef",
+              "url": "https://insidepolitic.co.za/fighting-in-eastern-congo-forces-ebola-workers-to-evacuate-threatening-outbreak-response/",
+              "headline": "Fighting in eastern Congo forces Ebola workers to evacuate, threatening outbreak response - Inside Politics",
+              "body": "Escalating fighting in eastern Congo has forced Ebola response workers to leave affected areas and disrupted efforts to contain the deadliest outbreak in the country, health officials and humanitarian workers said Wednesday.",
+              "published_date": "2026-11-26",
+              "outlet": "insidepolitic",
+              "image": ""
+            },
+            {
               "news_id": "26036e32ea6558a6a73b2c1cb8219a0f",
               "url": "https://www.newsday.com/news/nation/ebola-congo-who-fighting-rebels-evacuation-b71145",
               "headline": "Fighting in eastern Congo forces Ebola workers to evacuate, threatening outbreak response - Newsday",
@@ -8973,6 +9031,33 @@
               "published_date": "2026-11-25",
               "outlet": "Newsday",
               "image": "https://www.bing.com/th?id=ONUT.1obgjDz_oK9QyZ9F1fV76A"
+            },
+            {
+              "news_id": "b156de974a755066b0d989892edbd3ba",
+              "url": "https://www.msn.com/fr-xl/afrique-centre-et-est/cameroun-actualite/rdc-un-pilote-sud-africain-aux-mains-des-rebelles-ebola-dépasse-12-000-cas-et-l-ouganda-rappelé-à-l-ordre/ar-AA2ihRY5?ocid=BingNewsVerp",
+              "headline": "RDC : un pilote sud-africain aux mains des rebelles, Ebola dépasse 12 000 cas et l’Ouganda rappelé à l’ordre",
+              "body": "RDC : un pilote sud-africain capturé par les rebelles, Ebola dépasse 12 000 cas et Kinshasa convoque l’OugandaLa République démocratique du Congo fait face à une nouvelle séquence de tensions sécurita ...",
+              "published_date": "2026-11-26",
+              "outlet": "Cameroun24.net on MSN",
+              "image": ""
+            },
+            {
+              "news_id": "28c5a13ab91a5c7ebe27c1a1995f66d7",
+              "url": "https://abcnews.com/Health/wireStory/ebola-outbreak-congo-reaches-12000-cases-violence-forces-138463911",
+              "headline": "Ebola outbreak in Congo reaches 12,000 cases; violence forces responders to evacuate",
+              "body": "The fast-moving Ebola outbreak in eastern Congo has topped 12,000 confirmed cases, government data shows",
+              "published_date": "2026-11-26",
+              "outlet": "ABC News",
+              "image": "https://www.bing.com/th?id=ONUT.CoVT6_w6uyjASVu_ns2kUg"
+            },
+            {
+              "news_id": "381ef57a34ba57d29800e0d095f930ac",
+              "url": "https://medicalxpress.com/news/2026-11-ebola-outbreak-congo-cases-violence.html",
+              "headline": "Ebola outbreak in Congo reaches 12,000 cases as violence forces some responders to evacuate",
+              "body": "The fast-moving Ebola outbreak in eastern Congo has topped 12,000 confirmed cases, government data showed Thursday, as fighting between rebels and the army disrupts efforts to contain the spread of the disease.",
+              "published_date": "2026-11-26",
+              "outlet": "Medical Xpress",
+              "image": "https://www.bing.com/th?id=ONUT.6Ez6THOtWKysGifK9qfb0Q"
             },
             {
               "news_id": "02c4f25363f75eba9efe60465f11e648",
@@ -9001,7 +9086,7 @@
       "incident_id": "20260421-XX-DR",
       "tree_id": "e3e6066ac5db4c95a652c8970b5fa6c3",
       "canonical_name": "Drought Green",
-      "summary": "Campton, Kentucky, declared a state of emergency because its sole water supply is critically low from ongoing drought. Reports also highlighted severe droughts in Pacific island nations, global economic disruptions, and near-record San Francisco tides, while Caribbean meteorologists urged countries to prepare for El Niño’s impact on the upcoming dry season. Local drought conditions in parts of Florida were expected to persist.",
+      "summary": "A study is examining whether Millwood Lake can support a proposed water transfer to North Texas amid drought concerns, and the latest U.S. Drought Monitor update covers conditions in Iowa, Nebraska, and South Dakota. Caribbean climatologists warned that a strong El Niño is expected to bring drier conditions, increased heat, and warmer ocean temperatures. Other reporting described drought-stressed trees and a Rudy Christmas tree farm with no trees to sell this season after drought and a shipping mix-up.",
       "country": "",
       "iso2": "XX",
       "lat": null,
@@ -9025,7 +9110,7 @@
       "disease_name": null,
       "event_date": "2026-04-21",
       "first_reported_date": "2026-04-21",
-      "last_updated_date": "2026-11-25",
+      "last_updated_date": "2026-11-26",
       "days_since_event": 219,
       "source_count": 1,
       "should_report": true,
@@ -9039,7 +9124,7 @@
         "gdacs": 1,
         "ercc": 0,
         "healthmap": 0,
-        "news": 83
+        "news": 87
       },
       "source_links": [
         {
@@ -9057,7 +9142,7 @@
           "url": "https://www.malaymail.com/news/world/2026/11/25/el-nino-this-week-pacific-droughts-san-franciscotides-and-a-global-economic-threat/244571",
           "source": "Malay Mail",
           "date": "2026-11-25",
-          "reason": "Latest log"
+          "reason": "Related article"
         },
         {
           "kind": "news",
@@ -9065,7 +9150,7 @@
           "url": "https://abc13.com/post/drought-reveals-remnants-communities-beneath-jordan-lake/20071028/",
           "source": "ABC13 Houston",
           "date": "2026-11-23",
-          "reason": "Latest log"
+          "reason": "Related article"
         },
         {
           "kind": "news",
@@ -9408,19 +9493,35 @@
           "published_date": "2026-11-24T22:56:12+00:00"
         },
         {
-          "headline": "Rudy Christmas tree farm has no trees to sell this year after drought, shipping mix-up",
-          "published_date": "2026-11-25"
-        },
-        {
           "headline": "El Nino this week: Pacific droughts, San Franciscotides and a global economic threat",
           "published_date": "2026-11-25"
         },
         {
           "headline": "Region urged to prepare for El Niño’s impact on dry season",
           "published_date": "2026-11-25"
+        },
+        {
+          "headline": "Study examines drought effects of proposed Millwood water transfer | Texarkana Gazette",
+          "published_date": "2026-11-25"
+        },
+        {
+          "headline": "Rudy Christmas tree farm has no trees to sell this year after drought, shipping mix-up",
+          "published_date": "2026-11-25"
+        },
+        {
+          "headline": "Caribbean warned to brace for drought, extreme heat as strong El Niño develops",
+          "published_date": "2026-11-25"
+        },
+        {
+          "headline": "Agrovision to focus on drought management, crop planning",
+          "published_date": "2026-11-26"
+        },
+        {
+          "headline": "Drought Monitor Update – November 26, 2026",
+          "published_date": "2026-11-26"
         }
       ],
-      "news_total": 83,
+      "news_total": 87,
       "logs": [
         {
           "log_date": "2026-11-18",
@@ -9663,57 +9764,6 @@
           ]
         },
         {
-          "log_date": "2026-11-23",
-          "summary": "UN Secretary-General António Guterres warned that landslides and drought threaten the centuries-old Banaue rice terraces and surrounding communities in the Philippine Cordilleras. In the UK, freezing temperatures combined with the summer drought continue to disrupt racecourses such as Fakenham, and the country is building new reservoirs to counter persistent droughts even as parts of Britain remain drought-stricken. Fiji's FCOSS warned that reduced crop production could drive up prices for root crops and vegetables, while Idaho is described as experiencing a historic statewide drought despite near-normal precipitation.",
-          "news": [
-            {
-              "news_id": "52877650b9a45890a335e415ca4b79a1",
-              "url": "https://www.philstar.com/headlines/climate-and-environment/2026/11/22/2571868/un-chief-warns-landslides-drought-threaten-banaue-rice-terraces",
-              "headline": "UN chief warns landslides, drought threaten Banaue rice terraces",
-              "body": "UN Secretary-General Antonio Guterres warned that the Philippine Cordilleras' centuries-old rice terraces and surrounding communities face growing climate threats.",
-              "published_date": "2026-11-22",
-              "outlet": "Philstar.com",
-              "image": "https://www.bing.com/th?id=ONUT.ApEJFFHeFcSq_qAKSUzFlg"
-            },
-            {
-              "news_id": "14b5ad5be1ae536b973c85ad138e8fd9",
-              "url": "https://www.sportinglife.com/racing/news/freezing-temperatures-and-summer-drought-continue-to-hamper-racecourses/235598",
-              "headline": "Freezing temperatures and summer drought continue to hamper racecourses",
-              "body": "Fakenham's meeting on Sunday became the latest to fall foul of the weather as freezing conditions put paid to their card.",
-              "published_date": "2026-11-22",
-              "outlet": "Sporting Life",
-              "image": "https://www.bing.com/th?id=ONUT.ly2Ff4Sg3ON90XKDidgsWw"
-            },
-            {
-              "news_id": "3538a1e086e655d2a58c7086e9fda7ec",
-              "url": "https://www.msn.com/en-my/news/other/uk-digging-new-reservoirs-to-fight-persistent-droughts/ar-AA2i1MzD?ocid=BingNewsVerp",
-              "headline": "UK digging new reservoirs to fight persistent droughts",
-              "body": "Britain endured record-breaking summer heat, and parts of the country remain drought-stricken despite the return of rain ...",
-              "published_date": "2026-11-23",
-              "outlet": "Free Malaysia Today on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.M1_w1L4_ZN7g2uT9R-zDuQ"
-            },
-            {
-              "news_id": "3a6892a6d3175cd0a9327e90b41c4604",
-              "url": "https://www.fbcnews.com.fj/news/drought-could-drive-up-food-prices-fcoss-warns/",
-              "headline": "Drought could drive up food prices, FCOSS warns",
-              "body": "Executive Director Vani Catanasiga warns that reduced crop production may lead to higher prices for root crops, vegetables ...",
-              "published_date": "2025-06-09",
-              "outlet": "FBC News",
-              "image": "https://www.bing.com/th?id=ONUT.HFUEhDTUyHyKlnqIPs4Ivg"
-            },
-            {
-              "news_id": "f5f2ab78923b502381b596777c795c41",
-              "url": "https://www.eastidahonews.com/2026/11/normal-precipitation-historic-drought-whats-happening-to-idahos-water/",
-              "headline": "Normal precipitation, historic drought: What's happening to Idaho's water? -...",
-              "body": "Idaho is experiencing a historic statewide drought — even though precipitation has been near normal....",
-              "published_date": "2026-11-22T21:12:50+00:00",
-              "outlet": "EastIdahoNews.com",
-              "image": "https://s.yimg.com/bo/cd7ef84e-a625-531b-8eec-6e041596bbb3_1795382336212.jpg"
-            }
-          ]
-        },
-        {
           "log_date": "2026-11-24",
           "summary": "A strong El Niño could bring winter rain that helps ease drought, while prolonged dry conditions at North Carolina’s Jordan Lake have exposed remnants of communities dating to the 1700s. Exceptional drought is expanding across Mississippi and Arkansas, an Allentown-area water utility is asking customers to cut consumption by 10–15%, and recent central North Carolina rain brought slight relief but slowed Christmas tree sales. In the Czech Republic, severe drought is reducing autumn fish harvests and supplies of traditional Christmas carp.\nSouth African cities tightened water restrictions as El Niño threatens drought, while UTA research aims to use AI and satellites to map millions of small bodies of water to strengthen drought resilience on Tribal lands. IUCN highlighted nature-based solutions for drought, and reporting covered drought and frost impacts on Wisconsin’s 2026 cranberry crop as well as a federal SBA drought loan deadline. A forecast also projected beneficial rain that could bring 1–2 inches and drought relief.\nZimbabwe has set aside US$400 million for a predicted El Niño drought, while Fiji will close schools early as the drought worsens. Catanauan, Quezon declared a state of calamity after drought losses reached P147 million, Hinds County extended a burn ban due to lingering extreme drought, and an RTI revealed drought affecting 365 mandals across 31 districts in Telangana. Mississippi cattle farmers reported that drought has prevented ryegrass from growing, forcing them to feed hay early and spend more to carry herds through winter.",
           "news": [
@@ -9949,15 +9999,75 @@
               "image": "https://www.bing.com/th?id=ONUT.LYuHpg_l8iL6wwy6F66vbw"
             }
           ]
+        },
+        {
+          "log_date": "2026-11-26",
+          "summary": "A study is examining whether Millwood Lake can support a proposed water transfer to North Texas amid drought concerns, and the latest U.S. Drought Monitor update covers conditions in Iowa, Nebraska, and South Dakota. Caribbean climatologists warned that a strong El Niño is expected to bring drier conditions, increased heat, and warmer ocean temperatures. Other reporting described drought-stressed trees and a Rudy Christmas tree farm with no trees to sell this season after drought and a shipping mix-up.",
+          "news": [
+            {
+              "news_id": "a4b84f02c39c51058e544a22aa3ed68a",
+              "url": "https://www.texarkanagazette.com/news/2026/nov/25/study-examines-drought-effects-of-proposed/",
+              "headline": "Study examines drought effects of proposed Millwood water transfer | Texarkana Gazette",
+              "body": "TEXARKANA, Ark. -- Millwood Lake has been studied for decades, and much of that research is now being used to help determine whether the reservoir can support sending millions of gallons of water a day to North Texas.",
+              "published_date": "2026-11-25",
+              "outlet": "Texarkana Gazette",
+              "image": ""
+            },
+            {
+              "news_id": "a156653b9bea55138c299c7f5027a88b",
+              "url": "https://www.msn.com/en-in/news/other/agrovision-to-focus-on-drought-management-crop-planning/ar-AA2ifUR9?ocid=BingNewsVerp",
+              "headline": "Agrovision to focus on drought management, crop planning",
+              "body": "Gadkari To Inaugurate Expo On Friday ...",
+              "published_date": "2026-11-26",
+              "outlet": "The Times of India on MSN",
+              "image": ""
+            },
+            {
+              "news_id": "0ed731836a1b53168b474937b0d7f6d8",
+              "url": "https://www.yahoo.com/lifestyle/articles/ground-saving-stressed-trees-suffering-110135283.html",
+              "headline": "From the Ground Up: Saving stressed trees suffering from drought",
+              "body": "Weekly From the Ground Up column for the week of Nov. 22",
+              "published_date": "2026-11-21",
+              "outlet": "The Daily News Journal · via Yahoo News",
+              "image": "https://media.zenfs.com/en/the-daily-news-journal/6afb7235e259fda1b55c8008f33fca30.png.cf.jpg"
+            },
+            {
+              "news_id": "395fabc1362a594d9500e89a6dff28a1",
+              "url": "https://www.yahoo.com/news/articles/rudy-christmas-tree-farm-no-224844713.html",
+              "headline": "Rudy Christmas tree farm has no trees to sell this year after drought, shipping mix-up",
+              "body": "A Rudy Christmas tree farm that has sold trees for more than 40 years has none to sell this season after a drought and a shipping mix-up.",
+              "published_date": "2026-11-25",
+              "outlet": "KNWA Fayetteville · via Yahoo News",
+              "image": "https://media.zenfs.com/en/knwa_fayetteville_articles_688/6f246a1559722368eaf9a4bb8f64afea.png_up.jpg.cf.jpg"
+            },
+            {
+              "news_id": "6d5ac1274a035175bca0d87173aa5675",
+              "url": "https://www.yahoo.com/news/weather-news/articles/drought-monitor-november-26-2026-163352201.html",
+              "headline": "Drought Monitor Update – November 26, 2026",
+              "body": "IA, NE, SD (KCAU) — The latest drought monitor update from the USDA (US Department of Agriculture), NOAA (National Oceanic and Atmospheric Administration), CPC (Climate Prediction Center), and the NDM...",
+              "published_date": "2026-11-26",
+              "outlet": "KCAU Sioux City · via Yahoo News",
+              "image": "https://media.zenfs.com/en/kcau_sioux_city_articles_201/201498fb49deb651de5fd6bf04aecdad.jpg_up.jpg"
+            },
+            {
+              "news_id": "ad694620f03a57c28636ac03ccd0ed49",
+              "url": "https://www.caribbeannationalweekly.com/posts/caribbean-warned-to-brace-for-drought-extreme-heat-as-strong-el-nio-develops",
+              "headline": "Caribbean warned to brace for drought, extreme heat as strong El Niño develops",
+              "body": "A regional climatologist warned that a strong El Niño event is expected to bring drier conditions, increased heat and warmer ocean temperatures.",
+              "published_date": "2026-11-25",
+              "outlet": "Caribbean National Weekly",
+              "image": "https://www.bing.com/th?id=ONUT.zBvVOlb1Zk-LZfyzp-exsQ"
+            }
+          ]
         }
       ],
-      "logs_total": 7
+      "logs_total": 8
     },
     {
       "incident_id": "20260511-XX-DR",
       "tree_id": "d75afb3078c54d74b37c4f8bb985dfce",
       "canonical_name": "Drought Green",
-      "summary": "Reports highlight localized drought adaptations and impacts in the United States. California growers are being presented with pomegranates as a drought-tolerant alternative crop as water shortages and declining soil quality hit Central Valley farming, while North Carolina's prolonged drought is forcing cattle producers to sell livestock and spend thousands more on winter feed amid depleted pastures and reduced hay production. In North Carolina, Ramseur residents experienced temporary water discoloration linked to drought conditions, and the SBA reminded Colorado businesses and nonprofits of an approaching deadline for drought-related disaster loan applications.",
+      "summary": "NOAA reports that the 2026–2027 El Niño continues to strengthen, with the eastern Pacific at 4.9°C above normal and Latin America bracing for peak impacts. Lake Powell rose 24 feet after fall rains, but Arizona still faces persistent drought conditions as officials monitor early snowpack. In Guatemala, El Niño-induced drought is pushing families to sell possessions or send children to work to afford food.",
       "country": "",
       "iso2": "XX",
       "lat": null,
@@ -9995,7 +10105,7 @@
         "gdacs": 1,
         "ercc": 1,
         "healthmap": 0,
-        "news": 1194
+        "news": 1195
       },
       "source_links": [
         {
@@ -10024,19 +10134,19 @@
         },
         {
           "kind": "news",
-          "label": "SBA disaster loan deadline approaching for drought-impacted biz, nonprofits",
-          "url": "https://www.montrosepress.com/news/sba-disaster-loan-deadline-approaching-for-drought-impacted-biz-nonprofits/article_bbcd5bb5-a54c-449a-83a0-f05c3360ae46.html",
-          "source": "Montrose Daily Press",
-          "date": "2026-11-24",
+          "label": "Guatemala: El Niño drought pushes families to sell possessions or send children to work to afford food",
+          "url": "https://www.savethechildren.net/news/guatemala-el-nino-drought-pushes-families-sell-possessions-or-send-children-work-afford-food",
+          "source": "Save the Children International",
+          "date": "2026-11-26",
           "reason": "Latest log"
         },
         {
           "kind": "news",
-          "label": "See Tulsa County and Oklahoma precipitation rankings, drought conditions as of Nov. 19",
-          "url": "https://tulsaworld.com/news/state-regional/weather/article_32cc5d66-1d96-475b-a160-beb70eb6f8c5.html",
-          "source": "Tulsa World",
+          "label": "Colorado River and Salt River systems see water level gains, but drought conditions persist in Arizona",
+          "url": "https://www.abc15.com/news/local-news/colorado-river-and-salt-river-systems-see-water-level-gains-but-drought-conditions-persist-in-arizona",
+          "source": "ABC 15 Phoenix",
           "date": "2026-11-24",
-          "reason": "Related article"
+          "reason": "Latest log"
         }
       ],
       "physical": {
@@ -14783,11 +14893,11 @@
           "published_date": "2026-11-23"
         },
         {
-          "headline": "Colorado River and Salt River systems see water level gains, but drought conditions persist in Arizona",
+          "headline": "SBA disaster loan deadline approaching for drought-impacted biz, nonprofits",
           "published_date": "2026-11-24"
         },
         {
-          "headline": "SBA disaster loan deadline approaching for drought-impacted biz, nonprofits",
+          "headline": "Colorado River and Salt River systems see water level gains, but drought conditions persist in Arizona",
           "published_date": "2026-11-24"
         },
         {
@@ -14825,9 +14935,13 @@
         {
           "headline": "NOAA El Niño alert: Pacific at 4.9°C above normal as Latin America braces for peak",
           "published_date": "2026-11-26"
+        },
+        {
+          "headline": "Guatemala: El Niño drought pushes families to sell possessions or send children to work to afford food",
+          "published_date": "2026-11-26"
         }
       ],
-      "news_total": 1194,
+      "news_total": 1195,
       "logs": [
         {
           "log_date": "2026-08-18",
@@ -15106,39 +15220,6 @@
           ]
         },
         {
-          "log_date": "2026-11-22",
-          "summary": "Sindh’s chief minister announced a Rs5.3 billion relief package for drought-hit Thar and Umerkot. In North Carolina, drought now affects 6.2 million people as reservoirs continue to drop. Drought conditions in Michigan’s Upper Peninsula are raising wildfire risk, with meteorologists warning of a potentially dry winter.",
-          "news": [
-            {
-              "news_id": "83a467e1261351f9916d9f4c86e8f888",
-              "url": "https://www.msn.com/en-xl/money/general/rs-5-3bn-relief-announced-for-drought-hit-thar-umerkotpublished-on-november-21-2026-11-31-am/ar-AA2hTEp6?ocid=BingNewsVerp",
-              "headline": "Rs 5.3bn relief announced for drought-hit Thar, UmerkotPublished on: November 21, 2026 11:31 AM",
-              "body": "Pakistan, Nov. 21 -- Sindh Chief Minister Syed Murad Ali Shah has announced a Rs5.3 billion relief package for ...",
-              "published_date": "2026-11-22",
-              "outlet": "Daily Times on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.Jc53U3gtsAzhV-_rI9JQag"
-            },
-            {
-              "news_id": "a5d65f8ec9225a20bd5e1ab4c7e150ca",
-              "url": "https://abc11.com/videoClip/20057341/",
-              "headline": "NC drought reaches 6.2 million people as reservoirs continue to drop",
-              "body": "More than half of North Carolina's population lives in areas affected by drought, according to the state's latest drought report.",
-              "published_date": "2026-11-20",
-              "outlet": "WTVD-TV 11 Raleigh-Durham",
-              "image": "https://s.yimg.com/bo/db7188b1-af41-54d0-9caf-feb9ee936193_1795131456667.jpg"
-            },
-            {
-              "news_id": "5c74205eb2625cfda8510cfbc3c9c6b3",
-              "url": "https://www.ourmidland.com/lifestyles/article/droughts-put-upper-peninsula-wildfire-risk-22535642.php",
-              "headline": "Droughts put the Upper Peninsula at wildfire risk as a potential dry winter...",
-              "body": "Drought conditions have impacted Michigan this fall, and meteorologists say this winter’s forecast c...",
-              "published_date": "2026-11-21T14:26:50+00:00",
-              "outlet": "Midland Daily News",
-              "image": "https://s.yimg.com/bo/2b0b812a-f5ab-59a9-9b3a-3dac3aed9a4d_1795270598023.png.cf.jpg"
-            }
-          ]
-        },
-        {
           "log_date": "2026-11-24",
           "summary": "Ethiopia's failed rains pushed maize prices to record highs, with IFPRI projecting 905,000 more Ethiopians falling into poverty in 2027. New Utah State University research attributes Utah's exceptionally warm, low-snow winter to conditions that could make similar drought-inducing winters more frequent in coming decades, while drought, frost and warming winters affected Wisconsin's 2026 cranberry harvest. Colorado recorded an increase in invasive mussel-infested watercraft this summer even as drought reduced boating activity, and Oklahoma's energy and livestock sectors helped sustain its economy through 2026 drought conditions, with the latest rankings showing continued dryness around Tulsa County.",
           "news": [
@@ -15248,15 +15329,48 @@
               "image": "https://media.zenfs.com/en/wghp_greensboro_articles_678/4d10ab9417c2fddeea98ba38a54fada5.jpg_up.jpg"
             }
           ]
+        },
+        {
+          "log_date": "2026-11-26",
+          "summary": "NOAA reports that the 2026–2027 El Niño continues to strengthen, with the eastern Pacific at 4.9°C above normal and Latin America bracing for peak impacts. Lake Powell rose 24 feet after fall rains, but Arizona still faces persistent drought conditions as officials monitor early snowpack. In Guatemala, El Niño-induced drought is pushing families to sell possessions or send children to work to afford food.",
+          "news": [
+            {
+              "news_id": "7541e3b5164450e3b59c43ca58ba0646",
+              "url": "https://www.msn.com/en-us/news/other/noaa-el-niño-alert-pacific-at-49-c-above-normal-as-latin-america-braces-for-peak/ar-AA2ieRQF?ocid=BingNewsVerp",
+              "headline": "NOAA El Niño alert: Pacific at 4.9°C above normal as Latin America braces for peak",
+              "body": "NOAA says the 2026–2027 El Niño continues to strengthen, with extreme warmth in the eastern Pacific and heightened risks of ...",
+              "published_date": "2026-11-26",
+              "outlet": "Latin Times on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.gm-DyEri1XD5fpf1WXLGnQ"
+            },
+            {
+              "news_id": "f51fe5f5cc4d5687962a68aaf8b12fdd",
+              "url": "https://www.abc15.com/news/local-news/colorado-river-and-salt-river-systems-see-water-level-gains-but-drought-conditions-persist-in-arizona",
+              "headline": "Colorado River and Salt River systems see water level gains, but drought conditions persist in Arizona",
+              "body": "Lake Powell rose 24 feet after fall rains, but Arizona still faces drought conditions as officials monitor early snowpack data.",
+              "published_date": "2026-11-24",
+              "outlet": "ABC 15 Phoenix",
+              "image": "https://s.yimg.com/bo/58cde18c-ea68-5939-ac58-32e9815b56e1_1795565441945.jpg"
+            },
+            {
+              "news_id": "686cb5c0ebee5add991fca6aa6f126fb",
+              "url": "https://www.savethechildren.net/news/guatemala-el-nino-drought-pushes-families-sell-possessions-or-send-children-work-afford-food",
+              "headline": "Guatemala: El Niño drought pushes families to sell possessions or send children to work to afford food",
+              "body": "Families in Guatemala are resorting to desperate measures to stave off hunger as the El Niño-induced drought gripping the country worsens with four in ten families in affected areas telling Save the Children they were forced to sell possessions to generate income to feed their children.",
+              "published_date": "2026-11-26",
+              "outlet": "Save the Children International",
+              "image": "https://www.bing.com/th?id=ONUT.0IX5WavQP-DCVDLjVPjglQ"
+            }
+          ]
         }
       ],
-      "logs_total": 89
+      "logs_total": 90
     },
     {
       "incident_id": "20260715-UA-CF",
       "tree_id": "f22292f8c3ff448a920c3b1fe41d3aa0",
       "canonical_name": "Conflict Ukraine 2026-07-15",
-      "summary": "Belarusian President Alexander Lukashenko, a close Putin ally, proposed traveling to Moscow together with President Zelenskyy for talks, according to Reuters. Metinvest CEO Yuriy Ryzhenkov warned that Ukraine's biggest steelmaker is contending with a fresh wave of Russian bombardment and new EU tariff hikes, saying the future of the country's steel industry hangs in the balance. Separately, a mixed-methods study of front-line Ukraine found that community health workers reconnected isolated rural villagers to primary care, restoring chronic disease management and psychosocial support.",
+      "summary": "President Trump and NATO Secretary General Mark Rutte met at Mar-a-Lago and urged Russia to avoid any actions that would expand the war in Ukraine, with Trump saying his recent call with Putin covered Russian aggression beyond Ukraine and hoping for a quick peace deal. U.S. envoy Jared Kushner separately warned against further escalation, calling the conflict a proxy war. Ukraine said its forces struck a major Russian military base and destroyed five warplanes, while the White House announced that nine children separated by the war had been reunited with their families in an exchange assisted by Melania Trump.",
       "country": "Ukraine",
       "iso2": "UA",
       "lat": 48.9,
@@ -15280,7 +15394,7 @@
       "disease_name": null,
       "event_date": "2026-07-15",
       "first_reported_date": "2026-07-15",
-      "last_updated_date": "2026-11-25",
+      "last_updated_date": "2026-11-26",
       "days_since_event": 134,
       "source_count": 6,
       "should_report": true,
@@ -15294,7 +15408,7 @@
         "gdacs": 0,
         "ercc": 6,
         "healthmap": 0,
-        "news": 2314
+        "news": 2332
       },
       "source_links": [
         {
@@ -15359,11 +15473,11 @@
         },
         {
           "kind": "news",
-          "label": "Poland blames Russia for drone incursion as fears grow of Ukraine conflict escalation",
-          "url": "https://www.msn.com/en-gb/news/world/poland-blames-russia-for-drone-incursion-as-fears-grow-of-ukraine-conflict-escalation/ar-AA2i7yxv?ocid=BingNewsVerp",
-          "source": "Reuters on MSN",
-          "date": "2026-11-24",
-          "reason": "Related article"
+          "label": "Russia-Ukraine war: 10 reasons why peace remains elusive and how the conflict could end",
+          "url": "https://www.msn.com/en-in/news/other/russia-ukraine-war-10-reasons-why-peace-remains-elusive-and-how-the-conflict-could-end/ar-AA2ihimb?ocid=BingNewsVerp",
+          "source": "The Times of India on MSN",
+          "date": "2026-11-26",
+          "reason": "Latest log"
         }
       ],
       "physical": {
@@ -24370,6 +24484,10 @@
           "published_date": "2026-11-21"
         },
         {
+          "headline": "Ukraine’s Number One Supporter: Howard Buffett On Why He’s Donated So Much To Th...",
+          "published_date": "2026-11-21T21:59:37+00:00"
+        },
+        {
           "headline": "Ukraine war briefing: Russian cargo ship hit by drone in Baltic Sea as Finland PM says conflict ‘spilling over’",
           "published_date": "2026-11-22"
         },
@@ -24632,9 +24750,77 @@
         {
           "headline": "Belarus's Lukashenko Proposes Flying With Ukraine's Zelenskiy to Moscow for Talks",
           "published_date": "2026-11-25T09:16:16+00:00"
+        },
+        {
+          "headline": "Trump Takes His Warning to Putin Beyond Ukraine - AOL",
+          "published_date": "2026-11-26"
+        },
+        {
+          "headline": "Trump Urges Putin to ‘Pull Back’ Military Aggression in Europe",
+          "published_date": "2026-11-26"
+        },
+        {
+          "headline": "Donald Trump Urges Vladimir Putin to Stop 'All Military Aggression' Across Europe — as He Calls Conflict a 'Complete Bloodbath' - AOL",
+          "published_date": "2026-11-26"
+        },
+        {
+          "headline": "Russia Sentences Colombian Who Fought for Ukraine to 20 Years in Prison",
+          "published_date": "2026-11-26"
+        },
+        {
+          "headline": "Ukraine tells Putin ‘stop complaining’ following attacks on Russian infrastructure",
+          "published_date": "2026-11-26"
+        },
+        {
+          "headline": "Colombian jailed for 20 years for fighting for Ukraine",
+          "published_date": "2026-11-26"
+        },
+        {
+          "headline": "Russia-Ukraine war: 10 reasons why peace remains elusive and how the conflict could end",
+          "published_date": "2026-11-26"
+        },
+        {
+          "headline": "Fact Check: Did Trump threaten to join forces with Russia and attack Ukraine?",
+          "published_date": "2026-11-26"
+        },
+        {
+          "headline": "Leaked records suggest 700,000 Russian soldiers have died in Ukraine",
+          "published_date": "2026-11-26"
+        },
+        {
+          "headline": "Trump, NATO chief urge Russia not to expand war in Ukraine",
+          "published_date": "2026-11-26"
+        },
+        {
+          "headline": "Trump, NATO chief push Russia to avoid any actions that would 'expand the war' with Ukraine",
+          "published_date": "2026-11-26"
+        },
+        {
+          "headline": "Russia must avoid ‘any actions’ expanding war in Ukraine — Trump, NATO chief say after Mar-a-Lago meeting",
+          "published_date": "2026-11-26"
+        },
+        {
+          "headline": "NetNewsLedger - Nine children reunited with families separated by Russia-Ukraine war, White House says",
+          "published_date": "2026-11-26"
+        },
+        {
+          "headline": "Alleged Russia-directed sabotage in Europe risks mass-casualty event, think tank warns",
+          "published_date": "2026-11-26"
+        },
+        {
+          "headline": "US envoy Kushner warns against Ukraine war escalation",
+          "published_date": "2026-11-26T00:00:00+00:00"
+        },
+        {
+          "headline": "On Thanksgiving, follow Eisenhower’s example and help Ukraine’s war victims | Opinion",
+          "published_date": "2026-11-26T08:59:40+00:00"
+        },
+        {
+          "headline": "Mural appears near Dutch embassy in Moscow depicting missile supplies for Ukraine",
+          "published_date": "2026-11-26T21:59:40+00:00"
         }
       ],
-      "news_total": 2314,
+      "news_total": 2332,
       "logs": [
         {
           "log_date": "2026-07-24",
@@ -24972,120 +25158,6 @@
               "published_date": "2026-07-20",
               "outlet": "TechRadar",
               "image": "https://s.yimg.com/am/60d/d890fa3eaca01ed00a0e9f9bd415abb8"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-11-23",
-          "summary": "A suspected Ukrainian sea-drone strike hit a Russian warship docked at the Benghazi naval base in Libya, with local authorities and satellite imagery indicating the vessel sank in a large explosion — extending Ukraine's attacks on Russian assets well beyond the Black Sea. Libya's government warned its territory must not become \"an arena for settling scores,\" and the UN mission in Libya urged an investigation. Separately, Levada Centre polling reported by The Moscow Times found only 6% of Russians say Russia should answer for Ukraine's destruction, while 65% blame the US and NATO.",
-          "news": [
-            {
-              "news_id": "3cfe74992b9d51b08e27024d76d1355c",
-              "url": "https://www.clickondetroit.com/news/2026/11/22/suspected-ukrainian-sea-drones-hit-russian-warship-at-benghazi-naval-base-libyan-officials-say/",
-              "headline": "Suspected Ukrainian sea drones hit Russian warship at Benghazi naval base, Libyan officials say",
-              "body": "Libyan officials say a suspected Ukrainian drone strike has hit a Russian warship at a naval base in Libya.",
-              "published_date": "2026-11-22",
-              "outlet": "ClickOnDetroit",
-              "image": "https://s.yimg.com/bo/cd6243a3-1064-5f02-9cc8-b5e2d60b91ac_1795368668064.jpg"
-            },
-            {
-              "news_id": "3edc71ea77995a96b91d06d82125291d",
-              "url": "https://www.kdrv.com/news/social/russian-warship-sunk-in-north-africa-after-suspected-ukrainian-drone-strike-causes-huge-explosion/article_cf2abe35-c731-5455-b6e2-ea26d6ff5e7e.html",
-              "headline": "Russian warship sunk in North Africa after suspected Ukrainian drone strike causes huge explosion",
-              "body": "(CNN) — A Russian warship docked in Libya has sunk after being hit by a suspected Ukrainian drone strike, local authorities said, in the latest attack on Russian assets far",
-              "published_date": "2026-11-22",
-              "outlet": "NewsWatch 12 Medford - Klamath Falls",
-              "image": "https://s.yimg.com/bo/04023c1b-9295-5324-ba41-e5856a8ec4b1_1795369517764.jpg"
-            },
-            {
-              "news_id": "1ef2dfb2b39f51d6825b26938af357e1",
-              "url": "https://www.yahoo.com/news/world/articles/only-6-russians-russia-answer-192113839.html",
-              "headline": "Only 6% of Russians say Russia should answer for Ukraine's destruction, Levada finds",
-              "body": "Only 6% of Russians say Russia should answer for Ukraine's ruin and 65% blame the US and Nato, Levada Centre data show, The Moscow Times reported on November 20. Another 11% lay the responsibility on ...",
-              "published_date": "2026-11-22",
-              "outlet": "IntelliNews · via Yahoo News",
-              "image": "https://media.zenfs.com/en/intellinews_516/c572e0f6474f31d3c66df27c742aa906.png_up.jpg.cf.jpg"
-            },
-            {
-              "news_id": "efc1a80221875870b15f19afb891c412",
-              "url": "https://au.news.yahoo.com/ukraine-russia-war-latest-kyiv-042352979.html",
-              "headline": "Ukraine-Russia war latest: Satellite images shows sunken Russian warship after suspected Ukrainian strike off Libya",
-              "body": "Libya’s government warns its territory must not be ‘turned into an arena for settling scores’",
-              "published_date": "2026-11-23",
-              "outlet": "Yahoo News Australia",
-              "image": "https://www.bing.com/th?id=ONUT.wxMcVR1c5w2EkZMiej5llA"
-            },
-            {
-              "news_id": "d579f632075a53d2b5126764b8ef06b8",
-              "url": "https://www.borgenmagazine.com/support-for-ukraine/",
-              "headline": "The UK’s Continued Support for Ukraine",
-              "body": "Over 4 and a half years into the Russian invasion, the U.K.’s continued support for Ukraine is providing a lifeline for many ...",
-              "published_date": "2026-11-23T08:14:04+00:00",
-              "outlet": "BORGEN Magazine",
-              "image": "https://www.bing.com/th?id=ONUT.qg8EjK_b4zEBFnmZSScvmA"
-            },
-            {
-              "news_id": "6db41f4dfa3c5509a77b07674bd32c47",
-              "url": "https://www.forbes.com/sites/brucelee/2026/11/22/russia-being-accused-of-ecocide-in-invasion-of-ukraine/",
-              "headline": "Russia Being Accused Of ‘Ecocide’ In Invasion Of Ukraine",
-              "body": "UAnimals set up a display at COP31 to bring more attention to the major impact on dolphins and the...",
-              "published_date": "2026-11-22T14:14:01+00:00",
-              "outlet": "Forbes",
-              "image": "https://s.yimg.com/bo/82894c09-73dd-51e4-8cfc-29f8e7c7ea62_1795384198476.jpg"
-            },
-            {
-              "news_id": "2591c4c4fb1b578ca8b020cab19e3abd",
-              "url": "https://www.clickondetroit.com/entertainment/2026/11/18/uks-prince-harry-sees-big-separation-between-us-administration-public-on-support-for-ukraine/",
-              "headline": "UK's Prince Harry sees 'big separation' between US administration, public on support for Ukraine",
-              "body": "Britain’s Prince Harry offered a veiled criticism of the U.S. government’s policy toward Ukraine, saying in an interview released late Wednesday that he believes there is a “big separation” between the U.S. administration’s stance and that of the American people.",
-              "published_date": "2026-11-18",
-              "outlet": "ClickOnDetroit",
-              "image": "https://s.yimg.com/bo/9e415f69-846a-519e-a831-5e9e3358be52_1795042474399.jpg"
-            },
-            {
-              "news_id": "18f5f93c4e7659d699a078d2dc23ea86",
-              "url": "https://www.msn.com/en-nz/news/other/un-mission-in-libya-urges-probe-after-russian-ship-hit-by-drones-off-benghazi/ar-AA2i0TEq?ocid=BingNewsVerp",
-              "headline": "UN mission in Libya urges probe after Russian ship hit by drones off Benghazi",
-              "body": "The attacks came after a drone hit a Russian cargo ship in the eastern Baltic Sea on Saturday, close to the waters of Finland ...",
-              "published_date": "2026-11-23",
-              "outlet": "Euronews on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.3IJXGCKM5UmUuji4Yfxl0g"
-            },
-            {
-              "news_id": "efb920b8b3055e68be27ddd33a1edbc8",
-              "url": "https://cyprus-mail.com/2026/11/22/ukraine-empties-as-war-reaches-a-protracted-stalemate",
-              "headline": "Ukraine empties as war reaches a protracted stalemate",
-              "body": "By Theo Kyriacou Wilfred Owen’s despondent poem ‘Anthem for Doomed Youth’ encapsulated the mood of all those who felt they were hoodwinked by the solemn promise: ‘it will all be over by Christmas’. For history buffs it’s a conspicuous reference to World War I, but turn the clock forward 100…",
-              "published_date": "2026-11-22",
-              "outlet": "Cyprus Mail",
-              "image": "https://www.bing.com/th?id=ONUT.hAfWEpPGaECLGt-qy4h9qQ"
-            },
-            {
-              "news_id": "815068085a86560abae76a1282c15c97",
-              "url": "https://www.yahoo.com/news/world/articles/drone-destroys-russian-warship-libyan-164056689.html",
-              "headline": "Drone destroys £150m Russian warship at Libyan naval base",
-              "body": "A Russian ship docked at the Libyan port of Benghazi was struck on Sunday in a suspected drone attack.",
-              "published_date": "2026-11-22",
-              "outlet": "The Telegraph · via Yahoo News",
-              "image": "https://media.zenfs.com/en/the_telegraph_258/2cd8740a852b176c485929bd68619f03.jpg"
-            },
-            {
-              "news_id": "91c45cd1fe785cb7b43b326cec5ec51c",
-              "url": "https://www.msn.com/en-ca/news/news/pope-receives-gift-from-ukrainian-family-who-escaped-russian-occupied-oleshky/ar-AA2hYfdZ?ocid=BingNewsVerp",
-              "headline": "Pope receives gift from Ukrainian family who escaped Russian-occupied Oleshky",
-              "body": "On November 19, Tetiana Stavnychy, president of Caritas Ukraine, met with Pope Leo XIV. During the visit, she presented the ...",
-              "published_date": "2026-11-23",
-              "outlet": "RBC Ukraine on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.kmZ8Y_fQPf8qXShs0e40nw"
-            },
-            {
-              "news_id": "2a1f421b672f54a08b4f5787e5eee06b",
-              "url": "https://www.nytimes.com/2026/11/22/us/politics/melania-trump-ukraine-diplomacy.html",
-              "headline": "How Melania Trump Found a Diplomatic Opening in the War in Ukraine",
-              "body": "The first lady, who has little experience in international affairs, developed back channels to key figures on both sides of ...",
-              "published_date": "2026-11-22T00:00:00+00:00",
-              "outlet": "The New York Times",
-              "image": "https://www.bing.com/th?id=ONUT.BtSzCinlMVkukTPkzwVQcQ"
             }
           ]
         },
@@ -25559,15 +25631,183 @@
               "image": "https://media.zenfs.com/en/intellinews_516/938e98416c49bb3f584cc23f1057c93c.jpg_up.jpg"
             }
           ]
+        },
+        {
+          "log_date": "2026-11-26",
+          "summary": "President Trump and NATO Secretary General Mark Rutte met at Mar-a-Lago and urged Russia to avoid any actions that would expand the war in Ukraine, with Trump saying his recent call with Putin covered Russian aggression beyond Ukraine and hoping for a quick peace deal. U.S. envoy Jared Kushner separately warned against further escalation, calling the conflict a proxy war. Ukraine said its forces struck a major Russian military base and destroyed five warplanes, while the White House announced that nine children separated by the war had been reunited with their families in an exchange assisted by Melania Trump.",
+          "news": [
+            {
+              "news_id": "ddee8e648f3459849dd2fdc7ff43a34f",
+              "url": "https://www.aol.com/articles/trump-takes-warning-putin-beyond-195745000.html",
+              "headline": "Trump Takes His Warning to Putin Beyond Ukraine - AOL",
+              "body": "A recent conversation between Donald Trump and Vladimir Putin drew attention across Europe. The US president said their discussion covered Russia’s military aggression beyond its ongoing invasion of Ukraine. His remarks also raised questions about the possibility of a broader agreement. Why Trump’s latest message to Putin extends beyond the Ukraine war Trump shared details […] The post Trump Takes His Warning to Putin Beyond Ukraine appeared first on Mandatory .",
+              "published_date": "2026-11-26",
+              "outlet": "AOL",
+              "image": ""
+            },
+            {
+              "news_id": "db357e1e41da5bed897884f8195f3696",
+              "url": "https://www.forbes.com/sites/forbesinternational/2026/11/21/how-warren-buffetts-son-howard-buffett-became-ukraines-largest-private-donor/",
+              "headline": "Ukraine’s Number One Supporter: Howard Buffett On Why He’s Donated So Much To Th...",
+              "body": "The farmer and chairman of Berkshire Hathaway has made 28 visits to war-torn Ukraine, formed great f...",
+              "published_date": "2026-11-21T21:59:37+00:00",
+              "outlet": "Forbes",
+              "image": "https://s.yimg.com/bo/0f49524a-323a-5f79-9a3e-72fc67688388_1795344764934.jpg"
+            },
+            {
+              "news_id": "76158ebe817a51e9b062807c0f431605",
+              "url": "https://time.com/article/2026/11/26/trump-warns-putin-russia-to-pull-back-military-aggression-europe-ukraine-war/",
+              "headline": "Trump Urges Putin to ‘Pull Back’ Military Aggression in Europe",
+              "body": "The U.S. President expressed hope that a deal can be made between Russia and Ukraine \"quickly\" to avoid an expansion of the war.",
+              "published_date": "2026-11-26",
+              "outlet": "Time Magazine",
+              "image": "https://s.yimg.com/bo/62ac9779-9f92-5f4a-b350-a3ccb0243e81_1795721652737.jpg"
+            },
+            {
+              "news_id": "32ab1810c5b45ff3b5404ff72dd05d75",
+              "url": "https://www.aol.com/articles/donald-trump-urges-vladimir-putin-191125000.html",
+              "headline": "Donald Trump Urges Vladimir Putin to Stop 'All Military Aggression' Across Europe — as He Calls Conflict a 'Complete Bloodbath' - AOL",
+              "body": "President Donald Trump has called on Russian President Vladimir Putin to halt military aggression across Europe, saying a quick peace deal with Ukraine could be within reach. RadarOnline.",
+              "published_date": "2026-11-26",
+              "outlet": "AOL",
+              "image": "https://www.bing.com/th?id=ONUT.L9HsWUDtooX_deLHus30-w"
+            },
+            {
+              "news_id": "9bb440c9fbd756168c03bdc94244a52c",
+              "url": "https://colombiaone.com/2026/11/26/russia-sentences-colombian-fighter-20-years-prison-ukraine/",
+              "headline": "Russia Sentences Colombian Who Fought for Ukraine to 20 Years in Prison",
+              "body": "Russian authorities have sentenced Colombian national Cristian Morales Mendoza to 20 years in prison for fighting alongside Ukrainian forces.",
+              "published_date": "2026-11-26",
+              "outlet": "colombiaone",
+              "image": "https://www.bing.com/th?id=ONUT.HwhPvG0OIMO5m2D9w4ALqg"
+            },
+            {
+              "news_id": "6499aa14d0f55af0b8768d44713c894a",
+              "url": "https://www.msn.com/en-us/news/other/ukraine-tells-putin-stop-complaining-as-leak-reveals-1-000-russian-soldier-suicides/ar-AA2ieNag?ocid=BingNewsVerp",
+              "headline": "Ukraine tells Putin ‘stop complaining’ following attacks on Russian infrastructure",
+              "body": "Ukraine claimed its forces struck a major military base in Russia on Wednesday, taking out five warplanes, as the Ukrainian government told Vladimir Putin to “stop complaining” about attacks on ...",
+              "published_date": "2026-11-26",
+              "outlet": "New York Post on MSN",
+              "image": ""
+            },
+            {
+              "news_id": "a28d84f2bc8a5dc99be6fad6c5a6f902",
+              "url": "https://www.newindianexpress.com/world/2026/Nov/26/colombian-jailed-for-20-years-for-fighting-for-ukraine",
+              "headline": "Colombian jailed for 20 years for fighting for Ukraine",
+              "body": "A court in Ukraine's Moscow-annexed Donetsk region has jailed a Colombian for 20 years, saying he was a mercenary fighting for Kyiv, Russia said on Thursday.The",
+              "published_date": "2026-11-26",
+              "outlet": "The New Indian Express",
+              "image": "https://www.bing.com/th?id=ONUT.QCc0AFRNMuaOaObDYOGlrA"
+            },
+            {
+              "news_id": "2e5ce034150456eba80c06f5248cc274",
+              "url": "https://www.msn.com/en-in/news/other/russia-ukraine-war-10-reasons-why-peace-remains-elusive-and-how-the-conflict-could-end/ar-AA2ihimb?ocid=BingNewsVerp",
+              "headline": "Russia-Ukraine war: 10 reasons why peace remains elusive and how the conflict could end",
+              "body": "Nearly five years after Russia launched its full-scale invasion of Ukraine, the war remains far from over. Territorial ...",
+              "published_date": "2026-11-26",
+              "outlet": "The Times of India on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.wFxBDcyOFYv_ZMnJnYkvGg"
+            },
+            {
+              "news_id": "fb647d472e5f5c5a9d6f7d38c67e64a5",
+              "url": "https://news.meaww.com/fact-check-did-trump-threaten-to-join-forces-with-russia-and-attack-ukraine",
+              "headline": "Fact Check: Did Trump threaten to join forces with Russia and attack Ukraine?",
+              "body": "Donald Trump allegedly threatened to join forces with Russia and attack Ukraine",
+              "published_date": "2026-11-26",
+              "outlet": "MEAWW News",
+              "image": "https://www.bing.com/th?id=ONUT.SjZNXxFPDXszQyd7ZnJltA"
+            },
+            {
+              "news_id": "204b03cae60d5ccd8dd9cb76fb5bf8ab",
+              "url": "https://www.pennlive.com/opinion/2026/11/on-thanksgiving-follow-eisenhowers-example-and-help-ukraines-war-victims-opinion.html",
+              "headline": "On Thanksgiving, follow Eisenhower’s example and help Ukraine’s war victims | Opinion",
+              "body": "We must stand by Ukraine’s war victims while we try to get Russia to end its invasion and withdraw its troops.",
+              "published_date": "2026-11-26T08:59:40+00:00",
+              "outlet": "PennLive",
+              "image": "https://www.bing.com/th?id=ONUT.QLHZkEU4TR4FwnQCBr8LIg"
+            },
+            {
+              "news_id": "770998c43fda5ab9b142951f7aaab277",
+              "url": "https://www.ewn.co.za/2026/11/26/leaked-records-suggest-700-000-russian-soldiers-have-died-in-ukraine",
+              "headline": "Leaked records suggest 700,000 Russian soldiers have died in Ukraine",
+              "body": "Leaked Russian death records analysed by groups in Ukraine and Belarus suggest up to 700,000 Russian soldiers may have died in the war.",
+              "published_date": "2026-11-26",
+              "outlet": "EWN",
+              "image": "https://www.bing.com/th?id=ONUT.WuzKTf877eYo00hSY_M7eQ"
+            },
+            {
+              "news_id": "c94ad3853d495245952734d11f598ff8",
+              "url": "https://www.yahoo.com/news/politics/articles/trump-nato-chief-urge-russia-164426883.html",
+              "headline": "Trump, NATO chief urge Russia not to expand war in Ukraine",
+              "body": "President Trump and NATO Secretary-General Mark Rutte urged Russia not to expand its war with Ukraine, as peace talks between the countries have made little headway in recent weeks and as the conflict...",
+              "published_date": "2026-11-26",
+              "outlet": "The Hill · via Yahoo News",
+              "image": "https://media.zenfs.com/en/the_hill_articles_341/12a76418b9c7760b72ba998bb908e6c8.jpg_up.jpg"
+            },
+            {
+              "news_id": "79fcb2098d9e5ba2970420c50cedaa3a",
+              "url": "https://english.alarabiya.net/News/world/2026/11/26/us-envoy-kushner-warns-against-ukraine-war-escalation",
+              "headline": "US envoy Kushner warns against Ukraine war escalation",
+              "body": "US envoy Jared Kushner warned on Wednesday against any downward spiral in the Ukraine conflict, which he called “a proxy war ...",
+              "published_date": "2026-11-26T00:00:00+00:00",
+              "outlet": "Al Arabiya English",
+              "image": "https://www.bing.com/th?id=ONUT.TNUR7J1_e-cdIq6s9DP_Iw"
+            },
+            {
+              "news_id": "00c09254c2425473b67e54bd4402e21c",
+              "url": "https://www.msn.com/en-us/news/other/trump-nato-chief-push-russia-to-avoid-any-actions-that-would-expand-the-war-with-ukraine/ar-AA2iiaY9?ocid=BingNewsVerp",
+              "headline": "Trump, NATO chief push Russia to avoid any actions that would 'expand the war' with Ukraine",
+              "body": "President Donald Trump and NATO chief Mark Rutte, who met Wednesday night at Mar-a-Lago, urged Russia to avoid actions that ...",
+              "published_date": "2026-11-26",
+              "outlet": "FOX News on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.dEZQ_UalNihyWXqKe_LZgQ"
+            },
+            {
+              "news_id": "52fdad9c98285cfc99c64c9545b26da3",
+              "url": "https://www.msn.com/en-us/news/other/russia-must-avoid-any-actions-expanding-war-in-ukraine-trump-nato-chief-say-after-mar-a-lago-meeting/ar-AA2ifBpO?ocid=BingNewsVerp",
+              "headline": "Russia must avoid ‘any actions’ expanding war in Ukraine — Trump, NATO chief say after Mar-a-Lago meeting",
+              "body": "President Trump and NATO Secretary General Mark Rutte agreed that Russia must steer clear of “any actions” that would expand ...",
+              "published_date": "2026-11-26",
+              "outlet": "New York Post on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.c0e2fe30cfe680d0440898fec5bd94fc"
+            },
+            {
+              "news_id": "bef73a50cb855c6d977fac0e1670c62e",
+              "url": "https://www.newsobserver.com/news/nation-world/world/article318267156.html",
+              "headline": "Mural appears near Dutch embassy in Moscow depicting missile supplies for Ukraine",
+              "body": "A giant mural suggesting the Netherlands is guilty of military aggression has appeared near the Dutch embassy in Moscow, ...",
+              "published_date": "2026-11-26T21:59:40+00:00",
+              "outlet": "The News & Observer",
+              "image": "https://www.bing.com/th?id=ONUT.oOXK1y3YG8Uy83faF5VKyA"
+            },
+            {
+              "news_id": "0259fbe7d1bd511687ea779d7cf66875",
+              "url": "https://www.netnewsledger.com/2026/11/26/nine-children-reunited-with-families-separated-by-russia-ukraine-war-white-house-says/",
+              "headline": "NetNewsLedger - Nine children reunited with families separated by Russia-Ukraine war, White House says",
+              "body": "latest exchange assisted by U.S. first lady Melania Trump, the White House announced Wednesday in an ongoing effort in Ukraine",
+              "published_date": "2026-11-26",
+              "outlet": "NetNewsLedger",
+              "image": "https://www.bing.com/th?id=ONUT.Q8_vs4TcA2Jvnh3QjnsXug"
+            },
+            {
+              "news_id": "f10b36a31a4257d5bec5c0bcc3d23e65",
+              "url": "https://www.msn.com/en-us/news/other/alleged-russia-directed-sabotage-in-europe-risks-mass-casualty-event-think-tank-warns/ar-AA2ihCCM?ocid=BingNewsVerp",
+              "headline": "Alleged Russia-directed sabotage in Europe risks mass-casualty event, think tank warns",
+              "body": "Alleged Russia-directed sabotage in Europe is intensifying, with the possibility of a mass-casualty event as Moscow ...",
+              "published_date": "2026-11-26",
+              "outlet": "CNN on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.B8Al25NkO95GNbicHaijig"
+            }
+          ]
         }
       ],
-      "logs_total": 115
+      "logs_total": 116
     },
     {
       "incident_id": "20260726-IR-CF",
       "tree_id": "13763def03ab448898154124734fe728",
       "canonical_name": "Iran/US war",
-      "summary": "Iranian state media reported that two oil tankers and a third vessel hit naval mines in the Strait of Hormuz on Wednesday, with attacks on shipping described as reaching an all-time high. Iran’s deputy parliament speaker said breaking the U.S. blockade would require preventing other regional oil exports, while Houthi forces advanced near Aden and Iran said it would not hold talks unless its conditions are met.",
+      "summary": "Iranian state media reported that two oil tankers and a third vessel hit naval mines in the Strait of Hormuz on Wednesday, with attacks on shipping described as reaching an all-time high. Iran’s deputy parliament speaker said breaking the U.S. blockade would require preventing other regional oil exports, while Houthi forces advanced near Aden and Iran said it would not hold talks unless its conditions are met.\nIran denied responsibility for a drone attack in Kuwait that killed two Italian technicians and wounded others, after Kuwait blamed Tehran for the strike. A U.S.-based institute reported that Iran is rapidly constructing an underground facility between key nuclear sites as Gulf tensions rise. Oil prices rose in early Asian trading as Iran claimed mine strikes on ships, and a Newsweek analysis examined AI’s role in the war.",
       "country": "Iran",
       "iso2": "IR",
       "lat": 32.4,
@@ -25606,7 +25846,7 @@
         "gdacs": 0,
         "ercc": 2,
         "healthmap": 0,
-        "news": 3742
+        "news": 3751
       },
       "source_links": [
         {
@@ -40242,6 +40482,10 @@
           "published_date": "2026-11-22T12:09:58+00:00"
         },
         {
+          "headline": "Iran live updates: Iranian drone attack killed 2 Italians, Kuwait says",
+          "published_date": "2026-11-23"
+        },
+        {
           "headline": "How Democrats plan to use Congress's funding power to push Trump to end Iran war",
           "published_date": "2026-11-23"
         },
@@ -40614,7 +40858,19 @@
           "published_date": "2026-11-25T08:52:32+00:00"
         },
         {
+          "headline": "UK Readies 100,000 Reservists as Russia Tensions Rise",
+          "published_date": "2026-11-25T21:56:11+00:00"
+        },
+        {
           "headline": "The scale of Russia’s war laid bare as leak shows 500,000 dead",
+          "published_date": "2026-11-26"
+        },
+        {
+          "headline": "Iran said racing to build underground facility between key nuclear sites",
+          "published_date": "2026-11-26"
+        },
+        {
+          "headline": "Iran denies carrying out drone attack that killed two Italians in Kuwait",
           "published_date": "2026-11-26"
         },
         {
@@ -40626,11 +40882,31 @@
           "published_date": "2026-11-26"
         },
         {
+          "headline": "How Silicon Valley became central to Israel’s war on Palestinians",
+          "published_date": "2026-11-26"
+        },
+        {
           "headline": "Iran deputy speaker threatens regional oil exports to break US blockade – state media",
           "published_date": "2026-11-26"
+        },
+        {
+          "headline": "Oil rises on supply concerns as Iran claims mine strikes on ships",
+          "published_date": "2026-11-26"
+        },
+        {
+          "headline": "How Trump's Iran war was betrayed by AI",
+          "published_date": "2026-11-26"
+        },
+        {
+          "headline": "Kremlin Accuses Ukraine of Trying to Widen Conflict Zone to Mediterranean and Baltic Seas",
+          "published_date": "2026-11-26T21:56:11+00:00"
+        },
+        {
+          "headline": "UPDATES: US War on Iran, Day 273 — Iranians Face Power Cuts and Surging Inflation",
+          "published_date": "2026-11-26T22:00:25+00:00"
         }
       ],
-      "news_total": 3742,
+      "news_total": 3751,
       "logs": [
         {
           "log_date": "2026-07-27",
@@ -41597,7 +41873,7 @@
         },
         {
           "log_date": "2026-11-26",
-          "summary": "Iranian state media reported that two oil tankers and a third vessel hit naval mines in the Strait of Hormuz on Wednesday, with attacks on shipping described as reaching an all-time high. Iran’s deputy parliament speaker said breaking the U.S. blockade would require preventing other regional oil exports, while Houthi forces advanced near Aden and Iran said it would not hold talks unless its conditions are met.",
+          "summary": "Iranian state media reported that two oil tankers and a third vessel hit naval mines in the Strait of Hormuz on Wednesday, with attacks on shipping described as reaching an all-time high. Iran’s deputy parliament speaker said breaking the U.S. blockade would require preventing other regional oil exports, while Houthi forces advanced near Aden and Iran said it would not hold talks unless its conditions are met.\nIran denied responsibility for a drone attack in Kuwait that killed two Italian technicians and wounded others, after Kuwait blamed Tehran for the strike. A U.S.-based institute reported that Iran is rapidly constructing an underground facility between key nuclear sites as Gulf tensions rise. Oil prices rose in early Asian trading as Iran claimed mine strikes on ships, and a Newsweek analysis examined AI’s role in the war.",
           "news": [
             {
               "news_id": "57e66344a3c45c369006bef87dc8eea4",
@@ -41618,6 +41894,24 @@
               "image": "https://s.yimg.com/bo/278125aa-fc54-5615-9fa7-b379eb3e997c_1795579939078.jpg"
             },
             {
+              "news_id": "62dd6928d6dd5106b030d9882acd5161",
+              "url": "https://www.msn.com/en-us/news/other/iran-said-racing-to-build-underground-facility-between-key-nuclear-sites/ar-AA2iiPgi?ocid=BingNewsVerp",
+              "headline": "Iran said racing to build underground facility between key nuclear sites",
+              "body": "US-based institute says construction for underground site is moving unusually fast; Gulf tensions rise with deadly Kuwait ...",
+              "published_date": "2026-11-26",
+              "outlet": "The Times of Israel on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.VJ9PGpdBvCAZYXhHzLWesA"
+            },
+            {
+              "news_id": "9541487df4b555bd845382966e270d6c",
+              "url": "https://www.aljazeera.com/news/liveblog/2026/11/26/iran-war-live-explosion-rocks-sanaa-missiles-intercepted-over-riyadh",
+              "headline": "Iran denies carrying out drone attack that killed two Italians in Kuwait",
+              "body": "In a call with his Kuwait counterpart, Iran's Foreign Minister rejects claim Tehran was behind the attack.",
+              "published_date": "2026-11-26",
+              "outlet": "Al Jazeera",
+              "image": "https://www.bing.com/th?id=ONUT.DkqTxkRI2tuSAxKSGCQkoQ"
+            },
+            {
               "news_id": "f4eea2caecc858fa85b3f3d7557afceb",
               "url": "https://www.msn.com/en-nz/news/other/five-key-moments-in-ukraine-and-iran-that-sent-energy-bills-soaring/ar-AA2idmrL?ocid=BingNewsVerp",
               "headline": "Five key moments in Ukraine and Iran that sent energy bills soaring",
@@ -41627,6 +41921,15 @@
               "image": "https://www.bing.com/th?id=ONUT.yiD5f07MB2o1VeBVOhygMA"
             },
             {
+              "news_id": "1b04c983f446560db178ba0729c95429",
+              "url": "https://eaworldview.com/2026/11/us-war-on-iran-power-cuts-and-surging-inflation/",
+              "headline": "UPDATES: US War on Iran, Day 273 — Iranians Face Power Cuts and Surging Inflation",
+              "body": "Two of the four people wounded by an Iranian drone attack on Kuwait (see 1321 GMT) have died in hospital. The victims were Italian nationals working as technicians for the German defense group ...",
+              "published_date": "2026-11-26T22:00:25+00:00",
+              "outlet": "EA WorldView",
+              "image": ""
+            },
+            {
               "news_id": "b04c8e88e89c539bb857f61cf2b7d338",
               "url": "https://www.msn.com/en-us/news/other/trump-s-biggest-fear-just-came-true-ship-attacks-in-hormuz-hit-an-all-time-high-and-iran-says-2-more-tankers-struck-mines/ar-AA2idKxz?ocid=BingNewsVerp",
               "headline": "Trump’s biggest fear just came true: Ship attacks in Hormuz hit an all-time high and Iran says 2 more tankers struck mines",
@@ -41634,6 +41937,15 @@
               "published_date": "2026-11-26",
               "outlet": "National Security Journal on MSN",
               "image": "https://www.bing.com/th?id=ONUT.sPeVs6oCP3aCigJBgnYrYQ"
+            },
+            {
+              "news_id": "2520541cc18553f8a78420a261a4007f",
+              "url": "https://www.msn.com/en-us/news/other/how-silicon-valley-became-central-to-israel-s-war-on-palestinians/ar-AA2ifQfH?ocid=BingNewsVerp",
+              "headline": "How Silicon Valley became central to Israel’s war on Palestinians",
+              "body": "From surveillance systems to AI targeting, US tech giants are deeply embedded in Israel’s war machine.",
+              "published_date": "2026-11-26",
+              "outlet": "Al Jazeera on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.5524e2d57085553f6c9d0a3598b4c652"
             },
             {
               "news_id": "d13bb60149f35d0b8bae8a9f2a94172e",
@@ -41654,6 +41966,15 @@
               "image": "https://www.bing.com/th?id=ONUT.vaDB0q5w66CHVhZ3aj9cGA"
             },
             {
+              "news_id": "e5e48c64a6a05ce69f7af21a9e0275ac",
+              "url": "https://www.msn.com/en-us/news/other/oil-rises-on-supply-concerns-as-iran-claims-mine-strikes-on-ships/ar-AA2ieLHI?ocid=BingNewsVerp",
+              "headline": "Oil rises on supply concerns as Iran claims mine strikes on ships",
+              "body": "SINGAPORE, Nov 26 (Reuters) - Crude oil prices rose in early Asian trade on Thursday, extending gains from the previous ...",
+              "published_date": "2026-11-26",
+              "outlet": "Reuters on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.f214f425ce844b9e43d307ea230535d3"
+            },
+            {
               "news_id": "84f162c6225154488b7dc49b5b452bc4",
               "url": "https://www.bbc.com/pidgin/articles/cm20vnz7p942o",
               "headline": "Anglophone crisis: Dem shoot her severally and e disfigure her face - how Cameroon conflict dey destroy lives - BBC News Pidgin",
@@ -41661,6 +41982,42 @@
               "published_date": "2026-11-25",
               "outlet": "BBC",
               "image": "https://www.bing.com/th?id=ONUT.Ur-8bQhSLZGkKQuQJ6ijgw"
+            },
+            {
+              "news_id": "88c9fa12618559f68f8da5ae69a67ab3",
+              "url": "https://www.newsmax.com/world/globaltalk/britain-military-veterans-russia/2026/11/26/id/1277645/",
+              "headline": "UK Readies 100,000 Reservists as Russia Tensions Rise",
+              "body": "Britain has alerted about 100,000 military veterans to a possible wartime call-up as Russia's war in Ukraine raises fears of ...",
+              "published_date": "2026-11-25T21:56:11+00:00",
+              "outlet": "Newsmax",
+              "image": "https://www.bing.com/th?id=ONUT.qJlHdi8PhPJIxb7WWKgofw"
+            },
+            {
+              "news_id": "9bc23d67700558aa80c234e4503d16a5",
+              "url": "https://www.goodmorningamerica.com/news/live-updates/iran-live-updates-tehran-strait-hormuz-safe-demands-138369648",
+              "headline": "Iran live updates: Iranian drone attack killed 2 Italians, Kuwait says",
+              "body": "President Donald Trump announced \"major combat operations\" against Iran on Feb. 28.",
+              "published_date": "2026-11-23",
+              "outlet": "Good Morning America",
+              "image": "https://www.bing.com/th?id=ONUT.7YhpLAfq_WP4UvwAst8Nyw"
+            },
+            {
+              "news_id": "49cd2aecb005562eb7bb4e277e59d707",
+              "url": "https://www.usnews.com/news/world/articles/2026-11-26/kremlin-accuses-ukraine-of-trying-to-widen-conflict-zone-to-mediterranean-and-baltic-seas",
+              "headline": "Kremlin Accuses Ukraine of Trying to Widen Conflict Zone to Mediterranean and Baltic Seas",
+              "body": "MOSCOW, Nov 26 (Reuters) - The Kremlin on Thursday accused Ukraine of trying to spread the war it is fighting against Russia to the Mediterranean and Baltics seas, a move it called very dangerous.",
+              "published_date": "2026-11-26T21:56:11+00:00",
+              "outlet": "U.S. News & World Report",
+              "image": ""
+            },
+            {
+              "news_id": "6510c18d92e056c0be19e6bc8af42066",
+              "url": "https://www.newsweek.com/how-trumps-iran-war-was-betrayed-by-ai-12765338",
+              "headline": "How Trump's Iran war was betrayed by AI",
+              "body": "\"One emerging problem is that leaders have conflated speed/scale with military victory,\" a former U.S. official told Newsweek.",
+              "published_date": "2026-11-26",
+              "outlet": "Newsweek",
+              "image": "https://www.bing.com/th?id=ONUT.JDNy7c-F_6OgOoBLSiScWg"
             }
           ]
         }
@@ -53615,7 +53972,7 @@
       "disease_name": null,
       "event_date": "2026-07-30",
       "first_reported_date": "2026-07-30",
-      "last_updated_date": "2026-11-24",
+      "last_updated_date": "2026-11-26",
       "days_since_event": 119,
       "source_count": 1,
       "should_report": true,
@@ -53629,7 +53986,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 708
+        "news": 710
       },
       "source_links": [
         {
@@ -56508,9 +56865,17 @@
         {
           "headline": "Pacific governments step up El Niño response as drought and water crisis deepen",
           "published_date": "2026-11-24"
+        },
+        {
+          "headline": "Global Water Monitor and Forecast Watch List",
+          "published_date": "2026-11-25"
+        },
+        {
+          "headline": "DAR earmarks P600 million for El Niño response in 2027",
+          "published_date": "2026-11-26"
         }
       ],
-      "news_total": 708,
+      "news_total": 710,
       "logs": [
         {
           "log_date": "2026-07-31",
@@ -56903,7 +57268,7 @@
       "incident_id": "20260826-NP-FL",
       "tree_id": "26a139d9c4274b379e946b7b737af269",
       "canonical_name": "Flood Bagmati, Nepal 2026-08-26",
-      "summary": "Nepal has begun the process to formally declare missing foreign nationals dead after the August floods, with India’s embassy urging families of 213 missing Indians to review the published list and raise objections by December 2. Nepali authorities have verified details of 452 missing foreign nationals from 12 countries, including 85 Chinese and 69 Americans, while Malaysian officials said certificates of presumed death will be issued once documents arrive from Nepal. Separate coverage noted a Sonoma Sherpa community fundraiser raising more than $100,000 for flood relief and commentary urging that Himalayan settlements be kept out of harm’s way.",
+      "summary": "Nepal has begun the process to formally declare missing foreign nationals dead after the August floods, with India’s embassy urging families of 213 missing Indians to review the published list and raise objections by December 2. Nepali authorities have verified details of 452 missing foreign nationals from 12 countries, including 85 Chinese and 69 Americans, while Malaysian officials said certificates of presumed death will be issued once documents arrive from Nepal. Separate coverage noted a Sonoma Sherpa community fundraiser raising more than $100,000 for flood relief and commentary urging that Himalayan settlements be kept out of harm’s way.\nThree months after the August 26 floods, survivors returned to a destroyed Hindu temple to honour those killed, as communities continue picking up the pieces. Nepal has meanwhile issued an official list of missing foreign nationals, including 213 Indians whose families were asked to review it, and Malaysia's National Registration Department said death certificates for the 54 missing Malaysians will be issued once Nepali authorities provide official confirmation. Families of the missing, such as an Isipingo mother awaiting news of her daughter, remain in limbo.",
       "country": "Nepal",
       "iso2": "NP",
       "lat": 27.2952744,
@@ -56941,7 +57306,7 @@
         "gdacs": 1,
         "ercc": 2,
         "healthmap": 0,
-        "news": 1263
+        "news": 1269
       },
       "source_links": [
         {
@@ -56977,18 +57342,18 @@
         },
         {
           "kind": "news",
-          "label": "Nepal To Formally Declare 213 Indians Missing Since August Floods Presumed Dead",
-          "url": "https://news.abplive.com/news/nepal-to-formally-declare-213-indians-missing-since-august-floods-presumed-dead-5-000-missing-people-1877633",
-          "source": "ABP News",
+          "label": "Nepal Initiates Death Declaration Process for Over 5K Missing in August Flash Floods, Including 213 Indians",
+          "url": "https://pragativadi.com/nepal-flash-floods-missing-indians-official-list-released/",
+          "source": "Pragativadi",
           "date": "2026-11-26",
           "reason": "Latest log"
         },
         {
           "kind": "news",
-          "label": "Sonoma’s Sherpa community raises more than $100,000 for flood relief in Nepal",
-          "url": "https://www.pressdemocrat.com/2026/11/25/sonoma-sherpa-flood-relief/",
-          "source": "The Press Democrat",
-          "date": "2026-11-25",
+          "label": "Nepal To Formally Declare 213 Indians Missing Since August Floods Presumed Dead",
+          "url": "https://news.abplive.com/news/nepal-to-formally-declare-213-indians-missing-since-august-floods-presumed-dead-5-000-missing-people-1877633",
+          "source": "ABP News",
+          "date": "2026-11-26",
           "reason": "Latest log"
         }
       ],
@@ -61752,6 +62117,10 @@
           "published_date": "2026-10-31T07:01:17+00:00"
         },
         {
+          "headline": "India seizes Nepal flood crisis to rebuild influence - Taipei Times",
+          "published_date": "2026-11-01"
+        },
+        {
           "headline": "Say it in Antalya, write it in Kathmandu",
           "published_date": "2026-11-01"
         },
@@ -62036,7 +62405,15 @@
           "published_date": "2026-11-25"
         },
         {
+          "headline": "Nepal Initiates Death Declaration Process for Over 5K Missing in August Flash Floods, Including 213 Indians",
+          "published_date": "2026-11-26"
+        },
+        {
           "headline": "Nepal floods: Indian Embassy seeks verification of missing Indians by 2 Dec",
+          "published_date": "2026-11-26"
+        },
+        {
+          "headline": "Death certs to be issued for all M’sians missing in Nepal",
           "published_date": "2026-11-26"
         },
         {
@@ -62044,7 +62421,19 @@
           "published_date": "2026-11-26"
         },
         {
+          "headline": "Worshippers return to lost Hindu temple to honour dead after Nepal disaster",
+          "published_date": "2026-11-26"
+        },
+        {
+          "headline": "Nepal moves to declare 213 Indians missing in August flash floods dead",
+          "published_date": "2026-11-26"
+        },
+        {
           "headline": "Keep Himalayan settlements out of harm's way",
+          "published_date": "2026-11-26"
+        },
+        {
+          "headline": "Isipingo mother keeps faith as daughter remains missing after Himalayan floods - The Witness",
           "published_date": "2026-11-26"
         },
         {
@@ -62056,7 +62445,7 @@
           "published_date": "2026-11-26"
         }
       ],
-      "news_total": 1263,
+      "news_total": 1269,
       "logs": [
         {
           "log_date": "2026-08-28",
@@ -62717,8 +63106,17 @@
         },
         {
           "log_date": "2026-11-26",
-          "summary": "Nepal has begun the process to formally declare missing foreign nationals dead after the August floods, with India’s embassy urging families of 213 missing Indians to review the published list and raise objections by December 2. Nepali authorities have verified details of 452 missing foreign nationals from 12 countries, including 85 Chinese and 69 Americans, while Malaysian officials said certificates of presumed death will be issued once documents arrive from Nepal. Separate coverage noted a Sonoma Sherpa community fundraiser raising more than $100,000 for flood relief and commentary urging that Himalayan settlements be kept out of harm’s way.",
+          "summary": "Nepal has begun the process to formally declare missing foreign nationals dead after the August floods, with India’s embassy urging families of 213 missing Indians to review the published list and raise objections by December 2. Nepali authorities have verified details of 452 missing foreign nationals from 12 countries, including 85 Chinese and 69 Americans, while Malaysian officials said certificates of presumed death will be issued once documents arrive from Nepal. Separate coverage noted a Sonoma Sherpa community fundraiser raising more than $100,000 for flood relief and commentary urging that Himalayan settlements be kept out of harm’s way.\nThree months after the August 26 floods, survivors returned to a destroyed Hindu temple to honour those killed, as communities continue picking up the pieces. Nepal has meanwhile issued an official list of missing foreign nationals, including 213 Indians whose families were asked to review it, and Malaysia's National Registration Department said death certificates for the 54 missing Malaysians will be issued once Nepali authorities provide official confirmation. Families of the missing, such as an Isipingo mother awaiting news of her daughter, remain in limbo.",
           "news": [
+            {
+              "news_id": "36793264058c58e78bb68159e3487445",
+              "url": "https://pragativadi.com/nepal-flash-floods-missing-indians-official-list-released/",
+              "headline": "Nepal Initiates Death Declaration Process for Over 5K Missing in August Flash Floods, Including 213 Indians",
+              "body": "Three months after the Nepal flash floods, discover the latest on the missing Indians as the government takes official steps.",
+              "published_date": "2026-11-26",
+              "outlet": "Pragativadi",
+              "image": "https://www.bing.com/th?id=ONUT.noDCGwdh_SC7mb2Y2rCqVQ"
+            },
             {
               "news_id": "1c5665067128509d804cefe13cb648ed",
               "url": "https://foreignpolicy.com/2026/11/25/bangladesh-india-china-modi-shah-visit-flood-reconstruction-aid/",
@@ -62738,6 +63136,15 @@
               "image": "https://www.bing.com/th?id=ONUT.HAKAELHsA6EmM6V9RHp6nQ"
             },
             {
+              "news_id": "0136d4e0bec75ea280e04be03399e3f0",
+              "url": "https://www.taipeitimes.com/News/editorials/archives/2026/11/27/2003868465",
+              "headline": "India seizes Nepal flood crisis to rebuild influence - Taipei Times",
+              "body": "India is moving swiftly with aid and reconstruction grants after Nepal’s devastating floods earlier this year, seizing an opportunity to rebuild influence as Nepalese Prime Minister Balendra Shah’s Gen Z-backed government faces its biggest test since taking power.Relations had frayed over the past d",
+              "published_date": "2026-11-01",
+              "outlet": "Taipei Times",
+              "image": ""
+            },
+            {
               "news_id": "fd670516fb2452d39733fcc0c021d2c1",
               "url": "https://www.pressdemocrat.com/2026/11/25/sonoma-sherpa-flood-relief/",
               "headline": "Sonoma’s Sherpa community raises more than $100,000 for flood relief in Nepal",
@@ -62747,6 +63154,15 @@
               "image": "https://www.bing.com/th?id=ONUT.UpNeuVjR3nmin2oAGX5UYA"
             },
             {
+              "news_id": "e1ed0f11371159da998342881fb8c990",
+              "url": "https://www.msn.com/en-my/news/national/death-certs-to-be-issued-for-all-m-sians-missing-in-nepal/ar-AA2ieHWn?ocid=BingNewsVerp",
+              "headline": "Death certs to be issued for all M’sians missing in Nepal",
+              "body": "KUALA LUMPUR: The National Registration Department (JPN) will issue death certificates for the 54 Malaysians missing in the Nepal floods once the Nepalese authorities provide official confirmation of ...",
+              "published_date": "2026-11-26",
+              "outlet": "The Star on MSN",
+              "image": ""
+            },
+            {
               "news_id": "d88854b23a75594c886191947bc61260",
               "url": "https://www.msn.com/en-in/news/India/nepal-begins-process-to-declare-213-missing-indians-dead-in-august-floods/ar-AA2igMX2?ocid=BingNewsVerp",
               "headline": "Nepal begins process to declare 213 missing Indians dead in August floods",
@@ -62754,6 +63170,24 @@
               "published_date": "2026-11-26",
               "outlet": "Hindustan Times on MSN",
               "image": "https://www.bing.com/th?id=ORMS.35ea0f740b2f5afa92b13c9932abf0c6"
+            },
+            {
+              "news_id": "bb3904fa14ba54869f560a94d132871d",
+              "url": "https://www.msn.com/en-au/weather/general/worshippers-return-to-lost-hindu-temple-to-honour-dead-after-nepal-disaster/ar-AA2iiUfF?ocid=BingNewsVerp",
+              "headline": "Worshippers return to lost Hindu temple to honour dead after Nepal disaster",
+              "body": "Three months after devastating floods tore through communities in Nepal, survivors are still picking up the pieces. On the ...",
+              "published_date": "2026-11-26",
+              "outlet": "ABC News Australia on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.n89S9rsl5C4Bx5MdrsSFeQ"
+            },
+            {
+              "news_id": "0af24bac637558f1996226ce4f1e0a3c",
+              "url": "https://www.msn.com/en-us/news/other/nepal-moves-to-declare-213-indians-missing-in-august-flash-floods-dead/ar-AA2igk4n?ocid=BingNewsVerp",
+              "headline": "Nepal moves to declare 213 Indians missing in August flash floods dead",
+              "body": "The August 26 flash floods killed at least 1,453 people, and left more than 5,000 missing, according to the Nepal's National ...",
+              "published_date": "2026-11-26",
+              "outlet": "India Today on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.8e3e6e564ae91452f280db34621705f6"
             },
             {
               "news_id": "cb214e665a745b9ba1c7db29c6801e42",
@@ -62772,6 +63206,15 @@
               "published_date": "2026-11-26",
               "outlet": "The Kathmandu Post on MSN",
               "image": "https://www.bing.com/th?id=ONUT.FmujjQIOyeHlzubnN7YISA"
+            },
+            {
+              "news_id": "3bb06db9b1915601a538e3468346d817",
+              "url": "https://witness.co.za/news/2026/11/26/isipingo-mother-keeps-faith-as-daughter-remains-missing-after-himalayan-floods/",
+              "headline": "Isipingo mother keeps faith as daughter remains missing after Himalayan floods - The Witness",
+              "body": "Three months after the devastating Nepal-Tibet floods, Linda Govender is still holding on to hope th",
+              "published_date": "2026-11-26",
+              "outlet": "The Witness",
+              "image": "https://www.bing.com/th?id=ONUT.FwErj79laJZ3s7e3f84fNA"
             },
             {
               "news_id": "9af8918c977451779086a620cc4b53b6",
@@ -62800,7 +63243,7 @@
       "incident_id": "20260903-PS-CF",
       "tree_id": "e650e542b08c4c03badd08f734e3234d",
       "canonical_name": "Conflict Palestine 2026-09-03",
-      "summary": "Gaza is reporting a surge in meningitis cases as overcrowding and damaged sanitation put children at risk. Gaza's municipalities warned that winter rains threaten around 1,000 shelter sites, with some 200,000 tents needing replacement, as the EU urged Israel to reopen all crossings. Separately, dozens of Palestinian prisoners from Gaza remain in Israeli custody despite having completed their sentences, under provisions permitting detention without conviction.",
+      "summary": "Gaza is reporting a surge in meningitis cases as overcrowding and damaged sanitation put children at risk. Gaza's municipalities warned that winter rains threaten around 1,000 shelter sites, with some 200,000 tents needing replacement, as the EU urged Israel to reopen all crossings. Separately, dozens of Palestinian prisoners from Gaza remain in Israeli custody despite having completed their sentences, under provisions permitting detention without conviction.\nIsraeli attacks in Gaza killed Khaled Abu Nada, undersecretary of the Education Ministry, along with seven other people, according to reports. Separate Israeli strikes in Gaza killed 10 people, hospital officials said, while a UN tribunal disputed Israeli allegations used to dismiss UNRWA Gaza staff and questioned the credibility of dismissals made without substantiated evidence. Iranian drones also killed two Italians in Kuwait amid the wider regional tensions.",
       "country": "Palestine",
       "iso2": "PS",
       "lat": 31.9,
@@ -62838,7 +63281,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 891
+        "news": 894
       },
       "source_links": [
         {
@@ -62860,17 +63303,17 @@
         },
         {
           "kind": "news",
-          "label": "Zionist Regime Keeps Palestinian Prisoners behind Bars After Their Sentences Expire - World news - Tasnim News Agency",
-          "url": "https://www.tasnimnews.ir/en/news/2026/11/25/3758025/zionist-regime-keeps-palestinian-prisoners-behind-bars-after-their-sentences-expire",
-          "source": "tasnimnews.ir",
-          "date": "2026-11-25",
+          "label": "Israeli strikes kill 10 in Gaza as Iranian drones kill 2 Italians in Kuwait, and other Mideast news",
+          "url": "https://wgntv.com/israel-hamas-conflict/ap-israeli-strikes-kill-8-in-gaza-and-other-mideast-news/",
+          "source": "WGN-TV",
+          "date": "2026-11-25T22:02:14+00:00",
           "reason": "Latest log"
         },
         {
           "kind": "news",
-          "label": "Winter rains threaten 1,000 Gaza shelter sites, councils warn",
-          "url": "https://www.aljazeera.com/news/2026/11/25/winter-rains-threaten-1000-gaza-shelter-sites-councils-warn",
-          "source": "Al Jazeera",
+          "label": "Zionist Regime Keeps Palestinian Prisoners behind Bars After Their Sentences Expire - World news - Tasnim News Agency",
+          "url": "https://www.tasnimnews.ir/en/news/2026/11/25/3758025/zionist-regime-keeps-palestinian-prisoners-behind-bars-after-their-sentences-expire",
+          "source": "tasnimnews.ir",
           "date": "2026-11-25",
           "reason": "Latest log"
         }
@@ -66447,11 +66890,23 @@
           "published_date": "2026-11-25"
         },
         {
+          "headline": "Israeli strikes kill 10 in Gaza as Iranian drones kill 2 Italians in Kuwait, and other Mideast news",
+          "published_date": "2026-11-25T22:02:14+00:00"
+        },
+        {
+          "headline": "Israeli attacks on Gaza kill senior education official, seven other people",
+          "published_date": "2026-11-26"
+        },
+        {
+          "headline": "UN ruling disputes Israeli allegations used to dismiss UNRWA Gaza staff",
+          "published_date": "2026-11-26"
+        },
+        {
           "headline": "Gaza meningitis cases surge as collapsing infrastructure fuels health fears",
           "published_date": "2026-11-26"
         }
       ],
-      "news_total": 891,
+      "news_total": 894,
       "logs": [
         {
           "log_date": "2026-09-04",
@@ -66743,8 +67198,17 @@
         },
         {
           "log_date": "2026-11-26",
-          "summary": "Gaza is reporting a surge in meningitis cases as overcrowding and damaged sanitation put children at risk. Gaza's municipalities warned that winter rains threaten around 1,000 shelter sites, with some 200,000 tents needing replacement, as the EU urged Israel to reopen all crossings. Separately, dozens of Palestinian prisoners from Gaza remain in Israeli custody despite having completed their sentences, under provisions permitting detention without conviction.",
+          "summary": "Gaza is reporting a surge in meningitis cases as overcrowding and damaged sanitation put children at risk. Gaza's municipalities warned that winter rains threaten around 1,000 shelter sites, with some 200,000 tents needing replacement, as the EU urged Israel to reopen all crossings. Separately, dozens of Palestinian prisoners from Gaza remain in Israeli custody despite having completed their sentences, under provisions permitting detention without conviction.\nIsraeli attacks in Gaza killed Khaled Abu Nada, undersecretary of the Education Ministry, along with seven other people, according to reports. Separate Israeli strikes in Gaza killed 10 people, hospital officials said, while a UN tribunal disputed Israeli allegations used to dismiss UNRWA Gaza staff and questioned the credibility of dismissals made without substantiated evidence. Iranian drones also killed two Italians in Kuwait amid the wider regional tensions.",
           "news": [
+            {
+              "news_id": "967bb3690672598fa1d39843eb981712",
+              "url": "https://www.msn.com/en-us/news/world/israeli-attacks-on-gaza-kill-senior-education-official-seven-other-people/ar-AA2igrv8?ocid=BingNewsVerp",
+              "headline": "Israeli attacks on Gaza kill senior education official, seven other people",
+              "body": "Israeli Prime Minister Benjamin Netanyahu confirms killing of Khaled Abu Nada, undersecretary of Education Ministry.",
+              "published_date": "2026-11-26",
+              "outlet": "Al Jazeera on MSN",
+              "image": "https://www.bing.com/th?id=ORMS.17d7669100ddc5380f5a1ad7ac63437f"
+            },
             {
               "news_id": "152e01c9912c5665a14f1788b2091300",
               "url": "https://www.tasnimnews.ir/en/news/2026/11/25/3758025/zionist-regime-keeps-palestinian-prisoners-behind-bars-after-their-sentences-expire",
@@ -66753,6 +67217,24 @@
               "published_date": "2026-11-25",
               "outlet": "tasnimnews.ir",
               "image": "https://www.bing.com/th?id=ONUT.IhiPcn9gRuLW9E1sqC8TxA"
+            },
+            {
+              "news_id": "10b2e20146d95a84b9dacc4b59d76934",
+              "url": "https://www.msn.com/en-us/news/world/un-ruling-disputes-israeli-allegations-used-to-dismiss-unrwa-gaza-staff/ar-AA2ihMN5?ocid=BingNewsVerp",
+              "headline": "UN ruling disputes Israeli allegations used to dismiss UNRWA Gaza staff",
+              "body": "Tribunal raises questions about the credibility of UNRWA’s decision to dismiss its staff without substantiated evidence.",
+              "published_date": "2026-11-26",
+              "outlet": "Al Jazeera on MSN",
+              "image": "https://www.bing.com/th?id=ONUT.TQTNB4r34Bi0MVTlH2kK5g"
+            },
+            {
+              "news_id": "0bb71afed7ce59b1b63df682e2de5183",
+              "url": "https://wgntv.com/israel-hamas-conflict/ap-israeli-strikes-kill-8-in-gaza-and-other-mideast-news/",
+              "headline": "Israeli strikes kill 10 in Gaza as Iranian drones kill 2 Italians in Kuwait, and other Mideast news",
+              "body": "Israeli strikes in Gaza killed 10 people, hospital officials in the Palestinian territory said Thursday, while a British ...",
+              "published_date": "2026-11-25T22:02:14+00:00",
+              "outlet": "WGN-TV",
+              "image": "https://www.bing.com/th?id=ONUT.dc0MNfqtxVtZJvwsHD0WeQ"
             },
             {
               "news_id": "66f01018247251a69b1adacbfada562c",
@@ -66805,7 +67287,7 @@
       "disease_name": null,
       "event_date": "2026-09-17",
       "first_reported_date": "2026-09-17",
-      "last_updated_date": "2026-11-25",
+      "last_updated_date": "2026-11-26",
       "days_since_event": 70,
       "source_count": 1,
       "should_report": false,
@@ -66819,7 +67301,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 3
+        "news": 5
       },
       "source_links": [],
       "key_links": [
@@ -66862,9 +67344,17 @@
         {
           "headline": "El Nino risks adding to data centre water stress in South-East Asia: BMI",
           "published_date": "2026-11-25"
+        },
+        {
+          "headline": "How El Niño could trigger poisonous mushroom surge",
+          "published_date": "2026-11-26"
+        },
+        {
+          "headline": "El Niño offers lead time — not certainty — against dengue in South Asia",
+          "published_date": "2026-11-26"
         }
       ],
-      "news_total": 3,
+      "news_total": 5,
       "logs": [
         {
           "log_date": "2026-09-17",
@@ -72663,7 +73153,7 @@
       "incident_id": "20261023-MY-MS",
       "tree_id": "85a1b2c3d4e5f60718293a4b5c6d7e8f",
       "canonical_name": "Northeast Monsoon — Malaysia",
-      "summary": "In Negeri Sembilan, 274 SPM 2026 candidates have been identified as at risk of disaster amid the Northeast Monsoon. Separately, JAKOA has advised NGOs against visiting Orang Asli villages during the monsoon, citing hazards including landslides and water surges.\nThe Kelantan Fire and Rescue Department has stepped up monitoring at Pengkalan Chepa, Kota Bharu, Tumpat and Pasir Puteh ahead of a high tide phenomenon forecast for 26–27 November. Meanwhile, Universiti Sultan Zainal Abidin activated its Flood Operations Room to coordinate flood monitoring and welfare assistance for students and staff affected by heavy rain.",
+      "summary": "UMK has proposed an underground water retention system to address recurring floods in Taman Bendahara. Local authorities were also instructed to clean drains, rubbish traps and retention ponds throughout the monsoon, with 1,445 flood hotspot locations identified.",
       "country": "Malaysia",
       "iso2": "MY",
       "lat": 4.2,
@@ -72687,7 +73177,7 @@
       "disease_name": null,
       "event_date": "2026-10-23",
       "first_reported_date": "2026-10-23",
-      "last_updated_date": "2026-11-25",
+      "last_updated_date": "2026-11-26",
       "days_since_event": 34,
       "source_count": 1,
       "should_report": false,
@@ -72701,7 +73191,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 6
+        "news": 7
       },
       "source_links": [],
       "key_links": [
@@ -72711,7 +73201,7 @@
           "url": "https://www.bernama.com/en/general/news.php?id=2638225",
           "source": "BERNAMA",
           "date": "2026-11-23",
-          "reason": "Latest log"
+          "reason": "Related article"
         },
         {
           "kind": "news",
@@ -72719,7 +73209,7 @@
           "url": "https://www.bernama.com/en/general/news.php?id=2638776",
           "source": "BERNAMA",
           "date": "2026-11-24",
-          "reason": "Latest log"
+          "reason": "Related article"
         }
       ],
       "physical": {
@@ -72756,9 +73246,13 @@
         {
           "headline": "UMK Proposes Underground Water Retention System To Curb Recurring Floods In Taman Bendahara",
           "published_date": "2026-11-25"
+        },
+        {
+          "headline": "PBT diminta bersihkan longkang kerap sepanjang monsun, 1,445 lokasi panas banjir dikenal pasti",
+          "published_date": "2026-11-26"
         }
       ],
-      "news_total": 6,
+      "news_total": 7,
       "logs": [
         {
           "log_date": "2026-10-23",
@@ -72816,9 +73310,33 @@
               "image": ""
             }
           ]
+        },
+        {
+          "log_date": "2026-11-26",
+          "summary": "UMK has proposed an underground water retention system to address recurring floods in Taman Bendahara. Local authorities were also instructed to clean drains, rubbish traps and retention ponds throughout the monsoon, with 1,445 flood hotspot locations identified.",
+          "news": [
+            {
+              "news_id": "92bb0d3556e35aff82924efaa2b01ce8",
+              "url": "https://www.bernama.com/tv/news.php?id=2639056",
+              "headline": "UMK Proposes Underground Water Retention System To Curb Recurring Floods In Taman Bendahara",
+              "body": "umk, retention pond, floods",
+              "published_date": "2026-11-25",
+              "outlet": "BERNAMA",
+              "image": "https://www.bing.com/th?id=ONUT.tgnWJw_a-FyfNGKxsMU5oA"
+            },
+            {
+              "news_id": "97bb7bf2d3bf563cbe95e75f5ad79ab0",
+              "url": "https://www.wilayahku.com.my/pbt-diminta-bersihkan-longkang-kerap-musim-monsun-1445-lokasi-panas-banjir/",
+              "headline": "PBT diminta bersihkan longkang kerap sepanjang monsun, 1,445 lokasi panas banjir dikenal pasti",
+              "body": "Fadillah Yusof minta semua PBT bersihkan longkang, perangkap sampah dan kolam takungan sepanjang monsun. Garis panduan kenderaan terbiar mula Februari. Ada senarai semak.",
+              "published_date": "2026-11-26",
+              "outlet": "WilayahKu",
+              "image": ""
+            }
+          ]
         }
       ],
-      "logs_total": 2
+      "logs_total": 3
     },
     {
       "incident_id": "20261025-VU-EQ",
@@ -74435,7 +74953,7 @@
       "incident_id": "20261102-FR-DI",
       "tree_id": "08e51208cb5c41daa06a3c14df4a0661",
       "canonical_name": "Shamonda France 2026-11-02",
-      "summary": "Reports in this batch describe an emerging cattle-associated virus detected in horses with neurological disease in Europe, and The Lancet examines Shamonda virus’s emergence in Europe after identification in cattle in central Europe in June 2026, raising questions about orthobunyavirus infections during pregnancy. A Telegraph article warns that midges pose a growing health threat to Britons as the climate warms, but the excerpt does not specifically mention Shamonda virus.",
+      "summary": "French animal-health surveillance platforms are inviting farmers to participate in a survey aimed at better characterizing the effects of Shamonda virus in livestock. A regional report describes a poorly understood virus circulating in Breton cattle and sheep herds, with fever, diarrhea, and reduced milk production.",
       "country": "France",
       "iso2": "FR",
       "lat": 46.2,
@@ -74459,7 +74977,7 @@
       "disease_name": null,
       "event_date": "2026-11-02",
       "first_reported_date": "2026-11-02",
-      "last_updated_date": "2026-11-24",
+      "last_updated_date": "2026-11-26",
       "days_since_event": 24,
       "source_count": 1,
       "should_report": false,
@@ -74473,7 +74991,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 14
+        "news": 16
       },
       "source_links": [
         {
@@ -74495,11 +75013,11 @@
         },
         {
           "kind": "news",
-          "label": "Can the Shamonda Virus, Detected in a Human in France, Reach the Americas?",
-          "url": "https://colombiaone.com/2026/11/15/can-the-shamonda-virus-detected-in-a-human-in-france-reach-the-americas/",
-          "source": "colombiaone",
-          "date": "2026-11-15",
-          "reason": "Related article"
+          "label": "First human infection involving Shamonda virus",
+          "url": "https://www.thelancet.com/journals/laninf/article/PIIS1473-3099(26)00595-5/fulltext",
+          "source": "The Lancet",
+          "date": "2026-11-20T08:49:53+00:00",
+          "reason": "Latest log"
         },
         {
           "kind": "news",
@@ -74576,9 +75094,17 @@
         {
           "headline": "En Bretagne, quel est ce nouveau virus qui touche les vaches et les moutons… ?",
           "published_date": "2026-11-24T00:35:25+00:00"
+        },
+        {
+          "headline": "Virus Shamonda-Europe : les éleveurs invités à participer à une enquête sur la plateforme ESA",
+          "published_date": "2026-11-26"
+        },
+        {
+          "headline": "Une enquête pour mieux comprendre les effets du virus Shamonda dans les élevages",
+          "published_date": "2026-11-26"
         }
       ],
-      "news_total": 14,
+      "news_total": 16,
       "logs": [
         {
           "log_date": "2026-11-12",
@@ -74610,39 +75136,6 @@
               "published_date": "2026-11-08",
               "outlet": "Agriland",
               "image": ""
-            }
-          ]
-        },
-        {
-          "log_date": "2026-11-16",
-          "summary": "Coverage this batch considers whether the Shamonda virus could spread to the Americas and notes that the virus, which primarily infects ruminants, continues to raise new questions for researchers. A separate report on a fatal avian virus infection during cancer immunotherapy is unrelated to Shamonda.",
-          "news": [
-            {
-              "news_id": "b1ceb74e8bf85f13a4c326aa50502129",
-              "url": "https://www.miragenews.com/shamonda-virus-still-surprises-researchers-1778043/",
-              "headline": "Shamonda Virus Still Surprises Researchers Despite Years of Study",
-              "body": "Despite years of experience with related viruses, Shamonda virus continues to raise new questions. The virus, which primarily infects ruminants and is",
-              "published_date": "2026-11-16",
-              "outlet": "Mirage News",
-              "image": "https://www.bing.com/th?id=ONUT.C-gWYTmF-ino61wz5iwPgg"
-            },
-            {
-              "news_id": "703fdbc60fc05ef1b368e19d7be38cd5",
-              "url": "https://medicalxpress.com/news/2026-11-unusual-pathogen-fatal-viral-infection.html",
-              "headline": "Unusual pathogen: Fatal viral infection identified during advanced cancer immunotherapy",
-              "body": "Modern immunotherapy may leave patients vulnerable to rare and potentially severe infections, according to a case study by researchers at the University Medical Center Hamburg-Eppendorf (UKE) and the Leibniz Institute of Virology (LIV). The team identified an avian virus, typically harmless to humans, as the cause of a fatal brain infection in a cancer patient.",
-              "published_date": "2026-11-12",
-              "outlet": "Medical Xpress",
-              "image": "https://www.bing.com/th?id=ONUT.k6QPnfRFi3IY_jL34QTueQ"
-            },
-            {
-              "news_id": "07689654e8e1593ba42e694f59749464",
-              "url": "https://colombiaone.com/2026/11/15/can-the-shamonda-virus-detected-in-a-human-in-france-reach-the-americas/",
-              "headline": "Can the Shamonda Virus, Detected in a Human in France, Reach the Americas?",
-              "body": "With the first documented case in history of a human infection with the Shamonda virus (SHAV) the world was put on alert",
-              "published_date": "2026-11-15",
-              "outlet": "colombiaone",
-              "image": "https://www.bing.com/th?id=ONUT.aiblBjkthtA0FS3DxAwEZg"
             }
           ]
         },
@@ -74711,9 +75204,51 @@
               "image": ""
             }
           ]
+        },
+        {
+          "log_date": "2026-11-26",
+          "summary": "French animal-health surveillance platforms are inviting farmers to participate in a survey aimed at better characterizing the effects of Shamonda virus in livestock. A regional report describes a poorly understood virus circulating in Breton cattle and sheep herds, with fever, diarrhea, and reduced milk production.",
+          "news": [
+            {
+              "news_id": "2bcc63be6b7b530a8b1dc55725af0ed4",
+              "url": "https://www.thelancet.com/journals/laninf/article/PIIS1473-3099(26)00595-5/fulltext",
+              "headline": "First human infection involving Shamonda virus",
+              "body": "The first documented case of a human infection involving Shamonda virus was confirmed in France on Oct 20, 2026. Talha Burki ...",
+              "published_date": "2026-11-20T08:49:53+00:00",
+              "outlet": "The Lancet",
+              "image": "https://www.bing.com/th?id=ONUT.gpKUeVJmFfdNhCrQ-8uMWw"
+            },
+            {
+              "news_id": "7828d0b14550583a98224a58501c530f",
+              "url": "https://www.reussir.fr/articles/virus-shamonda-europe-les-eleveurs-invites-participer-une-enquete-sur-la-plateforme-esa",
+              "headline": "Virus Shamonda-Europe : les éleveurs invités à participer à une enquête sur la plateforme ESA",
+              "body": "Afin d’aider à mieux connaître les effets du virus Shamonda-Europe dans les élevages, la plateforme d’épidémiosurveillance…",
+              "published_date": "2026-11-26",
+              "outlet": "Réussir",
+              "image": "https://www.bing.com/th?id=ONUT.0-nFSDCLpOHKIkqZPmrqrg"
+            },
+            {
+              "news_id": "0be8c478a1295c229ce511a62882d976",
+              "url": "https://www.lafranceagricole.fr/shamonda/article/906619/une-enquete-pour-mieux-comprendre-les-effets-du-virus-shamonda-dans-les-elevages",
+              "headline": "Une enquête pour mieux comprendre les effets du virus Shamonda dans les élevages",
+              "body": "Vous êtes éleveurs et vous avez été touché par le virus de Shamonda, la plateforme d’épidémiosurveillance en santé animale a besoin de votre...",
+              "published_date": "2026-11-26",
+              "outlet": "La France Agricole",
+              "image": "https://www.bing.com/th?id=ONUT.utNRKyrx_Jnos06SoT-6Zg"
+            },
+            {
+              "news_id": "721ecd6456bb590cafdf93ecefdcc030",
+              "url": "https://actu.fr/bretagne/rennes_35238/quel-est-ce-nouveau-virus-qui-touche-les-vaches-et-les-moutons-en-bretagne_65087908.html",
+              "headline": "En Bretagne, quel est ce nouveau virus qui touche les vaches et les moutons… ?",
+              "body": "Fièvre, diarrhées, baisse de production de lait… un virus mal connu circule dans les élevages bretons. Ses conséquences sur ...",
+              "published_date": "2026-11-24T00:35:25+00:00",
+              "outlet": "Actu.fr",
+              "image": "https://www.bing.com/th?id=ONUT.eLSw_vKHkvwwKT11ML1sMg"
+            }
+          ]
         }
       ],
-      "logs_total": 4
+      "logs_total": 5
     },
     {
       "incident_id": "20261106-EC-FL",
@@ -76445,7 +76980,7 @@
       "incident_id": "20261121-CN-EQ",
       "tree_id": "57d4ff1f248e4c09aa51c084bfd60de9",
       "canonical_name": "Earthquake M5.9 Yanglong, China 2026-11-21",
-      "summary": "Reports on 21 November describe an earthquake in Qinghai, China, with magnitudes given variously as 5.6, 5.7, and 5.9. One report places strong shaking in Delingha, while another cites the Haixi region, and depth estimates range from about 10 km to 80 km. One source reported no casualties so far.",
+      "summary": "A magnitude 5.9 earthquake struck Qinghai province on 21 November at 10:45 UTC, about 56 kilometers from the small airport serving Delingha, and triggered a USGS yellow alert. A later report said earthquake-hit communities in Qinghai, Gansu and Xizang were returning to normal life as reconstruction efforts provided warm homes and essential services.",
       "country": "China",
       "iso2": "CN",
       "lat": 37.1958,
@@ -76469,7 +77004,7 @@
       "disease_name": null,
       "event_date": "2026-11-21",
       "first_reported_date": "2026-11-21",
-      "last_updated_date": "2026-11-24",
+      "last_updated_date": "2026-11-26",
       "days_since_event": 5,
       "source_count": 1,
       "should_report": true,
@@ -76483,7 +77018,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 8
+        "news": 10
       },
       "source_links": [
         {
@@ -76505,19 +77040,19 @@
         },
         {
           "kind": "news",
-          "label": "5.7-magnitude earthquake strikes China | International",
-          "url": "https://www.devdiscourse.com/article/international/4010321-57-magnitude-earthquake-strikes-china",
-          "source": "Devdiscourse",
-          "date": "2026-11-21",
+          "label": "Warm homes, renewed hopes: Recovery in earthquake-hit regions of western China",
+          "url": "https://www.ecns.cn/cns-wire/2026-11-24/detail-ihfnkzcu9653634.shtml",
+          "source": "China News Service",
+          "date": "2026-11-24",
           "reason": "Latest log"
         },
         {
           "kind": "news",
-          "label": "5.7-magnitude earthquake strikes China",
-          "url": "https://www.msn.com/en-in/news/other/5-7-magnitude-earthquake-strikes-china/ar-AA2hVbFm?ocid=BingNewsVerp",
-          "source": "News18 on MSN",
-          "date": "2026-11-22",
-          "reason": "Latest log"
+          "label": "5.7-magnitude earthquake strikes China | International",
+          "url": "https://www.devdiscourse.com/article/international/4010321-57-magnitude-earthquake-strikes-china",
+          "source": "Devdiscourse",
+          "date": "2026-11-21",
+          "reason": "Related article"
         }
       ],
       "physical": {
@@ -76562,9 +77097,17 @@
         {
           "headline": "Warm homes, renewed hopes: Recovery in earthquake-hit regions of western China",
           "published_date": "2026-11-24"
+        },
+        {
+          "headline": "A magnitude 5.9 earthquake struck remote western China and triggered a USGS yellow alert",
+          "published_date": "2026-11-26"
+        },
+        {
+          "headline": "A magnitude 5.9 earthquake struck remote western China and triggered a USGS yellow alert",
+          "published_date": "2026-11-26"
         }
       ],
-      "news_total": 8,
+      "news_total": 10,
       "logs": [
         {
           "log_date": "2026-11-22",
@@ -76625,9 +77168,51 @@
               "image": "https://www.bing.com/th?id=ONUT.7l5e6zYIoHVWA3QbaOepyw"
             }
           ]
+        },
+        {
+          "log_date": "2026-11-26",
+          "summary": "A magnitude 5.9 earthquake struck Qinghai province on 21 November at 10:45 UTC, about 56 kilometers from the small airport serving Delingha, and triggered a USGS yellow alert. A later report said earthquake-hit communities in Qinghai, Gansu and Xizang were returning to normal life as reconstruction efforts provided warm homes and essential services.",
+          "news": [
+            {
+              "news_id": "ad5dd6160ed659aba7c95401d4ef9f21",
+              "url": "https://www.msn.com/en-us/news/other/a-magnitude-59-earthquake-struck-remote-western-china-and-triggered-a-usgs-yellow-alert/ar-AA2ij1Vi?ocid=BingNewsVerp",
+              "headline": "A magnitude 5.9 earthquake struck remote western China and triggered a USGS yellow alert",
+              "body": "A magnitude 5.9 earthquake shook Qinghai province in remote western China on Saturday, Nov. 21, at 10:45 UTC, about 56 kilometers from the small airport serving Delingha. The U.S. Geological Survey ...",
+              "published_date": "2026-11-26",
+              "outlet": "Morning Overview on MSN",
+              "image": ""
+            },
+            {
+              "news_id": "4be250dc6b725664b07203069b8fd289",
+              "url": "https://www.msn.com/en-in/news/other/57-magnitude-earthquake-strikes-china/ar-AA2hVbFm",
+              "headline": "5.7-magnitude earthquake strikes China",
+              "body": "Beijing [China], November 21 (ANI): An earthquake of magnitude 5.7 struck China at a depth of 80 kilometres on Saturday, the National Center for Seismology (NCS) said, reporting another seismic event in the country earlier this month.",
+              "published_date": "2026-11-24",
+              "outlet": "News18",
+              "image": ""
+            },
+            {
+              "news_id": "c45a72a75e8253b2afbe6850c57ff1fd",
+              "url": "https://www.ecns.cn/cns-wire/2026-11-24/detail-ihfnkzcu9653634.shtml",
+              "headline": "Warm homes, renewed hopes: Recovery in earthquake-hit regions of western China",
+              "body": "As winter sets in, earthquake-hit communities in China’s Qinghai, Gansu and Xizang Autonomous Region are gradually returning to normal life, with reconstruction efforts ensuring warm homes, stable livelihoods and essential public services, Xinhua News Agency reported Tuesday.",
+              "published_date": "2026-11-24",
+              "outlet": "China News Service",
+              "image": "https://www.bing.com/th?id=ONUT.2zX86u9f2X0lIeFc88gc3Q"
+            },
+            {
+              "news_id": "137b0bdfed365883b1bb157c50f1e421",
+              "url": "https://www.msn.com/en-us/news/other/a-magnitude-5-9-earthquake-struck-remote-western-china-and-triggered-a-usgs-yellow-alert/ar-AA2ij1Vi?ocid=BingNewsVerp",
+              "headline": "A magnitude 5.9 earthquake struck remote western China and triggered a USGS yellow alert",
+              "body": "A magnitude 5.9 earthquake shook Qinghai province in remote western China on Saturday, Nov. 21, at 10:45 UTC, about 56 kilometers from the small airport serving Delingha. The U.S. Geological Survey ...",
+              "published_date": "2026-11-26",
+              "outlet": "Morning Overview on MSN",
+              "image": ""
+            }
+          ]
         }
       ],
-      "logs_total": 1
+      "logs_total": 2
     },
     {
       "incident_id": "20261123-SS-OT",
@@ -76928,7 +77513,7 @@
       "disease_name": null,
       "event_date": "2026-11-24",
       "first_reported_date": "2026-11-24",
-      "last_updated_date": "2026-11-25",
+      "last_updated_date": "2026-11-26",
       "days_since_event": 2,
       "source_count": 1,
       "should_report": true,
@@ -76942,7 +77527,7 @@
         "gdacs": 0,
         "ercc": 0,
         "healthmap": 0,
-        "news": 15
+        "news": 16
       },
       "source_links": [
         {
@@ -77049,9 +77634,13 @@
         {
           "headline": "A strong earthquake of magnitude 6.4 occurred off the coast of Mauritius",
           "published_date": "2026-11-25T08:57:48+00:00"
+        },
+        {
+          "headline": "A shallow magnitude 6.4 quake rattled the Mauritius-Reunion sea floor about 900 km east of Port Louis",
+          "published_date": "2026-11-26"
         }
       ],
-      "news_total": 15,
+      "news_total": 16,
       "logs": [
         {
           "log_date": "2026-11-24",
@@ -77231,7 +77820,7 @@
       "disease_name": null,
       "event_date": "2026-11-24",
       "first_reported_date": "2026-11-24",
-      "last_updated_date": "2026-11-25",
+      "last_updated_date": "2026-11-26",
       "days_since_event": 2,
       "source_count": 1,
       "should_report": false,
@@ -77245,7 +77834,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 3
+        "news": 4
       },
       "source_links": [
         {
@@ -77304,9 +77893,13 @@
         {
           "headline": "Kenya Met warns of continued rains in 23 counties as flood risks persist",
           "published_date": "2026-11-25"
+        },
+        {
+          "headline": "More Villages At Risk As Kenya Red Cross Warns of Further Flooding in Tana Delta",
+          "published_date": "2026-11-26"
         }
       ],
-      "news_total": 3,
+      "news_total": 4,
       "logs": [
         {
           "log_date": "2026-11-26",
@@ -77343,6 +77936,96 @@
         }
       ],
       "logs_total": 1
+    },
+    {
+      "incident_id": "20261126-XX-EQ",
+      "tree_id": "d176d3617d504fbea2049182bf8ac480",
+      "canonical_name": "Earthquake M5.7 Ocean 2026-11-26",
+      "summary": "",
+      "country": "",
+      "iso2": "XX",
+      "lat": 19.8135,
+      "lon": -109.2958,
+      "country_group": "C",
+      "region": "Unknown",
+      "incident_type": "Earthquake",
+      "incident_category": "Natural",
+      "is_disease": false,
+      "severity": "MEDIUM",
+      "priority": "LOW",
+      "priority_rank": 3,
+      "pandemic_potential": null,
+      "event_status": null,
+      "extended_monitoring": false,
+      "scope": "country",
+      "region_code": "",
+      "region_name": "",
+      "monitoring_status": "",
+      "tracking_window_days": 0,
+      "disease_name": null,
+      "event_date": "2026-11-26",
+      "first_reported_date": "2026-11-26",
+      "last_updated_date": "2026-11-26",
+      "days_since_event": 0,
+      "source_count": 1,
+      "should_report": false,
+      "search_keys": [],
+      "sources": {
+        "who_don": 0,
+        "usgs": 1,
+        "gdacs": 0,
+        "ercc": 0,
+        "healthmap": 0,
+        "news": 1
+      },
+      "source_links": [
+        {
+          "type": "USGS",
+          "label": "M 5.7 - Revilla Gigedo Islands region",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000udq5",
+          "meta": "10 km depth",
+          "date": "2026-11-26"
+        }
+      ],
+      "key_links": [
+        {
+          "kind": "official",
+          "label": "M 5.7 - Revilla Gigedo Islands region",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000udq5",
+          "source": "USGS",
+          "date": "2026-11-26",
+          "reason": "Newest official"
+        },
+        {
+          "kind": "news",
+          "label": "Thanksgiving Earthquake Hits Off Baja California Coast, Magnitude 5.7",
+          "url": "https://www.tmz.com/2026/11/26/earthquake-hits-baja-california-coast/",
+          "source": "TMZ",
+          "date": "2026-11-26",
+          "reason": "News"
+        }
+      ],
+      "physical": {
+        "max_magnitude": 5.7,
+        "max_depth_km": 10.0,
+        "place": "Revilla Gigedo Islands region",
+        "felt": 1,
+        "sig": 500,
+        "tsunami": false,
+        "gdacs_alertlevel": null,
+        "gdacs_population": null
+      },
+      "news": [
+        {
+          "headline": "Thanksgiving Earthquake Hits Off Baja California Coast, Magnitude 5.7",
+          "url": "https://www.tmz.com/2026/11/26/earthquake-hits-baja-california-coast/",
+          "outlet": "TMZ",
+          "published_date": "2026-11-26"
+        }
+      ],
+      "news_total": 1,
+      "logs": [],
+      "logs_total": 0
     }
   ]
 }
