@@ -1,26 +1,26 @@
 {
   "schema_version": "1.6",
   "report_date": "2026-11-25",
-  "generated_at": "2026-11-26T22:28:14Z",
+  "generated_at": "2026-11-27T09:47:22Z",
   "as_of": "2026-11-25",
   "tracking_window_days": 7,
   "min_severity": "LOW",
   "summary": {
-    "reportable_total": 17,
+    "reportable_total": 16,
     "new_today": 4,
     "critical": 4,
     "high": 5,
     "medium": 4,
-    "low": 4,
+    "low": 3,
     "disease_outbreaks": 2,
-    "countries_affected": 12,
-    "news_total": 2203,
+    "countries_affected": 11,
+    "news_total": 2190,
     "max_magnitude": 6.9,
     "by_severity": {
       "CRITICAL": 4,
       "HIGH": 5,
       "MEDIUM": 4,
-      "LOW": 4
+      "LOW": 3
     },
     "by_type": {
       "Forest Fire": 1,
@@ -28,7 +28,6 @@
       "Severe Weather": 1,
       "Conflict": 1,
       "Tropical Cyclone": 1,
-      "Flood": 1,
       "Disease": 2,
       "Storm": 1,
       "": 2
@@ -38,20 +37,11 @@
       "Oceania": 2,
       "Unknown": 4,
       "Asia": 4,
-      "Americas": 2,
-      "Africa": 2
+      "Africa": 2,
+      "Americas": 1
     }
   },
   "by_country": [
-    {
-      "country": "Ecuador",
-      "count": 1,
-      "max_sev_rank": 1,
-      "iso2": "EC",
-      "region": "Americas",
-      "country_group": "C",
-      "max_severity": "LOW"
-    },
     {
       "country": "Portugal",
       "count": 1,
@@ -182,7 +172,7 @@
       "event_date": "2026-07-27",
       "first_reported_date": "2026-07-27",
       "last_updated_date": "2026-11-23",
-      "days_since_event": 122,
+      "days_since_event": 123,
       "source_count": 8,
       "should_report": true,
       "search_keys": [
@@ -12102,7 +12092,7 @@
       "event_date": "2026-10-08",
       "first_reported_date": "2026-10-08",
       "last_updated_date": "2026-11-24",
-      "days_since_event": 49,
+      "days_since_event": 50,
       "source_count": 14,
       "should_report": true,
       "search_keys": [
@@ -12646,7 +12636,7 @@
       "event_date": "2026-10-14",
       "first_reported_date": "2026-10-14",
       "last_updated_date": "2026-11-22",
-      "days_since_event": 43,
+      "days_since_event": 44,
       "source_count": 2,
       "should_report": true,
       "search_keys": [
@@ -15573,7 +15563,7 @@
       "event_date": "2026-10-22",
       "first_reported_date": "2026-10-22",
       "last_updated_date": "2026-11-25",
-      "days_since_event": 35,
+      "days_since_event": 36,
       "source_count": 2,
       "should_report": true,
       "search_keys": [
@@ -17847,7 +17837,7 @@
       "event_date": "2026-10-25",
       "first_reported_date": "2026-10-25",
       "last_updated_date": "2026-11-24",
-      "days_since_event": 32,
+      "days_since_event": 33,
       "source_count": 7,
       "should_report": true,
       "search_keys": [
@@ -18032,7 +18022,7 @@
       "event_date": "2026-10-26",
       "first_reported_date": "2026-10-26",
       "last_updated_date": "2026-11-25",
-      "days_since_event": 31,
+      "days_since_event": 32,
       "source_count": 5,
       "should_report": true,
       "search_keys": [
@@ -19430,315 +19420,6 @@
       "logs_total": 7
     },
     {
-      "incident_id": "20261106-EC-FL",
-      "tree_id": "050df730595f49208172897815968707",
-      "canonical_name": "Flood Ecuador 2026-11-06",
-      "summary": "Babahoyo declared a 90-day flood emergency on 23 November after 13 rivers overflowed in Los Ríos province, prompting schools to move online as more rain was forecast. Church sources reported that more than 106,000 people across Ecuador have been affected by the ongoing heavy rainfall and flooding, with the local Church delivering aid following the bishops' ad limina visit to Rome. Video reporting from the Galápagos showed residents fleeing inundated areas and being evacuated by boat as they tried to salvage belongings.",
-      "country": "Ecuador",
-      "iso2": "EC",
-      "lat": -1.8,
-      "lon": -78.2,
-      "country_group": "C",
-      "region": "Americas",
-      "incident_type": "Flood",
-      "incident_category": "Natural",
-      "is_disease": false,
-      "severity": "LOW",
-      "priority": "LOW",
-      "priority_rank": 3,
-      "pandemic_potential": null,
-      "event_status": null,
-      "extended_monitoring": false,
-      "scope": "country",
-      "region_code": "",
-      "region_name": "",
-      "monitoring_status": "",
-      "tracking_window_days": 0,
-      "disease_name": null,
-      "event_date": "2026-11-06",
-      "first_reported_date": "2026-11-06",
-      "last_updated_date": "2026-11-24",
-      "days_since_event": 20,
-      "source_count": 2,
-      "should_report": false,
-      "search_keys": [
-        "Ecuador Flood latest 2026",
-        "Ecuador Flood 2026"
-      ],
-      "sources": {
-        "who_don": 0,
-        "usgs": 0,
-        "gdacs": 0,
-        "ercc": 2,
-        "healthmap": 0,
-        "news": 14
-      },
-      "source_links": [
-        {
-          "type": "ERCC",
-          "label": "ECHO Daily Map of 06 November 2026",
-          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5835",
-          "meta": "",
-          "date": "2026-11-06"
-        },
-        {
-          "type": "ERCC",
-          "label": "ECHO Daily Map of 18 November 2026",
-          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5847",
-          "meta": "",
-          "date": "2026-11-18"
-        }
-      ],
-      "key_links": [
-        {
-          "kind": "official",
-          "label": "ECHO Daily Map of 18 November 2026",
-          "url": "https://erccportal.jrc.ec.europa.eu/ECHOProducts//Maps#/maps/5847",
-          "source": "ERCC",
-          "date": "2026-11-18",
-          "reason": "Newest official"
-        },
-        {
-          "kind": "news",
-          "label": "Ecuador’s Babahoyo Declares Flood Emergency",
-          "url": "https://www.riotimesonline.com/ecuador-babahoyo-declares-90-day-flood-emergency/",
-          "source": "The Rio Times",
-          "date": "2026-11-24",
-          "reason": "Latest log"
-        },
-        {
-          "kind": "news",
-          "label": "Ecuador Sets Flood Plan for Voting Day",
-          "url": "https://www.riotimesonline.com/ecuador-election-flood-evacuation-protocol-polling-sites/",
-          "source": "The Rio Times",
-          "date": "2026-11-22",
-          "reason": "Related article"
-        }
-      ],
-      "physical": {
-        "max_magnitude": null,
-        "max_depth_km": null,
-        "place": "",
-        "felt": null,
-        "sig": null,
-        "tsunami": false,
-        "gdacs_alertlevel": null,
-        "gdacs_population": null
-      },
-      "news": [
-        {
-          "headline": "Extreme weather alerts are in effect for the Pichincha and Galapagos regions of Ecuador through November 21; monitor local media. - SafeAbroad",
-          "published_date": "2026-11-18"
-        },
-        {
-          "headline": "Cocoa Prices Jump as Ecuador Floods Could Disrupt Global Supplies",
-          "published_date": "2026-11-19"
-        },
-        {
-          "headline": "Ecuador El Niño Floods",
-          "published_date": "2026-11-19"
-        },
-        {
-          "headline": "Небывалый масштаб разрушений в Эквадоре: водная стихия отрезала от мира сразу девять провинций",
-          "published_date": "2026-11-20"
-        },
-        {
-          "headline": "Grocers sell bananas at 66 cents a pound to lure you in. What could be the strongest El Niño on record is testing that",
-          "published_date": "2026-11-20"
-        },
-        {
-          "headline": "Grocers sell bananas at 66 cents a pound to lure you in. What could be the strongest El Niño on record is testing that | Fortune",
-          "published_date": "2026-11-20"
-        },
-        {
-          "headline": "Landslide Dams River Near Ecuador’s Alausí",
-          "published_date": "2026-11-21"
-        },
-        {
-          "headline": "Grocers sell bananas at 66 cents a pound to lure you in. What could be the strongest El Niño on record is testing that",
-          "published_date": "2026-11-21"
-        },
-        {
-          "headline": "Ecuador Sets Flood Plan for Voting Day",
-          "published_date": "2026-11-22"
-        },
-        {
-          "headline": "Ecuador evacuates residents of the Galápagos due to flooding",
-          "published_date": "2026-11-23"
-        },
-        {
-          "headline": "Ecuador’s Babahoyo Declares Flood Emergency",
-          "published_date": "2026-11-24"
-        },
-        {
-          "headline": "Video. Ecuador: Severe flooding hits Galápagos Islands amid El Niño concerns",
-          "published_date": "2026-11-24"
-        },
-        {
-          "headline": "ഇക്വഡോറിൽ കനത്ത പ്രളയം: ഒരു ലക്ഷത്തിലധികം പേർ ദുരിതത്തിൽ - Vatican News",
-          "published_date": "2026-11-24"
-        },
-        {
-          "headline": "Church in Ecuador delivers aid as heavy rainfall and floods continue - Vatican News",
-          "published_date": "2026-11-24"
-        }
-      ],
-      "news_total": 14,
-      "logs": [
-        {
-          "log_date": "2026-11-20",
-          "summary": "Floods in Ecuador have destroyed rural roads, damaged cocoa bean quality, and spread disease, contributing to sharp increases in cocoa futures. Ecuador’s meteorological service has issued an extreme thunderstorm and heavy-rain warning for Pichincha and a severe warning for Galapagos through November 21, with flooding, landslides, and road washouts possible. Reports also describe a large rescue operation across nine provinces cut off by floods and landslides, with threats of epidemics.",
-          "news": [
-            {
-              "news_id": "ad3d6455a1ef58c383c68eb8b719cf51",
-              "url": "https://finance.yahoo.com/markets/commodities/articles/cocoa-prices-jump-ecuador-floods-171424426.html",
-              "headline": "Cocoa Prices Jump as Ecuador Floods Could Disrupt Global Supplies",
-              "body": "December ICE NY cocoa (CCZ26 ) is up +210 (+4.33%) today, and ICE London cocoa #7 (CAZ26 ) is up +138 (+3.69%). Cocoa prices are sharply higher today as short covering emerged in cocoa futures after floods in Ecuador destroyed rural roads, damaged cocoa bean quality, and spread disease to...",
-              "published_date": "2026-11-19",
-              "outlet": "Barchart · via Yahoo Finance",
-              "image": "https://media.zenfs.com/en/barchart_com_477/783e6e413e65f30cf962cea426c03639.jpg"
-            },
-            {
-              "news_id": "82c705095d7c57c7b98358312659abc6",
-              "url": "https://www.pravda.ru/news/world/2446403-ecuador-flood-rescue-operation/",
-              "headline": "Небывалый масштаб разрушений в Эквадоре: водная стихия отрезала от мира сразу девять провинций",
-              "body": "Узнайте о масштабной спасательной операции в Эквадоре: как власти девяти провинций борются с последствиями разрушительных наводнений, оползней и угрозой эпидемий.",
-              "published_date": "2026-11-20",
-              "outlet": "Правда.Ру",
-              "image": "https://www.bing.com/th?id=ONUT.-3AaBMUwSXBRrBTY_UdvXw"
-            },
-            {
-              "news_id": "ac46139d23bf5c9fb8d4511d872ed589",
-              "url": "https://safeabroad.com/advisories/extreme-weather-alerts-are-in-effect-for-the-pichincha-and-galapagos-regions-of-ecuador-through-november-21-monitor-local-media/",
-              "headline": "Extreme weather alerts are in effect for the Pichincha and Galapagos regions of Ecuador through November 21; monitor local media. - SafeAbroad",
-              "body": "The National Institute of Meteorology and Hydrology (INAMHI) has issued an ‘extreme’ warning (the highest level) for thunderstorms and heavy rain in the Pichincha province. A ‘severe’ warning (second-highest) is in effect for the Galapagos province. Both alerts will remain in effect until November 21. Heavy rains are expected to continue disrupting travel and essential services. Flooding, landslides, and road washouts are all possible due to overflowing watersheds",
-              "published_date": "2026-11-18",
-              "outlet": "safeabroad",
-              "image": "https://www.bing.com/th?id=ONUT.m8gYgqRXUkeSjLMNCkegbA"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-11-21",
-          "summary": "A landslide partly dammed a river near Alausí on 18 November; the risk agency says it is draining the blockage, no one was hurt, and a road is restricted. In Milagro, a resident was transported on a makeshift raft through a flooded street on 19 November after heavy rains linked to El Niño. A commodity report also notes that Ecuador has logged 851 floods since late August.",
-          "news": [
-            {
-              "news_id": "7c76694451bd5da4b544311a1730aebe",
-              "url": "https://www.riotimesonline.com/ecuador-alausi-landslide-blocks-river-flood-alert/",
-              "headline": "Landslide Dams River Near Ecuador’s Alausí",
-              "body": "A landslide partly dammed a river near Alausí, Ecuador, on 18 November. The risk agency says it is draining and no one is hurt; a road is restricted.",
-              "published_date": "2026-11-21",
-              "outlet": "The Rio Times",
-              "image": "https://www.bing.com/th?id=ONUT.THnY1xndIfbz7kzlvQ9Q_g"
-            },
-            {
-              "news_id": "d30235908b025f95a4d1b9e6e435d644",
-              "url": "https://www.goshennews.com/news/national_news/ecuador-el-ni-o-floods/image_36a26c6b-bfdf-549e-9c09-884e5ac51004.html",
-              "headline": "Ecuador El Niño Floods",
-              "body": "A resident is transported on a makeshift raft through a flooded street after heavy rains linked to the El Niño weather phenomenon in Milagro, Ecuador, Thursday, Nov. 19, 2026. (AP",
-              "published_date": "2026-11-19",
-              "outlet": "Goshen News",
-              "image": "https://www.bing.com/th?id=ONUT.w1SDYIMTJvNlkzNLtNQEPg"
-            },
-            {
-              "news_id": "29d31187db945b74b29576d1e533c415",
-              "url": "https://finance.yahoo.com/markets/commodities/articles/grocers-sell-bananas-66-cents-080600812.html",
-              "headline": "Grocers sell bananas at 66 cents a pound to lure you in. What could be the strongest El Niño on record is testing that",
-              "body": "Costa Rica wants growers paid nearly 10% more per box next year, and Ecuador has logged 851 floods since late August.",
-              "published_date": "2026-11-20",
-              "outlet": "Fortune · via Yahoo Finance",
-              "image": "https://media.zenfs.com/en/fortune_175/6522562c74f37875630e3d4e77758898.jpg"
-            },
-            {
-              "news_id": "8058d0659e9f5f729d930b950ad42645",
-              "url": "https://www.msn.com/en-us/news/other/grocers-sell-bananas-at-66-cents-a-pound-to-lure-you-in-what-could-be-the-strongest-el-niño-on-record-is-testing-that/ar-AA2hQweS?ocid=BingNewsVerp",
-              "headline": "Grocers sell bananas at 66 cents a pound to lure you in. What could be the strongest El Niño on record is testing that",
-              "body": "Costa Rica wants growers paid nearly 10% more per box next year, and Ecuador has logged 851 floods since late August.",
-              "published_date": "2026-11-21",
-              "outlet": "Fortune on MSN",
-              "image": "https://www.bing.com/th?id=ONUT.kBKtylDBT9m4BV_BiKn5UQ"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-11-24",
-          "summary": "At least 227 people on Santa Cruz Island in the Galápagos have left their homes due to flooding, with a temporary shelter accommodating evacuees and rescue teams continuing work in flooded neighborhoods. Ecuador’s electoral council has also set out and tested a flood evacuation protocol for polling sites ahead of the 29 November local elections.",
-          "news": [
-            {
-              "news_id": "14859c498bb0574c8ffd2157c74e7cc2",
-              "url": "https://fortune.com/2026/11/20/bananas-tested-by-strong-el-nino-in-75-years/",
-              "headline": "Grocers sell bananas at 66 cents a pound to lure you in. What could be the strongest El Niño on record is testing that | Fortune",
-              "body": "Costa Rica wants growers paid nearly 10% more per box next year, and Ecuador has logged 851 floods since late August.",
-              "published_date": "2026-11-20",
-              "outlet": "Fortune",
-              "image": "https://s.yimg.com/bo/642a3a60-9674-5977-b9de-56e8a87c8368_1795162828959.jpg"
-            },
-            {
-              "news_id": "1ced38d8852a55a8a54e618d07c7ae4e",
-              "url": "https://www.riotimesonline.com/ecuador-election-flood-evacuation-protocol-polling-sites/",
-              "headline": "Ecuador Sets Flood Plan for Voting Day",
-              "body": "Ecuador’s electoral council has set out and tested a flood evacuation protocol for polling sites ahead of the 29 November 2026 local elections.",
-              "published_date": "2026-11-22",
-              "outlet": "The Rio Times",
-              "image": "https://www.bing.com/th?id=ONUT.DyG5HoYUJtdgODEhjBQHlg"
-            },
-            {
-              "news_id": "65105708a25259df97d95d0e8061c52d",
-              "url": "https://fakti.bg/en/world/1103593-ecuador-evacuates-residents-of-the-galapagos-due-to-flooding",
-              "headline": "Ecuador evacuates residents of the Galápagos due to flooding",
-              "body": "The situation is worst on Santa Cruz Island, where at least 227 people have left their homes. A temporary shelter is accommodating evacuees, while rescue teams continue working in the flooded neighborhoods",
-              "published_date": "2026-11-23",
-              "outlet": "Fakti.bg",
-              "image": "https://www.bing.com/th?id=ONUT.QLj3RpgfLcCveZCElaqofA"
-            }
-          ]
-        },
-        {
-          "log_date": "2026-11-25",
-          "summary": "Babahoyo declared a 90-day flood emergency on 23 November after 13 rivers overflowed in Los Ríos province, prompting schools to move online as more rain was forecast. Church sources reported that more than 106,000 people across Ecuador have been affected by the ongoing heavy rainfall and flooding, with the local Church delivering aid following the bishops' ad limina visit to Rome. Video reporting from the Galápagos showed residents fleeing inundated areas and being evacuated by boat as they tried to salvage belongings.",
-          "news": [
-            {
-              "news_id": "277d06a45684501eb72b19b61d31d543",
-              "url": "https://www.riotimesonline.com/ecuador-babahoyo-declares-90-day-flood-emergency/",
-              "headline": "Ecuador’s Babahoyo Declares Flood Emergency",
-              "body": "Babahoyo, Ecuador declared a 90-day flood emergency on 23 November as 13 rivers overflowed in Los Ríos; schools moved online and more rain is forecast.",
-              "published_date": "2026-11-24",
-              "outlet": "The Rio Times",
-              "image": "https://www.bing.com/th?id=ONUT.i8XpC2bFH5WfxZPgKrzYOQ"
-            },
-            {
-              "news_id": "524ed8177c425a59b46e9aae78ac313e",
-              "url": "https://www.euronews.com/video/2026/11/24/ecuador-severe-flooding-hits-galapagos-islands-amid-el-nino-concerns",
-              "headline": "Video. Ecuador: Severe flooding hits Galápagos Islands amid El Niño concerns",
-              "body": "Video. Torrential rains have inundated parts of Ecuador's Galápagos Islands, forcing residents to flee their homes. Rescue teams have evacuated people by boat as communities struggle to salvage their belongings.",
-              "published_date": "2026-11-24",
-              "outlet": "Euronews",
-              "image": "https://www.bing.com/th?id=ONUT.GzzoSY_EMLR8HEZKkp65mw"
-            },
-            {
-              "news_id": "14beb04824eb556fa239c009d4d82d21",
-              "url": "https://www.vaticannews.va/ml/church/news/2026-11/ecuador-flood-affected-church-aid-to-need-conflicts-migration.html",
-              "headline": "ഇക്വഡോറിൽ കനത്ത പ്രളയം: ഒരു ലക്ഷത്തിലധികം പേർ ദുരിതത്തിൽ - Vatican News",
-              "body": "ദക്ഷിണ അമേരിക്കൻ ഭൂഖണ്ഡത്തിന്റെ വടക്കുകിഴക്കുവശത്തുള്ള രാജ്യമായ ഇക്വഡോറിൽ ഓഗസ്റ്റ് അവസാനം മുതൽ തുടരുന്ന കനത്ത മഴയിലും പ്രളയത്തിലും ഒരു ലക്ഷത്തിലധികം ...",
-              "published_date": "2026-11-24",
-              "outlet": "Vatican News",
-              "image": "https://www.bing.com/th?id=ONUT.TmJPtwDKcgDSvsbjKHlXvg"
-            },
-            {
-              "news_id": "bc24f4f03421531c9ae4f3514ef79b95",
-              "url": "https://www.vaticannews.va/en/church/news/2026-11/church-in-ecuador-offers-aid-heavy-rainfall-floods-continue.html",
-              "headline": "Church in Ecuador delivers aid as heavy rainfall and floods continue - Vatican News",
-              "body": "Following the Ecuadorian Bishops' ad limina visit to Rome, the local Church continues to offer aid to the more than 106,000 people in different ...",
-              "published_date": "2026-11-24",
-              "outlet": "Vatican News",
-              "image": "https://www.bing.com/th?id=ONUT.gUPTOxFoZZ0543ztDahxPA"
-            }
-          ]
-        }
-      ],
-      "logs_total": 4
-    },
-    {
       "incident_id": "20261106-BF-DI",
       "tree_id": "c7c537cf25114dbf8531a4aec164b085",
       "canonical_name": "Yellow fever Burkina Faso 2026-11-06",
@@ -19767,7 +19448,7 @@
       "event_date": "2026-11-06",
       "first_reported_date": "2026-11-06",
       "last_updated_date": "2026-11-25",
-      "days_since_event": 20,
+      "days_since_event": 21,
       "source_count": 1,
       "should_report": false,
       "search_keys": [
@@ -20047,7 +19728,7 @@
       "event_date": "2026-11-12",
       "first_reported_date": "2026-11-12",
       "last_updated_date": "2026-11-19",
-      "days_since_event": 14,
+      "days_since_event": 15,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -20169,7 +19850,7 @@
       "event_date": "2026-11-13",
       "first_reported_date": "2026-11-13",
       "last_updated_date": "2026-11-23",
-      "days_since_event": 13,
+      "days_since_event": 14,
       "source_count": 3,
       "should_report": true,
       "search_keys": [
@@ -20531,7 +20212,7 @@
       "event_date": "2026-11-16",
       "first_reported_date": "2026-11-16",
       "last_updated_date": "2026-11-18",
-      "days_since_event": 10,
+      "days_since_event": 11,
       "source_count": 2,
       "should_report": true,
       "search_keys": [
@@ -20936,7 +20617,7 @@
       "event_date": "2026-11-17",
       "first_reported_date": "2026-11-17",
       "last_updated_date": "2026-11-24",
-      "days_since_event": 9,
+      "days_since_event": 10,
       "source_count": 1,
       "should_report": true,
       "search_keys": [
@@ -21035,7 +20716,7 @@
       "event_date": "2026-11-18",
       "first_reported_date": "2026-11-18",
       "last_updated_date": "2026-11-19",
-      "days_since_event": 8,
+      "days_since_event": 9,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -21125,7 +20806,7 @@
       "event_date": "2026-11-19",
       "first_reported_date": "2026-11-19",
       "last_updated_date": "2026-11-20",
-      "days_since_event": 7,
+      "days_since_event": 8,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -21215,7 +20896,7 @@
       "event_date": "2026-11-21",
       "first_reported_date": "2026-11-21",
       "last_updated_date": "2026-11-25",
-      "days_since_event": 5,
+      "days_since_event": 6,
       "source_count": 1,
       "should_report": true,
       "search_keys": [
@@ -21589,7 +21270,7 @@
       "event_date": "2026-11-23",
       "first_reported_date": "2026-11-23",
       "last_updated_date": "2026-11-24",
-      "days_since_event": 3,
+      "days_since_event": 4,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
@@ -21599,7 +21280,7 @@
         "gdacs": 0,
         "ercc": 1,
         "healthmap": 0,
-        "news": 7
+        "news": 8
       },
       "source_links": [
         {
@@ -21656,6 +21337,10 @@
           "published_date": "2026-11-20"
         },
         {
+          "headline": "US deportees in S. Sudan deprived, kin say | Arkansas Democrat Gazette",
+          "published_date": "2026-11-21"
+        },
+        {
           "headline": "Guest Column: Here’s why South Sudan marking its independence matters to US",
           "published_date": "2026-11-23"
         },
@@ -21676,7 +21361,7 @@
           "published_date": "2026-11-24T22:52:20+00:00"
         }
       ],
-      "news_total": 7,
+      "news_total": 8,
       "logs": [
         {
           "log_date": "2026-11-24",
@@ -21770,7 +21455,7 @@
       "event_date": "2026-11-23",
       "first_reported_date": "2026-11-23",
       "last_updated_date": "2026-11-24",
-      "days_since_event": 3,
+      "days_since_event": 4,
       "source_count": 1,
       "should_report": false,
       "search_keys": [],
